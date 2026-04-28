@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'>
+  <rect width='1200' height='630' fill='#0F172A'/>
+  <rect width='1200' height='8' fill='#0369A1'/>
+  <text x='80' y='220' font-family='Arial,sans-serif' font-size='72' font-weight='bold' fill='white'>ШколыРоссии.рф</text>
+  <text x='80' y='300' font-family='Arial,sans-serif' font-size='36' fill='#94A3B8'>Каталог школ России</text>
+  <text x='80' y='356' font-family='Arial,sans-serif' font-size='30' fill='#64748B'>Государственные · Частные · Онлайн · Вечерние · Экстернат</text>
+  <text x='80' y='430' font-family='Arial,sans-serif' font-size='26' fill='#64748B'>Москва · Московская область · Новосибирск</text>
+  <text x='80' y='560' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='#0369A1'>pro-schools.ru</text>
+</svg>
