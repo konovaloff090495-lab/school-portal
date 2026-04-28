@@ -1,65 +1,299 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { schools, regionSlugs, regionLabels, typeSlugs, typeLabels, RegionSlug, SchoolType } from '@/data/schools'
+import { getTypeColor, pluralSchools } from '@/lib/utils'
+import SchoolCard from '@/components/SchoolCard'
+import SearchBar from '@/components/SearchBar'
 
-export default function Home() {
+function IconBuilding() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+    </svg>
+  )
+}
+function IconGradCap() {
+  return (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+    </svg>
+  )
+}
+function IconMonitor() {
+  return (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
+    </svg>
+  )
+}
+function IconMoon() {
+  return (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+    </svg>
+  )
+}
+function IconBolt() {
+  return (
+    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+    </svg>
+  )
+}
+function IconMapPin() {
+  return (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+    </svg>
+  )
+}
+
+const typeIcons: Record<SchoolType, React.ReactNode> = {
+  gosudarstvennye: <IconBuilding />,
+  chastnie: <IconGradCap />,
+  online: <IconMonitor />,
+  vechernie: <IconMoon />,
+  eksternal: <IconBolt />,
+  semejnye: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+    </svg>
+  ),
+  domashnie: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+    </svg>
+  ),
+  'pri-vuzakh': (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+    </svg>
+  ),
+  profilnye: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+    </svg>
+  ),
+  gimnazii: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+    </svg>
+  ),
+}
+
+const typeDesc: Record<SchoolType, string> = {
+  gosudarstvennye: 'Бесплатное образование по государственной программе',
+  chastnie: 'Малые классы, индивидуальный подход, доп. программы',
+  online: 'Обучение дистанционно из любой точки мира',
+  vechernie: 'Для работающих граждан, обучение по вечерам',
+  eksternal: 'Ускоренное прохождение программы, аттестат гос. образца',
+  semejnye: 'Родители участвуют в обучении, малые классы, семейная атмосфера',
+  domashnie: 'Обучение дома с официальным сопровождением и аттестацией',
+  'pri-vuzakh': 'Лицеи и школы на базе университетов с углублённой программой',
+  profilnye: 'Специализированные школы: IT, медицина, право, искусство и другие',
+  gimnazii: 'Углублённые программы, высокие баллы ЕГЭ, победители олимпиад',
+}
+
+const typeColors: Record<SchoolType, string> = {
+  gosudarstvennye: 'bg-blue-50 text-blue-700 border-blue-200 group-hover:border-blue-400 group-hover:bg-blue-50',
+  chastnie: 'bg-purple-50 text-purple-700 border-purple-200 group-hover:border-purple-400 group-hover:bg-purple-50',
+  online: 'bg-emerald-50 text-emerald-700 border-emerald-200 group-hover:border-emerald-400 group-hover:bg-emerald-50',
+  vechernie: 'bg-indigo-50 text-indigo-700 border-indigo-200 group-hover:border-indigo-400 group-hover:bg-indigo-50',
+  eksternal: 'bg-amber-50 text-amber-700 border-amber-200 group-hover:border-amber-400 group-hover:bg-amber-50',
+  semejnye: 'bg-teal-50 text-teal-700 border-teal-200 group-hover:border-teal-400 group-hover:bg-teal-50',
+  domashnie: 'bg-yellow-50 text-yellow-700 border-yellow-200 group-hover:border-yellow-400 group-hover:bg-yellow-50',
+  'pri-vuzakh': 'bg-indigo-50 text-indigo-700 border-indigo-200 group-hover:border-indigo-400 group-hover:bg-indigo-50',
+  profilnye: 'bg-rose-50 text-rose-700 border-rose-200 group-hover:border-rose-400 group-hover:bg-rose-50',
+  gimnazii: 'bg-cyan-50 text-cyan-700 border-cyan-200 group-hover:border-cyan-400 group-hover:bg-cyan-50',
+}
+
+const typeIconColors: Record<SchoolType, string> = {
+  gosudarstvennye: 'text-blue-600 bg-blue-100',
+  chastnie: 'text-purple-600 bg-purple-100',
+  online: 'text-emerald-600 bg-emerald-100',
+  vechernie: 'text-indigo-600 bg-indigo-100',
+  eksternal: 'text-amber-600 bg-amber-100',
+  semejnye: 'text-teal-600 bg-teal-100',
+  domashnie: 'text-yellow-600 bg-yellow-100',
+  'pri-vuzakh': 'text-indigo-600 bg-indigo-100',
+  profilnye: 'text-rose-600 bg-rose-100',
+  gimnazii: 'text-cyan-600 bg-cyan-100',
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://pro-schools.ru/#website',
+  name: 'ШколыРоссии.рф',
+  url: 'https://pro-schools.ru',
+  description: 'Крупнейший каталог школ России',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: 'https://pro-schools.ru/poisk/?q={search_term_string}' },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://pro-schools.ru/#organization',
+  name: 'ШколыРоссии.рф',
+  url: 'https://pro-schools.ru',
+  logo: 'https://pro-schools.ru/logo.png',
+  contactPoint: { '@type': 'ContactPoint', email: 'info@pro-schools.ru', contactType: 'customer support' },
+}
+
+export default function HomePage() {
+  const topSchools = schools.filter(s => s.rating >= 4.7).slice(0, 6)
+
+  return (
+    <div className="bg-[#F8FAFC]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      {/* Hero */}
+      <section className="bg-[#0F172A] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm text-slate-300 mb-6">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+              {pluralSchools(schools.length)} в каталоге
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
+              Каталог школ России
+            </h1>
+            <p className="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
+              Государственные, частные, онлайн-школы, вечерние и экстернат.
+              Адреса, телефоны, описания и контакты.
+            </p>
+            <SearchBar />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Stats bar */}
+      <section className="bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center gap-6 overflow-x-auto text-sm text-gray-500">
+            <span className="font-semibold text-[#0F172A] whitespace-nowrap">{pluralSchools(schools.length)} в каталоге</span>
+            <span className="w-px h-4 bg-gray-200 shrink-0" />
+            {typeSlugs.map(type => (
+              <Link key={type} href={`/shkoly/moskva/${type}/`} className="flex items-center gap-1.5 whitespace-nowrap hover:text-[#0369A1] transition-colors duration-200 cursor-pointer">
+                <span className={`inline-block w-2 h-2 rounded-full ${getTypeColor(type).split(' ')[0]}`} />
+                {typeLabels[type]}: {schools.filter(s => s.type === type).length}
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Types grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-2xl font-bold text-[#0F172A] mb-2">Типы школ</h2>
+        <p className="text-gray-500 mb-8">Выберите подходящий формат обучения</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          {typeSlugs.map(type => (
+            <Link
+              key={type}
+              href={`/shkoly/moskva/${type}/`}
+              className={`group bg-white rounded-2xl border-2 p-5 hover:shadow-lg transition-all duration-200 cursor-pointer ${typeColors[type]}`}
+            >
+              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${typeIconColors[type]} transition-transform duration-200 group-hover:scale-110`}>
+                {typeIcons[type]}
+              </div>
+              <h3 className="font-semibold text-[#0F172A] mb-1.5 group-hover:text-[#0369A1] transition-colors duration-200">
+                {typeLabels[type]}
+              </h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-3">{typeDesc[type]}</p>
+              <span className={`inline-block text-xs px-2.5 py-1 rounded-full font-semibold ${getTypeColor(type)}`}>
+                {schools.filter(s => s.type === type).length} школ
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Regions */}
+      <section className="bg-white border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-[#0F172A] mb-8">Выберите регион</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {regionSlugs.map((region, i) => {
+              const regionSchools = schools.filter(s => s.region === region)
+              return (
+                <Link
+                  key={region}
+                  href={`/shkoly/${region}/`}
+                  className="group bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200 hover:border-[#0369A1] hover:from-blue-50 hover:to-indigo-50 hover:shadow-md transition-all duration-200 cursor-pointer"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors duration-200">
+                        {regionLabels[region]}
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-1">{pluralSchools(regionSchools.length)} в каталоге</p>
+                    </div>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${i === 0 ? 'bg-blue-100 text-blue-600' : 'bg-emerald-100 text-emerald-600'}`}>
+                      <IconMapPin />
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {typeSlugs.map(type => {
+                      const count = regionSchools.filter(s => s.type === type).length
+                      return (
+                        <span key={type} className={`text-xs px-2.5 py-1 rounded-full font-medium ${getTypeColor(type)}`}>
+                          {typeLabels[type]}: {count}
+                        </span>
+                      )
+                    })}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Top schools */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-2xl font-bold text-[#0F172A]">Лучшие школы</h2>
+            <p className="text-gray-500 mt-1">По рейтингу и отзывам пользователей</p>
+          </div>
+          <Link href="/shkoly/" className="text-[#0369A1] text-sm font-semibold hover:text-blue-700 transition-colors duration-200 cursor-pointer flex items-center gap-1">
+            Все школы
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {topSchools.map(school => (
+            <SchoolCard key={school.id} school={school} />
+          ))}
+        </div>
+      </section>
+
+      {/* SEO text */}
+      <section className="bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-3xl">
+            <h2 className="text-xl font-bold text-[#0F172A] mb-4">О каталоге школ России</h2>
+            <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <p>
+                Наш портал собрал информацию о государственных, частных, онлайн-школах, вечерних школах и центрах экстернатного обучения по всей России. Начиная с Москвы и Московской области, каталог постепенно охватывает все регионы страны.
+              </p>
+              <p>
+                Для каждой школы представлены: официальное название, адрес и контакты, описание образовательной программы, особенности и преимущества, а также рейтинг на основе отзывов родителей и учеников.
+              </p>
+              <p>
+                Частные школы Москвы — одно из самых популярных направлений поиска. В каталоге представлены небольшие частные школы с малыми классами, школы с международными программами, а также школы-пансионы Подмосковья.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }

@@ -1,0 +1,28 @@
+# ШколыРоссии.рф — pro-schools.ru
+> Крупнейший каталог школ России: государственные, частные, онлайн, вечерние и экстернат. Адреса, телефоны, описания, рейтинги.
+
+## Каталог школ
+- [Все школы России](https://pro-schools.ru/shkoly/)
+- [Школы Москвы](https://pro-schools.ru/shkoly/moskva/)
+- [Государственные школы Москвы](https://pro-schools.ru/shkoly/moskva/gosudarstvennye/)
+- [Частные школы Москвы](https://pro-schools.ru/shkoly/moskva/chastnie/)
+- [Онлайн-школы Москвы](https://pro-schools.ru/shkoly/moskva/online/)
+- [Вечерние школы Москвы](https://pro-schools.ru/shkoly/moskva/vechernie/)
+- [Экстернат Москвы](https://pro-schools.ru/shkoly/moskva/eksternal/)
+- [Школы Московской области](https://pro-schools.ru/shkoly/moskovskaya-oblast/)
+- [Школы Новосибирска](https://pro-schools.ru/shkoly/novosibirsk/)
+
+## Округа Москвы
+- [Школы ЦАО](https://pro-schools.ru/shkoly/moskva/rayon/cao/)
+- [Школы САО](https://pro-schools.ru/shkoly/moskva/rayon/sao/)
+- [Школы СВАО](https://pro-schools.ru/shkoly/moskva/rayon/svao/)
+- [Школы ВАО](https://pro-schools.ru/shkoly/moskva/rayon/vao/)
+- [Школы ЮВАО](https://pro-schools.ru/shkoly/moskva/rayon/yuvao/)
+- [Школы ЮАО](https://pro-schools.ru/shkoly/moskva/rayon/yuao/)
+- [Школы ЮЗАО](https://pro-schools.ru/shkoly/moskva/rayon/yuzao/)
+- [Школы ЗАО](https://pro-schools.ru/shkoly/moskva/rayon/zao/)
+- [Школы СЗАО](https://pro-schools.ru/shkoly/moskva/rayon/szao/)
+
+## О сайте
+ШколыРоссии.рф (pro-schools.ru) — справочник школ России с актуальными данными: адреса, телефоны, типы учебных заведений, стоимость обучения, станции метро, рейтинги.
+Контакт: info@pro-schools.ru
