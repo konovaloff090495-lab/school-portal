@@ -60,6 +60,8 @@ export function getTypeColor(type: SchoolType): string {
     'pri-vuzakh': 'bg-indigo-100 text-indigo-800',
     profilnye: 'bg-rose-100 text-rose-800',
     gimnazii: 'bg-cyan-100 text-cyan-800',
+    korrektsionnye: 'bg-lime-100 text-lime-800',
+    kadetskie: 'bg-slate-100 text-slate-800',
   }
   return colors[type]
 }
@@ -76,6 +78,8 @@ export function getTypeBorderColor(type: SchoolType): string {
     'pri-vuzakh': 'border-indigo-200',
     profilnye: 'border-rose-200',
     gimnazii: 'border-cyan-200',
+    korrektsionnye: 'border-lime-200',
+    kadetskie: 'border-slate-200',
   }
   return colors[type]
 }

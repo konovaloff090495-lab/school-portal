@@ -15,6 +15,9 @@ const placeholderGradient: Record<string, string> = {
   domashnie:       'from-yellow-50 to-yellow-100',
   'pri-vuzakh':    'from-indigo-50 to-indigo-100',
   profilnye:       'from-rose-50 to-rose-100',
+  gimnazii:        'from-cyan-50 to-cyan-100',
+  korrektsionnye:  'from-lime-50 to-lime-100',
+  kadetskie:       'from-slate-50 to-slate-100',
 }
 
 const placeholderIconColor: Record<string, string> = {
@@ -27,6 +30,9 @@ const placeholderIconColor: Record<string, string> = {
   domashnie:       'text-yellow-300',
   'pri-vuzakh':    'text-indigo-300',
   profilnye:       'text-rose-300',
+  gimnazii:        'text-cyan-300',
+  korrektsionnye:  'text-lime-300',
+  kadetskie:       'text-slate-300',
 }
 
 function SchoolPlaceholder({ type, name }: { type: string; name: string }) {
