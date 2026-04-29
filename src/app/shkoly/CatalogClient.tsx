@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -16,6 +16,32 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
 
+// ── Профили для профильных школ ───────────────────────────────────────────────
+const SCHOOL_PROFILES = [
+  { id: 'it',          label: 'IT / Программирование', keywords: ['it', 'программирован', 'кибер', 'цифров', 'алгоритм', 'код', 'робот', 'искусственный интеллект', 'компьютер', 'технолог'] },
+  { id: 'medical',     label: 'Медицинский',            keywords: ['медицин', 'биолог', 'химия', 'анатомия', 'фармацевт', 'врач', 'здоровь', 'гиппократ', 'сеченов', 'первый мед'] },
+  { id: 'math',        label: 'Физ-мат',                keywords: ['физ-мат', 'физмат', 'математик', 'физика', 'точные науки', 'олимпиад', 'математическ'] },
+  { id: 'music',       label: 'Музыкальный',            keywords: ['музык', 'фортепиано', 'скрипка', 'вокал', 'хор', 'соната', 'консерватори', 'инструмент'] },
+  { id: 'sport',       label: 'Спортивный',             keywords: ['спорт', 'футбол', 'хоккей', 'теннис', 'олимпийск', 'баскетбол', 'борьба', 'плавание', 'гимнастик'] },
+  { id: 'art',         label: 'Художественный',         keywords: ['художеств', 'искусств', 'живопись', 'дизайн', 'архитектур', 'творческ', 'сценическ'] },
+  { id: 'humanities',  label: 'Гуманитарный',           keywords: ['гуманитар', 'история', 'литератур', 'языков', 'лингвистик', 'журналист', 'право', 'обществ'] },
+  { id: 'economics',   label: 'Экономический',          keywords: ['экономик', 'бизнес', 'финанс', 'предпринимат', 'менеджмент', 'маркетинг', 'управлен'] },
+  { id: 'engineering', label: 'Инженерный',             keywords: ['инженер', 'механик', 'авиа', 'судостроен', 'строительн', 'техническ', 'промышленн'] },
+  { id: 'languages',   label: 'Языковой',               keywords: ['языков', 'иностранн', 'английск', 'лингвистик', 'переводч', 'международн'] },
+  { id: 'ecology',     label: 'Естественнонаучный',     keywords: ['экологи', 'биохими', 'географи', 'геологи', 'естественн', 'природ', 'окружающ'] },
+] as const
+
+type ProfileId = typeof SCHOOL_PROFILES[number]['id']
+
+function detectProfile(school: { name: string; features: string[]; description: string; fullDescription?: string }): ProfileId | null {
+  const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
+    .join(' ').toLowerCase()
+  for (const p of SCHOOL_PROFILES) {
+    if (p.keywords.some(kw => haystack.includes(kw))) return p.id
+  }
+  return null
+}
+
 // reverse maps: label → slug (used for URL navigation)
 const districtLabelToSlug = Object.fromEntries(
   moscowDistrictSlugs.map(slug => [moscowDistrictLabels[slug], slug])
@@ -24,13 +50,6 @@ const moCityLabelToSlug = Object.fromEntries(
   moCitySlugs.map(slug => [moCityLabels[slug], slug])
 )
 
-const ALL_METRO = Array.from(
-  new Set(schools.map(s => s.metro).filter(Boolean) as string[])
-).sort((a, b) => a.localeCompare(b, 'ru'))
-
-const metroCount = Object.fromEntries(
-  ALL_METRO.map(m => [m, schools.filter(s => s.metro === m).length])
-)
 
 interface Filters {
   regions: RegionSlug[]
@@ -41,6 +60,7 @@ interface Filters {
   priceMode: 'all' | 'free' | 'paid'
   minRating: number
   metro: string[]
+  profiles: ProfileId[]
   sort: SortKey
 }
 
@@ -61,10 +81,11 @@ function toggle<T>(arr: T[], val: T): T[] {
   return arr.includes(val) ? arr.filter(x => x !== val) : [...arr, val]
 }
 
-function MetroFilter({ selected, onChange, stations }: {
+function MetroFilter({ selected, onChange, stations, counts }: {
   selected: string[]
   onChange: (v: string[]) => void
   stations: string[]
+  counts: Record<string, number>
 }) {
   const [search, setSearch] = useState('')
   const [open, setOpen] = useState(false)
@@ -119,7 +140,7 @@ function MetroFilter({ selected, onChange, stations }: {
                   <span className="w-4 h-4 bg-red-500 rounded-full text-white text-[8px] flex items-center justify-center font-bold shrink-0">М</span>
                   {m}
                 </span>
-                <span className="text-xs text-gray-400">{metroCount[m]}</span>
+                <span className="text-xs text-gray-400">{counts[m]}</span>
               </label>
             ))}
           </div>
@@ -137,7 +158,12 @@ function MetroFilter({ selected, onChange, stations }: {
   )
 }
 
-function FilterSection({ title, children, defaultOpen = true }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
+function FilterSection({ title, children, defaultOpen = true, scrollable = false }: {
+  title: string
+  children: React.ReactNode
+  defaultOpen?: boolean
+  scrollable?: boolean
+}) {
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="border-b border-gray-100 pb-4 mb-4">
@@ -150,7 +176,11 @@ function FilterSection({ title, children, defaultOpen = true }: { title: string;
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      {open && <div className="mt-3 space-y-2">{children}</div>}
+      {open && (
+        <div className={`mt-3 space-y-2 ${scrollable ? 'max-h-44 overflow-y-auto pr-1' : ''}`}>
+          {children}
+        </div>
+      )}
     </div>
   )
 }
@@ -204,6 +234,7 @@ export default function CatalogClient({
     priceMode: 'all',
     minRating: 0,
     metro: [],
+    profiles: [],
     sort: 'rating',
   })
   const router = useRouter()
@@ -254,57 +285,77 @@ export default function CatalogClient({
     }
   }, [filters.regions, filters.types, filters.districts, filters.moCities])
 
-  // Determine which metro stations and districts to show based on context
-  const contextSchools = useMemo(() => {
-    let list = [...schools]
-    if (lockRegion && initialRegions.length) list = list.filter(s => initialRegions.includes(s.region))
-    return list
-  }, [lockRegion, initialRegions])
+  // contextMetro и metroCount объявлены ниже — после baseForMetro
 
-  const contextMetro = useMemo(() =>
-    Array.from(new Set(contextSchools.map(s => s.metro).filter(Boolean) as string[])).sort((a, b) => a.localeCompare(b, 'ru')),
-    [contextSchools]
-  )
+  // moscowDistricts / Neighborhoods / moCityList объявлены ниже — после baseFor* мемо
 
-  const moscowDistricts = useMemo(() => {
-    const isMoscowContext = initialRegions.includes('moskva') || (!lockRegion && filters.regions.includes('moskva')) || (!lockRegion && filters.regions.length === 0)
-    if (!isMoscowContext) return []
-    return Array.from(new Set(
-      schools.filter(s => s.region === 'moskva' && s.district).map(s => s.district!)
-    )).sort((a, b) => a.localeCompare(b, 'ru'))
-  }, [initialRegions, lockRegion, filters.regions])
-
-  const moscowNeighborhoods = useMemo(() => {
-    const isMoscowContext = initialRegions.includes('moskva') || (!lockRegion && filters.regions.includes('moskva')) || (!lockRegion && filters.regions.length === 0)
-    if (!isMoscowContext) return []
-    // If districts are selected, show only neighborhoods within those districts
-    const baseList = filters.districts.length
-      ? schools.filter(s => s.region === 'moskva' && s.neighborhood && filters.districts.includes(s.district!))
-      : schools.filter(s => s.region === 'moskva' && s.neighborhood)
-    return Array.from(new Set(baseList.map(s => s.neighborhood!))).sort((a, b) => a.localeCompare(b, 'ru'))
-  }, [initialRegions, lockRegion, filters.regions, filters.districts])
-
-  const moCityList = useMemo(() => {
-    const isMoContext = initialRegions.includes('moskovskaya-oblast') || (!lockRegion && filters.regions.includes('moskovskaya-oblast'))
-    if (!isMoContext) return []
-    return Array.from(new Set(
-      schools.filter(s => s.region === 'moskovskaya-oblast' && s.city).map(s => s.city!)
-    )).sort((a, b) => a.localeCompare(b, 'ru'))
-  }, [initialRegions, lockRegion, filters.regions])
-
-  const filtered = useMemo(() => {
+  // ── Вспомогательная функция: базовые фильтры без конкретного измерения ───────
+  const applyBaseFilters = useCallback((
+    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'none' = 'none'
+  ) => {
     let list = [...schools]
     const activeRegions = lockRegion ? initialRegions : filters.regions
     if (activeRegions.length) list = list.filter(s => activeRegions.includes(s.region))
-    if (filters.districts.length) list = list.filter(s => s.district && filters.districts.includes(s.district))
-    if (filters.neighborhoods.length) list = list.filter(s => s.neighborhood && filters.neighborhoods.includes(s.neighborhood))
-    if (filters.moCities.length) list = list.filter(s => s.city && filters.moCities.includes(s.city))
-    if (filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
+    if (skip !== 'districts' && filters.districts.length) list = list.filter(s => s.district && filters.districts.includes(s.district))
+    if (skip !== 'neighborhoods' && filters.neighborhoods.length) list = list.filter(s => s.neighborhood && filters.neighborhoods.includes(s.neighborhood))
+    if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => s.city && filters.moCities.includes(s.city))
+    if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
-    if (activeTypes.length) list = list.filter(s => activeTypes.includes(s.type))
+    if (skip !== 'types' && activeTypes.length) list = list.filter(s => activeTypes.includes(s.type))
     if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || s.priceFrom === undefined)
     if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
     if (filters.minRating > 0) list = list.filter(s => s.rating >= filters.minRating)
+    if (skip !== 'profiles' && filters.profiles.length)
+      list = list.filter(s => { const p = detectProfile(s); return p && filters.profiles.includes(p) })
+    return list
+  }, [filters, initialRegions, initialTypes, lockRegion, lockType, schools])
+
+  // Базовые списки для подсчёта фасетов (без своего измерения)
+  const baseForDistricts    = useMemo(() => applyBaseFilters('districts'),    [applyBaseFilters])
+  const baseForNeighborhood = useMemo(() => applyBaseFilters('neighborhoods'), [applyBaseFilters])
+  const baseForMoCity       = useMemo(() => applyBaseFilters('moCities'),     [applyBaseFilters])
+  const baseForTypes        = useMemo(() => applyBaseFilters('types'),        [applyBaseFilters])
+  const baseForMetro        = useMemo(() => applyBaseFilters('metro'),        [applyBaseFilters])
+  const baseForProfiles     = useMemo(() => applyBaseFilters('profiles'),     [applyBaseFilters])
+
+  // Метро — только станции из текущей выборки (без metro-фильтра), с фасетными счётчиками
+  const contextMetro = useMemo(() =>
+    Array.from(new Set(baseForMetro.map(s => s.metro).filter(Boolean) as string[])).sort((a, b) => a.localeCompare(b, 'ru')),
+    [baseForMetro]
+  )
+  const metroCount = useMemo(() =>
+    Object.fromEntries(contextMetro.map(m => [m, baseForMetro.filter(s => s.metro === m).length])),
+    [contextMetro, baseForMetro]
+  )
+
+  // Доступные округа/районы/города — только те, где есть школы при текущих фильтрах
+  const isMoscowContext = initialRegions.includes('moskva') || (!lockRegion && filters.regions.includes('moskva')) || (!lockRegion && filters.regions.length === 0)
+  const isMoContext     = initialRegions.includes('moskovskaya-oblast') || (!lockRegion && filters.regions.includes('moskovskaya-oblast'))
+
+  const moscowDistricts = useMemo(() => {
+    if (!isMoscowContext) return []
+    return Array.from(new Set(
+      baseForDistricts.filter(s => s.district).map(s => s.district!)
+    )).sort((a, b) => a.localeCompare(b, 'ru'))
+  }, [isMoscowContext, baseForDistricts])
+
+  const moscowNeighborhoods = useMemo(() => {
+    if (!isMoscowContext) return []
+    const baseList = filters.districts.length
+      ? baseForNeighborhood.filter(s => s.neighborhood && filters.districts.includes(s.district!))
+      : baseForNeighborhood.filter(s => s.neighborhood)
+    return Array.from(new Set(baseList.map(s => s.neighborhood!))).sort((a, b) => a.localeCompare(b, 'ru'))
+  }, [isMoscowContext, filters.districts, baseForNeighborhood])
+
+  const moCityList = useMemo(() => {
+    if (!isMoContext) return []
+    return Array.from(new Set(
+      baseForMoCity.filter(s => s.city).map(s => s.city!)
+    )).sort((a, b) => a.localeCompare(b, 'ru'))
+  }, [isMoContext, baseForMoCity])
+
+  const filtered = useMemo(() => {
+    const list = applyBaseFilters('none')
     switch (filters.sort) {
       case 'rating': list.sort((a, b) => b.rating - a.rating); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
@@ -312,7 +363,7 @@ export default function CatalogClient({
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? 0) - (a.priceFrom ?? 0)); break
     }
     return list
-  }, [filters, initialRegions, initialTypes, lockRegion, lockType])
+  }, [applyBaseFilters, filters.sort])
 
   const resetableFilters: Filters = {
     regions: lockRegion ? initialRegions : [],
@@ -323,6 +374,7 @@ export default function CatalogClient({
     priceMode: 'all',
     minRating: 0,
     metro: [],
+    profiles: [],
     sort: 'rating',
   }
 
@@ -334,7 +386,8 @@ export default function CatalogClient({
     (filters.moCities.length > (initialCity ? 1 : 0) ? filters.moCities.length - (initialCity ? 1 : 0) : 0) +
     (filters.priceMode !== 'all' ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0) +
-    filters.metro.length
+    filters.metro.length +
+    filters.profiles.length
 
   function resetFilters() { setFilters(resetableFilters) }
 
@@ -387,7 +440,7 @@ export default function CatalogClient({
   const FiltersPanel = (
     <div className="space-y-0">
       {!lockRegion && (
-        <FilterSection title="Регион">
+        <FilterSection title="Регион" scrollable>
           {regionSlugs.map(r => (
             <Checkbox
               key={r}
@@ -401,60 +454,101 @@ export default function CatalogClient({
       )}
 
       {moscowDistricts.length > 0 && (
-        <FilterSection title="Округ Москвы">
-          {moscowDistricts.map(d => (
-            <Checkbox
-              key={d}
-              checked={filters.districts.includes(d)}
-              onChange={() => setFilters(f => ({ ...f, districts: toggle(f.districts, d), neighborhoods: [] }))}
-              label={d}
-              count={schools.filter(s => s.region === 'moskva' && s.district === d).length}
-            />
-          ))}
+        <FilterSection title="Округ Москвы" scrollable>
+          {moscowDistricts.map(d => {
+            const cnt = baseForDistricts.filter(s => s.district === d).length
+            if (cnt === 0 && !filters.districts.includes(d)) return null
+            return (
+              <Checkbox
+                key={d}
+                checked={filters.districts.includes(d)}
+                onChange={() => setFilters(f => ({ ...f, districts: toggle(f.districts, d), neighborhoods: [] }))}
+                label={d}
+                count={cnt}
+              />
+            )
+          })}
         </FilterSection>
       )}
 
       {moscowNeighborhoods.length > 0 && (
-        <FilterSection title="Район Москвы" defaultOpen={false}>
-          {moscowNeighborhoods.map(n => (
-            <Checkbox
-              key={n}
-              checked={filters.neighborhoods.includes(n)}
-              onChange={() => setFilters(f => ({ ...f, neighborhoods: toggle(f.neighborhoods, n) }))}
-              label={n}
-              count={schools.filter(s => s.region === 'moskva' && s.neighborhood === n).length}
-            />
-          ))}
+        <FilterSection title="Район Москвы" defaultOpen={false} scrollable>
+          {moscowNeighborhoods.map(n => {
+            const cnt = baseForNeighborhood.filter(s => s.neighborhood === n).length
+            if (cnt === 0 && !filters.neighborhoods.includes(n)) return null
+            return (
+              <Checkbox
+                key={n}
+                checked={filters.neighborhoods.includes(n)}
+                onChange={() => setFilters(f => ({ ...f, neighborhoods: toggle(f.neighborhoods, n) }))}
+                label={n}
+                count={cnt}
+              />
+            )
+          })}
         </FilterSection>
       )}
 
       {moCityList.length > 0 && (
-        <FilterSection title="Город">
-          {moCityList.map(city => (
-            <Checkbox
-              key={city}
-              checked={filters.moCities.includes(city)}
-              onChange={() => setFilters(f => ({ ...f, moCities: toggle(f.moCities, city) }))}
-              label={city}
-              count={schools.filter(s => s.region === 'moskovskaya-oblast' && s.city === city).length}
-            />
-          ))}
+        <FilterSection title="Город" scrollable>
+          {moCityList.map(city => {
+            const cnt = baseForMoCity.filter(s => s.city === city).length
+            if (cnt === 0 && !filters.moCities.includes(city)) return null
+            return (
+              <Checkbox
+                key={city}
+                checked={filters.moCities.includes(city)}
+                onChange={() => setFilters(f => ({ ...f, moCities: toggle(f.moCities, city) }))}
+                label={city}
+                count={cnt}
+              />
+            )
+          })}
         </FilterSection>
       )}
 
       {!lockType && (
         <FilterSection title="Тип школы">
-          {typeSlugs.map(t => (
-            <Checkbox
-              key={t}
-              checked={filters.types.includes(t)}
-              onChange={() => setFilters(f => ({ ...f, types: toggle(f.types, t) }))}
-              label={typeLabels[t]}
-              count={schools.filter(s => s.type === t && (lockRegion ? initialRegions.includes(s.region) : true)).length}
-            />
-          ))}
+          {typeSlugs.map(t => {
+            const cnt = baseForTypes.filter(s => s.type === t).length
+            if (cnt === 0 && !filters.types.includes(t)) return null
+            return (
+              <Checkbox
+                key={t}
+                checked={filters.types.includes(t)}
+                onChange={() => setFilters(f => ({ ...f, types: toggle(f.types, t) }))}
+                label={typeLabels[t]}
+                count={cnt}
+              />
+            )
+          })}
         </FilterSection>
       )}
+
+      {/* Профили — только когда тип зафиксирован как «Профильные» */}
+      {(lockType ? initialTypes : filters.types).includes('profilnye' as SchoolType) && (() => {
+        const visibleProfiles = SCHOOL_PROFILES.filter(p => {
+          const cnt = baseForProfiles.filter(s => s.type === 'profilnye' && detectProfile(s) === p.id).length
+          return cnt > 0 || filters.profiles.includes(p.id)
+        })
+        if (visibleProfiles.length === 0) return null
+        return (
+          <FilterSection title="Профиль" scrollable>
+            {visibleProfiles.map(p => {
+              const cnt = baseForProfiles.filter(s => s.type === 'profilnye' && detectProfile(s) === p.id).length
+              return (
+                <Checkbox
+                  key={p.id}
+                  checked={filters.profiles.includes(p.id)}
+                  onChange={() => setFilters(f => ({ ...f, profiles: toggle(f.profiles, p.id) }))}
+                  label={p.label}
+                  count={cnt}
+                />
+              )
+            })}
+          </FilterSection>
+        )
+      })()}
 
       <FilterSection title="Стоимость">
         {(['all', 'free', 'paid'] as const).map(mode => (
@@ -493,6 +587,7 @@ export default function CatalogClient({
           selected={filters.metro}
           onChange={metro => setFilters(f => ({ ...f, metro }))}
           stations={contextMetro}
+          counts={metroCount}
         />
       )}
 
@@ -547,6 +642,10 @@ export default function CatalogClient({
           {!lockType && filters.types.map(t => (
             <ActiveChip key={t} label={typeLabels[t]} onRemove={() => setFilters(f => ({ ...f, types: f.types.filter(x => x !== t) }))} />
           ))}
+          {filters.profiles.map(pid => {
+            const p = SCHOOL_PROFILES.find(x => x.id === pid)
+            return p ? <ActiveChip key={pid} label={p.label} onRemove={() => setFilters(f => ({ ...f, profiles: f.profiles.filter(x => x !== pid) }))} /> : null
+          })}
           {filters.priceMode !== 'all' && (
             <ActiveChip label={filters.priceMode === 'free' ? 'Бесплатно' : 'Платные'} onRemove={() => setFilters(f => ({ ...f, priceMode: 'all' }))} />
           )}
@@ -564,15 +663,17 @@ export default function CatalogClient({
 
       <div className="flex gap-8 items-start">
         {viewMode === 'grid' && (
-          <aside className="hidden md:block w-64 shrink-0 sticky top-24">
-            <div className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
+          <aside className="hidden md:block w-64 shrink-0 sticky top-24 self-start">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm max-h-[calc(100vh-7rem)] flex flex-col">
+              <div className="flex items-center justify-between px-5 pt-5 pb-4 shrink-0">
                 <span className="font-semibold text-[#0F172A] text-sm">Фильтры</span>
                 {activeCount > 0 && (
                   <button onClick={resetFilters} className="text-xs text-[#0369A1] hover:underline cursor-pointer">Сбросить</button>
                 )}
               </div>
-              {FiltersPanel}
+              <div className="overflow-y-auto px-5 pb-5 min-h-0 flex-1">
+                {FiltersPanel}
+              </div>
             </div>
           </aside>
         )}

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import {
   schools, regionLabels, typeLabels,
   getSchoolBySlug, getAllSchoolSlugs, formatPrice,
@@ -10,6 +9,7 @@ import { getTypeColor, getTypeBorderColor } from '@/lib/utils'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 import SchoolCard from '@/components/SchoolCard'
+import SchoolPageGallery from '@/components/SchoolPageGallery'
 
 
 interface Props {
@@ -99,34 +99,23 @@ export default async function SchoolPage({ params }: Props) {
         { label: school.name },
       ]} />
 
-      {/* Hero фото */}
-      <div className="mt-6 relative h-56 md:h-72 rounded-2xl overflow-hidden bg-gray-100">
-        <Image
-          src={`/schools/${school.slug}.jpg`}
-          alt={school.imageAlt}
-          fill
-          className="object-cover"
-          priority
-          sizes="(max-width: 1280px) 100vw, 1200px"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-        <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
-          <div>
-            <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
-              {typeLabels[school.type]}
-            </span>
-            <h1 className="text-white font-bold text-2xl md:text-3xl drop-shadow-md leading-tight">
-              {school.name}
-            </h1>
-            <p className="text-white/80 text-sm mt-1">{school.city}, {school.address}</p>
-          </div>
-          <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
-            <div className="text-2xl font-bold text-gray-900">{school.rating}</div>
-            <div className="text-yellow-400 text-sm">{'★'.repeat(stars)}</div>
-            <div className="text-xs text-gray-400">{school.reviewCount} отз.</div>
-          </div>
+      {/* Hero галерея */}
+      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt}>
+        <div>
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
+            {typeLabels[school.type]}
+          </span>
+          <h1 className="text-white font-bold text-2xl md:text-3xl drop-shadow-md leading-tight">
+            {school.name}
+          </h1>
+          <p className="text-white/80 text-sm mt-1">{school.city}, {school.address}</p>
         </div>
-      </div>
+        <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
+          <div className="text-2xl font-bold text-gray-900">{school.rating}</div>
+          <div className="text-yellow-400 text-sm">{'★'.repeat(stars)}</div>
+          <div className="text-xs text-gray-400">{school.reviewCount} отз.</div>
+        </div>
+      </SchoolPageGallery>
 
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main content */}

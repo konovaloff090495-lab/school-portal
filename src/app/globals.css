@@ -3,7 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Pro-schools warm design tokens */
+  --cream: #FFF8F0;
+  --coral-400: #FF8B5A;
+  --coral-500: #FF6B3D;
+  --coral-600: #E8552A;
+  --honey-400: #FFC547;
+  --ink: #1A1814;
+  --ink-2: #3A332B;
+  --ink-3: #6B5F50;
+  --peach-glow: #FFE9D0;
 }
+
+@keyframes ps-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(2deg); }
+}
+.ps-floaty { animation: ps-float 4s ease-in-out infinite; }
 
 @theme inline {
   --color-background: var(--background);
