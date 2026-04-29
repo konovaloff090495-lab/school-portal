@@ -1,0 +1,261 @@
+[
+  {
+    "city": "Москва",
+    "slug": "moskva",
+    "status": "done",
+    "types": "all"
+  },
+  {
+    "city": "Московская область",
+    "slug": "moskovskaya-oblast",
+    "status": "done",
+    "types": "all"
+  },
+  {
+    "city": "Новосибирск",
+    "slug": "novosibirsk",
+    "status": "done",
+    "types": "all"
+  },
+  {
+    "city": "Екатеринбург",
+    "slug": "ekaterinburg",
+    "status": "done",
+    "types": "all"
+  },
+  {
+    "city": "Казань",
+    "slug": "kazan",
+    "status": "done",
+    "doneAt": "2026-04-29T11:11:28.200Z"
+  },
+  {
+    "city": "Нижний Новгород",
+    "slug": "nizhniy-novgorod",
+    "status": "done",
+    "doneAt": "2026-04-29T14:29:22.529Z"
+  },
+  {
+    "city": "Санкт-Петербург",
+    "slug": "sankt-peterburg",
+    "status": "failed",
+    "error": "Процесс завершился с кодом 2"
+  },
+  {
+    "city": "Челябинск",
+    "slug": "chelyabinsk",
+    "status": "failed",
+    "error": "Процесс завершился с кодом 2"
+  },
+  {
+    "city": "Самара",
+    "slug": "samara",
+    "status": "failed",
+    "error": "Процесс завершился с кодом 2"
+  },
+  {
+    "city": "Омск",
+    "slug": "omsk",
+    "status": "pending"
+  },
+  {
+    "city": "Ростов-на-Дону",
+    "slug": "rostov-na-donu",
+    "status": "pending"
+  },
+  {
+    "city": "Уфа",
+    "slug": "ufa",
+    "status": "pending"
+  },
+  {
+    "city": "Красноярск",
+    "slug": "krasnoyarsk",
+    "status": "pending"
+  },
+  {
+    "city": "Пермь",
+    "slug": "perm",
+    "status": "pending"
+  },
+  {
+    "city": "Воронеж",
+    "slug": "voronezh",
+    "status": "pending"
+  },
+  {
+    "city": "Волгоград",
+    "slug": "volgograd",
+    "status": "pending"
+  },
+  {
+    "city": "Краснодар",
+    "slug": "krasnodar",
+    "status": "pending"
+  },
+  {
+    "city": "Саратов",
+    "slug": "saratov",
+    "status": "pending"
+  },
+  {
+    "city": "Тюмень",
+    "slug": "tyumen",
+    "status": "pending"
+  },
+  {
+    "city": "Тольятти",
+    "slug": "tolyatti",
+    "status": "pending"
+  },
+  {
+    "city": "Ижевск",
+    "slug": "izhevsk",
+    "status": "pending"
+  },
+  {
+    "city": "Барнаул",
+    "slug": "barnaul",
+    "status": "pending"
+  },
+  {
+    "city": "Ульяновск",
+    "slug": "ulyanovsk",
+    "status": "pending"
+  },
+  {
+    "city": "Иркутск",
+    "slug": "irkutsk",
+    "status": "pending"
+  },
+  {
+    "city": "Хабаровск",
+    "slug": "khabarovsk",
+    "status": "pending"
+  },
+  {
+    "city": "Ярославль",
+    "slug": "yaroslavl",
+    "status": "pending"
+  },
+  {
+    "city": "Владивосток",
+    "slug": "vladivostok",
+    "status": "pending"
+  },
+  {
+    "city": "Махачкала",
+    "slug": "makhachkala",
+    "status": "pending"
+  },
+  {
+    "city": "Томск",
+    "slug": "tomsk",
+    "status": "pending"
+  },
+  {
+    "city": "Оренбург",
+    "slug": "orenburg",
+    "status": "pending"
+  },
+  {
+    "city": "Кемерово",
+    "slug": "kemerovo",
+    "status": "pending"
+  },
+  {
+    "city": "Новокузнецк",
+    "slug": "novokuznetsk",
+    "status": "pending"
+  },
+  {
+    "city": "Рязань",
+    "slug": "ryazan",
+    "status": "pending"
+  },
+  {
+    "city": "Астрахань",
+    "slug": "astrakhan",
+    "status": "pending"
+  },
+  {
+    "city": "Набережные Челны",
+    "slug": "naberezhnye-chelny",
+    "status": "pending"
+  },
+  {
+    "city": "Пенза",
+    "slug": "penza",
+    "status": "pending"
+  },
+  {
+    "city": "Липецк",
+    "slug": "lipetsk",
+    "status": "pending"
+  },
+  {
+    "city": "Тула",
+    "slug": "tula",
+    "status": "pending"
+  },
+  {
+    "city": "Киров",
+    "slug": "kirov",
+    "status": "pending"
+  },
+  {
+    "city": "Чебоксары",
+    "slug": "cheboksary",
+    "status": "pending"
+  },
+  {
+    "city": "Калининград",
+    "slug": "kaliningrad",
+    "status": "pending"
+  },
+  {
+    "city": "Брянск",
+    "slug": "bryansk",
+    "status": "pending"
+  },
+  {
+    "city": "Курск",
+    "slug": "kursk",
+    "status": "pending"
+  },
+  {
+    "city": "Иваново",
+    "slug": "ivanovo",
+    "status": "pending"
+  },
+  {
+    "city": "Магнитогорск",
+    "slug": "magnitogorsk",
+    "status": "pending"
+  },
+  {
+    "city": "Тверь",
+    "slug": "tver",
+    "status": "pending"
+  },
+  {
+    "city": "Ставрополь",
+    "slug": "stavropol",
+    "status": "pending"
+  },
+  {
+    "city": "Белгород",
+    "slug": "belgorod",
+    "status": "pending"
+  },
+  {
+    "city": "Сочи",
+    "slug": "sochi",
+    "status": "pending"
+  },
+  {
+    "city": "Нижний Тагил",
+    "slug": "nizhniy-tagil",
+    "status": "pending"
+  }
+]

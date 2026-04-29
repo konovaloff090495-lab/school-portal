@@ -3,6 +3,7 @@ import { schools, regionSlugs, regionLabels, typeSlugs, typeLabels, RegionSlug, 
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import SchoolCard from '@/components/SchoolCard'
 import SearchBar from '@/components/SearchBar'
+import HeroBanner from '@/components/HeroBanner'
 
 function IconBuilding() {
   return (
@@ -164,31 +165,15 @@ export default function HomePage() {
   const topSchools = schools.filter(s => s.rating >= 4.7).slice(0, 6)
 
   return (
-    <div className="bg-[#F8FAFC]">
+    <div className="bg-[#FFF8F0]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+
       {/* Hero */}
-      <section className="bg-[#0F172A] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm text-slate-300 mb-6">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              {pluralSchools(schools.length)} в каталоге
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
-              Каталог школ России
-            </h1>
-            <p className="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
-              Государственные, частные, онлайн-школы, вечерние и экстернат.
-              Адреса, телефоны, описания и контакты.
-            </p>
-            <SearchBar />
-          </div>
-        </div>
-      </section>
+      <HeroBanner />
 
       {/* Stats bar */}
-      <section className="bg-white border-b border-gray-200 shadow-sm">
+      <section className="bg-white border-b border-gray-200 shadow-sm" style={{ background: '#fff' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex items-center gap-6 overflow-x-auto text-sm text-gray-500">
             <span className="font-semibold text-[#0F172A] whitespace-nowrap">{pluralSchools(schools.length)} в каталоге</span>
