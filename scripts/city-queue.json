@@ -38,20 +38,18 @@
   {
     "city": "Санкт-Петербург",
     "slug": "sankt-peterburg",
-    "status": "failed",
+    "status": "done",
     "error": "Процесс завершился с кодом 2"
   },
   {
     "city": "Челябинск",
     "slug": "chelyabinsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 2"
+    "status": "pending"
   },
   {
     "city": "Самара",
     "slug": "samara",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 2"
+    "status": "pending"
   },
   {
     "city": "Омск",
