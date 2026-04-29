@@ -74,6 +74,7 @@ export interface CatalogClientProps {
   lockType?: boolean
   title?: string
   subtitle?: string
+  seoCity?: string   // имя города в именительном падеже для SEO-текста
   breadcrumbs?: { label: string; href?: string }[]
 }
 
@@ -223,6 +224,7 @@ export default function CatalogClient({
   lockType = false,
   title = 'Каталог школ России',
   subtitle,
+  seoCity,
   breadcrumbs = [{ label: 'Все школы' }],
 }: CatalogClientProps) {
   const [filters, setFilters] = useState<Filters>({
@@ -427,13 +429,16 @@ export default function CatalogClient({
       const city = regionLabels[region]
       return `${typeLabels[type]} школы ${city} — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа в ${city}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по округу, рейтингу или стоимости обучения для удобного выбора.`
     }
+    if (seoCity) {
+      return `Каталог школ ${seoCity} (Московская область) содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние и профильные. Для каждого учебного заведения указаны адрес, контактный телефон, описание образовательной программы и рейтинг родителей. Используйте фильтры по типу школы, рейтингу или стоимости обучения, чтобы найти подходящий вариант.`
+    }
     if (lockRegion && initialRegions.length === 1 && !lockType) {
       const region = initialRegions[0]
       const city = regionLabels[region]
       return `Каталог школ ${city} содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние, экстернат, семейные и профильные. Для каждого учебного заведения указаны адрес, контакты, описание программы и рейтинг родителей. Используйте фильтры по типу, округу и стоимости обучения для удобного выбора.`
     }
     return null
-  }, [initialRegions, initialTypes, lockRegion, lockType, filtered.length])
+  }, [initialRegions, initialTypes, lockRegion, lockType, filtered.length, seoCity])
 
   const resolvedSubtitle = subtitle ?? `${pluralSchools(filtered.length)} — государственные, частные, онлайн, вечерние, экстернат`
 
