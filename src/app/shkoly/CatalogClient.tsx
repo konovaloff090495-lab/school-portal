@@ -245,6 +245,11 @@ export default function CatalogClient({
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid')
   const [mapSchoolId, setMapSchoolId] = useState<string | null>(null)
 
+  // При смене фильтров в режиме карты — сбрасываем выбранную школу (возврат к обзору города)
+  useEffect(() => {
+    if (viewMode === 'map') setMapSchoolId(null)
+  }, [filters]) // eslint-disable-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     if (isFirstMount.current) {
       isFirstMount.current = false
@@ -394,18 +399,20 @@ export default function CatalogClient({
   function resetFilters() { setFilters(resetableFilters) }
 
   const mapSchool = useMemo(() => {
-    if (mapSchoolId) return filtered.find(s => s.id === mapSchoolId) ?? filtered[0]
-    return filtered[0]
+    if (!mapSchoolId) return null
+    return filtered.find(s => s.id === mapSchoolId) ?? null
   }, [mapSchoolId, filtered])
 
   const mapIframeSrc = useMemo(() => {
     if (mapSchool) {
+      // Конкретная школа — зум 16
       return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${mapSchool.city}, ${mapSchool.address}`)}&z=16&lang=ru_RU`
     }
+    // Обзор города — показываем все школы через поиск по городу
     const region = initialRegions[0]
-    const city = region ? regionLabels[region] : 'Россия'
-    return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(city)}&z=10&lang=ru_RU`
-  }, [mapSchool, initialRegions])
+    const cityName = initialCity ?? (region ? regionLabels[region] : 'Россия')
+    return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`школы ${cityName}`)}&z=12&lang=ru_RU`
+  }, [mapSchool, initialRegions, initialCity])
 
   const seoText = useMemo(() => {
     const n = filtered.length
@@ -667,21 +674,19 @@ export default function CatalogClient({
       )}
 
       <div className="flex gap-8 items-start">
-        {viewMode === 'grid' && (
-          <aside className="hidden md:block w-64 shrink-0 sticky top-24 self-start">
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm max-h-[calc(100vh-7rem)] flex flex-col">
-              <div className="flex items-center justify-between px-5 pt-5 pb-4 shrink-0">
-                <span className="font-semibold text-[#0F172A] text-sm">Фильтры</span>
-                {activeCount > 0 && (
-                  <button onClick={resetFilters} className="text-xs text-[#0369A1] hover:underline cursor-pointer">Сбросить</button>
-                )}
-              </div>
-              <div className="overflow-y-auto px-5 pb-5 min-h-0 flex-1">
-                {FiltersPanel}
-              </div>
+        <aside className="hidden md:block w-64 shrink-0 sticky top-24 self-start">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm max-h-[calc(100vh-7rem)] flex flex-col">
+            <div className="flex items-center justify-between px-5 pt-5 pb-4 shrink-0">
+              <span className="font-semibold text-[#0F172A] text-sm">Фильтры</span>
+              {activeCount > 0 && (
+                <button onClick={resetFilters} className="text-xs text-[#0369A1] hover:underline cursor-pointer">Сбросить</button>
+              )}
             </div>
-          </aside>
-        )}
+            <div className="overflow-y-auto px-5 pb-5 min-h-0 flex-1">
+              {FiltersPanel}
+            </div>
+          </div>
+        </aside>
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-5 bg-white rounded-xl border border-gray-200 px-4 py-3">
@@ -773,11 +778,11 @@ export default function CatalogClient({
                     style={{ border: 0, display: 'block' }}
                   />
                 </div>
-                {mapSchool && (
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    Показана: <span className="font-medium text-[#0F172A]">{mapSchool.name}</span>
-                  </p>
-                )}
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  {mapSchool
+                    ? <>Показана: <span className="font-medium text-[#0F172A]">{mapSchool.name}</span></>
+                    : 'Выберите школу из списка справа'}
+                </p>
               </div>
               <div className="w-full md:w-2/5 space-y-2 max-h-[560px] overflow-y-auto pr-1">
                 {filtered.map(school => (
