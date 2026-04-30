@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 100,
-    "generated": 13,
-    "lastRun": "2026-04-30T16:08:47.263Z"
+    "generated": 15,
+    "lastRun": "2026-04-30T19:15:12.175Z"
   },
   "topics": [
     {
