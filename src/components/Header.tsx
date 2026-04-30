@@ -104,7 +104,7 @@ export default function Header() {
               boxShadow: '0 2px 0 #E8552A, inset 0 1px 0 rgba(255,255,255,0.25)',
               flexShrink: 0,
             }}>P</div>
-            <span style={{
+            <span className="header-logo-text" style={{
               fontFamily: 'var(--font-unbounded, system-ui)',
               fontWeight: 700, fontSize: 20,
               letterSpacing: '-0.02em',
@@ -132,7 +132,7 @@ export default function Header() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B3D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20 10c0 7-8 13-8 13s-8-6-8-13a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>
             </svg>
-            {city}
+            <span className="header-city-label">{city}</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.5 }}>
               <path d="m6 9 6 6 6-6"/>
             </svg>
@@ -246,9 +246,13 @@ export default function Header() {
 
         <style>{`
           @media (max-width: 768px) {
-            .header-inner { padding: 0 16px !important; gap: 12px !important; }
+            .header-inner { padding: 0 16px !important; gap: 10px !important; }
             .header-inner form { display: none !important; }
             .header-inner nav { display: none !important; }
+            .header-logo-text { display: none !important; }
+          }
+          @media (max-width: 360px) {
+            .header-city-label { display: none !important; }
           }
         `}</style>
       </header>
