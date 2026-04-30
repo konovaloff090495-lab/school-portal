@@ -46,13 +46,23 @@ export default async function TypePage({ params }: Props) {
   const typeName = typeLabels[t]
   const list = getSchoolsByRegionAndType(r, t)
 
+  // Правильные русские названия для H1/title — без лишнего "школы" там, где тип самодостаточен
+  const pageTitleMap: Partial<Record<SchoolType, string>> = {
+    gimnazii:    'Гимназии',
+    eksternal:   'Школы-экстернаты',
+    'pri-vuzakh': 'Школы при вузах',
+  }
+  const pageTitle = pageTitleMap[t]
+    ? `${pageTitleMap[t]} — ${regionName}`
+    : `${typeName} школы — ${regionName}`
+
   return (
     <CatalogClient
       initialRegions={[r]}
       initialTypes={[t]}
       lockRegion
       lockType
-      title={`${typeName} школы — ${regionName}`}
+      title={pageTitle}
       subtitle={`${list.length} школ в каталоге`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },

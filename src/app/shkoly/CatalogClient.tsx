@@ -403,23 +403,35 @@ export default function CatalogClient({
     return filtered.find(s => s.id === mapSchoolId) ?? null
   }, [mapSchoolId, filtered])
 
+  // Центры регионов для fallback-карты (без поискового запроса)
+  const REGION_CENTERS: Record<string, { lon: number; lat: number; z: number }> = {
+    'moskva':             { lon: 37.6173, lat: 55.7558, z: 11 },
+    'moskovskaya-oblast': { lon: 37.8960, lat: 55.8040, z: 10 },
+    'novosibirsk':        { lon: 82.9357, lat: 55.0084, z: 12 },
+    'sankt-peterburg':    { lon: 30.3141, lat: 59.9386, z: 12 },
+    'ekaterinburg':       { lon: 60.6122, lat: 56.8519, z: 12 },
+    'nizhniy-novgorod':   { lon: 44.0020, lat: 56.3269, z: 12 },
+    'chelyabinsk':        { lon: 61.4291, lat: 55.1644, z: 12 },
+    'kazan':              { lon: 49.1221, lat: 55.7963, z: 12 },
+    'omsk':               { lon: 73.3686, lat: 54.9885, z: 12 },
+    'samara':             { lon: 50.1500, lat: 53.2001, z: 12 },
+  }
+
   const mapIframeSrc = useMemo(() => {
     // Школы с координатами из нашей базы
     const withCoords = filtered.filter(s => s.lat && s.lon)
 
     if (mapSchool) {
       if (mapSchool.lat && mapSchool.lon) {
-        // Точная точка — зум 16 по координатам
         const pt = `${mapSchool.lon},${mapSchool.lat},pm2rdm`
         return `https://yandex.ru/map-widget/v1/?ll=${mapSchool.lon},${mapSchool.lat}&z=16&pt=${pt}&lang=ru_RU`
       }
-      // Нет координат — fallback на поиск по адресу
+      // Нет координат — fallback на поиск по адресу конкретной школы
       return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${mapSchool.city}, ${mapSchool.address}`)}&z=16&lang=ru_RU`
     }
 
     if (withCoords.length > 0) {
       // Показываем все наши школы точками
-      // Вычисляем центр и зум по bounding box
       const lats = withCoords.map(s => s.lat!)
       const lons = withCoords.map(s => s.lon!)
       const centerLat = (Math.min(...lats) + Math.max(...lats)) / 2
@@ -427,13 +439,10 @@ export default function CatalogClient({
       const spanLat   = Math.max(...lats) - Math.min(...lats)
       const spanLon   = Math.max(...lons) - Math.min(...lons)
       const span      = Math.max(spanLat, spanLon)
-      // Примерный зум по разбросу точек
       const zoom = span < 0.02 ? 15 : span < 0.05 ? 14 : span < 0.1 ? 13 : span < 0.3 ? 12 : span < 1 ? 11 : 10
 
-      // Максимум 50 точек в URL (ограничение браузера)
       const MAX_PINS = 50
       const pins = withCoords.slice(0, MAX_PINS)
-      // Выбранная школа выделяется красным, остальные синим
       const pt = pins.map((s, i) => {
         const style = s.id === mapSchoolId ? 'pm2rdm' : 'pm2blm'
         return `${s.lon},${s.lat},${style}${i + 1}`
@@ -442,14 +451,35 @@ export default function CatalogClient({
       return `https://yandex.ru/map-widget/v1/?ll=${centerLon},${centerLat}&z=${zoom}&pt=${pt}&lang=ru_RU`
     }
 
-    // Нет координат — показываем город без поиска школ
+    // Нет координат — показываем центр региона/города БЕЗ text= (не вызывает поиск Яндекса)
     const region = initialRegions[0]
+    const center = region ? REGION_CENTERS[region] : null
+    if (center) {
+      return `https://yandex.ru/map-widget/v1/?ll=${center.lon},${center.lat}&z=${center.z}&lang=ru_RU`
+    }
+    // Последний fallback — поиск по названию города
     const cityName = initialCity ?? (region ? regionLabels[region] : 'Россия')
     return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(cityName)}&z=12&lang=ru_RU`
   }, [mapSchool, mapSchoolId, filtered, initialRegions, initialCity])
 
   const seoText = useMemo(() => {
     const n = filtered.length
+
+    // Правильные русские названия типов школ (без "школы" там, где тип уже содержит смысл)
+    const typeNames: Record<SchoolType, string> = {
+      gosudarstvennye: 'Государственные школы',
+      chastnie:        'Частные школы',
+      online:          'Онлайн-школы',
+      vechernie:       'Вечерние школы',
+      eksternal:       'Школы-экстернаты',
+      semejnye:        'Семейные школы',
+      domashnie:       'Домашние школы',
+      'pri-vuzakh':    'Школы при вузах',
+      profilnye:       'Профильные школы',
+      gimnazii:        'Гимназии',
+      korrektsionnye:  'Коррекционные школы',
+      kadetskie:       'Кадетские школы',
+    }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
       chastnie: 'предлагают малые классы, индивидуальный подход и расширенные образовательные программы',
@@ -468,7 +498,8 @@ export default function CatalogClient({
       const type = initialTypes[0]
       const region = initialRegions[0]
       const city = regionLabels[region]
-      return `${typeLabels[type]} школы ${city} — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа в ${city}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по округу, рейтингу или стоимости обучения для удобного выбора.`
+      const typeName = typeNames[type]
+      return `${typeName} ${city} — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа в ${city}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по округу, рейтингу или стоимости обучения для удобного выбора.`
     }
     if (seoCity) {
       return `Каталог школ ${seoCity} (Московская область) содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние и профильные. Для каждого учебного заведения указаны адрес, контактный телефон, описание образовательной программы и рейтинг родителей. Используйте фильтры по типу школы, рейтингу или стоимости обучения, чтобы найти подходящий вариант.`
