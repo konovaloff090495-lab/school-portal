@@ -7,6 +7,7 @@ import {
   schools, regionSlugs, regionLabels, typeSlugs, typeLabels,
   moscowDistrictSlugs, moscowDistrictLabels,
   moCitySlugs, moCityLabels,
+  featureMetas, FeatureSlug,
   RegionSlug, SchoolType,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
@@ -76,6 +77,7 @@ export interface CatalogClientProps {
   subtitle?: string
   seoCity?: string   // имя города в именительном падеже для SEO-текста
   breadcrumbs?: { label: string; href?: string }[]
+  featureFilter?: FeatureSlug
 }
 
 function toggle<T>(arr: T[], val: T): T[] {
@@ -226,6 +228,7 @@ export default function CatalogClient({
   subtitle,
   seoCity,
   breadcrumbs = [{ label: 'Все школы' }],
+  featureFilter,
 }: CatalogClientProps) {
   const [filters, setFilters] = useState<Filters>({
     regions: initialRegions,
@@ -362,7 +365,16 @@ export default function CatalogClient({
   }, [isMoContext, baseForMoCity])
 
   const filtered = useMemo(() => {
-    const list = applyBaseFilters('none')
+    let list = applyBaseFilters('none')
+    if (featureFilter) {
+      const meta = featureMetas.find(f => f.slug === featureFilter)
+      if (meta) {
+        list = list.filter(s => {
+          const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
+          return meta.keywords.some(kw => haystack.includes(kw.toLowerCase()))
+        })
+      }
+    }
     switch (filters.sort) {
       case 'rating': list.sort((a, b) => b.rating - a.rating); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
@@ -370,7 +382,7 @@ export default function CatalogClient({
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? 0) - (a.priceFrom ?? 0)); break
     }
     return list
-  }, [applyBaseFilters, filters.sort])
+  }, [applyBaseFilters, filters.sort, featureFilter])
 
   const resetableFilters: Filters = {
     regions: lockRegion ? initialRegions : [],
