@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YandexMetrika from "@/components/YandexMetrika";
 import ScrollToTop from "@/components/ScrollToTop";
+import GeoPrompt from "@/components/GeoPrompt";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 const unbounded = Unbounded({
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${unbounded.variable} ${manrope.variable} bg-[#F8FAFC] min-h-screen`}>
         <YandexMetrika />
         <Header />
+        <GeoPrompt />
         <main>{children}</main>
         <Footer />
         <ScrollToTop />

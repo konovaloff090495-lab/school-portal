@@ -34,6 +34,17 @@ export default function Header() {
     if (saved && regionSlugs.includes(saved)) setCity(regionLabels[saved])
   }, [])
 
+  // Слушаем обновление от GeoPrompt
+  useEffect(() => {
+    function onStorage(e: StorageEvent) {
+      if (e.key === STORAGE_KEY && e.newValue && regionSlugs.includes(e.newValue as RegionSlug)) {
+        setCity(regionLabels[e.newValue as RegionSlug])
+      }
+    }
+    window.addEventListener('storage', onStorage)
+    return () => window.removeEventListener('storage', onStorage)
+  }, [])
+
   // Close schools dropdown on outside click
   useEffect(() => {
     function handler(e: MouseEvent) {
