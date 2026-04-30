@@ -27,6 +27,8 @@ export interface School {
   priceFrom?: number
   priceTo?: number
   imageAlt: string
+  lat?: number
+  lon?: number
 }
 
 export const schools: School[] = [
@@ -54,6 +56,8 @@ export const schools: School[] = [
     rating: 4.8,
     reviewCount: 247,
     imageAlt: 'ГБОУ Школа № 179 Москва — фасад здания',
+    lat: 55.790336,
+    lon: 37.716297,
   },
   {
     id: 'school-57',
@@ -77,6 +81,8 @@ export const schools: School[] = [
     rating: 4.7,
     reviewCount: 189,
     imageAlt: 'ГБОУ Школа № 57 Москва лингвистическая',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'shkola-gimnazia-1543',
@@ -101,6 +107,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 312,
     imageAlt: 'ГБОУ Гимназия 1543 Москва гуманитарная',
+    lat: 55.594986,
+    lon: 37.600341,
   },
   {
     id: 'shkola-1502',
@@ -124,6 +132,8 @@ export const schools: School[] = [
     rating: 4.6,
     reviewCount: 143,
     imageAlt: 'Лицей 1502 при МЭИ Москва технический',
+    lat: 55.754893,
+    lon: 37.706466,
   },
   {
     id: 'shkola-2086',
@@ -147,6 +157,8 @@ export const schools: School[] = [
     rating: 4.4,
     reviewCount: 98,
     imageAlt: 'ГБОУ Школа 2086 Москва ЮВАО',
+    lat: 55.586880,
+    lon: 38.141881,
   },
 
   // ===== МОСКВА — ЧАСТНЫЕ =====
@@ -175,6 +187,8 @@ export const schools: School[] = [
     priceFrom: 45000,
     priceTo: 65000,
     imageAlt: 'Ломоносовская школа Москва частная',
+    lat: 55.743252,
+    lon: 37.651866,
   },
   {
     id: 'president-school',
@@ -201,6 +215,8 @@ export const schools: School[] = [
     priceFrom: 75000,
     priceTo: 120000,
     imageAlt: 'Частная школа Президент Москва пансион',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'zolotoe-sechenie',
@@ -227,6 +243,8 @@ export const schools: School[] = [
     priceFrom: 50000,
     priceTo: 70000,
     imageAlt: 'Школа Золотое сечение Москва ЮЗАО',
+    lat: 55.643805,
+    lon: 37.467117,
   },
   {
     id: 'abs-school',
@@ -253,6 +271,8 @@ export const schools: School[] = [
     priceFrom: 60000,
     priceTo: 90000,
     imageAlt: 'ABS Школа Москва британская программа',
+    lat: 55.802840,
+    lon: 37.392067,
   },
   {
     id: 'intellect-school',
@@ -278,6 +298,8 @@ export const schools: School[] = [
     priceFrom: 55000,
     priceTo: 75000,
     imageAlt: 'Школа Интеллект Москва точные науки',
+    lat: 55.621412,
+    lon: 37.507295,
   },
 
   // ===== МОСКВА — ОНЛАЙН =====
@@ -303,6 +325,8 @@ export const schools: School[] = [
     priceFrom: 3900,
     priceTo: 12000,
     imageAlt: 'Онлайн школа Фоксфорд обучение дистанционно',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'skysmart-school',
@@ -325,6 +349,8 @@ export const schools: School[] = [
     priceFrom: 1200,
     priceTo: 3500,
     imageAlt: 'Онлайн школа Skysmart уроки дистанционно',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'synergy-school-online',
@@ -348,6 +374,8 @@ export const schools: School[] = [
     priceFrom: 4500,
     priceTo: 15000,
     imageAlt: 'Онлайн школа Синергия государственный аттестат',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'interneturok-school',
@@ -370,6 +398,8 @@ export const schools: School[] = [
     priceFrom: 0,
     priceTo: 1500,
     imageAlt: 'Интернет урок онлайн бесплатные видеоуроки',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'uchi-ru-school',
@@ -392,6 +422,8 @@ export const schools: School[] = [
     priceFrom: 0,
     priceTo: 800,
     imageAlt: 'Учи.ру образовательная платформа для школьников',
+    lat: 55.625578,
+    lon: 37.606392,
   },
 
   // ===== МОСКВА — ВЕЧЕРНИЕ =====
@@ -417,6 +449,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 67,
     imageAlt: 'Вечерняя школа 156 Москва для взрослых',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'co-1865',
@@ -440,6 +474,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 43,
     imageAlt: 'Центр образования 1865 вечернее отделение Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'vechernyaya-baumanka',
@@ -463,6 +499,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 55,
     imageAlt: 'Вечерняя школа Бауманский район Москва',
+    lat: 55.772544,
+    lon: 37.675465,
   },
   {
     id: 'vechernyaya-online-attestat',
@@ -489,6 +527,8 @@ export const schools: School[] = [
     priceFrom: 8000,
     priceTo: 18000,
     imageAlt: 'Вечерняя онлайн школа Аттестат Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
 
   // ===== МОСКВА — ЭКСТЕРНАТ =====
@@ -514,6 +554,8 @@ export const schools: School[] = [
     priceFrom: 3000,
     priceTo: 9000,
     imageAlt: 'Экстернат Фоксфорд ускоренное обучение аттестат',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'eksternal-rf',
@@ -540,6 +582,8 @@ export const schools: School[] = [
     priceFrom: 15000,
     priceTo: 35000,
     imageAlt: 'Экстернат РФ Москва ускоренная программа',
+    lat: 55.752522,
+    lon: 37.581915,
   },
   {
     id: 'internet-shkola-extren',
@@ -561,6 +605,8 @@ export const schools: School[] = [
     priceFrom: 5000,
     priceTo: 12000,
     imageAlt: 'Интернет школа Экстрен онлайн экстернат Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'smartia-extren',
@@ -587,6 +633,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 45000,
     imageAlt: 'Центр экстерната Smartia Москва подготовка ОГЭ ЕГЭ',
+    lat: 55.641121,
+    lon: 37.525360,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ГОСУДАРСТВЕННЫЕ =====
@@ -611,6 +659,8 @@ export const schools: School[] = [
     rating: 4.6,
     reviewCount: 178,
     imageAlt: 'Гимназия 1 Химки Московская область',
+    lat: 55.891729,
+    lon: 37.439699,
   },
   {
     id: 'mo-litsei-podolsk',
@@ -632,6 +682,8 @@ export const schools: School[] = [
     rating: 4.5,
     reviewCount: 134,
     imageAlt: 'Лицей Подольск Московская область',
+    lat: 55.423548,
+    lon: 37.521399,
   },
   {
     id: 'mo-shkola-odintsovo',
@@ -653,6 +705,8 @@ export const schools: School[] = [
     rating: 4.3,
     reviewCount: 87,
     imageAlt: 'Школа 14 Одинцово Московская область',
+    lat: 55.685421,
+    lon: 37.256582,
   },
   {
     id: 'mo-shkola-mytishchi',
@@ -674,6 +728,8 @@ export const schools: School[] = [
     rating: 4.4,
     reviewCount: 112,
     imageAlt: 'Гимназия 16 Мытищи Московская область',
+    lat: 55.917324,
+    lon: 37.724638,
   },
   {
     id: 'mo-shkola-balashiha',
@@ -695,6 +751,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 65,
     imageAlt: 'СОШ 5 Балашиха Московская область новая школа',
+    lat: 55.814786,
+    lon: 37.954157,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ЧАСТНЫЕ =====
@@ -720,6 +778,8 @@ export const schools: School[] = [
     priceFrom: 35000,
     priceTo: 50000,
     imageAlt: 'Частная школа Эйдос Реутов Московская область',
+    lat: 55.762245,
+    lon: 37.856555,
   },
   {
     id: 'mo-chast-skolkovo-school',
@@ -743,6 +803,8 @@ export const schools: School[] = [
     priceFrom: 65000,
     priceTo: 95000,
     imageAlt: 'Частная школа Сколково Одинцово STEM',
+    lat: 55.678223,
+    lon: 37.266810,
   },
   {
     id: 'mo-chast-rodnoy-kray',
@@ -766,6 +828,8 @@ export const schools: School[] = [
     priceFrom: 40000,
     priceTo: 58000,
     imageAlt: 'Частная школа Родной край Королёв экологическая',
+    lat: 55.913004,
+    lon: 37.864904,
   },
   {
     id: 'mo-chast-leader-dolgoprudny',
@@ -789,6 +853,8 @@ export const schools: School[] = [
     priceFrom: 45000,
     priceTo: 65000,
     imageAlt: 'Частная школа Лидер Долгопрудный рядом с МФТИ',
+    lat: 55.934149,
+    lon: 37.514242,
   },
   {
     id: 'mo-chast-ruzha',
@@ -812,6 +878,8 @@ export const schools: School[] = [
     priceFrom: 80000,
     priceTo: 130000,
     imageAlt: 'Частная школа-пансион Солнечная Руза Подмосковье',
+    lat: 58.662705,
+    lon: 49.914542,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ОНЛАЙН =====
@@ -834,6 +902,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 2341,
     imageAlt: 'Онлайн школа Интернет-класс Московская область',
+    lat: 55.820471,
+    lon: 37.319694,
   },
   {
     id: 'mo-online-podolsk-school',
@@ -856,6 +926,8 @@ export const schools: School[] = [
     priceFrom: 2000,
     priceTo: 5000,
     imageAlt: 'Онлайн репетитор Подольск Московская область ОГЭ ЕГЭ',
+    lat: 55.430884,
+    lon: 37.545306,
   },
   {
     id: 'mo-online-himki-digital',
@@ -878,6 +950,8 @@ export const schools: School[] = [
     priceFrom: 3500,
     priceTo: 7000,
     imageAlt: 'Digital School Химки онлайн программирование',
+    lat: 55.891729,
+    lon: 37.439699,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ВЕЧЕРНИЕ =====
@@ -901,6 +975,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 34,
     imageAlt: 'Вечерняя школа Химки Московская область',
+    lat: 55.884132,
+    lon: 37.453332,
   },
   {
     id: 'mo-vechernyaya-podolsk',
@@ -922,6 +998,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 28,
     imageAlt: 'Вечерняя школа Подольск Московская область бесплатно',
+    lat: 55.351275,
+    lon: 37.516586,
   },
   {
     id: 'mo-vechernyaya-mytishchi',
@@ -943,6 +1021,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 41,
     imageAlt: 'Вечерняя школа Мытищи Московская область',
+    lat: 55.914267,
+    lon: 37.720065,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ЭКСТЕРНАТ =====
@@ -968,6 +1048,8 @@ export const schools: School[] = [
     priceFrom: 12000,
     priceTo: 28000,
     imageAlt: 'Центр экстерната Химки Московская область',
+    lat: 55.893997,
+    lon: 37.438493,
   },
   {
     id: 'mo-eksternal-krasnogorsk',
@@ -991,6 +1073,8 @@ export const schools: School[] = [
     priceFrom: 10000,
     priceTo: 25000,
     imageAlt: 'Школа экстерната Красногорск Московская область',
+    lat: 55.829424,
+    lon: 37.297399,
   },
   {
     id: 'mo-eksternal-odintsovo',
@@ -1014,6 +1098,8 @@ export const schools: School[] = [
     priceFrom: 14000,
     priceTo: 30000,
     imageAlt: 'Экстернат центр Одинцово Московская область',
+    lat: 55.682451,
+    lon: 37.266968,
   },
 
   // ===== МОСКВА — ГОСУДАРСТВЕННЫЕ (доп.) =====
@@ -1039,6 +1125,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 287,
     imageAlt: 'Лицей 1580 при МГТУ Бауманка Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'shkola-gimnazia-45',
@@ -1062,6 +1150,8 @@ export const schools: School[] = [
     rating: 4.8,
     reviewCount: 392,
     imageAlt: 'Гимназия 45 Мильграма Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'shkola-litsei-hse',
@@ -1086,6 +1176,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 476,
     imageAlt: 'Лицей ВШЭ Москва проектное обучение',
+    lat: 55.765879,
+    lon: 37.639154,
   },
   {
     id: 'shkola-444',
@@ -1109,6 +1201,8 @@ export const schools: School[] = [
     rating: 4.6,
     reviewCount: 154,
     imageAlt: 'ГБОУ Школа 444 Москва математика информатика',
+    lat: 55.821571,
+    lon: 37.624959,
   },
   {
     id: 'shkola-letovo',
@@ -1132,6 +1226,8 @@ export const schools: School[] = [
     rating: 4.3,
     reviewCount: 89,
     imageAlt: 'Школа Новые Черёмушки Москва ЮЗАО',
+    lat: 55.665837,
+    lon: 37.562228,
   },
 
   // ===== МОСКВА — ЧАСТНЫЕ (доп.) =====
@@ -1160,6 +1256,8 @@ export const schools: School[] = [
     priceFrom: 70000,
     priceTo: 110000,
     imageAlt: 'Европейская гимназия Москва IB Diploma',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'letovo-school',
@@ -1186,6 +1284,8 @@ export const schools: School[] = [
     priceFrom: 100000,
     priceTo: 170000,
     imageAlt: 'Школа Летово Москва IB пансион топ',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'pokrovskiy-kvartal',
@@ -1211,6 +1311,8 @@ export const schools: School[] = [
     priceFrom: 60000,
     priceTo: 85000,
     imageAlt: 'Школа Покровский квартал Москва центр',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'internat-english-first',
@@ -1236,6 +1338,8 @@ export const schools: School[] = [
     priceFrom: 65000,
     priceTo: 95000,
     imageAlt: 'English First School Москва билингвальная',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'shkola-retra-msk',
@@ -1261,6 +1365,8 @@ export const schools: School[] = [
     priceFrom: 42000,
     priceTo: 58000,
     imageAlt: 'Школа Ретра Москва демократичная частная',
+    lat: 55.682993,
+    lon: 37.568114,
   },
 
   // ===== МОСКВА — ОНЛАЙН (доп.) =====
@@ -1285,6 +1391,8 @@ export const schools: School[] = [
     priceFrom: 2500,
     priceTo: 5000,
     imageAlt: 'Онлайн школа Алгоритмика программирование дети',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'codabra-online',
@@ -1307,6 +1415,8 @@ export const schools: School[] = [
     priceFrom: 3000,
     priceTo: 5500,
     imageAlt: 'Онлайн школа Кодабра программирование игры дети',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'infoeurok-platform',
@@ -1330,6 +1440,8 @@ export const schools: School[] = [
     priceFrom: 2900,
     priceTo: 8000,
     imageAlt: 'Инфоурок онлайн школа аттестат государственный',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'yandex-uchebnik',
@@ -1352,6 +1464,8 @@ export const schools: School[] = [
     priceFrom: 0,
     priceTo: 600,
     imageAlt: 'Яндекс Учебник онлайн школа адаптивные задания',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'rostok-online',
@@ -1374,6 +1488,8 @@ export const schools: School[] = [
     priceFrom: 7000,
     priceTo: 16000,
     imageAlt: 'Онлайн гимназия Росток семейное обучение',
+    lat: 55.625578,
+    lon: 37.606392,
   },
 
   // ===== МОСКВА — ВЕЧЕРНИЕ (доп.) =====
@@ -1399,6 +1515,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 48,
     imageAlt: 'Вечерняя школа 72 Москва Тульская',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'vechernyaya-novye-vozmozh',
@@ -1424,6 +1542,8 @@ export const schools: School[] = [
     priceFrom: 6000,
     priceTo: 14000,
     imageAlt: 'Вечерняя школа Новые возможности Москва взрослые',
+    lat: 55.745072,
+    lon: 37.795949,
   },
   {
     id: 'vechernyaya-zao-msk',
@@ -1447,6 +1567,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 37,
     imageAlt: 'Вечерняя школа Кунцево Москва ЗАО',
+    lat: 55.733954,
+    lon: 37.403643,
   },
 
   // ===== МОСКВА — ЭКСТЕРНАТ (доп.) =====
@@ -1474,6 +1596,8 @@ export const schools: School[] = [
     priceFrom: 12000,
     priceTo: 28000,
     imageAlt: 'Центр экстерната Веда Москва аттестат',
+    lat: 55.608338,
+    lon: 37.206855,
   },
   {
     id: 'diplom-school-msk',
@@ -1499,6 +1623,8 @@ export const schools: School[] = [
     priceFrom: 18000,
     priceTo: 40000,
     imageAlt: 'Школа экстерната Диплом Москва ЕГЭ',
+    lat: 55.766045,
+    lon: 37.653577,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ГОСУДАРСТВЕННЫЕ (доп.) =====
@@ -1523,6 +1649,8 @@ export const schools: School[] = [
     rating: 4.5,
     reviewCount: 102,
     imageAlt: 'Гимназия Железнодорожный Московская область',
+    lat: 55.751229,
+    lon: 38.026782,
   },
   {
     id: 'mo-litsei-shchelkovo',
@@ -1544,6 +1672,8 @@ export const schools: School[] = [
     rating: 4.4,
     reviewCount: 78,
     imageAlt: 'Лицей Щёлково химия биология Московская область',
+    lat: 55.920658,
+    lon: 37.970799,
   },
   {
     id: 'mo-shkola-lyubertsy',
@@ -1565,6 +1695,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 64,
     imageAlt: 'СОШ 4 Люберцы Московская область спорт',
+    lat: 55.705461,
+    lon: 37.897496,
   },
   {
     id: 'mo-gimn-domodedovo',
@@ -1586,6 +1718,8 @@ export const schools: School[] = [
     rating: 4.5,
     reviewCount: 91,
     imageAlt: 'Гимназия Домодедово три языка Московская область',
+    lat: 55.424347,
+    lon: 37.779803,
   },
   {
     id: 'mo-shkola-serpuhov',
@@ -1607,6 +1741,8 @@ export const schools: School[] = [
     rating: 4.4,
     reviewCount: 83,
     imageAlt: 'СОШ 2 Серпухов Московская область ЕГЭ',
+    lat: 54.908432,
+    lon: 37.423183,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ЧАСТНЫЕ (доп.) =====
@@ -1632,6 +1768,8 @@ export const schools: School[] = [
     priceFrom: 38000,
     priceTo: 52000,
     imageAlt: 'Частная школа Алые паруса Раменское МО',
+    lat: 55.567448,
+    lon: 38.236241,
   },
   {
     id: 'mo-chast-kolomna',
@@ -1655,6 +1793,8 @@ export const schools: School[] = [
     priceFrom: 30000,
     priceTo: 45000,
     imageAlt: 'Частная школа Формула Коломна математика вузы',
+    lat: 55.095757,
+    lon: 38.765382,
   },
   {
     id: 'mo-chast-dmitrov',
@@ -1678,6 +1818,8 @@ export const schools: School[] = [
     priceFrom: 35000,
     priceTo: 48000,
     imageAlt: 'Частная школа Академия Дмитров полный день',
+    lat: 56.356097,
+    lon: 37.524956,
   },
   {
     id: 'mo-chast-klin',
@@ -1701,6 +1843,8 @@ export const schools: School[] = [
     priceFrom: 32000,
     priceTo: 44000,
     imageAlt: 'Частная школа Успех Клин Московская область',
+    lat: 56.338251,
+    lon: 36.739427,
   },
   {
     id: 'mo-chast-noginsk',
@@ -1724,6 +1868,8 @@ export const schools: School[] = [
     priceFrom: 28000,
     priceTo: 40000,
     imageAlt: 'Частная школа Знание Ногинск Московская область',
+    lat: 55.890226,
+    lon: 38.449402,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ОНЛАЙН (доп.) =====
@@ -1748,6 +1894,8 @@ export const schools: School[] = [
     priceFrom: 1800,
     priceTo: 4500,
     imageAlt: 'Онлайн репетитор Серпухов Московская область ОГЭ ЕГЭ',
+    lat: 54.915525,
+    lon: 37.419553,
   },
   {
     id: 'mo-online-kolomna',
@@ -1770,6 +1918,8 @@ export const schools: School[] = [
     priceFrom: 2000,
     priceTo: 4000,
     imageAlt: 'Онлайн школа Кругозор Коломна дети',
+    lat: 55.093874,
+    lon: 38.767012,
   },
   {
     id: 'mo-online-balashiha-prog',
@@ -1792,6 +1942,8 @@ export const schools: School[] = [
     priceFrom: 3200,
     priceTo: 6000,
     imageAlt: 'IT школа онлайн Балашиха программирование Python',
+    lat: 55.799766,
+    lon: 37.937371,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ВЕЧЕРНИЕ (доп.) =====
@@ -1815,6 +1967,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 29,
     imageAlt: 'Вечерняя школа Серпухов Московская область',
+    lat: 54.916184,
+    lon: 37.420955,
   },
   {
     id: 'mo-vechernyaya-korolev',
@@ -1836,6 +1990,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 36,
     imageAlt: 'Вечерняя школа Королёв Московская область',
+    lat: 55.951384,
+    lon: 37.833280,
   },
   {
     id: 'mo-vechernyaya-reutov',
@@ -1857,6 +2013,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 22,
     imageAlt: 'Вечерняя школа Реутов Московская область',
+    lat: 55.762245,
+    lon: 37.856555,
   },
   {
     id: 'mo-vechernyaya-ramenskoe',
@@ -1878,6 +2036,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 31,
     imageAlt: 'Вечерняя школа Раменское Московская область',
+    lat: 55.570636,
+    lon: 38.246257,
   },
   {
     id: 'mo-vechernyaya-domodedovo',
@@ -1899,6 +2059,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 18,
     imageAlt: 'Вечерняя школа Домодедово Московская область аэропорт',
+    lat: 55.408712,
+    lon: 37.909472,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ЭКСТЕРНАТ (доп.) =====
@@ -1924,6 +2086,8 @@ export const schools: School[] = [
     priceFrom: 11000,
     priceTo: 24000,
     imageAlt: 'Центр экстерната Люберцы Московская область',
+    lat: 55.668278,
+    lon: 37.884896,
   },
   {
     id: 'mo-eksternal-balashiha',
@@ -1947,6 +2111,8 @@ export const schools: School[] = [
     priceFrom: 10000,
     priceTo: 22000,
     imageAlt: 'Экстернат Восток МО Балашиха аттестат',
+    lat: 55.789725,
+    lon: 37.894193,
   },
   {
     id: 'mo-eksternal-noginsk',
@@ -1970,6 +2136,8 @@ export const schools: School[] = [
     priceFrom: 9000,
     priceTo: 20000,
     imageAlt: 'Экстернат Ногинск Московская область дистанционно',
+    lat: 55.867838,
+    lon: 38.439628,
   },
   {
     id: 'mo-eksternal-korolev',
@@ -1993,6 +2161,8 @@ export const schools: School[] = [
     priceFrom: 16000,
     priceTo: 32000,
     imageAlt: 'Экстернат Орбита Королёв физика математика МФТИ',
+    lat: 55.922705,
+    lon: 37.815783,
   },
   {
     id: 'mo-eksternal-ramenskoe',
@@ -2016,6 +2186,8 @@ export const schools: School[] = [
     priceFrom: 10000,
     priceTo: 22000,
     imageAlt: 'Экстернат Прогресс Раменское Московская область',
+    lat: 55.553967,
+    lon: 38.272489,
   },
 
   // ===== НОВОСИБИРСК — ГОСУДАРСТВЕННЫЕ =====
@@ -2041,6 +2213,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 312,
     imageAlt: 'Лицей 22 Надежда Сибири Новосибирск',
+    lat: 55.043641,
+    lon: 82.975778,
   },
   {
     id: 'nsk-gimnazia-1',
@@ -2063,6 +2237,8 @@ export const schools: School[] = [
     rating: 4.7,
     reviewCount: 274,
     imageAlt: 'Гимназия 1 Новосибирск гуманитарная',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'nsk-licey-9',
@@ -2085,6 +2261,8 @@ export const schools: School[] = [
     rating: 4.6,
     reviewCount: 198,
     imageAlt: 'Лицей 9 Новосибирск академический',
+    lat: 54.997705,
+    lon: 82.990713,
   },
   {
     id: 'nsk-shkola-54',
@@ -2107,6 +2285,8 @@ export const schools: School[] = [
     rating: 4.5,
     reviewCount: 156,
     imageAlt: 'Школа 54 Новосибирск иностранные языки',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'nsk-shkola-informatika',
@@ -2128,6 +2308,8 @@ export const schools: School[] = [
     rating: 4.4,
     reviewCount: 121,
     imageAlt: 'Школа 112 Новосибирск ИТ-профиль',
+    lat: 54.987990,
+    lon: 82.835048,
   },
 
   // ===== НОВОСИБИРСК — ЧАСТНЫЕ =====
@@ -2155,6 +2337,8 @@ export const schools: School[] = [
     priceFrom: 28000,
     priceTo: 38000,
     imageAlt: 'Частная школа Эрудит Новосибирск',
+    lat: 55.038400,
+    lon: 82.896717,
   },
   {
     id: 'nsk-chast-lomonosov',
@@ -2178,6 +2362,8 @@ export const schools: School[] = [
     priceFrom: 32000,
     priceTo: 45000,
     imageAlt: 'Школа Ломоносова Новосибирск частная',
+    lat: 55.029307,
+    lon: 82.922810,
   },
   {
     id: 'nsk-chast-akademiya',
@@ -2202,6 +2388,8 @@ export const schools: School[] = [
     priceFrom: 40000,
     priceTo: 60000,
     imageAlt: 'Частная школа Академия Новосибирск Академгородок',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'nsk-chast-umka',
@@ -2225,6 +2413,8 @@ export const schools: School[] = [
     priceFrom: 22000,
     priceTo: 30000,
     imageAlt: 'Частная школа Умка Новосибирск',
+    lat: 55.080072,
+    lon: 82.962475,
   },
 
   // ===== НОВОСИБИРСК — ОНЛАЙН =====
@@ -2249,6 +2439,8 @@ export const schools: School[] = [
     priceFrom: 7500,
     priceTo: 12000,
     imageAlt: 'Сибирская онлайн-школа Новосибирск',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'nsk-online-znanie',
@@ -2270,6 +2462,8 @@ export const schools: School[] = [
     priceFrom: 4500,
     priceTo: 9000,
     imageAlt: 'Онлайн-школа Знание Новосибирск ОГЭ ЕГЭ',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'nsk-online-progress',
@@ -2291,6 +2485,8 @@ export const schools: School[] = [
     priceFrom: 6000,
     priceTo: 10500,
     imageAlt: 'Онлайн-школа Прогресс НСК Новосибирск',
+    lat: 55.028831,
+    lon: 82.922689,
   },
 
   // ===== НОВОСИБИРСК — ВЕЧЕРНИЕ =====
@@ -2315,6 +2511,8 @@ export const schools: School[] = [
     rating: 4.1,
     reviewCount: 88,
     imageAlt: 'Вечерняя школа 1 Новосибирск для взрослых',
+    lat: 55.016195,
+    lon: 82.927693,
   },
   {
     id: 'nsk-vech-3',
@@ -2336,6 +2534,8 @@ export const schools: School[] = [
     rating: 4.0,
     reviewCount: 64,
     imageAlt: 'Вечерняя школа 3 Новосибирск Октябрьский район',
+    lat: 54.935739,
+    lon: 82.917194,
   },
   {
     id: 'nsk-vech-centr',
@@ -2357,6 +2557,8 @@ export const schools: School[] = [
     rating: 4.2,
     reviewCount: 75,
     imageAlt: 'Центр образования взрослых Перспектива Новосибирск',
+    lat: 55.040339,
+    lon: 82.909790,
   },
 
   // ===== НОВОСИБИРСК — ЭКСТЕРНАТ =====
@@ -2383,6 +2585,8 @@ export const schools: School[] = [
     priceFrom: 12000,
     priceTo: 20000,
     imageAlt: 'Школа экстернат 21 век Новосибирск',
+    lat: 55.025953,
+    lon: 82.907476,
   },
   {
     id: 'nsk-ekst-sibirskiy',
@@ -2405,6 +2609,8 @@ export const schools: School[] = [
     priceFrom: 9500,
     priceTo: 16000,
     imageAlt: 'Сибирский центр экстерната Новосибирск',
+    lat: 55.012512,
+    lon: 82.941587,
   },
   {
     id: 'nsk-ekst-oge-ege',
@@ -2428,6 +2634,8 @@ export const schools: School[] = [
     priceFrom: 14000,
     priceTo: 22000,
     imageAlt: 'Экстернат-центр ОГЭ ЕГЭ Новосибирск',
+    lat: 55.028831,
+    lon: 82.922689,
   },
 
   // ===== МОСКВА — СЕМЕЙНЫЕ =====
@@ -2454,6 +2662,8 @@ export const schools: School[] = [
     priceFrom: 28000,
     priceTo: 35000,
     imageAlt: 'Семейная школа Росток Москва',
+    lat: 55.733758,
+    lon: 37.425252,
   },
   {
     id: 'semejnye-moskva-2',
@@ -2478,6 +2688,8 @@ export const schools: School[] = [
     priceFrom: 32000,
     priceTo: 42000,
     imageAlt: 'Центр семейного образования Академия Москва',
+    lat: 55.682993,
+    lon: 37.568114,
   },
   {
     id: 'semejnye-moskva-3',
@@ -2502,6 +2714,8 @@ export const schools: School[] = [
     priceFrom: 25000,
     priceTo: 32000,
     imageAlt: 'Семейная школа Первый шаг Москва',
+    lat: 55.808999,
+    lon: 37.460100,
   },
   {
     id: 'semejnye-moskva-4',
@@ -2526,6 +2740,8 @@ export const schools: School[] = [
     priceFrom: 35000,
     priceTo: 45000,
     imageAlt: 'Семейный образовательный центр Мир Москва',
+    lat: 55.718040,
+    lon: 37.625110,
   },
   {
     id: 'semejnye-moskva-5',
@@ -2550,6 +2766,8 @@ export const schools: School[] = [
     priceFrom: 30000,
     priceTo: 40000,
     imageAlt: 'Семейная школа Эрудит Москва',
+    lat: 55.430935,
+    lon: 37.266623,
   },
   {
     id: 'semejnye-moskva-6',
@@ -2574,6 +2792,8 @@ export const schools: School[] = [
     priceFrom: 27000,
     priceTo: 36000,
     imageAlt: 'Центр семейного образования Лига Москва',
+    lat: 55.804413,
+    lon: 37.759812,
   },
   {
     id: 'semejnye-moskva-7',
@@ -2598,6 +2818,8 @@ export const schools: School[] = [
     priceFrom: 26000,
     priceTo: 34000,
     imageAlt: 'Семейная школа Грамотей Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'semejnye-moskva-8',
@@ -2622,6 +2844,8 @@ export const schools: School[] = [
     priceFrom: 38000,
     priceTo: 50000,
     imageAlt: 'Семейный лицей Интеллект Москва',
+    lat: 55.803443,
+    lon: 37.465050,
   },
   {
     id: 'semejnye-moskva-9',
@@ -2646,6 +2870,8 @@ export const schools: School[] = [
     priceFrom: 29000,
     priceTo: 38000,
     imageAlt: 'Семейная школа Содружество Москва',
+    lat: 55.696170,
+    lon: 37.733602,
   },
   {
     id: 'semejnye-moskva-10',
@@ -2670,6 +2896,8 @@ export const schools: School[] = [
     priceFrom: 55000,
     priceTo: 75000,
     imageAlt: 'Центр семейного образования Горизонт Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — СЕМЕЙНЫЕ =====
@@ -2693,6 +2921,8 @@ export const schools: School[] = [
     priceFrom: 22000,
     priceTo: 28000,
     imageAlt: 'Семейная школа Класс Химки',
+    lat: 55.886360,
+    lon: 37.406809,
   },
   {
     id: 'semejnye-mo-2',
@@ -2714,6 +2944,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 26000,
     imageAlt: 'Центр семейного обучения Планета Подольск',
+    lat: 55.430171,
+    lon: 37.542958,
   },
   {
     id: 'semejnye-mo-3',
@@ -2735,6 +2967,8 @@ export const schools: School[] = [
     priceFrom: 23000,
     priceTo: 30000,
     imageAlt: 'Семейная школа Знание Одинцово',
+    lat: 55.685421,
+    lon: 37.256582,
   },
   {
     id: 'semejnye-mo-4',
@@ -2756,6 +2990,8 @@ export const schools: School[] = [
     priceFrom: 21000,
     priceTo: 27000,
     imageAlt: 'Семейная школа Радуга Мытищи',
+    lat: 55.908055,
+    lon: 37.740683,
   },
   {
     id: 'semejnye-mo-5',
@@ -2777,6 +3013,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 26000,
     imageAlt: 'Центр семейного образования Ориентир Балашиха',
+    lat: 55.814786,
+    lon: 37.954157,
   },
   {
     id: 'semejnye-mo-6',
@@ -2798,6 +3036,8 @@ export const schools: School[] = [
     priceFrom: 22000,
     priceTo: 28000,
     imageAlt: 'Семейная школа Ключ Красногорск',
+    lat: 55.828699,
+    lon: 37.307891,
   },
   {
     id: 'semejnye-mo-7',
@@ -2819,6 +3059,8 @@ export const schools: School[] = [
     priceFrom: 21000,
     priceTo: 27000,
     imageAlt: 'Семейная школа Парус Королёв',
+    lat: 55.913004,
+    lon: 37.864904,
   },
   {
     id: 'semejnye-mo-8',
@@ -2840,6 +3082,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 26000,
     imageAlt: 'Центр семейного обучения Успех Люберцы',
+    lat: 55.674354,
+    lon: 37.881627,
   },
   {
     id: 'semejnye-mo-9',
@@ -2861,6 +3105,8 @@ export const schools: School[] = [
     priceFrom: 19000,
     priceTo: 25000,
     imageAlt: 'Семейная школа Ступени Домодедово',
+    lat: 55.444855,
+    lon: 37.734155,
   },
   {
     id: 'semejnye-mo-10',
@@ -2882,6 +3128,8 @@ export const schools: School[] = [
     priceFrom: 22000,
     priceTo: 30000,
     imageAlt: 'Семейная школа Открытие Реутов',
+    lat: 55.762245,
+    lon: 37.856555,
   },
 
   // ===== НОВОСИБИРСК — СЕМЕЙНЫЕ =====
@@ -2905,6 +3153,8 @@ export const schools: School[] = [
     priceFrom: 18000,
     priceTo: 24000,
     imageAlt: 'Семейная школа Сибиряк Новосибирск',
+    lat: 54.992946,
+    lon: 82.879013,
   },
   {
     id: 'semejnye-nsk-2',
@@ -2926,6 +3176,8 @@ export const schools: School[] = [
     priceFrom: 22000,
     priceTo: 30000,
     imageAlt: 'Центр семейного образования Перспектива Новосибирск',
+    lat: 55.016426,
+    lon: 82.923506,
   },
   {
     id: 'semejnye-nsk-3',
@@ -2947,6 +3199,8 @@ export const schools: School[] = [
     priceFrom: 24000,
     priceTo: 32000,
     imageAlt: 'Семейная школа Академгородка Новосибирск',
+    lat: 54.851188,
+    lon: 83.091785,
   },
   {
     id: 'semejnye-nsk-4',
@@ -2968,6 +3222,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 27000,
     imageAlt: 'Семейная школа Навигатор Новосибирск',
+    lat: 55.029307,
+    lon: 82.922810,
   },
   {
     id: 'semejnye-nsk-5',
@@ -2989,6 +3245,8 @@ export const schools: School[] = [
     priceFrom: 19000,
     priceTo: 25000,
     imageAlt: 'Центр семейного обучения Олимп Новосибирск',
+    lat: 55.080072,
+    lon: 82.962475,
   },
   {
     id: 'semejnye-nsk-6',
@@ -3010,6 +3268,8 @@ export const schools: School[] = [
     priceFrom: 17000,
     priceTo: 22000,
     imageAlt: 'Семейная школа Берёзка Новосибирск',
+    lat: 55.887705,
+    lon: 76.229936,
   },
   {
     id: 'semejnye-nsk-7',
@@ -3031,6 +3291,8 @@ export const schools: School[] = [
     priceFrom: 19000,
     priceTo: 25000,
     imageAlt: 'Семейная школа Мастер Новосибирск',
+    lat: 55.047046,
+    lon: 81.934407,
   },
   {
     id: 'semejnye-nsk-8',
@@ -3052,6 +3314,8 @@ export const schools: School[] = [
     priceFrom: 21000,
     priceTo: 28000,
     imageAlt: 'Центр семейного образования Прогресс Новосибирск',
+    lat: 55.028831,
+    lon: 82.922689,
   },
   {
     id: 'semejnye-nsk-9',
@@ -3073,6 +3337,8 @@ export const schools: School[] = [
     priceFrom: 17000,
     priceTo: 23000,
     imageAlt: 'Семейная школа Ровесник Новосибирск',
+    lat: 55.449149,
+    lon: 78.409180,
   },
   {
     id: 'semejnye-nsk-10',
@@ -3094,6 +3360,8 @@ export const schools: School[] = [
     priceFrom: 16000,
     priceTo: 20000,
     imageAlt: 'Семейная школа Знайка Новосибирск',
+    lat: 55.043872,
+    lon: 82.937409,
   },
 
   // ===== МОСКВА — ДОМАШНИЕ =====
@@ -3120,6 +3388,8 @@ export const schools: School[] = [
     priceFrom: 8000,
     priceTo: 18000,
     imageAlt: 'Школа домашнего образования Дом знаний Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-2',
@@ -3144,6 +3414,8 @@ export const schools: School[] = [
     priceFrom: 12000,
     priceTo: 22000,
     imageAlt: 'Центр домашнего обучения Кенгуру Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-3',
@@ -3168,6 +3440,8 @@ export const schools: School[] = [
     priceFrom: 10000,
     priceTo: 25000,
     imageAlt: 'Домашняя школа Умники и умницы Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-4',
@@ -3192,6 +3466,8 @@ export const schools: School[] = [
     priceFrom: 9000,
     priceTo: 16000,
     imageAlt: 'Центр домашнего образования Гений Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-5',
@@ -3216,6 +3492,8 @@ export const schools: School[] = [
     priceFrom: 15000,
     priceTo: 30000,
     imageAlt: 'Домашняя школа Вундеркинд Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-6',
@@ -3240,6 +3518,8 @@ export const schools: School[] = [
     priceFrom: 5000,
     priceTo: 10000,
     imageAlt: 'Центр дистанционного домашнего обучения АВС Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-7',
@@ -3264,6 +3544,8 @@ export const schools: School[] = [
     priceFrom: 14000,
     priceTo: 28000,
     imageAlt: 'Домашняя школа Формула знаний Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-8',
@@ -3288,6 +3570,8 @@ export const schools: School[] = [
     priceFrom: 18000,
     priceTo: 28000,
     imageAlt: 'Школа домашнего образования Ступени Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-9',
@@ -3312,6 +3596,8 @@ export const schools: School[] = [
     priceFrom: 20000,
     priceTo: 38000,
     imageAlt: 'Центр домашнего образования Полиглот Москва',
+    lat: 55.625578,
+    lon: 37.606392,
   },
   {
     id: 'domashnie-moskva-10',
@@ -9417,6 +9703,8 @@ export const schools: School[] = [
     reviewCount: 287,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 7 в центре Казани',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'gosud-kazan-2',
@@ -9479,6 +9767,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 102 в Ново-Савиновском районе',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'gosud-kazan-5',
@@ -9602,6 +9892,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Гимназия № 96 в Авиастроительном районе Казани',
+    lat: 55.810692,
+    lon: 49.203080,
   },
 
   // ===== КАЗАНЬ — ЧАСТНЫЕ =====
@@ -9727,6 +10019,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 40000,
     imageAlt: 'Монтессори-класс школы Солнышко в Казани',
+    lat: 55.744862,
+    lon: 49.185737,
   },
     {
     id: 'chast-kazan-7',
@@ -9748,6 +10042,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 48000,
     imageAlt: 'Здание немецкой школы Erfolg в Казани',
+    lat: 55.848822,
+    lon: 49.252625,
   },
     {
     id: 'chast-kazan-8',
@@ -9768,6 +10064,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 42000,
     imageAlt: 'Ученики спортивной школы Чемпион Казань',
+    lat: 55.750370,
+    lon: 49.196829,
   },
     {
     id: 'chast-kazan-9',
@@ -9788,6 +10086,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 95000,
     imageAlt: 'Кампус элитной школы Престиж в Казани',
+    lat: 55.710726,
+    lon: 49.181378,
   },
     {
     id: 'chast-kazan-10',
@@ -9809,6 +10109,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 28000,
     imageAlt: 'Православная гимназия имени святителя Гурия в Казани',
+    lat: 55.794649,
+    lon: 49.111502,
   },
 
   // ===== КАЗАНЬ — ОНЛАЙН =====
@@ -9832,6 +10134,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 3500,
     imageAlt: 'Онлайн-платформа интернет-школы Знание Онлайн Казань',
+    lat: 55.777007,
+    lon: 49.142940,
   },
     {
     id: 'onlin-kazan-2',
@@ -9853,6 +10157,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 5500,
     imageAlt: 'Ученики Кибершколы Татарстана на онлайн-занятии по программированию',
+    lat: 55.792420,
+    lon: 49.111398,
   },
     {
     id: 'onlin-kazan-3',
@@ -9873,6 +10179,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 2800,
     imageAlt: 'Домашнее обучение с онлайн-школой Волга Казань',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'onlin-kazan-4',
@@ -9894,6 +10202,8 @@ export const schools: School[] = [
     reviewCount: 278,
     priceFrom: 3200,
     imageAlt: 'Онлайн-урок татарского языка в Татарской онлайн-гимназии',
+    lat: 55.796907,
+    lon: 49.117490,
   },
     {
     id: 'onlin-kazan-5',
@@ -9915,6 +10225,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 6500,
     imageAlt: 'Ученик проходит онлайн-тестирование в Экстернат-Казань',
+    lat: 55.788919,
+    lon: 49.123938,
   },
     {
     id: 'onlin-kazan-6',
@@ -9935,6 +10247,8 @@ export const schools: School[] = [
     reviewCount: 124,
     priceFrom: 8900,
     imageAlt: 'Онлайн-урок английского языка в Smart School KZN Казань',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'onlin-kazan-7',
@@ -9955,6 +10269,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 4200,
     imageAlt: 'Младший школьник на онлайн-уроке в Началка Онлайн Казань',
+    lat: 55.788252,
+    lon: 49.141888,
   },
     {
     id: 'onlin-kazan-8',
@@ -9976,6 +10292,8 @@ export const schools: School[] = [
     reviewCount: 445,
     priceFrom: 4500,
     imageAlt: 'Онлайн-подготовка к ЕГЭ в школе ОГЭ-ЕГЭ Онлайн Казань',
+    lat: 55.790385,
+    lon: 49.171179,
   },
     {
     id: 'onlin-kazan-9',
@@ -9996,6 +10314,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 5800,
     imageAlt: 'Проектная работа ученика Свободного образования Казань',
+    lat: 55.794464,
+    lon: 49.135295,
   },
     {
     id: 'onlin-kazan-10',
@@ -10016,6 +10336,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 5200,
     imageAlt: 'Онлайн-урок анатомии в Медицинском лицее Онлайн Казань',
+    lat: 55.787715,
+    lon: 49.130198,
   },
 
   // ===== КАЗАНЬ — ВЕЧЕРНИЕ =====
@@ -10039,6 +10361,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 0,
     imageAlt: 'Здание вечерней школы №1 в центре Казани',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'veche-kazan-2',
@@ -10060,6 +10384,8 @@ export const schools: School[] = [
     reviewCount: 43,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа №3 на улице Декабристов в Казани',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'veche-kazan-3',
@@ -10080,6 +10406,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Открытая сменная школа на улице Гвардейской',
+    lat: 55.778283,
+    lon: 49.173088,
   },
     {
     id: 'veche-kazan-4',
@@ -10100,6 +10428,8 @@ export const schools: School[] = [
     reviewCount: 38,
     priceFrom: 0,
     imageAlt: 'Здание вечерней школы №5 в Приволжском районе Казани',
+    lat: 55.758931,
+    lon: 49.178241,
   },
     {
     id: 'veche-kazan-5',
@@ -10121,6 +10451,8 @@ export const schools: School[] = [
     reviewCount: 124,
     priceFrom: 15000,
     imageAlt: 'Центр образования Перспектива на улице Баумана',
+    lat: 55.792420,
+    lon: 49.111398,
   },
     {
     id: 'veche-kazan-6',
@@ -10142,6 +10474,8 @@ export const schools: School[] = [
     reviewCount: 52,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа Авиастроительного района Казани',
+    lat: 55.847102,
+    lon: 49.084313,
   },
     {
     id: 'veche-kazan-7',
@@ -10162,6 +10496,8 @@ export const schools: School[] = [
     reviewCount: 61,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа Кировского района на улице Восстания',
+    lat: 55.830722,
+    lon: 49.049065,
   },
     {
     id: 'veche-kazan-8',
@@ -10182,6 +10518,8 @@ export const schools: School[] = [
     reviewCount: 47,
     priceFrom: 0,
     imageAlt: 'Школа рабочей молодёжи №2 в Казани',
+    lat: 55.848475,
+    lon: 49.079572,
   },
     {
     id: 'veche-kazan-9',
@@ -10203,6 +10541,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 18000,
     imageAlt: 'Образовательный центр Шанс на улице Пушкина в Казани',
+    lat: 55.790870,
+    lon: 49.124702,
   },
     {
     id: 'veche-kazan-10',
@@ -10224,6 +10564,8 @@ export const schools: School[] = [
     reviewCount: 93,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа Ново-Савиновского района у метро Яшьлек',
+    lat: 55.835884,
+    lon: 49.150039,
   },
 
   // ===== КАЗАНЬ — ЭКСТЕРНАТ =====
@@ -10247,6 +10589,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 35000,
     imageAlt: 'Здание Центра экстернат-образования Знание в Казани',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'ekste-kazan-2',
@@ -10268,6 +10612,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 42000,
     imageAlt: 'Школа-экстернат для спортсменов Олимп в Казани',
+    lat: 55.768798,
+    lon: 49.152832,
   },
     {
     id: 'ekste-kazan-3',
@@ -10288,6 +10634,8 @@ export const schools: School[] = [
     reviewCount: 68,
     priceFrom: 28000,
     imageAlt: 'Центр семейного образования Родник в Казани',
+    lat: 55.787476,
+    lon: 49.157209,
   },
     {
     id: 'ekste-kazan-4',
@@ -10309,6 +10657,8 @@ export const schools: School[] = [
     reviewCount: 54,
     priceFrom: 55000,
     imageAlt: 'Здание Экспресс-школы в центре Казани',
+    lat: 55.790870,
+    lon: 49.124702,
   },
     {
     id: 'ekste-kazan-5',
@@ -10330,6 +10680,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 32000,
     imageAlt: 'Офис онлайн-экстерната Татарстан на улице Баумана',
+    lat: 55.792420,
+    lon: 49.111398,
   },
     {
     id: 'ekste-kazan-6',
@@ -10350,6 +10702,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа-экстернат №1 в Советском районе Казани',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'ekste-kazan-7',
@@ -10371,6 +10725,8 @@ export const schools: School[] = [
     reviewCount: 43,
     priceFrom: 38000,
     imageAlt: 'Здание экстерната при Казанской консерватории',
+    lat: 55.794649,
+    lon: 49.111502,
   },
     {
     id: 'ekste-kazan-8',
@@ -10392,6 +10748,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 48000,
     imageAlt: 'Современное здание IT-экстерната КодБудущего в Казани',
+    lat: 55.780730,
+    lon: 49.134941,
   },
     {
     id: 'ekste-kazan-9',
@@ -10412,6 +10770,8 @@ export const schools: School[] = [
     reviewCount: 72,
     priceFrom: 45000,
     imageAlt: 'Экстернат МедПрофиль на улице Бутлерова в Казани',
+    lat: 55.787750,
+    lon: 49.123574,
   },
     {
     id: 'ekste-kazan-10',
@@ -10433,6 +10793,8 @@ export const schools: School[] = [
     reviewCount: 91,
     priceFrom: 52000,
     imageAlt: 'Билингвальный экстернат Полиглот в центре Казани',
+    lat: 55.801699,
+    lon: 49.116533,
   },
 
   // ===== КАЗАНЬ — СЕМЕЙНЫЕ =====
@@ -10456,6 +10818,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 25000,
     imageAlt: 'Уютный класс семейной школы Солнышко с детьми за круглым столом',
+    lat: 55.788252,
+    lon: 49.141888,
   },
     {
     id: 'semej-kazan-2',
@@ -10477,6 +10841,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 22000,
     imageAlt: 'Дети семейного класса Альтернатива работают над совместным проектом',
+    lat: 55.795388,
+    lon: 49.134224,
   },
     {
     id: 'semej-kazan-3',
@@ -10497,6 +10863,8 @@ export const schools: School[] = [
     reviewCount: 45,
     priceFrom: 18000,
     imageAlt: 'Светлый класс православной семейной школы Радость',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'semej-kazan-4',
@@ -10518,6 +10886,8 @@ export const schools: School[] = [
     reviewCount: 56,
     priceFrom: 35000,
     imageAlt: 'Монтессори-класс с детьми, работающими с развивающими материалами',
+    lat: 55.772517,
+    lon: 49.140818,
   },
     {
     id: 'semej-kazan-5',
@@ -10538,6 +10908,8 @@ export const schools: School[] = [
     reviewCount: 34,
     priceFrom: 15000,
     imageAlt: 'Дети школы Полёт на выездном занятии в лесу',
+    lat: 55.826865,
+    lon: 49.189034,
   },
     {
     id: 'semej-kazan-6',
@@ -10559,6 +10931,8 @@ export const schools: School[] = [
     reviewCount: 78,
     priceFrom: 28000,
     imageAlt: 'Ученики семейного класса Знания+ решают олимпиадные задачи',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'semej-kazan-7',
@@ -10580,6 +10954,8 @@ export const schools: School[] = [
     reviewCount: 52,
     priceFrom: 24000,
     imageAlt: 'Урок татарского языка в билингвальной семейной школе',
+    lat: 55.787715,
+    lon: 49.130198,
   },
     {
     id: 'semej-kazan-8',
@@ -10600,6 +10976,8 @@ export const schools: School[] = [
     reviewCount: 41,
     priceFrom: 26000,
     imageAlt: 'Дети вальдорфской школы Росток занимаются рукоделием',
+    lat: 55.862662,
+    lon: 49.098352,
   },
     {
     id: 'semej-kazan-9',
@@ -10620,6 +10998,8 @@ export const schools: School[] = [
     reviewCount: 95,
     priceFrom: 20000,
     imageAlt: 'Семейный образовательный центр Гармония в Казани',
+    lat: 55.836754,
+    lon: 49.147393,
   },
     {
     id: 'semej-kazan-10',
@@ -10640,6 +11020,8 @@ export const schools: School[] = [
     reviewCount: 29,
     priceFrom: 30000,
     imageAlt: 'Дети лесной школы Зелёная на занятии в лесу',
+    lat: 55.794649,
+    lon: 49.111502,
   },
 
   // ===== КАЗАНЬ — ДОМАШНИЕ =====
@@ -10663,6 +11045,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 8500,
     imageAlt: 'Центр домашнего обучения Перспектива в Казани',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'domas-kazan-2',
@@ -10684,6 +11068,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Школа надомного обучения Радуга для детей с ОВЗ в Казани',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'domas-kazan-3',
@@ -10705,6 +11091,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 6000,
     imageAlt: 'Центр семейного образования Знание в центре Казани',
+    lat: 55.794649,
+    lon: 49.111502,
   },
     {
     id: 'domas-kazan-4',
@@ -10725,6 +11113,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 12000,
     imageAlt: 'Онлайн-школа Татарстан дистанционное обучение Казань',
+    lat: 55.790870,
+    lon: 49.124702,
   },
     {
     id: 'domas-kazan-5',
@@ -10746,6 +11136,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 15000,
     imageAlt: 'Школа Чемпион для юных спортсменов Казань',
+    lat: 55.839835,
+    lon: 49.328441,
   },
     {
     id: 'domas-kazan-6',
@@ -10767,6 +11159,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Государственный центр надомного обучения Забота Казань',
+    lat: 55.796559,
+    lon: 49.120719,
   },
     {
     id: 'domas-kazan-7',
@@ -10787,6 +11181,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 18000,
     imageAlt: 'Экстернат-школа Успех ускоренное обучение Казань',
+    lat: 55.788818,
+    lon: 49.152003,
   },
     {
     id: 'domas-kazan-8',
@@ -10808,6 +11204,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 10000,
     imageAlt: 'Домашняя школа Белем с татарским языком Казань',
+    lat: 55.895152,
+    lon: 49.129596,
   },
     {
     id: 'domas-kazan-9',
@@ -10828,6 +11226,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 14000,
     imageAlt: 'Школа индивидуального обучения Мир Казань',
+    lat: 55.778283,
+    lon: 49.173088,
   },
     {
     id: 'domas-kazan-10',
@@ -10849,6 +11249,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 16000,
     imageAlt: 'АйТи-Школа центр дистанционного образования Казань',
+    lat: 55.780730,
+    lon: 49.134941,
   },
 
   // ===== КАЗАНЬ — ПРИ ВУЗАХ =====
@@ -10872,6 +11274,8 @@ export const schools: School[] = [
     reviewCount: 287,
     priceFrom: 0,
     imageAlt: 'Современное здание IT-лицея КФУ в центре Казани',
+    lat: 55.793489,
+    lon: 49.116086,
   },
     {
     id: 'privu-kazan-2',
@@ -10893,6 +11297,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Историческое здание лицея Лобачевского при КФУ',
+    lat: 55.794649,
+    lon: 49.111502,
   },
     {
     id: 'privu-kazan-3',
@@ -10914,6 +11320,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Корпус инженерного лицея КНИТУ в Казани',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'privu-kazan-4',
@@ -10934,6 +11342,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Здание медицинского лицея при КГМУ в Казани',
+    lat: 55.787715,
+    lon: 49.130198,
   },
     {
     id: 'privu-kazan-5',
@@ -10954,6 +11364,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Авиационный лицей КНИТУ-КАИ с моделями самолётов',
+    lat: 55.823609,
+    lon: 49.131367,
   },
     {
     id: 'privu-kazan-6',
@@ -10974,6 +11386,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 0,
     imageAlt: 'Современный кампус лицея Иннополис',
+    lat: 55.794649,
+    lon: 49.111502,
   },
     {
     id: 'privu-kazan-7',
@@ -10995,6 +11409,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Здание экономического лицея КФУ в Казани',
+    lat: 55.787715,
+    lon: 49.130198,
   },
     {
     id: 'privu-kazan-8',
@@ -11015,6 +11431,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 15000,
     imageAlt: 'Лицей КГАСУ с выставкой студенческих проектов',
+    lat: 55.806142,
+    lon: 49.250634,
   },
     {
     id: 'privu-kazan-9',
@@ -11035,6 +11453,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 0,
     imageAlt: 'Аграрный лицей Казанского ГАУ с учебными полями',
+    lat: 55.719719,
+    lon: 49.173603,
   },
     {
     id: 'privu-kazan-10',
@@ -11056,6 +11476,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 0,
     imageAlt: 'Юридический лицей КФУ в историческом здании',
+    lat: 55.795430,
+    lon: 49.111215,
   },
 
   // ===== КАЗАНЬ — ПРОФИЛЬНЫЕ =====
@@ -11079,6 +11501,8 @@ export const schools: School[] = [
     reviewCount: 287,
     priceFrom: 0,
     imageAlt: 'Современное здание IT-лицея КФУ в центре Казани',
+    lat: 55.793489,
+    lon: 49.116086,
   },
     {
     id: 'profi-kazan-2',
@@ -11100,6 +11524,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Здание лицея № 131 с медицинским уклоном в Казани',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'profi-kazan-3',
@@ -11121,6 +11547,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Историческое здание гимназии № 7 на улице Карла Маркса',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'profi-kazan-4',
@@ -11141,6 +11569,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Современный кампус лицея Иннополис',
+    lat: 55.794649,
+    lon: 49.111502,
   },
     {
     id: 'profi-kazan-5',
@@ -11161,6 +11591,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 45000,
     imageAlt: 'Современное здание частной школы Олимп в Казани',
+    lat: 55.710726,
+    lon: 49.181378,
   },
     {
     id: 'profi-kazan-6',
@@ -11181,6 +11613,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Спортивный комплекс лицея № 84 с бассейном',
+    lat: 55.752802,
+    lon: 49.192879,
   },
     {
     id: 'profi-kazan-7',
@@ -11201,6 +11635,8 @@ export const schools: School[] = [
     reviewCount: 245,
     priceFrom: 0,
     imageAlt: 'Здание физико-математического лицея № 116',
+    lat: 55.808593,
+    lon: 49.196588,
   },
     {
     id: 'profi-kazan-8',
@@ -11222,6 +11658,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 0,
     imageAlt: 'Гимназия № 2 имени Марджани с национальным колоритом',
+    lat: 55.778420,
+    lon: 49.114969,
   },
     {
     id: 'profi-kazan-9',
@@ -11242,6 +11680,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Аэрокосмический лицей с макетами самолётов у входа',
+    lat: 55.823612,
+    lon: 49.122652,
   },
     {
     id: 'profi-kazan-10',
@@ -11263,6 +11703,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Лицей № 159 с химическими лабораториями',
+    lat: 55.820768,
+    lon: 49.089578,
   },
 
   // ===== КАЗАНЬ — ГИМНАЗИИ =====
@@ -11286,6 +11728,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Здание гимназии №7 в центре Казани на улице Карла Маркса',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'gimna-kazan-2',
@@ -11307,6 +11751,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Фасад гимназии №19 с углублённым изучением английского языка в Казани',
+    lat: 55.830723,
+    lon: 49.049065,
   },
     {
     id: 'gimna-kazan-3',
@@ -11328,6 +11774,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Татарская гимназия №2 имени Марджани на улице Тукая в Казани',
+    lat: 55.778420,
+    lon: 49.114969,
   },
     {
     id: 'gimna-kazan-4',
@@ -11348,6 +11796,8 @@ export const schools: School[] = [
     reviewCount: 142,
     priceFrom: 0,
     imageAlt: 'Гимназия №102 с французским уклоном в Ново-Савиновском районе Казани',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'gimna-kazan-5',
@@ -11369,6 +11819,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Современное здание гимназии №155 с восточными языками на Чистопольской улице',
+    lat: 55.819539,
+    lon: 49.151838,
   },
     {
     id: 'gimna-kazan-6',
@@ -11389,6 +11841,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 45000,
     imageAlt: 'Кампус частной гимназии Аль-Манар в Казани',
+    lat: 55.821003,
+    lon: 49.133636,
   },
     {
     id: 'gimna-kazan-7',
@@ -11410,6 +11864,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Гимназия №122 в Авиастроительном районе Казани',
+    lat: 55.815652,
+    lon: 49.108738,
   },
     {
     id: 'gimna-kazan-8',
@@ -11431,6 +11887,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Современное здание IT-гимназии Иннополис в центре Казани',
+    lat: 55.770323,
+    lon: 49.149557,
   },
     {
     id: 'gimna-kazan-9',
@@ -11451,6 +11909,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 0,
     imageAlt: 'Гимназия №96 с эстетическим уклоном в Советском районе Казани',
+    lat: 55.810692,
+    lon: 49.203080,
   },
     {
     id: 'gimna-kazan-10',
@@ -11471,6 +11931,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 125000,
     imageAlt: 'Кампус Международной гимназии Казань на Оренбургском тракте',
+    lat: 55.750756,
+    lon: 49.163259,
   },
 
   // ===== КАЗАНЬ — КОРРЕКЦИОННЫЕ =====
@@ -11494,6 +11956,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 0,
     imageAlt: 'Здание школы-интерната для детей с нарушениями слуха в Казани',
+    lat: 55.822816,
+    lon: 49.194350,
   },
     {
     id: 'korre-kazan-2',
@@ -11515,6 +11979,8 @@ export const schools: School[] = [
     reviewCount: 64,
     priceFrom: 0,
     imageAlt: 'Школа для детей с задержкой психического развития в Казани',
+    lat: 55.830723,
+    lon: 49.049065,
   },
     {
     id: 'korre-kazan-3',
@@ -11535,6 +12001,8 @@ export const schools: School[] = [
     reviewCount: 93,
     priceFrom: 0,
     imageAlt: 'Школа-интернат для слепых и слабовидящих детей в Казани',
+    lat: 55.826670,
+    lon: 49.065971,
   },
     {
     id: 'korre-kazan-4',
@@ -11556,6 +12024,8 @@ export const schools: School[] = [
     reviewCount: 71,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа с трудовыми мастерскими в Казани',
+    lat: 55.792839,
+    lon: 49.171626,
   },
     {
     id: 'korre-kazan-5',
@@ -11576,6 +12046,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Школа для детей с нарушениями речи в Казани',
+    lat: 55.744862,
+    lon: 49.185737,
   },
     {
     id: 'korre-kazan-6',
@@ -11596,6 +12068,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Школа-интернат для детей с нарушениями опорно-двигательного аппарата',
+    lat: 55.820095,
+    lon: 49.052114,
   },
     {
     id: 'korre-kazan-7',
@@ -11617,6 +12091,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 35000,
     imageAlt: 'Образовательный центр для детей с аутизмом в Казани',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'korre-kazan-8',
@@ -11637,6 +12113,8 @@ export const schools: School[] = [
     reviewCount: 45,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа для детей с умственной отсталостью в Казани',
+    lat: 55.876511,
+    lon: 49.016360,
   },
     {
     id: 'korre-kazan-9',
@@ -11658,6 +12136,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 48000,
     imageAlt: 'Частная инклюзивная школа Гармония в Казани',
+    lat: 55.788252,
+    lon: 49.141888,
   },
     {
     id: 'korre-kazan-10',
@@ -11678,6 +12158,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Санаторная школа-интернат Лесная поляна в Казани',
+    lat: 55.848470,
+    lon: 48.904595,
   },
 
   // ===== КАЗАНЬ — КАДЕТСКИЕ =====
@@ -11701,6 +12183,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Здание Казанского кадетского корпуса с плацем для строевой подготовки',
+    lat: 55.793070,
+    lon: 49.149452,
   },
     {
     id: 'kadet-kazan-2',
@@ -11722,6 +12206,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Школа №102 с кадетскими классами МВД в Казани',
+    lat: 55.830723,
+    lon: 49.049065,
   },
     {
     id: 'kadet-kazan-3',
@@ -11742,6 +12228,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Гимназия №7 с кадетскими классами МЧС в Казани',
+    lat: 55.819319,
+    lon: 49.143849,
   },
     {
     id: 'kadet-kazan-4',
@@ -11762,6 +12250,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 0,
     imageAlt: 'Школа №39 с морскими кадетскими классами в Казани',
+    lat: 55.808593,
+    lon: 49.196588,
   },
     {
     id: 'kadet-kazan-5',
@@ -11783,6 +12273,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Кадетская школа-интернат Республики Татарстан в Казани',
+    lat: 55.750756,
+    lon: 49.163259,
   },
     {
     id: 'kadet-kazan-6',
@@ -11804,6 +12296,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Лицей №149 с кадетскими классами ФСБ в Казани',
+    lat: 55.831246,
+    lon: 49.080404,
   },
     {
     id: 'kadet-kazan-7',
@@ -11824,6 +12318,8 @@ export const schools: School[] = [
     reviewCount: 94,
     priceFrom: 0,
     imageAlt: 'Школа №85 с кадетскими классами ВДВ в Казани',
+    lat: 55.757760,
+    lon: 49.231705,
   },
     {
     id: 'kadet-kazan-8',
@@ -11844,6 +12340,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 0,
     imageAlt: 'Гимназия №122 с казачьими кадетскими классами в Казани',
+    lat: 55.748979,
+    lon: 49.189829,
   },
     {
     id: 'kadet-kazan-9',
@@ -11865,6 +12363,8 @@ export const schools: School[] = [
     reviewCount: 68,
     priceFrom: 0,
     imageAlt: 'Школа №51 с кадетскими классами Росгвардии в Казани',
+    lat: 55.769587,
+    lon: 49.177273,
   },
     {
     id: 'kadet-kazan-10',
@@ -11885,6 +12385,8 @@ export const schools: School[] = [
     reviewCount: 52,
     priceFrom: 45000,
     imageAlt: 'Частная кадетская школа Беркут в Казани',
+    lat: 55.802503,
+    lon: 49.202348,
   },
 
   // ===== НИЖНИЙ НОВГОРОД — ГОСУДАРСТВЕННЫЕ =====
@@ -11908,6 +12410,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 1 на улице Большая Покровская в Нижнем Новгороде',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'gosud-nizhniy-novgorod-2',
@@ -11929,6 +12433,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 0,
     imageAlt: 'Современное здание лицея № 40 в Нижнем Новгороде',
+    lat: 56.310822,
+    lon: 44.010731,
   },
     {
     id: 'gosud-nizhniy-novgorod-3',
@@ -11950,6 +12456,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Новое здание школы № 186 в Приокском районе Нижнего Новгорода',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'gosud-nizhniy-novgorod-4',
@@ -11970,6 +12478,8 @@ export const schools: School[] = [
     reviewCount: 267,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 53 с углублённым изучением английского языка',
+    lat: 56.344373,
+    lon: 43.839488,
   },
     {
     id: 'gosud-nizhniy-novgorod-5',
@@ -11991,6 +12501,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Лицей № 165 в Автозаводском районе Нижнего Новгорода',
+    lat: 56.258428,
+    lon: 43.870798,
   },
     {
     id: 'gosud-nizhniy-novgorod-6',
@@ -12011,6 +12523,8 @@ export const schools: School[] = [
     reviewCount: 143,
     priceFrom: 0,
     imageAlt: 'Школа № 91 с естественнонаучным уклоном в Сормовском районе',
+    lat: 56.313105,
+    lon: 44.023151,
   },
     {
     id: 'gosud-nizhniy-novgorod-7',
@@ -12031,6 +12545,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Гимназия № 25 с эстетическим уклоном в Советском районе',
+    lat: 56.295170,
+    lon: 44.034219,
   },
     {
     id: 'gosud-nizhniy-novgorod-8',
@@ -12051,6 +12567,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Современная школа № 187 на Стрелке в Нижнем Новгороде',
+    lat: 56.338087,
+    lon: 43.960016,
   },
     {
     id: 'gosud-nizhniy-novgorod-9',
@@ -12072,6 +12590,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Школа № 85 с кадетскими классами в Канавинском районе',
+    lat: 56.227611,
+    lon: 43.835733,
   },
     {
     id: 'gosud-nizhniy-novgorod-10',
@@ -12093,6 +12613,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Школа № 70 со спортивным уклоном в Нижегородском районе',
+    lat: 56.312211,
+    lon: 43.930345,
   },
 
   // ===== НИЖНИЙ НОВГОРОД — ЧАСТНЫЕ =====
@@ -12116,6 +12638,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 55000,
     imageAlt: 'Здание частной школы Премьер на Верхне-Волжской набережной',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'chast-nizhniy-novgorod-2',
@@ -12136,6 +12660,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 42000,
     imageAlt: 'Современное здание школы Сокол в районе Верхние Печёры',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'chast-nizhniy-novgorod-3',
@@ -12157,6 +12683,8 @@ export const schools: School[] = [
     reviewCount: 187,
     priceFrom: 68000,
     imageAlt: 'Историческое здание гимназии Юный европеец на Большой Покровской',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'chast-nizhniy-novgorod-4',
@@ -12178,6 +12706,8 @@ export const schools: School[] = [
     reviewCount: 73,
     priceFrom: 35000,
     imageAlt: 'Уютное здание начальной школы Радуга с детской площадкой',
+    lat: 56.344373,
+    lon: 43.839488,
   },
     {
     id: 'chast-nizhniy-novgorod-5',
@@ -12199,6 +12729,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 48000,
     imageAlt: 'Здание школы Интеллект с вывеской и современным фасадом',
+    lat: 56.318750,
+    lon: 44.025930,
   },
     {
     id: 'chast-nizhniy-novgorod-6',
@@ -12219,6 +12751,8 @@ export const schools: School[] = [
     reviewCount: 64,
     priceFrom: 45000,
     imageAlt: 'Монтессори-класс школы Солнышко с развивающими материалами',
+    lat: 56.295170,
+    lon: 44.034219,
   },
     {
     id: 'chast-nizhniy-novgorod-7',
@@ -12239,6 +12773,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 28000,
     imageAlt: 'Историческое здание православной гимназии Александра Невского',
+    lat: 56.323502,
+    lon: 43.992940,
   },
     {
     id: 'chast-nizhniy-novgorod-8',
@@ -12259,6 +12795,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 62000,
     imageAlt: 'Современное здание Школы Будущего с панорамными окнами',
+    lat: 56.279559,
+    lon: 44.035540,
   },
     {
     id: 'chast-nizhniy-novgorod-9',
@@ -12280,6 +12818,8 @@ export const schools: School[] = [
     reviewCount: 54,
     priceFrom: 52000,
     imageAlt: 'Здание школы Чемпион рядом со стадионом Нижний Новгород',
+    lat: 56.338087,
+    lon: 43.960016,
   },
     {
     id: 'chast-nizhniy-novgorod-10',
@@ -12300,6 +12840,8 @@ export const schools: School[] = [
     reviewCount: 78,
     priceFrom: 95000,
     imageAlt: 'Современный кампус британской школы Альбион с зелёной территорией',
+    lat: 56.286831,
+    lon: 44.076736,
   },
 
   // ===== НИЖНИЙ НОВГОРОД — ОНЛАЙН =====
@@ -12323,6 +12865,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 3500,
     imageAlt: 'Онлайн-платформа Интернет-школы НН с интерактивными уроками',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'onlin-nizhniy-novgorod-2',
@@ -12344,6 +12888,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 5500,
     imageAlt: 'Ученик Волга Диджитал Скул на онлайн-уроке программирования',
+    lat: 56.323446,
+    lon: 44.034279,
   },
     {
     id: 'onlin-nizhniy-novgorod-3',
@@ -12364,6 +12910,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 4200,
     imageAlt: 'Онлайн-урок литературы в Классической онлайн-гимназии НН',
+    lat: 56.320229,
+    lon: 44.013570,
   },
     {
     id: 'onlin-nizhniy-novgorod-4',
@@ -12385,6 +12933,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 2800,
     imageAlt: 'Интерфейс платформы Экстернат-Онлайн НН для самостоятельного обучения',
+    lat: 56.316552,
+    lon: 44.017629,
   },
     {
     id: 'onlin-nizhniy-novgorod-5',
@@ -12406,6 +12956,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 4800,
     imageAlt: 'Адаптивная платформа СмартЭдьюкейшн НН с персональными заданиями',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'onlin-nizhniy-novgorod-6',
@@ -12426,6 +12978,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 6200,
     imageAlt: 'Виртуальная лаборатория физики в Нижегородском онлайн-лицее',
+    lat: 56.314511,
+    lon: 44.013139,
   },
     {
     id: 'onlin-nizhniy-novgorod-7',
@@ -12447,6 +13001,8 @@ export const schools: School[] = [
     reviewCount: 423,
     priceFrom: 3200,
     imageAlt: 'Выпускники Первой дистанционной школы Нижнего Новгорода',
+    lat: 56.314945,
+    lon: 43.999191,
   },
     {
     id: 'onlin-nizhniy-novgorod-8',
@@ -12467,6 +13023,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 5000,
     imageAlt: 'Онлайн-вебинар с предпринимателем в Школе Будущего',
+    lat: 56.301842,
+    lon: 44.080330,
   },
     {
     id: 'onlin-nizhniy-novgorod-9',
@@ -12487,6 +13045,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 4500,
     imageAlt: 'Виртуальная выставка работ учеников АртОнлайн Школы НН',
+    lat: 56.329457,
+    lon: 43.992685,
   },
     {
     id: 'onlin-nizhniy-novgorod-10',
@@ -12508,6 +13068,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 1900,
     imageAlt: 'Ученик Домашней школы Волга-Онлайн занимается дома',
+    lat: 56.326482,
+    lon: 44.005139,
   },
 
   // ===== НИЖНИЙ НОВГОРОД — ВЕЧЕРНИЕ =====
@@ -12531,6 +13093,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 0,
     imageAlt: 'Здание вечерней школы № 1 на улице Большая Покровская в Нижнем Новгороде',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'veche-nizhniy-novgorod-2',
@@ -12552,6 +13116,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа № 2 в Автозаводском районе Нижнего Новгорода',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'veche-nizhniy-novgorod-3',
@@ -12573,6 +13139,8 @@ export const schools: School[] = [
     reviewCount: 54,
     priceFrom: 0,
     imageAlt: 'Центр образования взрослых в Сормовском районе Нижнего Новгорода',
+    lat: 56.348283,
+    lon: 43.868880,
   },
     {
     id: 'veche-nizhniy-novgorod-4',
@@ -12594,6 +13162,8 @@ export const schools: School[] = [
     reviewCount: 43,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа № 3 в Канавинском районе Нижнего Новгорода',
+    lat: 56.323501,
+    lon: 43.950491,
   },
     {
     id: 'veche-nizhniy-novgorod-5',
@@ -12614,6 +13184,8 @@ export const schools: School[] = [
     reviewCount: 38,
     priceFrom: 0,
     imageAlt: 'Открытая школа на проспекте Гагарина в Приокском районе Нижнего Новгорода',
+    lat: 56.326482,
+    lon: 44.005139,
   },
     {
     id: 'veche-nizhniy-novgorod-6',
@@ -12635,6 +13207,8 @@ export const schools: School[] = [
     reviewCount: 72,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа Ленинского района на улице Невзоровых в Нижнем Новгороде',
+    lat: 56.316224,
+    lon: 44.022554,
   },
     {
     id: 'veche-nizhniy-novgorod-7',
@@ -12655,6 +13229,8 @@ export const schools: School[] = [
     reviewCount: 34,
     priceFrom: 8500,
     imageAlt: 'Центр непрерывного образования Перспектива на улице Белинского в Нижнем Новгороде',
+    lat: 56.309137,
+    lon: 43.993806,
   },
     {
     id: 'veche-nizhniy-novgorod-8',
@@ -12676,6 +13252,8 @@ export const schools: School[] = [
     reviewCount: 58,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа Московского района на улице Березовской в Нижнем Новгороде',
+    lat: 56.331776,
+    lon: 43.873572,
   },
     {
     id: 'veche-nizhniy-novgorod-9',
@@ -12696,6 +13274,8 @@ export const schools: School[] = [
     reviewCount: 29,
     priceFrom: 6000,
     imageAlt: 'Школа второго шанса Новый путь на улице Родионова в Нижнем Новгороде',
+    lat: 56.301842,
+    lon: 44.080330,
   },
     {
     id: 'veche-nizhniy-novgorod-10',
@@ -12717,6 +13297,8 @@ export const schools: School[] = [
     reviewCount: 81,
     priceFrom: 0,
     imageAlt: 'Вечерний учебный центр на улице Минина в центре Нижнего Новгорода',
+    lat: 56.325972,
+    lon: 44.024892,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ГОСУДАРСТВЕННЫЕ =====
@@ -12740,6 +13322,8 @@ export const schools: School[] = [
     reviewCount: 387,
     priceFrom: 0,
     imageAlt: 'Здание физико-математического лицея 239 на Кирочной улице в Санкт-Петербурге',
+    lat: 59.943812,
+    lon: 30.364901,
   },
     {
     id: 'gosud-sankt-peterburg-2',
@@ -12761,6 +13345,8 @@ export const schools: School[] = [
     reviewCount: 542,
     priceFrom: 0,
     imageAlt: 'Главный корпус гимназии 56 на Пудожской улице в Санкт-Петербурге',
+    lat: 59.964794,
+    lon: 30.292775,
   },
     {
     id: 'gosud-sankt-peterburg-3',
@@ -12782,6 +13368,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Историческое здание Академической гимназии СПбГУ в центре Санкт-Петербурга',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gosud-sankt-peterburg-4',
@@ -12803,6 +13391,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Современное здание лицея 470 на проспекте Луначарского в Калининском районе',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gosud-sankt-peterburg-5',
@@ -12824,6 +13414,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 0,
     imageAlt: 'Здание школы 80 с углублённым изучением английского на улице Воскова',
+    lat: 59.833934,
+    lon: 30.098169,
   },
     {
     id: 'gosud-sankt-peterburg-6',
@@ -12845,6 +13437,8 @@ export const schools: School[] = [
     reviewCount: 267,
     priceFrom: 0,
     imageAlt: 'Фасад гимназии 155 на улице Маяковского в Центральном районе Петербурга',
+    lat: 59.931974,
+    lon: 30.353431,
   },
     {
     id: 'gosud-sankt-peterburg-7',
@@ -12866,6 +13460,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Современное здание Инженерно-технологической школы 777 на улице Оптиков',
+    lat: 59.996751,
+    lon: 30.243231,
   },
     {
     id: 'gosud-sankt-peterburg-8',
@@ -12887,6 +13483,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Историческое здание школы 30 с французским уклоном на 7-й линии Васильевского острова',
+    lat: 59.941142,
+    lon: 30.280737,
   },
     {
     id: 'gosud-sankt-peterburg-9',
@@ -12908,6 +13506,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Здание экономико-математического лицея 590 на Ириновском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gosud-sankt-peterburg-10',
@@ -12929,6 +13529,8 @@ export const schools: School[] = [
     reviewCount: 278,
     priceFrom: 0,
     imageAlt: 'Школа 619 с доступной средой на улице Черкасова в Калининском районе',
+    lat: 60.031220,
+    lon: 30.427543,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ЧАСТНЫЕ =====
@@ -12952,6 +13554,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 75000,
     imageAlt: 'Здание частной школы Взлёт на Большой Конюшенной улице',
+    lat: 59.939533,
+    lon: 30.324046,
   },
     {
     id: 'chast-sankt-peterburg-2',
@@ -12973,6 +13577,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 65000,
     imageAlt: 'Современное здание Петербургской инновационной школы',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'chast-sankt-peterburg-3',
@@ -12994,6 +13600,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 120000,
     imageAlt: 'Историческое здание Британской школы Альбион на набережной Мойки',
+    lat: 59.928937,
+    lon: 30.297228,
   },
     {
     id: 'chast-sankt-peterburg-4',
@@ -13015,6 +13623,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 55000,
     imageAlt: 'Фасад частной школы Эрудиция на проспекте Энгельса',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'chast-sankt-peterburg-5',
@@ -13036,6 +13646,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 70000,
     imageAlt: 'Экологичное здание Монтессори-школы Солнечный город',
+    lat: 59.984268,
+    lon: 30.252212,
   },
     {
     id: 'chast-sankt-peterburg-6',
@@ -13057,6 +13669,8 @@ export const schools: School[] = [
     reviewCount: 52,
     priceFrom: 60000,
     imageAlt: 'Здание частной школы Чемпион для юных спортсменов',
+    lat: 59.852524,
+    lon: 30.333993,
   },
     {
     id: 'chast-sankt-peterburg-7',
@@ -13078,6 +13692,8 @@ export const schools: School[] = [
     reviewCount: 83,
     priceFrom: 45000,
     imageAlt: 'Частная православная школа Наследие на Невском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'chast-sankt-peterburg-8',
@@ -13099,6 +13715,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 80000,
     imageAlt: 'Современное здание IT-школы Digital Generation',
+    lat: 59.971334,
+    lon: 30.322534,
   },
     {
     id: 'chast-sankt-peterburg-9',
@@ -13120,6 +13738,8 @@ export const schools: School[] = [
     reviewCount: 91,
     priceFrom: 68000,
     imageAlt: 'Историческое здание частной школы Петершуле',
+    lat: 59.684493,
+    lon: 30.443179,
   },
     {
     id: 'chast-sankt-peterburg-10',
@@ -13140,6 +13760,8 @@ export const schools: School[] = [
     reviewCount: 48,
     priceFrom: 95000,
     imageAlt: 'Загородная школа Дубрава среди сосен в Комарово',
+    lat: 59.960674,
+    lon: 30.158655,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ОНЛАЙН =====
@@ -13163,6 +13785,8 @@ export const schools: School[] = [
     reviewCount: 456,
     priceFrom: 3500,
     imageAlt: 'Онлайн-платформа интернет-школы Нева для дистанционного обучения',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'onlin-sankt-peterburg-2',
@@ -13184,6 +13808,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 5500,
     imageAlt: 'Интерфейс онлайн-урока цифровой гимназии Питер',
+    lat: 59.932947,
+    lon: 30.360070,
   },
     {
     id: 'onlin-sankt-peterburg-3',
@@ -13205,6 +13831,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 4200,
     imageAlt: 'Ученик онлайн-экстерната Балтика занимается дома за компьютером',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'onlin-sankt-peterburg-4',
@@ -13226,6 +13854,8 @@ export const schools: School[] = [
     reviewCount: 567,
     priceFrom: 0,
     imageAlt: 'Логотип Петербургской электронной школы на экране компьютера',
+    lat: 59.928937,
+    lon: 30.297228,
   },
     {
     id: 'onlin-sankt-peterburg-5',
@@ -13247,6 +13877,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 12000,
     imageAlt: 'Виртуальный урок истории искусств в онлайн-лицее Эрмитаж',
+    lat: 59.941744,
+    lon: 30.319337,
   },
     {
     id: 'onlin-sankt-peterburg-6',
@@ -13268,6 +13900,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 6800,
     imageAlt: 'Онлайн-занятие в дистанционной школе Кронштадт с морской символикой',
+    lat: 59.936417,
+    lon: 30.317645,
   },
     {
     id: 'onlin-sankt-peterburg-7',
@@ -13289,6 +13923,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 4800,
     imageAlt: 'Интерфейс геймифицированной платформы Smart School SPB Online',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'onlin-sankt-peterburg-8',
@@ -13310,6 +13946,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 2800,
     imageAlt: 'Семья занимается в онлайн-школе Белые ночи за домашним компьютером',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'onlin-sankt-peterburg-9',
@@ -13331,6 +13969,8 @@ export const schools: School[] = [
     reviewCount: 389,
     priceFrom: 2500,
     imageAlt: 'Старшеклассник готовится к ЕГЭ в онлайн-школе Будущее',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'onlin-sankt-peterburg-10',
@@ -13352,6 +13992,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 18000,
     imageAlt: 'Онлайн-урок на английском языке в международной школе Петрополис',
+    lat: 59.960674,
+    lon: 30.158655,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ВЕЧЕРНИЕ =====
@@ -13375,6 +14017,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Здание вечерней школы №1 на Васильевском острове',
+    lat: 59.952699,
+    lon: 30.234159,
   },
     {
     id: 'veche-sankt-peterburg-2',
@@ -13396,6 +14040,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Центр образования №18 на проспекте Обуховской Обороны',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-3',
@@ -13417,6 +14063,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа №27 в Калининском районе',
+    lat: 60.000293,
+    lon: 30.425122,
   },
     {
     id: 'veche-sankt-peterburg-4',
@@ -13438,6 +14086,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Открытая школа на Большом проспекте Петроградской стороны',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-5',
@@ -13459,6 +14109,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Здание вечерней школы №8 на Московском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-6',
@@ -13480,6 +14132,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Центр образования взрослых на Будапештской улице',
+    lat: 59.873999,
+    lon: 30.366074,
   },
     {
     id: 'veche-sankt-peterburg-7',
@@ -13501,6 +14155,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа №5 на Индустриальном проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-8',
@@ -13522,6 +14178,8 @@ export const schools: School[] = [
     reviewCount: 78,
     priceFrom: 0,
     imageAlt: 'Вечерняя школа №12 на проспекте Просвещения',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-9',
@@ -13543,6 +14201,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 35000,
     imageAlt: 'Центр образования Перспектива на Комендантском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'veche-sankt-peterburg-10',
@@ -13564,6 +14224,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 0,
     imageAlt: 'Историческое здание вечерней школы №3 на улице Восстания',
+    lat: 59.932947,
+    lon: 30.360070,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ЭКСТЕРНАТ =====
@@ -13587,6 +14249,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 45000,
     imageAlt: 'Здание Центра экстернат-образования Невский на Невском проспекте',
+    lat: 59.933670,
+    lon: 30.339475,
   },
     {
     id: 'ekste-sankt-peterburg-2',
@@ -13608,6 +14272,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 38000,
     imageAlt: 'Школа-экстернат Петроградская на Большом проспекте Петроградской стороны',
+    lat: 59.965838,
+    lon: 30.312189,
   },
     {
     id: 'ekste-sankt-peterburg-3',
@@ -13629,6 +14295,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 52000,
     imageAlt: 'Экстернат для спортсменов Зенит рядом с Крестовским островом',
+    lat: 59.974406,
+    lon: 30.226157,
   },
     {
     id: 'ekste-sankt-peterburg-4',
@@ -13650,6 +14318,8 @@ export const schools: School[] = [
     reviewCount: 267,
     priceFrom: 0,
     imageAlt: 'Государственный центр экстерната на Васильевском острове',
+    lat: 59.941142,
+    lon: 30.280737,
   },
     {
     id: 'ekste-sankt-peterburg-5',
@@ -13671,6 +14341,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 32000,
     imageAlt: 'Офис онлайн-экстерната Балтика на улице Марата',
+    lat: 59.684493,
+    lon: 30.443179,
   },
     {
     id: 'ekste-sankt-peterburg-6',
@@ -13692,6 +14364,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 65000,
     imageAlt: 'Экстернат-школа Интеллект на Московском проспекте',
+    lat: 59.902811,
+    lon: 30.318498,
   },
     {
     id: 'ekste-sankt-peterburg-7',
@@ -13713,6 +14387,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 28000,
     imageAlt: 'Центр семейного образования Ладога в Озерках',
+    lat: 60.053480,
+    lon: 30.343572,
   },
     {
     id: 'ekste-sankt-peterburg-8',
@@ -13734,6 +14410,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 22000,
     imageAlt: 'Вечерняя школа-экстернат Нева на Лиговском проспекте',
+    lat: 59.892237,
+    lon: 30.319568,
   },
     {
     id: 'ekste-sankt-peterburg-9',
@@ -13755,6 +14433,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 58000,
     imageAlt: 'Экстернат Прима для юных артистов у Александринского театра',
+    lat: 59.930405,
+    lon: 30.335591,
   },
     {
     id: 'ekste-sankt-peterburg-10',
@@ -13776,6 +14456,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 35000,
     imageAlt: 'Экстернат Перспектива на Комендантском проспекте',
+    lat: 60.014947,
+    lon: 30.251236,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — СЕМЕЙНЫЕ =====
@@ -13799,6 +14481,8 @@ export const schools: School[] = [
     reviewCount: 67,
     priceFrom: 35000,
     imageAlt: 'Уютный класс семейной школы Радость с детскими работами на стенах',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'semej-sankt-peterburg-2',
@@ -13820,6 +14504,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 42000,
     imageAlt: 'Ученики семейного класса Петербург на экскурсии в Эрмитаже',
+    lat: 59.941142,
+    lon: 30.280737,
   },
     {
     id: 'semej-sankt-peterburg-3',
@@ -13841,6 +14527,8 @@ export const schools: School[] = [
     reviewCount: 54,
     priceFrom: 55000,
     imageAlt: 'Светлый класс Монтессори-школы с развивающими материалами',
+    lat: 59.984268,
+    lon: 30.252212,
   },
     {
     id: 'semej-sankt-peterburg-4',
@@ -13862,6 +14550,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 48000,
     imageAlt: 'Занятие по риторике в семейной школе Классика',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'semej-sankt-peterburg-5',
@@ -13883,6 +14573,8 @@ export const schools: School[] = [
     reviewCount: 38,
     priceFrom: 40000,
     imageAlt: 'Общее собрание учеников и педагогов Свободной школы на Фонтанке',
+    lat: 59.921440,
+    lon: 30.318369,
   },
     {
     id: 'semej-sankt-peterburg-6',
@@ -13904,6 +14596,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 32000,
     imageAlt: 'Занятие по подготовке к ЕГЭ в семейном центре Знание',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'semej-sankt-peterburg-7',
@@ -13925,6 +14619,8 @@ export const schools: School[] = [
     reviewCount: 41,
     priceFrom: 38000,
     imageAlt: 'Дети семейной школы Зелёная ветка на занятии в парке',
+    lat: 59.967393,
+    lon: 30.301326,
   },
     {
     id: 'semej-sankt-peterburg-8',
@@ -13946,6 +14642,8 @@ export const schools: School[] = [
     reviewCount: 96,
     priceFrom: 50000,
     imageAlt: 'Театральная постановка учеников Семейного лицея на Литейном',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'semej-sankt-peterburg-9',
@@ -13967,6 +14665,8 @@ export const schools: School[] = [
     reviewCount: 58,
     priceFrom: 25000,
     imageAlt: 'Светлый класс семейной школы Умка с учениками за партами',
+    lat: 59.855636,
+    lon: 30.380150,
   },
     {
     id: 'semej-sankt-peterburg-10',
@@ -13988,6 +14688,8 @@ export const schools: School[] = [
     reviewCount: 73,
     priceFrom: 95000,
     imageAlt: 'Современное здание семейного центра Новая школа на Крестовском острове',
+    lat: 59.960674,
+    lon: 30.158655,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ДОМАШНИЕ =====
@@ -14011,6 +14713,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Центр надомного обучения Невский в Санкт-Петербурге',
+    lat: 59.932947,
+    lon: 30.360070,
   },
     {
     id: 'domas-sankt-peterburg-2',
@@ -14032,6 +14736,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 35000,
     imageAlt: 'Домашняя школа для спортсменов Олимп в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-3',
@@ -14053,6 +14759,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Центр индивидуального обучения Петроградский в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-4',
@@ -14074,6 +14782,8 @@ export const schools: School[] = [
     reviewCount: 267,
     priceFrom: 18000,
     imageAlt: 'Домашняя школа Знания без границ в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-5',
@@ -14095,6 +14805,8 @@ export const schools: School[] = [
     reviewCount: 143,
     priceFrom: 0,
     imageAlt: 'Служба надомного обучения Приморского района в Санкт-Петербурге',
+    lat: 59.984268,
+    lon: 30.252212,
   },
     {
     id: 'domas-sankt-peterburg-6',
@@ -14116,6 +14828,8 @@ export const schools: School[] = [
     reviewCount: 62,
     priceFrom: 42000,
     imageAlt: 'Домашняя школа Артис для творческих детей в Санкт-Петербурге',
+    lat: 59.928051,
+    lon: 30.333579,
   },
     {
     id: 'domas-sankt-peterburg-7',
@@ -14137,6 +14851,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 22000,
     imageAlt: 'Центр дистанционного обучения Нева в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-8',
@@ -14158,6 +14874,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Надомная школа Здоровье в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-9',
@@ -14179,6 +14897,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 55000,
     imageAlt: 'Домашняя школа Перспектива в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'domas-sankt-peterburg-10',
@@ -14200,6 +14920,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 12000,
     imageAlt: 'Центр семейного образования Гармония в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ПРИ ВУЗАХ =====
@@ -14223,6 +14945,8 @@ export const schools: School[] = [
     reviewCount: 287,
     priceFrom: 0,
     imageAlt: 'Здание Академической гимназии СПбГУ на улице Халтурина',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'privu-sankt-peterburg-2',
@@ -14244,6 +14968,8 @@ export const schools: School[] = [
     reviewCount: 412,
     priceFrom: 0,
     imageAlt: 'Историческое здание физико-математического лицея 239 на Кирочной улице',
+    lat: 59.943812,
+    lon: 30.364901,
   },
     {
     id: 'privu-sankt-peterburg-3',
@@ -14265,6 +14991,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Современный корпус лицея при Политехническом университете',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'privu-sankt-peterburg-4',
@@ -14286,6 +15014,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Здание лицея при ИТМО на Васильевском острове',
+    lat: 59.944580,
+    lon: 30.295712,
   },
     {
     id: 'privu-sankt-peterburg-5',
@@ -14307,6 +15037,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 0,
     imageAlt: 'Корпус медицинского лицея при университете Мечникова',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'privu-sankt-peterburg-6',
@@ -14328,6 +15060,8 @@ export const schools: School[] = [
     reviewCount: 78,
     priceFrom: 35000,
     imageAlt: 'Здание экономического лицея на Петроградской стороне',
+    lat: 59.954159,
+    lon: 30.298859,
   },
     {
     id: 'privu-sankt-peterburg-7',
@@ -14349,6 +15083,8 @@ export const schools: School[] = [
     reviewCount: 52,
     priceFrom: 0,
     imageAlt: 'Лабораторный корпус лицея при Технологическом институте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'privu-sankt-peterburg-8',
@@ -14370,6 +15106,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Историческое здание гуманитарного лицея на набережной Мойки',
+    lat: 59.928937,
+    lon: 30.297228,
   },
     {
     id: 'privu-sankt-peterburg-9',
@@ -14391,6 +15129,8 @@ export const schools: School[] = [
     reviewCount: 97,
     priceFrom: 0,
     imageAlt: 'Здание морского лицея на Васильевском острове',
+    lat: 59.932406,
+    lon: 30.261656,
   },
     {
     id: 'privu-sankt-peterburg-10',
@@ -14412,6 +15152,8 @@ export const schools: School[] = [
     reviewCount: 86,
     priceFrom: 28000,
     imageAlt: 'Мастерские архитектурного лицея при СПбГАСУ',
+    lat: 59.915265,
+    lon: 30.312011,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ПРОФИЛЬНЫЕ =====
@@ -14435,6 +15177,8 @@ export const schools: School[] = [
     reviewCount: 487,
     priceFrom: 0,
     imageAlt: 'Здание Президентского физико-математического лицея № 239 на Кирочной улице',
+    lat: 59.943812,
+    lon: 30.364901,
   },
     {
     id: 'profi-sankt-peterburg-2',
@@ -14456,6 +15200,8 @@ export const schools: School[] = [
     reviewCount: 612,
     priceFrom: 0,
     imageAlt: 'Современное здание Академической гимназии № 56 на Чкаловском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'profi-sankt-peterburg-3',
@@ -14477,6 +15223,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Здание Медицинского лицея при СПбГПМУ на Литовской улице',
+    lat: 59.978866,
+    lon: 30.362572,
   },
     {
     id: 'profi-sankt-peterburg-4',
@@ -14498,6 +15246,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Историческое здание Классической гимназии № 610 на Петроградской стороне',
+    lat: 59.957971,
+    lon: 30.320335,
   },
     {
     id: 'profi-sankt-peterburg-5',
@@ -14519,6 +15269,8 @@ export const schools: School[] = [
     reviewCount: 234,
     priceFrom: 0,
     imageAlt: 'Здание Экономического лицея № 373 на Крестовском острове',
+    lat: 59.967824,
+    lon: 30.274875,
   },
     {
     id: 'profi-sankt-peterburg-6',
@@ -14540,6 +15292,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Спортивный комплекс школы № 593 на Дунайском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'profi-sankt-peterburg-7',
@@ -14561,6 +15315,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 65000,
     imageAlt: 'Современный интерьер частной IT-школы Алгоритмика на Петроградской',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'profi-sankt-peterburg-8',
@@ -14582,6 +15338,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Химическая лаборатория лицея № 554 на проспекте Просвещения',
+    lat: 60.042635,
+    lon: 30.363344,
   },
     {
     id: 'profi-sankt-peterburg-9',
@@ -14603,6 +15361,8 @@ export const schools: School[] = [
     reviewCount: 312,
     priceFrom: 0,
     imageAlt: 'Здание Лингвистической гимназии № 631 на Приморском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'profi-sankt-peterburg-10',
@@ -14624,6 +15384,8 @@ export const schools: School[] = [
     reviewCount: 127,
     priceFrom: 0,
     imageAlt: 'Современное здание Инженерно-технологической школы № 777 на Пулковском шоссе',
+    lat: 59.827888,
+    lon: 30.322976,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — ГИМНАЗИИ =====
@@ -14647,6 +15409,8 @@ export const schools: School[] = [
     reviewCount: 387,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 56 на улице Пудожской в Петроградском районе',
+    lat: 59.964794,
+    lon: 30.292775,
   },
     {
     id: 'gimna-sankt-peterburg-2',
@@ -14668,6 +15432,8 @@ export const schools: School[] = [
     reviewCount: 215,
     priceFrom: 0,
     imageAlt: 'Современное здание Академической гимназии СПбГУ',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gimna-sankt-peterburg-3',
@@ -14689,6 +15455,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Историческое здание гимназии № 155 на Кирочной улице',
+    lat: 59.943812,
+    lon: 30.364901,
   },
     {
     id: 'gimna-sankt-peterburg-4',
@@ -14710,6 +15478,8 @@ export const schools: School[] = [
     reviewCount: 142,
     priceFrom: 0,
     imageAlt: 'Здание Классической гимназии № 610 на Петроградской стороне',
+    lat: 59.684944,
+    lon: 30.459135,
   },
     {
     id: 'gimna-sankt-peterburg-5',
@@ -14731,6 +15501,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Фасад гимназии № 171 на улице Чайковского',
+    lat: 59.946546,
+    lon: 30.339336,
   },
     {
     id: 'gimna-sankt-peterburg-6',
@@ -14752,6 +15524,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 0,
     imageAlt: 'Современное здание гимназии № 261 на проспекте Стачек',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gimna-sankt-peterburg-7',
@@ -14773,6 +15547,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 75000,
     imageAlt: 'Историческое здание гимназии Петершуле на Невском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gimna-sankt-peterburg-8',
@@ -14794,6 +15570,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Здание гимназии № 116 на улице Савушкина',
+    lat: 59.984268,
+    lon: 30.252212,
   },
     {
     id: 'gimna-sankt-peterburg-9',
@@ -14815,6 +15593,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Современный комплекс гимназии № 631 на проспекте Ветеранов',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'gimna-sankt-peterburg-10',
@@ -14859,6 +15639,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 0,
     imageAlt: 'Здание коррекционной школы для слабовидящих детей на улице Рубинштейна',
+    lat: 59.929624,
+    lon: 30.344302,
   },
     {
     id: 'korre-sankt-peterburg-2',
@@ -14880,6 +15662,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Школа-интернат для глухих детей на проспекте Стачек в Санкт-Петербурге',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'korre-sankt-peterburg-3',
@@ -14901,6 +15685,8 @@ export const schools: School[] = [
     reviewCount: 94,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа 565 Московского района Санкт-Петербурга',
+    lat: 59.864748,
+    lon: 30.316146,
   },
     {
     id: 'korre-sankt-peterburg-4',
@@ -14922,6 +15708,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Школа-центр речевой патологии на Невском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'korre-sankt-peterburg-5',
@@ -14943,6 +15731,8 @@ export const schools: School[] = [
     reviewCount: 128,
     priceFrom: 0,
     imageAlt: 'Школа для детей с нарушениями опорно-двигательного аппарата на Васильевском острове',
+    lat: 59.939146,
+    lon: 30.218434,
   },
     {
     id: 'korre-sankt-peterburg-6',
@@ -14964,6 +15754,8 @@ export const schools: School[] = [
     reviewCount: 89,
     priceFrom: 45000,
     imageAlt: 'Частная коррекционная школа Радуга возможностей на Каменноостровском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'korre-sankt-peterburg-7',
@@ -14985,6 +15777,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Школа для детей с расстройствами аутистического спектра на улице Савушкина',
+    lat: 59.984268,
+    lon: 30.252212,
   },
     {
     id: 'korre-sankt-peterburg-8',
@@ -15005,6 +15799,8 @@ export const schools: School[] = [
     reviewCount: 76,
     priceFrom: 0,
     imageAlt: 'Школа-интернат для детей с ЗПР в Петергофе',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'korre-sankt-peterburg-9',
@@ -15026,6 +15822,8 @@ export const schools: School[] = [
     reviewCount: 167,
     priceFrom: 0,
     imageAlt: 'Школа-интернат имени Грота для слепых детей на проспекте Шаумяна',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'korre-sankt-peterburg-10',
@@ -15047,6 +15845,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 55000,
     imageAlt: 'Частный образовательный центр Особые дети на Большом проспекте Петроградской стороны',
+    lat: 59.960674,
+    lon: 30.158655,
   },
 
   // ===== САНКТ-ПЕТЕРБУРГ — КАДЕТСКИЕ =====
@@ -15090,6 +15890,8 @@ export const schools: School[] = [
     reviewCount: 189,
     priceFrom: 0,
     imageAlt: 'Здание Кронштадтского морского кадетского корпуса',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'kadet-sankt-peterburg-3',
@@ -15111,6 +15913,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Современное здание кадетской школы IT-технологий на проспекте Энгельса',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'kadet-sankt-peterburg-4',
@@ -15132,6 +15936,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Историческое здание Петровского кадетского корпуса на Садовой улице',
+    lat: 59.685021,
+    lon: 30.467353,
   },
     {
     id: 'kadet-sankt-peterburg-5',
@@ -15153,6 +15959,8 @@ export const schools: School[] = [
     reviewCount: 212,
     priceFrom: 0,
     imageAlt: 'Здание кадетской школы МЧС на Московском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'kadet-sankt-peterburg-6',
@@ -15174,6 +15982,8 @@ export const schools: School[] = [
     reviewCount: 134,
     priceFrom: 0,
     imageAlt: 'Современное здание кадетского корпуса Росгвардии',
+    lat: 59.852524,
+    lon: 30.333993,
   },
     {
     id: 'kadet-sankt-peterburg-7',
@@ -15195,6 +16005,8 @@ export const schools: School[] = [
     reviewCount: 287,
     priceFrom: 0,
     imageAlt: 'Историческое здание Санкт-Петербургского суворовского военного училища',
+    lat: 59.685072,
+    lon: 30.468882,
   },
     {
     id: 'kadet-sankt-peterburg-8',
@@ -15216,6 +16028,8 @@ export const schools: School[] = [
     reviewCount: 145,
     priceFrom: 0,
     imageAlt: 'Здание кадетской школы полиции на проспекте Ветеранов',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'kadet-sankt-peterburg-9',
@@ -15237,6 +16051,8 @@ export const schools: School[] = [
     reviewCount: 98,
     priceFrom: 0,
     imageAlt: 'Здание кадетского корпуса железнодорожных войск на Лиговском проспекте',
+    lat: 59.960674,
+    lon: 30.158655,
   },
     {
     id: 'kadet-sankt-peterburg-10',
