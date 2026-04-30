@@ -197,7 +197,13 @@ export default async function SchoolPage({ params }: Props) {
             <div className="mb-5 rounded-xl overflow-hidden border border-gray-100" style={{ height: 280 }}>
               <iframe
                 title={`Карта — ${school.name}`}
-                src={`https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}&z=16&lang=ru_RU`}
+                src={
+                  school.lat && school.lon
+                    // Если есть координаты — показываем точку без поиска
+                    ? `https://yandex.ru/map-widget/v1/?ll=${school.lon},${school.lat}&z=16&pt=${school.lon},${school.lat},pm2rdm&lang=ru_RU`
+                    // Fallback: ищем по адресу (может показать несколько результатов)
+                    : `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}&z=16&lang=ru_RU`
+                }
                 width="100%"
                 height="280"
                 allowFullScreen
