@@ -101,7 +101,7 @@ function buildPrompt(topic) {
 ${cityContext}
 
 ТРЕБОВАНИЯ К СТАТЬЕ:
-1. Объём: 1600–2200 слов (только текст без HTML-тегов)
+1. Объём: 1800–2500 слов (только текст без HTML-тегов). Это жёсткое требование — статья должна быть развёрнутой и подробной.
 2. Структура: минимум 5 секций H2, дополнительные H3 где нужно
 3. Обязательный блок FAQ в конце: 4 вопроса с развёрнутыми ответами (оберни в <section>)
 4. Минимум 2 нумерованных или маркированных списка
@@ -216,7 +216,7 @@ async function main() {
     try {
       const response = await anthropic.messages.create({
         model: 'claude-opus-4-5',
-        max_tokens: 8000,
+        max_tokens: 12000,
         messages: [{ role: 'user', content: buildPrompt(topic) }],
       })
 
