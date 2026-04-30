@@ -74,7 +74,7 @@ export default function SchoolPageGallery({ slug, imageAlt, children }: Props) {
           </button>
 
           {/* Точки */}
-          <div className="absolute top-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+          <div className="absolute top-3 left-4 flex gap-1.5">
             {available.map(i => (
               <button
                 key={i}
@@ -87,9 +87,9 @@ export default function SchoolPageGallery({ slug, imageAlt, children }: Props) {
         </>
       )}
 
-      {/* Миниатюры снизу */}
+      {/* Миниатюры — сверху справа, не перекрывают рейтинг */}
       {available.length > 1 && (
-        <div className="absolute bottom-16 right-4 flex gap-1.5">
+        <div className="absolute top-3 right-4 flex gap-1.5">
           {available.map(i => (
             <button
               key={i}
