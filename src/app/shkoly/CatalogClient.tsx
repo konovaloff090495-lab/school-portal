@@ -404,15 +404,49 @@ export default function CatalogClient({
   }, [mapSchoolId, filtered])
 
   const mapIframeSrc = useMemo(() => {
+    // Школы с координатами из нашей базы
+    const withCoords = filtered.filter(s => s.lat && s.lon)
+
     if (mapSchool) {
-      // Конкретная школа — зум 16
+      if (mapSchool.lat && mapSchool.lon) {
+        // Точная точка — зум 16 по координатам
+        const pt = `${mapSchool.lon},${mapSchool.lat},pm2rdm`
+        return `https://yandex.ru/map-widget/v1/?ll=${mapSchool.lon},${mapSchool.lat}&z=16&pt=${pt}&lang=ru_RU`
+      }
+      // Нет координат — fallback на поиск по адресу
       return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${mapSchool.city}, ${mapSchool.address}`)}&z=16&lang=ru_RU`
     }
-    // Обзор города — показываем все школы через поиск по городу
+
+    if (withCoords.length > 0) {
+      // Показываем все наши школы точками
+      // Вычисляем центр и зум по bounding box
+      const lats = withCoords.map(s => s.lat!)
+      const lons = withCoords.map(s => s.lon!)
+      const centerLat = (Math.min(...lats) + Math.max(...lats)) / 2
+      const centerLon = (Math.min(...lons) + Math.max(...lons)) / 2
+      const spanLat   = Math.max(...lats) - Math.min(...lats)
+      const spanLon   = Math.max(...lons) - Math.min(...lons)
+      const span      = Math.max(spanLat, spanLon)
+      // Примерный зум по разбросу точек
+      const zoom = span < 0.02 ? 15 : span < 0.05 ? 14 : span < 0.1 ? 13 : span < 0.3 ? 12 : span < 1 ? 11 : 10
+
+      // Максимум 50 точек в URL (ограничение браузера)
+      const MAX_PINS = 50
+      const pins = withCoords.slice(0, MAX_PINS)
+      // Выбранная школа выделяется красным, остальные синим
+      const pt = pins.map((s, i) => {
+        const style = s.id === mapSchoolId ? 'pm2rdm' : 'pm2blm'
+        return `${s.lon},${s.lat},${style}${i + 1}`
+      }).join('~')
+
+      return `https://yandex.ru/map-widget/v1/?ll=${centerLon},${centerLat}&z=${zoom}&pt=${pt}&lang=ru_RU`
+    }
+
+    // Нет координат — показываем город без поиска школ
     const region = initialRegions[0]
     const cityName = initialCity ?? (region ? regionLabels[region] : 'Россия')
-    return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`школы ${cityName}`)}&z=12&lang=ru_RU`
-  }, [mapSchool, initialRegions, initialCity])
+    return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(cityName)}&z=12&lang=ru_RU`
+  }, [mapSchool, mapSchoolId, filtered, initialRegions, initialCity])
 
   const seoText = useMemo(() => {
     const n = filtered.length
