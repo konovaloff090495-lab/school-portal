@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import { useRouter } from 'next/navigation'
 import { schools } from '@/data/schools'
 
@@ -23,14 +24,22 @@ const STEPS = [
     title: 'В каком городе ищете школу?',
     emoji: '🏙️',
     options: [
-      { value: 'moskva',          label: 'Москва',              emoji: '🏛️' },
-      { value: 'sankt-peterburg', label: 'Санкт-Петербург',     emoji: '🌊' },
-      { value: 'novosibirsk',     label: 'Новосибирск',         emoji: '❄️' },
-      { value: 'ekaterinburg',    label: 'Екатеринбург',        emoji: '⛰️' },
-      { value: 'kazan',           label: 'Казань',              emoji: '🕌' },
-      { value: 'nizhniy-novgorod',label: 'Нижний Новгород',     emoji: '🏘️' },
-      { value: 'krasnodar',       label: 'Краснодар',           emoji: '🌞' },
-      { value: 'other',           label: 'Другой город',        emoji: '📍' },
+      { value: 'moskva',           label: 'Москва',           emoji: '🏛️' },
+      { value: 'sankt-peterburg',  label: 'Санкт-Петербург',  emoji: '🌊' },
+      { value: 'novosibirsk',      label: 'Новосибирск',      emoji: '❄️' },
+      { value: 'ekaterinburg',     label: 'Екатеринбург',     emoji: '⛰️' },
+      { value: 'kazan',            label: 'Казань',           emoji: '🕌' },
+      { value: 'nizhniy-novgorod', label: 'Нижний Новгород',  emoji: '🏘️' },
+      { value: 'rostov-na-donu',   label: 'Ростов-на-Дону',   emoji: '☀️' },
+      { value: 'krasnodar',        label: 'Краснодар',        emoji: '🌞' },
+      { value: 'samara',           label: 'Самара',           emoji: '✈️' },
+      { value: 'ufa',              label: 'Уфа',              emoji: '🌿' },
+      { value: 'chelyabinsk',      label: 'Челябинск',        emoji: '⚙️' },
+      { value: 'perm',             label: 'Пермь',            emoji: '🦋' },
+      { value: 'voronezh',         label: 'Воронеж',          emoji: '🌾' },
+      { value: 'volgograd',        label: 'Волгоград',        emoji: '🌊' },
+      { value: 'omsk',             label: 'Омск',             emoji: '🌲' },
+      { value: 'other',            label: 'Другой город',     emoji: '📍' },
     ],
   },
   {
@@ -38,12 +47,13 @@ const STEPS = [
     title: 'Какой тип школы интересует?',
     emoji: '🏫',
     options: [
-      { value: 'gosudarstvennye', label: 'Государственная',     emoji: '🏛️', hint: 'бесплатно' },
-      { value: 'gimnazii',        label: 'Гимназия или лицей',  emoji: '🎓', hint: 'углублённые программы' },
-      { value: 'chastnie',        label: 'Частная школа',       emoji: '⭐', hint: 'малые классы' },
-      { value: 'online',          label: 'Онлайн-школа',        emoji: '💻', hint: 'из любой точки' },
-      { value: 'pri-vuzakh',      label: 'При университете',    emoji: '🔬', hint: 'ранний старт' },
-      { value: 'any',             label: 'Не принципиально',    emoji: '🤷', hint: '' },
+      { value: 'gosudarstvennye', label: 'Государственная',    emoji: '🏛️', hint: 'бесплатно' },
+      { value: 'gimnazii',        label: 'Гимназия / лицей',   emoji: '🎓', hint: 'углублённые программы' },
+      { value: 'chastnie',        label: 'Частная школа',      emoji: '⭐', hint: 'малые классы' },
+      { value: 'online',          label: 'Онлайн-школа',       emoji: '💻', hint: 'из любой точки' },
+      { value: 'pri-vuzakh',      label: 'При университете',   emoji: '🔬', hint: 'ранний старт' },
+      { value: 'eksternal',       label: 'Экстернат',          emoji: '⚡', hint: 'ускоренно' },
+      { value: 'any',             label: 'Не принципиально',   emoji: '🤷', hint: '' },
     ],
   },
   {
@@ -51,10 +61,10 @@ const STEPS = [
     title: 'В каком классе ребёнок?',
     emoji: '👧',
     options: [
-      { value: '1-4',  label: '1–4 класс',   emoji: '🌱', hint: 'начальная школа' },
-      { value: '5-9',  label: '5–9 класс',   emoji: '📚', hint: 'средняя школа' },
-      { value: '10-11',label: '10–11 класс', emoji: '🎯', hint: 'подготовка к ЕГЭ' },
-      { value: 'any',  label: 'Ещё не решили', emoji: '💭', hint: '' },
+      { value: '1-4',   label: '1–4 класс',    emoji: '🌱', hint: 'начальная школа' },
+      { value: '5-9',   label: '5–9 класс',    emoji: '📚', hint: 'средняя школа' },
+      { value: '10-11', label: '10–11 класс',  emoji: '🎯', hint: 'подготовка к ЕГЭ' },
+      { value: 'any',   label: 'Ещё не решили',emoji: '💭', hint: '' },
     ],
   },
   {
@@ -62,12 +72,12 @@ const STEPS = [
     title: 'Что важнее всего?',
     emoji: '✨',
     options: [
-      { value: 'ege',       label: 'Высокий рейтинг ЕГЭ', emoji: '📈', hint: '' },
-      { value: 'languages', label: 'Иностранные языки',    emoji: '🇬🇧', hint: '' },
-      { value: 'it',        label: 'IT и технологии',      emoji: '💻', hint: '' },
-      { value: 'sport',     label: 'Спорт и активности',   emoji: '🏃', hint: '' },
-      { value: 'prodlyonka',label: 'Группа продлёнки',     emoji: '🕐', hint: '' },
-      { value: 'price',     label: 'Доступная цена',       emoji: '💰', hint: '' },
+      { value: 'ege',           label: 'Подготовка к ЕГЭ',    emoji: '📈', hint: '' },
+      { value: 'oge',           label: 'Подготовка к ОГЭ',    emoji: '📋', hint: '' },
+      { value: 'it',            label: 'IT и программирование',emoji: '💻', hint: '' },
+      { value: 'languages',     label: 'Иностранные языки',    emoji: '🇬🇧', hint: '' },
+      { value: 'sport',         label: 'Спорт и активности',   emoji: '🏃', hint: '' },
+      { value: 'prodlyonka',    label: 'Группа продлёнки',     emoji: '🕐', hint: '' },
     ],
   },
 ]
@@ -83,17 +93,14 @@ function buildUrl(answers: QuizAnswers): string {
   const region = city && city !== 'other' ? city : null
   const typeSlug = type && type !== 'any' ? type : null
 
-  // Маппинг фичи на страницу особенностей
-  const featurePageMap: Record<string, string> = {
-    it:        '/shkoly/osobennosti/it-klass/',
-    prodlyonka:'/shkoly/osobennosti/prodlyonka/',
-    languages: '/shkoly/osobennosti/uglublenny-anglijskij/',
-    ege:       '/shkoly/moskva/gosudarstvennye/', // рейтинг ЕГЭ → гос.
-  }
-
-  // Если выбрана фича и нет конкретного типа и есть Москва → страница особенности
-  if (feature && featurePageMap[feature] && !typeSlug && region === 'moskva') {
-    return featurePageMap[feature]
+  // Маппинг фичи на страницу
+  if (feature && feature !== 'any' && feature !== 'sport' && feature !== 'price') {
+    const r = region ?? 'moskva'
+    if (feature === 'ege')       return `/shkoly/${r}/podgotovka-k-ege/`
+    if (feature === 'oge')       return `/shkoly/${r}/podgotovka-k-oge/`
+    if (feature === 'it')        return region ? `/shkoly/${r}/programmirovanie/` : '/shkoly/osobennosti/it-klass/'
+    if (feature === 'prodlyonka')return '/shkoly/osobennosti/prodlyonka/'
+    if (feature === 'languages') return '/shkoly/osobennosti/uglublenny-anglijskij/'
   }
 
   if (region && typeSlug) return `/shkoly/${region}/${typeSlug}/`
@@ -120,7 +127,10 @@ export default function SchoolQuiz() {
   const [step, setStep]       = useState(0)
   const [answers, setAnswers] = useState<QuizAnswers>({})
   const [done, setDone]       = useState(false)
+  const [mounted, setMounted] = useState(false)
   const router                = useRouter()
+
+  useEffect(() => { setMounted(true) }, [])
 
   // Закрытие по Escape
   useEffect(() => {
@@ -171,33 +181,13 @@ export default function SchoolQuiz() {
   const matchCount  = done ? countMatching(answers) : 0
   const progressPct = done ? 100 : ((step) / TOTAL) * 100
 
-  if (!open) {
-    return (
-      <button
-        onClick={openQuiz}
-        className="hero-btn-primary"
-        style={{
-          display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          background: '#1A1814', color: '#fff',
-          borderRadius: 999,
-          fontFamily: 'var(--font-manrope, sans-serif)',
-          fontWeight: 700, textDecoration: 'none', border: 'none', cursor: 'pointer',
-          boxShadow: '0 4px 0 #000, 0 12px 32px rgba(0,0,0,0.25)',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        Подобрать школу за 2 мин →
-      </button>
-    )
-  }
-
-  return (
+  const modal = open && mounted ? createPortal(
     <>
       {/* Backdrop */}
       <div
         onClick={closeQuiz}
         style={{
-          position: 'fixed', inset: 0, zIndex: 200,
+          position: 'fixed', inset: 0, zIndex: 9998,
           background: 'rgba(15,23,42,0.7)',
           backdropFilter: 'blur(6px)',
           WebkitBackdropFilter: 'blur(6px)',
@@ -207,7 +197,7 @@ export default function SchoolQuiz() {
       {/* Modal */}
       <div
         style={{
-          position: 'fixed', inset: 0, zIndex: 201,
+          position: 'fixed', inset: 0, zIndex: 9999,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px',
           pointerEvents: 'none',
@@ -408,6 +398,28 @@ export default function SchoolQuiz() {
           </div>
         </div>
       </div>
+    </>,
+    document.body
+  ) : null
+
+  return (
+    <>
+      <button
+        onClick={openQuiz}
+        className="hero-btn-primary"
+        style={{
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+          background: '#1A1814', color: '#fff',
+          borderRadius: 999,
+          fontFamily: 'var(--font-manrope, sans-serif)',
+          fontWeight: 700, textDecoration: 'none', border: 'none', cursor: 'pointer',
+          boxShadow: '0 4px 0 #000, 0 12px 32px rgba(0,0,0,0.25)',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        Подобрать школу за 2 мин →
+      </button>
+      {modal}
     </>
   )
 }
