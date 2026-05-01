@@ -21513,7 +21513,7 @@ export function getSchoolsByMoCity(city: string): School[] {
 }
 
 // Feature-based filtering
-export type FeatureSlug = 's-bassejnom' | 'it-klass' | 'meditsinskij-klass' | 'uglublenny-anglijskij' | 'kadety' | 'prodlyonka' | 'boarding'
+export type FeatureSlug = 's-bassejnom' | 'it-klass' | 'meditsinskij-klass' | 'uglublenny-anglijskij' | 'kadety' | 'prodlyonka' | 'boarding' | 'podgotovka-k-ege' | 'podgotovka-k-oge'
 
 export interface FeatureMeta {
   slug: FeatureSlug
@@ -21572,6 +21572,22 @@ export const featureMetas: FeatureMeta[] = [
     title: 'Школы-пансионы и интернаты',
     description: 'Школы-пансионы и школы с интернатом в России. Полный пансион, проживание и обучение в одном месте.',
     keywords: ['пансион', 'интернат', 'boarding', 'проживание', 'общежит'],
+  },
+  {
+    slug: 'podgotovka-k-ege',
+    label: 'Подготовка к ЕГЭ',
+    labelGen: 'с подготовкой к ЕГЭ',
+    title: 'Школы с подготовкой к ЕГЭ',
+    description: 'Школы с углублённой подготовкой к ЕГЭ: профильные классы, интенсивы, авторские программы. Адреса, телефоны, отзывы родителей.',
+    keywords: ['егэ', 'ege', 'единый государственный экзамен', 'подготовка к экзамен', 'сдать егэ', 'подготовк к егэ', 'профильный класс', 'профильн', 'олимпиадн', 'углублённ'],
+  },
+  {
+    slug: 'podgotovka-k-oge',
+    label: 'Подготовка к ОГЭ',
+    labelGen: 'с подготовкой к ОГЭ',
+    title: 'Школы с подготовкой к ОГЭ',
+    description: 'Школы с углублённой подготовкой к ОГЭ: тренировочные экзамены, профильные 9-е классы. Адреса, телефоны, отзывы.',
+    keywords: ['огэ', 'oge', 'основной государственный экзамен', 'гиа', 'подготовк к огэ', 'сдать огэ', '9 класс', 'девятый класс'],
   },
 ]
 
