@@ -185,7 +185,7 @@ export default function HomePage() {
             <span className="font-semibold text-[#0F172A] whitespace-nowrap">{pluralSchools(schools.length)} в каталоге</span>
             <span className="w-px h-4 bg-gray-200 shrink-0" />
             {typeSlugs.map(type => (
-              <Link key={type} href={`/shkoly/moskva/${type}/`} className="flex items-center gap-1.5 whitespace-nowrap hover:text-[#0369A1] transition-colors duration-200 cursor-pointer">
+              <Link key={type} href={`/shkoly/tipy/${type}/`} className="flex items-center gap-1.5 whitespace-nowrap hover:text-[#0369A1] transition-colors duration-200 cursor-pointer">
                 <span className={`inline-block w-2 h-2 rounded-full ${getTypeColor(type).split(' ')[0]}`} />
                 {typeLabels[type]}: {schools.filter(s => s.type === type).length}
               </Link>
@@ -202,7 +202,7 @@ export default function HomePage() {
           {typeSlugs.map(type => (
             <Link
               key={type}
-              href={`/shkoly/moskva/${type}/`}
+              href={`/shkoly/tipy/${type}/`}
               className={`group bg-white rounded-2xl border-2 p-5 hover:shadow-lg transition-all duration-200 cursor-pointer ${typeColors[type]}`}
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${typeIconColors[type]} transition-transform duration-200 group-hover:scale-110`}>
