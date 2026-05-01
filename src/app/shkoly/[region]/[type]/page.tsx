@@ -6,6 +6,7 @@ import {
 } from '@/data/schools'
 import { buildTitle, buildDescription } from '@/lib/utils'
 import CatalogClient from '../../CatalogClient'
+import SeoBlock from '@/components/SeoBlock'
 
 interface Props {
   params: Promise<{ region: string; type: string }>
@@ -70,6 +71,7 @@ export default async function TypePage({ params }: Props) {
         { label: regionName, href: `/shkoly/${r}/` },
         { label: typeName },
       ]}
+      seoContent={<SeoBlock region={r} type={t} count={list.length} />}
     />
   )
 }

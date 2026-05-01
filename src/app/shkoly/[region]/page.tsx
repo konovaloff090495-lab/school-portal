@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { regionSlugs, regionLabels, regionLabelsIn, getSchoolsByRegion, RegionSlug } from '@/data/schools'
 import { buildTitle, buildDescription } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
+import SeoBlock from '@/components/SeoBlock'
 
 interface Props {
   params: Promise<{ region: string }>
@@ -42,6 +43,7 @@ export default async function RegionPage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: regionName },
       ]}
+      seoContent={<SeoBlock region={r} count={count} />}
     />
   )
 }
