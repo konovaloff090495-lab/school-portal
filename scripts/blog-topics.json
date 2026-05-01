@@ -369,12 +369,15 @@
     },
     {
       "id": "t041",
-      "status": "pending",
+      "status": "done",
       "title": "Как подготовить ребёнка к 1 классу: полное руководство",
       "slug": "podgotovka-k-1-klassu",
       "category": "Советы родителям",
       "keywords": "подготовка к школе 1 класс",
-      "freq": 8500
+      "freq": 8500,
+      "generatedAt": "2026-05-01T07:41:53.981Z",
+      "wordCount": 1632,
+      "seoScore": 100
     },
     {
       "id": "t042",
@@ -429,12 +432,15 @@
     },
     {
       "id": "t047",
-      "status": "pending",
+      "status": "done",
       "title": "Школьная форма в России: правила, цены, где купить",
       "slug": "shkolnaya-forma-rossiya",
       "category": "Советы родителям",
       "keywords": "школьная форма",
-      "freq": 9000
+      "freq": 9000,
+      "generatedAt": "2026-05-01T07:40:04.368Z",
+      "wordCount": 1489,
+      "seoScore": 90
     },
     {
       "id": "t048",
@@ -456,12 +462,15 @@
     },
     {
       "id": "t050",
-      "status": "pending",
+      "status": "done",
       "title": "Электронный дневник: как пользоваться и что смотреть родителям",
       "slug": "elektronnyj-dnevnik-roditeli",
       "category": "Советы родителям",
       "keywords": "электронный дневник",
-      "freq": 8400
+      "freq": 8400,
+      "generatedAt": "2026-05-01T07:43:31.147Z",
+      "wordCount": 1473,
+      "seoScore": 90
     },
     {
       "id": "t051",
@@ -618,12 +627,15 @@
     },
     {
       "id": "t067",
-      "status": "pending",
+      "status": "done",
       "title": "ВОШ (Всероссийская олимпиада): как готовиться и что даёт",
       "slug": "vosh-vserossijskaya-olimpiada",
       "category": "Советы родителям",
       "keywords": "всероссийская олимпиада школьников",
-      "freq": 9200
+      "freq": 9200,
+      "generatedAt": "2026-05-01T07:38:23.014Z",
+      "wordCount": 1479,
+      "seoScore": 90
     },
     {
       "id": "t068",
@@ -817,12 +829,15 @@
     },
     {
       "id": "t088",
-      "status": "pending",
+      "status": "done",
       "title": "Как проходит ОГЭ: всё о процедуре для родителей",
       "slug": "kak-prohodit-oge-procedura",
       "category": "Советы родителям",
       "keywords": "как проходит огэ",
-      "freq": 8200
+      "freq": 8200,
+      "generatedAt": "2026-05-01T07:45:20.855Z",
+      "wordCount": 1433,
+      "seoScore": 95
     },
     {
       "id": "t089",
