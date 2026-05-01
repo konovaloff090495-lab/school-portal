@@ -1,4 +1,4 @@
-import { SchoolType, RegionSlug, typeLabels, regionLabels, formatPrice } from '@/data/schools'
+import { SchoolType, RegionSlug, typeLabels, regionLabels, regionLabelsOf, regionLabelsIn, formatPrice } from '@/data/schools'
 export { formatPrice }
 
 export function buildTitle(
@@ -11,15 +11,14 @@ export function buildTitle(
     return `${schoolName} — официальная информация, адрес, контакты`
   }
   if (region && type) {
-    const typeLower = typeLabels[type].toLowerCase()
-    const city = regionLabels[region]
+    const cityOf = regionLabelsOf[region]
     const suffix = count ? ` — список ${count} школ` : ''
-    return `${typeLabels[type]} школы ${city} ${new Date().getFullYear()}${suffix}`
+    return `${typeLabels[type]} школы ${cityOf} ${new Date().getFullYear()}${suffix}`
   }
   if (region) {
-    const city = regionLabels[region]
+    const cityOf = regionLabelsOf[region]
     const suffix = count ? ` — ${count} школ` : ''
-    return `Школы ${city}${suffix} — адреса, телефоны, отзывы`
+    return `Школы ${cityOf}${suffix} — адреса, телефоны, отзывы`
   }
   return `Каталог школ России — государственные, частные, онлайн, вечерние, экстернат`
 }
@@ -31,19 +30,19 @@ export function buildDescription(
   count?: number
 ): string {
   if (schoolName && region) {
-    const city = regionLabels[region]
-    return `${schoolName} (${city}) — адрес, телефон, описание, особенности. Актуальная информация о школе на портале ШколыРоссии.`
+    const cityIn = regionLabelsIn[region]
+    return `${schoolName} ${cityIn} — адрес, телефон, описание, особенности. Актуальная информация о школе на портале pro-schools.ru.`
   }
   if (region && type) {
     const typeLower = typeLabels[type].toLowerCase()
-    const city = regionLabels[region]
+    const cityIn = regionLabelsIn[region]
     const n = count ?? 'все'
-    return `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${city}: ${n} школ с адресами, телефонами и описаниями. Сравните и выберите лучшую школу для вашего ребёнка.`
+    return `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}: ${n} школ с адресами, телефонами и описаниями. Сравните и выберите лучшую школу для вашего ребёнка.`
   }
   if (region) {
-    const city = regionLabels[region]
+    const cityIn = regionLabelsIn[region]
     const n = count ?? 'все'
-    return `Полный список школ ${city}: ${n} образовательных организаций. Государственные, частные, онлайн, вечерние школы и экстернат с адресами и контактами.`
+    return `Полный список школ ${cityIn}: ${n} образовательных организаций. Государственные, частные, онлайн, вечерние школы и экстернат с адресами и контактами.`
   }
   return `Крупнейший каталог школ России. Государственные, частные, онлайн-школы, вечерние школы и экстернат по всем регионам. Адреса, телефоны, описания, отзывы.`
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { regionSlugs, regionLabels, getSchoolsByRegion, RegionSlug } from '@/data/schools'
+import { regionSlugs, regionLabels, regionLabelsIn, getSchoolsByRegion, RegionSlug } from '@/data/schools'
 import { buildTitle, buildDescription } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 
@@ -29,13 +29,14 @@ export default async function RegionPage({ params }: Props) {
   if (!regionSlugs.includes(region as RegionSlug)) notFound()
   const r = region as RegionSlug
   const regionName = regionLabels[r]
+  const regionIn = regionLabelsIn[r]
   const count = getSchoolsByRegion(r).length
 
   return (
     <CatalogClient
       initialRegions={[r]}
       lockRegion
-      title={`Школы — ${regionName}`}
+      title={`Школы ${regionIn}`}
       subtitle={`${count} школ — государственные, частные, онлайн, вечерние, экстернат`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },

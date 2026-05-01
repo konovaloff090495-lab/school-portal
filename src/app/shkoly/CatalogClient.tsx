@@ -9,6 +9,7 @@ import {
   moCitySlugs, moCityLabels,
   featureMetas, FeatureSlug,
   RegionSlug, SchoolType,
+  metroNameToSlug,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import SchoolCard from '@/components/SchoolCard'
@@ -71,13 +72,16 @@ export interface CatalogClientProps {
   initialDistrict?: string
   initialNeighborhood?: string
   initialCity?: string
+  initialMetro?: string
   lockRegion?: boolean
   lockType?: boolean
+  lockMetro?: boolean
   title?: string
   subtitle?: string
   seoCity?: string   // имя города в именительном падеже для SEO-текста
   breadcrumbs?: { label: string; href?: string }[]
   featureFilter?: FeatureSlug
+  seoContent?: React.ReactNode
 }
 
 function toggle<T>(arr: T[], val: T): T[] {
@@ -222,13 +226,16 @@ export default function CatalogClient({
   initialDistrict,
   initialNeighborhood,
   initialCity,
+  initialMetro,
   lockRegion = false,
   lockType = false,
+  lockMetro = false,
   title = 'Каталог школ России',
   subtitle,
   seoCity,
   breadcrumbs = [{ label: 'Все школы' }],
   featureFilter,
+  seoContent,
 }: CatalogClientProps) {
   const [filters, setFilters] = useState<Filters>({
     regions: initialRegions,
@@ -238,7 +245,7 @@ export default function CatalogClient({
     moCities: initialCity ? [initialCity] : [],
     priceMode: 'all',
     minRating: 0,
-    metro: [],
+    metro: initialMetro ? [initialMetro] : [],
     profiles: [],
     sort: 'rating',
   })
@@ -293,7 +300,14 @@ export default function CatalogClient({
       const slug = moCityLabelToSlug[filters.moCities[0]]
       if (slug) { router.push(`/shkoly/moskovskaya-oblast/gorod/${slug}/`); return }
     }
-  }, [filters.regions, filters.types, filters.districts, filters.moCities])
+
+    // From /shkoly/moskva/ → 1 metro selected → metro station page
+    if (lockRegion && !lockMetro && initialRegions[0] === 'moskva'
+        && filters.metro.length === 1 && filters.types.length === 0 && filters.districts.length === 0) {
+      const slug = metroNameToSlug[filters.metro[0]]
+      if (slug) { router.push(`/shkoly/moskva/metro/${slug}/`); return }
+    }
+  }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
 
@@ -392,7 +406,7 @@ export default function CatalogClient({
     moCities: initialCity ? [initialCity] : [],
     priceMode: 'all',
     minRating: 0,
-    metro: [],
+    metro: lockMetro && initialMetro ? [initialMetro] : [],
     profiles: [],
     sort: 'rating',
   }
@@ -405,7 +419,7 @@ export default function CatalogClient({
     (filters.moCities.length > (initialCity ? 1 : 0) ? filters.moCities.length - (initialCity ? 1 : 0) : 0) +
     (filters.priceMode !== 'all' ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0) +
-    filters.metro.length +
+    (lockMetro ? Math.max(0, filters.metro.length - 1) : filters.metro.length) +
     filters.profiles.length
 
   function resetFilters() { setFilters(resetableFilters) }
@@ -862,25 +876,43 @@ export default function CatalogClient({
                 </p>
               </div>
               <div className="w-full md:w-2/5 space-y-2 max-h-[560px] overflow-y-auto pr-1">
-                {filtered.map(school => (
-                  <button
-                    key={school.id}
-                    onClick={() => setMapSchoolId(school.id)}
-                    className={`w-full text-left bg-white rounded-xl border p-3.5 hover:border-[#0369A1] transition-colors cursor-pointer ${mapSchool?.id === school.id ? 'border-[#0369A1] ring-2 ring-blue-100' : 'border-gray-200'}`}
-                  >
-                    <p className="font-semibold text-sm text-[#0F172A] leading-snug">{school.name}</p>
-                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{school.address}</p>
-                    <div className="flex items-center gap-2 mt-1.5">
-                      {school.metro && (
-                        <span className="text-xs text-gray-400 flex items-center gap-1">
-                          <span className="w-3.5 h-3.5 bg-red-500 rounded-full text-white text-[7px] flex items-center justify-center font-bold">М</span>
-                          {school.metro}
-                        </span>
-                      )}
-                      <span className="text-xs text-amber-500 font-medium">★ {school.rating}</span>
+                {filtered.map(school => {
+                  const isSelected = mapSchool?.id === school.id
+                  return (
+                    <div
+                      key={school.id}
+                      className={`bg-white rounded-xl border transition-colors ${isSelected ? 'border-[#0369A1] ring-2 ring-blue-100' : 'border-gray-200 hover:border-[#0369A1]'}`}
+                    >
+                      {/* Верхняя часть — клик показывает на карте */}
+                      <button
+                        onClick={() => setMapSchoolId(school.id)}
+                        className="w-full text-left p-3.5 pb-2 cursor-pointer"
+                      >
+                        <p className="font-semibold text-sm text-[#0F172A] leading-snug">{school.name}</p>
+                        <p className="text-xs text-gray-500 mt-1 leading-relaxed">{school.address}</p>
+                        <div className="flex items-center gap-2 mt-1.5">
+                          {school.metro && (
+                            <span className="text-xs text-gray-400 flex items-center gap-1">
+                              <span className="w-3.5 h-3.5 bg-red-500 rounded-full text-white text-[7px] flex items-center justify-center font-bold">М</span>
+                              {school.metro}
+                            </span>
+                          )}
+                          <span className="text-xs text-amber-500 font-medium">★ {school.rating}</span>
+                        </div>
+                      </button>
+                      {/* Нижняя часть — ссылка на карточку, всегда видна */}
+                      <div className="px-3.5 pb-3">
+                        <Link
+                          href={`/shkola/${school.slug}/`}
+                          className="inline-flex items-center gap-1 text-xs font-semibold text-[#0369A1] hover:text-blue-700 transition-colors"
+                        >
+                          Открыть карточку
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </Link>
+                      </div>
                     </div>
-                  </button>
-                ))}
+                  )
+                })}
               </div>
             </div>
           )}
@@ -890,6 +922,10 @@ export default function CatalogClient({
               <h2 className="text-lg font-semibold text-[#0F172A] mb-3">{title}</h2>
               <p className="text-gray-600 text-sm leading-relaxed">{seoText}</p>
             </div>
+          )}
+
+          {seoContent && viewMode === 'grid' && (
+            <div className="mt-4">{seoContent}</div>
           )}
         </div>
       </div>

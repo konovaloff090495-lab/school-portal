@@ -4,6 +4,7 @@ import { getTypeColor, pluralSchools } from '@/lib/utils'
 import SchoolCard from '@/components/SchoolCard'
 import SearchBar from '@/components/SearchBar'
 import HeroBanner from '@/components/HeroBanner'
+import CitiesSection from '@/components/CitiesSection'
 
 function IconBuilding() {
   return (
@@ -214,46 +215,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Regions */}
-      <section className="bg-white border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-2xl font-bold text-[#0F172A] mb-8">Выберите регион</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {regionSlugs.map((region, i) => {
-              const regionSchools = schools.filter(s => s.region === region)
-              return (
-                <Link
-                  key={region}
-                  href={`/shkoly/${region}/`}
-                  className="group bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200 hover:border-[#0369A1] hover:from-blue-50 hover:to-indigo-50 hover:shadow-md transition-all duration-200 cursor-pointer"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-[#0F172A] group-hover:text-[#0369A1] transition-colors duration-200">
-                        {regionLabels[region]}
-                      </h3>
-                      <p className="text-sm text-gray-500 mt-1">{pluralSchools(regionSchools.length)} в каталоге</p>
-                    </div>
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${i === 0 ? 'bg-blue-100 text-blue-600' : 'bg-emerald-100 text-emerald-600'}`}>
-                      <IconMapPin />
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {typeSlugs.map(type => {
-                      const count = regionSchools.filter(s => s.type === type).length
-                      return (
-                        <span key={type} className={`text-xs px-2.5 py-1 rounded-full font-medium ${getTypeColor(type)}`}>
-                          {typeLabels[type]}: {count}
-                        </span>
-                      )
-                    })}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Cities */}
+      <CitiesSection />
 
       {/* Top schools */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

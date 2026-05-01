@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import SchoolQuiz from '@/components/SchoolQuiz'
 
 const STATS = [
   { num: '3 280', label: 'школ в каталоге', emoji: '🏫' },
@@ -164,17 +165,7 @@ export default function HeroBanner() {
 
             {/* CTA buttons */}
             <div className="hero-btns" style={{ display: 'flex', gap: 10, marginBottom: 24, flexWrap: 'wrap' }}>
-              <Link href="/shkoly/" className="hero-btn-primary" style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                background: '#1A1814', color: '#fff',
-                borderRadius: 999,
-                fontFamily: 'var(--font-manrope, sans-serif)',
-                fontWeight: 700, textDecoration: 'none',
-                boxShadow: '0 4px 0 #000, 0 12px 32px rgba(0,0,0,0.25)',
-                whiteSpace: 'nowrap',
-              }}>
-                Подобрать школу за 2 мин →
-              </Link>
+              <SchoolQuiz />
               <Link href="/shkoly/" className="hero-btn-ghost" style={{
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
                 background: 'rgba(255,255,255,0.18)', color: '#fff',

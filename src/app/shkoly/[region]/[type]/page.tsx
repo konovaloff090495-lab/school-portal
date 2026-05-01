@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
-  regionSlugs, regionLabels, typeSlugs, typeLabels,
+  regionSlugs, regionLabels, regionLabelsIn, typeSlugs, typeLabels,
   getSchoolsByRegionAndType, RegionSlug, SchoolType,
 } from '@/data/schools'
 import { buildTitle, buildDescription } from '@/lib/utils'
@@ -43,18 +43,19 @@ export default async function TypePage({ params }: Props) {
   const r = region as RegionSlug
   const t = type as SchoolType
   const regionName = regionLabels[r]
+  const regionIn = regionLabelsIn[r]
   const typeName = typeLabels[t]
   const list = getSchoolsByRegionAndType(r, t)
 
-  // Правильные русские названия для H1/title — без лишнего "школы" там, где тип самодостаточен
+  // Правильные русские названия для H1
   const pageTitleMap: Partial<Record<SchoolType, string>> = {
-    gimnazii:    'Гимназии',
-    eksternal:   'Школы-экстернаты',
+    gimnazii:     'Гимназии',
+    eksternal:    'Школы-экстернаты',
     'pri-vuzakh': 'Школы при вузах',
   }
   const pageTitle = pageTitleMap[t]
-    ? `${pageTitleMap[t]} — ${regionName}`
-    : `${typeName} школы — ${regionName}`
+    ? `${pageTitleMap[t]} ${regionIn}`
+    : `${typeName} школы ${regionIn}`
 
   return (
     <CatalogClient
