@@ -1,8 +1,9 @@
-import { RegionSlug, SchoolType, regionLabels, regionLabelsIn, regionLabelsOf } from '@/data/schools'
+import { RegionSlug, SchoolType, FeatureSlug, regionLabels, regionLabelsIn, regionLabelsOf } from '@/data/schools'
 
 interface SeoBlockProps {
   region?: RegionSlug
   type?: SchoolType
+  feature?: FeatureSlug  // подготовка к ЕГЭ/ОГЭ и другие фичи
   count?: number
   metro?: string        // название станции метро
   district?: string     // название района
@@ -136,13 +137,41 @@ const regionContext: Partial<Record<RegionSlug, string>> = {
   volgograd: 'Волгоград развивает патриотическое и кадетское образование, есть сильные государственные лицеи.',
 }
 
+// ── Данные по ЕГЭ/ОГЭ подготовке ──────────────────────────────────────────────
+const examInfo: Partial<Record<FeatureSlug, {
+  title: string
+  who: string
+  subjects: string
+  formats: string
+  online: string
+  tip: string
+}>> = {
+  'podgotovka-k-ege': {
+    title: 'Подготовка к ЕГЭ',
+    who: 'учеников 10–11 классов, которым важно получить высокий балл для поступления в вуз',
+    subjects: 'Самые востребованные предметы: математика (профиль), русский язык, физика, химия, биология, история, обществознание, английский язык. В большинстве школ занятия по ЕГЭ включены в профильные классы или предлагаются как факультатив.',
+    formats: 'Форматы подготовки: профильные классы (10–11 кл.), факультативы и элективы, онлайн-курсы с разбором заданий, пробные ЕГЭ с развёрнутым анализом ошибок, интенсивы в каникулярное время.',
+    online: 'Онлайн-школы с подготовкой к ЕГЭ позволяют заниматься в любом темпе. Лучшие вписывают тренировочные варианты в расписание каждые 2–3 недели — это даёт ощутимый прирост баллов.',
+    tip: 'Проверяйте средний балл ЕГЭ выпускников конкретной школы: он публично доступен на сайтах региональных Министерств образования. Разрыв между топ- и обычной школой одного города может достигать 20–25 баллов.',
+  },
+  'podgotovka-k-oge': {
+    title: 'Подготовка к ОГЭ',
+    who: 'учеников 8–9 классов, готовящихся к государственной итоговой аттестации за курс основной школы',
+    subjects: 'Обязательные предметы ОГЭ: русский язык и математика. По выбору сдаются история, обществознание, физика, химия, биология, география, информатика, иностранный язык. Школы всё чаще включают «репетиционные» ОГЭ в учебный план 9 класса.',
+    formats: 'Форматы подготовки: углублённые программы 8–9 классов, тренировочные экзамены по расписанию, разборы типичных ошибок на уроках, факультативные занятия с разбором КИМов.',
+    online: 'Онлайн-школы с подготовкой к ОГЭ подходят для девятиклассников, которые хотят подтянуть отстающий предмет без смены основной школы. Многие предлагают помесячную подписку на конкретный предмет.',
+    tip: 'Обратите внимание на процент пятёрок и четвёрок на ОГЭ в рейтингах МЦКО (для Москвы) и региональных министерств — это показательнее, чем общий средний балл.',
+  },
+}
+
 // ── Основной компонент ────────────────────────────────────────────────────────
-export default function SeoBlock({ region, type, count = 0, metro, district, city }: SeoBlockProps) {
+export default function SeoBlock({ region, type, feature, count = 0, metro, district, city }: SeoBlockProps) {
   const regionName  = region ? regionLabels[region]  : null
   const regionIn    = region ? regionLabelsIn[region] : null
   const regionOf    = region ? regionLabelsOf[region] : null
   const context     = region ? (regionContext[region] ?? null) : null
   const info        = type ? typeInfo[type] : null
+  const exam        = feature ? (examInfo[feature] ?? null) : null
 
   const locationLabel = metro
     ? `у метро «${metro}»`
@@ -208,8 +237,25 @@ export default function SeoBlock({ region, type, count = 0, metro, district, cit
     })
   }
 
-  // ── 6. Региональные типы (только для страниц города без типа) ────────────
-  if (region && !type && !metro) {
+  // ── 6. ЕГЭ/ОГЭ блоки ────────────────────────────────────────────────────────
+  if (exam) {
+    const isOnline = type === 'online'
+    sections.push({
+      h: `${exam.title} ${locationLabel}: что важно знать`,
+      p: `${context ? context + ' ' : ''}${locationLabel.charAt(0).toUpperCase() + locationLabel.slice(1)} в нашем каталоге — ${countStr} с программами ${exam.title.toLowerCase()}. ${isOnline ? exam.online : exam.formats}`,
+    })
+    sections.push({
+      h: `Для кого подходит`,
+      p: `Эти школы ориентированы на ${exam.who}. ${exam.subjects}`,
+    })
+    sections.push({
+      h: `Совет при выборе`,
+      p: exam.tip,
+    })
+  }
+
+  // ── 7. Региональные типы (только для страниц города без типа) ────────────
+  if (region && !type && !metro && !exam) {
     sections.push({
       h: `Типы школ ${regionIn}`,
       p: `Государственные школы — бесплатно, по прописке. Гимназии и лицеи — конкурсный отбор, усиленные программы. Частные школы — малые классы, индивидуальный подход, платно. Онлайн-школы — гибкий график, подходят для спортсменов и путешественников. Экстернат — ускоренное прохождение программы. Семейные школы — альтернативные методики в малых группах. Школы при вузах — профильная подготовка и высокая поступаемость.`,
