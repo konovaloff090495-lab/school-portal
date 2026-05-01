@@ -917,15 +917,15 @@ export default function CatalogClient({
             </div>
           )}
 
-          {seoText && viewMode === 'grid' && (
+          {seoContent && viewMode === 'grid' && (
+            <div className="mt-4">{seoContent}</div>
+          )}
+
+          {seoText && !seoContent && viewMode === 'grid' && (
             <div className="mt-10 bg-gray-50 rounded-2xl border border-gray-200 p-6 md:p-8">
               <h2 className="text-lg font-semibold text-[#0F172A] mb-3">{title}</h2>
               <p className="text-gray-600 text-sm leading-relaxed">{seoText}</p>
             </div>
-          )}
-
-          {seoContent && viewMode === 'grid' && (
-            <div className="mt-4">{seoContent}</div>
           )}
         </div>
       </div>
