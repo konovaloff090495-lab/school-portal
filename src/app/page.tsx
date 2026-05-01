@@ -220,7 +220,7 @@ export default function HomePage() {
 
           {/* Программирование */}
           <Link
-            href="/shkoly/moskva/programmirovanie/"
+            href="/shkoly/osobennosti/it-klass/"
             className="group bg-white rounded-2xl border-2 p-5 hover:shadow-lg transition-all duration-200 cursor-pointer border-violet-200 hover:border-violet-400 hover:bg-violet-50"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 text-violet-600 bg-violet-100 transition-transform duration-200 group-hover:scale-110">
