@@ -1303,7 +1303,7 @@ export const schools: School[] = [
     founded: 2016,
     studentsCount: 210,
     features: ['Классическое образование', 'Дебатный клуб', 'Театр', 'Литературный клуб', 'Малые классы'],
-    metro: 'Чистые пруды',
+    metro: 'Чистые Пруды',
     district: 'ЦАО',
     neighborhood: 'Басманный',
     rating: 4.7,
@@ -3622,6 +3622,8 @@ export const schools: School[] = [
     priceFrom: 12000,
     priceTo: 22000,
     imageAlt: 'Домашняя школа Индиго Москва',
+    lat: 55.7472,
+    lon: 37.7258,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ДОМАШНИЕ =====
@@ -4071,6 +4073,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 312,
     imageAlt: 'Лицей МГУ Москва',
+    lat: 55.7058,
+    lon: 37.526,
   },
   {
     id: 'pri-vuzakh-moskva-2',
@@ -4094,6 +4098,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 267,
     imageAlt: 'Предуниверсарий НИУ ВШЭ Москва',
+    lat: 55.765,
+    lon: 37.6368,
   },
   {
     id: 'pri-vuzakh-moskva-3',
@@ -4117,6 +4123,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 345,
     imageAlt: 'Физтех-лицей МФТИ Москва',
+    lat: 55.9377,
+    lon: 37.5155,
   },
   {
     id: 'pri-vuzakh-moskva-4',
@@ -4139,6 +4147,8 @@ export const schools: School[] = [
     rating: 4.8,
     reviewCount: 298,
     imageAlt: 'Лицей при МГТУ Баумана Москва',
+    lat: 55.7725,
+    lon: 37.6862,
   },
   {
     id: 'pri-vuzakh-moskva-5',
@@ -4161,6 +4171,8 @@ export const schools: School[] = [
     rating: 4.8,
     reviewCount: 221,
     imageAlt: 'Лицей при МИФИ Москва',
+    lat: 55.721,
+    lon: 37.617,
   },
   {
     id: 'pri-vuzakh-moskva-6',
@@ -4184,6 +4196,8 @@ export const schools: School[] = [
     rating: 4.7,
     reviewCount: 189,
     imageAlt: 'Гимназия РАНХиГС Москва',
+    lat: 55.6726,
+    lon: 37.3586,
   },
   {
     id: 'pri-vuzakh-moskva-7',
@@ -4206,6 +4220,8 @@ export const schools: School[] = [
     rating: 4.8,
     reviewCount: 176,
     imageAlt: 'Лицей при МАИ Москва',
+    lat: 55.801,
+    lon: 37.492,
   },
   {
     id: 'pri-vuzakh-moskva-8',
@@ -4228,6 +4244,8 @@ export const schools: School[] = [
     rating: 4.7,
     reviewCount: 204,
     imageAlt: 'Школа-лицей РУДН Москва',
+    lat: 55.657,
+    lon: 37.5286,
   },
   {
     id: 'pri-vuzakh-moskva-9',
@@ -4250,6 +4268,8 @@ export const schools: School[] = [
     rating: 4.6,
     reviewCount: 134,
     imageAlt: 'Педагогический лицей при МПГУ Москва',
+    lat: 55.7359,
+    lon: 37.575,
   },
   {
     id: 'pri-vuzakh-moskva-10',
@@ -4272,6 +4292,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 278,
     imageAlt: 'Лицей при МГИМО Москва',
+    lat: 55.6754,
+    lon: 37.361,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ШКОЛЫ ПРИ ВУЗАХ =====
@@ -4683,6 +4705,8 @@ export const schools: School[] = [
     priceFrom: 40000,
     priceTo: 55000,
     imageAlt: 'IT-школа Алгоритм Москва',
+    lat: 55.7669,
+    lon: 37.6776,
   },
   {
     id: 'profilnye-moskva-2',
@@ -4705,6 +4729,8 @@ export const schools: School[] = [
     rating: 4.9,
     reviewCount: 245,
     imageAlt: 'Медицинский лицей Гиппократ Москва',
+    lat: 55.735,
+    lon: 37.574,
   },
   {
     id: 'profilnye-moskva-3',
@@ -4729,6 +4755,8 @@ export const schools: School[] = [
     priceFrom: 45000,
     priceTo: 65000,
     imageAlt: 'Школа искусств Арт-профиль Москва',
+    lat: 55.7609,
+    lon: 37.628,
   },
   {
     id: 'profilnye-moskva-4',
@@ -4753,6 +4781,8 @@ export const schools: School[] = [
     priceFrom: 35000,
     priceTo: 50000,
     imageAlt: 'Спортивная школа Олимпийский резерв Москва',
+    lat: 55.7155,
+    lon: 37.5595,
   },
   {
     id: 'profilnye-moskva-5',
@@ -4777,6 +4807,8 @@ export const schools: School[] = [
     priceFrom: 42000,
     priceTo: 58000,
     imageAlt: 'Экономическая школа Финансист Москва',
+    lat: 55.7538,
+    lon: 37.577,
   },
   {
     id: 'profilnye-moskva-6',
@@ -4801,6 +4833,8 @@ export const schools: School[] = [
     priceFrom: 48000,
     priceTo: 68000,
     imageAlt: 'Театральная школа Маски Москва',
+    lat: 55.7489,
+    lon: 37.5917,
   },
   {
     id: 'profilnye-moskva-7',
@@ -4825,6 +4859,8 @@ export const schools: School[] = [
     priceFrom: 38000,
     priceTo: 52000,
     imageAlt: 'Экологическая школа Биосфера Москва',
+    lat: 55.648,
+    lon: 37.4008,
   },
   {
     id: 'profilnye-moskva-8',
@@ -4849,6 +4885,8 @@ export const schools: School[] = [
     priceFrom: 45000,
     priceTo: 62000,
     imageAlt: 'Языковая школа Полиглот Москва',
+    lat: 55.7453,
+    lon: 37.5638,
   },
   {
     id: 'profilnye-moskva-9',
@@ -4873,6 +4911,8 @@ export const schools: School[] = [
     priceFrom: 55000,
     priceTo: 80000,
     imageAlt: 'Музыкальная школа Соната Москва',
+    lat: 55.7624,
+    lon: 37.5918,
   },
   {
     id: 'profilnye-moskva-10',
@@ -4897,6 +4937,8 @@ export const schools: School[] = [
     priceFrom: 42000,
     priceTo: 58000,
     imageAlt: 'Юридический лицей Фемида Москва',
+    lat: 55.7697,
+    lon: 37.6378,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ПРОФИЛЬНЫЕ =====
@@ -5346,6 +5388,8 @@ export const schools: School[] = [
     reviewCount: 284,
     priceFrom: 0,
     imageAlt: 'Гимназия 1514 Москва Хамовники',
+    lat: 55.7258,
+    lon: 37.5616,
   },
   {
     id: 'gimnazii-moskva-2',
@@ -5370,6 +5414,8 @@ export const schools: School[] = [
     priceFrom: 45000,
     priceTo: 65000,
     imageAlt: 'Гимназия Золотое сечение Москва',
+    lat: 55.708,
+    lon: 37.384,
   },
   {
     id: 'gimnazii-moskva-3',
@@ -5392,6 +5438,8 @@ export const schools: School[] = [
     reviewCount: 211,
     priceFrom: 0,
     imageAlt: 'Лингвистическая гимназия 1555 Москва',
+    lat: 55.86,
+    lon: 37.51,
   },
   {
     id: 'gimnazii-moskva-4',
@@ -5414,6 +5462,8 @@ export const schools: School[] = [
     reviewCount: 178,
     priceFrom: 0,
     imageAlt: 'Гимназия 51 Маршака Москва',
+    lat: 55.8249,
+    lon: 37.5989,
   },
   {
     id: 'gimnazii-moskva-5',
@@ -5439,6 +5489,8 @@ export const schools: School[] = [
     priceFrom: 55000,
     priceTo: 75000,
     imageAlt: 'Гимназия Класс-Центр Москва',
+    lat: 55.7796,
+    lon: 37.635,
   },
   {
     id: 'gimnazii-moskva-6',
@@ -5463,6 +5515,8 @@ export const schools: School[] = [
     priceFrom: 38000,
     priceTo: 55000,
     imageAlt: 'Гимназия Корифей Москва ЮЗАО',
+    lat: 55.6922,
+    lon: 37.5272,
   },
   {
     id: 'gimnazii-moskva-7',
@@ -5486,6 +5540,8 @@ export const schools: School[] = [
     reviewCount: 129,
     priceFrom: 0,
     imageAlt: 'Гимназия Карамзина Москва ВАО',
+    lat: 55.7895,
+    lon: 37.7722,
   },
   {
     id: 'gimnazii-moskva-8',
@@ -5509,6 +5565,8 @@ export const schools: School[] = [
     priceFrom: 32000,
     priceTo: 48000,
     imageAlt: 'Гимназия Юго-Запад Москва ЮАО',
+    lat: 55.6869,
+    lon: 37.5716,
   },
   {
     id: 'gimnazii-moskva-9',
@@ -5532,6 +5590,8 @@ export const schools: School[] = [
     priceFrom: 58000,
     priceTo: 80000,
     imageAlt: 'Гимназия Северо-Запад Москва СЗАО',
+    lat: 55.8012,
+    lon: 37.4378,
   },
   {
     id: 'gimnazii-moskva-10',
@@ -5555,6 +5615,8 @@ export const schools: School[] = [
     reviewCount: 203,
     priceFrom: 0,
     imageAlt: 'Гимназия Измайлово Москва',
+    lat: 55.7877,
+    lon: 37.7868,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ГИМНАЗИИ =====
@@ -5986,6 +6048,8 @@ export const schools: School[] = [
     reviewCount: 96,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа 2124 Москва нарушение зрения',
+    lat: 55.8362,
+    lon: 37.5428,
   },
   {
     id: 'korr-moskva-2',
@@ -6008,6 +6072,8 @@ export const schools: School[] = [
     reviewCount: 84,
     priceFrom: 0,
     imageAlt: 'Школа 1862 Москва нарушение слуха',
+    lat: 55.7869,
+    lon: 37.49,
   },
   {
     id: 'korr-moskva-3',
@@ -6030,6 +6096,8 @@ export const schools: School[] = [
     reviewCount: 73,
     priceFrom: 0,
     imageAlt: 'Школа интернат 31 Москва ОВЗ',
+    lat: 55.782,
+    lon: 37.5865,
   },
   {
     id: 'korr-moskva-4',
@@ -6052,6 +6120,8 @@ export const schools: School[] = [
     reviewCount: 88,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа 359 Москва ЗПР',
+    lat: 55.6943,
+    lon: 37.5605,
   },
   {
     id: 'korr-moskva-5',
@@ -6074,6 +6144,8 @@ export const schools: School[] = [
     reviewCount: 112,
     priceFrom: 0,
     imageAlt: 'Центр реабилитации 76 Москва',
+    lat: 55.6778,
+    lon: 37.6218,
   },
   {
     id: 'korr-moskva-6',
@@ -6096,6 +6168,8 @@ export const schools: School[] = [
     reviewCount: 143,
     priceFrom: 0,
     imageAlt: 'Инклюзивная школа 499 Москва',
+    lat: 55.8014,
+    lon: 37.8066,
   },
   {
     id: 'korr-moskva-7',
@@ -6118,6 +6192,8 @@ export const schools: School[] = [
     reviewCount: 61,
     priceFrom: 0,
     imageAlt: 'Коррекционная школа 532 Москва',
+    lat: 55.6425,
+    lon: 37.592,
   },
   {
     id: 'korr-moskva-8',
@@ -6140,6 +6216,8 @@ export const schools: School[] = [
     reviewCount: 79,
     priceFrom: 0,
     imageAlt: 'Школа интернат слабовидящих 3 Москва',
+    lat: 55.7889,
+    lon: 37.8095,
   },
   {
     id: 'korr-moskva-9',
@@ -6162,6 +6240,8 @@ export const schools: School[] = [
     reviewCount: 107,
     priceFrom: 0,
     imageAlt: 'Центр коррекции речи 1811 Москва',
+    lat: 55.844,
+    lon: 37.5755,
   },
   {
     id: 'korr-moskva-10',
@@ -6184,6 +6264,8 @@ export const schools: School[] = [
     reviewCount: 85,
     priceFrom: 0,
     imageAlt: 'Школа 297 Москва задержка психического развития',
+    lat: 55.772,
+    lon: 37.6222,
   },
 
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — КОРРЕКЦИОННЫЕ ШКОЛЫ =====
@@ -6606,12 +6688,14 @@ export const schools: School[] = [
     founded: 1997,
     studentsCount: 480,
     features: ['НВП', 'Строевая подготовка', 'Рукопашный бой', 'Стрелковое дело', 'Парад Победы'],
-    metro: 'Тёплый стан',
+    metro: 'Тёплый Стан',
     district: 'ЮЗАО',
     rating: 4.8,
     reviewCount: 142,
     priceFrom: 0,
     imageAlt: 'Кадетская школа 1770 Москва',
+    lat: 55.6593,
+    lon: 37.5453,
   },
   {
     id: 'kadet-moskva-2',
@@ -6634,6 +6718,8 @@ export const schools: School[] = [
     reviewCount: 198,
     priceFrom: 0,
     imageAlt: 'Первый Московский кадетский корпус',
+    lat: 55.7426,
+    lon: 37.5555,
   },
   {
     id: 'kadet-moskva-3',
@@ -6650,12 +6736,14 @@ export const schools: School[] = [
     founded: 1995,
     studentsCount: 320,
     features: ['Казачество', 'Верховая езда', 'Фланкировка шашкой', 'Народный танец', 'Казачий хор'],
-    metro: 'Красные ворота',
+    metro: 'Красные Ворота',
     district: 'ЦАО',
     rating: 4.7,
     reviewCount: 118,
     priceFrom: 0,
     imageAlt: 'Казачий кадетский корпус Москва',
+    lat: 55.7549,
+    lon: 37.6602,
   },
   {
     id: 'kadet-moskva-4',
@@ -6678,6 +6766,8 @@ export const schools: School[] = [
     reviewCount: 124,
     priceFrom: 0,
     imageAlt: 'Кадетская школа МЧС Москва',
+    lat: 55.7355,
+    lon: 37.387,
   },
   {
     id: 'kadet-moskva-5',
@@ -6700,6 +6790,8 @@ export const schools: School[] = [
     reviewCount: 156,
     priceFrom: 0,
     imageAlt: 'Морской кадетский корпус Москва',
+    lat: 55.7814,
+    lon: 37.6188,
   },
   {
     id: 'kadet-moskva-6',
@@ -6722,6 +6814,8 @@ export const schools: School[] = [
     reviewCount: 131,
     priceFrom: 0,
     imageAlt: 'Кадетская школа 1501 Москва авиационная',
+    lat: 55.875,
+    lon: 37.71,
   },
   {
     id: 'kadet-moskva-7',
@@ -6744,6 +6838,8 @@ export const schools: School[] = [
     reviewCount: 113,
     priceFrom: 0,
     imageAlt: 'Кадетский корпус МВД Москва',
+    lat: 55.7224,
+    lon: 37.7955,
   },
   {
     id: 'kadet-moskva-8',
@@ -6766,6 +6862,8 @@ export const schools: School[] = [
     reviewCount: 87,
     priceFrom: 0,
     imageAlt: 'Президентское кадетское училище Москва',
+    lat: 55.71,
+    lon: 37.543,
   },
   {
     id: 'kadet-moskva-9',
@@ -6788,6 +6886,8 @@ export const schools: School[] = [
     reviewCount: 104,
     priceFrom: 0,
     imageAlt: 'Кадетская школа 1883 Москва ФСБ профиль',
+    lat: 55.7972,
+    lon: 37.706,
   },
   {
     id: 'kadet-moskva-10',
@@ -6810,6 +6910,8 @@ export const schools: School[] = [
     reviewCount: 217,
     priceFrom: 0,
     imageAlt: 'Кадетский корпус Суворова Москва',
+    lat: 55.7596,
+    lon: 37.7025,
   },
 
   // ===== МОСКВА — ДОПОЛНИТЕЛЬНЫЕ ШКОЛЫ (ЦАО) =====
@@ -21285,6 +21387,46 @@ export const regionLabels: Record<RegionSlug, string> = {
   'volgograd': 'Волгоград',
 }
 
+// Предложный падеж — «в Москве», «в Волгограде» (для H1)
+export const regionLabelsIn: Record<RegionSlug, string> = {
+  'moskva':             'в Москве',
+  'moskovskaya-oblast': 'в Московской области',
+  'novosibirsk':        'в Новосибирске',
+  'ekaterinburg':       'в Екатеринбурге',
+  'kazan':              'в Казани',
+  'nizhniy-novgorod':   'в Нижнем Новгороде',
+  'sankt-peterburg':    'в Санкт-Петербурге',
+  'chelyabinsk':        'в Челябинске',
+  'omsk':               'в Омске',
+  'samara':             'в Самаре',
+  'rostov-na-donu':     'в Ростове-на-Дону',
+  'ufa':                'в Уфе',
+  'krasnodar':          'в Краснодаре',
+  'perm':               'в Перми',
+  'voronezh':           'в Воронеже',
+  'volgograd':          'в Волгограде',
+}
+
+// Родительный падеж — «Москвы», «Волгограда» (для meta title/description)
+export const regionLabelsOf: Record<RegionSlug, string> = {
+  'moskva':             'Москвы',
+  'moskovskaya-oblast': 'Московской области',
+  'novosibirsk':        'Новосибирска',
+  'ekaterinburg':       'Екатеринбурга',
+  'kazan':              'Казани',
+  'nizhniy-novgorod':   'Нижнего Новгорода',
+  'sankt-peterburg':    'Санкт-Петербурга',
+  'chelyabinsk':        'Челябинска',
+  'omsk':               'Омска',
+  'samara':             'Самары',
+  'rostov-na-donu':     'Ростова-на-Дону',
+  'ufa':                'Уфы',
+  'krasnodar':          'Краснодара',
+  'perm':               'Перми',
+  'voronezh':           'Воронежа',
+  'volgograd':          'Волгограда',
+}
+
 export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd']
 
 export function getSchoolsByRegion(region: RegionSlug): School[] {
@@ -21447,4 +21589,107 @@ export function getSchoolsByFeature(featureSlug: FeatureSlug, region?: RegionSlu
     const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
     return meta.keywords.some(kw => haystack.includes(kw.toLowerCase()))
   })
+}
+
+// ─── Metro stations ───────────────────────────────────────────────────────────
+
+export const metroSlugToName: Record<string, string> = {
+  "aviamotornaya": "Авиамоторная",
+  "avtozavodskaya": "Автозаводская",
+  "akademicheskaya": "Академическая",
+  "altufevo": "Алтуфьево",
+  "annino": "Аннино",
+  "arbatskaya": "Арбатская",
+  "babushkinskaya": "Бабушкинская",
+  "bagrationovskaya": "Багратионовская",
+  "barrikadnaya": "Баррикадная",
+  "baumanskaya": "Бауманская",
+  "belorusskaya": "Белорусская",
+  "belyaevo": "Беляево",
+  "beskudnikovo": "Бескудниково",
+  "borovskoe-shosse": "Боровское шоссе",
+  "botanicheskiy-sad": "Ботанический сад",
+  "bulvar-rokossovskogo": "Бульвар Рокоссовского",
+  "vdnkh": "ВДНХ",
+  "vladykino": "Владыкино",
+  "vodnyy-stadion": "Водный стадион",
+  "voykovskaya": "Войковская",
+  "vorobyovy-gory": "Воробьёвы горы",
+  "vykhino": "Выхино",
+  "dmitrovskaya": "Дмитровская",
+  "dolgoprudnaya": "Долгопрудная",
+  "izmaylovskaya": "Измайловская",
+  "kaluzhskaya": "Калужская",
+  "kantemirovskaya": "Кантемировская",
+  "kolomenskaya": "Коломенская",
+  "kommunarka": "Коммунарка",
+  "koptevo": "Коптево",
+  "kosino": "Косино",
+  "krasnye-vorota": "Красные Ворота",
+  "kuznetskiy-most": "Кузнецкий Мост",
+  "kuntsevskaya": "Кунцевская",
+  "kutuzovskaya": "Кутузовская",
+  "leninskiy-prospekt": "Ленинский проспект",
+  "lefortovo": "Лефортово",
+  "lubyanka": "Лубянка",
+  "lyublino": "Люблино",
+  "mayakovskaya": "Маяковская",
+  "medvedkovo": "Медведково",
+  "mitino": "Митино",
+  "nagatinskaya": "Нагатинская",
+  "nakhimovskiy-prospekt": "Нахимовский проспект",
+  "nizhegorodskaya": "Нижегородская",
+  "novokosino": "Новокосино",
+  "novokuznetskaya": "Новокузнецкая",
+  "novye-cheryomushki": "Новые Черёмушки",
+  "oktyabrskaya": "Октябрьская",
+  "oktyabrskoe-pole": "Октябрьское поле",
+  "orekhovo": "Орехово",
+  "okhotnyy-ryad": "Охотный Ряд",
+  "paveletskaya": "Павелецкая",
+  "pervomayskaya": "Первомайская",
+  "perovo": "Перово",
+  "pechatniki": "Печатники",
+  "polezhaevskaya": "Полежаевская",
+  "preobrazhenskaya-ploshchad": "Преображенская площадь",
+  "prospekt-mira": "Проспект Мира",
+  "profsoyuznaya": "Профсоюзная",
+  "savyolovskaya": "Савёловская",
+  "sviblovo": "Свиблово",
+  "serpukhovskaya": "Серпуховская",
+  "smolenskaya": "Смоленская",
+  "sokol": "Сокол",
+  "sportivnaya": "Спортивная",
+  "strogino": "Строгино",
+  "taganskaya": "Таганская",
+  "tverskaya": "Тверская",
+  "tekstilshchiki": "Текстильщики",
+  "timiryazevskaya": "Тимирязевская",
+  "troparyovo": "Тропарёво",
+  "tulskaya": "Тульская",
+  "tushinskaya": "Тушинская",
+  "tyoplyy-stan": "Тёплый Стан",
+  "universitet": "Университет",
+  "fiztekh": "Физтех",
+  "fili": "Фили",
+  "frunzenskaya": "Фрунзенская",
+  "tsaritsyno": "Царицыно",
+  "tsvetnoy-bulvar": "Цветной бульвар",
+  "cherkizovskaya": "Черкизовская",
+  "chertanovskaya": "Чертановская",
+  "chistye-prudy": "Чистые Пруды",
+  "shchukinskaya": "Щукинская",
+  "shchyolkovskaya": "Щёлковская",
+  "elektrozavodskaya": "Электрозаводская",
+  "yugo-zapadnaya": "Юго-Западная",
+}
+
+export const metroNameToSlug: Record<string, string> = Object.fromEntries(
+  Object.entries(metroSlugToName).map(([slug, name]) => [name, slug])
+)
+
+export const metroSlugs = Object.keys(metroSlugToName)
+
+export function getSchoolsByMetro(metroName: string): School[] {
+  return schools.filter(s => s.region === 'moskva' && s.metro === metroName)
 }

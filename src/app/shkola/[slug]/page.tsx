@@ -16,6 +16,124 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
+// ── Автогенерация FAQ по данным школы ────────────────────────────────────────
+function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
+  const faq: { q: string; a: string }[] = []
+  const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
+    .join(' ').toLowerCase()
+
+  // 1. Адрес и метро
+  if (school.metro) {
+    faq.push({
+      q: `Как добраться до ${school.name}?`,
+      a: `Школа расположена по адресу: ${school.city}, ${school.address}. Ближайшая станция метро — «${school.metro}». Уточнить маршрут можно по телефону ${school.phone}.`,
+    })
+  } else {
+    faq.push({
+      q: `Где находится ${school.name}?`,
+      a: `Адрес школы: ${school.city}, ${school.address}. По дополнительным вопросам о местоположении звоните: ${school.phone}.`,
+    })
+  }
+
+  // 2. Запись и поступление
+  const enrollVerb = school.type === 'gosudarstvennye' || school.type === 'kadetskie' ? 'записаться' : 'подать заявку на поступление'
+  faq.push({
+    q: `Как ${enrollVerb} в ${school.name}?`,
+    a: school.website
+      ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')}) или позвоните по телефону ${school.phone}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
+      : `Позвоните по телефону ${school.phone} или оставьте заявку через форму на нашем сайте. Администрация школы свяжется с вами и расскажет о порядке поступления.`,
+  })
+
+  // 3. Стоимость обучения
+  if (school.priceFrom === undefined || school.priceFrom === 0) {
+    faq.push({
+      q: `Платное или бесплатное обучение в ${school.name}?`,
+      a: `Обучение в ${school.name} бесплатное — школа финансируется из государственного бюджета и работает по стандартам ФГОС.`,
+    })
+  } else {
+    const priceStr = school.priceTo
+      ? `от ${formatPrice(school.priceFrom)} до ${formatPrice(school.priceTo)} в месяц`
+      : `от ${formatPrice(school.priceFrom)} в месяц`
+    faq.push({
+      q: `Сколько стоит обучение в ${school.name}?`,
+      a: `Стоимость обучения составляет ${priceStr}. Актуальные тарифы и условия рассрочки уточняйте по телефону ${school.phone} — стоимость может зависеть от программы и класса.`,
+    })
+  }
+
+  // 4. Классы / возраст приёма
+  const gradesLower = school.grades.toLowerCase()
+  const startsFrom1 = gradesLower.startsWith('1')
+  faq.push({
+    q: `С какого класса принимают учеников в ${school.name}?`,
+    a: startsFrom1
+      ? `Школа принимает детей с 1 класса (обучение по программе ${school.grades} класс). Приём в первый класс ведётся в соответствии с требованиями законодательства — ребёнку должно исполниться 6,5–8 лет на 1 сентября.`
+      : `Школа ведёт обучение с ${school.grades.split('–')[0]} по ${school.grades.split('–')[1] ?? school.grades} класс. Условия и сроки подачи документов уточняйте по телефону ${school.phone}.`,
+  })
+
+  // 5. Прописка (для государственных)
+  if (school.type === 'gosudarstvennye') {
+    faq.push({
+      q: `Нужна ли прописка для поступления в ${school.name}?`,
+      a: `Государственные школы в первую очередь принимают детей, прописанных на закреплённой территории. Если в школе есть свободные места — могут принять и без прописки. Рекомендуем заранее уточнить актуальную ситуацию по телефону ${school.phone}.`,
+    })
+  }
+
+  // 6. Размер класса (для частных)
+  if (school.type === 'chastnie' || school.type === 'semejnye') {
+    const smallClass = haystack.includes('малый класс') || haystack.includes('10–15') || haystack.includes('до 15')
+    faq.push({
+      q: `Какой размер классов в ${school.name}?`,
+      a: smallClass
+        ? `В ${school.name} практикуется обучение в малых классах — как правило, не более 12–15 учеников. Это позволяет учителю уделять внимание каждому ребёнку индивидуально.`
+        : `Наполняемость классов в ${school.name} значительно ниже, чем в государственных школах. Точные данные уточняйте по телефону ${school.phone}.`,
+    })
+  }
+
+  // 7. Онлайн-формат
+  if (school.type === 'online') {
+    faq.push({
+      q: `Как проходят занятия в ${school.name}?`,
+      a: `Обучение ведётся дистанционно: уроки проходят в режиме видеоконференций, домашние задания и тесты выполняются в личном кабинете. Расписание можно подстроить под нужды семьи. Ученик получает аттестат государственного образца.`,
+    })
+  }
+
+  // 8. Продлёнка
+  if (haystack.includes('продлён') || haystack.includes('продлен') || haystack.includes('группа продл')) {
+    faq.push({
+      q: `Есть ли группа продлённого дня в ${school.name}?`,
+      a: `Да, в ${school.name} есть группа продлённого дня (ГПД). Дети находятся под присмотром педагогов после уроков — делают домашние задания и участвуют в дополнительных занятиях. Расписание и условия уточняйте по телефону ${school.phone}.`,
+    })
+  }
+
+  // 9. Углублённый английский
+  if (haystack.includes('углублённый английский') || haystack.includes('английск') && haystack.includes('углублён')) {
+    faq.push({
+      q: `Есть ли углублённое изучение английского языка в ${school.name}?`,
+      a: `Да, ${school.name} предлагает углублённое изучение английского языка. Программа включает расширенный курс грамматики, разговорной речи и подготовку к международным экзаменам. Подробности — по телефону ${school.phone}.`,
+    })
+  }
+
+  // 10. Бассейн
+  if (haystack.includes('бассейн')) {
+    faq.push({
+      q: `Есть ли бассейн в ${school.name}?`,
+      a: `Да, в ${school.name} есть собственный бассейн. Плавание входит в программу физического воспитания. Расписание занятий уточняйте в администрации: ${school.phone}.`,
+    })
+  }
+
+  // 11. Год основания
+  if (school.founded) {
+    const age = new Date().getFullYear() - school.founded
+    faq.push({
+      q: `Когда была основана ${school.name}?`,
+      a: `Школа основана в ${school.founded} году. За ${age} лет работы сложились устойчивые педагогические традиции и накоплен богатый опыт подготовки выпускников.`,
+    })
+  }
+
+  // Ограничиваем до 6 вопросов
+  return faq.slice(0, 6)
+}
+
 export async function generateStaticParams() {
   return getAllSchoolSlugs().map(slug => ({ slug }))
 }
@@ -39,6 +157,8 @@ export default async function SchoolPage({ params }: Props) {
   const similar = schools
     .filter(s => s.id !== school.id && s.type === school.type && s.region === school.region)
     .slice(0, 3)
+
+  const faq = generateFaq(school)
 
   const stars = Math.round(school.rating)
 
@@ -75,6 +195,17 @@ export default async function SchoolPage({ params }: Props) {
     ...(school.email ? { email: school.email } : {}),
   }
 
+  // Schema.org: FAQPage
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }
+
   // Schema.org: BreadcrumbList
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -91,6 +222,7 @@ export default async function SchoolPage({ params }: Props) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Breadcrumbs crumbs={[
         { label: 'Все школы', href: '/shkoly/' },
@@ -188,6 +320,36 @@ export default async function SchoolPage({ params }: Props) {
               ))}
             </div>
           </div>
+
+          {/* FAQ */}
+          {faq.length > 0 && (
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Часто задаваемые вопросы</h2>
+              <style>{`
+                .faq-item summary { list-style: none; cursor: pointer; }
+                .faq-item summary::-webkit-details-marker { display: none; }
+                .faq-item[open] summary .faq-arrow { transform: rotate(180deg); }
+                .faq-item summary:hover .faq-q { color: #0369A1; }
+              `}</style>
+              <div className="divide-y divide-gray-100">
+                {faq.map((item, i) => (
+                  <details key={i} className="faq-item py-3 first:pt-0 last:pb-0">
+                    <summary className="flex items-start justify-between gap-3 group">
+                      <span className="faq-q text-sm font-medium text-gray-900 transition-colors leading-snug">
+                        {item.q}
+                      </span>
+                      <svg className="faq-arrow w-4 h-4 text-gray-400 shrink-0 mt-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <p className="mt-2 text-sm text-gray-600 leading-relaxed pr-7">
+                      {item.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Contacts */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
