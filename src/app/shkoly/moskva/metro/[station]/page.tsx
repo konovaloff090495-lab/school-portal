@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { metroSlugToName, metroSlugs, getSchoolsByMetro } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
+import SeoBlock from '@/components/SeoBlock'
 
 interface Props {
   params: Promise<{ station: string }>
@@ -75,22 +76,7 @@ export default async function MetroPage({ params }: Props) {
           { label: 'Москва', href: '/shkoly/moskva/' },
           { label: `Метро ${metroName}` },
         ]}
-        seoContent={
-          <div style={{ maxWidth: 860, margin: '0 auto', padding: '8px 0 40px', color: '#374151', fontFamily: 'var(--font-manrope, system-ui)' }}>
-            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 8px' }}>
-              Как выбрать школу у метро {metroName}?
-            </h2>
-            <p style={{ fontSize: 15, lineHeight: 1.7, margin: '0 0 12px' }}>
-              При выборе школы рядом с метро «{metroName}» важно учитывать тип учреждения (государственная, лицей, гимназия или частная школа), наличие углублённых программ, внеурочных секций и рейтинг ЕГЭ. Используйте фильтры по типу, рейтингу и стоимости обучения, чтобы быстро найти подходящий вариант.
-            </p>
-            <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '16px 0 8px' }}>
-              Государственные и частные школы у метро {metroName}
-            </h2>
-            <p style={{ fontSize: 15, lineHeight: 1.7, margin: '0' }}>
-              В районе станции метро «{metroName}» представлены как бесплатные государственные школы, так и частные учебные заведения с расширенными программами и малыми классами. Для государственных школ вам потребуется прописка в зоне действия школы. Частные школы принимают детей по всей Москве.
-            </p>
-          </div>
-        }
+        seoContent={<SeoBlock region="moskva" metro={metroName} count={count} />}
       />
     </>
   )
