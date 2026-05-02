@@ -517,6 +517,7 @@ export default function CatalogClient({
       gimnazii:        'Гимназии',
       korrektsionnye:  'Коррекционные школы',
       kadetskie:       'Кадетские школы',
+      mezhdunarodnie:  'Международные школы',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -531,6 +532,7 @@ export default function CatalogClient({
       gimnazii: 'предлагают углублённые академические программы, готовят победителей олимпиад и обеспечивают высокие баллы ЕГЭ',
       korrektsionnye: 'оказывают специализированную помощь детям с ОВЗ: нарушениями слуха, зрения, речи, ЗПР и РАС в адаптированных условиях',
       kadetskie: 'формируют патриотическое воспитание, высокую дисциплину и физическую подготовку через программы НВП и военного дела',
+      mezhdunarodnie: 'обучают по программам IB и Cambridge на английском языке, выдавая диплом, признаваемый в зарубежных вузах',
     }
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]
