@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { typeSlugs, typeLabels, schools, SchoolType } from '@/data/schools'
+import { buildKeywords } from '@/lib/utils'
 import CatalogClient from '../../CatalogClient'
+import SeoBlock from '@/components/SeoBlock'
 
 interface Props {
   params: Promise<{ type: string }>
@@ -24,6 +26,7 @@ const typeDescriptions: Record<SchoolType, string> = {
   gimnazii:        'Гимназии и лицеи: углублённые программы, высокие баллы ЕГЭ, победители олимпиад.',
   korrektsionnye:  'Коррекционные школы для детей с ОВЗ: профессиональные дефектологи, адаптированные программы.',
   kadetskie:       'Кадетские школы и корпуса: военно-патриотическое воспитание, строевая подготовка, НВП.',
+  mezhdunarodnie:  'Международные школы России: программы IB и Cambridge, обучение на английском, диплом для поступления в зарубежные вузы.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -36,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description: typeDescriptions[t],
+    keywords: buildKeywords(undefined, t),
     alternates: { canonical: `https://pro-schools.ru/shkoly/tipy/${t}/` },
     openGraph: { title, description: typeDescriptions[t], url: `https://pro-schools.ru/shkoly/tipy/${t}/` },
   }
@@ -52,12 +56,13 @@ export default async function GlobalTypePage({ params }: Props) {
     <CatalogClient
       initialTypes={[t]}
       lockType
-      title={`${label} школы России`}
+      title={`Все ${label.toLowerCase()} школы в России`}
       subtitle={`${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: label },
       ]}
+      seoContent={<SeoBlock type={t} count={count} />}
     />
   )
 }

@@ -278,6 +278,11 @@ export default function CatalogClient({
         router.push(`/shkoly/${filters.regions[0]}/${filters.types[0]}/`)
         return
       }
+      // From /shkoly/ → 1 type, no region → global type page
+      if (filters.regions.length === 0 && filters.types.length === 1) {
+        router.push(`/shkoly/tipy/${filters.types[0]}/`)
+        return
+      }
     }
 
     // From /shkoly/{region}/ (not a district/city page) → 1 type, no districts → region/type page
@@ -304,6 +309,13 @@ export default function CatalogClient({
     // From /shkoly/moskva/ → 1 metro selected → metro station page
     if (lockRegion && !lockMetro && initialRegions[0] === 'moskva'
         && filters.metro.length === 1 && filters.types.length === 0 && filters.districts.length === 0) {
+      const slug = metroNameToSlug[filters.metro[0]]
+      if (slug) { router.push(`/shkoly/moskva/metro/${slug}/`); return }
+    }
+
+    // From /shkoly/tipy/{type}/ → 1 metro selected → Moscow metro station page
+    if (lockType && !lockRegion && !lockMetro
+        && filters.metro.length === 1 && filters.districts.length === 0) {
       const slug = metroNameToSlug[filters.metro[0]]
       if (slug) { router.push(`/shkoly/moskva/metro/${slug}/`); return }
     }
@@ -917,11 +929,11 @@ export default function CatalogClient({
             </div>
           )}
 
-          {seoContent && viewMode === 'grid' && (
+          {seoContent && (
             <div className="mt-4">{seoContent}</div>
           )}
 
-          {seoText && !seoContent && viewMode === 'grid' && (
+          {seoText && !seoContent && (
             <div className="mt-10 bg-gray-50 rounded-2xl border border-gray-200 p-6 md:p-8">
               <h2 className="text-lg font-semibold text-[#0F172A] mb-3">{title}</h2>
               <p className="text-gray-600 text-sm leading-relaxed">{seoText}</p>

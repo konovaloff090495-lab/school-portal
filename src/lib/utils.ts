@@ -1,6 +1,58 @@
 import { SchoolType, RegionSlug, typeLabels, regionLabels, regionLabelsOf, regionLabelsIn, formatPrice } from '@/data/schools'
 export { formatPrice }
 
+// Дополнительные поисковые синонимы для каждого типа школ
+const typeKeywordMap: Record<SchoolType, string[]> = {
+  gosudarstvennye: ['бесплатная школа', 'муниципальная школа', 'общеобразовательная школа', 'МБОУ'],
+  chastnie:        ['частная школа', 'платная школа', 'негосударственная школа', 'малые классы'],
+  online:          ['онлайн школа', 'дистанционная школа', 'обучение дома', 'дистанционное обучение'],
+  vechernie:       ['вечерняя школа', 'школа для взрослых', 'обучение по вечерам', 'получить аттестат'],
+  eksternal:       ['экстернат', 'ускоренное обучение', 'школа экстернат', 'сдать экзамены экстерном'],
+  semejnye:        ['семейная школа', 'семейное обучение', 'домашняя школа', 'альтернативное образование'],
+  domashnie:       ['домашнее обучение', 'надомное обучение', 'обучение на дому', 'индивидуальный план'],
+  'pri-vuzakh':    ['школа при университете', 'лицей при вузе', 'предуниверсарий', 'школа при институте'],
+  profilnye:       ['профильная школа', 'специализированная школа', 'IT школа', 'медицинский класс'],
+  gimnazii:        ['гимназия', 'лицей', 'углублённое обучение', 'олимпиадная школа', 'ЕГЭ высокий балл'],
+  korrektsionnye:  ['коррекционная школа', 'школа для детей с ОВЗ', 'школа для детей с РАС', 'дефектолог'],
+  kadetskie:       ['кадетская школа', 'кадетский корпус', 'военно-патриотическое воспитание', 'НВП'],
+  mezhdunarodnie:  ['международная школа', 'IB школа', 'школа с международной программой', 'Cambridge school', 'двуязычная школа'],
+}
+
+export function buildKeywords(
+  region?: RegionSlug,
+  type?: SchoolType,
+): string {
+  const cityName = region ? regionLabels[region] : null
+  const typeKw   = type   ? typeKeywordMap[type]  : null
+  const typeLabel = type  ? typeLabels[type].toLowerCase() : null
+
+  if (region && type && cityName && typeKw && typeLabel) {
+    return [
+      `${typeLabel} школы ${cityName}`,
+      `${typeLabel} школа ${cityName}`,
+      ...typeKw.map(kw => `${kw} ${cityName}`),
+      `школы ${cityName}`,
+    ].join(', ')
+  }
+  if (region && cityName) {
+    return [
+      `школы ${cityName}`,
+      `частные школы ${cityName}`,
+      `онлайн школы ${cityName}`,
+      `лучшие школы ${cityName}`,
+      `каталог школ ${cityName}`,
+    ].join(', ')
+  }
+  if (type && typeKw && typeLabel) {
+    return [
+      `${typeLabel} школы России`,
+      ...typeKw,
+      `каталог ${typeLabel} школ`,
+    ].join(', ')
+  }
+  return 'школы России, каталог школ, частные школы, онлайн школы, вечерние школы, экстернат'
+}
+
 export function buildTitle(
   region?: RegionSlug,
   type?: SchoolType,
@@ -61,6 +113,7 @@ export function getTypeColor(type: SchoolType): string {
     gimnazii: 'bg-cyan-100 text-cyan-800',
     korrektsionnye: 'bg-lime-100 text-lime-800',
     kadetskie: 'bg-slate-100 text-slate-800',
+    mezhdunarodnie: 'bg-sky-100 text-sky-800',
   }
   return colors[type]
 }
@@ -79,6 +132,7 @@ export function getTypeBorderColor(type: SchoolType): string {
     gimnazii: 'border-cyan-200',
     korrektsionnye: 'border-lime-200',
     kadetskie: 'border-slate-200',
+    mezhdunarodnie: 'border-sky-200',
   }
   return colors[type]
 }

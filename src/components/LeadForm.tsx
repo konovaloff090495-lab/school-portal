@@ -11,15 +11,80 @@ interface LeadFormProps {
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'mpqkebae'
 
+// ── Phone mask ────────────────────────────────────────────────────────────────
+function formatPhone(raw: string): string {
+  // оставляем только цифры
+  const digits = raw.replace(/\D/g, '')
+  // убираем ведущую 7 или 8
+  const local = digits.startsWith('7') || digits.startsWith('8')
+    ? digits.slice(1)
+    : digits
+  if (local.length === 0) return '+7 ('
+  if (local.length <= 3)  return `+7 (${local}`
+  if (local.length <= 6)  return `+7 (${local.slice(0,3)}) ${local.slice(3)}`
+  if (local.length <= 8)  return `+7 (${local.slice(0,3)}) ${local.slice(3,6)}-${local.slice(6)}`
+  return `+7 (${local.slice(0,3)}) ${local.slice(3,6)}-${local.slice(6,8)}-${local.slice(8,10)}`
+}
+
+// ── Phone validation ──────────────────────────────────────────────────────────
+function validatePhone(phone: string): string | null {
+  const digits = phone.replace(/\D/g, '')
+  if (digits.length < 11) return 'Введите полный номер телефона'
+
+  const local = digits.startsWith('7') || digits.startsWith('8')
+    ? digits.slice(1)
+    : digits.slice(0, 10)
+
+  // первая цифра оператора: только 3, 4, 8, 9
+  if (!['3','4','8','9'].includes(local[0]))
+    return 'Некорректный номер телефона'
+
+  const area = local.slice(0, 3)
+  const rest  = local.slice(3)
+
+  // подозрительные коды: все одинаковые цифры, 123, 000 и т.п.
+  const badAreas = ['000','111','222','333','444','555','666','777','888','999','123','321']
+  if (badAreas.includes(area))
+    return 'Некорректный номер телефона'
+
+  // весь номер из одинаковых цифр
+  if (/^(\d)\1{9}$/.test(local))
+    return 'Некорректный номер телефона'
+
+  // подписной номер из одинаковых цифр (напр. 7777777)
+  if (/^(\d)\1{6}$/.test(rest))
+    return 'Некорректный номер телефона'
+
+  // последовательности типа 1234567 / 7654321
+  if (['1234567','2345678','3456789','9876543','8765432','7654321'].includes(rest))
+    return 'Некорректный номер телефона'
+
+  return null
+}
+
 export default function LeadForm({ schoolName, compact = false, title }: LeadFormProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
-  const [form, setForm] = useState({ name: '', phone: '', email: '', question: '' })
+  const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
+  const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
   const [marketingAgreed, setMarketingAgreed] = useState(true)
 
+  function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
+    const masked = formatPhone(e.target.value)
+    setForm(f => ({ ...f, phone: masked }))
+    if (phoneError) setPhoneError(null)
+  }
+
+  function handlePhoneBlur() {
+    const err = validatePhone(form.phone)
+    setPhoneError(err)
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    const err = validatePhone(form.phone)
+    if (err) { setPhoneError(err); return }
     setLoading(true)
 
     if (FORMSPREE_ID) {
@@ -60,14 +125,25 @@ export default function LeadForm({ schoolName, compact = false, title }: LeadFor
           onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
         />
-        <input
-          type="tel"
-          placeholder="Телефон"
-          required
-          value={form.phone}
-          onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-        />
+        <div>
+          <input
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+            value={form.phone}
+            onChange={handlePhone}
+            onBlur={handlePhoneBlur}
+            maxLength={18}
+            className={`w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 bg-white ${
+              phoneError
+                ? 'border-red-400 focus:ring-red-300'
+                : 'border-gray-300 focus:ring-blue-500'
+            }`}
+          />
+          {phoneError && (
+            <p className="text-xs text-red-500 mt-1 pl-1">{phoneError}</p>
+          )}
+        </div>
         <input
           type="email"
           placeholder="Электронная почта"

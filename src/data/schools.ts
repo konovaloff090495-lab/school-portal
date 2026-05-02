@@ -1,4 +1,4 @@
-export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie'
+export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie' | 'mezhdunarodnie'
 export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd'
 
 export interface School {
@@ -21364,9 +21364,10 @@ export const typeLabels: Record<SchoolType, string> = {
   gimnazii: 'Гимназии',
   korrektsionnye: 'Коррекционные',
   kadetskie: 'Кадетские',
+  mezhdunarodnie: 'Международные',
 }
 
-export const typeSlugs: SchoolType[] = ['gosudarstvennye', 'chastnie', 'online', 'vechernie', 'eksternal', 'semejnye', 'domashnie', 'pri-vuzakh', 'profilnye', 'gimnazii', 'korrektsionnye', 'kadetskie']
+export const typeSlugs: SchoolType[] = ['gosudarstvennye', 'chastnie', 'online', 'vechernie', 'eksternal', 'semejnye', 'domashnie', 'pri-vuzakh', 'profilnye', 'gimnazii', 'korrektsionnye', 'kadetskie', 'mezhdunarodnie']
 
 export const regionLabels: Record<RegionSlug, string> = {
   'moskva': 'Москва',
