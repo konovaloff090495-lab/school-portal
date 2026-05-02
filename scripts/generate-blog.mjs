@@ -26,6 +26,13 @@ const ROOT      = path.join(__dirname, '..')
 const BLOG_TS   = path.join(ROOT, 'src', 'data', 'blog.ts')
 const QUEUE     = path.join(__dirname, 'blog-topics.json')
 
+// Vercel project (pro-schools.ru)
+const VERCEL_ENV = {
+  ...process.env,
+  VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID || 'prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ',
+  VERCEL_ORG_ID:     process.env.VERCEL_ORG_ID     || 'team_nn4HHJh7sr6tITE0mA24TmBT',
+}
+
 // ─── CLI аргументы ──────────────────────────────────────────────────────────
 const args = Object.fromEntries(
   process.argv.slice(2)
@@ -173,10 +180,10 @@ ${safeContent}
 }
 
 // ─── Запуск команд ──────────────────────────────────────────────────────────
-function run(cmd) {
+function run(cmd, extraEnv = {}) {
   return new Promise((resolve, reject) => {
     const [bin, ...cmdArgs] = cmd.split(' ')
-    const proc = spawn(bin, cmdArgs, { stdio: 'inherit', cwd: ROOT, shell: true })
+    const proc = spawn(bin, cmdArgs, { stdio: 'inherit', cwd: ROOT, shell: true, env: { ...process.env, ...extraEnv } })
     proc.on('close', code => code === 0 ? resolve() : reject(new Error(`Exit ${code}: ${cmd}`)))
   })
 }
@@ -295,7 +302,7 @@ async function main() {
   if (!NO_DEPLOY) {
     console.log('🚀 Деплоим на Vercel...')
     try {
-      await run('vercel --prod')
+      await run('vercel --prod --yes', VERCEL_ENV)
       console.log('✅ Задеплоено!')
     } catch (e) {
       console.error('❌ Деплой не удался:', e.message)
