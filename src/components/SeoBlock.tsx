@@ -115,6 +115,14 @@ const typeInfo: Record<SchoolType, {
     price: 'Государственные кадетские школы — бесплатно, часто с частичным пансионом. Частные военно-патриотические школы — от 25 000 ₽/мес.',
     tip: 'Уточните, является ли это государственным кадетским корпусом (подчинён Министерству обороны или МВД) или частной школой с кадетской тематикой — это существенно влияет на документы и статус.',
   },
+  mezhdunarodnie: {
+    label: 'международных школ',
+    who: 'семей с международным образом жизни, экспатов, детей планирующих поступление в зарубежные вузы',
+    pros: ['обучение по программам IB, Cambridge IGCSE или A-Level', 'преподавание на английском или двух языках', 'диплом, признаваемый в университетах Европы и США', 'мультикультурная среда и международные обмены'],
+    how: 'Приём круглый год. Требуется уровень владения языком обучения — обычно тестирование. Необходимы: паспорт, предыдущие академические записи (transcript), рекомендации учителей для старших классов.',
+    price: 'От 80 000 до 350 000 ₽/мес в Москве и Санкт-Петербурге. В регионах — от 30 000 ₽/мес. Обычно включает учебные материалы, иногда питание и трансфер.',
+    tip: 'Убедитесь что школа аккредитована одной из признанных организаций (IBO, Cambridge Assessment, CIS). Аккредитация гарантирует признание диплома в зарубежных вузах без дополнительных нострификаций.',
+  },
 }
 
 // ── Контекст по регионам ──────────────────────────────────────────────────────
@@ -164,6 +172,32 @@ const examInfo: Partial<Record<FeatureSlug, {
   },
 }
 
+// ── Склонения для счётных форм типов школ ────────────────────────────────────
+// [singular, 2-4, 5+]
+const typeCountForms: Record<SchoolType, [string, string, string]> = {
+  gosudarstvennye: ['государственная школа',   'государственные школы',  'государственных школ'],
+  chastnie:        ['частная школа',            'частные школы',           'частных школ'],
+  online:          ['онлайн-школа',             'онлайн-школы',            'онлайн-школ'],
+  vechernie:       ['вечерняя школа',           'вечерние школы',          'вечерних школ'],
+  eksternal:       ['школа-экстернат',          'школы-экстернаты',        'школ-экстернатов'],
+  semejnye:        ['семейная школа',           'семейные школы',          'семейных школ'],
+  domashnie:       ['школа с надомным обучением','школы с надомным обучением','школ с надомным обучением'],
+  'pri-vuzakh':    ['школа при вузе',           'школы при вузах',         'школ при вузах'],
+  profilnye:       ['профильная школа',         'профильные школы',        'профильных школ'],
+  gimnazii:        ['гимназия',                 'гимназии',                'гимназий'],
+  korrektsionnye:  ['коррекционная школа',      'коррекционные школы',     'коррекционных школ'],
+  kadetskie:       ['кадетская школа',          'кадетские школы',         'кадетских школ'],
+  mezhdunarodnie:  ['международная школа',      'международные школы',     'международных школ'],
+}
+
+function typedCount(n: number, t: SchoolType): string {
+  const [one, few, many] = typeCountForms[t]
+  const mod10 = n % 10, mod100 = n % 100
+  if (mod10 === 1 && mod100 !== 11) return `${n} ${one}`
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return `${n} ${few}`
+  return `${n} ${many}`
+}
+
 // ── Основной компонент ────────────────────────────────────────────────────────
 export default function SeoBlock({ region, type, feature, count = 0, metro, district, city }: SeoBlockProps) {
   const regionName  = region ? regionLabels[region]  : null
@@ -181,19 +215,40 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
     ? `в ${city}`
     : regionIn ?? 'в России'
 
+  // Счётная форма: с типом ("10 онлайн-школ") или без ("10 школ")
   const countStr = count > 0
-    ? `${count} ${count === 1 ? 'школа' : count >= 2 && count <= 4 ? 'школы' : 'школ'}`
-    : 'несколько школ'
+    ? (type ? typedCount(count, type) : `${count} ${count === 1 ? 'школа' : count >= 2 && count <= 4 ? 'школы' : 'школ'}`)
+    : (type ? `несколько ${typeCountForms[type][2]}` : 'несколько школ')
 
   const sections: { h: string; p: string }[] = []
 
   // ── 1. Вводный раздел ─────────────────────────────────────────────────────
-  if (info && region) {
+  if (exam && region) {
+    // Страница подготовки к экзамену в городе
     sections.push({
-      h: `${typeInfo[type!].label.charAt(0).toUpperCase() + typeInfo[type!].label.slice(1)} ${locationLabel}: обзор`,
-      p: `${context ? context + ' ' : ''}${locationLabel.charAt(0).toUpperCase() + locationLabel.slice(1)} в нашем каталоге представлено ${countStr}. Этот тип учреждений подходит для ${info.who}.`,
+      h: `${exam.title} ${locationLabel}: что важно знать`,
+      p: `В каталоге ${locationLabel} — ${countStr} с программами подготовки. ${exam.formats}`,
     })
-  } else if (region && !type) {
+  } else if (exam && !region) {
+    // Глобальная страница подготовки к экзамену
+    sections.push({
+      h: `${exam.title} в России: обзор`,
+      p: `В нашем каталоге представлено ${countStr} с программами подготовки по всей России. ${exam.formats}`,
+    })
+  } else if (info && region) {
+    // Страница типа школы в городе — только тематический контент, без дублирующего regionContext
+    const typeLabel = typeInfo[type!].label
+    sections.push({
+      h: `${typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1)} ${locationLabel}: обзор`,
+      p: `${locationLabel.charAt(0).toUpperCase() + locationLabel.slice(1)} представлено ${countStr} этого типа. Такие учреждения подходят для ${info.who}.`,
+    })
+  } else if (info && !region) {
+    sections.push({
+      h: `${typeInfo[type!].label.charAt(0).toUpperCase() + typeInfo[type!].label.slice(1)} в России: обзор`,
+      p: `В нашем каталоге представлено ${countStr} данного типа по всей России. Используйте фильтр по городу, чтобы найти школу в своём регионе. Этот тип учреждений подходит для ${info.who}.`,
+    })
+  } else if (region && !type && !exam) {
+    // Главная страница города — здесь regionContext уместен
     sections.push({
       h: `Как выбрать школу ${regionIn}`,
       p: `${context ? context + ' ' : ''}В каталоге — ${countStr} всех форм обучения: государственные, частные, онлайн-школы, гимназии, лицеи и экстернат. Используйте фильтры по типу, рейтингу и стоимости, чтобы найти подходящий вариант.`,
@@ -205,32 +260,20 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
     })
   }
 
-  // ── 2. Преимущества типа ──────────────────────────────────────────────────
-  if (info) {
+  // ── 2–5. Секции типа школы (только если нет exam-режима) ────────────────
+  if (info && !exam) {
     sections.push({
       h: `Что даёт обучение в ${info.label}`,
       p: info.pros.map((p, i) => `${i + 1}. ${p}`).join('. ') + '.',
     })
-  }
-
-  // ── 3. Как поступить ─────────────────────────────────────────────────────
-  if (info) {
     sections.push({
       h: `Как поступить`,
       p: info.how,
     })
-  }
-
-  // ── 4. Стоимость ─────────────────────────────────────────────────────────
-  if (info) {
     sections.push({
       h: `Стоимость обучения`,
       p: info.price,
     })
-  }
-
-  // ── 5. Совет ─────────────────────────────────────────────────────────────
-  if (info) {
     sections.push({
       h: `Совет при выборе`,
       p: info.tip,
@@ -239,15 +282,16 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
 
   // ── 6. ЕГЭ/ОГЭ блоки ────────────────────────────────────────────────────────
   if (exam) {
-    const isOnline = type === 'online'
-    sections.push({
-      h: `${exam.title} ${locationLabel}: что важно знать`,
-      p: `${context ? context + ' ' : ''}${locationLabel.charAt(0).toUpperCase() + locationLabel.slice(1)} в нашем каталоге — ${countStr} с программами ${exam.title.toLowerCase()}. ${isOnline ? exam.online : exam.formats}`,
-    })
     sections.push({
       h: `Для кого подходит`,
       p: `Эти школы ориентированы на ${exam.who}. ${exam.subjects}`,
     })
+    if (type === 'online') {
+      sections.push({
+        h: `Онлайн-подготовка`,
+        p: exam.online,
+      })
+    }
     sections.push({
       h: `Совет при выборе`,
       p: exam.tip,

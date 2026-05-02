@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { regionSlugs, regionLabels, regionLabelsIn, getSchoolsByRegion, RegionSlug } from '@/data/schools'
-import { buildTitle, buildDescription } from '@/lib/utils'
+import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: buildTitle(r, undefined, undefined, count),
     description: buildDescription(r, undefined, undefined, count),
+    keywords: buildKeywords(r),
     alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/` },
   }
 }
