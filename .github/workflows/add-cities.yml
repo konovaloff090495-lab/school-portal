@@ -1,0 +1,87 @@
+name: Add New City
+
+on:
+  schedule:
+    # Каждую среду в 06:00 МСК (03:00 UTC) — добавляем 1 новый город из очереди
+    - cron: '0 3 * * 3'
+  workflow_dispatch:
+    inputs:
+      city_slug:
+        description: 'Конкретный город (slug). Пусто = следующий из очереди'
+        required: false
+      count:
+        description: 'Школ на тип'
+        default: '8'
+        required: false
+
+jobs:
+  add-city:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Show queue status
+        run: node scripts/pipeline.mjs --status
+
+      - name: Run city pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
+          VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          CITY_SLUG="${{ github.event.inputs.city_slug }}"
+          COUNT="${{ github.event.inputs.count || '8' }}"
+
+          # Передаём count через env для pipeline
+          export CITY_COUNT=$COUNT
+
+          if [ -n "$CITY_SLUG" ]; then
+            node scripts/pipeline.mjs --city-only=$CITY_SLUG --no-deploy
+          else
+            # Берём только 1 следующий город из очереди
+            node -e "
+              const { execSync } = require('child_process');
+              const fs = require('fs');
+              const queue = JSON.parse(fs.readFileSync('scripts/city-queue.json', 'utf-8'));
+              const next = queue.find(c => c.status === 'pending');
+              if (!next) { console.log('✅ Все города готовы!'); process.exit(0); }
+              console.log('Обрабатываем:', next.city, '(' + next.slug + ')');
+              execSync('node scripts/pipeline.mjs --city-only=' + next.slug + ' --no-deploy', { stdio: 'inherit' });
+            "
+          fi
+
+      - name: Configure git
+        run: |
+          git config user.name "pro-schools bot"
+          git config user.email "bot@pro-schools.ru"
+
+      - name: Commit and push
+        run: |
+          git add src/data/schools.ts scripts/city-queue.json
+          git diff --staged --quiet || git commit -m "Cities: add next city from queue $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
+          VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel --prod --yes --token $VERCEL_TOKEN

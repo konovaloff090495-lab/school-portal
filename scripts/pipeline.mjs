@@ -19,6 +19,13 @@ const __dirname  = path.dirname(fileURLToPath(import.meta.url))
 const ROOT       = path.join(__dirname, '..')
 const QUEUE_FILE = path.join(__dirname, 'city-queue.json')
 
+// Vercel project (pro-schools.ru)
+const VERCEL_ENV = {
+  ...process.env,
+  VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID || 'prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ',
+  VERCEL_ORG_ID:     process.env.VERCEL_ORG_ID     || 'team_nn4HHJh7sr6tITE0mA24TmBT',
+}
+
 // ─── Очередь городов по умолчанию ───────────────────────────────────────────
 const DEFAULT_QUEUE = [
   // Уже добавлены:
@@ -154,7 +161,7 @@ function runGenerate(city, slug) {
 function deploy() {
   return new Promise((resolve, reject) => {
     console.log('\n🚀 Деплой на Vercel...')
-    const proc = spawn('npx', ['vercel', '--prod'], { stdio: 'inherit', cwd: ROOT })
+    const proc = spawn('npx', ['vercel', '--prod', '--yes'], { stdio: 'inherit', cwd: ROOT, env: VERCEL_ENV })
     proc.on('close', code => code === 0 ? resolve() : reject(new Error('Deploy failed')))
   })
 }

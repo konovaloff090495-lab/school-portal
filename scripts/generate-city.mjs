@@ -27,6 +27,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT       = path.join(__dirname, '..')
 const SCHOOLS_TS = path.join(ROOT, 'src', 'data', 'schools.ts')
 
+// Vercel project (pro-schools.ru) — передаём явно, чтобы не попасть в другой проект
+const VERCEL_ENV = {
+  ...process.env,
+  VERCEL_PROJECT_ID: process.env.VERCEL_PROJECT_ID || 'prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ',
+  VERCEL_ORG_ID:     process.env.VERCEL_ORG_ID     || 'team_nn4HHJh7sr6tITE0mA24TmBT',
+}
+
 // ─── CLI аргументы ─────────────────────────────────────────────────────────
 const args = Object.fromEntries(
   process.argv.slice(2)
@@ -47,7 +54,7 @@ const NO_DEPLOY = !!args['no-deploy']
 const ALL_TYPES = [
   'gosudarstvennye', 'chastnie', 'online', 'vechernie', 'eksternal',
   'semejnye', 'domashnie', 'pri-vuzakh', 'profilnye', 'gimnazii',
-  'korrektsionnye', 'kadetskie',
+  'korrektsionnye', 'kadetskie', 'mezhdunarodnie',
 ]
 const TYPES = args.types ? args.types.split(',').map(t => t.trim()) : ALL_TYPES
 
@@ -64,6 +71,7 @@ const TYPE_LABELS = {
   domashnie: 'Домашние',               'pri-vuzakh': 'При вузах',
   profilnye: 'Профильные',             gimnazii: 'Гимназии',
   korrektsionnye: 'Коррекционные',     kadetskie: 'Кадетские',
+  mezhdunarodnie: 'Международные',
 }
 
 // ─── Anthropic клиент ───────────────────────────────────────────────────────
@@ -216,6 +224,7 @@ function getTypeHint(type) {
     gimnazii: 'гимназии с углублёнными программами, несколько иностранных языков; упоминай ЕГЭ в description',
     korrektsionnye: 'коррекционные школы для детей с ОВЗ разных нозологий',
     kadetskie: 'кадетские корпуса, военно-патриотические классы, шефство силовых структур',
+    mezhdunarodnie: 'международные школы по программам IB (International Baccalaureate), Cambridge (IGCSE/A-Level), двуязычные школы с обучением на английском/другом иностранном языке; упоминай международный диплом и поступление в зарубежные вузы',
   }
   return hints[type] ?? 'специфика типа школы'
 }
@@ -364,6 +373,15 @@ async function main() {
     await runCommand('node', ['scripts/scrape-school-images.mjs', '--only-missing'])
   }
 
+  // Git commit
+  try {
+    execSync(`git -C "${ROOT}" add src/data/schools.ts`, { stdio: 'inherit' })
+    execSync(`git -C "${ROOT}" commit -m "Schools: add ${TYPES.length * COUNT} schools for ${CITY} (${SLUG})\n\nCo-Authored-By: Claude Opus 4 <noreply@anthropic.com>"`, { stdio: 'inherit' })
+    console.log('\n📦 Git commit сделан')
+  } catch (e) {
+    console.warn('⚠️  Git commit не удался:', e.message)
+  }
+
   // Билд
   console.log('\n🔨 Сборка...')
   await runCommand('npm', ['run', 'build'])
@@ -371,7 +389,7 @@ async function main() {
   // Деплой
   if (!NO_DEPLOY) {
     console.log('\n🚀 Деплой...')
-    await runCommand('npx', ['vercel', '--prod'])
+    await runCommand('npx', ['vercel', '--prod', '--yes'], { env: VERCEL_ENV })
   }
 
   console.log(`\n🎉 Готово! Добавлено ${allGeneratedTs.length * COUNT} школ для ${CITY}`)
