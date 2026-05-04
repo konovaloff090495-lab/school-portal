@@ -137,12 +137,20 @@ const TYPE_META: {
     sub: 'IB, Cambridge, обучение на английском, диплом для зарубежных вузов',
   },
   {
-    slug: 'podgotovka-ege-oge',
-    name: 'Центры ЕГЭ/ОГЭ',
-    tint: '#F5A623',
+    slug: 'podgotovka-ege',
+    name: 'Центры ЕГЭ',
+    tint: '#F59E0B',
     image: null,
-    href: '/shkoly/tipy/podgotovka-ege-oge/',
-    sub: 'Вебиум, Максимум Эдьюкейшн, ЕГЭхаб — авторские методики, онлайн и очно',
+    href: '/shkoly/tipy/podgotovka-ege/',
+    sub: 'Вебиум, Максимум Эдьюкейшн, ЕГЭхаб — 80+ баллов по каждому предмету',
+  },
+  {
+    slug: 'podgotovka-oge',
+    name: 'Центры ОГЭ',
+    tint: '#0D9488',
+    image: null,
+    href: '/shkoly/tipy/podgotovka-oge/',
+    sub: 'Подготовка 9-классников: КИМы, тренировочные экзамены, все предметы',
   },
 ]
 
