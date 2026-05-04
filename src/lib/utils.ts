@@ -16,6 +16,8 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   korrektsionnye:  ['коррекционная школа', 'школа для детей с ОВЗ', 'школа для детей с РАС', 'дефектолог'],
   kadetskie:       ['кадетская школа', 'кадетский корпус', 'военно-патриотическое воспитание', 'НВП'],
   mezhdunarodnie:  ['международная школа', 'IB школа', 'школа с международной программой', 'Cambridge school', 'двуязычная школа'],
+  programmirovanie:['школа программирования', 'IT школа', 'школа кодирования', 'Python школа', 'школа веб-разработки'],
+  shahmatnye:      ['шахматная школа', 'школа шахмат', 'шахматный лицей', 'обучение шахматам', 'шахматы для детей'],
 }
 
 export function buildKeywords(
@@ -114,6 +116,8 @@ export function getTypeColor(type: SchoolType): string {
     korrektsionnye: 'bg-lime-100 text-lime-800',
     kadetskie: 'bg-slate-100 text-slate-800',
     mezhdunarodnie: 'bg-sky-100 text-sky-800',
+    programmirovanie: 'bg-violet-100 text-violet-800',
+    shahmatnye: 'bg-emerald-100 text-emerald-800',
   }
   return colors[type]
 }
@@ -133,6 +137,8 @@ export function getTypeBorderColor(type: SchoolType): string {
     korrektsionnye: 'border-lime-200',
     kadetskie: 'border-slate-200',
     mezhdunarodnie: 'border-sky-200',
+    programmirovanie: 'border-violet-200',
+    shahmatnye: 'border-emerald-200',
   }
   return colors[type]
 }

@@ -535,6 +535,8 @@ export default function CatalogClient({
       korrektsionnye:  'Коррекционные школы',
       kadetskie:       'Кадетские школы',
       mezhdunarodnie:  'Международные школы',
+      programmirovanie:'Школы программирования',
+      shahmatnye:      'Шахматные школы',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -550,6 +552,8 @@ export default function CatalogClient({
       korrektsionnye: 'оказывают специализированную помощь детям с ОВЗ: нарушениями слуха, зрения, речи, ЗПР и РАС в адаптированных условиях',
       kadetskie: 'формируют патриотическое воспитание, высокую дисциплину и физическую подготовку через программы НВП и военного дела',
       mezhdunarodnie: 'обучают по программам IB и Cambridge на английском языке, выдавая диплом, признаваемый в зарубежных вузах',
+      programmirovanie:'специализируются на IT и программировании: Python, веб-разработка, ИИ, кибербезопасность и реальные проекты',
+      shahmatnye:     'обучают шахматам как отдельному предмету, развивая логику, стратегическое мышление и готовя к турнирам ФИДЕ',
     }
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]

@@ -117,8 +117,16 @@ const TYPE_META: {
     name: 'Программирование',
     tint: '#7B5CFF',
     image: null,
-    href: '/shkoly/osobennosti/it-klass/',
-    sub: 'IT-классы, робототехника, веб-разработка, ИИ и Яндекс.Лицей',
+    href: '/shkoly/tipy/programmirovanie/',
+    sub: 'Python, веб-разработка, ИИ, кибербезопасность — профильные IT-школы',
+  },
+  {
+    slug: 'shahmatnye',
+    name: 'Шахматные',
+    tint: '#2D6A4F',
+    image: null,
+    href: '/shkoly/tipy/shahmatnye/',
+    sub: 'Шахматы как учебный предмет, логика, стратегия, турниры ФИДЕ',
   },
   {
     slug: 'mezhdunarodnie',
@@ -133,7 +141,7 @@ const TYPE_META: {
     name: 'Подготовка к ЕГЭ',
     tint: '#F5A623',
     image: '/school-types/podgotovka-k-ege.png',
-    href: '/shkoly/moskva/podgotovka-k-ege/',
+    href: '/shkoly/osobennosti/podgotovka-k-ege/',
     sub: 'Профильные 10–11 классы, интенсивы, высокий средний балл выпускников',
   },
   {
@@ -141,7 +149,7 @@ const TYPE_META: {
     name: 'Подготовка к ОГЭ',
     tint: '#3DBE9E',
     image: '/school-types/podgotovka-k-oge.png',
-    href: '/shkoly/moskva/podgotovka-k-oge/',
+    href: '/shkoly/osobennosti/podgotovka-k-oge/',
     sub: 'Профильные 9-е классы, тренировочные экзамены, разбор КИМ',
   },
 ]
@@ -324,7 +332,6 @@ export default function SchoolTypesSection() {
   for (const t of typeSlugs) {
     counts[t] = schools.filter(s => s.type === t).length
   }
-  counts['programmirovanie'] = getSchoolsByFeature('it-klass').length
   counts['podgotovka-k-ege'] = getSchoolsByFeature('podgotovka-k-ege').length
   counts['podgotovka-k-oge'] = getSchoolsByFeature('podgotovka-k-oge').length
 

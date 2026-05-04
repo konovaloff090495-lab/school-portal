@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { schools, typeSlugs, typeLabels, getSchoolsByFeature } from '@/data/schools'
+import { schools, typeSlugs, typeLabels, getSchoolsByFeature, featureMetas } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import SchoolCard from '@/components/SchoolCard'
 import HeroBanner from '@/components/HeroBanner'
@@ -67,6 +67,48 @@ export default function HomePage() {
       {/* Cities */}
       <CitiesSection />
 
+      {/* Features / Особенности */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-end justify-between mb-6 gap-4">
+          <div>
+            <h2 className="text-2xl font-bold text-[#0F172A] mb-1">Особенности школ</h2>
+            <p className="text-gray-500 text-sm">Фильтруйте по важным для вас критериям</p>
+          </div>
+          <Link href="/shkoly/" className="text-[#FF6B3D] text-sm font-semibold hover:text-orange-600 transition-colors flex items-center gap-1 whitespace-nowrap">
+            Все фильтры
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {featureMetas.map(f => {
+            const cnt = getSchoolsByFeature(f.slug).length
+            return (
+              <Link
+                key={f.slug}
+                href={`/shkoly/osobennosti/${f.slug}/`}
+                className="group flex flex-col gap-2 rounded-2xl border border-[#E8E0D6] bg-white hover:border-[#FF6B3D] hover:shadow-md transition-all duration-200 p-4"
+              >
+                <span className="text-sm font-semibold text-[#1A1814] group-hover:text-[#FF6B3D] transition-colors leading-tight">
+                  {f.label}
+                </span>
+                <span className="text-xs text-gray-400 font-medium">{cnt} школ</span>
+              </Link>
+            )
+          })}
+          <Link
+            href="/shkoly/osobennosti/it-klass/"
+            className="group flex flex-col gap-2 rounded-2xl border border-[#E8E0D6] bg-white hover:border-[#7B5CFF] hover:shadow-md transition-all duration-200 p-4"
+          >
+            <span className="text-sm font-semibold text-[#1A1814] group-hover:text-[#7B5CFF] transition-colors leading-tight">
+              Программирование
+            </span>
+            <span className="text-xs text-gray-400 font-medium">{getSchoolsByFeature('it-klass').length} школ</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Exam prep */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-[#0F172A] mb-2">Подготовка к экзаменам</h2>
@@ -92,7 +134,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 <Link
-                  href="/shkoly/moskva/podgotovka-k-ege/"
+                  href="/shkoly/osobennosti/podgotovka-k-ege/"
                   className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors duration-200"
                 >
                   Смотреть школы ЕГЭ
@@ -101,7 +143,7 @@ export default function HomePage() {
                   </svg>
                 </Link>
                 <Link
-                  href="/shkoly/moskva/podgotovka-k-ege/online/"
+                  href="/shkoly/tipy/online/"
                   className="inline-flex items-center gap-1.5 bg-white border border-amber-300 text-amber-700 hover:bg-amber-100 text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors duration-200"
                 >
                   Онлайн ({egeOnlineCount})
@@ -129,7 +171,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 <Link
-                  href="/shkoly/moskva/podgotovka-k-oge/"
+                  href="/shkoly/osobennosti/podgotovka-k-oge/"
                   className="inline-flex items-center gap-1.5 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors duration-200"
                 >
                   Смотреть школы ОГЭ
@@ -138,7 +180,7 @@ export default function HomePage() {
                   </svg>
                 </Link>
                 <Link
-                  href="/shkoly/moskva/podgotovka-k-oge/online/"
+                  href="/shkoly/tipy/online/"
                   className="inline-flex items-center gap-1.5 bg-white border border-teal-300 text-teal-700 hover:bg-teal-100 text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors duration-200"
                 >
                   Онлайн ({ogeOnlineCount})
