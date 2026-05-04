@@ -70,11 +70,8 @@ jobs:
       - name: Notify Telegram
         if: always()
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YANDEX_METRICA_TOKEN: ${{ secrets.YANDEX_METRICA_TOKEN }}
         run: |
-          # Читаем slugи новых статей из git diff
-          SLUGS=$(git log -1 --name-only --diff-filter=M -- src/data/blog.ts 2>/dev/null | head -1)
-
           # Извлекаем заголовки и slugи последних 5 статей из blog.ts
           ARTICLES=$(node -e "
             const fs = require('fs');
@@ -88,13 +85,43 @@ jobs:
             console.log(lines.join('\n'));
           " 2>/dev/null || echo "• Статьи сгенерированы")
 
+          # Трафик Яндекс.Метрика
+          TRAFFIC_LINE=""
+          if [ -n "$YANDEX_METRICA_TOKEN" ]; then
+            COUNTER_ID="108789843"
+            YESTERDAY=$(date -d 'yesterday' +'%Y-%m-%d')
+            DAY_BEFORE=$(date -d '2 days ago' +'%Y-%m-%d')
+
+            VISITS_YESTERDAY=$(curl -s \
+              "https://api-metrika.yandex.net/stat/v1/data?ids=$COUNTER_ID&metrics=ym:s:visits&date1=$YESTERDAY&date2=$YESTERDAY" \
+              -H "Authorization: OAuth $YANDEX_METRICA_TOKEN" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(int(d['totals'][0]))" 2>/dev/null || echo "0")
+
+            VISITS_BEFORE=$(curl -s \
+              "https://api-metrika.yandex.net/stat/v1/data?ids=$COUNTER_ID&metrics=ym:s:visits&date1=$DAY_BEFORE&date2=$DAY_BEFORE" \
+              -H "Authorization: OAuth $YANDEX_METRICA_TOKEN" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(int(d['totals'][0]))" 2>/dev/null || echo "0")
+
+            if [ "$VISITS_BEFORE" -gt 0 ] 2>/dev/null; then
+              DELTA=$((VISITS_YESTERDAY - VISITS_BEFORE))
+              if [ "$DELTA" -gt 0 ]; then DELTA_STR="+$DELTA ▲"
+              elif [ "$DELTA" -lt 0 ]; then DELTA_STR="$DELTA ▼"
+              else DELTA_STR="0 →"; fi
+              TRAFFIC_LINE="
+📈 Трафик вчера: *${VISITS_YESTERDAY}* визитов (${DELTA_STR} к позавчера)"
+            else
+              TRAFFIC_LINE="
+📈 Трафик вчера: *${VISITS_YESTERDAY}* визитов"
+            fi
+          fi
+
           STATUS="${{ job.status }}"
           if [ "$STATUS" = "success" ]; then
             ICON="✅"
             MSG="$ICON *Новые статьи на pro-schools.ru*
 
 $ARTICLES
-
+${TRAFFIC_LINE}
 📅 $(date +'%d.%m.%Y %H:%M') МСК"
           else
             ICON="❌"
