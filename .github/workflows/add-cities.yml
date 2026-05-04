@@ -82,8 +82,48 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
+        id: deploy
         env:
           VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
           VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod --yes --token $VERCEL_TOKEN
+
+      - name: Notify Telegram
+        if: always()
+        run: |
+          # Узнаём какой город был добавлен
+          CITY=$(node -e "
+            const fs = require('fs');
+            const q = JSON.parse(fs.readFileSync('scripts/city-queue.json', 'utf-8'));
+            const done = q.filter(c => c.status === 'done');
+            const last = done[done.length - 1];
+            if (last) console.log(last.city);
+            else console.log('Новый город');
+          " 2>/dev/null || echo "Новый город")
+
+          SCHOOL_COUNT=$(node -e "
+            const fs = require('fs');
+            const content = fs.readFileSync('src/data/schools.ts', 'utf-8');
+            const matches = content.match(/type: '[^']+' as const,\s*\n\s*region: '[^']+' as const/g);
+            console.log(matches ? matches.length : 0);
+          " 2>/dev/null || echo "?")
+
+          STATUS="${{ job.status }}"
+          if [ "$STATUS" = "success" ]; then
+            MSG="🏙 *Новый город на pro-schools.ru*
+
+📍 Добавлен: *$CITY*
+🏫 Всего школ в базе: $SCHOOL_COUNT
+🔗 https://pro-schools.ru/shkoly/
+
+📅 $(date +'%d.%m.%Y %H:%M') МСК"
+          else
+            MSG="❌ *Ошибка добавления города*
+Проверь: https://github.com/konovaloff090495-lab/school-portal/actions"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d parse_mode="Markdown" \
+            -d "text=$MSG" > /dev/null

@@ -41,9 +41,6 @@ jobs:
       - name: Generate blog articles
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
-          VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           COUNT=${{ github.event.inputs.count || '5' }}
           node scripts/generate-blog.mjs --count=$COUNT --no-deploy
@@ -56,17 +53,56 @@ jobs:
           git config user.name "pro-schools bot"
           git config user.email "bot@pro-schools.ru"
 
-      - name: Commit changes
+      - name: Commit and push
         run: |
           git add src/data/blog.ts scripts/blog-topics.json
           git diff --staged --quiet || git commit -m "Blog: auto-generate 5 articles $(date +'%Y-%m-%d')"
-
-      - name: Push changes
-        run: git push
+          git push
 
       - name: Deploy to Vercel
+        id: deploy
         env:
           VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
           VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod --yes --token $VERCEL_TOKEN
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Читаем slugи новых статей из git diff
+          SLUGS=$(git log -1 --name-only --diff-filter=M -- src/data/blog.ts 2>/dev/null | head -1)
+
+          # Извлекаем заголовки и slugи последних 5 статей из blog.ts
+          ARTICLES=$(node -e "
+            const fs = require('fs');
+            const content = fs.readFileSync('src/data/blog.ts', 'utf-8');
+            const titleMatches = [...content.matchAll(/title:\s*['\"]([^'\"]+)['\"]/g)].map(m => m[1]);
+            const slugMatches  = [...content.matchAll(/slug:\s*['\"]([^'\"]+)['\"]/g)].map(m => m[1]);
+            const count = ${{ github.event.inputs.count || '5' }};
+            const last = titleMatches.slice(-count);
+            const lastSlugs = slugMatches.slice(-count);
+            const lines = last.map((t, i) => '• ' + t + '\n  https://pro-schools.ru/blog/' + lastSlugs[i] + '/');
+            console.log(lines.join('\n'));
+          " 2>/dev/null || echo "• Статьи сгенерированы")
+
+          STATUS="${{ job.status }}"
+          if [ "$STATUS" = "success" ]; then
+            ICON="✅"
+            MSG="$ICON *Новые статьи на pro-schools.ru*
+
+$ARTICLES
+
+📅 $(date +'%d.%m.%Y %H:%M') МСК"
+          else
+            ICON="❌"
+            MSG="$ICON *Ошибка генерации статей*
+Проверь: https://github.com/konovaloff090495-lab/school-portal/actions"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d parse_mode="Markdown" \
+            -d "text=$MSG" > /dev/null

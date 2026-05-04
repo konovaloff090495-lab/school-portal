@@ -76,8 +76,37 @@ jobs:
         run: npm run build
 
       - name: Deploy to Vercel
+        id: deploy
         env:
           VERCEL_PROJECT_ID: prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ
           VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod --yes --token $VERCEL_TOKEN
+
+      - name: Notify Telegram
+        if: always()
+        run: |
+          CITY="${{ github.event.inputs.city }}"
+          SLUG="${{ github.event.inputs.slug }}"
+          TYPES="${{ github.event.inputs.types || 'все типы' }}"
+          COUNT="${{ github.event.inputs.count || '8' }}"
+
+          STATUS="${{ job.status }}"
+          if [ "$STATUS" = "success" ]; then
+            MSG="🏫 *Новые карточки школ на pro-schools.ru*
+
+📍 Город: *$CITY*
+📚 Типы: $TYPES
+➕ Добавлено: ~$COUNT школ на тип
+🔗 https://pro-schools.ru/shkoly/$SLUG/
+
+📅 $(date +'%d.%m.%Y %H:%M') МСК"
+          else
+            MSG="❌ *Ошибка добавления карточек*
+Проверь: https://github.com/konovaloff090495-lab/school-portal/actions"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d parse_mode="Markdown" \
+            -d "text=$MSG" > /dev/null
