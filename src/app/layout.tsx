@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     "школы России, каталог школ, частные школы, онлайн школы, вечерние школы, экстернат",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://pro-schools.ru/" },
+  manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "ru_RU",

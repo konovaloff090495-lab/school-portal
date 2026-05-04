@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Transparent background version for apple-touch (will be put on white) -->
+  <rect width="64" height="64" rx="14" fill="#EFF6FF"/>
+
+  <!-- Book / base -->
+  <ellipse cx="32" cy="54" rx="18" ry="3.5" fill="#FCD34D" opacity="0.85"/>
+
+  <!-- Main building body -->
+  <rect x="14" y="28" width="36" height="24" rx="2" fill="#2563EB"/>
+  <!-- Building highlight -->
+  <rect x="14" y="28" width="36" height="3" rx="1" fill="#3B82F6"/>
+
+  <!-- Roof -->
+  <polygon points="32,8 10,28 54,28" fill="#1D4ED8"/>
+
+  <!-- Flag pole -->
+  <line x1="32" y1="8" x2="32" y2="17" stroke="#BFDBFE" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Flag -->
+  <polygon points="32,8 43,11.5 32,15" fill="#EF4444"/>
+
+  <!-- Door -->
+  <rect x="27" y="38" width="10" height="14" rx="1" fill="#DBEAFE" opacity="0.9"/>
+  <circle cx="35.5" cy="45" r="1" fill="#FCD34D"/>
+
+  <!-- Left window -->
+  <rect x="16" y="31" width="8" height="7" rx="1" fill="#BFDBFE" opacity="0.9"/>
+  <line x1="20" y1="31" x2="20" y2="38" stroke="#93C5FD" stroke-width="0.8"/>
+  <line x1="16" y1="34.5" x2="24" y2="34.5" stroke="#93C5FD" stroke-width="0.8"/>
+
+  <!-- Right window -->
+  <rect x="40" y="31" width="8" height="7" rx="1" fill="#BFDBFE" opacity="0.9"/>
+  <line x1="44" y1="31" x2="44" y2="38" stroke="#93C5FD" stroke-width="0.8"/>
+  <line x1="40" y1="34.5" x2="48" y2="34.5" stroke="#93C5FD" stroke-width="0.8"/>
+
+  <!-- Clock -->
+  <circle cx="32" cy="22" r="5.5" fill="#EFF6FF"/>
+  <circle cx="32" cy="22" r="4.5" fill="white"/>
+  <line x1="32" y1="22" x2="32" y2="19" stroke="#1E40AF" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="32" y1="22" x2="34.5" y2="22.8" stroke="#1E40AF" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
