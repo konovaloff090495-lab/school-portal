@@ -953,6 +953,938 @@
       "category": "Советы родителям",
       "keywords": "профориентация школьник",
       "freq": 7400
+    },
+    {
+      "id": "t101",
+      "status": "pending",
+      "title": "Лучшие школы Нижнего Новгорода 2026",
+      "slug": "luchshie-shkoly-nizhnego-novgoroda-2026",
+      "category": "Рейтинги",
+      "city": "Нижний Новгород",
+      "keywords": "лучшие школы нижнего новгорода",
+      "freq": 1600
+    },
+    {
+      "id": "t102",
+      "status": "pending",
+      "title": "Лучшие частные школы Москвы 2026: топ-15 с ценами",
+      "slug": "luchshie-chastnye-shkoly-moskvy-2026",
+      "category": "Рейтинги",
+      "keywords": "лучшие частные школы москвы",
+      "freq": 5400
+    },
+    {
+      "id": "t103",
+      "status": "pending",
+      "title": "Лучшие частные школы Санкт-Петербурга 2026",
+      "slug": "luchshie-chastnye-shkoly-spb-2026",
+      "category": "Рейтинги",
+      "city": "Санкт-Петербург",
+      "keywords": "лучшие частные школы петербурга",
+      "freq": 2800
+    },
+    {
+      "id": "t104",
+      "status": "pending",
+      "title": "Лучшие онлайн-школы России 2026: рейтинг и сравнение",
+      "slug": "luchshie-onlayn-shkoly-rossii-2026",
+      "category": "Рейтинги",
+      "keywords": "лучшие онлайн школы россия",
+      "freq": 4200
+    },
+    {
+      "id": "t105",
+      "status": "pending",
+      "title": "Лучшие гимназии Москвы 2026: топ-10",
+      "slug": "luchshie-gimnazii-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие гимназии москвы",
+      "freq": 3100
+    },
+    {
+      "id": "t106",
+      "status": "pending",
+      "title": "Лучшие лицеи Москвы 2026: рейтинг по ЕГЭ",
+      "slug": "luchshie-licei-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие лицеи москвы",
+      "freq": 2700
+    },
+    {
+      "id": "t107",
+      "status": "pending",
+      "title": "Школы с углублённым изучением математики Москвы",
+      "slug": "shkoly-uglublennaya-matematika-moskva",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "школы математика углублённое москва",
+      "freq": 1800
+    },
+    {
+      "id": "t108",
+      "status": "pending",
+      "title": "Школы с углублённым изучением английского Москвы",
+      "slug": "shkoly-uglublenny-anglijskij-moskva",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "школы английский углублённый москва",
+      "freq": 2100
+    },
+    {
+      "id": "t109",
+      "status": "pending",
+      "title": "Топ IT-школ России 2026: программирование с детства",
+      "slug": "top-it-shkol-rossii-2026",
+      "category": "Рейтинги",
+      "keywords": "IT школы программирование дети",
+      "freq": 3300
+    },
+    {
+      "id": "t110",
+      "status": "pending",
+      "title": "Семейное образование: как перейти и что нужно знать в 2026",
+      "slug": "semejnoe-obrazovanie-kak-perejti-2026",
+      "category": "Типы школ",
+      "keywords": "семейное образование как перейти",
+      "freq": 4100
+    },
+    {
+      "id": "t111",
+      "status": "pending",
+      "title": "Экстернат: как сдать экзамены досрочно и получить аттестат",
+      "slug": "eksternat-kak-sdat-ekzameny-dosrochno",
+      "category": "Типы школ",
+      "keywords": "экстернат как сдать экзамены",
+      "freq": 3600
+    },
+    {
+      "id": "t112",
+      "status": "pending",
+      "title": "Домашнее обучение: плюсы, минусы и как оформить в 2026",
+      "slug": "domashee-obuchenie-plyusy-minusy-2026",
+      "category": "Типы школ",
+      "keywords": "домашнее обучение оформить",
+      "freq": 3800
+    },
+    {
+      "id": "t113",
+      "status": "pending",
+      "title": "Кадетская школа: что это, как поступить и стоит ли",
+      "slug": "kadetskaya-shkola-chto-eto-kak-postupit",
+      "category": "Типы школ",
+      "keywords": "кадетская школа как поступить",
+      "freq": 2900
+    },
+    {
+      "id": "t114",
+      "status": "pending",
+      "title": "Коррекционная школа: виды, права ребёнка и как попасть",
+      "slug": "korrektsionnaya-shkola-vidy-prava",
+      "category": "Типы школ",
+      "keywords": "коррекционная школа как попасть",
+      "freq": 2400
+    },
+    {
+      "id": "t115",
+      "status": "pending",
+      "title": "Международная школа в России: IB, Cambridge и стоимость",
+      "slug": "mezhdunarodnaya-shkola-rossiya-ib-cambridge",
+      "category": "Типы школ",
+      "keywords": "международная школа россия IB cambridge",
+      "freq": 3200
+    },
+    {
+      "id": "t116",
+      "status": "pending",
+      "title": "Вечерняя школа для взрослых: как получить аттестат",
+      "slug": "vechernyaya-shkola-vzroslyh-kak-poluchit-attestat",
+      "category": "Типы школ",
+      "keywords": "вечерняя школа взрослые аттестат",
+      "freq": 2600
+    },
+    {
+      "id": "t117",
+      "status": "pending",
+      "title": "Школа при университете: лицеи и классы в вузах России",
+      "slug": "shkola-pri-universitete-licei-vuzy",
+      "category": "Типы школ",
+      "keywords": "школа при университете лицей",
+      "freq": 1900
+    },
+    {
+      "id": "t118",
+      "status": "pending",
+      "title": "Профильные классы: как выбрать направление в 10 классе",
+      "slug": "profilnye-klassy-kak-vybrat-napravlenie",
+      "category": "Типы школ",
+      "keywords": "профильные классы 10 класс выбрать",
+      "freq": 3400
+    },
+    {
+      "id": "t119",
+      "status": "pending",
+      "title": "Онлайн-школа: полный переход или дополнительное обучение",
+      "slug": "onlayn-shkola-polnyj-perehod-ili-dop",
+      "category": "Типы школ",
+      "keywords": "онлайн школа перейти полностью",
+      "freq": 4700
+    },
+    {
+      "id": "t120",
+      "status": "pending",
+      "title": "Как записать ребёнка в школу в 2026 году: инструкция",
+      "slug": "kak-zapisat-rebyonka-v-shkolu-2026",
+      "category": "Советы родителям",
+      "keywords": "как записать ребёнка в школу",
+      "freq": 12000
+    },
+    {
+      "id": "t121",
+      "status": "pending",
+      "title": "Когда отдавать ребёнка в первый класс: возраст и готовность",
+      "slug": "kogda-otdavat-rebyonka-v-pervyj-klass",
+      "category": "Советы родителям",
+      "keywords": "когда отдавать ребёнка в первый класс",
+      "freq": 8500
+    },
+    {
+      "id": "t122",
+      "status": "pending",
+      "title": "Как перевести ребёнка в другую школу: документы и порядок",
+      "slug": "kak-perevesti-rebyonka-v-druguyu-shkolu",
+      "category": "Советы родителям",
+      "keywords": "перевести ребёнка в другую школу документы",
+      "freq": 6200
+    },
+    {
+      "id": "t123",
+      "status": "pending",
+      "title": "Частная школа: стоит ли платить и на что обращать внимание",
+      "slug": "chastnaya-shkola-stoit-li-platit",
+      "category": "Советы родителям",
+      "keywords": "частная школа стоит ли",
+      "freq": 4800
+    },
+    {
+      "id": "t124",
+      "status": "pending",
+      "title": "Как выбрать школу по прописке или не по прописке в 2026",
+      "slug": "kak-vybrat-shkolu-po-propiske-2026",
+      "category": "Советы родителям",
+      "keywords": "школа по прописке как поступить",
+      "freq": 5600
+    },
+    {
+      "id": "t125",
+      "status": "pending",
+      "title": "Адаптация ребёнка в новой школе: советы психолога",
+      "slug": "adaptaciya-rebyonka-v-novoj-shkole",
+      "category": "Советы родителям",
+      "keywords": "адаптация ребёнка новая школа",
+      "freq": 3100
+    },
+    {
+      "id": "t126",
+      "status": "pending",
+      "title": "Буллинг в школе: что делать родителям и ребёнку",
+      "slug": "bulling-v-shkole-chto-delat-roditelyam",
+      "category": "Советы родителям",
+      "keywords": "буллинг школа что делать",
+      "freq": 5900
+    },
+    {
+      "id": "t127",
+      "status": "pending",
+      "title": "Платные секции в школе: что обязательно, что добровольно",
+      "slug": "platnye-sekcii-v-shkole-chto-obyazatelno",
+      "category": "Советы родителям",
+      "keywords": "платные секции школа обязательно",
+      "freq": 3700
+    },
+    {
+      "id": "t128",
+      "status": "pending",
+      "title": "Репетитор или курсы: что лучше для подготовки к ЕГЭ",
+      "slug": "repetitor-ili-kursy-chto-luchshe-ege",
+      "category": "Советы родителям",
+      "keywords": "репетитор или курсы ЕГЭ",
+      "freq": 4200
+    },
+    {
+      "id": "t129",
+      "status": "pending",
+      "title": "Школьная форма в России 2026: требования и выбор",
+      "slug": "shkolnaya-forma-rossiya-2026-trebovaniya",
+      "category": "Советы родителям",
+      "keywords": "школьная форма требования 2026",
+      "freq": 3900
+    },
+    {
+      "id": "t130",
+      "status": "pending",
+      "title": "Льготы при поступлении в школу: кто имеет право",
+      "slug": "lgoty-pri-postuplenii-v-shkolu",
+      "category": "Советы родителям",
+      "keywords": "льготы поступление школа",
+      "freq": 2800
+    },
+    {
+      "id": "t131",
+      "status": "pending",
+      "title": "Как помочь ребёнку с учёбой без скандалов",
+      "slug": "kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov",
+      "category": "Советы родителям",
+      "keywords": "как помочь ребёнку с учёбой",
+      "freq": 6100
+    },
+    {
+      "id": "t132",
+      "status": "pending",
+      "title": "Дистанционное обучение для детей: плюсы и минусы",
+      "slug": "distancionnoe-obuchenie-dlya-detej",
+      "category": "Советы родителям",
+      "keywords": "дистанционное обучение дети",
+      "freq": 4300
+    },
+    {
+      "id": "t133",
+      "status": "pending",
+      "title": "Как выбрать профиль в 10 классе: советы и тесты",
+      "slug": "kak-vybrat-profil-v-10-klasse",
+      "category": "Советы родителям",
+      "keywords": "профиль 10 класс как выбрать",
+      "freq": 5200
+    },
+    {
+      "id": "t134",
+      "status": "pending",
+      "title": "Индивидуальный учебный план (ИУП): что это и как оформить",
+      "slug": "individualnyj-uchebnyj-plan-iup-kak-oformit",
+      "category": "Советы родителям",
+      "keywords": "индивидуальный учебный план оформить",
+      "freq": 2100
+    },
+    {
+      "id": "t135",
+      "status": "pending",
+      "title": "Как подготовиться к ЕГЭ по математике с нуля",
+      "slug": "podgotovka-k-ege-po-matematike-s-nulya",
+      "category": "Советы родителям",
+      "keywords": "подготовка ЕГЭ математика с нуля",
+      "freq": 7800
+    },
+    {
+      "id": "t136",
+      "status": "pending",
+      "title": "Как подготовиться к ЕГЭ по русскому языку: план",
+      "slug": "podgotovka-k-ege-russkij-yazyk-plan",
+      "category": "Советы родителям",
+      "keywords": "подготовка ЕГЭ русский язык",
+      "freq": 6900
+    },
+    {
+      "id": "t137",
+      "status": "pending",
+      "title": "ОГЭ 2026: что изменилось и как подготовиться",
+      "slug": "oge-2026-izmeneniya-kak-podgotovitsya",
+      "category": "Советы родителям",
+      "keywords": "ОГЭ 2026 как подготовиться",
+      "freq": 8100
+    },
+    {
+      "id": "t138",
+      "status": "pending",
+      "title": "Курсы подготовки к ЕГЭ: как выбрать и сколько стоит",
+      "slug": "kursy-podgotovki-k-ege-kak-vybrat",
+      "category": "Советы родителям",
+      "keywords": "курсы подготовки ЕГЭ выбрать",
+      "freq": 5300
+    },
+    {
+      "id": "t139",
+      "status": "pending",
+      "title": "Онлайн-подготовка к ЕГЭ: топ-5 платформ 2026",
+      "slug": "onlayn-podgotovka-k-ege-platformy-2026",
+      "category": "Рейтинги",
+      "keywords": "онлайн подготовка ЕГЭ платформы",
+      "freq": 4600
+    },
+    {
+      "id": "t140",
+      "status": "pending",
+      "title": "Когда начинать готовиться к ЕГЭ: в 10 или 11 классе",
+      "slug": "kogda-nachinать-gotovitsya-k-ege",
+      "category": "Советы родителям",
+      "keywords": "когда начинать готовиться ЕГЭ",
+      "freq": 4900
+    },
+    {
+      "id": "t141",
+      "status": "pending",
+      "title": "ЕГЭ по информатике 2026: разбор формата и советы",
+      "slug": "ege-informatika-2026-format-sovety",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ информатика 2026",
+      "freq": 3700
+    },
+    {
+      "id": "t142",
+      "status": "pending",
+      "title": "ЕГЭ по английскому 2026: структура и как готовиться",
+      "slug": "ege-anglijskij-2026-struktura",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ английский 2026",
+      "freq": 4100
+    },
+    {
+      "id": "t143",
+      "status": "pending",
+      "title": "Как сдать ЕГЭ на 100 баллов: советы отличников",
+      "slug": "kak-sdat-ege-na-100-ballov",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ 100 баллов как сдать",
+      "freq": 6800
+    },
+    {
+      "id": "t144",
+      "status": "pending",
+      "title": "Школы с бассейном в Москве: список и где найти",
+      "slug": "shkoly-s-bassejnom-moskva-spisok",
+      "category": "Типы школ",
+      "city": "Москва",
+      "keywords": "школы с бассейном москва",
+      "freq": 2400
+    },
+    {
+      "id": "t145",
+      "status": "pending",
+      "title": "IT-классы в школах: как поступить и чему учат",
+      "slug": "it-klassy-v-shkolah-kak-postupit",
+      "category": "Типы школ",
+      "keywords": "IT класс школа как поступить",
+      "freq": 3100
+    },
+    {
+      "id": "t146",
+      "status": "pending",
+      "title": "Медицинские классы в школах России: что это и где",
+      "slug": "medicinskie-klassy-shkoly-rossii",
+      "category": "Типы школ",
+      "keywords": "медицинские классы школа",
+      "freq": 2200
+    },
+    {
+      "id": "t147",
+      "status": "pending",
+      "title": "Школы с продлёнкой: как работает и сколько стоит",
+      "slug": "shkoly-s-prodljonkoj-kak-rabotaet",
+      "category": "Советы родителям",
+      "keywords": "школа продлёнка сколько стоит",
+      "freq": 2900
+    },
+    {
+      "id": "t148",
+      "status": "pending",
+      "title": "Инклюзивное образование в школе: права и возможности",
+      "slug": "inklyuzivnoe-obrazovanie-shkola-prava",
+      "category": "Типы школ",
+      "keywords": "инклюзивное образование школа",
+      "freq": 2700
+    },
+    {
+      "id": "t149",
+      "status": "pending",
+      "title": "Школы с военно-патриотическим воспитанием: обзор",
+      "slug": "shkoly-s-voenno-patrioticheskim-vospitaniem",
+      "category": "Типы школ",
+      "keywords": "военно-патриотическое воспитание школа",
+      "freq": 1800
+    },
+    {
+      "id": "t150",
+      "status": "pending",
+      "title": "Государственная или частная школа: плюсы и минусы каждой",
+      "slug": "gosudarstvennaya-ili-chastnaya-shkola-sravnenie",
+      "category": "Советы родителям",
+      "keywords": "государственная или частная школа",
+      "freq": 5600
+    },
+    {
+      "id": "t151",
+      "status": "pending",
+      "title": "Онлайн-школа vs обычная: что лучше для ребёнка",
+      "slug": "onlayn-shkola-vs-obychnaya-chto-luchshe",
+      "category": "Советы родителям",
+      "keywords": "онлайн школа vs обычная",
+      "freq": 4300
+    },
+    {
+      "id": "t152",
+      "status": "pending",
+      "title": "Российский аттестат vs IB Diploma: что выбрать",
+      "slug": "rossijskij-attestat-vs-ib-diploma",
+      "category": "Типы школ",
+      "keywords": "IB diploma vs российский аттестат",
+      "freq": 2100
+    },
+    {
+      "id": "t153",
+      "status": "pending",
+      "title": "Переехали в другой город: как выбрать школу быстро",
+      "slug": "pereehali-vybrat-shkolu-drugoj-gorod",
+      "category": "Советы родителям",
+      "keywords": "переезд выбрать школу другой город",
+      "freq": 3200
+    },
+    {
+      "id": "t154",
+      "status": "pending",
+      "title": "Лучшие школы ЦАО Москвы 2026: рейтинг",
+      "slug": "luchshie-shkoly-cao-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие школы ЦАО москва",
+      "freq": 1600
+    },
+    {
+      "id": "t155",
+      "status": "pending",
+      "title": "Лучшие школы ЗАО Москвы 2026: куда отдать ребёнка",
+      "slug": "luchshie-shkoly-zao-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие школы ЗАО москва",
+      "freq": 1500
+    },
+    {
+      "id": "t156",
+      "status": "pending",
+      "title": "Лучшие школы СЗАО Москвы 2026: рейтинг",
+      "slug": "luchshie-shkoly-szao-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие школы СЗАО москва",
+      "freq": 1400
+    },
+    {
+      "id": "t157",
+      "status": "pending",
+      "title": "Лучшие школы ВАО Москвы 2026: топ-10",
+      "slug": "luchshie-shkoly-vao-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие школы ВАО москва",
+      "freq": 1300
+    },
+    {
+      "id": "t158",
+      "status": "pending",
+      "title": "Лучшие школы ЮВАО Москвы 2026",
+      "slug": "luchshie-shkoly-yuvao-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "лучшие школы ЮВАО москва",
+      "freq": 1200
+    },
+    {
+      "id": "t159",
+      "status": "pending",
+      "title": "Школы Новой Москвы: лучшие варианты 2026",
+      "slug": "shkoly-novoj-moskvy-luchshie-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "школы новой москвы",
+      "freq": 2100
+    },
+    {
+      "id": "t160",
+      "status": "pending",
+      "title": "ЕГЭ по физике 2026: что изменилось и как готовиться",
+      "slug": "ege-fizika-2026-izmeneniya",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ физика 2026",
+      "freq": 4200
+    },
+    {
+      "id": "t161",
+      "status": "pending",
+      "title": "ЕГЭ по химии 2026: структура экзамена и лучшие курсы",
+      "slug": "ege-himiya-2026-kak-sdat",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ химия 2026",
+      "freq": 3800
+    },
+    {
+      "id": "t162",
+      "status": "pending",
+      "title": "ЕГЭ по биологии 2026: как готовиться самостоятельно",
+      "slug": "ege-biologiya-2026-samostoyatelno",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ биология 2026",
+      "freq": 3600
+    },
+    {
+      "id": "t163",
+      "status": "pending",
+      "title": "ЕГЭ по истории 2026: что важно знать",
+      "slug": "ege-istoriya-2026-chto-vazhno",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ история 2026",
+      "freq": 3300
+    },
+    {
+      "id": "t164",
+      "status": "pending",
+      "title": "ЕГЭ по обществознанию 2026: самый популярный предмет",
+      "slug": "ege-obshchestvoznanie-2026-popular",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ обществознание 2026",
+      "freq": 6100
+    },
+    {
+      "id": "t165",
+      "status": "pending",
+      "title": "ЕГЭ по литературе 2026: структура и советы",
+      "slug": "ege-literatura-2026-struktura-sovety",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ литература 2026",
+      "freq": 2900
+    },
+    {
+      "id": "t166",
+      "status": "pending",
+      "title": "ЕГЭ по географии 2026: как подготовиться за год",
+      "slug": "ege-geografiya-2026-za-god",
+      "category": "Советы родителям",
+      "keywords": "ЕГЭ география 2026",
+      "freq": 2400
+    },
+    {
+      "id": "t167",
+      "status": "pending",
+      "title": "Базовая или профильная математика: как выбрать для ЕГЭ",
+      "slug": "bazovaya-ili-profilnaya-matematika-ege",
+      "category": "Советы родителям",
+      "keywords": "базовая профильная математика ЕГЭ",
+      "freq": 5200
+    },
+    {
+      "id": "t168",
+      "status": "pending",
+      "title": "Сочинение ЕГЭ: как написать на максимум баллов",
+      "slug": "sochinenie-ege-maksimum-ballov",
+      "category": "Советы родителям",
+      "keywords": "сочинение ЕГЭ максимум баллов",
+      "freq": 7400
+    },
+    {
+      "id": "t169",
+      "status": "pending",
+      "title": "Как сдать ОГЭ по математике: разбор заданий",
+      "slug": "oge-matematika-razbor-zadanij",
+      "category": "Советы родителям",
+      "keywords": "ОГЭ математика задания",
+      "freq": 5600
+    },
+    {
+      "id": "t170",
+      "status": "pending",
+      "title": "ОГЭ по русскому языку 2026: что нужно знать",
+      "slug": "oge-russkij-yazyk-2026-chto-nuzhno",
+      "category": "Советы родителям",
+      "keywords": "ОГЭ русский язык 2026",
+      "freq": 5100
+    },
+    {
+      "id": "t171",
+      "status": "pending",
+      "title": "Лучшие IT-школы Москвы 2026: программирование для детей",
+      "slug": "luchshie-it-shkoly-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "IT школы москва дети",
+      "freq": 2900
+    },
+    {
+      "id": "t172",
+      "status": "pending",
+      "title": "Лучшие международные школы Москвы 2026: IB и Cambridge",
+      "slug": "luchshie-mezhdunarodnye-shkoly-moskvy-2026",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "международные школы москва IB",
+      "freq": 2600
+    },
+    {
+      "id": "t173",
+      "status": "pending",
+      "title": "Лучшие школы Подмосковья 2026: рейтинг",
+      "slug": "luchshie-shkoly-podmoskovya-2026",
+      "category": "Рейтинги",
+      "keywords": "лучшие школы подмосковья",
+      "freq": 2300
+    },
+    {
+      "id": "t174",
+      "status": "pending",
+      "title": "Лучшие школы-пансионы России 2026",
+      "slug": "luchshie-shkoly-pansiony-rossii-2026",
+      "category": "Рейтинги",
+      "keywords": "школы пансионы россия",
+      "freq": 1700
+    },
+    {
+      "id": "t175",
+      "status": "pending",
+      "title": "Топ кадетских школ России 2026: рейтинг",
+      "slug": "top-kadetskih-shkol-rossii-2026",
+      "category": "Рейтинги",
+      "keywords": "кадетские школы россия рейтинг",
+      "freq": 1600
+    },
+    {
+      "id": "t176",
+      "status": "pending",
+      "title": "Лучшие школы с бесплатными кружками 2026",
+      "slug": "shkoly-s-besplatnymi-kruzhkami-2026",
+      "category": "Рейтинги",
+      "keywords": "школы бесплатные кружки",
+      "freq": 2100
+    },
+    {
+      "id": "t177",
+      "status": "pending",
+      "title": "Куда поступать с ЕГЭ 200+ баллов: лучшие вузы 2026",
+      "slug": "kuda-postupat-s-ege-200-ballov-vuzy",
+      "category": "Советы родителям",
+      "keywords": "куда поступать ЕГЭ 200 баллов",
+      "freq": 4800
+    },
+    {
+      "id": "t178",
+      "status": "pending",
+      "title": "Олимпиады для школьников 2026: как участвовать и льготы",
+      "slug": "olimpiady-dlya-shkolnikov-2026-lgoty",
+      "category": "Советы родителям",
+      "keywords": "олимпиады школьники льготы вуз",
+      "freq": 5300
+    },
+    {
+      "id": "t179",
+      "status": "pending",
+      "title": "Всероссийская олимпиада школьников: как подготовиться",
+      "slug": "vserossijskaya-olimpiada-shkolnikov-podgotovka",
+      "category": "Советы родителям",
+      "keywords": "всероссийская олимпиада подготовка",
+      "freq": 3900
+    },
+    {
+      "id": "t180",
+      "status": "pending",
+      "title": "Целевое обучение в вузе: как получить место от работодателя",
+      "slug": "celevoe-obuchenie-v-vuze-kak-poluchit",
+      "category": "Советы родителям",
+      "keywords": "целевое обучение вуз",
+      "freq": 4100
+    },
+    {
+      "id": "t181",
+      "status": "pending",
+      "title": "Поступление в МГУ 2026: баллы, факультеты, олимпиады",
+      "slug": "postuplenie-v-mgu-2026-bally",
+      "category": "Советы родителям",
+      "keywords": "поступление МГУ 2026 баллы",
+      "freq": 5700
+    },
+    {
+      "id": "t182",
+      "status": "pending",
+      "title": "Поступление в МФТИ 2026: требования и проходные баллы",
+      "slug": "postuplenie-v-mfti-2026",
+      "category": "Советы родителям",
+      "keywords": "поступление МФТИ 2026",
+      "freq": 3400
+    },
+    {
+      "id": "t183",
+      "status": "pending",
+      "title": "Поступление в ВШЭ 2026: что нужно знать",
+      "slug": "postuplenie-v-vshe-2026",
+      "category": "Советы родителям",
+      "keywords": "поступление ВШЭ 2026",
+      "freq": 3100
+    },
+    {
+      "id": "t184",
+      "status": "pending",
+      "title": "Как справиться со стрессом перед экзаменами: советы",
+      "slug": "kak-spravitsya-so-stressom-pered-ekzamenami",
+      "category": "Советы родителям",
+      "keywords": "стресс перед экзаменами ребёнок",
+      "freq": 4600
+    },
+    {
+      "id": "t185",
+      "status": "pending",
+      "title": "Хорошие оценки без зубрёжки: методики запоминания",
+      "slug": "horoshie-ocenki-bez-zubrjozki-metodiki",
+      "category": "Советы родителям",
+      "keywords": "хорошие оценки без зубрёжки",
+      "freq": 5200
+    },
+    {
+      "id": "t186",
+      "status": "pending",
+      "title": "Школьная программа по математике: чего ждать в 5–11 классах",
+      "slug": "shkolnaya-programma-matematika-klassy",
+      "category": "Советы родителям",
+      "keywords": "школьная программа математика классы",
+      "freq": 3100
+    },
+    {
+      "id": "t187",
+      "status": "pending",
+      "title": "Электронный журнал и дневник: как родителям следить за оценками",
+      "slug": "elektronnyj-zhurnal-dnevnik-roditelyam",
+      "category": "Советы родителям",
+      "keywords": "электронный журнал родители оценки",
+      "freq": 4400
+    },
+    {
+      "id": "t188",
+      "status": "pending",
+      "title": "Школьная перегрузка: признаки и как помочь ребёнку",
+      "slug": "shkolnaya-peregruzka-priznaki-pomoch",
+      "category": "Советы родителям",
+      "keywords": "школьная перегрузка ребёнок",
+      "freq": 3300
+    },
+    {
+      "id": "t189",
+      "status": "pending",
+      "title": "Дополнительное образование детей: кружки и секции",
+      "slug": "dopolnitelnoe-obrazovanie-kruzhki-sekcii",
+      "category": "Советы родителям",
+      "keywords": "дополнительное образование дети кружки",
+      "freq": 4800
+    },
+    {
+      "id": "t190",
+      "status": "pending",
+      "title": "Налоговый вычет за обучение детей: как получить в 2026",
+      "slug": "nalogovyj-vychet-obuchenie-detej-2026",
+      "category": "Советы родителям",
+      "keywords": "налоговый вычет обучение дети",
+      "freq": 5100
+    },
+    {
+      "id": "t191",
+      "status": "pending",
+      "title": "Материнский капитал на обучение ребёнка: как использовать",
+      "slug": "materinskij-kapital-obuchenie-2026",
+      "category": "Советы родителям",
+      "keywords": "материнский капитал обучение ребёнок",
+      "freq": 4700
+    },
+    {
+      "id": "t192",
+      "status": "pending",
+      "title": "Стипендии и гранты для школьников: где найти деньги на учёбу",
+      "slug": "stipendii-granty-dlya-shkolnikov",
+      "category": "Советы родителям",
+      "keywords": "стипендии гранты школьники",
+      "freq": 2800
+    },
+    {
+      "id": "t193",
+      "status": "pending",
+      "title": "Сколько стоит частная школа в Москве 2026: цены и сравнение",
+      "slug": "stoimost-chastnoj-shkoly-moskva-2026-ceny",
+      "category": "Рейтинги",
+      "city": "Москва",
+      "keywords": "стоимость частная школа москва цены",
+      "freq": 3600
+    },
+    {
+      "id": "t194",
+      "status": "pending",
+      "title": "Бесплатные кружки и секции для школьников: где найти",
+      "slug": "besplatnye-kruzhki-sekcii-shkolnikov",
+      "category": "Советы родителям",
+      "keywords": "бесплатные кружки школьники",
+      "freq": 3900
+    },
+    {
+      "id": "t195",
+      "status": "pending",
+      "title": "Школы Красноярска 2026: лучшие варианты",
+      "slug": "luchshie-shkoly-krasnoyarska-2026",
+      "category": "Рейтинги",
+      "city": "Красноярск",
+      "keywords": "лучшие школы красноярска",
+      "freq": 1100
+    },
+    {
+      "id": "t196",
+      "status": "pending",
+      "title": "Школы Тюмени 2026: рейтинг и отзывы",
+      "slug": "luchshie-shkoly-tyumeni-2026",
+      "category": "Рейтинги",
+      "city": "Тюмень",
+      "keywords": "лучшие школы тюмени",
+      "freq": 900
+    },
+    {
+      "id": "t197",
+      "status": "pending",
+      "title": "Школы Иркутска 2026: топ учреждений",
+      "slug": "luchshie-shkoly-irkutska-2026",
+      "category": "Рейтинги",
+      "city": "Иркутск",
+      "keywords": "лучшие школы иркутска",
+      "freq": 850
+    },
+    {
+      "id": "t198",
+      "status": "pending",
+      "title": "Школы Хабаровска 2026: лучшие варианты",
+      "slug": "luchshie-shkoly-khabarovska-2026",
+      "category": "Рейтинги",
+      "city": "Хабаровск",
+      "keywords": "лучшие школы хабаровска",
+      "freq": 800
+    },
+    {
+      "id": "t199",
+      "status": "pending",
+      "title": "Частные школы Краснодара 2026: рейтинг и цены",
+      "slug": "chastnye-shkoly-krasnodara-2026",
+      "category": "Рейтинги",
+      "city": "Краснодар",
+      "keywords": "частные школы краснодара",
+      "freq": 1200
+    },
+    {
+      "id": "t200",
+      "status": "pending",
+      "title": "Частные школы Екатеринбурга 2026: сравнение",
+      "slug": "chastnye-shkoly-ekaterinburga-2026",
+      "category": "Рейтинги",
+      "city": "Екатеринбург",
+      "keywords": "частные школы екатеринбурга",
+      "freq": 1100
+    },
+    {
+      "id": "t201",
+      "status": "pending",
+      "title": "Частные школы Новосибирска 2026: топ вариантов",
+      "slug": "chastnye-shkoly-novosibirska-2026",
+      "category": "Рейтинги",
+      "city": "Новосибирск",
+      "keywords": "частные школы новосибирска",
+      "freq": 1000
     }
   ]
 }

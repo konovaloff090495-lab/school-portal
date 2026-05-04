@@ -2,13 +2,13 @@ name: Daily Blog Generation
 
 on:
   schedule:
-    # Каждый день в 08:00 МСК (05:00 UTC)
-    - cron: '0 5 * * *'
+    # Каждый день в 09:00 МСК (06:00 UTC)
+    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       count:
         description: 'Количество статей'
-        default: '2'
+        default: '5'
         required: false
 
 jobs:
@@ -31,6 +31,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Replenish topics if queue is low
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-topics.mjs
+
       - name: Generate blog articles
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -38,7 +43,7 @@ jobs:
           VERCEL_ORG_ID: team_nn4HHJh7sr6tITE0mA24TmBT
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          COUNT=${{ github.event.inputs.count || '2' }}
+          COUNT=${{ github.event.inputs.count || '5' }}
           node scripts/generate-blog.mjs --count=$COUNT --no-deploy
 
       - name: Build
@@ -52,7 +57,7 @@ jobs:
       - name: Commit changes
         run: |
           git add src/data/blog.ts scripts/blog-topics.json
-          git diff --staged --quiet || git commit -m "Blog: auto-generate articles $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "Blog: auto-generate 5 articles $(date +'%Y-%m-%d')"
 
       - name: Push changes
         run: git push

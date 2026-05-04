@@ -156,25 +156,47 @@ async function generateSchools(city, slug, type, count) {
 
 Верни ровно ${count} объектов в JSON массиве. Только JSON, ничего больше.`
 
-  const message = await anthropic.messages.create({
-    model: 'claude-opus-4-5',
-    max_tokens: 8000,
-    messages: [{ role: 'user', content: prompt }],
-  })
+  // Парсим JSON с retry — Claude иногда возвращает невалидный JSON
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const message = await anthropic.messages.create({
+      model: 'claude-opus-4-5',
+      max_tokens: 8192,
+      messages: [{ role: 'user', content: prompt }],
+    })
 
-  addUsage(message.usage)
-  const raw = message.content[0].text.trim()
+    addUsage(message.usage)
+    const raw = message.content[0].text.trim()
 
-  // Извлекаем JSON даже если Claude добавил markdown-обёртку
-  const jsonMatch = raw.match(/\[[\s\S]*\]/)
-  if (!jsonMatch) throw new Error('Claude не вернул JSON массив')
+    // Извлекаем JSON даже если Claude добавил markdown-обёртку
+    const jsonMatch = raw.match(/\[[\s\S]*\]/)
+    if (!jsonMatch) {
+      if (attempt < 3) { await new Promise(r => setTimeout(r, 1000)); continue }
+      throw new Error('Claude не вернул JSON массив')
+    }
 
-  const schools = JSON.parse(jsonMatch[0])
-  if (!Array.isArray(schools) || schools.length === 0) throw new Error('Пустой массив от Claude')
+    let jsonStr = jsonMatch[0]
 
-  // Конвертируем JSON → TypeScript строки с правильным escaping
-  const tsObjects = schools.map(s => jsonSchoolToTs(s, type, slug))
-  return tsObjects.join(',\n  ')
+    // Чистим частые JSON-ошибки: trailing comma перед ] или }
+    jsonStr = jsonStr
+      .replace(/,\s*\]/g, ']')
+      .replace(/,\s*\}/g, '}')
+
+    try {
+      const schools = JSON.parse(jsonStr)
+      if (!Array.isArray(schools) || schools.length === 0) throw new Error('Пустой массив')
+
+      // Конвертируем JSON → TypeScript строки с правильным escaping
+      const tsObjects = schools.map(s => jsonSchoolToTs(s, type, slug))
+      return tsObjects.join(',\n  ')
+    } catch (parseErr) {
+      if (attempt < 3) {
+        process.stdout.write(` (retry ${attempt}/3)`)
+        await new Promise(r => setTimeout(r, 1000))
+        continue
+      }
+      throw new Error(`JSON parse error: ${parseErr.message}`)
+    }
+  }
 }
 
 // ─── JSON объект → TypeScript строка ─────────────────────────────────────────

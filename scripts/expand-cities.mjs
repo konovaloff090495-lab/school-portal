@@ -39,6 +39,7 @@ const TYPES = [
   'gosudarstvennye', 'chastnie', 'gimnazii', 'profilnye',
   'pri-vuzakh', 'semejnye', 'online', 'kadetskie',
   'korrektsionnye', 'domashnie', 'vechernie', 'eksternal',
+  'mezhdunarodnie',
 ]
 
 // Читаем состояние ротации
