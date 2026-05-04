@@ -269,6 +269,19 @@ export default function CatalogClient({
     }
     if (lockRegion && lockType) return
 
+    // From /shkoly/osobennosti/{feature}/ → 1 region selected → region-feature page
+    if (featureFilter && !lockRegion && filters.regions.length === 1 && filters.types.length === 0) {
+      const r = filters.regions[0]
+      const featureToUrl: Partial<Record<FeatureSlug, string>> = {
+        'podgotovka-k-ege': `/shkoly/${r}/podgotovka-k-ege/`,
+        'podgotovka-k-oge': `/shkoly/${r}/podgotovka-k-oge/`,
+        'it-klass':          `/shkoly/${r}/programmirovanie/`,
+      }
+      const url = featureToUrl[featureFilter] ?? `/shkoly/${r}/osobennosti/${featureFilter}/`
+      router.push(url)
+      return
+    }
+
     // From /shkoly/ → 1 region (no type) → region page
     if (!lockRegion) {
       if (filters.regions.length === 1 && filters.types.length === 0) {
@@ -537,6 +550,7 @@ export default function CatalogClient({
       mezhdunarodnie:  'Международные школы',
       programmirovanie:'Школы программирования',
       shahmatnye:      'Шахматные школы',
+      'podgotovka-ege-oge': 'Центры подготовки к ЕГЭ/ОГЭ',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -554,6 +568,7 @@ export default function CatalogClient({
       mezhdunarodnie: 'обучают по программам IB и Cambridge на английском языке, выдавая диплом, признаваемый в зарубежных вузах',
       programmirovanie:'специализируются на IT и программировании: Python, веб-разработка, ИИ, кибербезопасность и реальные проекты',
       shahmatnye:     'обучают шахматам как отдельному предмету, развивая логику, стратегическое мышление и готовя к турнирам ФИДЕ',
+      'podgotovka-ege-oge': 'специализируются на интенсивной подготовке к ЕГЭ и ОГЭ на коммерческой основе: авторские методики, онлайн и очный форматы',
     }
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]
