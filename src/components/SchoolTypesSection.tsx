@@ -152,6 +152,46 @@ const TYPE_META: {
     href: '/shkoly/tipy/podgotovka-oge/',
     sub: 'Подготовка 9-классников: КИМы, тренировочные экзамены, все предметы',
   },
+  {
+    slug: 'internaty',
+    name: 'Интернаты',
+    tint: '#3B82F6',
+    image: null,
+    href: '/shkoly/tipy/internaty/',
+    sub: 'Школы с проживанием, пансионы, круглосуточное пребывание',
+  },
+  {
+    slug: 'valdorfskie',
+    name: 'Вальдорфские',
+    tint: '#65A30D',
+    image: null,
+    href: '/shkoly/tipy/valdorfskie/',
+    sub: 'Педагогика Штайнера: эвритмия, художественное воспитание',
+  },
+  {
+    slug: 'montessori',
+    name: 'Монтессори',
+    tint: '#EC4899',
+    image: null,
+    href: '/shkoly/tipy/montessori/',
+    sub: 'Метод Монтессори: развивающая среда, свободный выбор деятельности',
+  },
+  {
+    slug: 'pravoslavnye',
+    name: 'Православные',
+    tint: '#D97706',
+    image: null,
+    href: '/shkoly/tipy/pravoslavnye/',
+    sub: 'Православное воспитание, Закон Божий, духовное образование',
+  },
+  {
+    slug: 'sportivnye',
+    name: 'Спортивные',
+    tint: '#EA580C',
+    image: null,
+    href: '/shkoly/tipy/sportivnye/',
+    sub: 'При спортивных клубах, двухразовые тренировки, олимпийский резерв',
+  },
 ]
 
 // ── Placeholder for cards without images ──────────────────────────────────────

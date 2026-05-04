@@ -20,6 +20,11 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   shahmatnye:      ['шахматная школа', 'школа шахмат', 'шахматный лицей', 'обучение шахматам', 'шахматы для детей'],
   'podgotovka-ege': ['курсы ЕГЭ', 'подготовка к ЕГЭ', 'центр ЕГЭ', 'репетитор ЕГЭ', 'онлайн курсы ЕГЭ'],
   'podgotovka-oge': ['курсы ОГЭ', 'подготовка к ОГЭ', 'центр ОГЭ', 'репетитор ОГЭ', 'центр подготовки к ОГЭ'],
+  internaty:        ['школа-интернат', 'пансион для детей', 'школа с проживанием', 'частный пансион', 'интернат обучение'],
+  valdorfskie:      ['вальдорфская школа', 'педагогика Штайнера', 'альтернативная школа', 'вальдорф', 'эвритмия'],
+  montessori:       ['монтессори школа', 'метод Монтессори', 'монтессори для детей', 'AMI монтессори', 'альтернативное образование'],
+  pravoslavnye:     ['православная школа', 'православная гимназия', 'церковная школа', 'религиозная школа', 'закон Божий'],
+  sportivnye:       ['спортивная школа', 'школа для спортсменов', 'школа при спортклубе', 'олимпийский резерв', 'спортивный класс'],
 }
 
 export function buildKeywords(
@@ -122,6 +127,11 @@ export function getTypeColor(type: SchoolType): string {
     shahmatnye: 'bg-emerald-100 text-emerald-800',
     'podgotovka-ege': 'bg-amber-100 text-amber-800',
     'podgotovka-oge': 'bg-teal-100 text-teal-800',
+    internaty:        'bg-blue-100 text-blue-800',
+    valdorfskie:      'bg-lime-100 text-lime-800',
+    montessori:       'bg-pink-100 text-pink-800',
+    pravoslavnye:     'bg-yellow-100 text-yellow-800',
+    sportivnye:       'bg-orange-100 text-orange-800',
   }
   return colors[type]
 }
@@ -145,6 +155,11 @@ export function getTypeBorderColor(type: SchoolType): string {
     shahmatnye: 'border-emerald-200',
     'podgotovka-ege': 'border-amber-200',
     'podgotovka-oge': 'border-teal-200',
+    internaty:        'border-blue-200',
+    valdorfskie:      'border-lime-200',
+    montessori:       'border-pink-200',
+    pravoslavnye:     'border-yellow-200',
+    sportivnye:       'border-orange-200',
   }
   return colors[type]
 }
