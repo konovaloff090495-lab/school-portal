@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { typeSlugs, typeLabels, schools, SchoolType } from '@/data/schools'
+import { typeSlugs, typeLabels, profileMetas, schools, SchoolType } from '@/data/schools'
 import { buildKeywords } from '@/lib/utils'
+import Link from 'next/link'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 
@@ -11,6 +12,26 @@ interface Props {
 
 export function generateStaticParams() {
   return typeSlugs.map(type => ({ type }))
+}
+
+// Full display titles for H1 and metadata (overrides bare typeLabels for new types)
+const typeDisplayTitles: Record<SchoolType, string> = {
+  gosudarstvennye: 'Государственные школы',
+  chastnie:        'Частные школы',
+  online:          'Онлайн-школы',
+  vechernie:       'Вечерние школы',
+  eksternal:       'Школы-экстернаты',
+  semejnye:        'Семейные школы',
+  domashnie:       'Домашние школы',
+  'pri-vuzakh':    'Школы при вузах',
+  profilnye:       'Профильные школы',
+  gimnazii:        'Гимназии и лицеи',
+  korrektsionnye:  'Коррекционные школы',
+  kadetskie:       'Кадетские школы',
+  mezhdunarodnie:  'Международные школы',
+  programmirovanie:'Школы программирования',
+  shahmatnye:      'Шахматные школы',
+  'podgotovka-ege-oge': 'Центры подготовки к ЕГЭ и ОГЭ',
 }
 
 const typeDescriptions: Record<SchoolType, string> = {
@@ -29,15 +50,16 @@ const typeDescriptions: Record<SchoolType, string> = {
   mezhdunarodnie:  'Международные школы России: программы IB и Cambridge, обучение на английском, диплом для поступления в зарубежные вузы.',
   programmirovanie:'Школы программирования России: Python, веб-разработка, ИИ, кибербезопасность. Партнёрство с Яндексом и ведущими IT-компаниями.',
   shahmatnye:      'Шахматные школы России: шахматы как учебный предмет, тренировка логики и стратегического мышления, турниры ФИДЕ.',
+  'podgotovka-ege-oge': 'Коммерческие центры подготовки к ЕГЭ и ОГЭ: Вебиум, Максимум Эдьюкейшн, ЕГЭхаб и другие. Онлайн и очный форматы, авторские методики.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { type } = await params
   if (!typeSlugs.includes(type as SchoolType)) return {}
   const t = type as SchoolType
-  const label = typeLabels[t]
+  const displayTitle = typeDisplayTitles[t]
   const count = schools.filter(s => s.type === t).length
-  const title = `${label} школы России — ${count} школ в каталоге`
+  const title = `${displayTitle} России — ${count} в каталоге`
   return {
     title,
     description: typeDescriptions[t],
@@ -47,24 +69,57 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+function ProfileNavSection() {
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Выберите профиль
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 10 }}>
+        {profileMetas.map(p => (
+          <Link
+            key={p.slug}
+            href={`/shkoly/tipy/profilnye/${p.slug}/`}
+            style={{
+              display: 'flex', flexDirection: 'column', gap: 4,
+              padding: '14px 16px', borderRadius: 14,
+              border: '1.5px solid #E8E0D6', background: '#fff',
+              textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s',
+            }}
+            className="profile-nav-tile"
+          >
+            <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{p.label}</span>
+            <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{p.title.replace('школы России', '').replace('России', '').trim()}</span>
+          </Link>
+        ))}
+      </div>
+      <style>{`.profile-nav-tile:hover { border-color: #FF6B3D !important; box-shadow: 0 4px 12px rgba(255,107,61,0.12) !important; }`}</style>
+    </div>
+  )
+}
+
 export default async function GlobalTypePage({ params }: Props) {
   const { type } = await params
   if (!typeSlugs.includes(type as SchoolType)) notFound()
   const t = type as SchoolType
-  const label = typeLabels[t]
+  const displayTitle = typeDisplayTitles[t]
   const count = schools.filter(s => s.type === t).length
+
+  const seoContent = t === 'profilnye'
+    ? <><ProfileNavSection /><SeoBlock type={t} count={count} /></>
+    : <SeoBlock type={t} count={count} />
 
   return (
     <CatalogClient
       initialTypes={[t]}
       lockType
-      title={`${label} в России`}
+      title={`${displayTitle} в России`}
       subtitle={`${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
-        { label: label },
+        { label: displayTitle },
       ]}
-      seoContent={<SeoBlock type={t} count={count} />}
+      seoContent={seoContent}
     />
   )
 }

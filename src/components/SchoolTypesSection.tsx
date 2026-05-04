@@ -7,7 +7,7 @@ import { schools, typeSlugs, typeLabels, SchoolType, getSchoolsByFeature } from 
 
 // ── Card metadata ─────────────────────────────────────────────────────────────
 const TYPE_META: {
-  slug: SchoolType | 'programmirovanie' | 'podgotovka-k-ege' | 'podgotovka-k-oge'
+  slug: SchoolType
   name: string
   tint: string
   image: string | null
@@ -137,20 +137,12 @@ const TYPE_META: {
     sub: 'IB, Cambridge, обучение на английском, диплом для зарубежных вузов',
   },
   {
-    slug: 'podgotovka-k-ege',
-    name: 'Подготовка к ЕГЭ',
+    slug: 'podgotovka-ege-oge',
+    name: 'Центры ЕГЭ/ОГЭ',
     tint: '#F5A623',
-    image: '/school-types/podgotovka-k-ege.png',
-    href: '/shkoly/osobennosti/podgotovka-k-ege/',
-    sub: 'Профильные 10–11 классы, интенсивы, высокий средний балл выпускников',
-  },
-  {
-    slug: 'podgotovka-k-oge',
-    name: 'Подготовка к ОГЭ',
-    tint: '#3DBE9E',
-    image: '/school-types/podgotovka-k-oge.png',
-    href: '/shkoly/osobennosti/podgotovka-k-oge/',
-    sub: 'Профильные 9-е классы, тренировочные экзамены, разбор КИМ',
+    image: null,
+    href: '/shkoly/tipy/podgotovka-ege-oge/',
+    sub: 'Вебиум, Максимум Эдьюкейшн, ЕГЭхаб — авторские методики, онлайн и очно',
   },
 ]
 
@@ -332,8 +324,6 @@ export default function SchoolTypesSection() {
   for (const t of typeSlugs) {
     counts[t] = schools.filter(s => s.type === t).length
   }
-  counts['podgotovka-k-ege'] = getSchoolsByFeature('podgotovka-k-ege').length
-  counts['podgotovka-k-oge'] = getSchoolsByFeature('podgotovka-k-oge').length
 
   return (
     <section>
