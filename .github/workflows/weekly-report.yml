@@ -5,6 +5,11 @@ on:
     # Каждый понедельник в 08:00 МСК (05:00 UTC)
     - cron: '0 5 * * 1'
   workflow_dispatch:
+    inputs:
+      days:
+        description: 'За сколько дней отчёт'
+        default: '7'
+        required: false
 
 jobs:
   report:
