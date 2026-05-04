@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { typeSlugs, typeLabels, profileMetas, schools, SchoolType } from '@/data/schools'
+import { typeSlugs, typeLabels, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType } from '@/data/schools'
 import { buildKeywords } from '@/lib/utils'
 import Link from 'next/link'
 import CatalogClient from '../../CatalogClient'
@@ -38,6 +38,7 @@ const typeDisplayTitles: Record<SchoolType, string> = {
   montessori:       'Школы Монтессори',
   pravoslavnye:     'Православные школы',
   sportivnye:       'Спортивные школы',
+  yazykovye:        'Языковые школы',
 }
 
 const typeDescriptions: Record<SchoolType, string> = {
@@ -63,6 +64,7 @@ const typeDescriptions: Record<SchoolType, string> = {
   montessori:       'Школы Монтессори России по методу Марии Монтессори. Развивающая среда, смешанные возрастные группы, свободный выбор деятельности, AMI-сертифицированные педагоги.',
   pravoslavnye:     'Православные школы и гимназии России. Образование 1–11 класс в сочетании с православным воспитанием, уроками Закона Божия и духовными практиками.',
   sportivnye:       'Спортивные школы России при профессиональных клубах и как самостоятельные учреждения. Двухразовые тренировки, полное образование, путь в профессиональный спорт.',
+  yazykovye:        'Языковые школы России: лингвистические гимназии, немецкие и французские лицеи, школы с углублённым китайским и испанским. Международные сертификаты и дипломы.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -110,6 +112,38 @@ function ProfileNavSection() {
   )
 }
 
+function LanguageNavSection() {
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Выберите язык
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 10 }}>
+        {languageMetas.map(l => {
+          const cnt = getSchoolsByLanguage(l.slug).length
+          return (
+            <Link
+              key={l.slug}
+              href={`/shkoly/tipy/yazykovye/${l.slug}/`}
+              style={{
+                display: 'flex', flexDirection: 'column', gap: 6,
+                padding: '16px 18px', borderRadius: 14,
+                border: '1.5px solid #E8E0D6', background: '#fff',
+                textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s',
+              }}
+              className="profile-nav-tile"
+            >
+              <span style={{ fontSize: 15, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{l.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{cnt} школ</span>
+            </Link>
+          )
+        })}
+      </div>
+      <style>{`.profile-nav-tile:hover { border-color: #FF6B3D !important; box-shadow: 0 4px 12px rgba(255,107,61,0.12) !important; }`}</style>
+    </div>
+  )
+}
+
 export default async function GlobalTypePage({ params }: Props) {
   const { type } = await params
   if (!typeSlugs.includes(type as SchoolType)) notFound()
@@ -119,6 +153,8 @@ export default async function GlobalTypePage({ params }: Props) {
 
   const seoContent = t === 'profilnye'
     ? <><ProfileNavSection /><SeoBlock type={t} count={count} /></>
+    : t === 'yazykovye'
+    ? <><LanguageNavSection /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (

@@ -192,6 +192,14 @@ const TYPE_META: {
     href: '/shkoly/tipy/sportivnye/',
     sub: 'При спортивных клубах, двухразовые тренировки, олимпийский резерв',
   },
+  {
+    slug: 'yazykovye',
+    name: 'Языковые',
+    tint: '#0891B2',
+    image: null,
+    href: '/shkoly/tipy/yazykovye/',
+    sub: 'Английский, немецкий, французский, китайский — углублённый профиль',
+  },
 ]
 
 // ── Placeholder for cards without images ──────────────────────────────────────
