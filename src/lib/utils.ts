@@ -25,6 +25,7 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   montessori:       ['монтессори школа', 'метод Монтессори', 'монтессори для детей', 'AMI монтессори', 'альтернативное образование'],
   pravoslavnye:     ['православная школа', 'православная гимназия', 'церковная школа', 'религиозная школа', 'закон Божий'],
   sportivnye:       ['спортивная школа', 'школа для спортсменов', 'школа при спортклубе', 'олимпийский резерв', 'спортивный класс'],
+  yazykovye:        ['языковая школа', 'лингвистическая гимназия', 'углублённый английский', 'школа с иностранным языком', 'языковой профиль'],
 }
 
 export function buildKeywords(
@@ -132,6 +133,7 @@ export function getTypeColor(type: SchoolType): string {
     montessori:       'bg-pink-100 text-pink-800',
     pravoslavnye:     'bg-yellow-100 text-yellow-800',
     sportivnye:       'bg-orange-100 text-orange-800',
+    yazykovye:        'bg-cyan-100 text-cyan-800',
   }
   return colors[type]
 }
@@ -160,6 +162,7 @@ export function getTypeBorderColor(type: SchoolType): string {
     montessori:       'border-pink-200',
     pravoslavnye:     'border-yellow-200',
     sportivnye:       'border-orange-200',
+    yazykovye:        'border-cyan-200',
   }
   return colors[type]
 }

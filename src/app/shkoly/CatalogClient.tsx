@@ -8,6 +8,7 @@ import {
   moscowDistrictSlugs, moscowDistrictLabels,
   moCitySlugs, moCityLabels,
   featureMetas, FeatureSlug,
+  languageMetas, LanguageSlug,
   RegionSlug, SchoolType,
   metroNameToSlug,
 } from '@/data/schools'
@@ -116,6 +117,7 @@ export interface CatalogClientProps {
   seoCity?: string   // имя города в именительном падеже для SEO-текста
   breadcrumbs?: { label: string; href?: string }[]
   featureFilter?: FeatureSlug
+  languageFilter?: LanguageSlug
   seoContent?: React.ReactNode
 }
 
@@ -270,6 +272,7 @@ export default function CatalogClient({
   seoCity,
   breadcrumbs = [{ label: 'Все школы' }],
   featureFilter,
+  languageFilter,
   seoContent,
 }: CatalogClientProps) {
   const [filters, setFilters] = useState<Filters>({
@@ -473,6 +476,17 @@ export default function CatalogClient({
         })
       }
     }
+    // Page-level language filter
+    if (languageFilter) {
+      const lmeta = languageMetas.find(l => l.slug === languageFilter)
+      if (lmeta) {
+        list = list.filter(s => {
+          if (s.languages && s.languages.includes(languageFilter)) return true
+          const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
+          return lmeta.keywords.some(kw => haystack.includes(kw.toLowerCase()))
+        })
+      }
+    }
     switch (filters.sort) {
       case 'rating': list.sort((a, b) => b.rating - a.rating); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
@@ -604,6 +618,7 @@ export default function CatalogClient({
       montessori:       'Школы Монтессори',
       pravoslavnye:     'Православные школы',
       sportivnye:       'Спортивные школы',
+      yazykovye:        'Языковые школы',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -628,6 +643,7 @@ export default function CatalogClient({
       montessori:       'применяют метод Монтессори: подготовленная развивающая среда, смешанные возрастные группы и свободный выбор деятельности',
       pravoslavnye:     'дают полноценное среднее образование в сочетании с православным воспитанием, уроками Закона Божия и участием в церковной жизни',
       sportivnye:       'обеспечивают двухразовые профессиональные тренировки при сохранении полноценного учебного процесса и пути в профессиональный спорт',
+      yazykovye:        'специализируются на углублённом изучении иностранных языков, готовят к международным сертификатам и поступлению в зарубежные вузы',
     }
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]
