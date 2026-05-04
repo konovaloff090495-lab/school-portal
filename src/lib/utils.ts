@@ -18,7 +18,8 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   mezhdunarodnie:  ['международная школа', 'IB школа', 'школа с международной программой', 'Cambridge school', 'двуязычная школа'],
   programmirovanie:['школа программирования', 'IT школа', 'школа кодирования', 'Python школа', 'школа веб-разработки'],
   shahmatnye:      ['шахматная школа', 'школа шахмат', 'шахматный лицей', 'обучение шахматам', 'шахматы для детей'],
-  'podgotovka-ege-oge': ['подготовка к ЕГЭ', 'подготовка к ОГЭ', 'курсы ЕГЭ', 'репетитор ЕГЭ', 'центр подготовки к экзаменам'],
+  'podgotovka-ege': ['курсы ЕГЭ', 'подготовка к ЕГЭ', 'центр ЕГЭ', 'репетитор ЕГЭ', 'онлайн курсы ЕГЭ'],
+  'podgotovka-oge': ['курсы ОГЭ', 'подготовка к ОГЭ', 'центр ОГЭ', 'репетитор ОГЭ', 'центр подготовки к ОГЭ'],
 }
 
 export function buildKeywords(
@@ -119,7 +120,8 @@ export function getTypeColor(type: SchoolType): string {
     mezhdunarodnie: 'bg-sky-100 text-sky-800',
     programmirovanie: 'bg-violet-100 text-violet-800',
     shahmatnye: 'bg-emerald-100 text-emerald-800',
-    'podgotovka-ege-oge': 'bg-amber-100 text-amber-800',
+    'podgotovka-ege': 'bg-amber-100 text-amber-800',
+    'podgotovka-oge': 'bg-teal-100 text-teal-800',
   }
   return colors[type]
 }
@@ -141,7 +143,8 @@ export function getTypeBorderColor(type: SchoolType): string {
     mezhdunarodnie: 'border-sky-200',
     programmirovanie: 'border-violet-200',
     shahmatnye: 'border-emerald-200',
-    'podgotovka-ege-oge': 'border-amber-200',
+    'podgotovka-ege': 'border-amber-200',
+    'podgotovka-oge': 'border-teal-200',
   }
   return colors[type]
 }
