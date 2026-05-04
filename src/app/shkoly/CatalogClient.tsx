@@ -17,6 +17,38 @@ import AdBanner from '@/components/AdBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
+type EducationLevel = 'elementary' | 'middle' | 'high'
+
+const LEVEL_LABELS: Record<EducationLevel, string> = {
+  elementary: 'Начальная (1–4 кл.)',
+  middle:     'Основная (5–9 кл.)',
+  high:       'Старшая (10–11 кл.)',
+}
+
+function getSchoolLevels(grades: string): EducationLevel[] {
+  const m = grades.replace('–', '-').match(/(\d+)[–\-](\d+)/)
+  if (!m) return ['elementary', 'middle', 'high']
+  const from = parseInt(m[1]), to = parseInt(m[2])
+  const levels: EducationLevel[] = []
+  if (from <= 4) levels.push('elementary')
+  if (to >= 5 && from <= 9) levels.push('middle')
+  if (to >= 10) levels.push('high')
+  return levels
+}
+
+function getPriceCategory(priceFrom?: number): 'free' | 'budget' | 'mid' | 'premium' {
+  if (!priceFrom || priceFrom === 0) return 'free'
+  if (priceFrom <= 25000) return 'budget'
+  if (priceFrom <= 70000) return 'mid'
+  return 'premium'
+}
+
+const PRICE_LABELS: Record<string, string> = {
+  free:    'Бесплатно',
+  budget:  'до 25 000 ₽/мес',
+  mid:     '25 000–70 000 ₽/мес',
+  premium: 'от 70 000 ₽/мес',
+}
 
 // ── Профили для профильных школ ───────────────────────────────────────────────
 const SCHOOL_PROFILES = [
@@ -60,6 +92,8 @@ interface Filters {
   neighborhoods: string[]
   moCities: string[]
   priceMode: 'all' | 'free' | 'paid'
+  priceCategories: string[]
+  levels: EducationLevel[]
   minRating: number
   metro: string[]
   profiles: ProfileId[]
@@ -245,6 +279,8 @@ export default function CatalogClient({
     neighborhoods: initialNeighborhood ? [initialNeighborhood] : [],
     moCities: initialCity ? [initialCity] : [],
     priceMode: 'all',
+    priceCategories: [],
+    levels: [],
     minRating: 0,
     metro: initialMetro ? [initialMetro] : [],
     profiles: [],
@@ -342,7 +378,7 @@ export default function CatalogClient({
 
   // ── Вспомогательная функция: базовые фильтры без конкретного измерения ───────
   const applyBaseFilters = useCallback((
-    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'features' | 'regions' | 'none' = 'none'
+    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'features' | 'regions' | 'levels' | 'price' | 'none' = 'none'
   ) => {
     let list = [...schools]
     const activeRegions = lockRegion ? initialRegions : filters.regions
@@ -353,8 +389,16 @@ export default function CatalogClient({
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
     if (skip !== 'types' && activeTypes.length) list = list.filter(s => activeTypes.includes(s.type))
-    if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || s.priceFrom === undefined)
-    if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
+    if (skip !== 'price') {
+      if (filters.priceCategories.length) {
+        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
+      } else {
+        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || s.priceFrom === undefined)
+        if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
+      }
+    }
+    if (skip !== 'levels' && filters.levels.length)
+      list = list.filter(s => getSchoolLevels(s.grades).some(l => filters.levels.includes(l)))
     if (filters.minRating > 0) list = list.filter(s => s.rating >= filters.minRating)
     if (skip !== 'profiles' && filters.profiles.length)
       list = list.filter(s => { const p = detectProfile(s); return p && filters.profiles.includes(p) })
@@ -445,6 +489,8 @@ export default function CatalogClient({
     neighborhoods: initialNeighborhood ? [initialNeighborhood] : [],
     moCities: initialCity ? [initialCity] : [],
     priceMode: 'all',
+    priceCategories: [],
+    levels: [],
     minRating: 0,
     metro: lockMetro && initialMetro ? [initialMetro] : [],
     profiles: [],
@@ -458,7 +504,8 @@ export default function CatalogClient({
     filters.districts.length +
     (filters.neighborhoods.length > (initialNeighborhood ? 1 : 0) ? filters.neighborhoods.length - (initialNeighborhood ? 1 : 0) : 0) +
     (filters.moCities.length > (initialCity ? 1 : 0) ? filters.moCities.length - (initialCity ? 1 : 0) : 0) +
-    (filters.priceMode !== 'all' ? 1 : 0) +
+    (filters.priceCategories.length > 0 ? filters.priceCategories.length : filters.priceMode !== 'all' ? 1 : 0) +
+    filters.levels.length +
     (filters.minRating > 0 ? 1 : 0) +
     (lockMetro ? Math.max(0, filters.metro.length - 1) : filters.metro.length) +
     filters.profiles.length +
@@ -552,6 +599,11 @@ export default function CatalogClient({
       shahmatnye:      'Шахматные школы',
       'podgotovka-ege': 'Центры подготовки к ЕГЭ',
       'podgotovka-oge': 'Центры подготовки к ОГЭ',
+      internaty:        'Школы-интернаты и пансионы',
+      valdorfskie:      'Вальдорфские школы',
+      montessori:       'Школы Монтессори',
+      pravoslavnye:     'Православные школы',
+      sportivnye:       'Спортивные школы',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -571,6 +623,11 @@ export default function CatalogClient({
       shahmatnye:     'обучают шахматам как отдельному предмету, развивая логику, стратегическое мышление и готовя к турнирам ФИДЕ',
       'podgotovka-ege': 'специализируются на интенсивной подготовке к ЕГЭ: авторские методики, пробные экзамены, онлайн и очный форматы для 10–11 классов',
       'podgotovka-oge': 'специализируются на подготовке к ОГЭ: тренировочные экзамены, разбор КИМов, групповые и индивидуальные занятия для 8–9 классов',
+      internaty:        'предлагают круглосуточное проживание в кампусе, полный пансион и углублённые образовательные программы для детей из других городов',
+      valdorfskie:      'реализуют педагогику Рудольфа Штайнера: художественное воспитание, эвритмия, ритмический день и безотметочное обучение в начальных классах',
+      montessori:       'применяют метод Монтессори: подготовленная развивающая среда, смешанные возрастные группы и свободный выбор деятельности',
+      pravoslavnye:     'дают полноценное среднее образование в сочетании с православным воспитанием, уроками Закона Божия и участием в церковной жизни',
+      sportivnye:       'обеспечивают двухразовые профессиональные тренировки при сохранении полноценного учебного процесса и пути в профессиональный спорт',
     }
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]
@@ -709,21 +766,37 @@ export default function CatalogClient({
         )
       })()}
 
-      <FilterSection title="Стоимость">
-        {(['all', 'free', 'paid'] as const).map(mode => (
-          <label key={mode} className="flex items-center gap-2.5 cursor-pointer group">
-            <input
-              type="radio"
-              name="price"
-              checked={filters.priceMode === mode}
-              onChange={() => setFilters(f => ({ ...f, priceMode: mode }))}
-              className="w-4 h-4 accent-[#0369A1] cursor-pointer"
+      {/* Ступень обучения */}
+      <FilterSection title="Ступень обучения" defaultOpen={false}>
+        {(['elementary', 'middle', 'high'] as EducationLevel[]).map(lvl => {
+          const cnt = applyBaseFilters('levels').filter(s => getSchoolLevels(s.grades).includes(lvl)).length
+          return (
+            <Checkbox
+              key={lvl}
+              checked={filters.levels.includes(lvl)}
+              onChange={() => setFilters(f => ({ ...f, levels: toggle(f.levels, lvl) }))}
+              label={LEVEL_LABELS[lvl]}
+              count={cnt}
             />
-            <span className="text-sm text-gray-700 group-hover:text-[#0F172A] transition-colors">
-              {mode === 'all' ? 'Все' : mode === 'free' ? 'Бесплатно' : 'Платные'}
-            </span>
-          </label>
-        ))}
+          )
+        })}
+      </FilterSection>
+
+      {/* Стоимость */}
+      <FilterSection title="Стоимость" defaultOpen={false}>
+        {(['free', 'budget', 'mid', 'premium'] as const).map(cat => {
+          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom) === cat).length
+          if (cnt === 0 && !filters.priceCategories.includes(cat)) return null
+          return (
+            <Checkbox
+              key={cat}
+              checked={filters.priceCategories.includes(cat)}
+              onChange={() => setFilters(f => ({ ...f, priceCategories: toggle(f.priceCategories, cat), priceMode: 'all' }))}
+              label={PRICE_LABELS[cat]}
+              count={cnt}
+            />
+          )
+        })}
       </FilterSection>
 
       <FilterSection title="Рейтинг">
