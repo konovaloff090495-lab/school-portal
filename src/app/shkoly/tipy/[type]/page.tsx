@@ -56,7 +56,7 @@ export default async function GlobalTypePage({ params }: Props) {
     <CatalogClient
       initialTypes={[t]}
       lockType
-      title={`Все ${label.toLowerCase()} школы в России`}
+      title={`${label} в России`}
       subtitle={`${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
