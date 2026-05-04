@@ -190,6 +190,23 @@ const typeCountForms: Record<SchoolType, [string, string, string]> = {
   mezhdunarodnie:  ['международная школа',      'международные школы',     'международных школ'],
 }
 
+// Предложный падеж: "обучение в ..."
+const typeInForm: Record<SchoolType, string> = {
+  gosudarstvennye: 'государственных школах',
+  chastnie:        'частных школах',
+  online:          'онлайн-школах',
+  vechernie:       'вечерних школах',
+  eksternal:       'школах-экстернатах',
+  semejnye:        'семейных школах',
+  domashnie:       'школах с надомным обучением',
+  'pri-vuzakh':    'школах при вузах',
+  profilnye:       'профильных школах',
+  gimnazii:        'гимназиях',
+  korrektsionnye:  'коррекционных школах',
+  kadetskie:       'кадетских школах',
+  mezhdunarodnie:  'международных школах',
+}
+
 function typedCount(n: number, t: SchoolType): string {
   const [one, few, many] = typeCountForms[t]
   const mod10 = n % 10, mod100 = n % 100
@@ -244,8 +261,8 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
     })
   } else if (info && !region) {
     sections.push({
-      h: `${typeInfo[type!].label.charAt(0).toUpperCase() + typeInfo[type!].label.slice(1)} в России: обзор`,
-      p: `В нашем каталоге представлено ${countStr} данного типа по всей России. Используйте фильтр по городу, чтобы найти школу в своём регионе. Этот тип учреждений подходит для ${info.who}.`,
+      h: `${countStr} в России`,
+      p: `В каталоге собраны ${typeInfo[type!].label.toLowerCase()} по всей России. Используйте фильтр по городу, чтобы найти школу в своём регионе. Этот тип учреждений подходит для ${info.who}.`,
     })
   } else if (region && !type && !exam) {
     // Главная страница города — здесь regionContext уместен
@@ -262,8 +279,9 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
 
   // ── 2–5. Секции типа школы (только если нет exam-режима) ────────────────
   if (info && !exam) {
+    const inForm = type ? typeInForm[type] : info.label
     sections.push({
-      h: `Что даёт обучение в ${info.label}`,
+      h: `Что даёт обучение в ${inForm}`,
       p: info.pros.map((p, i) => `${i + 1}. ${p}`).join('. ') + '.',
     })
     sections.push({

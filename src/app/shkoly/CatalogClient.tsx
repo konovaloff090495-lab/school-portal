@@ -63,6 +63,7 @@ interface Filters {
   minRating: number
   metro: string[]
   profiles: ProfileId[]
+  featureFilters: FeatureSlug[]
   sort: SortKey
 }
 
@@ -247,6 +248,7 @@ export default function CatalogClient({
     minRating: 0,
     metro: initialMetro ? [initialMetro] : [],
     profiles: [],
+    featureFilters: [],
     sort: 'rating',
   })
   const router = useRouter()
@@ -327,11 +329,11 @@ export default function CatalogClient({
 
   // ── Вспомогательная функция: базовые фильтры без конкретного измерения ───────
   const applyBaseFilters = useCallback((
-    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'none' = 'none'
+    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'features' | 'regions' | 'none' = 'none'
   ) => {
     let list = [...schools]
     const activeRegions = lockRegion ? initialRegions : filters.regions
-    if (activeRegions.length) list = list.filter(s => activeRegions.includes(s.region))
+    if (skip !== 'regions' && activeRegions.length) list = list.filter(s => activeRegions.includes(s.region))
     if (skip !== 'districts' && filters.districts.length) list = list.filter(s => s.district && filters.districts.includes(s.district))
     if (skip !== 'neighborhoods' && filters.neighborhoods.length) list = list.filter(s => s.neighborhood && filters.neighborhoods.includes(s.neighborhood))
     if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => s.city && filters.moCities.includes(s.city))
@@ -343,6 +345,15 @@ export default function CatalogClient({
     if (filters.minRating > 0) list = list.filter(s => s.rating >= filters.minRating)
     if (skip !== 'profiles' && filters.profiles.length)
       list = list.filter(s => { const p = detectProfile(s); return p && filters.profiles.includes(p) })
+    if (skip !== 'features' && filters.featureFilters.length) {
+      list = list.filter(s => {
+        const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
+        return filters.featureFilters.every(slug => {
+          const meta = featureMetas.find(f => f.slug === slug)
+          return meta ? meta.keywords.some(kw => haystack.includes(kw.toLowerCase())) : false
+        })
+      })
+    }
     return list
   }, [filters, initialRegions, initialTypes, lockRegion, lockType, schools])
 
@@ -353,6 +364,8 @@ export default function CatalogClient({
   const baseForTypes        = useMemo(() => applyBaseFilters('types'),        [applyBaseFilters])
   const baseForMetro        = useMemo(() => applyBaseFilters('metro'),        [applyBaseFilters])
   const baseForProfiles     = useMemo(() => applyBaseFilters('profiles'),     [applyBaseFilters])
+  const baseForRegions      = useMemo(() => applyBaseFilters('regions'),      [applyBaseFilters])
+  const baseForFeatures     = useMemo(() => applyBaseFilters('features'),     [applyBaseFilters])
 
   // Метро — только станции из текущей выборки (без metro-фильтра), с фасетными счётчиками
   const contextMetro = useMemo(() =>
@@ -365,7 +378,8 @@ export default function CatalogClient({
   )
 
   // Доступные округа/районы/города — только те, где есть школы при текущих фильтрах
-  const isMoscowContext = initialRegions.includes('moskva') || (!lockRegion && filters.regions.includes('moskva')) || (!lockRegion && filters.regions.length === 0)
+  // Округа/метро Москвы показываем только когда Москва явно выбрана или это страница Москвы
+  const isMoscowContext = initialRegions.includes('moskva') || (!lockRegion && filters.regions.includes('moskva'))
   const isMoContext     = initialRegions.includes('moskovskaya-oblast') || (!lockRegion && filters.regions.includes('moskovskaya-oblast'))
 
   const moscowDistricts = useMemo(() => {
@@ -392,6 +406,7 @@ export default function CatalogClient({
 
   const filtered = useMemo(() => {
     let list = applyBaseFilters('none')
+    // Page-level feature filter (from URL)
     if (featureFilter) {
       const meta = featureMetas.find(f => f.slug === featureFilter)
       if (meta) {
@@ -420,6 +435,7 @@ export default function CatalogClient({
     minRating: 0,
     metro: lockMetro && initialMetro ? [initialMetro] : [],
     profiles: [],
+    featureFilters: [],
     sort: 'rating',
   }
 
@@ -432,7 +448,8 @@ export default function CatalogClient({
     (filters.priceMode !== 'all' ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0) +
     (lockMetro ? Math.max(0, filters.metro.length - 1) : filters.metro.length) +
-    filters.profiles.length
+    filters.profiles.length +
+    filters.featureFilters.length
 
   function resetFilters() { setFilters(resetableFilters) }
 
@@ -558,15 +575,19 @@ export default function CatalogClient({
     <div className="space-y-0">
       {!lockRegion && (
         <FilterSection title="Регион" scrollable>
-          {regionSlugs.map(r => (
-            <Checkbox
-              key={r}
-              checked={filters.regions.includes(r)}
-              onChange={() => setFilters(f => ({ ...f, regions: toggle(f.regions, r), districts: [] }))}
-              label={regionLabels[r]}
-              count={schools.filter(s => s.region === r).length}
-            />
-          ))}
+          {regionSlugs.map(r => {
+            const cnt = baseForRegions.filter(s => s.region === r).length
+            if (cnt === 0 && !filters.regions.includes(r)) return null
+            return (
+              <Checkbox
+                key={r}
+                checked={filters.regions.includes(r)}
+                onChange={() => setFilters(f => ({ ...f, regions: toggle(f.regions, r), districts: [] }))}
+                label={regionLabels[r]}
+                count={cnt}
+              />
+            )
+          })}
         </FilterSection>
       )}
 
@@ -699,7 +720,39 @@ export default function CatalogClient({
         ))}
       </FilterSection>
 
-      {contextMetro.length > 0 && (
+      {/* Особенности школы */}
+      {(() => {
+        const visibleFeatures = featureMetas.filter(f => {
+          if (featureFilter === f.slug) return false // уже применён на уровне страницы
+          const cnt = baseForFeatures.filter(s => {
+            const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
+            return f.keywords.some(kw => haystack.includes(kw.toLowerCase()))
+          }).length
+          return cnt > 0 || filters.featureFilters.includes(f.slug)
+        })
+        if (visibleFeatures.length === 0) return null
+        return (
+          <FilterSection title="Особенности" defaultOpen={false}>
+            {visibleFeatures.map(f => {
+              const cnt = baseForFeatures.filter(s => {
+                const haystack = [s.name, s.description, s.fullDescription ?? '', ...s.features].join(' ').toLowerCase()
+                return f.keywords.some(kw => haystack.includes(kw.toLowerCase()))
+              }).length
+              return (
+                <Checkbox
+                  key={f.slug}
+                  checked={filters.featureFilters.includes(f.slug)}
+                  onChange={() => setFilters(flt => ({ ...flt, featureFilters: toggle(flt.featureFilters, f.slug) }))}
+                  label={f.label}
+                  count={cnt}
+                />
+              )
+            })}
+          </FilterSection>
+        )
+      })()}
+
+      {contextMetro.length > 0 && isMoscowContext && (
         <MetroFilter
           selected={filters.metro}
           onChange={metro => setFilters(f => ({ ...f, metro }))}
@@ -772,6 +825,10 @@ export default function CatalogClient({
           {filters.metro.map(m => (
             <ActiveChip key={m} label={`м. ${m}`} onRemove={() => setFilters(f => ({ ...f, metro: f.metro.filter(x => x !== m) }))} />
           ))}
+          {filters.featureFilters.map(slug => {
+            const meta = featureMetas.find(f => f.slug === slug)
+            return meta ? <ActiveChip key={slug} label={meta.label} onRemove={() => setFilters(f => ({ ...f, featureFilters: f.featureFilters.filter(x => x !== slug) }))} /> : null
+          })}
           <button onClick={resetFilters} className="text-xs text-gray-400 hover:text-red-500 transition-colors cursor-pointer px-1">
             Сбросить всё
           </button>
@@ -885,8 +942,8 @@ export default function CatalogClient({
                 </div>
                 <p className="text-xs text-gray-500 mt-2 text-center">
                   {mapSchool
-                    ? <>Показана: <span className="font-medium text-[#0F172A]">{mapSchool.name}</span></>
-                    : 'Выберите школу из списка справа'}
+                    ? <>📍 <span className="font-medium text-[#0F172A]">{mapSchool.name}</span> — <Link href={`/shkola/${mapSchool.slug}/`} className="text-[#0369A1] hover:underline">открыть карточку</Link></>
+                    : '← Нажмите на школу в списке, чтобы показать её на карте'}
                 </p>
               </div>
               <div className="w-full md:w-2/5 space-y-2 max-h-[560px] overflow-y-auto pr-1">
