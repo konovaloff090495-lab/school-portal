@@ -227,6 +227,15 @@ async function main() {
         messages: [{ role: 'user', content: buildPrompt(topic) }],
       })
 
+      // Трекаем расходы
+      const inputTokens = response.usage?.input_tokens || 0
+      const outputTokens = response.usage?.output_tokens || 0
+      const usd = (inputTokens / 1_000_000) * 15 + (outputTokens / 1_000_000) * 75
+      try {
+        const { execSync } = await import('child_process')
+        execSync(`node scripts/cost-tracker.mjs log --type=blog --tokens-in=${inputTokens} --tokens-out=${outputTokens} --usd=${usd.toFixed(6)}`, { cwd: ROOT, stdio: 'pipe' })
+      } catch {}
+
       const rawText = response.content[0].text.trim()
 
       // Парсим JSON
