@@ -71,14 +71,18 @@ jobs:
         if: always()
         env:
           YANDEX_METRICA_TOKEN: ${{ secrets.YANDEX_METRICA_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ARTICLE_COUNT: ${{ github.event.inputs.count || '5' }}
+          JOB_STATUS: ${{ job.status }}
         run: |
-          # Извлекаем заголовки и slugи последних 5 статей из blog.ts
+          # Извлекаем заголовки и slugи последних N статей из blog.ts
           ARTICLES=$(node -e "
             const fs = require('fs');
             const content = fs.readFileSync('src/data/blog.ts', 'utf-8');
             const titleMatches = [...content.matchAll(/title:\s*['\"]([^'\"]+)['\"]/g)].map(m => m[1]);
             const slugMatches  = [...content.matchAll(/slug:\s*['\"]([^'\"]+)['\"]/g)].map(m => m[1]);
-            const count = ${{ github.event.inputs.count || '5' }};
+            const count = parseInt(process.env.ARTICLE_COUNT || '5');
             const last = titleMatches.slice(-count);
             const lastSlugs = slugMatches.slice(-count);
             const lines = last.map((t, i) => '• ' + t + '\n  https://pro-schools.ru/blog/' + lastSlugs[i] + '/');
@@ -107,29 +111,20 @@ jobs:
               if [ "$DELTA" -gt 0 ]; then DELTA_STR="+$DELTA ▲"
               elif [ "$DELTA" -lt 0 ]; then DELTA_STR="$DELTA ▼"
               else DELTA_STR="0 →"; fi
-              TRAFFIC_LINE="
-📈 Трафик вчера: *${VISITS_YESTERDAY}* визитов (${DELTA_STR} к позавчера)"
+              TRAFFIC_LINE=$(printf '\n📈 Трафик вчера: %s визитов (%s к позавчера)' "$VISITS_YESTERDAY" "$DELTA_STR")
             else
-              TRAFFIC_LINE="
-📈 Трафик вчера: *${VISITS_YESTERDAY}* визитов"
+              TRAFFIC_LINE=$(printf '\n📈 Трафик вчера: %s визитов' "$VISITS_YESTERDAY")
             fi
           fi
 
-          STATUS="${{ job.status }}"
-          if [ "$STATUS" = "success" ]; then
-            ICON="✅"
-            MSG="$ICON *Новые статьи на pro-schools.ru*
-
-$ARTICLES
-${TRAFFIC_LINE}
-📅 $(date +'%d.%m.%Y %H:%M') МСК"
+          if [ "$JOB_STATUS" = "success" ]; then
+            MSG=$(printf '✅ *Новые статьи на pro-schools.ru*\n\n%s%s\n\n📅 %s МСК' \
+              "$ARTICLES" "$TRAFFIC_LINE" "$(date +'%d.%m.%Y %H:%M')")
           else
-            ICON="❌"
-            MSG="$ICON *Ошибка генерации статей*
-Проверь: https://github.com/konovaloff090495-lab/school-portal/actions"
+            MSG=$(printf '❌ *Ошибка генерации статей*\nПроверь: https://github.com/konovaloff090495-lab/school-portal/actions')
           fi
 
-          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
             -d parse_mode="Markdown" \
-            -d "text=$MSG" > /dev/null
+            -d "text=${MSG}" > /dev/null
