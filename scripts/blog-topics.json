@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 25,
-    "lastRun": "2026-05-05T07:20:25.130Z"
+    "generated": 30,
+    "lastRun": "2026-05-05T08:03:48.063Z"
   },
   "topics": [
     {
@@ -444,12 +444,15 @@
     },
     {
       "id": "t048",
-      "status": "pending",
+      "status": "done",
       "title": "Домашнее задание: сколько времени норма и как организовать",
       "slug": "domashnie-zadaniya-normy",
       "category": "Советы родителям",
       "keywords": "домашнее задание школа",
-      "freq": 7200
+      "freq": 7200,
+      "generatedAt": "2026-05-05T08:00:25.873Z",
+      "wordCount": 1499,
+      "seoScore": 95
     },
     {
       "id": "t049",
@@ -726,12 +729,15 @@
     },
     {
       "id": "t077",
-      "status": "pending",
+      "status": "done",
       "title": "Суворовские и нахимовские училища: поступление 2026",
       "slug": "suvorovskie-nahimovskie-postuplenie",
       "category": "Типы школ",
       "keywords": "суворовское училище поступление",
-      "freq": 6800
+      "freq": 6800,
+      "generatedAt": "2026-05-05T08:03:47.722Z",
+      "wordCount": 1249,
+      "seoScore": 95
     },
     {
       "id": "t078",
@@ -950,12 +956,15 @@
     },
     {
       "id": "t100",
-      "status": "pending",
+      "status": "done",
       "title": "Профориентация для школьников: тесты, ресурсы, советы",
       "slug": "proforientatsiya-shkolnikov",
       "category": "Советы родителям",
       "keywords": "профориентация школьник",
-      "freq": 7400
+      "freq": 7400,
+      "generatedAt": "2026-05-05T07:56:49.323Z",
+      "wordCount": 1368,
+      "seoScore": 95
     },
     {
       "id": "t101",
@@ -1289,12 +1298,15 @@
     },
     {
       "id": "t136",
-      "status": "pending",
+      "status": "done",
       "title": "Как подготовиться к ЕГЭ по русскому языку: план",
       "slug": "podgotovka-k-ege-russkij-yazyk-plan",
       "category": "Советы родителям",
       "keywords": "подготовка ЕГЭ русский язык",
-      "freq": 6900
+      "freq": 6900,
+      "generatedAt": "2026-05-05T08:02:23.554Z",
+      "wordCount": 1566,
+      "seoScore": 95
     },
     {
       "id": "t137",
@@ -1587,12 +1599,15 @@
     },
     {
       "id": "t168",
-      "status": "pending",
+      "status": "done",
       "title": "Сочинение ЕГЭ: как написать на максимум баллов",
       "slug": "sochinenie-ege-maksimum-ballov",
       "category": "Советы родителям",
       "keywords": "сочинение ЕГЭ максимум баллов",
-      "freq": 7400
+      "freq": 7400,
+      "generatedAt": "2026-05-05T07:58:39.393Z",
+      "wordCount": 1408,
+      "seoScore": 90
     },
     {
       "id": "t169",
