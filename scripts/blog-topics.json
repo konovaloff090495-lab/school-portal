@@ -2,9 +2,9 @@
   "meta": {
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
-    "totalTopics": 100,
-    "generated": 20,
-    "lastRun": "2026-05-01T07:45:20.949Z"
+    "totalTopics": 201,
+    "generated": 25,
+    "lastRun": "2026-05-05T07:20:25.130Z"
   },
   "topics": [
     {
@@ -648,12 +648,15 @@
     },
     {
       "id": "t069",
-      "status": "pending",
+      "status": "done",
       "title": "Права родителей в школе: что можно требовать по закону",
       "slug": "prava-roditelej-v-shkole",
       "category": "Советы родителям",
       "keywords": "права родителей в школе",
-      "freq": 7800
+      "freq": 7800,
+      "generatedAt": "2026-05-05T07:18:31.728Z",
+      "wordCount": 1296,
+      "seoScore": 95
     },
     {
       "id": "t070",
@@ -1133,21 +1136,27 @@
     },
     {
       "id": "t120",
-      "status": "pending",
+      "status": "done",
       "title": "Как записать ребёнка в школу в 2026 году: инструкция",
       "slug": "kak-zapisat-rebyonka-v-shkolu-2026",
       "category": "Советы родителям",
       "keywords": "как записать ребёнка в школу",
-      "freq": 12000
+      "freq": 12000,
+      "generatedAt": "2026-05-05T07:14:06.274Z",
+      "wordCount": 1462,
+      "seoScore": 95
     },
     {
       "id": "t121",
-      "status": "pending",
+      "status": "done",
       "title": "Когда отдавать ребёнка в первый класс: возраст и готовность",
       "slug": "kogda-otdavat-rebyonka-v-pervyj-klass",
       "category": "Советы родителям",
       "keywords": "когда отдавать ребёнка в первый класс",
-      "freq": 8500
+      "freq": 8500,
+      "generatedAt": "2026-05-05T07:15:28.637Z",
+      "wordCount": 1217,
+      "seoScore": 95
     },
     {
       "id": "t122",
@@ -1268,12 +1277,15 @@
     },
     {
       "id": "t135",
-      "status": "pending",
+      "status": "done",
       "title": "Как подготовиться к ЕГЭ по математике с нуля",
       "slug": "podgotovka-k-ege-po-matematike-s-nulya",
       "category": "Советы родителям",
       "keywords": "подготовка ЕГЭ математика с нуля",
-      "freq": 7800
+      "freq": 7800,
+      "generatedAt": "2026-05-05T07:20:24.855Z",
+      "wordCount": 1438,
+      "seoScore": 90
     },
     {
       "id": "t136",
@@ -1286,12 +1298,15 @@
     },
     {
       "id": "t137",
-      "status": "pending",
+      "status": "done",
       "title": "ОГЭ 2026: что изменилось и как подготовиться",
       "slug": "oge-2026-izmeneniya-kak-podgotovitsya",
       "category": "Советы родителям",
       "keywords": "ОГЭ 2026 как подготовиться",
-      "freq": 8100
+      "freq": 8100,
+      "generatedAt": "2026-05-05T07:17:05.451Z",
+      "wordCount": 1382,
+      "seoScore": 90
     },
     {
       "id": "t138",
