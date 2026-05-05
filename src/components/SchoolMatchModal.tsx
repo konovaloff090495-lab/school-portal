@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { School } from '@/data/schools'
+import { School, schools as allSchools, typeLabels, type SchoolType } from '@/data/schools'
 
 // ── Типы ─────────────────────────────────────────────────────────────────────
 type Answers = Record<number, string>
@@ -215,6 +215,88 @@ function priorityScore(school: School, answer: string): number {
   return 6
 }
 
+// ── Склонение ─────────────────────────────────────────────────────────────────
+function pluralRu(n: number): string {
+  const abs = Math.abs(n) % 100
+  const last = abs % 10
+  if (abs >= 11 && abs <= 19) return 'школ'
+  if (last === 1) return 'школу'
+  if (last >= 2 && last <= 4) return 'школы'
+  return 'школ'
+}
+
+// ── Рекомендация лучших школ по ответам ──────────────────────────────────────
+function getBestRecommendation(currentSchool: School, answers: Answers): {
+  type: SchoolType
+  count: number
+  url: string
+  label: string
+} {
+  const format   = answers[3]
+  const interest = answers[2]
+  const priority = answers[5]
+  const budget   = answers[4]
+  const character = answers[1]
+
+  let primary: SchoolType
+
+  // Формат — самый сильный сигнал
+  if (format === 'online') {
+    primary = 'online'
+  } else if (format === 'boarding') {
+    primary = 'internaty'
+  } else if (interest === 'tech') {
+    primary = priority === 'ege' ? 'profilnye' : 'programmirovanie'
+  } else if (interest === 'languages') {
+    primary = 'yazykovye'
+  } else if (interest === 'sports') {
+    primary = character === 'quiet' ? 'shahmatnye' : 'sportivnye'
+  } else if (interest === 'creative') {
+    primary = 'semejnye'
+  } else if (priority === 'ege') {
+    primary = 'podgotovka-ege'
+  } else if (priority === 'development') {
+    primary = 'montessori'
+  } else if (priority === 'values') {
+    primary = 'kadetskie'
+  } else if (priority === 'specialization') {
+    primary = 'profilnye'
+  } else if (budget === 'free') {
+    primary = 'gosudarstvennye'
+  } else {
+    primary = 'chastnie'
+  }
+
+  // Дополнительные типы для подсчёта
+  const secondaryMap: Partial<Record<SchoolType, SchoolType[]>> = {
+    online:             ['eksternal', 'domashnie'],
+    internaty:          ['kadetskie'],
+    profilnye:          ['pri-vuzakh', 'gimnazii'],
+    programmirovanie:   ['profilnye'],
+    yazykovye:          ['mezhdunarodnie'],
+    sportivnye:         ['kadetskie'],
+    semejnye:           ['valdorfskie', 'montessori'],
+    'podgotovka-ege':   ['profilnye', 'podgotovka-oge'],
+    montessori:         ['valdorfskie', 'semejnye'],
+    kadetskie:          ['pravoslavnye'],
+    gosudarstvennye:    ['gimnazii'],
+    chastnie:           ['semejnye'],
+  }
+  const secondary = secondaryMap[primary] ?? []
+  const allTypes  = [primary, ...secondary] as SchoolType[]
+
+  const count = allSchools.filter(
+    s => s.id !== currentSchool.id && allTypes.includes(s.type)
+  ).length
+
+  return {
+    type: primary,
+    count,
+    url: `/shkoly/tipy/${primary}/`,
+    label: typeLabels[primary] ?? 'школы',
+  }
+}
+
 function computeMatch(school: School, answers: Answers): number {
   const raw =
     gradeScore(school.grades, answers[0] ?? '5-9') +
@@ -299,6 +381,7 @@ export default function SchoolMatchModal({ school }: { school: School }) {
   const pct = isResult ? computeMatch(school, answers) : 0
   const label = isResult ? matchLabel(pct) : null
   const reasons = isResult ? matchReasons(school, answers, pct) : []
+  const recommendation = isResult ? getBestRecommendation(school, answers) : null
 
   const handleOpen = () => {
     setOpen(true)
@@ -483,12 +566,15 @@ export default function SchoolMatchModal({ school }: { school: School }) {
                     >
                       Открыть страницу школы →
                     </Link>
-                    {pct < 60 && (
+                    {recommendation && (
                       <Link
-                        href="/shkoly/"
-                        className="w-full py-3 rounded-xl border border-gray-200 text-[#0F172A] text-sm font-semibold text-center hover:bg-gray-50 transition-colors block"
+                        href={recommendation.url}
+                        className="w-full py-3 rounded-xl border-2 border-emerald-200 bg-emerald-50 text-emerald-800 text-sm font-semibold text-center hover:bg-emerald-100 transition-colors block"
                       >
-                        Найти более подходящие школы
+                        <span className="block text-xs text-emerald-600 font-normal mb-0.5">
+                          Нашли {recommendation.count} {pluralRu(recommendation.count)} подходящих школ
+                        </span>
+                        Посмотреть {recommendation.label.toLowerCase()} →
                       </Link>
                     )}
                     <button
