@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { School } from '@/data/schools'
 
 // ── Типы ─────────────────────────────────────────────────────────────────────
@@ -325,7 +326,7 @@ export default function SchoolMatchModal({ school }: { school: School }) {
     <>
       {/* Кнопка-триггер */}
       <button
-        onClick={handleOpen}
+        onClick={e => { e.stopPropagation(); handleOpen() }}
         className="w-full mt-3 py-2.5 px-4 rounded-xl border-2 border-dashed border-[#FF6B3D]/40 text-[#FF6B3D] text-xs font-semibold
           hover:bg-[#FFF3EE] hover:border-[#FF6B3D] transition-all duration-200 flex items-center justify-center gap-2"
       >
@@ -342,11 +343,12 @@ export default function SchoolMatchModal({ school }: { school: School }) {
         <div
           className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4"
           style={{ background: 'rgba(15,23,42,0.55)', backdropFilter: 'blur(4px)' }}
-          onClick={e => { if (e.target === e.currentTarget) handleClose() }}
+          onMouseDown={e => { if (e.target === e.currentTarget) handleClose() }}
         >
           <div
             className="bg-white w-full sm:max-w-lg sm:rounded-2xl rounded-t-3xl shadow-2xl overflow-hidden"
             style={{ maxHeight: '92dvh', overflowY: 'auto' }}
+            onClick={e => e.stopPropagation()}
           >
             {/* Шапка */}
             <div className="sticky top-0 bg-white border-b border-gray-100 px-5 py-4 flex items-center justify-between z-10">
@@ -475,19 +477,19 @@ export default function SchoolMatchModal({ school }: { school: School }) {
 
                   {/* CTA кнопки */}
                   <div className="flex flex-col gap-2.5">
-                    <a
+                    <Link
                       href={`/shkola/${school.slug}/`}
-                      className="w-full py-3 rounded-xl bg-[#0369A1] text-white text-sm font-semibold text-center hover:bg-blue-500 transition-colors"
+                      className="w-full py-3 rounded-xl bg-[#0369A1] text-white text-sm font-semibold text-center hover:bg-blue-500 transition-colors block"
                     >
                       Открыть страницу школы →
-                    </a>
+                    </Link>
                     {pct < 60 && (
-                      <a
+                      <Link
                         href="/shkoly/"
-                        className="w-full py-3 rounded-xl border border-gray-200 text-[#0F172A] text-sm font-semibold text-center hover:bg-gray-50 transition-colors"
+                        className="w-full py-3 rounded-xl border border-gray-200 text-[#0F172A] text-sm font-semibold text-center hover:bg-gray-50 transition-colors block"
                       >
                         Найти более подходящие школы
-                      </a>
+                      </Link>
                     )}
                     <button
                       onClick={handleRestart}
