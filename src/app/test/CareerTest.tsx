@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { saveExpressResult } from '@/lib/userStorage'
 
 // ── RIASEC вопросы (20 штук, да / нет) ──────────────────────────────────────
 // Типы: R=Мастер, I=Исследователь, A=Творец, S=Помощник, E=Лидер, C=Организатор
@@ -200,6 +201,14 @@ export default function CareerTest() {
     if (currentQ < QUESTIONS.length - 1) {
       setCurrentQ(q => q + 1)
     } else {
+      // Сохраняем результат в localStorage
+      const { primary, secondary, scores } = computeResult(newAnswers)
+      saveExpressResult({
+        primary,
+        secondary,
+        scores,
+        completedAt: new Date().toISOString(),
+      })
       setScreen('result')
     }
   }
@@ -543,24 +552,60 @@ function ResultScreen({
           </div>
         </div>
 
-        {/* CTA */}
-        <div
-          className="rounded-2xl p-6 mb-6 text-center"
-          style={{ background: primary.bg, border: `1.5px solid ${primary.border}` }}
-        >
-          <p className="text-sm font-bold mb-1" style={{ color: primary.color }}>
-            Готовы найти идеальную школу?
-          </p>
-          <p className="text-xs text-gray-500 mb-4">
-            Используйте результат теста для фильтрации школ в каталоге
-          </p>
-          <Link
-            href="/shkoly/"
-            className="inline-flex items-center gap-2 text-sm font-bold text-white px-6 py-3 rounded-xl transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 shadow-md"
-            style={{ background: primary.color }}
-          >
-            Открыть каталог школ →
-          </Link>
+        {/* Два оффера */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          {/* Оффер 1: расширенный тест */}
+          <div className="rounded-2xl p-5 border-2 flex flex-col" style={{ background: primary.bg, borderColor: primary.border }}>
+            <div className="text-2xl mb-2">🔍</div>
+            <p className="text-sm font-bold mb-1" style={{ color: primary.color }}>
+              Расширенный тест
+            </p>
+            <p className="text-xs text-gray-500 mb-4 flex-1">
+              30 вопросов — полный портрет личности: стиль обучения, мотивация, среда, карьера
+            </p>
+            <div className="space-y-1 mb-4">
+              {['Стиль мышления и обучения', 'Мотивация и ценности', 'Карьерные пути с % совпадения', 'Личный кабинет с результатами'].map(f => (
+                <div key={f} className="flex items-center gap-1.5 text-xs text-gray-600">
+                  <span className="w-3.5 h-3.5 rounded-full flex items-center justify-center shrink-0" style={{ background: primary.color }}>
+                    <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                  </span>
+                  {f}
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/test/extended/"
+              className="w-full py-2.5 rounded-xl text-white text-sm font-bold text-center transition-all hover:opacity-90 block"
+              style={{ background: primary.color }}
+            >
+              Пройти расширенный тест →
+            </Link>
+          </div>
+
+          {/* Оффер 2: каталог школ */}
+          <div className="rounded-2xl p-5 border-2 border-gray-200 bg-white flex flex-col">
+            <div className="text-2xl mb-2">🏫</div>
+            <p className="text-sm font-bold text-[#0F172A] mb-1">
+              Подходящие школы
+            </p>
+            <p className="text-xs text-gray-500 mb-4 flex-1">
+              Каталог отфильтрован под тип «{primary.name}» — смотрите только то, что подойдёт
+            </p>
+            <div className="space-y-2 mb-4">
+              {primary.schoolTypes.slice(0, 3).map(s => (
+                <div key={s.slug} className="flex items-center gap-2 text-xs text-gray-600">
+                  <span>{s.emoji}</span>
+                  <span>{s.label}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              href={`/shkoly/?type=${primary.schoolTypes[0]?.slug ?? ''}`}
+              className="w-full py-2.5 rounded-xl bg-gray-900 text-white text-sm font-bold text-center transition-all hover:bg-gray-700 block"
+            >
+              Открыть подборку →
+            </Link>
+          </div>
         </div>
 
         {/* Методология */}

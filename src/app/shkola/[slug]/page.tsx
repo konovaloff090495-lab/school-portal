@@ -10,6 +10,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 import SchoolCard from '@/components/SchoolCard'
 import SchoolPageGallery from '@/components/SchoolPageGallery'
+import SchoolMatchModal from '@/components/SchoolMatchModal'
 
 
 interface Props {
@@ -462,6 +463,13 @@ export default async function SchoolPage({ params }: Props) {
         {/* Sidebar */}
         <div className="space-y-6">
           <LeadForm schoolName={school.name} />
+
+          {/* School match widget */}
+          <div className="bg-white rounded-xl border border-gray-200 p-5">
+            <h3 className="font-semibold text-gray-900 mb-1">Подходит ли эта школа?</h3>
+            <p className="text-xs text-gray-400 mb-3">Ответьте на 6 вопросов — узнайте % совместимости</p>
+            <SchoolMatchModal school={school} />
+          </div>
 
           {/* Price block */}
           {school.priceFrom !== undefined && school.priceFrom > 0 && (
