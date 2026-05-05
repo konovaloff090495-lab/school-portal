@@ -1,0 +1,85 @@
+[
+  {"city": "Москва",              "slug": "moskva",             "types": "internaty",        "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "internaty",        "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "internaty",        "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "internaty",        "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "internaty",        "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "internaty",        "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "internaty",        "status": "pending"},
+
+  {"city": "Москва",              "slug": "moskva",             "types": "valdorfskie",      "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "valdorfskie",      "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "valdorfskie",      "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "valdorfskie",      "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "valdorfskie",      "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "valdorfskie",      "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "valdorfskie",      "status": "pending"},
+
+  {"city": "Москва",              "slug": "moskva",             "types": "montessori",       "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "montessori",       "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "montessori",       "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "montessori",       "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "montessori",       "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "montessori",       "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "montessori",       "status": "pending"},
+
+  {"city": "Москва",              "slug": "moskva",             "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "pravoslavnye",     "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "pravoslavnye",     "status": "pending"},
+
+  {"city": "Москва",              "slug": "moskva",             "types": "sportivnye",       "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "sportivnye",       "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "sportivnye",       "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "sportivnye",       "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "sportivnye",       "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "sportivnye",       "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "sportivnye",       "status": "pending"},
+
+  {"city": "Москва",              "slug": "moskva",             "types": "yazykovye",        "status": "pending"},
+  {"city": "Санкт-Петербург",     "slug": "sankt-peterburg",    "types": "yazykovye",        "status": "pending"},
+  {"city": "Екатеринбург",        "slug": "ekaterinburg",       "types": "yazykovye",        "status": "pending"},
+  {"city": "Казань",              "slug": "kazan",              "types": "yazykovye",        "status": "pending"},
+  {"city": "Новосибирск",         "slug": "novosibirsk",        "types": "yazykovye",        "status": "pending"},
+  {"city": "Нижний Новгород",     "slug": "nizhniy-novgorod",   "types": "yazykovye",        "status": "pending"},
+  {"city": "Московская область",  "slug": "moskovskaya-oblast", "types": "yazykovye",        "status": "pending"},
+
+  {"city": "Краснодар",           "slug": "krasnodar",          "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Краснодар",           "slug": "krasnodar",          "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Краснодар",           "slug": "krasnodar",          "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Ростов-на-Дону",      "slug": "rostov-na-donu",     "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Ростов-на-Дону",      "slug": "rostov-na-donu",     "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Ростов-на-Дону",      "slug": "rostov-na-donu",     "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Челябинск",           "slug": "chelyabinsk",        "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Челябинск",           "slug": "chelyabinsk",        "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Челябинск",           "slug": "chelyabinsk",        "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Самара",              "slug": "samara",             "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Самара",              "slug": "samara",             "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Самара",              "slug": "samara",             "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Уфа",                 "slug": "ufa",                "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Уфа",                 "slug": "ufa",                "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Уфа",                 "slug": "ufa",                "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Пермь",               "slug": "perm",               "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Пермь",               "slug": "perm",               "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Пермь",               "slug": "perm",               "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Воронеж",             "slug": "voronezh",           "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Воронеж",             "slug": "voronezh",           "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Воронеж",             "slug": "voronezh",           "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Волгоград",           "slug": "volgograd",          "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Волгоград",           "slug": "volgograd",          "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Волгоград",           "slug": "volgograd",          "types": "internaty,sportivnye,yazykovye",       "status": "pending"},
+
+  {"city": "Омск",                "slug": "omsk",               "types": "chastnie,profilnye,gimnazii",          "status": "pending"},
+  {"city": "Омск",                "slug": "omsk",               "types": "podgotovka-ege,podgotovka-oge",        "status": "pending"},
+  {"city": "Омск",                "slug": "omsk",               "types": "internaty,sportivnye,yazykovye",       "status": "pending"}
+]
