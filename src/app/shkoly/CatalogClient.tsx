@@ -308,6 +308,12 @@ export default function CatalogClient({
     }
     if (lockRegion && lockType) return
 
+    // From /shkoly/tipy/yazykovye/{lang}/ → 1 region selected → lang/region static page
+    if (languageFilter && !lockRegion && filters.regions.length === 1) {
+      router.push(`/shkoly/tipy/yazykovye/${languageFilter}/${filters.regions[0]}/`)
+      return
+    }
+
     // From /shkoly/osobennosti/{feature}/ → 1 region selected → region-feature page
     if (featureFilter && !lockRegion && filters.regions.length === 1 && filters.types.length === 0) {
       const r = filters.regions[0]
