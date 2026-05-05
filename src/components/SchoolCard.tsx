@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { School, typeLabels } from '@/data/schools'
 import { getTypeColor, formatPrice } from '@/lib/utils'
+import SchoolMatchModal from './SchoolMatchModal'
 
 // градиент фона плейсхолдера
 const placeholderGradient: Record<string, string> = {
@@ -338,6 +339,8 @@ export default function SchoolCard({ school }: { school: School }) {
             </Link>
           </div>
         </div>
+
+        <SchoolMatchModal school={school} />
       </div>
     </article>
   )
