@@ -1,5 +1,5 @@
 export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie' | 'mezhdunarodnie' | 'programmirovanie' | 'shahmatnye' | 'podgotovka-ege' | 'podgotovka-oge' | 'internaty' | 'valdorfskie' | 'montessori' | 'pravoslavnye' | 'sportivnye' | 'yazykovye'
-export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd' | 'krasnoyarsk'
+export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd' | 'krasnoyarsk' | 'saratov'
 
 export interface School {
   id: string
@@ -29117,6 +29117,7 @@ export const regionLabels: Record<RegionSlug, string> = {
   'voronezh': 'Воронеж',
   'volgograd': 'Волгоград',
   'krasnoyarsk': 'Красноярск',
+  'saratov': 'Саратов',
 }
 
 // Предложный падеж — «в Москве», «в Волгограде» (для H1)
@@ -29161,7 +29162,7 @@ export const regionLabelsOf: Record<RegionSlug, string> = {
   'krasnoyarsk':        'Красноярска',
 }
 
-export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk']
+export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov']
 
 export function getSchoolsByRegion(region: RegionSlug): School[] {
   return schools.filter(s => s.region === region)

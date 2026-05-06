@@ -111,7 +111,8 @@
   {
     "city": "Саратов",
     "slug": "saratov",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Тюмень",
