@@ -306,6 +306,14 @@ export default function CatalogClient({
       isFirstMount.current = false
       return
     }
+    // From /shkoly/moskovskaya-oblast/{type}/ → 1 city selected → city+type static page
+    if (lockRegion && lockType && initialRegions[0] === 'moskovskaya-oblast'
+        && filters.moCities.length === 1) {
+      const slug = moCityLabelToSlug[filters.moCities[0]]
+      const t = initialTypes[0]
+      if (slug && t) { router.push(`/shkoly/moskovskaya-oblast/gorod/${slug}/${t}/`); return }
+    }
+
     if (lockRegion && lockType) return
 
     // From /shkoly/tipy/yazykovye/{lang}/ → 1 region selected → lang/region static page
