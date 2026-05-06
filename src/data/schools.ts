@@ -29139,6 +29139,7 @@ export const regionLabelsIn: Record<RegionSlug, string> = {
   'voronezh':           'в Воронеже',
   'volgograd':          'в Волгограде',
   'krasnoyarsk':        'в Красноярске',
+  'saratov':            'в Саратове',
 }
 
 // Родительный падеж — «Москвы», «Волгограда» (для meta title/description)
@@ -29160,6 +29161,7 @@ export const regionLabelsOf: Record<RegionSlug, string> = {
   'voronezh':           'Воронежа',
   'volgograd':          'Волгограда',
   'krasnoyarsk':        'Красноярска',
+  'saratov':            'Саратова',
 }
 
 export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov']

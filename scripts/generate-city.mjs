@@ -254,6 +254,40 @@ function getTypeHint(type) {
   return hints[type] ?? 'специфика типа школы'
 }
 
+// ─── Склонение города: предложный падеж «в ...» ────────────────────────────
+function getCityIn(city) {
+  // Известные исключения
+  const exceptions = {
+    'Москва': 'в Москве', 'Казань': 'в Казани', 'Пермь': 'в Перми',
+    'Уфа': 'в Уфе', 'Тверь': 'в Твери', 'Чебоксары': 'в Чебоксарах',
+    'Набережные Челны': 'в Набережных Челнах', 'Нижний Новгород': 'в Нижнем Новгороде',
+    'Ростов-на-Дону': 'в Ростове-на-Дону', 'Санкт-Петербург': 'в Санкт-Петербурге',
+    'Московская область': 'в Московской области',
+  }
+  if (exceptions[city]) return exceptions[city]
+  // Правило: -ов/-ев/-ск/-бург → +е; -а/-я → -е; остальное → +е
+  if (/[ов|ев|ск|бург]$/i.test(city)) return `в ${city}е`
+  if (city.endsWith('а')) return `в ${city.slice(0, -1)}е`
+  if (city.endsWith('я')) return `в ${city.slice(0, -1)}е`
+  return `в ${city}е`
+}
+
+// ─── Склонение города: родительный падеж ───────────────────────────────────
+function getCityOf(city) {
+  const exceptions = {
+    'Москва': 'Москвы', 'Казань': 'Казани', 'Пермь': 'Перми',
+    'Уфа': 'Уфы', 'Тверь': 'Твери', 'Чебоксары': 'Чебоксар',
+    'Набережные Челны': 'Набережных Челнов', 'Нижний Новгород': 'Нижнего Новгорода',
+    'Ростов-на-Дону': 'Ростова-на-Дону', 'Санкт-Петербург': 'Санкт-Петербурга',
+    'Московская область': 'Московской области',
+  }
+  if (exceptions[city]) return exceptions[city]
+  if (city.endsWith('а')) return `${city.slice(0, -1)}ы`
+  if (city.endsWith('я')) return `${city.slice(0, -1)}и`
+  // -ск/-бург/-ов/-ев → +а
+  return `${city}а`
+}
+
 // ─── Добавить регион в schools.ts ───────────────────────────────────────────
 function addRegionToFile(content, slug, city) {
   let updated = content
@@ -272,10 +306,30 @@ function addRegionToFile(content, slug, city) {
   // regionLabels
   if (!updated.includes(`'${slug}': '${city}'`)) {
     updated = updated.replace(
-      /(export const regionLabels[^{]*\{[^}]*)(})/s,
+      /(export const regionLabels: Record<RegionSlug, string> = \{[^}]*)(})/s,
       (_, body, close) => `${body}  '${slug}': '${city}',\n${close}`
     )
     console.log(`  ✅ regionLabels['${slug}'] = '${city}'`)
+  }
+
+  // regionLabelsIn (предложный падеж — «в Саратове»)
+  const cityIn = getCityIn(city)
+  if (!updated.includes(`'${slug}':`) || !updated.match(new RegExp(`regionLabelsIn[\\s\\S]*?'${slug}'`))) {
+    updated = updated.replace(
+      /(export const regionLabelsIn: Record<RegionSlug, string> = \{[^}]*)(})/s,
+      (_, body, close) => `${body}  '${slug}':            '${cityIn}',\n${close}`
+    )
+    console.log(`  ✅ regionLabelsIn['${slug}'] = '${cityIn}'`)
+  }
+
+  // regionLabelsOf (родительный падеж — «Саратова»)
+  const cityOf = getCityOf(city)
+  if (!updated.match(new RegExp(`regionLabelsOf[\\s\\S]*?'${slug}'`))) {
+    updated = updated.replace(
+      /(export const regionLabelsOf: Record<RegionSlug, string> = \{[^}]*)(})/s,
+      (_, body, close) => `${body}  '${slug}':            '${cityOf}',\n${close}`
+    )
+    console.log(`  ✅ regionLabelsOf['${slug}'] = '${cityOf}'`)
   }
 
   // regionSlugs — проверяем именно в строке regionSlugs, а не по всему файлу
