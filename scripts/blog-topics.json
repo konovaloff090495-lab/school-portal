@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 30,
-    "lastRun": "2026-05-05T08:03:48.063Z"
+    "generated": 35,
+    "lastRun": "2026-05-06T10:24:00.924Z"
   },
   "topics": [
     {
@@ -405,12 +405,15 @@
     },
     {
       "id": "t044",
-      "status": "pending",
+      "status": "done",
       "title": "Буллинг в школе: как распознать и что делать родителям",
       "slug": "bulling-v-shkole-chto-delat",
       "category": "Советы родителям",
       "keywords": "буллинг в школе",
-      "freq": 6200
+      "freq": 6200,
+      "generatedAt": "2026-05-06T10:22:22.076Z",
+      "wordCount": 1321,
+      "seoScore": 90
     },
     {
       "id": "t045",
@@ -571,12 +574,15 @@
     },
     {
       "id": "t061",
-      "status": "pending",
+      "status": "done",
       "title": "Рейтинг школ России 2026: методология и топ-100",
       "slug": "rejting-shkol-rossii-2026",
       "category": "Рейтинги",
       "keywords": "рейтинг школ России",
-      "freq": 6500
+      "freq": 6500,
+      "generatedAt": "2026-05-06T10:19:01.092Z",
+      "wordCount": 1209,
+      "seoScore": 95
     },
     {
       "id": "t062",
@@ -663,12 +669,15 @@
     },
     {
       "id": "t070",
-      "status": "pending",
+      "status": "done",
       "title": "Психологическая готовность к школе: тесты и признаки",
       "slug": "psihologicheskaya-gotovnost-k-shkole",
       "category": "Советы родителям",
       "keywords": "психологическая готовность к школе",
-      "freq": 6300
+      "freq": 6300,
+      "generatedAt": "2026-05-06T10:20:48.136Z",
+      "wordCount": 1472,
+      "seoScore": 90
     },
     {
       "id": "t071",
@@ -929,12 +938,15 @@
     },
     {
       "id": "t097",
-      "status": "pending",
+      "status": "done",
       "title": "Учебники в школе: какие нужны и за чей счёт",
       "slug": "uchebniki-v-shkole",
       "category": "Советы родителям",
       "keywords": "учебники школа",
-      "freq": 6200
+      "freq": 6200,
+      "generatedAt": "2026-05-06T10:24:00.581Z",
+      "wordCount": 1378,
+      "seoScore": 95
     },
     {
       "id": "t098",
@@ -1367,12 +1379,15 @@
     },
     {
       "id": "t143",
-      "status": "pending",
+      "status": "done",
       "title": "Как сдать ЕГЭ на 100 баллов: советы отличников",
       "slug": "kak-sdat-ege-na-100-ballov",
       "category": "Советы родителям",
       "keywords": "ЕГЭ 100 баллов как сдать",
-      "freq": 6800
+      "freq": 6800,
+      "generatedAt": "2026-05-06T10:17:23.874Z",
+      "wordCount": 1413,
+      "seoScore": 90
     },
     {
       "id": "t144",
