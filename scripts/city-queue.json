@@ -49,22 +49,30 @@
   {
     "city": "Самара",
     "slug": "samara",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.413Z",
+    "note": "seed data existed"
   },
   {
     "city": "Омск",
     "slug": "omsk",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.424Z",
+    "note": "seed data existed"
   },
   {
     "city": "Ростов-на-Дону",
     "slug": "rostov-na-donu",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.425Z",
+    "note": "seed data existed"
   },
   {
     "city": "Уфа",
     "slug": "ufa",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.425Z",
+    "note": "seed data existed"
   },
   {
     "city": "Красноярск",
@@ -74,22 +82,30 @@
   {
     "city": "Пермь",
     "slug": "perm",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.426Z",
+    "note": "seed data existed"
   },
   {
     "city": "Воронеж",
     "slug": "voronezh",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.426Z",
+    "note": "seed data existed"
   },
   {
     "city": "Волгоград",
     "slug": "volgograd",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.426Z",
+    "note": "seed data existed"
   },
   {
     "city": "Краснодар",
     "slug": "krasnodar",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-06T12:15:20.427Z",
+    "note": "seed data existed"
   },
   {
     "city": "Саратов",
