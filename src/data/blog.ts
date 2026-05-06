@@ -10,6 +10,7 @@ export interface BlogPost {
   publishedAt: string   // ISO date
   readTime: number      // minutes
   imageAlt: string
+  imageUrl?: string     // путь к превью-картинке /blog/images/{slug}.jpg
 }
 
 export const blogPosts: BlogPost[] = [
