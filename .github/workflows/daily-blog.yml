@@ -45,6 +45,12 @@ jobs:
           COUNT=${{ github.event.inputs.count || '5' }}
           node scripts/generate-blog.mjs --count=$COUNT --no-deploy
 
+      - name: Generate blog images
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node scripts/generate-blog-images.mjs --limit=5
+
       - name: Configure git
         run: |
           git config user.name "pro-schools bot"
@@ -52,7 +58,7 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add src/data/blog.ts scripts/blog-topics.json
+          git add src/data/blog.ts scripts/blog-topics.json public/blog/images/
           git diff --staged --quiet || git commit -m "Blog: auto-generate 5 articles $(date +'%Y-%m-%d')"
           git pull --no-rebase -X ours origin main
           git push

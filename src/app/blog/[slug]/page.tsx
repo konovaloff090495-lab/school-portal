@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { blogPosts, getPostBySlug, getAllPostSlugs } from '@/data/blog'
 
@@ -153,6 +154,19 @@ export default async function BlogPostPage({ params }: Props) {
               }}>
                 {post.excerpt}
               </p>
+
+              {/* Hero image */}
+              {post.imageUrl && (
+                <div style={{ position: 'relative', width: '100%', height: 'clamp(200px, 40vw, 420px)', borderRadius: 20, overflow: 'hidden', marginBottom: 28 }}>
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.imageAlt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority
+                  />
+                </div>
+              )}
 
               {/* Author */}
               <div style={{
