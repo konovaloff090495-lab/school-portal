@@ -77,7 +77,7 @@
   {
     "city": "Красноярск",
     "slug": "krasnoyarsk",
-    "status": "failed",
+    "status": "pending",
     "error": "API credit balance exhausted"
   },
   {
