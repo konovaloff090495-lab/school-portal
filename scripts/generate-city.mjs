@@ -71,7 +71,10 @@ const TYPE_LABELS = {
   domashnie: 'Домашние',               'pri-vuzakh': 'При вузах',
   profilnye: 'Профильные',             gimnazii: 'Гимназии',
   korrektsionnye: 'Коррекционные',     kadetskie: 'Кадетские',
-  mezhdunarodnie: 'Международные',
+  mezhdunarodnie: 'Международные',     internaty: 'Интернаты',
+  yazykovye: 'Языковые',               sportivnye: 'Спортивные',
+  montessori: 'Монтессори',            shahmatnye: 'Шахматные',
+  programmirovanie: 'Программирование', 'podgotovka-ege': 'Подготовка к ЕГЭ',
 }
 
 // ─── Anthropic клиент ───────────────────────────────────────────────────────
