@@ -111,15 +111,15 @@ jobs:
           CITY=$(node -e "
             const fs = require('fs');
             const q = JSON.parse(fs.readFileSync('scripts/city-queue.json', 'utf-8'));
-            const done = q.filter(c => c.status === 'done');
-            const last = done[done.length - 1];
-            console.log(last ? last.city : 'Новый город');
+            const done = q.filter(c => c.status === 'done' && c.doneAt);
+            done.sort((a,b) => new Date(b.doneAt) - new Date(a.doneAt));
+            console.log(done[0] ? done[0].city : 'Новый город');
           " 2>/dev/null || echo "Новый город")
 
           SCHOOL_COUNT=$(node -e "
             const fs = require('fs');
             const content = fs.readFileSync('src/data/schools.ts', 'utf-8');
-            const matches = content.match(/type: '[^']+' as const/g);
+            const matches = content.match(/region: '[^']+'/g);
             console.log(matches ? matches.length : 0);
           " 2>/dev/null || echo "?")
 
@@ -129,9 +129,11 @@ jobs:
             console.log(q.filter(c => c.status === 'pending').length);
           " 2>/dev/null || echo "?")
 
+          DATE=$(date +'%d.%m.%Y %H:%M')
+
           if [ "$JOB_STATUS" = "success" ]; then
-            MSG=$(printf '🏙 *Новый город на pro-schools.ru*\n\n📍 Добавлен: %s\n🏫 Всего школ в базе: %s\n📋 Городов в очереди: %s\n🔗 https://pro-schools.ru/shkoly/\n\n📅 %s МСК' \
-              "$CITY" "$SCHOOL_COUNT" "$PENDING" "$(date +'%d.%m.%Y %H:%M')")
+            MSG=$(printf '🏙 *Новый город на pro-schools.ru*\n\n📍 Добавлен: %s\n🏫 Всего школ в базе: %s\n📋 Городов в очереди: %s\n🔗 https://pro-schools.ru/shkoly/\n\n%s МСК' \
+              "$CITY" "$SCHOOL_COUNT" "$PENDING" "$DATE")
           else
             MSG=$(printf '❌ *Ошибка добавления города*\nПроверь: https://github.com/konovaloff090495-lab/school-portal/actions')
           fi
