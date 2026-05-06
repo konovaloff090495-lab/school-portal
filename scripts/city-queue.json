@@ -44,7 +44,8 @@
   {
     "city": "Челябинск",
     "slug": "chelyabinsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Самара",
