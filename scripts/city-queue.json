@@ -77,8 +77,8 @@
   {
     "city": "Красноярск",
     "slug": "krasnoyarsk",
-    "status": "pending",
-    "error": "API credit balance exhausted"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Пермь",
