@@ -38,14 +38,13 @@
   {
     "city": "Санкт-Петербург",
     "slug": "sankt-peterburg",
-    "status": "done",
-    "error": "Процесс завершился с кодом 2"
+    "status": "done"
   },
   {
     "city": "Челябинск",
     "slug": "chelyabinsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "doneAt": "2026-05-06T12:10:06.386Z"
   },
   {
     "city": "Самара",
