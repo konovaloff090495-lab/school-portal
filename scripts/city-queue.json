@@ -77,8 +77,8 @@
   {
     "city": "Красноярск",
     "slug": "krasnoyarsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "doneAt": "2026-05-06T13:14:40.000Z"
   },
   {
     "city": "Пермь",
