@@ -193,6 +193,16 @@ export default function Header() {
               </svg>
             </button>
 
+            {/* Учебник */}
+            <Link href="/uchebnik/" style={{
+              padding: '8px 12px', borderRadius: 10, cursor: 'pointer',
+              textDecoration: 'none', color: 'inherit', transition: 'background .12s',
+              fontFamily: 'var(--font-manrope, system-ui)',
+            }}
+            onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'rgba(0,0,0,0.04)')}
+            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'transparent')}
+            >📖 Учебник</Link>
+
             {/* Blog */}
             <Link href="/blog" style={{
               padding: '8px 12px', borderRadius: 10, cursor: 'pointer',
