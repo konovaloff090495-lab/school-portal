@@ -54,6 +54,7 @@ jobs:
         run: |
           git add src/data/blog.ts scripts/blog-topics.json
           git diff --staged --quiet || git commit -m "Blog: auto-generate 5 articles $(date +'%Y-%m-%d')"
+          git pull --rebase origin main
           git push
 
       - name: Deploy to Vercel

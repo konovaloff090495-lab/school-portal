@@ -362,20 +362,15 @@ async function main() {
     return
   }
 
-  // Вставляем в конец массива schools (перед закрывающей ])
-  const newContent = content.replace(
-    /^(\]\s*)$/m,
-    `${schoolsBlock}\n]`
-  )
-
-  if (newContent === content) {
-    // Fallback: добавляем в самый конец перед ]
-    const lastBracket = content.lastIndexOf('\n]')
-    const finalContent = content.slice(0, lastBracket) + '\n' + schoolsBlock + '\n]' + content.slice(lastBracket + 2)
-    writeFileSync(SCHOOLS_TS, finalContent)
-  } else {
-    writeFileSync(SCHOOLS_TS, newContent)
+  // Вставляем в конец массива schools (перед "] as any[] as School[])")
+  const SCHOOLS_CLOSE = '] as any[] as School[])'
+  const closeIdx = content.lastIndexOf(SCHOOLS_CLOSE)
+  if (closeIdx === -1) {
+    console.error('❌ Не найден маркер конца массива schools: "' + SCHOOLS_CLOSE + '"')
+    process.exit(1)
   }
+  const newContent = content.slice(0, closeIdx) + schoolsBlock + '\n' + content.slice(closeIdx)
+  writeFileSync(SCHOOLS_TS, newContent)
 
   console.log(`\n✅ Записано ${allGeneratedTs.length * COUNT} школ в schools.ts`)
 

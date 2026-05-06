@@ -119,6 +119,7 @@ jobs:
         run: |
           git add src/data/schools.ts scripts/school-cards-queue.json
           git diff --staged --quiet || git commit -m "Schools: add ${{ steps.pick.outputs.types }} for ${{ steps.pick.outputs.city }} $(date +'%Y-%m-%d')"
+          git pull --rebase origin main
           git push
 
       - name: Deploy to Vercel
