@@ -32,8 +32,9 @@ const args = Object.fromEntries(
       return [k, v.join('=') || true]
     })
 )
-const TARGET_SLUG = args.slug
-const LIMIT       = parseInt(args.limit ?? '99')
+const TARGET_SLUG   = args.slug
+const LIMIT         = parseInt(args.limit ?? '99')
+const CUSTOM_PROMPT = args.prompt ?? null  // кастомный промпт для конкретной картинки
 
 // ─── OpenAI ─────────────────────────────────────────────────────────────────
 const OPENAI_KEY = process.env.OPENAI_API_KEY
@@ -216,8 +217,8 @@ async function main() {
     const imgPath = path.join(IMG_DIR, `${post.slug}.jpg`)
     const imgUrl  = `/blog/images/${post.slug}.jpg`
 
-    // Если файл уже есть — только обновляем blog.ts
-    if (existsSync(imgPath)) {
+    // Если файл уже есть и нет кастомного промпта — только обновляем blog.ts
+    if (existsSync(imgPath) && !CUSTOM_PROMPT) {
       insertImageUrl(post.slug, imgUrl)
       console.log(`  ⚡ ${post.slug} — файл уже есть, обновили blog.ts`)
       generated++
@@ -228,7 +229,7 @@ async function main() {
     process.stdout.write(`  🎨 ${label} `)
 
     try {
-      const prompt = buildPrompt(post.title, post.excerpt)
+      const prompt = CUSTOM_PROMPT ?? buildPrompt(post.title, post.excerpt)
       const openaiUrl = await openaiGenerateImage(prompt)
       await downloadImage(openaiUrl, imgPath)
       insertImageUrl(post.slug, imgUrl)

@@ -3,8 +3,16 @@ name: Generate Blog Images
 on:
   workflow_dispatch:
     inputs:
+      slug:
+        description: 'Slug статьи (пусто = все без картинок)'
+        required: false
+        default: ''
+      prompt:
+        description: 'Кастомный промпт для картинки (только если указан slug)'
+        required: false
+        default: ''
       limit:
-        description: 'Сколько картинок сгенерировать (0 = все без картинок)'
+        description: 'Сколько картинок сгенерировать'
         default: '50'
         required: false
 
@@ -34,8 +42,15 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          SLUG="${{ github.event.inputs.slug }}"
+          PROMPT="${{ github.event.inputs.prompt }}"
           LIMIT="${{ github.event.inputs.limit || '50' }}"
-          node scripts/generate-blog-images.mjs --limit=$LIMIT
+
+          ARGS="--limit=$LIMIT"
+          if [ -n "$SLUG" ]; then ARGS="$ARGS --slug=$SLUG"; fi
+          if [ -n "$PROMPT" ]; then ARGS="$ARGS --prompt=$PROMPT"; fi
+
+          node scripts/generate-blog-images.mjs $ARGS
 
       - name: Configure git
         run: |
