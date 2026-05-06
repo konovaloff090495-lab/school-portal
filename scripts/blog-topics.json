@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 35,
-    "lastRun": "2026-05-06T10:24:00.924Z"
+    "generated": 40,
+    "lastRun": "2026-05-06T12:26:07.613Z"
   },
   "topics": [
     {
@@ -908,12 +908,15 @@
     },
     {
       "id": "t094",
-      "status": "pending",
+      "status": "done",
       "title": "Домашнее обучение: плюсы, минусы и как организовать",
       "slug": "domashnee-obuchenie-plyusy-minusy",
       "category": "Типы школ",
       "keywords": "домашнее обучение школа",
-      "freq": 6100
+      "freq": 6100,
+      "generatedAt": "2026-05-06T12:20:44.925Z",
+      "wordCount": 1428,
+      "seoScore": 90
     },
     {
       "id": "t095",
@@ -1181,12 +1184,15 @@
     },
     {
       "id": "t122",
-      "status": "pending",
+      "status": "done",
       "title": "Как перевести ребёнка в другую школу: документы и порядок",
       "slug": "kak-perevesti-rebyonka-v-druguyu-shkolu",
       "category": "Советы родителям",
       "keywords": "перевести ребёнка в другую школу документы",
-      "freq": 6200
+      "freq": 6200,
+      "generatedAt": "2026-05-06T12:18:59.809Z",
+      "wordCount": 1212,
+      "seoScore": 90
     },
     {
       "id": "t123",
@@ -1217,12 +1223,15 @@
     },
     {
       "id": "t126",
-      "status": "pending",
+      "status": "done",
       "title": "Буллинг в школе: что делать родителям и ребёнку",
       "slug": "bulling-v-shkole-chto-delat-roditelyam",
       "category": "Советы родителям",
       "keywords": "буллинг школа что делать",
-      "freq": 5900
+      "freq": 5900,
+      "generatedAt": "2026-05-06T12:26:07.565Z",
+      "wordCount": 1518,
+      "seoScore": 100
     },
     {
       "id": "t127",
@@ -1262,12 +1271,15 @@
     },
     {
       "id": "t131",
-      "status": "pending",
+      "status": "done",
       "title": "Как помочь ребёнку с учёбой без скандалов",
       "slug": "kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov",
       "category": "Советы родителям",
       "keywords": "как помочь ребёнку с учёбой",
-      "freq": 6100
+      "freq": 6100,
+      "generatedAt": "2026-05-06T12:22:25.557Z",
+      "wordCount": 1376,
+      "seoScore": 90
     },
     {
       "id": "t132",
@@ -1578,12 +1590,15 @@
     },
     {
       "id": "t164",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по обществознанию 2026: самый популярный предмет",
       "slug": "ege-obshchestvoznanie-2026-popular",
       "category": "Советы родителям",
       "keywords": "ЕГЭ обществознание 2026",
-      "freq": 6100
+      "freq": 6100,
+      "generatedAt": "2026-05-06T12:24:12.627Z",
+      "wordCount": 1397,
+      "seoScore": 90
     },
     {
       "id": "t165",
