@@ -27,6 +27,8 @@ jobs:
       - name: Generate weekly report and notify Telegram
         env:
           YANDEX_METRICA_TOKEN: ${{ secrets.YANDEX_METRICA_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # Читаем лог расходов
           REPORT=$(node scripts/cost-tracker.mjs report --days=7 2>/dev/null || echo "Нет данных за неделю")
@@ -74,26 +76,17 @@ jobs:
             fi
           fi
 
-          MSG="📊 *Еженедельный отчёт pro-schools.ru*
+          WEEK_START=$(date -d '7 days ago' +'%d.%m')
+          WEEK_END=$(date +'%d.%m.%Y')
+          MSG=$(printf '📊 *Еженедельный отчёт pro-schools.ru*\n\n🗓 Неделя: %s — %s\n\nЧто было сделано:\n📝 Статей написано: ~%s\n🏙 Городов добавлено: %s\n🏫 Пачек карточек: %s\n%s\n\nРасходы Claude API:\n%s\n\n⚠️ Не забудь проверить баланс!\n👉 https://console.anthropic.com/settings/billing' \
+            "$WEEK_START" "$WEEK_END" \
+            "$ARTICLES" "$CITY_COUNT" "$SCHOOL_COUNT" \
+            "$TRAFFIC_LINE" "$REPORT")
 
-🗓 Неделя: $(date -d '7 days ago' +'%d.%m') — $(date +'%d.%m.%Y')
-
-*Что было сделано:*
-📝 Статей написано: ~$ARTICLES
-🏙 Городов добавлено: $CITY_COUNT
-🏫 Пачек карточек: $SCHOOL_COUNT
-${TRAFFIC_LINE}
-
-*Расходы Claude API:*
-$REPORT
-
-⚠️ *Не забудь проверить баланс\!*
-👉 [Пополнить баланс](https://console.anthropic.com/settings/billing)"
-
-          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
             -d parse_mode="Markdown" \
             -d disable_web_page_preview="true" \
-            --data-urlencode "text=$MSG" > /dev/null
+            --data-urlencode "text=${MSG}" > /dev/null
 
           echo "Отчёт отправлен"
