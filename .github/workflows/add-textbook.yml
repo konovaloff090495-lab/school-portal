@@ -22,10 +22,15 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -92,9 +97,9 @@ jobs:
           GENERATED="${{ steps.generate.outputs.generated }}"
           DATE=$(date +'%d.%m.%Y %H:%M')
           if [ "$GENERATED" = "0" ] || [ -z "$GENERATED" ]; then
-            MSG=$(printf '📚 *Учебник*: все статьи уже сгенерированы\n📅 %s' "$DATE")
+            MSG=$(printf '📚 *Учебник*: все статьи уже сгенерированы\n%s МСК' "$DATE")
           else
-            MSG=$(printf '📚 *Новые статьи в учебнике*\n\n➕ Добавлено: %s статей\n🔗 https://pro-schools.ru/uchebnik/\n📅 %s' "$GENERATED" "$DATE")
+            MSG=$(printf '📚 *Новые статьи в учебнике*\n\n➕ Добавлено: %s статей\n🔗 https://pro-schools.ru/uchebnik/\n%s МСК' "$GENERATED" "$DATE")
           fi
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TELEGRAM_CHAT_ID}" \
