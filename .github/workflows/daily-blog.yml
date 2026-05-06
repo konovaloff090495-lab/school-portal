@@ -49,7 +49,8 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          node scripts/generate-blog-images.mjs --limit=5
+          COUNT=${{ github.event.inputs.count || '5' }}
+          node scripts/generate-blog-images.mjs --limit=$COUNT
 
       - name: Configure git
         run: |
