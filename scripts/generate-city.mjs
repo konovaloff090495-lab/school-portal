@@ -362,6 +362,17 @@ async function main() {
     return
   }
 
+  // Проверяем дубли по slug перед вставкой
+  const existingSlugs = new Set((content.match(/slug: '([^']+)'/g) ?? []).map(m => m.slice(7, -1)))
+  const filteredBlock = schoolsBlock.split('\n').filter(line => {
+    const slugMatch = line.match(/slug: '([^']+)'/)
+    if (slugMatch && existingSlugs.has(slugMatch[1])) {
+      console.warn(`⚠️  Пропускаем дубль: ${slugMatch[1]}`)
+      return false
+    }
+    return true
+  }).join('\n')
+
   // Вставляем в конец массива schools (перед "] as any[] as School[])")
   const SCHOOLS_CLOSE = '] as any[] as School[])'
   const closeIdx = content.lastIndexOf(SCHOOLS_CLOSE)
@@ -369,7 +380,7 @@ async function main() {
     console.error('❌ Не найден маркер конца массива schools: "' + SCHOOLS_CLOSE + '"')
     process.exit(1)
   }
-  const newContent = content.slice(0, closeIdx) + schoolsBlock + '\n' + content.slice(closeIdx)
+  const newContent = content.slice(0, closeIdx) + filteredBlock + '\n' + content.slice(closeIdx)
   writeFileSync(SCHOOLS_TS, newContent)
 
   console.log(`\n✅ Записано ${allGeneratedTs.length * COUNT} школ в schools.ts`)
