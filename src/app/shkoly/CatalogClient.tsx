@@ -360,11 +360,25 @@ export default function CatalogClient({
       return
     }
 
+    // From /shkoly/moskva/rayon/{district}/ → 1 type selected → district+type static page
+    if (lockRegion && !lockType && initialDistrict && initialRegions[0] === 'moskva'
+        && filters.types.length === 1 && filters.districts.length === 0) {
+      const slug = districtLabelToSlug[initialDistrict]
+      if (slug) { router.push(`/shkoly/moskva/rayon/${slug}/${filters.types[0]}/`); return }
+    }
+
     // From /shkoly/moskva/ → 1 district, no types → district page
     if (lockRegion && !lockType && !initialDistrict && initialRegions[0] === 'moskva'
         && filters.districts.length === 1 && filters.types.length === 0) {
       const slug = districtLabelToSlug[filters.districts[0]]
       if (slug) { router.push(`/shkoly/moskva/rayon/${slug}/`); return }
+    }
+
+    // From /shkoly/moskovskaya-oblast/gorod/{city}/ → 1 type selected → city+type static page
+    if (lockRegion && !lockType && initialCity && initialRegions[0] === 'moskovskaya-oblast'
+        && filters.types.length === 1 && filters.moCities.length <= 1) {
+      const slug = moCityLabelToSlug[initialCity]
+      if (slug) { router.push(`/shkoly/moskovskaya-oblast/gorod/${slug}/${filters.types[0]}/`); return }
     }
 
     // From /shkoly/moskovskaya-oblast/ → 1 city, no types → city page
