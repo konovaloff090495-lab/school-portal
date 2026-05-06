@@ -1,0 +1,102 @@
+name: Generate Textbook Articles
+
+on:
+  schedule:
+    # Каждый день в 11:00 МСК (08:00 UTC)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: 'Предмет (matematika, algebra, fizika...)'
+        required: false
+        default: ''
+      klass:
+        description: 'Класс (5, 7, 9, 11...)'
+        required: false
+        default: ''
+      limit:
+        description: 'Сколько статей сгенерировать'
+        required: false
+        default: '8'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate textbook articles
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          SUBJECT="${{ github.event.inputs.subject }}"
+          KLASS="${{ github.event.inputs.klass }}"
+          LIMIT="${{ github.event.inputs.limit || '8' }}"
+
+          ARGS="--limit=$LIMIT"
+          if [ -n "$SUBJECT" ]; then ARGS="$ARGS --subject=$SUBJECT"; fi
+          if [ -n "$KLASS" ]; then ARGS="$ARGS --klass=$KLASS"; fi
+          if [ -z "$SUBJECT" ]; then ARGS="$ARGS --all"; fi
+
+          echo "Запускаем: node scripts/generate-textbook.mjs $ARGS"
+          OUTPUT=$(node scripts/generate-textbook.mjs $ARGS 2>&1)
+          echo "$OUTPUT"
+
+          GENERATED=$(echo "$OUTPUT" | grep -oP 'Сгенерировано: \K\d+' || echo "0")
+          echo "generated=$GENERATED" >> $GITHUB_OUTPUT
+          echo "output<<EOF" >> $GITHUB_OUTPUT
+          echo "$OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.generate.outputs.generated != '0'
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add src/data/textbook-articles.ts
+          git diff --staged --quiet || git commit -m "Textbook: add ${{ steps.generate.outputs.generated }} articles $(date +'%Y-%m-%d')"
+          git pull --no-rebase -X ours origin main
+          git push
+
+      - name: Deploy to Vercel
+        if: steps.generate.outputs.generated != '0'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          COMMIT=$(git rev-parse HEAD)
+          curl -sf -X POST \
+            "https://api.vercel.com/v13/deployments?teamId=team_nn4HHJh7sr6tITE0mA24TmBT" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"school-portal\",\"project\":\"prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ\",\"target\":\"production\",\"gitSource\":{\"type\":\"github\",\"org\":\"konovaloff090495-lab\",\"repo\":\"school-portal\",\"ref\":\"main\",\"sha\":\"$COMMIT\"}}" \
+            > /dev/null && echo "✅ Deploy triggered" || echo "⚠️ Deploy failed"
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          GENERATED="${{ steps.generate.outputs.generated }}"
+          DATE=$(date +'%d.%m.%Y %H:%M')
+          if [ "$GENERATED" = "0" ] || [ -z "$GENERATED" ]; then
+            MSG=$(printf '📚 *Учебник*: все статьи уже сгенерированы\n📅 %s' "$DATE")
+          else
+            MSG=$(printf '📚 *Новые статьи в учебнике*\n\n➕ Добавлено: %s статей\n🔗 https://pro-schools.ru/uchebnik/\n📅 %s' "$GENERATED" "$DATE")
+          fi
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d parse_mode="Markdown" \
+            --data-urlencode "text=${MSG}" > /dev/null
