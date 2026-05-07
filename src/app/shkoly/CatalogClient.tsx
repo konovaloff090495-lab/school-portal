@@ -468,6 +468,11 @@ export default function CatalogClient({
     if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'domashnie' && filters.levels.length === 1) {
       if (filters.levels[0] === 'middle') { router.push('/shkoly/tipy/domashnie/srednie-klassy/'); return }
     }
+
+    // From /shkoly/tipy/profilnye/ → level filter → 10-11 klass
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'profilnye' && initialTypes.length === 1 && filters.levels.length === 1) {
+      if (filters.levels[0] === 'high') { router.push('/shkoly/tipy/profilnye/10-11-klass/'); return }
+    }
   }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles, filters.levels, filters.priceMode])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
