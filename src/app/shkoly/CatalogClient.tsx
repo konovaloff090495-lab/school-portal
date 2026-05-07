@@ -463,6 +463,11 @@ export default function CatalogClient({
       if (filters.levels[0] === 'elementary') { router.push('/shkoly/tipy/semejnye/nachalnye-klassy/'); return }
       if (filters.levels[0] === 'middle')     { router.push('/shkoly/tipy/semejnye/srednie-klassy/'); return }
     }
+
+    // From /shkoly/tipy/domashnie/ → level filter → sub-page
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'domashnie' && filters.levels.length === 1) {
+      if (filters.levels[0] === 'middle') { router.push('/shkoly/tipy/domashnie/srednie-klassy/'); return }
+    }
   }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles, filters.levels, filters.priceMode])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro

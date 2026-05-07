@@ -112,6 +112,44 @@ function ProfileNavSection() {
   )
 }
 
+function DomashniеSubNav() {
+  const tiles = [
+    { href: '/shkoly/tipy/domashnie/online/',        icon: '💻', label: 'Онлайн',           sub: 'Дистанционно из дома' },
+    { href: '/shkoly/tipy/domashnie/luchshie/',      icon: '⭐', label: 'Лучшие',           sub: 'Рейтинг по отзывам' },
+    { href: '/shkoly/tipy/domashnie/anglijskij/',    icon: '🇬🇧', label: 'С английским',    sub: 'Билингвальное обучение' },
+    { href: '/shkoly/tipy/domashnie/chastnie/',      icon: '🏠', label: 'Частные',          sub: 'Стоимость и программы' },
+    { href: '/shkoly/tipy/domashnie/srednie-klassy/', icon: '📚', label: '5–9 класс',       sub: 'Средняя школа, ОГЭ' },
+  ]
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Найти по запросу
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 10 }}>
+        {tiles.map(t => (
+          <a
+            key={t.href}
+            href={t.href}
+            style={{
+              display: 'flex', alignItems: 'flex-start', gap: 12,
+              padding: '14px 16px', borderRadius: 14,
+              border: '1.5px solid #E8E0D6', background: '#fff',
+              textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s',
+            }}
+            className="vechernie-nav-tile"
+          >
+            <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0 }}>{t.icon}</span>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function SemejnyeSubNav() {
   const tiles = [
     { href: '/shkoly/tipy/semejnye/online/',           icon: '💻', label: 'Онлайн',             sub: 'Дистанционное семейное' },
@@ -275,6 +313,8 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><EksternalSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'semejnye'
     ? <><SemejnyeSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'domashnie'
+    ? <><DomashniеSubNav /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (
