@@ -112,6 +112,43 @@ function ProfileNavSection() {
   )
 }
 
+function EksternalSubNav() {
+  const tiles = [
+    { href: '/shkoly/tipy/eksternal/10-11-klass/', icon: '🎓', label: '10–11 класс',      sub: 'Старшие классы экстерном' },
+    { href: '/shkoly/tipy/eksternal/online/',      icon: '💻', label: 'Онлайн',            sub: 'Дистанционный экстернат' },
+    { href: '/shkoly/tipy/eksternal/besplatnye/',  icon: '🆓', label: 'Бесплатные',        sub: 'Прикрепление к гос. школе' },
+    { href: '/shkoly/tipy/eksternal/9-klass/',     icon: '9️⃣', label: '9 класс / ОГЭ',    sub: 'Сдать ОГЭ экстерном' },
+  ]
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Найти по запросу
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 10 }}>
+        {tiles.map(t => (
+          <a
+            key={t.href}
+            href={t.href}
+            style={{
+              display: 'flex', alignItems: 'flex-start', gap: 12,
+              padding: '14px 16px', borderRadius: 14,
+              border: '1.5px solid #E8E0D6', background: '#fff',
+              textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s',
+            }}
+            className="vechernie-nav-tile"
+          >
+            <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0 }}>{t.icon}</span>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function VechernieSubNav() {
   const tiles = [
     { href: '/shkoly/tipy/vechernie/online/',          icon: '💻', label: 'Онлайн',             sub: 'Дистанционное вечернее' },
@@ -197,6 +234,8 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><LanguageNavSection /><SeoBlock type={t} count={count} /></>
     : t === 'vechernie'
     ? <><VechernieSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'eksternal'
+    ? <><EksternalSubNav /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (
