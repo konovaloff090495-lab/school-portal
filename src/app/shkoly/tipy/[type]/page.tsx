@@ -84,6 +84,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 function ProfileNavSection() {
+  const extraTiles = [
+    { href: '/shkoly/tipy/profilnye/online/',      label: '💻 Онлайн',         sub: 'Дистанционный профиль' },
+    { href: '/shkoly/tipy/profilnye/10-11-klass/', label: '🎓 10–11 класс',     sub: 'Старшая профильная школа' },
+    { href: '/shkoly/tipy/profilnye/letnie/',       label: '☀️ Летние школы',   sub: 'Интенсивы на каникулах' },
+  ]
   return (
     <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
       <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
@@ -105,6 +110,22 @@ function ProfileNavSection() {
             <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{p.label}</span>
             <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{p.title.replace('школы России', '').replace('России', '').trim()}</span>
           </Link>
+        ))}
+        {extraTiles.map(t => (
+          <a
+            key={t.href}
+            href={t.href}
+            style={{
+              display: 'flex', flexDirection: 'column', gap: 4,
+              padding: '14px 16px', borderRadius: 14,
+              border: '1.5px solid #E8E0D6', background: '#fff',
+              textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s',
+            }}
+            className="profile-nav-tile"
+          >
+            <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+            <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+          </a>
         ))}
       </div>
       <style>{`.profile-nav-tile:hover { border-color: #FF6B3D !important; box-shadow: 0 4px 12px rgba(255,107,61,0.12) !important; }`}</style>
