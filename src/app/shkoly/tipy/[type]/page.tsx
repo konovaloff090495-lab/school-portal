@@ -317,6 +317,35 @@ function LanguageNavSection() {
   )
 }
 
+function SportivnyeSubNav() {
+  const tiles = [
+    { href: '/shkoly/tipy/sportivnye/olimpijskij-rezerv/', icon: '🏆', label: 'Олимп. резерв',    sub: 'СШОР и ДЮСШ' },
+    { href: '/shkoly/tipy/sportivnye/posle-9-klassa/',     icon: '🎓', label: 'После 9 класса',   sub: '10–11 класс и карьера' },
+    { href: '/shkoly/tipy/sportivnye/gimnastika/',          icon: '🤸', label: 'Гимнастика',        sub: 'Спортивная и художественная' },
+    { href: '/shkoly/tipy/sportivnye/edinoborstva/',        icon: '🥋', label: 'Единоборства',      sub: 'Борьба, дзюдо, самбо' },
+    { href: '/shkoly/tipy/sportivnye/futbol/',              icon: '⚽', label: 'Футбол',            sub: 'Академии и СШОР' },
+    { href: '/shkoly/tipy/sportivnye/plavanie/',            icon: '🏊', label: 'Плавание',          sub: 'Секции и бассейны' },
+  ]
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Найти по направлению
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 10 }}>
+        {tiles.map(t => (
+          <a key={t.href} href={t.href} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, padding: '14px 16px', borderRadius: 14, border: '1.5px solid #E8E0D6', background: '#fff', textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s' }} className="vechernie-nav-tile">
+            <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0 }}>{t.icon}</span>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function EgeSubNav() {
   const tiles = [
     { href: '/shkoly/tipy/podgotovka-ege/online/',     icon: '💻', label: 'Онлайн',          sub: 'Дистанционная подготовка' },
@@ -511,6 +540,8 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><KadetkieSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'mezhdunarodnie'
     ? <><MezhdunarodnieSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'sportivnye'
+    ? <><SportivnyeSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-ege'
     ? <><EgeSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-oge'
