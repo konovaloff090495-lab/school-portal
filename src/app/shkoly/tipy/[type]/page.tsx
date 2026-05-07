@@ -317,6 +317,61 @@ function LanguageNavSection() {
   )
 }
 
+function EgeSubNav() {
+  const tiles = [
+    { href: '/shkoly/tipy/podgotovka-ege/online/',     icon: '💻', label: 'Онлайн',          sub: 'Дистанционная подготовка' },
+    { href: '/shkoly/tipy/podgotovka-ege/matematika/', icon: '📐', label: 'Математика',       sub: 'Профиль и база' },
+    { href: '/shkoly/tipy/podgotovka-ege/russkij/',    icon: '📝', label: 'Русский язык',     sub: 'Сочинение и тест' },
+    { href: '/shkoly/tipy/podgotovka-ege/biologiya/',  icon: '🧬', label: 'Биология',         sub: 'Для поступления в медвуз' },
+    { href: '/shkoly/tipy/podgotovka-ege/luchshie/',   icon: '⭐', label: 'Лучшие',           sub: 'Рейтинг и отзывы' },
+  ]
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Найти по запросу
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 10 }}>
+        {tiles.map(t => (
+          <a key={t.href} href={t.href} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, padding: '14px 16px', borderRadius: 14, border: '1.5px solid #E8E0D6', background: '#fff', textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s' }} className="vechernie-nav-tile">
+            <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0 }}>{t.icon}</span>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function OgeSubNav() {
+  const tiles = [
+    { href: '/shkoly/tipy/podgotovka-oge/online/',     icon: '💻', label: 'Онлайн',          sub: 'Дистанционная подготовка' },
+    { href: '/shkoly/tipy/podgotovka-oge/matematika/', icon: '📐', label: 'Математика',       sub: '9 класс, алгебра и геометрия' },
+    { href: '/shkoly/tipy/podgotovka-oge/russkij/',    icon: '📝', label: 'Русский язык',     sub: 'Изложение и сочинение' },
+    { href: '/shkoly/tipy/podgotovka-oge/9-klass/',    icon: '9️⃣', label: '9 класс',          sub: 'Все предметы ОГЭ' },
+  ]
+  return (
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 16px', lineHeight: 1.3 }}>
+        Найти по запросу
+      </h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 10 }}>
+        {tiles.map(t => (
+          <a key={t.href} href={t.href} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, padding: '14px 16px', borderRadius: 14, border: '1.5px solid #E8E0D6', background: '#fff', textDecoration: 'none', transition: 'border-color .15s, box-shadow .15s' }} className="vechernie-nav-tile">
+            <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0 }}>{t.icon}</span>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: '#1A1814', lineHeight: 1.3 }}>{t.label}</span>
+              <span style={{ fontSize: 12, color: '#9B9490', lineHeight: 1.4 }}>{t.sub}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function MezhdunarodnieSubNav() {
   const tiles = [
     { href: '/shkoly/tipy/mezhdunarodnie/anglijskie/',  icon: '🇬🇧', label: 'С английским',      sub: 'Языковые программы, IELTS' },
@@ -456,6 +511,10 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><KadetkieSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'mezhdunarodnie'
     ? <><MezhdunarodnieSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'podgotovka-ege'
+    ? <><EgeSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'podgotovka-oge'
+    ? <><OgeSubNav /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (
