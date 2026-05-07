@@ -112,7 +112,7 @@ function ProfileNavSection() {
   )
 }
 
-function DomashniеSubNav() {
+function DomashnieSubNav() {
   const tiles = [
     { href: '/shkoly/tipy/domashnie/online/',        icon: '💻', label: 'Онлайн',           sub: 'Дистанционно из дома' },
     { href: '/shkoly/tipy/domashnie/luchshie/',      icon: '⭐', label: 'Лучшие',           sub: 'Рейтинг по отзывам' },
@@ -314,7 +314,7 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'semejnye'
     ? <><SemejnyeSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'domashnie'
-    ? <><DomashniеSubNav /><SeoBlock type={t} count={count} /></>
+    ? <><DomashnieSubNav /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (
