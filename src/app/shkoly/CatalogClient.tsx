@@ -473,6 +473,11 @@ export default function CatalogClient({
     if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'profilnye' && initialTypes.length === 1 && filters.levels.length === 1) {
       if (filters.levels[0] === 'high') { router.push('/shkoly/tipy/profilnye/10-11-klass/'); return }
     }
+
+    // From /shkoly/tipy/sportivnye/ → level filter → posle-9-klassa
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'sportivnye' && initialTypes.length === 1 && filters.levels.length === 1) {
+      if (filters.levels[0] === 'high') { router.push('/shkoly/tipy/sportivnye/posle-9-klassa/'); return }
+    }
   }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles, filters.levels, filters.priceMode])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
