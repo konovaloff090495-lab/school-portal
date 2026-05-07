@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 40,
-    "lastRun": "2026-05-06T12:26:07.613Z"
+    "generated": 45,
+    "lastRun": "2026-05-07T07:13:58.763Z"
   },
   "topics": [
     {
@@ -565,12 +565,15 @@
     },
     {
       "id": "t060",
-      "status": "pending",
+      "status": "done",
       "title": "Коррекционные школы: виды, права родителей, как оформить",
       "slug": "korrektsionnye-shkoly-vidy",
       "category": "Типы школ",
       "keywords": "коррекционная школа",
-      "freq": 5800
+      "freq": 5800,
+      "generatedAt": "2026-05-07T07:07:34.457Z",
+      "wordCount": 1415,
+      "seoScore": 95
     },
     {
       "id": "t061",
@@ -932,12 +935,15 @@
     },
     {
       "id": "t096",
-      "status": "pending",
+      "status": "done",
       "title": "Что такое ФГОС и как он влияет на образование ребёнка",
       "slug": "fgos-chto-eto-roditeli",
       "category": "Советы родителям",
       "keywords": "фгос школа",
-      "freq": 5800
+      "freq": 5800,
+      "generatedAt": "2026-05-07T07:09:04.493Z",
+      "wordCount": 1419,
+      "seoScore": 90
     },
     {
       "id": "t097",
@@ -1205,12 +1211,15 @@
     },
     {
       "id": "t124",
-      "status": "pending",
+      "status": "done",
       "title": "Как выбрать школу по прописке или не по прописке в 2026",
       "slug": "kak-vybrat-shkolu-po-propiske-2026",
       "category": "Советы родителям",
       "keywords": "школа по прописке как поступить",
-      "freq": 5600
+      "freq": 5600,
+      "generatedAt": "2026-05-07T07:12:21.958Z",
+      "wordCount": 1434,
+      "seoScore": 90
     },
     {
       "id": "t125",
@@ -1458,12 +1467,15 @@
     },
     {
       "id": "t150",
-      "status": "pending",
+      "status": "done",
       "title": "Государственная или частная школа: плюсы и минусы каждой",
       "slug": "gosudarstvennaya-ili-chastnaya-shkola-sravnenie",
       "category": "Советы родителям",
       "keywords": "государственная или частная школа",
-      "freq": 5600
+      "freq": 5600,
+      "generatedAt": "2026-05-07T07:13:58.136Z",
+      "wordCount": 1368,
+      "seoScore": 90
     },
     {
       "id": "t151",
@@ -1751,12 +1763,15 @@
     },
     {
       "id": "t181",
-      "status": "pending",
+      "status": "done",
       "title": "Поступление в МГУ 2026: баллы, факультеты, олимпиады",
       "slug": "postuplenie-v-mgu-2026-bally",
       "category": "Советы родителям",
       "keywords": "поступление МГУ 2026 баллы",
-      "freq": 5700
+      "freq": 5700,
+      "generatedAt": "2026-05-07T07:10:44.688Z",
+      "wordCount": 1252,
+      "seoScore": 90
     },
     {
       "id": "t182",
