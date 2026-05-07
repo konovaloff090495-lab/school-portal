@@ -109,9 +109,11 @@ export interface CatalogClientProps {
   initialNeighborhood?: string
   initialCity?: string
   initialMetro?: string
+  initialProfile?: string
   lockRegion?: boolean
   lockType?: boolean
   lockMetro?: boolean
+  lockProfile?: boolean
   title?: string
   subtitle?: string
   seoCity?: string   // имя города в именительном падеже для SEO-текста
@@ -264,9 +266,11 @@ export default function CatalogClient({
   initialNeighborhood,
   initialCity,
   initialMetro,
+  initialProfile,
   lockRegion = false,
   lockType = false,
   lockMetro = false,
+  lockProfile = false,
   title = 'Каталог школ России',
   subtitle,
   seoCity,
@@ -286,7 +290,7 @@ export default function CatalogClient({
     levels: [],
     minRating: 0,
     metro: initialMetro ? [initialMetro] : [],
-    profiles: [],
+    profiles: initialProfile ? [initialProfile as ProfileId] : [],
     featureFilters: [],
     sort: 'rating',
   })
@@ -306,6 +310,13 @@ export default function CatalogClient({
       isFirstMount.current = false
       return
     }
+    // From /shkoly/{region}/profilnye/ → 1 profile selected → region/profilnye/{profile}/
+    if (lockRegion && lockType && initialTypes[0] === 'profilnye' && !lockProfile
+        && filters.profiles.length === 1) {
+      router.push(`/shkoly/${initialRegions[0]}/profilnye/${filters.profiles[0]}/`)
+      return
+    }
+
     // From /shkoly/moskovskaya-oblast/{type}/ → 1 city selected → city+type static page
     if (lockRegion && lockType && initialRegions[0] === 'moskovskaya-oblast'
         && filters.moCities.length === 1) {
@@ -401,7 +412,7 @@ export default function CatalogClient({
       const slug = metroNameToSlug[filters.metro[0]]
       if (slug) { router.push(`/shkoly/moskva/metro/${slug}/`); return }
     }
-  }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro])
+  }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
 
