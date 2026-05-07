@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 45,
-    "lastRun": "2026-05-07T07:13:58.763Z"
+    "generated": 47,
+    "lastRun": "2026-05-07T12:24:07.438Z"
   },
   "topics": [
     {
@@ -426,12 +426,15 @@
     },
     {
       "id": "t046",
-      "status": "pending",
+      "status": "done",
       "title": "Перевод в другую школу: как сделать правильно",
       "slug": "perevod-v-druguyu-shkolu",
       "category": "Советы родителям",
       "keywords": "перевод в другую школу",
-      "freq": 5500
+      "freq": 5500,
+      "generatedAt": "2026-05-07T12:24:06.724Z",
+      "wordCount": 1400,
+      "seoScore": 95
     },
     {
       "id": "t047",
@@ -771,12 +774,14 @@
     },
     {
       "id": "t080",
-      "status": "pending",
+      "status": "error",
       "title": "Продлёнка в школе: всё что нужно знать родителям",
       "slug": "prodlyonka-v-shkole",
       "category": "Советы родителям",
       "keywords": "продлёнка в школе",
-      "freq": 5500
+      "freq": 5500,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-08T12:24:06.923Z"
     },
     {
       "id": "t081",
@@ -999,12 +1004,14 @@
     },
     {
       "id": "t102",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие частные школы Москвы 2026: топ-15 с ценами",
       "slug": "luchshie-chastnye-shkoly-moskvy-2026",
       "category": "Рейтинги",
       "keywords": "лучшие частные школы москвы",
-      "freq": 5400
+      "freq": 5400,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-08T12:24:07.024Z"
     },
     {
       "id": "t103",
@@ -1355,12 +1362,14 @@
     },
     {
       "id": "t138",
-      "status": "pending",
+      "status": "error",
       "title": "Курсы подготовки к ЕГЭ: как выбрать и сколько стоит",
       "slug": "kursy-podgotovki-k-ege-kak-vybrat",
       "category": "Советы родителям",
       "keywords": "курсы подготовки ЕГЭ выбрать",
-      "freq": 5300
+      "freq": 5300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-08T12:24:07.139Z"
     },
     {
       "id": "t139",
@@ -1653,12 +1662,15 @@
     },
     {
       "id": "t169",
-      "status": "pending",
+      "status": "done",
       "title": "Как сдать ОГЭ по математике: разбор заданий",
       "slug": "oge-matematika-razbor-zadanij",
       "category": "Советы родителям",
       "keywords": "ОГЭ математика задания",
-      "freq": 5600
+      "freq": 5600,
+      "generatedAt": "2026-05-07T12:22:29.793Z",
+      "wordCount": 1490,
+      "seoScore": 95
     },
     {
       "id": "t170",
