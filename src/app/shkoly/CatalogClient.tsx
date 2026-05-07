@@ -457,6 +457,12 @@ export default function CatalogClient({
     if (lockType && !lockRegion && !lockPriceMode && initialTypes[0] === 'vechernie' && filters.priceMode === 'free') {
       router.push('/shkoly/tipy/vechernie/besplatnye/'); return
     }
+
+    // From /shkoly/tipy/semejnye/ → level filter → sub-page
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'semejnye' && filters.levels.length === 1) {
+      if (filters.levels[0] === 'elementary') { router.push('/shkoly/tipy/semejnye/nachalnye-klassy/'); return }
+      if (filters.levels[0] === 'middle')     { router.push('/shkoly/tipy/semejnye/srednie-klassy/'); return }
+    }
   }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles, filters.levels, filters.priceMode])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
