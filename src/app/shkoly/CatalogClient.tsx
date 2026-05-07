@@ -317,6 +317,14 @@ export default function CatalogClient({
       return
     }
 
+    // From /shkoly/moskva/{type}/ → 1 district selected → rayon/{district}/{type}/
+    if (lockRegion && lockType && initialRegions[0] === 'moskva' && !initialDistrict
+        && filters.districts.length === 1) {
+      const slug = districtLabelToSlug[filters.districts[0]]
+      const t = initialTypes[0]
+      if (slug && t) { router.push(`/shkoly/moskva/rayon/${slug}/${t}/`); return }
+    }
+
     // From /shkoly/moskva/{type}/ → 1 metro selected → metro+type static page
     if (lockRegion && lockType && initialRegions[0] === 'moskva' && !lockMetro
         && filters.metro.length === 1) {
