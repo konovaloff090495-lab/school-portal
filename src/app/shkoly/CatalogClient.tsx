@@ -110,10 +110,14 @@ export interface CatalogClientProps {
   initialCity?: string
   initialMetro?: string
   initialProfile?: string
+  initialPriceMode?: 'all' | 'free' | 'paid'
+  initialLevels?: EducationLevel[]
   lockRegion?: boolean
   lockType?: boolean
   lockMetro?: boolean
   lockProfile?: boolean
+  lockPriceMode?: boolean
+  lockLevels?: boolean
   title?: string
   subtitle?: string
   seoCity?: string   // имя города в именительном падеже для SEO-текста
@@ -267,10 +271,14 @@ export default function CatalogClient({
   initialCity,
   initialMetro,
   initialProfile,
+  initialPriceMode,
+  initialLevels,
   lockRegion = false,
   lockType = false,
   lockMetro = false,
   lockProfile = false,
+  lockPriceMode = false,
+  lockLevels = false,
   title = 'Каталог школ России',
   subtitle,
   seoCity,
@@ -285,9 +293,9 @@ export default function CatalogClient({
     districts: initialDistrict ? [initialDistrict] : [],
     neighborhoods: initialNeighborhood ? [initialNeighborhood] : [],
     moCities: initialCity ? [initialCity] : [],
-    priceMode: 'all',
+    priceMode: initialPriceMode ?? 'all',
     priceCategories: [],
-    levels: [],
+    levels: initialLevels ?? [],
     minRating: 0,
     metro: initialMetro ? [initialMetro] : [],
     profiles: initialProfile ? [initialProfile as ProfileId] : [],

@@ -64,7 +64,7 @@ export default async function MetroTypePage({ params }: Props) {
 
   const count = schools.filter(
     s => s.region === 'moskva' && s.type === t &&
-    s.metro && s.metro.some(m => m.toLowerCase().includes(metroName.toLowerCase()))
+    s.metro && s.metro.toLowerCase().includes(metroName.toLowerCase())
   ).length
 
   return (
