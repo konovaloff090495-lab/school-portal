@@ -496,7 +496,15 @@ export default function CatalogClient({
     if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => s.city && filters.moCities.includes(s.city))
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
-    if (skip !== 'types' && activeTypes.length) list = list.filter(s => activeTypes.includes(s.type))
+    if (skip !== 'types' && activeTypes.length) list = list.filter(s => {
+      if (activeTypes.includes(s.type)) return true
+      // yazykovye has no dedicated type in data — match by language keywords
+      if (activeTypes.includes('yazykovye')) {
+        const haystack = [s.name, s.description, s.fullDescription ?? '', ...(s.features ?? [])].join(' ').toLowerCase()
+        if (languageMetas.some(lm => lm.keywords.some(kw => haystack.includes(kw.toLowerCase())))) return true
+      }
+      return false
+    })
     if (skip !== 'price') {
       if (filters.priceCategories.length) {
         list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
