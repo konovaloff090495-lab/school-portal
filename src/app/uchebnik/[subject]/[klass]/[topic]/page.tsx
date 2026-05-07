@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Плейсхолдер-контент для тем без статьи
 function PlaceholderContent({ title, excerpt, subject, klass }: { title: string; excerpt: string; subject: string; klass: number }) {
   return (
-    <div className="prose prose-sm max-w-none">
+    <div className="textbook-content">
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 not-prose">
         <p className="text-sm text-amber-700 font-medium">✏️ Статья готовится</p>
         <p className="text-xs text-amber-600 mt-1">Полное объяснение этой темы скоро появится. Пока доступно краткое описание.</p>
@@ -103,7 +103,7 @@ export default async function TopicPage({ params }: Props) {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
               <div
-                className="prose prose-sm md:prose max-w-none prose-headings:text-[#0F172A] prose-headings:font-black prose-a:text-blue-600 prose-code:bg-gray-100 prose-code:rounded prose-code:px-1"
+                className="textbook-content"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
             ) : (
