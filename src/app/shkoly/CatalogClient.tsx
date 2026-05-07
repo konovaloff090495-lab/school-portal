@@ -436,7 +436,28 @@ export default function CatalogClient({
       const slug = metroNameToSlug[filters.metro[0]]
       if (slug) { router.push(`/shkoly/moskva/metro/${slug}/`); return }
     }
-  }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles])
+
+    // From /shkoly/tipy/eksternal/ → level filter → sub-page
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'eksternal' && filters.levels.length === 1) {
+      if (filters.levels[0] === 'high')   { router.push('/shkoly/tipy/eksternal/10-11-klass/'); return }
+      if (filters.levels[0] === 'middle') { router.push('/shkoly/tipy/eksternal/9-klass/'); return }
+    }
+
+    // From /shkoly/tipy/eksternal/ → price free → besplatnye
+    if (lockType && !lockRegion && !lockPriceMode && initialTypes[0] === 'eksternal' && filters.priceMode === 'free') {
+      router.push('/shkoly/tipy/eksternal/besplatnye/'); return
+    }
+
+    // From /shkoly/tipy/vechernie/ → level high → starshie-klassy
+    if (lockType && !lockRegion && !lockLevels && initialTypes[0] === 'vechernie' && filters.levels.length === 1) {
+      if (filters.levels[0] === 'high') { router.push('/shkoly/tipy/vechernie/starshie-klassy/'); return }
+    }
+
+    // From /shkoly/tipy/vechernie/ → price free → besplatnye
+    if (lockType && !lockRegion && !lockPriceMode && initialTypes[0] === 'vechernie' && filters.priceMode === 'free') {
+      router.push('/shkoly/tipy/vechernie/besplatnye/'); return
+    }
+  }, [filters.regions, filters.types, filters.districts, filters.moCities, filters.metro, filters.profiles, filters.levels, filters.priceMode])
 
   // contextMetro и metroCount объявлены ниже — после baseForMetro
 
