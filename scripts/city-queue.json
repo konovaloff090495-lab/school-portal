@@ -117,7 +117,8 @@
   {
     "city": "Тюмень",
     "slug": "tyumen",
-    "status": "pending"
+    "status": "failed",
+    "error": "API credit balance exhausted"
   },
   {
     "city": "Тольятти",
