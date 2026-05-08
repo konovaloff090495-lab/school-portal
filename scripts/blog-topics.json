@@ -519,12 +519,14 @@
     },
     {
       "id": "t055",
-      "status": "pending",
+      "status": "error",
       "title": "Экстернат: как перейти и сдать аттестацию",
       "slug": "eksternat-kak-perejti",
       "category": "Типы школ",
       "keywords": "экстернат школа",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.231Z"
     },
     {
       "id": "t056",
@@ -735,12 +737,14 @@
     },
     {
       "id": "t076",
-      "status": "pending",
+      "status": "error",
       "title": "Фоксфорд: обзор онлайн-школы для родителей",
       "slug": "foxford-obzor-onlajn-shkoly",
       "category": "Советы родителям",
       "keywords": "фоксфорд школа",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.326Z"
     },
     {
       "id": "t077",
@@ -1308,12 +1312,14 @@
     },
     {
       "id": "t133",
-      "status": "pending",
+      "status": "error",
       "title": "Как выбрать профиль в 10 классе: советы и тесты",
       "slug": "kak-vybrat-profil-v-10-klasse",
       "category": "Советы родителям",
       "keywords": "профиль 10 класс как выбрать",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.418Z"
     },
     {
       "id": "t134",
@@ -1641,12 +1647,14 @@
     },
     {
       "id": "t167",
-      "status": "pending",
+      "status": "error",
       "title": "Базовая или профильная математика: как выбрать для ЕГЭ",
       "slug": "bazovaya-ili-profilnaya-matematika-ege",
       "category": "Советы родителям",
       "keywords": "базовая профильная математика ЕГЭ",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.508Z"
     },
     {
       "id": "t168",
@@ -1748,12 +1756,14 @@
     },
     {
       "id": "t178",
-      "status": "pending",
+      "status": "error",
       "title": "Олимпиады для школьников 2026: как участвовать и льготы",
       "slug": "olimpiady-dlya-shkolnikov-2026-lgoty",
       "category": "Советы родителям",
       "keywords": "олимпиады школьники льготы вуз",
-      "freq": 5300
+      "freq": 5300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.131Z"
     },
     {
       "id": "t179",
