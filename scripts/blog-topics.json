@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 52,
-    "lastRun": "2026-05-09T10:07:08.288Z"
+    "generated": 57,
+    "lastRun": "2026-05-10T10:52:23.277Z"
   },
   "topics": [
     {
@@ -417,12 +417,15 @@
     },
     {
       "id": "t045",
-      "status": "pending",
+      "status": "done",
       "title": "Адаптация ребёнка в новой школе: советы психолога",
       "slug": "adaptatsiya-v-novoj-shkole",
       "category": "Советы родителям",
       "keywords": "адаптация ребёнка в школе",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:47:40.339Z",
+      "wordCount": 1483,
+      "seoScore": 95
     },
     {
       "id": "t046",
@@ -510,12 +513,15 @@
     },
     {
       "id": "t054",
-      "status": "pending",
+      "status": "done",
       "title": "Вечерняя школа: кому подходит и как поступить",
       "slug": "vechernyaya-shkola-kak-postupit",
       "category": "Типы школ",
       "keywords": "вечерняя школа",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:49:12.806Z",
+      "wordCount": 1407,
+      "seoScore": 95
     },
     {
       "id": "t055",
@@ -722,12 +728,15 @@
     },
     {
       "id": "t074",
-      "status": "pending",
+      "status": "done",
       "title": "Онлайн-школы с аккредитацией: полный список 2026",
       "slug": "onlajn-shkoly-akkreditatsiya-2026",
       "category": "Рейтинги",
       "keywords": "аккредитованные онлайн школы",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:50:42.875Z",
+      "wordCount": 1225,
+      "seoScore": 95
     },
     {
       "id": "t075",
@@ -895,13 +904,16 @@
     },
     {
       "id": "t091",
-      "status": "pending",
+      "status": "done",
       "title": "Школа Летово: обзор, стоимость и как поступить",
       "slug": "shkola-letovo-obzor",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школа летово",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:52:22.569Z",
+      "wordCount": 1389,
+      "seoScore": 90
     },
     {
       "id": "t092",
@@ -1394,12 +1406,15 @@
     },
     {
       "id": "t140",
-      "status": "pending",
+      "status": "done",
       "title": "Когда начинать готовиться к ЕГЭ: в 10 или 11 классе",
       "slug": "kogda-nachinать-gotovitsya-k-ege",
       "category": "Советы родителям",
       "keywords": "когда начинать готовиться ЕГЭ",
-      "freq": 4900
+      "freq": 4900,
+      "generatedAt": "2026-05-10T10:45:53.750Z",
+      "wordCount": 1460,
+      "seoScore": 90
     },
     {
       "id": "t141",
