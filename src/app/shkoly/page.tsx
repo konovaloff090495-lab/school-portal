@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { schools } from '@/data/schools'
 import CatalogClient from './CatalogClient'
+import { WebSiteJsonLd } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: `Все школы России — каталог ${new Date().getFullYear()}`,
@@ -40,5 +41,10 @@ function MainSeoBlock({ count }: { count: number }) {
 }
 
 export default function AllSchoolsPage() {
-  return <CatalogClient seoContent={<MainSeoBlock count={schools.length} />} />
+  return (
+    <>
+      <WebSiteJsonLd />
+      <CatalogClient seoContent={<MainSeoBlock count={schools.length} />} />
+    </>
+  )
 }
