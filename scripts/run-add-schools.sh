@@ -7,9 +7,18 @@
 #   ./scripts/run-add-schools.sh sankт-peterburg "mezhdunarodnie,kadetskie"
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
-export ANTHROPIC_API_KEY="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"
 export VERCEL_PROJECT_ID="prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ"
 export VERCEL_ORG_ID="team_nn4HHJh7sr6tITE0mA24TmBT"
+
+# Загружаем секреты из .env.local (файл не попадает в git)
+ROOT_ENV="/Users/dmitriikonovalov/claude/school-portal"
+if [ -f "$ROOT_ENV/.env.local" ]; then
+  set -a; source "$ROOT_ENV/.env.local"; set +a
+fi
+if [ -z "$ANTHROPIC_API_KEY" ]; then
+  echo "ERROR: ANTHROPIC_API_KEY не найден. Задайте его в $ROOT_ENV/.env.local" >&2
+  exit 1
+fi
 
 ROOT="/Users/dmitriikonovalov/claude/school-portal"
 LOG="$ROOT/scripts/logs/schools-$(date +%Y-%m-%d).log"
@@ -33,9 +42,9 @@ if [ -n "$SLUG" ]; then
   echo "=== $(date) Добавляем $CITY ($SLUG) типы: ${TYPES:-все} ===" >> "$LOG"
   cd "$ROOT"
 
-  ARGS="--city=\"$CITY\" --slug=\"$SLUG\" --count=8 --no-photos"
-  [ -n "$TYPES" ] && ARGS="$ARGS --types=\"$TYPES\""
-  eval /opt/homebrew/bin/node scripts/generate-city.mjs $ARGS >> "$LOG" 2>&1
+  NODE_ARGS=(--city="$CITY" --slug="$SLUG" --count=8 --no-photos)
+  [ -n "$TYPES" ] && NODE_ARGS+=(--types="$TYPES")
+  /opt/homebrew/bin/node scripts/generate-city.mjs "${NODE_ARGS[@]}" >> "$LOG" 2>&1
 else
   # Авто-режим: добавляем mezhdunarodnie для городов где его ещё нет
   echo "=== $(date) Авто: добавляем mezhdunarodnie для городов без международных ===" >> "$LOG"

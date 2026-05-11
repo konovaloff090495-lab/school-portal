@@ -81,11 +81,11 @@ jobs:
           TYPES: ${{ steps.pick.outputs.types }}
           COUNT: ${{ github.event.inputs.count || '8' }}
         run: |
-          ARGS="--city=\"$CITY\" --slug=\"$SLUG\" --count=$COUNT --no-deploy --no-photos"
+          NODE_ARGS=(--city="$CITY" --slug="$SLUG" --count="$COUNT" --no-deploy --no-photos)
           if [ -n "$TYPES" ]; then
-            ARGS="$ARGS --types=\"$TYPES\""
+            NODE_ARGS+=(--types="$TYPES")
           fi
-          eval node scripts/generate-city.mjs $ARGS
+          node scripts/generate-city.mjs "${NODE_ARGS[@]}"
 
       - name: Mark done in queue
         if: steps.pick.outputs.skip != 'true' && success()
