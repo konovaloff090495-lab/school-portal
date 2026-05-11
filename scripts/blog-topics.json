@@ -968,12 +968,14 @@
     },
     {
       "id": "t098",
-      "status": "pending",
+      "status": "error",
       "title": "Классный руководитель: права и обязанности по закону",
       "slug": "klassnyj-rukovoditel-prava",
       "category": "Советы родителям",
       "keywords": "классный руководитель права",
-      "freq": 4700
+      "freq": 4700,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-12T16:17:27.614Z"
     },
     {
       "id": "t099",
@@ -1168,12 +1170,14 @@
     },
     {
       "id": "t119",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-школа: полный переход или дополнительное обучение",
       "slug": "onlayn-shkola-polnyj-perehod-ili-dop",
       "category": "Типы школ",
       "keywords": "онлайн школа перейти полностью",
-      "freq": 4700
+      "freq": 4700,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-12T16:17:27.755Z"
     },
     {
       "id": "t120",
@@ -1213,12 +1217,14 @@
     },
     {
       "id": "t123",
-      "status": "pending",
+      "status": "error",
       "title": "Частная школа: стоит ли платить и на что обращать внимание",
       "slug": "chastnaya-shkola-stoit-li-platit",
       "category": "Советы родителям",
       "keywords": "частная школа стоит ли",
-      "freq": 4800
+      "freq": 4800,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-12T16:17:27.252Z"
     },
     {
       "id": "t124",
@@ -1747,12 +1753,14 @@
     },
     {
       "id": "t177",
-      "status": "pending",
+      "status": "error",
       "title": "Куда поступать с ЕГЭ 200+ баллов: лучшие вузы 2026",
       "slug": "kuda-postupat-s-ege-200-ballov-vuzy",
       "category": "Советы родителям",
       "keywords": "куда поступать ЕГЭ 200 баллов",
-      "freq": 4800
+      "freq": 4800,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-12T16:17:27.364Z"
     },
     {
       "id": "t178",
@@ -1860,12 +1868,14 @@
     },
     {
       "id": "t189",
-      "status": "pending",
+      "status": "error",
       "title": "Дополнительное образование детей: кружки и секции",
       "slug": "dopolnitelnoe-obrazovanie-kruzhki-sekcii",
       "category": "Советы родителям",
       "keywords": "дополнительное образование дети кружки",
-      "freq": 4800
+      "freq": 4800,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-12T16:17:27.472Z"
     },
     {
       "id": "t190",
