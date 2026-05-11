@@ -1,0 +1,110 @@
+name: Enrich Schools (AI)
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Сколько школ обогатить за один прогон'
+        default: '50'
+        required: false
+      region:
+        description: 'Регион (необязательно, напр. moskva)'
+        required: false
+      id:
+        description: 'ID конкретной школы (необязательно, напр. school-179)'
+        required: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run enrichment
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNT: ${{ github.event.inputs.count || '50' }}
+          REGION: ${{ github.event.inputs.region }}
+          ID_ARG: ${{ github.event.inputs.id }}
+        run: |
+          ARGS=(--count="$COUNT")
+          if [ -n "$REGION" ]; then ARGS+=(--region="$REGION"); fi
+          if [ -n "$ID_ARG" ]; then ARGS+=(--id="$ID_ARG"); fi
+          node scripts/enrich-schools.mjs "${ARGS[@]}"
+
+      - name: Configure git
+        run: |
+          git config user.name "pro-schools bot"
+          git config user.email "bot@pro-schools.ru"
+
+      - name: Commit and push
+        run: |
+          git add src/data/schools.ts scripts/enrich-progress.json
+          git diff --staged --quiet || git commit -m "Enrich: AI-обогащение ${{ github.event.inputs.count || '50' }} школ $(date +'%Y-%m-%d')"
+          git pull --no-rebase -X ours origin main
+          git push
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          COMMIT=$(git rev-parse HEAD)
+          curl -sf -X POST "https://api.vercel.com/v13/deployments?teamId=team_nn4HHJh7sr6tITE0mA24TmBT" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"name\": \"school-portal\",
+              \"project\": \"prj_VYu8oMFiOeRe6Pabqug4NJaekgpJ\",
+              \"target\": \"production\",
+              \"gitSource\": {
+                \"type\": \"github\",
+                \"org\": \"konovaloff090495-lab\",
+                \"repo\": \"school-portal\",
+                \"ref\": \"main\",
+                \"sha\": \"$COMMIT\"
+              }
+            }" | python3 -c "import sys,json; d=json.load(sys.stdin); print('Deploy:', d.get('url'), '— state:', d.get('readyState'))"
+
+      - name: Notify Telegram
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          JOB_STATUS: ${{ job.status }}
+          COUNT: ${{ github.event.inputs.count || '50' }}
+          REGION: ${{ github.event.inputs.region }}
+        run: |
+          PROGRESS=$(node -e "
+            const fs = require('fs');
+            try {
+              const p = JSON.parse(fs.readFileSync('scripts/enrich-progress.json', 'utf-8'));
+              console.log(p.done ? p.done.length : 0);
+            } catch { console.log('?'); }
+          " 2>/dev/null || echo "?")
+          if [ "$JOB_STATUS" = "success" ]; then
+            MSG=$(printf '✅ *Обогащение школ завершено*\n\n➕ Обогащено: %s школ\n🗂️ Всего в базе: %s\n📍 Регион: %s\n📅 %s МСК' \
+              "$COUNT" "$PROGRESS" "${REGION:-все}" "$(date +'%d.%m.%Y %H:%M')")
+          else
+            MSG=$(printf '❌ *Ошибка обогащения школ*\nПроверь: https://github.com/konovaloff090495-lab/school-portal/actions')
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d parse_mode="Markdown" \
+            -d "text=${MSG}" > /dev/null
