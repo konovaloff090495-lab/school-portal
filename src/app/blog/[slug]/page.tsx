@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { blogPosts, getPostBySlug, getAllPostSlugs } from '@/data/blog'
 import { sanitizeHtml } from '@/lib/sanitize'
+import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -51,25 +52,17 @@ export default async function BlogPostPage({ params }: Props) {
     ? [...related, ...blogPosts.filter(p => p.slug !== slug && !related.includes(p)).slice(0, 2 - related.length)]
     : related
 
-  // Article schema
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    author: { '@type': 'Person', name: post.author },
-    datePublished: post.publishedAt,
-    publisher: {
-      '@type': 'Organization',
-      name: 'pro-schools.ru',
-      url: 'https://pro-schools.ru',
-    },
-    mainEntityOfPage: `https://pro-schools.ru/blog/${slug}/`,
-  }
-
   return (
+    <>
+      <ArticleJsonLd post={post} url={`https://pro-schools.ru/blog/${post.slug}/`} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', href: 'https://pro-schools.ru/' },
+          { name: 'Блог', href: 'https://pro-schools.ru/blog/' },
+          { name: post.title },
+        ]}
+      />
     <div style={{ background: 'var(--cream)', minHeight: '100vh' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <style>{`
         .post-wrap { max-width: 1280px; margin: 0 auto; padding: 40px 20px 80px; }
@@ -331,5 +324,6 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
     </div>
+    </>
   )
 }

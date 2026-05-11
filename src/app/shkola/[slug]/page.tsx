@@ -11,6 +11,7 @@ import LeadForm from '@/components/LeadForm'
 import SchoolCard from '@/components/SchoolCard'
 import SchoolPageGallery from '@/components/SchoolPageGallery'
 import SchoolMatchModal from '@/components/SchoolMatchModal'
+import ReviewsBlock from '@/components/ReviewsBlock'
 
 
 interface Props {
@@ -351,6 +352,9 @@ export default async function SchoolPage({ params }: Props) {
               </div>
             </div>
           )}
+
+          {/* Reviews */}
+          <ReviewsBlock schoolSlug={school.slug} schoolName={school.name} />
 
           {/* Contacts */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">

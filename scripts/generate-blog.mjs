@@ -94,11 +94,83 @@ function pickTopics(queue, existingSlugs, count) {
     .slice(0, count)
 }
 
+// ─── Карта внутренних ссылок каталога ───────────────────────────────────────
+// Используется в промпте: скрипт выбирает релевантные ссылки по теме статьи
+const INTERNAL_LINKS = [
+  // Типы школ — общие
+  { url: '/shkoly/',                                   label: 'каталог всех школ России' },
+  { url: '/shkoly/tipy/gosudarstvennye/',              label: 'государственные школы' },
+  { url: '/shkoly/tipy/chastnie/',                     label: 'частные школы' },
+  { url: '/shkoly/tipy/online/',                       label: 'онлайн-школы' },
+  { url: '/shkoly/tipy/vechernie/',                    label: 'вечерние школы' },
+  { url: '/shkoly/tipy/eksternal/',                    label: 'школы-экстернаты' },
+  { url: '/shkoly/tipy/internaty/',                    label: 'школы-интернаты' },
+  // Профильные
+  { url: '/shkoly/tipy/profilnye/',                    label: 'профильные школы' },
+  { url: '/shkoly/tipy/profilnye/online/',             label: 'профильные онлайн-школы' },
+  { url: '/shkoly/tipy/profilnye/10-11-klass/',        label: 'профильные классы 10–11' },
+  // Гимназии и лицеи
+  { url: '/shkoly/tipy/gimnazii/',                     label: 'гимназии' },
+  // Спортивные
+  { url: '/shkoly/tipy/sportivnye/',                   label: 'спортивные школы' },
+  { url: '/shkoly/tipy/sportivnye/futbol/',            label: 'футбольные школы' },
+  { url: '/shkoly/tipy/sportivnye/plavanie/',          label: 'школы плавания' },
+  { url: '/shkoly/tipy/sportivnye/gimnastika/',        label: 'школы гимназии' },
+  { url: '/shkoly/tipy/sportivnye/olimpijskij-rezerv/', label: 'школы олимпийского резерва' },
+  // Кадетские
+  { url: '/shkoly/tipy/kadetskie/',                    label: 'кадетские школы' },
+  { url: '/shkoly/tipy/kadetskie/dlya-devochek/',      label: 'кадетские школы для девочек' },
+  { url: '/shkoly/tipy/kadetskie/s-prozhivaniem/',     label: 'кадетские школы с проживанием' },
+  // Языковые и международные
+  { url: '/shkoly/tipy/yazykovye/',                    label: 'языковые школы' },
+  { url: '/shkoly/tipy/mezhdunarodnie/',               label: 'международные школы' },
+  { url: '/shkoly/tipy/mezhdunarodnie/anglijskie/',    label: 'английские школы' },
+  // Подготовка к экзаменам
+  { url: '/shkoly/tipy/podgotovka-ege/',               label: 'подготовка к ЕГЭ' },
+  { url: '/shkoly/tipy/podgotovka-ege/matematika/',    label: 'подготовка к ЕГЭ по математике' },
+  { url: '/shkoly/tipy/podgotovka-ege/russkij/',       label: 'подготовка к ЕГЭ по русскому' },
+  { url: '/shkoly/tipy/podgotovka-oge/',               label: 'подготовка к ОГЭ' },
+  { url: '/shkoly/tipy/podgotovka-oge/9-klass/',       label: 'подготовка к ОГЭ в 9 классе' },
+  // При вузах
+  { url: '/shkoly/tipy/pri-vuzakh/',                   label: 'школы при вузах' },
+  { url: '/shkoly/tipy/pri-vuzakh/tehnicheskie/',      label: 'технические школы при вузах' },
+  // Монтессори, Вальдорф
+  { url: '/shkoly/tipy/montessori/',                   label: 'школы Монтессори' },
+  { url: '/shkoly/tipy/valdorfskie/',                  label: 'вальдорфские школы' },
+  // Города
+  { url: '/shkoly/moskva/',                            label: 'школы Москвы' },
+  { url: '/shkoly/sankt-peterburg/',                   label: 'школы Санкт-Петербурга' },
+  { url: '/shkoly/novosibirsk/',                       label: 'школы Новосибирска' },
+  { url: '/shkoly/ekaterinburg/',                      label: 'школы Екатеринбурга' },
+  { url: '/shkoly/kazan/',                             label: 'школы Казани' },
+  { url: '/shkoly/krasnodar/',                         label: 'школы Краснодара' },
+]
+
+// Выбираем 3–4 ссылки, наиболее релевантные теме статьи
+function pickRelevantLinks(topic) {
+  const needle = (topic.title + ' ' + (topic.keywords ?? '') + ' ' + topic.category).toLowerCase()
+  const scored = INTERNAL_LINKS.map(link => {
+    const words = link.label.split(/\s+/)
+    const score = words.filter(w => needle.includes(w.replace(/[^а-яё]/gi, ''))).length
+    return { ...link, score }
+  })
+  scored.sort((a, b) => b.score - a.score)
+  // Всегда включаем общий каталог + 2–3 тематических
+  const top = scored.filter(l => l.score > 0).slice(0, 3)
+  if (!top.find(l => l.url === '/shkoly/')) top.unshift(INTERNAL_LINKS[0])
+  return top.slice(0, 4)
+}
+
 // ─── Промпт для генерации статьи ────────────────────────────────────────────
 function buildPrompt(topic) {
   const cityContext = topic.city
     ? `Статья ориентирована на город ${topic.city}. Упоминай конкретные реалии этого города, местные школы, районы где уместно.`
     : 'Статья для общероссийской аудитории. Приводи примеры из разных городов.'
+
+  const relevantLinks = pickRelevantLinks(topic)
+  const linksBlock = relevantLinks.map(l =>
+    `  <a href="${l.url}">${l.label}</a>`
+  ).join('\n')
 
   return `Ты — SEO-редактор образовательного портала pro-schools.ru. Напиши статью для блога.
 
@@ -118,6 +190,11 @@ ${cityContext}
 8. Конкретные цифры и факты — никаких размытых "примерно", "около" без данных
 9. Никаких шаблонных фраз: "важно помнить", "следует отметить", "таким образом"
 10. Читаемо, живо, полезно — не академично
+
+ВНУТРЕННИЕ ССЫЛКИ — ОБЯЗАТЕЛЬНО:
+Естественно включи 2–3 ссылки из списка ниже в текст статьи (в нужный контекст, не списком):
+${linksBlock}
+Ссылки должны быть органично вписаны в предложения, не как "нажмите здесь", а как контекстный анкор.
 
 ВЕРНУТЬ СТРОГО JSON (без markdown-обёртки):
 {

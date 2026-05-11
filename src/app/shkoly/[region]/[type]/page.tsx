@@ -7,6 +7,7 @@ import {
 import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
+import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 
 interface Props {
   params: Promise<{ region: string; type: string }>
@@ -60,19 +61,33 @@ export default async function TypePage({ params }: Props) {
     : `${typeName} школы ${regionIn}`
 
   return (
-    <CatalogClient
-      initialRegions={[r]}
-      initialTypes={[t]}
-      lockRegion
-      lockType
-      title={pageTitle}
-      subtitle={`${list.length} школ в каталоге`}
-      breadcrumbs={[
-        { label: 'Все школы', href: '/shkoly/' },
-        { label: regionName, href: `/shkoly/${r}/` },
-        { label: typeName },
-      ]}
-      seoContent={<SeoBlock region={r} type={t} count={list.length} />}
-    />
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Все школы', href: 'https://pro-schools.ru/shkoly/' },
+          { name: regionName, href: `https://pro-schools.ru/shkoly/${r}/` },
+          { name: typeName },
+        ]}
+      />
+      <SchoolListJsonLd
+        schools={list}
+        url={`https://pro-schools.ru/shkoly/${r}/${t}/`}
+        name={pageTitle}
+      />
+      <CatalogClient
+        initialRegions={[r]}
+        initialTypes={[t]}
+        lockRegion
+        lockType
+        title={pageTitle}
+        subtitle={`${list.length} школ в каталоге`}
+        breadcrumbs={[
+          { label: 'Все школы', href: '/shkoly/' },
+          { label: regionName, href: `/shkoly/${r}/` },
+          { label: typeName },
+        ]}
+        seoContent={<SeoBlock region={r} type={t} count={list.length} />}
+      />
+    </>
   )
 }
