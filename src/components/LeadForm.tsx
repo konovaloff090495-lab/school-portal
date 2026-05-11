@@ -9,7 +9,7 @@ interface LeadFormProps {
   title?: string
 }
 
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'mpqkebae'
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? ''
 
 // ── Phone mask ────────────────────────────────────────────────────────────────
 function formatPhone(raw: string): string {

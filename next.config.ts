@@ -1,7 +1,53 @@
 import type { NextConfig } from "next";
 
+const securityHeaders = [
+  // Запрещаем отображение сайта в iframe с чужих доменов
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+  // Запрещаем браузеру угадывать MIME-тип
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  // Управляем реферером
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  // Ограничиваем доступ к браузерным API
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+  // HSTS — только HTTPS
+  { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+  // XSS-фильтр для старых браузеров
+  { key: 'X-XSS-Protection', value: '1; mode=block' },
+  // Content Security Policy
+  {
+    key: 'Content-Security-Policy',
+    value: [
+      "default-src 'self'",
+      // Next.js inline scripts необходимы для гидратации
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru",
+      // Inline стили — для CSS-in-JS и контента блога
+      "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
+      // Картинки: свои + data-URI
+      "img-src 'self' data: blob: mc.yandex.ru",
+      // Шрифты Google
+      "font-src 'self' fonts.gstatic.com",
+      // API-запросы
+      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru",
+      // Фреймы полностью запрещены
+      "frame-src 'none'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' formspree.io",
+    ].join('; '),
+  },
+];
+
 const nextConfig: NextConfig = {
   trailingSlash: true,
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

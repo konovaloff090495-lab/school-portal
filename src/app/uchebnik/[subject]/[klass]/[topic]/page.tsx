@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { sanitizeHtml } from '@/lib/sanitize'
 import {
   getSubjectBySlug, getTopicBySlug, getTopicsForSubjectAndClass,
   textbookSubjects, klassLabel, klassLabelIn,
@@ -104,7 +105,7 @@ export default async function TopicPage({ params }: Props) {
             {article?.content ? (
               <div
                 className="textbook-content"
-                dangerouslySetInnerHTML={{ __html: article.content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
               />
             ) : (
               <PlaceholderContent

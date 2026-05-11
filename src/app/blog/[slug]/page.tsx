@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { blogPosts, getPostBySlug, getAllPostSlugs } from '@/data/blog'
+import { sanitizeHtml } from '@/lib/sanitize'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -198,7 +199,7 @@ export default async function BlogPostPage({ params }: Props) {
                 border: '1px solid rgba(26,24,20,0.07)',
                 boxShadow: '0 2px 8px rgba(60,30,10,0.04)',
               }}
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
             />
 
             {/* Tags */}
