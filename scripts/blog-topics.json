@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 47,
-    "lastRun": "2026-05-07T12:24:07.438Z"
+    "generated": 57,
+    "lastRun": "2026-05-10T10:52:23.277Z"
   },
   "topics": [
     {
@@ -417,12 +417,15 @@
     },
     {
       "id": "t045",
-      "status": "pending",
+      "status": "done",
       "title": "Адаптация ребёнка в новой школе: советы психолога",
       "slug": "adaptatsiya-v-novoj-shkole",
       "category": "Советы родителям",
       "keywords": "адаптация ребёнка в школе",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:47:40.339Z",
+      "wordCount": 1483,
+      "seoScore": 95
     },
     {
       "id": "t046",
@@ -510,21 +513,26 @@
     },
     {
       "id": "t054",
-      "status": "pending",
+      "status": "done",
       "title": "Вечерняя школа: кому подходит и как поступить",
       "slug": "vechernyaya-shkola-kak-postupit",
       "category": "Типы школ",
       "keywords": "вечерняя школа",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:49:12.806Z",
+      "wordCount": 1407,
+      "seoScore": 95
     },
     {
       "id": "t055",
-      "status": "pending",
+      "status": "error",
       "title": "Экстернат: как перейти и сдать аттестацию",
       "slug": "eksternat-kak-perejti",
       "category": "Типы школ",
       "keywords": "экстернат школа",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.231Z"
     },
     {
       "id": "t056",
@@ -602,12 +610,15 @@
     },
     {
       "id": "t063",
-      "status": "pending",
+      "status": "done",
       "title": "Лучшие онлайн-школы России 2026: рейтинг и сравнение",
       "slug": "luchshie-onlajn-shkoly-2026",
       "category": "Рейтинги",
       "keywords": "лучшие онлайн школы россия",
-      "freq": 5100
+      "freq": 5100,
+      "generatedAt": "2026-05-09T10:02:14.401Z",
+      "wordCount": 1500,
+      "seoScore": 100
     },
     {
       "id": "t064",
@@ -717,12 +728,15 @@
     },
     {
       "id": "t074",
-      "status": "pending",
+      "status": "done",
       "title": "Онлайн-школы с аккредитацией: полный список 2026",
       "slug": "onlajn-shkoly-akkreditatsiya-2026",
       "category": "Рейтинги",
       "keywords": "аккредитованные онлайн школы",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:50:42.875Z",
+      "wordCount": 1225,
+      "seoScore": 95
     },
     {
       "id": "t075",
@@ -735,12 +749,14 @@
     },
     {
       "id": "t076",
-      "status": "pending",
+      "status": "error",
       "title": "Фоксфорд: обзор онлайн-школы для родителей",
       "slug": "foxford-obzor-onlajn-shkoly",
       "category": "Советы родителям",
       "keywords": "фоксфорд школа",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.326Z"
     },
     {
       "id": "t077",
@@ -888,13 +904,16 @@
     },
     {
       "id": "t091",
-      "status": "pending",
+      "status": "done",
       "title": "Школа Летово: обзор, стоимость и как поступить",
       "slug": "shkola-letovo-obzor",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школа летово",
-      "freq": 4800
+      "freq": 4800,
+      "generatedAt": "2026-05-10T10:52:22.569Z",
+      "wordCount": 1389,
+      "seoScore": 90
     },
     {
       "id": "t092",
@@ -973,12 +992,15 @@
     },
     {
       "id": "t099",
-      "status": "pending",
+      "status": "done",
       "title": "Отличник или троечник: что важнее — оценки или знания",
       "slug": "otlichnik-ili-troechnik",
       "category": "Советы родителям",
       "keywords": "оценки в школе",
-      "freq": 5100
+      "freq": 5100,
+      "generatedAt": "2026-05-09T10:04:06.779Z",
+      "wordCount": 1450,
+      "seoScore": 95
     },
     {
       "id": "t100",
@@ -1308,12 +1330,14 @@
     },
     {
       "id": "t133",
-      "status": "pending",
+      "status": "error",
       "title": "Как выбрать профиль в 10 классе: советы и тесты",
       "slug": "kak-vybrat-profil-v-10-klasse",
       "category": "Советы родителям",
       "keywords": "профиль 10 класс как выбрать",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.418Z"
     },
     {
       "id": "t134",
@@ -1382,12 +1406,15 @@
     },
     {
       "id": "t140",
-      "status": "pending",
+      "status": "done",
       "title": "Когда начинать готовиться к ЕГЭ: в 10 или 11 классе",
       "slug": "kogda-nachinать-gotovitsya-k-ege",
       "category": "Советы родителям",
       "keywords": "когда начинать готовиться ЕГЭ",
-      "freq": 4900
+      "freq": 4900,
+      "generatedAt": "2026-05-10T10:45:53.750Z",
+      "wordCount": 1460,
+      "seoScore": 90
     },
     {
       "id": "t141",
@@ -1641,12 +1668,14 @@
     },
     {
       "id": "t167",
-      "status": "pending",
+      "status": "error",
       "title": "Базовая или профильная математика: как выбрать для ЕГЭ",
       "slug": "bazovaya-ili-profilnaya-matematika-ege",
       "category": "Советы родителям",
       "keywords": "базовая профильная математика ЕГЭ",
-      "freq": 5200
+      "freq": 5200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.508Z"
     },
     {
       "id": "t168",
@@ -1674,12 +1703,15 @@
     },
     {
       "id": "t170",
-      "status": "pending",
+      "status": "done",
       "title": "ОГЭ по русскому языку 2026: что нужно знать",
       "slug": "oge-russkij-yazyk-2026-chto-nuzhno",
       "category": "Советы родителям",
       "keywords": "ОГЭ русский язык 2026",
-      "freq": 5100
+      "freq": 5100,
+      "generatedAt": "2026-05-09T10:05:35.130Z",
+      "wordCount": 1231,
+      "seoScore": 90
     },
     {
       "id": "t171",
@@ -1748,12 +1780,14 @@
     },
     {
       "id": "t178",
-      "status": "pending",
+      "status": "error",
       "title": "Олимпиады для школьников 2026: как участвовать и льготы",
       "slug": "olimpiady-dlya-shkolnikov-2026-lgoty",
       "category": "Советы родителям",
       "keywords": "олимпиады школьники льготы вуз",
-      "freq": 5300
+      "freq": 5300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-09T10:54:55.131Z"
     },
     {
       "id": "t179",
@@ -1814,12 +1848,15 @@
     },
     {
       "id": "t185",
-      "status": "pending",
+      "status": "done",
       "title": "Хорошие оценки без зубрёжки: методики запоминания",
       "slug": "horoshie-ocenki-bez-zubrjozki-metodiki",
       "category": "Советы родителям",
       "keywords": "хорошие оценки без зубрёжки",
-      "freq": 5200
+      "freq": 5200,
+      "generatedAt": "2026-05-09T10:00:25.845Z",
+      "wordCount": 1508,
+      "seoScore": 100
     },
     {
       "id": "t186",
@@ -1859,12 +1896,15 @@
     },
     {
       "id": "t190",
-      "status": "pending",
+      "status": "done",
       "title": "Налоговый вычет за обучение детей: как получить в 2026",
       "slug": "nalogovyj-vychet-obuchenie-detej-2026",
       "category": "Советы родителям",
       "keywords": "налоговый вычет обучение дети",
-      "freq": 5100
+      "freq": 5100,
+      "generatedAt": "2026-05-09T10:07:08.159Z",
+      "wordCount": 1430,
+      "seoScore": 90
     },
     {
       "id": "t191",
