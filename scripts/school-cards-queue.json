@@ -27,19 +27,19 @@
     "city": "Новосибирск",
     "slug": "novosibirsk",
     "types": "internaty",
-    "status": "pending"
+    "status": "done"
   },
   {
     "city": "Нижний Новгород",
     "slug": "nizhniy-novgorod",
     "types": "internaty",
-    "status": "pending"
+    "status": "done"
   },
   {
     "city": "Московская область",
     "slug": "moskovskaya-oblast",
     "types": "internaty",
-    "status": "pending"
+    "status": "done"
   },
   {
     "city": "Москва",
