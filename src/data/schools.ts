@@ -1,6 +1,18 @@
 export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie' | 'mezhdunarodnie' | 'programmirovanie' | 'shahmatnye' | 'podgotovka-ege' | 'podgotovka-oge' | 'internaty' | 'valdorfskie' | 'montessori' | 'pravoslavnye' | 'sportivnye' | 'yazykovye'
 export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd' | 'krasnoyarsk' | 'saratov'
 
+export interface SchoolProgram {
+  grades: string        // '1-4' | '5-9' | '10-11'
+  level: string         // 'Начальная школа' | 'Основная' | 'Старшая'
+  subjects: string[]    // ключевые предметы/направления
+  description: string   // 1-2 предложения
+}
+
+export interface SchoolFAQ {
+  question: string
+  answer: string
+}
+
 export interface School {
   id: string
   slug: string
@@ -31,6 +43,14 @@ export interface School {
   lon?: number
   languages?: string[]   // языки обучения, напр. ['english', 'german']
   boarding?: boolean     // есть пансион/интернат
+  // New enrichment fields
+  director?: string           // 'Иванова Анна Петровна'
+  workHours?: string          // 'Пн-Пт: 8:00-19:00, Сб: 9:00-14:00'
+  egeAvgScore?: number        // средний балл ЕГЭ (например 68.5)
+  egeYear?: number            // год результатов ЕГЭ
+  programs?: SchoolProgram[]  // программы по ступеням
+  achievements?: string[]     // достижения последних лет
+  faq?: SchoolFAQ[]           // FAQ для страницы школы
 }
 
 // Force typed inference in chunks to avoid TS2590
