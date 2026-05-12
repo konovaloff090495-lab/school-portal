@@ -656,12 +656,14 @@
     },
     {
       "id": "t068",
-      "status": "pending",
+      "status": "error",
       "title": "Сколько стоит образование в России: полный расчёт",
       "slug": "stoimost-obrazovaniya-rossiya",
       "category": "Советы родителям",
       "keywords": "стоимость обучения в школе",
-      "freq": 4500
+      "freq": 4500,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.485Z"
     },
     {
       "id": "t069",
@@ -1385,21 +1387,25 @@
     },
     {
       "id": "t139",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-подготовка к ЕГЭ: топ-5 платформ 2026",
       "slug": "onlayn-podgotovka-k-ege-platformy-2026",
       "category": "Рейтинги",
       "keywords": "онлайн подготовка ЕГЭ платформы",
-      "freq": 4600
+      "freq": 4600,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.226Z"
     },
     {
       "id": "t140",
-      "status": "pending",
+      "status": "error",
       "title": "Когда начинать готовиться к ЕГЭ: в 10 или 11 классе",
       "slug": "kogda-nachinать-gotovitsya-k-ege",
       "category": "Советы родителям",
       "keywords": "когда начинать готовиться ЕГЭ",
-      "freq": 4900
+      "freq": 4900,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:23.556Z"
     },
     {
       "id": "t141",
@@ -1823,12 +1829,14 @@
     },
     {
       "id": "t184",
-      "status": "pending",
+      "status": "error",
       "title": "Как справиться со стрессом перед экзаменами: советы",
       "slug": "kak-spravitsya-so-stressom-pered-ekzamenami",
       "category": "Советы родителям",
       "keywords": "стресс перед экзаменами ребёнок",
-      "freq": 4600
+      "freq": 4600,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.363Z"
     },
     {
       "id": "t185",
@@ -1888,12 +1896,14 @@
     },
     {
       "id": "t191",
-      "status": "pending",
+      "status": "error",
       "title": "Материнский капитал на обучение ребёнка: как использовать",
       "slug": "materinskij-kapital-obuchenie-2026",
       "category": "Советы родителям",
       "keywords": "материнский капитал обучение ребёнок",
-      "freq": 4700
+      "freq": 4700,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:23.708Z"
     },
     {
       "id": "t192",
