@@ -129,7 +129,8 @@
   {
     "city": "Ижевск",
     "slug": "izhevsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "API credit balance exhausted"
   },
   {
     "city": "Барнаул",
