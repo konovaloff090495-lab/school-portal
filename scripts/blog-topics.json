@@ -483,12 +483,14 @@
     },
     {
       "id": "t051",
-      "status": "pending",
+      "status": "error",
       "title": "Школы Монтессори в России: что это и для кого",
       "slug": "shkoly-montessori-rossiya",
       "category": "Типы школ",
       "keywords": "школа монтессори",
-      "freq": 4200
+      "freq": 4200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.712Z"
     },
     {
       "id": "t052",
@@ -594,13 +596,15 @@
     },
     {
       "id": "t062",
-      "status": "pending",
+      "status": "error",
       "title": "Топ-10 школ Москвы по результатам ЕГЭ 2025",
       "slug": "top-10-shkol-moskvy-ege-2025",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школы москвы рейтинг егэ",
-      "freq": 4200
+      "freq": 4200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.806Z"
     },
     {
       "id": "t063",
@@ -1311,12 +1315,14 @@
     },
     {
       "id": "t132",
-      "status": "pending",
+      "status": "error",
       "title": "Дистанционное обучение для детей: плюсы и минусы",
       "slug": "distancionnoe-obuchenie-dlya-detej",
       "category": "Советы родителям",
       "keywords": "дистанционное обучение дети",
-      "freq": 4300
+      "freq": 4300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.537Z"
     },
     {
       "id": "t133",
@@ -1506,12 +1512,14 @@
     },
     {
       "id": "t151",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-школа vs обычная: что лучше для ребёнка",
       "slug": "onlayn-shkola-vs-obychnaya-chto-luchshe",
       "category": "Советы родителям",
       "keywords": "онлайн школа vs обычная",
-      "freq": 4300
+      "freq": 4300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.630Z"
     },
     {
       "id": "t152",
@@ -1858,12 +1866,14 @@
     },
     {
       "id": "t187",
-      "status": "pending",
+      "status": "error",
       "title": "Электронный журнал и дневник: как родителям следить за оценками",
       "slug": "elektronnyj-zhurnal-dnevnik-roditelyam",
       "category": "Советы родителям",
       "keywords": "электронный журнал родители оценки",
-      "freq": 4400
+      "freq": 4400,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.457Z"
     },
     {
       "id": "t188",
