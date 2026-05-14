@@ -111,7 +111,7 @@
   {
     "city": "Саратов",
     "slug": "saratov",
-    "status": "failed",
+    "status": "in-progress",
     "error": "Процесс завершился с кодом 1"
   },
   {
@@ -130,7 +130,8 @@
     "city": "Ижевск",
     "slug": "izhevsk",
     "status": "failed",
-    "error": "API credit balance exhausted"
+    "doneAt": "2026-05-13T10:32:33.074Z",
+    "error": "Deploy failed"
   },
   {
     "city": "Барнаул",
@@ -170,7 +171,8 @@
   {
     "city": "Томск",
     "slug": "tomsk",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-13T07:40:07.564Z"
   },
   {
     "city": "Оренбург",
