@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 47,
-    "lastRun": "2026-05-07T12:24:07.438Z"
+    "generated": 52,
+    "lastRun": "2026-05-14T12:21:20.422Z"
   },
   "topics": [
     {
@@ -269,13 +269,16 @@
     },
     {
       "id": "t031",
-      "status": "pending",
+      "status": "done",
       "title": "Гимназии Москвы: полный список и как поступить в 2026 году",
       "slug": "gimnazii-moskvy-polnyj-spisok",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "гимназии москвы список",
-      "freq": 4100
+      "freq": 4100,
+      "generatedAt": "2026-05-14T12:21:19.626Z",
+      "wordCount": 1366,
+      "seoScore": 95
     },
     {
       "id": "t032",
@@ -775,12 +778,15 @@
     },
     {
       "id": "t079",
-      "status": "pending",
+      "status": "done",
       "title": "Как ребёнок может учиться за рубежом: варианты и цены",
       "slug": "ucheba-za-rubezhom-shkola",
       "category": "Советы родителям",
       "keywords": "школа за рубежом",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:14:50.771Z",
+      "wordCount": 1710,
+      "seoScore": 100
     },
     {
       "id": "t080",
@@ -1037,12 +1043,15 @@
     },
     {
       "id": "t104",
-      "status": "pending",
+      "status": "done",
       "title": "Лучшие онлайн-школы России 2026: рейтинг и сравнение",
       "slug": "luchshie-onlayn-shkoly-rossii-2026",
       "category": "Рейтинги",
       "keywords": "лучшие онлайн школы россия",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:16:24.523Z",
+      "wordCount": 1274,
+      "seoScore": 95
     },
     {
       "id": "t105",
@@ -1276,12 +1285,15 @@
     },
     {
       "id": "t128",
-      "status": "pending",
+      "status": "done",
       "title": "Репетитор или курсы: что лучше для подготовки к ЕГЭ",
       "slug": "repetitor-ili-kursy-chto-luchshe-ege",
       "category": "Советы родителям",
       "keywords": "репетитор или курсы ЕГЭ",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:17:59.522Z",
+      "wordCount": 1418,
+      "seoScore": 95
     },
     {
       "id": "t129",
@@ -1601,12 +1613,15 @@
     },
     {
       "id": "t160",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по физике 2026: что изменилось и как готовиться",
       "slug": "ege-fizika-2026-izmeneniya",
       "category": "Советы родителям",
       "keywords": "ЕГЭ физика 2026",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:19:42.288Z",
+      "wordCount": 1370,
+      "seoScore": 95
     },
     {
       "id": "t161",
