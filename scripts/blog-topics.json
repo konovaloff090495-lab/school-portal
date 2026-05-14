@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 47,
-    "lastRun": "2026-05-07T12:24:07.438Z"
+    "generated": 52,
+    "lastRun": "2026-05-14T12:21:20.422Z"
   },
   "topics": [
     {
@@ -269,13 +269,16 @@
     },
     {
       "id": "t031",
-      "status": "pending",
+      "status": "done",
       "title": "Гимназии Москвы: полный список и как поступить в 2026 году",
       "slug": "gimnazii-moskvy-polnyj-spisok",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "гимназии москвы список",
-      "freq": 4100
+      "freq": 4100,
+      "generatedAt": "2026-05-14T12:21:19.626Z",
+      "wordCount": 1366,
+      "seoScore": 95
     },
     {
       "id": "t032",
@@ -483,12 +486,14 @@
     },
     {
       "id": "t051",
-      "status": "pending",
+      "status": "error",
       "title": "Школы Монтессори в России: что это и для кого",
       "slug": "shkoly-montessori-rossiya",
       "category": "Типы школ",
       "keywords": "школа монтессори",
-      "freq": 4200
+      "freq": 4200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.712Z"
     },
     {
       "id": "t052",
@@ -594,13 +599,15 @@
     },
     {
       "id": "t062",
-      "status": "pending",
+      "status": "error",
       "title": "Топ-10 школ Москвы по результатам ЕГЭ 2025",
       "slug": "top-10-shkol-moskvy-ege-2025",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школы москвы рейтинг егэ",
-      "freq": 4200
+      "freq": 4200,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.806Z"
     },
     {
       "id": "t063",
@@ -656,12 +663,14 @@
     },
     {
       "id": "t068",
-      "status": "pending",
+      "status": "error",
       "title": "Сколько стоит образование в России: полный расчёт",
       "slug": "stoimost-obrazovaniya-rossiya",
       "category": "Советы родителям",
       "keywords": "стоимость обучения в школе",
-      "freq": 4500
+      "freq": 4500,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.485Z"
     },
     {
       "id": "t069",
@@ -769,12 +778,15 @@
     },
     {
       "id": "t079",
-      "status": "pending",
+      "status": "done",
       "title": "Как ребёнок может учиться за рубежом: варианты и цены",
       "slug": "ucheba-za-rubezhom-shkola",
       "category": "Советы родителям",
       "keywords": "школа за рубежом",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:14:50.771Z",
+      "wordCount": 1710,
+      "seoScore": 100
     },
     {
       "id": "t080",
@@ -1031,12 +1043,15 @@
     },
     {
       "id": "t104",
-      "status": "pending",
+      "status": "done",
       "title": "Лучшие онлайн-школы России 2026: рейтинг и сравнение",
       "slug": "luchshie-onlayn-shkoly-rossii-2026",
       "category": "Рейтинги",
       "keywords": "лучшие онлайн школы россия",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:16:24.523Z",
+      "wordCount": 1274,
+      "seoScore": 95
     },
     {
       "id": "t105",
@@ -1270,12 +1285,15 @@
     },
     {
       "id": "t128",
-      "status": "pending",
+      "status": "done",
       "title": "Репетитор или курсы: что лучше для подготовки к ЕГЭ",
       "slug": "repetitor-ili-kursy-chto-luchshe-ege",
       "category": "Советы родителям",
       "keywords": "репетитор или курсы ЕГЭ",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:17:59.522Z",
+      "wordCount": 1418,
+      "seoScore": 95
     },
     {
       "id": "t129",
@@ -1309,12 +1327,14 @@
     },
     {
       "id": "t132",
-      "status": "pending",
+      "status": "error",
       "title": "Дистанционное обучение для детей: плюсы и минусы",
       "slug": "distancionnoe-obuchenie-dlya-detej",
       "category": "Советы родителям",
       "keywords": "дистанционное обучение дети",
-      "freq": 4300
+      "freq": 4300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.537Z"
     },
     {
       "id": "t133",
@@ -1385,21 +1405,25 @@
     },
     {
       "id": "t139",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-подготовка к ЕГЭ: топ-5 платформ 2026",
       "slug": "onlayn-podgotovka-k-ege-platformy-2026",
       "category": "Рейтинги",
       "keywords": "онлайн подготовка ЕГЭ платформы",
-      "freq": 4600
+      "freq": 4600,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.226Z"
     },
     {
       "id": "t140",
-      "status": "pending",
+      "status": "error",
       "title": "Когда начинать готовиться к ЕГЭ: в 10 или 11 классе",
       "slug": "kogda-nachinать-gotovitsya-k-ege",
       "category": "Советы родителям",
       "keywords": "когда начинать готовиться ЕГЭ",
-      "freq": 4900
+      "freq": 4900,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:23.556Z"
     },
     {
       "id": "t141",
@@ -1500,12 +1524,14 @@
     },
     {
       "id": "t151",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-школа vs обычная: что лучше для ребёнка",
       "slug": "onlayn-shkola-vs-obychnaya-chto-luchshe",
       "category": "Советы родителям",
       "keywords": "онлайн школа vs обычная",
-      "freq": 4300
+      "freq": 4300,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.630Z"
     },
     {
       "id": "t152",
@@ -1587,12 +1613,15 @@
     },
     {
       "id": "t160",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по физике 2026: что изменилось и как готовиться",
       "slug": "ege-fizika-2026-izmeneniya",
       "category": "Советы родителям",
       "keywords": "ЕГЭ физика 2026",
-      "freq": 4200
+      "freq": 4200,
+      "generatedAt": "2026-05-14T12:19:42.288Z",
+      "wordCount": 1370,
+      "seoScore": 95
     },
     {
       "id": "t161",
@@ -1823,12 +1852,14 @@
     },
     {
       "id": "t184",
-      "status": "pending",
+      "status": "error",
       "title": "Как справиться со стрессом перед экзаменами: советы",
       "slug": "kak-spravitsya-so-stressom-pered-ekzamenami",
       "category": "Советы родителям",
       "keywords": "стресс перед экзаменами ребёнок",
-      "freq": 4600
+      "freq": 4600,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:24.363Z"
     },
     {
       "id": "t185",
@@ -1850,12 +1881,14 @@
     },
     {
       "id": "t187",
-      "status": "pending",
+      "status": "error",
       "title": "Электронный журнал и дневник: как родителям следить за оценками",
       "slug": "elektronnyj-zhurnal-dnevnik-roditelyam",
       "category": "Советы родителям",
       "keywords": "электронный журнал родители оценки",
-      "freq": 4400
+      "freq": 4400,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-14T13:38:32.457Z"
     },
     {
       "id": "t188",
@@ -1888,12 +1921,14 @@
     },
     {
       "id": "t191",
-      "status": "pending",
+      "status": "error",
       "title": "Материнский капитал на обучение ребёнка: как использовать",
       "slug": "materinskij-kapital-obuchenie-2026",
       "category": "Советы родителям",
       "keywords": "материнский капитал обучение ребёнок",
-      "freq": 4700
+      "freq": 4700,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-13T12:29:23.708Z"
     },
     {
       "id": "t192",
