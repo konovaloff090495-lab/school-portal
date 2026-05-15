@@ -895,12 +895,14 @@
     },
     {
       "id": "t090",
-      "status": "pending",
+      "status": "error",
       "title": "Психолог в школе: зачем нужен и как к нему попасть",
       "slug": "psiholog-v-shkole",
       "category": "Советы родителям",
       "keywords": "школьный психолог",
-      "freq": 4100
+      "freq": 4100,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-16T12:22:10.293Z"
     },
     {
       "id": "t091",
@@ -914,12 +916,14 @@
     },
     {
       "id": "t092",
-      "status": "pending",
+      "status": "error",
       "title": "Как развить математические способности у ребёнка",
       "slug": "razvit-matematicheskie-sposobnosti",
       "category": "Советы родителям",
       "keywords": "математические способности дети",
-      "freq": 3900
+      "freq": 3900,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-16T12:22:11.015Z"
     },
     {
       "id": "t093",
@@ -1104,12 +1108,14 @@
     },
     {
       "id": "t110",
-      "status": "pending",
+      "status": "error",
       "title": "Семейное образование: как перейти и что нужно знать в 2026",
       "slug": "semejnoe-obrazovanie-kak-perejti-2026",
       "category": "Типы школ",
       "keywords": "семейное образование как перейти",
-      "freq": 4100
+      "freq": 4100,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-16T12:22:10.426Z"
     },
     {
       "id": "t111",
@@ -1436,12 +1442,14 @@
     },
     {
       "id": "t142",
-      "status": "pending",
+      "status": "error",
       "title": "ЕГЭ по английскому 2026: структура и как готовиться",
       "slug": "ege-anglijskij-2026-struktura",
       "category": "Советы родителям",
       "keywords": "ЕГЭ английский 2026",
-      "freq": 4100
+      "freq": 4100,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-16T12:22:10.771Z"
     },
     {
       "id": "t143",
@@ -1813,12 +1821,14 @@
     },
     {
       "id": "t180",
-      "status": "pending",
+      "status": "error",
       "title": "Целевое обучение в вузе: как получить место от работодателя",
       "slug": "celevoe-obuchenie-v-vuze-kak-poluchit",
       "category": "Советы родителям",
       "keywords": "целевое обучение вуз",
-      "freq": 4100
+      "freq": 4100,
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"reque",
+      "retryAt": "2026-05-16T12:22:10.890Z"
     },
     {
       "id": "t181",
