@@ -1,0 +1,25 @@
+{
+  "done": [],
+  "failed": [
+    {
+      "id": "school-179",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CawSoUnG6An55RQFGEJZ7\"}",
+      "ts": "2026-05-11T20:53:33.518Z"
+    },
+    {
+      "id": "school-179",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CawT6nAFg9Sq7n3gxW1JA\"}",
+      "ts": "2026-05-11T20:57:28.080Z"
+    },
+    {
+      "id": "school-57",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CawT6pm24HHbptGN2cyzv\"}",
+      "ts": "2026-05-11T20:57:28.728Z"
+    },
+    {
+      "id": "shkola-gimnazia-1543",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CawT6sBsYgrfq4fD8yUkv\"}",
+      "ts": "2026-05-11T20:57:29.192Z"
+    }
+  ]
+}

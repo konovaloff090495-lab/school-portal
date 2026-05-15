@@ -142,22 +142,27 @@
   {
     "city": "Ульяновск",
     "slug": "ulyanovsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Иркутск",
     "slug": "irkutsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "API credit balance exhausted"
   },
   {
     "city": "Хабаровск",
     "slug": "khabarovsk",
-    "status": "pending"
+    "status": "done",
+    "doneAt": "2026-05-14T22:54:31.495Z",
+    "error": "Deploy failed"
   },
   {
     "city": "Ярославль",
     "slug": "yaroslavl",
-    "status": "pending"
+    "status": "failed",
+    "error": "API credit balance exhausted"
   },
   {
     "city": "Владивосток",
