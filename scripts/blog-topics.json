@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 52,
-    "lastRun": "2026-05-14T12:21:20.422Z"
+    "generated": 57,
+    "lastRun": "2026-05-16T10:51:58.014Z"
   },
   "topics": [
     {
@@ -282,13 +282,16 @@
     },
     {
       "id": "t032",
-      "status": "pending",
+      "status": "done",
       "title": "Лицеи Москвы: топ-15 и условия поступления",
       "slug": "litsej-moskvy-top-15",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "лицеи москвы",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-16T10:50:19.258Z",
+      "wordCount": 1358,
+      "seoScore": 95
     },
     {
       "id": "t033",
@@ -620,13 +623,16 @@
     },
     {
       "id": "t064",
-      "status": "pending",
+      "status": "done",
       "title": "Рейтинг частных школ Москвы 2026",
       "slug": "rejting-chastnyh-shkol-moskvy-2026",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "рейтинг частных школ москвы",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-16T10:51:57.309Z",
+      "wordCount": 1443,
+      "seoScore": 95
     },
     {
       "id": "t065",
@@ -1303,12 +1309,15 @@
     },
     {
       "id": "t129",
-      "status": "pending",
+      "status": "done",
       "title": "Школьная форма в России 2026: требования и выбор",
       "slug": "shkolnaya-forma-rossiya-2026-trebovaniya",
       "category": "Советы родителям",
       "keywords": "школьная форма требования 2026",
-      "freq": 3900
+      "freq": 3900,
+      "generatedAt": "2026-05-16T10:45:16.442Z",
+      "wordCount": 1417,
+      "seoScore": 90
     },
     {
       "id": "t130",
@@ -1812,12 +1821,15 @@
     },
     {
       "id": "t179",
-      "status": "pending",
+      "status": "done",
       "title": "Всероссийская олимпиада школьников: как подготовиться",
       "slug": "vserossijskaya-olimpiada-shkolnikov-podgotovka",
       "category": "Советы родителям",
       "keywords": "всероссийская олимпиада подготовка",
-      "freq": 3900
+      "freq": 3900,
+      "generatedAt": "2026-05-16T10:47:05.428Z",
+      "wordCount": 1390,
+      "seoScore": 95
     },
     {
       "id": "t180",
@@ -1961,12 +1973,15 @@
     },
     {
       "id": "t194",
-      "status": "pending",
+      "status": "done",
       "title": "Бесплатные кружки и секции для школьников: где найти",
       "slug": "besplatnye-kruzhki-sekcii-shkolnikov",
       "category": "Советы родителям",
       "keywords": "бесплатные кружки школьники",
-      "freq": 3900
+      "freq": 3900,
+      "generatedAt": "2026-05-16T10:48:41.740Z",
+      "wordCount": 1468,
+      "seoScore": 95
     },
     {
       "id": "t195",
