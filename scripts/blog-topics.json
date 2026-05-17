@@ -3,8 +3,13 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 52,
-    "lastRun": "2026-05-14T12:21:20.422Z"
+<<<<<<< Updated upstream
+    "generated": 62,
+    "lastRun": "2026-05-17T11:01:36.215Z"
+=======
+    "generated": 57,
+    "lastRun": "2026-05-16T05:24:57.505Z"
+>>>>>>> Stashed changes
   },
   "topics": [
     {
@@ -289,8 +294,8 @@
       "city": "Москва",
       "keywords": "лицеи москвы",
       "freq": 3800,
-      "generatedAt": "2026-05-16T03:07:14.497Z",
-      "wordCount": 1430,
+      "generatedAt": "2026-05-16T10:50:19.258Z",
+      "wordCount": 1358,
       "seoScore": 95
     },
     {
@@ -630,8 +635,8 @@
       "city": "Москва",
       "keywords": "рейтинг частных школ москвы",
       "freq": 3800,
-      "generatedAt": "2026-05-16T03:08:56.950Z",
-      "wordCount": 1452,
+      "generatedAt": "2026-05-16T10:51:57.309Z",
+      "wordCount": 1443,
       "seoScore": 95
     },
     {
@@ -743,12 +748,15 @@
     },
     {
       "id": "t075",
-      "status": "pending",
+      "status": "done",
       "title": "Как выбрать онлайн-школу: 10 критериев",
       "slug": "kak-vybrat-onlajn-shkolu-kriterii",
       "category": "Советы родителям",
       "keywords": "как выбрать онлайн школу",
-      "freq": 3600
+      "freq": 3600,
+      "generatedAt": "2026-05-17T11:01:35.342Z",
+      "wordCount": 1495,
+      "seoScore": 95
     },
     {
       "id": "t076",
@@ -1134,12 +1142,15 @@
     },
     {
       "id": "t112",
-      "status": "pending",
+      "status": "done",
       "title": "Домашнее обучение: плюсы, минусы и как оформить в 2026",
       "slug": "domashee-obuchenie-plyusy-minusy-2026",
       "category": "Типы школ",
       "keywords": "домашнее обучение оформить",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-17T10:54:41.296Z",
+      "wordCount": 1582,
+      "seoScore": 95
     },
     {
       "id": "t113",
@@ -1288,12 +1299,15 @@
     },
     {
       "id": "t127",
-      "status": "pending",
+      "status": "done",
       "title": "Платные секции в школе: что обязательно, что добровольно",
       "slug": "platnye-sekcii-v-shkole-chto-obyazatelno",
       "category": "Советы родителям",
       "keywords": "платные секции школа обязательно",
-      "freq": 3700
+      "freq": 3700,
+      "generatedAt": "2026-05-17T10:58:09.954Z",
+      "wordCount": 1282,
+      "seoScore": 90
     },
     {
       "id": "t128",
@@ -1315,9 +1329,9 @@
       "category": "Советы родителям",
       "keywords": "школьная форма требования 2026",
       "freq": 3900,
-      "generatedAt": "2026-05-16T03:01:47.261Z",
-      "wordCount": 1533,
-      "seoScore": 95
+      "generatedAt": "2026-05-16T10:45:16.442Z",
+      "wordCount": 1417,
+      "seoScore": 90
     },
     {
       "id": "t130",
@@ -1442,12 +1456,15 @@
     },
     {
       "id": "t141",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по информатике 2026: разбор формата и советы",
       "slug": "ege-informatika-2026-format-sovety",
       "category": "Советы родителям",
       "keywords": "ЕГЭ информатика 2026",
-      "freq": 3700
+      "freq": 3700,
+      "generatedAt": "2026-05-17T10:59:44.410Z",
+      "wordCount": 1257,
+      "seoScore": 90
     },
     {
       "id": "t142",
@@ -1642,12 +1659,15 @@
     },
     {
       "id": "t161",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по химии 2026: структура экзамена и лучшие курсы",
       "slug": "ege-himiya-2026-kak-sdat",
       "category": "Советы родителям",
       "keywords": "ЕГЭ химия 2026",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-17T10:56:38.968Z",
+      "wordCount": 1573,
+      "seoScore": 95
     },
     {
       "id": "t162",
@@ -1827,9 +1847,9 @@
       "category": "Советы родителям",
       "keywords": "всероссийская олимпиада подготовка",
       "freq": 3900,
-      "generatedAt": "2026-05-16T03:03:52.959Z",
-      "wordCount": 1706,
-      "seoScore": 100
+      "generatedAt": "2026-05-16T10:47:05.428Z",
+      "wordCount": 1390,
+      "seoScore": 95
     },
     {
       "id": "t180",
@@ -1979,8 +1999,8 @@
       "category": "Советы родителям",
       "keywords": "бесплатные кружки школьники",
       "freq": 3900,
-      "generatedAt": "2026-05-16T03:05:33.107Z",
-      "wordCount": 1387,
+      "generatedAt": "2026-05-16T10:48:41.740Z",
+      "wordCount": 1468,
       "seoScore": 95
     },
     {
