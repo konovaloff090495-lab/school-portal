@@ -3,8 +3,8 @@
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
     "totalTopics": 201,
-    "generated": 57,
-    "lastRun": "2026-05-16T10:51:58.014Z"
+    "generated": 62,
+    "lastRun": "2026-05-17T11:01:36.215Z"
   },
   "topics": [
     {
@@ -743,12 +743,15 @@
     },
     {
       "id": "t075",
-      "status": "pending",
+      "status": "done",
       "title": "Как выбрать онлайн-школу: 10 критериев",
       "slug": "kak-vybrat-onlajn-shkolu-kriterii",
       "category": "Советы родителям",
       "keywords": "как выбрать онлайн школу",
-      "freq": 3600
+      "freq": 3600,
+      "generatedAt": "2026-05-17T11:01:35.342Z",
+      "wordCount": 1495,
+      "seoScore": 95
     },
     {
       "id": "t076",
@@ -1134,12 +1137,15 @@
     },
     {
       "id": "t112",
-      "status": "pending",
+      "status": "done",
       "title": "Домашнее обучение: плюсы, минусы и как оформить в 2026",
       "slug": "domashee-obuchenie-plyusy-minusy-2026",
       "category": "Типы школ",
       "keywords": "домашнее обучение оформить",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-17T10:54:41.296Z",
+      "wordCount": 1582,
+      "seoScore": 95
     },
     {
       "id": "t113",
@@ -1288,12 +1294,15 @@
     },
     {
       "id": "t127",
-      "status": "pending",
+      "status": "done",
       "title": "Платные секции в школе: что обязательно, что добровольно",
       "slug": "platnye-sekcii-v-shkole-chto-obyazatelno",
       "category": "Советы родителям",
       "keywords": "платные секции школа обязательно",
-      "freq": 3700
+      "freq": 3700,
+      "generatedAt": "2026-05-17T10:58:09.954Z",
+      "wordCount": 1282,
+      "seoScore": 90
     },
     {
       "id": "t128",
@@ -1442,12 +1451,15 @@
     },
     {
       "id": "t141",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по информатике 2026: разбор формата и советы",
       "slug": "ege-informatika-2026-format-sovety",
       "category": "Советы родителям",
       "keywords": "ЕГЭ информатика 2026",
-      "freq": 3700
+      "freq": 3700,
+      "generatedAt": "2026-05-17T10:59:44.410Z",
+      "wordCount": 1257,
+      "seoScore": 90
     },
     {
       "id": "t142",
@@ -1642,12 +1654,15 @@
     },
     {
       "id": "t161",
-      "status": "pending",
+      "status": "done",
       "title": "ЕГЭ по химии 2026: структура экзамена и лучшие курсы",
       "slug": "ege-himiya-2026-kak-sdat",
       "category": "Советы родителям",
       "keywords": "ЕГЭ химия 2026",
-      "freq": 3800
+      "freq": 3800,
+      "generatedAt": "2026-05-17T10:56:38.968Z",
+      "wordCount": 1573,
+      "seoScore": 95
     },
     {
       "id": "t162",
