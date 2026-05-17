@@ -45698,6 +45698,7 @@ export const schools: School[] = ([
   },
     {
     id: 'gosud-moskva-2',
+    slug: 'gbou-shkola-57-moskva',
     name: 'ГБОУ Школа № 57',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -45718,6 +45719,7 @@ export const schools: School[] = ([
   },
     {
     id: 'gosud-moskva-3',
+    slug: 'gbou-shkola-179-moskva',
     name: 'ГБОУ Школа № 179',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -45801,6 +45803,7 @@ export const schools: School[] = ([
   },
     {
     id: 'gosud-moskva-7',
+    slug: 'gbou-shkola-1329-moskva',
     name: 'ГБОУ Школа № 1329',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
