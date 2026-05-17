@@ -3,6 +3,10 @@ import { schools } from '@/data/schools'
 import CatalogClient from './CatalogClient'
 import { WebSiteJsonLd } from '@/lib/schema'
 
+// Страница с большим каталогом школ — отключаем статическую генерацию
+// чтобы не превышать лимит Vercel 19 МБ для pre-rendered HTML
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: `Все школы России — каталог ${new Date().getFullYear()}`,
   description: `Полный каталог школ России: государственные, частные, онлайн, вечерние и экстернат. ${schools.length} школ с адресами, телефонами и описаниями.`,
