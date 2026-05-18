@@ -167,7 +167,8 @@
   {
     "city": "Владивосток",
     "slug": "vladivostok",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Махачкала",
