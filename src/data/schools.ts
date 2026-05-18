@@ -1,5 +1,5 @@
 export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie' | 'mezhdunarodnie' | 'programmirovanie' | 'shahmatnye' | 'podgotovka-ege' | 'podgotovka-oge' | 'internaty' | 'valdorfskie' | 'montessori' | 'pravoslavnye' | 'sportivnye' | 'yazykovye'
-export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd' | 'krasnoyarsk' | 'saratov' | 'tomsk' | 'izhevsk' | 'barnaul' | 'ulyanovsk' | 'irkutsk' | 'khabarovsk'
+export type RegionSlug = 'moskva' | 'moskovskaya-oblast' | 'novosibirsk' | 'ekaterinburg' | 'kazan' | 'nizhniy-novgorod' | 'sankt-peterburg' | 'chelyabinsk' | 'omsk' | 'samara' | 'rostov-na-donu' | 'ufa' | 'krasnodar' | 'perm' | 'voronezh' | 'volgograd' | 'krasnoyarsk' | 'saratov' | 'tomsk' | 'izhevsk' | 'barnaul' | 'ulyanovsk' | 'irkutsk' | 'khabarovsk' | 'vladivostok'
 
 export interface SchoolProgram {
   grades: string        // '1-4' | '5-9' | '10-11'
@@ -58015,6 +58015,7 @@ export const regionLabels: Record<RegionSlug, string> = {
   'ulyanovsk': 'Ульяновск',
   'irkutsk': 'Иркутск',
   'khabarovsk': 'Хабаровск',
+  'vladivostok': 'Владивосток',
 }
 
 // Предложный падеж — «в Москве», «в Волгограде» (для H1)
@@ -58043,6 +58044,7 @@ export const regionLabelsIn: Record<RegionSlug, string> = {
   'ulyanovsk':            'в Ульяновске',
   'irkutsk':            'в Иркутске',
   'khabarovsk':            'в Хабаровске',
+  'vladivostok':            'в Владивостоке',
 }
 
 // Родительный падеж — «Москвы», «Волгограда» (для meta title/description)
@@ -58071,9 +58073,10 @@ export const regionLabelsOf: Record<RegionSlug, string> = {
   'ulyanovsk':            'Ульяновска',
   'irkutsk':            'Иркутска',
   'khabarovsk':            'Хабаровска',
+  'vladivostok':            'Владивостока',
 }
 
-export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk']
+export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk', 'vladivostok']
 
 export function getSchoolsByRegion(region: RegionSlug): School[] {
   return schools.filter(s => s.region === region)
