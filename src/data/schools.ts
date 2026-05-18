@@ -49957,6 +49957,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-kazan-2',
+    slug: 'gimnaziya-19-shevchenko-kazan',
     name: 'Гимназия № 19 имени Л.И. Шевченко',
     type: 'yazykovye' as const,
     region: 'kazan' as const,
@@ -49977,6 +49978,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-kazan-3',
+    slug: 'shkola-39-anglijskij-kazan',
     name: 'Средняя школа № 39 с углублённым изучением английского языка',
     type: 'yazykovye' as const,
     region: 'kazan' as const,
@@ -50018,6 +50020,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-kazan-5',
+    slug: 'gimnaziya-7-vostochnye-yazyki-kazan',
     name: 'Гимназия № 7 с изучением восточных языков',
     type: 'yazykovye' as const,
     region: 'kazan' as const,
@@ -50058,6 +50061,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-kazan-7',
+    slug: 'gimnaziya-96-francuzskij-kazan',
     name: 'Гимназия № 96 с углублённым изучением французского языка',
     type: 'yazykovye' as const,
     region: 'kazan' as const,
@@ -50265,6 +50269,7 @@ export const schools: School[] = ([
   // ===== НИЖНИЙ НОВГОРОД — ПРАВОСЛАВНЫЕ =====
   {
     id: 'pravo-nizhniy-novgorod-1',
+    slug: 'pravoslavnaya-gimnaziya-aleksandra-nevskogo-nn',
     name: 'Православная гимназия имени святого благоверного князя Александра Невского',
     type: 'pravoslavnye' as const,
     region: 'nizhniy-novgorod' as const,
@@ -50765,6 +50770,7 @@ export const schools: School[] = ([
   // ===== НИЖНИЙ НОВГОРОД — ЯЗЫКОВЫЕ =====
   {
     id: 'yazyk-nizhniy-novgorod-1',
+    slug: 'gimnaziya-1-anglijskij-nizhniy-novgorod',
     name: 'Гимназия № 1 с углублённым изучением английского языка',
     type: 'yazykovye' as const,
     region: 'nizhniy-novgorod' as const,
@@ -51611,6 +51617,7 @@ export const schools: School[] = ([
   // ===== САНКТ-ПЕТЕРБУРГ — ЯЗЫКОВЫЕ =====
   {
     id: 'yazyk-sankt-peterburg-1',
+    slug: 'gimnaziya-56-mendeleeva-spb',
     name: 'Гимназия № 56 имени Д.И. Менделеева',
     type: 'yazykovye' as const,
     region: 'sankt-peterburg' as const,
@@ -52428,6 +52435,7 @@ export const schools: School[] = ([
   // ===== ЧЕЛЯБИНСК — ЯЗЫКОВЫЕ =====
   {
     id: 'yazyk-chelyabinsk-1',
+    slug: 'gimnaziya-26-chelyabinsk',
     name: 'Гимназия № 26',
     type: 'yazykovye' as const,
     region: 'chelyabinsk' as const,
@@ -52487,6 +52495,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-chelyabinsk-4',
+    slug: 'gimnaziya-80-chelyabinsk',
     name: 'Гимназия № 80',
     type: 'yazykovye' as const,
     region: 'chelyabinsk' as const,
@@ -54208,6 +54217,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-samara-8',
+    slug: 'shkola-132-anglijskij-samara',
     name: 'Средняя школа № 132 с углублённым изучением английского языка',
     type: 'yazykovye' as const,
     region: 'samara' as const,
@@ -54917,6 +54927,7 @@ export const schools: School[] = ([
   },
     {
     id: 'yazyk-rostov-na-donu-3',
+    slug: 'shkola-80-anglijskij-rostov-na-donu',
     name: 'Средняя школа № 80 с углублённым изучением английского языка',
     type: 'yazykovye' as const,
     region: 'rostov-na-donu' as const,
