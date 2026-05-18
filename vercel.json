@@ -2,5 +2,8 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "regions": ["fra1"]
+  "regions": ["fra1"],
+  "env": {
+    "VERCEL_BYPASS_FALLBACK_OVERSIZED_ERROR": "1"
+  }
 }
