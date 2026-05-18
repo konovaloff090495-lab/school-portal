@@ -12,11 +12,13 @@ jobs:
 
     steps:
       - name: Trigger Vercel deployment via API
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          COMMIT_SHA: ${{ github.sha }}
         run: |
-          COMMIT=$(git ls-remote https://github.com/konovaloff090495-lab/school-portal.git HEAD | cut -f1)
-          echo "Triggering deployment for commit: $COMMIT"
+          echo "Triggering deployment for commit: $COMMIT_SHA"
           curl -sf -X POST "https://api.vercel.com/v13/deployments?teamId=team_nn4HHJh7sr6tITE0mA24TmBT" \
-            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
             -H "Content-Type: application/json" \
             -d "{
               \"name\": \"school-portal\",
@@ -27,6 +29,6 @@ jobs:
                 \"org\": \"konovaloff090495-lab\",
                 \"repo\": \"school-portal\",
                 \"ref\": \"main\",
-                \"sha\": \"$COMMIT\"
+                \"sha\": \"$COMMIT_SHA\"
               }
             }" | python3 -c "import sys,json; d=json.load(sys.stdin); print('Deployment:', d.get('url'), '— state:', d.get('readyState'))"
