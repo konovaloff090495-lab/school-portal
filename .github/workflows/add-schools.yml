@@ -1,9 +1,9 @@
 name: Add School Cards
 
 on:
-  schedule:
-    # Каждый день в 08:00 МСК (05:00 UTC)
-    - cron: '0 5 * * *'
+  # schedule:
+    # # Каждый день в 08:00 МСК (05:00 UTC)
+    # - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
       city:
