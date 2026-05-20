@@ -1,9 +1,9 @@
 name: Add New City
 
 on:
-  schedule:
-    # Пн, Ср, Пт в 10:00 МСК (07:00 UTC) — добавляем 1 новый город из очереди
-    - cron: '0 7 * * 1,3,5'
+  # schedule:
+    # # Пн, Ср, Пт в 10:00 МСК (07:00 UTC) — добавляем 1 новый город из очереди
+    # - cron: '0 7 * * 1,3,5'
   workflow_dispatch:
     inputs:
       city_slug:

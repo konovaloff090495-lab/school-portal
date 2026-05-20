@@ -1,9 +1,9 @@
 name: Generate Textbook Articles
 
 on:
-  schedule:
-    # Каждый день в 11:00 МСК (08:00 UTC)
-    - cron: '0 8 * * *'
+  # schedule:
+    # # Каждый день в 11:00 МСК (08:00 UTC)
+    # - cron: '0 8 * * *'
   workflow_dispatch:
     inputs:
       subject:

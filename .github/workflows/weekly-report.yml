@@ -1,9 +1,9 @@
 name: Weekly Balance Report
 
 on:
-  schedule:
-    # Каждый понедельник в 08:00 МСК (05:00 UTC)
-    - cron: '0 5 * * 1'
+  # schedule:
+    # # Каждый понедельник в 08:00 МСК (05:00 UTC)
+    # - cron: '0 5 * * 1'
   workflow_dispatch:
     inputs:
       days:
