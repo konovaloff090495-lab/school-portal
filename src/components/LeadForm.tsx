@@ -9,8 +9,6 @@ interface LeadFormProps {
   title?: string
 }
 
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? ''
-
 // ── Phone mask ────────────────────────────────────────────────────────────────
 function formatPhone(raw: string): string {
   // оставляем только цифры
@@ -87,24 +85,21 @@ export default function LeadForm({ schoolName, compact = false, title }: LeadFor
     if (err) { setPhoneError(err); return }
     setLoading(true)
 
-    if (FORMSPREE_ID) {
-      try {
-        await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            name: form.name,
-            phone: form.phone,
-            email: form.email,
-            question: form.question,
-            school: schoolName ?? 'Не указана',
-            pd_agreed: pdAgreed,
-            marketing_agreed: marketingAgreed,
-            _subject: `Заявка со школьного портала: ${schoolName ?? 'общая'}`,
-          }),
-        })
-      } catch {}
-    }
+    try {
+      await fetch('/api/leads/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          question: form.question,
+          school: schoolName ?? 'Не указана',
+          pd_agreed: pdAgreed,
+          marketing_agreed: marketingAgreed,
+        }),
+      })
+    } catch {}
 
     setLoading(false)
     router.push('/spasibo/')

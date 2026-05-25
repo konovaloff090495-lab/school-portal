@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendTelegramMessage } from '@/lib/telegram'
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
 const GITHUB_OWNER = process.env.GITHUB_OWNER
-const GITHUB_REPO = process.env.GITHUB_REPO
+const GITHUB_REPO  = process.env.GITHUB_REPO
 
 export async function POST(req: NextRequest) {
   try {
@@ -69,6 +70,21 @@ export async function POST(req: NextRequest) {
       console.error('GitHub API error:', ghErr)
       return NextResponse.json({ error: 'Не удалось сохранить отзыв. Попробуйте позже.' }, { status: 500 })
     }
+
+    // Telegram notification (fire-and-forget)
+    const stars = '⭐'.repeat(rating)
+    const schoolLabel = reviewData.schoolName || schoolSlug
+    let msg = `📝 <b>Новый отзыв</b>\n\n`
+    msg += `🏫 Школа: <b>${schoolLabel}</b>\n`
+    msg += `👤 Автор: ${reviewData.authorName}`
+    if (reviewData.childGrade) msg += ` (класс: ${reviewData.childGrade})`
+    msg += `\n${stars} Оценка: ${rating}/5\n\n`
+    msg += `💬 ${reviewData.text}`
+    if (reviewData.pros) msg += `\n\n✅ Плюсы: ${reviewData.pros}`
+    if (reviewData.cons) msg += `\n\n❌ Минусы: ${reviewData.cons}`
+    msg += `\n\n⏳ Ожидает модерации`
+
+    sendTelegramMessage(msg).catch(() => {})
 
     return NextResponse.json({ success: true })
   } catch (err) {
