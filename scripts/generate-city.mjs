@@ -84,7 +84,7 @@ if (!ANTHROPIC_KEY) {
   console.error('   export ANTHROPIC_API_KEY=sk-ant-...')
   process.exit(1)
 }
-const anthropic = new Anthropic({ apiKey: ANTHROPIC_KEY })
+const anthropic = new Anthropic({ apiKey: ANTHROPIC_KEY, timeout: 120000 })
 
 // ─── Трекинг токенов ─────────────────────────────────────────────────────────
 const tokenUsage = { input: 0, output: 0 }
