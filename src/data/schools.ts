@@ -66056,7 +66056,7 @@ export function getSchoolBySlug(slug: string): School | undefined {
 }
 
 export function getAllSchoolSlugs(): string[] {
-  return schools.map(s => s.slug)
+  return [...new Set(schools.map(s => s.slug).filter((s): s is string => !!s))]
 }
 
 export function formatPrice(price: number): string {
