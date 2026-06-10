@@ -119,11 +119,11 @@ export default function Footer() {
                 Экзамены
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
-                <li><Link href="/shkoly/osobennosti/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Подготовка к ЕГЭ</Link></li>
-                <li><Link href="/shkoly/osobennosti/podgotovka-k-oge/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Подготовка к ОГЭ</Link></li>
+                <li><Link href="/ege/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Разборы заданий ЕГЭ →</Link></li>
+                <li><Link href="/oge/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Разборы заданий ОГЭ →</Link></li>
+                <li><Link href="/shkoly/osobennosti/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Школы — подготовка к ЕГЭ</Link></li>
+                <li><Link href="/shkoly/osobennosti/podgotovka-k-oge/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Школы — подготовка к ОГЭ</Link></li>
                 <li><Link href="/shkoly/moskva/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Москва</Link></li>
-                <li><Link href="/shkoly/sankt-peterburg/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Санкт-Петербург</Link></li>
-                <li><Link href="/shkoly/novosibirsk/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Новосибирск</Link></li>
                 <li style={{ marginTop: 8 }}>
                   <Link href="/shkoly/osobennosti/it-klass/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">IT-классы</Link>
                 </li>
