@@ -44,7 +44,7 @@ export default function Footer() {
                 Типы школ
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
-                {typeSlugs.map(type => (
+                {typeSlugs.slice(0, 10).map(type => (
                   <li key={type}>
                     <Link
                       href={`/shkoly/tipy/${type}/`}
@@ -55,6 +55,11 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link href="/shkoly/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">
+                    Все типы →
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -100,21 +105,15 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-                {regionSlugs.filter(r => !MAIN_REGIONS.includes(r as typeof MAIN_REGIONS[number])).map(region => (
-                  <li key={region}>
-                    <Link
-                      href={`/shkoly/${region}/`}
-                      style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }}
-                      className="footer-link"
-                    >
-                      {regionLabels[region]}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link href="/shkoly/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">
+                    Все города →
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Подготовка к экзаменам + быстрые ссылки */}
+            {/* Подготовка к экзаменам */}
             <div>
               <h3 style={{ fontSize: 13, fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>
                 Экзамены
@@ -122,13 +121,9 @@ export default function Footer() {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
                 <li><Link href="/shkoly/osobennosti/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Подготовка к ЕГЭ</Link></li>
                 <li><Link href="/shkoly/osobennosti/podgotovka-k-oge/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Подготовка к ОГЭ</Link></li>
-                {regionSlugs.slice(0, 6).map(r => (
-                  <li key={r}>
-                    <Link href={`/shkoly/${r}/podgotovka-k-ege/`} style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">
-                      ЕГЭ — {regionLabels[r]}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link href="/shkoly/moskva/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Москва</Link></li>
+                <li><Link href="/shkoly/sankt-peterburg/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Санкт-Петербург</Link></li>
+                <li><Link href="/shkoly/novosibirsk/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Новосибирск</Link></li>
                 <li style={{ marginTop: 8 }}>
                   <Link href="/shkoly/osobennosti/it-klass/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">IT-классы</Link>
                 </li>
