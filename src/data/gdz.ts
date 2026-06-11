@@ -1830,12 +1830,27 @@ const kanakina2Extra: GdzProblem[] = [
   { number: '321', page: 166, condition: 'Вставьте пропущенную букву: «ж_раф» (словарное слово).', steps: ['Жираф — словарное слово, запомнить: жИраф.'], answer: 'жИраф.' },
 ]
 
+// ── Канакина 2 extra-2 ──
+const kanakina2Extra2: GdzProblem[] = [
+  { number: '22', page: 17, condition: 'Разберите слово «школьник» по составу.', steps: ['школ- — корень (школа).', '-ьник — суффикс.', 'Нулевое окончание.', 'Основа: школьник.'], answer: 'школ|ьник — корень+суффикс.' },
+  { number: '31', page: 21, condition: 'Найдите в предложении прилагательное: «Большой белый медведь живёт на севере».', steps: ['Отвечают на вопрос «какой?»: большой, белый — имена прилагательные.'], answer: 'большой, белый.' },
+  { number: '42', page: 26, condition: 'Запишите слова в алфавитном порядке: ёжик, утка, зебра, муравей.', steps: ['Алфавит: а, б, в, г, д, е, ё, ж, з... у.', 'Порядок: ёжик, зебра, муравей, утка.'], answer: 'ёжик, зебра, муравей, утка.' },
+  { number: '62', page: 34, condition: 'Правило «жи-ши»: вставьте букву — «ш_рина», «ж_тель».', steps: ['жи-ши пишем с «и»: ширина, житель.'], answer: 'шИрина, жИтель.' },
+  { number: '72', page: 38, condition: 'Составьте предложение с обращением.', steps: ['Обращение выделяется запятой.', 'Мама, посмотри на закат!'], answer: 'Пример: «Мама, посмотри на закат!»' },
+  { number: '132', page: 68, condition: 'Подберите однокоренные слова к «вода»: 3 слова.', steps: ['водный, водопад, водяной.', 'Общий корень -ВОД-.'], answer: 'водный, водопад, водяной.' },
+  { number: '142', page: 72, condition: 'Разделите слова для переноса: «ручка», «весна», «класс».', steps: ['руч-ка, вес-на, класс (нельзя разделить — одна гласная).'], answer: 'руч-ка, вес-на, класс (без переноса).' },
+  { number: '152', page: 78, condition: 'Найдите безударную гласную в корне и подберите проверочное слово: «с_дит».', steps: ['с_дит — проверяем: сесть? нет... сидеть → сИдит (сИд-).', 'Корень сид-: сИдит.'], answer: 'сИдит (проверка: сИдя).' },
+  { number: '232', page: 118, condition: 'Определите число существительного: «окна», «стол», «птицы».', steps: ['окна — множественное число.', 'стол — единственное число.', 'птицы — множественное число.'], answer: 'окна — мн.ч.; стол — ед.ч.; птицы — мн.ч.' },
+  { number: '242', page: 122, condition: 'Образуйте женский и мужской род прилагательного «красный».', steps: ['красный (м.р.), красная (ж.р.), красное (ср.р.).'], answer: 'красный, красная.' },
+  { number: '330', page: 168, condition: 'Вставьте ь или ъ: «об_явление», «вос_питание».', steps: ['объявление — после приставки об- перед я: ъ.', 'воспитание — разделительного знака нет.'], answer: 'объявление; воспитание (без знака).' },
+  { number: '340', page: 172, condition: 'Правило «ча-ща»: вставьте букву — «ч_сы», «рощ_».', steps: ['ча-ща пишем с «а»: часы, роща.'], answer: 'чАсы, рощА.' },
+]
 const kanakina2ChaptersExt: GdzChapter[] = [
-  { title: 'Повторение', problems: [ ...kanakina2Solutions, ...kanakina2Extra.slice(0, 2), ...makeProblems(20, 50, 18) ] },
-  { title: 'Текст. Предложение. Словосочетание', problems: [ ...kanakina2Extra.slice(2, 3), ...makeProblems(55, 120, 38) ] },
-  { title: 'Слово в языке и речи', problems: [ ...kanakina2Extra.slice(3, 4), ...makeProblems(125, 220, 75) ] },
-  { title: 'Части речи', problems: [ ...kanakina2Extra.slice(4, 5), ...makeProblems(225, 320, 133) ] },
-  { title: 'Правописание', problems: [ ...kanakina2Extra.slice(5), ...makeProblems(325, 400, 191) ] },
+  { title: 'Повторение', problems: [ ...kanakina2Solutions, ...kanakina2Extra.slice(0, 2), ...kanakina2Extra2.slice(0, 3), ...makeProblems(45, 50, 22) ] },
+  { title: 'Текст. Предложение. Словосочетание', problems: [ ...kanakina2Extra.slice(2, 3), ...kanakina2Extra2.slice(3, 5), ...makeProblems(75, 120, 45) ] },
+  { title: 'Слово в языке и речи', problems: [ ...kanakina2Extra.slice(3, 4), ...kanakina2Extra2.slice(5, 8), ...makeProblems(155, 220, 88) ] },
+  { title: 'Части речи', problems: [ ...kanakina2Extra.slice(4, 5), ...kanakina2Extra2.slice(8, 10), ...makeProblems(245, 320, 142) ] },
+  { title: 'Правописание', problems: [ ...kanakina2Extra.slice(5), ...kanakina2Extra2.slice(10), ...makeProblems(345, 400, 198) ] },
 ]
 
 const kanakina2Chapters: GdzChapter[] = [
@@ -1896,11 +1911,26 @@ const kanakina3Extra: GdzProblem[] = [
   { number: '281', page: 144, condition: 'Найдите слова с безударной гласной, требующей проверки: «молоко», «стол», «вода».', steps: ['молоко — безударная гласная О в первом слоге → молОко (проверка: ?).', 'стол — гласная О под ударением.', 'вода — безударная О → воды (ударная).'], answer: 'молоко, вода — безударные гласные требуют проверки.' },
 ]
 
+// ── Канакина 3 extra-2 ──
+const kanakina3Extra2: GdzProblem[] = [
+  { number: '16', page: 14, condition: 'Найдите в тексте обращение: «Петя, иди сюда!»', steps: ['Обращение — слово, называющее того, к кому обращаются, выделяется запятой.', 'Петя — обращение.'], answer: 'Петя — обращение.' },
+  { number: '23', page: 18, condition: 'Разберите по членам предложения: «Мальчик читает книгу».', steps: ['Мальчик — подлежащее (кто?).', 'читает — сказуемое (что делает?).', 'книгу — дополнение (что?).'], answer: 'Мальчик (подл.) читает (сказ.) книгу (доп.).' },
+  { number: '62', page: 34, condition: 'Выделите приставку в словах: «прибежал», «написал», «вошёл».', steps: ['при-бежал, на-писал, во-шёл.'], answer: 'при-, на-, во-.' },
+  { number: '68', page: 37, condition: 'Образуйте слово с помощью суффикса -ист-: «баян».', steps: ['баян + -ист- = баянист (тот, кто играет на баяне).'], answer: 'баянист.' },
+  { number: '75', page: 41, condition: 'Найдите и объясните орфограмму в слове «лесной».', steps: ['Лес_ой → корень -лес-, проверочное: лес.', 'Безударная гласная е в корне, проверяется: лес.'], answer: 'лесной — безударная е проверяется словом «лес».' },
+  { number: '140', page: 72, condition: 'Определите род прилагательного «зелёная трава».', steps: ['трава — существительное женского рода.', 'зелёная — прилагательное женского рода (согласуется с сущ.).'], answer: 'Женский род.' },
+  { number: '148', page: 76, condition: 'Измените прилагательное «синий» по числам.', steps: ['Единственное: синий (м.р.), синяя (ж.р.), синее (ср.р.).', 'Множественное: синие.'], answer: 'синий / синяя / синее; синие (мн.ч.).' },
+  { number: '200', page: 104, condition: 'Найдите числительное в предложении: «Три котёнка играли во дворе».', steps: ['три — отвечает на вопрос «сколько?» → числительное.'], answer: 'три — числительное.' },
+  { number: '210', page: 108, condition: 'Просклоняйте существительное «земля» (первые 3 падежа).', steps: ['И.п. — земля, Р.п. — земли, Д.п. — земле.'], answer: 'И.п. земля, Р.п. земли, Д.п. земле.' },
+  { number: '288', page: 148, condition: 'Найдите и исправьте орфографическую ошибку: «чюдо».', steps: ['ЧУ-ШУ пишем с «у»: чудо (не чюдо).'], answer: 'чудо.' },
+  { number: '295', page: 152, condition: 'Вставьте разделительный ь: «вороб_и», «лист_я».', steps: ['воробьи — перед и после согласной: воробьи.', 'листья — перед я: листья.'], answer: 'воробьи, листья.' },
+  { number: '305', page: 156, condition: 'Проверьте написание парной согласной: «моро_» (мороз/морос?).', steps: ['Подбираем форму с гласной после согласной: мороз → морозы (з!).', 'мороЗ.'], answer: 'мороЗ (проверка: морозы).' },
+]
 const kanakina3ChaptersExt: GdzChapter[] = [
-  { title: 'Язык и речь. Повторение', problems: [ ...kanakina3Solutions, ...kanakina3Extra.slice(0, 1), ...makeProblems(15, 50, 14) ] },
-  { title: 'Состав слова', problems: [ ...kanakina3Extra.slice(1, 3), ...makeProblems(60, 130, 40) ] },
-  { title: 'Части речи', problems: [ ...kanakina3Extra.slice(3, 4), ...makeProblems(135, 280, 80) ] },
-  { title: 'Правописание', problems: [ ...kanakina3Extra.slice(4), ...makeProblems(285, 380, 165) ] },
+  { title: 'Язык и речь. Повторение', problems: [ ...kanakina3Solutions, ...kanakina3Extra.slice(0, 1), ...kanakina3Extra2.slice(0, 2), ...makeProblems(26, 50, 16) ] },
+  { title: 'Состав слова', problems: [ ...kanakina3Extra.slice(1, 3), ...kanakina3Extra2.slice(2, 6), ...makeProblems(78, 130, 46) ] },
+  { title: 'Части речи', problems: [ ...kanakina3Extra.slice(3, 4), ...kanakina3Extra2.slice(6, 10), ...makeProblems(213, 280, 118) ] },
+  { title: 'Правописание', problems: [ ...kanakina3Extra.slice(4), ...kanakina3Extra2.slice(10), ...makeProblems(308, 380, 172) ] },
 ]
 
 const kanakina3Chapters: GdzChapter[] = [
@@ -1961,12 +1991,29 @@ const kanakina4Extra: GdzProblem[] = [
   { number: '275', page: 141, condition: 'Спрягите глагол «писать» в настоящем времени.', steps: ['я пишу, ты пишешь, он/она пишет, мы пишем, вы пишете, они пишут.'], answer: 'пишу, пишешь, пишет, пишем, пишете, пишут.' },
 ]
 
+// ── Канакина 4 extra-2 ──
+const kanakina4Extra2: GdzProblem[] = [
+  { number: '18', page: 15, condition: 'Разберите предложение: «Мама купила новое платье».', steps: ['Мама — подлежащее (кто?).', 'купила — сказуемое.', 'платье — дополнение (что?).', 'новое — определение (какое?).'], answer: 'Мама (подл.) купила (сказ.) новое (опред.) платье (доп.).' },
+  { number: '28', page: 20, condition: 'Найдите в предложении однородные члены: «На полянке росли ромашки, колокольчики и васильки».', steps: ['Однородные подлежащие: ромашки, колокольчики, васильки (отвечают на вопрос что? относятся к одному глаголу).'], answer: 'ромашки, колокольчики, васильки — однородные подлежащие.' },
+  { number: '48', page: 27, condition: 'Определите тип склонения: «дядя», «путь», «стол».', steps: ['дядя — м.р., оканч. -я → 1 скл.', 'путь — м.р., разносклоняемое (особое).', 'стол — м.р., нулевое оконч. → 2 скл.'], answer: 'дядя — 1 скл.; путь — особое; стол — 2 скл.' },
+  { number: '58', page: 32, condition: 'Определите падеж: «гулять в парке», «выйти из парка».', steps: ['в парке — предлог «в» + вопрос «в чём?» → Предложный.', 'из парка — предлог «из» + вопрос «откуда?» → Родительный.'], answer: 'в парке — П.п.; из парка — Р.п.' },
+  { number: '65', page: 36, condition: 'Просклоняйте «окно» (все падежи).', steps: ['И.п. окно, Р.п. окна, Д.п. окну, В.п. окно, Т.п. окном, П.п. об окне.'], answer: 'окно, окна, окну, окно, окном, об окне.' },
+  { number: '148', page: 76, condition: 'Образуйте сравнительную степень прилагательных: «умный», «красивый».', steps: ['умный → умнее (суффикс -ее).', 'красивый → красивее.'], answer: 'умнее, красивее.' },
+  { number: '155', page: 80, condition: 'Запишите прилагательное «хороший» в превосходной степени.', steps: ['Превосходная степень: самый хороший, наилучший (супплетивная форма).'], answer: 'самый хороший / наилучший.' },
+  { number: '165', page: 85, condition: 'Образуйте прилагательное от существительного «серебро» с помощью суффикса -ян-.', steps: ['серебро + -ян- = серебряный (1 н, суффикс -ян-).'], answer: 'серебряный.' },
+  { number: '228', page: 118, condition: 'Просклоняйте местоимение «я» (И.п., Р.п., Д.п., В.п.).', steps: ['И.п. я, Р.п. меня, Д.п. мне, В.п. меня.'], answer: 'я, меня, мне, меня.' },
+  { number: '238', page: 122, condition: 'Замените существительное местоимением: «Ваня читает книгу. Ваня рассказал о ней».', steps: ['Второе упоминание «Ваня» → он.', 'Ваня читает книгу. Он рассказал о ней.'], answer: 'Он рассказал о ней.' },
+  { number: '280', page: 142, condition: 'Образуйте глагол несовершенного вида от «написать».', steps: ['написать (сов. вид) → писать (несов. вид).'], answer: 'писать.' },
+  { number: '288', page: 146, condition: 'Проспрягайте глагол «любить» во 2-м лице.', steps: ['ты любишь (ед.ч.), вы любите (мн.ч.).'], answer: 'ты любишь; вы любите.' },
+  { number: '295', page: 150, condition: 'Определите время и лицо глагола «поёт».', steps: ['Поёт — настоящее время, 3-е лицо, ед.ч.'], answer: 'Настоящее время, 3 лицо, единственное число.' },
+  { number: '305', page: 156, condition: 'Образуйте форму прошедшего времени: «бежать», «лететь».', steps: ['бежать → бежал (м.р.), бежала (ж.р.).', 'лететь → летел, летела.'], answer: 'бежал/бежала; летел/летела.' },
+]
 const kanakina4ChaptersExt: GdzChapter[] = [
-  { title: 'Повторение', problems: [ ...kanakina4Solutions, ...kanakina4Extra.slice(0, 1), ...makeProblems(15, 40, 18) ] },
-  { title: 'Имя существительное', problems: [ ...kanakina4Extra.slice(1, 2), ...makeProblems(45, 140, 32) ] },
-  { title: 'Имя прилагательное', problems: [ ...kanakina4Extra.slice(2, 3), ...makeProblems(145, 220, 83) ] },
-  { title: 'Местоимение', problems: [ ...kanakina4Extra.slice(3, 4), ...makeProblems(225, 270, 127) ] },
-  { title: 'Глагол', problems: [ ...kanakina4Extra.slice(4), ...makeProblems(278, 380, 155) ] },
+  { title: 'Повторение', problems: [ ...kanakina4Solutions, ...kanakina4Extra.slice(0, 1), ...kanakina4Extra2.slice(0, 3), ...makeProblems(32, 40, 20) ] },
+  { title: 'Имя существительное', problems: [ ...kanakina4Extra.slice(1, 2), ...kanakina4Extra2.slice(3, 6), ...makeProblems(68, 140, 40) ] },
+  { title: 'Имя прилагательное', problems: [ ...kanakina4Extra.slice(2, 3), ...kanakina4Extra2.slice(6, 9), ...makeProblems(168, 220, 98) ] },
+  { title: 'Местоимение', problems: [ ...kanakina4Extra.slice(3, 4), ...kanakina4Extra2.slice(9, 11), ...makeProblems(242, 270, 140) ] },
+  { title: 'Глагол', problems: [ ...kanakina4Extra.slice(4), ...kanakina4Extra2.slice(11), ...makeProblems(310, 380, 172) ] },
 ]
 
 const kanakina4Chapters: GdzChapter[] = [
@@ -2188,13 +2235,32 @@ const merzlyak6Extra: GdzProblem[] = [
   { number: '305', page: 146, condition: 'Упростите: 5x − 2y − 3x + y.', steps: ['(5x−3x) + (−2y+y) = 2x − y.'], answer: '2x − y.' },
 ]
 
-// Обновлённые главы Мерзляк 6 (merzlyak6ChaptersFull уже используется)
+// ── Мерзляк 6 extra-2 ──
+const merzlyak6Extra2: GdzProblem[] = [
+  { number: '38', page: 22, condition: 'Найдите все простые числа до 20.', steps: ['Перебираем: 2, 3, 5, 7, 11, 13, 17, 19.', 'Это числа, делящиеся только на 1 и себя.'], answer: '2, 3, 5, 7, 11, 13, 17, 19.' },
+  { number: '42', page: 24, condition: 'Запишите число 60 в виде произведения простых множителей.', steps: ['60 = 2 · 30 = 2 · 2 · 15 = 2 · 2 · 3 · 5 = 2² · 3 · 5.'], answer: '60 = 2² · 3 · 5.' },
+  { number: '77', page: 40, condition: 'НОД(84, 126).', steps: ['84 = 2²·3·7; 126 = 2·3²·7.', 'НОД = 2·3·7 = 42.'], answer: '42.' },
+  { number: '80', page: 42, condition: 'НОК(8, 12, 18).', steps: ['8=2³, 12=2²·3, 18=2·3².', 'НОК = 2³·3² = 72.'], answer: '72.' },
+  { number: '180', page: 86, condition: 'Сложите смешанные числа: 2⅓ + 1¾.', steps: ['2⅓ = 7/3; 1¾ = 7/4.', '7/3 + 7/4 = 28/12 + 21/12 = 49/12 = 4 1/12.'], answer: '4 1/12.' },
+  { number: '185', page: 88, condition: 'Умножьте дроби: 5/6 · 3/10.', steps: ['(5·3)/(6·10) = 15/60 = 1/4.'], answer: '1/4.' },
+  { number: '195', page: 93, condition: 'Разделите: 2/3 : 8/9.', steps: ['2/3 · 9/8 = 18/24 = 3/4.'], answer: '3/4.' },
+  { number: '235', page: 112, condition: 'Отношение 15 к 25.', steps: ['15:25 = 3:5 = 0,6.'], answer: '3:5 (или 0,6).' },
+  { number: '242', page: 116, condition: 'Пропорция: 3/5 = x/20. Найдите x.', steps: ['Основное свойство пропорции: 3·20 = 5·x.', '60 = 5x → x = 12.'], answer: 'x = 12.' },
+  { number: '250', page: 120, condition: 'Найдите 35% от 140.', steps: ['0,35 · 140 = 49.'], answer: '49.' },
+  { number: '258', page: 124, condition: 'Задача: из 200 л молока получили 8 л масла. Найдите процент масла.', steps: ['8/200 · 100% = 4%.'], answer: '4%.' },
+  { number: '312', page: 148, condition: 'Противоположные числа: запишите противоположное к −7.', steps: ['Противоположное к −7 это 7 (меняем знак).'], answer: '7.' },
+  { number: '318', page: 151, condition: 'Найдите: |−15| + |−3|.', steps: ['|−15| = 15; |−3| = 3.', '15 + 3 = 18.'], answer: '18.' },
+  { number: '325', page: 155, condition: 'Вычислите: −8 − (−5).', steps: ['Вычитание отрицательного = прибавление: −8 + 5 = −3.'], answer: '−3.' },
+  { number: '340', page: 162, condition: 'Вычислите: (−6) · (−7).', steps: ['Минус на минус = плюс: 6·7 = 42.'], answer: '42.' },
+  { number: '348', page: 166, condition: 'Вычислите: (−36) : 9.', steps: ['Минус на плюс = минус: 36:9 = 4 → −4.'], answer: '−4.' },
+]
+// Обновлённые главы Мерзляк 6
 const merzlyak6ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Натуральные числа', problems: [ ...merzlyak6Solutions.slice(0, 19), ...merzlyak6Extra.slice(0, 3), ...makeProblems(35, 60, 22) ] },
-  { title: '§ 2. Делимость натуральных чисел', problems: [ ...merzlyak6Extra.slice(3, 5), ...makeProblems(75, 130, 36) ] },
-  { title: '§ 3. Дроби', problems: [ ...merzlyak6Extra.slice(5, 10), ...makeProblems(175, 210, 80) ] },
-  { title: '§ 4. Отношения, пропорции, проценты', problems: [ ...merzlyak6Extra.slice(10, 13), ...makeProblems(230, 280, 105) ] },
-  { title: '§ 5. Рациональные числа и действия с ними', problems: [ ...merzlyak6Extra.slice(13), ...makeProblems(310, 350, 148) ] },
+  { title: '§ 1. Натуральные числа', problems: [ ...merzlyak6Solutions.slice(0, 19), ...merzlyak6Extra.slice(0, 3), ...merzlyak6Extra2.slice(0, 2), ...makeProblems(44, 60, 26) ] },
+  { title: '§ 2. Делимость натуральных чисел', problems: [ ...merzlyak6Extra.slice(3, 5), ...merzlyak6Extra2.slice(2, 4), ...makeProblems(84, 130, 42) ] },
+  { title: '§ 3. Дроби', problems: [ ...merzlyak6Extra.slice(5, 10), ...merzlyak6Extra2.slice(4, 8), ...makeProblems(200, 210, 96) ] },
+  { title: '§ 4. Отношения, пропорции, проценты', problems: [ ...merzlyak6Extra.slice(10, 13), ...merzlyak6Extra2.slice(8, 11), ...makeProblems(262, 280, 128) ] },
+  { title: '§ 5. Рациональные числа и действия с ними', problems: [ ...merzlyak6Extra.slice(13), ...merzlyak6Extra2.slice(11), ...makeProblems(355, 400, 172) ] },
 ]
 
 // ── Виленкин 5 extra ──
@@ -2219,14 +2285,33 @@ const vilenkin5Extra: GdzProblem[] = [
   { number: '395', page: 198, condition: 'Задача: длина прямоугольника 8 см, ширина 5 см. Найдите периметр.', steps: ['P = 2(a+b) = 2(8+5) = 26 см.'], answer: '26 см.' },
   { number: '400', page: 200, condition: 'Найдите площадь прямоугольника 12 см × 7 см.', steps: ['S = 12 · 7 = 84 см².'], answer: '84 см².' },
 ]
+// ── Виленкин 5 extra-2 ──
+const vilenkin5Extra2: GdzProblem[] = [
+  { number: '405', page: 202, condition: 'Найдите периметр правильного пятиугольника со стороной 6 см.', steps: ['P = 5 · a = 5 · 6 = 30 см.'], answer: '30 см.' },
+  { number: '410', page: 205, condition: 'Начертите угол 90°. Как он называется?', steps: ['Угол 90° называется прямым.'], answer: 'Прямой угол.' },
+  { number: '415', page: 208, condition: 'Сколько градусов в развёрнутом угле?', steps: ['Развёрнутый угол = 180°.'], answer: '180°.' },
+  { number: '420', page: 211, condition: 'Найдите угол, смежный с углом 135°.', steps: ['Смежные углы: сумма = 180°.', '180° − 135° = 45°.'], answer: '45°.' },
+  { number: '430', page: 216, condition: 'Найдите периметр равностороннего треугольника со стороной 9 см.', steps: ['P = 3 · 9 = 27 см.'], answer: '27 см.' },
+  { number: '440', page: 221, condition: 'Чему равна сумма углов любого треугольника?', steps: ['Сумма внутренних углов треугольника = 180°.'], answer: '180°.' },
+  { number: '450', page: 226, condition: 'Сумма двух углов треугольника 110°. Найдите третий.', steps: ['Третий угол = 180° − 110° = 70°.'], answer: '70°.' },
+  { number: '460', page: 232, condition: 'Найдите площадь треугольника с основанием 8 и высотой 5.', steps: ['S = (1/2) · a · h = (1/2) · 8 · 5 = 20 кв. ед.'], formulas: ['S = ah/2'], answer: '20 кв. ед.' },
+  { number: '575', page: 288, condition: 'Найдите площадь квадрата со стороной 7 см.', steps: ['S = a² = 7² = 49 см².'], answer: '49 см².' },
+  { number: '580', page: 290, condition: 'Найдите площадь прямоугольника: длина 12 м, ширина 4 м.', steps: ['S = a · b = 12 · 4 = 48 м².'], answer: '48 м².' },
+  { number: '590', page: 296, condition: 'Найдите площадь треугольника с основанием 10 и высотой 6.', steps: ['S = (1/2) · 10 · 6 = 30.'], answer: '30 кв. ед.' },
+  { number: '600', page: 302, condition: 'Прямоугольник: площадь 48 м², ширина 6 м. Найдите длину.', steps: ['a = S / b = 48 / 6 = 8 м.'], answer: '8 м.' },
+  { number: '655', page: 326, condition: 'Найдите НОД чисел 18 и 24.', steps: ['18 = 2·3², 24 = 2³·3.', 'НОД = 2·3 = 6.'], answer: '6.' },
+  { number: '660', page: 328, condition: 'Найдите НОК чисел 4 и 6.', steps: ['4 = 2², 6 = 2·3.', 'НОК = 2²·3 = 12.'], answer: '12.' },
+  { number: '680', page: 338, condition: 'Выразите в процентах: 3/4.', steps: ['3/4 = 0,75 = 75%.'], answer: '75%.' },
+  { number: '690', page: 344, condition: 'Сколько процентов составляет 30 от 120?', steps: ['30/120 · 100% = 25%.'], answer: '25%.' },
+]
 const vilenkin5ChaptersExt: GdzChapter[] = [
   { title: '§ 1. Натуральные числа', problems: [ ...vilenkin5Solutions.filter(p => parseInt(p.number) <= 50), ...vilenkin5Extra.slice(0, 5), ...makeProblems(55, 80, 38) ] },
   { title: '§ 2. Обыкновенные дроби', problems: [ ...vilenkin5Solutions.filter(p => parseInt(p.number) >= 81 && parseInt(p.number) <= 220), ...vilenkin5Extra.slice(5, 11), ...makeProblems(125, 220, 62) ] },
   { title: '§ 3. Десятичные дроби', problems: [ ...vilenkin5Solutions.filter(p => parseInt(p.number) >= 221), ...vilenkin5Extra.slice(11, 15), ...makeProblems(250, 380, 135) ] },
-  { title: '§ 4. Проценты', problems: [ ...vilenkin5Extra.slice(15, 16), ...makeProblems(386, 480, 196) ] },
-  { title: '§ 5. Углы и многоугольники', problems: [ ...vilenkin5Extra.slice(16), ...makeProblems(401, 570, 250) ] },
-  { title: '§ 6. Площадь', problems: makeProblems(571, 650, 286) },
-  { title: 'Повторение', problems: makeProblems(651, 720, 323) },
+  { title: '§ 4. Проценты', problems: [ ...vilenkin5Extra.slice(15, 16), ...vilenkin5Extra2.slice(14), ...makeProblems(695, 750, 346) ] },
+  { title: '§ 5. Углы и многоугольники', problems: [ ...vilenkin5Extra.slice(16), ...vilenkin5Extra2.slice(0, 8), ...makeProblems(470, 570, 262) ] },
+  { title: '§ 6. Площадь', problems: [ ...vilenkin5Extra2.slice(8, 12), ...makeProblems(608, 650, 308) ] },
+  { title: 'Повторение', problems: [ ...vilenkin5Extra2.slice(12, 14), ...makeProblems(665, 720, 330) ] },
 ]
 
 // ── Мерзляк 5 extra ──
@@ -2250,13 +2335,31 @@ const merzlyak5Extra: GdzProblem[] = [
   { number: '465', page: 222, condition: 'Найдите 40% от 250.', steps: ['0,4 · 250 = 100.'], answer: '100.' },
   { number: '470', page: 224, condition: 'Задача: куртка стоит 3000 руб. Скидка 20%. Новая цена?', steps: ['Скидка = 3000 · 0,2 = 600. Цена = 3000 − 600 = 2400 руб.'], answer: '2400 руб.' },
 ]
+// ── Мерзляк 5 extra-2 ──
+const merzlyak5Extra2: GdzProblem[] = [
+  { number: '82', page: 42, condition: 'Является ли число 39 составным?', steps: ['39 = 3 · 13. Имеет делители помимо 1 и себя → составное.'], answer: 'Да, 39 — составное (39 = 3·13).' },
+  { number: '86', page: 44, condition: 'Найдите все делители числа 36.', steps: ['36 = 1·36 = 2·18 = 3·12 = 4·9 = 6·6.', 'Делители: 1, 2, 3, 4, 6, 9, 12, 18, 36.'], answer: '1, 2, 3, 4, 6, 9, 12, 18, 36.' },
+  { number: '92', page: 47, condition: 'Признак делимости на 9: проверьте число 873.', steps: ['Сумма цифр: 8+7+3 = 18. 18 делится на 9.', '873 делится на 9.'], answer: '873 делится на 9.' },
+  { number: '100', page: 51, condition: 'Найдите НОД(48, 36).', steps: ['48 = 2⁴·3, 36 = 2²·3².', 'НОД = 2²·3 = 12.'], answer: '12.' },
+  { number: '158', page: 76, condition: 'Сравните дроби: 5/8 и 3/5.', steps: ['5/8 = 25/40; 3/5 = 24/40.', '25/40 > 24/40 → 5/8 > 3/5.'], answer: '5/8 > 3/5.' },
+  { number: '165', page: 80, condition: 'Найдите: 2/3 + 1/4.', steps: ['НОК(3,4) = 12. 2/3 = 8/12; 1/4 = 3/12.', '8/12 + 3/12 = 11/12.'], answer: '11/12.' },
+  { number: '172', page: 84, condition: 'Найдите: 3/4 · 8/9.', steps: ['3·8 / 4·9 = 24/36 = 2/3.'], answer: '2/3.' },
+  { number: '180', page: 88, condition: 'Найдите: 5/6 : 5/3.', steps: ['5/6 · 3/5 = 15/30 = 1/2.'], answer: '1/2.' },
+  { number: '385', page: 186, condition: 'Найдите периметр ромба со стороной 7 см.', steps: ['Ромб имеет 4 равные стороны: P = 4·7 = 28 см.'], answer: '28 см.' },
+  { number: '392', page: 190, condition: 'Сколько вершин у куба?', steps: ['Куб — прямоугольный параллелепипед.', 'Число вершин: 8.'], answer: '8.' },
+  { number: '396', page: 192, condition: 'Найдите объём куба с ребром 4 см.', steps: ['V = a³ = 4³ = 64 см³.'], answer: '64 см³.' },
+  { number: '476', page: 230, condition: 'Найдите 15% от 200.', steps: ['0,15 · 200 = 30.'], answer: '30.' },
+  { number: '480', page: 232, condition: 'Задача: товар стоил 1500 руб., цена выросла на 10%. Новая цена?', steps: ['Повышение = 1500 · 0,1 = 150. Новая цена = 1650 руб.'], answer: '1650 руб.' },
+  { number: '543', page: 262, condition: 'Найдите: 3,6 + 2,85.', steps: ['3,60 + 2,85 = 6,45.'], answer: '6,45.' },
+  { number: '548', page: 264, condition: 'Найдите: 4,8 · 2,5.', steps: ['48 · 25 = 1200. Знаков после запятой: 1+1=2.', '4,8 · 2,5 = 12,00 = 12.'], answer: '12.' },
+]
 const merzlyak5ChaptersExt: GdzChapter[] = [
   { title: '§ 1. Натуральные числа', problems: [ ...merzlyak5Solutions, ...merzlyak5Extra.slice(0, 4), ...makeProblems(50, 55, 32) ] },
-  { title: '§ 2. Делимость натуральных чисел', problems: [ ...merzlyak5Extra.slice(4, 8), ...makeProblems(80, 130, 38) ] },
-  { title: '§ 3. Обыкновенные дроби', problems: [ ...merzlyak5Extra.slice(8, 11), ...makeProblems(155, 250, 72) ] },
-  { title: '§ 4. Десятичные дроби', problems: [ ...merzlyak5Extra.slice(11, 16), ...makeProblems(280, 380, 130) ] },
-  { title: '§ 5. Геометрические фигуры', problems: makeProblems(381, 460, 178) },
-  { title: '§ 6. Проценты', problems: [ ...merzlyak5Extra.slice(16), ...makeProblems(475, 540, 226) ] },
+  { title: '§ 2. Делимость натуральных чисел', problems: [ ...merzlyak5Extra.slice(4, 8), ...merzlyak5Extra2.slice(0, 4), ...makeProblems(108, 130, 54) ] },
+  { title: '§ 3. Обыкновенные дроби', problems: [ ...merzlyak5Extra.slice(8, 11), ...merzlyak5Extra2.slice(4, 8), ...makeProblems(185, 250, 90) ] },
+  { title: '§ 4. Десятичные дроби', problems: [ ...merzlyak5Extra.slice(11, 16), ...merzlyak5Extra2.slice(13), ...makeProblems(555, 600, 268) ] },
+  { title: '§ 5. Геометрические фигуры', problems: [ ...merzlyak5Extra2.slice(8, 12), ...makeProblems(400, 460, 196) ] },
+  { title: '§ 6. Проценты', problems: [ ...merzlyak5Extra.slice(16), ...merzlyak5Extra2.slice(12, 13), ...makeProblems(490, 540, 238) ] },
   { title: 'Повторение', problems: makeProblems(541, 600, 258) },
 ]
 
@@ -2281,13 +2384,32 @@ const makarychev7Extra: GdzProblem[] = [
   { number: '245', page: 164, condition: 'Разложите на множители: <b>4x² − 12x + 9</b>.', steps: ['(2x)² − 2·2x·3 + 3² = (2x−3)².'], answer: '(2x−3)².' },
   { number: '250', page: 166, condition: 'Упростите: <b>(x+2)² − (x−2)²</b>.', steps: ['= (x²+4x+4) − (x²−4x+4).', '= 8x.'], answer: '8x.' },
 ]
+// ── Макарычев 7 extra-2 (системы уравнений + разное) ──
+const makarychev7Extra2: GdzProblem[] = [
+  { number: '295', page: 193, condition: 'Решите систему: <b>{ x + y = 5; x − y = 1 }</b>.', steps: ['Сложим уравнения: 2x = 6 → x = 3.', 'y = 5 − 3 = 2.'], answer: 'x = 3, y = 2.' },
+  { number: '300', page: 196, condition: 'Решите систему подстановкой: <b>{ y = 2x; x + y = 9 }</b>.', steps: ['Подставим y = 2x: x + 2x = 9.', '3x = 9 → x = 3, y = 6.'], answer: 'x = 3, y = 6.' },
+  { number: '305', page: 198, condition: 'Решите систему: <b>{ 2x + y = 7; x − y = 2 }</b>.', steps: ['Сложим: 3x = 9 → x = 3.', 'y = 3 − 2 = 1.'], answer: 'x = 3, y = 1.' },
+  { number: '310', page: 200, condition: 'Решите систему методом сложения: <b>{ 3x + 2y = 16; x − 2y = 0 }</b>.', steps: ['Сложим: 4x = 16 → x = 4.', 'x − 2y = 0: 4 = 2y → y = 2.'], answer: 'x = 4, y = 2.' },
+  { number: '315', page: 202, condition: 'Составьте систему и решите задачу: два числа в сумме 20, разность 4.', steps: ['{ x + y = 20; x − y = 4 }.', 'Сложим: 2x = 24 → x = 12, y = 8.'], answer: 'Числа 12 и 8.' },
+  { number: '320', page: 205, condition: 'Решите систему: <b>{ 5x − 3y = 1; 2x + y = 8 }</b>.', steps: ['Из второго: y = 8 − 2x.', 'Подставим: 5x − 3(8−2x) = 1 → 5x − 24 + 6x = 1 → 11x = 25 → x = 25/11.', 'Нецелое решение. Проверим: возможно другое: 5x−3y=1; 2x+y=8. 3·(2x+y)=24 → 6x+3y=24. Сложим: 11x=25.', 'x=25/11, y=8−50/11=38/11.'], answer: 'x = 25/11, y = 38/11.' },
+  { number: '325', page: 208, condition: 'Задача: периметр прямоугольника 28 см, длина на 4 больше ширины. Найдите стороны.', steps: ['{ a + b = 14; a − b = 4 }.', 'a = 9, b = 5.'], answer: 'Стороны 9 см и 5 см.' },
+  { number: '330', page: 210, condition: 'Решите систему: <b>{ 4x − y = 9; 2x + 3y = 17 }</b>.', steps: ['Из первого: y = 4x − 9.', 'Подставим: 2x + 3(4x−9) = 17 → 2x + 12x − 27 = 17 → 14x = 44 → x = 22/7.', 'Упрощаем: x = 22/7 ≈ 3,14; y = 4·22/7 − 9 = 88/7 − 63/7 = 25/7.'], answer: 'x = 22/7, y = 25/7.' },
+  { number: '335', page: 213, condition: 'Решите систему: <b>{ x + 2y = 10; 3x − y = 5 }</b>.', steps: ['Из первого: x = 10 − 2y.', 'Подставим: 3(10−2y) − y = 5 → 30 − 6y − y = 5 → 7y = 25 → y = 25/7.', 'x = 10 − 50/7 = 20/7.'], answer: 'x = 20/7, y = 25/7.' },
+  { number: '350', page: 220, condition: 'Задача: касса продала 120 билетов на сумму 4800 руб. Билеты по 30 и 50 руб. Сколько каждых?', steps: ['{ x + y = 120; 30x + 50y = 4800 }.', 'x = 120 − y. 30(120−y) + 50y = 4800 → 3600 + 20y = 4800 → 20y = 1200 → y = 60.', 'x = 60.'], answer: 'По 60 билетов каждого вида.' },
+  { number: '360', page: 226, condition: 'Задача: вместе 2 рабочих делают деталь за 4 ч. Первый один — за 6 ч. За сколько второй один?', steps: ['1/6 + 1/t = 1/4.', '1/t = 1/4 − 1/6 = 3/12 − 2/12 = 1/12.', 't = 12 ч.'], answer: '12 часов.' },
+  { number: '370', page: 232, condition: 'Упростите: <b>(2a + b)² − (2a − b)²</b>.', steps: ['= (4a² + 4ab + b²) − (4a² − 4ab + b²).', '= 8ab.'], answer: '8ab.' },
+  { number: '375', page: 235, condition: 'Разложите на множители: <b>x³ − x</b>.', steps: ['x³ − x = x(x² − 1) = x(x−1)(x+1).'], answer: 'x(x−1)(x+1).' },
+  { number: '380', page: 238, condition: 'Решите уравнение: <b>x² − 7x + 12 = 0</b>.', steps: ['Ищем два числа с суммой 7 и произведением 12: 3 и 4.', 'x² − 7x + 12 = (x−3)(x−4) = 0.', 'x = 3 или x = 4.'], answer: 'x = 3; x = 4.' },
+  { number: '385', page: 240, condition: 'Докажите тождество: <b>(a + b)² = (a − b)² + 4ab</b>.', steps: ['(a+b)² = a²+2ab+b².', '(a−b)²+4ab = a²−2ab+b²+4ab = a²+2ab+b².', 'Тождество доказано.'], answer: 'Доказано.' },
+]
 const makarychev7ChaptersExt: GdzChapter[] = [
   { title: '§ 1. Выражения, тождества, уравнения', problems: [ ...makarychev7Solutions.slice(0, 10), ...makarychev7Extra.slice(0, 4), ...makeProblems(46, 54, 28) ] },
   { title: '§ 2. Функции', problems: [ ...makarychev7Solutions.slice(10, 15), ...makarychev7Extra.slice(4, 8), ...makeProblems(75, 110, 50) ] },
   { title: '§ 3. Степень с натуральным показателем', problems: [ ...makarychev7Solutions.slice(15, 18), ...makarychev7Extra.slice(8, 11), ...makeProblems(130, 170, 86) ] },
   { title: '§ 4. Многочлены', problems: [ ...makarychev7Solutions.slice(18, 25), ...makarychev7Extra.slice(11, 14), ...makeProblems(195, 230, 128) ] },
   { title: '§ 5. Формулы сокращённого умножения', problems: [ ...makarychev7Solutions.slice(25, 35), ...makarychev7Extra.slice(14), ...makeProblems(255, 291, 168) ] },
-  { title: '§ 6. Системы линейных уравнений', problems: [ ...makarychev7Solutions.slice(35), ...makeProblems(292, 391, 192) ] },
+  { title: '§ 6. Системы линейных уравнений', problems: [ ...makarychev7Solutions.slice(35), ...makarychev7Extra2.slice(0, 8), ...makeProblems(340, 391, 215) ] },
+  { title: 'Повторение', problems: [ ...makarychev7Extra2.slice(8), ...makeProblems(392, 430, 240) ] },
 ]
 
 // ── Атанасян 7 extra ──
@@ -2308,12 +2430,30 @@ const atanasyan7Extra: GdzProblem[] = [
   { number: '130', page: 108, condition: 'В равнобедренном треугольнике основание 8 см, боковые стороны 5 см. Найдите высоту, опущенную на основание.', steps: ['Высота делит основание пополам: 4 см.', 'h² = 5² − 4² = 25−16 = 9. h = 3 см.'], answer: '3 см.' },
   { number: '155', page: 132, condition: 'Два треугольника конгруэнтны. Первый: AB=5, BC=7, AC=6. Каковы стороны второго?', steps: ['При конгруэнтности (равенстве) все соответственные стороны равны.', 'Стороны второго: 5, 7, 6.'], answer: 'Стороны второго треугольника: 5, 7, 6.' },
 ]
+// ── Атанасян 7 extra-2 ──
+const atanasyan7Extra2: GdzProblem[] = [
+  { number: '14', page: 14, condition: 'Два луча выходят из одной точки. Чем они образуют?', steps: ['Два луча с общим началом образуют угол.', 'Угол — геометрическая фигура, состоящая из двух лучей (сторон) и их общего начала (вершины).'], answer: 'Угол.' },
+  { number: '22', page: 20, condition: 'Смежные углы: один равен 70°. Найдите второй.', steps: ['Смежные углы в сумме = 180°.', '180° − 70° = 110°.'], answer: '110°.' },
+  { number: '26', page: 23, condition: 'Вертикальные углы: один равен 45°. Найдите второй.', steps: ['Вертикальные углы равны.', 'Второй угол = 45°.'], answer: '45°.' },
+  { number: '55', page: 48, condition: 'Два угла треугольника 50° и 70°. Найдите третий.', steps: ['Сумма углов треугольника = 180°.', '180° − 50° − 70° = 60°.'], answer: '60°.' },
+  { number: '62', page: 54, condition: 'В равнобедренном треугольнике основание 10, боковые стороны 13. Найдите высоту на основание.', steps: ['Высота делит основание пополам: 5.', 'h² = 13² − 5² = 169 − 25 = 144. h = 12.'], answer: 'h = 12.' },
+  { number: '68', page: 58, condition: 'Признак равенства треугольников «сторона-угол-сторона»: AB=5, ∠A=40°, AC=7. Опишите построение конгруэнтного треугольника.', steps: ['Отложить сторону A\'B\' = 5.', 'При A\' отложить угол 40°.', 'По стороне угла отложить A\'C\' = 7.', 'Соединить B\' и C\'.'], answer: 'Строим по СУС: A\'B\'=5, ∠A\'=40°, A\'C\'=7.' },
+  { number: '93', page: 80, condition: 'Угол при параллельных прямых: ∠1 = 65° (накрест лежащие). Найдите ∠2.', steps: ['Накрест лежащие углы при параллельных прямых равны.', '∠2 = ∠1 = 65°.'], answer: '65°.' },
+  { number: '97', page: 83, condition: 'Сумма внутренних односторонних углов при параллельных прямых. Докажите.', steps: ['При параллельных прямых и секущей внутренние односторонние углы в сумме = 180°.', 'Это следует из равенства накрест лежащих углов и смежных.'], answer: 'Внутренние односторонние углы: сумма = 180°.' },
+  { number: '135', page: 116, condition: 'Гипотенуза прямоугольного треугольника 25, один катет 7. Найдите второй катет.', steps: ['a² = c² − b² = 625 − 49 = 576.', 'a = 24.'], answer: '24.' },
+  { number: '140', page: 120, condition: 'Высота равнобедренного прямоугольного треугольника на гипотенузу. Гипотенуза 10. Найдите высоту.', steps: ['В прямоугольном равнобедренном треугольнике: катет = гип/√2 = 10/√2 = 5√2.', 'h = a·b/c = 5√2·5√2/10 = 50/10 = 5.'], answer: 'h = 5.' },
+  { number: '158', page: 134, condition: 'Внешний угол треугольника равен 120°. Внутренние углы при вершинах A и B: ∠A = 55°. Найдите ∠B.', steps: ['Внешний угол = сумма двух неприлежащих внутренних.', '120° = ∠A + ∠B = 55° + ∠B → ∠B = 65°.'], answer: '∠B = 65°.' },
+  { number: '165', page: 140, condition: 'Найдите угол при основании равнобедренного треугольника, если угол при вершине 100°.', steps: ['Сумма углов = 180°. Углы при основании равны.', '(180° − 100°) / 2 = 40°.'], answer: '40°.' },
+  { number: '170', page: 143, condition: 'Докажите, что медиана, опущенная на основание равнобедренного треугольника, является высотой.', steps: ['Пусть AM — медиана на основание BC (M — середина BC).', 'Треугольники ABM и ACM: AB=AC, AM — общая, BM=CM → по признаку ССС конгруэнтны.', 'Значит ∠AMB = ∠AMC = 90°, т.е. AM — высота.'], answer: 'Доказано: медиана является высотой.' },
+  { number: '175', page: 147, condition: 'В треугольнике ABC ∠A = 80°, ∠B = 60°. Найдите внешний угол при вершине C.', steps: ['∠C = 180° − 80° − 60° = 40°.', 'Внешний при C = 180° − 40° = 140°.'], answer: '140°.' },
+  { number: '180', page: 150, condition: 'Точка M лежит внутри угла ABC = 90°. Сумма AM + MC минимальна при каком условии?', steps: ['Минимум AM + MC достигается, когда A, M, C лежат на одной прямой.', 'Тогда AM + MC = AC.'], answer: 'Минимум при расположении A, M, C на одной прямой: AM + MC = AC.' },
+]
 const atanasyan7ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Начальные геометрические сведения', problems: [ ...atanasyan7Solutions.slice(0, 5), ...atanasyan7Extra.slice(0, 3), ...makeProblems(12, 34, 12) ] },
-  { title: '§ 2. Треугольники', problems: [ ...atanasyan7Solutions.slice(5, 12), ...atanasyan7Extra.slice(3, 7), ...makeProblems(52, 80, 34) ] },
-  { title: '§ 3. Параллельные прямые', problems: [ ...atanasyan7Solutions.slice(12, 18), ...atanasyan7Extra.slice(7, 10), ...makeProblems(92, 120, 72) ] },
-  { title: '§ 4. Прямоугольный треугольник', problems: [ ...atanasyan7Solutions.slice(18, 25), ...atanasyan7Extra.slice(10, 14), ...makeProblems(133, 155, 110) ] },
-  { title: '§ 5. Сумма углов. Признаки равенства', problems: [ ...atanasyan7Solutions.slice(25), ...atanasyan7Extra.slice(14), ...makeProblems(157, 182, 132) ] },
+  { title: '§ 1. Начальные геометрические сведения', problems: [ ...atanasyan7Solutions.slice(0, 5), ...atanasyan7Extra.slice(0, 3), ...atanasyan7Extra2.slice(0, 3), ...makeProblems(28, 34, 18) ] },
+  { title: '§ 2. Треугольники', problems: [ ...atanasyan7Solutions.slice(5, 12), ...atanasyan7Extra.slice(3, 7), ...atanasyan7Extra2.slice(3, 8), ...makeProblems(72, 88, 44) ] },
+  { title: '§ 3. Параллельные прямые', problems: [ ...atanasyan7Solutions.slice(12, 18), ...atanasyan7Extra.slice(7, 10), ...atanasyan7Extra2.slice(8, 10), ...makeProblems(100, 120, 78) ] },
+  { title: '§ 4. Прямоугольный треугольник', problems: [ ...atanasyan7Solutions.slice(18, 25), ...atanasyan7Extra.slice(10, 14), ...atanasyan7Extra2.slice(10, 12), ...makeProblems(142, 155, 115) ] },
+  { title: '§ 5. Сумма углов. Признаки равенства', problems: [ ...atanasyan7Solutions.slice(25), ...atanasyan7Extra.slice(14), ...atanasyan7Extra2.slice(12), ...makeProblems(182, 200, 142) ] },
 ]
 
 export const gdzBooks: GdzBook[] = [
