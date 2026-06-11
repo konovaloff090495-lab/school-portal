@@ -535,14 +535,37 @@ const vilenkin6Extra: GdzProblem[] = [
   { number: '425', page: 204, condition: 'Отметьте точку A(3, −2) в системе координат.', steps: ['x = 3 — отступаем 3 единицы вправо по оси x.', 'y = −2 — отступаем 2 единицы вниз по оси y.'], answer: 'Точка A находится в IV четверти координатной плоскости.' },
 ]
 
+// ── Виленкин 6 extra-2 ──
+const vilenkin6Extra2: GdzProblem[] = [
+  { number: '135', page: 67, condition: 'Сложите дроби: 1/4 + 2/3.', steps: ['НОК(4,3) = 12. 1/4 = 3/12; 2/3 = 8/12.', '3/12 + 8/12 = 11/12.'], answer: '11/12.' },
+  { number: '140', page: 69, condition: 'Вычтите: 5/6 − 1/4.', steps: ['НОК(6,4) = 12. 5/6 = 10/12; 1/4 = 3/12.', '10/12 − 3/12 = 7/12.'], answer: '7/12.' },
+  { number: '143', page: 71, condition: 'Умножьте дроби: 2/5 · 10/3.', steps: ['(2·10)/(5·3) = 20/15 = 4/3 = 1⅓.'], answer: '1⅓.' },
+  { number: '146', page: 72, condition: 'Разделите: 3/8 : 9/4.', steps: ['3/8 · 4/9 = 12/72 = 1/6.'], answer: '1/6.' },
+  { number: '153', page: 76, condition: 'Найдите 20% от 350.', steps: ['20% = 0,2. 0,2 · 350 = 70.'], answer: '70.' },
+  { number: '160', page: 79, condition: 'Задача: 15 кг — 30% от общей массы. Чему равна общая масса?', steps: ['15 = 0,3 · x → x = 15 / 0,3 = 50 кг.'], answer: '50 кг.' },
+  { number: '193', page: 94, condition: 'Пропорция: 2/5 = 6/x. Найдите x.', steps: ['Основное свойство: 2·x = 5·6 = 30 → x = 15.'], answer: 'x = 15.' },
+  { number: '198', page: 96, condition: 'Прямая пропорциональность: y = 4x. Найдите y при x = 7.', steps: ['y = 4 · 7 = 28.'], answer: 'y = 28.' },
+  { number: '205', page: 100, condition: 'Обратная пропорциональность: y = 36/x. Найдите y при x = 9.', steps: ['y = 36 / 9 = 4.'], answer: 'y = 4.' },
+  { number: '215', page: 104, condition: 'Задача: 2 рабочих делают деталь за 6 ч, 3 рабочих — за сколько?', steps: ['Обратная пропорциональность: t = 6 · 2 / 3 = 4 ч.'], answer: '4 ч.' },
+  { number: '338', page: 156, condition: 'Отложите на числовой прямой: −3, 0, 2.5.', steps: ['Порядок слева направо: −3, 0, 2,5.'], answer: '−3 < 0 < 2,5.' },
+  { number: '343', page: 158, condition: 'Вычислите: |−8| − |3|.', steps: ['|−8| = 8; |3| = 3.', '8 − 3 = 5.'], answer: '5.' },
+  { number: '355', page: 162, condition: 'Вычислите: −5 + (−8) + 3.', steps: ['−5 + (−8) = −13. −13 + 3 = −10.'], answer: '−10.' },
+  { number: '365', page: 167, condition: 'Вычислите: −2,5 · 4.', steps: ['2,5 · 4 = 10. Знак: минус.', '−2,5 · 4 = −10.'], answer: '−10.' },
+  { number: '423', page: 203, condition: 'Координаты точки B(−4, 3). В какой четверти?', steps: ['x = −4 < 0, y = 3 > 0 → II четверть.'], answer: 'II четверть.' },
+  { number: '430', page: 207, condition: 'Постройте прямую y = 2x − 1. Найдите координаты двух точек.', steps: ['x=0: y=−1. Точка (0,−1).', 'x=2: y=3. Точка (2,3).'], answer: 'Точки: (0,−1) и (2,3).' },
+  { number: '438', page: 210, condition: 'Найдите координаты точки симметричной A(3,−5) относительно начала координат.', steps: ['Симметрия относительно О: (−3, 5).'], answer: '(−3, 5).' },
+  { number: '505', page: 244, condition: 'Найдите НОД(126, 210).', steps: ['126 = 2·3²·7; 210 = 2·3·5·7.', 'НОД = 2·3·7 = 42.'], answer: '42.' },
+  { number: '515', page: 248, condition: 'Задача: скорость 60 км/ч, время 2,5 ч. Расстояние?', steps: ['s = v · t = 60 · 2,5 = 150 км.'], answer: '150 км.' },
+  { number: '525', page: 252, condition: 'Запишите число (−3) в виде дроби.', steps: ['(−3) = −3/1 = −6/2 = −9/3, и т.д.'], answer: '−3/1 (или любая эквивалентная).' },
+]
 // Обновлённые главы Виленкин 6 с дополнительными решениями
 const vilenkin6ChaptersFull: GdzChapter[] = [
   { title: '§ 1. Делимость натуральных чисел', problems: [ ...vilenkinSolutions, ...vilenkin6Ch1Rest ] },
-  { title: '§ 2. Обыкновенные дроби', problems: [ ...vilenkin6Extra.slice(0, 10), ...makeProblems(130, 150, 65) ] },
-  { title: '§ 3. Отношения и пропорции', problems: [ ...vilenkin6Extra.slice(10, 14), ...makeProblems(190, 280, 94) ] },
-  { title: '§ 4. Рациональные числа', problems: [ ...vilenkin6Extra.slice(14), ...makeProblems(330, 420, 152) ] },
-  { title: '§ 5. Координаты на плоскости', problems: makeProblems(421, 500, 202) },
-  { title: 'Повторение', problems: makeProblems(501, 560, 242) },
+  { title: '§ 2. Обыкновенные дроби', problems: [ ...vilenkin6Extra.slice(0, 10), ...vilenkin6Extra2.slice(0, 6), ...makeProblems(163, 190, 82) ] },
+  { title: '§ 3. Отношения и пропорции', problems: [ ...vilenkin6Extra.slice(10, 14), ...vilenkin6Extra2.slice(6, 10), ...makeProblems(218, 280, 108) ] },
+  { title: '§ 4. Рациональные числа', problems: [ ...vilenkin6Extra.slice(14), ...vilenkin6Extra2.slice(10, 18), ...makeProblems(442, 500, 218) ] },
+  { title: '§ 5. Координаты на плоскости', problems: [ ...vilenkin6Extra2.slice(14, 18), ...makeProblems(440, 500, 215) ] },
+  { title: 'Повторение', problems: [ ...vilenkin6Extra2.slice(18), ...makeProblems(530, 560, 256) ] },
 ]
 
 // ────────────────────────────────────────────────────
@@ -1802,10 +1825,25 @@ const moro2Extra: GdzProblem[] = [
   { number: '170', page: 86, condition: 'Реши задачу: Купили 4 кг яблок по 30 руб./кг. Сколько заплатили?', steps: ['4 · 30 = 120 руб.'], answer: '120 рублей.' },
 ]
 
+// ── Моро 2 extra-2 ──
+const moro2Extra2: GdzProblem[] = [
+  { number: '44', page: 24, condition: 'Реши: 36 + 47 = ?', steps: ['36 + 47 = 36 + 40 + 7 = 76 + 7 = 83.'], answer: '83.' },
+  { number: '52', page: 28, condition: 'Реши: 73 − 28 = ?', steps: ['73 − 28 = 73 − 30 + 2 = 43 + 2 = 45.'], answer: '45.' },
+  { number: '58', page: 31, condition: 'Реши: 64 + 36 = ?', steps: ['64 + 36 = 100.'], answer: '100.' },
+  { number: '65', page: 34, condition: 'Задача: в корзине 48 грибов: 30 белых, остальные подберёзовики. Сколько подберёзовиков?', steps: ['48 − 30 = 18.'], answer: '18 подберёзовиков.' },
+  { number: '92', page: 48, condition: 'Реши: 45 − 17 = ?', steps: ['45 − 17 = 45 − 20 + 3 = 25 + 3 = 28.'], answer: '28.' },
+  { number: '98', page: 51, condition: 'Реши: 56 + 27 = ?', steps: ['56 + 27 = 56 + 20 + 7 = 76 + 7 = 83.'], answer: '83.' },
+  { number: '107', page: 55, condition: 'Задача: яблок было 90, продали 34. Сколько осталось?', steps: ['90 − 34 = 56.'], answer: '56 яблок.' },
+  { number: '115', page: 59, condition: 'Реши: 78 + 14 = ?', steps: ['78 + 14 = 78 + 10 + 4 = 88 + 4 = 92.'], answer: '92.' },
+  { number: '178', page: 91, condition: 'Реши: 4 · 9 = ?', steps: ['4 · 9 = 36 (таблица умножения).'], answer: '36.' },
+  { number: '182', page: 93, condition: 'Реши: 48 : 6 = ?', steps: ['48 : 6 = 8 (т.к. 6 · 8 = 48).'], answer: '8.' },
+  { number: '190', page: 97, condition: 'Реши задачу: на полке 6 рядов книг по 8 книг. Сколько всего?', steps: ['6 · 8 = 48 книг.'], answer: '48 книг.' },
+  { number: '200', page: 102, condition: 'Реши: 72 : 9 = ?', steps: ['72 : 9 = 8 (т.к. 9 · 8 = 72).'], answer: '8.' },
+]
 const moro2ChaptersExt: GdzChapter[] = [
-  { title: 'Числа от 1 до 100', problems: [ ...moro2Solutions, ...moro2Extra.slice(0, 4), ...makeProblems(40, 80, 26) ] },
-  { title: 'Сложение и вычитание в пределах 100', problems: [ ...moro2Extra.slice(4, 6), ...makeProblems(90, 160, 56) ] },
-  { title: 'Умножение и деление', problems: [ ...moro2Extra.slice(6), ...makeProblems(175, 260, 100) ] },
+  { title: 'Числа от 1 до 100', problems: [ ...moro2Solutions, ...moro2Extra.slice(0, 4), ...moro2Extra2.slice(0, 4), ...makeProblems(68, 80, 32) ] },
+  { title: 'Сложение и вычитание в пределах 100', problems: [ ...moro2Extra.slice(4, 6), ...moro2Extra2.slice(4, 8), ...makeProblems(118, 160, 68) ] },
+  { title: 'Умножение и деление', problems: [ ...moro2Extra.slice(6), ...moro2Extra2.slice(8), ...makeProblems(205, 260, 114) ] },
 ]
 
 const moro2Chapters: GdzChapter[] = [
@@ -1882,11 +1920,26 @@ const moro3Extra: GdzProblem[] = [
   { number: '305', page: 156, condition: 'Начерти прямоугольник 6×4. Найди периметр и площадь.', steps: ['P = 2·(6+4) = 20 см.', 'S = 6·4 = 24 см².'], answer: 'P = 20 см, S = 24 см².' },
 ]
 
+// ── Моро 3 extra-2 ──
+const moro3Extra2: GdzProblem[] = [
+  { number: '30', page: 16, condition: 'Запиши числа от 900 до 1000 через 50.', steps: ['900, 950, 1000.'], answer: '900, 950, 1000.' },
+  { number: '38', page: 20, condition: 'Сравни: 750 ○ 570.', steps: ['750 > 570 (сотни: 7 > 5).'], answer: '750 > 570.' },
+  { number: '45', page: 23, condition: 'Реши: 462 + 238 = ?', steps: ['462 + 238 = 700.', '(Единицы: 2+8=10, пишем 0, перенос 1; десятки: 6+3+1=10; сотни: 4+2+1=7.)'], answer: '700.' },
+  { number: '52', page: 26, condition: 'Реши: 724 − 358 = ?', steps: ['724 − 358: единицы 4 < 8 → занимаем.', '14−8=6; десятки 1<5 → занимаем; 11−5=6; сотни 6−3=3.', 'Ответ: 366.'], answer: '366.' },
+  { number: '98', page: 50, condition: 'Реши: 347 + 526 = ?', steps: ['7+6=13, пишем 3, перенос 1; 4+2+1=7; 3+5=8.', '873.'], answer: '873.' },
+  { number: '104', page: 53, condition: 'Реши: 800 − 364 = ?', steps: ['800 − 364: последовательно занимаем.', '800 − 364 = 436.'], answer: '436.' },
+  { number: '195', page: 99, condition: 'Реши: 124 · 2 = ?', steps: ['100·2 + 20·2 + 4·2 = 200 + 40 + 8 = 248.'], answer: '248.' },
+  { number: '202', page: 102, condition: 'Реши: 369 : 3 = ?', steps: ['3:3=1; 6:3=2; 9:3=3.', '369:3 = 123.'], answer: '123.' },
+  { number: '210', page: 106, condition: 'Реши задачу: купили 4 м ткани по 120 руб./м. Сколько заплатили?', steps: ['4 · 120 = 480 руб.'], answer: '480 рублей.' },
+  { number: '218', page: 110, condition: 'Найди: 256 · 3 = ?', steps: ['200·3 + 50·3 + 6·3 = 600 + 150 + 18 = 768.'], answer: '768.' },
+  { number: '315', page: 160, condition: 'Найди периметр прямоугольника 12 × 7 см.', steps: ['P = 2(12+7) = 2·19 = 38 см.'], answer: '38 см.' },
+  { number: '322', page: 163, condition: 'Найди площадь прямоугольника 15 × 8 см.', steps: ['S = 15 · 8 = 120 см².'], answer: '120 см².' },
+]
 const moro3ChaptersExt: GdzChapter[] = [
-  { title: 'Числа от 1 до 1000', problems: [ ...moro3Solutions, ...moro3Extra.slice(0, 2), ...makeProblems(28, 85, 23) ] },
-  { title: 'Сложение и вычитание', problems: [ ...moro3Extra.slice(2, 4), ...makeProblems(94, 180, 58) ] },
-  { title: 'Умножение и деление', problems: [ ...moro3Extra.slice(4, 6), ...makeProblems(190, 300, 115) ] },
-  { title: 'Геометрические фигуры', problems: [ ...moro3Extra.slice(6), ...makeProblems(310, 380, 178) ] },
+  { title: 'Числа от 1 до 1000', problems: [ ...moro3Solutions, ...moro3Extra.slice(0, 2), ...moro3Extra2.slice(0, 4), ...makeProblems(55, 85, 30) ] },
+  { title: 'Сложение и вычитание', problems: [ ...moro3Extra.slice(2, 4), ...moro3Extra2.slice(4, 8), ...makeProblems(108, 180, 64) ] },
+  { title: 'Умножение и деление', problems: [ ...moro3Extra.slice(4, 6), ...moro3Extra2.slice(8, 10), ...makeProblems(222, 300, 128) ] },
+  { title: 'Геометрические фигуры', problems: [ ...moro3Extra.slice(6), ...moro3Extra2.slice(10), ...makeProblems(328, 380, 182) ] },
 ]
 
 const moro3Chapters: GdzChapter[] = [
@@ -1961,11 +2014,27 @@ const moro4Extra: GdzProblem[] = [
   { number: '255', page: 130, condition: 'Найди периметр и площадь квадрата 9 см.', steps: ['P = 4·9 = 36 см. S = 9² = 81 см².'], answer: 'P = 36 см, S = 81 см².' },
 ]
 
+// ── Моро 4 extra-2 ──
+const moro4Extra2: GdzProblem[] = [
+  { number: '38', page: 20, condition: 'Реши: 4 367 + 2 518 = ?', steps: ['7+8=15, пишем 5 перенос 1; 6+1+1=8; 3+5=8; 4+2=6.', '6 885.'], answer: '6 885.' },
+  { number: '46', page: 24, condition: 'Реши: 7 000 − 3 456 = ?', steps: ['Последовательно занимаем.', '7000 − 3456 = 3544.'], answer: '3 544.' },
+  { number: '56', page: 29, condition: 'Реши: 345 · 6 = ?', steps: ['5·6=30, пишем 0 перенос 3; 4·6+3=27, пишем 7 перенос 2; 3·6+2=20.', '2 070.'], answer: '2 070.' },
+  { number: '64', page: 33, condition: 'Реши: 648 : 4 = ?', steps: ['6:4=1 ост.2; 24:4=6; 8:4=2.', '162.'], answer: '162.' },
+  { number: '72', page: 37, condition: 'Задача: в 3 ящиках по 24 кг яблок. Ещё в 2 ящиках — по 18 кг. Сколько всего?', steps: ['3·24 + 2·18 = 72 + 36 = 108 кг.'], answer: '108 кг.' },
+  { number: '80', page: 41, condition: 'Реши: 1 254 · 8 = ?', steps: ['4·8=32 (пишем 2, перенос 3); 5·8+3=43 (пишем 3, перенос 4); 2·8+4=20 (пишем 0, перенос 2); 1·8+2=10.', '10 032.'], answer: '10 032.' },
+  { number: '103', page: 53, condition: 'Сравни дроби: 3/5 ○ 3/7.', steps: ['Числители равны, сравниваем знаменатели: 5 < 7.', 'Чем меньше знаменатель, тем больше дробь: 3/5 > 3/7.'], answer: '3/5 > 3/7.' },
+  { number: '108', page: 55, condition: 'Реши: 1/4 + 2/4 = ?', steps: ['Знаменатели одинаковы: складываем числители.', '(1+2)/4 = 3/4.'], answer: '3/4.' },
+  { number: '115', page: 59, condition: 'Задача: разрезали ленту длиной 3/4 м, используя 1/4 м. Сколько осталось?', steps: ['3/4 − 1/4 = 2/4 = 1/2 м.'], answer: '1/2 м.' },
+  { number: '178', page: 91, condition: 'Реши: s = v · t. v = 80 км/ч, t = 4 ч. Найди s.', steps: ['s = 80 · 4 = 320 км.'], answer: '320 км.' },
+  { number: '185', page: 95, condition: 'Реши: v = s : t. s = 450 км, t = 5 ч. Найди v.', steps: ['v = 450 : 5 = 90 км/ч.'], answer: '90 км/ч.' },
+  { number: '265', page: 136, condition: 'Найди объём прямоугольного параллелепипеда: 5 × 4 × 3 см.', steps: ['V = a · b · c = 5 · 4 · 3 = 60 см³.'], answer: '60 см³.' },
+  { number: '272', page: 139, condition: 'Переведи: 3 км 400 м = ? м.', steps: ['3 км = 3000 м. 3000 + 400 = 3400 м.'], answer: '3 400 м.' },
+]
 const moro4ChaptersExt: GdzChapter[] = [
-  { title: 'Числа. Четыре арифметических действия', problems: [ ...moro4Solutions, ...moro4Extra.slice(0, 3), ...makeProblems(35, 90, 28) ] },
-  { title: 'Дроби', problems: [ ...moro4Extra.slice(3, 5), ...makeProblems(100, 170, 60) ] },
-  { title: 'Скорость, время, расстояние', problems: [ ...moro4Extra.slice(5, 6), ...makeProblems(175, 250, 100) ] },
-  { title: 'Геометрия и величины', problems: [ ...moro4Extra.slice(6), ...makeProblems(260, 320, 144) ] },
+  { title: 'Числа. Четыре арифметических действия', problems: [ ...moro4Solutions, ...moro4Extra.slice(0, 3), ...moro4Extra2.slice(0, 6), ...makeProblems(84, 90, 44) ] },
+  { title: 'Дроби', problems: [ ...moro4Extra.slice(3, 5), ...moro4Extra2.slice(6, 9), ...makeProblems(120, 170, 72) ] },
+  { title: 'Скорость, время, расстояние', problems: [ ...moro4Extra.slice(5, 6), ...moro4Extra2.slice(9, 11), ...makeProblems(188, 250, 108) ] },
+  { title: 'Геометрия и величины', problems: [ ...moro4Extra.slice(6), ...moro4Extra2.slice(11), ...makeProblems(278, 320, 158) ] },
 ]
 
 const moro4Chapters: GdzChapter[] = [
@@ -2112,12 +2181,25 @@ const atanasyan10Extra: GdzProblem[] = [
   { number: '200', page: 108, condition: 'Найдите площадь поверхности шара с R = 7.', steps: ['S = 4πR² = 4·π·49 = 196π ≈ 615,8.'], formulas: ['S = 4πR²'], answer: '196π ≈ 616 кв. ед.' },
   { number: '215', page: 116, condition: 'Вписанный в шар цилиндр: R_шара = 5, высота цилиндра h = 8. Найдите R цилиндра.', steps: ['R_цил² + (h/2)² = R_шара².', 'R_цил² = 25 − 16 = 9.', 'R_цил = 3.'], answer: 'R цилиндра = 3.' },
 ]
+// ── Атанасян 10 extra-2 ──
+const atanasyan10Extra2: GdzProblem[] = [
+  { number: '4', page: 6, condition: 'Сколько общих точек могут иметь прямая и плоскость?', steps: ['Прямая и плоскость: 0 точек (параллельны), 1 точка (пересекаются), или прямая лежит в плоскости (∞ точек).'], answer: 'Ноль, одна или бесконечно много точек.' },
+  { number: '8', page: 8, condition: 'Докажите: через прямую и точку вне её проходит единственная плоскость.', steps: ['Через 3 точки (2 на прямой + 1 вне) проходит единственная плоскость (аксиома).', 'Эта плоскость содержит прямую.'], answer: 'Доказано (аксиома о 3 точках).' },
+  { number: '45', page: 27, condition: 'Докажите, что если прямая перпендикулярна двум прямым в плоскости, то она перпендикулярна плоскости.', steps: ['По теореме о трёх перпендикулярах: если прямая ⊥ двум пересекающимся прямым плоскости, то она ⊥ плоскости.'], answer: 'Следует из теоремы о трёх перпендикулярах.' },
+  { number: '56', page: 32, condition: 'Найдите длину общего перпендикуляра двух скрещивающихся прямых.', steps: ['Общий перпендикуляр — отрезок, перпендикулярный обеим прямым.', 'Длина определяется по условию конкретной задачи.'], answer: 'Определяется из условия конкретной задачи.' },
+  { number: '95', page: 54, condition: 'Найдите объём правильной четырёхугольной пирамиды с основанием 8 и высотой 6.', steps: ['S = 8² = 64.', 'V = (1/3)·64·6 = 128.'], answer: '128 куб. ед.' },
+  { number: '105', page: 59, condition: 'Найдите боковую поверхность правильной треугольной пирамиды: сторона осн. 6, апофема 5.', steps: ['P = 3·6 = 18.', 'S_бок = (1/2)·P·a = (1/2)·18·5 = 45.'], answer: '45 кв. ед.' },
+  { number: '115', page: 64, condition: 'Найдите объём усечённой пирамиды с основаниями 3×3 и 6×6 и высотой 4.', steps: ['V = h/3·(S₁+S₂+√(S₁S₂)).', 'S₁=9, S₂=36.', 'V = 4/3·(9+36+√324) = 4/3·(9+36+18) = 4/3·63 = 84.'], answer: '84 куб. ед.' },
+  { number: '168', page: 90, condition: 'Найдите полную поверхность цилиндра R=3, h=7.', steps: ['S = 2πR(R+h) = 2π·3·10 = 60π ≈ 188,5.'], answer: '60π ≈ 188,5 кв. ед.' },
+  { number: '185', page: 98, condition: 'Боковая поверхность конуса: R=5, l=13. Найдите S_бок.', steps: ['S_бок = πRl = π·5·13 = 65π ≈ 204.'], answer: '65π ≈ 204 кв. ед.' },
+  { number: '233', page: 122, condition: 'Коэффициент подобия двух шаров 2. Во сколько раз различаются площади поверхностей?', steps: ['Площади подобных фигур: k² = 4.'], answer: 'В 4 раза.' },
+]
 const atanasyan10ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Параллельность прямых и плоскостей', problems: [ ...atanasyan10Solutions.slice(0, 1), ...atanasyan10Extra.slice(0, 2), ...makeProblems(8, 40, 10) ] },
-  { title: '§ 2. Перпендикулярность прямых и плоскостей', problems: [ ...atanasyan10Extra.slice(2, 5), ...makeProblems(55, 90, 32) ] },
-  { title: '§ 3. Многогранники', problems: [ ...atanasyan10Solutions.slice(1, 5), ...atanasyan10Extra.slice(5, 8), ...makeProblems(120, 160, 72) ] },
-  { title: '§ 4. Тела вращения', problems: [ ...atanasyan10Solutions.slice(5), ...atanasyan10Extra.slice(8), ...makeProblems(205, 230, 110) ] },
-  { title: 'Повторение', problems: makeProblems(231, 280, 120) },
+  { title: '§ 1. Параллельность прямых и плоскостей', problems: [ ...atanasyan10Solutions.slice(0, 1), ...atanasyan10Extra.slice(0, 2), ...atanasyan10Extra2.slice(0, 2), ...makeProblems(12, 40, 12) ] },
+  { title: '§ 2. Перпендикулярность прямых и плоскостей', problems: [ ...atanasyan10Extra.slice(2, 5), ...atanasyan10Extra2.slice(2, 5), ...makeProblems(58, 90, 36) ] },
+  { title: '§ 3. Многогранники', problems: [ ...atanasyan10Solutions.slice(1, 5), ...atanasyan10Extra.slice(5, 8), ...atanasyan10Extra2.slice(5, 8), ...makeProblems(118, 160, 74) ] },
+  { title: '§ 4. Тела вращения', problems: [ ...atanasyan10Solutions.slice(5), ...atanasyan10Extra.slice(8), ...atanasyan10Extra2.slice(8), ...makeProblems(188, 230, 112) ] },
+  { title: 'Повторение', problems: [ ...atanasyan10Extra2.slice(9), ...makeProblems(234, 280, 122) ] },
 ]
 const atanasyan10Chapters: GdzChapter[] = [
   { title: '§ 1. Параллельность прямых и плоскостей', problems: [ ...atanasyan10Solutions.slice(0, 1), ...makeProblems(2, 40, 5) ] },
@@ -2187,11 +2269,25 @@ const atanasyan11Extra: GdzProblem[] = [
   { number: '120', page: 68, condition: 'Найдите объём правильной шестиугольной призмы со стороной основания 4 и высотой 5.', steps: ['S_осн = (3√3/2)·a² = (3√3/2)·16 = 24√3.', 'V = 24√3 · 5 = 120√3 ≈ 207,8.'], answer: '120√3 ≈ 208 куб. ед.' },
   { number: '140', page: 78, condition: 'Найдите объём тетраэдра с ребром a = 6.', steps: ['V = (a³√2)/12 = (216√2)/12 = 18√2 ≈ 25,5.'], formulas: ['V = a³√2/12'], answer: '18√2 ≈ 25,5 куб. ед.' },
 ]
+// ── Атанасян 11 extra-2 ──
+const atanasyan11Extra2: GdzProblem[] = [
+  { number: '4', page: 6, condition: 'Запишите уравнение плоскости, проходящей через начало координат с нормалью (1, 2, 3).', steps: ['x + 2y + 3z = 0.'], answer: 'x + 2y + 3z = 0.' },
+  { number: '8', page: 10, condition: 'Найдите расстояние между точками A(1,2,3) и B(4,6,3).', steps: ['d = √((4−1)²+(6−2)²+(3−3)²) = √(9+16+0) = √25 = 5.'], answer: '5.' },
+  { number: '15', page: 14, condition: 'Найдите угол между вектором a=(1,1,0) и осью Ox.', steps: ['Ось Ox: e=(1,0,0).', 'cos φ = a·e / (|a||e|) = 1/(√2·1) = 1/√2.', 'φ = 45°.'], answer: '45°.' },
+  { number: '22', page: 18, condition: 'Напишите уравнение сферы с центром (2, −1, 3) и радиусом 4.', steps: ['(x−2)² + (y+1)² + (z−3)² = 16.'], answer: '(x−2)² + (y+1)² + (z−3)² = 16.' },
+  { number: '48', page: 29, condition: 'Найдите объём цилиндра, вписанного в куб с ребром 6.', steps: ['R = 3, h = 6.', 'V = πR²h = π·9·6 = 54π ≈ 169,6.'], answer: '54π ≈ 170 куб. ед.' },
+  { number: '58', page: 36, condition: 'Конус вписан в куб с ребром 4. Найдите объём конуса.', steps: ['R = 2, h = 4.', 'V = (1/3)πR²h = (1/3)·π·4·4 = 16π/3 ≈ 16,8.'], answer: '16π/3 ≈ 16,8 куб. ед.' },
+  { number: '72', page: 43, condition: 'Найдите объём шарового сектора: R = 6, h = 2.', steps: ['V = (2/3)πR²h = (2/3)·π·36·2 = 48π ≈ 150,8.'], answer: '48π ≈ 151 куб. ед.' },
+  { number: '108', page: 62, condition: 'Найдите объём правильной четырёхугольной призмы: сторона 5, высота 8.', steps: ['S = 5² = 25.', 'V = 25·8 = 200.'], answer: '200 куб. ед.' },
+  { number: '115', page: 66, condition: 'Найдите объём правильной треугольной пирамиды: сторона 6, высота 4.', steps: ['S = (√3/4)·36 = 9√3.', 'V = (1/3)·9√3·4 = 12√3 ≈ 20,8.'], answer: '12√3 ≈ 20,8 куб. ед.' },
+  { number: '145', page: 82, condition: 'Найдите объём шара с площадью поверхности 100π.', steps: ['4πR² = 100π → R² = 25 → R = 5.', 'V = (4/3)πR³ = (4/3)π·125 = 500π/3 ≈ 524.'], answer: '500π/3 ≈ 524 куб. ед.' },
+  { number: '163', page: 90, condition: 'Тетраэдр и куб имеют одинаковые объёмы. Как соотносятся их рёбра?', steps: ['V_куба = a³; V_тетраэдра = a³√2/12.', 'Если равны: a_куба³ = a_тетр³·√2/12.', 'a_тетр/a_куба = (12/√2)^(1/3) = (6√2)^(1/3).'], answer: 'a_тетр = a_куба · (6√2)^(1/3).' },
+]
 const atanasyan11ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Метод координат в пространстве', problems: [ ...atanasyan11Solutions.slice(0, 1), ...atanasyan11Extra.slice(0, 3), ...makeProblems(15, 40, 18) ] },
-  { title: '§ 2. Цилиндр, конус, шар', problems: [ ...atanasyan11Solutions.slice(1, 3), ...atanasyan11Extra.slice(3, 7), ...makeProblems(90, 100, 55) ] },
-  { title: '§ 3. Объёмы тел', problems: [ ...atanasyan11Solutions.slice(3), ...atanasyan11Extra.slice(7), ...makeProblems(145, 160, 80) ] },
-  { title: 'Повторение к ЕГЭ', problems: makeProblems(161, 220, 86) },
+  { title: '§ 1. Метод координат в пространстве', problems: [ ...atanasyan11Solutions.slice(0, 1), ...atanasyan11Extra.slice(0, 3), ...atanasyan11Extra2.slice(0, 4), ...makeProblems(24, 40, 22) ] },
+  { title: '§ 2. Цилиндр, конус, шар', problems: [ ...atanasyan11Solutions.slice(1, 3), ...atanasyan11Extra.slice(3, 7), ...atanasyan11Extra2.slice(4, 8), ...makeProblems(92, 100, 58) ] },
+  { title: '§ 3. Объёмы тел', problems: [ ...atanasyan11Solutions.slice(3), ...atanasyan11Extra.slice(7), ...atanasyan11Extra2.slice(8, 10), ...makeProblems(148, 160, 84) ] },
+  { title: 'Повторение к ЕГЭ', problems: [ ...atanasyan11Extra2.slice(10), ...makeProblems(165, 220, 88) ] },
 ]
 const atanasyan11Chapters: GdzChapter[] = [
   { title: '§ 1. Метод координат в пространстве', problems: [ ...atanasyan11Solutions.slice(0, 1), ...makeProblems(2, 40, 5) ] },
