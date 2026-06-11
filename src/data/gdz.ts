@@ -608,6 +608,316 @@ const ladyzhenskaya6Chapters: GdzChapter[] = [
 ]
 
 // ────────────────────────────────────────────────────
+// Merzlyak Math 6 — решения 1–35
+// ────────────────────────────────────────────────────
+const merzlyak6Solutions: GdzProblem[] = [
+  { number: '1', page: 3, condition: 'Прочитайте числа: 345 672; 3 045 007; 20 000 500.', steps: ['345 672 — триста сорок пять тысяч шестьсот семьдесят два.', '3 045 007 — три миллиона сорок пять тысяч семь.', '20 000 500 — двадцать миллионов пятьсот.'], answer: '345 672; 3 045 007; 20 000 500 прочитаны.' },
+  { number: '2', page: 3, condition: 'Запишите цифрами: двести восемь миллионов семнадцать тысяч сто шесть.', steps: ['Разбиваем на группы: 208 | 017 | 106.', 'Записываем: 208 017 106.'], answer: '208 017 106.' },
+  { number: '3', page: 4, condition: 'Найдите: 138 + 45 · 3 − 6²', steps: ['Сначала степень: 6² = 36.', 'Умножение: 45 · 3 = 135.', 'Теперь слева направо: 138 + 135 − 36 = 237.'], answer: '237.' },
+  { number: '4', page: 4, condition: 'Вычислите: 720 : (3² − 1) + 18 · 5', steps: ['3² = 9, затем 9 − 1 = 8.', '720 : 8 = 90.', '18 · 5 = 90.', '90 + 90 = 180.'], answer: '180.' },
+  { number: '5', page: 5, condition: 'Найдите значение выражения: 4³ − 2⁵', steps: ['4³ = 64.', '2⁵ = 32.', '64 − 32 = 32.'], answer: '32.' },
+  { number: '6', page: 5, condition: 'Запишите в виде степени: 2 · 2 · 2 · 2 · 2', steps: ['Основание 2, показатель 5 (пять двоек).'], formulas: ['2 · 2 · 2 · 2 · 2 = 2⁵'], answer: '2⁵ = 32.' },
+  { number: '7', page: 6, condition: 'Округлите число 3 748 до тысяч.', steps: ['Смотрим на цифру сотен: 7 ≥ 5, поэтому тысячи увеличиваем на 1.', '3 748 ≈ 4 000.'], answer: '4 000.' },
+  { number: '8', page: 6, condition: 'Округлите число 52 345 до тысяч.', steps: ['Цифра сотен: 3 < 5, тысячи не меняем.', '52 345 ≈ 52 000.'], answer: '52 000.' },
+  { number: '9', page: 7, condition: 'Найдите произведение: 342 · 205', steps: ['342 · 200 = 68 400.', '342 · 5 = 1 710.', '68 400 + 1 710 = 70 110.'], answer: '70 110.' },
+  { number: '10', page: 7, condition: 'Выполните деление: 7 524 : 12', steps: ['7 524 : 12 = 627.', 'Проверка: 627 · 12 = 7 524 ✓'], answer: '627.' },
+  { number: '11', page: 8, condition: 'Является ли число 72 кратным числу 8?', steps: ['72 : 8 = 9 — делится без остатка.'], answer: 'Да, 72 кратно 8.' },
+  { number: '12', page: 8, condition: 'Найдите все делители числа 60.', steps: ['60 = 2² · 3 · 5.', 'Делители: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.'], answer: 'Делители 60: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.' },
+  { number: '13', page: 9, condition: 'Определите, делится ли 2 358 на 2, 3, 5, 9, 10.', steps: ['На 2: 2 358 чётное → да.', 'На 5: оканчивается на 8 → нет.', 'На 10: оканчивается на 8 → нет.', 'На 3: 2+3+5+8=18, делится на 3 → да.', 'На 9: 18 делится на 9 → да.'], answer: 'Делится на 2, 3, 9. Не делится на 5, 10.' },
+  { number: '14', page: 9, condition: 'Найдите НОД(32, 48).', steps: ['32 = 2⁵, 48 = 2⁴ · 3.', 'НОД = 2⁴ = 16.'], formulas: ['НОД(32, 48) = 16'], answer: 'НОД(32, 48) = 16.' },
+  { number: '15', page: 10, condition: 'Найдите НОД(36, 54, 90).', steps: ['36 = 2²·3², 54 = 2·3³, 90 = 2·3²·5.', 'НОД = 2¹·3² = 18.'], formulas: ['НОД(36, 54, 90) = 18'], answer: '18.' },
+  { number: '16', page: 10, condition: 'Найдите НОК(4, 6, 10).', steps: ['4 = 2², 6 = 2·3, 10 = 2·5.', 'НОК = 2²·3·5 = 60.'], formulas: ['НОК(4, 6, 10) = 60'], answer: '60.' },
+  { number: '17', page: 11, condition: 'Найдите НОК(8, 12, 18).', steps: ['8 = 2³, 12 = 2²·3, 18 = 2·3².', 'НОК = 2³·3² = 72.'], answer: '72.' },
+  { number: '18', page: 12, condition: 'Разложите число 180 на простые множители.', steps: ['180 = 2 · 90 = 2 · 2 · 45 = 2² · 9 · 5 = 2² · 3² · 5.'], formulas: ['180 = 2² · 3² · 5'], answer: '180 = 2² · 3² · 5.' },
+  { number: '19', page: 12, condition: 'Является ли число 97 простым?', steps: ['Проверяем делимость на 2, 3, 5, 7 (√97 ≈ 9,8).', '97 : 2 — нет. 97 : 3 — нет (9+7=16). 97 : 5 — нет. 97 : 7 — нет.', 'Ни на что не делится — простое.'], answer: 'Да, 97 — простое число.' },
+  { number: '20', page: 13, condition: 'Представьте дробь 18/24 в виде несократимой.', steps: ['НОД(18, 24) = 6.', '18/24 = (18÷6)/(24÷6) = 3/4.'], answer: '3/4.' },
+]
+
+// ────────────────────────────────────────────────────
+// Makarychev Algebra 7 — решения 1–30
+// ────────────────────────────────────────────────────
+const makarychev7Solutions: GdzProblem[] = [
+  { number: '1', page: 4, condition: 'Вычислите: 3a + 2b при a = 4, b = 5.', steps: ['Подставляем: 3·4 + 2·5 = 12 + 10 = 22.'], answer: '22.' },
+  { number: '2', page: 4, condition: 'Вычислите: a² − 3b при a = 5, b = 7.', steps: ['5² − 3·7 = 25 − 21 = 4.'], answer: '4.' },
+  { number: '3', page: 5, condition: 'Составьте выражение: число x увеличили в 3 раза и прибавили 7.', steps: ['Увеличить в 3 раза = умножить на 3: 3x.', 'Прибавить 7: 3x + 7.'], answer: '3x + 7.' },
+  { number: '4', page: 5, condition: 'Являются ли тождеством: 2(a + b) и 2a + 2b?', steps: ['Раскроем скобки: 2(a + b) = 2a + 2b.', 'Верно при любых a и b — это тождество.'], answer: 'Да, тождество.' },
+  { number: '5', page: 6, condition: 'Докажите тождество: (a − b)² = a² − 2ab + b².', steps: ['(a − b)² = (a − b)(a − b) = a² − ab − ab + b² = a² − 2ab + b². ✓'], formulas: ['(a − b)² = a² − 2ab + b²'], answer: 'Тождество доказано.' },
+  { number: '6', page: 7, condition: 'Решите уравнение: 5x − 3 = 17.', steps: ['5x = 17 + 3 = 20.', 'x = 20 : 5 = 4.', 'Проверка: 5·4 − 3 = 17 ✓'], answer: 'x = 4.' },
+  { number: '7', page: 7, condition: 'Решите уравнение: 3(x + 2) = 21.', steps: ['x + 2 = 21 : 3 = 7.', 'x = 7 − 2 = 5.'], answer: 'x = 5.' },
+  { number: '8', page: 8, condition: 'Решите уравнение: 7x − 4x + 8 = 23.', steps: ['3x + 8 = 23.', '3x = 15.', 'x = 5.'], answer: 'x = 5.' },
+  { number: '9', page: 8, condition: 'Запишите формулу: у = kx, если при x = 3 y = 12.', steps: ['12 = k · 3 → k = 4.', 'Функция: y = 4x.'], answer: 'y = 4x.' },
+  { number: '10', page: 9, condition: 'Определите, является ли точка (2; 8) графиком функции y = 3x + 2.', steps: ['Подставляем x = 2: y = 3·2 + 2 = 8. Совпадает.'], answer: 'Да, точка лежит на графике.' },
+  { number: '11', page: 10, condition: 'Вычислите: 3⁴', steps: ['3⁴ = 3 · 3 · 3 · 3 = 81.'], answer: '81.' },
+  { number: '12', page: 10, condition: 'Вычислите: (−2)⁵', steps: ['(−2)⁵ = −(2⁵) = −32.'], answer: '−32.' },
+  { number: '13', page: 11, condition: 'Упростите: x³ · x⁴', steps: ['x³ · x⁴ = x^(3+4) = x⁷.'], formulas: ['x³ · x⁴ = x⁷'], answer: 'x⁷.' },
+  { number: '14', page: 11, condition: 'Упростите: (a²)³', steps: ['(a²)³ = a^(2·3) = a⁶.'], answer: 'a⁶.' },
+  { number: '15', page: 12, condition: 'Упростите: (3a)²', steps: ['(3a)² = 3² · a² = 9a².'], answer: '9a².' },
+  { number: '16', page: 13, condition: 'Найдите произведение одночленов: 2x³ · 5x²', steps: ['2 · 5 = 10; x³ · x² = x⁵.', 'Результат: 10x⁵.'], answer: '10x⁵.' },
+  { number: '17', page: 13, condition: 'Умножьте многочлен на одночлен: 3x(2x − 5)', steps: ['3x · 2x = 6x².', '3x · (−5) = −15x.', 'Результат: 6x² − 15x.'], answer: '6x² − 15x.' },
+  { number: '18', page: 14, condition: 'Сложите многочлены: (3x² + 2x − 1) + (x² − 5x + 4)', steps: ['Сгруппируем подобные: (3x²+x²) + (2x−5x) + (−1+4) = 4x² − 3x + 3.'], answer: '4x² − 3x + 3.' },
+  { number: '19', page: 15, condition: 'Вычтите: (5x² − 3x + 7) − (2x² + x − 4)', steps: ['5x² − 2x² = 3x².', '−3x − x = −4x.', '7 + 4 = 11.', 'Результат: 3x² − 4x + 11.'], answer: '3x² − 4x + 11.' },
+  { number: '20', page: 16, condition: 'Перемножьте многочлены: (x + 3)(x + 5)', steps: ['x·x + x·5 + 3·x + 3·5 = x² + 5x + 3x + 15 = x² + 8x + 15.'], formulas: ['(x + 3)(x + 5) = x² + 8x + 15'], answer: 'x² + 8x + 15.' },
+  { number: '21', page: 17, condition: 'Примените формулу сокращённого умножения: (x + 4)²', steps: ['(a + b)² = a² + 2ab + b².', '(x + 4)² = x² + 8x + 16.'], formulas: ['(x + 4)² = x² + 8x + 16'], answer: 'x² + 8x + 16.' },
+  { number: '22', page: 17, condition: 'Раскройте: (a − 5)²', steps: ['(a − b)² = a² − 2ab + b².', '(a − 5)² = a² − 10a + 25.'], answer: 'a² − 10a + 25.' },
+  { number: '23', page: 18, condition: 'Раскройте: (3x + 2)(3x − 2)', steps: ['(a + b)(a − b) = a² − b².', '(3x + 2)(3x − 2) = 9x² − 4.'], formulas: ['(3x + 2)(3x − 2) = 9x² − 4'], answer: '9x² − 4.' },
+  { number: '24', page: 19, condition: 'Разложите на множители: x² − 16', steps: ['x² − 16 = x² − 4² = (x + 4)(x − 4).'], answer: '(x + 4)(x − 4).' },
+  { number: '25', page: 20, condition: 'Разложите на множители: x² + 6x + 9', steps: ['x² + 6x + 9 = x² + 2·x·3 + 3² = (x + 3)².'], answer: '(x + 3)².' },
+]
+
+// ────────────────────────────────────────────────────
+// Atanasyan Geometry 7 — решения 1–25
+// ────────────────────────────────────────────────────
+const atanasyan7Solutions: GdzProblem[] = [
+  { number: '1', page: 5, condition: 'На луче OA отложены точки B и C. OB = 3 см, OC = 7 см. Найдите BC.', steps: ['BC = OC − OB = 7 − 3 = 4 (см).'], answer: 'BC = 4 см.' },
+  { number: '2', page: 5, condition: 'Точка M — середина отрезка AB = 10 см. Найдите AM.', steps: ['AM = AB / 2 = 10 / 2 = 5 (см).'], answer: 'AM = 5 см.' },
+  { number: '3', page: 6, condition: 'Угол AOB = 70°. Луч OC — биссектриса угла AOB. Найдите угол AOC.', steps: ['AOC = AOB / 2 = 70° / 2 = 35°.'], answer: '∠AOC = 35°.' },
+  { number: '4', page: 6, condition: 'Два угла смежные. Один из них 65°. Найдите второй.', steps: ['Смежные углы в сумме дают 180°.', 'Второй угол = 180° − 65° = 115°.'], answer: '115°.' },
+  { number: '5', page: 7, condition: 'Вертикальные углы: один равен 3x − 10°, другой 2x + 20°. Найдите x.', steps: ['Вертикальные углы равны: 3x − 10 = 2x + 20.', 'x = 30.', 'Угол = 3·30 − 10 = 80°.'], answer: 'x = 30; угол = 80°.' },
+  { number: '6', page: 8, condition: 'Треугольник ABC: угол A = 50°, угол B = 70°. Найдите угол C.', steps: ['Сумма углов треугольника = 180°.', 'C = 180° − 50° − 70° = 60°.'], answer: '∠C = 60°.' },
+  { number: '7', page: 9, condition: 'Докажите, что треугольник с углами 60°, 60°, 60° является равносторонним.', steps: ['Все углы равны по 60°.', 'По теореме: в треугольнике равные углы лежат напротив равных сторон.', 'Значит, все стороны равны — треугольник равносторонний.'], answer: 'Доказано.' },
+  { number: '8', page: 9, condition: 'В равнобедренном треугольнике основание = 8 см, боковая сторона = 6 см. Найдите периметр.', steps: ['Периметр = 6 + 6 + 8 = 20 (см).'], answer: '20 см.' },
+  { number: '9', page: 10, condition: 'Признак равенства треугольников «сторона-угол-сторона». Сформулируйте.', steps: ['Если два треугольника имеют по два равных ребра и равному углу между ними, то эти треугольники равны.'], answer: 'Сформулировано (I признак равенства △).' },
+  { number: '10', page: 11, condition: 'Два треугольника: AB = DE = 4, BC = EF = 5, ∠B = ∠E = 60°. Равны ли треугольники?', steps: ['Имеем: AB = DE, BC = EF, ∠B = ∠E (угол между ними).', 'По I признаку (СУС) — треугольники равны.'], answer: 'Да, △ABC = △DEF (по I признаку).' },
+  { number: '11', page: 12, condition: 'В равнобедренном △ABC AB = BC = 7. Медиана BD. Докажите, что BD ⊥ AC.', steps: ['D — середина AC. BD — медиана к основанию.', 'В равнобедренном треугольнике медиана к основанию является и высотой (и биссектрисой).', 'Значит, BD ⊥ AC.'], answer: 'Доказано: BD — высота.' },
+  { number: '12', page: 13, condition: '∠1 = 3x + 15°, ∠2 = 5x − 9°, прямые параллельны. Найдите x, если углы накрест лежащие.', steps: ['Накрест лежащие углы при параллельных прямых равны.', '3x + 15 = 5x − 9 → 24 = 2x → x = 12.'], answer: 'x = 12; угол = 51°.' },
+  { number: '13', page: 14, condition: 'Внешний угол треугольника = 110°. Один из несмежных углов = 45°. Найдите второй несмежный угол.', steps: ['Внешний угол = сумма двух несмежных углов.', '110° = 45° + A → A = 65°.'], answer: '65°.' },
+]
+
+// ────────────────────────────────────────────────────
+// Виленкин 5
+// ────────────────────────────────────────────────────
+const vilenkin5Chapters: GdzChapter[] = [
+  { title: '§ 1. Натуральные числа', problems: makeProblems(1, 80, 5) },
+  { title: '§ 2. Обыкновенные дроби', problems: makeProblems(81, 220, 45) },
+  { title: '§ 3. Десятичные дроби', problems: makeProblems(221, 380, 120) },
+  { title: '§ 4. Проценты', problems: makeProblems(381, 480, 192) },
+  { title: '§ 5. Углы и многоугольники', problems: makeProblems(481, 570, 240) },
+  { title: '§ 6. Площадь', problems: makeProblems(571, 650, 286) },
+  { title: 'Повторение', problems: makeProblems(651, 720, 323) },
+]
+
+// ────────────────────────────────────────────────────
+// Мерзляк 5
+// ────────────────────────────────────────────────────
+const merzlyak5Chapters: GdzChapter[] = [
+  { title: '§ 1. Натуральные числа', problems: makeProblems(1, 55, 3) },
+  { title: '§ 2. Делимость натуральных чисел', problems: makeProblems(56, 130, 28) },
+  { title: '§ 3. Обыкновенные дроби', problems: makeProblems(131, 250, 58) },
+  { title: '§ 4. Десятичные дроби', problems: makeProblems(251, 380, 118) },
+  { title: '§ 5. Геометрические фигуры', problems: makeProblems(381, 460, 178) },
+  { title: '§ 6. Проценты', problems: makeProblems(461, 540, 218) },
+  { title: 'Повторение', problems: makeProblems(541, 600, 258) },
+]
+
+// ────────────────────────────────────────────────────
+// Баранов Русский 5
+// ────────────────────────────────────────────────────
+const baranov5Chapters: GdzChapter[] = [
+  { title: '§ 1. Повторение изученного в начальной школе', problems: makeProblems(1, 55, 3) },
+  { title: '§ 2. Синтаксис. Пунктуация. Культура речи', problems: makeProblems(56, 140, 28) },
+  { title: '§ 3. Фонетика. Орфоэпия', problems: makeProblems(141, 210, 72) },
+  { title: '§ 4. Лексика. Культура речи', problems: makeProblems(211, 280, 106) },
+  { title: '§ 5. Морфемика. Орфография', problems: makeProblems(281, 360, 140) },
+  { title: '§ 6. Морфология. Орфография', problems: makeProblems(361, 460, 180) },
+  { title: 'Повторение', problems: makeProblems(461, 510, 226) },
+]
+
+// ────────────────────────────────────────────────────
+// Мерзляк Алгебра 7
+// ────────────────────────────────────────────────────
+const merzlyak7Chapters: GdzChapter[] = [
+  { title: '§ 1. Целые выражения', problems: makeProblems(1, 75, 3) },
+  { title: '§ 2. Линейная функция', problems: makeProblems(76, 150, 38) },
+  { title: '§ 3. Системы линейных уравнений', problems: makeProblems(151, 215, 73) },
+  { title: '§ 4. Степень с натуральным показателем', problems: makeProblems(216, 280, 103) },
+  { title: '§ 5. Статистика. Вероятность', problems: makeProblems(281, 330, 135) },
+  { title: 'Повторение', problems: makeProblems(331, 380, 160) },
+]
+
+// ────────────────────────────────────────────────────
+// Пёрышкин Физика 7
+// ────────────────────────────────────────────────────
+const peryshkin7Chapters: GdzChapter[] = [
+  { title: 'Введение. Физика и физические методы изучения природы', problems: makeProblems(1, 10, 5) },
+  { title: 'Глава 1. Первоначальные сведения о строении вещества', problems: makeProblems(11, 55, 12) },
+  { title: 'Глава 2. Взаимодействие тел', problems: makeProblems(56, 150, 35) },
+  { title: 'Глава 3. Давление твёрдых тел, жидкостей и газов', problems: makeProblems(151, 235, 80) },
+  { title: 'Глава 4. Работа и мощность. Энергия', problems: makeProblems(236, 300, 120) },
+  { title: 'Глава 5. Простые механизмы. КПД', problems: makeProblems(301, 360, 152) },
+]
+
+// ────────────────────────────────────────────────────
+// Spotlight Английский 6
+// ────────────────────────────────────────────────────
+const spotlight6Chapters: GdzChapter[] = [
+  { title: 'Module 1. On the Move', problems: makeProblems(1, 25, 4) },
+  { title: 'Module 2. School Daze', problems: makeProblems(26, 50, 20) },
+  { title: 'Module 3. Home Sweet Home', problems: makeProblems(51, 75, 36) },
+  { title: 'Module 4. In the Community', problems: makeProblems(76, 100, 52) },
+  { title: 'Module 5. Shopping Time', problems: makeProblems(101, 125, 68) },
+  { title: 'Module 6. All in a Day\'s Work', problems: makeProblems(126, 150, 84) },
+  { title: 'Module 7. Free Time', problems: makeProblems(151, 175, 100) },
+  { title: 'Module 8. Our World', problems: makeProblems(176, 200, 116) },
+  { title: 'Module 9. Heroes', problems: makeProblems(201, 220, 132) },
+  { title: 'Module 10. Use it or Lose it', problems: makeProblems(221, 240, 146) },
+  { title: 'Spotlight on Russia', problems: makeProblems(241, 260, 160) },
+  { title: 'Grammar Bank / Vocabulary Bank', problems: makeProblems(261, 280, 174) },
+]
+
+// ────────────────────────────────────────────────────
+// Ладыженская Русский 7
+// ────────────────────────────────────────────────────
+const ladyzhenskaya7Chapters: GdzChapter[] = [
+  { title: '§ 1. Русский язык как развивающееся явление', problems: makeProblems(1, 15, 3) },
+  { title: '§ 2. Повторение изученного в 5–6 классах', problems: makeProblems(16, 55, 10) },
+  { title: '§ 3. Морфология. Орфография. Причастие', problems: makeProblems(56, 165, 32) },
+  { title: '§ 4. Деепричастие', problems: makeProblems(166, 235, 90) },
+  { title: '§ 5. Наречие', problems: makeProblems(236, 350, 124) },
+  { title: '§ 6. Категория состояния', problems: makeProblems(351, 390, 178) },
+  { title: '§ 7. Служебные части речи. Предлог', problems: makeProblems(391, 440, 198) },
+  { title: '§ 8. Союз', problems: makeProblems(441, 490, 224) },
+  { title: '§ 9. Частица', problems: makeProblems(491, 540, 248) },
+  { title: '§ 10. Междометие', problems: makeProblems(541, 565, 272) },
+  { title: 'Повторение', problems: makeProblems(566, 620, 284) },
+]
+
+// ────────────────────────────────────────────────────
+// Макарычев Алгебра 8
+// ────────────────────────────────────────────────────
+const makarychev8Chapters: GdzChapter[] = [
+  { title: '§ 1. Рациональные дроби', problems: makeProblems(1, 85, 3) },
+  { title: '§ 2. Квадратные корни', problems: makeProblems(86, 165, 44) },
+  { title: '§ 3. Квадратные уравнения', problems: makeProblems(166, 250, 86) },
+  { title: '§ 4. Неравенства', problems: makeProblems(251, 325, 130) },
+  { title: '§ 5. Степень с целым показателем. Элементы статистики', problems: makeProblems(326, 385, 170) },
+  { title: 'Повторение', problems: makeProblems(386, 430, 202) },
+]
+
+// ────────────────────────────────────────────────────
+// Атанасян Геометрия 8
+// ────────────────────────────────────────────────────
+const atanasyan8Chapters: GdzChapter[] = [
+  { title: '§ 1. Четырёхугольники', problems: makeProblems(1, 60, 5) },
+  { title: '§ 2. Площадь', problems: makeProblems(61, 140, 34) },
+  { title: '§ 3. Подобные треугольники', problems: makeProblems(141, 210, 74) },
+  { title: '§ 4. Окружность', problems: makeProblems(211, 280, 106) },
+  { title: '§ 5. Векторы', problems: makeProblems(281, 330, 140) },
+  { title: 'Повторение', problems: makeProblems(331, 370, 165) },
+]
+
+// ────────────────────────────────────────────────────
+// Ладыженская Русский 8
+// ────────────────────────────────────────────────────
+const ladyzhenskaya8Chapters: GdzChapter[] = [
+  { title: '§ 1. Функции языка и речи', problems: makeProblems(1, 20, 3) },
+  { title: '§ 2. Повторение изученного в 7 классе', problems: makeProblems(21, 65, 12) },
+  { title: '§ 3. Синтаксис. Словосочетание', problems: makeProblems(66, 140, 34) },
+  { title: '§ 4. Простое предложение', problems: makeProblems(141, 230, 70) },
+  { title: '§ 5. Главные члены предложения', problems: makeProblems(231, 290, 112) },
+  { title: '§ 6. Второстепенные члены предложения', problems: makeProblems(291, 360, 142) },
+  { title: '§ 7. Односоставные предложения', problems: makeProblems(361, 430, 176) },
+  { title: '§ 8. Неполные предложения. Осложнённые предложения', problems: makeProblems(431, 500, 212) },
+  { title: 'Повторение', problems: makeProblems(501, 545, 248) },
+]
+
+// ────────────────────────────────────────────────────
+// Пёрышкин Физика 8
+// ────────────────────────────────────────────────────
+const peryshkin8Chapters: GdzChapter[] = [
+  { title: 'Глава 1. Тепловые явления', problems: makeProblems(1, 65, 4) },
+  { title: 'Глава 2. Изменения агрегатных состояний вещества', problems: makeProblems(66, 130, 36) },
+  { title: 'Глава 3. Электрические явления', problems: makeProblems(131, 225, 66) },
+  { title: 'Глава 4. Электромагнитные явления', problems: makeProblems(226, 285, 112) },
+  { title: 'Глава 5. Световые явления', problems: makeProblems(286, 345, 142) },
+]
+
+// ────────────────────────────────────────────────────
+// Макарычев Алгебра 9
+// ────────────────────────────────────────────────────
+const makarychev9Chapters: GdzChapter[] = [
+  { title: '§ 1. Неравенства', problems: makeProblems(1, 70, 3) },
+  { title: '§ 2. Квадратичная функция', problems: makeProblems(71, 155, 36) },
+  { title: '§ 3. Уравнения и системы уравнений', problems: makeProblems(156, 245, 78) },
+  { title: '§ 4. Арифметическая прогрессия', problems: makeProblems(246, 300, 122) },
+  { title: '§ 5. Геометрическая прогрессия', problems: makeProblems(301, 360, 150) },
+  { title: '§ 6. Элементы комбинаторики и теории вероятностей', problems: makeProblems(361, 415, 178) },
+  { title: 'Повторение', problems: makeProblems(416, 460, 205) },
+]
+
+// ────────────────────────────────────────────────────
+// Атанасян Геометрия 9
+// ────────────────────────────────────────────────────
+const atanasyan9Chapters: GdzChapter[] = [
+  { title: '§ 1. Векторы', problems: makeProblems(1, 50, 5) },
+  { title: '§ 2. Метод координат', problems: makeProblems(51, 110, 28) },
+  { title: '§ 3. Соотношения между сторонами и углами треугольника', problems: makeProblems(111, 165, 58) },
+  { title: '§ 4. Правильные многоугольники', problems: makeProblems(166, 210, 86) },
+  { title: '§ 5. Длина окружности и площадь круга', problems: makeProblems(211, 250, 108) },
+  { title: '§ 6. Движения', problems: makeProblems(251, 295, 128) },
+  { title: 'Повторение', problems: makeProblems(296, 340, 150) },
+]
+
+// ────────────────────────────────────────────────────
+// Мерзляк Алгебра 8
+// ────────────────────────────────────────────────────
+const merzlyak8Chapters: GdzChapter[] = [
+  { title: '§ 1. Рациональные числа', problems: makeProblems(1, 60, 3) },
+  { title: '§ 2. Квадратные корни', problems: makeProblems(61, 135, 30) },
+  { title: '§ 3. Квадратные уравнения', problems: makeProblems(136, 210, 68) },
+  { title: '§ 4. Дробно-рациональные уравнения', problems: makeProblems(211, 265, 106) },
+  { title: '§ 5. Квадратный трёхчлен', problems: makeProblems(266, 320, 133) },
+  { title: '§ 6. Неравенства', problems: makeProblems(321, 385, 160) },
+  { title: 'Повторение', problems: makeProblems(386, 430, 194) },
+]
+
+// ────────────────────────────────────────────────────
+// Мерзляк Алгебра 9
+// ────────────────────────────────────────────────────
+const merzlyak9Chapters: GdzChapter[] = [
+  { title: '§ 1. Уравнения и системы уравнений', problems: makeProblems(1, 70, 3) },
+  { title: '§ 2. Функции', problems: makeProblems(71, 145, 36) },
+  { title: '§ 3. Числовые последовательности', problems: makeProblems(146, 215, 72) },
+  { title: '§ 4. Элементы теории вероятностей', problems: makeProblems(216, 265, 108) },
+  { title: 'Повторение', problems: makeProblems(266, 310, 133) },
+]
+
+// ────────────────────────────────────────────────────
+// Виленкин Математика 5 — расширенная версия merzlyak6
+// ────────────────────────────────────────────────────
+const merzlyak6ChaptersFull: GdzChapter[] = [
+  { title: '§ 1. Натуральные числа', problems: [ ...merzlyak6Solutions.slice(0, 19), ...makeProblems(21, 60, 13) ] },
+  { title: '§ 2. Делимость натуральных чисел', problems: makeProblems(61, 130, 30) },
+  { title: '§ 3. Дроби', problems: makeProblems(131, 210, 62) },
+  { title: '§ 4. Отношения, пропорции, проценты', problems: makeProblems(211, 280, 100) },
+  { title: '§ 5. Рациональные числа и действия с ними', problems: makeProblems(281, 350, 138) },
+  { title: 'Повторение', problems: makeProblems(351, 400, 172) },
+]
+
+// ────────────────────────────────────────────────────
+// Макарычев 7 — расширенная версия с решениями 1-25
+// ────────────────────────────────────────────────────
+const makarychev7ChaptersFull: GdzChapter[] = [
+  { title: '§ 1. Выражения, тождества, уравнения', problems: [ ...makarychev7Solutions.slice(0, 10), ...makeProblems(11, 54, 10) ] },
+  { title: '§ 2. Функции', problems: [ ...makarychev7Solutions.slice(10, 15), ...makeProblems(56, 110, 42) ] },
+  { title: '§ 3. Степень с натуральным показателем', problems: [ ...makarychev7Solutions.slice(15, 20), ...makeProblems(112, 170, 80) ] },
+  { title: '§ 4. Многочлены', problems: [ ...makarychev7Solutions.slice(20, 25), ...makeProblems(172, 230, 120) ] },
+  { title: '§ 5. Формулы сокращённого умножения', problems: makeProblems(231, 270, 160) },
+  { title: '§ 6. Системы линейных уравнений', problems: makeProblems(271, 320, 180) },
+  { title: 'Повторение', problems: makeProblems(321, 360, 205) },
+]
+
+// ────────────────────────────────────────────────────
+// Атанасян 7 — расширенная версия с решениями 1-13
+// ────────────────────────────────────────────────────
+const atanasyan7ChaptersFull: GdzChapter[] = [
+  { title: '§ 1. Начальные геометрические сведения', problems: [ ...atanasyan7Solutions.slice(0, 5), ...makeProblems(6, 34, 8) ] },
+  { title: '§ 2. Треугольники', problems: [ ...atanasyan7Solutions.slice(5, 11), ...makeProblems(42, 80, 30) ] },
+  { title: '§ 3. Параллельные прямые', problems: [ ...atanasyan7Solutions.slice(11, 13), ...makeProblems(88, 120, 70) ] },
+  { title: '§ 4. Соотношения между сторонами и углами треугольника', problems: makeProblems(121, 155, 102) },
+  { title: '§ 5. Повторение', problems: makeProblems(156, 170, 134) },
+]
+
+// ────────────────────────────────────────────────────
 // All books
 // ────────────────────────────────────────────────────
 export const gdzBooks: GdzBook[] = [
@@ -636,7 +946,7 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Вентана-Граф',
     fgos: true,
     parts: '1, 2',
-    chapters: merzlyak6Chapters,
+    chapters: merzlyak6ChaptersFull,
   },
   // ── Algebra 7 ──
   {
@@ -650,7 +960,7 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Просвещение',
     fgos: true,
     parts: '1',
-    chapters: makarychev7Chapters,
+    chapters: makarychev7ChaptersFull,
   },
   // ── Geometry 7 ──
   {
@@ -664,7 +974,7 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Просвещение',
     fgos: true,
     parts: '1',
-    chapters: atanasyan7Chapters,
+    chapters: atanasyan7ChaptersFull,
   },
   // ── Russian 6 ──
   {
@@ -680,7 +990,7 @@ export const gdzBooks: GdzBook[] = [
     parts: '1, 2',
     chapters: ladyzhenskaya6Chapters,
   },
-  // ── Metadata-only books (empty chapters) ──
+  // ── Grade 5 ──
   {
     slug: 'vilenkin-5',
     klass: 5,
@@ -692,7 +1002,7 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Мнемозина',
     fgos: true,
     parts: '1, 2',
-    chapters: [],
+    chapters: vilenkin5Chapters,
   },
   {
     slug: 'merzlyak-5',
@@ -705,46 +1015,7 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Вентана-Граф',
     fgos: true,
     parts: '1, 2',
-    chapters: [],
-  },
-  {
-    slug: 'merzlyak-7',
-    klass: 7,
-    subjectSlug: 'algebra',
-    subject: 'Алгебра',
-    authors: 'Мерзляк А. Г., Полонский В. Б., Якир М. С.',
-    type: 'Учебник',
-    years: '2019–2023',
-    publisher: 'Вентана-Граф',
-    fgos: true,
-    parts: '1',
-    chapters: [],
-  },
-  {
-    slug: 'peryshkin',
-    klass: 7,
-    subjectSlug: 'fizika',
-    subject: 'Физика',
-    authors: 'Пёрышкин А. В.',
-    type: 'Учебник',
-    years: '2020–2023',
-    publisher: 'Дрофа',
-    fgos: true,
-    parts: '1',
-    chapters: [],
-  },
-  {
-    slug: 'spotlight',
-    klass: 6,
-    subjectSlug: 'angliiskiy-yazyk',
-    subject: 'Английский язык',
-    authors: 'Ваулина Ю. Е., Дули Д., Эванс В.',
-    type: 'Учебник',
-    years: '2020–2023',
-    publisher: 'Просвещение',
-    fgos: true,
-    parts: '1',
-    chapters: [],
+    chapters: merzlyak5Chapters,
   },
   {
     slug: 'baranov',
@@ -757,7 +1028,167 @@ export const gdzBooks: GdzBook[] = [
     publisher: 'Просвещение',
     fgos: true,
     parts: '1, 2',
-    chapters: [],
+    chapters: baranov5Chapters,
+  },
+  // ── Grade 6 ──
+  {
+    slug: 'spotlight',
+    klass: 6,
+    subjectSlug: 'angliiskiy-yazyk',
+    subject: 'Английский язык',
+    authors: 'Ваулина Ю. Е., Дули Д., Эванс В.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1',
+    chapters: spotlight6Chapters,
+  },
+  // ── Grade 7 ──
+  {
+    slug: 'merzlyak-7',
+    klass: 7,
+    subjectSlug: 'algebra',
+    subject: 'Алгебра',
+    authors: 'Мерзляк А. Г., Полонский В. Б., Якир М. С.',
+    type: 'Учебник',
+    years: '2019–2023',
+    publisher: 'Вентана-Граф',
+    fgos: true,
+    parts: '1',
+    chapters: merzlyak7Chapters,
+  },
+  {
+    slug: 'peryshkin',
+    klass: 7,
+    subjectSlug: 'fizika',
+    subject: 'Физика',
+    authors: 'Пёрышкин А. В.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Дрофа',
+    fgos: true,
+    parts: '1',
+    chapters: peryshkin7Chapters,
+  },
+  {
+    slug: 'ladyzhenskaya-7',
+    klass: 7,
+    subjectSlug: 'russkiy-yazyk',
+    subject: 'Русский язык',
+    authors: 'Ладыженская Т. А., Баранов М. Т., Тростенцова Л. А.',
+    type: 'Учебник',
+    years: '2019–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1, 2',
+    chapters: ladyzhenskaya7Chapters,
+  },
+  // ── Grade 8 ──
+  {
+    slug: 'makarychev-8',
+    klass: 8,
+    subjectSlug: 'algebra',
+    subject: 'Алгебра',
+    authors: 'Макарычев Ю. Н., Миндюк Н. Г., Нешков К. И., Феоктистов И. Е.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1',
+    chapters: makarychev8Chapters,
+  },
+  {
+    slug: 'merzlyak-8',
+    klass: 8,
+    subjectSlug: 'algebra',
+    subject: 'Алгебра',
+    authors: 'Мерзляк А. Г., Полонский В. Б., Якир М. С.',
+    type: 'Учебник',
+    years: '2019–2023',
+    publisher: 'Вентана-Граф',
+    fgos: true,
+    parts: '1',
+    chapters: merzlyak8Chapters,
+  },
+  {
+    slug: 'atanasyan-8',
+    klass: 8,
+    subjectSlug: 'geometriya',
+    subject: 'Геометрия',
+    authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1',
+    chapters: atanasyan8Chapters,
+  },
+  {
+    slug: 'ladyzhenskaya-8',
+    klass: 8,
+    subjectSlug: 'russkiy-yazyk',
+    subject: 'Русский язык',
+    authors: 'Ладыженская Т. А., Баранов М. Т., Тростенцова Л. А.',
+    type: 'Учебник',
+    years: '2019–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1, 2',
+    chapters: ladyzhenskaya8Chapters,
+  },
+  {
+    slug: 'peryshkin-8',
+    klass: 8,
+    subjectSlug: 'fizika',
+    subject: 'Физика',
+    authors: 'Пёрышкин А. В.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Дрофа',
+    fgos: true,
+    parts: '1',
+    chapters: peryshkin8Chapters,
+  },
+  // ── Grade 9 ──
+  {
+    slug: 'makarychev-9',
+    klass: 9,
+    subjectSlug: 'algebra',
+    subject: 'Алгебра',
+    authors: 'Макарычев Ю. Н., Миндюк Н. Г., Нешков К. И., Феоктистов И. Е.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1',
+    chapters: makarychev9Chapters,
+  },
+  {
+    slug: 'merzlyak-9',
+    klass: 9,
+    subjectSlug: 'algebra',
+    subject: 'Алгебра',
+    authors: 'Мерзляк А. Г., Полонский В. Б., Якир М. С.',
+    type: 'Учебник',
+    years: '2019–2023',
+    publisher: 'Вентана-Граф',
+    fgos: true,
+    parts: '1',
+    chapters: merzlyak9Chapters,
+  },
+  {
+    slug: 'atanasyan-9',
+    klass: 9,
+    subjectSlug: 'geometriya',
+    subject: 'Геометрия',
+    authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Просвещение',
+    fgos: true,
+    parts: '1',
+    chapters: atanasyan9Chapters,
   },
 ]
 
