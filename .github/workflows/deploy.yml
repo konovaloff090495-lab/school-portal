@@ -31,6 +31,7 @@ jobs:
             echo "==> build..."
             npm run build
             echo "==> restart PM2..."
-            pm2 restart school-portal || pm2 start npm --name school-portal -- start
+            pm2 delete school-portal 2>/dev/null || true
+            PORT=3001 pm2 start npm --name school-portal -- start
             pm2 save
             echo "==> done"
