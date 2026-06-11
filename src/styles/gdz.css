@@ -1,0 +1,814 @@
+/* ════════════════════════════════════════════════════════════
+   Pro-schools · Раздел ГДЗ — общие стили (статичный SEO-шаблон)
+   Тёплая палитра Pro-schools. Подключается на всех 4 страницах.
+   Шрифты: Unbounded (заголовки) + Manrope (текст).
+   ════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Тёплая палитра — персик / коралл / мёд */
+  --cream:     #FFF8F0;
+  --cream-2:   #FDEFE0;
+  --peach-50:  #FFEFDD;
+  --peach-100: #FFD9B8;
+  --peach-200: #FFB988;
+  --coral-400: #FF8B5A;
+  --coral-500: #FF6B3D;
+  --coral-600: #E8552A;
+  --honey-400: #FFC547;
+  --honey-500: #F5A623;
+  --leaf-400:  #6BBE7E;
+  --sky-300:   #BCDFF1;
+  --sky-400:   #7CC0DE;
+  --plum-700:  #2D1F3D;
+
+  --ink:      #1A1814;
+  --ink-2:    #3A332B;
+  --ink-3:    #6B5F50;
+  --ink-soft: rgba(26, 24, 20, 0.6);
+
+  --line:   rgba(26, 24, 20, 0.08);
+  --line-2: rgba(26, 24, 20, 0.14);
+
+  --shadow-sm: 0 1px 2px rgba(60, 30, 10, 0.04), 0 2px 6px rgba(60, 30, 10, 0.04);
+  --shadow-md: 0 4px 12px rgba(60, 30, 10, 0.06), 0 12px 32px rgba(60, 30, 10, 0.08);
+  --shadow-lg: 0 8px 24px rgba(60, 30, 10, 0.08), 0 24px 60px rgba(60, 30, 10, 0.10);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --font-display: 'Unbounded', 'Manrope', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+
+  /* Сетка раздела */
+  --content-max: 1200px;
+  --rail-w: 300px;     /* ширина рекламной колонки */
+  --gap-col: 32px;
+  --header-h: 68px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.gdz-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* ── Шапка ─────────────────────────────────────────────── */
+.gdz-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 248, 240, 0.88);
+  backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.gdz-header-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  height: var(--header-h);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.gdz-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.gdz-logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--coral-500);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  box-shadow: 0 2px 0 var(--coral-600), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+.gdz-logo .muted { opacity: 0.5; font-weight: 500; }
+.gdz-logo .tag {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--coral-600);
+  background: var(--peach-50);
+  border: 1px solid rgba(255, 107, 61, 0.2);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-left: 2px;
+}
+
+/* Поиск в шапке */
+.gdz-search {
+  flex: 1;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  padding: 9px 16px;
+  color: var(--ink-3);
+  transition: border-color .15s, box-shadow .15s;
+}
+.gdz-search:focus-within { border-color: var(--coral-400); box-shadow: 0 0 0 4px rgba(255,107,61,0.12); }
+.gdz-search svg { flex-shrink: 0; }
+.gdz-search input {
+  border: none; outline: none; background: transparent; flex: 1;
+  font-family: var(--font-body); font-size: 15px; color: var(--ink);
+}
+
+.gdz-header-cta {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Кнопки ────────────────────────────────────────────── */
+.gdz-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 11px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform .12s ease, box-shadow .12s ease, background .15s;
+  white-space: nowrap;
+}
+.gdz-btn:active { transform: translateY(1px); }
+.gdz-btn--primary {
+  background: var(--coral-500); color: #fff;
+  box-shadow: 0 3px 0 var(--coral-600), 0 6px 18px rgba(255, 107, 61, 0.3);
+}
+.gdz-btn--primary:hover { background: var(--coral-400); }
+.gdz-btn--ghost {
+  background: #fff; color: var(--ink); border: 1.5px solid var(--line-2);
+}
+.gdz-btn--ghost:hover { background: var(--peach-50); border-color: var(--peach-200); }
+
+/* ── Контейнер + сетка контент / реклама ──────────────── */
+.gdz-shell {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 28px 24px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--rail-w);
+  gap: var(--gap-col);
+  align-items: start;
+}
+.gdz-main { min-width: 0; }
+
+/* ── Хлебные крошки ───────────────────────────────────── */
+.gdz-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-3);
+  margin-bottom: 16px;
+}
+.gdz-crumbs a, .gdz-crumbs .cur { white-space: nowrap; }
+.gdz-crumbs a { color: var(--ink-3); transition: color .12s; }
+.gdz-crumbs a:hover { color: var(--coral-500); }
+.gdz-crumbs .sep { opacity: 0.4; }
+.gdz-crumbs .cur { color: var(--ink); }
+
+/* ── Заголовок страницы ───────────────────────────────── */
+.gdz-pagehead { margin-bottom: 24px; }
+.gdz-pagehead h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+.gdz-pagehead .lede {
+  color: var(--ink-3);
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 640px;
+}
+.gdz-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral-600);
+  margin-bottom: 14px;
+}
+.gdz-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--coral-500); }
+
+/* ── Переключатель классов (табы 1–11) ────────────────── */
+.gdz-classbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.gdz-classbar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--line-2);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-2);
+  transition: all .12s;
+}
+.gdz-classbar a:hover { border-color: var(--peach-200); background: var(--peach-50); color: var(--coral-600); }
+.gdz-classbar a.active {
+  background: var(--coral-500); color: #fff; border-color: var(--coral-500);
+  box-shadow: 0 3px 0 var(--coral-600);
+}
+
+/* ── Секции ───────────────────────────────────────────── */
+.gdz-section { margin-bottom: 38px; }
+.gdz-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.gdz-section-head h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  margin: 0;
+}
+.gdz-section-head .more { font-size: 14px; font-weight: 600; color: var(--coral-600); }
+
+/* ── Сетка классов (главная разводящая) ───────────────── */
+.gdz-class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.gdz-class-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s;
+  overflow: hidden;
+}
+.gdz-class-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--peach-200);
+}
+.gdz-class-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--coral-500);
+}
+.gdz-class-card .lbl { font-weight: 700; font-size: 15px; color: var(--ink); }
+.gdz-class-card .sub { font-size: 12.5px; color: var(--ink-3); font-weight: 500; }
+.gdz-class-card .corner {
+  position: absolute;
+  right: -14px; top: -14px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--peach-50);
+  opacity: 0.8;
+}
+
+/* ── Сетка предметов ──────────────────────────────────── */
+.gdz-subj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.gdz-subj-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s;
+}
+.gdz-subj-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--peach-200);
+}
+.gdz-subj-ic {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: var(--peach-50);
+  display: grid; place-items: center;
+  font-size: 24px; line-height: 1;
+  flex-shrink: 0;
+}
+.gdz-subj-txt { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.gdz-subj-card .name { font-weight: 700; font-size: 15.5px; color: var(--ink); line-height: 1.2; }
+.gdz-subj-card .count { font-size: 12.5px; color: var(--ink-3); font-weight: 500; }
+
+/* ── Фильтры (страница учебников) ─────────────────────── */
+.gdz-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.gdz-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--line-2);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all .12s;
+}
+.gdz-chip:hover { border-color: var(--peach-200); background: var(--peach-50); }
+.gdz-chip.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.gdz-chip .ct { opacity: 0.55; font-weight: 600; }
+
+/* ── Карточки учебников ───────────────────────────────── */
+.gdz-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+.gdz-book-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s;
+}
+.gdz-book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--peach-200);
+}
+.gdz-book-cover {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  /* Плейсхолдер обложки — мягкая тёплая заливка в полоску.
+     Claude Code: замените на <img> реальной обложки учебника. */
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.5) 0 10px, rgba(255,255,255,0) 10px 20px),
+    linear-gradient(160deg, var(--peach-100), var(--coral-400));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+.gdz-book-cover .cv-subj {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+}
+.gdz-book-cover .cv-num {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 38px;
+  color: rgba(255,255,255,0.92);
+  line-height: 0.9;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.16);
+}
+.gdz-book-card .b-authors { font-weight: 700; font-size: 14px; color: var(--ink); line-height: 1.25; }
+.gdz-book-card .b-meta { font-size: 12.5px; color: var(--ink-3); font-weight: 500; margin-top: 4px; }
+.gdz-badge {
+  display: inline-flex; align-items: center;
+  margin-top: 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--coral-600);
+  background: var(--peach-50);
+  border: 1px solid rgba(255,107,61,0.2);
+  padding: 3px 8px; border-radius: 6px;
+  align-self: flex-start;
+}
+
+/* ── Карточка учебника (страница заданий) ─────────────── */
+.gdz-bookhead {
+  display: flex;
+  gap: 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+.gdz-bookhead-cover {
+  width: 120px;
+  flex-shrink: 0;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.5) 0 10px, rgba(255,255,255,0) 10px 20px),
+    linear-gradient(160deg, var(--peach-100), var(--coral-400));
+  display: flex; flex-direction: column; justify-content: space-between; padding: 12px;
+}
+.gdz-bookhead-cover .cv-subj { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.18); }
+.gdz-bookhead-cover .cv-num { align-self: flex-end; font-family: var(--font-display); font-weight: 700; font-size: 34px; color: rgba(255,255,255,0.92); text-shadow: 0 2px 4px rgba(0,0,0,0.16); }
+.gdz-bookhead-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; align-content: start; font-size: 14px; }
+.gdz-bookhead-meta .row { display: flex; gap: 8px; }
+.gdz-bookhead-meta .k { color: var(--ink-3); font-weight: 500; white-space: nowrap; }
+.gdz-bookhead-meta .v { color: var(--ink); font-weight: 700; }
+.gdz-bookhead-meta .v a { color: var(--coral-600); }
+
+/* ── Поиск по номеру упражнения ───────────────────────── */
+.gdz-exsearch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1.5px solid var(--line-2);
+  border-radius: 14px;
+  padding: 13px 18px;
+  margin-bottom: 26px;
+  color: var(--ink-3);
+  max-width: 460px;
+}
+.gdz-exsearch:focus-within { border-color: var(--coral-400); box-shadow: 0 0 0 4px rgba(255,107,61,0.1); }
+.gdz-exsearch input { border: none; outline: none; background: transparent; flex: 1; font-family: var(--font-body); font-size: 15px; color: var(--ink); }
+
+/* ── Содержание: группы + сетки номеров ───────────────── */
+.gdz-toc-group { margin-bottom: 26px; }
+.gdz-toc-group h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+}
+.gdz-num-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 8px;
+}
+.gdz-num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  aspect-ratio: 1 / 1;
+  min-height: 56px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform .1s ease, box-shadow .12s, border-color .12s, background .12s;
+}
+.gdz-num small { font-size: 10.5px; font-weight: 600; color: var(--ink-3); }
+.gdz-num:hover {
+  transform: translateY(-2px);
+  border-color: var(--coral-400);
+  background: var(--peach-50);
+  color: var(--coral-600);
+}
+.gdz-num:hover small { color: var(--coral-500); }
+
+/* ════════════════════════════════════════════════════════
+   РЕКЛАМА · РСЯ (Рекламная сеть Яндекса)
+   Сквозной липкий блок справа. Не перегружаем: 1 основной
+   слот, прилипает при прокрутке. На мобайле — нативная
+   вставка в поток.
+   Claude Code / владелец: вставьте код РСЯ внутрь .gdz-ad-slot,
+   заменив плейсхолдер. id блока хранится в data-rsya.
+   ════════════════════════════════════════════════════════ */
+.gdz-rail { position: relative; }
+.gdz-rail-sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.gdz-ad {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.gdz-ad-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
+}
+.gdz-ad-label .age { opacity: 0.6; }
+/* Плейсхолдер рекламного места — заменяется кодом РСЯ */
+.gdz-ad-slot {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px 18px;
+  color: var(--ink-3);
+  background:
+    repeating-linear-gradient(135deg, rgba(26,24,20,0.018) 0 12px, rgba(26,24,20,0) 12px 24px);
+}
+.gdz-ad-slot--tall { min-height: 500px; }
+.gdz-ad-slot .ph-ic {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--peach-50);
+  display: grid; place-items: center; color: var(--coral-500);
+  margin-bottom: 4px;
+}
+.gdz-ad-slot .ph-t { font-weight: 700; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+.gdz-ad-slot .ph-id {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 11px; color: var(--ink-3);
+  background: var(--cream-2); padding: 3px 8px; border-radius: 6px;
+}
+.gdz-ad-slot .ph-hint { font-size: 11px; color: var(--ink-3); max-width: 200px; line-height: 1.4; }
+
+/* Нативная реклама в потоке (между блоками контента) */
+.gdz-ad-inline { margin: 26px 0; }
+.gdz-ad-inline .gdz-ad-slot { min-height: 132px; padding: 20px 18px; }
+
+/* ── Подвал ───────────────────────────────────────────── */
+.gdz-footer {
+  border-top: 1px solid var(--line);
+  background: var(--cream-2);
+}
+.gdz-footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 40px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+.gdz-footer a:hover { color: var(--coral-500); }
+.gdz-footer .links { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 600; }
+
+/* ════════════════════════════════════════════════════════
+   СТРАНИЦА РЕШЕНИЯ (5-й уровень) — конкретный номер
+   ════════════════════════════════════════════════════════ */
+/* Навигация по номерам: предыдущий / следующий */
+.gdz-exnav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.gdz-exnav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--line-2);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  transition: all .12s;
+}
+.gdz-exnav a:hover { border-color: var(--peach-200); background: var(--peach-50); color: var(--coral-600); }
+.gdz-exnav .spacer { flex: 1; }
+.gdz-exnav .to-list { color: var(--ink-3); font-weight: 600; font-size: 13.5px; }
+.gdz-exnav .to-list:hover { color: var(--coral-500); }
+
+/* Вкладки вариантов решения (разные издания / способы) */
+.gdz-soltabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.gdz-soltab {
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-3);
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  margin-bottom: -1px;
+  transition: color .12s, border-color .12s;
+}
+.gdz-soltab:hover { color: var(--ink-2); }
+.gdz-soltab.active { color: var(--coral-600); border-bottom-color: var(--coral-500); }
+
+/* Карточка условия / решения / ответа */
+.gdz-solve {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 22px;
+}
+.gdz-solve-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral-600);
+  margin-bottom: 14px;
+}
+.gdz-solve-tag .ic {
+  width: 22px; height: 22px; border-radius: 7px;
+  background: var(--peach-50);
+  display: grid; place-items: center; color: var(--coral-500);
+}
+.gdz-solve-tag.ans { color: var(--leaf-400); }
+.gdz-solve-tag.ans .ic { background: rgba(107,190,126,0.14); color: var(--leaf-400); }
+.gdz-solve p { font-size: 16px; line-height: 1.7; color: var(--ink-2); margin: 0 0 12px; }
+.gdz-solve p:last-child { margin-bottom: 0; }
+.gdz-solve b, .gdz-solve strong { color: var(--ink); font-weight: 700; }
+/* Шаги решения */
+.gdz-steps { display: flex; flex-direction: column; gap: 16px; margin: 4px 0 0; padding: 0; list-style: none; counter-reset: step; }
+.gdz-steps > li {
+  position: relative;
+  padding-left: 42px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.gdz-steps > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: -2px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--peach-50);
+  color: var(--coral-600);
+  font-weight: 700;
+  font-size: 14px;
+  display: grid; place-items: center;
+}
+/* Формула — моноширинный акцент-блок */
+.gdz-formula {
+  display: block;
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  font-family: 'Cambria Math', Georgia, serif;
+  font-size: 18px;
+  color: var(--ink);
+  overflow-x: auto;
+}
+/* Ответ — выделенная плашка */
+.gdz-answer {
+  background: linear-gradient(160deg, rgba(107,190,126,0.10), rgba(107,190,126,0.04));
+  border: 1px solid rgba(107,190,126,0.3);
+}
+/* Плейсхолдер скана/рисунка к заданию */
+.gdz-figure {
+  aspect-ratio: 16 / 7;
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(135deg, rgba(26,24,20,0.03) 0 12px, rgba(26,24,20,0) 12px 24px),
+    var(--cream-2);
+  border: 1px dashed var(--line-2);
+  display: grid; place-items: center;
+  color: var(--ink-3);
+  font-size: 12.5px; font-weight: 600;
+  margin: 10px 0;
+}
+
+/* «Похожие / соседние номера» */
+.gdz-related h2 {
+  font-family: var(--font-display);
+  font-weight: 600; letter-spacing: -0.02em;
+  font-size: 20px; margin: 0 0 14px;
+}
+
+/* ════════════════════════════════════════════════════════
+   АДАПТИВ — мобайл-фёрст приоритет (большинство трафика)
+   ════════════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  :root { --gap-col: 24px; }
+  .gdz-shell { grid-template-columns: 1fr; }
+  /* Рекламная колонка уходит в поток после первого экрана контента */
+  .gdz-rail { order: 2; }
+  .gdz-rail-sticky { position: static; }
+  .gdz-ad-slot--tall { min-height: 250px; }
+}
+
+@media (max-width: 720px) {
+  .gdz-header-inner { padding: 0 16px; gap: 12px; }
+  .gdz-logo .muted { display: none; }
+  .gdz-search { max-width: none; }
+  .gdz-header-cta .hide-sm { display: none; }
+  .gdz-shell { padding: 20px 16px 64px; }
+  .gdz-bookhead { flex-direction: column; gap: 16px; }
+  .gdz-bookhead-cover { width: 96px; }
+  .gdz-bookhead-meta { grid-template-columns: 1fr; }
+  .gdz-solve { padding: 20px 18px; }
+  .gdz-exnav { flex-wrap: wrap; }
+  .gdz-exnav .spacer { display: none; }
+}
+
+@media (max-width: 560px) {
+  .gdz-search { display: none; }            /* поиск прячем — есть на странице */
+  .gdz-class-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .gdz-subj-grid { grid-template-columns: 1fr; }
+  .gdz-book-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .gdz-num-grid { grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); }
+  .gdz-pagehead h1 { font-size: 26px; }
+}
