@@ -1301,12 +1301,27 @@ const makarychev8Extra: GdzProblem[] = [
   { number: '390', page: 205, condition: 'Вычислите: <b>√50 + √8</b>.', steps: ['√50 = 5√2, √8 = 2√2.', '5√2 + 2√2 = 7√2.'], answer: '7√2.' },
 ]
 
+// ── Макарычев 8 extra-2 ──
+const makarychev8Extra2: GdzProblem[] = [
+  { number: '68', page: 36, condition: 'Упростите: <b>(x²−1)/(x−1)</b>.', steps: ['x²−1 = (x−1)(x+1).', '(x+1)(x−1)/(x−1) = x+1 при x≠1.'], answer: 'x + 1.' },
+  { number: '72', page: 38, condition: 'Сложите дроби: <b>2/x + 3/x</b>.', steps: ['Общий знаменатель x: (2+3)/x = 5/x.'], answer: '5/x.' },
+  { number: '80', page: 42, condition: 'Вычислите: <b>(x+1)/(x−2) · (x−2)/(x+3)</b>.', steps: ['Сокращаем (x−2): (x+1)/(x+3) при x≠2.'], answer: '(x+1)/(x+3).' },
+  { number: '125', page: 65, condition: 'Вычислите: <b>√(49/25)</b>.', steps: ['√49/√25 = 7/5 = 1,4.'], answer: '7/5 = 1,4.' },
+  { number: '130', page: 67, condition: 'Вычислите: <b>√12 · √3</b>.', steps: ['√12 · √3 = √36 = 6.'], answer: '6.' },
+  { number: '168', page: 87, condition: 'Вынесите множитель за знак корня: <b>√(18x²)</b>.', steps: ['√(9·2·x²) = 3x·√2 (при x ≥ 0).'], answer: '3x√2.' },
+  { number: '202', page: 103, condition: 'Решите уравнение: <b>2x² − 5x + 2 = 0</b>.', steps: ['D = 25 − 16 = 9. √D = 3.', 'x = (5±3)/4. x₁ = 2, x₂ = 1/2.'], answer: 'x = 2; x = 1/2.' },
+  { number: '210', page: 107, condition: 'Решите уравнение: <b>x(x−3) = 0</b>.', steps: ['Произведение равно нулю: x = 0 или x = 3.'], answer: 'x = 0; x = 3.' },
+  { number: '288', page: 148, condition: 'Решите линейное неравенство: <b>3(x−2) > x + 4</b>.', steps: ['3x − 6 > x + 4 → 2x > 10 → x > 5.'], answer: 'x > 5.' },
+  { number: '295', page: 151, condition: 'Решите систему неравенств: <b>{ x > 2; x < 7 }</b>.', steps: ['Пересечение: 2 < x < 7.'], answer: '2 < x < 7.' },
+  { number: '362', page: 187, condition: 'Вычислите: <b>(2³)⁻¹</b>.', steps: ['2³ = 8. (8)⁻¹ = 1/8.'], answer: '1/8.' },
+  { number: '368', page: 190, condition: 'Упростите: <b>(a²b)³</b>.', steps: ['(a²b)³ = a⁶b³.'], answer: 'a⁶b³.' },
+]
 const makarychev8ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Рациональные дроби', problems: [ ...makarychev8Solutions.slice(0, 5), ...makarychev8Extra.slice(0, 4), ...makeProblems(65, 85, 33) ] },
-  { title: '§ 2. Квадратные корни', problems: [ ...makarychev8Solutions.slice(5, 9), ...makarychev8Extra.slice(4, 8), ...makeProblems(120, 165, 60) ] },
-  { title: '§ 3. Квадратные уравнения', problems: [ ...makarychev8Solutions.slice(9, 13), ...makarychev8Extra.slice(8, 11), ...makeProblems(200, 250, 102) ] },
-  { title: '§ 4. Неравенства', problems: [ ...makarychev8Solutions.slice(13, 16), ...makarychev8Extra.slice(11, 13), ...makeProblems(285, 325, 145) ] },
-  { title: '§ 5. Степень с целым показателем', problems: [ ...makarychev8Solutions.slice(16, 18), ...makarychev8Extra.slice(13, 15), ...makeProblems(360, 385, 183) ] },
+  { title: '§ 1. Рациональные дроби', problems: [ ...makarychev8Solutions.slice(0, 5), ...makarychev8Extra.slice(0, 4), ...makarychev8Extra2.slice(0, 3), ...makeProblems(84, 85, 40) ] },
+  { title: '§ 2. Квадратные корни', problems: [ ...makarychev8Solutions.slice(5, 9), ...makarychev8Extra.slice(4, 8), ...makarychev8Extra2.slice(3, 6), ...makeProblems(172, 195, 88) ] },
+  { title: '§ 3. Квадратные уравнения', problems: [ ...makarychev8Solutions.slice(9, 13), ...makarychev8Extra.slice(8, 11), ...makarychev8Extra2.slice(6, 8), ...makeProblems(215, 250, 112) ] },
+  { title: '§ 4. Неравенства', problems: [ ...makarychev8Solutions.slice(13, 16), ...makarychev8Extra.slice(11, 13), ...makarychev8Extra2.slice(8, 10), ...makeProblems(298, 325, 152) ] },
+  { title: '§ 5. Степень с целым показателем', problems: [ ...makarychev8Solutions.slice(16, 18), ...makarychev8Extra.slice(13, 15), ...makarychev8Extra2.slice(10), ...makeProblems(372, 385, 190) ] },
   { title: 'Повторение', problems: [ ...makarychev8Solutions.slice(18), ...makeProblems(400, 430, 208) ] },
 ]
 
@@ -1357,12 +1372,26 @@ const atanasyan8Extra: GdzProblem[] = [
   { number: '340', page: 168, condition: 'Докажите, что четырёхугольник с диагоналями, делящими друг друга пополам, является параллелограммом.', steps: ['Пусть диагонали пересекаются в точке O и делятся пополам.', 'Треугольники AOB и COD равны (по двум сторонам и углу между ними).', 'AB || CD и AB = CD → ABCD параллелограмм.'], answer: 'Признак параллелограмма: диагонали делят друг друга пополам.' },
 ]
 
+// ── Атанасян 8 extra-2 ──
+const atanasyan8Extra2: GdzProblem[] = [
+  { number: '37', page: 22, condition: 'Диагонали ромба равны 6 и 8. Найдите сторону ромба.', steps: ['Диагонали ромба перпендикулярны и делятся пополам.', 'a² = 3² + 4² = 9 + 16 = 25. a = 5.'], answer: '5.' },
+  { number: '42', page: 25, condition: 'Площадь ромба с диагоналями 10 и 12.', steps: ['S = d₁·d₂/2 = 10·12/2 = 60.'], formulas: ['S = d₁d₂/2'], answer: '60 кв. ед.' },
+  { number: '48', page: 28, condition: 'Трапеция: основания 6 и 10, высота 4. Найдите площадь.', steps: ['S = (a+b)/2 · h = (6+10)/2 · 4 = 8·4 = 32.'], formulas: ['S = (a+b)h/2'], answer: '32 кв. ед.' },
+  { number: '98', page: 50, condition: 'Найдите площадь прямоугольного треугольника с катетами 5 и 12.', steps: ['S = (1/2)·a·b = (1/2)·5·12 = 30.'], answer: '30 кв. ед.' },
+  { number: '105', page: 54, condition: 'Прямоугольник: одна сторона 6, площадь 48. Найдите другую сторону.', steps: ['S = a·b → b = S/a = 48/6 = 8.'], answer: '8.' },
+  { number: '163', page: 83, condition: 'Два подобных треугольника: стороны 3, 4, 5 и 6, 8, 10. Найдите коэффициент подобия.', steps: ['k = 6/3 = 8/4 = 10/5 = 2.'], answer: 'k = 2.' },
+  { number: '168', page: 86, condition: 'Подобные треугольники: коэффициент 3. Площади: первый 12. Найдите площадь второго.', steps: ['Площади подобных: S₂/S₁ = k². S₂ = 12 · 9 = 108.'], answer: '108.' },
+  { number: '235', page: 118, condition: 'Угол, вписанный в полуокружность.', steps: ['Угол, вписанный в полуокружность, всегда прямой (90°).'], answer: '90°.' },
+  { number: '240', page: 120, condition: 'Вписанный угол в 30°. Найдите соответствующую дугу.', steps: ['Вписанный угол = половина центрального.', 'Центральный = 2·30° = 60°. Дуга = 60°.'], answer: 'Дуга = 60°.' },
+  { number: '302', page: 152, condition: 'Найдите скалярное произведение векторов a=(2,3) и b=(4,−1).', steps: ['a·b = 2·4 + 3·(−1) = 8 − 3 = 5.'], answer: '5.' },
+  { number: '307', page: 155, condition: 'Угол между векторами a=(1,0) и b=(0,1).', steps: ['cos φ = (a·b)/(|a|·|b|) = 0/(1·1) = 0.', 'φ = 90°.'], answer: '90°.' },
+]
 const atanasyan8ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Четырёхугольники', problems: [ ...atanasyan8Solutions.slice(0, 4), ...atanasyan8Extra.slice(0, 3), ...makeProblems(35, 60, 19) ] },
-  { title: '§ 2. Площадь', problems: [ ...atanasyan8Solutions.slice(4, 8), ...atanasyan8Extra.slice(3, 6), ...makeProblems(95, 140, 48) ] },
-  { title: '§ 3. Подобные треугольники', problems: [ ...atanasyan8Solutions.slice(8, 10), ...atanasyan8Extra.slice(6, 8), ...makeProblems(160, 210, 82) ] },
-  { title: '§ 4. Окружность', problems: [ ...atanasyan8Solutions.slice(10, 12), ...atanasyan8Extra.slice(8, 10), ...makeProblems(230, 280, 115) ] },
-  { title: '§ 5. Векторы', problems: [ ...atanasyan8Solutions.slice(12, 14), ...atanasyan8Extra.slice(10, 12), ...makeProblems(300, 330, 150) ] },
+  { title: '§ 1. Четырёхугольники', problems: [ ...atanasyan8Solutions.slice(0, 4), ...atanasyan8Extra.slice(0, 3), ...atanasyan8Extra2.slice(0, 3), ...makeProblems(52, 60, 28) ] },
+  { title: '§ 2. Площадь', problems: [ ...atanasyan8Solutions.slice(4, 8), ...atanasyan8Extra.slice(3, 6), ...atanasyan8Extra2.slice(3, 6), ...makeProblems(108, 140, 58) ] },
+  { title: '§ 3. Подобные треугольники', problems: [ ...atanasyan8Solutions.slice(8, 10), ...atanasyan8Extra.slice(6, 8), ...atanasyan8Extra2.slice(6, 8), ...makeProblems(172, 210, 90) ] },
+  { title: '§ 4. Окружность', problems: [ ...atanasyan8Solutions.slice(10, 12), ...atanasyan8Extra.slice(8, 10), ...atanasyan8Extra2.slice(8, 10), ...makeProblems(244, 280, 122) ] },
+  { title: '§ 5. Векторы', problems: [ ...atanasyan8Solutions.slice(12, 14), ...atanasyan8Extra.slice(10, 12), ...atanasyan8Extra2.slice(10), ...makeProblems(310, 330, 160) ] },
   { title: 'Повторение', problems: [ ...atanasyan8Solutions.slice(14), ...atanasyan8Extra.slice(12), ...makeProblems(345, 370, 170) ] },
 ]
 
@@ -1410,12 +1439,26 @@ const ladyzhenskaya8Extra: GdzProblem[] = [
   { number: '510', page: 252, condition: 'Составьте схему предложения с обособленным определением: «Листья, покрытые росой, блестели».', steps: ['[Листья], (покрытые росой), = .', 'Определение выражено причастным оборотом, стоит после определяемого слова.'], answer: 'Схема: [–, |прич. об.|, =]. Запятые выделяют причастный оборот.' },
 ]
 
+// ── Ладыженская 8 extra-2 ──
+const ladyzhenskaya8Extra2: GdzProblem[] = [
+  { number: '4', page: 6, condition: 'Что изучает синтаксис? Приведите пример.', steps: ['Синтаксис изучает строение словосочетаний и предложений.', 'Пример: «Мальчик бежит» — подлежащее + сказуемое.'], answer: 'Синтаксис — раздел, изучающий словосочетания и предложения.' },
+  { number: '12', page: 10, condition: 'Найдите грамматическую основу: «Ярко светит солнце».', steps: ['Солнце — подлежащее. Светит — сказуемое.'], answer: 'Грамматическая основа: солнце светит.' },
+  { number: '22', page: 14, condition: 'Выпишите словосочетание из предложения: «Дети весело играли».', steps: ['весело играли — наречие + глагол = словосочетание.'], answer: 'весело играли (наречие + глагол).' },
+  { number: '33', page: 18, condition: 'Укажите тип связи в словосочетании «читать книгу».', steps: ['читать (гл.) → книгу (сущ., В.п.) — управление.'], answer: 'Управление.' },
+  { number: '80', page: 42, condition: 'Синтаксический разбор словосочетания «быстро бежать».', steps: ['Главное слово: бежать (глагол).', 'Зависимое: быстро (наречие, неизменяемое).', 'Тип связи: примыкание.'], answer: 'бежать (гл.) ← быстро (нар.), связь: примыкание.' },
+  { number: '168', page: 86, condition: 'Найдите в предложении тире между подлежащим и сказуемым: «Математика — наука о числах».', steps: ['Подлежащее и сказуемое выражены именами существительными.', 'Ставится тире: Математика — наука о числах.'], answer: 'Тире между подл. и сказ. (оба — существительные).' },
+  { number: '175', page: 89, condition: 'Составной именной сказуемый: найдите в предложении «Он казался умным».', steps: ['казался умным — связка «казался» + именная часть «умным» (прил.).', 'Составное именное сказуемое.'], answer: 'казался умным — составное именное сказуемое.' },
+  { number: '258', page: 130, condition: 'Найдите дополнение в предложении: «Мы читаем интересную книгу».', steps: ['Читаем что? — книгу (В.п.) — дополнение.'], answer: 'книгу — дополнение.' },
+  { number: '265', page: 133, condition: 'Найдите обстоятельство: «Он пришёл вчера».', steps: ['пришёл когда? — вчера (наречие) — обстоятельство времени.'], answer: 'вчера — обстоятельство времени.' },
+  { number: '310', page: 158, condition: 'Вставьте знаки препинания при обособленном определении: «Мальчик увлечённый спортом занимается каждый день».', steps: ['Причастный оборот после определяемого слова обособляется.', 'Мальчик, увлечённый спортом, занимается каждый день.'], answer: 'Мальчик, увлечённый спортом, занимается каждый день.' },
+  { number: '320', page: 162, condition: 'Выделите деепричастный оборот: «Прочитав книгу он сделал выводы».', steps: ['Деепричастный оборот выделяется запятыми.', 'Прочитав книгу, он сделал выводы.'], answer: 'Прочитав книгу, он сделал выводы.' },
+]
 const ladyzhenskaya8ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Функции языка и речи', problems: [ ...ladyzhenskaya8Solutions.slice(0, 1), ...makeProblems(3, 10, 4) ] },
-  { title: '§ 2. Повторение изученного в 7 классе', problems: [ ...ladyzhenskaya8Solutions.slice(1, 2), ...ladyzhenskaya8Extra.slice(0, 2), ...makeProblems(30, 65, 15) ] },
-  { title: '§ 3. Синтаксис. Словосочетание', problems: [ ...ladyzhenskaya8Solutions.slice(2, 4), ...makeProblems(75, 140, 38) ] },
-  { title: '§ 4. Простое предложение', problems: [ ...ladyzhenskaya8Solutions.slice(4, 6), ...ladyzhenskaya8Extra.slice(2, 4), ...makeProblems(165, 230, 82) ] },
-  { title: '§ 5. Главные члены предложения', problems: [ ...ladyzhenskaya8Solutions.slice(6, 8), ...ladyzhenskaya8Extra.slice(4, 5), ...makeProblems(255, 290, 124) ] },
+  { title: '§ 1. Функции языка и речи', problems: [ ...ladyzhenskaya8Solutions.slice(0, 1), ...ladyzhenskaya8Extra2.slice(0, 2), ...makeProblems(14, 25, 6) ] },
+  { title: '§ 2. Повторение изученного в 7 классе', problems: [ ...ladyzhenskaya8Solutions.slice(1, 2), ...ladyzhenskaya8Extra.slice(0, 2), ...ladyzhenskaya8Extra2.slice(2, 5), ...makeProblems(38, 65, 18) ] },
+  { title: '§ 3. Синтаксис. Словосочетание', problems: [ ...ladyzhenskaya8Solutions.slice(2, 4), ...ladyzhenskaya8Extra2.slice(5, 6), ...makeProblems(82, 140, 42) ] },
+  { title: '§ 4. Простое предложение', problems: [ ...ladyzhenskaya8Solutions.slice(4, 6), ...ladyzhenskaya8Extra.slice(2, 4), ...ladyzhenskaya8Extra2.slice(6, 9), ...makeProblems(172, 230, 88) ] },
+  { title: '§ 5. Главные члены предложения', problems: [ ...ladyzhenskaya8Solutions.slice(6, 8), ...ladyzhenskaya8Extra.slice(4, 5), ...ladyzhenskaya8Extra2.slice(9, 11), ...makeProblems(270, 290, 130) ] },
   { title: '§ 6. Второстепенные члены предложения', problems: [ ...ladyzhenskaya8Solutions.slice(8, 9), ...ladyzhenskaya8Extra.slice(5, 6), ...makeProblems(305, 360, 150) ] },
   { title: '§ 7. Односоставные предложения', problems: [ ...ladyzhenskaya8Solutions.slice(9, 11), ...ladyzhenskaya8Extra.slice(6, 8), ...makeProblems(395, 430, 192) ] },
   { title: '§ 8. Осложнённые предложения', problems: [ ...ladyzhenskaya8Solutions.slice(11, 13), ...ladyzhenskaya8Extra.slice(8, 11), ...makeProblems(465, 500, 228) ] },
@@ -1469,12 +1512,26 @@ const peryshkin8Extra: GdzProblem[] = [
   { number: '305', page: 153, condition: 'Предмет находится в воде (n = 1,33). Луч выходит в воздух. Что произойдёт с углом?', steps: ['Переход из воды в воздух — из более плотной в менее плотную среду.', 'Угол преломления больше угла падения.'], answer: 'Угол преломления будет больше угла падения (луч отклоняется от нормали).' },
 ]
 
+// ── Перышкин 8 extra-2 ──
+const peryshkin8Extra2: GdzProblem[] = [
+  { number: '36', page: 19, condition: 'Изменение внутренней энергии при теплообмене. Что происходит с телом при нагревании?', steps: ['При нагревании тела его внутренняя энергия увеличивается.', 'Молекулы движутся быстрее, среднее расстояние между ними растёт.'], answer: 'Внутренняя энергия увеличивается.' },
+  { number: '42', page: 22, condition: 'Рассчитайте количество теплоты для нагрева воды 2 кг на 20°C. c = 4200 Дж/(кг·°C).', steps: ['Q = m·c·ΔT = 2 · 4200 · 20 = 168 000 Дж.'], formulas: ['Q = mcΔT'], answer: 'Q = 168 000 Дж = 168 кДж.' },
+  { number: '50', page: 26, condition: 'Что такое теплопроводность? Приведите пример.', steps: ['Теплопроводность — вид теплообмена, при котором энергия передаётся от частицы к частице при непосредственном контакте.', 'Пример: нагрев металлической ложки в горячем чае.'], answer: 'Теплопроводность: теплообмен при непосредственном контакте частиц. Пример: металлическая ложка в чае.' },
+  { number: '88', page: 46, condition: 'Теплота плавления льда: q = 334 кДж/кг. Сколько теплоты нужно для плавления 3 кг льда?', steps: ['Q = m·q = 3 · 334 000 = 1 002 000 Дж ≈ 1 МДж.'], formulas: ['Q = mq'], answer: 'Q = 1 002 кДж ≈ 1 МДж.' },
+  { number: '95', page: 50, condition: 'Что называется точкой кипения? Как она зависит от давления?', steps: ['Точка кипения — температура, при которой жидкость кипит при данном давлении.', 'При увеличении давления точка кипения повышается.'], answer: 'Точка кипения растёт с давлением.' },
+  { number: '172', page: 88, condition: 'Закон Ома для участка цепи. Ток I=2 А, R=10 Ом. Напряжение?', steps: ['U = I·R = 2·10 = 20 В.'], formulas: ['U = IR'], answer: 'U = 20 В.' },
+  { number: '180', page: 92, condition: 'Последовательное соединение: R₁=4 Ом, R₂=6 Ом. Общее сопротивление?', steps: ['R = R₁ + R₂ = 4 + 6 = 10 Ом.'], answer: 'R = 10 Ом.' },
+  { number: '188', page: 96, condition: 'Параллельное соединение: R₁=6 Ом, R₂=3 Ом. Найдите общее сопротивление.', steps: ['1/R = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2.', 'R = 2 Ом.'], answer: 'R = 2 Ом.' },
+  { number: '243', page: 124, condition: 'Что такое электромагнитная индукция? Кто открыл?', steps: ['Электромагнитная индукция — возникновение тока в замкнутом контуре при изменении магнитного потока.', 'Открыл Майкл Фарадей в 1831 году.'], answer: 'Возникновение ЭДС при изменении магнитного потока; открыл Фарадей.' },
+  { number: '312', page: 158, condition: 'Угол преломления 30°, угол падения 45°. Найдите показатель преломления.', steps: ['n = sin(45°)/sin(30°) = (√2/2)/(1/2) = √2 ≈ 1,41.'], formulas: ['n = sinα/sinβ'], answer: 'n = √2 ≈ 1,41.' },
+  { number: '320', page: 162, condition: 'Линза с фокусным расстоянием 20 см. Предмет на расстоянии 30 см. Где изображение?', steps: ['1/v = 1/F − 1/u = 1/20 − 1/30 = 3/60 − 2/60 = 1/60.', 'v = 60 см.'], formulas: ['1/v + 1/u = 1/F'], answer: 'v = 60 см.' },
+]
 const peryshkin8ChaptersExt: GdzChapter[] = [
-  { title: 'Глава 1. Тепловые явления', problems: [ ...peryshkin8Solutions.slice(0, 4), ...peryshkin8Extra.slice(0, 3), ...makeProblems(35, 65, 20) ] },
-  { title: 'Глава 2. Изменения агрегатных состояний вещества', problems: [ ...peryshkin8Solutions.slice(4, 6), ...peryshkin8Extra.slice(3, 5), ...makeProblems(85, 130, 45) ] },
-  { title: 'Глава 3. Электрические явления', problems: [ ...peryshkin8Solutions.slice(6, 11), ...peryshkin8Extra.slice(5, 8), ...makeProblems(170, 225, 88) ] },
-  { title: 'Глава 4. Электромагнитные явления', problems: [ ...peryshkin8Solutions.slice(11, 12), ...peryshkin8Extra.slice(8, 9), ...makeProblems(240, 285, 122) ] },
-  { title: 'Глава 5. Световые явления', problems: [ ...peryshkin8Solutions.slice(12), ...peryshkin8Extra.slice(9), ...makeProblems(310, 345, 158) ] },
+  { title: 'Глава 1. Тепловые явления', problems: [ ...peryshkin8Solutions.slice(0, 4), ...peryshkin8Extra.slice(0, 3), ...peryshkin8Extra2.slice(0, 3), ...makeProblems(53, 65, 28) ] },
+  { title: 'Глава 2. Изменения агрегатных состояний вещества', problems: [ ...peryshkin8Solutions.slice(4, 6), ...peryshkin8Extra.slice(3, 5), ...peryshkin8Extra2.slice(3, 5), ...makeProblems(98, 130, 52) ] },
+  { title: 'Глава 3. Электрические явления', problems: [ ...peryshkin8Solutions.slice(6, 11), ...peryshkin8Extra.slice(5, 8), ...peryshkin8Extra2.slice(5, 8), ...makeProblems(192, 225, 100) ] },
+  { title: 'Глава 4. Электромагнитные явления', problems: [ ...peryshkin8Solutions.slice(11, 12), ...peryshkin8Extra.slice(8, 9), ...peryshkin8Extra2.slice(8, 9), ...makeProblems(248, 285, 128) ] },
+  { title: 'Глава 5. Световые явления', problems: [ ...peryshkin8Solutions.slice(12), ...peryshkin8Extra.slice(9), ...peryshkin8Extra2.slice(9), ...makeProblems(325, 345, 168) ] },
 ]
 
 const peryshkin8Chapters: GdzChapter[] = [
@@ -1670,12 +1727,26 @@ const merzlyak8Extra: GdzProblem[] = [
   { number: '335', page: 167, condition: 'Решите: <b>x² − 2x − 3 > 0</b>.', steps: ['Корни: x = 3, x = −1.', 'Парабола > 0 вне корней: x < −1 или x > 3.'], answer: 'x < −1 или x > 3.' },
 ]
 
+// ── Мерзляк 8 extra-2 ──
+const merzlyak8Extra2: GdzProblem[] = [
+  { number: '32', page: 18, condition: 'Упростите: <b>(3a − 2b)(3a + 2b)</b>.', steps: ['(a−b)(a+b) = a²−b².', '(3a)²−(2b)² = 9a²−4b².'], answer: '9a² − 4b².' },
+  { number: '36', page: 20, condition: 'Разложите на множители: <b>5x² − 20</b>.', steps: ['5(x²−4) = 5(x−2)(x+2).'], answer: '5(x−2)(x+2).' },
+  { number: '42', page: 22, condition: 'Упростите: <b>(x+3)² − (x−3)²</b>.', steps: ['= x²+6x+9 − (x²−6x+9).', '= 12x.'], answer: '12x.' },
+  { number: '102', page: 52, condition: 'Вычислите: <b>√(121)</b>.', steps: ['√121 = 11 (т.к. 11² = 121).'], answer: '11.' },
+  { number: '108', page: 55, condition: 'Упростите: <b>√(75) − √(48)</b>.', steps: ['√75 = 5√3; √48 = 4√3.', '5√3 − 4√3 = √3.'], answer: '√3.' },
+  { number: '115', page: 58, condition: 'Освободитесь от иррациональности в знаменателе: <b>1/√5</b>.', steps: ['1/√5 = √5/5.'], answer: '√5/5.' },
+  { number: '168', page: 84, condition: 'Решите: <b>x² − 8x + 12 = 0</b>.', steps: ['D = 64 − 48 = 16. √D = 4.', 'x = (8±4)/2. x₁ = 6, x₂ = 2.'], answer: 'x = 6; x = 2.' },
+  { number: '175', page: 88, condition: 'Решите уравнение через разложение: <b>x² − 5x = 0</b>.', steps: ['x(x−5) = 0.', 'x = 0 или x = 5.'], answer: 'x = 0; x = 5.' },
+  { number: '228', page: 114, condition: 'Решите дробное уравнение: <b>1/x + 1/(x+1) = 1</b>.', steps: ['НЗ = x(x+1). (x+1) + x = x(x+1).', '2x+1 = x²+x. x²−x−1 = 0.', 'D = 5. x = (1±√5)/2.'], answer: 'x = (1+√5)/2 или x = (1−√5)/2.' },
+  { number: '278', page: 140, condition: 'Найдите знак квадратного трёхчлена: <b>f(x) = x² + 2x + 5</b> при всех x.', steps: ['D = 4−20 = −16 < 0.', 'a > 0 и D < 0 → f(x) > 0 для всех x.'], answer: 'f(x) > 0 при всех x.' },
+  { number: '285', page: 143, condition: 'Разложите: <b>2x² + 5x + 3</b>.', steps: ['D = 25−24 = 1. x = (−5±1)/4.', 'x₁ = −1, x₂ = −3/2.', '2x² + 5x + 3 = 2(x+1)(x+3/2) = (x+1)(2x+3).'], answer: '(x+1)(2x+3).' },
+]
 const merzlyak8ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Рациональные числа', problems: [ ...merzlyak8Solutions.slice(0, 3), ...merzlyak8Extra.slice(0, 3), ...makeProblems(30, 60, 14) ] },
-  { title: '§ 2. Квадратные корни', problems: [ ...merzlyak8Solutions.slice(3, 7), ...merzlyak8Extra.slice(3, 7), ...makeProblems(100, 135, 50) ] },
-  { title: '§ 3. Квадратные уравнения', problems: [ ...merzlyak8Solutions.slice(7, 10), ...merzlyak8Extra.slice(7, 10), ...makeProblems(165, 210, 82) ] },
-  { title: '§ 4. Дробно-рациональные уравнения', problems: [ ...merzlyak8Solutions.slice(10, 12), ...merzlyak8Extra.slice(10, 11), ...makeProblems(225, 265, 113) ] },
-  { title: '§ 5. Квадратный трёхчлен', problems: [ ...merzlyak8Extra.slice(11, 12), ...makeProblems(275, 320, 138) ] },
+  { title: '§ 1. Рациональные числа', problems: [ ...merzlyak8Solutions.slice(0, 3), ...merzlyak8Extra.slice(0, 3), ...merzlyak8Extra2.slice(0, 3), ...makeProblems(44, 60, 22) ] },
+  { title: '§ 2. Квадратные корни', problems: [ ...merzlyak8Solutions.slice(3, 7), ...merzlyak8Extra.slice(3, 7), ...merzlyak8Extra2.slice(3, 6), ...makeProblems(118, 135, 62) ] },
+  { title: '§ 3. Квадратные уравнения', problems: [ ...merzlyak8Solutions.slice(7, 10), ...merzlyak8Extra.slice(7, 10), ...merzlyak8Extra2.slice(6, 8), ...makeProblems(178, 210, 92) ] },
+  { title: '§ 4. Дробно-рациональные уравнения', problems: [ ...merzlyak8Solutions.slice(10, 12), ...merzlyak8Extra.slice(10, 11), ...merzlyak8Extra2.slice(8, 9), ...makeProblems(232, 265, 118) ] },
+  { title: '§ 5. Квадратный трёхчлен', problems: [ ...merzlyak8Extra.slice(11, 12), ...merzlyak8Extra2.slice(9), ...makeProblems(290, 320, 148) ] },
   { title: '§ 6. Неравенства', problems: [ ...merzlyak8Solutions.slice(12, 14), ...merzlyak8Extra.slice(12), ...makeProblems(340, 385, 170) ] },
   { title: 'Повторение', problems: [ ...merzlyak8Solutions.slice(14), ...makeProblems(393, 430, 198) ] },
 ]
