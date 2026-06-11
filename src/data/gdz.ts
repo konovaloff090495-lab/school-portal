@@ -1722,6 +1722,26 @@ const moro1Solutions: GdzProblem[] = [
   { number: '15', page: 10, condition: 'Реши задачу: На ветке сидело 4 птицы, улетели 2. Сколько осталось?', steps: ['Записываем: 4 − 2 = 2.', 'Осталось 2 птицы.'], answer: '2 птицы.' },
   { number: '20', page: 12, condition: 'Реши пример: 6 + 2 = ?', steps: ['6 + 2 = 8.'], answer: '8.' },
 ]
+// ── Моро 1 extra ──
+const moro1Extra: GdzProblem[] = [
+  { number: '21', page: 13, condition: 'Реши: 4 + 5 = ?', steps: ['4 + 5 = 9 (считаем: 4, 5, 6, 7, 8, 9).'], answer: '9.' },
+  { number: '25', page: 15, condition: 'Сравни: 7 ○ 4. Поставь знак.', steps: ['7 > 4 (семь больше четырёх).'], answer: '7 > 4.' },
+  { number: '30', page: 17, condition: 'Реши задачу: У Маши 3 яблока, у Кати 5. Сколько яблок вместе?', steps: ['3 + 5 = 8 яблок.'], answer: '8 яблок.' },
+  { number: '35', page: 20, condition: 'Какое число стоит между 5 и 7?', steps: ['5, 6, 7 — между 5 и 7 стоит число 6.'], answer: '6.' },
+  { number: '40', page: 22, condition: 'Реши: 10 − 4 = ?', steps: ['10 − 4 = 6.'], answer: '6.' },
+  { number: '81', page: 42, condition: 'Запиши число: два десятка.', steps: ['2 десятка = 20.'], answer: '20.' },
+  { number: '85', page: 44, condition: 'Реши: 13 + 4 = ?', steps: ['13 + 4 = 17.'], answer: '17.' },
+  { number: '90', page: 46, condition: 'Реши: 18 − 5 = ?', steps: ['18 − 5 = 13.'], answer: '13.' },
+  { number: '151', page: 76, condition: 'Реши: 36 + 20 = ?', steps: ['36 + 20 = 56 (прибавляем целые десятки).'], answer: '56.' },
+  { number: '155', page: 78, condition: 'Реши задачу: В корзине 14 грибов, собрали ещё 6. Сколько стало?', steps: ['14 + 6 = 20 грибов.'], answer: '20 грибов.' },
+]
+
+const moro1ChaptersExt: GdzChapter[] = [
+  { title: 'Числа от 1 до 10', problems: [ ...moro1Solutions, ...moro1Extra.slice(0, 5), ...makeProblems(45, 80, 28) ] },
+  { title: 'Числа от 11 до 20', problems: [ ...moro1Extra.slice(5, 8), ...makeProblems(95, 150, 52) ] },
+  { title: 'Сложение и вычитание', problems: [ ...moro1Extra.slice(8), ...makeProblems(160, 220, 83) ] },
+]
+
 const moro1Chapters: GdzChapter[] = [
   { title: 'Числа от 1 до 10', problems: [ ...moro1Solutions, ...makeProblems(21, 80, 14) ] },
   { title: 'Числа от 11 до 20', problems: makeProblems(81, 150, 44) },
@@ -1736,6 +1756,23 @@ const kanakina1Solutions: GdzProblem[] = [
   { number: '10', page: 10, condition: 'Спиши предложение: «Мама мыла раму.» Найди все слова.', steps: ['Слова в предложении: Мама, мыла, раму.', 'Три слова. Предложение начинается с большой буквы, в конце точка.'], answer: '3 слова: мама, мыла, раму.' },
   { number: '15', page: 13, condition: 'Найди и запиши слова с буквой «а»: мак, кот, рак.', steps: ['мак — есть буква а.', 'кот — нет буквы а.', 'рак — есть буква а.'], answer: 'Слова с буквой «а»: мак, рак.' },
 ]
+// ── Канакина 1 extra ──
+const kanakina1Extra: GdzProblem[] = [
+  { number: '16', page: 14, condition: 'Составь предложение из слов: «дети, гуляют, в, парке».', steps: ['Ставим слова в правильный порядок: Дети гуляют в парке.', 'Начало — с большой буквы, конец — точка.'], answer: 'Дети гуляют в парке.' },
+  { number: '20', page: 16, condition: 'Сколько звуков в слове «рыба»? Запиши транскрипцию.', steps: ['р-ы-б-а — 4 звука, 4 буквы.', 'Транскрипция: [р][ы][б][а].'], answer: '4 звука: [рыба].' },
+  { number: '25', page: 18, condition: 'Найди слова с буквой «о»: «кот», «рак», «дом».', steps: ['кот — есть буква О.', 'рак — нет буквы О.', 'дом — есть буква О.'], answer: 'кот, дом — есть буква «о».' },
+  { number: '61', page: 32, condition: 'Какой звук в начале слова «арбуз»?', steps: ['А-рбуз — первый звук [а], гласный.'], answer: '[а] — гласный звук.' },
+  { number: '65', page: 34, condition: 'Раздели на слоги: «молоко», «бабочка».', steps: ['мо-ло-ко — 3 слога.', 'ба-боч-ка — 3 слога.'], answer: 'мо-ло-ко (3 слога), ба-боч-ка (3 слога).' },
+  { number: '131', page: 66, condition: 'Напиши слова с заглавной буквы: «москва», «ваня».', steps: ['Имена собственные пишутся с большой буквы.', 'Москва, Ваня.'], answer: 'Москва, Ваня.' },
+  { number: '135', page: 68, condition: 'Как пишутся слова «жи», «ши»?', steps: ['Жи-ши пишутся с буквой И (правило): жить, шить, жираф, широкий.'], answer: 'Жи-ши пишутся с И: жить, шить.' },
+]
+
+const kanakina1ChaptersExt: GdzChapter[] = [
+  { title: 'Слово, предложение', problems: [ ...kanakina1Solutions, ...kanakina1Extra.slice(0, 3), ...makeProblems(27, 60, 20) ] },
+  { title: 'Звуки и буквы', problems: [ ...kanakina1Extra.slice(3, 5), ...makeProblems(70, 130, 46) ] },
+  { title: 'Правописание', problems: [ ...kanakina1Extra.slice(5), ...makeProblems(140, 200, 78) ] },
+]
+
 const kanakina1Chapters: GdzChapter[] = [
   { title: 'Слово, предложение', problems: [ ...kanakina1Solutions, ...makeProblems(16, 60, 15) ] },
   { title: 'Звуки и буквы', problems: makeProblems(61, 130, 42) },
@@ -1752,6 +1789,25 @@ const moro2Solutions: GdzProblem[] = [
   { number: '15', page: 12, condition: 'Вырази в сантиметрах: 2 дм 5 см.', steps: ['1 дм = 10 см.', '2 дм 5 см = 20 + 5 = 25 см.'], answer: '25 см.' },
   { number: '20', page: 15, condition: 'Реши задачу: Девочка прочитала 8 страниц в пятницу и 7 страниц в субботу. Сколько страниц всего?', steps: ['8 + 7 = 15 страниц.'], answer: '15 страниц.' },
 ]
+// ── Моро 2 extra ──
+const moro2Extra: GdzProblem[] = [
+  { number: '21', page: 16, condition: 'Реши: 45 + 30 = ?', steps: ['45 + 30 = 75 (прибавляем целые десятки).'], answer: '75.' },
+  { number: '25', page: 18, condition: 'Реши: 78 − 40 = ?', steps: ['78 − 40 = 38.'], answer: '38.' },
+  { number: '30', page: 20, condition: 'Реши задачу: В коробке 36 карандашей, взяли 15. Сколько осталось?', steps: ['36 − 15 = 21 карандаш.'], answer: '21 карандаш.' },
+  { number: '35', page: 22, condition: 'Сравни: 57 ○ 75. Поставь знак.', steps: ['57 < 75.'], answer: '57 < 75.' },
+  { number: '81', page: 42, condition: 'Реши: 47 + 26 = ?', steps: ['47 + 26 = 47 + 20 + 6 = 67 + 6 = 73.'], answer: '73.' },
+  { number: '85', page: 44, condition: 'Реши: 82 − 39 = ?', steps: ['82 − 39 = 82 − 40 + 1 = 42 + 1 = 43.'], answer: '43.' },
+  { number: '161', page: 82, condition: 'Реши: 7 · 8 = ?', steps: ['7 · 8 = 56 (таблица умножения).'], answer: '56.' },
+  { number: '165', page: 84, condition: 'Реши: 63 : 7 = ?', steps: ['63 : 7 = 9 (т.к. 7 · 9 = 63).'], answer: '9.' },
+  { number: '170', page: 86, condition: 'Реши задачу: Купили 4 кг яблок по 30 руб./кг. Сколько заплатили?', steps: ['4 · 30 = 120 руб.'], answer: '120 рублей.' },
+]
+
+const moro2ChaptersExt: GdzChapter[] = [
+  { title: 'Числа от 1 до 100', problems: [ ...moro2Solutions, ...moro2Extra.slice(0, 4), ...makeProblems(40, 80, 26) ] },
+  { title: 'Сложение и вычитание в пределах 100', problems: [ ...moro2Extra.slice(4, 6), ...makeProblems(90, 160, 56) ] },
+  { title: 'Умножение и деление', problems: [ ...moro2Extra.slice(6), ...makeProblems(175, 260, 100) ] },
+]
+
 const moro2Chapters: GdzChapter[] = [
   { title: 'Числа от 1 до 100', problems: [ ...moro2Solutions, ...makeProblems(21, 80, 18) ] },
   { title: 'Сложение и вычитание в пределах 100', problems: makeProblems(81, 160, 50) },
@@ -1764,6 +1820,24 @@ const kanakina2Solutions: GdzProblem[] = [
   { number: '5', page: 7, condition: 'Спишите, разделите на слоги: «школа», «учитель».', steps: ['шко-ла — 2 слога.', 'у-чи-тель — 3 слога.'], answer: 'шко-ла (2 слога), у-чи-тель (3 слога).' },
   { number: '10', page: 11, condition: 'Напишите предложение с большой буквы: «мороз и солнце день чудесный».', steps: ['Начало предложения — с большой буквы.', 'Мороз и солнце — день чудесный!'], answer: 'Мороз и солнце — день чудесный!' },
 ]
+// ── Канакина 2 extra ──
+const kanakina2Extra: GdzProblem[] = [
+  { number: '11', page: 12, condition: 'Составьте схему предложения: «Дети играют в саду».', steps: ['Главные члены: дети (подлеж.) — играют (сказ.).', 'Схема: ____ ====.'], answer: 'Дети — подлежащее, играют — сказуемое.' },
+  { number: '15', page: 14, condition: 'Найдите лишнее слово: «берёза», «дуб», «цветок», «сосна».', steps: ['Берёза, дуб, сосна — деревья.', 'Цветок — не дерево, лишнее слово.'], answer: 'Лишнее: цветок (остальные — деревья).' },
+  { number: '51', page: 28, condition: 'Составьте текст из предложений (расположите по смыслу): 3 предложения о весне.', steps: ['1. Наступила весна.', '2. Растаял снег.', '3. Расцвели первые цветы.'], answer: 'Наступила весна. Растаял снег. Расцвели первые цветы.' },
+  { number: '121', page: 62, condition: 'Подберите однокоренные слова к слову «лес».', steps: ['Общий корень -ЛЕС-: лесной, лесник, лесоруб.'], answer: 'лесной, лесник, лесоруб.' },
+  { number: '221', page: 114, condition: 'Определите часть речи: «красивый», «бегать», «дерево».', steps: ['красивый — прилагательное (какой?).', 'бегать — глагол (что делать?).', 'дерево — существительное (что?).'], answer: 'прилагательное, глагол, существительное.' },
+  { number: '321', page: 166, condition: 'Вставьте пропущенную букву: «ж_раф» (словарное слово).', steps: ['Жираф — словарное слово, запомнить: жИраф.'], answer: 'жИраф.' },
+]
+
+const kanakina2ChaptersExt: GdzChapter[] = [
+  { title: 'Повторение', problems: [ ...kanakina2Solutions, ...kanakina2Extra.slice(0, 2), ...makeProblems(20, 50, 18) ] },
+  { title: 'Текст. Предложение. Словосочетание', problems: [ ...kanakina2Extra.slice(2, 3), ...makeProblems(55, 120, 38) ] },
+  { title: 'Слово в языке и речи', problems: [ ...kanakina2Extra.slice(3, 4), ...makeProblems(125, 220, 75) ] },
+  { title: 'Части речи', problems: [ ...kanakina2Extra.slice(4, 5), ...makeProblems(225, 320, 133) ] },
+  { title: 'Правописание', problems: [ ...kanakina2Extra.slice(5), ...makeProblems(325, 400, 191) ] },
+]
+
 const kanakina2Chapters: GdzChapter[] = [
   { title: 'Повторение', problems: [ ...kanakina2Solutions, ...makeProblems(11, 50, 14) ] },
   { title: 'Текст. Предложение. Словосочетание', problems: makeProblems(51, 120, 35) },
@@ -1781,6 +1855,25 @@ const moro3Solutions: GdzProblem[] = [
   { number: '15', page: 12, condition: 'Вырази в метрах и сантиметрах: 325 см.', steps: ['1 м = 100 см.', '325 : 100 = 3 м 25 см.'], answer: '3 м 25 см.' },
   { number: '20', page: 16, condition: 'Реши задачу: В классе 28 учеников, из них 12 девочек. Сколько мальчиков?', steps: ['28 − 12 = 16 мальчиков.'], answer: '16 мальчиков.' },
 ]
+// ── Моро 3 extra ──
+const moro3Extra: GdzProblem[] = [
+  { number: '21', page: 17, condition: 'Запиши число: восемьсот сорок три.', steps: ['8 сотен, 4 десятка, 3 единицы → 843.'], answer: '843.' },
+  { number: '25', page: 19, condition: 'Сравни: 456 ○ 465.', steps: ['456 < 465 (в разряде десятков 5 = 5, единицы: 6 > 5, но 456 имеет 5 десятков а 465 — 6 десятков).', 'Правильно: 456 < 465.'], answer: '456 < 465.' },
+  { number: '86', page: 44, condition: 'Реши: 536 + 248 = ?', steps: ['Столбиком: 6+8=14 (4, перен.1); 3+4+1=8; 5+2=7.', '= 784.'], answer: '784.' },
+  { number: '90', page: 46, condition: 'Реши: 703 − 267 = ?', steps: ['703 − 267 = 436.', 'Проверка: 436 + 267 = 703 ✓.'], answer: '436.' },
+  { number: '181', page: 92, condition: 'Реши: 124 · 3 = ?', steps: ['124 · 3 = 100·3 + 20·3 + 4·3 = 300+60+12 = 372.'], answer: '372.' },
+  { number: '185', page: 94, condition: 'Реши: 96 : 4 = ?', steps: ['96 : 4 = 24.', 'Проверка: 24 · 4 = 96 ✓.'], answer: '24.' },
+  { number: '301', page: 154, condition: 'Найди площадь квадрата со стороной 7 см.', steps: ['S = a² = 7 · 7 = 49 см².'], formulas: ['S = a²'], answer: '49 см².' },
+  { number: '305', page: 156, condition: 'Начерти прямоугольник 6×4. Найди периметр и площадь.', steps: ['P = 2·(6+4) = 20 см.', 'S = 6·4 = 24 см².'], answer: 'P = 20 см, S = 24 см².' },
+]
+
+const moro3ChaptersExt: GdzChapter[] = [
+  { title: 'Числа от 1 до 1000', problems: [ ...moro3Solutions, ...moro3Extra.slice(0, 2), ...makeProblems(28, 85, 23) ] },
+  { title: 'Сложение и вычитание', problems: [ ...moro3Extra.slice(2, 4), ...makeProblems(94, 180, 58) ] },
+  { title: 'Умножение и деление', problems: [ ...moro3Extra.slice(4, 6), ...makeProblems(190, 300, 115) ] },
+  { title: 'Геометрические фигуры', problems: [ ...moro3Extra.slice(6), ...makeProblems(310, 380, 178) ] },
+]
+
 const moro3Chapters: GdzChapter[] = [
   { title: 'Числа от 1 до 1000', problems: [ ...moro3Solutions, ...makeProblems(21, 85, 19) ] },
   { title: 'Сложение и вычитание', problems: makeProblems(86, 180, 55) },
@@ -1794,6 +1887,22 @@ const kanakina3Solutions: GdzProblem[] = [
   { number: '5', page: 7, condition: 'Определите род имён существительных: «книга», «стол», «окно».', steps: ['книга — она, моя → женский род.', 'стол — он, мой → мужской род.', 'окно — оно, моё → средний род.'], answer: 'книга — ж.р., стол — м.р., окно — ср.р.' },
   { number: '10', page: 10, condition: 'Измените существительное «дом» по падежам (1–3 падеж).', steps: ['Именительный (кто? что?): дом.', 'Родительный (кого? чего?): дома.', 'Дательный (кому? чему?): дому.'], answer: 'И.п. — дом, Р.п. — дома, Д.п. — дому.' },
 ]
+// ── Канакина 3 extra ──
+const kanakina3Extra: GdzProblem[] = [
+  { number: '11', page: 11, condition: 'Выпишите из предложения имя прилагательное: «Красивый цветок стоит в вазе».', steps: ['Красивый — отвечает на вопрос «какой?» → прилагательное.'], answer: 'красивый — имя прилагательное.' },
+  { number: '51', page: 28, condition: 'Выделите корень слова: «подберёзовик».', steps: ['Родственные слова: берёза, берёзовый, подберёзовик.', 'Корень: -берёз-.', 'под-берёз-овик.'], answer: 'Корень: берёз- (под|берёз|овик).' },
+  { number: '55', page: 30, condition: 'Образуйте слова с приставкой «под-»: ходить, бежать.', steps: ['ходить → подходить.', 'бежать → подбежать.'], answer: 'подходить, подбежать.' },
+  { number: '131', page: 68, condition: 'Просклоняйте прилагательное «белый» (единственное число).', steps: ['И.п. — белый, Р.п. — белого, Д.п. — белому, В.п. — белый/белого, Т.п. — белым, П.п. — о белом.'], answer: 'белый, белого, белому, белый, белым, о белом.' },
+  { number: '281', page: 144, condition: 'Найдите слова с безударной гласной, требующей проверки: «молоко», «стол», «вода».', steps: ['молоко — безударная гласная О в первом слоге → молОко (проверка: ?).', 'стол — гласная О под ударением.', 'вода — безударная О → воды (ударная).'], answer: 'молоко, вода — безударные гласные требуют проверки.' },
+]
+
+const kanakina3ChaptersExt: GdzChapter[] = [
+  { title: 'Язык и речь. Повторение', problems: [ ...kanakina3Solutions, ...kanakina3Extra.slice(0, 1), ...makeProblems(15, 50, 14) ] },
+  { title: 'Состав слова', problems: [ ...kanakina3Extra.slice(1, 3), ...makeProblems(60, 130, 40) ] },
+  { title: 'Части речи', problems: [ ...kanakina3Extra.slice(3, 4), ...makeProblems(135, 280, 80) ] },
+  { title: 'Правописание', problems: [ ...kanakina3Extra.slice(4), ...makeProblems(285, 380, 165) ] },
+]
+
 const kanakina3Chapters: GdzChapter[] = [
   { title: 'Язык и речь. Повторение', problems: [ ...kanakina3Solutions, ...makeProblems(11, 50, 12) ] },
   { title: 'Состав слова', problems: makeProblems(51, 130, 36) },
@@ -1810,6 +1919,25 @@ const moro4Solutions: GdzProblem[] = [
   { number: '15', page: 14, condition: 'Запиши число 3/4 как долю единицы. Что означает дробь 3/4?', steps: ['3/4 означает: единица разделена на 4 части, взяты 3 из них.', '3/4 < 1.'], answer: 'Три четверти целого. 3/4 < 1.' },
   { number: '20', page: 18, condition: 'Реши задачу: Купили 3 кг конфет по 120 руб./кг. Сколько заплатили?', steps: ['3 · 120 = 360 руб.'], answer: '360 рублей.' },
 ]
+// ── Моро 4 extra ──
+const moro4Extra: GdzProblem[] = [
+  { number: '21', page: 19, condition: 'Реши: 2 345 · 3 = ?', steps: ['2345 · 3 = 7035.', '2000·3 + 300·3 + 40·3 + 5·3 = 6000+900+120+15 = 7035.'], answer: '7035.' },
+  { number: '25', page: 21, condition: 'Реши: 1248 : 4 = ?', steps: ['1248 : 4 = 312.', '1200:4=300, 48:4=12, 300+12=312.'], answer: '312.' },
+  { number: '30', page: 23, condition: 'Реши задачу: Автомобиль проехал 240 км за 3 ч. Найди скорость.', steps: ['v = s/t = 240/3 = 80 км/ч.'], answer: '80 км/ч.' },
+  { number: '91', page: 47, condition: 'Запиши дроби: один из пяти, три из восьми.', steps: ['один из пяти = 1/5.', 'три из восьми = 3/8.'], answer: '1/5 и 3/8.' },
+  { number: '95', page: 49, condition: 'Сравни дроби: 1/2 ○ 1/3.', steps: ['При одинаковом числителе большая дробь та, у которой меньший знаменатель.', '1/2 > 1/3.'], answer: '1/2 > 1/3.' },
+  { number: '171', page: 87, condition: 'Реши задачу: велосипедист едет 15 км/ч. Какое расстояние проедет за 3 ч?', steps: ['s = v · t = 15 · 3 = 45 км.'], answer: '45 км.' },
+  { number: '251', page: 128, condition: 'Переведи: 2 ч 30 мин = ? мин.', steps: ['2 ч = 120 мин. 120 + 30 = 150 мин.'], answer: '150 минут.' },
+  { number: '255', page: 130, condition: 'Найди периметр и площадь квадрата 9 см.', steps: ['P = 4·9 = 36 см. S = 9² = 81 см².'], answer: 'P = 36 см, S = 81 см².' },
+]
+
+const moro4ChaptersExt: GdzChapter[] = [
+  { title: 'Числа. Четыре арифметических действия', problems: [ ...moro4Solutions, ...moro4Extra.slice(0, 3), ...makeProblems(35, 90, 28) ] },
+  { title: 'Дроби', problems: [ ...moro4Extra.slice(3, 5), ...makeProblems(100, 170, 60) ] },
+  { title: 'Скорость, время, расстояние', problems: [ ...moro4Extra.slice(5, 6), ...makeProblems(175, 250, 100) ] },
+  { title: 'Геометрия и величины', problems: [ ...moro4Extra.slice(6), ...makeProblems(260, 320, 144) ] },
+]
+
 const moro4Chapters: GdzChapter[] = [
   { title: 'Числа. Четыре арифметических действия', problems: [ ...moro4Solutions, ...makeProblems(21, 90, 22) ] },
   { title: 'Дроби', problems: makeProblems(91, 170, 56) },
@@ -1823,6 +1951,24 @@ const kanakina4Solutions: GdzProblem[] = [
   { number: '5', page: 8, condition: 'Определите время глагола: «читал», «читает», «будет читать».', steps: ['читал — прошедшее время (что делал?).', 'читает — настоящее время (что делает?).', 'будет читать — будущее время.'], answer: 'читал — прош.вр., читает — наст.вр., будет читать — буд.вр.' },
   { number: '10', page: 12, condition: 'Определите склонение: «мама», «папа», «дочь».', steps: ['мама — ж.р., окончание -а → 1-е скл.', 'папа — м.р. (но оканч. -а) → 1-е скл.', 'дочь — ж.р., окончание нулевое → 3-е скл.'], answer: 'мама — 1 скл., папа — 1 скл., дочь — 3 скл.' },
 ]
+// ── Канакина 4 extra ──
+const kanakina4Extra: GdzProblem[] = [
+  { number: '11', page: 13, condition: 'Составьте словосочетание «существительное + прилагательное».', steps: ['Существительное: лес. Прилагательное: зелёный.', 'Словосочетание: зелёный лес.'], answer: 'Зелёный лес.' },
+  { number: '41', page: 23, condition: 'Определите падеж существительного в словосочетании «смотреть на небо».', steps: ['Смотреть на что? — на небо (В.п. с предлогом «на»).', 'Но здесь управление: смотреть (на что?) → небо (В.п.).'], answer: 'Винительный падеж с предлогом «на».' },
+  { number: '141', page: 73, condition: 'Образуйте краткое прилагательное от «красивый».', steps: ['красивый → красив (м.р.), красива (ж.р.), красиво (ср.р.).'], answer: 'красив, красива, красиво.' },
+  { number: '221', page: 115, condition: 'Определите лицо местоимения: «он», «мы», «вы».', steps: ['он — 3-е лицо, ед.ч.', 'мы — 1-е лицо, мн.ч.', 'вы — 2-е лицо, мн.ч.'], answer: 'он — 3 л. ед.ч.; мы — 1 л. мн.ч.; вы — 2 л. мн.ч.' },
+  { number: '271', page: 139, condition: 'Определите вид глагола: «рисовать», «нарисовать».', steps: ['рисовать — что делать? → несовершенный вид.', 'нарисовать — что сделать? → совершенный вид.'], answer: 'рисовать — несов. вид; нарисовать — сов. вид.' },
+  { number: '275', page: 141, condition: 'Спрягите глагол «писать» в настоящем времени.', steps: ['я пишу, ты пишешь, он/она пишет, мы пишем, вы пишете, они пишут.'], answer: 'пишу, пишешь, пишет, пишем, пишете, пишут.' },
+]
+
+const kanakina4ChaptersExt: GdzChapter[] = [
+  { title: 'Повторение', problems: [ ...kanakina4Solutions, ...kanakina4Extra.slice(0, 1), ...makeProblems(15, 40, 18) ] },
+  { title: 'Имя существительное', problems: [ ...kanakina4Extra.slice(1, 2), ...makeProblems(45, 140, 32) ] },
+  { title: 'Имя прилагательное', problems: [ ...kanakina4Extra.slice(2, 3), ...makeProblems(145, 220, 83) ] },
+  { title: 'Местоимение', problems: [ ...kanakina4Extra.slice(3, 4), ...makeProblems(225, 270, 127) ] },
+  { title: 'Глагол', problems: [ ...kanakina4Extra.slice(4), ...makeProblems(278, 380, 155) ] },
+]
+
 const kanakina4Chapters: GdzChapter[] = [
   { title: 'Повторение', problems: [ ...kanakina4Solutions, ...makeProblems(11, 40, 14) ] },
   { title: 'Имя существительное', problems: makeProblems(41, 140, 28) },
@@ -1833,17 +1979,17 @@ const kanakina4Chapters: GdzChapter[] = [
 
 const grade14Books: GdzBook[] = [
   // Grade 1
-  { slug: 'moro-1', klass: 1, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Степанова С. В., Волкова С. И.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro1Chapters },
-  { slug: 'kanakina-1', klass: 1, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kanakina1Chapters },
+  { slug: 'moro-1', klass: 1, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Степанова С. В., Волкова С. И.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro1ChaptersExt },
+  { slug: 'kanakina-1', klass: 1, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kanakina1ChaptersExt },
   // Grade 2
-  { slug: 'moro-2', klass: 2, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro2Chapters },
-  { slug: 'kanakina-2', klass: 2, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina2Chapters },
+  { slug: 'moro-2', klass: 2, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro2ChaptersExt },
+  { slug: 'kanakina-2', klass: 2, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina2ChaptersExt },
   // Grade 3
-  { slug: 'moro-3', klass: 3, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro3Chapters },
-  { slug: 'kanakina-3', klass: 3, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina3Chapters },
+  { slug: 'moro-3', klass: 3, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro3ChaptersExt },
+  { slug: 'kanakina-3', klass: 3, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina3ChaptersExt },
   // Grade 4
-  { slug: 'moro-4', klass: 4, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro4Chapters },
-  { slug: 'kanakina-4', klass: 4, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina4Chapters },
+  { slug: 'moro-4', klass: 4, subjectSlug: 'matematika', subject: 'Математика', authors: 'Моро М. И., Бантова М. А., Бельтюкова Г. В.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: moro4ChaptersExt },
+  { slug: 'kanakina-4', klass: 4, subjectSlug: 'russkiy-yazyk', subject: 'Русский язык', authors: 'Канакина В. П., Горецкий В. Г.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1, 2', chapters: kanakina4ChaptersExt },
 ]
 
 // ════════════════════════════════════════════════════
@@ -1862,6 +2008,30 @@ const kolmogorov10Solutions: GdzProblem[] = [
   { number: '40', page: 32, condition: 'Вычислите интеграл: <b>∫ 2x dx</b>.', steps: ['∫ 2x dx = x² + C.'], formulas: ['∫ xⁿ dx = xⁿ⁺¹/(n+1) + C'], answer: 'x² + C.' },
   { number: '45', page: 36, condition: 'Найдите площадь фигуры, ограниченной <b>y = x²</b>, x = 0, x = 2.', steps: ['S = ∫₀² x² dx = [x³/3]₀² = 8/3 − 0 = 8/3.'], formulas: ['S = ∫ₐᵇ f(x)dx'], answer: '8/3 ≈ 2,67 кв.ед.' },
 ]
+// ── Колмогоров 10 extra ──
+const kolmogorov10Extra: GdzProblem[] = [
+  { number: '3', page: 5, condition: 'Найдите область определения функции <b>y = 1/(x+2)</b>.', steps: ['Знаменатель ≠ 0: x + 2 ≠ 0, x ≠ −2.', 'D(y) = (−∞;−2)∪(−2;+∞).'], answer: 'D = ℝ \\ {−2}.' },
+  { number: '6', page: 6, condition: 'Является ли функция <b>y = x²</b> чётной?', steps: ['f(−x) = (−x)² = x² = f(x).', 'f(−x) = f(x) → функция чётная.'], answer: 'Да, чётная (f(−x) = f(x)).' },
+  { number: '8', page: 8, condition: 'Найдите асимптоту функции <b>y = 1/x</b>.', steps: ['При x → 0: y → ∞ (вертикальная асимптота x = 0).', 'При x → ∞: y → 0 (горизонтальная асимптота y = 0).'], answer: 'x = 0 (верт.), y = 0 (гориз.).' },
+  { number: '41', page: 20, condition: 'Найдите производную: <b>y = 4x⁴ − 2x</b>.', steps: ['y′ = 16x³ − 2.'], answer: "y' = 16x³ − 2." },
+  { number: '45', page: 22, condition: 'Найдите точки, где функция <b>y = x³ − 3x</b> имеет экстремумы.', steps: ["y' = 3x² − 3 = 0 → x² = 1 → x = ±1.", "При x = 1: y'' = 6 > 0 → минимум. При x = −1: y'' = −6 < 0 → максимум."], answer: 'Максимум при x = −1, минимум при x = 1.' },
+  { number: '50', page: 24, condition: 'Напишите уравнение касательной к <b>y = x²</b> в точке x = 3.', steps: ["y' = 2x → при x=3: k = 6.", 'Точка (3;9). Касательная: y − 9 = 6(x − 3) → y = 6x − 9.'], answer: 'y = 6x − 9.' },
+  { number: '101', page: 52, condition: 'Вычислите: <b>tg 45°</b>.', steps: ['tg 45° = sin45°/cos45° = (√2/2)/(√2/2) = 1.'], answer: '1.' },
+  { number: '105', page: 54, condition: 'Упростите: <b>sin²x + cos²x</b>.', steps: ['Основное тригонометрическое тождество: sin²x + cos²x = 1.'], answer: '1.' },
+  { number: '110', page: 56, condition: 'Решите уравнение: <b>cos x = 0</b>.', steps: ['x = π/2 + πn, n ∈ ℤ.'], answer: 'x = π/2 + πn.' },
+  { number: '171', page: 88, condition: 'Вычислите: <b>∫₀¹ x dx</b>.', steps: ['[x²/2]₀¹ = 1/2 − 0 = 1/2.'], answer: '1/2.' },
+  { number: '175', page: 90, condition: 'Найдите площадь между <b>y = x</b> и осью x от 0 до 4.', steps: ['S = ∫₀⁴ x dx = [x²/2]₀⁴ = 8.'], answer: '8 кв.ед.' },
+]
+
+const kolmogorov10ChaptersExt: GdzChapter[] = [
+  { title: '§ 1. Функции и их свойства', problems: [ ...kolmogorov10Solutions.slice(0, 2), ...kolmogorov10Extra.slice(0, 3), ...makeProblems(10, 40, 8) ] },
+  { title: '§ 2. Производная', problems: [ ...kolmogorov10Solutions.slice(2, 5), ...kolmogorov10Extra.slice(3, 6), ...makeProblems(55, 100, 30) ] },
+  { title: '§ 3. Тригонометрические функции', problems: [ ...kolmogorov10Solutions.slice(5, 8), ...kolmogorov10Extra.slice(6, 9), ...makeProblems(115, 170, 58) ] },
+  { title: '§ 4. Интеграл', problems: [ ...kolmogorov10Solutions.slice(8), ...kolmogorov10Extra.slice(9), ...makeProblems(180, 240, 92) ] },
+  { title: '§ 5. Показательные и логарифмические функции', problems: makeProblems(241, 320, 122) },
+  { title: 'Повторение', problems: makeProblems(321, 380, 160) },
+]
+
 const kolmogorov10Chapters: GdzChapter[] = [
   { title: '§ 1. Функции и их свойства', problems: [ ...kolmogorov10Solutions.slice(0, 2), ...makeProblems(3, 40, 5) ] },
   { title: '§ 2. Производная', problems: [ ...kolmogorov10Solutions.slice(2, 5), ...makeProblems(41, 100, 25) ] },
@@ -1880,6 +2050,27 @@ const atanasyan10Solutions: GdzProblem[] = [
   { number: '25', page: 23, condition: 'Найдите объём цилиндра с радиусом 3 и высотой 5.', steps: ['V = πR²h = π · 9 · 5 = 45π ≈ 141.'], formulas: ['V = πR²h'], answer: '45π ≈ 141 куб. ед.' },
   { number: '30', page: 27, condition: 'Найдите объём конуса с радиусом 3 и высотой 4.', steps: ['V = (1/3)πR²h = (1/3)·π·9·4 = 12π ≈ 37,7.'], formulas: ['V = πR²h/3'], answer: '12π ≈ 37,7 куб. ед.' },
   { number: '35', page: 31, condition: 'Найдите объём шара радиуса 6.', steps: ['V = (4/3)πR³ = (4/3)·π·216 = 288π ≈ 904.'], formulas: ['V = (4/3)πR³'], answer: '288π ≈ 904 куб. ед.' },
+]
+// ── Атанасян 10 extra ──
+const atanasyan10Extra: GdzProblem[] = [
+  { number: '2', page: 5, condition: 'Докажите, что две прямые, параллельные третьей, параллельны между собой.', steps: ['По аксиоме стереометрии: если две прямые параллельны третьей, они лежат в одной плоскости.', 'По транзитивности параллельности: a ∥ c, b ∥ c → a ∥ b.'], answer: 'Доказано: a ∥ b.' },
+  { number: '7', page: 9, condition: 'Прямая пересекает плоскость. Что можно сказать о её проекции?', steps: ['Если прямая не перпендикулярна плоскости, её проекция — прямая в этой плоскости.', 'Угол между прямой и плоскостью равен углу между прямой и её проекцией.'], answer: 'Проекция прямой — прямая в плоскости (если прямая не ⊥ плоскости).' },
+  { number: '42', page: 26, condition: 'Прямая перпендикулярна плоскости. Верно ли, что она перпендикулярна любой прямой этой плоскости?', steps: ['Да, по определению: если прямая ⊥ плоскости, она ⊥ любой прямой в этой плоскости, проходящей через точку пересечения.'], answer: 'Да, перпендикулярна любой прямой плоскости, проходящей через основание.' },
+  { number: '50', page: 30, condition: 'Найдите двугранный угол, если угол между полуплоскостями равен 60°.', steps: ['Двугранный угол — угол между двумя полуплоскостями с общим ребром.', 'Если угол 60°, то двугранный угол = 60°.'], answer: '60°.' },
+  { number: '92', page: 52, condition: 'Найдите объём прямой призмы с основанием — правильным треугольником со стороной 4 и высотой 9.', steps: ['S_осн = (√3/4)·a² = (√3/4)·16 = 4√3.', 'V = S_осн · h = 4√3 · 9 = 36√3.'], formulas: ['S = (√3/4)a²', 'V = Sh'], answer: '36√3 куб. ед.' },
+  { number: '100', page: 57, condition: 'Найдите площадь боковой поверхности правильной четырёхугольной пирамиды с основанием 6 см и апофемой 5 см.', steps: ['S_бок = (1/2)·P·a = (1/2)·24·5 = 60 см².'], formulas: ['Sбок = Pa/2'], answer: '60 см².' },
+  { number: '110', page: 63, condition: 'Найдите объём правильной треугольной пирамиды с основанием 6 и высотой 4.', steps: ['S = (√3/4)·36 = 9√3.', 'V = (1/3)·9√3·4 = 12√3.'], answer: '12√3 куб. ед.' },
+  { number: '165', page: 88, condition: 'Найдите площадь полной поверхности цилиндра: R = 5, h = 8.', steps: ['S = 2πR(R + h) = 2π·5·(5 + 8) = 10π·13 = 130π ≈ 408.'], formulas: ['S = 2πR(R+h)'], answer: '130π ≈ 408 кв. ед.' },
+  { number: '180', page: 96, condition: 'Найдите объём конуса с R = 4, h = 9.', steps: ['V = (1/3)πR²h = (1/3)·π·16·9 = 48π ≈ 150,8.'], formulas: ['V = πR²h/3'], answer: '48π ≈ 150,8 куб. ед.' },
+  { number: '200', page: 108, condition: 'Найдите площадь поверхности шара с R = 7.', steps: ['S = 4πR² = 4·π·49 = 196π ≈ 615,8.'], formulas: ['S = 4πR²'], answer: '196π ≈ 616 кв. ед.' },
+  { number: '215', page: 116, condition: 'Вписанный в шар цилиндр: R_шара = 5, высота цилиндра h = 8. Найдите R цилиндра.', steps: ['R_цил² + (h/2)² = R_шара².', 'R_цил² = 25 − 16 = 9.', 'R_цил = 3.'], answer: 'R цилиндра = 3.' },
+]
+const atanasyan10ChaptersExt: GdzChapter[] = [
+  { title: '§ 1. Параллельность прямых и плоскостей', problems: [ ...atanasyan10Solutions.slice(0, 1), ...atanasyan10Extra.slice(0, 2), ...makeProblems(8, 40, 10) ] },
+  { title: '§ 2. Перпендикулярность прямых и плоскостей', problems: [ ...atanasyan10Extra.slice(2, 5), ...makeProblems(55, 90, 32) ] },
+  { title: '§ 3. Многогранники', problems: [ ...atanasyan10Solutions.slice(1, 5), ...atanasyan10Extra.slice(5, 8), ...makeProblems(120, 160, 72) ] },
+  { title: '§ 4. Тела вращения', problems: [ ...atanasyan10Solutions.slice(5), ...atanasyan10Extra.slice(8), ...makeProblems(205, 230, 110) ] },
+  { title: 'Повторение', problems: makeProblems(231, 280, 120) },
 ]
 const atanasyan10Chapters: GdzChapter[] = [
   { title: '§ 1. Параллельность прямых и плоскостей', problems: [ ...atanasyan10Solutions.slice(0, 1), ...makeProblems(2, 40, 5) ] },
@@ -1900,6 +2091,27 @@ const kolmogorov11Solutions: GdzProblem[] = [
   { number: '35', page: 32, condition: 'Решите уравнение: <b>cos x = 0</b>.', steps: ['x = π/2 + πn, n ∈ ℤ.'], answer: 'x = π/2 + πn.' },
   { number: '40', page: 36, condition: 'Вычислите: <b>∫₁² (2x + 1) dx</b>.', steps: ['= [x² + x]₁² = (4 + 2) − (1 + 1) = 6 − 2 = 4.'], answer: '4.' },
 ]
+// ── Колмогоров 11 extra ──
+const kolmogorov11Extra: GdzProblem[] = [
+  { number: '2', page: 5, condition: 'Найдите производную <b>y = x³ − 3x² + 2</b>.', steps: ["y' = 3x² − 6x."], formulas: ["(xⁿ)' = nxⁿ⁻¹"], answer: "y' = 3x² − 6x." },
+  { number: '6', page: 8, condition: 'Найдите производную <b>y = ln x</b>.', steps: ["(ln x)' = 1/x."], formulas: ["(ln x)' = 1/x"], answer: "y' = 1/x." },
+  { number: '8', page: 10, condition: 'Найдите точки экстремума: <b>y = x² − 4x + 3</b>.', steps: ["y' = 2x − 4 = 0 → x = 2.", "y''(2) = 2 > 0 → минимум.", 'y_min = 4 − 8 + 3 = −1.'], answer: 'x = 2 — минимум, y_min = −1.' },
+  { number: '11', page: 12, condition: 'Вычислите <b>∫ (3x² + 2x) dx</b>.', steps: ['= x³ + x² + C.'], formulas: ['∫ xⁿ dx = xⁿ⁺¹/(n+1) + C'], answer: 'x³ + x² + C.' },
+  { number: '16', page: 16, condition: 'Вычислите <b>∫₀¹ (x² + 1) dx</b>.', steps: ['= [x³/3 + x]₀¹ = (1/3 + 1) − 0 = 4/3.'], answer: '4/3.' },
+  { number: '18', page: 18, condition: 'Найдите площадь фигуры, ограниченной <b>y = x²</b> и <b>y = x</b>.', steps: ['Пересечение: x² = x → x(x−1) = 0 → x = 0, 1.', 'S = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = 1/6.'], answer: 'S = 1/6.' },
+  { number: '22', page: 22, condition: 'Решите уравнение: <b>3ˣ = 81</b>.', steps: ['81 = 3⁴.', 'x = 4.'], answer: 'x = 4.' },
+  { number: '27', page: 26, condition: 'Решите уравнение: <b>log₅(x − 1) = 2</b>.', steps: ['x − 1 = 5² = 25.', 'x = 26.'], answer: 'x = 26.' },
+  { number: '32', page: 30, condition: 'Решите неравенство: <b>eˣ > e²</b>.', steps: ['Функция eˣ возрастает.', 'x > 2.'], answer: 'x > 2.' },
+  { number: '36', page: 33, condition: 'Решите уравнение: <b>sin x = √2/2</b>.', steps: ['x = π/4 + 2πn или x = 3π/4 + 2πn, n ∈ ℤ.'], answer: 'x = π/4 + 2πn; x = 3π/4 + 2πn.' },
+  { number: '42', page: 37, condition: 'Решите уравнение: <b>tan x = 1</b>.', steps: ['x = π/4 + πn, n ∈ ℤ.'], answer: 'x = π/4 + πn.' },
+]
+const kolmogorov11ChaptersExt: GdzChapter[] = [
+  { title: '§ 1. Производная (углублённо)', problems: [ ...kolmogorov11Solutions.slice(0, 2), ...kolmogorov11Extra.slice(0, 4), ...makeProblems(9, 55, 12) ] },
+  { title: '§ 2. Интеграл', problems: [ ...kolmogorov11Solutions.slice(2, 5), ...kolmogorov11Extra.slice(4, 7), ...makeProblems(20, 55, 22) ] },
+  { title: '§ 3. Показательные и логарифмические уравнения', problems: [ ...kolmogorov11Solutions.slice(5, 7), ...kolmogorov11Extra.slice(7, 9), ...makeProblems(34, 60, 38) ] },
+  { title: '§ 4. Тригонометрические уравнения', problems: [ ...kolmogorov11Solutions.slice(7), ...kolmogorov11Extra.slice(9), ...makeProblems(44, 80, 47) ] },
+  { title: 'Повторение к ЕГЭ', problems: makeProblems(261, 330, 133) },
+]
 const kolmogorov11Chapters: GdzChapter[] = [
   { title: '§ 1. Производная (углублённо)', problems: [ ...kolmogorov11Solutions.slice(0, 2), ...makeProblems(3, 55, 5) ] },
   { title: '§ 2. Интеграл', problems: [ ...kolmogorov11Solutions.slice(2, 5), ...makeProblems(56, 120, 30) ] },
@@ -1915,6 +2127,25 @@ const atanasyan11Solutions: GdzProblem[] = [
   { number: '15', page: 17, condition: 'Найдите площадь полной поверхности конуса: R = 3, l = 5 (образующая).', steps: ['S = πRl + πR² = π·3·5 + π·9 = 15π + 9π = 24π.'], formulas: ['S = πRl + πR²'], answer: '24π ≈ 75,4 кв. ед.' },
   { number: '20', page: 21, condition: 'Найдите объём шара с площадью поверхности 36π.', steps: ['S = 4πR² = 36π → R² = 9, R = 3.', 'V = (4/3)πR³ = (4/3)π·27 = 36π ≈ 113.'], answer: '36π ≈ 113 куб. ед.' },
 ]
+// ── Атанасян 11 extra ──
+const atanasyan11Extra: GdzProblem[] = [
+  { number: '2', page: 5, condition: 'Составьте уравнение плоскости, проходящей через точку A(1, 2, 3) с нормалью <b>n = (2, −1, 1)</b>.', steps: ['Уравнение: 2(x−1) − 1(y−2) + 1(z−3) = 0.', '2x − 2 − y + 2 + z − 3 = 0.', '2x − y + z − 3 = 0.'], answer: '2x − y + z − 3 = 0.' },
+  { number: '6', page: 9, condition: 'Найдите расстояние от точки M(1, 2, 3) до плоскости <b>2x − y + 2z − 6 = 0</b>.', steps: ['d = |2·1 − 2 + 2·3 − 6| / √(4 + 1 + 4) = |2 − 2 + 6 − 6| / 3 = 0 / 3 = 0.'], answer: 'd = 0 (точка лежит в плоскости).' },
+  { number: '12', page: 14, condition: 'Найдите угол между прямыми с направляющими векторами <b>a = (1, 0, 1)</b> и <b>b = (1, 1, 0)</b>.', steps: ['cos φ = |a·b| / (|a|·|b|) = |1+0+0| / (√2·√2) = 1/2.', 'φ = 60°.'], answer: 'φ = 60°.' },
+  { number: '44', page: 27, condition: 'Найдите объём цилиндра с R = 3, h = 10.', steps: ['V = πR²h = π·9·10 = 90π ≈ 282,7.'], formulas: ['V = πR²h'], answer: '90π ≈ 283 куб. ед.' },
+  { number: '55', page: 34, condition: 'Найдите объём конуса, вписанного в цилиндр с R = 4, h = 6.', steps: ['Конус имеет те же R и h.', 'V_кон = (1/3)V_цил = (1/3)·πR²h = (1/3)·π·16·6 = 32π.'], answer: '32π ≈ 100,5 куб. ед.' },
+  { number: '70', page: 42, condition: 'Шар вписан в куб с ребром 8 см. Найдите объём шара.', steps: ['R = a/2 = 4 см.', 'V = (4/3)πR³ = (4/3)π·64 = 256π/3 ≈ 268.'], answer: '256π/3 ≈ 268 куб. ед.' },
+  { number: '85', page: 50, condition: 'Найдите объём шарового сегмента высотой h = 3, R = 5.', steps: ['V = πh²(R − h/3) = π·9·(5 − 1) = 36π ≈ 113.'], formulas: ['V = πh²(R − h/3)'], answer: '36π ≈ 113 куб. ед.' },
+  { number: '105', page: 60, condition: 'Два тела подобны с коэффициентом 3. Во сколько раз отличаются их объёмы?', steps: ['Объёмы подобных тел относятся как k³.', 'k³ = 27.'], answer: 'В 27 раз.' },
+  { number: '120', page: 68, condition: 'Найдите объём правильной шестиугольной призмы со стороной основания 4 и высотой 5.', steps: ['S_осн = (3√3/2)·a² = (3√3/2)·16 = 24√3.', 'V = 24√3 · 5 = 120√3 ≈ 207,8.'], answer: '120√3 ≈ 208 куб. ед.' },
+  { number: '140', page: 78, condition: 'Найдите объём тетраэдра с ребром a = 6.', steps: ['V = (a³√2)/12 = (216√2)/12 = 18√2 ≈ 25,5.'], formulas: ['V = a³√2/12'], answer: '18√2 ≈ 25,5 куб. ед.' },
+]
+const atanasyan11ChaptersExt: GdzChapter[] = [
+  { title: '§ 1. Метод координат в пространстве', problems: [ ...atanasyan11Solutions.slice(0, 1), ...atanasyan11Extra.slice(0, 3), ...makeProblems(15, 40, 18) ] },
+  { title: '§ 2. Цилиндр, конус, шар', problems: [ ...atanasyan11Solutions.slice(1, 3), ...atanasyan11Extra.slice(3, 7), ...makeProblems(90, 100, 55) ] },
+  { title: '§ 3. Объёмы тел', problems: [ ...atanasyan11Solutions.slice(3), ...atanasyan11Extra.slice(7), ...makeProblems(145, 160, 80) ] },
+  { title: 'Повторение к ЕГЭ', problems: makeProblems(161, 220, 86) },
+]
 const atanasyan11Chapters: GdzChapter[] = [
   { title: '§ 1. Метод координат в пространстве', problems: [ ...atanasyan11Solutions.slice(0, 1), ...makeProblems(2, 40, 5) ] },
   { title: '§ 2. Цилиндр, конус, шар', problems: [ ...atanasyan11Solutions.slice(1, 3), ...makeProblems(41, 100, 24) ] },
@@ -1924,11 +2155,11 @@ const atanasyan11Chapters: GdzChapter[] = [
 
 const grade1011Books: GdzBook[] = [
   // Grade 10
-  { slug: 'kolmogorov-10', klass: 10, subjectSlug: 'algebra-nachala-analiza', subject: 'Алгебра и начала анализа', authors: 'Колмогоров А. Н., Абрамов А. М., Дудницын Ю. П.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kolmogorov10Chapters },
-  { slug: 'atanasyan-10', klass: 10, subjectSlug: 'geometriya', subject: 'Геометрия', authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.', type: 'Учебник', years: '2020–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: atanasyan10Chapters },
+  { slug: 'kolmogorov-10', klass: 10, subjectSlug: 'algebra-nachala-analiza', subject: 'Алгебра и начала анализа', authors: 'Колмогоров А. Н., Абрамов А. М., Дудницын Ю. П.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kolmogorov10ChaptersExt },
+  { slug: 'atanasyan-10', klass: 10, subjectSlug: 'geometriya', subject: 'Геометрия', authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.', type: 'Учебник', years: '2020–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: atanasyan10ChaptersExt },
   // Grade 11
-  { slug: 'kolmogorov-11', klass: 11, subjectSlug: 'algebra-nachala-analiza', subject: 'Алгебра и начала анализа', authors: 'Колмогоров А. Н., Абрамов А. М., Дудницын Ю. П.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kolmogorov11Chapters },
-  { slug: 'atanasyan-11', klass: 11, subjectSlug: 'geometriya', subject: 'Геометрия', authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.', type: 'Учебник', years: '2020–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: atanasyan11Chapters },
+  { slug: 'kolmogorov-11', klass: 11, subjectSlug: 'algebra-nachala-analiza', subject: 'Алгебра и начала анализа', authors: 'Колмогоров А. Н., Абрамов А. М., Дудницын Ю. П.', type: 'Учебник', years: '2019–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: kolmogorov11ChaptersExt },
+  { slug: 'atanasyan-11', klass: 11, subjectSlug: 'geometriya', subject: 'Геометрия', authors: 'Атанасян Л. С., Бутузов В. Ф., Кадомцев С. Б.', type: 'Учебник', years: '2020–2023', publisher: 'Просвещение', fgos: true, parts: '1', chapters: atanasyan11ChaptersExt },
 ]
 
 // ════════════════════════════════════════════════════
