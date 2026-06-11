@@ -26,6 +26,8 @@ jobs:
             GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
             echo "==> npm ci..."
             npm ci --prefer-offline
+            echo "==> clean .next cache..."
+            rm -rf .next
             echo "==> build..."
             npm run build
             echo "==> restart PM2..."
