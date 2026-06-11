@@ -1157,17 +1157,35 @@ const spotlight6Solutions: GdzProblem[] = [
   { number: '221', page: 146, condition: 'Ex. 1. Fill in the missing words: recycle, reuse, reduce.', steps: ['recycle — перерабатывать (бумагу, стекло).', 'reuse — использовать повторно.', 'reduce — уменьшать потребление.'], answer: 'recycle — recycling materials; reuse — using again; reduce — using less.' },
 ]
 
+// ── Spotlight 6 extra ──
+const spotlight6Extra: GdzProblem[] = [
+  { number: '10', page: 10, condition: 'Ex. 3. Write questions. "He can swim." → Can he swim?', steps: ['Вопросительная форма с модальным глаголом can: can + подлежащее + инфинитив.', 'Can he swim?'], answer: 'Can he swim?' },
+  { number: '15', page: 13, condition: 'Ex. 2. Present Continuous. "She ___ (read) now." Fill in.', steps: ['Present Continuous: am/is/are + V-ing.', 'She is reading now.'], answer: 'She <b>is reading</b> now.' },
+  { number: '20', page: 16, condition: 'Ex. 4. Translate: «Я умею играть на гитаре».', steps: ['Умею = can. Играть на гитаре = play the guitar.', 'I can play the guitar.'], answer: 'I can play the guitar.' },
+  { number: '35', page: 25, condition: 'Ex. 3. Write: "What subjects do you study?"', steps: ['do you study — общий вопрос с do для 2-го лица.', 'Ответ: I study Maths, Russian, English, History, etc.'], answer: 'I study Maths, Russian, English and other subjects.' },
+  { number: '40', page: 28, condition: 'Ex. 2. Use Past Simple. "We ___ (visit) the museum last week."', steps: ['Past Simple правильных глаголов: V + -ed.', 'visit → visited.'], answer: 'We <b>visited</b> the museum last week.' },
+  { number: '56', page: 38, condition: 'Ex. 4. Describe your room. Use "there is" / "there are".', steps: ['Единственное число: There is a bed.', 'Множественное: There are two windows.'], answer: 'There is a desk in my room. There are bookshelves on the wall.' },
+  { number: '62', page: 42, condition: 'Ex. 3. Compare using "bigger than / smaller than": elephant, cat, mouse.', steps: ['An elephant is bigger than a cat.', 'A cat is bigger than a mouse.', 'A mouse is the smallest.'], answer: 'An elephant is bigger than a cat. A cat is bigger than a mouse.' },
+  { number: '78', page: 52, condition: 'Ex. 2. Write: "Where is the cinema?" Use a map.', steps: ['The cinema is next to / opposite / between...', 'Example: The cinema is next to the park.'], answer: 'The cinema is next to the park.' },
+  { number: '105', page: 70, condition: 'Ex. 3. Use "would like to". "What ___ you ___ to do?"', steps: ['would like to = хотел бы.', 'What would you like to do?'], answer: 'What <b>would</b> you <b>like to</b> do?' },
+  { number: '130', page: 86, condition: 'Ex. 2. Translate: «Он работает врачом».', steps: ['работает — works (Present Simple, he/she/it + s).', 'врачом = as a doctor.', 'He works as a doctor.'], answer: 'He works as a doctor.' },
+  { number: '155', page: 102, condition: 'Ex. 3. Write about yesterday. "Yesterday I ___ (go) to school."', steps: ['go — неправильный глагол: went.', 'Yesterday I went to school.'], answer: 'Yesterday I <b>went</b> to school.' },
+  { number: '160', page: 104, condition: 'Ex. 5. Use "will". "In 10 years robots ___ (do) all the work."', steps: ['will + инфинитив = будущее простое.', 'Robots will do all the work.'], answer: 'Robots <b>will do</b> all the work.' },
+  { number: '178', page: 118, condition: 'Ex. 3. Modal verbs. "You ___ eat more vegetables." (advice)', steps: ['Совет = should.', 'You should eat more vegetables.'], answer: 'You <b>should</b> eat more vegetables.' },
+  { number: '205', page: 134, condition: 'Ex. 2. Passive voice. "The book ___ (write) by Pushkin."', steps: ['Passive: was/were + past participle.', 'write → written.', 'The book was written by Pushkin.'], answer: 'The book <b>was written</b> by Pushkin.' },
+  { number: '225', page: 148, condition: 'Ex. 3. Environment. "We must ___ (protect) the rainforests."', steps: ['must + инфинитив (без to).', 'We must protect the rainforests.'], answer: 'We must <b>protect</b> the rainforests.' },
+]
 const spotlight6Chapters: GdzChapter[] = [
-  { title: 'Module 1. On the Move', problems: [ ...spotlight6Solutions.slice(0, 4), ...makeProblems(9, 25, 8) ] },
-  { title: 'Module 2. School Daze', problems: [ ...spotlight6Solutions.slice(4, 6), ...makeProblems(32, 50, 22) ] },
-  { title: 'Module 3. Home Sweet Home', problems: [ ...spotlight6Solutions.slice(6, 8), ...makeProblems(55, 75, 38) ] },
-  { title: 'Module 4. In the Community', problems: [ ...spotlight6Solutions.slice(8, 9), ...makeProblems(80, 100, 55) ] },
-  { title: 'Module 5. Shopping Time', problems: [ ...spotlight6Solutions.slice(9, 10), ...makeProblems(104, 125, 70) ] },
-  { title: 'Module 6. All in a Day\'s Work', problems: [ ...spotlight6Solutions.slice(10, 11), ...makeProblems(128, 150, 86) ] },
-  { title: 'Module 7. Free Time', problems: [ ...spotlight6Solutions.slice(11, 13), ...makeProblems(158, 175, 103) ] },
-  { title: 'Module 8. Our World', problems: [ ...spotlight6Solutions.slice(13, 14), ...makeProblems(179, 200, 118) ] },
+  { title: 'Module 1. On the Move', problems: [ ...spotlight6Solutions.slice(0, 4), ...spotlight6Extra.slice(0, 3), ...makeProblems(22, 25, 10) ] },
+  { title: 'Module 2. School Daze', problems: [ ...spotlight6Solutions.slice(4, 6), ...spotlight6Extra.slice(3, 5), ...makeProblems(42, 50, 28) ] },
+  { title: 'Module 3. Home Sweet Home', problems: [ ...spotlight6Solutions.slice(6, 8), ...spotlight6Extra.slice(5, 8), ...makeProblems(64, 75, 42) ] },
+  { title: 'Module 4. In the Community', problems: [ ...spotlight6Solutions.slice(8, 9), ...spotlight6Extra.slice(8, 9), ...makeProblems(80, 100, 55) ] },
+  { title: 'Module 5. Shopping Time', problems: [ ...spotlight6Solutions.slice(9, 10), ...spotlight6Extra.slice(9, 10), ...makeProblems(108, 125, 74) ] },
+  { title: 'Module 6. All in a Day\'s Work', problems: [ ...spotlight6Solutions.slice(10, 11), ...spotlight6Extra.slice(10, 12), ...makeProblems(132, 150, 88) ] },
+  { title: 'Module 7. Free Time', problems: [ ...spotlight6Solutions.slice(11, 13), ...spotlight6Extra.slice(12, 13), ...makeProblems(162, 175, 108) ] },
+  { title: 'Module 8. Our World', problems: [ ...spotlight6Solutions.slice(13, 14), ...spotlight6Extra.slice(13, 14), ...makeProblems(179, 200, 118) ] },
   { title: 'Module 9. Heroes', problems: [ ...spotlight6Solutions.slice(14, 15), ...makeProblems(204, 220, 134) ] },
-  { title: 'Module 10. Use it or Lose it', problems: [ ...spotlight6Solutions.slice(15), ...makeProblems(224, 240, 148) ] },
+  { title: 'Module 10. Use it or Lose it', problems: [ ...spotlight6Solutions.slice(15), ...spotlight6Extra.slice(14), ...makeProblems(228, 240, 152) ] },
   { title: 'Spotlight on Russia', problems: makeProblems(241, 260, 160) },
   { title: 'Grammar Bank / Vocabulary Bank', problems: makeProblems(261, 280, 174) },
 ]
@@ -1505,12 +1523,27 @@ const makarychev9Extra: GdzProblem[] = [
   { number: '420', page: 208, condition: 'В колоде 52 карты. Вытащили одну. Найдите вероятность туза.', steps: ['Тузов 4, всего карт 52.', 'P = 4/52 = 1/13.'], answer: 'P = 1/13 ≈ 0,077.' },
 ]
 
+// ── Макарычев 9 extra-2 ──
+const makarychev9Extra2: GdzProblem[] = [
+  { number: '32', page: 16, condition: 'Решите неравенство: <b>3x − 7 > 2x + 1</b>.', steps: ['3x − 2x > 1 + 7 → x > 8.'], answer: 'x > 8.' },
+  { number: '36', page: 18, condition: 'Решите систему неравенств: <b>{ 2x > 6; x < 10 }</b>.', steps: ['2x > 6 → x > 3.', 'x < 10.', 'Ответ: 3 < x < 10.'], answer: '3 < x < 10.' },
+  { number: '40', page: 20, condition: 'Решите неравенство: <b>x² − 4 < 0</b>.', steps: ['x² < 4 → |x| < 2 → −2 < x < 2.'], answer: '−2 < x < 2.' },
+  { number: '103', page: 54, condition: 'Найдите вершину параболы: <b>y = x² − 6x + 5</b>.', steps: ['x_в = −b/(2a) = 6/2 = 3.', 'y_в = 9 − 18 + 5 = −4.', 'Вершина: (3, −4).'], answer: 'Вершина (3, −4).' },
+  { number: '108', page: 56, condition: 'Постройте параболу: <b>y = −x² + 2x + 3</b>. Найдите точки пересечения с осью x.', steps: ['−x² + 2x + 3 = 0 → x² − 2x − 3 = 0.', 'D = 4 + 12 = 16. x = (2±4)/2.', 'x₁ = 3, x₂ = −1.'], answer: 'Пересекает ось x в точках (3, 0) и (−1, 0).' },
+  { number: '172', page: 87, condition: 'Решите систему: <b>{ x² + y = 1; x + y = 1 }</b>.', steps: ['Из второго: y = 1 − x.', 'x² + 1 − x = 1 → x² − x = 0 → x(x−1) = 0.', 'x = 0: y = 1. x = 1: y = 0.'], answer: '(0, 1) и (1, 0).' },
+  { number: '180', page: 91, condition: 'Решите уравнение: <b>x² − 3|x| + 2 = 0</b>.', steps: ['Замена t = |x| ≥ 0: t² − 3t + 2 = 0.', 't = 1 или t = 2.', '|x| = 1 → x = ±1; |x| = 2 → x = ±2.'], answer: 'x = ±1, x = ±2.' },
+  { number: '273', page: 139, condition: 'Найдите сумму первых 20 членов арифметической прогрессии: a₁ = 3, d = 4.', steps: ['a₂₀ = 3 + 19·4 = 79.', 'S₂₀ = 20·(3+79)/2 = 20·82/2 = 820.'], formulas: ['Sₙ = n(a₁+aₙ)/2'], answer: '820.' },
+  { number: '278', page: 141, condition: 'В арифметической прогрессии a₅ = 17, d = 3. Найдите a₁.', steps: ['a₅ = a₁ + 4d → 17 = a₁ + 12 → a₁ = 5.'], answer: 'a₁ = 5.' },
+  { number: '325', page: 162, condition: 'Сумма геометрической прогрессии (∞): a₁ = 4, q = 1/2. Найдите S.', steps: ['S = a₁/(1−q) = 4/(1−1/2) = 4/(1/2) = 8.'], formulas: ['S = a₁/(1-q)'], answer: 'S = 8.' },
+  { number: '332', page: 165, condition: 'Найдите первый член геометрической прогрессии: q = 3, a₄ = 54.', steps: ['a₄ = a₁·q³ → 54 = a₁·27 → a₁ = 2.'], answer: 'a₁ = 2.' },
+  { number: '360', page: 180, condition: 'Вычислите: <b>4! / 2!</b>.', steps: ['4! = 24; 2! = 2.', '24/2 = 12.'], answer: '12.' },
+]
 const makarychev9ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Неравенства', problems: [ ...makarychev9Solutions.slice(0, 3), ...makarychev9Extra.slice(0, 3), ...makeProblems(30, 70, 14) ] },
-  { title: '§ 2. Квадратичная функция', problems: [ ...makarychev9Solutions.slice(3, 6), ...makarychev9Extra.slice(3, 7), ...makeProblems(100, 155, 52) ] },
-  { title: '§ 3. Уравнения и системы уравнений', problems: [ ...makarychev9Solutions.slice(6, 7), ...makarychev9Extra.slice(7, 8), ...makeProblems(170, 245, 85) ] },
-  { title: '§ 4. Арифметическая прогрессия', problems: [ ...makarychev9Solutions.slice(7, 10), ...makarychev9Extra.slice(8, 10), ...makeProblems(270, 300, 138) ] },
-  { title: '§ 5. Геометрическая прогрессия', problems: [ ...makarychev9Solutions.slice(10, 12), ...makarychev9Extra.slice(10, 11), ...makeProblems(320, 360, 160) ] },
+  { title: '§ 1. Неравенства', problems: [ ...makarychev9Solutions.slice(0, 3), ...makarychev9Extra.slice(0, 3), ...makarychev9Extra2.slice(0, 3), ...makeProblems(42, 70, 18) ] },
+  { title: '§ 2. Квадратичная функция', problems: [ ...makarychev9Solutions.slice(3, 6), ...makarychev9Extra.slice(3, 7), ...makarychev9Extra2.slice(3, 7), ...makeProblems(112, 155, 58) ] },
+  { title: '§ 3. Уравнения и системы уравнений', problems: [ ...makarychev9Solutions.slice(6, 7), ...makarychev9Extra.slice(7, 8), ...makarychev9Extra2.slice(7, 8), ...makeProblems(185, 245, 96) ] },
+  { title: '§ 4. Арифметическая прогрессия', problems: [ ...makarychev9Solutions.slice(7, 10), ...makarychev9Extra.slice(8, 10), ...makarychev9Extra2.slice(8, 10), ...makeProblems(282, 300, 144) ] },
+  { title: '§ 5. Геометрическая прогрессия', problems: [ ...makarychev9Solutions.slice(10, 12), ...makarychev9Extra.slice(10, 11), ...makarychev9Extra2.slice(10), ...makeProblems(338, 360, 170) ] },
   { title: '§ 6. Комбинаторика и вероятность', problems: [ ...makarychev9Solutions.slice(12, 14), ...makarychev9Extra.slice(11), ...makeProblems(385, 415, 192) ] },
   { title: 'Повторение', problems: [ ...makarychev9Solutions.slice(14), ...makeProblems(425, 460, 210) ] },
 ]
@@ -1563,12 +1596,27 @@ const atanasyan9Extra: GdzProblem[] = [
   { number: '255', page: 130, condition: 'Точка A(2,3). Найдите точку, симметричную ей относительно начала координат.', steps: ['При центральной симметрии относительно O(0,0): A′ = (−x, −y).', 'A′ = (−2, −3).'], answer: '(−2, −3).' },
 ]
 
+// ── Атанасян 9 extra-2 ──
+const atanasyan9Extra2: GdzProblem[] = [
+  { number: '31', page: 20, condition: 'Сумма двух векторов: a = (3, 4), b = (−1, 2). Найдите a + b.', steps: ['a + b = (3+(−1), 4+2) = (2, 6).'], answer: '(2, 6).' },
+  { number: '38', page: 24, condition: 'Найдите модуль вектора a = (5, −12).', steps: ['|a| = √(5²+(−12)²) = √(25+144) = √169 = 13.'], answer: '|a| = 13.' },
+  { number: '45', page: 28, condition: 'Докажите, что точки A(0,0), B(4,0), C(4,3) — вершины прямоугольного треугольника.', steps: ['AB = 4, BC = 3, AC = √(16+9) = 5.', 'Проверяем теорему Пифагора: 3²+4² = 9+16 = 25 = 5². Верно.'], answer: 'Прямоугольный треугольник: AC — гипотенуза.' },
+  { number: '82', page: 44, condition: 'Уравнение окружности с центром (3,−2) и радиусом 5.', steps: ['(x−3)² + (y+2)² = 25.'], answer: '(x−3)² + (y+2)² = 25.' },
+  { number: '88', page: 47, condition: 'Найдите центр и радиус окружности: x² + y² − 4x + 6y − 3 = 0.', steps: ['(x²−4x+4) + (y²+6y+9) = 3+4+9.', '(x−2)² + (y+3)² = 16.', 'Центр (2,−3), R = 4.'], answer: 'Центр (2, −3), радиус 4.' },
+  { number: '138', page: 72, condition: 'Теорема косинусов: a=5, b=7, C=60°. Найдите c.', steps: ['c² = a²+b²−2ab·cosC = 25+49−2·35·0,5 = 74−35 = 39.', 'c = √39 ≈ 6,24.'], formulas: ['c² = a²+b²-2ab·cosC'], answer: 'c = √39 ≈ 6,24.' },
+  { number: '144', page: 75, condition: 'Площадь треугольника: a=6, b=8, угол между ними C=30°.', steps: ['S = (1/2)·a·b·sinC = (1/2)·6·8·0,5 = 12.'], formulas: ['S = ab·sinC/2'], answer: 'S = 12 кв. ед.' },
+  { number: '188', page: 96, condition: 'Найдите площадь правильного шестиугольника со стороной 4.', steps: ['S = (3√3/2)·a² = (3√3/2)·16 = 24√3 ≈ 41,6.'], formulas: ['S = 3√3a²/2'], answer: '24√3 ≈ 41,6 кв. ед.' },
+  { number: '196', page: 100, condition: 'Вписанная окружность правильного треугольника со стороной 6. Найдите радиус.', steps: ['r = a/(2√3) = 6/(2√3) = 3/√3 = √3.'], answer: 'r = √3 ≈ 1,73.' },
+  { number: '237', page: 120, condition: 'Площадь круга с радиусом 7.', steps: ['S = πR² = 49π ≈ 153,9.'], answer: '49π ≈ 153,9 кв. ед.' },
+  { number: '242', page: 122, condition: 'Длина дуги 120° при радиусе 9.', steps: ['l = (α/360°)·2πR = (1/3)·18π = 6π.'], answer: '6π ≈ 18,85.' },
+  { number: '258', page: 130, condition: 'Нарисуйте фигуру, симметричную прямоугольнику ABCD относительно прямой x=2 (с вершинами A(0,0), B(4,0), C(4,2), D(0,2)).', steps: ['Симметрия относительно x=2: x → 4−x.', 'A→(4,0)=B, B→(0,0)=A, C→(0,2)=D, D→(4,2)=C.', 'Фигура совпадает с исходной.'], answer: 'Фигура симметрична сама себе (симметрична относительно x=2).' },
+]
 const atanasyan9ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Векторы', problems: [ ...atanasyan9Solutions.slice(0, 3), ...atanasyan9Extra.slice(0, 3), ...makeProblems(30, 50, 18) ] },
-  { title: '§ 2. Метод координат', problems: [ ...atanasyan9Solutions.slice(3, 6), ...atanasyan9Extra.slice(3, 6), ...makeProblems(80, 110, 42) ] },
-  { title: '§ 3. Соотношения между сторонами и углами', problems: [ ...atanasyan9Solutions.slice(6, 9), ...atanasyan9Extra.slice(6, 8), ...makeProblems(135, 165, 70) ] },
-  { title: '§ 4. Правильные многоугольники', problems: [ ...atanasyan9Solutions.slice(9, 11), ...atanasyan9Extra.slice(8, 10), ...makeProblems(185, 210, 96) ] },
-  { title: '§ 5. Длина окружности и площадь круга', problems: [ ...atanasyan9Solutions.slice(11, 14), ...atanasyan9Extra.slice(10, 12), ...makeProblems(235, 250, 122) ] },
+  { title: '§ 1. Векторы', problems: [ ...atanasyan9Solutions.slice(0, 3), ...atanasyan9Extra.slice(0, 3), ...atanasyan9Extra2.slice(0, 3), ...makeProblems(48, 50, 26) ] },
+  { title: '§ 2. Метод координат', problems: [ ...atanasyan9Solutions.slice(3, 6), ...atanasyan9Extra.slice(3, 6), ...atanasyan9Extra2.slice(3, 5), ...makeProblems(92, 110, 54) ] },
+  { title: '§ 3. Соотношения между сторонами и углами', problems: [ ...atanasyan9Solutions.slice(6, 9), ...atanasyan9Extra.slice(6, 8), ...atanasyan9Extra2.slice(5, 8), ...makeProblems(148, 165, 82) ] },
+  { title: '§ 4. Правильные многоугольники', problems: [ ...atanasyan9Solutions.slice(9, 11), ...atanasyan9Extra.slice(8, 10), ...atanasyan9Extra2.slice(8, 10), ...makeProblems(198, 210, 106) ] },
+  { title: '§ 5. Длина окружности и площадь круга', problems: [ ...atanasyan9Solutions.slice(11, 14), ...atanasyan9Extra.slice(10, 12), ...atanasyan9Extra2.slice(10), ...makeProblems(244, 250, 130) ] },
   { title: '§ 6. Движения', problems: [ ...atanasyan9Extra.slice(12), ...makeProblems(260, 295, 132) ] },
   { title: 'Повторение', problems: [ ...atanasyan9Solutions.slice(14), ...makeProblems(300, 340, 153) ] },
 ]
@@ -1675,12 +1723,27 @@ const merzlyak9Extra: GdzProblem[] = [
   { number: '280', page: 141, condition: 'Упростите: <b>(x²−9)/(x+3)</b>.', steps: ['x²−9 = (x−3)(x+3).', '(x−3)(x+3)/(x+3) = x−3.'], answer: 'x − 3 (при x ≠ −3).' },
 ]
 
+// ── Мерзляк 9 extra-2 ──
+const merzlyak9Extra2: GdzProblem[] = [
+  { number: '33', page: 18, condition: 'Решите систему: <b>{ x² + y = 5; x + y = 1 }</b>.', steps: ['y = 1 − x. x² + 1 − x = 5 → x² − x − 4 = 0.', 'D = 1 + 16 = 17. x = (1±√17)/2.'], answer: 'x = (1+√17)/2; x = (1−√17)/2.' },
+  { number: '38', page: 20, condition: 'Решите уравнение: <b>|2x − 3| = 5</b>.', steps: ['2x − 3 = 5 → x = 4.', '2x − 3 = −5 → x = −1.'], answer: 'x = 4; x = −1.' },
+  { number: '42', page: 22, condition: 'Решите неравенство: <b>x² − 5x + 6 ≤ 0</b>.', steps: ['x² − 5x + 6 = (x−2)(x−3).', 'Неравенство ≤ 0 между корнями: 2 ≤ x ≤ 3.'], answer: '2 ≤ x ≤ 3.' },
+  { number: '92', page: 48, condition: 'Функция y = 2ˣ. Найдите значения при x = −1, 0, 1, 2.', steps: ['2⁻¹ = 1/2; 2⁰ = 1; 2¹ = 2; 2² = 4.'], answer: '0,5; 1; 2; 4.' },
+  { number: '100', page: 52, condition: 'Область значений функции y = √x.', steps: ['√x определена при x ≥ 0.', 'Значения: y ≥ 0.'], answer: 'y ≥ 0.' },
+  { number: '178', page: 90, condition: 'Найдите 10-й член арифметической прогрессии: a₁ = 2, d = 3.', steps: ['a₁₀ = 2 + 9·3 = 2 + 27 = 29.'], answer: 'a₁₀ = 29.' },
+  { number: '184', page: 93, condition: 'Сумма первых 15 членов прогрессии a₁ = 5, d = 2.', steps: ['a₁₅ = 5 + 14·2 = 33.', 'S₁₅ = 15·(5+33)/2 = 15·19 = 285.'], answer: 'S₁₅ = 285.' },
+  { number: '190', page: 96, condition: 'Геометрическая прогрессия: b₁ = 3, q = 2. Найдите b₅.', steps: ['b₅ = 3 · 2⁴ = 3 · 16 = 48.'], answer: 'b₅ = 48.' },
+  { number: '237', page: 120, condition: 'Вероятность: из урны с 6 белыми и 4 чёрными шарами достали один. Вероятность белого?', steps: ['P = 6/(6+4) = 6/10 = 0,6.'], answer: 'P = 0,6.' },
+  { number: '243', page: 123, condition: 'Два события: P(A) = 0,4, P(B) = 0,3. Найдите P(A∪B) если они несовместны.', steps: ['P(A∪B) = P(A) + P(B) = 0,4 + 0,3 = 0,7.'], answer: 'P(A∪B) = 0,7.' },
+  { number: '287', page: 145, condition: 'Упростите: <b>(x² − 1)/(x − 1)</b>.', steps: ['x²−1 = (x−1)(x+1).', '(x−1)(x+1)/(x−1) = x+1 при x ≠ 1.'], answer: 'x + 1 (при x ≠ 1).' },
+  { number: '292', page: 147, condition: 'Вычислите: <b>log₂ 16 + log₂ 4</b>.', steps: ['log₂ 16 = 4; log₂ 4 = 2.', '4 + 2 = 6.'], answer: '6.' },
+]
 const merzlyak9ChaptersExt: GdzChapter[] = [
-  { title: '§ 1. Уравнения и системы уравнений', problems: [ ...merzlyak9Solutions.slice(0, 3), ...merzlyak9Extra.slice(0, 3), ...makeProblems(30, 70, 14) ] },
-  { title: '§ 2. Функции', problems: [ ...merzlyak9Solutions.slice(3, 5), ...merzlyak9Extra.slice(3, 5), ...makeProblems(90, 145, 46) ] },
-  { title: '§ 3. Числовые последовательности', problems: [ ...merzlyak9Solutions.slice(5, 8), ...merzlyak9Extra.slice(5, 8), ...makeProblems(175, 215, 88) ] },
-  { title: '§ 4. Элементы теории вероятностей', problems: [ ...merzlyak9Solutions.slice(8, 10), ...merzlyak9Extra.slice(8, 10), ...makeProblems(235, 265, 118) ] },
-  { title: 'Повторение', problems: [ ...merzlyak9Solutions.slice(10), ...merzlyak9Extra.slice(10), ...makeProblems(285, 310, 143) ] },
+  { title: '§ 1. Уравнения и системы уравнений', problems: [ ...merzlyak9Solutions.slice(0, 3), ...merzlyak9Extra.slice(0, 3), ...merzlyak9Extra2.slice(0, 3), ...makeProblems(44, 70, 22) ] },
+  { title: '§ 2. Функции', problems: [ ...merzlyak9Solutions.slice(3, 5), ...merzlyak9Extra.slice(3, 5), ...merzlyak9Extra2.slice(3, 5), ...makeProblems(104, 145, 58) ] },
+  { title: '§ 3. Числовые последовательности', problems: [ ...merzlyak9Solutions.slice(5, 8), ...merzlyak9Extra.slice(5, 8), ...merzlyak9Extra2.slice(5, 8), ...makeProblems(194, 215, 100) ] },
+  { title: '§ 4. Элементы теории вероятностей', problems: [ ...merzlyak9Solutions.slice(8, 10), ...merzlyak9Extra.slice(8, 10), ...merzlyak9Extra2.slice(8, 10), ...makeProblems(248, 265, 130) ] },
+  { title: 'Повторение', problems: [ ...merzlyak9Solutions.slice(10), ...merzlyak9Extra.slice(10), ...merzlyak9Extra2.slice(10), ...makeProblems(296, 310, 152) ] },
 ]
 
 const merzlyak9Chapters: GdzChapter[] = [
