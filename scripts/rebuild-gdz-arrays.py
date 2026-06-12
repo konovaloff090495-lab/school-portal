@@ -27,6 +27,7 @@ CHAPTERS = {
         ('§ 6. Алгебраические дроби', 343, 469),
         ('§ 7. Линейные уравнения с двумя переменными', 470, 514),
         ('§ 8. Системы линейных уравнений', 515, 700),
+        ('Повторение', 701, 1247),
     ],
     'makarychev-8': [
         ('§ 1. Рациональные дроби', 1, 120),
@@ -34,13 +35,15 @@ CHAPTERS = {
         ('§ 3. Квадратные уравнения', 271, 370),
         ('§ 4. Неравенства', 371, 460),
         ('§ 5. Степень с целым показателем', 461, 560),
+        ('Повторение', 561, 700),
     ],
     'makarychev-9': [
-        ('§ 1. Неравенства', 1, 100),
-        ('§ 2. Квадратичная функция', 101, 220),
-        ('§ 3. Уравнения и системы', 221, 330),
-        ('§ 4. Арифметическая прогрессия', 331, 430),
-        ('§ 5. Геометрическая прогрессия', 431, 550),
+        ('§ 1. Неравенства', 1, 90),
+        ('§ 2. Квадратичная функция', 91, 200),
+        ('§ 3. Уравнения и системы', 201, 310),
+        ('§ 4. Арифметическая прогрессия', 311, 430),
+        ('§ 5. Геометрическая прогрессия', 431, 560),
+        ('Повторение', 561, 1097),
     ],
     'merzlyak-7': [
         ('§ 1. Линейное уравнение с одной переменной', 1, 75),
@@ -383,15 +386,16 @@ def rebuild_book(slug: str, lines: list) -> tuple:
         print(f'  [{slug}] файл условий пустой')
         return lines, 0
 
-    # Get existing full solutions from ALL related arrays (Solutions + Extra*)
+    # Get existing full solutions from ALL related arrays (primary + Extra* variants)
+    # Use EXACT prefix matching to avoid cross-book contamination (e.g. vilenkin vs vilenkin5)
     existing = {}
-    for name, line in enumerate(lines):
-        pass  # just needed to iterate
-    
-    # Find all array names that start with the base prefix
-    base_prefix = arr_name.replace('Solutions', '')
+    # Determine the shared prefix for this book's arrays
+    # e.g. 'merzlyak7Solutions' → prefix='merzlyak7', extra arrays: merzlyak7Extra, merzlyak7Extra2
+    # Use the primary array name as the exact base, strip 'Solutions' suffix
+    base_prefix = re.sub(r'Solutions$', '', arr_name)
     for i, line in enumerate(lines):
-        m = re.match(rf'^\s*const ({re.escape(base_prefix)}\w*): GdzProblem', line)
+        # Match exact prefix: must start with base_prefix and be followed by Solutions or Extra
+        m = re.match(rf'^const ({re.escape(base_prefix)}(?:Solutions|Extra\w*))\s*:', line)
         if m:
             sol = get_existing_solutions(lines, m.group(1))
             existing.update(sol)

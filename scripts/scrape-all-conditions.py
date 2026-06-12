@@ -60,28 +60,31 @@ BOOKS = {
         'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=merzlyak9',
     },
     'makarychev-7': {
-        'max': 700,
-        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=makarychev7',
+        'max': 1247,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=makar7',
     },
     'makarychev-8': {
-        'max': 560,
-        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=makarychev8',
+        'max': 700,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=makar8',
     },
     'makarychev-9': {
-        'max': 550,
-        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=makarychev9',
+        'max': 1097,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/otvet24.php?otvet1={n}',
     },
     # ─── Геометрия 7-11 ───
     'atanasyan-7': {
+        'min': 1,
         'max': 330,
         'url_fn': lambda n: f'https://reshak.ru/otvet/otvet11.php?otvet1={n}',
     },
     'atanasyan-8': {
-        'max': 451,
+        'min': 331,
+        'max': 737,
         'url_fn': lambda n: f'https://reshak.ru/otvet/otvet11.php?otvet1={n}',
     },
     'atanasyan-9': {
-        'max': 420,
+        'min': 738,
+        'max': 1100,
         'url_fn': lambda n: f'https://reshak.ru/otvet/otvet11.php?otvet1={n}',
     },
     'atanasyan-10': {
@@ -94,12 +97,12 @@ BOOKS = {
     },
     # ─── Русский язык ───
     'baranov-5': {
-        'max': 700,
-        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=baranov5',
+        'max': 967,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=ladizhenskaya5',
     },
     'ladyzhenskaya-6': {
-        'max': 670,
-        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=ladizhenskaya6',
+        'max': 700,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=baranov6',
     },
     'ladyzhenskaya-7': {
         'max': 700,
@@ -204,7 +207,8 @@ def scrape_book(slug: str, config: dict):
         except Exception:
             pass
 
-    to_scrape = [str(n) for n in range(1, max_num + 1) if str(n) not in existing]
+    min_num = config.get('min', 1)
+    to_scrape = [str(n) for n in range(min_num, max_num + 1) if str(n) not in existing]
     if not to_scrape:
         print(f'  [{slug}] всё спарсено ({len(existing)} условий)')
         return
