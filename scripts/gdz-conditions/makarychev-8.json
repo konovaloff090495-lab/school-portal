@@ -5,14 +5,29 @@
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/1-nom/"
   },
   {
+    "number": "5",
+    "condition": "5. Чему равно значение дроби (a+b) 2 -1 / a 2 +1 при: а) a= - 3, b = - 1; б) a= 1½, b = 0,5?",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/5-nom/"
+  },
+  {
     "number": "8",
     "condition": "8. Из городов А и В , расстояние между которыми s км, вышли в одно и то же время навстречу друг другу два поезда. Первый шёл со скоростью υ 1 км/ч, а второй — со скоростью υ 2 км/ч, Через t ч они встретились. Выразите переменную t через s , υ 1 и υ 2 . Найдите значение t , если известно, что: а) s = 250, υ 1 = 60, υ 2 = 40; б) s = 310, υ 1 = 75, υ 2 = 80.",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/8-nom/"
   },
   {
+    "number": "10",
+    "condition": "10. При каких значениях переменной имеет смысл рациональное выражение: а) x / x-2 ; б) b+4 / b 2 +7 ; в) y 2 -1 / y + y / y-3 ; г) a+10 / a(a-1) - 1.",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/10-nom/"
+  },
+  {
     "number": "15",
     "condition": "15. При каких значениях переменной равно нулю значение дроби: а) y-5 / 8 ; б) 2y+3 / 10 ; в) x(x-1) / x+4 ; г) x(x+3) / 2x+6 .",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/15-nom/"
+  },
+  {
+    "number": "20",
+    "condition": "20. При каком значении b принимает наименьшее значение дробь: а) b 2 + 7 / 21 ; б) (b - 2) 2 + 16 / 2 ?",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/20-nom/"
   },
   {
     "number": "22",
@@ -45,9 +60,19 @@
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/99-nom/"
   },
   {
+    "number": "105",
+    "condition": "105. Две речные пристани А и В расположены на расстоянии s км друг от друга. Между ними курсирует катер, скорость которого в стоячей воде равна υ км/ч. Сколько времени t ч потребуется катеру на путь от A до B и обратно, если скорость течения реки равна 5 км/ч? Найдите t при: а) s = 50, υ = 25; б) s = 105, υ = 40.",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/105-nom/"
+  },
+  {
     "number": "106",
     "condition": "106. Туристы прошли s км по шоссе со скоростью υ км/ч и вдвое больший путь по просёлочной дороге. Сколько времени t ч затратили туристы, если известно, что по просёлочной дороге они шли со скоростью, на 2 км/ч меньшей, чем по шоссе? Найдите t при s = 10, υ = 6 .",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/106-nom/"
+  },
+  {
+    "number": "110",
+    "condition": "110. Выполните умножение: а) 5/3a · 2b/3; б) 5a/8y · 7/10; в) b 2 /10 · 5/b; г) 18/c 4 · c 3 /24.",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/110-nom/"
   },
   {
     "number": "113",
@@ -55,14 +80,29 @@
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/113-nom/"
   },
   {
+    "number": "115",
+    "condition": "115. Выполните умножение: а) - 10x 2 y 2 /9a 2 · 27a 3 /5xy; б) 2m 3 /35a 3 b 2 · (- 7a 2 b/6m); в) 13x/12mn 2 · 4m 2 n; г) -ab · (- 11x 2 /3a 2 b 2 .",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/115-nom/"
+  },
+  {
     "number": "120",
     "condition": "120. Зная, что a - 5/a = 2, найдите значение выражения a 2 + 25/a 2 .",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/120-nom/"
   },
   {
+    "number": "125",
+    "condition": "125.Представьте в виде дроби а) a 2 -1/a-b · 7a-7b/a 2 +a б) b 2 +2bc/b+3 · 5b+15/b 2 -4) b 2 -4c 2 в) (x+3) 2",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/125-nom/"
+  },
+  {
     "number": "127",
     "condition": "127. Выполните умножение: a) a 2 -b 2 /a 2 -3a · 2a-6/b 2 +2ab+a 2 б) bx+3b/x 2 -25 · 25-10x+x 2 /ax + 3a",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/127-nom/"
+  },
+  {
+    "number": "130",
+    "condition": "130. Докажите, что если дробь a/b является квадратом дроби, то и произведение ab можно представить в виде квадрата некоторого выражения.",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/130-nom/"
   },
   {
     "number": "134",
@@ -88,51 +128,6 @@
     "number": "162",
     "condition": "162. Докажите тождество: а)1,2x 2 -xy/0,36x 2 -0,25y 2 = 20x/6x+5y; б) 4,5a+4x/0,81a 2 -0,64x 2 = 50/9a-8x",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/162-nom/"
-  },
-  {
-    "number": "211",
-    "condition": "211. Зная, что a+2b / a = 11, (a-3b)² / b²",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/211-nom/"
-  },
-  {
-    "number": "5",
-    "condition": "5. Чему равно значение дроби (a+b) 2 -1 / a 2 +1 при: а) a= - 3, b = - 1; б) a= 1½, b = 0,5?",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/5-nom/"
-  },
-  {
-    "number": "10",
-    "condition": "10. При каких значениях переменной имеет смысл рациональное выражение: а) x / x-2 ; б) b+4 / b 2 +7 ; в) y 2 -1 / y + y / y-3 ; г) a+10 / a(a-1) - 1.",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/10-nom/"
-  },
-  {
-    "number": "20",
-    "condition": "20. При каком значении b принимает наименьшее значение дробь: а) b 2 + 7 / 21 ; б) (b - 2) 2 + 16 / 2 ?",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/20-nom/"
-  },
-  {
-    "number": "105",
-    "condition": "105. Две речные пристани А и В расположены на расстоянии s км друг от друга. Между ними курсирует катер, скорость которого в стоячей воде равна υ км/ч. Сколько времени t ч потребуется катеру на путь от A до B и обратно, если скорость течения реки равна 5 км/ч? Найдите t при: а) s = 50, υ = 25; б) s = 105, υ = 40.",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/105-nom/"
-  },
-  {
-    "number": "110",
-    "condition": "110. Выполните умножение: а) 5/3a · 2b/3; б) 5a/8y · 7/10; в) b 2 /10 · 5/b; г) 18/c 4 · c 3 /24.",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/110-nom/"
-  },
-  {
-    "number": "115",
-    "condition": "115. Выполните умножение: а) - 10x 2 y 2 /9a 2 · 27a 3 /5xy; б) 2m 3 /35a 3 b 2 · (- 7a 2 b/6m); в) 13x/12mn 2 · 4m 2 n; г) -ab · (- 11x 2 /3a 2 b 2 .",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/115-nom/"
-  },
-  {
-    "number": "125",
-    "condition": "125.Представьте в виде дроби а) a 2 -1/a-b · 7a-7b/a 2 +a б) b 2 +2bc/b+3 · 5b+15/b 2 -4) b 2 -4c 2 в) (x+3) 2",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/125-nom/"
-  },
-  {
-    "number": "130",
-    "condition": "130. Докажите, что если дробь a/b является квадратом дроби, то и произведение ab можно представить в виде квадрата некоторого выражения.",
-    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/130-nom/"
   },
   {
     "number": "166",
@@ -183,6 +178,11 @@
     "number": "210",
     "condition": "210. Найдите значение дроби 3x²-xy+6y² / y² , если x-y / y = 2.",
     "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/210-nom/"
+  },
+  {
+    "number": "211",
+    "condition": "211. Зная, что a+2b / a = 11, (a-3b)² / b²",
+    "source_url": "https://gdz.ru/class-8/algebra/makarychev-8/211-nom/"
   },
   {
     "number": "251",
