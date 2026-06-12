@@ -292,16 +292,7 @@ function getCityOf(city) {
 function addRegionToFile(content, slug, city) {
   let updated = content
 
-  // RegionSlug — ищем строго строку с объявлением типа (^export type RegionSlug)
-  const regionSlugLine = /^export type RegionSlug = (.+)$/m
-  const hasSlugInType = regionSlugLine.test(updated) && updated.match(regionSlugLine)?.[1].includes(`'${slug}'`)
-  if (!hasSlugInType) {
-    updated = updated.replace(
-      regionSlugLine,
-      (match, types) => `export type RegionSlug = ${types.trimEnd()} | '${slug}'`
-    )
-    console.log(`  ✅ RegionSlug += '${slug}'`)
-  }
+  // RegionSlug is now just `string` — не расширяем union type во избежание TS2590
 
   // regionLabels
   if (!updated.includes(`'${slug}': '${city}'`)) {
