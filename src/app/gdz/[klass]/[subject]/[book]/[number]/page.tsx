@@ -62,7 +62,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!problem) return {}
 
   const firstAuthor = book.authors.split(',')[0].trim()
-  const hasSolution = !!(problem.steps?.length && problem.condition)
+  const hasSolution = !!(
+    (problem.steps?.length && problem.condition) ||
+    (problem.imageUrls?.length && problem.condition)
+  )
   const canonicalUrl = `${SITE}/gdz/${klass}/${subject}/${bookSlug}/nomer-${num}/`
 
   const conditionSnippet = problem.condition
@@ -128,7 +131,10 @@ export default async function GdzNumberPage({ params }: Props) {
 
   const bookBase = `/gdz/${klass}/${subject}/${bookSlug}`
   const canonicalUrl = `${SITE}${bookBase}/nomer-${num}/`
-  const hasSolution = !!(problem.steps?.length && problem.condition)
+  const hasSolution = !!(
+    (problem.steps?.length && problem.condition) ||
+    (problem.imageUrls?.length && problem.condition)
+  )
 
   // ── JSON-LD ────────────────────────────────────────────────────────────────
   const breadcrumbLd = {
@@ -239,14 +245,34 @@ export default async function GdzNumberPage({ params }: Props) {
                   </span>
                   Решение
                 </div>
-                <ol className="gdz-steps">
-                  {problem.steps!.map((step, i) => (
-                    <li key={i} dangerouslySetInnerHTML={{ __html: step }} />
-                  ))}
-                </ol>
-                {problem.formulas && problem.formulas.map((f, i) => (
-                  <span key={i} className="gdz-formula">{f}</span>
-                ))}
+
+                {/* Картинки-решения (основной источник) */}
+                {problem.imageUrls?.length ? (
+                  <div className="gdz-solution-images">
+                    {problem.imageUrls.map((url, i) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        key={i}
+                        src={url}
+                        alt={`Решение номера ${num}, часть ${i + 1}`}
+                        className="gdz-solution-img"
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  /* Текстовые шаги (для учебников с готовыми решениями) */
+                  <>
+                    <ol className="gdz-steps">
+                      {problem.steps!.map((step, i) => (
+                        <li key={i} dangerouslySetInnerHTML={{ __html: step }} />
+                      ))}
+                    </ol>
+                    {problem.formulas && problem.formulas.map((f, i) => (
+                      <span key={i} className="gdz-formula">{f}</span>
+                    ))}
+                  </>
+                )}
               </article>
 
               {problem.answer && (

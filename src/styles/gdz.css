@@ -811,3 +811,20 @@
   .gdz-num-grid { grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); }
   .gdz-pagehead h1 { font-size: 26px; }
 }
+
+
+/* ── Solution images (from reshak.ru) ─────────────────────── */
+.gdz-solution-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0 0;
+}
+.gdz-solution-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-light, #e8ecf0);
+  background: #fff;
+  display: block;
+}
