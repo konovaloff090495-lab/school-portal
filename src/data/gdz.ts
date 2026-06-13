@@ -32,9 +32,10 @@ export interface GdzProblem {
   number: string
   page: number
   condition?: string
-  steps?: string[  ]
-  formulas?: string[  ]
+  steps?: string[]
+  formulas?: string[]
   answer?: string
+  imageUrls?: string[]
 }
 
 // ────────────────────────────────────────────────────

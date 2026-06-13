@@ -403,8 +403,15 @@ def build_new_array(conditions: dict, existing: dict, chapters: list) -> list:
                 continue
             n = int(num) if num.isdigit() else 0
             page = estimate_page(n, chapters) if chapters else max(1, n // 5)
-            step = make_step(cond)
-            lines.append(f"  {{ number: '{num}', page: {page}, condition: '{esc(cond)}', steps: ['{esc(step)}'], answer: 'Решение представлено выше.' }},")
+            image_urls = cdata.get('imageUrls', [])
+            if image_urls:
+                # Есть картинки-решения → записываем imageUrls, без fake steps
+                urls_ts = ', '.join(f"'{u}'" for u in image_urls)
+                lines.append(f"  {{ number: '{num}', page: {page}, condition: '{esc(cond)}', imageUrls: [{urls_ts}] }},")
+            else:
+                # Нет картинок → пишем заглушку (будет обновлено после скрапинга)
+                step = make_step(cond)
+                lines.append(f"  {{ number: '{num}', page: {page}, condition: '{esc(cond)}', steps: ['{esc(step)}'], answer: 'Решение представлено выше.' }},")
     return lines
 
 
