@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBook, getGdzAllProblems } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -79,6 +80,12 @@ export default async function GdzBookPage({ params }: Props) {
 
   const firstAuthor = book.authors.split(',')[0].trim()
   const intro = getBookIntro(book, klassNum)
+
+  // ── Перелинковка с разделом «Учебник» ──
+  const textbookSubject = getSubjectBySlug(book.subjectSlug)
+  const textbookTopics = getTopicsForSubjectAndClass(book.subjectSlug, klassNum)
+  const hasTextbook = !!(textbookSubject && textbookTopics.length > 0)
+  const textbookBase = `/uchebnik/${book.subjectSlug}/${klassNum}`
 
   return (
     <>
@@ -160,6 +167,32 @@ export default async function GdzBookPage({ params }: Props) {
               </div>
             ))}
           </section>
+
+          {/* Теория по теме в учебнике — внутренняя перелинковка */}
+          {hasTextbook && (
+            <section className="gdz-textbook gdz-section">
+              <h2>Теория по предмету в учебнике</h2>
+              <p className="gdz-textbook-lede">
+                Разбери правила и теорию по предмету «{textbookSubject!.title}»
+                за {klassNum} класс в нашем учебнике.
+              </p>
+              <div className="gdz-textbook-grid">
+                {textbookTopics.slice(0, 6).map(t => (
+                  <Link
+                    key={t.slug}
+                    className="gdz-textbook-card"
+                    href={`${textbookBase}/${t.slug}/`}
+                  >
+                    <span className="gdz-textbook-card-title">{t.title}</span>
+                    <span className="gdz-textbook-card-excerpt">{t.excerpt}</span>
+                  </Link>
+                ))}
+              </div>
+              <Link className="gdz-textbook-all" href={`${textbookBase}/`}>
+                Все темы по предмету «{textbookSubject!.title}» за {klassNum} класс →
+              </Link>
+            </section>
+          )}
         </main>
 
         {/* Рекламная колонка — sidebar */}
