@@ -49,7 +49,7 @@ const subjectsBase14: GdzSubject[  ] = [ { slug: 'matematika', name: 'Матем
   { slug: 'angliiskiy-yazyk', name: 'Английский язык', icon: '🇬🇧', bookCount: 15 },
   { slug: 'literaturnoe-chtenie', name: 'Литературное чтение', icon: '📚', bookCount: 10 } ]
 
-const subjectsGrade56extra: GdzSubject[  ] = [ { slug: 'biologiya', name: 'Биология', icon: '🧬', bookCount: 10 },
+const subjectsGrade56extra: GdzSubject[  ] = [ { slug: 'biologiya', name: 'Биология', icon: '🧬', bookCount: 1 },
   { slug: 'istoriya', name: 'История', icon: '🏛️', bookCount: 14 },
   { slug: 'obshchestvoznanie', name: 'Обществознание', icon: '⚖️', bookCount: 8 },
   { slug: 'nemetskiy-yazyk', name: 'Немецкий язык', icon: '🇩🇪', bookCount: 7 },
@@ -97,7 +97,7 @@ function makeGrade1011(): GdzSubject[  ] {
     { slug: 'literatura', name: 'Литература', icon: '📕', bookCount: 12 },
     { slug: 'fizika', name: 'Физика', icon: '⚛️', bookCount: 14 },
     { slug: 'khimiya', name: 'Химия', icon: '🧪', bookCount: 10 },
-    { slug: 'biologiya', name: 'Биология', icon: '🧬', bookCount: 9 },
+    { slug: 'biologiya', name: 'Биология', icon: '🧬', bookCount: 1 },
     { slug: 'angliiskiy-yazyk', name: 'Английский язык', icon: '🇬🇧', bookCount: 18 },
     { slug: 'istoriya', name: 'История', icon: '🏛️', bookCount: 11 },
     { slug: 'obshchestvoznanie', name: 'Обществознание', icon: '⚖️', bookCount: 7 },
