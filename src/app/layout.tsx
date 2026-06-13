@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import YandexMetrika from "@/components/YandexMetrika";
+import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
 import GeoPrompt from "@/components/GeoPrompt";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${inter.className} ${unbounded.variable} ${manrope.variable} bg-[#F8FAFC] min-h-screen`}>
         <YandexMetrika />
+        <YandexRTB />
         <Header />
         <GeoPrompt />
         <main>{children}</main>
