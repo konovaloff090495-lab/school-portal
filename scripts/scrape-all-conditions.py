@@ -121,6 +121,10 @@ BOOKS = {
         'max': 330,
         'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet=Upr/{n}&predmet=per8',
     },
+    'peryshkin-9': {
+        'max': 430,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet=Upr/{n}&predmet=per9',
+    },
     # ─── Алгебра 10-11 ───
     'kolmogorov-10': {
         'max': 580,

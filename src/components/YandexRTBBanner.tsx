@@ -16,15 +16,19 @@ declare global {
 
 interface Props {
   blockId: string
+  /** Уникальный суффикс для div ID, если блок используется несколько раз на странице */
+  suffix?: string
 }
 
 /**
  * Рекламный блок РСЯ.
- * Использует один раз добавленный загрузчик из YandexRTB.
  * blockId — идентификатор блока из кабинета РСЯ, напр. "R-A-19425636-1"
+ * suffix  — уникальный суффикс если блок стоит несколько раз на одной странице
  */
-export default function YandexRTBBanner({ blockId }: Props) {
-  const divId = `yandex_rtb_${blockId}`
+export default function YandexRTBBanner({ blockId, suffix }: Props) {
+  const divId = suffix
+    ? `yandex_rtb_${blockId}_${suffix}`
+    : `yandex_rtb_${blockId}`
 
   useEffect(() => {
     window.yaContextCb = window.yaContextCb || []

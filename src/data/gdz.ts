@@ -8469,6 +8469,17 @@ const peryshkin8Chapters: GdzChapter[  ] = [ { title: 'Глава 1. Тепло�
   { title: 'Глава 5. Световые явления', problems: [ ...peryshkin8Solutions.slice(12) ] } ]
 
 // ────────────────────────────────────────────────────
+// Пёрышкин Физика 9 — solutions
+// ────────────────────────────────────────────────────
+const peryshkin9Solutions: GdzProblem[] = []
+const peryshkin9ChaptersExt: GdzChapter[] = [
+  { title: 'Глава 1. Законы взаимодействия и движения тел', problems: peryshkin9Solutions.filter(p => { const n = parseInt(p.number); return n >= 1 && n <= 120; }) },
+  { title: 'Глава 2. Механические колебания и волны. Звук', problems: peryshkin9Solutions.filter(p => { const n = parseInt(p.number); return n >= 121 && n <= 220; }) },
+  { title: 'Глава 3. Электромагнитное поле', problems: peryshkin9Solutions.filter(p => { const n = parseInt(p.number); return n >= 221 && n <= 320; }) },
+  { title: 'Глава 4. Строение атома и атомного ядра', problems: peryshkin9Solutions.filter(p => { const n = parseInt(p.number); return n >= 321 && n <= 430; }) },
+]
+
+// ────────────────────────────────────────────────────
 // Макарычев Алгебра 9 — solutions
 // ────────────────────────────────────────────────────
 const makarychev9Solutions: GdzProblem[] = [
@@ -12491,6 +12502,19 @@ export const gdzBooks: GdzBook[  ] = [ // ── Math 6 ──
     chapters: peryshkin8ChaptersExt,
   },
   // ── Grade 9 ──
+  {
+    slug: 'peryshkin',
+    klass: 9,
+    subjectSlug: 'fizika',
+    subject: 'Физика',
+    authors: 'Пёрышкин А. В., Гутник Е. М.',
+    type: 'Учебник',
+    years: '2020–2023',
+    publisher: 'Дрофа',
+    fgos: true,
+    parts: '1',
+    chapters: peryshkin9ChaptersExt,
+  },
   {
     slug: 'makarychev-9',
     klass: 9,

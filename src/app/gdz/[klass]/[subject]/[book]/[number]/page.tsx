@@ -337,8 +337,15 @@ export default async function GdzNumberPage({ params }: Props) {
           )}
         </main>
 
-        {/* Рекламная колонка — появится когда создадим второй блок РСЯ */}
-        <aside className="gdz-rail" aria-label="Реклама"></aside>
+        {/* Рекламная колонка — sidebar */}
+        <aside className="gdz-rail" aria-label="Реклама">
+          <div className="gdz-rail-sticky">
+            <div className="gdz-ad">
+              <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+              <YandexRTBBanner blockId="R-A-19425636-1" suffix="sidebar" />
+            </div>
+          </div>
+        </aside>
       </div>
     </>
   )

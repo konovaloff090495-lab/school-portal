@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBook, getGdzAllProblems } from '@/data/gdz'
+import YandexRTBBanner from '@/components/YandexRTBBanner'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -136,19 +137,9 @@ export default async function GdzBookPage({ params }: Props) {
             {book.chapters.map((chapter, ci) => (
               <div key={chapter.title}>
                 {ci === 2 && (
-                  <aside className="gdz-ad gdz-ad-inline" data-rsya="R-A-XXXXXX-2" aria-label="Реклама">
+                  <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
                     <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-                    <div className="gdz-ad-slot">
-                      <div className="ph-ic">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                          <path d="M3 10h18"></path>
-                        </svg>
-                      </div>
-                      <div className="ph-t">Нативный блок РСЯ</div>
-                      <div className="ph-id">R-A-XXXXXX-2</div>
-                      <div className="ph-hint">Горизонтальный адаптивный блок между параграфами</div>
-                    </div>
+                    <YandexRTBBanner blockId="R-A-19425636-1" suffix="list-inline" />
                   </aside>
                 )}
                 <div className="gdz-toc-group">
@@ -171,22 +162,12 @@ export default async function GdzBookPage({ params }: Props) {
           </section>
         </main>
 
-        {/* Рекламная колонка */}
+        {/* Рекламная колонка — sidebar */}
         <aside className="gdz-rail" aria-label="Реклама">
           <div className="gdz-rail-sticky">
-            <div className="gdz-ad" data-rsya="R-A-XXXXXX-1">
+            <div className="gdz-ad">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-              <div className="gdz-ad-slot gdz-ad-slot--tall">
-                <div className="ph-ic">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="4" y="3" width="16" height="18" rx="2"></rect>
-                    <path d="M8 8h8M8 12h8M8 16h5"></path>
-                  </svg>
-                </div>
-                <div className="ph-t">Место под РСЯ</div>
-                <div className="ph-id">R-A-XXXXXX-1</div>
-                <div className="ph-hint">Вертикальный блок 300×600.</div>
-              </div>
+              <YandexRTBBanner blockId="R-A-19425636-1" suffix="list-sidebar" />
             </div>
           </div>
         </aside>
