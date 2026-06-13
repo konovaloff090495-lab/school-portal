@@ -828,3 +828,52 @@
   background: #fff;
   display: block;
 }
+
+/* ── Перелинковка с учебником ──────────────────────────────── */
+.gdz-textbook { margin-top: 28px; }
+.gdz-textbook-lede {
+  color: var(--ink-3);
+  font-size: 15px;
+  margin: 4px 0 16px;
+  line-height: 1.5;
+}
+.gdz-textbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.gdz-textbook-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.gdz-textbook-card:hover {
+  border-color: var(--coral-400);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+.gdz-textbook-card-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink-1);
+}
+.gdz-textbook-card-excerpt {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.45;
+}
+.gdz-textbook-all {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--coral-600);
+  text-decoration: none;
+}
+.gdz-textbook-all:hover { text-decoration: underline; }

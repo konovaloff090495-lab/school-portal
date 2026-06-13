@@ -9,6 +9,7 @@ import {
   getGdzProblemChapter,
 } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -135,6 +136,12 @@ export default async function GdzNumberPage({ params }: Props) {
     (problem.steps?.length && problem.condition) ||
     (problem.imageUrls?.length && problem.condition)
   )
+
+  // ── Перелинковка с разделом «Учебник» ──────────────────────────────────────
+  const textbookSubject = getSubjectBySlug(book.subjectSlug)
+  const textbookTopics = getTopicsForSubjectAndClass(book.subjectSlug, klassNum)
+  const hasTextbook = !!(textbookSubject && textbookTopics.length > 0)
+  const textbookBase = `/uchebnik/${book.subjectSlug}/${klassNum}`
 
   // ── JSON-LD ────────────────────────────────────────────────────────────────
   const breadcrumbLd = {
@@ -333,6 +340,32 @@ export default async function GdzNumberPage({ params }: Props) {
                   </Link>
                 ))}
               </div>
+            </section>
+          )}
+
+          {/* Теория по теме в учебнике — внутренняя перелинковка */}
+          {hasTextbook && (
+            <section className="gdz-textbook gdz-section">
+              <h2>Теория по теме в учебнике</h2>
+              <p className="gdz-textbook-lede">
+                Не понял тему? Разберись с правилами и теорией в нашем учебнике
+                по предмету «{textbookSubject!.title}» за {klassNum} класс.
+              </p>
+              <div className="gdz-textbook-grid">
+                {textbookTopics.slice(0, 6).map(t => (
+                  <Link
+                    key={t.slug}
+                    className="gdz-textbook-card"
+                    href={`${textbookBase}/${t.slug}/`}
+                  >
+                    <span className="gdz-textbook-card-title">{t.title}</span>
+                    <span className="gdz-textbook-card-excerpt">{t.excerpt}</span>
+                  </Link>
+                ))}
+              </div>
+              <Link className="gdz-textbook-all" href={`${textbookBase}/`}>
+                Все темы по предмету «{textbookSubject!.title}» за {klassNum} класс →
+              </Link>
             </section>
           )}
         </main>
