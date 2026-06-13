@@ -118,6 +118,12 @@ CHAPTERS = {
         ('Глава 3. Электрические явления', 161, 250),
         ('Глава 4. Электромагнитные явления', 251, 330),
     ],
+    'peryshkin-9': [
+        ('Глава 1. Законы взаимодействия и движения тел', 1, 120),
+        ('Глава 2. Механические колебания и волны. Звук', 121, 220),
+        ('Глава 3. Электромагнитное поле', 221, 320),
+        ('Глава 4. Строение атома и атомного ядра', 321, 430),
+    ],
     'baranov-5': [
         ('§ 1. Повторение изученного в начальной школе', 1, 55),
         ('§ 2. Синтаксис. Пунктуация', 56, 140),
@@ -244,6 +250,7 @@ SLUG_TO_PRIMARY_ARRAY = {
     'ladyzhenskaya-8': 'ladyzhenskaya8Solutions',
     'peryshkin-7':  'peryshkin7Solutions',
     'peryshkin-8':  'peryshkin8Solutions',
+    'peryshkin-9':  'peryshkin9Solutions',
     'kolmogorov-10': 'kolmogorov10Solutions',
     'kolmogorov-11': 'kolmogorov11Solutions',
     'pasechnik-5':   'pasechnik5Solutions',
@@ -277,6 +284,7 @@ SLUG_TO_CHAPTERS_ARRAY = {
     'ladyzhenskaya-8': 'ladyzhenskaya8ChaptersExt',
     'peryshkin-7':  'peryshkin7ChaptersExt',
     'peryshkin-8':  'peryshkin8ChaptersExt',
+    'peryshkin-9':  'peryshkin9ChaptersExt',
     'kolmogorov-10': 'kolmogorov10ChaptersExt',
     'kolmogorov-11': 'kolmogorov11ChaptersExt',
     'pasechnik-5':   'pasechnik5ChaptersExt',
