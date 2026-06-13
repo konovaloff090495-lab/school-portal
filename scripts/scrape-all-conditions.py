@@ -130,6 +130,35 @@ BOOKS = {
         'max': 360,
         'url_fn': lambda n: f'https://reshak.ru/otvet/otvet29.php?otvet1={n}',
     },
+    # ─── Биология ───
+    'pasechnik-5': {
+        'max': 26,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik5',
+    },
+    'pasechnik-6': {
+        'max': 32,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik6',
+    },
+    'pasechnik-7': {
+        'max': 26,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik_sum7',
+    },
+    'kolesov-8': {
+        'max': 64,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=kolesov8',
+    },
+    'pasechnik-9': {
+        'max': 55,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik_ucheb9',
+    },
+    'pasechnik-10': {
+        'max': 27,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik_ucheb10',
+    },
+    'pasechnik-11': {
+        'max': 30,
+        'url_fn': lambda n: f'https://reshak.ru/otvet/reshebniki.php?otvet={n}&predmet=pasechnik_baz11',
+    },
 }
 
 # ────────────────────────────────────────────────────
