@@ -185,9 +185,11 @@ def fetch_condition(url: str, session, retries=2):
             if r.status_code != 200:
                 return None
 
+            # UTF-8 с errors='replace' — лучше чем cp1251 fallback
+            # (страницы reshak.ru в основном UTF-8 с редкими плохими байтами)
             try:
-                html = r.content.decode('utf-8')
-            except UnicodeDecodeError:
+                html = r.content.decode('utf-8', errors='replace')
+            except Exception:
                 html = r.content.decode('cp1251', errors='replace')
 
             soup = BeautifulSoup(html, 'html.parser')
