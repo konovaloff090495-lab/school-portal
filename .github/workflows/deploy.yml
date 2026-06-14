@@ -26,12 +26,20 @@ jobs:
             GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
             echo "==> npm ci..."
             npm ci --prefer-offline
-            echo "==> clean .next cache..."
-            rm -rf .next
-            echo "==> build..."
-            npm run build
-            echo "==> restart PM2..."
+            echo "==> stop PM2 (освобождаем .next перед очисткой)..."
             pm2 delete school-portal 2>/dev/null || true
-            PORT=3001 pm2 start npm --name school-portal -- start
-            pm2 save
-            echo "==> done"
+            sleep 2
+            echo "==> clean .next cache..."
+            rm -rf .next || true
+            echo "==> build..."
+            if npm run build; then
+              echo "==> build OK, start PM2..."
+              PORT=3001 pm2 start npm --name school-portal -- start
+              pm2 save
+              echo "==> done"
+            else
+              echo "!! BUILD FAILED — пробуем стартовать на текущем .next"
+              PORT=3001 pm2 start npm --name school-portal -- start
+              pm2 save
+              exit 1
+            fi
