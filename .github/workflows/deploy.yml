@@ -32,6 +32,9 @@ jobs:
             GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
             echo "==> npm ci..."
             npm ci --prefer-offline
+            echo "==> убиваем зависшие сборки от отменённых деплоев (не трогаем работающий сайт)..."
+            pkill -f "bin/next build" 2>/dev/null || true
+            sleep 3
             echo "==> BLUE-GREEN: собираем в .next-build (старый сайт продолжает работать)..."
             rm -rf .next-build
             if NEXT_DIST_DIR=.next-build npm run build; then
