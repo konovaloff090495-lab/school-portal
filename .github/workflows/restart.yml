@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Restart PM2 via SSH
+      - name: Restart PM2 with memory guard
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: 45.80.70.209
@@ -14,6 +14,7 @@ jobs:
           key: ${{ secrets.BEGET_SSH_KEY }}
           script: |
             cd /var/www/school-portal
-            pm2 restart school-portal --update-env 2>/dev/null || PORT=3001 pm2 start npm --name school-portal -- start
+            pm2 delete school-portal 2>/dev/null || true
+            PORT=3001 NODE_OPTIONS="--max-old-space-size=1024" pm2 start npm --name school-portal --max-memory-restart 900M --time -- start
             pm2 save
             pm2 status
