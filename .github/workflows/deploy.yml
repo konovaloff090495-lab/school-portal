@@ -5,6 +5,12 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Только один деплой за раз: новый пуш отменяет предыдущий незавершённый
+# (иначе два blue-green билда конфликтуют на сервере за .next-build).
+concurrency:
+  group: deploy-beget
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
