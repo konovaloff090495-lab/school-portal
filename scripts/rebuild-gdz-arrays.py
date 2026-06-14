@@ -398,14 +398,24 @@ def build_new_array(conditions: dict, existing: dict, chapters: list) -> list:
     all_nums = sorted(set(list(conditions.keys()) + list(existing.keys())), key=sort_key)
     lines = []
     for num in all_nums:
-        if num in existing:
+        cdata = conditions.get(num, {})
+        # ПРИОРИТЕТ 1: реальное решение из JSON (steps + answer вручную/мной)
+        if cdata.get('steps') and cdata.get('answer'):
+            cond = cdata.get('condition', '')
+            n = int(num) if num.isdigit() else 0
+            page = estimate_page(n, chapters) if chapters else max(1, n // 5)
+            steps_ts = ', '.join(f"'{esc(s)}'" for s in cdata['steps'])
+            lines.append(
+                f"  {{ number: '{num}', page: {page}, condition: '{esc(cond)}', "
+                f"steps: [{steps_ts}], answer: '{esc(cdata['answer'])}' }},"
+            )
+        elif num in existing:
             # Keep full solution (already prefixed with '  ')
             line = existing[num]
             if not line.rstrip().endswith(','):
                 line = line.rstrip() + ','
             lines.append(line)
         elif num in conditions:
-            cdata = conditions[num]
             cond = cdata.get('condition', '')
             if not cond:
                 continue
