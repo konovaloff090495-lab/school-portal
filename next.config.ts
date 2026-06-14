@@ -43,6 +43,12 @@ const nextConfig: NextConfig = {
   // Папка сборки из env — для blue-green деплоя (build в .next-build → атомарный swap)
   distDir: process.env.NEXT_DIST_DIR || '.next',
 
+  // Не гоняем type-check и ESLint при сборке (огромные data-файлы) —
+  // типы проверяются локально через `npx tsc --noEmit` перед пушем.
+  // Это резко ускоряет `next build`.
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
+
   async headers() {
     return [
       {
