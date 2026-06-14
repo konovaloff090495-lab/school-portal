@@ -1,0 +1,19 @@
+name: Restart Site
+on:
+  workflow_dispatch:
+jobs:
+  restart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Restart PM2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 45.80.70.209
+          username: root
+          key: ${{ secrets.BEGET_SSH_KEY }}
+          script: |
+            cd /var/www/school-portal
+            pm2 restart school-portal --update-env 2>/dev/null || PORT=3001 pm2 start npm --name school-portal -- start
+            pm2 save
+            pm2 status
