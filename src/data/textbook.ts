@@ -651,6 +651,36 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
     11: [
       { slug: 'ege-obshhestvo', title: 'Подготовка к ЕГЭ по обществознанию', excerpt: 'Структура ЕГЭ, задания 1–25 (эссе, план, задачи). Все разделы.' },
     ],
+    7: [
+      { slug: 'chelovek-i-zakon', title: 'Человек и закон', excerpt: 'Что регулирует право, законы и порядок в обществе.' },
+      { slug: 'prava-i-obyazannosti', title: 'Права и обязанности граждан', excerpt: 'Права человека, обязанности, защита прав.' },
+      { slug: 'disciplina-i-otvetstvennost', title: 'Дисциплина и ответственность', excerpt: 'Зачем нужна дисциплина, виды ответственности.' },
+      { slug: 'chelovek-v-ekonomike', title: 'Человек в экономике', excerpt: 'Производство, обмен, деньги, семейный бюджет.' },
+      { slug: 'trud-i-tvorchestvo', title: 'Труд и творчество', excerpt: 'Роль труда, мастерство, творческий труд.' },
+      { slug: 'chelovek-i-priroda-obsh', title: 'Человек и природа', excerpt: 'Взаимодействие человека и природы, охрана среды.' },
+      { slug: 'obshchenie-i-konflikty', title: 'Общение и конфликты', excerpt: 'Правила общения, причины конфликтов и их решение.' },
+      { slug: 'chelovek-v-obshchestve', title: 'Человек в группе и обществе', excerpt: 'Социальные группы, нормы поведения, межличностные отношения.' },
+    ],
+    8: [
+      { slug: 'obshchestvo-i-chelovek', title: 'Общество и человек', excerpt: 'Что такое общество, сферы общественной жизни.' },
+      { slug: 'lichnost-i-socializaciya', title: 'Личность и социализация', excerpt: 'Становление личности, мировоззрение, самопознание.' },
+      { slug: 'sfera-duhovnoy-kultury', title: 'Сфера духовной культуры', excerpt: 'Культура, мораль, образование, наука, религия.' },
+      { slug: 'ekonomika-osnovy', title: 'Экономика и её роль', excerpt: 'Главные вопросы экономики, собственность, рынок.' },
+      { slug: 'rynok-i-predprinimatelstvo', title: 'Рынок и предпринимательство', excerpt: 'Спрос и предложение, бизнес, деньги.' },
+      { slug: 'socialnaya-struktura', title: 'Социальная сфера', excerpt: 'Социальные группы, статусы, роли, отношения.' },
+      { slug: 'nacii-i-otnosheniya', title: 'Нации и межнациональные отношения', excerpt: 'Этносы, нации, межнациональное согласие.' },
+      { slug: 'otklonyayushcheesya-povedenie', title: 'Отклоняющееся поведение', excerpt: 'Нормы и отклонения, вредные привычки.' },
+    ],
+    10: [
+      { slug: 'chelovek-kak-tvorenie', title: 'Человек как творец культуры', excerpt: 'Природа человека, деятельность, познание мира.' },
+      { slug: 'obshchestvo-kak-sistema', title: 'Общество как система', excerpt: 'Общество, его сферы и институты, развитие.' },
+      { slug: 'duhovnaya-kultura-10', title: 'Духовная культура общества', excerpt: 'Культура, наука, образование, искусство, мораль.' },
+      { slug: 'ekonomicheskaya-zhizn', title: 'Экономическая жизнь общества', excerpt: 'Экономика, рынок, роль государства в экономике.' },
+      { slug: 'socialnaya-sfera-10', title: 'Социальная сфера общества', excerpt: 'Социальная структура, стратификация, мобильность.' },
+      { slug: 'politicheskaya-sistema', title: 'Политическая система общества', excerpt: 'Власть, государство, политические институты.' },
+      { slug: 'pravo-v-zhizni', title: 'Право в жизни общества', excerpt: 'Понятие права, источники права, правовая культура.' },
+      { slug: 'globalizaciya-mir', title: 'Современное общество и глобализация', excerpt: 'Информационное общество, глобальные процессы.' },
+    ],
   },
 
   geografiya: {
