@@ -545,6 +545,16 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'organy-chuvstv', title: 'Органы чувств', excerpt: 'Зрение, слух, обоняние, вкус, осязание.' },
       { slug: 'vydelenie-i-kozha', title: 'Выделение и кожа', excerpt: 'Почки и кожа: удаление лишних веществ и защита организма.' },
     ],
+    10: [
+      { slug: 'himicheskiy-sostav-kletki', title: 'Химический состав клетки', excerpt: 'Вода, белки, жиры, углеводы и нуклеиновые кислоты.' },
+      { slug: 'stroenie-kletki-organoidy', title: 'Строение клетки', excerpt: 'Органоиды и их функции, прокариоты и эукариоты.' },
+      { slug: 'obmen-veshchestv-kletka', title: 'Обмен веществ в клетке', excerpt: 'Энергетический и пластический обмен, фотосинтез.' },
+      { slug: 'delenie-kletki', title: 'Деление клетки', excerpt: 'Митоз и мейоз, жизненный цикл клетки.' },
+      { slug: 'razmnozhenie-organizmov', title: 'Размножение организмов', excerpt: 'Бесполое и половое размножение, оплодотворение.' },
+      { slug: 'individualnoe-razvitie', title: 'Индивидуальное развитие организма', excerpt: 'Онтогенез: от зиготы до взрослого организма.' },
+      { slug: 'osnovy-genetiki', title: 'Основы генетики', excerpt: 'Законы Менделя, наследственность и изменчивость.' },
+      { slug: 'genetika-cheloveka', title: 'Генетика человека', excerpt: 'Наследственные признаки и болезни, значение генетики.' },
+    ],
   },
 
   istoriya: {
