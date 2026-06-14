@@ -136,8 +136,12 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   return faq.slice(0, 6)
 }
 
+// ISR: не пре-рендерим все ~3280 школ на каждом билде.
+// Пре-рендерим первые 100 для прогрева, остальные — по требованию с кешем.
+export const dynamicParams = true
+
 export async function generateStaticParams() {
-  return getAllSchoolSlugs().map(slug => ({ slug }))
+  return getAllSchoolSlugs().slice(0, 100).map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
