@@ -717,6 +717,36 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
     11: [
       { slug: 'ege-informatika', title: 'Подготовка к ЕГЭ по информатике', excerpt: 'Структура ЕГЭ, задания 1–27. Python, логика, теория информации, сети.' },
     ],
+    6: [
+      { slug: 'obekty-i-sistemy', title: 'Объекты и системы', excerpt: 'Что такое объект, его свойства, действия и отношения.' },
+      { slug: 'modeli-obektov', title: 'Модели объектов', excerpt: 'Моделирование, виды моделей, информационные модели.' },
+      { slug: 'grafy-i-skhemy', title: 'Графы и схемы', excerpt: 'Графы, деревья, таблицы как способы представления данных.' },
+      { slug: 'algoritm-ponyatie', title: 'Понятие алгоритма', excerpt: 'Алгоритм, его свойства и способы записи.' },
+      { slug: 'vidy-algoritmov', title: 'Виды алгоритмов', excerpt: 'Линейные, ветвящиеся и циклические алгоритмы.' },
+      { slug: 'ispolniteli', title: 'Исполнители алгоритмов', excerpt: 'Исполнитель, система команд, управление исполнителем.' },
+      { slug: 'graficheskaya-informaciya', title: 'Графическая информация', excerpt: 'Компьютерная графика, растровые и векторные изображения.' },
+      { slug: 'tekstovaya-informaciya', title: 'Обработка текстовой информации', excerpt: 'Создание и редактирование текстовых документов.' },
+    ],
+    8: [
+      { slug: 'matematicheskie-osnovy', title: 'Математические основы информатики', excerpt: 'Системы счисления, перевод чисел, двоичный код.' },
+      { slug: 'kodirovanie-informacii', title: 'Кодирование информации', excerpt: 'Кодирование текста, изображений и звука, единицы измерения.' },
+      { slug: 'logika-osnovy', title: 'Основы логики', excerpt: 'Высказывания, логические операции, таблицы истинности.' },
+      { slug: 'algoritmizaciya', title: 'Алгоритмизация', excerpt: 'Алгоритмы, исполнители, способы записи алгоритмов.' },
+      { slug: 'programmirovanie-osnovy', title: 'Начала программирования', excerpt: 'Языки программирования, переменные, операторы.' },
+      { slug: 'vetvleniya-cikly', title: 'Ветвления и циклы', excerpt: 'Условный оператор и циклы в программах.' },
+      { slug: 'massivy', title: 'Массивы', excerpt: 'Хранение и обработка наборов однотипных данных.' },
+      { slug: 'modelirovanie-8', title: 'Моделирование и формализация', excerpt: 'Модели, формализация, информационные модели.' },
+    ],
+    10: [
+      { slug: 'informaciya-i-ee-svoystva', title: 'Информация и её свойства', excerpt: 'Понятие информации, её виды и свойства.' },
+      { slug: 'informacionnye-processy', title: 'Информационные процессы', excerpt: 'Хранение, передача и обработка информации.' },
+      { slug: 'predstavlenie-chisel', title: 'Представление чисел в компьютере', excerpt: 'Целые и вещественные числа, системы счисления.' },
+      { slug: 'logicheskie-osnovy-evm', title: 'Логические основы компьютера', excerpt: 'Логические элементы и схемы, алгебра логики.' },
+      { slug: 'arhitektura-kompyutera', title: 'Архитектура компьютера', excerpt: 'Устройство компьютера, процессор, память.' },
+      { slug: 'programmnoe-obespechenie', title: 'Программное обеспечение', excerpt: 'Системные и прикладные программы, операционная система.' },
+      { slug: 'algoritmy-i-slozhnost', title: 'Алгоритмы и их эффективность', excerpt: 'Свойства алгоритмов, сложность, поиск и сортировка.' },
+      { slug: 'kompyuternye-seti', title: 'Компьютерные сети и Интернет', excerpt: 'Устройство сетей, протоколы, ресурсы Интернета.' },
+    ],
   },
 }
 
