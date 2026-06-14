@@ -40,6 +40,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   trailingSlash: true,
 
+  // Папка сборки из env — для blue-green деплоя (build в .next-build → атомарный swap)
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+
   async headers() {
     return [
       {

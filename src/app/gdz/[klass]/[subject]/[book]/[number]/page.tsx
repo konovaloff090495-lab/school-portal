@@ -34,12 +34,18 @@ function stripTags(s: string) {
   return s.replace(/<[^>]+>/g, '')
 }
 
+// ISR: не пре-рендерим все ~19K страниц на каждом билде (это занимало ~25 мин).
+// Пре-рендерим только первые несколько задач каждой книги для прогрева,
+// остальные страницы генерируются по требованию и кешируются (dynamicParams).
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const out: { klass: string; subject: string; book: string; number: string }[] = []
   for (const b of gdzBooks) {
     if (b.chapters.length === 0) continue
     const allProblems = b.chapters.flatMap(ch => ch.problems)
-    for (const p of allProblems) {
+    // только первые 3 задачи книги как статические; остальные — on-demand
+    for (const p of allProblems.slice(0, 3)) {
       out.push({
         klass: `${b.klass}-klass`,
         subject: b.subjectSlug,
