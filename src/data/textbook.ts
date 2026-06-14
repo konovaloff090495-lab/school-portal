@@ -675,6 +675,26 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'regiony-rossii', title: 'Экономические регионы России', excerpt: 'Центральная Россия, Поволжье, Урал, Сибирь, Дальний Восток.' },
       { slug: 'oge-geografiya', title: 'Подготовка к ОГЭ по географии', excerpt: 'Структура ОГЭ, работа с картой и диаграммами, климатические задачи.' },
     ],
+    6: [
+      { slug: 'zemlya-planeta', title: 'Земля как планета', excerpt: 'Форма и движения Земли, их географические следствия.' },
+      { slug: 'plan-i-karta', title: 'План и карта', excerpt: 'Масштаб, условные знаки, географические координаты.' },
+      { slug: 'litosfera', title: 'Литосфера', excerpt: 'Строение Земли, горные породы, рельеф суши.' },
+      { slug: 'gidrosfera', title: 'Гидросфера', excerpt: 'Воды суши и Мирового океана, круговорот воды.' },
+      { slug: 'atmosfera', title: 'Атмосфера', excerpt: 'Воздушная оболочка, погода и климат.' },
+      { slug: 'biosfera', title: 'Биосфера', excerpt: 'Оболочка жизни, её границы и значение.' },
+      { slug: 'prirodnye-kompleksy', title: 'Природные комплексы', excerpt: 'Взаимосвязь компонентов природы, природные зоны.' },
+      { slug: 'chelovek-i-priroda', title: 'Человек и природа', excerpt: 'Влияние человека на природу и её охрана.' },
+    ],
+    10: [
+      { slug: 'politicheskaya-karta', title: 'Политическая карта мира', excerpt: 'Страны мира, их типы и формы правления.' },
+      { slug: 'naselenie-mira', title: 'Население мира', excerpt: 'Численность, размещение и состав населения планеты.' },
+      { slug: 'prirodnye-resursy', title: 'Природные ресурсы мира', excerpt: 'Виды ресурсов, их размещение и использование.' },
+      { slug: 'mirovoe-hozyaystvo', title: 'Мировое хозяйство', excerpt: 'Структура и отрасли мирового хозяйства.' },
+      { slug: 'promyshlennost-mira', title: 'География промышленности', excerpt: 'Размещение основных отраслей промышленности.' },
+      { slug: 'selskoe-hozyaystvo-mira', title: 'География сельского хозяйства', excerpt: 'Растениеводство и животноводство в мире.' },
+      { slug: 'globalnye-problemy', title: 'Глобальные проблемы человечества', excerpt: 'Экологические, демографические и другие мировые проблемы.' },
+      { slug: 'regiony-mira', title: 'Регионы и страны мира', excerpt: 'Характеристика крупных регионов планеты.' },
+    ],
   },
 
   informatika: {
