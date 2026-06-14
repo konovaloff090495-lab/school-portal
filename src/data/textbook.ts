@@ -535,6 +535,16 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'zemnovodnye-presmykayushchiesya', title: 'Земноводные и пресмыкающиеся', excerpt: 'Выход позвоночных на сушу: амфибии и рептилии.' },
       { slug: 'pticy-mlekopitayushchie', title: 'Птицы и млекопитающие', excerpt: 'Теплокровные животные: приспособления к полёту и заботе о потомстве.' },
     ],
+    8: [
+      { slug: 'oporno-dvigatelnaya-sistema', title: 'Опорно-двигательная система', excerpt: 'Скелет и мышцы человека, их строение и функции.' },
+      { slug: 'krov-i-krovoobrashchenie', title: 'Кровь и кровообращение', excerpt: 'Состав крови, сердце, круги кровообращения.' },
+      { slug: 'dyhatelnaya-sistema', title: 'Дыхательная система', excerpt: 'Органы дыхания и газообмен в организме.' },
+      { slug: 'pishchevaritelnaya-sistema', title: 'Пищеварительная система', excerpt: 'Путь пищи и переваривание питательных веществ.' },
+      { slug: 'obmen-veshchestv', title: 'Обмен веществ и энергии', excerpt: 'Питательные вещества, витамины, энергия.' },
+      { slug: 'nervnaya-sistema', title: 'Нервная система', excerpt: 'Головной и спинной мозг, нервы, рефлексы.' },
+      { slug: 'organy-chuvstv', title: 'Органы чувств', excerpt: 'Зрение, слух, обоняние, вкус, осязание.' },
+      { slug: 'vydelenie-i-kozha', title: 'Выделение и кожа', excerpt: 'Почки и кожа: удаление лишних веществ и защита организма.' },
+    ],
   },
 
   istoriya: {
