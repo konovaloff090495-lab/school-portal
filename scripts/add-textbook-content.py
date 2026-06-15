@@ -111,6 +111,24 @@ def add_articles(subject, klass, articles):
     ART.write_text('\n'.join(content), encoding='utf-8')
 
 
+def replace_article(subject, klass, slug, new_html):
+    """Заменяет content существующей статьи (subject,klass,slug) на новый HTML."""
+    import re as _re
+    raw = ART.read_text(encoding='utf-8')
+    h = new_html.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
+    pat = _re.compile(
+        r"(\{\n    subject: '" + _re.escape(subject) +
+        r"',\n    klass: " + str(klass) +
+        r",\n    topicSlug: '" + _re.escape(slug) +
+        r"',\n    publishedAt: '[^']*',\n    content: `)(.*?)(`,\n  \},)",
+        _re.S)
+    n = len(pat.findall(raw))
+    if n != 1:
+        raise SystemExit(f'replace_article: найдено {n} совпадений для {subject}/{klass}/{slug} (нужно 1)')
+    raw = pat.sub(lambda m: m.group(1) + h + m.group(3), raw)
+    ART.write_text(raw, encoding='utf-8')
+
+
 def add_subject_klass(subject, klass, topics, articles):
     add_topics(subject, klass, topics)
     add_articles(subject, klass, articles)
