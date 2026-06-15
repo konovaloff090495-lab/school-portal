@@ -516,6 +516,48 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'ege-english-writing', title: 'Письмо в ЕГЭ', excerpt: 'Личное письмо и эссе: структура, клише, объём, критерии оценивания.' },
       { slug: 'ege-english-speaking', title: 'Устная часть ЕГЭ', excerpt: 'Задания 1–4 устной части: чтение, вопросы, монолог, диалог.' },
     ],
+    2: [
+      { slug: 'alfavit-2', title: 'Английский алфавит', excerpt: 'Буквы английского алфавита и их звуки.' },
+      { slug: 'privetstvie-2', title: 'Приветствие и знакомство', excerpt: 'Как поздороваться и представиться по-английски.' },
+      { slug: 'schyot-1-10-2', title: 'Счёт от 1 до 10', excerpt: 'Числа и счёт предметов на английском.' },
+      { slug: 'cveta-2', title: 'Цвета', excerpt: 'Названия основных цветов на английском.' },
+    ],
+    3: [
+      { slug: 'semya-3', title: 'Моя семья', excerpt: 'Названия членов семьи на английском.' },
+      { slug: 'schyot-1-20-3', title: 'Числа до 20', excerpt: 'Счёт от 1 до 20, возраст.' },
+      { slug: 'glagol-tobe-3', title: 'Глагол to be', excerpt: 'Формы am, is, are и их употребление.' },
+      { slug: 'mnozhestvennoe-3', title: 'Множественное число', excerpt: 'Образование множественного числа существительных.' },
+    ],
+    4: [
+      { slug: 'rasporyadok-dnya-4', title: 'Распорядок дня', excerpt: 'Как рассказать о своём дне на английском.' },
+      { slug: 'present-simple-4', title: 'Настоящее простое время', excerpt: 'Present Simple: правила и употребление.' },
+      { slug: 'predlogi-mesta-4', title: 'Предлоги места', excerpt: 'in, on, under, near и другие предлоги.' },
+      { slug: 'lyubimaya-eda-4', title: 'Еда и предпочтения', excerpt: 'Названия продуктов, как рассказать о любимой еде.' },
+    ],
+    6: [
+      { slug: 'past-simple-6', title: 'Прошедшее простое время', excerpt: 'Past Simple: правильные и неправильные глаголы.' },
+      { slug: 'future-simple-6', title: 'Будущее простое время', excerpt: 'Future Simple: will и его употребление.' },
+      { slug: 'stepeni-sravneniya-6', title: 'Степени сравнения прилагательных', excerpt: 'Сравнительная и превосходная степени.' },
+      { slug: 'modalnye-glagoly-6', title: 'Модальные глаголы', excerpt: 'can, must, may и их значение.' },
+    ],
+    7: [
+      { slug: 'present-continuous-7', title: 'Настоящее длительное время', excerpt: 'Present Continuous: действие в момент речи.' },
+      { slug: 'sravnenie-vremyon-7', title: 'Сравнение Present Simple и Continuous', excerpt: 'Когда какое время употреблять.' },
+      { slug: 'present-perfect-7', title: 'Настоящее совершённое время', excerpt: 'Present Perfect: связь прошлого с настоящим.' },
+      { slug: 'artikli-7', title: 'Артикли', excerpt: 'Употребление a, an, the.' },
+    ],
+    8: [
+      { slug: 'past-continuous-8', title: 'Прошедшее длительное время', excerpt: 'Past Continuous: действие в процессе в прошлом.' },
+      { slug: 'passivnyy-zalog-8', title: 'Страдательный залог', excerpt: 'Passive Voice: когда действие важнее деятеля.' },
+      { slug: 'uslovnye-predlozheniya-8', title: 'Условные предложения', excerpt: 'Conditionals: предложения с if.' },
+      { slug: 'kosvennaya-rech-8', title: 'Косвенная речь', excerpt: 'Reported Speech: передача чужих слов.' },
+    ],
+    10: [
+      { slug: 'vremena-obzor-10', title: 'Система времён английского глагола', excerpt: 'Обзор всех времён группы Simple, Continuous, Perfect.' },
+      { slug: 'slovoobrazovanie-eng-10', title: 'Словообразование', excerpt: 'Приставки и суффиксы в английском языке.' },
+      { slug: 'frazovye-glagoly-10', title: 'Фразовые глаголы', excerpt: 'Глаголы с предлогами и их значения.' },
+      { slug: 'podgotovka-ege-eng-10', title: 'Подготовка к экзамену', excerpt: 'Структура экзамена, чтение, письмо, говорение.' },
+    ],
   },
 
   fizika: {
