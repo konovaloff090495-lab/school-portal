@@ -21,7 +21,7 @@ def add_topics(subject, klass, topics):
     # находим блок предмета в RAW_TOPICS
     subj_i = None
     for i, l in enumerate(src):
-        if re.match(rf'\s+{re.escape(subject)}:\s*\{{', l):
+        if re.match(rf"\s+'?{re.escape(subject)}'?:\s*\{{", l):
             subj_i = i
             break
     if subj_i is None:
