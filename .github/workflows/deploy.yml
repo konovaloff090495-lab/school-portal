@@ -30,8 +30,8 @@ jobs:
             cd /var/www/school-portal
             echo "==> git pull..."
             GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
-            echo "==> npm ci..."
-            npm ci --prefer-offline
+            echo "==> npm ci (с фолбэком на чистую переустановку при повреждённом node_modules)..."
+            npm ci --prefer-offline || { echo "!! npm ci упал — чищу node_modules и ставлю заново"; rm -rf node_modules; npm ci; }
             echo "==> BLUE-GREEN: собираем в .next-build (старый сайт продолжает работать)..."
             rm -rf .next-build
             if NEXT_DIST_DIR=.next-build npm run build; then
