@@ -468,6 +468,30 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'chekhov-vishnyovyy-sad', title: 'А.П. Чехов «Вишнёвый сад»', excerpt: 'Комедия о смене эпох. Раневская, Лопахин. Уходящее дворянство и новый мир.' },
       { slug: 'poeziya-tyutchev-fet', title: 'Поэзия Тютчева и Фета', excerpt: 'Лирика природы и чувства. Философия Ф.И. Тютчева и музыкальность А.А. Фета.' },
     ],
+    1: [
+      { slug: 'ustnoe-narodnoe-1', title: 'Устное народное творчество', excerpt: 'Потешки, загадки, скороговорки, считалки.' },
+      { slug: 'skazki-1', title: 'Русские народные сказки', excerpt: 'Сказки о животных, их герои и поучения.' },
+      { slug: 'stihi-o-prirode-1', title: 'Стихи о природе', excerpt: 'Стихотворения русских поэтов о временах года.' },
+      { slug: 'rasskazy-o-detyah-1', title: 'Рассказы о детях', excerpt: 'Короткие рассказы о дружбе, доброте, поступках.' },
+    ],
+    2: [
+      { slug: 'skazki-narodnye-2', title: 'Народные и литературные сказки', excerpt: 'Различие народных и авторских сказок.' },
+      { slug: 'basni-2', title: 'Басни', excerpt: 'Басни и их мораль, басни Крылова.' },
+      { slug: 'stihi-poetov-2', title: 'Стихи русских поэтов', excerpt: 'Стихотворения о Родине и природе.' },
+      { slug: 'rasskazy-o-prirode-2', title: 'Рассказы о природе и животных', excerpt: 'Рассказы о бережном отношении к природе.' },
+    ],
+    3: [
+      { slug: 'ustnoe-tvorchestvo-3', title: 'Устное народное творчество', excerpt: 'Былины, пословицы, народные песни.' },
+      { slug: 'skazki-pushkina-3', title: 'Сказки русских писателей', excerpt: 'Литературные сказки Пушкина и других авторов.' },
+      { slug: 'stihi-o-rodine-3', title: 'Поэзия о Родине и природе', excerpt: 'Стихотворения классиков русской поэзии.' },
+      { slug: 'rasskazy-3', title: 'Рассказы русских писателей', excerpt: 'Произведения о детях, дружбе, честности.' },
+    ],
+    4: [
+      { slug: 'letopisi-byliny-4', title: 'Летописи и былины', excerpt: 'Древние сказания и героический эпос.' },
+      { slug: 'skazki-literaturnye-4', title: 'Литературные сказки', excerpt: 'Сказки русских и зарубежных писателей.' },
+      { slug: 'klassiki-poezii-4', title: 'Классики русской поэзии', excerpt: 'Стихи Пушкина, Лермонтова, Тютчева.' },
+      { slug: 'rasskazy-povesti-4', title: 'Рассказы и повести', excerpt: 'Произведения русских писателей о Родине и детях.' },
+    ],
   },
 
   'angliiskiy-yazyk': {
@@ -832,6 +856,18 @@ const RAW_TOPICS: Record<string, Record<number, Array<{ slug: string; title: str
       { slug: 'programmnoe-obespechenie', title: 'Программное обеспечение', excerpt: 'Системные и прикладные программы, операционная система.' },
       { slug: 'algoritmy-i-slozhnost', title: 'Алгоритмы и их эффективность', excerpt: 'Свойства алгоритмов, сложность, поиск и сортировка.' },
       { slug: 'kompyuternye-seti', title: 'Компьютерные сети и Интернет', excerpt: 'Устройство сетей, протоколы, ресурсы Интернета.' },
+    ],
+    3: [
+      { slug: 'informaciya-3', title: 'Информация вокруг нас', excerpt: 'Что такое информация, как мы её получаем.' },
+      { slug: 'kodirovanie-3', title: 'Кодирование информации', excerpt: 'Способы записи и кодирования информации.' },
+      { slug: 'komp-i-ustroystva-3', title: 'Компьютер и его устройства', excerpt: 'Главные части компьютера и их назначение.' },
+      { slug: 'deystviya-s-informaciey-3', title: 'Действия с информацией', excerpt: 'Хранение, передача и обработка информации.' },
+    ],
+    4: [
+      { slug: 'obekty-deystviya-4', title: 'Объекты и действия', excerpt: 'Объекты, их свойства и действия над ними.' },
+      { slug: 'algoritmy-4', title: 'Алгоритмы', excerpt: 'Что такое алгоритм, его исполнение.' },
+      { slug: 'vidy-algoritmov-4', title: 'Виды алгоритмов', excerpt: 'Линейные, с ветвлением и повторением.' },
+      { slug: 'komp-grafika-tekst-4', title: 'Графика и текст на компьютере', excerpt: 'Создание рисунков и текстов на компьютере.' },
     ],
   },
 }
