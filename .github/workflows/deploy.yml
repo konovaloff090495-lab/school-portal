@@ -40,7 +40,8 @@ jobs:
               mv .next .next-old 2>/dev/null || true
               mv .next-build .next
               echo "==> reload PM2 (быстро, без долгого даунтайма)..."
-              pm2 reload school-portal --update-env 2>/dev/null || PORT=3001 pm2 start npm --name school-portal -- start
+              # memory guard: ограничиваем память, авто-рестарт при OOM (иначе сайт падал в 502 через ~20 мин после деплоя)
+              pm2 reload school-portal --update-env 2>/dev/null || PORT=3001 NODE_OPTIONS="--max-old-space-size=1024" pm2 start npm --name school-portal --max-memory-restart 900M --time -- start
               pm2 save
               rm -rf .next-old
               echo "==> done (zero-downtime)"
