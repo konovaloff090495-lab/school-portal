@@ -45,6 +45,52 @@ def add_topics(subject, klass, topics):
     TB.write_text('\n'.join(src), encoding='utf-8')
 
 
+def add_topics_existing(subject, klass, topics):
+    """Дописывает темы в УЖЕ существующий блок класса (не создаёт новый ключ)."""
+    src = TB.read_text(encoding='utf-8').split('\n')
+    subj_i = None
+    for i, l in enumerate(src):
+        if re.match(rf"\s+'?{re.escape(subject)}'?:\s*\{{", l):
+            subj_i = i
+            break
+    if subj_i is None:
+        raise SystemExit(f'предмет {subject} не найден в RAW_TOPICS')
+    indent = len(src[subj_i]) - len(src[subj_i].lstrip())
+    subj_end = None
+    for j in range(subj_i + 1, len(src)):
+        if re.match(rf'^\s{{{indent}}}\}},?\s*$', src[j]):
+            subj_end = j
+            break
+    # находим строку "    {klass}: [" внутри блока предмета
+    kl_i = None
+    for j in range(subj_i + 1, subj_end):
+        if re.match(rf'^\s+{klass}:\s*\[\s*$', src[j]):
+            kl_i = j
+            break
+    if kl_i is None:
+        raise SystemExit(f'класс {klass} не найден в блоке {subject}')
+    kindent = len(src[kl_i]) - len(src[kl_i].lstrip())
+    # закрытие массива класса
+    kl_end = None
+    for j in range(kl_i + 1, subj_end):
+        if re.match(rf'^\s{{{kindent}}}\],?\s*$', src[j]):
+            kl_end = j
+            break
+    lines = []
+    for slug, title, excerpt in topics:
+        t = title.replace("'", "\\'")
+        e = excerpt.replace("'", "\\'")
+        lines.append(f"      {{ slug: '{slug}', title: '{t}', excerpt: '{e}' }},")
+    src = src[:kl_end] + lines + src[kl_end:]
+    TB.write_text('\n'.join(src), encoding='utf-8')
+
+
+def add_to_existing(subject, klass, topics, articles):
+    add_topics_existing(subject, klass, topics)
+    add_articles(subject, klass, articles)
+    print(f'{subject} {klass}кл: +{len(topics)} тем (в существующий класс), +{len(articles)} статей')
+
+
 def add_articles(subject, klass, articles):
     content = ART.read_text(encoding='utf-8').split('\n')
     close = next(i for i, l in enumerate(content) if l.strip() == ']')
