@@ -18,18 +18,18 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      // Next.js inline scripts необходимы для гидратации
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru",
+      // Next.js inline scripts + загрузчик и скрипты рекламы РСЯ (Яндекс)
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru *.yandex.ru yastatic.net",
       // Inline стили — для CSS-in-JS и контента блога
       "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
-      // Картинки: свои + data-URI
-      "img-src 'self' data: blob: mc.yandex.ru",
+      // Картинки: свои + data-URI + креативы и аватары рекламы РСЯ
+      "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net",
       // Шрифты Google
       "font-src 'self' fonts.gstatic.com",
-      // API-запросы
-      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru",
-      // Фреймы полностью запрещены
-      "frame-src 'none'",
+      // API-запросы + запросы рекламы РСЯ
+      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net",
+      // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe)
+      "frame-src yandex.ru *.yandex.ru yastatic.net",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self' formspree.io",
