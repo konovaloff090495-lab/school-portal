@@ -32,8 +32,8 @@ jobs:
             GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
             echo "==> npm ci (с фолбэком на чистую переустановку при повреждённом node_modules)..."
             npm ci --prefer-offline || { echo "!! npm ci упал — чищу node_modules и ставлю заново"; rm -rf node_modules; npm ci; }
-            echo "==> убиваем orphan-сборки от отменённых деплоев (паттерн не совпадает с этим скриптом)..."
-            pkill -9 -f "next/dist/bin/next" 2>/dev/null || true
+            echo "==> убиваем orphan-сборки от отменённых деплоев (паттерн [n] не совпадает с этим скриптом)..."
+            pkill -9 -f "next/dist/bin/[n]ext" 2>/dev/null || true
             sleep 2
             echo "==> BLUE-GREEN: собираем в .next-build (старый сайт продолжает работать)..."
             rm -rf .next-build || true
