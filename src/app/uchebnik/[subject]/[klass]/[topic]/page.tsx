@@ -7,6 +7,7 @@ import {
   textbookSubjects, klassLabel, klassLabelIn,
 } from '@/data/textbook'
 import { getArticle } from '@/data/textbook-articles'
+import YandexRTBBanner from '@/components/YandexRTBBanner'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -79,7 +80,7 @@ export default async function TopicPage({ params }: Props) {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <nav className="flex items-center gap-2 text-xs text-gray-400 flex-wrap mb-3">
             <Link href="/" className="hover:text-gray-600">Главная</Link>
             <span>/</span>
@@ -98,7 +99,7 @@ export default async function TopicPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-8 flex gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
         {/* Основной контент */}
         <div className="flex-1 min-w-0">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
@@ -144,27 +145,37 @@ export default async function TopicPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Сайдбар — список тем */}
-        <aside className="w-64 flex-shrink-0 hidden lg:block">
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 sticky top-4">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
-              {subject.title} · {klassLabel(klass)}
-            </p>
-            <div className="space-y-0.5 max-h-[70vh] overflow-y-auto">
-              {allTopics.map((t, idx) => (
-                <Link
-                  key={t.slug}
-                  href={`/uchebnik/${subjectSlug}/${klassStr}/${t.slug}/`}
-                  className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs transition-colors ${
-                    t.slug === topicSlug
-                      ? 'bg-blue-600 text-white font-semibold'
-                      : 'text-gray-600 hover:bg-gray-100'
-                  }`}
-                >
-                  <span className="opacity-50 w-4 text-right flex-shrink-0">{idx + 1}</span>
-                  <span className="truncate">{t.title}</span>
-                </Link>
-              ))}
+        {/* Сайдбар — реклама + список тем */}
+        <aside className="w-72 flex-shrink-0 hidden lg:block">
+          <div className="sticky top-4 space-y-4">
+            {/* Рекламный блок */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-3">
+              <div className="flex items-center justify-between mb-2 px-1">
+                <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+                <span className="text-[10px] text-gray-300">16+</span>
+              </div>
+              <YandexRTBBanner blockId="R-A-19425636-1" suffix="uchebnik-topic" />
+            </div>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                {subject.title} · {klassLabel(klass)}
+              </p>
+              <div className="space-y-0.5 max-h-[60vh] overflow-y-auto">
+                {allTopics.map((t, idx) => (
+                  <Link
+                    key={t.slug}
+                    href={`/uchebnik/${subjectSlug}/${klassStr}/${t.slug}/`}
+                    className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs transition-colors ${
+                      t.slug === topicSlug
+                        ? 'bg-blue-600 text-white font-semibold'
+                        : 'text-gray-600 hover:bg-gray-100'
+                    }`}
+                  >
+                    <span className="opacity-50 w-4 text-right flex-shrink-0">{idx + 1}</span>
+                    <span className="truncate">{t.title}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </aside>

@@ -5,6 +5,7 @@ import {
   getSubjectBySlug, getTopicsForSubjectAndClass,
   textbookSubjects, klassLabel, klassLabelIn,
 } from '@/data/textbook'
+import YandexRTBBanner from '@/components/YandexRTBBanner'
 
 interface Props { params: Promise<{ subject: string; klass: string }> }
 
@@ -49,7 +50,7 @@ export default async function KlassPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link href="/" className="hover:text-gray-600">Главная</Link>
             <span>/</span>
@@ -74,7 +75,8 @@ export default async function KlassPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
+        <div className="flex-1 min-w-0">
 
         {/* Основные темы */}
         <h2 className="text-base font-bold text-gray-700 mb-4">Темы программы</h2>
@@ -138,6 +140,18 @@ export default async function KlassPage({ params }: Props) {
             </Link>
           ))}
         </div>
+        </div>
+
+        {/* Рекламный сайдбар */}
+        <aside className="w-72 flex-shrink-0 hidden lg:block">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-3 sticky top-4">
+            <div className="flex items-center justify-between mb-2 px-1">
+              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+              <span className="text-[10px] text-gray-300">16+</span>
+            </div>
+            <YandexRTBBanner blockId="R-A-19425636-1" suffix="uchebnik-klass" />
+          </div>
+        </aside>
       </div>
     </div>
   )
