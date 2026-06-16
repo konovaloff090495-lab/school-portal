@@ -85,7 +85,7 @@ export default async function GdzBookPage({ params }: Props) {
   const textbookSubject = getSubjectBySlug(book.subjectSlug)
   const textbookTopics = getTopicsForSubjectAndClass(book.subjectSlug, klassNum)
   const hasTextbook = !!(textbookSubject && textbookTopics.length > 0)
-  const textbookBase = `/uchebnik/${book.subjectSlug}/${klassNum}`
+  const textbookBase = `/uchebnik/${book.subjectSlug}/${klassNum}-klass`
 
   return (
     <>

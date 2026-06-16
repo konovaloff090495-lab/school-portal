@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBooks, getGdzSubjects, gdzKlasses } from '@/data/gdz'
+import YandexRTBBanner from '@/components/YandexRTBBanner'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -168,18 +169,10 @@ export default async function GdzSubjectPage({ params }: Props) {
         {/* Рекламная колонка */}
         <aside className="gdz-rail" aria-label="Реклама">
           <div className="gdz-rail-sticky">
-            <div className="gdz-ad" data-rsya="R-A-XXXXXX-1">
+            <div className="gdz-ad" data-rsya="R-A-19425636-1">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
               <div className="gdz-ad-slot gdz-ad-slot--tall">
-                <div className="ph-ic">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="4" y="3" width="16" height="18" rx="2"></rect>
-                    <path d="M8 8h8M8 12h8M8 16h5"></path>
-                  </svg>
-                </div>
-                <div className="ph-t">Место под РСЯ</div>
-                <div className="ph-id">R-A-XXXXXX-1</div>
-                <div className="ph-hint">Вертикальный блок 300×600.</div>
+                <YandexRTBBanner blockId="R-A-19425636-1" suffix="subject" />
               </div>
             </div>
           </div>
