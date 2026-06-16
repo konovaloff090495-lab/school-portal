@@ -94,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ch.problems
         .filter(p => p.condition && p.steps?.length)
         .map(p => ({
-          url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/nomer-${p.number}/`,
+          url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/nomer-${p.number.replace(/\./g, "-")}/`,
           lastModified: now,
           changeFrequency: 'monthly' as const,
           priority: 0.7,

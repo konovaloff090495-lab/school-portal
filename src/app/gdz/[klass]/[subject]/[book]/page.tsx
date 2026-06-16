@@ -156,7 +156,7 @@ export default async function GdzBookPage({ params }: Props) {
                       <Link
                         key={p.number}
                         className="gdz-num"
-                        href={`/gdz/${klass}/${subject}/${bookSlug}/nomer-${p.number}/`}
+                        href={`/gdz/${klass}/${subject}/${bookSlug}/nomer-${p.number.replace(/\./g, "-")}/`}
                       >
                         {p.number}
                         <small>с. {p.page}</small>

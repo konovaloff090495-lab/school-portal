@@ -27,7 +27,14 @@ function parseKlass(slug: string): number | null {
 
 function parseNumber(slug: string): string | null {
   const m = slug.match(/^nomer-(.+)$/)
-  return m ? m[1] : null
+  // В URL точка в номере (напр. 1.23) кодируется дефисом (nomer-1-23),
+  // т.к. точка ломает trailing slash. Декодируем обратно.
+  return m ? m[1].replace(/-/g, '.') : null
+}
+
+// Номер задачи → URL-безопасный slug (точку заменяем на дефис)
+function numToSlug(n: string): string {
+  return n.replace(/\./g, '-')
 }
 
 function stripTags(s: string) {
@@ -50,7 +57,7 @@ export async function generateStaticParams() {
         klass: `${b.klass}-klass`,
         subject: b.subjectSlug,
         book: b.slug,
-        number: `nomer-${p.number}`,
+        number: `nomer-${numToSlug(p.number)}`,
       })
     }
   }
@@ -73,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (problem.steps?.length && problem.condition) ||
     (problem.imageUrls?.length && problem.condition)
   )
-  const canonicalUrl = `${SITE}/gdz/${klass}/${subject}/${bookSlug}/nomer-${num}/`
+  const canonicalUrl = `${SITE}/gdz/${klass}/${subject}/${bookSlug}/nomer-${numToSlug(num)}/`
 
   const conditionSnippet = problem.condition
     ? stripTags(problem.condition).slice(0, 100)
@@ -137,7 +144,7 @@ export default async function GdzNumberPage({ params }: Props) {
     .filter(Boolean).join(' · ')
 
   const bookBase = `/gdz/${klass}/${subject}/${bookSlug}`
-  const canonicalUrl = `${SITE}${bookBase}/nomer-${num}/`
+  const canonicalUrl = `${SITE}${bookBase}/nomer-${numToSlug(num)}/`
   const hasSolution = !!(
     (problem.steps?.length && problem.condition) ||
     (problem.imageUrls?.length && problem.condition)
@@ -210,14 +217,14 @@ export default async function GdzNumberPage({ params }: Props) {
           {/* Навигация по номерам */}
           <nav className="gdz-exnav" aria-label="Соседние номера">
             {prev ? (
-              <Link href={`${bookBase}/nomer-${prev}/`}>← Номер {prev}</Link>
+              <Link href={`${bookBase}/nomer-${numToSlug(prev)}/`}>← Номер {prev}</Link>
             ) : (
               <span style={{ visibility: 'hidden' }}>← Номер 0</span>
             )}
             <Link href={`${bookBase}/`} className="to-list">Все номера</Link>
             <span className="spacer"></span>
             {next ? (
-              <Link href={`${bookBase}/nomer-${next}/`}>Номер {next} →</Link>
+              <Link href={`${bookBase}/nomer-${numToSlug(next)}/`}>Номер {next} →</Link>
             ) : (
               <span style={{ visibility: 'hidden' }}>Номер 0 →</span>
             )}
@@ -334,7 +341,7 @@ export default async function GdzNumberPage({ params }: Props) {
                   <Link
                     key={p.number}
                     className="gdz-num"
-                    href={`${bookBase}/nomer-${p.number}/`}
+                    href={`${bookBase}/nomer-${numToSlug(p.number)}/`}
                     style={p.number === num ? {
                       borderColor: 'var(--coral-400)',
                       background: 'var(--peach-50)',
