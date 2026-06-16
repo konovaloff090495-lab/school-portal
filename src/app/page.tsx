@@ -213,6 +213,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Наши сервисы */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-[#0F172A]">Наши сервисы</h2>
+          <p className="text-gray-500 mt-1">Бесплатные образовательные ресурсы для учеников и родителей</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <Link href="/uchebnik/" className="group bg-white border border-gray-200 rounded-2xl p-6 flex items-start gap-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 cursor-pointer">
+            <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
+              <svg className="w-7 h-7 text-[#0369A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-[#0F172A]">Онлайн-учебник</h3>
+                <span className="text-xs text-[#0369A1] font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Открыть →</span>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">Понятные статьи по школьной программе 1–11 класса: правила, формулы, таблицы и разбор тем с примерами по всем предметам.</p>
+            </div>
+          </Link>
+          <Link href="/gdz/" className="group bg-white border border-gray-200 rounded-2xl p-6 flex items-start gap-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 cursor-pointer">
+            <div className="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-emerald-100 transition-colors">
+              <svg className="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-[#0F172A]">Помощь с домашними заданиями</h3>
+                <span className="text-xs text-[#0369A1] font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Открыть →</span>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">ГДЗ с подробными решениями по учебникам 1–11 класса: условия задач, пошаговые решения и ответы для самопроверки.</p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* SEO text */}
       <section className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
