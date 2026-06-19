@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs } from '@/data/schools'
 import { gdzKlasses, gdzBooks, getGdzSubjects } from '@/data/gdz'
+import { textbookSubjects, textbookTopics } from '@/data/textbook'
 
 const BASE_URL = 'https://pro-schools.ru'
 
@@ -102,8 +103,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     )
   )
 
+  // ── Учебник (textbook) pages ───────────────────────
+  const uchebnikIndex: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/uchebnik/`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+  ]
+
+  const uchebnikSubjectPages: MetadataRoute.Sitemap = textbookSubjects.map(s => ({
+    url: `${BASE_URL}/uchebnik/${s.slug}/`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  const uchebnikKlassPages: MetadataRoute.Sitemap = textbookSubjects.flatMap(s =>
+    s.classes.map(k => ({
+      url: `${BASE_URL}/uchebnik/${s.slug}/${k}-klass/`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+  )
+
+  const uchebnikTopicPages: MetadataRoute.Sitemap = textbookTopics.map(t => ({
+    url: `${BASE_URL}/uchebnik/${t.subject}/${t.klass}-klass/${t.slug}/`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
+    ...uchebnikIndex, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
   ]
 }
