@@ -108,6 +108,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/uchebnik/`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
   ]
 
+  const uchebnikClassPages: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(k => ({
+    url: `${BASE_URL}/uchebnik/klass/${k}-klass/`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
   const uchebnikSubjectPages: MetadataRoute.Sitemap = textbookSubjects.map(s => ({
     url: `${BASE_URL}/uchebnik/${s.slug}/`,
     lastModified: now,
@@ -134,6 +141,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
-    ...uchebnikIndex, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
+    ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
   ]
 }
