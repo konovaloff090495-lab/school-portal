@@ -11,14 +11,15 @@ import YandexRTBBanner from '@/components/YandexRTBBanner'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
-import { textbookTopics } from '@/data/textbook'
+// ISR: страницы тем рендерятся по запросу и кешируются (revalidate),
+// а НЕ пре-рендерятся все на сборке — иначе при тысячах тем build на
+// сервере упирается в память/таймаут. dynamicParams=true по умолчанию,
+// поэтому любая тема из RAW_TOPICS отдаётся на лету и попадает в кеш.
+// Sitemap по-прежнему перечисляет все темы (из textbookTopics).
+export const revalidate = 86400
 
 export function generateStaticParams() {
-  return textbookTopics.map(t => ({
-    subject: t.subject,
-    klass: `${t.klass}-klass`,
-    topic: t.slug,
-  }))
+  return []
 }
 
 function parseKlass(str: string): number | null {
