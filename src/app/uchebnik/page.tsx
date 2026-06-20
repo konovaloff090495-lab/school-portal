@@ -28,20 +28,40 @@ export default function TextbookPage() {
             {totalTopics}+ тем по всем предметам. Понятные объяснения, примеры с решением,
             подготовка к ОГЭ и ЕГЭ — всё в одном месте.
           </p>
-          {/* Поиск по предметам */}
+          {/* Быстрый переход по классам */}
           <div className="flex flex-wrap gap-2 justify-center">
-            {['1 класс', '5 класс', '9 класс (ОГЭ)', '11 класс (ЕГЭ)'].map(label => (
-              <span key={label} className="bg-white/10 hover:bg-white/20 transition-colors text-sm px-4 py-2 rounded-full cursor-default">
+            {[{ k: 1, label: '1 класс' }, { k: 5, label: '5 класс' }, { k: 9, label: '9 класс (ОГЭ)' }, { k: 11, label: '11 класс (ЕГЭ)' }].map(({ k, label }) => (
+              <Link key={k} href={`/uchebnik/klass/${k}-klass/`} className="bg-white/10 hover:bg-white/20 transition-colors text-sm px-4 py-2 rounded-full">
                 {label}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
       </div>
 
+      {/* Выбор класса */}
+      <div className="max-w-5xl mx-auto px-4 pt-12">
+        <h2 className="text-2xl font-black text-[#0F172A] mb-2">Выберите класс</h2>
+        <p className="text-gray-500 text-sm mb-8">Все предметы вашего класса на одной странице</p>
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(k => (
+            <Link
+              key={k}
+              href={`/uchebnik/klass/${k}-klass/`}
+              className="group bg-white rounded-2xl border border-gray-100 hover:border-blue-300 hover:shadow-lg shadow-sm p-4 flex flex-col items-center justify-center transition-all duration-200"
+            >
+              <span className="text-2xl md:text-3xl font-black text-[#0F172A] group-hover:text-blue-600 transition-colors leading-none">
+                {k}
+              </span>
+              <span className="text-xs text-gray-400 mt-1">класс</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* Предметы */}
       <div className="max-w-5xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-black text-[#0F172A] mb-2">Выберите предмет</h2>
+        <h2 className="text-2xl font-black text-[#0F172A] mb-2">Или выберите предмет</h2>
         <p className="text-gray-500 text-sm mb-8">13 предметов · {totalTopics} тем</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
