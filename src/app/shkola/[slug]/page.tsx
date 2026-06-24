@@ -364,30 +364,36 @@ export default async function SchoolPage({ params }: Props) {
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Контакты и адрес</h2>
 
-            {/* Яндекс Карты — iframe с координатами или ссылка по адресу */}
+            {/* Яндекс Карты — встроенный iframe: по координатам (точная метка)
+                либо поиском по адресу (если координат нет). Карта есть всегда. */}
             <div className="mb-5 rounded-xl overflow-hidden border border-gray-100" style={{ height: 280 }}>
-              {school.lat && school.lon ? (
-                <iframe
-                  title={`Карта — ${school.name}`}
-                  src={`https://yandex.ru/map-widget/v1/?ll=${school.lon},${school.lat}&z=16&pt=${school.lon},${school.lat},pm2rdm`}
-                  width="100%"
-                  height="280"
-                  loading="lazy"
-                  className="block"
-                  style={{ border: 0 }}
-                />
-              ) : (
-                <a
-                  href={`https://yandex.ru/maps/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full h-full bg-gray-50 text-blue-600 hover:bg-gray-100 transition-colors text-sm font-medium gap-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                  Посмотреть на Яндекс Картах
-                </a>
-              )}
+              <iframe
+                title={`Карта — ${school.name}`}
+                src={
+                  school.lat && school.lon
+                    ? `https://yandex.ru/map-widget/v1/?ll=${school.lon},${school.lat}&z=16&pt=${school.lon},${school.lat},pm2rdm&lang=ru_RU`
+                    : `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}&z=16&lang=ru_RU`
+                }
+                width="100%"
+                height="280"
+                loading="lazy"
+                className="block"
+                style={{ border: 0 }}
+              />
             </div>
+            <a
+              href={
+                school.lat && school.lon
+                  ? `https://yandex.ru/maps/?ll=${school.lon},${school.lat}&z=16&pt=${school.lon},${school.lat}`
+                  : `https://yandex.ru/maps/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}`
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-700 mb-5"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+              Открыть в Яндекс Картах
+            </a>
 
             <div className="space-y-3">
               <div className="flex items-start gap-3">
