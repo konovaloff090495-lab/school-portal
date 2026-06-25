@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs } from '@/data/schools'
 import { gdzKlasses, gdzBooks, getGdzSubjects } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
+import { blogPosts } from '@/data/blog'
 
 const BASE_URL = 'https://pro-schools.ru'
 
@@ -138,8 +139,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // ── Блог ───────────────────────────────────────────
+  const blogIndex: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/blog/`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+  ]
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => ({
+    url: `${BASE_URL}/blog/${p.slug}/`,
+    lastModified: p.publishedAt ? new Date(p.publishedAt) : now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
+    ...blogIndex, ...blogPostPages,
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
   ]
