@@ -1134,7 +1134,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['школьная форма', 'одежда для школы', 'покупки к школе', 'требования к форме', 'сборы в школу'],
     author: 'Редакция pro-schools.ru',
     authorRole: 'Аналитический отдел',
-    publishedAt: 'undefined',
+    publishedAt: '2026-03-15',
     readTime: 10,
     imageAlt: 'Школьники в форме разных фасонов идут по коридору современной российской школы',
     imageUrl: '/blog/images/shkolnaya-forma-rossiya.jpg',
@@ -1862,7 +1862,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['ЕГЭ 2026', 'физика', 'подготовка к экзаменам', 'выпускникам', 'советы родителям'],
     author: 'Редакция pro-schools.ru',
     authorRole: 'Аналитический отдел',
-    publishedAt: 'undefined',
+    publishedAt: '2026-03-15',
     readTime: 10,
     imageAlt: 'Выпускник готовится к ЕГЭ по физике 2026 с учебниками и калькулятором',
     content: `
