@@ -204,12 +204,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogIndex: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/blog/`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
   ]
-  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => ({
-    url: `${BASE_URL}/blog/${p.slug}/`,
-    lastModified: p.publishedAt ? new Date(p.publishedAt) : now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => {
+    // Защита от кривых дат: невалидный publishedAt не должен ломать сборку sitemap
+    const d = p.publishedAt ? new Date(p.publishedAt) : now
+    return {
+      url: `${BASE_URL}/blog/${p.slug}/`,
+      lastModified: isNaN(d.getTime()) ? now : d,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }
+  })
 
   return [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
