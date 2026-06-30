@@ -2,8 +2,9 @@ import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
   featureSlugs, languageSlugs, metroSlugs,
+  getSchoolsByRegion, getSchoolsByRegionAndType,
 } from '@/data/schools'
-import { gdzKlasses, gdzBooks, getGdzSubjects } from '@/data/gdz'
+import { gdzKlasses, gdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { blogPosts } from '@/data/blog'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
@@ -28,86 +29,99 @@ const STATIC_LANDINGS = [
 const BASE_URL = 'https://pro-schools.ru'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  // Stable dates by content type — prevents Yandex/Google from treating every
+  // build as a full-site update and wasting crawl budget re-crawling unchanged pages.
+  const D_SCHOOLS   = new Date('2026-06-15') // school catalog data last major update
+  const D_BLOG      = new Date('2026-06-01') // blog index (individual posts use publishedAt)
+  const D_GDZ       = new Date('2026-05-20') // GDZ content (stable)
+  const D_UCHEBNIK  = new Date('2026-05-20') // textbook content (stable)
+  const D_EGE       = new Date('2026-06-01') // EGE/OGE pages
+  const D_LANDINGS  = new Date('2026-06-01') // type/feature landings
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: now,
+      lastModified: D_SCHOOLS,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/shkoly/`,
-      lastModified: now,
+      lastModified: D_SCHOOLS,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
   ]
 
-  const regionPages: MetadataRoute.Sitemap = regionSlugs.map(region => ({
-    url: `${BASE_URL}/shkoly/${region}/`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.85,
-  }))
+  const regionPages: MetadataRoute.Sitemap = regionSlugs
+    .filter(region => getSchoolsByRegion(region).length >= 3)
+    .map(region => ({
+      url: `${BASE_URL}/shkoly/${region}/`,
+      lastModified: D_SCHOOLS,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    }))
 
   const typePages: MetadataRoute.Sitemap = regionSlugs.flatMap(region =>
-    typeSlugs.map(type => ({
-      url: `${BASE_URL}/shkoly/${region}/${type}/`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    }))
+    typeSlugs
+      .filter(type => getSchoolsByRegionAndType(region, type).length >= 3)
+      .map(type => ({
+        url: `${BASE_URL}/shkoly/${region}/${type}/`,
+        lastModified: D_SCHOOLS,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      }))
   )
 
   const schoolPages: MetadataRoute.Sitemap = schools.map(school => ({
     url: `${BASE_URL}/shkola/${school.slug}/`,
-    lastModified: now,
+    lastModified: D_SCHOOLS,
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
 
   const districtPages: MetadataRoute.Sitemap = moscowDistrictSlugs.map(d => ({
     url: `${BASE_URL}/shkoly/moskva/rayon/${d}/`,
-    lastModified: now,
+    lastModified: D_SCHOOLS,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   const moCityPages: MetadataRoute.Sitemap = moCitySlugs.map(c => ({
     url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/`,
-    lastModified: now,
+    lastModified: D_SCHOOLS,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   // ── GDZ pages ──────────────────────────────────────
   const gdzIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/gdz/`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/gdz/`, lastModified: D_GDZ, changeFrequency: 'weekly', priority: 0.9 },
   ]
 
   const gdzKlassPages: MetadataRoute.Sitemap = gdzKlasses.map(n => ({
     url: `${BASE_URL}/gdz/${n}-klass/`,
-    lastModified: now,
+    lastModified: D_GDZ,
     changeFrequency: 'weekly',
     priority: 0.85,
   }))
 
   const gdzSubjectPages: MetadataRoute.Sitemap = gdzKlasses.flatMap(n =>
-    getGdzSubjects(n).map(s => ({
-      url: `${BASE_URL}/gdz/${n}-klass/${s.slug}/`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    }))
+    getGdzSubjects(n)
+      .filter(s => getGdzBooks(n, s.slug).length > 0)
+      .map(s => ({
+        url: `${BASE_URL}/gdz/${n}-klass/${s.slug}/`,
+        lastModified: D_GDZ,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      }))
   )
 
   const gdzBookPages: MetadataRoute.Sitemap = gdzBooks
     .filter(b => b.chapters.length > 0)
     .map(b => ({
       url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/`,
-      lastModified: now,
+      lastModified: D_GDZ,
       changeFrequency: 'monthly',
       priority: 0.75,
     }))
@@ -118,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         .filter(p => p.condition && p.steps?.length)
         .map(p => ({
           url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/nomer-${p.number.replace(/\./g, "-")}/`,
-          lastModified: now,
+          lastModified: D_GDZ,
           changeFrequency: 'monthly' as const,
           priority: 0.7,
         }))
@@ -127,19 +141,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Учебник (textbook) pages ───────────────────────
   const uchebnikIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/uchebnik/`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/uchebnik/`, lastModified: D_UCHEBNIK, changeFrequency: 'weekly', priority: 0.9 },
   ]
 
   const uchebnikClassPages: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(k => ({
     url: `${BASE_URL}/uchebnik/klass/${k}-klass/`,
-    lastModified: now,
+    lastModified: D_UCHEBNIK,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }))
 
   const uchebnikSubjectPages: MetadataRoute.Sitemap = textbookSubjects.map(s => ({
     url: `${BASE_URL}/uchebnik/${s.slug}/`,
-    lastModified: now,
+    lastModified: D_UCHEBNIK,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }))
@@ -147,7 +161,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const uchebnikKlassPages: MetadataRoute.Sitemap = textbookSubjects.flatMap(s =>
     s.classes.map(k => ({
       url: `${BASE_URL}/uchebnik/${s.slug}/${k}-klass/`,
-      lastModified: now,
+      lastModified: D_UCHEBNIK,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }))
@@ -155,61 +169,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const uchebnikTopicPages: MetadataRoute.Sitemap = textbookTopics.map(t => ({
     url: `${BASE_URL}/uchebnik/${t.subject}/${t.klass}-klass/${t.slug}/`,
-    lastModified: now,
+    lastModified: D_UCHEBNIK,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
   // ── ЕГЭ / ОГЭ ──────────────────────────────────────
   const egeIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/ege/`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE_URL}/oge/`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/ege/`, lastModified: D_EGE, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/oge/`, lastModified: D_EGE, changeFrequency: 'weekly', priority: 0.85 },
   ]
   const egeSubjectPages: MetadataRoute.Sitemap = [
-    ...egeSubjects.map(s => ({ url: `${BASE_URL}/ege/${s.slug}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })),
-    ...ogeSubjects.map(s => ({ url: `${BASE_URL}/oge/${s.slug}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })),
+    ...egeSubjects.map(s => ({ url: `${BASE_URL}/ege/${s.slug}/`, lastModified: D_EGE, changeFrequency: 'weekly' as const, priority: 0.8 })),
+    ...ogeSubjects.map(s => ({ url: `${BASE_URL}/oge/${s.slug}/`, lastModified: D_EGE, changeFrequency: 'weekly' as const, priority: 0.8 })),
   ]
   const egeTaskPages: MetadataRoute.Sitemap = [
-    ...egeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/ege/${s.slug}/${t.slug}/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }))),
-    ...ogeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/oge/${s.slug}/${t.slug}/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }))),
+    ...egeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/ege/${s.slug}/${t.slug}/`, lastModified: D_EGE, changeFrequency: 'monthly' as const, priority: 0.7 }))),
+    ...ogeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/oge/${s.slug}/${t.slug}/`, lastModified: D_EGE, changeFrequency: 'monthly' as const, priority: 0.7 }))),
   ]
 
   // ── Лендинги школ: типы, особенности, профили, языки, метро ──
   const shkolyTypePages: MetadataRoute.Sitemap = typeSlugs.map(t => ({
-    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.75,
+    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
   }))
   const shkolyFeaturePages: MetadataRoute.Sitemap = featureSlugs.map(f => ({
-    url: `${BASE_URL}/shkoly/osobennosti/${f}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7,
+    url: `${BASE_URL}/shkoly/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
   const shkolyLangPages: MetadataRoute.Sitemap = languageSlugs.map(l => ({
-    url: `${BASE_URL}/shkoly/tipy/yazykovye/${l}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7,
+    url: `${BASE_URL}/shkoly/tipy/yazykovye/${l}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
   const shkolyMetroPages: MetadataRoute.Sitemap = metroSlugs.map(st => ({
-    url: `${BASE_URL}/shkoly/moskva/metro/${st}/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7,
+    url: `${BASE_URL}/shkoly/moskva/metro/${st}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
   // Региональные лендинги: регион × особенность / подготовка
   const regionFeaturePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
-    featureSlugs.map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.65 }))
+    featureSlugs.map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65 }))
   )
   const regionPodgotovkaPages: MetadataRoute.Sitemap = regionSlugs.flatMap(r => [
-    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-oge/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/shkoly/${r}/programmirovanie/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.65 },
+    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-oge/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/shkoly/${r}/programmirovanie/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.65 },
   ])
   const staticLandingPages: MetadataRoute.Sitemap = STATIC_LANDINGS.map(path => ({
-    url: `${BASE_URL}${path}/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6,
+    url: `${BASE_URL}${path}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,
   }))
 
   // ── Блог ───────────────────────────────────────────
   const blogIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/blog/`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/blog/`, lastModified: D_BLOG, changeFrequency: 'weekly', priority: 0.8 },
   ]
   const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => {
     // Защита от кривых дат: невалидный publishedAt не должен ломать сборку sitemap
-    const d = p.publishedAt ? new Date(p.publishedAt) : now
+    const d = p.publishedAt ? new Date(p.publishedAt) : D_BLOG
     return {
       url: `${BASE_URL}/blog/${p.slug}/`,
-      lastModified: isNaN(d.getTime()) ? now : d,
+      lastModified: isNaN(d.getTime()) ? D_BLOG : d,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }

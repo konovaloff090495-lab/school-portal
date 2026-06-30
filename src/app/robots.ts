@@ -8,12 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/poisk/'],
+        disallow: ['/api/', '/_next/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/lk/'],
       },
       {
         userAgent: 'Yandex',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/poisk/'],
+        disallow: ['/api/', '/_next/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/lk/'],
       },
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,

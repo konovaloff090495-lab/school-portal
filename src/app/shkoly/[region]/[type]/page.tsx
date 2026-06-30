@@ -30,11 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = region as RegionSlug
   const t = type as SchoolType
   const list = getSchoolsByRegionAndType(r, t)
+  const tooFew = list.length < 3
   return {
     title: buildTitle(r, t, undefined, list.length),
     description: buildDescription(r, t, undefined, list.length),
     keywords: buildKeywords(r, t),
     alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/${t}/` },
+    ...(tooFew ? { robots: { index: false, follow: true } } : {}),
   }
 }
 

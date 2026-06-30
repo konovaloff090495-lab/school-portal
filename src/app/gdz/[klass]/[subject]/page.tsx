@@ -67,17 +67,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const subj = subjects.find(s => s.slug === subject)
   if (!subj) return {}
   const books = getGdzBooks(n, subject)
+  if (books.length === 0) return {}
   const canonicalUrl = `${SITE}/gdz/${klass}/${subject}/`
   const title = `ГДЗ по ${subj.name.toLowerCase()} ${n} класс — учебники и решебники · pro-schools.ru`
-  const description = `ГДЗ по ${subj.name.toLowerCase()} за ${n} класс: ${books.length > 0 ? books.map(b => b.authors.split(',')[0].trim()).join(', ') : 'все авторы'}. Пошаговые решения всех номеров и заданий.`
-  // Если нет книг — не индексируем (нет ценного контента)
-  const robots = books.length > 0
-    ? { index: true, follow: true }
-    : { index: false, follow: true }
+  const description = `ГДЗ по ${subj.name.toLowerCase()} за ${n} класс: ${books.map(b => b.authors.split(',')[0].trim()).join(', ')}. Пошаговые решения всех номеров и заданий.`
   return {
     title,
     description,
-    robots,
+    robots: { index: true, follow: true },
     alternates: { canonical: canonicalUrl },
     openGraph: { title, description, url: canonicalUrl, siteName: 'pro-schools.ru', locale: 'ru_RU', type: 'website' },
   }
@@ -93,6 +90,7 @@ export default async function GdzSubjectPage({ params }: Props) {
   if (!subj) notFound()
 
   const books = getGdzBooks(klassNum, subject)
+  if (books.length === 0) notFound()
   const canonicalUrl = `${SITE}/gdz/${klass}/${subject}/`
 
   const breadcrumbLd = {

@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: buildDescription(r, undefined, undefined, count),
     keywords: buildKeywords(r),
     alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/` },
+    ...(count < 3 ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
