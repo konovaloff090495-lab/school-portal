@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 
+// v2: блокируем /preload/ */preload/ /spasibo/ /lk/
 const BASE_URL = 'https://pro-schools.ru'
 
 export default function robots(): MetadataRoute.Robots {
