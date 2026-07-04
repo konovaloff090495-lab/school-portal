@@ -62,8 +62,84 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 - **Reviews**: GitHub API (fine-grained PAT) — moderation via `/admin/otzyvy`
 - **Analytics**: Yandex Metrika (no GA)
 - **Ads**: Yandex РСЯ — CSP in `next.config.ts` allows their iframes
-- **Deployment**: Vercel Pro; blue-green swap via `NEXT_DIST_DIR` env var
+- **Deployment**: VPS Бегет 45.80.70.209 через PM2 + Nginx (порт 3001). НЕ Vercel.
 
 ### Scripts
 
 `/scripts/` contains Node/Python scripts for offline data enrichment and batch content generation (uses `@anthropic-ai/sdk`). These are run locally, not deployed.
+
+## Deploy (VPS Бегет)
+
+**Прод** — VPS 45.80.70.209, домен pro-schools.ru, PM2 `school-portal` на порту 3001, Nginx reverse-proxy с SSL (Certbot).
+
+### Стандартный деплой
+
+```bash
+# 1. Коммит и пуш
+git add -A && git commit -m "..." && git push origin main
+
+# 2. Деплой на VPS
+./deploy.sh
+```
+
+`deploy.sh` делает автоматически:
+1. SSH → `git pull origin main` (ключ `/root/.ssh/github_school_portal`)
+2. `npm ci --prefer-offline`
+3. `nohup NODE_OPTIONS=--max-old-space-size=2048 npm run build` (5–15 мин, не боится обрыва SSH)
+4. Ожидает `/tmp/sp-build.log` → `BUILD_DONE`
+5. `pm2 restart school-portal`
+6. Проверяет HTTP 200
+
+### SSH
+
+```bash
+ssh -i ~/.ssh/id_ed25519 root@45.80.70.209
+```
+
+SSH часто обрывается (`kex_exchange_identification`). Всегда оборачивать в until-loop:
+
+```bash
+until ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 root@45.80.70.209 'echo ok' 2>/dev/null; do sleep 15; done
+```
+
+### RAM (важно!)
+
+VPS 3.8 GB делится с seocheckup (PM2 `seocheckup`).
+- Runtime: `NODE_OPTIONS=--max-old-space-size=1536`, `max_memory_restart: 1800M`
+- Сборка: `NODE_OPTIONS=--max-old-space-size=2048` (временно)
+- Больше 2048 при сборке **не ставить** — OOM killer убьёт процесс
+
+### Структура на VPS
+
+```
+/var/www/school-portal/     # исходники + .next
+  ecosystem.config.cjs      # PM2 конфиг
+  deploy.sh                 # скрипт деплоя
+/var/log/school-portal/     # логи PM2
+/etc/nginx/sites-enabled/school-portal  # Nginx конфиг
+```
+
+### PM2 команды
+
+```bash
+# Статус
+ssh -i ~/.ssh/id_ed25519 root@45.80.70.209 'pm2 list'
+
+# Логи
+ssh -i ~/.ssh/id_ed25519 root@45.80.70.209 'pm2 logs school-portal --lines 50'
+
+# Перезапуск вручную
+ssh -i ~/.ssh/id_ed25519 root@45.80.70.209 'pm2 restart school-portal'
+```
+
+### Проверка прода
+
+```bash
+curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/"
+```
+
+### Что НЕ делать
+
+- НЕ деплоить через `vercel --prod` — прод только VPS
+- НЕ запускать `npm run build` без `nohup` — SSH обрывается на длинных командах
+- НЕ чистить `.next` пока идёт сборка — сломает текущий билд
