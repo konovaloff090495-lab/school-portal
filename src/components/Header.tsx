@@ -287,6 +287,7 @@ export default function Header() {
             background: 'rgba(26,24,20,0.45)', zIndex: 200,
             display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: 80,
             backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
           }}
         >
           <div

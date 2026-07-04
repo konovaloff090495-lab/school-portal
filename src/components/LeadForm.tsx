@@ -99,6 +99,7 @@ export default function LeadForm({ schoolName, compact = false, title }: LeadFor
           marketing_agreed: marketingAgreed,
         }),
       })
+      window.ym?.(108789843, 'reachGoal', 'lead_submit')
     } catch {}
 
     setLoading(false)
