@@ -327,6 +327,7 @@ export default function SchoolCard({ school }: { school: School }) {
           <div className="flex items-center gap-2">
             <a
               href={`tel:${school.phone}`}
+              onClick={() => window.ym?.(108789843, 'reachGoal', 'phone_click')}
               className="text-xs text-gray-500 hover:text-[#0369A1] transition-colors duration-200 cursor-pointer"
             >
               {school.phone}

@@ -2,14 +2,9 @@
   "meta": {
     "created": "2026-04-30",
     "description": "Очередь тем для блога pro-schools.ru. Статусы: pending / generating / done / error",
-    "totalTopics": 201,
-<<<<<<< Updated upstream
+    "totalTopics": 361,
     "generated": 62,
-    "lastRun": "2026-05-17T11:01:36.215Z"
-=======
-    "generated": 57,
-    "lastRun": "2026-05-16T05:24:57.505Z"
->>>>>>> Stashed changes
+    "lastRun": "2026-06-30T07:09:42.409Z"
   },
   "topics": [
     {
@@ -1133,12 +1128,14 @@
     },
     {
       "id": "t111",
-      "status": "pending",
+      "status": "error",
       "title": "Экстернат: как сдать экзамены досрочно и получить аттестат",
       "slug": "eksternat-kak-sdat-ekzameny-dosrochno",
       "category": "Типы школ",
       "keywords": "экстернат как сдать экзамены",
-      "freq": 3600
+      "freq": 3600,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcabC9U6TbbvJNvp4dhEx\"}",
+      "retryAt": "2026-07-02T03:00:02.072Z"
     },
     {
       "id": "t112",
@@ -1199,12 +1196,14 @@
     },
     {
       "id": "t118",
-      "status": "pending",
+      "status": "error",
       "title": "Профильные классы: как выбрать направление в 10 классе",
       "slug": "profilnye-klassy-kak-vybrat-napravlenie",
       "category": "Типы школ",
       "keywords": "профильные классы 10 класс выбрать",
-      "freq": 3400
+      "freq": 3400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcabCDj53Nf9JdmSJV1Zx\"}",
+      "retryAt": "2026-07-02T03:00:03.043Z"
     },
     {
       "id": "t119",
@@ -1671,12 +1670,14 @@
     },
     {
       "id": "t162",
-      "status": "pending",
+      "status": "error",
       "title": "ЕГЭ по биологии 2026: как готовиться самостоятельно",
       "slug": "ege-biologiya-2026-samostoyatelno",
       "category": "Советы родителям",
       "keywords": "ЕГЭ биология 2026",
-      "freq": 3600
+      "freq": 3600,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcabCAqC5qAoV8vP65G2y\"}",
+      "retryAt": "2026-07-02T03:00:02.368Z"
     },
     {
       "id": "t163",
@@ -1876,12 +1877,14 @@
     },
     {
       "id": "t182",
-      "status": "pending",
+      "status": "error",
       "title": "Поступление в МФТИ 2026: требования и проходные баллы",
       "slug": "postuplenie-v-mfti-2026",
       "category": "Советы родителям",
       "keywords": "поступление МФТИ 2026",
-      "freq": 3400
+      "freq": 3400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcabCEyEdTSkSqjTsL1xQ\"}",
+      "retryAt": "2026-07-02T03:00:03.342Z"
     },
     {
       "id": "t183",
@@ -1983,13 +1986,15 @@
     },
     {
       "id": "t193",
-      "status": "pending",
+      "status": "error",
       "title": "Сколько стоит частная школа в Москве 2026: цены и сравнение",
       "slug": "stoimost-chastnoj-shkoly-moskva-2026-ceny",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "стоимость частная школа москва цены",
-      "freq": 3600
+      "freq": 3600,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcabCC76McLVCNg6rK5Vs\"}",
+      "retryAt": "2026-07-02T03:00:02.742Z"
     },
     {
       "id": "t194",
@@ -2072,6 +2077,1446 @@
       "city": "Новосибирск",
       "keywords": "частные школы новосибирска",
       "freq": 1000
+    },
+    {
+      "id": "t202",
+      "status": "pending",
+      "title": "Семейное обучение в 2026 году: как перейти, оформить и получить аттестат",
+      "slug": "semejnoe-obuchenie-2026",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение 2026",
+      "freq": 500
+    },
+    {
+      "id": "t203",
+      "status": "pending",
+      "title": "Семейное обучение в начальной школе: особенности 1–4 классов",
+      "slug": "semejnoe-obuchenie-mladshie-klassy",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение начальная школа",
+      "freq": 500
+    },
+    {
+      "id": "t204",
+      "status": "pending",
+      "title": "Групповое домашнее обучение: как организовать учёбу с другими семьями",
+      "slug": "gruppovoe-obuchenie-doma",
+      "category": "Домашнее обучение",
+      "keywords": "групповое домашнее обучение",
+      "freq": 500
+    },
+    {
+      "id": "t205",
+      "status": "pending",
+      "title": "Как помочь ребёнку с физикой: методы и ресурсы для родителей",
+      "slug": "kak-pomoch-rebenku-s-fizikoj",
+      "category": "Советы родителям",
+      "keywords": "помочь ребёнку с физикой",
+      "freq": 500
+    },
+    {
+      "id": "t206",
+      "status": "pending",
+      "title": "Семейное обучение и спорт: как совмещать тренировки с учёбой",
+      "slug": "semejnoe-obuchenie-i-sport",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение спорт",
+      "freq": 500
+    },
+    {
+      "id": "t207",
+      "status": "pending",
+      "title": "Заочное обучение для взрослых: как получить школьный аттестат после 18",
+      "slug": "zaochnoe-obuchenie-dlya-vzroslyh",
+      "category": "Формы обучения",
+      "keywords": "заочное обучение для взрослых аттестат",
+      "freq": 500
+    },
+    {
+      "id": "t208",
+      "status": "pending",
+      "title": "Как учить ребёнка математике дома: методики и практические советы",
+      "slug": "kak-uchit-rebenka-matematike-doma",
+      "category": "Советы родителям",
+      "keywords": "как учить математике дома",
+      "freq": 500
+    },
+    {
+      "id": "t209",
+      "status": "pending",
+      "title": "Экстернат в 10–11 классе: как пройти старшую школу быстрее",
+      "slug": "eksternat-v-10-klasse",
+      "category": "Формы обучения",
+      "keywords": "экстернат 10 11 класс",
+      "freq": 500
+    },
+    {
+      "id": "t210",
+      "status": "pending",
+      "title": "Надомное обучение по медицинским показаниям: права и порядок оформления",
+      "slug": "nadomnoe-obuchenie-po-zdorovyu",
+      "category": "Домашнее обучение",
+      "keywords": "надомное обучение по здоровью",
+      "freq": 500
+    },
+    {
+      "id": "t211",
+      "status": "pending",
+      "title": "Как проходит домашнее обучение: расписание, уроки и аттестации изнутри",
+      "slug": "kak-prohodit-domashneye-obuchenie",
+      "category": "Домашнее обучение",
+      "keywords": "как проходит домашнее обучение",
+      "freq": 500
+    },
+    {
+      "id": "t212",
+      "status": "pending",
+      "title": "Экстернат за 9 класс: как сдать ОГЭ раньше срока",
+      "slug": "eksternat-za-9-klass",
+      "category": "Формы обучения",
+      "keywords": "экстернат 9 класс ОГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t213",
+      "status": "pending",
+      "title": "Надомное vs семейное обучение: в чём принципиальная разница",
+      "slug": "chem-otlichaetsya-nadomnoe-ot-semejnogo",
+      "category": "Домашнее обучение",
+      "keywords": "надомное семейное обучение разница",
+      "freq": 500
+    },
+    {
+      "id": "t214",
+      "status": "pending",
+      "title": "Заочная форма обучения в школе: плюсы, минусы и как перейти",
+      "slug": "zaochnoe-obuchenie-v-shkole",
+      "category": "Формы обучения",
+      "keywords": "заочное обучение в школе",
+      "freq": 500
+    },
+    {
+      "id": "t215",
+      "status": "pending",
+      "title": "Семейное обучение подростка 7–9 класс: мотивация и организация",
+      "slug": "semejnoe-obuchenie-podrostok",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение подросток",
+      "freq": 500
+    },
+    {
+      "id": "t216",
+      "status": "pending",
+      "title": "Как на самом деле проходит семейное обучение: организация изнутри",
+      "slug": "semejnoe-obuchenie-kak-proishodit",
+      "category": "Домашнее обучение",
+      "keywords": "как проходит семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t217",
+      "status": "pending",
+      "title": "Семейное обучение в 10–11 классе: подготовка к ЕГЭ и поступлению",
+      "slug": "semejnoe-obuchenie-starshaya-shkola",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение старшая школа ЕГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t218",
+      "status": "pending",
+      "title": "Как проходит дистанционное обучение в школе: расписание и уроки",
+      "slug": "kak-prohodit-distancionnoe-obuchenie",
+      "category": "Формы обучения",
+      "keywords": "дистанционное обучение школа как проходит",
+      "freq": 500
+    },
+    {
+      "id": "t219",
+      "status": "pending",
+      "title": "Очно-заочная форма обучения: что это и как оформить",
+      "slug": "ochno-zaochnaya-forma-obucheniya",
+      "category": "Формы обучения",
+      "keywords": "очно-заочная форма обучения",
+      "freq": 500
+    },
+    {
+      "id": "t220",
+      "status": "pending",
+      "title": "Разновозрастное обучение: что это такое и как работает на практике",
+      "slug": "raznovozrastnoe-obuchenie",
+      "category": "Образовательные системы",
+      "keywords": "разновозрастное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t221",
+      "status": "pending",
+      "title": "Смешанное обучение (blended learning): как сочетать онлайн и очный формат",
+      "slug": "smeshannoe-obuchenie-blended",
+      "category": "Образовательные системы",
+      "keywords": "смешанное обучение blended learning",
+      "freq": 500
+    },
+    {
+      "id": "t222",
+      "status": "pending",
+      "title": "Анскулинг: обучение без программы — что это и кому подходит",
+      "slug": "anskuling-chto-eto",
+      "category": "Образовательные системы",
+      "keywords": "анскулинг что это",
+      "freq": 500
+    },
+    {
+      "id": "t223",
+      "status": "pending",
+      "title": "Обучение детей с СДВГ: как организовать учёбу и какой формат выбрать",
+      "slug": "obuchenie-detej-s-sdvg",
+      "category": "Советы родителям",
+      "keywords": "обучение ребёнок СДВГ",
+      "freq": 500
+    },
+    {
+      "id": "t224",
+      "status": "pending",
+      "title": "Обучение леворуких детей: нужно ли переучивать и как помочь",
+      "slug": "obuchenie-levshej",
+      "category": "Советы родителям",
+      "keywords": "обучение леворукий ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t225",
+      "status": "pending",
+      "title": "Обучение двуязычных детей: как поддержать оба языка и не навредить",
+      "slug": "obuchenie-dvuyazychnyh-detej",
+      "category": "Советы родителям",
+      "keywords": "обучение двуязычный ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t226",
+      "status": "pending",
+      "title": "Обучение ребёнка в эмиграции: как сохранить российскую программу за рубежом",
+      "slug": "obuchenie-rebyonka-v-emigracii",
+      "category": "Домашнее обучение",
+      "keywords": "обучение ребёнок эмиграция",
+      "freq": 500
+    },
+    {
+      "id": "t227",
+      "status": "pending",
+      "title": "Очное и заочное обучение: в чём разница и что выбрать",
+      "slug": "raznica-ochnogo-i-zaochnogo",
+      "category": "Формы обучения",
+      "keywords": "очное заочное обучение разница",
+      "freq": 500
+    },
+    {
+      "id": "t228",
+      "status": "pending",
+      "title": "Можно ли учиться дома легально: что говорит закон об образовании",
+      "slug": "legalno-li-uchitsya-doma",
+      "category": "Домашнее обучение",
+      "keywords": "домашнее обучение легально закон",
+      "freq": 500
+    },
+    {
+      "id": "t229",
+      "status": "pending",
+      "title": "Кому подходит семейное обучение: условия и кто может перейти",
+      "slug": "kto-mozhet-pereyti-na-semejnoe",
+      "category": "Домашнее обучение",
+      "keywords": "кто может перейти семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t230",
+      "status": "pending",
+      "title": "С какого класса можно перейти на семейное обучение",
+      "slug": "s-kakogo-klassa-semejnoe-obuchenie",
+      "category": "Домашнее обучение",
+      "keywords": "с какого класса семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t231",
+      "status": "pending",
+      "title": "Как устроен учебный год на семейном обучении: расписание и темп",
+      "slug": "kak-ustroen-uchebnyj-god-na-semejnom",
+      "category": "Домашнее обучение",
+      "keywords": "учебный год семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t232",
+      "status": "pending",
+      "title": "Можно ли вернуться в обычную школу после семейного обучения",
+      "slug": "mozhno-li-vernutsya-v-shkolu-posle-semejnogo",
+      "category": "Домашнее обучение",
+      "keywords": "вернуться в школу после семейного обучения",
+      "freq": 500
+    },
+    {
+      "id": "t233",
+      "status": "pending",
+      "title": "Экстернат или онлайн-школа: в чём разница и что выбрать",
+      "slug": "eksternat-vs-onlajn-shkola",
+      "category": "Формы обучения",
+      "keywords": "экстернат онлайн-школа разница",
+      "freq": 500
+    },
+    {
+      "id": "t234",
+      "status": "pending",
+      "title": "Кому подходит дистанционное обучение: честный разбор и критерии",
+      "slug": "komu-podhodit-distancionnoe-obuchenie",
+      "category": "Формы обучения",
+      "keywords": "кому подходит дистанционное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t235",
+      "status": "pending",
+      "title": "Как организовать семейное обучение с нуля: пошаговый план",
+      "slug": "kak-organizovat-semejnoe-obuchenie",
+      "category": "Домашнее обучение",
+      "keywords": "как организовать семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t236",
+      "status": "pending",
+      "title": "Семейное обучение в многодетной семье: как организовать нескольких детей",
+      "slug": "semejnoe-obuchenie-mnogodetnym",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение многодетная семья",
+      "freq": 500
+    },
+    {
+      "id": "t237",
+      "status": "pending",
+      "title": "Семейное обучение в путешествии: учёба в поездках",
+      "slug": "semejnoe-obuchenie-v-puteshestvii",
+      "category": "Домашнее обучение",
+      "keywords": "семейное обучение путешествие",
+      "freq": 500
+    },
+    {
+      "id": "t238",
+      "status": "pending",
+      "title": "Worldschooling: что это такое и как учиться путешествуя",
+      "slug": "worldschooling-chto-eto",
+      "category": "Образовательные системы",
+      "keywords": "worldschooling обучение в путешествиях",
+      "freq": 500
+    },
+    {
+      "id": "t239",
+      "status": "pending",
+      "title": "Экстернат после 9 класса: как ускоренно пройти 10–11 классы",
+      "slug": "eksternat-posle-9-klassa",
+      "category": "Формы обучения",
+      "keywords": "экстернат после 9 класса",
+      "freq": 500
+    },
+    {
+      "id": "t240",
+      "status": "pending",
+      "title": "Предпрофильная подготовка в 8–9 классе: что это и как выбрать направление",
+      "slug": "predprofilnaya-podgotovka",
+      "category": "Советы родителям",
+      "keywords": "предпрофильная подготовка 8 9 класс",
+      "freq": 500
+    },
+    {
+      "id": "t241",
+      "status": "pending",
+      "title": "Как работать с электронными учебниками: организация и лайфхаки",
+      "slug": "kak-rabotat-s-elektronnymi-uchebnikami",
+      "category": "Учёба и навыки",
+      "keywords": "электронные учебники школьник",
+      "freq": 500
+    },
+    {
+      "id": "t242",
+      "status": "pending",
+      "title": "Лучшие онлайн-ресурсы для домашнего обучения: платформы и тренажёры",
+      "slug": "onlajn-resursy-dlya-domashnego-obucheniya",
+      "category": "Домашнее обучение",
+      "keywords": "онлайн ресурсы домашнее обучение",
+      "freq": 500
+    },
+    {
+      "id": "t243",
+      "status": "pending",
+      "title": "Вечерняя школа онлайн: дистанционное обучение для работающих",
+      "slug": "vechernyaya-shkola-onlajn",
+      "category": "Формы обучения",
+      "keywords": "вечерняя школа онлайн",
+      "freq": 500
+    },
+    {
+      "id": "t244",
+      "status": "pending",
+      "title": "Как помочь ребёнку с математикой без слёз и репетиторов",
+      "slug": "kak-pomoch-s-matematicheskimi-zadachami",
+      "category": "Советы родителям",
+      "keywords": "помочь ребёнку с математикой",
+      "freq": 500
+    },
+    {
+      "id": "t245",
+      "status": "pending",
+      "title": "Как организовать учебное место дома: освещение, мебель и зонирование",
+      "slug": "kak-organizovat-uchebnoe-mesto",
+      "category": "Советы родителям",
+      "keywords": "учебное место дома школьник",
+      "freq": 500
+    },
+    {
+      "id": "t246",
+      "status": "pending",
+      "title": "Как научить ребёнка учиться самостоятельно: пошаговый подход",
+      "slug": "kak-nauchit-uchitsya-samostoyatelno",
+      "category": "Советы родителям",
+      "keywords": "учиться самостоятельно ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t247",
+      "status": "pending",
+      "title": "Как справляться с домашней работой быстро: чтобы не растягивалось на весь вечер",
+      "slug": "kak-spravitsya-s-domashnej-rabotoj",
+      "category": "Учёба и навыки",
+      "keywords": "домашняя работа быстро",
+      "freq": 500
+    },
+    {
+      "id": "t248",
+      "status": "pending",
+      "title": "Как не отвлекаться на онлайн-уроках: рабочие приёмы концентрации",
+      "slug": "kak-ne-otvlekatsya-na-urokah-onlajn",
+      "category": "Учёба и навыки",
+      "keywords": "концентрация онлайн урок",
+      "freq": 500
+    },
+    {
+      "id": "t249",
+      "status": "pending",
+      "title": "Как поступить в вуз после онлайн-школы: пошаговый план",
+      "slug": "kak-postupit-v-vuz-posle-onlajn-shkoly",
+      "category": "Поступление",
+      "keywords": "поступить в вуз онлайн-школа",
+      "freq": 500
+    },
+    {
+      "id": "t250",
+      "status": "pending",
+      "title": "Отзывы об онлайн-школах: как читать и не ошибиться с выбором",
+      "slug": "kak-chitat-otzyvy-ob-onlajn-shkolah",
+      "category": "Советы родителям",
+      "keywords": "отзывы онлайн-школа как выбрать",
+      "freq": 500
+    },
+    {
+      "id": "t251",
+      "status": "pending",
+      "title": "Онлайн-доска для учёбы: инструменты и как использовать",
+      "slug": "onlajn-doska-dlya-uchyoby",
+      "category": "Учёба и навыки",
+      "keywords": "онлайн доска учёба",
+      "freq": 500
+    },
+    {
+      "id": "t252",
+      "status": "pending",
+      "title": "Онлайн-курсы для школьников: какие бывают и как выбрать",
+      "slug": "onlajn-kursy-dlya-shkolnikov",
+      "category": "Советы родителям",
+      "keywords": "онлайн курсы школьник",
+      "freq": 500
+    },
+    {
+      "id": "t253",
+      "status": "pending",
+      "title": "Онлайн-репетитор или онлайн-школа: разница и как выбрать",
+      "slug": "onlajn-repetitor-vs-onlajn-shkola",
+      "category": "Советы родителям",
+      "keywords": "онлайн репетитор онлайн-школа разница",
+      "freq": 500
+    },
+    {
+      "id": "t254",
+      "status": "pending",
+      "title": "Онлайн-олимпиады для школьников: какие бывают и как получить льготы",
+      "slug": "onlajn-olimpiady-dlya-shkolnikov",
+      "category": "Советы родителям",
+      "keywords": "онлайн олимпиады школьники",
+      "freq": 500
+    },
+    {
+      "id": "t255",
+      "status": "pending",
+      "title": "Прокторинг на онлайн-экзаменах: что это и как подготовиться",
+      "slug": "proktoring-na-onlajn-ekzamenah",
+      "category": "Учёба и навыки",
+      "keywords": "прокторинг онлайн экзамен",
+      "freq": 500
+    },
+    {
+      "id": "t256",
+      "status": "pending",
+      "title": "Образовательные приложения для школьника: как выбрать полезные",
+      "slug": "obrazovatelnye-prilozheniya-dlya-shkolnika",
+      "category": "Учёба и навыки",
+      "keywords": "образовательные приложения школьник",
+      "freq": 500
+    },
+    {
+      "id": "t257",
+      "status": "pending",
+      "title": "Есть ли оценки в онлайн-школе и как там оценивают",
+      "slug": "ocenki-v-onlajn-shkole",
+      "category": "Формы обучения",
+      "keywords": "оценки онлайн-школа",
+      "freq": 500
+    },
+    {
+      "id": "t258",
+      "status": "pending",
+      "title": "Как получить аттестат государственного образца онлайн",
+      "slug": "kak-poluchit-attestat-onlajn",
+      "category": "Документы",
+      "keywords": "аттестат онлайн государственного образца",
+      "freq": 500
+    },
+    {
+      "id": "t259",
+      "status": "pending",
+      "title": "Как онлайн-школа готовит к ОГЭ и ЕГЭ: форматы и результаты",
+      "slug": "kak-onlajn-shkola-gotovit-k-ekzamenam",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "онлайн-школа подготовка ЕГЭ ОГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t260",
+      "status": "pending",
+      "title": "Смена школы в подростковом возрасте: как помочь адаптироваться",
+      "slug": "smena-shkoly-v-podrostkovom-vozraste",
+      "category": "Советы родителям",
+      "keywords": "смена школы подросток адаптация",
+      "freq": 500
+    },
+    {
+      "id": "t261",
+      "status": "pending",
+      "title": "Как не бояться перехода на онлайн-обучение: разбор главных страхов",
+      "slug": "kak-ne-boyatsya-perehoda-na-onlajn",
+      "category": "Формы обучения",
+      "keywords": "страх перехода онлайн обучение",
+      "freq": 500
+    },
+    {
+      "id": "t262",
+      "status": "pending",
+      "title": "Переход на домашнее обучение: с чего начать и как подготовиться",
+      "slug": "perehod-na-domashnee-obuchenie-s-chego-nachat",
+      "category": "Домашнее обучение",
+      "keywords": "переход домашнее обучение с чего начать",
+      "freq": 500
+    },
+    {
+      "id": "t263",
+      "status": "pending",
+      "title": "Первый месяц на онлайн-обучении: чего ждать и как пройти",
+      "slug": "pervyj-mesyac-na-onlajn-obuchenii",
+      "category": "Формы обучения",
+      "keywords": "первый месяц онлайн обучение",
+      "freq": 500
+    },
+    {
+      "id": "t264",
+      "status": "pending",
+      "title": "Онлайн-школа в маленьком городе: сильное образование вне мегаполиса",
+      "slug": "onlajn-shkola-v-malenkom-gorode",
+      "category": "Советы родителям",
+      "keywords": "онлайн-школа маленький город",
+      "freq": 500
+    },
+    {
+      "id": "t265",
+      "status": "pending",
+      "title": "Как перейти на онлайн-обучение в 10 классе: пошаговый план",
+      "slug": "kak-perejti-na-onlajn-v-10-klasse",
+      "category": "Формы обучения",
+      "keywords": "перейти онлайн 10 класс",
+      "freq": 500
+    },
+    {
+      "id": "t266",
+      "status": "pending",
+      "title": "Как забрать личное дело из школы: какие документы и порядок",
+      "slug": "kak-zabrat-lichnoe-delo-iz-shkoly",
+      "category": "Документы",
+      "keywords": "личное дело школа забрать",
+      "freq": 500
+    },
+    {
+      "id": "t267",
+      "status": "pending",
+      "title": "Как сообщить школе об уходе: корректно и по правилам",
+      "slug": "kak-soobshchit-shkole-ob-uhode",
+      "category": "Документы",
+      "keywords": "сообщить школе об уходе",
+      "freq": 500
+    },
+    {
+      "id": "t268",
+      "status": "pending",
+      "title": "Перевод в онлайн-школу из-за буллинга: как вернуть безопасность",
+      "slug": "perevod-v-onlajn-iz-za-bullinga",
+      "category": "Советы родителям",
+      "keywords": "перевод онлайн буллинг",
+      "freq": 500
+    },
+    {
+      "id": "t269",
+      "status": "pending",
+      "title": "Перевод в онлайн из-за здоровья: учёба без вреда для самочувствия",
+      "slug": "perevod-v-onlajn-iz-za-zdorovya",
+      "category": "Домашнее обучение",
+      "keywords": "перевод онлайн здоровье",
+      "freq": 500
+    },
+    {
+      "id": "t270",
+      "status": "pending",
+      "title": "Перевод в онлайн из-за спорта: как совмещать тренировки и учёбу",
+      "slug": "perevod-v-onlajn-iz-za-sporta",
+      "category": "Советы родителям",
+      "keywords": "онлайн школа спорт совмещать",
+      "freq": 500
+    },
+    {
+      "id": "t271",
+      "status": "pending",
+      "title": "Как понять, подходит ли онлайн-обучение вашему ребёнку",
+      "slug": "kak-ponyat-podhodit-li-onlajn-rebyonku",
+      "category": "Советы родителям",
+      "keywords": "онлайн обучение подходит ребёнку",
+      "freq": 500
+    },
+    {
+      "id": "t272",
+      "status": "pending",
+      "title": "Как рассказать ребёнку о переводе в онлайн-школу: разговор без страха",
+      "slug": "kak-rasskazat-rebyonku-o-perevode-v-onlajn",
+      "category": "Советы родителям",
+      "keywords": "рассказать ребёнку перевод онлайн",
+      "freq": 500
+    },
+    {
+      "id": "t273",
+      "status": "pending",
+      "title": "Перевод в онлайн в выпускном классе: как не навредить поступлению",
+      "slug": "perevod-v-vypusknom-klasse",
+      "category": "Формы обучения",
+      "keywords": "перевод онлайн выпускной класс",
+      "freq": 500
+    },
+    {
+      "id": "t274",
+      "status": "pending",
+      "title": "Как перейти на онлайн после болезни: без перегруза и стресса",
+      "slug": "perevod-v-onlajn-posle-bolezni",
+      "category": "Домашнее обучение",
+      "keywords": "перейти онлайн после болезни",
+      "freq": 500
+    },
+    {
+      "id": "t275",
+      "status": "pending",
+      "title": "Перевод ребёнка из государственной школы: права родителей",
+      "slug": "perevod-iz-gosudarstvennoj-shkoly",
+      "category": "Документы",
+      "keywords": "перевод государственная школа права",
+      "freq": 500
+    },
+    {
+      "id": "t276",
+      "status": "pending",
+      "title": "Как перевести ребёнка в онлайн-школу летом: почему каникулы удобны",
+      "slug": "kak-perevesti-letom",
+      "category": "Советы родителям",
+      "keywords": "перевести онлайн летом каникулы",
+      "freq": 500
+    },
+    {
+      "id": "t277",
+      "status": "pending",
+      "title": "Перевод в онлайн при переезде за границу: сохранение российской программы",
+      "slug": "perevod-v-onlajn-pri-pereezde",
+      "category": "Домашнее обучение",
+      "keywords": "онлайн школа переезд за границу",
+      "freq": 500
+    },
+    {
+      "id": "t278",
+      "status": "pending",
+      "title": "Что делать, если школа не отпускает на семейное обучение: ваши права",
+      "slug": "chto-delat-esli-shkola-ne-otpuskaet",
+      "category": "Документы",
+      "keywords": "школа не отпускает семейное обучение права",
+      "freq": 500
+    },
+    {
+      "id": "t279",
+      "status": "pending",
+      "title": "Оценки при семейном обучении: как выставляются и что значат",
+      "slug": "ocenki-pri-semejnom-obuchenii",
+      "category": "Домашнее обучение",
+      "keywords": "оценки семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t280",
+      "status": "pending",
+      "title": "Индивидуальный учебный план в школе: что это и как оформить",
+      "slug": "individualnyj-uchebnyj-plan",
+      "category": "Документы",
+      "keywords": "индивидуальный учебный план школа",
+      "freq": 500
+    },
+    {
+      "id": "t281",
+      "status": "pending",
+      "title": "Как оформить семейное обучение: документы и пошаговый порядок",
+      "slug": "kak-oformit-semejnoe-obuchenie-dokumenty",
+      "category": "Домашнее обучение",
+      "keywords": "оформить семейное обучение документы",
+      "freq": 500
+    },
+    {
+      "id": "t282",
+      "status": "pending",
+      "title": "Права родителей при семейном обучении: что гарантирует закон",
+      "slug": "prava-roditelej-na-semejnom-obuchenii",
+      "category": "Домашнее обучение",
+      "keywords": "права родителей семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t283",
+      "status": "pending",
+      "title": "Аттестат вечерней школы: равноценен ли обычному и как получить",
+      "slug": "attestat-vechernej-shkoly",
+      "category": "Документы",
+      "keywords": "аттестат вечерняя школа",
+      "freq": 500
+    },
+    {
+      "id": "t284",
+      "status": "pending",
+      "title": "Личное дело при переводе в другую школу: что это и как передаётся",
+      "slug": "lichnoe-delo-pri-perevode",
+      "category": "Документы",
+      "keywords": "личное дело перевод школа",
+      "freq": 500
+    },
+    {
+      "id": "t285",
+      "status": "pending",
+      "title": "Российский аттестат за границей: как получить онлайн из другой страны",
+      "slug": "rossijskij-attestat-za-granicej",
+      "category": "Документы",
+      "keywords": "российский аттестат за границей",
+      "freq": 500
+    },
+    {
+      "id": "t286",
+      "status": "pending",
+      "title": "Медкарта для школы: какие прививки и осмотры нужны",
+      "slug": "medkarta-dlya-shkoly",
+      "category": "Документы",
+      "keywords": "медкарта школа прививки",
+      "freq": 500
+    },
+    {
+      "id": "t287",
+      "status": "pending",
+      "title": "Уведомление о семейном обучении: как составить и подать в орган опеки",
+      "slug": "uvedomlenie-o-semejnom-obuchenii",
+      "category": "Документы",
+      "keywords": "уведомление семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t288",
+      "status": "pending",
+      "title": "Заявление на семейное обучение: образец и порядок подачи",
+      "slug": "zayavlenie-na-semejnoe-obuchenie",
+      "category": "Документы",
+      "keywords": "заявление семейное обучение образец",
+      "freq": 500
+    },
+    {
+      "id": "t289",
+      "status": "pending",
+      "title": "Документы для перевода в онлайн-школу: полный список",
+      "slug": "dokumenty-dlya-onlajn-shkoly",
+      "category": "Документы",
+      "keywords": "документы перевод онлайн-школа",
+      "freq": 500
+    },
+    {
+      "id": "t290",
+      "status": "pending",
+      "title": "Академический отпуск в школе: как оформить и кому положен",
+      "slug": "akademicheskij-otpusk-v-shkole",
+      "category": "Документы",
+      "keywords": "академический отпуск школа",
+      "freq": 500
+    },
+    {
+      "id": "t291",
+      "status": "pending",
+      "title": "Как получить аттестат без экзаменов: законные пути",
+      "slug": "kak-poluchit-attestat-bez-ekzamenov",
+      "category": "Документы",
+      "keywords": "аттестат без экзаменов",
+      "freq": 500
+    },
+    {
+      "id": "t292",
+      "status": "pending",
+      "title": "Медаль «За особые успехи в учении»: условия получения",
+      "slug": "medal-za-osobye-uspehi-shkola",
+      "category": "Документы",
+      "keywords": "медаль за особые успехи школа",
+      "freq": 500
+    },
+    {
+      "id": "t293",
+      "status": "pending",
+      "title": "Как подтвердить российское образование за рубежом: апостиль и перевод",
+      "slug": "kak-podtverdit-obrazovanie-za-rubezhom",
+      "category": "Документы",
+      "keywords": "подтвердить образование за рубежом апостиль",
+      "freq": 500
+    },
+    {
+      "id": "t294",
+      "status": "pending",
+      "title": "Обучение без прописки: право на образование и как оформить",
+      "slug": "obuchenie-bez-propiski",
+      "category": "Документы",
+      "keywords": "обучение без прописки школа",
+      "freq": 500
+    },
+    {
+      "id": "t295",
+      "status": "pending",
+      "title": "Как оформить перевод ребёнка при переезде в другой регион",
+      "slug": "kak-perehodit-mezhdu-regionami",
+      "category": "Документы",
+      "keywords": "перевод школа другой регион переезд",
+      "freq": 500
+    },
+    {
+      "id": "t296",
+      "status": "pending",
+      "title": "Заключение ПМПК: как получить и что даёт",
+      "slug": "zaklyuchenie-pmpk",
+      "category": "Документы",
+      "keywords": "ПМПК заключение школа",
+      "freq": 500
+    },
+    {
+      "id": "t297",
+      "status": "pending",
+      "title": "Золотая медаль в онлайн-школе: реально ли получить дистанционно",
+      "slug": "zolotaya-medal-v-onlajn-shkole",
+      "category": "Документы",
+      "keywords": "золотая медаль онлайн-школа",
+      "freq": 500
+    },
+    {
+      "id": "t298",
+      "status": "pending",
+      "title": "Подготовка к ВПР на домашнем обучении: сроки и форматы",
+      "slug": "podgotovka-k-vpr-na-domashnem",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ВПР домашнее обучение подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t299",
+      "status": "pending",
+      "title": "Как сдать ЕГЭ на домашнем обучении: регистрация и подготовка",
+      "slug": "kak-sdat-ege-na-domashnem-obuchenii",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ЕГЭ домашнее обучение как сдать",
+      "freq": 500
+    },
+    {
+      "id": "t300",
+      "status": "pending",
+      "title": "Как сдать ОГЭ на домашнем обучении: порядок и подготовка",
+      "slug": "kak-sdat-oge-na-domashnem-obuchenii",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ домашнее обучение как сдать",
+      "freq": 500
+    },
+    {
+      "id": "t301",
+      "status": "pending",
+      "title": "ОГЭ по истории: структура, типичные ошибки и как готовиться",
+      "slug": "oge-po-istorii",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ история подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t302",
+      "status": "pending",
+      "title": "ОГЭ по литературе: формат, сочинение и критерии оценки",
+      "slug": "oge-po-literature",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ литература подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t303",
+      "status": "pending",
+      "title": "Резервные дни ЕГЭ: кто сдаёт в резерв и как записаться",
+      "slug": "rezervnyj-den-ege",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "резервные дни ЕГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t304",
+      "status": "pending",
+      "title": "ГВЭ: что это за экзамен и кто его сдаёт вместо ЕГЭ",
+      "slug": "gve-chto-eto-za-ekzamen",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ГВЭ государственный выпускной экзамен",
+      "freq": 500
+    },
+    {
+      "id": "t305",
+      "status": "pending",
+      "title": "ОГЭ по химии: структура, задания и как готовиться",
+      "slug": "oge-po-himii-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ химия подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t306",
+      "status": "pending",
+      "title": "ОГЭ по физике: структура, эксперимент и типичные ошибки",
+      "slug": "oge-po-fizike-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ физика подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t307",
+      "status": "pending",
+      "title": "ОГЭ по географии: структура, карты и как готовиться",
+      "slug": "oge-po-geografii-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ география подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t308",
+      "status": "pending",
+      "title": "ЕГЭ по профильной математике: структура, темы и советы",
+      "slug": "ege-po-profilnoj-matematike",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ЕГЭ профильная математика",
+      "freq": 500
+    },
+    {
+      "id": "t309",
+      "status": "pending",
+      "title": "ЕГЭ по базовой математике: кому сдавать и чем отличается от профильной",
+      "slug": "ege-po-bazovoj-matematike",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ЕГЭ базовая математика",
+      "freq": 500
+    },
+    {
+      "id": "t310",
+      "status": "pending",
+      "title": "ОГЭ по английскому: письменная и устная части — как готовиться",
+      "slug": "oge-po-anglijskomu-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ английский подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t311",
+      "status": "pending",
+      "title": "ОГЭ по биологии: структура, типичные ошибки и план подготовки",
+      "slug": "oge-po-biologii-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ биология подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t312",
+      "status": "pending",
+      "title": "ОГЭ по информатике: практические задания и как готовиться",
+      "slug": "oge-po-informatike-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ОГЭ информатика подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t313",
+      "status": "pending",
+      "title": "ЕГЭ по английскому: письменная и устная части — полный разбор",
+      "slug": "ege-po-anglijskomu-podgotovka",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ЕГЭ английский подготовка",
+      "freq": 500
+    },
+    {
+      "id": "t314",
+      "status": "pending",
+      "title": "Апелляция на ЕГЭ: когда подавать и как правильно оформить",
+      "slug": "apellyaciya-ege-kak-podat",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "апелляция ЕГЭ как подать",
+      "freq": 500
+    },
+    {
+      "id": "t315",
+      "status": "pending",
+      "title": "ВПР: что это такое и зачем нужны всероссийские проверочные работы",
+      "slug": "vpr-chto-eto-takoe",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "ВПР что это всероссийские проверочные работы",
+      "freq": 500
+    },
+    {
+      "id": "t316",
+      "status": "pending",
+      "title": "Как решать тестовые задания без ошибок: ловушки и стратегии",
+      "slug": "kak-reshat-test-bez-oshibok",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "тест без ошибок стратегия",
+      "freq": 500
+    },
+    {
+      "id": "t317",
+      "status": "pending",
+      "title": "Чем ОГЭ отличается от ЕГЭ: разбираемся в экзаменах",
+      "slug": "chem-oge-otlichaetsya-ot-ege",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "разница ОГЭ ЕГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t318",
+      "status": "pending",
+      "title": "Досрочный период ЕГЭ и ОГЭ: кто может сдавать раньше",
+      "slug": "dosrochnyj-period-ege-oge",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "досрочный период ЕГЭ ОГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t319",
+      "status": "pending",
+      "title": "Осенняя пересдача ЕГЭ: кто имеет право и как подготовиться",
+      "slug": "ossennyaya-peresdacha-ege",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "осенняя пересдача ЕГЭ",
+      "freq": 500
+    },
+    {
+      "id": "t320",
+      "status": "pending",
+      "title": "Как сдать ВПР без долгой подготовки: что успеть в последний момент",
+      "slug": "kak-sdat-vpr-bez-podgotovki",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "сдать ВПР быстро",
+      "freq": 500
+    },
+    {
+      "id": "t321",
+      "status": "pending",
+      "title": "Выгорание родителей на семейном обучении: признаки и как справиться",
+      "slug": "vygoranie-roditelej-na-semejnom",
+      "category": "Советы родителям",
+      "keywords": "выгорание родители семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t322",
+      "status": "pending",
+      "title": "Как помочь ребёнку полюбить чтение: советы для домашнего обучения",
+      "slug": "kak-pomoch-rebenku-polyubit-chtenie",
+      "category": "Советы родителям",
+      "keywords": "ребёнок чтение как помочь",
+      "freq": 500
+    },
+    {
+      "id": "t323",
+      "status": "pending",
+      "title": "Как помочь ребёнку с английским языком дома: методы и ресурсы",
+      "slug": "kak-pomoch-rebenku-s-anglijskim",
+      "category": "Советы родителям",
+      "keywords": "помочь ребёнку с английским",
+      "freq": 500
+    },
+    {
+      "id": "t324",
+      "status": "pending",
+      "title": "Первый день в новой школе: как помочь ребёнку адаптироваться",
+      "slug": "pervyj-den-v-novoj-shkole",
+      "category": "Советы родителям",
+      "keywords": "первый день новая школа адаптация",
+      "freq": 500
+    },
+    {
+      "id": "t325",
+      "status": "pending",
+      "title": "Похвала и критика: как правильно хвалить и ругать ребёнка",
+      "slug": "pohvala-i-kritika-rebenka",
+      "category": "Советы родителям",
+      "keywords": "похвала критика ребёнок воспитание",
+      "freq": 500
+    },
+    {
+      "id": "t326",
+      "status": "pending",
+      "title": "Детская ложь: почему ребёнок врёт и что делать родителям",
+      "slug": "detskaya-lozh-pochemu-i-chto-delat",
+      "category": "Советы родителям",
+      "keywords": "детская ложь почему ребёнок врёт",
+      "freq": 500
+    },
+    {
+      "id": "t327",
+      "status": "pending",
+      "title": "Конфликты между братьями и сёстрами: что делать родителям",
+      "slug": "konflikty-bratev-i-syostyor",
+      "category": "Советы родителям",
+      "keywords": "конфликт братья сёстры",
+      "freq": 500
+    },
+    {
+      "id": "t328",
+      "status": "pending",
+      "title": "Застенчивый ребёнок: как помочь раскрыться и найти друзей",
+      "slug": "zastenchivyj-rebenok-kak-pomoch",
+      "category": "Советы родителям",
+      "keywords": "застенчивый ребёнок как помочь",
+      "freq": 500
+    },
+    {
+      "id": "t329",
+      "status": "pending",
+      "title": "Гиперактивный ребёнок и учёба: СДВГ и как помочь",
+      "slug": "giperaktivnyj-rebenok-uchyoba",
+      "category": "Советы родителям",
+      "keywords": "гиперактивный ребёнок СДВГ учёба",
+      "freq": 500
+    },
+    {
+      "id": "t330",
+      "status": "pending",
+      "title": "Режим сна подростка: сколько нужно спать и почему это важно для учёбы",
+      "slug": "rezhim-sna-podrostka",
+      "category": "Советы родителям",
+      "keywords": "режим сна подросток",
+      "freq": 500
+    },
+    {
+      "id": "t331",
+      "status": "pending",
+      "title": "Ребёнок хочет стать блогером: как реагировать и поддержать",
+      "slug": "rebenok-hochet-stat-blogerom",
+      "category": "Советы родителям",
+      "keywords": "ребёнок блогер как реагировать",
+      "freq": 500
+    },
+    {
+      "id": "t332",
+      "status": "pending",
+      "title": "Игровая зависимость у ребёнка: как отличить увлечение от зависимости",
+      "slug": "igrovaya-zavisimost-u-rebenka",
+      "category": "Советы родителям",
+      "keywords": "игровая зависимость ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t333",
+      "status": "pending",
+      "title": "Дислексия у школьника: признаки и как помочь с чтением",
+      "slug": "disleksiya-u-shkolnika",
+      "category": "Советы родителям",
+      "keywords": "дислексия школьник признаки",
+      "freq": 500
+    },
+    {
+      "id": "t334",
+      "status": "pending",
+      "title": "Наставник для подростка: зачем нужен значимый взрослый",
+      "slug": "nastavnik-dlya-podrostka",
+      "category": "Советы родителям",
+      "keywords": "наставник подросток значимый взрослый",
+      "freq": 500
+    },
+    {
+      "id": "t335",
+      "status": "pending",
+      "title": "Агрессия у подростка: откуда берётся и как реагировать родителям",
+      "slug": "agressiya-u-podrostka",
+      "category": "Советы родителям",
+      "keywords": "агрессия подросток что делать",
+      "freq": 500
+    },
+    {
+      "id": "t336",
+      "status": "pending",
+      "title": "Страх ошибки у ребёнка: почему боится и как снять тревожность",
+      "slug": "strah-oshibki-u-rebenka",
+      "category": "Советы родителям",
+      "keywords": "страх ошибки ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t337",
+      "status": "pending",
+      "title": "Как подростку найти друзей: почему трудно и как помочь",
+      "slug": "kak-najti-druzej-podrostku",
+      "category": "Советы родителям",
+      "keywords": "подросток найти друзей",
+      "freq": 500
+    },
+    {
+      "id": "t338",
+      "status": "pending",
+      "title": "Страх публичных выступлений у ребёнка: как помочь справиться",
+      "slug": "strah-publichnyh-vystuplenij-rebenok",
+      "category": "Советы родителям",
+      "keywords": "страх публичных выступлений ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t339",
+      "status": "pending",
+      "title": "Самооценка подростка: как формируется и что влияет",
+      "slug": "samoocenka-podrostka",
+      "category": "Советы родителям",
+      "keywords": "самооценка подросток",
+      "freq": 500
+    },
+    {
+      "id": "t340",
+      "status": "pending",
+      "title": "Низкая мотивация к учёбе: почему пропадает интерес и что делать",
+      "slug": "nizkaya-motivaciya-k-uchebe",
+      "category": "Советы родителям",
+      "keywords": "низкая мотивация учёба",
+      "freq": 500
+    },
+    {
+      "id": "t341",
+      "status": "pending",
+      "title": "Дисграфия у школьника: как помочь с письмом",
+      "slug": "disgrafiya-u-shkolnika",
+      "category": "Советы родителям",
+      "keywords": "дисграфия школьник письмо",
+      "freq": 500
+    },
+    {
+      "id": "t342",
+      "status": "pending",
+      "title": "Границы в воспитании: зачем нужны и как устанавливать без криков",
+      "slug": "granicy-v-vospitanii",
+      "category": "Советы родителям",
+      "keywords": "границы воспитание ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t343",
+      "status": "pending",
+      "title": "Кризис 7 лет: признаки, причины и как помочь ребёнку",
+      "slug": "krizis-7-let",
+      "category": "Советы родителям",
+      "keywords": "кризис 7 лет ребёнок",
+      "freq": 500
+    },
+    {
+      "id": "t344",
+      "status": "pending",
+      "title": "Инфантильность подростка: почему не взрослеет и как помочь",
+      "slug": "infantilnost-podrostka",
+      "category": "Советы родителям",
+      "keywords": "инфантильность подросток",
+      "freq": 500
+    },
+    {
+      "id": "t345",
+      "status": "pending",
+      "title": "Как готовиться к уроку эффективно: меньше времени, больше толку",
+      "slug": "kak-gotovitsya-k-uroku-effektivno",
+      "category": "Учёба и навыки",
+      "keywords": "готовиться к уроку эффективно",
+      "freq": 500
+    },
+    {
+      "id": "t346",
+      "status": "pending",
+      "title": "Дневник успехов: как вести и зачем нужен школьнику",
+      "slug": "dnevnik-uspehov-rebenka",
+      "category": "Учёба и навыки",
+      "keywords": "дневник успехов школьник",
+      "freq": 500
+    },
+    {
+      "id": "t347",
+      "status": "pending",
+      "title": "Как подготовиться к экзамену за один день: реальный план",
+      "slug": "kak-podgotovitsya-k-ekzamenu-za-den",
+      "category": "ОГЭ и ЕГЭ",
+      "keywords": "подготовиться к экзамену за день",
+      "freq": 500
+    },
+    {
+      "id": "t348",
+      "status": "pending",
+      "title": "Сколько стоит домашнее обучение: реальные цены и компенсации",
+      "slug": "skolko-stoit-domashnee-obuchenie",
+      "category": "Финансы образования",
+      "keywords": "стоимость домашнее обучение",
+      "freq": 500
+    },
+    {
+      "id": "t349",
+      "status": "pending",
+      "title": "Компенсация за семейное обучение: кому платят, сколько и как получить",
+      "slug": "kompensaciya-za-semejnoe-obuchenie",
+      "category": "Финансы образования",
+      "keywords": "компенсация семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t350",
+      "status": "pending",
+      "title": "Скрытые расходы на школу: на что реально уходят деньги",
+      "slug": "skrytye-rashody-na-shkolu",
+      "category": "Финансы образования",
+      "keywords": "скрытые расходы школа",
+      "freq": 500
+    },
+    {
+      "id": "t351",
+      "status": "pending",
+      "title": "Как сэкономить на школе: где сократить расходы без ущерба для качества",
+      "slug": "ekonomiya-na-shkole",
+      "category": "Финансы образования",
+      "keywords": "экономия школа расходы",
+      "freq": 500
+    },
+    {
+      "id": "t352",
+      "status": "pending",
+      "title": "Сколько стоит репетитор в 2026 году: цены и от чего зависят",
+      "slug": "skolko-stoit-repetitor-2026",
+      "category": "Финансы образования",
+      "keywords": "стоимость репетитор цена 2026",
+      "freq": 500
+    },
+    {
+      "id": "t353",
+      "status": "pending",
+      "title": "Сколько стоит онлайн-школа в 2026 году: диапазон цен и тарифы",
+      "slug": "skolko-stoit-onlajn-shkola-2026",
+      "category": "Финансы образования",
+      "keywords": "стоимость онлайн-школа 2026",
+      "freq": 500
+    },
+    {
+      "id": "t354",
+      "status": "pending",
+      "title": "Подработка для подростка: с какого возраста можно работать",
+      "slug": "podrabotka-dlya-podrostka",
+      "category": "Советы родителям",
+      "keywords": "подработка подросток возраст",
+      "freq": 500
+    },
+    {
+      "id": "t355",
+      "status": "pending",
+      "title": "Как оплатить онлайн-школу материнским капиталом: пошаговый разбор",
+      "slug": "materinskij-kapital-na-shkolu",
+      "category": "Финансы образования",
+      "keywords": "материнский капитал оплата школа",
+      "freq": 500
+    },
+    {
+      "id": "t356",
+      "status": "pending",
+      "title": "Льготы для многодетных семей в школе: что положено по закону",
+      "slug": "lgoty-dlya-mnogodetnyh-v-shkole",
+      "category": "Финансы образования",
+      "keywords": "льготы многодетные школа",
+      "freq": 500
+    },
+    {
+      "id": "t357",
+      "status": "pending",
+      "title": "Сколько стоит семейное обучение на самом деле: расходы и экономия",
+      "slug": "skolko-stoit-semejnoe-obuchenie",
+      "category": "Финансы образования",
+      "keywords": "стоимость семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t358",
+      "status": "pending",
+      "title": "Выплаты за семейное обучение: положены ли родителям деньги от государства",
+      "slug": "vyplaty-za-semejnoe-obuchenie",
+      "category": "Финансы образования",
+      "keywords": "выплаты семейное обучение государство",
+      "freq": 500
+    },
+    {
+      "id": "t359",
+      "status": "pending",
+      "title": "Как получить компенсацию за семейное обучение: пошаговый разбор",
+      "slug": "kak-poluchit-kompensaciyu-za-semejnoe",
+      "category": "Финансы образования",
+      "keywords": "получить компенсацию семейное обучение",
+      "freq": 500
+    },
+    {
+      "id": "t360",
+      "status": "pending",
+      "title": "Выгодно ли экстернат: сколько экономит по сравнению с обычной школой",
+      "slug": "vygodno-li-eksternat",
+      "category": "Финансы образования",
+      "keywords": "экстернат стоимость выгодно",
+      "freq": 500
+    },
+    {
+      "id": "t361",
+      "status": "pending",
+      "title": "Как платить за онлайн-школу в рассрочку: варианты и условия",
+      "slug": "kak-platit-za-onlajn-shkolu-v-rassrochku",
+      "category": "Финансы образования",
+      "keywords": "онлайн-школа рассрочка оплата",
+      "freq": 500
     }
   ]
 }

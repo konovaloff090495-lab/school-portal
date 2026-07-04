@@ -263,6 +263,8 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
   )
 }
 
+const PAGE_SIZE = 24
+
 export default function CatalogClient({
   initialRegions = [],
   initialTypes = [],
@@ -287,6 +289,7 @@ export default function CatalogClient({
   languageFilter,
   seoContent,
 }: CatalogClientProps) {
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const [filters, setFilters] = useState<Filters>({
     regions: initialRegions,
     types: initialTypes,
@@ -305,6 +308,16 @@ export default function CatalogClient({
   const router = useRouter()
   const isFirstMount = useRef(true)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  // Reset pagination when filters change (exclude sort — reorder doesn't need reset)
+  const filterKey = useMemo(() => JSON.stringify([
+    filters.regions, filters.types, filters.districts, filters.neighborhoods,
+    filters.moCities, filters.metro, filters.profiles, filters.levels,
+    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating,
+  ]), [filters.regions, filters.types, filters.districts, filters.neighborhoods,
+    filters.moCities, filters.metro, filters.profiles, filters.levels,
+    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating])
+  useEffect(() => { setVisibleCount(PAGE_SIZE) }, [filterKey])
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid')
   const [mapSchoolId, setMapSchoolId] = useState<string | null>(null)
 
@@ -1130,7 +1143,8 @@ export default function CatalogClient({
           )}
 
           {filtered.length > 0 && viewMode === 'grid' && (() => {
-            const cards = filtered.map((school, i) => {
+            const page = filtered.slice(0, visibleCount)
+            const cards = page.map((school, i) => {
               const elements: React.ReactNode[] = []
               if (i === 6) {
                 elements.push(
@@ -1142,8 +1156,26 @@ export default function CatalogClient({
               return elements
             })
             return (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                {cards}
+              <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                  {cards}
+                </div>
+                {visibleCount < filtered.length && (
+                  <div className="mt-8 text-center">
+                    <button
+                      onClick={() => setVisibleCount(n => n + PAGE_SIZE)}
+                      className="inline-flex items-center gap-2 bg-white border-2 border-[#0369A1] text-[#0369A1] hover:bg-[#0369A1] hover:text-white px-8 py-3 rounded-xl font-semibold text-sm transition-colors duration-200 cursor-pointer"
+                    >
+                      Загрузить ещё {Math.min(PAGE_SIZE, filtered.length - visibleCount)} школ
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <p className="text-xs text-gray-400 mt-2">
+                      Показано {Math.min(visibleCount, filtered.length)} из {filtered.length} школ
+                    </p>
+                  </div>
+                )}
               </div>
             )
           })()}

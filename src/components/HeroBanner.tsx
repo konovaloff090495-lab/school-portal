@@ -138,6 +138,7 @@ export default function HeroBanner() {
               background: 'rgba(0,0,0,0.28)', color: '#fff',
               border: '1px solid rgba(255,255,255,0.15)', marginBottom: 20, alignSelf: 'flex-start',
               backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
               fontFamily: 'var(--font-manrope, sans-serif)',
               whiteSpace: 'nowrap',
             }}>
@@ -174,6 +175,7 @@ export default function HeroBanner() {
                 fontFamily: 'var(--font-manrope, sans-serif)',
                 fontWeight: 600, textDecoration: 'none',
                 backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
                 whiteSpace: 'nowrap',
               }}>
                 Каталог 3&nbsp;280 школ

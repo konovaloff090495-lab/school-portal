@@ -27,7 +27,7 @@ const securityHeaders = [
       // Шрифты Google
       "font-src 'self' fonts.gstatic.com",
       // API-запросы + запросы рекламы РСЯ
-      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net",
+      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net ip-api.com",
       // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe)
       "frame-src yandex.ru *.yandex.ru yastatic.net",
       "object-src 'none'",

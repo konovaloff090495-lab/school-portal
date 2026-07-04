@@ -173,7 +173,8 @@
   {
     "city": "Махачкала",
     "slug": "makhachkala",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Томск",
@@ -184,106 +185,127 @@
   {
     "city": "Оренбург",
     "slug": "orenburg",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Кемерово",
     "slug": "kemerovo",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Новокузнецк",
     "slug": "novokuznetsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Рязань",
     "slug": "ryazan",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Астрахань",
     "slug": "astrakhan",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Набережные Челны",
     "slug": "naberezhnye-chelny",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Пенза",
     "slug": "penza",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Липецк",
     "slug": "lipetsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Тула",
     "slug": "tula",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Киров",
     "slug": "kirov",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Чебоксары",
     "slug": "cheboksary",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Калининград",
     "slug": "kaliningrad",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Брянск",
     "slug": "bryansk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Курск",
     "slug": "kursk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Иваново",
     "slug": "ivanovo",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Магнитогорск",
     "slug": "magnitogorsk",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Тверь",
     "slug": "tver",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Ставрополь",
     "slug": "stavropol",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Белгород",
     "slug": "belgorod",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Сочи",
     "slug": "sochi",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   },
   {
     "city": "Нижний Тагил",
     "slug": "nizhniy-tagil",
-    "status": "pending"
+    "status": "failed",
+    "error": "Процесс завершился с кодом 1"
   }
 ]

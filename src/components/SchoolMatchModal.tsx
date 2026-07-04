@@ -425,12 +425,12 @@ export default function SchoolMatchModal({ school }: { school: School }) {
       {open && (
         <div
           className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4"
-          style={{ background: 'rgba(15,23,42,0.55)', backdropFilter: 'blur(4px)' }}
+          style={{ background: 'rgba(15,23,42,0.55)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
           onMouseDown={e => { if (e.target === e.currentTarget) handleClose() }}
         >
           <div
             className="bg-white w-full sm:max-w-lg sm:rounded-2xl rounded-t-3xl shadow-2xl overflow-hidden"
-            style={{ maxHeight: '92dvh', overflowY: 'auto' }}
+            style={{ maxHeight: '92svh', overflowY: 'auto' }}
             onClick={e => e.stopPropagation()}
           >
             {/* Шапка */}
