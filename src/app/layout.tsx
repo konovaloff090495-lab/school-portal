@@ -8,18 +8,20 @@ import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
 import GeoPrompt from "@/components/GeoPrompt";
 
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
+const inter = Inter({ subsets: ["latin", "cyrillic"], preload: false });
 const unbounded = Unbounded({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-unbounded",
   display: "swap",
+  preload: false,
 });
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-manrope",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
