@@ -111,45 +111,58 @@
   {
     "city": "Саратов",
     "slug": "saratov",
-    "status": "in-progress",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:15:39.745Z",
+    "addedCount": 2
   },
   {
     "city": "Тюмень",
     "slug": "tyumen",
-    "status": "failed",
-    "error": "API credit balance exhausted"
+    "status": "done",
+    "error": "API credit balance exhausted",
+    "doneAt": "2026-07-08T22:16:45.425Z",
+    "addedCount": 8
   },
   {
     "city": "Тольятти",
     "slug": "tolyatti",
-    "status": "failed",
-    "error": "API credit balance exhausted"
+    "status": "done",
+    "error": "API credit balance exhausted",
+    "doneAt": "2026-07-08T22:17:27.355Z",
+    "addedCount": 1
   },
   {
     "city": "Ижевск",
     "slug": "izhevsk",
-    "status": "failed",
-    "doneAt": "2026-05-13T10:32:33.074Z",
-    "error": "Deploy failed"
+    "status": "done",
+    "doneAt": "2026-07-08T22:17:40.138Z",
+    "error": "Deploy failed",
+    "addedCount": 3
   },
   {
     "city": "Барнаул",
     "slug": "barnaul",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:18:08.337Z",
+    "addedCount": 8
   },
   {
     "city": "Ульяновск",
     "slug": "ulyanovsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:18:11.916Z",
+    "addedCount": 0
   },
   {
     "city": "Иркутск",
     "slug": "irkutsk",
-    "status": "failed",
-    "error": "API credit balance exhausted"
+    "status": "done",
+    "error": "API credit balance exhausted",
+    "doneAt": "2026-07-08T22:19:01.763Z",
+    "addedCount": 2
   },
   {
     "city": "Хабаровск",
@@ -161,20 +174,26 @@
   {
     "city": "Ярославль",
     "slug": "yaroslavl",
-    "status": "failed",
-    "error": "API credit balance exhausted"
+    "status": "done",
+    "error": "API credit balance exhausted",
+    "doneAt": "2026-07-08T22:19:36.845Z",
+    "addedCount": 0
   },
   {
     "city": "Владивосток",
     "slug": "vladivostok",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:19:37.321Z",
+    "addedCount": 0
   },
   {
     "city": "Махачкала",
     "slug": "makhachkala",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:20:13.095Z",
+    "addedCount": 0
   },
   {
     "city": "Томск",
@@ -185,49 +204,63 @@
   {
     "city": "Оренбург",
     "slug": "orenburg",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:20:48.116Z",
+    "addedCount": 0
   },
   {
     "city": "Кемерово",
     "slug": "kemerovo",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:21:26.393Z",
+    "addedCount": 0
   },
   {
     "city": "Новокузнецк",
     "slug": "novokuznetsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:22:03.367Z",
+    "addedCount": 0
   },
   {
     "city": "Рязань",
     "slug": "ryazan",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:22:38.609Z",
+    "addedCount": 0
   },
   {
     "city": "Астрахань",
     "slug": "astrakhan",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:23:13.540Z",
+    "addedCount": 0
   },
   {
     "city": "Набережные Челны",
     "slug": "naberezhnye-chelny",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:23:49.264Z",
+    "addedCount": 0
   },
   {
     "city": "Пенза",
     "slug": "penza",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "doneAt": "2026-07-08T22:24:24.362Z",
+    "addedCount": 0
   },
   {
     "city": "Липецк",
     "slug": "lipetsk",
-    "status": "failed",
+    "status": "in-progress",
     "error": "Процесс завершился с кодом 1"
   },
   {
