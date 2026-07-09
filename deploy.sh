@@ -23,6 +23,10 @@ echo "==> rsync .next на VPS..."
 rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
   .next/ $VPS:$DIR/.next/ 2>&1 | tail -3
 
+echo "==> rsync public/ на VPS (фото школ и статика)..."
+rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+  public/ $VPS:$DIR/public/ 2>&1 | tail -3
+
 echo "==> Перезапускаем PM2..."
 $SSH $VPS "pm2 restart school-portal --update-env" 2>/dev/null || \
   $SSH $VPS "pm2 start $DIR/ecosystem.config.cjs && pm2 save"
