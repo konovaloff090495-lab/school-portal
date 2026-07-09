@@ -1,6 +1,6 @@
 #!/bin/bash
 # Deploy school-portal → VPS 45.80.70.209
-# Использование: ./deploy.sh
+# Стратегия: собираем ЛОКАЛЬНО (Turbopack на VPS падает из-за RAM), rsync .next на VPS
 set -e
 
 SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
@@ -10,36 +10,25 @@ DIR="/var/www/school-portal"
 echo "==> Подключаемся к VPS..."
 until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждём..."; sleep 15; done
 
-echo "==> git pull..."
-$SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main"
+echo "==> git pull на VPS..."
+$SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main 2>&1 | tail -3"
 
-echo "==> npm ci..."
-$SSH $VPS "cd $DIR && npm ci --prefer-offline 2>&1 | tail -3"
+echo "==> npm ci на VPS..."
+$SSH $VPS "cd $DIR && npm ci --prefer-offline 2>&1 | tail -2"
 
-echo "==> Запускаем сборку (nohup, может занять 5-15 мин)..."
-$SSH $VPS "cd $DIR && rm -f /tmp/sp-build.log && nohup bash -c 'NODE_OPTIONS=\"--max-old-space-size=2048\" npm run build > /tmp/sp-build.log 2>&1 && echo BUILD_DONE >> /tmp/sp-build.log || echo BUILD_FAILED >> /tmp/sp-build.log' > /dev/null 2>&1 &"
+echo "==> Локальная сборка (Turbopack)..."
+NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
-echo "==> Ожидаем завершения сборки..."
-while true; do
-  sleep 20
-  until $SSH $VPS 'echo ok' 2>/dev/null; do sleep 10; done
-  STATUS=$($SSH $VPS 'tail -1 /tmp/sp-build.log 2>/dev/null || echo BUILDING')
-  echo "  Статус: $STATUS"
-  if [[ "$STATUS" == "BUILD_DONE" ]]; then
-    echo "✅ Сборка успешна"
-    break
-  elif [[ "$STATUS" == "BUILD_FAILED" ]]; then
-    echo "❌ Сборка упала. Лог:"
-    $SSH $VPS 'tail -30 /tmp/sp-build.log'
-    exit 1
-  fi
-done
+echo "==> rsync .next на VPS..."
+rsync -avz --delete -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+  .next/ $VPS:$DIR/.next/ 2>&1 | tail -3
 
 echo "==> Перезапускаем PM2..."
 $SSH $VPS "pm2 restart school-portal --update-env" 2>/dev/null || \
   $SSH $VPS "pm2 start $DIR/ecosystem.config.cjs && pm2 save"
 
 echo "==> Проверка..."
+until $SSH $VPS 'echo ok' 2>/dev/null; do sleep 5; done
 sleep 5
 CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/")
 echo "  HTTP: $CODE"
