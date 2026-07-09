@@ -151,8 +151,11 @@
   {
     "city": "Ульяновск",
     "slug": "ulyanovsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Все Overpass-зеркала недоступны",
+    "addedCount": 84,
+    "doneAt": "2026-07-09T13:31:39.350Z",
+    "_source": "overpass"
   },
   {
     "city": "Иркутск",
@@ -172,20 +175,29 @@
   {
     "city": "Ярославль",
     "slug": "yaroslavl",
-    "status": "failed",
-    "error": "API credit balance exhausted"
+    "status": "done",
+    "error": "API credit balance exhausted",
+    "addedCount": 93,
+    "doneAt": "2026-07-09T13:31:51.952Z",
+    "_source": "overpass"
   },
   {
     "city": "Владивосток",
     "slug": "vladivostok",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 88,
+    "doneAt": "2026-07-09T13:31:57.597Z",
+    "_source": "overpass"
   },
   {
     "city": "Махачкала",
     "slug": "makhachkala",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 49,
+    "doneAt": "2026-07-09T13:32:04.986Z",
+    "_source": "overpass"
   },
   {
     "city": "Томск",
@@ -196,127 +208,190 @@
   {
     "city": "Оренбург",
     "slug": "orenburg",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 94,
+    "doneAt": "2026-07-09T13:32:39.203Z",
+    "_source": "overpass"
   },
   {
     "city": "Кемерово",
     "slug": "kemerovo",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 86,
+    "doneAt": "2026-07-09T13:32:47.450Z",
+    "_source": "overpass"
   },
   {
     "city": "Новокузнецк",
     "slug": "novokuznetsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 68,
+    "doneAt": "2026-07-09T13:32:51.141Z",
+    "_source": "overpass"
   },
   {
     "city": "Рязань",
     "slug": "ryazan",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 70,
+    "doneAt": "2026-07-09T13:32:56.607Z",
+    "_source": "overpass"
   },
   {
     "city": "Астрахань",
     "slug": "astrakhan",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 74,
+    "doneAt": "2026-07-09T13:33:00.267Z",
+    "_source": "overpass"
   },
   {
     "city": "Набережные Челны",
     "slug": "naberezhnye-chelny",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 83,
+    "doneAt": "2026-07-09T13:33:05.321Z",
+    "_source": "overpass"
   },
   {
     "city": "Пенза",
     "slug": "penza",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 78,
+    "doneAt": "2026-07-09T13:33:09.056Z",
+    "_source": "overpass"
   },
   {
     "city": "Липецк",
     "slug": "lipetsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 58,
+    "doneAt": "2026-07-09T13:33:13.862Z",
+    "_source": "overpass"
   },
   {
     "city": "Тула",
     "slug": "tula",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 36,
+    "doneAt": "2026-07-09T13:33:19.205Z",
+    "_source": "overpass"
   },
   {
     "city": "Киров",
     "slug": "kirov",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 43,
+    "doneAt": "2026-07-09T13:33:24.928Z",
+    "_source": "overpass"
   },
   {
     "city": "Чебоксары",
     "slug": "cheboksary",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 69,
+    "doneAt": "2026-07-09T13:33:28.986Z",
+    "_source": "overpass"
   },
   {
     "city": "Калининград",
     "slug": "kaliningrad",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 70,
+    "doneAt": "2026-07-09T13:33:34.038Z",
+    "_source": "overpass"
   },
   {
     "city": "Брянск",
     "slug": "bryansk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 74,
+    "doneAt": "2026-07-09T13:33:37.746Z",
+    "_source": "overpass"
   },
   {
     "city": "Курск",
     "slug": "kursk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 91,
+    "doneAt": "2026-07-09T13:33:41.556Z",
+    "_source": "overpass"
   },
   {
     "city": "Иваново",
     "slug": "ivanovo",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 53,
+    "doneAt": "2026-07-09T13:33:46.855Z",
+    "_source": "overpass"
   },
   {
     "city": "Магнитогорск",
     "slug": "magnitogorsk",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 70,
+    "doneAt": "2026-07-09T13:33:50.608Z",
+    "_source": "overpass"
   },
   {
     "city": "Тверь",
     "slug": "tver",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 62,
+    "doneAt": "2026-07-09T13:33:54.341Z",
+    "_source": "overpass"
   },
   {
     "city": "Ставрополь",
     "slug": "stavropol",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 40,
+    "doneAt": "2026-07-09T13:33:58.088Z",
+    "_source": "overpass"
   },
   {
     "city": "Белгород",
     "slug": "belgorod",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 44,
+    "doneAt": "2026-07-09T13:34:01.819Z",
+    "_source": "overpass"
   },
   {
     "city": "Сочи",
     "slug": "sochi",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 43,
+    "doneAt": "2026-07-09T13:34:06.608Z",
+    "_source": "overpass"
   },
   {
     "city": "Нижний Тагил",
     "slug": "nizhniy-tagil",
-    "status": "failed",
-    "error": "Процесс завершился с кодом 1"
+    "status": "done",
+    "error": "Процесс завершился с кодом 1",
+    "addedCount": 65,
+    "doneAt": "2026-07-09T13:34:10.278Z",
+    "_source": "overpass"
   }
 ]
