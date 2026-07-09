@@ -135,14 +135,13 @@ async function searchYandex(name, city) {
   return null
 }
 
-// ─── Loremflickr (без ключа) ──────────────────────────────────────────────────
-// Каждый запрос с уникальным lock= возвращает стабильно одно и то же фото,
-// но разные lock дают разные фото — идеально для пула уникальных изображений.
-let flickrCounter = Date.now()
-function getLoremflickrUrl(type) {
-  const keywords = typeKeywords[type] ?? 'school,building,education'
-  const lock = (flickrCounter++) % 100000   // уникальный номер → уникальное фото
-  return `https://loremflickr.com/800/450/${keywords}?lock=${lock}`
+// ─── Picsum Photos (без ключа) ────────────────────────────────────────────────
+// picsum.photos — стабильный сервис случайных фото. Seed из slug даёт
+// уникальное, но воспроизводимое фото для каждой школы.
+function getLoremflickrUrl(type, slug = '') {
+  // Генерируем числовой seed из slug чтобы каждая школа получила уникальное фото
+  const seed = slug ? slug.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % 1000 : Math.floor(Math.random() * 1000)
+  return `https://picsum.photos/seed/${seed}/800/450`
 }
 
 // ─── Скачивание ───────────────────────────────────────────────────────────────
@@ -208,10 +207,10 @@ for (let i = 0; i < toProcess.length; i++) {
       if (photoUrl) source = 'Яндекс'
     }
 
-    // 2. Fallback: loremflickr
+    // 2. Fallback: picsum
     if (!photoUrl) {
-      photoUrl = getLoremflickrUrl(type)
-      source   = 'flickr'
+      photoUrl = getLoremflickrUrl(type, slug)
+      source   = 'picsum'
     }
 
     await downloadImage(photoUrl, destPath)
