@@ -48,7 +48,7 @@ const typeKeywords = {
 function parseSchools(filePath) {
   const content = readFileSync(filePath, 'utf-8')
   const schools = []
-  const blocks  = content.split(/\n  \{/)
+  const blocks  = content.split(/\n {2,}\{/)
 
   for (const block of blocks) {
     const slug    = block.match(/\bslug:\s*['"]([^'"]+)['"]/)?.[1]
@@ -162,7 +162,7 @@ async function downloadImage(url, destPath) {
 // ─── Основной цикл ───────────────────────────────────────────────────────────
 const allSchools = parseSchools(SCHOOLS_TS)
 const toProcess  = ONLY_MISSING
-  ? allSchools.filter(s => !existsSync(path.join(PUBLIC_DIR, `${s.slug}.jpg`)))
+  ? allSchools.filter(s => !existsSync(path.join(PUBLIC_DIR, `${s.slug}-1.jpg`)))
   : allSchools
 
 const mode =
@@ -183,10 +183,12 @@ console.log(`
 
 for (let i = 0; i < toProcess.length; i++) {
   const { slug, name, city, type } = toProcess[i]
-  const destPath = path.join(PUBLIC_DIR, `${slug}.jpg`)
-  const n        = `[${String(i + 1).padStart(String(toProcess.length).length)}/${toProcess.length}]`
+  const n = `[${String(i + 1).padStart(String(toProcess.length).length)}/${toProcess.length}]`
 
-  if (existsSync(destPath)) {
+  // Галерея использует slug-1.jpg, slug-2.jpg, slug-3.jpg
+  // OG-тег использует slug.jpg (копия первого)
+  const dest1 = path.join(PUBLIC_DIR, `${slug}-1.jpg`)
+  if (existsSync(dest1)) {
     console.log(`${n} ✅ уже есть  ${slug}`)
     stats.skipped++
     continue
@@ -195,33 +197,33 @@ for (let i = 0; i < toProcess.length; i++) {
   process.stdout.write(`${n} 🔍 ${name.slice(0, 38).padEnd(38)} `)
 
   try {
-    let photoUrl  = null
-    let source    = ''
+    let source = ''
 
-    // 1. Пробуем 2GIS / Яндекс (если есть ключ)
+    // 1. Пробуем 2GIS / Яндекс (если есть ключ) — для первого фото
+    let photoUrl1 = null
     if (TWOGIS_KEY) {
-      photoUrl = await search2GIS(name, city)
-      if (photoUrl) source = '2GIS'
+      photoUrl1 = await search2GIS(name, city)
+      if (photoUrl1) source = '2GIS'
     } else if (YANDEX_KEY) {
-      photoUrl = await searchYandex(name, city)
-      if (photoUrl) source = 'Яндекс'
+      photoUrl1 = await searchYandex(name, city)
+      if (photoUrl1) source = 'Яндекс'
     }
 
-    // 2. Fallback: picsum
-    if (!photoUrl) {
-      photoUrl = getLoremflickrUrl(type, slug)
-      source   = 'picsum'
-    }
+    // 2. Fallback: picsum — 3 разных фото (разные seed)
+    const baseSeed = slug.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % 1000
+    const url1 = photoUrl1 ?? `https://picsum.photos/seed/${baseSeed}/800/450`
+    const url2 = `https://picsum.photos/seed/${(baseSeed + 111) % 1000}/800/450`
+    const url3 = `https://picsum.photos/seed/${(baseSeed + 333) % 1000}/800/450`
+    if (!photoUrl1) source = 'picsum'
 
-    await downloadImage(photoUrl, destPath)
+    await downloadImage(url1, dest1)
+    await downloadImage(url2, path.join(PUBLIC_DIR, `${slug}-2.jpg`))
+    await downloadImage(url3, path.join(PUBLIC_DIR, `${slug}-3.jpg`))
+    // OG-копия
+    await downloadImage(url1, path.join(PUBLIC_DIR, `${slug}.jpg`))
 
-    if (source === 'flickr') {
-      console.log('🌄 flickr')
-      stats.flickr++
-    } else {
-      console.log(`✅ ${source}`)
-      stats.found++
-    }
+    console.log(`✅ ${source}`)
+    stats.found++
     progress[slug] = 'done'
     saveProgress()
 
