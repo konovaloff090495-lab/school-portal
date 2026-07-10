@@ -76,17 +76,26 @@ function detectType(name, tags = {}) {
   const op = (tags['operator:type'] || '').toLowerCase()
 
   if (/вечерн|открытая шк|сменная шк/.test(n)) return 'vechernie'
-  if (/экстерн|семейн.*(шк|образо)|шк.*семейн/.test(n)) return 'eksternal'
+  if (/экстерн/.test(n)) return 'eksternal'
+  if (/семейн.*(шк|образо|центр)|шк.*семейн|домашн.*(шк|образо)/.test(n)) return 'semejnye'
   if (/кадет/.test(n)) return 'kadetskie'
   if (/коррекц|овз/.test(n) && /шк/.test(n)) return 'korrektsionnye'
+  if (/интернат/.test(n) && /шк/.test(n)) return 'internaty'
+  if (/вальдорф/.test(n)) return 'valdorfskie'
+  if (/монтессори/.test(n)) return 'montessori'
+  if (/православ|церковн|christian|христиан/.test(n) && /шк|гимназ/.test(n)) return 'pravoslavnye'
   if (/международн/.test(n) && /шк/.test(n)) return 'mezhdunarodnie'
+  if (/спортивн/.test(n) && /шк/.test(n)) return 'sportivnye'
+  if (/шахмат/.test(n) && /шк/.test(n)) return 'shahmatnye'
   if (/гимназ/.test(n)) return 'gimnazii'
   if (/лицей/.test(n)) {
     if (/универс|вуз|инсти|академи/.test(n)) return 'pri-vuzakh'
     return 'profilnye'
   }
-  if (op === 'private' || /частн/.test(n)) return 'chastnie'
+  if (/языков|лингвист/.test(n) && /шк|гимназ|лицей/.test(n)) return 'yazykovye'
+  if (/it-|айти|программир|цифров/.test(n) && /шк|лицей/.test(n)) return 'programmirovanie'
   if (/дистанцион|онлайн/.test(n)) return 'online'
+  if (op === 'private' || /частн/.test(n)) return 'chastnie'
   return 'gosudarstvennye'
 }
 

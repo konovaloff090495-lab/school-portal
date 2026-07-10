@@ -13,9 +13,6 @@ until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждё
 echo "==> git pull на VPS..."
 $SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main 2>&1 | tail -3"
 
-echo "==> npm ci на VPS..."
-$SSH $VPS "cd $DIR && npm ci --prefer-offline 2>&1 | tail -2"
-
 echo "==> Локальная сборка (Turbopack)..."
 NODE_OPTIONS=--max-old-space-size=4096 npm run build
 

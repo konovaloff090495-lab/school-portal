@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
- * fetch-school-photos.mjs — реальные фото школ с Яндекс Картинок.
- * Задержка 3.5 сек между запросами, иначе капча.
+ * fetch-school-photos.mjs — реальные фото школ.
+ * Стратегия (как iColleges):
+ *   1. og:image с сайта самой школы (быстро, без задержки)
+ *   2. Яндекс Картинки (задержка 3.5 сек, иначе капча)
  *
  * Запуск:
  *   node scripts/fetch-school-photos.mjs --limit=50          # 50 школ
@@ -40,13 +42,39 @@ function parseSchools() {
   const schools = []
   const blocks  = src.split(/\n {2,4}\{/)
   for (const block of blocks) {
-    const slug   = block.match(/\bslug:\s*'([^']+)'/)?.[1]
-    const name   = block.match(/\bname:\s*'([^']+)'/)?.[1]
-    const city   = block.match(/\bcity:\s*'([^']+)'/)?.[1]
-    const region = block.match(/\bregion:\s*'([^']+)'/)?.[1]
-    if (slug && name && city) schools.push({ slug, name, city, region })
+    const slug    = block.match(/\bslug:\s*'([^']+)'/)?.[1]
+    const name    = block.match(/\bname:\s*'([^']+)'/)?.[1]
+    const city    = block.match(/\bcity:\s*'([^']+)'/)?.[1]
+    const region  = block.match(/\bregion:\s*'([^']+)'/)?.[1]
+    const website = block.match(/\bwebsite:\s*'([^']+)'/)?.[1]
+    if (slug && name && city) schools.push({ slug, name, city, region, website: website || '' })
   }
   return schools
+}
+
+// ─── og:image с сайта школы (как iColleges 3-fetch-photos.mjs) ──────────────
+async function fetchOgImage(website) {
+  const url = website.startsWith('http') ? website : 'https://' + website
+  const res = await fetch(url, {
+    headers: { 'User-Agent': UA, 'Accept': 'text/html,*/*' },
+    redirect: 'follow',
+    signal: AbortSignal.timeout(10_000),
+  })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const html = await res.text()
+  const finalUrl = res.url
+  const patterns = [
+    /<meta\s+[^>]*property=["']og:image(?::secure_url)?["']\s+[^>]*content=["']([^"']+)["']/i,
+    /<meta\s+[^>]*content=["']([^"']+)["']\s+[^>]*property=["']og:image(?::secure_url)?["']/i,
+    /<meta\s+[^>]*name=["']twitter:image["']\s+[^>]*content=["']([^"']+)["']/i,
+  ]
+  for (const p of patterns) {
+    const m = html.match(p)
+    if (m?.[1]) {
+      try { return new URL(m[1], finalUrl).href } catch {}
+    }
+  }
+  return null
 }
 
 // ─── Yandex Images ───────────────────────────────────────────────────────────
@@ -124,43 +152,53 @@ const stats = { ok: 0, fail: 0 }
 for (let i = 0; i < queue.length; i++) {
   if (captchaHit) { console.log('⛔ Капча — останавливаюсь'); break }
 
-  const { slug, name, city } = queue[i]
+  const { slug, name, city, website } = queue[i]
   const n = `[${String(i + 1).padStart(String(queue.length).length)}/${queue.length}]`
-  process.stdout.write(`${n} ${name.slice(0, 40).padEnd(42)} `)
+  process.stdout.write(`${n} ${name.slice(0, 38).padEnd(40)} `)
+
+  const dest1 = path.join(PUBLIC_DIR, `${slug}-1.jpg`)
+  const destOg = path.join(PUBLIC_DIR, `${slug}.jpg`)
 
   try {
-    const query = `${name} ${city} здание фото`
-    const html  = await searchYandex(query)
-    const { captcha, urls } = parseImageUrls(html)
-    if (captcha) { captchaHit = true; console.log('CAPTCHA'); stats.fail++; break }
-    if (urls.length === 0) throw new Error('нет фото')
+    let photoUrl = null
+    let source = ''
 
-    // Скачиваем до 3 фото
-    let downloaded = 0
-    for (let j = 0; j < Math.min(3, urls.length); j++) {
-      const dest = path.join(PUBLIC_DIR, `${slug}-${j + 1}.jpg`)
+    // 1. Пробуем og:image с сайта школы (без задержки)
+    if (website) {
       try {
-        await downloadImage(urls[j], dest)
-        downloaded++
-      } catch (e) {
-        // если 2-е или 3-е фото не скачалось — не страшно
-        if (j === 0) throw e
-      }
+        photoUrl = await fetchOgImage(website)
+        if (photoUrl) source = 'og:image'
+      } catch {}
     }
 
-    // OG-копия = первое фото
-    const dest1 = path.join(PUBLIC_DIR, `${slug}-1.jpg`)
-    const destOg = path.join(PUBLIC_DIR, `${slug}.jpg`)
+    // 2. Fallback: Яндекс Картинки
+    if (!photoUrl) {
+      const query = `${name} ${city} школа здание`
+      const html  = await searchYandex(query)
+      const { captcha, urls } = parseImageUrls(html)
+      if (captcha) { captchaHit = true; console.log('CAPTCHA'); stats.fail++; break }
+      if (urls.length > 0) { photoUrl = urls[0]; source = 'yandex' }
+      // Скачиваем доп. фото из Яндекса (2-е и 3-е)
+      if (urls.length > 1) {
+        for (let j = 1; j < Math.min(3, urls.length); j++) {
+          try { await downloadImage(urls[j], path.join(PUBLIC_DIR, `${slug}-${j + 1}.jpg`)) } catch {}
+        }
+      }
+      await sleep(3500)
+    }
+
+    if (!photoUrl) throw new Error('нет фото')
+
+    await downloadImage(photoUrl, dest1)
     if (existsSync(dest1)) copyFileSync(dest1, destOg)
 
-    console.log(`✅ ${downloaded} фото`)
+    console.log(`✅ [${source}]`)
     stats.ok++
   } catch (e) {
     console.log(`✗ ${e.message?.slice(0, 60)}`)
     stats.fail++
+    if (!website) await sleep(3500)  // задержка только если шли через Яндекс
   }
-
-  await sleep(3500)
 }
 
 console.log(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`)
