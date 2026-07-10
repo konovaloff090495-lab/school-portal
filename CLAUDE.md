@@ -70,6 +70,8 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 
 ## Deploy (VPS Бегет)
 
+**После любых правок — сразу деплоить без подтверждения юзера.** В ответе одна строка: «задеплоил → https://pro-schools.ru/».
+
 **Прод** — VPS 45.80.70.209, домен pro-schools.ru, PM2 `school-portal` на порту 3001, Nginx reverse-proxy с SSL (Certbot).
 
 ### Стандартный деплой

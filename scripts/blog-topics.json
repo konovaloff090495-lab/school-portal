@@ -69,13 +69,15 @@
     },
     {
       "id": "t011",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие школы Санкт-Петербурга 2026: рейтинг и как поступить",
       "slug": "luchshie-shkoly-sankt-peterburga-2026",
       "category": "Рейтинги",
       "city": "Санкт-Петербург",
       "keywords": "лучшие школы санкт-петербурга",
-      "freq": 3200
+      "freq": 3200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcqjfbfBFpBdmTVaMFsAd\"}",
+      "retryAt": "2026-07-10T03:00:03.854Z"
     },
     {
       "id": "t012",
@@ -548,13 +550,15 @@
     },
     {
       "id": "t057",
-      "status": "pending",
+      "status": "error",
       "title": "Спортивные школы Москвы: список по видам спорта",
       "slug": "sportivnye-shkoly-moskvy",
       "category": "Типы школ",
       "city": "Москва",
       "keywords": "спортивная школа москва",
-      "freq": 3200
+      "freq": 3200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcqjfeCyEeQwm8gLM7RJW\"}",
+      "retryAt": "2026-07-10T03:00:04.399Z"
     },
     {
       "id": "t058",
@@ -1108,12 +1112,14 @@
     },
     {
       "id": "t109",
-      "status": "pending",
+      "status": "error",
       "title": "Топ IT-школ России 2026: программирование с детства",
       "slug": "top-it-shkol-rossii-2026",
       "category": "Рейтинги",
       "keywords": "IT школы программирование дети",
-      "freq": 3300
+      "freq": 3300,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcqjfXPwjCfijgrDrmoMe\"}",
+      "retryAt": "2026-07-10T03:00:02.818Z"
     },
     {
       "id": "t110",
@@ -1681,12 +1687,14 @@
     },
     {
       "id": "t163",
-      "status": "pending",
+      "status": "error",
       "title": "ЕГЭ по истории 2026: что важно знать",
       "slug": "ege-istoriya-2026-chto-vazhno",
       "category": "Советы родителям",
       "keywords": "ЕГЭ история 2026",
-      "freq": 3300
+      "freq": 3300,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcqjfYtEiFebMTvmHLVrR\"}",
+      "retryAt": "2026-07-10T03:00:03.125Z"
     },
     {
       "id": "t164",
@@ -1937,12 +1945,14 @@
     },
     {
       "id": "t188",
-      "status": "pending",
+      "status": "error",
       "title": "Школьная перегрузка: признаки и как помочь ребёнку",
       "slug": "shkolnaya-peregruzka-priznaki-pomoch",
       "category": "Советы родителям",
       "keywords": "школьная перегрузка ребёнок",
-      "freq": 3300
+      "freq": 3300,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcqjfaGLbgiLVbjZXciKL\"}",
+      "retryAt": "2026-07-10T03:00:03.461Z"
     },
     {
       "id": "t189",
