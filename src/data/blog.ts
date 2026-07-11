@@ -21887,7 +21887,3 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 export function getAllPostSlugs(): string[] {
   return blogPosts.map(p => p.slug)
 }
-
-export function getAllPostSlugs(): string[] {
-  return blogPosts.map(p => p.slug)
-}
