@@ -470,12 +470,14 @@
     },
     {
       "id": "t049",
-      "status": "pending",
+      "status": "error",
       "title": "Репетитор или кружок: что выбрать для ребёнка",
       "slug": "repetitor-ili-kruzhok",
       "category": "Советы родителям",
       "keywords": "репетитор или кружок",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcuXHLtBSYT7uk7i79mee\"}",
+      "retryAt": "2026-07-12T03:00:03.145Z"
     },
     {
       "id": "t050",
@@ -502,12 +504,14 @@
     },
     {
       "id": "t052",
-      "status": "pending",
+      "status": "error",
       "title": "Вальдорфские школы в России: плюсы, минусы, список",
       "slug": "valdorfskie-shkoly-rossiya",
       "category": "Типы школ",
       "keywords": "вальдорфская школа",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcuXHMyfF3WdvweJVBYMx\"}",
+      "retryAt": "2026-07-12T03:00:03.442Z"
     },
     {
       "id": "t053",
@@ -940,12 +944,14 @@
     },
     {
       "id": "t093",
-      "status": "pending",
+      "status": "error",
       "title": "10 признаков хорошей школы: чек-лист для родителей",
       "slug": "10-priznakov-horoshej-shkoly",
       "category": "Советы родителям",
       "keywords": "признаки хорошей школы",
-      "freq": 3200
+      "freq": 3200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcuXHH4jcZ1f31eJic4qk\"}",
+      "retryAt": "2026-07-12T03:00:02.291Z"
     },
     {
       "id": "t094",
@@ -1175,12 +1181,14 @@
     },
     {
       "id": "t115",
-      "status": "pending",
+      "status": "error",
       "title": "Международная школа в России: IB, Cambridge и стоимость",
       "slug": "mezhdunarodnaya-shkola-rossiya-ib-cambridge",
       "category": "Типы школ",
       "keywords": "международная школа россия IB cambridge",
-      "freq": 3200
+      "freq": 3200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcuXHJJQBuJXmKy7HzSqd\"}",
+      "retryAt": "2026-07-12T03:00:02.550Z"
     },
     {
       "id": "t116",
@@ -1583,12 +1591,14 @@
     },
     {
       "id": "t153",
-      "status": "pending",
+      "status": "error",
       "title": "Переехали в другой город: как выбрать школу быстро",
       "slug": "pereehali-vybrat-shkolu-drugoj-gorod",
       "category": "Советы родителям",
       "keywords": "переезд выбрать школу другой город",
-      "freq": 3200
+      "freq": 3200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CcuXHKanztkaf5LUXin4f\"}",
+      "retryAt": "2026-07-12T03:00:02.884Z"
     },
     {
       "id": "t154",
