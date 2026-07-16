@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import ApproveButton from './ApproveButton'
+
+// Служебная страница модерации — не индексировать
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
 
 interface PendingReview {
   schoolSlug: string

@@ -8,23 +8,8 @@ interface Props {
   params: Promise<{ region: string; profile: string }>
 }
 
-// Профили совпадают с SCHOOL_PROFILES в CatalogClient
-const PROFILES = [
-  { id: 'math',        label: 'Физ-мат',               title: 'Физ-мат школы' },
-  { id: 'it',          label: 'IT / Программирование',  title: 'IT-школы и школы программирования' },
-  { id: 'medical',     label: 'Медицинский профиль',    title: 'Медицинские профильные школы' },
-  { id: 'sport',       label: 'Спортивный профиль',     title: 'Спортивные профильные школы' },
-  { id: 'art',         label: 'Художественный профиль', title: 'Школы искусств' },
-  { id: 'humanities',  label: 'Гуманитарный профиль',   title: 'Гуманитарные школы' },
-  { id: 'economics',   label: 'Экономический профиль',  title: 'Экономические профильные школы' },
-  { id: 'engineering', label: 'Инженерный профиль',     title: 'Инженерные школы' },
-  { id: 'languages',   label: 'Языковой профиль',       title: 'Языковые профильные школы' },
-  { id: 'music',       label: 'Музыкальный профиль',    title: 'Музыкальные школы' },
-  { id: 'ecology',     label: 'Естественнонаучный',     title: 'Естественнонаучные школы' },
-] as const
-
-type ProfileId = typeof PROFILES[number]['id']
-const profileIds = PROFILES.map(p => p.id)
+// Профили — единый источник в src/data/region-profiles.ts (используется и в sitemap.ts)
+import { REGION_PROFILES as PROFILES, regionProfileIds as profileIds, type RegionProfileId as ProfileId } from '@/data/region-profiles'
 
 export async function generateStaticParams() {
   const params: { region: string; profile: string }[] = []
