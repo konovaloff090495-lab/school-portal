@@ -1,9 +1,11 @@
 import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
-  featureSlugs, languageSlugs, metroSlugs,
-  getSchoolsByRegion, getSchoolsByRegionAndType,
+  featureSlugs, languageSlugs, metroSlugs, profileSlugs,
+  getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
+  type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
+import { regionProfileIds } from '@/data/region-profiles'
 import { gdzKlasses, gdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { blogPosts } from '@/data/blog'
@@ -64,6 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const typePages: MetadataRoute.Sitemap = regionSlugs.flatMap(region =>
     typeSlugs
+      // programmirovanie исключён: для него есть выделенный роут /shkoly/[region]/programmirovanie/,
+      // который добавляется для всех регионов в regionPodgotovkaPages (иначе дубли URL)
+      .filter(type => type !== 'programmirovanie')
       .filter(type => getSchoolsByRegionAndType(region, type).length >= 3)
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
@@ -73,12 +78,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   )
 
-  const schoolPages: MetadataRoute.Sitemap = schools.map(school => ({
-    url: `${BASE_URL}/shkola/${school.slug}/`,
-    lastModified: D_SCHOOLS,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }))
+  // Фильтр школ без slug — иначе в sitemap попадают битые /shkola/undefined/
+  const schoolPages: MetadataRoute.Sitemap = schools
+    .filter(school => school.slug)
+    .map(school => ({
+      url: `${BASE_URL}/shkola/${school.slug}/`,
+      lastModified: D_SCHOOLS,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }))
 
   const districtPages: MetadataRoute.Sitemap = moscowDistrictSlugs.map(d => ({
     url: `${BASE_URL}/shkoly/moskva/rayon/${d}/`,
@@ -201,6 +209,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const shkolyMetroPages: MetadataRoute.Sitemap = metroSlugs.map(st => ({
     url: `${BASE_URL}/shkoly/moskva/metro/${st}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
+  // Метро × тип школы (роут /shkoly/moskva/metro/[station]/[type]/ генерит все комбинации)
+  const metroTypePages: MetadataRoute.Sitemap = metroSlugs.flatMap(st =>
+    typeSlugs.map(t => ({
+      url: `${BASE_URL}/shkoly/moskva/metro/${st}/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,
+    }))
+  )
+  // Округ Москвы × тип школы (роут /shkoly/moskva/rayon/[district]/[type]/)
+  const districtTypePages: MetadataRoute.Sitemap = moscowDistrictSlugs.flatMap(d =>
+    typeSlugs.map(t => ({
+      url: `${BASE_URL}/shkoly/moskva/rayon/${d}/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
+    }))
+  )
+  // Город МО × тип школы (роут /shkoly/moskovskaya-oblast/gorod/[city]/[type]/)
+  const moCityTypePages: MetadataRoute.Sitemap = moCitySlugs.flatMap(c =>
+    typeSlugs.map(t => ({
+      url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
+    }))
+  )
+  // Регион × профиль (роут /shkoly/[region]/profilnye/[profile]/ — единый источник region-profiles.ts)
+  const regionProfilePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
+    regionProfileIds.map(p => ({
+      url: `${BASE_URL}/shkoly/${r}/profilnye/${p}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
+    }))
+  )
+  // Языковые школы: язык × регион — только комбинации, где есть школы (как в generateStaticParams роута)
+  const langRegionPages: MetadataRoute.Sitemap = languageSlugs.flatMap(l =>
+    regionSlugs
+      .filter(r => getSchoolsByLanguage(l as LanguageSlug, r as RegionSlug).length > 0)
+      .map(r => ({
+        url: `${BASE_URL}/shkoly/tipy/yazykovye/${l}/${r}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,
+      }))
+  )
+  // Профильные лендинги /shkoly/tipy/profilnye/[profile]/ (profileSlugs из schools.ts)
+  const tipyProfilnyePages: MetadataRoute.Sitemap = profileSlugs.map(p => ({
+    url: `${BASE_URL}/shkoly/tipy/profilnye/${p}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
+  }))
   // Региональные лендинги: регион × особенность / подготовка
   const regionFeaturePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
     featureSlugs.map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65 }))
@@ -208,6 +252,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionPodgotovkaPages: MetadataRoute.Sitemap = regionSlugs.flatMap(r => [
     { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-oge/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/online/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.65 },
+    { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-oge/online/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.65 },
     { url: `${BASE_URL}/shkoly/${r}/programmirovanie/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.65 },
   ])
   const staticLandingPages: MetadataRoute.Sitemap = STATIC_LANDINGS.map(path => ({
@@ -229,13 +275,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [
+  // Тесты профориентации
+  const testPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/test/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6 },
+  ]
+
+  const all: MetadataRoute.Sitemap = [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
     ...blogIndex, ...blogPostPages,
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...shkolyTypePages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
+    ...metroTypePages, ...districtTypePages, ...moCityTypePages,
+    ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,
+    ...testPages,
   ]
+
+  // Финальная дедупликация по URL — страховка от дублей в данных
+  // (дубли slug школ, задач ГДЗ и т.п.): каждый <loc> в sitemap уникален.
+  const seen = new Set<string>()
+  return all.filter(entry => {
+    if (seen.has(entry.url)) return false
+    seen.add(entry.url)
+    return true
+  })
 }

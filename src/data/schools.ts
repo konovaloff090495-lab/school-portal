@@ -63801,6 +63801,7 @@ export const schools = ([
   // ===== МОСКВА — ГОСУДАРСТВЕННЫЕ =====
   {
     id: 'gosud-moskva-1',
+    slug: 'gimnaziya-1514',
     name: 'ГБОУ Гимназия № 1514',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -63821,6 +63822,7 @@ export const schools = ([
   },
     {
     id: 'gosud-moskva-2',
+    slug: 'shkola-57',
     name: 'ГБОУ Школа № 57',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -63841,6 +63843,7 @@ export const schools = ([
   },
     {
     id: 'gosud-moskva-3',
+    slug: 'litsey-1535',
     name: 'ГБОУ Лицей № 1535',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -63861,6 +63864,7 @@ export const schools = ([
   },
     {
     id: 'gosud-moskva-4',
+    slug: 'shkola-1329',
     name: 'ГБОУ Школа № 1329',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -63944,6 +63948,7 @@ export const schools = ([
   },
     {
     id: 'gosud-moskva-8',
+    slug: 'shkola-1547',
     name: 'ГБОУ Школа № 1547',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
@@ -64048,6 +64053,7 @@ export const schools = ([
   },
     {
     id: 'gosud-moskva-13',
+    slug: 'shkola-2086',
     name: 'ГБОУ Школа № 2086',
     type: 'gosudarstvennye' as const,
     region: 'moskva' as const,
