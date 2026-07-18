@@ -166,7 +166,7 @@ export default async function SchoolPage({ params }: Props) {
 
   const faq = generateFaq(school)
 
-  const stars = Math.round(school.rating)
+  const stars = school.rating ? Math.round(school.rating) : 0
 
   const pageUrl = `https://pro-schools.ru/shkola/${school.slug}/`
   const regionName = school.region === 'moskva' ? 'Москва'
@@ -190,13 +190,17 @@ export default async function SchoolPage({ params }: Props) {
       addressRegion: regionName,
       addressCountry: 'RU',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: school.rating.toString(),
-      reviewCount: school.reviewCount.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
+    ...(school.rating && school.reviewCount > 0
+      ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: school.rating.toString(),
+            reviewCount: school.reviewCount.toString(),
+            bestRating: '5',
+            worstRating: '1',
+          },
+        }
+      : {}),
     ...(school.founded ? { foundingDate: school.founded.toString() } : {}),
     ...(school.email ? { email: school.email } : {}),
   }
@@ -248,11 +252,13 @@ export default async function SchoolPage({ params }: Props) {
           </h1>
           <p className="text-white/80 text-sm mt-1">{school.city}, {school.address}</p>
         </div>
-        <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
-          <div className="text-2xl font-bold text-gray-900">{school.rating}</div>
-          <div className="text-yellow-400 text-sm">{'★'.repeat(stars)}</div>
-          <div className="text-xs text-gray-400">{school.reviewCount} отз.</div>
-        </div>
+        {school.rating && school.reviewCount > 0 && (
+          <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
+            <div className="text-2xl font-bold text-gray-900">{school.rating}</div>
+            <div className="text-yellow-400 text-sm">{'★'.repeat(stars)}</div>
+            <div className="text-xs text-gray-400">{school.reviewCount} отз.</div>
+          </div>
+        )}
       </SchoolPageGallery>
 
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -528,7 +528,7 @@ export default function CatalogClient({
     }
     if (skip !== 'levels' && filters.levels.length)
       list = list.filter(s => getSchoolLevels(s.grades).some(l => filters.levels.includes(l)))
-    if (filters.minRating > 0) list = list.filter(s => s.rating >= filters.minRating)
+    if (filters.minRating > 0) list = list.filter(s => (s.rating ?? 0) >= filters.minRating)
     if (skip !== 'profiles' && filters.profiles.length)
       list = list.filter(s => { const p = detectProfile(s); return p && filters.profiles.includes(p) })
     if (skip !== 'features' && filters.featureFilters.length) {
@@ -614,7 +614,7 @@ export default function CatalogClient({
       }
     }
     switch (filters.sort) {
-      case 'rating': list.sort((a, b) => b.rating - a.rating); break
+      case 'rating': list.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0)); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
       case 'price_asc': list.sort((a, b) => (a.priceFrom ?? 0) - (b.priceFrom ?? 0)); break
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? 0) - (a.priceFrom ?? 0)); break
@@ -1223,7 +1223,9 @@ export default function CatalogClient({
                               {school.metro}
                             </span>
                           )}
-                          <span className="text-xs text-amber-500 font-medium">★ {school.rating}</span>
+                          {school.rating && (
+                            <span className="text-xs text-amber-500 font-medium">★ {school.rating}</span>
+                          )}
                         </div>
                       </button>
                       {/* Нижняя часть — ссылка на карточку, всегда видна */}
