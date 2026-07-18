@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -53,6 +54,15 @@ export default async function BlogPostPage({ params }: Props) {
     ? [...related, ...blogPosts.filter(p => p.slug !== slug && !related.includes(p)).slice(0, 2 - related.length)]
     : related
 
+  // Разбиваем тело статьи на секции по заголовкам <h2>, чтобы вставить
+  // рекламные блоки прямо в контент (видны на всех экранах, включая мобильные).
+  const rawHtml = sanitizeHtml(post.content)
+  const sections = rawHtml.split('</h2>').map((s, i, arr) => (i < arr.length - 1 ? s + '</h2>' : s))
+  // Позиции вставки: после 1-й секции (высоко, сразу после вступления) и в середине.
+  const adAfter = new Set<number>()
+  if (sections.length >= 2) adAfter.add(0)
+  if (sections.length >= 4) adAfter.add(Math.floor(sections.length / 2))
+
   return (
     <>
       <ArticleJsonLd post={post} url={`https://pro-schools.ru/blog/${post.slug}/`} />
@@ -102,6 +112,20 @@ export default async function BlogPostPage({ params }: Props) {
         .post-body li { margin-bottom: 8px; }
         .post-body strong { color: var(--ink); font-weight: 700; }
         .post-body em { color: var(--ink-2); font-style: italic; }
+        .in-article-ad {
+          margin: 28px 0;
+          padding: 12px 14px 14px;
+          background: #FBF9F6;
+          border: 1px solid rgba(26,24,20,0.08);
+          border-radius: 14px;
+        }
+        .in-article-ad-label {
+          display: flex; justify-content: space-between; align-items: center;
+          margin-bottom: 8px;
+          font-family: var(--font-manrope, sans-serif);
+          font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+          text-transform: uppercase; color: rgba(26,24,20,0.3);
+        }
         .blog-card-hover { transition: transform .15s, box-shadow .15s; }
         .blog-card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(60,30,10,0.08) !important; }
         .sidebar-link:hover h3 { color: var(--coral-500); }
@@ -185,7 +209,7 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </header>
 
-            {/* Article body */}
+            {/* Article body — с рекламными блоками, встроенными в контент */}
             <article
               className="post-body"
               style={{
@@ -193,8 +217,22 @@ export default async function BlogPostPage({ params }: Props) {
                 border: '1px solid rgba(26,24,20,0.07)',
                 boxShadow: '0 2px 8px rgba(60,30,10,0.04)',
               }}
-              dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
-            />
+            >
+              {sections.map((html, i) => (
+                <Fragment key={i}>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                  {adAfter.has(i) && (
+                    <div className="in-article-ad">
+                      <div className="in-article-ad-label">
+                        <span>Реклама</span>
+                        <span>16+</span>
+                      </div>
+                      <YandexRTBBanner blockId="R-A-19425636-1" suffix={`blog-inline-${i}`} />
+                    </div>
+                  )}
+                </Fragment>
+              ))}
+            </article>
 
             {/* Tags */}
             <div style={{ marginTop: 28, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
