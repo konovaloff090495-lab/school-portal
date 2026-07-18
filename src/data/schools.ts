@@ -36,7 +36,7 @@ export interface School {
   metro?: string
   district?: string
   neighborhood?: string
-  rating: number
+  rating: number | null
   reviewCount: number
   priceFrom?: number
   priceTo?: number

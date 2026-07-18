@@ -31,7 +31,7 @@ const orgSchema = {
 }
 
 export default function HomePage() {
-  const topSchools = schools.filter(s => s.rating >= 4.7).slice(0, 6)
+  const topSchools = schools.filter(s => (s.rating ?? 0) >= 4.7).slice(0, 6)
   const egeCount = getSchoolsByFeature('podgotovka-k-ege').length
   const ogeCount = getSchoolsByFeature('podgotovka-k-oge').length
   const egeOnlineCount = getSchoolsByFeature('podgotovka-k-ege').filter(s => s.type === 'online').length

@@ -249,7 +249,7 @@ function SchoolGallery({ school }: { school: School }) {
 }
 
 export default function SchoolCard({ school }: { school: School }) {
-  const stars = Math.round(school.rating)
+  const stars = school.rating ? Math.round(school.rating) : 0
 
   return (
     <article className="bg-white rounded-2xl border border-gray-200 hover:border-[#0369A1] hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
@@ -269,10 +269,12 @@ export default function SchoolCard({ school }: { school: School }) {
             </span>
           )}
         </div>
-        <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-xl px-2.5 py-1.5 text-center shadow-sm z-20 pointer-events-none">
-          <div className="text-sm font-bold text-gray-900 leading-none">{school.rating}</div>
-          <div className="text-yellow-400 text-[10px] leading-none mt-0.5">{'★'.repeat(stars)}</div>
-        </div>
+        {school.rating && (
+          <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-xl px-2.5 py-1.5 text-center shadow-sm z-20 pointer-events-none">
+            <div className="text-sm font-bold text-gray-900 leading-none">{school.rating}</div>
+            <div className="text-yellow-400 text-[10px] leading-none mt-0.5">{'★'.repeat(stars)}</div>
+          </div>
+        )}
       </div>
 
       <div className="p-4">
