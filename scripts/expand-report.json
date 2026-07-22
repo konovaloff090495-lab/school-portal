@@ -1,554 +1,279 @@
 [
   {
-    "city": "Нижневартовск",
-    "added": 7,
+    "city": "Москва",
+    "added": 1305,
     "byType": {
-      "gosudarstvennye": 3,
-      "gimnazii": 2,
-      "profilnye": 1,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Новороссийск",
-    "added": 9,
-    "byType": {
-      "gimnazii": 3,
-      "gosudarstvennye": 3,
-      "vechernie": 1,
-      "sportivnye": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Стерлитамак",
-    "added": 11,
-    "byType": {
-      "gosudarstvennye": 3,
-      "internaty": 3,
-      "gimnazii": 3,
-      "profilnye": 2
-    }
-  },
-  {
-    "city": "Сыктывкар",
-    "added": 10,
-    "byType": {
-      "gimnazii": 3,
-      "gosudarstvennye": 3,
-      "korrektsionnye": 1,
-      "profilnye": 3
-    }
-  },
-  {
-    "city": "Ангарск",
-    "added": 11,
-    "byType": {
-      "gosudarstvennye": 3,
-      "internaty": 2,
-      "vechernie": 1,
-      "profilnye": 2,
-      "korrektsionnye": 1,
-      "gimnazii": 1,
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Дзержинск",
-    "added": 6,
-    "byType": {
-      "gosudarstvennye": 3,
-      "gimnazii": 1,
-      "pravoslavnye": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Петрозаводск",
-    "added": 12,
-    "byType": {
-      "gosudarstvennye": 3,
-      "yazykovye": 2,
-      "kadetskie": 2,
-      "profilnye": 3,
-      "gimnazii": 2
-    }
-  },
-  {
-    "city": "Череповец",
-    "added": 5,
-    "byType": {
-      "gosudarstvennye": 3,
-      "korrektsionnye": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Сургут",
-    "added": 11,
-    "byType": {
-      "yazykovye": 1,
-      "pravoslavnye": 1,
-      "gosudarstvennye": 3,
-      "gimnazii": 3,
-      "profilnye": 3
-    }
-  },
-  {
-    "city": "Тольятти",
-    "added": 13,
-    "byType": {
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "gimnazii": 3,
-      "internaty": 3,
-      "pravoslavnye": 1
-    }
-  },
-  {
-    "city": "Архангельск",
-    "added": 20,
-    "byType": {
-      "vechernie": 2,
-      "sportivnye": 3,
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "pri-vuzakh": 1,
-      "gimnazii": 3,
-      "korrektsionnye": 2,
-      "kadetskie": 1,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Владимир",
-    "added": 12,
-    "byType": {
-      "gosudarstvennye": 3,
-      "gimnazii": 3,
-      "korrektsionnye": 2,
-      "internaty": 3,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Вологда",
-    "added": 8,
-    "byType": {
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "gimnazii": 1,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Курган",
-    "added": 6,
-    "byType": {
-      "gosudarstvennye": 3,
-      "gimnazii": 3
-    }
-  },
-  {
-    "city": "Владикавказ",
-    "added": 9,
-    "byType": {
-      "gosudarstvennye": 3,
-      "internaty": 1,
-      "gimnazii": 3,
-      "sportivnye": 1,
-      "chastnie": 1
-    }
-  },
-  {
-    "city": "Братск",
-    "added": 9,
-    "byType": {
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "gimnazii": 1,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Иркутск",
-    "added": 11,
-    "byType": {
-      "gosudarstvennye": 3,
-      "pravoslavnye": 1,
-      "korrektsionnye": 2,
-      "profilnye": 2,
-      "gimnazii": 2,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Смоленск",
-    "added": 15,
-    "byType": {
-      "pravoslavnye": 2,
-      "sportivnye": 3,
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "gimnazii": 3,
-      "vechernie": 1
-    }
-  },
-  {
-    "city": "Кострома",
-    "added": 12,
-    "byType": {
-      "gimnazii": 3,
-      "gosudarstvennye": 3,
-      "profilnye": 3,
-      "korrektsionnye": 2,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Улан-Удэ",
-    "added": 10,
-    "byType": {
-      "internaty": 3,
-      "gimnazii": 3,
-      "gosudarstvennye": 3,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Тюмень",
-    "added": 12,
-    "byType": {
-      "gosudarstvennye": 3,
-      "gimnazii": 3,
-      "profilnye": 3,
-      "pravoslavnye": 1,
-      "korrektsionnye": 1,
-      "kadetskie": 1
-    }
-  },
-  {
-    "city": "Махачкала",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Тула",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Сочи",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Иваново",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Нижний Тагил",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Новокузнецк",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Рязань",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Брянск",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Ярославль",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Ставрополь",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Белгород",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Магнитогорск",
-    "added": 1,
-    "byType": {
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Липецк",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Киров",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Тверь",
-    "added": 1,
-    "byType": {
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Волгоград",
-    "added": 8,
-    "byType": {
-      "chastnie": 1,
-      "internaty": 3,
-      "profilnye": 1,
-      "gimnazii": 2,
-      "kadetskie": 1
-    }
-  },
-  {
-    "city": "Кемерово",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Чебоксары",
-    "added": 3,
-    "byType": {
-      "sportivnye": 3
-    }
-  },
-  {
-    "city": "Пенза",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Оренбург",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Астрахань",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Курск",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Воронеж",
-    "added": 10,
-    "byType": {
-      "kadetskie": 2,
-      "yazykovye": 1,
-      "gimnazii": 1,
-      "internaty": 3,
-      "profilnye": 2,
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Набережные Челны",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Калининград",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Ростов-на-Дону",
-    "added": 10,
-    "byType": {
-      "gimnazii": 2,
-      "internaty": 3,
-      "profilnye": 2,
-      "vechernie": 1,
-      "mezhdunarodnie": 1,
-      "chastnie": 1
-    }
-  },
-  {
-    "city": "Уфа",
-    "added": 8,
-    "byType": {
-      "gimnazii": 1,
-      "profilnye": 2,
-      "internaty": 3,
-      "korrektsionnye": 2
-    }
-  },
-  {
-    "city": "Омск",
-    "added": 9,
-    "byType": {
-      "gimnazii": 1,
-      "gosudarstvennye": 1,
-      "profilnye": 1,
-      "internaty": 3,
-      "korrektsionnye": 1,
-      "kadetskie": 2
-    }
-  },
-  {
-    "city": "Пермь",
-    "added": 9,
-    "byType": {
-      "kadetskie": 2,
-      "profilnye": 1,
-      "gimnazii": 2,
-      "pri-vuzakh": 1,
-      "internaty": 2,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Самара",
-    "added": 12,
-    "byType": {
-      "profilnye": 2,
-      "gimnazii": 1,
-      "mezhdunarodnie": 1,
-      "internaty": 3,
-      "kadetskie": 2,
-      "chastnie": 1,
-      "korrektsionnye": 2
-    }
-  },
-  {
-    "city": "Краснодар",
-    "added": 5,
-    "byType": {
-      "profilnye": 1,
-      "internaty": 2,
-      "gimnazii": 2
-    }
-  },
-  {
-    "city": "Нижний Новгород",
-    "added": 1,
-    "byType": {
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Томск",
-    "added": 1,
-    "byType": {
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Ижевск",
-    "added": 3,
-    "byType": {
-      "sportivnye": 1,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Красноярск",
-    "added": 3,
-    "byType": {
-      "internaty": 3
-    }
-  },
-  {
-    "city": "Саратов",
-    "added": 3,
-    "byType": {
-      "pravoslavnye": 1,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Барнаул",
-    "added": 1,
-    "byType": {
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Хабаровск",
-    "added": 3,
-    "byType": {
-      "internaty": 3
-    }
-  },
-  {
-    "city": "Владивосток",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Новосибирск",
-    "added": 1,
-    "byType": {
-      "gosudarstvennye": 1
-    }
-  },
-  {
-    "city": "Ульяновск",
-    "added": 1,
-    "byType": {
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Екатеринбург",
-    "added": 0,
-    "byType": {}
-  },
-  {
-    "city": "Казань",
-    "added": 1,
-    "byType": {
-      "mezhdunarodnie": 1
+      "gosudarstvennye": 1109,
+      "mezhdunarodnie": 9,
+      "pravoslavnye": 7,
+      "profilnye": 53,
+      "chastnie": 5,
+      "gimnazii": 63,
+      "korrektsionnye": 10,
+      "internaty": 22,
+      "kadetskie": 16,
+      "vechernie": 4,
+      "sportivnye": 2,
+      "yazykovye": 5
     }
   },
   {
     "city": "Санкт-Петербург",
-    "added": 2,
+    "added": 623,
     "byType": {
-      "mezhdunarodnie": 2
+      "gosudarstvennye": 466,
+      "gimnazii": 78,
+      "profilnye": 47,
+      "chastnie": 12,
+      "kadetskie": 1,
+      "pravoslavnye": 2,
+      "vechernie": 2,
+      "internaty": 13,
+      "korrektsionnye": 1,
+      "sportivnye": 1
+    }
+  },
+  {
+    "city": "Воронеж",
+    "added": 114,
+    "byType": {
+      "vechernie": 3,
+      "gosudarstvennye": 91,
+      "gimnazii": 13,
+      "profilnye": 7
+    }
+  },
+  {
+    "city": "Самара",
+    "added": 70,
+    "byType": {
+      "gosudarstvennye": 51,
+      "profilnye": 6,
+      "gimnazii": 4,
+      "sportivnye": 1,
+      "korrektsionnye": 3,
+      "vechernie": 2,
+      "internaty": 3
+    }
+  },
+  {
+    "city": "Волгоград",
+    "added": 134,
+    "byType": {
+      "chastnie": 3,
+      "vechernie": 3,
+      "gosudarstvennye": 95,
+      "profilnye": 12,
+      "gimnazii": 13,
+      "internaty": 8
+    }
+  },
+  {
+    "city": "Омск",
+    "added": 156,
+    "byType": {
+      "gimnazii": 20,
+      "gosudarstvennye": 119,
+      "profilnye": 13,
+      "internaty": 3,
+      "vechernie": 1
+    }
+  },
+  {
+    "city": "Ростов-на-Дону",
+    "added": 116,
+    "byType": {
+      "gosudarstvennye": 74,
+      "gimnazii": 12,
+      "profilnye": 16,
+      "sportivnye": 8,
+      "internaty": 3,
+      "vechernie": 2,
+      "pravoslavnye": 1
+    }
+  },
+  {
+    "city": "Пермь",
+    "added": 106,
+    "byType": {
+      "gosudarstvennye": 79,
+      "profilnye": 12,
+      "gimnazii": 12,
+      "pravoslavnye": 1,
+      "yazykovye": 2
+    }
+  },
+  {
+    "city": "Уфа",
+    "added": 117,
+    "byType": {
+      "gosudarstvennye": 74,
+      "gimnazii": 16,
+      "profilnye": 21,
+      "korrektsionnye": 2,
+      "internaty": 4
+    }
+  },
+  {
+    "city": "Тольятти",
+    "added": 71,
+    "byType": {
+      "gosudarstvennye": 60,
+      "profilnye": 6,
+      "gimnazii": 5
+    }
+  },
+  {
+    "city": "Тюмень",
+    "added": 72,
+    "byType": {
+      "gosudarstvennye": 62,
+      "vechernie": 1,
+      "gimnazii": 9
+    }
+  },
+  {
+    "city": "Архангельск",
+    "added": 57,
+    "byType": {
+      "gosudarstvennye": 55,
+      "gimnazii": 2
+    }
+  },
+  {
+    "city": "Новосибирск",
+    "added": 220,
+    "byType": {
+      "vechernie": 8,
+      "profilnye": 21,
+      "gosudarstvennye": 168,
+      "korrektsionnye": 3,
+      "internaty": 5,
+      "gimnazii": 13,
+      "pravoslavnye": 1,
+      "kadetskie": 1
+    }
+  },
+  {
+    "city": "Нижний Новгород",
+    "added": 171,
+    "byType": {
+      "vechernie": 1,
+      "gosudarstvennye": 147,
+      "pravoslavnye": 3,
+      "gimnazii": 10,
+      "profilnye": 10
+    }
+  },
+  {
+    "city": "Иркутск",
+    "added": 0,
+    "error": "все зеркала Overpass недоступны"
+  },
+  {
+    "city": "Улан-Удэ",
+    "added": 0,
+    "error": "все зеркала Overpass недоступны"
+  },
+  {
+    "city": "Смоленск",
+    "added": 40,
+    "byType": {
+      "gosudarstvennye": 38,
+      "vechernie": 1,
+      "sportivnye": 1
+    }
+  },
+  {
+    "city": "Вологда",
+    "added": 0,
+    "error": "все зеркала Overpass недоступны"
+  },
+  {
+    "city": "Владимир",
+    "added": 39,
+    "byType": {
+      "gosudarstvennye": 39
+    }
+  },
+  {
+    "city": "Курган",
+    "added": 24,
+    "byType": {
+      "gosudarstvennye": 21,
+      "gimnazii": 3
+    }
+  },
+  {
+    "city": "Кострома",
+    "added": 32,
+    "byType": {
+      "gosudarstvennye": 26,
+      "profilnye": 3,
+      "gimnazii": 3
+    }
+  },
+  {
+    "city": "Екатеринбург",
+    "added": 193,
+    "byType": {
+      "gosudarstvennye": 143,
+      "gimnazii": 27,
+      "profilnye": 15,
+      "internaty": 6,
+      "kadetskie": 1,
+      "korrektsionnye": 1
+    }
+  },
+  {
+    "city": "Казань",
+    "added": 190,
+    "byType": {
+      "gosudarstvennye": 103,
+      "gimnazii": 46,
+      "vechernie": 2,
+      "internaty": 8,
+      "profilnye": 26,
+      "chastnie": 1,
+      "kadetskie": 1,
+      "korrektsionnye": 3
     }
   },
   {
     "city": "Челябинск",
-    "added": 2,
+    "added": 140,
     "byType": {
-      "internaty": 2
+      "gosudarstvennye": 107,
+      "gimnazii": 5,
+      "profilnye": 16,
+      "korrektsionnye": 4,
+      "internaty": 6,
+      "pravoslavnye": 1,
+      "sportivnye": 1
+    }
+  },
+  {
+    "city": "Красноярск",
+    "added": 114,
+    "byType": {
+      "gosudarstvennye": 86,
+      "profilnye": 14,
+      "korrektsionnye": 3,
+      "gimnazii": 9,
+      "kadetskie": 1,
+      "internaty": 1
+    }
+  },
+  {
+    "city": "Саратов",
+    "added": 103,
+    "byType": {
+      "gimnazii": 8,
+      "gosudarstvennye": 69,
+      "vechernie": 2,
+      "profilnye": 18,
+      "internaty": 3,
+      "kadetskie": 3
     }
   }
 ]

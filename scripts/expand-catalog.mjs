@@ -30,6 +30,9 @@ const args = Object.fromEntries(
 const DRY   = Boolean(args.dry)
 const LIMIT = parseInt(args.limit ?? '0')
 const MIN   = parseInt(args.min ?? '3')
+// --full=Москва,Самара — забрать из OSM ВСЕ школы этих городов, а не только дефицит.
+// Режим для крупных городов, где покрытие 5–30% (Москва: 155 наших против 1921 в OSM).
+const FULL  = typeof args.full === 'string' ? args.full.split(',').map(s => s.trim()).filter(Boolean) : null
 
 const OVERPASS_MIRRORS = [
   'https://overpass.kumi.systems/api/interpreter',
@@ -345,15 +348,35 @@ for (const r of regionSlugs) {
   }
 }
 
-let cities = Object.keys(deficitByCity)
-  .map(r => ({ slug: r, name: regionLabels[r], nameIn: regionLabelsIn[r] ?? `в ${regionLabels[r]}`, need: deficitByCity[r] }))
-  .filter(c => c.name && c.name !== 'Московская область')  // МО — не город, Overpass по нему не работает
-  .sort((a, b) => Object.values(b.need).reduce((x, y) => x + y, 0) - Object.values(a.need).reduce((x, y) => x + y, 0))
+// В режиме --full лимит на тип снимается: берём всё, что есть в OSM по этим городам
+const UNLIMITED = 10_000
+let cities
+if (FULL) {
+  const bySlug = Object.fromEntries(regionSlugs.map(r => [regionLabels[r], r]))
+  cities = FULL.map(name => {
+    const slug = bySlug[name]
+    if (!slug) { console.log(`⚠️  город «${name}» не заведён в regionSlugs — пропускаю`); return null }
+    return {
+      slug, name,
+      nameIn: regionLabelsIn[slug] ?? `в ${name}`,
+      need: Object.fromEntries([...OSM_TYPES].map(t => [t, UNLIMITED])),
+    }
+  }).filter(Boolean)
+} else {
+  cities = Object.keys(deficitByCity)
+    .map(r => ({ slug: r, name: regionLabels[r], nameIn: regionLabelsIn[r] ?? `в ${regionLabels[r]}`, need: deficitByCity[r] }))
+    .filter(c => c.name && c.name !== 'Московская область')  // МО — не город, Overpass по нему не работает
+    .sort((a, b) => Object.values(b.need).reduce((x, y) => x + y, 0) - Object.values(a.need).reduce((x, y) => x + y, 0))
+}
 
 if (LIMIT > 0) cities = cities.slice(0, LIMIT)
 
-console.log(`\n🎯 Городов с дефицитом (порог ${MIN} школ на тип): ${cities.length}`)
-console.log(`   Всего не хватает школ: ${cities.reduce((a, c) => a + Object.values(c.need).reduce((x, y) => x + y, 0), 0)}`)
+if (FULL) {
+  console.log(`\n🎯 Полная загрузка из OSM по городам: ${cities.map(c => c.name).join(', ')}`)
+} else {
+  console.log(`\n🎯 Городов с дефицитом (порог ${MIN} школ на тип): ${cities.length}`)
+  console.log(`   Всего не хватает школ: ${cities.reduce((a, c) => a + Object.values(c.need).reduce((x, y) => x + y, 0), 0)}`)
+}
 if (DRY) console.log('   Режим: DRY RUN, файл не меняется\n')
 
 let totalAdded = 0
@@ -361,7 +384,7 @@ const report = []
 
 for (const [i, city] of cities.entries()) {
   const wanted = city.need
-  console.log(`\n[${i + 1}/${cities.length}] ${city.name} — нужно: ${Object.entries(wanted).map(([t, n]) => `${t}×${n}`).join(', ')}`)
+  console.log(`\n[${i + 1}/${cities.length}] ${city.name}${FULL ? ' — забираем всё' : ` — нужно: ${Object.entries(wanted).map(([t, n]) => `${t}×${n}`).join(', ')}`}`)
 
   let elements
   try {
