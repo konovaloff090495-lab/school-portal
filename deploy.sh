@@ -48,7 +48,16 @@ rsync_retry "public/" "$DIR/public/" "public"
 # Гейт безопасности: если .next долит не полностью (обрыв SSH), BUILD_ID на VPS
 # не совпадёт с локальным — прерываемся БЕЗ рестарта, чтобы не поднять неполный билд.
 echo "==> Сверяем BUILD_ID на VPS..."
-VPS_BUILD_ID=$($SSH $VPS "cat $DIR/.next/BUILD_ID" 2>/dev/null || echo "")
+# SSH на этом VPS регулярно рвётся ("banner exchange"). Одна неудачная попытка
+# читала пустую строку, гейт срабатывал вхолостую и PM2 не перезапускался,
+# хотя .next был долит полностью. Читаем BUILD_ID с ретраями.
+VPS_BUILD_ID=""
+for attempt in 1 2 3 4 5; do
+  VPS_BUILD_ID=$($SSH $VPS "cat $DIR/.next/BUILD_ID" 2>/dev/null || echo "")
+  [[ -n "$VPS_BUILD_ID" ]] && break
+  echo "  ⚠️  не смог прочитать BUILD_ID (попытка $attempt/5), повтор через 15 с"
+  sleep 15
+done
 if [[ "$VPS_BUILD_ID" != "$LOCAL_BUILD_ID" ]]; then
   echo "❌ BUILD_ID на VPS ('$VPS_BUILD_ID') != локального ('$LOCAL_BUILD_ID')."
   echo "   .next долит не полностью — PM2 НЕ перезапускаем, прод остаётся на прежнем билде."
