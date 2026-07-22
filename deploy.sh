@@ -31,7 +31,20 @@ echo "==> Подключаемся к VPS..."
 until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждём..."; sleep 15; done
 
 echo "==> git pull на VPS..."
-$SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main 2>&1 | tail -3"
+# SSH тут регулярно рвётся на banner exchange. Со `set -e` одна неудачная попытка
+# роняла весь деплой ещё до сборки — поэтому ретраим.
+git_pull_ok=0
+for attempt in 1 2 3 4 5; do
+  if $SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main 2>&1 | tail -3"; then
+    git_pull_ok=1; break
+  fi
+  echo "  ⚠️  git pull не удался (попытка $attempt/5), повтор через 15 с"
+  sleep 15
+done
+if [[ "$git_pull_ok" != "1" ]]; then
+  echo "❌ git pull на VPS не прошёл после 5 попыток — выходим, прод не тронут."
+  exit 1
+fi
 
 echo "==> Локальная сборка (Turbopack)..."
 NODE_OPTIONS=--max-old-space-size=4096 npm run build
@@ -66,8 +79,20 @@ fi
 echo "  ✓ BUILD_ID совпал: $VPS_BUILD_ID"
 
 echo "==> Перезапускаем PM2..."
-$SSH $VPS "pm2 restart school-portal --update-env" 2>/dev/null || \
-  $SSH $VPS "pm2 start $DIR/ecosystem.config.cjs && pm2 save"
+# Самый обидный момент для обрыва: .next уже долит и сверен, а рестарт не прошёл —
+# прод остаётся на старом билде при полностью готовом новом.
+restart_ok=0
+for attempt in 1 2 3 4 5; do
+  if $SSH $VPS "pm2 restart school-portal --update-env" 2>/dev/null; then restart_ok=1; break; fi
+  if $SSH $VPS "pm2 start $DIR/ecosystem.config.cjs && pm2 save" 2>/dev/null; then restart_ok=1; break; fi
+  echo "  ⚠️  рестарт PM2 не удался (попытка $attempt/5), повтор через 15 с"
+  sleep 15
+done
+if [[ "$restart_ok" != "1" ]]; then
+  echo "❌ PM2 не перезапустился после 5 попыток. .next долит и сверен —"
+  echo "   допинать вручную: ssh root@45.80.70.209 'pm2 restart school-portal'"
+  exit 1
+fi
 
 echo "==> Проверка..."
 until $SSH $VPS 'echo ok' 2>/dev/null; do sleep 5; done
