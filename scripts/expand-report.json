@@ -1,570 +1,100 @@
 [
   {
-    "city": "Мурманск",
-    "added": 65,
-    "byType": {
-      "gosudarstvennye": 40,
-      "korrektsionnye": 3,
-      "gimnazii": 14,
-      "profilnye": 3,
-      "vechernie": 1,
-      "internaty": 2,
-      "mezhdunarodnie": 1,
-      "chastnie": 1
-    }
-  },
-  {
-    "city": "Севастополь",
-    "added": 44,
-    "byType": {
-      "sportivnye": 1,
-      "gimnazii": 9,
-      "gosudarstvennye": 31,
-      "internaty": 2,
-      "profilnye": 1
-    }
-  },
-  {
     "city": "Старый Оскол",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
+    "added": 32,
+    "byType": {
+      "profilnye": 1,
+      "gosudarstvennye": 29,
+      "korrektsionnye": 1,
+      "gimnazii": 1
+    }
   },
   {
     "city": "Калуга",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Грозный",
-    "added": 38,
+    "added": 51,
     "byType": {
-      "gosudarstvennye": 29,
-      "gimnazii": 6,
+      "gosudarstvennye": 44,
+      "internaty": 4,
       "chastnie": 1,
-      "profilnye": 1,
-      "yazykovye": 1
+      "gimnazii": 1,
+      "profilnye": 1
     }
   },
   {
     "city": "Чита",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Орёл",
-    "added": 40,
+    "added": 44,
     "byType": {
-      "gimnazii": 4,
-      "profilnye": 8,
-      "gosudarstvennye": 28
+      "gosudarstvennye": 41,
+      "gimnazii": 1,
+      "internaty": 1,
+      "korrektsionnye": 1
     }
   },
   {
     "city": "Симферополь",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Рыбинск",
-    "added": 37,
+    "added": 45,
     "byType": {
-      "gosudarstvennye": 30,
-      "gimnazii": 2,
-      "profilnye": 2,
-      "internaty": 2,
-      "vechernie": 1
-    }
-  },
-  {
-    "city": "Великий Новгород",
-    "added": 36,
-    "byType": {
-      "gosudarstvennye": 27,
-      "gimnazii": 9
-    }
-  },
-  {
-    "city": "Шахты",
-    "added": 49,
-    "byType": {
-      "vechernie": 1,
-      "profilnye": 4,
-      "gosudarstvennye": 40,
-      "gimnazii": 2,
-      "internaty": 1,
-      "kadetskie": 1
-    }
-  },
-  {
-    "city": "Волжский",
-    "added": 28,
-    "byType": {
-      "gosudarstvennye": 22,
-      "profilnye": 2,
-      "gimnazii": 2,
-      "kadetskie": 1,
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Норильск",
-    "added": 40,
-    "byType": {
-      "sportivnye": 1,
-      "gosudarstvennye": 32,
-      "profilnye": 2,
-      "gimnazii": 5
-    }
-  },
-  {
-    "city": "Тамбов",
-    "added": 35,
-    "byType": {
-      "profilnye": 6,
-      "gosudarstvennye": 26,
-      "gimnazii": 2,
-      "kadetskie": 1
-    }
-  },
-  {
-    "city": "Псков",
-    "added": 30,
-    "byType": {
-      "gosudarstvennye": 14,
-      "korrektsionnye": 6,
-      "profilnye": 8,
-      "vechernie": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Абакан",
-    "added": 23,
-    "byType": {
-      "gosudarstvennye": 17,
-      "pravoslavnye": 1,
-      "internaty": 3,
-      "profilnye": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Петропавловск-Камчатский",
-    "added": 38,
-    "byType": {
-      "gimnazii": 1,
-      "vechernie": 1,
-      "gosudarstvennye": 34,
-      "korrektsionnye": 1,
-      "profilnye": 1
+      "gosudarstvennye": 36,
+      "gimnazii": 5,
+      "profilnye": 3,
+      "internaty": 1
     }
   },
   {
     "city": "Октябрьский",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Южно-Сахалинск",
-    "added": 30,
+    "added": 26,
     "byType": {
-      "vechernie": 2,
       "gosudarstvennye": 21,
       "gimnazii": 3,
-      "sportivnye": 1,
-      "korrektsionnye": 1,
-      "profilnye": 2
-    }
-  },
-  {
-    "city": "Нальчик",
-    "added": 33,
-    "byType": {
-      "sportivnye": 4,
-      "profilnye": 1,
-      "gimnazii": 5,
-      "gosudarstvennye": 23
-    }
-  },
-  {
-    "city": "Нижнекамск",
-    "added": 36,
-    "byType": {
-      "korrektsionnye": 1,
-      "gosudarstvennye": 25,
-      "gimnazii": 4,
-      "internaty": 4,
-      "profilnye": 2
-    }
-  },
-  {
-    "city": "Златоуст",
-    "added": 25,
-    "byType": {
-      "gosudarstvennye": 24,
-      "sportivnye": 1
-    }
-  },
-  {
-    "city": "Благовещенск",
-    "added": 30,
-    "byType": {
-      "gimnazii": 5,
-      "pri-vuzakh": 1,
-      "gosudarstvennye": 21,
-      "internaty": 1,
-      "kadetskie": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Армавир",
-    "added": 16,
-    "byType": {
-      "gosudarstvennye": 14,
-      "internaty": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Прокопьевск",
-    "added": 21,
-    "byType": {
-      "gosudarstvennye": 18,
-      "internaty": 2,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Находка",
-    "added": 18,
-    "byType": {
-      "gosudarstvennye": 16,
-      "gimnazii": 1,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Бийск",
-    "added": 22,
-    "byType": {
-      "gosudarstvennye": 18,
-      "vechernie": 1,
-      "pravoslavnye": 1,
-      "internaty": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Элиста",
-    "added": 20,
-    "byType": {
-      "gosudarstvennye": 9,
-      "profilnye": 3,
-      "gimnazii": 6,
-      "vechernie": 1,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Таганрог",
-    "added": 24,
-    "byType": {
-      "gosudarstvennye": 21,
-      "gimnazii": 1,
       "profilnye": 2
     }
   },
   {
     "city": "Северодвинск",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Йошкар-Ола",
-    "added": 32,
-    "byType": {
-      "gosudarstvennye": 21,
-      "korrektsionnye": 2,
-      "gimnazii": 4,
-      "profilnye": 3,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Саранск",
-    "added": 37,
-    "byType": {
-      "gosudarstvennye": 27,
-      "gimnazii": 5,
-      "profilnye": 5
-    }
-  },
-  {
-    "city": "Миасс",
     "added": 31,
     "byType": {
-      "chastnie": 1,
-      "profilnye": 1,
-      "gosudarstvennye": 25,
+      "gosudarstvennye": 22,
+      "gimnazii": 5,
+      "kadetskie": 1,
       "korrektsionnye": 2,
-      "gimnazii": 1,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Якутск",
-    "added": 21,
-    "byType": {
-      "gosudarstvennye": 17,
-      "profilnye": 2,
-      "gimnazii": 2
-    }
-  },
-  {
-    "city": "Каменск-Уральский",
-    "added": 32,
-    "byType": {
-      "gosudarstvennye": 30,
-      "profilnye": 1,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Энгельс",
-    "added": 21,
-    "byType": {
-      "gosudarstvennye": 16,
-      "gimnazii": 1,
-      "internaty": 3,
-      "kadetskie": 1
-    }
-  },
-  {
-    "city": "Альметьевск",
-    "added": 28,
-    "byType": {
-      "gosudarstvennye": 21,
-      "gimnazii": 3,
-      "profilnye": 2,
-      "korrektsionnye": 1,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Нефтекамск",
-    "added": 16,
-    "byType": {
-      "gosudarstvennye": 12,
-      "profilnye": 1,
-      "gimnazii": 1,
-      "internaty": 2
+      "profilnye": 1
     }
   },
   {
     "city": "Копейск",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Черкесск",
-    "added": 19,
-    "byType": {
-      "gosudarstvennye": 10,
-      "gimnazii": 8,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Новочеркасск",
     "added": 24,
     "byType": {
-      "gosudarstvennye": 20,
-      "kadetskie": 1,
-      "internaty": 1,
-      "yazykovye": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Майкоп",
-    "added": 21,
-    "byType": {
-      "gosudarstvennye": 15,
-      "gimnazii": 3,
-      "profilnye": 2,
-      "internaty": 1
-    }
-  },
-  {
-    "city": "Керчь",
-    "added": 22,
-    "byType": {
-      "gosudarstvennye": 18,
-      "internaty": 2,
-      "profilnye": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Балаково",
-    "added": 21,
-    "byType": {
-      "gosudarstvennye": 18,
-      "gimnazii": 2,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Дербент",
-    "added": 16,
-    "byType": {
-      "gosudarstvennye": 15,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Ковров",
-    "added": 15,
-    "byType": {
-      "gosudarstvennye": 12,
-      "sportivnye": 1,
-      "profilnye": 1,
-      "gimnazii": 1
-    }
-  },
-  {
-    "city": "Ялта",
-    "added": 19,
-    "byType": {
-      "gosudarstvennye": 17,
-      "korrektsionnye": 1,
-      "gimnazii": 1
+      "sportivnye": 2,
+      "gosudarstvennye": 22
     }
   },
   {
     "city": "Обнинск",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Салават",
-    "added": 13,
+    "added": 18,
     "byType": {
-      "gosudarstvennye": 9,
-      "gimnazii": 2,
-      "profilnye": 2
-    }
-  },
-  {
-    "city": "Нефтеюганск",
-    "added": 14,
-    "byType": {
-      "profilnye": 1,
-      "gosudarstvennye": 13
-    }
-  },
-  {
-    "city": "Муром",
-    "added": 15,
-    "byType": {
-      "gosudarstvennye": 11,
-      "gimnazii": 1,
-      "profilnye": 1,
-      "internaty": 1,
-      "pravoslavnye": 1
-    }
-  },
-  {
-    "city": "Ухта",
-    "added": 17,
-    "byType": {
-      "gosudarstvennye": 13,
-      "internaty": 1,
-      "profilnye": 2,
-      "korrektsionnye": 1
-    }
-  },
-  {
-    "city": "Уссурийск",
-    "added": 17,
-    "byType": {
-      "gimnazii": 3,
-      "vechernie": 1,
-      "gosudarstvennye": 11,
-      "internaty": 2
-    }
-  },
-  {
-    "city": "Магадан",
-    "added": 14,
-    "byType": {
-      "gimnazii": 2,
-      "gosudarstvennye": 12
-    }
-  },
-  {
-    "city": "Елабуга",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Воркута",
-    "added": 6,
-    "byType": {
-      "profilnye": 1,
-      "gimnazii": 2,
+      "mezhdunarodnie": 1,
       "internaty": 2,
-      "gosudarstvennye": 1
-    }
-  },
-  {
-    "city": "Пятигорск",
-    "added": 15,
-    "byType": {
-      "internaty": 1,
-      "gosudarstvennye": 12,
-      "sportivnye": 1,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Первоуральск",
-    "added": 17,
-    "byType": {
-      "gosudarstvennye": 16,
-      "profilnye": 1
-    }
-  },
-  {
-    "city": "Ачинск",
-    "added": 0,
-    "error": "все зеркала Overpass недоступны"
-  },
-  {
-    "city": "Ханты-Мансийск",
-    "added": 13,
-    "byType": {
-      "gosudarstvennye": 11,
-      "internaty": 1,
+      "gosudarstvennye": 14,
       "gimnazii": 1
     }
   },
   {
-    "city": "Новый Уренгой",
-    "added": 13,
+    "city": "Елабуга",
+    "added": 15,
     "byType": {
-      "gosudarstvennye": 13
+      "gosudarstvennye": 11,
+      "gimnazii": 3,
+      "korrektsionnye": 1
     }
   },
   {
-    "city": "Зеленодольск",
-    "added": 14,
+    "city": "Ачинск",
+    "added": 17,
     "byType": {
-      "gimnazii": 3,
-      "sportivnye": 1,
-      "gosudarstvennye": 7,
-      "profilnye": 3
+      "gosudarstvennye": 13,
+      "korrektsionnye": 2,
+      "internaty": 1,
+      "profilnye": 1
     }
   }
 ]
