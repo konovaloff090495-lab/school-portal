@@ -41,7 +41,7 @@ const body = src.slice(start, end)
 const tail = src.slice(end)
 
 // Режем тело на блоки по «\n  {\n» — карточки лежат ровно на этом отступе
-const blocks = body.split(/\n(?=  \{\n)/)
+const blocks = body.split(/\n(?=\s*\{\n)/)
 const field = (b, name) => {
   const m = b.match(new RegExp(`\\n    ${name}: '((?:[^'\\\\]|\\\\.)*)'`))
   return m ? m[1].replace(/\\'/g, "'").replace(/\\\\/g, '\\') : null
