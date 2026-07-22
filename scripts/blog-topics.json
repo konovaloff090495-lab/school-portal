@@ -644,12 +644,14 @@
     },
     {
       "id": "t065",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие физмат школы России: топ-20",
       "slug": "luchshie-fizmat-shkoly-rossii",
       "category": "Рейтинги",
       "keywords": "физмат школы россия",
-      "freq": 2900
+      "freq": 2900,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-23T03:00:01.990Z"
     },
     {
       "id": "t066",
@@ -1078,13 +1080,15 @@
     },
     {
       "id": "t105",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие гимназии Москвы 2026: топ-10",
       "slug": "luchshie-gimnazii-moskvy-2026",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "лучшие гимназии москвы",
-      "freq": 3100
+      "freq": 3100,
+      "error": "Request timed out.",
+      "retryAt": "2026-07-20T03:03:32.863Z"
     },
     {
       "id": "t106",
@@ -1163,12 +1167,14 @@
     },
     {
       "id": "t113",
-      "status": "pending",
+      "status": "error",
       "title": "Кадетская школа: что это, как поступить и стоит ли",
       "slug": "kadetskaya-shkola-chto-eto-kak-postupit",
       "category": "Типы школ",
       "keywords": "кадетская школа как поступить",
-      "freq": 2900
+      "freq": 2900,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-23T03:00:02.475Z"
     },
     {
       "id": "t114",
@@ -1291,12 +1297,14 @@
     },
     {
       "id": "t125",
-      "status": "pending",
+      "status": "error",
       "title": "Адаптация ребёнка в новой школе: советы психолога",
       "slug": "adaptaciya-rebyonka-v-novoj-shkole",
       "category": "Советы родителям",
       "keywords": "адаптация ребёнка новая школа",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-20T03:03:33.293Z"
     },
     {
       "id": "t126",
@@ -1514,12 +1522,14 @@
     },
     {
       "id": "t145",
-      "status": "pending",
+      "status": "error",
       "title": "IT-классы в школах: как поступить и чему учат",
       "slug": "it-klassy-v-shkolah-kak-postupit",
       "category": "Типы школ",
       "keywords": "IT класс школа как поступить",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-20T03:03:33.614Z"
     },
     {
       "id": "t146",
@@ -1532,12 +1542,14 @@
     },
     {
       "id": "t147",
-      "status": "pending",
+      "status": "error",
       "title": "Школы с продлёнкой: как работает и сколько стоит",
       "slug": "shkoly-s-prodljonkoj-kak-rabotaet",
       "category": "Советы родителям",
       "keywords": "школа продлёнка сколько стоит",
-      "freq": 2900
+      "freq": 2900,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-23T03:00:02.682Z"
     },
     {
       "id": "t148",
@@ -1720,12 +1732,14 @@
     },
     {
       "id": "t165",
-      "status": "pending",
+      "status": "error",
       "title": "ЕГЭ по литературе 2026: структура и советы",
       "slug": "ege-literatura-2026-struktura-sovety",
       "category": "Советы родителям",
       "keywords": "ЕГЭ литература 2026",
-      "freq": 2900
+      "freq": 2900,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-23T03:00:02.949Z"
     },
     {
       "id": "t166",
@@ -1782,13 +1796,15 @@
     },
     {
       "id": "t171",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие IT-школы Москвы 2026: программирование для детей",
       "slug": "luchshie-it-shkoly-moskvy-2026",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "IT школы москва дети",
-      "freq": 2900
+      "freq": 2900,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-23T03:00:03.164Z"
     },
     {
       "id": "t172",
@@ -1906,12 +1922,14 @@
     },
     {
       "id": "t183",
-      "status": "pending",
+      "status": "error",
       "title": "Поступление в ВШЭ 2026: что нужно знать",
       "slug": "postuplenie-v-vshe-2026",
       "category": "Советы родителям",
       "keywords": "поступление ВШЭ 2026",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-20T03:03:33.847Z"
     },
     {
       "id": "t184",
@@ -1935,12 +1953,14 @@
     },
     {
       "id": "t186",
-      "status": "pending",
+      "status": "error",
       "title": "Школьная программа по математике: чего ждать в 5–11 классах",
       "slug": "shkolnaya-programma-matematika-klassy",
       "category": "Советы родителям",
       "keywords": "школьная программа математика классы",
-      "freq": 3100
+      "freq": 3100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-07-20T03:03:34.078Z"
     },
     {
       "id": "t187",
