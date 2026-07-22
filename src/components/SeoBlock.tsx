@@ -456,7 +456,7 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
     if (facts.free && facts.paidCount && facts.minPrice) {
       parts.push(
         `Из ${facts.total} ${plural(facts.total, 'школы', 'школ', 'школ')} ${regionIn} ` +
-        `${facts.free} ${plural(facts.free, 'учится', 'учатся', 'учатся')} бесплатно, ` +
+        `${facts.free} ${plural(facts.free, 'учит', 'учат', 'учат')} бесплатно, ` +
         `${facts.paidCount} ${plural(facts.paidCount, 'берёт', 'берут', 'берут')} оплату — ` +
         `от ${facts.minPrice.toLocaleString('ru-RU')} ₽ в месяц.`
       )
@@ -466,7 +466,9 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
       parts.push(`Обучение платное, стоимость начинается от ${facts.minPrice.toLocaleString('ru-RU')} ₽ в месяц.`)
     }
 
-    if (facts.fullCycle >= 3) {
+    if (facts.fullCycle === facts.total) {
+      parts.push(`Все ведут обучение с 1 по 11 класс.`)
+    } else if (facts.fullCycle >= 3) {
       parts.push(`${facts.fullCycle} ${plural(facts.fullCycle, 'школа ведёт', 'школы ведут', 'школ ведут')} полный цикл с 1 по 11 класс.`)
     }
     if (facts.seniorOnly >= 3) {
@@ -482,7 +484,7 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
       )
     }
     if (facts.withSite >= 3) {
-      parts.push(`У ${facts.withSite} ${plural(facts.withSite, 'школы указан', 'школ указаны', 'школ указаны')} официальный сайт.`)
+      parts.push(`У ${facts.withSite} ${plural(facts.withSite, 'школы', 'школ', 'школ')} указан официальный сайт.`)
     }
 
     if (parts.length >= 2) {
