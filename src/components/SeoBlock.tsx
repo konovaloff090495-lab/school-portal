@@ -1,4 +1,4 @@
-import { RegionSlug, SchoolType, FeatureSlug, regionLabels, regionLabelsIn, regionLabelsOf } from '@/data/schools'
+import { RegionSlug, SchoolType, FeatureSlug, regionLabels, regionLabelsIn, regionLabelsOf, schools, typeLabels } from '@/data/schools'
 
 interface SeoBlockProps {
   region?: RegionSlug
@@ -318,6 +318,39 @@ function typedCount(n: number, t: SchoolType): string {
 }
 
 // ── Основной компонент ────────────────────────────────────────────────────────
+// ── Городская статистика ──────────────────────────────────────────────────────
+// Считается из каталога, а не пишется вручную. Без неё текст на 584 страницах
+// «город × тип» различался только названием города — для поисковика это
+// малоценные дубли. Здесь у каждой страницы свои цифры из её же выборки школ.
+function plural(n: number, one: string, few: string, many: string) {
+  const m10 = n % 10, m100 = n % 100
+  if (m10 === 1 && m100 !== 11) return one
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few
+  return many
+}
+
+function cityFacts(region?: RegionSlug, type?: SchoolType) {
+  if (!region) return null
+  const list = schools.filter(s => s.region === region && (!type || s.type === type))
+  if (list.length < 3) return null
+
+  const paid = list.filter(s => typeof s.priceFrom === 'number' && s.priceFrom > 0)
+  const free = list.length - paid.length
+  const minPrice = paid.length ? Math.min(...paid.map(s => s.priceFrom as number)) : null
+
+  const fullCycle = list.filter(s => s.grades === '1–11').length
+  const seniorOnly = list.filter(s => /^(?:8|9|10)/.test(s.grades)).length
+  const boarding = list.filter(s => s.boarding).length
+  const withSite = list.filter(s => s.website).length
+
+  // Для страницы города без типа — какие типы представлены шире всего
+  const byType: Record<string, number> = {}
+  for (const s of list) byType[s.type] = (byType[s.type] || 0) + 1
+  const topTypes = Object.entries(byType).sort((a, b) => b[1] - a[1]).slice(0, 3)
+
+  return { total: list.length, free, paidCount: paid.length, minPrice, fullCycle, seniorOnly, boarding, withSite, topTypes }
+}
+
 export default function SeoBlock({ region, type, feature, count = 0, metro, district, city, customTitle, customText }: SeoBlockProps) {
   // Кастомный вариант для страниц уровней и т.д.
   if (customTitle || customText) {
@@ -413,6 +446,48 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
       h: `Совет при выборе`,
       p: info.tip,
     })
+  }
+
+  // ── 5b. Цифры по этому городу ───────────────────────────────────────────────
+  const facts = metro || district || city ? null : cityFacts(region, type)
+  if (facts && regionIn) {
+    const parts: string[] = []
+
+    if (facts.free && facts.paidCount && facts.minPrice) {
+      parts.push(
+        `Из ${facts.total} ${plural(facts.total, 'школы', 'школ', 'школ')} ${regionIn} ` +
+        `${facts.free} ${plural(facts.free, 'учится', 'учатся', 'учатся')} бесплатно, ` +
+        `${facts.paidCount} ${plural(facts.paidCount, 'берёт', 'берут', 'берут')} оплату — ` +
+        `от ${facts.minPrice.toLocaleString('ru-RU')} ₽ в месяц.`
+      )
+    } else if (facts.free === facts.total) {
+      parts.push(`Все ${facts.total} ${plural(facts.total, 'школа', 'школы', 'школ')} этой категории ${regionIn} учат бесплатно — они финансируются из бюджета.`)
+    } else if (facts.minPrice) {
+      parts.push(`Обучение платное, стоимость начинается от ${facts.minPrice.toLocaleString('ru-RU')} ₽ в месяц.`)
+    }
+
+    if (facts.fullCycle >= 3) {
+      parts.push(`${facts.fullCycle} ${plural(facts.fullCycle, 'школа ведёт', 'школы ведут', 'школ ведут')} полный цикл с 1 по 11 класс.`)
+    }
+    if (facts.seniorOnly >= 3) {
+      parts.push(`${facts.seniorOnly} ${plural(facts.seniorOnly, 'работает', 'работают', 'работают')} только со средними и старшими классами.`)
+    }
+    if (facts.boarding >= 2) {
+      parts.push(`В ${facts.boarding} ${plural(facts.boarding, 'школе', 'школах', 'школах')} есть проживание.`)
+    }
+    if (!type && facts.topTypes.length >= 2) {
+      parts.push(
+        `Шире всего представлены: ` +
+        facts.topTypes.map(([t, n]) => `${typeLabels[t as SchoolType].toLowerCase()} (${n})`).join(', ') + '.'
+      )
+    }
+    if (facts.withSite >= 3) {
+      parts.push(`У ${facts.withSite} ${plural(facts.withSite, 'школы указан', 'школ указаны', 'школ указаны')} официальный сайт.`)
+    }
+
+    if (parts.length >= 2) {
+      sections.push({ h: `Цифры по каталогу ${regionIn}`, p: parts.join(' ') })
+    }
   }
 
   // ── 6. ЕГЭ/ОГЭ блоки ────────────────────────────────────────────────────────
