@@ -21,6 +21,11 @@ interface Props {
 // ── Автогенерация FAQ по данным школы ────────────────────────────────────────
 function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   const faq: { q: string; a: string }[] = []
+  // Телефон есть не у всех школ — без фолбэка в тексте появлялось «по телефону undefined»
+  const callTo = school.phone ? `по телефону ${school.phone}` : 'через форму заявки на этой странице'
+  const callImperative = school.phone
+    ? `Позвоните по телефону ${school.phone}`
+    : 'Оставьте заявку через форму на этой странице'
   const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
     .join(' ').toLowerCase()
 
@@ -28,12 +33,12 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   if (school.metro) {
     faq.push({
       q: `Как добраться до ${school.name}?`,
-      a: `Школа расположена по адресу: ${school.city}, ${school.address}. Ближайшая станция метро — «${school.metro}». Уточнить маршрут можно по телефону ${school.phone}.`,
+      a: `Школа расположена по адресу: ${school.city}, ${school.address}. Ближайшая станция метро — «${school.metro}». Уточнить маршрут можно ${callTo}.`,
     })
   } else {
     faq.push({
       q: `Где находится ${school.name}?`,
-      a: `Адрес школы: ${school.city}, ${school.address}. По дополнительным вопросам о местоположении звоните: ${school.phone}.`,
+      a: `Адрес школы: ${school.city}, ${school.address}. По дополнительным вопросам о местоположении ${school.phone ? `звоните: ${school.phone}` : 'оставьте заявку через форму на этой странице'}.`,
     })
   }
 
@@ -42,8 +47,8 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   faq.push({
     q: `Как ${enrollVerb} в ${school.name}?`,
     a: school.website
-      ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')}) или позвоните по телефону ${school.phone}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
-      : `Позвоните по телефону ${school.phone} или оставьте заявку через форму на нашем сайте. Администрация школы свяжется с вами и расскажет о порядке поступления.`,
+      ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')})${school.phone ? ` или позвоните ${callTo}` : ''}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
+      : `${school.phone ? `${callImperative} или оставьте заявку через форму на нашем сайте` : 'Оставьте заявку через форму на этой странице'}. Администрация школы свяжется с вами и расскажет о порядке поступления.`,
   })
 
   // 3. Стоимость обучения
@@ -58,7 +63,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
       : `от ${formatPrice(school.priceFrom)} в месяц`
     faq.push({
       q: `Сколько стоит обучение в ${school.name}?`,
-      a: `Стоимость обучения составляет ${priceStr}. Актуальные тарифы и условия рассрочки уточняйте по телефону ${school.phone} — стоимость может зависеть от программы и класса.`,
+      a: `Стоимость обучения составляет ${priceStr}. Актуальные тарифы и условия рассрочки уточняйте ${callTo} — стоимость может зависеть от программы и класса.`,
     })
   }
 
@@ -69,14 +74,14 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `С какого класса принимают учеников в ${school.name}?`,
     a: startsFrom1
       ? `Школа принимает детей с 1 класса (обучение по программе ${school.grades} класс). Приём в первый класс ведётся в соответствии с требованиями законодательства — ребёнку должно исполниться 6,5–8 лет на 1 сентября.`
-      : `Школа ведёт обучение с ${school.grades.split('–')[0]} по ${school.grades.split('–')[1] ?? school.grades} класс. Условия и сроки подачи документов уточняйте по телефону ${school.phone}.`,
+      : `Школа ведёт обучение с ${school.grades.split('–')[0]} по ${school.grades.split('–')[1] ?? school.grades} класс. Условия и сроки подачи документов уточняйте ${callTo}.`,
   })
 
   // 5. Прописка (для государственных)
   if (school.type === 'gosudarstvennye') {
     faq.push({
       q: `Нужна ли прописка для поступления в ${school.name}?`,
-      a: `Государственные школы в первую очередь принимают детей, прописанных на закреплённой территории. Если в школе есть свободные места — могут принять и без прописки. Рекомендуем заранее уточнить актуальную ситуацию по телефону ${school.phone}.`,
+      a: `Государственные школы в первую очередь принимают детей, прописанных на закреплённой территории. Если в школе есть свободные места — могут принять и без прописки. Рекомендуем заранее уточнить актуальную ситуацию ${callTo}.`,
     })
   }
 
@@ -87,7 +92,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
       q: `Какой размер классов в ${school.name}?`,
       a: smallClass
         ? `В ${school.name} практикуется обучение в малых классах — как правило, не более 12–15 учеников. Это позволяет учителю уделять внимание каждому ребёнку индивидуально.`
-        : `Наполняемость классов в ${school.name} значительно ниже, чем в государственных школах. Точные данные уточняйте по телефону ${school.phone}.`,
+        : `Наполняемость классов в ${school.name} значительно ниже, чем в государственных школах. Точные данные уточняйте ${callTo}.`,
     })
   }
 
@@ -103,7 +108,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   if (haystack.includes('продлён') || haystack.includes('продлен') || haystack.includes('группа продл')) {
     faq.push({
       q: `Есть ли группа продлённого дня в ${school.name}?`,
-      a: `Да, в ${school.name} есть группа продлённого дня (ГПД). Дети находятся под присмотром педагогов после уроков — делают домашние задания и участвуют в дополнительных занятиях. Расписание и условия уточняйте по телефону ${school.phone}.`,
+      a: `Да, в ${school.name} есть группа продлённого дня (ГПД). Дети находятся под присмотром педагогов после уроков — делают домашние задания и участвуют в дополнительных занятиях. Расписание и условия уточняйте ${callTo}.`,
     })
   }
 
@@ -111,7 +116,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   if (haystack.includes('углублённый английский') || haystack.includes('английск') && haystack.includes('углублён')) {
     faq.push({
       q: `Есть ли углублённое изучение английского языка в ${school.name}?`,
-      a: `Да, ${school.name} предлагает углублённое изучение английского языка. Программа включает расширенный курс грамматики, разговорной речи и подготовку к международным экзаменам. Подробности — по телефону ${school.phone}.`,
+      a: `Да, ${school.name} предлагает углублённое изучение английского языка. Программа включает расширенный курс грамматики, разговорной речи и подготовку к международным экзаменам. Подробности — ${callTo}.`,
     })
   }
 
@@ -119,7 +124,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   if (haystack.includes('бассейн')) {
     faq.push({
       q: `Есть ли бассейн в ${school.name}?`,
-      a: `Да, в ${school.name} есть собственный бассейн. Плавание входит в программу физического воспитания. Расписание занятий уточняйте в администрации: ${school.phone}.`,
+      a: `Да, в ${school.name} есть собственный бассейн. Плавание входит в программу физического воспитания. Расписание занятий уточняйте ${school.phone ? `в администрации: ${school.phone}` : 'через форму заявки на этой странице'}.`,
     })
   }
 
@@ -150,7 +155,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!school) return {}
   return {
     title: `${school.name} — ${school.city} | адрес, телефон, описание`,
-    description: `${school.name} (${school.city}) — ${school.description} Адрес: ${school.address}. Телефон: ${school.phone}.`,
+    description: `${school.name} (${school.city}) — ${school.description} Адрес: ${school.address}.${school.phone ? ` Телефон: ${school.phone}.` : ''}`,
     alternates: { canonical: `https://pro-schools.ru/shkola/${slug}/` },
   }
 }
@@ -169,9 +174,7 @@ export default async function SchoolPage({ params }: Props) {
   const stars = school.rating ? Math.round(school.rating) : 0
 
   const pageUrl = `https://pro-schools.ru/shkola/${school.slug}/`
-  const regionName = school.region === 'moskva' ? 'Москва'
-    : school.region === 'moskovskaya-oblast' ? 'Московская область'
-    : 'Новосибирск'
+  const regionName = regionLabels[school.region] ?? school.city
 
   // Schema.org: EducationalOrganization
   const orgSchema = {
@@ -181,7 +184,7 @@ export default async function SchoolPage({ params }: Props) {
     name: school.name,
     description: school.description,
     url: school.website ?? pageUrl,
-    image: `https://pro-schools.ru/schools/${school.slug}.jpg`,
+    image: `https://pro-schools.ru/schools/${school.slug}-1.jpg`,
     telephone: school.phone,
     address: {
       '@type': 'PostalAddress',
@@ -417,6 +420,7 @@ export default async function SchoolPage({ params }: Props) {
                   )}
                 </div>
               </div>
+              {school.phone && (
               <div className="flex items-start gap-3">
                 <span className="text-gray-400 mt-0.5 shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
@@ -428,6 +432,7 @@ export default async function SchoolPage({ params }: Props) {
                   </a>
                 </div>
               </div>
+              )}
               {school.email && (
                 <div className="flex items-start gap-3">
                   <span className="text-gray-400 mt-0.5 shrink-0">

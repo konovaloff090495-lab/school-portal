@@ -95232,6 +95232,11 @@ export const regionLabels: Record<RegionSlug, string> = {
   'cherepovets': 'Череповец',
   'surgut': 'Сургут',
   'tolyatti': 'Тольятти',
+  'makhachkala': 'Махачкала',
+  'penza': 'Пенза',
+  'ivanovo': 'Иваново',
+  'tver': 'Тверь',
+  'nizhniy-tagil': 'Нижний Тагил',
 }
 
 // Предложный падеж — «в Москве», «в Волгограде» (для H1)
@@ -95298,7 +95303,12 @@ export const regionLabelsIn: Record<RegionSlug, string> = {
   'petrozavodsk':            'в Петрозаводске',
   'cherepovets':            'в Череповеце',
   'surgut':            'в Сургуте',
-  'tolyatti': 'в Тольяттие',
+  'tolyatti': 'в Тольятти',
+  'makhachkala': 'в Махачкале',
+  'penza': 'в Пензе',
+  'ivanovo': 'в Иванове',
+  'tver': 'в Твери',
+  'nizhniy-tagil': 'в Нижнем Тагиле',
 }
 
 // Родительный падеж — «Москвы», «Волгограда» (для meta title/description)
@@ -95365,10 +95375,15 @@ export const regionLabelsOf: Record<RegionSlug, string> = {
   'petrozavodsk':            'Петрозаводска',
   'cherepovets':            'Череповеца',
   'surgut':            'Сургута',
-  'tolyatti': 'Тольяттиа',
+  'tolyatti': 'Тольятти',
+  'makhachkala': 'Махачкалы',
+  'penza': 'Пензы',
+  'ivanovo': 'Иванова',
+  'tver': 'Твери',
+  'nizhniy-tagil': 'Нижнего Тагила',
 }
 
-export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk', 'vladivostok', 'yaroslavl', 'orenburg', 'kemerovo', 'novokuznetsk', 'ryazan', 'astrakhan', 'naberezhnye-chelny', 'lipetsk', 'tula', 'kirov', 'cheboksary', 'kaliningrad', 'bryansk', 'kursk', 'stavropol', 'belgorod', 'arkhangelsk', 'vladimir', 'smolensk', 'sochi', 'ulan-ude', 'kostroma', 'vologda', 'kurgan', 'tyumen', 'magnitogorsk', 'nizhnevartovsk', 'novorossiysk', 'vladikavkaz', 'sterlitamak', 'syktyvkar', 'bratsk', 'angarsk', 'dzerzhinsk', 'petrozavodsk', 'cherepovets', 'surgut', 'tolyatti']
+export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk', 'vladivostok', 'yaroslavl', 'orenburg', 'kemerovo', 'novokuznetsk', 'ryazan', 'astrakhan', 'naberezhnye-chelny', 'lipetsk', 'tula', 'kirov', 'cheboksary', 'kaliningrad', 'bryansk', 'kursk', 'stavropol', 'belgorod', 'arkhangelsk', 'vladimir', 'smolensk', 'sochi', 'ulan-ude', 'kostroma', 'vologda', 'kurgan', 'tyumen', 'magnitogorsk', 'nizhnevartovsk', 'novorossiysk', 'vladikavkaz', 'sterlitamak', 'syktyvkar', 'bratsk', 'angarsk', 'dzerzhinsk', 'petrozavodsk', 'cherepovets', 'surgut', 'tolyatti', 'makhachkala', 'penza', 'ivanovo', 'tver', 'nizhniy-tagil']
 
 export function getSchoolsByRegion(region: RegionSlug): School[] {
   return schools.filter(s => s.region === region)
