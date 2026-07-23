@@ -105,12 +105,12 @@ function cleanAddress(raw, cityName) {
     .replace(/Российская Федерация\s*,?/ig, ' ')
     .replace(w('г(ород)?\\.?\\s*(москв'+C+'*|санкт-?петербург'+C+'*|севастопол'+C+'*)\\s*,?'), ' ')
     .replace(/ВН\.?\s*ТЕР\.?\s*Г\.?\s*/ig, ' ')
-    .replace(w('муниципальн'+C+'*\\s+округ\\s+'+C+'[А-ЯЁа-яё-]*\\s*,?'), ' ')
+    .replace(/муниципальн[а-яё]*\s+округ[а-яё]*\s*(№\s*\d+|[А-ЯЁа-яё-]+)?\s*,?/ig, ' ')
     .replace(w('поселени'+C+'*\\s+'+C+'[А-ЯЁа-яё-]*\\s*,?'), ' ')
     .replace(w('(населенный пункт\\s+)?(деревня|пос[её]лок|село|рабочий пос[её]лок)\\s+'+C+'[А-ЯЁа-яё-]*\\s*,?'), ' ')
     .replace(/\bж\/?к\s+[А-ЯЁа-яё-]+\s*,?/ig, ' ')
     .replace(w('(помещ'+C+'*|литер[аы]?|каб'+C+'*|комн'+C+'*)\\.?[^,]*'), ' ')      // офисный хвост
-    .replace(/,?\s*оф(ис)?\.?\s*[^,]*/ig, ' ').replace(/,?\s*эт(аж)?\.?\s*\d[^,]*/ig, ' ')
+    .replace(/,?\s*оф(ис)?\.?\s*[^,]*/ig, ' ').replace(/,?\s*эт(аж)?\.?\s*\d[^,]*/ig, ' ').replace(/,?\s*кв\.?\s*\d[^,]*/ig, ' ')
     .replace(/\s+/g, ' ').replace(/^[,\s]+|[,\s]+$/g, '')
   // сокращения к единому виду (тоже через lookaround)
   const R = [['УЛ','ул.'],['ПЕР','пер.'],['ПРОСПЕКТ','просп.'],['ПР-?КТ','просп.'],['ШОССЕ','шоссе'],
@@ -124,21 +124,44 @@ function cleanAddress(raw, cityName) {
   return a && a.length > 3 ? a : `г. ${cityName}`
 }
 
-// Имя школы из юр-названия: «ОЧУ «Пироговская Школа»» → «Пироговская школа»,
-// «АНО СОШ «Ювенес»» → «Ювенес». Кавычки только парные.
-function displayName(short, full) {
-  const src = (short || full || '').replace(/\s+/g, ' ').trim()
-  const q = src.match(/[«"]([^«»"]{3,80})[»"]/)
-  if (q) {
-    let n = q[1].trim()
-    if (n === n.toUpperCase()) n = titleCase(n)
-    if (n.length >= 4) return `«${n}»`
-  }
-  // без кавычек — убираем ведущую аббревиатуру формы
-  let n = src.replace(/^(ОЧУ|ОАНО|АНО|НОЧУ|ЧОУ|НОУ|ЧУОО|ЧУ|ООО|СОШ|ОО)\s+/i, '').trim()
-  if (n === n.toUpperCase()) n = titleCase(n)
-  return n.length >= 5 ? n : src
+// Имя школы. Берём содержимое кавычек; если это аббревиатура (согласные капсом,
+// «ПЦО», «Мшдк»), пробуем осмысленную часть полного названия. Аббревиатуру-имя
+// возвращаем как null — такую карточку лучше не заводить, чем с бессмысленным H1.
+function isAcronym(n) {
+  const w = n.replace(/[«»"]/g, '').trim()
+  if (w.length <= 5 && !/\s/.test(w) && !/[аеёиоуыэюя]/i.test(w)) return true  // без гласных
+  if (/^[А-ЯЁ]{2,6}$/.test(w)) return true                                     // сплошной капс без пробелов
+  return false
 }
+function quoted(str) {
+  // последняя пара кавычек (устойчиво к вложенным: «ОЦ «Перспектива»»)
+  const all = [...str.matchAll(/[«"]([^«»"]{2,80})[»"]/g)].map(m => m[1].trim())
+  return all.length ? all[all.length - 1] : null
+}
+function normName(n) {
+  n = n.trim()
+  if (n === n.toUpperCase()) n = titleCase(n)
+  return n
+}
+function displayName(short, full) {
+  const s2 = (short || '').replace(/\s+/g, ' ').trim()
+  const f2 = (full  || '').replace(/\s+/g, ' ').trim()
+  // 1) кавычки короткого имени
+  let q = quoted(s2)
+  if (q && !isAcronym(q)) return `«${normName(q)}»`
+  // 2) кавычки полного имени
+  let qf = quoted(f2)
+  if (qf && !isAcronym(qf)) return `«${normName(qf)}»`
+  // 3) полное имя без формы-префикса и «общеобразовательное учреждение» и т.п.
+  let n = f2
+    .replace(/^(частное|негосударственное|автономная|общеобразовательн\w*)\s+/i, '')
+    .replace(/(частное|общеобразовательн\w*|учреждение|организация|некоммерческ\w*|автономн\w*|средн\w*|основн\w*|начальн\w*|школа|образовательн\w*)\s+/gi, '')
+    .replace(/^[«"]|[»"]$/g, '').replace(/\s+/g, ' ').trim()
+  if (n && n.length >= 5 && !isAcronym(n)) return normName(n)
+  // 4) не удалось получить осмысленное имя
+  return null
+}
+
 
 function detectType(name) {
   const n = name.toLowerCase()
@@ -191,7 +214,7 @@ for (const t of TARGETS) {
       if (NOT_SCHOOL.test(d.shortName || d.fullName || r.name)) continue
 
       const name = displayName(d.shortName, d.fullName || r.name)
-      if (!name || name.length < 5) continue
+      if (!name || name.replace(/[«»]/g,'').length < 5) continue
       const k = key(name, t.slug)
       if (existingKeys.has(k)) continue
       const slug = makeSlug(name, t.slug)
