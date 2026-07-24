@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "komsomolsk-na-amure",
+    "name": "Комсомольск-на-Амуре",
+    "code": "27"
+  },
+  {
+    "slug": "orsk",
+    "name": "Орск",
+    "code": "56"
+  },
+  {
+    "slug": "syzran",
+    "name": "Сызрань",
+    "code": "63"
+  },
+  {
+    "slug": "volgodonsk",
+    "name": "Волгодонск",
+    "code": "61"
+  },
+  {
+    "slug": "rubtsovsk",
+    "name": "Рубцовск",
+    "code": "22"
+  },
+  {
+    "slug": "khasavyurt",
+    "name": "Хасавюрт",
+    "code": "05"
+  },
+  {
+    "slug": "berezniki",
+    "name": "Березники",
+    "code": "59"
+  },
+  {
+    "slug": "kyzyl",
+    "name": "Кызыл",
+    "code": "17"
+  },
+  {
+    "slug": "kaspiysk",
+    "name": "Каспийск",
+    "code": "05"
+  },
+  {
+    "slug": "kislovodsk",
+    "name": "Кисловодск",
+    "code": "26"
+  },
+  {
+    "slug": "bataysk",
+    "name": "Батайск",
+    "code": "61"
+  },
+  {
+    "slug": "nazran",
+    "name": "Назрань",
+    "code": "06"
+  },
+  {
+    "slug": "essentuki",
+    "name": "Ессентуки",
+    "code": "26"
+  },
+  {
+    "slug": "novocheboksarsk",
+    "name": "Новочебоксарск",
+    "code": "21"
+  },
+  {
+    "slug": "novomoskovsk",
+    "name": "Новомосковск",
+    "code": "71"
+  },
+  {
+    "slug": "mikhaylovsk",
+    "name": "Михайловск",
+    "code": "26"
+  },
+  {
+    "slug": "nevinnomyssk",
+    "name": "Невинномысск",
+    "code": "26"
+  },
+  {
+    "slug": "dimitrovgrad",
+    "name": "Димитровград",
+    "code": "73"
+  },
+  {
+    "slug": "kamyshin",
+    "name": "Камышин",
+    "code": "34"
+  },
+  {
+    "slug": "artem",
+    "name": "Артём",
+    "code": "25"
+  },
+  {
+    "slug": "evpatoriya",
+    "name": "Евпатория",
+    "code": "91"
+  },
+  {
+    "slug": "seversk",
+    "name": "Северск",
+    "code": "70"
+  },
+  {
+    "slug": "novoshakhtinsk",
+    "name": "Новошахтинск",
+    "code": "61"
+  },
+  {
+    "slug": "arzamas",
+    "name": "Арзамас",
+    "code": "52"
+  },
+  {
+    "slug": "berdsk",
+    "name": "Бердск",
+    "code": "54"
+  },
+  {
+    "slug": "elets",
+    "name": "Елец",
+    "code": "48"
+  },
+  {
+    "slug": "noyabrsk",
+    "name": "Ноябрьск",
+    "code": "89"
+  }
+]
