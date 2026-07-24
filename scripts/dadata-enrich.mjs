@@ -63,8 +63,9 @@ const jiti = createJiti(import.meta.url, { interopDefault: true })
 const { schools } = await jiti.import(SCHOOLS_TS)
 // частные/гимназии/международные из реестра (id===slug), без координат, с улицей —
 // по всем городам, а не только федеральным
+// !director — не переобогащать уже обработанные (иначе задвоятся поля)
 let targets = schools.filter(s => ['chastnie', 'gimnazii', 'mezhdunarodnie'].includes(s.type)
-  && s.id === s.slug && s.lat == null && s.address && !/^г\. /.test(s.address))
+  && s.id === s.slug && s.lat == null && !s.director && s.address && !/^г\. /.test(s.address))
 if (LIMIT > 0) targets = targets.slice(0, LIMIT)
 console.error(`Кандидатов: ${targets.length}${DRY ? ' (DRY)' : ''}`)
 

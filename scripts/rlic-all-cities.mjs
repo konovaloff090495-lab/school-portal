@@ -29,6 +29,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 const args = Object.fromEntries(process.argv.slice(2).filter(a => a.startsWith('--')).map(a => { const [k, ...v] = a.slice(2).split('='); return [k, v.join('=') || true] }))
 const DRY = Boolean(args.dry)
 const ONLY = args.only ? String(args.only) : null
+const CODES = args.codes ? String(args.codes).split(',') : null   // --codes=27,56,...
 const MAX_PAGES = parseInt(args.pages ?? '20')
 
 // код субъекта РФ → наши города в нём. wholeSubject=true → субъект целиком = один
@@ -110,6 +111,17 @@ const SUBJECTS = [
   { code: '49', cities: [['magadan', 'Магадан']] },
   { code: '89', cities: [['novy-urengoy', 'Новый Уренгой']] },
 ]
+
+// подмешиваем новые города 100k+ (add-cities-100k.mjs) в их субъекты
+try {
+  const extra = JSON.parse(readFileSync(path.join(__dirname, 'new-cities-100k.json'), 'utf8'))
+  for (const { slug, name, code } of extra) {
+    let subj = SUBJECTS.find(s => s.code === code)
+    if (!subj) { subj = { code, cities: [] }; SUBJECTS.push(subj) }
+    if (!subj.cities) subj.cities = []           // whole-subject не бывает у новых
+    if (!subj.cities.some(c => c[0] === slug)) subj.cities.push([slug, name])
+  }
+} catch { /* файла нет — работаем без новых */ }
 
 const QUERIES = ['частное общеобразовательн', 'автономная общеобразовательн', 'негосударственн общеобразовательн']
 const STATE = /ГБОУ|ГАОУ|МБОУ|МАОУ|МКОУ|\bМОУ\b|ГБПОУ|ГОСУДАРСТВЕНН|МУНИЦИПАЛЬН|БЮДЖЕТН|КАЗ[ЕЁ]НН/i
@@ -200,6 +212,7 @@ function fmt(s) {
 
 let subs = SUBJECTS
 if (ONLY) subs = subs.filter(s => s.code === ONLY)
+if (CODES) subs = subs.filter(s => CODES.includes(s.code))
 const picked = []
 const perCity = {}
 for (const [i, subj] of subs.entries()) {
