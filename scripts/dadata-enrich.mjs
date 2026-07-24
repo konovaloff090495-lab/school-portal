@@ -61,13 +61,18 @@ function titleName(s) {
 
 const jiti = createJiti(import.meta.url, { interopDefault: true })
 const { schools } = await jiti.import(SCHOOLS_TS)
-let targets = schools.filter(s => ['moskva', 'sankt-peterburg', 'sevastopol'].includes(s.region)
-  && ['chastnie', 'gimnazii', 'mezhdunarodnie'].includes(s.type) && s.id === s.slug && s.lat == null
-  && s.address && !/^г\. /.test(s.address))
+// частные/гимназии/международные из реестра (id===slug), без координат, с улицей —
+// по всем городам, а не только федеральным
+let targets = schools.filter(s => ['chastnie', 'gimnazii', 'mezhdunarodnie'].includes(s.type)
+  && s.id === s.slug && s.lat == null && s.address && !/^г\. /.test(s.address))
 if (LIMIT > 0) targets = targets.slice(0, LIMIT)
 console.error(`Кандидатов: ${targets.length}${DRY ? ' (DRY)' : ''}`)
 
-const cityNeedle = { moskva: 'москв', 'sankt-peterburg': 'петербург', sevastopol: 'севастопол' }
+// «иголка» города для сверки: первое слово названия, обрезанное под склонения
+const cityNeedle = s => {
+  const first = s.city.toLowerCase().replace(/ё/g, 'е').split(/\s+/)[0]
+  return first.length > 7 ? first.slice(0, 6) : first
+}
 const updates = {}   // slug -> {lat, lon, director, founded}
 let matched = 0, skipped = 0, noResult = 0
 const skips = []
@@ -80,10 +85,10 @@ for (const s of targets) {
   if (!sug.length) { try { sug = await suggest(bare) } catch {} ; await sleep(120) }
   if (!sug.length) { noResult++; skips.push(`нет в DaData: ${s.name}`); continue }
 
-  const needle = cityNeedle[s.region]
+  const needle = cityNeedle(s)
   const cand = sug.find(x => {
     const a = x.data?.address?.data || {}
-    const cityStr = (a.region_with_type + ' ' + (a.city_with_type || '') + ' ' + (a.settlement_with_type || '')).toLowerCase().replace(/ё/g, 'е')
+    const cityStr = ((a.region_with_type || '') + ' ' + (a.city_with_type || '') + ' ' + (a.settlement_with_type || '') + ' ' + (a.area_with_type || '')).toLowerCase().replace(/ё/g, 'е')
     if (!cityStr.includes(needle)) return false
     return streetMatch(s.address, x.data?.address?.value)
   })
