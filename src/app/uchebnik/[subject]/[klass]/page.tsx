@@ -6,6 +6,7 @@ import {
   textbookSubjects, klassLabel, klassLabelIn,
 } from '@/data/textbook'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 
 interface Props { params: Promise<{ subject: string; klass: string }> }
 
@@ -149,7 +150,7 @@ export default async function KlassPage({ params }: Props) {
               <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
               <span className="text-[10px] text-gray-300">16+</span>
             </div>
-            <YandexRTBBanner blockId="R-A-19425636-1" suffix="uchebnik-klass" />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass" />
           </div>
         </aside>
       </div>

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBooks, getGdzSubjects, gdzKlasses } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -170,7 +171,7 @@ export default async function GdzSubjectPage({ params }: Props) {
             <div className="gdz-ad" data-rsya="R-A-19425636-1">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
               <div className="gdz-ad-slot gdz-ad-slot--tall">
-                <YandexRTBBanner blockId="R-A-19425636-1" suffix="subject" />
+                <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="subject" />
               </div>
             </div>
           </div>

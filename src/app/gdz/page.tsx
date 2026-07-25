@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { gdzSubjectsByClass } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 
 export const metadata: Metadata = {
   title: 'ГДЗ — готовые домашние задания по всем предметам · pro-schools.ru',
@@ -68,7 +69,7 @@ export default function GdzPage() {
         <aside className="gdz-ad gdz-ad-inline" data-rsya="R-A-19425636-1" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot">
-            <YandexRTBBanner blockId="R-A-19425636-1" suffix="index-inline" />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-inline" />
           </div>
         </aside>
 
@@ -98,7 +99,7 @@ export default function GdzPage() {
           <div className="gdz-ad" data-rsya="R-A-19425636-1">
             <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
             <div className="gdz-ad-slot gdz-ad-slot--tall">
-              <YandexRTBBanner blockId="R-A-19425636-1" suffix="index-sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-sidebar" />
             </div>
           </div>
         </div>

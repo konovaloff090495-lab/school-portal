@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBook, getGdzAllProblems } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
@@ -146,7 +147,7 @@ export default async function GdzBookPage({ params }: Props) {
                 {ci === 2 && (
                   <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
                     <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-                    <YandexRTBBanner blockId="R-A-19425636-1" suffix="list-inline" />
+                    <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="list-inline" />
                   </aside>
                 )}
                 <div className="gdz-toc-group">
@@ -200,7 +201,7 @@ export default async function GdzBookPage({ params }: Props) {
           <div className="gdz-rail-sticky">
             <div className="gdz-ad">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-              <YandexRTBBanner blockId="R-A-19425636-1" suffix="list-sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="list-sidebar" />
             </div>
           </div>
         </aside>
