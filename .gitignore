@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .claude/settings.local.json
+
+# локальный пульт статистики РСЯ (содержит OAuth-токен — не коммитить)
+rsya.py
