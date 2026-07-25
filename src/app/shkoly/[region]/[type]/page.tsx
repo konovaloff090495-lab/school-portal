@@ -62,6 +62,10 @@ export default async function TypePage({ params }: Props) {
     ? `${pageTitleMap[t]} ${regionIn}`
     : `${typeName} школы ${regionIn}`
 
+  // Название национального хаба (без региона) для контекстной ссылки-расшивки каннибализации:
+  // городская страница ведёт head-term сигнал вверх на /shkoly/tipy/{type}/.
+  const hubLabel = pageTitleMap[t] ?? `${typeName} школы`
+
   return (
     <>
       <BreadcrumbJsonLd
@@ -88,7 +92,7 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        seoContent={<SeoBlock region={r} type={t} count={list.length} />}
+        seoContent={<SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />}
       />
     </>
   )
