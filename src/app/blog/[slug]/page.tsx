@@ -7,6 +7,7 @@ import { blogPosts, getPostBySlug, getAllPostSlugs } from '@/data/blog'
 import { sanitizeHtml } from '@/lib/sanitize'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -227,7 +228,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <span>Реклама</span>
                         <span>16+</span>
                       </div>
-                      <YandexRTBBanner blockId="R-A-19425636-1" suffix={`blog-inline-${i}`} />
+                      <YandexRTBBanner blockId={AD_BLOCKS.blogInline} suffix={`blog-inline-${i}`} />
                     </div>
                   )}
                 </Fragment>
@@ -311,7 +312,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <span style={{ fontSize: 10, fontWeight: 700, color: 'rgba(26,24,20,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Реклама</span>
                   <span style={{ fontSize: 10, color: 'rgba(26,24,20,0.3)' }}>16+</span>
                 </div>
-                <YandexRTBBanner blockId="R-A-19425636-1" suffix="blog-post" />
+                <YandexRTBBanner blockId={AD_BLOCKS.blogSidebar} suffix="blog-post" />
               </div>
               {/* All posts */}
               <div style={{ background: 'white', borderRadius: 18, padding: 20, border: '1px solid rgba(26,24,20,0.08)' }}>

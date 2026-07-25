@@ -8,6 +8,7 @@ import {
 } from '@/data/textbook'
 import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -155,7 +156,7 @@ export default async function TopicPage({ params }: Props) {
                 <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
                 <span className="text-[10px] text-gray-300">16+</span>
               </div>
-              <YandexRTBBanner blockId="R-A-19425636-1" suffix="uchebnik-topic" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic" />
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">

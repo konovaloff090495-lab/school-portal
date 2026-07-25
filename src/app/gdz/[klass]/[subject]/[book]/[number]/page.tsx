@@ -9,6 +9,7 @@ import {
   getGdzProblemChapter,
 } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { AD_BLOCKS } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
@@ -329,7 +330,7 @@ export default async function GdzNumberPage({ params }: Props) {
           {/* РСЯ — адаптивный баннер после решения */}
           <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
             <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-            <YandexRTBBanner blockId="R-A-19425636-1" />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} />
           </aside>
 
           {/* Соседние номера */}
@@ -388,7 +389,7 @@ export default async function GdzNumberPage({ params }: Props) {
           <div className="gdz-rail-sticky">
             <div className="gdz-ad">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-              <YandexRTBBanner blockId="R-A-19425636-1" suffix="sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="sidebar" />
             </div>
           </div>
         </aside>
