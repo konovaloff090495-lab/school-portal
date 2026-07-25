@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { RegionSlug, SchoolType, FeatureSlug, regionLabels, regionLabelsIn, regionLabelsOf, schools, typeLabels } from '@/data/schools'
 
 interface SeoBlockProps {
@@ -10,6 +11,11 @@ interface SeoBlockProps {
   city?: string         // город МО
   customTitle?: string  // произвольный заголовок (для страниц уровней)
   customText?: string   // произвольный SEO-текст
+  // Контекстная ссылка на национальный хаб типа (/shkoly/tipy/{type}/).
+  // Ставится на городских страницах типа, чтобы head-term сигнал ("вальдорфская школа")
+  // концентрировался на ОДНОМ хабе, а не дробился между городскими страницами (расшивка каннибализации).
+  hubHref?: string
+  hubLabel?: string
 }
 
 // ── Данные по типам ───────────────────────────────────────────────────────────
@@ -351,7 +357,7 @@ function cityFacts(region?: RegionSlug, type?: SchoolType) {
   return { total: list.length, free, paidCount: paid.length, minPrice, fullCycle, seniorOnly, boarding, withSite, topTypes }
 }
 
-export default function SeoBlock({ region, type, feature, count = 0, metro, district, city, customTitle, customText }: SeoBlockProps) {
+export default function SeoBlock({ region, type, feature, count = 0, metro, district, city, customTitle, customText, hubHref, hubLabel }: SeoBlockProps) {
   // Кастомный вариант для страниц уровней и т.д.
   if (customTitle || customText) {
     return (
@@ -549,6 +555,13 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
           </p>
         </div>
       ))}
+      {hubHref && hubLabel && (
+        <div style={{ marginTop: 4, paddingTop: 16, borderTop: '1px solid #ECEAE5' }}>
+          <Link href={hubHref} style={{ fontSize: 15, fontWeight: 600, color: '#1D4ED8', textDecoration: 'none' }}>
+            Смотреть все {hubLabel} России →
+          </Link>
+        </div>
+      )}
     </div>
   )
 }
