@@ -101,6 +101,8 @@ CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools
 echo "  HTTP: $CODE"
 if [[ "$CODE" == "200" ]]; then
   echo "✅ pro-schools.ru работает! (BUILD_ID $VPS_BUILD_ID)"
+  # Переотправка sitemap в Google Search Console (переобход при релизе). Best-effort.
+  python3 "$HOME/claude/seo-tools/ping_sitemap.py" pro-schools.ru || true
 else
   echo "⚠️  HTTP $CODE — проверьте логи PM2"
 fi
