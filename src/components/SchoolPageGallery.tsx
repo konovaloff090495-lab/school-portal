@@ -3,19 +3,23 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-const PHOTOS_COUNT = 3
+const PHOTOS_MAX = 3
 
 interface Props {
   slug: string
   imageAlt: string
+  photoCount?: number         // фактическое число фото из данных (0..3)
+  name?: string               // для alt плейсхолдера
   children: React.ReactNode  // overlay (title, badge, rating)
 }
 
-export default function SchoolPageGallery({ slug, imageAlt, children }: Props) {
+export default function SchoolPageGallery({ slug, imageAlt, photoCount, name, children }: Props) {
   const [current, setCurrent]   = useState(0)
   const [errors, setErrors]     = useState<Record<number, boolean>>({})
 
-  const available = Array.from({ length: PHOTOS_COUNT }, (_, i) => i).filter(i => !errors[i])
+  // Реальное число фото (отсутствие поля трактуем как PHOTOS_MAX для совместимости)
+  const count     = Math.min(photoCount ?? PHOTOS_MAX, PHOTOS_MAX)
+  const available = Array.from({ length: count }, (_, i) => i).filter(i => !errors[i])
   const validIdx  = available.includes(current) ? current : (available[0] ?? 0)
 
   function prev() {
@@ -31,8 +35,17 @@ export default function SchoolPageGallery({ slug, imageAlt, children }: Props) {
 
   return (
     <div className="mt-6 relative h-64 md:h-80 rounded-2xl overflow-hidden bg-gray-200 group">
+      {/* Плейсхолдер, если фото нет вовсе — не запрашиваем /_next/image */}
+      {count === 0 && (
+        <div
+          role="img"
+          aria-label={`${name ?? imageAlt} — фото недоступно`}
+          className="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-gray-200"
+        />
+      )}
+
       {/* Главное фото */}
-      {Array.from({ length: PHOTOS_COUNT }, (_, i) => (
+      {Array.from({ length: count }, (_, i) => (
         <Image
           key={i}
           src={src(i)}

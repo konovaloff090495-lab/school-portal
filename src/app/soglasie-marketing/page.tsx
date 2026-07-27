@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Согласие на получение маркетинговых материалов — ШколыРоссии.рф',
-  description: 'Условия согласия на получение маркетинговых рассылок от ИП Коновалов Дмитрий Васильевич',
+  description: 'Условия согласия на получение маркетинговых рассылок от ИП Герасимов Евгений Сергеевич',
   robots: { index: false, follow: false },
 }
 
@@ -24,8 +24,9 @@ export default function SoglasieMarketing() {
         <section>
           <h2 className="text-xl font-semibold text-[#0F172A] mb-3">1. Оператор рассылки</h2>
           <ul className="list-none pl-0 space-y-1">
-            <li><strong>Наименование:</strong> ИП Коновалов Дмитрий Васильевич</li>
-            <li><strong>ИНН:</strong> 890203123335</li>
+            <li><strong>Наименование:</strong> ИП Герасимов Евгений Сергеевич</li>
+            <li><strong>ИНН:</strong> 890203667705</li>
+            <li><strong>ОГРНИП:</strong> 322508100563828</li>
             <li><strong>Сайт:</strong> <Link href="/" className="text-[#0369A1] hover:underline">pro-schools.ru</Link></li>
             <li><strong>Email:</strong> <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
             <li><strong>Телефон:</strong> <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
@@ -37,7 +38,7 @@ export default function SoglasieMarketing() {
           <p>
             Пользуясь сайтом <strong>pro-schools.ru</strong> и заполняя форму обратной связи с установленным флажком
             «Согласен(а) на получение маркетинговых материалов», я даю свободное, конкретное, информированное и
-            сознательное согласие ИП Коновалов Дмитрий Васильевич (далее — Оператор) на получение рекламных,
+            сознательное согласие ИП Герасимов Евгений Сергеевич (далее — Оператор) на получение рекламных,
             информационных и маркетинговых сообщений, связанных с услугами и предложениями портала ШколыРоссии.рф.
           </p>
         </section>

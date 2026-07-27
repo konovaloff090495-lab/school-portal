@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Политика конфиденциальности — ШколыРоссии.рф',
-  description: 'Политика обработки персональных данных ИП Коновалов Дмитрий Васильевич',
+  description: 'Политика обработки персональных данных ИП Герасимов Евгений Сергеевич',
   robots: { index: false, follow: false },
 }
 
@@ -29,8 +29,9 @@ export default function PolitikaKonfidentsialnosti() {
             Оператор персональных данных:
           </p>
           <ul className="mt-2 space-y-1 list-none pl-0">
-            <li><strong>Наименование:</strong> ИП Коновалов Дмитрий Васильевич</li>
-            <li><strong>ИНН:</strong> 890203123335</li>
+            <li><strong>Наименование:</strong> ИП Герасимов Евгений Сергеевич</li>
+            <li><strong>ИНН:</strong> 890203667705</li>
+            <li><strong>ОГРНИП:</strong> 322508100563828</li>
             <li><strong>Электронная почта:</strong> <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
             <li><strong>Телефон:</strong> <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
           </ul>
