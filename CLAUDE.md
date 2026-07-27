@@ -84,13 +84,23 @@ git add -A && git commit -m "..." && git push origin main
 ./deploy.sh
 ```
 
-`deploy.sh` делает автоматически:
-1. SSH → `git pull origin main` (ключ `/root/.ssh/github_school_portal`)
-2. `npm ci --prefer-offline`
-3. `nohup NODE_OPTIONS=--max-old-space-size=2048 npm run build` (5–15 мин, не боится обрыва SSH)
-4. Ожидает `/tmp/sp-build.log` → `BUILD_DONE`
-5. `pm2 restart school-portal`
-6. Проверяет HTTP 200
+**Стратегия: сборка ЛОКАЛЬНО на Mac + rsync `.next` на VPS.** Turbopack на VPS
+падает из-за нехватки RAM, поэтому билд гоняем локально (4 ГБ heap) и заливаем
+готовый `.next` на прод. `deploy.sh` делает автоматически:
+
+1. SSH → `git pull origin main` на VPS (ключ `/root/.ssh/github_school_portal`, до 5 ретраев)
+2. Локальная сборка: `NODE_OPTIONS=--max-old-space-size=4096 npm run build`
+3. Читает локальный `.next/BUILD_ID`
+4. `rsync -az --delete` каталогов `.next/` и `public/` на VPS (до 5 ретраев на каждый,
+   с реальной проверкой кода возврата — обрыв SSH во время rsync ловится)
+5. **Гейт безопасности по BUILD_ID**: читает `.next/BUILD_ID` на VPS (до 5 ретраев) и
+   сверяет с локальным. Не совпал → `.next` долит не полностью → выход БЕЗ рестарта,
+   прод остаётся на прежнем билде
+6. `pm2 restart school-portal --update-env` (до 5 ретраев; фолбэк — `pm2 start ecosystem.config.cjs && pm2 save`)
+7. Проверяет HTTP 200 и best-effort пингует sitemap (GSC) + IndexNow
+
+Все SSH/rsync-шаги обёрнуты в ретраи, т.к. этот VPS часто рвёт соединение на
+banner exchange.
 
 ### SSH
 
@@ -107,9 +117,9 @@ until ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 root@45.80.70.209 'echo ok' 
 ### RAM (важно!)
 
 VPS 3.8 GB делится с seocheckup (PM2 `seocheckup`).
-- Runtime: `NODE_OPTIONS=--max-old-space-size=1536`, `max_memory_restart: 1800M`
-- Сборка: `NODE_OPTIONS=--max-old-space-size=2048` (временно)
-- Больше 2048 при сборке **не ставить** — OOM killer убьёт процесс
+- Runtime на VPS: `NODE_OPTIONS=--max-old-space-size=1536`, `max_memory_restart: 1800M`
+- Сборка на VPS **не идёт** — Turbopack там OOM-ится. Билд гоняется локально на Mac
+  с `NODE_OPTIONS=--max-old-space-size=4096`, на VPS уезжает только готовый `.next`
 
 ### Структура на VPS
 
@@ -143,5 +153,7 @@ curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/"
 ### Что НЕ делать
 
 - НЕ деплоить через `vercel --prod` — прод только VPS
-- НЕ запускать `npm run build` без `nohup` — SSH обрывается на длинных командах
-- НЕ чистить `.next` пока идёт сборка — сломает текущий билд
+- НЕ собирать на VPS (`npm run build` по SSH) — Turbopack там OOM-ится; билд только локально
+- НЕ перезапускать PM2 в обход гейта BUILD_ID, если rsync `.next` мог оборваться —
+  поднимете неполный билд
+- НЕ чистить `.next` пока идёт локальная сборка — сломает текущий билд
