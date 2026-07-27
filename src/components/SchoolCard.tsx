@@ -116,7 +116,11 @@ function SchoolPlaceholder({ type, name }: { type: string; name: string }) {
     .join('')
 
   return (
-    <div className={`absolute inset-0 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-3 select-none overflow-hidden`}>
+    <div
+      role="img"
+      aria-label={`${name} — фото недоступно`}
+      className={`absolute inset-0 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-3 select-none overflow-hidden`}
+    >
       {/* декоративные круги */}
       <div className={`absolute -top-8 -right-8 w-32 h-32 rounded-full border-2 ${accent.ring} opacity-30`} />
       <div className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-full border-2 ${accent.ring} opacity-20`} />
@@ -137,18 +141,21 @@ function SchoolPlaceholder({ type, name }: { type: string; name: string }) {
   )
 }
 
-// Количество фото в галерее на школу (должно совпадать с PHOTOS_PER_SCHOOL в скрипте)
-const GALLERY_SIZE = 3
+// Верхняя граница галереи; фактическое число берём из school.photoCount
+const GALLERY_MAX = 3
 
 function SchoolGallery({ school }: { school: School }) {
   const [current, setCurrent] = useState(0)
-  // Список слотов: 1..GALLERY_SIZE, ошибочные помечаем
+  // Список слотов: 1..photoCount, ошибочные помечаем
   const [errors, setErrors] = useState<Record<number, boolean>>({})
 
   const markError = (idx: number) => setErrors(e => ({ ...e, [idx]: true }))
 
+  // Реальное число фото из данных (0..3). Отсутствие поля трактуем как GALLERY_MAX (совместимость).
+  const count = Math.min(school.photoCount ?? GALLERY_MAX, GALLERY_MAX)
+
   // Слоты без ошибок
-  const slots = Array.from({ length: GALLERY_SIZE }, (_, i) => i + 1).filter(i => !errors[i])
+  const slots = Array.from({ length: count }, (_, i) => i + 1).filter(i => !errors[i])
   const hasPhotos = slots.length > 0
 
   // Если текущий слот сломан — сдвигаемся
@@ -167,7 +174,7 @@ function SchoolGallery({ school }: { school: School }) {
   return (
     <div className="relative h-44 overflow-hidden bg-gray-100">
       {/* Все изображения слоями, показываем только активное */}
-      {Array.from({ length: GALLERY_SIZE }, (_, i) => i + 1).map(slot => (
+      {Array.from({ length: count }, (_, i) => i + 1).map(slot => (
         <div
           key={slot}
           className={`absolute inset-0 transition-opacity duration-300 ${
