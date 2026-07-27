@@ -245,7 +245,7 @@ export default async function SchoolPage({ params }: Props) {
       ]} />
 
       {/* Hero галерея */}
-      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt}>
+      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={school.photoCount} name={school.name}>
         <div>
           <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
             {typeLabels[school.type]}
