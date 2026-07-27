@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
-  featureSlugs, languageSlugs, metroSlugs, profileSlugs,
+  featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
   type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
@@ -246,8 +246,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/shkoly/tipy/profilnye/${p}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
   // Региональные лендинги: регион × особенность / подготовка
+  // regionFeatureSkipSlugs исключены: роут /shkoly/[region]/osobennosti/[feature]/
+  // отдаёт для них notFound() (есть выделенные роуты podgotovka-k-ege/oge и programmirovanie),
+  // иначе в sitemap попадает 157 × 3 = 471 битый URL.
   const regionFeaturePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
-    featureSlugs.map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65 }))
+    featureSlugs
+      .filter(f => !regionFeatureSkipSlugs.includes(f))
+      .map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65 }))
   )
   const regionPodgotovkaPages: MetadataRoute.Sitemap = regionSlugs.flatMap(r => [
     { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },

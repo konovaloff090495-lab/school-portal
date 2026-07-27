@@ -238274,6 +238274,17 @@ export const featureMetas: FeatureMeta[] = [
 
 export const featureSlugs: FeatureSlug[] = featureMetas.map(f => f.slug)
 
+// Особенности, у которых уже есть выделенные региональные роуты
+// (/shkoly/[region]/podgotovka-k-ege/, .../podgotovka-k-oge/, .../programmirovanie/).
+// Роут /shkoly/[region]/osobennosti/[feature]/ для них отдаёт notFound(),
+// поэтому эти комбинации НЕ должны попадать в sitemap.
+// Единый источник правды для роута и для src/app/sitemap.ts.
+export const regionFeatureSkipSlugs: FeatureSlug[] = [
+  'podgotovka-k-ege',
+  'podgotovka-k-oge',
+  'it-klass',
+]
+
 export function getFeatureBySlug(slug: string): FeatureMeta | undefined {
   return featureMetas.find(f => f.slug === slug)
 }

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import {
   regionSlugs, regionLabels, regionLabelsIn,
   featureSlugs, featureMetas, getFeatureBySlug, getSchoolsByFeature,
+  regionFeatureSkipSlugs,
   RegionSlug, FeatureSlug,
 } from '@/data/schools'
 import CatalogClient from '../../../CatalogClient'
@@ -11,8 +12,9 @@ interface Props {
   params: Promise<{ region: string; feature: string }>
 }
 
-// Skip features that already have dedicated regional routes
-const SKIP_FEATURES: FeatureSlug[] = ['podgotovka-k-ege', 'podgotovka-k-oge', 'it-klass']
+// Skip features that already have dedicated regional routes.
+// Единый источник — @/data/schools (его же использует src/app/sitemap.ts).
+const SKIP_FEATURES: FeatureSlug[] = regionFeatureSkipSlugs
 
 export function generateStaticParams() {
   const params: { region: string; feature: string }[] = []
