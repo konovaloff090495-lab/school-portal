@@ -35,9 +35,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const topic = klass ? getTopicBySlug(subjectSlug, klass, topicSlug) : undefined
   if (!subject || !topic || !klass) return {}
   return {
-    title: `${topic.title} — ${subject.title} ${klass} класс | pro-schools.ru`,
-    description: `${topic.excerpt} Понятное объяснение с примерами для ${klassLabelIn(klass)}.`,
-    keywords: `${topic.title.toLowerCase()}, ${subject.title.toLowerCase()} ${klass} класс, ${topic.title.toLowerCase()} объяснение`,
+    // Title под интент: тема впереди (совпадение с запросом), брендовый хвост
+    // убран — он не тянул CTR, а хук «объяснение и примеры» тянет.
+    title: `${topic.title} — ${subject.title}, ${klass} класс: объяснение и примеры`,
+    description: `${topic.excerpt} Тема «${topic.title}» простыми словами с примерами и определениями — для ${klassLabelIn(klass)} и подготовки к уроку.`,
+    keywords: `${topic.title.toLowerCase()}, ${subject.title.toLowerCase()} ${klass} класс, ${topic.title.toLowerCase()} объяснение, ${topic.title.toLowerCase()} примеры`,
     alternates: { canonical: `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/${topicSlug}/` },
   }
 }
