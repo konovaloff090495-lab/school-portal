@@ -136,6 +136,27 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* ГДЗ и учебник — сквозные ссылки на два крупнейших раздела (16k+
+                страниц). Раньше их не было ни в шапке, ни в подвале, и разделы
+                висели островами: робот до них почти не доходил. Подвал сквозной,
+                поэтому эти ссылки впрыскивают ссылочный вес с ~9k страниц каталога
+                в глубину ГДЗ/учебника — главный рычаг индексации. */}
+            <div>
+              <h3 style={{ fontSize: 13, fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 16 }}>
+                ГДЗ и учебник
+              </h3>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
+                <li><Link href="/gdz/" style={{ fontSize: 13, fontWeight: 700, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Готовые домашние задания →</Link></li>
+                <li><Link href="/gdz/6-klass/matematika/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ГДЗ математика 6 класс</Link></li>
+                <li><Link href="/gdz/7-klass/algebra/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ГДЗ алгебра 7 класс</Link></li>
+                <li><Link href="/gdz/7-klass/fizika/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ГДЗ физика 7 класс</Link></li>
+                <li style={{ marginTop: 8 }}><Link href="/uchebnik/" style={{ fontSize: 13, fontWeight: 700, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Учебник онлайн →</Link></li>
+                <li><Link href="/uchebnik/matematika/5-klass/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Математика 5 класс</Link></li>
+                <li><Link href="/uchebnik/algebra/7-klass/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Алгебра 7 класс</Link></li>
+                <li><Link href="/uchebnik/russkiy-yazyk/6-klass/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Русский язык 6 класс</Link></li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
