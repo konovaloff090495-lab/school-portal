@@ -25,6 +25,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pro-schools.ru"),
   title: "Школы России — каталог государственных, частных и онлайн школ",
   description:
     "Крупнейший каталог школ России. Государственные, частные, онлайн-школы, вечерние и экстернат. Адреса, телефоны, описания, отзывы.",
