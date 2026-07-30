@@ -59,18 +59,13 @@ export default async function BlogPostPage({ params }: Props) {
   // рекламные блоки прямо в контент (видны на всех экранах, включая мобильные).
   const rawHtml = sanitizeHtml(post.content)
   const sections = rawHtml.split('</h2>').map((s, i, arr) => (i < arr.length - 1 ? s + '</h2>' : s))
-  // Позиции вставки рекламы. Раньше стояло максимум 2 блока на статью, а в средней
-  // статье ~8-9 секций — инвентарь простаивал (слотов на просмотр 0.96 при 3 настроенных).
-  // Теперь: блок после вступления (высокая видимость) и далее каждые 3 секции.
-  // Последнюю секцию пропускаем (там уже CTA), общий лимит — 5 блоков, чтобы не
-  // раздувать страницу и не топить viewability.
-  const AD_EVERY = 3
-  const AD_MAX = 5
+  // Позиции вставки рекламы: максимум 2 блока — после вступления (высокая видимость)
+  // и в середине статьи. Откат уплотнения до 5 блоков (ebae112): плотная раскладка
+  // раздувала показы, но CTR просел (1,1% → 0,16%), а РСЯ по низкому CTR крутит рекламу
+  // дешевле. Держим 2 качественных места и не спамим блоками. См. заметку по РСЯ-аудиту.
   const adAfter = new Set<number>()
   if (sections.length >= 2) adAfter.add(0)
-  for (let i = AD_EVERY; i < sections.length - 1 && adAfter.size < AD_MAX; i += AD_EVERY) {
-    adAfter.add(i)
-  }
+  if (sections.length >= 4) adAfter.add(Math.floor(sections.length / 2))
 
   return (
     <>
