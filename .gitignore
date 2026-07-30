@@ -43,3 +43,8 @@ next-env.d.ts
 
 # локальный пульт статистики РСЯ (содержит OAuth-токен — не коммитить)
 rsya.py
+
+# переобход Яндекс Вебмастера — вшит OAuth-токен + рабочее состояние (как rsya.py)
+recrawl.py
+recrawl_state.json
+recrawl_priority.txt
