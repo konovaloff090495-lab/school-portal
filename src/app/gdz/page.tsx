@@ -7,6 +7,9 @@ import { AD_BLOCKS } from '@/lib/ads'
 export const metadata: Metadata = {
   title: 'ГДЗ — готовые домашние задания по всем предметам · pro-schools.ru',
   description: 'ГДЗ и готовые решения по всем школьным предметам с 1 по 11 класс. Выберите класс — учебники, рабочие тетради и пошаговые ответы.',
+  // Без явного self-canonical страница наследует canonical из layout (главная),
+  // и хаб ГДЗ выпадает из индекса вместе с ~10 тыс. вложенных URL.
+  alternates: { canonical: 'https://pro-schools.ru/gdz/' },
 }
 
 const classSubCounts: Record<number, string> = {

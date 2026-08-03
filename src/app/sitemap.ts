@@ -269,12 +269,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogIndex: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/blog/`, lastModified: D_BLOG, changeFrequency: 'weekly', priority: 0.8 },
   ]
+  // Дата сборки — потолок для lastmod. Часть статей в blog.ts датирована «наперёд»
+  // (плановые даты публикации), а lastmod из будущего поисковики считают невалидным
+  // и могут перестать доверять lastmod по всему сайту.
+  const NOW = new Date()
   const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => {
     // Защита от кривых дат: невалидный publishedAt не должен ломать сборку sitemap
     const d = p.publishedAt ? new Date(p.publishedAt) : D_BLOG
+    const safe = isNaN(d.getTime()) ? D_BLOG : d
     return {
       url: `${BASE_URL}/blog/${p.slug}/`,
-      lastModified: isNaN(d.getTime()) ? D_BLOG : d,
+      lastModified: safe > NOW ? NOW : safe,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     }
