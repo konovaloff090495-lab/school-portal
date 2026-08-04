@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 declare global {
   interface Window {
@@ -20,59 +20,35 @@ interface Props {
   suffix?: string
 }
 
-/** За сколько пикселей до вьюпорта начинаем грузить блок */
-const PRELOAD_MARGIN = '300px 0px'
-
 /**
- * Рекламный блок РСЯ с отложенным рендером.
+ * Рекламный блок РСЯ.
  *
  * blockId — идентификатор блока из кабинета РСЯ, напр. "R-A-19425636-1"
  * suffix  — уникальный суффикс если блок стоит несколько раз на одной странице
  *
- * Рендер вызывается не при монтировании, а когда блок подходит к вьюпорту
- * (IntersectionObserver, запас 300px). Платят за ВИДИМЫЕ показы: блоки в теле
- * статьи, отрендеренные сразу, засчитывались как показ, но до зоны видимости
- * не доживали — на мобильных viewability был 36% против 82% на десктопе.
+ * Рендер — сразу при монтировании (revert 919fc25).
+ *
+ * 25.07 блоки перевели на отложенный рендер через IntersectionObserver ради
+ * viewability. Замер за 10 дней после (`python3 rsya.py --period 30days --days`):
+ *   — CPM 25.07: 147₽ → 26.07: 51₽ → далее 23–61₽. Падение втрое, без отскока.
+ *   — CTR 1.5–4% → 0.3–1%.
+ *   — viewability при этом НЕ выросла: десктоп 82%→74%, мобильные 36%→41%,
+ *     видимые/показы держались на 57–64% против 50–61% до правки.
+ *   — запросов на монетизируемый просмотр осталось ~0.95 при вёрстке на 2 инлайна
+ *     + сайдбар: блоки ниже сгиба просто не успевали запроситься.
+ * Заявленная выгода не подтвердилась, цена — CPM втрое. Возвращаем как было.
  */
 export default function YandexRTBBanner({ blockId, suffix }: Props) {
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
     : `yandex_rtb_${blockId}`
-  const ref = useRef<HTMLDivElement>(null)
-  const rendered = useRef(false)
 
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-
-    const render = () => {
-      if (rendered.current) return
-      rendered.current = true
-      window.yaContextCb = window.yaContextCb || []
-      window.yaContextCb.push(() => {
-        window.Ya?.Context.AdvManager.render({ blockId, renderTo: divId })
-      })
-    }
-
-    // Старые браузеры без IntersectionObserver — рендерим сразу, как раньше
-    if (typeof IntersectionObserver === 'undefined') {
-      render()
-      return
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          render()
-          observer.disconnect()
-        }
-      },
-      { rootMargin: PRELOAD_MARGIN },
-    )
-    observer.observe(el)
-
-    return () => observer.disconnect()
+    window.yaContextCb = window.yaContextCb || []
+    window.yaContextCb.push(() => {
+      window.Ya?.Context.AdvManager.render({ blockId, renderTo: divId })
+    })
   }, [blockId, divId])
 
-  return <div id={divId} ref={ref} />
+  return <div id={divId} />
 }
