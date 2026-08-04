@@ -184,7 +184,11 @@ export default async function SchoolPage({ params }: Props) {
     name: school.name,
     description: school.description,
     url: school.website ?? pageUrl,
-    image: `https://pro-schools.ru/schools/${school.slug}-1.jpg`,
+    // Фото есть не у всех школ — photoCount проставляет scripts/set-photo-count.mjs.
+    // Без проверки в разметку уходит ссылка на несуществующий файл (404).
+    ...(school.photoCount > 0
+      ? { image: `https://pro-schools.ru/schools/${school.slug}-1.jpg` }
+      : {}),
     telephone: school.phone,
     address: {
       '@type': 'PostalAddress',
