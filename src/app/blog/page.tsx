@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { blogPosts } from '@/data/blog'
+import { blogPosts, safePublishedAt } from '@/data/blog'
 
 export const metadata: Metadata = {
   title: 'Блог про школы — советы родителям, рейтинги, выбор школы | pro-schools.ru',
@@ -196,7 +196,7 @@ export default function BlogPage() {
                         {post.author}
                       </div>
                       <div style={{ fontSize: 11, color: 'var(--ink-3)', fontFamily: 'var(--font-manrope)', marginTop: 2 }}>
-                        {formatDate(post.publishedAt)}
+                        {formatDate(safePublishedAt(post))}
                       </div>
                     </div>
                     <span style={{ color: 'var(--coral-500)', fontSize: 20, lineHeight: 1 }}>→</span>

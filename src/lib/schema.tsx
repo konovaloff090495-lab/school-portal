@@ -1,5 +1,5 @@
 import type { School } from '@/data/schools'
-import type { BlogPost } from '@/data/blog'
+import { safePublishedAt, type BlogPost } from '@/data/blog'
 
 // ── helpers ────────────────────────────────────────────────────────────────
 
@@ -79,7 +79,7 @@ export function ArticleJsonLd({
       name: post.author,
       jobTitle: post.authorRole,
     },
-    datePublished: post.publishedAt,
+    datePublished: safePublishedAt(post),
     publisher: {
       '@type': 'Organization',
       name: 'pro-schools.ru',

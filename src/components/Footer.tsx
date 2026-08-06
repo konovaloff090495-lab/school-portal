@@ -171,7 +171,7 @@ export default function Footer() {
             <Link href="/soglasie-marketing/" style={{ color: '#6B6560', textDecoration: 'none' }} className="footer-link">Согласие на маркетинг</Link>
           </p>
           <p style={{ fontSize: 12, color: '#6B6560', margin: 0 }}>
-            Реклама: <a href="mailto:info@pro-schools.ru" style={{ color: '#0369A1' }}>info@pro-schools.ru</a>
+            <Link href="/reklama/" style={{ color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Рекламодателям</Link>
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { sanitizeHtml } from '@/lib/sanitize'
 import {
   getSubjectBySlug, getTopicBySlug, getTopicsForSubjectAndClass,
-  textbookSubjects, klassLabel, klassLabelIn,
+  textbookSubjects, klassLabel, klassLabelIn, klassLabelOf,
 } from '@/data/textbook'
 import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // Title под интент: тема впереди (совпадение с запросом), брендовый хвост
     // убран — он не тянул CTR, а хук «объяснение и примеры» тянет.
     title: `${topic.title} — ${subject.title}, ${klass} класс: объяснение и примеры`,
-    description: `${topic.excerpt} Тема «${topic.title}» простыми словами с примерами и определениями — для ${klassLabelIn(klass)} и подготовки к уроку.`,
+    description: `${topic.excerpt} Тема «${topic.title}» простыми словами с примерами и определениями — для ${klassLabelOf(klass)} и подготовки к уроку.`,
     keywords: `${topic.title.toLowerCase()}, ${subject.title.toLowerCase()} ${klass} класс, ${topic.title.toLowerCase()} объяснение, ${topic.title.toLowerCase()} примеры`,
     alternates: { canonical: `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/${topicSlug}/` },
   }

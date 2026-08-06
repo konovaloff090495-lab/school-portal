@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { blogPosts, getPostBySlug, getAllPostSlugs } from '@/data/blog'
+import { blogPosts, getPostBySlug, getAllPostSlugs, safePublishedAt } from '@/data/blog'
 import { sanitizeHtml } from '@/lib/sanitize'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       type: 'article',
-      publishedTime: post.publishedAt,
+      publishedTime: safePublishedAt(post),
       authors: [post.author],
     },
   }
@@ -158,7 +158,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.readTime} минут чтения
                 </span>
                 <span style={{ fontSize: 13, color: 'var(--ink-3)', fontFamily: 'var(--font-manrope)' }}>
-                  {formatDate(post.publishedAt)}
+                  {formatDate(safePublishedAt(post))}
                 </span>
               </div>
 
