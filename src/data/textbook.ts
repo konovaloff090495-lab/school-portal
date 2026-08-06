@@ -6768,6 +6768,16 @@ export function klassLabelIn(klass: number): string {
   return `${klass} классе`
 }
 
+/**
+ * Родительный падеж: «для 5 класса», «предметы 5 класса».
+ *
+ * Раньше в этих местах стоял klassLabelIn — в описания 6 459 страниц учебника
+ * уезжало «для 5 классе». Ошибка была видна прямо в сниппете Google.
+ */
+export function klassLabelOf(klass: number): string {
+  return `${klass} класса`
+}
+
 export const subjectSlugs = textbookSubjects.map(s => s.slug)
 
 // ─── Статьи ────────────────────────────────────────────────────────────────────

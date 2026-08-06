@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
-  textbookSubjects, getTopicsForSubjectAndClass, klassLabel, klassLabelIn,
+  textbookSubjects, getTopicsForSubjectAndClass, klassLabel, klassLabelIn, klassLabelOf,
 } from '@/data/textbook'
 
 interface Props { params: Promise<{ klass: string }> }
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const subjects = subjectsForClass(klass)
   return {
     title: `Учебник ${klass} класс — все предметы онлайн | pro-schools.ru`,
-    description: `Онлайн учебник за ${klass} класс: ${subjects.map(s => s.subject.title).join(', ')}. Понятные объяснения, примеры и задачи по всем предметам ${klassLabelIn(klass)}.`,
+    description: `Онлайн учебник за ${klass} класс: ${subjects.map(s => s.subject.title).join(', ')}. Понятные объяснения, примеры и задачи по всем предметам ${klassLabelOf(klass)}.`,
     keywords: `учебник ${klass} класс, ${klass} класс все предметы, программа ${klass} класса онлайн`,
     alternates: { canonical: `https://pro-schools.ru/uchebnik/klass/${klassStr}/` },
   }
@@ -86,7 +86,7 @@ export default async function ClassPage({ params }: Props) {
         </div>
 
         {/* Предметы этого класса */}
-        <h2 className="text-base font-bold text-gray-700 mb-4">Предметы {klassLabelIn(klass)}</h2>
+        <h2 className="text-base font-bold text-gray-700 mb-4">Предметы {klassLabelOf(klass)}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {subjects.map(({ subject, topics }) => (
             <Link

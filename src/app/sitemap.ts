@@ -26,6 +26,7 @@ const STATIC_LANDINGS = [
   '/shkoly/tipy/sportivnye/edinoborstva', '/shkoly/tipy/sportivnye/futbol', '/shkoly/tipy/sportivnye/gimnastika', '/shkoly/tipy/sportivnye/olimpijskij-rezerv', '/shkoly/tipy/sportivnye/plavanie', '/shkoly/tipy/sportivnye/posle-9-klassa',
   '/shkoly/tipy/vechernie/besplatnye', '/shkoly/tipy/vechernie/online', '/shkoly/tipy/vechernie/posle-9-klassa', '/shkoly/tipy/vechernie/s-attestatom', '/shkoly/tipy/vechernie/smennye', '/shkoly/tipy/vechernie/starshie-klassy',
   '/o-nas',
+  '/reklama',
 ]
 
 const BASE_URL = 'https://pro-schools.ru'
