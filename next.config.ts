@@ -56,6 +56,23 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      // Удалённая недостоверная запись «Вечерняя школа № 156» (жалоба на чужой телефон,
+      // несуществующая школа). Ведём на каталог вечерних школ Москвы. 2026-08-07.
+      {
+        source: '/shkola/vechernyaya-shkola-156-moskva',
+        destination: '/shkoly/moskva/vechernie/',
+        permanent: true,
+      },
+      {
+        source: '/shkola/vechernyaya-shkola-156-moskva/',
+        destination: '/shkoly/moskva/vechernie/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
