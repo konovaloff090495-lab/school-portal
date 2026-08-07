@@ -40,6 +40,11 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   trailingSlash: true,
 
+  // Явно фиксируем корень воркспейса на этой папке. Иначе Next по ошибке
+  // считает корнем родительский ~/claude/ (там лежит лишний package-lock.json)
+  // и Turbopack начинает обходить десятки соседних проектов — сборка зависает.
+  turbopack: { root: process.cwd() },
+
   // Папка сборки из env — для blue-green деплоя (build в .next-build → атомарный swap)
   distDir: process.env.NEXT_DIST_DIR || '.next',
 
