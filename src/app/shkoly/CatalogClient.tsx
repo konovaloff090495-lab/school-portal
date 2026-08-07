@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
   schools, regionSlugs, regionLabels, typeSlugs, typeLabels,
-  moscowDistrictSlugs, moscowDistrictLabels,
+  moscowDistrictSlugs, moscowDistrictLabels, moscowDistrictFullNames,
   moCitySlugs, moCityLabels,
   featureMetas, FeatureSlug,
   languageMetas, LanguageSlug,
@@ -771,12 +771,47 @@ export default function CatalogClient({
       sportivnye:       'обеспечивают двухразовые профессиональные тренировки при сохранении полноценного учебного процесса и пути в профессиональный спорт',
       yazykovye:        'специализируются на углублённом изучении иностранных языков, готовят к международным сертификатам и поступлению в зарубежные вузы',
     }
+    // Уточнение места: округ Москвы / метро / город МО — чтобы SEO-текст
+    // не выглядел так, будто во всей Москве всего N школ данного типа.
+    const districtSlug = initialDistrict ? districtLabelToSlug[initialDistrict] : undefined
+    const districtFull = districtSlug ? moscowDistrictFullNames[districtSlug] : undefined
+    // Именительный: «Западный административный округ Москвы»
+    const districtPlaceNom = districtFull
+      ? `${districtFull} административный округ Москвы`
+      : undefined
+    // Предложный: «в Западном административном округе Москвы (ЗАО)» (Западный → Западном)
+    const districtPlacePrep = districtFull
+      ? `в ${districtFull.replace(/ый$/, 'ом')} административном округе Москвы (${initialDistrict})`
+      : undefined
+
     if (lockType && initialTypes.length === 1 && lockRegion && initialRegions.length === 1) {
       const type = initialTypes[0]
       const region = initialRegions[0]
       const city = regionLabels[region]
       const typeName = typeNames[type]
+
+      // Округ Москвы
+      if (districtPlaceNom && districtPlacePrep) {
+        return `${typeName} в ${initialDistrict} (${districtPlaceNom}) — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа ${districtPlacePrep}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по рейтингу или стоимости обучения для удобного выбора.`
+      }
+      // Метро Москвы
+      if (initialMetro) {
+        return `${typeName} у метро ${initialMetro} (Москва) — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа рядом с метро ${initialMetro}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по рейтингу или стоимости обучения для удобного выбора.`
+      }
+      // Город Московской области
+      if (seoCity) {
+        return `${typeName} — ${seoCity} — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа в городе ${seoCity} (Московская область). Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по рейтингу или стоимости обучения для удобного выбора.`
+      }
+      // Регион целиком
       return `${typeName} ${city} — учебные заведения, которые ${typeDescriptions[type]}. На портале собрано ${pluralSchools(n)} данного типа в ${city}. Для каждой школы указаны адрес, телефон, официальный сайт, рейтинг и описание программы. Используйте фильтры по округу, рейтингу или стоимости обучения для удобного выбора.`
+    }
+    // Округ Москвы без выбранного типа
+    if (!lockType && districtPlaceNom) {
+      return `Каталог школ ${initialDistrict} (${districtPlaceNom}) содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние, экстернат, семейные и профильные. Для каждого учебного заведения указаны адрес, контакты, описание программы и рейтинг родителей. Используйте фильтры по типу, рейтингу и стоимости обучения для удобного выбора.`
+    }
+    // Метро Москвы без выбранного типа
+    if (!lockType && initialMetro) {
+      return `Каталог школ рядом с метро ${initialMetro} (Москва) содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние, экстернат, семейные и профильные. Для каждого учебного заведения указаны адрес, контакты, описание программы и рейтинг родителей. Используйте фильтры по типу, рейтингу и стоимости обучения для удобного выбора.`
     }
     if (seoCity) {
       return `Каталог школ ${seoCity} (Московская область) содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние и профильные. Для каждого учебного заведения указаны адрес, контактный телефон, описание образовательной программы и рейтинг родителей. Используйте фильтры по типу школы, рейтингу или стоимости обучения, чтобы найти подходящий вариант.`
@@ -787,7 +822,7 @@ export default function CatalogClient({
       return `Каталог школ ${city} содержит ${pluralSchools(n)} всех типов: государственные, частные, онлайн, вечерние, экстернат, семейные и профильные. Для каждого учебного заведения указаны адрес, контакты, описание программы и рейтинг родителей. Используйте фильтры по типу, округу и стоимости обучения для удобного выбора.`
     }
     return null
-  }, [initialRegions, initialTypes, lockRegion, lockType, filtered.length, seoCity])
+  }, [initialRegions, initialTypes, lockRegion, lockType, filtered.length, seoCity, initialDistrict, initialMetro])
 
   const resolvedSubtitle = subtitle ?? `${pluralSchools(filtered.length)} — государственные, частные, онлайн, вечерние, экстернат`
 
