@@ -66,6 +66,11 @@ export default async function BlogPostPage({ params }: Props) {
   const adAfter = new Set<number>()
   if (sections.length >= 2) adAfter.add(0)
   if (sections.length >= 4) adAfter.add(Math.floor(sections.length / 2))
+  // Сквозная нумерация рекламных мест страницы: РСЯ рисует один блок на странице
+  // только один раз, повторные места оживают лишь с pageNumber. См. YandexRTBBanner.
+  const adSlotNumber = new Map<number, number>()
+  ;[...adAfter].sort((a, b) => a - b).forEach((i, n) => adSlotNumber.set(i, n + 1))
+  const sidebarAdNumber = adSlotNumber.size + 1
 
   return (
     <>
@@ -231,7 +236,11 @@ export default async function BlogPostPage({ params }: Props) {
                         <span>Реклама</span>
                         <span>16+</span>
                       </div>
-                      <YandexRTBBanner blockId={AD_BLOCKS.blogInline} suffix={`blog-inline-${i}`} />
+                      <YandexRTBBanner
+                        blockId={AD_BLOCKS.blogInline}
+                        suffix={`blog-inline-${i}`}
+                        pageNumber={adSlotNumber.get(i)}
+                      />
                     </div>
                   )}
                 </Fragment>
@@ -315,7 +324,11 @@ export default async function BlogPostPage({ params }: Props) {
                   <span style={{ fontSize: 10, fontWeight: 700, color: 'rgba(26,24,20,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Реклама</span>
                   <span style={{ fontSize: 10, color: 'rgba(26,24,20,0.3)' }}>16+</span>
                 </div>
-                <YandexRTBBanner blockId={AD_BLOCKS.blogSidebar} suffix="blog-post" />
+                <YandexRTBBanner
+                  blockId={AD_BLOCKS.blogSidebar}
+                  suffix="blog-post"
+                  pageNumber={sidebarAdNumber}
+                />
               </div>
               {/* All posts */}
               <div style={{ background: 'white', borderRadius: 18, padding: 20, border: '1px solid rgba(26,24,20,0.08)' }}>

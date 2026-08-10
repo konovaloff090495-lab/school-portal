@@ -72,7 +72,7 @@ export default function GdzPage() {
         <aside className="gdz-ad gdz-ad-inline" data-rsya="R-A-19425636-1" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot">
-            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-inline" />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-inline" pageNumber={1} />
           </div>
         </aside>
 
@@ -102,7 +102,7 @@ export default function GdzPage() {
           <div className="gdz-ad" data-rsya="R-A-19425636-1">
             <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
             <div className="gdz-ad-slot gdz-ad-slot--tall">
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="index-sidebar" pageNumber={2} />
             </div>
           </div>
         </div>
