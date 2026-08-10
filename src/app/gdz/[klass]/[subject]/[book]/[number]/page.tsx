@@ -330,7 +330,7 @@ export default async function GdzNumberPage({ params }: Props) {
           {/* РСЯ — адаптивный баннер после решения */}
           <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
             <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} pageNumber={1} />
           </aside>
 
           {/* Соседние номера */}
@@ -389,7 +389,7 @@ export default async function GdzNumberPage({ params }: Props) {
           <div className="gdz-rail-sticky">
             <div className="gdz-ad">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="sidebar" pageNumber={2} />
             </div>
           </div>
         </aside>
