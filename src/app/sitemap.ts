@@ -43,7 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
+      // trailingSlash: true — главная канонична со слешем (canonical на странице
+      // тоже https://pro-schools.ru/), поэтому и в sitemap отдаём со слешем.
+      url: `${BASE_URL}/`,
       lastModified: D_SCHOOLS,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -138,7 +140,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gdzProblemPages: MetadataRoute.Sitemap = gdzBooks.flatMap(b =>
     b.chapters.flatMap(ch =>
       ch.problems
-        .filter(p => p.condition && p.steps?.length)
+        // Критерий индексируемости должен совпадать с hasSolution в
+        // /gdz/[klass]/[subject]/[book]/[number]/page.tsx: решение = шаги ИЛИ
+        // картинки разбора, плюс условие. Иначе индексируемые страницы
+        // (условие + imageUrls, без steps) не попадают в sitemap.
+        .filter(p => p.condition && (p.steps?.length || p.imageUrls?.length))
         .map(p => ({
           url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/nomer-${p.number.replace(/\./g, "-")}/`,
           lastModified: D_GDZ,
