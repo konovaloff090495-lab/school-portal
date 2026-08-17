@@ -316,8 +316,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Финальная дедупликация по URL — страховка от дублей в данных
   // (дубли slug школ, задач ГДЗ и т.п.): каждый <loc> в sitemap уникален.
+  //
+  // Плюс ASCII-guard: часть slug'ов в данных (schools.ts, textbook.ts) битые —
+  // в них смешана кириллица с латиницей («externат-omsk-online», «doли-drobi»).
+  // Роут такие URL не отдаёт — прод возвращает 404, а в <loc> кириллица уходит
+  // неэкранированной (невалидный sitemap). Отбрасываем такие записи здесь, чтобы
+  // битые slug'и в данных больше никогда не попадали в sitemap автоматически.
   const seen = new Set<string>()
   return all.filter(entry => {
+    // eslint-disable-next-line no-control-regex
+    if (/[^\x20-\x7E]/.test(entry.url)) return false
     if (seen.has(entry.url)) return false
     seen.add(entry.url)
     return true
