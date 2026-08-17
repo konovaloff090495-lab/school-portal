@@ -101,6 +101,13 @@ CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools
 echo "  HTTP: $CODE"
 if [[ "$CODE" == "200" ]]; then
   echo "✅ pro-schools.ru работает! (BUILD_ID $VPS_BUILD_ID)"
+  # Belt-and-suspenders: rsync --delete стирает on-demand ISR-кэш блога, поэтому
+  # после полного деплоя инвалидируем /blog и /sitemap.xml, чтобы они перечитали
+  # content/blog. Best-effort (не влияет на статус деплоя).
+  BLOG_SECRET=$(grep -E '^ADMIN_SECRET=' "$(dirname "$0")/.env.local" 2>/dev/null | head -1 | sed -E 's/^ADMIN_SECRET=//')
+  if [[ -n "$BLOG_SECRET" ]]; then
+    curl -s --max-time 15 -X POST "https://pro-schools.ru/api/revalidate" -H "Authorization: $BLOG_SECRET" -H 'Content-Type: application/json' -d '{}' -o /dev/null || true
+  fi
   # Переотправка sitemap в Google Search Console (переобход при релизе). Best-effort.
   python3 "$HOME/claude/seo-tools/ping_sitemap.py" pro-schools.ru || true
   # IndexNow + переобход Яндекс.Вебмастера по изменённым за 2 дня страницам. Best-effort.
