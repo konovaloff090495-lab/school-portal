@@ -1,5 +1,5 @@
 import type { School } from '@/data/schools'
-import { safePublishedAt, type BlogPost } from '@/data/blog'
+import { safePublishedAt, type BlogPost } from '@/lib/blog-content'
 
 // ── helpers ────────────────────────────────────────────────────────────────
 

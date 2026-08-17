@@ -3,11 +3,17 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { blogPosts, getPostBySlug, getAllPostSlugs, safePublishedAt } from '@/data/blog'
+import { getAllPostsMeta, getPostBySlug, getAllPostSlugs, safePublishedAt } from '@/lib/blog-content'
 import { sanitizeHtml } from '@/lib/sanitize'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS } from '@/lib/ads'
+
+// Контент статей читается с диска (content/blog/*.json), а не из бандла.
+// Новый slug, появившийся между сборками, рендерится on-demand и кэшируется.
+// revalidate=86400 — как у рабочего роута /uchebnik.
+export const dynamicParams = true
+export const revalidate = 86400
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -50,9 +56,10 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const related = blogPosts.filter(p => p.slug !== slug && p.category === post.category).slice(0, 2)
+  const allPosts = getAllPostsMeta()
+  const related = allPosts.filter(p => p.slug !== slug && p.category === post.category).slice(0, 2)
   const others  = related.length < 2
-    ? [...related, ...blogPosts.filter(p => p.slug !== slug && !related.includes(p)).slice(0, 2 - related.length)]
+    ? [...related, ...allPosts.filter(p => p.slug !== slug && !related.includes(p)).slice(0, 2 - related.length)]
     : related
 
   // Разбиваем тело статьи на секции по заголовкам <h2>, чтобы вставить
@@ -336,7 +343,7 @@ export default async function BlogPostPage({ params }: Props) {
                   Все статьи
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {blogPosts.filter(p => p.slug !== slug).slice(0, 5).map(p => (
+                  {allPosts.filter(p => p.slug !== slug).slice(0, 5).map(p => (
                     <Link key={p.slug} href={`/blog/${p.slug}/`} style={{ textDecoration: 'none' }}>
                       <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                         <span style={{

@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { blogPosts, safePublishedAt } from '@/data/blog'
+import { getAllPostsMeta, safePublishedAt } from '@/lib/blog-content'
+
+// Список читается с диска в рендере; revalidate обновляет индекс после публикации
+// новой статьи (через /api/revalidate) без полной пересборки сайта.
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'Блог про школы — советы родителям, рейтинги, выбор школы | pro-schools.ru',
@@ -20,7 +24,7 @@ function formatDate(iso: string) {
 }
 
 export default function BlogPage() {
-  const [featured, ...rest] = blogPosts
+  const [featured, ...rest] = getAllPostsMeta()
 
   return (
     <div style={{ background: 'var(--cream)', minHeight: '100vh' }}>
