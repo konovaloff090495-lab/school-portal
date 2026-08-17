@@ -8,7 +8,7 @@ import {
 import { regionProfileIds } from '@/data/region-profiles'
 import { gdzKlasses, gdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
-import { blogPosts } from '@/data/blog'
+import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
@@ -30,6 +30,10 @@ const STATIC_LANDINGS = [
 ]
 
 const BASE_URL = 'https://pro-schools.ru'
+
+// Блог теперь читается с диска в рантайме; revalidate обновляет sitemap после
+// публикации новой статьи (через /api/revalidate) без полной пересборки.
+export const revalidate = 3600
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Stable dates by content type — prevents Yandex/Google from treating every
@@ -280,7 +284,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // (плановые даты публикации), а lastmod из будущего поисковики считают невалидным
   // и могут перестать доверять lastmod по всему сайту.
   const NOW = new Date()
-  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map(p => {
+  const blogPostPages: MetadataRoute.Sitemap = getAllPostsMeta().map(p => {
     // Защита от кривых дат: невалидный publishedAt не должен ломать сборку sitemap
     const d = p.publishedAt ? new Date(p.publishedAt) : D_BLOG
     const safe = isNaN(d.getTime()) ? D_BLOG : d
