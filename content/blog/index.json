@@ -14122,19 +14122,5 @@
     "publishedAt": "2026-08-17",
     "readTime": 9,
     "imageAlt": "Ребёнок на первом занятии в кружке"
-  },
-  {
-    "slug": "e2e-fast-publish-deleteme",
-    "title": "E2E тест быстрой публикации",
-    "excerpt": "Временная статья для проверки publish.sh. Будет удалена автоматически.",
-    "category": "Советы родителям",
-    "tags": [
-      "тест"
-    ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-08-17",
-    "readTime": 1,
-    "imageAlt": "тест"
   }
 ]
