@@ -67,8 +67,9 @@ export default async function MetroTypePage({ params }: Props) {
   // Для типов, которых в базе нет ни одной школы (programmirovanie, podgotovka-ege,
   // podgotovka-oge), фильтруем не по типу, а по одноимённой особенности — там данные есть.
   const feature = TYPE_TO_FEATURE[t]
-  const nearHere = (list: typeof schools) =>
-    list.filter(s => s.metro && s.metro.toLowerCase().includes(metroName.toLowerCase()))
+  // сверка точным совпадением — так же, как фильтрует сам каталог (CatalogClient),
+  // иначе подпись «N школ» разойдётся с тем, что реально видно в списке
+  const nearHere = (list: typeof schools) => list.filter(s => s.metro === metroName)
   const count = feature
     ? nearHere(getSchoolsByFeature(feature, 'moskva')).length
     : nearHere(schools.filter(s => s.region === 'moskva' && s.type === t)).length
