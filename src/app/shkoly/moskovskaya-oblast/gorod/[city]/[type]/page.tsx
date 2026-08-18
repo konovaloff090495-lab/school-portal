@@ -3,13 +3,15 @@ import { notFound } from 'next/navigation'
 import { moCitySlugs, moCityLabels, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
-import { relatedForMoCityType, TYPE_TO_FEATURE } from '@/lib/related-schools'
+import { relatedForMoCityType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ city: string; type: string }>
 }
 
 // Правильные русские названия для заголовков
+// Локальные формулировки имеют приоритет; для остальных типов —
+// общий словарь TYPE_FULL_NAME (иначе в H1 попадает «Шахматные у метро X»).
 const typeNameMap: Partial<Record<SchoolType, string>> = {
   gosudarstvennye: 'Государственные школы',
   chastnie:        'Частные школы',
@@ -70,7 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cityLabel = moCityLabels[city as keyof typeof moCityLabels]
   const t = type as SchoolType
-  const typeName = typeNameMap[t] ?? typeLabels[t]
+  const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
 
   const count = schools.filter(
     s => s.region === 'moskovskaya-oblast' && s.city === cityLabel && s.type === t
@@ -92,7 +94,7 @@ export default async function MoCityTypePage({ params }: Props) {
 
   const cityLabel = moCityLabels[city as keyof typeof moCityLabels]
   const t = type as SchoolType
-  const typeName = typeNameMap[t] ?? typeLabels[t]
+  const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
   const locative = inCity(cityLabel)
 
   // Типы без единой школы в базе фильтруем по одноимённой особенности — см. TYPE_TO_FEATURE.

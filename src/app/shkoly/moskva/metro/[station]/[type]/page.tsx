@@ -3,12 +3,14 @@ import type { Metadata } from 'next'
 import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
-import { relatedForMetroType, TYPE_TO_FEATURE } from '@/lib/related-schools'
+import { relatedForMetroType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ station: string; type: string }>
 }
 
+// Локальные формулировки имеют приоритет; для остальных типов —
+// общий словарь TYPE_FULL_NAME (иначе в H1 попадает «Шахматные у метро X»).
 const typeNameMap: Partial<Record<SchoolType, string>> = {
   gosudarstvennye: 'Государственные школы',
   chastnie:        'Частные школы',
@@ -44,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!typeSlugs.includes(type as SchoolType)) return {}
 
   const t = type as SchoolType
-  const typeName = typeNameMap[t] ?? typeLabels[t]
+  const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
   const title = `${typeName} у метро ${metroName} в Москве`
   const description = `${typeName} рядом со станцией метро «${metroName}» в Москве. Адреса, телефоны, рейтинги родителей.`
 
@@ -62,7 +64,7 @@ export default async function MetroTypePage({ params }: Props) {
   if (!typeSlugs.includes(type as SchoolType)) notFound()
 
   const t = type as SchoolType
-  const typeName = typeNameMap[t] ?? typeLabels[t]
+  const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
 
   // Для типов, которых в базе нет ни одной школы (programmirovanie, podgotovka-ege,
   // podgotovka-oge), фильтруем не по типу, а по одноимённой особенности — там данные есть.

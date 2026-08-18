@@ -28,7 +28,7 @@ export interface RelatedBlock {
  * Полные названия типов для заголовков блока. typeLabels в schools.ts — короткие
  * прилагательные («Международные»), из них не собрать читаемый заголовок.
  */
-const TYPE_FULL_NAME: Record<SchoolType, string> = {
+export const TYPE_FULL_NAME: Record<SchoolType, string> = {
   gosudarstvennye:   'Государственные школы',
   chastnie:          'Частные школы',
   online:            'Онлайн-школы',
