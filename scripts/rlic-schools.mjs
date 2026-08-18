@@ -25,6 +25,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { createJiti } from '../node_modules/jiti/lib/jiti.mjs'
 import { makeDescriptions, TYPE_META } from './lib/school-text.mjs'
+import { cleanAddress, titleCase } from './lib/rlic-address.mjs'
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url))
 const SCHOOLS_TS = path.join(__dirname, '..', 'src', 'data', 'schools.ts')
@@ -78,51 +79,9 @@ async function detail(id) {
   }
 }
 
-// Регистр слова: КАПС → Титул, иначе оставляем (чтобы не ломать «МБОУ», «им.»)
-const SMALL = new Set(['на','в','во','по','и','с','к','о','от','до','для','при','из','за','над','под','у'])
-function titleWord(w, i) {
-  if (w.length <= 1) return w
-  const low = w.toLowerCase()
-  if (i > 0 && SMALL.has(low)) return low
-  if (w === w.toUpperCase() && /[А-ЯЁA-Z]/.test(w)) return w.charAt(0) + low.slice(1)
-  return w
-}
-function titleCase(s) {
-  let idx=0; return s.split(/(\s+|-)/).map(t=>/^[\s-]+$/.test(t)?t:titleWord(t,idx++)).join('')
-}
 
 // Юр-адрес → человекочитаемый: «119034, Г.Москва, ВН.ТЕР.Г. ... УЛ ОСТОЖЕНКА, Д. 42, ПОМЕЩ. 2П»
 //   → «ул. Остоженка, д. 42»
-function cleanAddress(raw, cityName) {
-  if (!raw) return `г. ${cityName}`
-  // \b в JS не работает с кириллицей (граница слова — только ASCII), поэтому
-  // используем lookaround по кириллице. NB — «не буква кириллицы» слева/справа.
-  const NB = '(?<![А-ЯЁа-яё])', NA = '(?![А-ЯЁа-яё])'
-  const w = (body, flags='ig') => new RegExp(NB + body + NA, flags)
-  const C = '[А-ЯЁа-яё]'
-  let a = ' ' + raw + ' '
-  a = a.replace(/(^|,)\s*\d{5,6}\s*,?/g, ',')                        // индекс в любом месте
-    .replace(/Российская Федерация\s*,?/ig, ' ')
-    .replace(w('г(ород)?\\.?\\s*(москв'+C+'*|санкт-?петербург'+C+'*|севастопол'+C+'*)\\s*,?'), ' ')
-    .replace(/ВН\.?\s*ТЕР\.?\s*Г\.?\s*/ig, ' ')
-    .replace(/муниципальн[а-яё]*\s+округ[а-яё]*\s*(№\s*\d+|[А-ЯЁа-яё-]+)?\s*,?/ig, ' ')
-    .replace(w('поселени'+C+'*\\s+'+C+'[А-ЯЁа-яё-]*\\s*,?'), ' ')
-    .replace(w('(населенный пункт\\s+)?(деревня|пос[её]лок|село|рабочий пос[её]лок)\\s+'+C+'[А-ЯЁа-яё-]*\\s*,?'), ' ')
-    .replace(/\bж\/?к\s+[А-ЯЁа-яё-]+\s*,?/ig, ' ')
-    .replace(w('(помещ'+C+'*|литер[аы]?|каб'+C+'*|комн'+C+'*)\\.?[^,]*'), ' ')      // офисный хвост
-    .replace(/,?\s*оф(ис)?\.?\s*[^,]*/ig, ' ').replace(/,?\s*эт(аж)?\.?\s*\d[^,]*/ig, ' ').replace(/,?\s*кв\.?\s*\d[^,]*/ig, ' ')
-    .replace(/\s+/g, ' ').replace(/^[,\s]+|[,\s]+$/g, '')
-  // сокращения к единому виду (тоже через lookaround)
-  const R = [['УЛ','ул.'],['ПЕР','пер.'],['ПРОСПЕКТ','просп.'],['ПР-?КТ','просп.'],['ШОССЕ','шоссе'],
-    ['НАБ','наб.'],['БУЛЬВАР','бул.'],['Б-?Р','бул.'],['ТУП','тупик'],['ПЛ','пл.'],
-    ['ДОМ','д.'],['Д','д.'],['СТРОЕНИЕ','стр.'],['СТР','стр.'],['КОРПУС','корп.'],['КОРП?','корп.']]
-  for (const [from,to] of R) a = a.replace(w(from+'\\.?'), to)
-  a = a.replace(/\s+/g,' ').replace(/\s*,\s*/g,', ').replace(/^[,\s]+|[,\s]+$/g,'')
-  // капсовые названия улиц → Титул
-  a = a.split(', ').map(part => /^(ул\.|пер\.|просп\.|шоссе|наб\.|бул\.|пл\.|тупик)/i.test(part) ? titleCase(part) : part).join(', ')
-  a = a.charAt(0).toUpperCase() + a.slice(1)
-  return a && a.length > 3 ? a : `г. ${cityName}`
-}
 
 // Имя школы. Берём содержимое кавычек; если это аббревиатура (согласные капсом,
 // «ПЦО», «Мшдк»), пробуем осмысленную часть полного названия. Аббревиатуру-имя
