@@ -7,6 +7,8 @@ import {
   RegionSlug, FeatureSlug,
 } from '@/data/schools'
 import CatalogClient from '../../../CatalogClient'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForRegionFeature } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ region: string; feature: string }>
@@ -62,8 +64,11 @@ export default async function RegionFeaturePage({ params }: Props) {
   const regionIn = regionLabelsIn[r]
   const count = getSchoolsByFeature(f, r).length
 
+  const related = count === 0 ? relatedForRegionFeature(r, f) : null
+
   return (
     <CatalogClient
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       initialRegions={[r]}
       lockRegion
       featureFilter={f}

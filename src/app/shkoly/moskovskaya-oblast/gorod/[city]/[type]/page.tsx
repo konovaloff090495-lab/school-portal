@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { moCitySlugs, moCityLabels, typeSlugs, typeLabels, schools, SchoolType } from '@/data/schools'
+import { moCitySlugs, moCityLabels, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForMoCityType, TYPE_TO_FEATURE } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ city: string; type: string }>
@@ -93,17 +95,26 @@ export default async function MoCityTypePage({ params }: Props) {
   const typeName = typeNameMap[t] ?? typeLabels[t]
   const locative = inCity(cityLabel)
 
-  const count = schools.filter(
-    s => s.region === 'moskovskaya-oblast' && s.city === cityLabel && s.type === t
-  ).length
+  // Типы без единой школы в базе фильтруем по одноимённой особенности — см. TYPE_TO_FEATURE.
+  const feature = TYPE_TO_FEATURE[t]
+  const count = (feature
+    ? getSchoolsByFeature(feature, 'moskovskaya-oblast')
+    : schools.filter(s => s.region === 'moskovskaya-oblast' && s.type === t)
+  ).filter(s => s.city === cityLabel).length
+
+  const related = count === 0
+    ? relatedForMoCityType(city as keyof typeof moCityLabels, t, typeName, feature)
+    : null
 
   return (
     <CatalogClient
       initialRegions={['moskovskaya-oblast']}
       initialCity={cityLabel}
-      initialTypes={[t]}
+      initialTypes={feature ? [] : [t]}
+      featureFilter={feature}
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       lockRegion
-      lockType
+      lockType={!feature}
       seoCity={cityLabel}
       title={`${typeName} ${locative}`}
       subtitle={`${count} школ в каталоге`}

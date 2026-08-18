@@ -13,6 +13,7 @@ import {
   metroNameToSlug,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
+import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
 import AdBanner from '@/components/AdBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -52,30 +53,6 @@ const PRICE_LABELS: Record<string, string> = {
 }
 
 // ── Профили для профильных школ ───────────────────────────────────────────────
-const SCHOOL_PROFILES = [
-  { id: 'it',          label: 'IT / Программирование', keywords: ['it', 'программирован', 'кибер', 'цифров', 'алгоритм', 'код', 'робот', 'искусственный интеллект', 'компьютер', 'технолог'] },
-  { id: 'medical',     label: 'Медицинский',            keywords: ['медицин', 'биолог', 'химия', 'анатомия', 'фармацевт', 'врач', 'здоровь', 'гиппократ', 'сеченов', 'первый мед'] },
-  { id: 'math',        label: 'Физ-мат',                keywords: ['физ-мат', 'физмат', 'математик', 'физика', 'точные науки', 'олимпиад', 'математическ'] },
-  { id: 'music',       label: 'Музыкальный',            keywords: ['музык', 'фортепиано', 'скрипка', 'вокал', 'хор', 'соната', 'консерватори', 'инструмент'] },
-  { id: 'sport',       label: 'Спортивный',             keywords: ['спорт', 'футбол', 'хоккей', 'теннис', 'олимпийск', 'баскетбол', 'борьба', 'плавание', 'гимнастик'] },
-  { id: 'art',         label: 'Художественный',         keywords: ['художеств', 'искусств', 'живопись', 'дизайн', 'архитектур', 'творческ', 'сценическ'] },
-  { id: 'humanities',  label: 'Гуманитарный',           keywords: ['гуманитар', 'история', 'литератур', 'языков', 'лингвистик', 'журналист', 'право', 'обществ'] },
-  { id: 'economics',   label: 'Экономический',          keywords: ['экономик', 'бизнес', 'финанс', 'предпринимат', 'менеджмент', 'маркетинг', 'управлен'] },
-  { id: 'engineering', label: 'Инженерный',             keywords: ['инженер', 'механик', 'авиа', 'судостроен', 'строительн', 'техническ', 'промышленн'] },
-  { id: 'languages',   label: 'Языковой',               keywords: ['языков', 'иностранн', 'английск', 'лингвистик', 'переводч', 'международн'] },
-  { id: 'ecology',     label: 'Естественнонаучный',     keywords: ['экологи', 'биохими', 'географи', 'геологи', 'естественн', 'природ', 'окружающ'] },
-] as const
-
-type ProfileId = typeof SCHOOL_PROFILES[number]['id']
-
-function detectProfile(school: { name: string; features: string[]; description: string; fullDescription?: string }): ProfileId | null {
-  const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
-    .join(' ').toLowerCase()
-  for (const p of SCHOOL_PROFILES) {
-    if (p.keywords.some(kw => haystack.includes(kw))) return p.id
-  }
-  return null
-}
 
 // reverse maps: label → slug (used for URL navigation)
 const districtLabelToSlug = Object.fromEntries(
@@ -125,6 +102,8 @@ export interface CatalogClientProps {
   featureFilter?: FeatureSlug
   languageFilter?: LanguageSlug
   seoContent?: React.ReactNode
+  /** Блок расширенной выборки — показывается, когда по строгому фильтру школ нет. */
+  emptyFallback?: React.ReactNode
 }
 
 function toggle<T>(arr: T[], val: T): T[] {
@@ -288,6 +267,7 @@ export default function CatalogClient({
   featureFilter,
   languageFilter,
   seoContent,
+  emptyFallback,
 }: CatalogClientProps) {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const [filters, setFilters] = useState<Filters>({
@@ -1176,6 +1156,8 @@ export default function CatalogClient({
               </button>
             </div>
           )}
+
+          {filtered.length === 0 && emptyFallback}
 
           {filtered.length > 0 && viewMode === 'grid' && (() => {
             const page = filtered.slice(0, visibleCount)

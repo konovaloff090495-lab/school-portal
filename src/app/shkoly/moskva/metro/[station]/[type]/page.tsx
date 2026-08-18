@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType } from '@/data/schools'
+import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForMetroType, TYPE_TO_FEATURE } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ station: string; type: string }>
@@ -62,18 +64,26 @@ export default async function MetroTypePage({ params }: Props) {
   const t = type as SchoolType
   const typeName = typeNameMap[t] ?? typeLabels[t]
 
-  const count = schools.filter(
-    s => s.region === 'moskva' && s.type === t &&
-    s.metro && s.metro.toLowerCase().includes(metroName.toLowerCase())
-  ).length
+  // Для типов, которых в базе нет ни одной школы (programmirovanie, podgotovka-ege,
+  // podgotovka-oge), фильтруем не по типу, а по одноимённой особенности — там данные есть.
+  const feature = TYPE_TO_FEATURE[t]
+  const nearHere = (list: typeof schools) =>
+    list.filter(s => s.metro && s.metro.toLowerCase().includes(metroName.toLowerCase()))
+  const count = feature
+    ? nearHere(getSchoolsByFeature(feature, 'moskva')).length
+    : nearHere(schools.filter(s => s.region === 'moskva' && s.type === t)).length
+
+  const related = count === 0 ? relatedForMetroType(station, t, typeName, feature) : null
 
   return (
     <CatalogClient
       initialRegions={['moskva']}
-      initialTypes={[t]}
+      initialTypes={feature ? [] : [t]}
+      featureFilter={feature}
       initialMetro={metroName}
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       lockRegion
-      lockType
+      lockType={!feature}
       lockMetro
       title={`${typeName} у метро ${metroName}`}
       subtitle={`${count} школ в каталоге`}

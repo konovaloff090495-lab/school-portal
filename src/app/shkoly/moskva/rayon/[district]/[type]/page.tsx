@@ -4,9 +4,10 @@ import {
   moscowDistrictSlugs, moscowDistrictLabels, moscowDistrictFullNames,
   typeSlugs, typeLabels,
   MoscowDistrictSlug, SchoolType,
-  schools,
-} from '@/data/schools'
+  schools, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '../../../../CatalogClient'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForDistrictType, TYPE_TO_FEATURE } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ district: string; type: string }>
@@ -88,17 +89,24 @@ export default async function DistrictTypePage({ params }: Props) {
   const typeName      = typeNameMap[t] ?? typeLabels[t]
   const prep          = districtPrepMap[d]
 
-  const count = schools.filter(
-    s => s.region === 'moskva' && s.type === t && s.district === districtLabel
-  ).length
+  // Типы без единой школы в базе фильтруем по одноимённой особенности — см. TYPE_TO_FEATURE.
+  const feature = TYPE_TO_FEATURE[t]
+  const count = (feature
+    ? getSchoolsByFeature(feature, 'moskva')
+    : schools.filter(s => s.region === 'moskva' && s.type === t)
+  ).filter(s => s.district === districtLabel).length
+
+  const related = count === 0 ? relatedForDistrictType(d, t, typeName, feature) : null
 
   return (
     <CatalogClient
       initialRegions={['moskva']}
-      initialTypes={[t]}
+      initialTypes={feature ? [] : [t]}
+      featureFilter={feature}
       initialDistrict={districtLabel}
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       lockRegion
-      lockType
+      lockType={!feature}
       title={`${typeName} ${prep}`}
       subtitle={`${districtFull} административный округ Москвы · ${count} школ в каталоге`}
       breadcrumbs={[

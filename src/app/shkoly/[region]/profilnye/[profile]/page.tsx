@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { regionSlugs, regionLabels, regionLabelsIn, RegionSlug } from '@/data/schools'
+import { regionSlugs, regionLabels, regionLabelsIn, RegionSlug, schools } from '@/data/schools'
 import CatalogClient from '../../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForRegionProfile } from '@/lib/related-schools'
+import { detectProfile } from '@/lib/school-profiles'
 
 interface Props {
   params: Promise<{ region: string; profile: string }>
@@ -48,11 +51,17 @@ export default async function RegionProfilePage({ params }: Props) {
   const regionName = regionLabels[r]
   const regionIn = regionLabelsIn[r]
 
+  const count = schools.filter(
+    s => s.region === r && s.type === 'profilnye' && detectProfile(s) === profile,
+  ).length
+  const related = count === 0 ? relatedForRegionProfile(r, profile, p.label) : null
+
   return (
     <CatalogClient
       initialRegions={[r]}
       initialTypes={['profilnye']}
       initialProfile={profile}
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       lockRegion
       lockType
       lockProfile
