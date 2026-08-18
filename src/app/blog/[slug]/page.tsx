@@ -66,17 +66,24 @@ export default async function BlogPostPage({ params }: Props) {
   // рекламные блоки прямо в контент (видны на всех экранах, включая мобильные).
   const rawHtml = sanitizeHtml(post.content)
   const sections = rawHtml.split('</h2>').map((s, i, arr) => (i < arr.length - 1 ? s + '</h2>' : s))
-  // Позиции вставки рекламы: максимум 2 блока — после вступления (высокая видимость)
-  // и в середине статьи. Откат уплотнения до 5 блоков (ebae112): плотная раскладка
+  // Позиции вставки рекламы: максимум 2 блока — в начале статьи (высокая видимость)
+  // и в середине. Откат уплотнения до 5 блоков (ebae112): плотная раскладка
   // раздувала показы, но CTR просел (1,1% → 0,16%), а РСЯ по низкому CTR крутит рекламу
   // дешевле. Держим 2 качественных места и не спамим блоками. См. заметку по РСЯ-аудиту.
-  const adAfter = new Set<number>()
-  if (sections.length >= 2) adAfter.add(0)
-  if (sections.length >= 4) adAfter.add(Math.floor(sections.length / 2))
+  //
+  // 18.08.2026 — реклама вставляется ПЕРЕД секцией, а не после. Замер за неделю:
+  // видимые/запросы на мобильных 28,5% против 54% на десктопе. Причина — единственное
+  // работающее место (см. YandexRTBBanner: РСЯ отдаёт один блок на страницу) стояло
+  // после первой секции текста, а над ним ещё хлебные крошки, H1, лид, обложка до 420px
+  // и карточка автора: на телефоне это два экрана до рекламы. Подъём на верх тела
+  // статьи бьёт по единственному множителю, который можно двигать без кабинета РСЯ.
+  const adBefore = new Set<number>()
+  if (sections.length >= 2) adBefore.add(0)
+  if (sections.length >= 4) adBefore.add(Math.floor(sections.length / 2))
   // Сквозная нумерация рекламных мест страницы: РСЯ рисует один блок на странице
   // только один раз, повторные места оживают лишь с pageNumber. См. YandexRTBBanner.
   const adSlotNumber = new Map<number, number>()
-  ;[...adAfter].sort((a, b) => a - b).forEach((i, n) => adSlotNumber.set(i, n + 1))
+  ;[...adBefore].sort((a, b) => a - b).forEach((i, n) => adSlotNumber.set(i, n + 1))
   const sidebarAdNumber = adSlotNumber.size + 1
 
   return (
@@ -135,6 +142,8 @@ export default async function BlogPostPage({ params }: Props) {
           border: 1px solid rgba(26,24,20,0.08);
           border-radius: 14px;
         }
+        /* Первый блок стоит в самом верху тела статьи — верхний отступ не нужен. */
+        .post-body > .in-article-ad:first-child { margin-top: 0; }
         .in-article-ad-label {
           display: flex; justify-content: space-between; align-items: center;
           margin-bottom: 8px;
@@ -236,8 +245,7 @@ export default async function BlogPostPage({ params }: Props) {
             >
               {sections.map((html, i) => (
                 <Fragment key={i}>
-                  <div dangerouslySetInnerHTML={{ __html: html }} />
-                  {adAfter.has(i) && (
+                  {adBefore.has(i) && (
                     <div className="in-article-ad">
                       <div className="in-article-ad-label">
                         <span>Реклама</span>
@@ -250,6 +258,7 @@ export default async function BlogPostPage({ params }: Props) {
                       />
                     </div>
                   )}
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
                 </Fragment>
               ))}
             </article>
