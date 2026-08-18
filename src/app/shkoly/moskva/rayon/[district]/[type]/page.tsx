@@ -7,7 +7,7 @@ import {
   schools, getSchoolsByFeature } from '@/data/schools'
 import CatalogClient from '../../../../CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
-import { relatedForDistrictType, TYPE_TO_FEATURE } from '@/lib/related-schools'
+import { relatedForDistrictType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
 
 interface Props {
   params: Promise<{ district: string; type: string }>
@@ -24,6 +24,8 @@ export async function generateStaticParams() {
 }
 
 // Правильные русские названия для заголовков
+// Локальные формулировки имеют приоритет; для остальных типов —
+// общий словарь TYPE_FULL_NAME (иначе в H1 попадает «Шахматные у метро X»).
 const typeNameMap: Partial<Record<SchoolType, string>> = {
   gosudarstvennye: 'Государственные школы',
   chastnie:        'Частные школы',
@@ -61,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = type as SchoolType
   const districtLabel = moscowDistrictLabels[d]
   const districtFull  = moscowDistrictFullNames[d]
-  const typeName      = typeNameMap[t] ?? typeLabels[t]
+  const typeName      = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
   const prep          = districtPrepMap[d]
 
   const count = schools.filter(
@@ -86,7 +88,7 @@ export default async function DistrictTypePage({ params }: Props) {
   const t = type as SchoolType
   const districtLabel = moscowDistrictLabels[d]
   const districtFull  = moscowDistrictFullNames[d]
-  const typeName      = typeNameMap[t] ?? typeLabels[t]
+  const typeName      = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
   const prep          = districtPrepMap[d]
 
   // Типы без единой школы в базе фильтруем по одноимённой особенности — см. TYPE_TO_FEATURE.
