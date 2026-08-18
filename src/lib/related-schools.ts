@@ -24,6 +24,36 @@ export interface RelatedBlock {
   schools: School[]
 }
 
+/**
+ * Полные названия типов для заголовков блока. typeLabels в schools.ts — короткие
+ * прилагательные («Международные»), из них не собрать читаемый заголовок.
+ */
+const TYPE_FULL_NAME: Record<SchoolType, string> = {
+  gosudarstvennye:   'Государственные школы',
+  chastnie:          'Частные школы',
+  online:            'Онлайн-школы',
+  vechernie:         'Вечерние школы',
+  eksternal:         'Школы-экстернаты',
+  semejnye:          'Семейные школы',
+  domashnie:         'Школы домашнего обучения',
+  'pri-vuzakh':      'Школы при вузах',
+  profilnye:         'Профильные школы',
+  gimnazii:          'Гимназии',
+  korrektsionnye:    'Коррекционные школы',
+  kadetskie:         'Кадетские школы',
+  mezhdunarodnie:    'Международные школы',
+  programmirovanie:  'Школы программирования',
+  shahmatnye:        'Шахматные школы',
+  'podgotovka-ege':  'Центры подготовки к ЕГЭ',
+  'podgotovka-oge':  'Центры подготовки к ОГЭ',
+  internaty:         'Школы-интернаты',
+  valdorfskie:       'Вальдорфские школы',
+  montessori:        'Школы Монтессори',
+  pravoslavnye:      'Православные школы',
+  sportivnye:        'Спортивные школы',
+  yazykovye:         'Языковые школы',
+}
+
 const LIMIT = 12
 const NEAR_RADIUS_M = 3000
 
@@ -75,6 +105,7 @@ function acrossStations(stationSlugs: string[], pool: School[]): School[] {
 export function relatedForMetroType(
   station: string, type: SchoolType, typeName: string, feature?: FeatureSlug,
 ): RelatedBlock | null {
+  typeName = TYPE_FULL_NAME[type] ?? typeName
   const stationName = metroSlugToName[station]
   if (!stationName) return null
   const msk = schools.filter(s => s.region === 'moskva')
@@ -126,6 +157,7 @@ const DISTRICT_NEIGHBOURS: Record<MoscowDistrictSlug, MoscowDistrictSlug[]> = {
 export function relatedForDistrictType(
   district: MoscowDistrictSlug, type: SchoolType, typeName: string, feature?: FeatureSlug,
 ): RelatedBlock | null {
+  typeName = TYPE_FULL_NAME[type] ?? typeName
   const label = moscowDistrictLabels[district]
   const msk = schools.filter(s => s.region === 'moskva')
   const ofType = feature ? getSchoolsByFeature(feature, 'moskva') : msk.filter(s => s.type === type)
@@ -157,6 +189,7 @@ export function relatedForDistrictType(
 export function relatedForMoCityType(
   city: MoCitySlug, type: SchoolType, typeName: string, feature?: FeatureSlug,
 ): RelatedBlock | null {
+  typeName = TYPE_FULL_NAME[type] ?? typeName
   const label = moCityLabels[city]
   const mo = schools.filter(s => s.region === 'moskovskaya-oblast')
   const ofType = feature
