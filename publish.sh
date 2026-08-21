@@ -27,20 +27,24 @@ ssh_retry() { for i in 1 2 3 4 5; do $SSH "$VPS" "$1" 2>/dev/null && return 0; e
 node scripts/rebuild-manifest.mjs || { echo "❌ rebuild-manifest упал"; exit 1; }
 
 # ── определяем список slug'ов ────────────────────────────────────────────────
+SLUGS=()
 if [ "$#" -gt 0 ]; then
   SLUGS=("$@")
 else
   # изменённые/новые файлы статей в рабочем дереве
-  mapfile -t SLUGS < <(git status --porcelain content/blog | grep -E '\.json$' | grep -v 'index.json' | sed -E 's#.*content/blog/(.*)\.json#\1#' | sort -u)
+  # (без mapfile — его нет в bash 3.2, который стоит в macOS по умолчанию)
+  while IFS= read -r s; do
+    [ -n "$s" ] && SLUGS+=("$s")
+  done < <(git status --porcelain content/blog | grep -E '\.json$' | grep -v 'index.json' | sed -E 's#.*content/blog/(.*)\.json#\1#' | sort -u)
 fi
-echo "Публикую статей: ${#SLUGS[@]} — ${SLUGS[*]:-(нет изменений)}"
+echo "Публикую статей: ${#SLUGS[@]} — ${SLUGS[*]-(нет изменений)}"
 
 # ── 2. Коммит и пуш ──────────────────────────────────────────────────────────
 git add content/blog
 if git diff --cached --quiet; then
   echo "Нет изменений для коммита (манифест и файлы уже в git). Продолжаю к git pull + revalidate."
 else
-  git commit -q -m "blog: публикация ${SLUGS[*]:-статей} ($(node -e 'console.log(new Date().toISOString().slice(0,10))'))"
+  git commit -q -m "blog: публикация ${SLUGS[*]-статей} ($(node -e 'console.log(new Date().toISOString().slice(0,10))'))"
 fi
 if ! git push origin main -q 2>/dev/null; then
   echo "push отклонён, rebase..."; git pull --rebase origin main >/dev/null 2>&1 && git push origin main -q || { echo "❌ push не удался"; exit 1; }
@@ -52,7 +56,7 @@ echo "==> git pull на VPS..."
 if ssh_retry "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main"; then
   echo "✓ git pull на VPS ок"
 else
-  echo "❌ git pull на VPS не удался — статьи в origin/main, но не на сервере. Повтори позже: ./publish.sh ${SLUGS[*]}"; exit 1
+  echo "❌ git pull на VPS не удался — статьи в origin/main, но не на сервере. Повтори позже: ./publish.sh ${SLUGS[*]-}"; exit 1
 fi
 
 # ── 4. revalidate ────────────────────────────────────────────────────────────
