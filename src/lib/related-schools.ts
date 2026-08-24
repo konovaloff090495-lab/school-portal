@@ -296,6 +296,10 @@ const FEATURE_NEIGHBOURS: Partial<Record<FeatureSlug, FeatureSlug[]>> = {
   'uglublenny-anglijskij': ['meditsinskij-klass', 'prodlyonka'],
   'prodlyonka':            ['s-bassejnom', 'uglublenny-anglijskij'],
   'boarding':              ['s-bassejnom', 'prodlyonka'],
+  // Программирование (/shkoly/<регион>/programmirovanie/) — своя страница, но фича
+  // та же. Соседи — другие углублённые треки: местная школа с профильным уклоном
+  // полезнее читателю, чем IT-школа в другом городе (её даёт второй уровень).
+  'it-klass':              ['uglublenny-anglijskij', 'meditsinskij-klass'],
 }
 
 export function relatedForRegionFeature(

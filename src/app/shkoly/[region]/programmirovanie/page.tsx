@@ -5,6 +5,8 @@ import {
   getSchoolsByFeature, RegionSlug,
 } from '@/data/schools'
 import CatalogClient from '../../CatalogClient'
+import RelatedSchools from '@/components/RelatedSchools'
+import { relatedForRegionFeature } from '@/lib/related-schools'
 
 function ProgrammingRegionSeoBlock({ regionIn, count }: { regionIn: string; count: number }) {
   return (
@@ -69,8 +71,13 @@ export default async function ProgrammirovaniePage({ params }: Props) {
   const regionIn = regionLabelsIn[r]
   const count = getSchoolsByFeature('it-klass', r).length
 
+  // Как на соседних выборках (osobennosti/profilnye/метро×тип): вместо пустой
+  // страницы — честно подписанный блок ближайшего расширения выборки.
+  const related = count === 0 ? relatedForRegionFeature(r, 'it-klass') : null
+
   return (
     <CatalogClient
+      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       initialRegions={[r]}
       lockRegion
       featureFilter="it-klass"
