@@ -45,11 +45,13 @@ export default function LeadForm({ schoolName, compact = false, title }: LeadFor
           email: form.email,
           question: form.question,
           school: schoolName ?? 'Не указана',
+          source: schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы',
           pd_agreed: pdAgreed,
           marketing_agreed: marketingAgreed,
         }),
       })
       window.ym?.(108789843, 'reachGoal', 'lead_submit')
+      window.ym?.(108789843, 'reachGoal', 'card_lead')
     } catch {}
 
     setLoading(false)

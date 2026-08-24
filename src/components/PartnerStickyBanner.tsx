@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Countdown from '@/components/Countdown'
 
 const YM_ID = 108789843
 const STORAGE_KEY = 'ps_partner_banner_closed'
@@ -35,9 +36,15 @@ export default function PartnerStickyBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-[#0F3A5F] to-[#0369A1] text-white shadow-[0_-4px_20px_rgba(0,0,0,0.25)]">
       <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center gap-3">
         <span className="hidden sm:inline text-2xl shrink-0">🎓</span>
-        <p className="flex-1 text-sm sm:text-base font-medium leading-tight">
-          Поступите в онлайн-школу на льготных условиях
-        </p>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm sm:text-base font-medium leading-tight">
+            Поступите в онлайн-школу на льготных условиях
+          </p>
+          <div className="hidden sm:flex items-center gap-2 mt-1">
+            <span className="text-[11px] text-white/70">Приём до 31 августа:</span>
+            <Countdown variant="dark" />
+          </div>
+        </div>
         <a
           href={PARTNER_URL}
           target="_blank"

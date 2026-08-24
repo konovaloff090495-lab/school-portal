@@ -4,11 +4,12 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
+import Countdown from '@/components/Countdown'
 
 const YM_ID = 108789843
 const STORAGE_KEY = 'ps_catalog_offer_seen'
 const COOLDOWN_MS = 12 * 60 * 60 * 1000 // не показывать чаще раза в 12 часов
-const SOURCE = 'Поп-ап: последняя волна (каталог школ)'
+const SOURCE = 'Поп-ап «последняя волна» (каталог школ)'
 
 function recentlySeen(): boolean {
   try {
@@ -67,7 +68,8 @@ export default function CatalogOfferPopup() {
           name: form.name,
           phone: form.phone,
           email: form.email,
-          school: SOURCE,
+          school: 'Не указана',
+          source: SOURCE,
           pd_agreed: pdAgreed,
           marketing_agreed: marketingAgreed,
         }),
@@ -84,35 +86,41 @@ export default function CatalogOfferPopup() {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={close} />
 
-      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col sm:flex-row max-h-[92vh]">
-        {/* Фото */}
-        <div className="hidden sm:block sm:w-2/5 shrink-0 relative bg-blue-100">
+      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[94vh]">
+        <button
+          onClick={close}
+          aria-label="Закрыть"
+          className="absolute top-3 right-3 text-white bg-black/30 hover:bg-black/50 rounded-full p-1 cursor-pointer z-10"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Фото-шапка */}
+        <div className="h-44 sm:h-52 shrink-0 relative bg-blue-100">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/attestat-popup.jpg"
-            alt="Ученица с аттестатом"
+            src="/diplom-popup.jpg"
+            alt="Вручение дипломов государственного образца"
             className="absolute inset-0 w-full h-full object-cover object-top"
           />
         </div>
 
         {/* Контент */}
-        <div className="flex-1 p-5 sm:p-6 overflow-y-auto">
-          <button
-            onClick={close}
-            aria-label="Закрыть"
-            className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 cursor-pointer z-10"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
+        <div className="p-5 sm:p-6 overflow-y-auto">
           <div className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
             Последняя волна зачисления
           </div>
-          <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug mb-2">
+          <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug mb-3">
             Успейте подать документы и попасть в последнюю волну зачисления
           </h3>
+
+          <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5 mb-3">
+            <p className="text-xs text-gray-500 mb-1.5">До конца приёма документов:</p>
+            <Countdown variant="light" />
+          </div>
+
           <p className="text-sm text-gray-600 mb-4">
             Принимаем документы <b>взрослых и детей с 1 по 11 класс</b>. Перезвоним в течение 30 минут и поможем с выбором школы.
           </p>
