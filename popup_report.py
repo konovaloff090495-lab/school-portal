@@ -23,6 +23,15 @@ TG_CHAT  = "134614433"
 GOAL_CONTACT = "556308287"   # автоцель "отправил контактные данные" = заявка формой
 GOAL_PHONE   = "560865950"   # автоцель "клик по телефону"
 
+# JS-цели поп-апов/баннеров (созданы 2026-08-24). Точный сплит источников.
+CUSTOM_GOALS = [
+    ("601419042", "Заявка из поп-апа (каталог)"),
+    ("601419050", "Заявка с карточки школы"),
+    ("601419070", "Клик по растяжке (онлайн-школа)"),
+    ("601419122", "Клик в поп-апе блог/ГДЗ"),
+    ("601419163", "Клик по баннеру экстерната"),
+]
+
 def metrika(params):
     url = "https://api-metrika.yandex.net/stat/v1/data?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"Authorization": "OAuth " + METRIKA_TOKEN})
@@ -101,10 +110,19 @@ def main():
     else:
         msg.append("  🟢 Карточки не просели — перетягивания нет.")
 
+    # ── Точный сплит по JS-целям (данные копятся с 2026-08-24) ──
     msg.append("")
-    msg.append("<i>Точный сплит поп-ап/карточка/растяжка — по целям popup_lead, card_lead, "
-               "partner_banner_click, partner_popup_click (после их создания в Метрике). "
-               "Заявки из поп-апа помечены в ТГ «📍 Источник».</i>")
+    msg.append("<b>Точный сплит по целям (ПОСЛЕ, %s…%s):</b>" % (after_d1.isoformat(), after_d2.isoformat()))
+    for gid, label in CUSTOM_GOALS:
+        try:
+            r = metrika({"id": CID, "date1": after_d1.isoformat(), "date2": after_d2.isoformat(),
+                         "metrics": "ym:s:goal%sreaches" % gid})
+            val = int(round(r["totals"][0]))
+        except Exception:
+            val = -1
+        msg.append("  %s: %s" % (label, val if val >= 0 else "н/д"))
+    msg.append("")
+    msg.append("<i>Заявки из поп-апа также помечены в ТГ «📍 Источник».</i>")
 
     text = "\n".join(msg)
     print(text.replace("<b>", "").replace("</b>", "").replace("<i>", "").replace("</i>", ""))
