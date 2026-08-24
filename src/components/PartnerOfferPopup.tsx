@@ -1,42 +1,51 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 const YM_ID = 108789843
-const STORAGE_KEY = 'ps_partner_offer_seen'
-const COOLDOWN_MS = 12 * 60 * 60 * 1000
+// Агрессивный режим (как оффер-поп-ап card-open.ru): показ на КАЖДОЙ статье,
+// единственный гейт — клик по CTA в этой сессии. Закрытие крестиком не подавляет.
+const DONE_KEY = 'ps_partner_popup_done'
+const DELAY_MS = 6000
 const PARTNER_URL = 'https://schooluniversity.ru/online-school?utm_source=gerasimov_lav&utm_medium=lkpartners'
 
 const FORMATS = ['Бюджет', 'Очная', 'Заочная', 'Семейная форма', 'Онлайн-обучение']
 
-function recentlySeen(): boolean {
-  try { return Date.now() - Number(localStorage.getItem(STORAGE_KEY) || 0) < COOLDOWN_MS }
-  catch { return false }
-}
-function markSeen() {
-  try { localStorage.setItem(STORAGE_KEY, String(Date.now())) } catch {}
+function clickedThisSession(): boolean {
+  try { return !!sessionStorage.getItem(DONE_KEY) } catch { return false }
 }
 
 export default function PartnerOfferPopup() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const openedRef = useRef(false)
 
   const show = useCallback(() => {
-    if (recentlySeen()) return
+    if (openedRef.current || clickedThisSession()) return
+    openedRef.current = true
     setOpen(true)
-    markSeen()
     window.ym?.(YM_ID, 'reachGoal', 'partner_popup_shown')
   }, [])
 
+  // Перезапуск на каждый переход по статьям (layout в SPA не перемонтируется).
   useEffect(() => {
-    if (recentlySeen()) return
-    const timer = setTimeout(show, 8000)
+    if (clickedThisSession()) return
+    openedRef.current = false
+    const timer = setTimeout(show, DELAY_MS)
     const onScroll = () => {
       const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight || 1)
-      if (scrolled > 0.4) show()
+      if (scrolled > 0.3) show()
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll) }
-  }, [show])
+  }, [pathname, show])
+
+  function handleCta() {
+    window.ym?.(YM_ID, 'reachGoal', 'partner_popup_click')
+    try { sessionStorage.setItem(DONE_KEY, '1') } catch {}
+    setOpen(false)
+  }
 
   if (!open) return null
 
@@ -82,7 +91,7 @@ export default function PartnerOfferPopup() {
             href={PARTNER_URL}
             target="_blank"
             rel="noopener sponsored"
-            onClick={() => window.ym?.(YM_ID, 'reachGoal', 'partner_popup_click')}
+            onClick={handleCta}
             className="block w-full text-center bg-[#0369A1] text-white py-3.5 rounded-xl text-base font-semibold hover:bg-blue-500 transition-colors cursor-pointer"
           >
             Узнать детали
