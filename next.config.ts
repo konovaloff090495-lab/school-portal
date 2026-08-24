@@ -28,8 +28,8 @@ const securityHeaders = [
       "font-src 'self' fonts.gstatic.com",
       // API-запросы + запросы рекламы РСЯ
       "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net ip-api.com",
-      // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe)
-      "frame-src yandex.ru *.yandex.ru yastatic.net",
+      // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe) + карта OpenStreetMap
+      "frame-src yandex.ru *.yandex.ru yastatic.net www.openstreetmap.org openstreetmap.org",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self' formspree.io",

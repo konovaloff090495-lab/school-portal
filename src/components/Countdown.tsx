@@ -22,7 +22,8 @@ function Cell({ value, label, variant }: { value: number; label: string; variant
   )
 }
 
-export default function Countdown({ variant = 'light', className = '' }: { variant?: Variant; className?: string }) {
+export default function Countdown({ variant = 'light', compact = false, className = '' }:
+  { variant?: Variant; compact?: boolean; className?: string }) {
   const [left, setLeft] = useState<number | null>(null)
 
   useEffect(() => {
@@ -38,6 +39,23 @@ export default function Countdown({ variant = 'light', className = '' }: { varia
   const h = Math.floor(left / 3600000) % 24
   const m = Math.floor(left / 60000) % 60
   const s = Math.floor(left / 1000) % 60
+
+  // Компактный однострочный вид (для узких мест, напр. нижней растяжки)
+  if (compact) {
+    const box = variant === 'dark' ? 'bg-white/15 text-white' : 'bg-[#0F3A5F] text-white'
+    const p = (v: number) => String(v).padStart(2, '0')
+    return (
+      <span className={`inline-flex items-center gap-1 font-bold tabular-nums text-sm ${box} rounded-md px-2 py-1 ${className}`}>
+        <span>{p(d)}<span className="opacity-70 font-medium text-xs">д</span></span>
+        <span className="opacity-50">:</span>
+        <span>{p(h)}<span className="opacity-70 font-medium text-xs">ч</span></span>
+        <span className="opacity-50">:</span>
+        <span>{p(m)}<span className="opacity-70 font-medium text-xs">м</span></span>
+        <span className="opacity-50">:</span>
+        <span>{p(s)}<span className="opacity-70 font-medium text-xs">с</span></span>
+      </span>
+    )
+  }
 
   return (
     <div className={`flex items-center gap-1.5 ${className}`}>

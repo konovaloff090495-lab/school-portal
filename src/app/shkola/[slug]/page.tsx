@@ -377,23 +377,29 @@ export default async function SchoolPage({ params }: Props) {
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Контакты и адрес</h2>
 
-            {/* Яндекс Карты — встроенный iframe: по координатам (точная метка)
-                либо поиском по адресу (если координат нет). Карта есть всегда. */}
-            <div className="mb-5 rounded-xl overflow-hidden border border-gray-100" style={{ height: 280 }}>
-              <iframe
-                title={`Карта — ${school.name}`}
-                src={
-                  school.lat && school.lon
-                    ? `https://yandex.ru/map-widget/v1/?ll=${school.lon},${school.lat}&z=16&pt=${school.lon},${school.lat},pm2rdm&lang=ru_RU`
-                    : `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(`${school.city}, ${school.address}`)}&z=16&lang=ru_RU`
-                }
-                width="100%"
-                height="280"
-                loading="lazy"
-                className="block"
-                style={{ border: 0 }}
-              />
-            </div>
+            {/* Карта OpenStreetMap (рендерится без API-ключа). При наличии координат —
+                с меткой; без координат — аккуратный блок с адресом (без пустой карты). */}
+            {school.lat && school.lon ? (
+              <div className="mb-5 rounded-xl overflow-hidden border border-gray-100" style={{ height: 280 }}>
+                <iframe
+                  title={`Карта — ${school.name}`}
+                  src={`https://www.openstreetmap.org/export/embed.html?bbox=${school.lon - 0.006}%2C${school.lat - 0.004}%2C${school.lon + 0.006}%2C${school.lat + 0.004}&layer=mapnik&marker=${school.lat}%2C${school.lon}`}
+                  width="100%"
+                  height="280"
+                  loading="lazy"
+                  className="block"
+                  style={{ border: 0 }}
+                />
+              </div>
+            ) : (
+              <div className="mb-5 rounded-xl border border-gray-100 bg-gray-50 p-5 flex items-center gap-3">
+                <svg className="w-8 h-8 text-[#0369A1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{school.city}, {school.address}</p>
+                  {school.metro && <p className="text-xs text-gray-500 mt-0.5">м. {school.metro}</p>}
+                </div>
+              </div>
+            )}
             <a
               href={
                 school.lat && school.lon
