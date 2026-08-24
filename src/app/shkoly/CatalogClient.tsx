@@ -16,6 +16,7 @@ import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
 import AdBanner from '@/components/AdBanner'
+import ExternatBanner from '@/components/ExternatBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
@@ -1163,7 +1164,10 @@ export default function CatalogClient({
             const page = filtered.slice(0, visibleCount)
             const cards = page.map((school, i) => {
               const elements: React.ReactNode[] = []
-              if (i === 6) {
+              if (i === 3) {
+                elements.push(<ExternatBanner key="externat-banner" />)
+              }
+              if (i === 12) {
                 elements.push(
                   <div key="ad-desktop" className="col-span-full"><AdBanner variant="leaderboard" /></div>,
                   <div key="ad-mobile" className="col-span-full"><AdBanner variant="mobile" /></div>
