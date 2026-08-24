@@ -1,52 +1,52 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect, useCallback, useRef } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import Countdown from '@/components/Countdown'
 
 const YM_ID = 108789843
-const STORAGE_KEY = 'ps_catalog_offer_seen'
-const COOLDOWN_MS = 12 * 60 * 60 * 1000 // не показывать чаще раза в 12 часов
+// Единственный жёсткий гейт — заявка оставлена в этой сессии (как «клик по CTA» на card-open.ru).
+// Пока заявки нет — поп-ап показывается на КАЖДОЙ странице каталога. Закрытие крестиком не подавляет.
+const DONE_KEY = 'ps_catalog_popup_done'
+const DELAY_MS = 6000
 const SOURCE = 'Поп-ап «последняя волна» (каталог школ)'
 
-function recentlySeen(): boolean {
-  try {
-    const ts = Number(localStorage.getItem(STORAGE_KEY) || 0)
-    return Date.now() - ts < COOLDOWN_MS
-  } catch { return false }
-}
-function markSeen() {
-  try { localStorage.setItem(STORAGE_KEY, String(Date.now())) } catch {}
+function convertedThisSession(): boolean {
+  try { return !!sessionStorage.getItem(DONE_KEY) } catch { return false }
 }
 
 export default function CatalogOfferPopup() {
   const router = useRouter()
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
   const [marketingAgreed, setMarketingAgreed] = useState(true)
+  const openedRef = useRef(false)
 
   const show = useCallback(() => {
-    if (recentlySeen()) return
+    if (openedRef.current || convertedThisSession()) return
+    openedRef.current = true
     setOpen(true)
-    markSeen()
     window.ym?.(YM_ID, 'reachGoal', 'popup_shown')
   }, [])
 
+  // Перезапуск на каждый переход по страницам каталога (layout в SPA не перемонтируется).
   useEffect(() => {
-    if (recentlySeen()) return
-    const timer = setTimeout(show, 7000)
+    if (convertedThisSession()) return
+    openedRef.current = false
+    const timer = setTimeout(show, DELAY_MS)
     const onScroll = () => {
       const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight || 1)
-      if (scrolled > 0.35) show()
+      if (scrolled > 0.3) show()
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll) }
-  }, [show])
+  }, [pathname, show])
 
   function close() { setOpen(false) }
 
@@ -76,6 +76,7 @@ export default function CatalogOfferPopup() {
       })
       window.ym?.(YM_ID, 'reachGoal', 'popup_lead')
     } catch {}
+    try { sessionStorage.setItem(DONE_KEY, '1') } catch {}
     setLoading(false)
     router.push('/spasibo/')
   }
