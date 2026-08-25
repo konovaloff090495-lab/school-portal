@@ -1,4 +1,17 @@
 import type { NextConfig } from "next";
+import { readFileSync } from "fs";
+import path from "path";
+
+// Карточки школ, удалённые из каталога как недостоверные (scripts/delete-*.mjs
+// пишет сюда «слаг → куда вести»). 301 на каталог города, чтобы не плодить 404
+// и не терять переходы из поиска.
+const removedSchools: Record<string, string> = (() => {
+  try {
+    return JSON.parse(readFileSync(path.join(process.cwd(), "scripts", "removed-schools.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
 
 const securityHeaders = [
   // Запрещаем отображение сайта в iframe с чужих доменов
@@ -64,6 +77,25 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      ...Object.entries(removedSchools).map(([slug, destination]) => ({
+        source: `/shkola/${slug}`,
+        destination,
+        permanent: true,
+      })),
+      // ── Склейка малоценных гео-комбинаций (SEO-аудит 25.08.2026) ────────────
+      // 312 страниц «подготовка к ЕГЭ/ОГЭ онлайн × город» за месяц дали 0 кликов
+      // при 112 показах и средней позиции 17 — они конкурировали с родительской
+      // страницей подготовки и с /shkoly/<город>/online/. Склеиваем в родителя.
+      { source: '/shkoly/:region/podgotovka-k-ege/online', destination: '/shkoly/:region/podgotovka-k-ege/', permanent: true },
+      { source: '/shkoly/:region/podgotovka-k-oge/online', destination: '/shkoly/:region/podgotovka-k-oge/', permanent: true },
+      // Онлайн-школа не имеет районной географии: метро/округ/город МО × online
+      // (120 страниц) дали 0 кликов. Экстернат в микро-гео Москвы — тоже 0 кликов
+      // на 97 страницах. Всё склеиваем на городской уровень.
+      { source: '/shkoly/moskva/metro/:station/online', destination: '/shkoly/moskva/online/', permanent: true },
+      { source: '/shkoly/moskva/metro/:station/eksternal', destination: '/shkoly/moskva/eksternal/', permanent: true },
+      { source: '/shkoly/moskva/rayon/:district/online', destination: '/shkoly/moskva/online/', permanent: true },
+      { source: '/shkoly/moskva/rayon/:district/eksternal', destination: '/shkoly/moskva/eksternal/', permanent: true },
+      { source: '/shkoly/moskovskaya-oblast/gorod/:city/online', destination: '/shkoly/moskovskaya-oblast/online/', permanent: true },
       // Удалённая недостоверная запись «Вечерняя школа № 156» (жалоба на чужой телефон,
       // несуществующая школа). Ведём на каталог вечерних школ Москвы. 2026-08-07.
       {

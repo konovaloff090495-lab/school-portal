@@ -5,6 +5,7 @@ import { buildKeywords } from '@/lib/utils'
 import Link from 'next/link'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
+import TypeGuide from '@/components/TypeGuide'
 
 interface Props {
   params: Promise<{ type: string }>
@@ -44,9 +45,9 @@ const typeDisplayTitles: Record<SchoolType, string> = {
 const typeDescriptions: Record<SchoolType, string> = {
   gosudarstvennye: 'Бесплатные государственные школы России — полный каталог с адресами, телефонами и отзывами.',
   chastnie:        'Частные школы России: малые классы, индивидуальный подход, расширенные программы.',
-  online:          'Онлайн-школы России с государственной аккредитацией — гибкий график из любой точки.',
+  online:          'Онлайн-школы России: как проверить аккредитацию, где учиться бесплатно, сколько стоит обучение и как перейти на дистанционный формат. Каталог школ по городам.',
   vechernie:       'Вечерние школы для работающих и взрослых — обучение по вечерам, аттестат гос. образца.',
-  eksternal:       'Школы-экстернаты: ускоренное прохождение программы, официальный аттестат.',
+  eksternal:       'Школы-экстернаты России: как пройти 10–11 класс за год, где прикрепиться бесплатно, сколько стоит платный экстернат и как оформить документы.',
   semejnye:        'Семейные школы: родители участвуют в обучении, малые группы, альтернативная педагогика.',
   domashnie:       'Надомное обучение с официальным сопровождением и аттестацией.',
   'pri-vuzakh':    'Лицеи и школы при университетах: профильная подготовка и высокая поступаемость.',
@@ -67,13 +68,21 @@ const typeDescriptions: Record<SchoolType, string> = {
   yazykovye:        'Языковые школы России: лингвистические гимназии, немецкие и французские лицеи, школы с углублённым китайским и испанским. Международные сертификаты и дипломы.',
 }
 
+// Title под головной запрос — для хабов с развёрнутым гайдом (TypeGuide).
+// Общий шаблон «— N в каталоге» под «онлайн школа» и «школа экстернат» не играл:
+// хабы стояли на 27 и 19 месте, кликов не было.
+const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
+  online:    n => `Онлайн-школы России — ${n} школ: аккредитация, цены, отзывы`,
+  eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { type } = await params
   if (!typeSlugs.includes(type as SchoolType)) return {}
   const t = type as SchoolType
   const displayTitle = typeDisplayTitles[t]
   const count = schools.filter(s => s.type === t).length
-  const title = `${displayTitle} России — ${count} в каталоге`
+  const title = typeTitleOverrides[t]?.(count) ?? `${displayTitle} России — ${count} в каталоге`
   return {
     title,
     description: typeDescriptions[t],
@@ -528,8 +537,13 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><LanguageNavSection /><SeoBlock type={t} count={count} /></>
     : t === 'vechernie'
     ? <><VechernieSubNav /><SeoBlock type={t} count={count} /></>
+    // У этих двух хабов SeoBlock не выводим: TypeGuide покрывает те же темы
+    // («как поступить», «стоимость», «кому подходит») подробнее, а вместе они
+    // дают на одной странице два разных диапазона цен.
     : t === 'eksternal'
-    ? <><EksternalSubNav /><SeoBlock type={t} count={count} /></>
+    ? <><EksternalSubNav /><TypeGuide type={t} /></>
+    : t === 'online'
+    ? <TypeGuide type={t} />
     : t === 'semejnye'
     ? <><SemejnyeSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'domashnie'

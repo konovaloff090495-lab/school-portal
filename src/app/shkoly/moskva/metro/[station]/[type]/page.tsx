@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
+import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES} from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForMetroType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -33,6 +33,8 @@ export async function generateStaticParams() {
   const params: { station: string; type: string }[] = []
   for (const station of metroSlugs) {
     for (const type of typeSlugs) {
+      // Склеено 301-редиректом (next.config.ts) — страницы не генерим
+      if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
       params.push({ station, type })
     }
   }

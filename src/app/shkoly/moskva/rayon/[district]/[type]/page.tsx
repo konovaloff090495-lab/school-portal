@@ -4,7 +4,7 @@ import {
   moscowDistrictSlugs, moscowDistrictLabels, moscowDistrictFullNames,
   typeSlugs, typeLabels,
   MoscowDistrictSlug, SchoolType,
-  schools, getSchoolsByFeature } from '@/data/schools'
+  schools, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES} from '@/data/schools'
 import CatalogClient from '../../../../CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForDistrictType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -17,6 +17,8 @@ export async function generateStaticParams() {
   const params: { district: string; type: string }[] = []
   for (const district of moscowDistrictSlugs) {
     for (const type of typeSlugs) {
+      // Склеено 301-редиректом (next.config.ts) — страницы не генерим
+      if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
       params.push({ district, type })
     }
   }
