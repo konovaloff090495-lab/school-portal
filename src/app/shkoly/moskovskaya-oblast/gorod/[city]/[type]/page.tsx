@@ -59,6 +59,8 @@ export function generateStaticParams() {
   const params: { city: string; type: string }[] = []
   for (const city of moCitySlugs) {
     for (const type of typeSlugs) {
+      // Склеено 301-редиректом (next.config.ts) — страницы не генерим
+      if (type === 'online') continue
       params.push({ city, type })
     }
   }

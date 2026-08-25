@@ -11,6 +11,7 @@ import {
   languageMetas, LanguageSlug,
   RegionSlug, SchoolType,
   metroNameToSlug,
+  MICRO_GEO_SKIP_TYPES,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
@@ -324,7 +325,8 @@ export default function CatalogClient({
         && filters.districts.length === 1) {
       const slug = districtLabelToSlug[filters.districts[0]]
       const t = initialTypes[0]
-      if (slug && t) { router.push(`/shkoly/moskva/rayon/${slug}/${t}/`); return }
+      // online/eksternal в микро-гео склеены редиректом — не гоняем туда пользователя
+      if (slug && t && !MICRO_GEO_SKIP_TYPES.includes(t as SchoolType)) { router.push(`/shkoly/moskva/rayon/${slug}/${t}/`); return }
     }
 
     // From /shkoly/moskva/{type}/ → 1 metro selected → metro+type static page
@@ -332,7 +334,7 @@ export default function CatalogClient({
         && filters.metro.length === 1) {
       const slug = metroNameToSlug[filters.metro[0]]
       const t = initialTypes[0]
-      if (slug && t) { router.push(`/shkoly/moskva/metro/${slug}/${t}/`); return }
+      if (slug && t && !MICRO_GEO_SKIP_TYPES.includes(t as SchoolType)) { router.push(`/shkoly/moskva/metro/${slug}/${t}/`); return }
     }
 
     // From /shkoly/moskovskaya-oblast/{type}/ → 1 city selected → city+type static page
@@ -393,7 +395,7 @@ export default function CatalogClient({
     if (lockRegion && !lockType && initialDistrict && initialRegions[0] === 'moskva'
         && filters.types.length === 1 && filters.districts.length === 0) {
       const slug = districtLabelToSlug[initialDistrict]
-      if (slug) { router.push(`/shkoly/moskva/rayon/${slug}/${filters.types[0]}/`); return }
+      if (slug && !MICRO_GEO_SKIP_TYPES.includes(filters.types[0] as SchoolType)) { router.push(`/shkoly/moskva/rayon/${slug}/${filters.types[0]}/`); return }
     }
 
     // From /shkoly/moskva/ → 1 district, no types → district page
