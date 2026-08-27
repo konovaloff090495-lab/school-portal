@@ -140,6 +140,31 @@ export default function BlogPage() {
           </article>
         </Link>
 
+        {/* Раздел «Взрослым» — точка входа для аудитории аттестата после 18 */}
+        <Link href="/blog/vzroslym/" style={{ textDecoration: 'none', display: 'block', marginBottom: 32 }}>
+          <div className="blog-card-hover" style={{
+            background: 'white', border: '1px solid rgba(255,107,61,0.3)', borderRadius: 20,
+            padding: '22px 26px', display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap',
+            boxShadow: '0 1px 3px rgba(60,30,10,0.04)',
+          }}>
+            <div style={{ fontSize: 34, lineHeight: 1 }}>🎓</div>
+            <div style={{ flex: 1, minWidth: 240 }}>
+              <div style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 18, color: 'var(--ink)', marginBottom: 6 }}>
+                Раздел «Взрослым»: аттестат за 9 и 11 класс после 18 лет
+              </div>
+              <div style={{ fontFamily: 'var(--font-manrope)', fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.5 }}>
+                Вечерняя школа, экстернат и онлайн-форматы: сроки, документы, стоимость и экзамены для взрослых.
+              </div>
+            </div>
+            <span style={{
+              fontFamily: 'var(--font-manrope)', fontWeight: 700, fontSize: 14,
+              background: '#1A1814', color: 'white', borderRadius: 999, padding: '10px 20px',
+            }}>
+              Открыть раздел →
+            </span>
+          </div>
+        </Link>
+
         {/* Posts grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
           {rest.map(post => (

@@ -280,6 +280,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── Блог ───────────────────────────────────────────
   const blogIndex: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/blog/`, lastModified: D_BLOG, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/blog/vzroslym/`, lastModified: D_BLOG, changeFrequency: 'weekly', priority: 0.8 },
   ]
   // Дата сборки — потолок для lastmod. Часть статей в blog.ts датирована «наперёд»
   // (плановые даты публикации), а lastmod из будущего поисковики считают невалидным
