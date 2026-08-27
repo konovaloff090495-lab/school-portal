@@ -35,6 +35,7 @@ export async function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
+      if (!schools.some(s => s.region === 'moskva' && s.type === type && s.metro === metroSlugToName[station])) continue
       params.push({ station, type })
     }
   }
