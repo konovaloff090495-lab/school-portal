@@ -35,7 +35,11 @@ echo "==> git pull на VPS..."
 # роняла весь деплой ещё до сборки — поэтому ретраим.
 git_pull_ok=0
 for attempt in 1 2 3 4 5; do
-  if $SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main 2>&1 | tail -3"; then
+  # ⚠️ БЕЗ пайпа на tail: в конструкции `ssh host "cmd | tail"` код возврата берётся
+  # от ПОСЛЕДНЕЙ команды удалённой цепочки, то есть от tail (всегда 0). Из-за этого
+  # 27.08.2026 упавший git pull был засчитан как успешный: на VPS остались старые
+  # исходники и content/, а .next приехал новый — прод получил смесь двух версий.
+  if $SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main"; then
     git_pull_ok=1; break
   fi
   echo "  ⚠️  git pull не удался (попытка $attempt/5), повтор через 15 с"
@@ -51,6 +55,17 @@ NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 LOCAL_BUILD_ID=$(cat .next/BUILD_ID)
 echo "==> Локальный BUILD_ID: $LOCAL_BUILD_ID"
+
+echo "==> Проверяем зависимости на VPS..."
+# 27.08.2026 прод лёг в цикл рестартов с `next: not found`: node_modules на сервере
+# оказались неполными, а deploy.sh их никогда не проверял и не ставил.
+if ! $SSH $VPS "test -x $DIR/node_modules/.bin/next"; then
+  echo "  ⚠️  next на VPS отсутствует — ставим зависимости (npm ci)"
+  $SSH $VPS "cd $DIR && npm cache clean --force >/dev/null 2>&1; npm ci --no-audit --no-fund" || {
+    echo "❌ npm ci на VPS не прошёл — выходим, PM2 не трогаем."; exit 1; }
+  $SSH $VPS "test -x $DIR/node_modules/.bin/next" || { echo "❌ next так и не появился — выходим."; exit 1; }
+  echo "  ✓ зависимости на месте"
+fi
 
 echo "==> rsync .next на VPS..."
 rsync_retry ".next/" "$DIR/.next/" ".next"
