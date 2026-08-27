@@ -61,6 +61,7 @@ export function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (type === 'online') continue
+      if (!schools.some(s => s.region === 'moskovskaya-oblast' && s.type === type && s.city === moCityLabels[city as keyof typeof moCityLabels])) continue
       params.push({ city, type })
     }
   }

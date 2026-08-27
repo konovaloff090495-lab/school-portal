@@ -13,10 +13,15 @@ interface Props {
   params: Promise<{ region: string; type: string }>
 }
 
+// Пререндерим только комбинации, где есть хотя бы одна школа. Пустые пары
+// (их было большинство) остаются доступными по требованию через dynamicParams
+// и кэшируются после первого захода — поведение для пользователя и робота то же,
+// а из сборки уходит ~5 300 страниц из 10 860.
 export async function generateStaticParams() {
   const params: { region: string; type: string }[] = []
   for (const region of regionSlugs) {
     for (const type of typeSlugs) {
+      if (getSchoolsByRegionAndType(region, type as SchoolType).length === 0) continue
       params.push({ region, type })
     }
   }

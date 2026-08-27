@@ -4,7 +4,9 @@
 set -e
 
 SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
-RSYNC_SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
+# ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
+# на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
+RSYNC_SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
 VPS="root@45.80.70.209"
 DIR="/var/www/school-portal"
 
@@ -14,7 +16,16 @@ DIR="/var/www/school-portal"
 rsync_retry() {
   local src="$1" dst="$2" label="$3" n=0 max=5 out
   until [ "$n" -ge "$max" ]; do
-    if out=$(rsync -az --delete -e "$RSYNC_SSH" "$src" "$VPS:$dst" 2>&1); then
+    # --partial: оборванный файл не выбрасывается, следующая попытка его докачивает.
+    # --timeout=600: rsync подолгу молчит на сравнении 127к файлов .next — при 120 с
+    #   он убивал сам себя («io timeout after 124 seconds»), не передав ни байта.
+    # Исключения (27.08.2026): в .next лежало 8,1 ГБ, из них на прод нужно 2,7 ГБ.
+    #   dev/   — 4,3 ГБ артефактов `next dev`, проду не нужны вообще;
+    #   cache/ — 1,1 ГБ локального кэша сборки. Его нельзя ни заливать, ни удалять:
+    #            на сервере в .next/cache лежит РАБОЧИЙ ISR-кэш, и `--delete` без
+    #            этого исключения сносил его каждым деплоем — отсюда и медленный
+    #            прогрев сайта после выкатки.
+    if out=$(rsync -az --delete --partial --timeout=600 --exclude 'dev/' --exclude 'cache/' -e "$RSYNC_SSH" "$src" "$VPS:$dst" 2>&1); then
       echo "  ✓ rsync $label ok"
       return 0
     fi
@@ -50,8 +61,18 @@ if [[ "$git_pull_ok" != "1" ]]; then
   exit 1
 fi
 
-echo "==> Локальная сборка (Turbopack)..."
-NODE_OPTIONS=--max-old-space-size=4096 npm run build
+# --no-build: билд уже собран (например, предыдущий деплой упал на rsync) — доливаем
+# готовый .next, не тратя ~30 минут на повторную генерацию 10 800 страниц.
+if [[ " $* " == *" --no-build "* ]]; then
+  if [[ ! -f .next/BUILD_ID ]]; then
+    echo "❌ --no-build, но .next/BUILD_ID нет — собирать нечего. Запусти без флага."
+    exit 1
+  fi
+  echo "==> Сборка пропущена (--no-build), доливаем готовый .next"
+else
+  echo "==> Локальная сборка..."
+  NODE_OPTIONS=--max-old-space-size=4096 npm run build
+fi
 
 LOCAL_BUILD_ID=$(cat .next/BUILD_ID)
 echo "==> Локальный BUILD_ID: $LOCAL_BUILD_ID"
