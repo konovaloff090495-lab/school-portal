@@ -99,24 +99,37 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     const host = hostRef.current
     if (!host) return
 
-    // Целевой узел создаём вручную и НЕ отдаём React: реклама живёт в нём.
-    // Если рисовать прямо в React-узел, реконсиляция сносит вставленное РСЯ
-    // поддерево, а повторно в тот же renderTo РСЯ уже не рисует — место
-    // остаётся пустым навсегда (см. заметку выше).
-    let inner = document.getElementById(divId)
-    if (!inner) {
-      inner = document.createElement('div')
-      inner.id = divId
-      host.appendChild(inner)
+    // Замер 31.08 (вечер): вызов из useEffect в момент гидрации не даёт рекламы,
+    // а точно такой же вызов в свежесозданный узел ПОСЛЕ того, как страница ожила,
+    // даёт её всегда. Поэтому создаём узел и просим рекламу на следующем кадре,
+    // когда React уже закончил свою работу со страницей. Это не отложенный рендер
+    // по скроллу (провал 25.07, CPM втрое вниз) — задержка в один кадр, без условий.
+    let cancelled = false
+    let attempt = 0
+
+    const draw = () => {
+      if (cancelled || !hostRef.current) return
+      attempt += 1
+      const id = attempt === 1 ? divId : `${divId}-r${attempt}`
+      const node = document.createElement('div')
+      node.id = id
+      host.replaceChildren(node)
+      window.yaContextCb = window.yaContextCb || []
+      window.yaContextCb.push(() => {
+        window.Ya?.Context.AdvManager.render({ blockId, renderTo: id })
+      })
+      // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
+      // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
+      if (attempt < 3) {
+        window.setTimeout(() => {
+          if (cancelled) return
+          if (!node.isConnected || node.childElementCount === 0) draw()
+        }, 4000)
+      }
     }
 
-    window.yaContextCb = window.yaContextCb || []
-    window.yaContextCb.push(() => {
-      window.Ya?.Context.AdvManager.render({
-        blockId,
-        renderTo: divId,
-      })
-    })
+    const raf = window.requestAnimationFrame(() => window.setTimeout(draw, 0))
+    return () => { cancelled = true; window.cancelAnimationFrame(raf) }
   }, [blockId, divId, viewport])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
