@@ -161,6 +161,24 @@ export default async function BlogPostPage({ params }: Props) {
          */
         .in-article-ad .in-article-ad-slot,
         .in-article-ad > div:last-child { min-height: 250px; }
+        /*
+         * 31.08.2026 — ШИРИНА МЕСТА РЕШАЕТ, БУДЕТ ЛИ РЕКЛАМА. Замер в браузере на
+         * живой странице, один блок, одна страница, один момент: 343px — баннер
+         * приходит (600px высотой), 255px — не приходит вообще. А место в теле
+         * статьи получало ровно 255px: 375px экрана минус отступы страницы, статьи
+         * и самой плашки. Поэтому на телефоне инлайн-места пустовали.
+         * Ниже 1024px выпускаем плашку на всю ширину экрана: 375 − 8×2 поля
+         * − 8×2 внутренних = 343px, то есть ровно проверенный рабочий размер.
+         */
+        @media (max-width: 1023px) {
+          .in-article-ad {
+            margin-left: calc(50% - 50vw + 8px);
+            margin-right: calc(50% - 50vw + 8px);
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 10px;
+          }
+        }
         .in-article-ad-label {
           display: flex; justify-content: space-between; align-items: center;
           margin-bottom: 8px;
