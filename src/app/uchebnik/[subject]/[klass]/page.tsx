@@ -85,7 +85,9 @@ export default async function KlassPage({ params }: Props) {
             <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
             <span className="text-[10px] text-gray-300">16+</span>
           </div>
-          <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass-mobile" viewport="mobile" />
+          <div style={{ minHeight: 250 }}>
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass-mobile" viewport="mobile" />
+            </div>
         </aside>
 
         {/* Основные темы */}

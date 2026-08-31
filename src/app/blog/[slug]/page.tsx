@@ -150,6 +150,17 @@ export default async function BlogPostPage({ params }: Props) {
         }
         /* Первый блок стоит в самом верху тела статьи — верхний отступ не нужен. */
         .post-body > .in-article-ad:first-child { margin-top: 0; }
+        /*
+         * 31.08.2026 — БЕЗ ЭТОЙ ВЫСОТЫ РЕКЛАМЫ НЕТ. Проверено в браузере на живой
+         * странице: контейнер нулевой высоты РСЯ не заполняет вообще — тот же блок
+         * в тот же момент на той же странице заполняется, если у контейнера задан
+         * min-height, и не заполняется, если высота 0 (ширина при этом любая, 342
+         * или 728 — не влияет). Инлайн-места в статьях были именно такими: div без
+         * высоты, и потому пустовали. Резервируем место заранее — заодно уходит
+         * скачок вёрстки при появлении баннера (CLS).
+         */
+        .in-article-ad .in-article-ad-slot,
+        .in-article-ad > div:last-child { min-height: 250px; }
         .in-article-ad-label {
           display: flex; justify-content: space-between; align-items: center;
           margin-bottom: 8px;
