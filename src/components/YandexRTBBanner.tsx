@@ -28,6 +28,13 @@ interface Props {
    * РСЯ отрисовывает только первый вызов render() и остальные места молчат.
    */
   pageNumber?: number
+  /**
+   * Ограничить место одним типом экрана. Нужно там, где под десктоп и под
+   * мобильные стоят РАЗНЫЕ места одного и того же блока РСЯ: без ограничения
+   * оба вызовут render(), а блок отрисуется только в первом — и на телефоне
+   * реклама уедет в скрытый сайдбар. Граница — 1024px (Tailwind `lg`).
+   */
+  viewport?: 'mobile' | 'desktop'
 }
 
 /**
@@ -57,13 +64,28 @@ interface Props {
  * почему уплотнение до 5 инлайнов (ebae112) не дало ни одного лишнего запроса.
  * pageNumber — штатный способ РСЯ повторить блок на странице (он же для
  * бесконечной ленты). Нумеруем места сквозной единицей по всей странице.
+ *
+ * 31.08 — почему появился viewport. В /uchebnik/ единственное рекламное место
+ * лежало в сайдбаре `hidden lg:block`, то есть на телефоне и планшете его не было
+ * вовсе. За 30 дней это 2 207 просмотров раздела (52% его трафика) без единого
+ * запроса в РСЯ, при том что мобильный CPM (152₽) втрое выше десктопного (57₽).
+ * Ставим второе место в теле страницы под мобильные, а сайдбар оставляем десктопу.
+ * Оба места — один и тот же блок кабинета, поэтому render() должен звать ровно
+ * одно из них: иначе первый вызов заберёт блок себе и на телефоне снова пусто.
+ * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
+ * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, suffix, pageNumber }: Props) {
+export default function YandexRTBBanner({ blockId, suffix, pageNumber, viewport }: Props) {
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
     : `yandex_rtb_${blockId}`
 
   useEffect(() => {
+    if (viewport) {
+      const isDesktop = window.matchMedia('(min-width: 1024px)').matches
+      if (viewport === 'desktop' && !isDesktop) return
+      if (viewport === 'mobile' && isDesktop) return
+    }
     window.yaContextCb = window.yaContextCb || []
     window.yaContextCb.push(() => {
       window.Ya?.Context.AdvManager.render({
@@ -72,7 +94,7 @@ export default function YandexRTBBanner({ blockId, suffix, pageNumber }: Props) 
         ...(pageNumber && pageNumber > 1 ? { pageNumber } : {}),
       })
     })
-  }, [blockId, divId, pageNumber])
+  }, [blockId, divId, pageNumber, viewport])
 
   return <div id={divId} />
 }

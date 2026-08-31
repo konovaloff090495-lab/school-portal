@@ -79,6 +79,15 @@ export default async function KlassPage({ params }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
         <div className="flex-1 min-w-0">
 
+        {/* Реклама для телефонов и планшетов: сайдбар ниже скрыт до lg */}
+        <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
+          <div className="flex items-center justify-between mb-2 px-1">
+            <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+            <span className="text-[10px] text-gray-300">16+</span>
+          </div>
+          <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass-mobile" viewport="mobile" />
+        </aside>
+
         {/* Основные темы */}
         <h2 className="text-base font-bold text-gray-700 mb-4">Темы программы</h2>
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm mb-8 overflow-hidden">
@@ -150,7 +159,7 @@ export default async function KlassPage({ params }: Props) {
               <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
               <span className="text-[10px] text-gray-300">16+</span>
             </div>
-            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass" />
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-klass" viewport="desktop" />
           </div>
         </aside>
       </div>
