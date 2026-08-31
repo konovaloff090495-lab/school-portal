@@ -112,7 +112,9 @@ export default async function TopicPage({ params }: Props) {
               <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
               <span className="text-[10px] text-gray-300">16+</span>
             </div>
-            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
+            <div style={{ minHeight: 250 }}>
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
+            </div>
           </aside>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
