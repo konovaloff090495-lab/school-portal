@@ -128,8 +128,13 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       }
     }
 
-    const raf = window.requestAnimationFrame(() => window.setTimeout(draw, 0))
-    return () => { cancelled = true; window.cancelAnimationFrame(raf) }
+    // ВАЖНО: только setTimeout, без requestAnimationFrame. В скрытой вкладке
+    // (фоновая вкладка, свёрнутое окно) кадр отрисовки не наступает вообще —
+    // с rAF место не создавалось и реклама не запрашивалась никогда. Замер
+    // 31.08: document.visibilityState === 'hidden' → узлов нет ни одного.
+    // Таймеры в скрытой вкладке работают, пусть и реже.
+    const t = window.setTimeout(draw, 0)
+    return () => { cancelled = true; window.clearTimeout(t) }
   }, [blockId, divId, viewport])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
