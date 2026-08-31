@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 declare global {
   interface Window {
@@ -64,6 +64,16 @@ interface Props {
  * Правило: на одной странице каждый blockId вызывается РОВНО ОДИН раз.
  * Разные экраны разводятся prop `viewport`, а не повторным вызовом.
  *
+ * 31.08 (вечер) — НАСТОЯЩАЯ причина пустых мест в теле статьи. Замер на живой
+ * странице: свежесозданный div рядом с мёртвым местом, тот же блок, та же ширина
+ * 341px, та же секунда — реклама приходит (480px). Контейнер компонента — пусто.
+ * То есть ни блок, ни ширина, ни высота ни при чём: РСЯ рисует в React-узел,
+ * React при реконсиляции сносит вставленное поддерево, а повторно в тот же
+ * renderTo РСЯ уже не рисует. Сайдбар выживал потому, что стоит вне разметки
+ * статьи, а инлайн-места сидят внутри sections.map рядом с dangerouslySetInnerHTML,
+ * где узлы и пересобираются. Лечение: целевой узел создаём императивно в useEffect
+ * и React про него не знает.
+ *
  * 31.08 — почему появился viewport. В /uchebnik/ единственное рекламное место
  * лежало в сайдбаре `hidden lg:block`, то есть на телефоне и планшете его не было
  * вовсе. За 30 дней это 2 207 просмотров раздела (52% его трафика) без единого
@@ -78,6 +88,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
     : `yandex_rtb_${blockId}`
+  const hostRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (viewport) {
@@ -85,6 +96,20 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       if (viewport === 'desktop' && !isDesktop) return
       if (viewport === 'mobile' && isDesktop) return
     }
+    const host = hostRef.current
+    if (!host) return
+
+    // Целевой узел создаём вручную и НЕ отдаём React: реклама живёт в нём.
+    // Если рисовать прямо в React-узел, реконсиляция сносит вставленное РСЯ
+    // поддерево, а повторно в тот же renderTo РСЯ уже не рисует — место
+    // остаётся пустым навсегда (см. заметку выше).
+    let inner = document.getElementById(divId)
+    if (!inner) {
+      inner = document.createElement('div')
+      inner.id = divId
+      host.appendChild(inner)
+    }
+
     window.yaContextCb = window.yaContextCb || []
     window.yaContextCb.push(() => {
       window.Ya?.Context.AdvManager.render({
@@ -94,5 +119,6 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     })
   }, [blockId, divId, viewport])
 
-  return <div id={divId} />
+  // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
+  return <div ref={hostRef} suppressHydrationWarning />
 }
