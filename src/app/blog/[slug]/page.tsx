@@ -71,20 +71,25 @@ export default async function BlogPostPage({ params }: Props) {
   // раздувала показы, но CTR просел (1,1% → 0,16%), а РСЯ по низкому CTR крутит рекламу
   // дешевле. Держим 2 качественных места и не спамим блоками. См. заметку по РСЯ-аудиту.
   //
-  // 18.08.2026 — реклама вставляется ПЕРЕД секцией, а не после. Замер за неделю:
-  // видимые/запросы на мобильных 28,5% против 54% на десктопе. Причина — единственное
-  // работающее место (см. YandexRTBBanner: РСЯ отдаёт один блок на страницу) стояло
-  // после первой секции текста, а над ним ещё хлебные крошки, H1, лид, обложка до 420px
-  // и карточка автора: на телефоне это два экрана до рекламы. Подъём на верх тела
-  // статьи бьёт по единственному множителю, который можно двигать без кабинета РСЯ.
+  // 18.08.2026 — реклама вставляется ПЕРЕД секцией, а не после: над первым местом
+  // стояли крошки, H1, лид, обложка до 420px и карточка автора — на телефоне это два
+  // экрана до рекламы.
+  //
+  // 31.08.2026 — ОБА инлайн-места в статье были ПУСТЫЕ на проде, жил только сайдбар.
+  // Проверено в браузере на живой странице: один вызов блока в свежий контейнер даёт
+  // рекламу (330px), ДВА вызова того же блока на странице — оба контейнера остаются
+  // пустыми. То есть дубль blockId убивает не второе место, а ОБА. Оба инлайна тут
+  // ходили в blogInline, отсюда пустота. Правило теперь простое:
+  //   на одной странице каждый blockId вызывается РОВНО ОДИН раз.
+  // Плюс РСЯ не рисует в скрытый контейнер (в консоли CONTAINER_IS_HIDDEN), а сайдбар
+  // статьи — display:none до 1024px, поэтому на телефоне (65% трафика блога) не было
+  // ВООБЩЕ ни одного показа. Раскладка: верхний инлайн — blogInline; второе место —
+  // blogSidebar, на десктопе в колонке, на мобильных инлайном в середине статьи.
+  // Разводятся prop `viewport`, чтобы render() звался один раз. Итог: 2 живых места
+  // и на десктопе, и на телефоне. pageNumber убран — «страница ленты», не наш случай.
   const adBefore = new Set<number>()
   if (sections.length >= 2) adBefore.add(0)
-  if (sections.length >= 4) adBefore.add(Math.floor(sections.length / 2))
-  // Сквозная нумерация рекламных мест страницы: РСЯ рисует один блок на странице
-  // только один раз, повторные места оживают лишь с pageNumber. См. YandexRTBBanner.
-  const adSlotNumber = new Map<number, number>()
-  ;[...adBefore].sort((a, b) => a - b).forEach((i, n) => adSlotNumber.set(i, n + 1))
-  const sidebarAdNumber = adSlotNumber.size + 1
+  const mobileMidAd = sections.length >= 4 ? Math.floor(sections.length / 2) : -1
 
   return (
     <>
@@ -109,6 +114,7 @@ export default async function BlogPostPage({ params }: Props) {
           .post-wrap { padding: 56px 56px 96px; }
           .post-layout { grid-template-columns: 1fr 280px; gap: 48px; }
           .post-sidebar { display: block; }
+          .post-mobile-ad { display: none; }
         }
 
         /* Article typography */
@@ -254,7 +260,19 @@ export default async function BlogPostPage({ params }: Props) {
                       <YandexRTBBanner
                         blockId={AD_BLOCKS.blogInline}
                         suffix={`blog-inline-${i}`}
-                        pageNumber={adSlotNumber.get(i)}
+                      />
+                    </div>
+                  )}
+                  {i === mobileMidAd && (
+                    <div className="in-article-ad post-mobile-ad">
+                      <div className="in-article-ad-label">
+                        <span>Реклама</span>
+                        <span>16+</span>
+                      </div>
+                      <YandexRTBBanner
+                        blockId={AD_BLOCKS.blogSidebar}
+                        suffix="blog-mid-mobile"
+                        viewport="mobile"
                       />
                     </div>
                   )}
@@ -343,7 +361,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <YandexRTBBanner
                   blockId={AD_BLOCKS.blogSidebar}
                   suffix="blog-post"
-                  pageNumber={sidebarAdNumber}
+                  viewport="desktop"
                 />
               </div>
               {/* All posts */}
