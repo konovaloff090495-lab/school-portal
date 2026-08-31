@@ -106,6 +106,14 @@ export default async function TopicPage({ params }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
         {/* Основной контент */}
         <div className="flex-1 min-w-0">
+          {/* Реклама для телефонов и планшетов: сайдбар ниже скрыт до lg */}
+          <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
+            <div className="flex items-center justify-between mb-2 px-1">
+              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+              <span className="text-[10px] text-gray-300">16+</span>
+            </div>
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
+          </aside>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
               <div
@@ -158,7 +166,7 @@ export default async function TopicPage({ params }: Props) {
                 <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
                 <span className="text-[10px] text-gray-300">16+</span>
               </div>
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic" viewport="desktop" />
             </div>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">

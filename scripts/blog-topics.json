@@ -307,13 +307,15 @@
     },
     {
       "id": "t034",
-      "status": "pending",
+      "status": "error",
       "title": "Школы с углублённым английским в Москве",
       "slug": "shkoly-s-anglijskim-moskva",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школы с английским уклоном москва",
-      "freq": 2800
+      "freq": 2800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-31T03:00:06.522Z"
     },
     {
       "id": "t035",
@@ -425,12 +427,14 @@
     },
     {
       "id": "t045",
-      "status": "pending",
+      "status": "error",
       "title": "Адаптация ребёнка в новой школе: советы психолога",
       "slug": "adaptatsiya-v-novoj-shkole",
       "category": "Советы родителям",
       "keywords": "адаптация ребёнка в школе",
-      "freq": 4800
+      "freq": 4800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-31T03:00:02.994Z"
     },
     {
       "id": "t046",
@@ -524,12 +528,14 @@
     },
     {
       "id": "t054",
-      "status": "pending",
+      "status": "error",
       "title": "Вечерняя школа: кому подходит и как поступить",
       "slug": "vechernyaya-shkola-kak-postupit",
       "category": "Типы школ",
       "keywords": "вечерняя школа",
-      "freq": 4800
+      "freq": 4800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-31T03:00:04.976Z"
     },
     {
       "id": "t055",
@@ -622,12 +628,14 @@
     },
     {
       "id": "t063",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие онлайн-школы России 2026: рейтинг и сравнение",
       "slug": "luchshie-onlajn-shkoly-2026",
       "category": "Рейтинги",
       "keywords": "лучшие онлайн школы россия",
-      "freq": 5100
+      "freq": 5100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-30T03:00:02.427Z"
     },
     {
       "id": "t064",
@@ -744,12 +752,14 @@
     },
     {
       "id": "t074",
-      "status": "pending",
+      "status": "error",
       "title": "Онлайн-школы с аккредитацией: полный список 2026",
       "slug": "onlajn-shkoly-akkreditatsiya-2026",
       "category": "Рейтинги",
       "keywords": "аккредитованные онлайн школы",
-      "freq": 4800
+      "freq": 4800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-31T03:00:05.511Z"
     },
     {
       "id": "t075",
@@ -925,13 +935,15 @@
     },
     {
       "id": "t091",
-      "status": "pending",
+      "status": "error",
       "title": "Школа Летово: обзор, стоимость и как поступить",
       "slug": "shkola-letovo-obzor",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "школа летово",
-      "freq": 4800
+      "freq": 4800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-31T03:00:06.020Z"
     },
     {
       "id": "t092",
@@ -1016,12 +1028,14 @@
     },
     {
       "id": "t099",
-      "status": "pending",
+      "status": "error",
       "title": "Отличник или троечник: что важнее — оценки или знания",
       "slug": "otlichnik-ili-troechnik",
       "category": "Советы родителям",
       "keywords": "оценки в школе",
-      "freq": 5100
+      "freq": 5100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-30T03:00:02.700Z"
     },
     {
       "id": "t100",
@@ -1787,12 +1801,14 @@
     },
     {
       "id": "t170",
-      "status": "pending",
+      "status": "error",
       "title": "ОГЭ по русскому языку 2026: что нужно знать",
       "slug": "oge-russkij-yazyk-2026-chto-nuzhno",
       "category": "Советы родителям",
       "keywords": "ОГЭ русский язык 2026",
-      "freq": 5100
+      "freq": 5100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-30T03:00:02.992Z"
     },
     {
       "id": "t171",
@@ -1944,12 +1960,14 @@
     },
     {
       "id": "t185",
-      "status": "pending",
+      "status": "error",
       "title": "Хорошие оценки без зубрёжки: методики запоминания",
       "slug": "horoshie-ocenki-bez-zubrjozki-metodiki",
       "category": "Советы родителям",
       "keywords": "хорошие оценки без зубрёжки",
-      "freq": 5200
+      "freq": 5200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-30T03:00:02.018Z"
     },
     {
       "id": "t186",
@@ -1997,12 +2015,14 @@
     },
     {
       "id": "t190",
-      "status": "pending",
+      "status": "error",
       "title": "Налоговый вычет за обучение детей: как получить в 2026",
       "slug": "nalogovyj-vychet-obuchenie-detej-2026",
       "category": "Советы родителям",
       "keywords": "налоговый вычет обучение дети",
-      "freq": 5100
+      "freq": 5100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-08-30T03:00:03.254Z"
     },
     {
       "id": "t191",
