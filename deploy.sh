@@ -82,7 +82,11 @@ echo "==> Проверяем зависимости на VPS..."
 # оказались неполными, а deploy.sh их никогда не проверял и не ставил.
 if ! $SSH $VPS "test -x $DIR/node_modules/.bin/next"; then
   echo "  ⚠️  next на VPS отсутствует — ставим зависимости (npm ci)"
-  $SSH $VPS "cd $DIR && npm cache clean --force >/dev/null 2>&1; npm ci --no-audit --no-fund" || {
+  # 31.08.2026: `npm ci` поверх существующей папки трижды за день падал с ENOTEMPTY
+  # (rmdir на занятых файлах при живом процессе) и оставлял node_modules БЕЗ .bin —
+  # после чего следующий деплой снова шёл сюда же. Сносим папку сами: так ci ставит
+  # с нуля и не спотыкается. Прод при этом жив — процесс уже загружен в память.
+  $SSH $VPS "cd $DIR && rm -rf node_modules && npm ci --no-audit --no-fund" || {
     echo "❌ npm ci на VPS не прошёл — выходим, PM2 не трогаем."; exit 1; }
   $SSH $VPS "test -x $DIR/node_modules/.bin/next" || { echo "❌ next так и не появился — выходим."; exit 1; }
   echo "  ✓ зависимости на месте"
