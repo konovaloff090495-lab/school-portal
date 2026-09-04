@@ -546,7 +546,24 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
     })
   }
 
-  if (sections.length === 0) return null
+  // ── 8. Краулящиеся ссылки на индексируемые тайп-страницы города ───────────────
+  // На городском хабе типы школ доступны только через JS-фильтры каталога —
+  // поисковик их не обходит. Даём прямые ссылки на /shkoly/{город}/{тип}/ для
+  // типов, где есть индексируемая страница (>=3 школы). Это раздаёт внутренний вес
+  // вертикалям (вальдорфские, коррекционные, кадетские, при вузах) и помогает
+  // Google находить и ранжировать город × тип.
+  const cityTypeLinks: [SchoolType, number][] =
+    region && !type && !metro && !district && !city && !exam
+      ? (() => {
+          const byType: Record<string, number> = {}
+          for (const s of schools) if (s.region === region) byType[s.type] = (byType[s.type] || 0) + 1
+          return (Object.entries(byType) as [SchoolType, number][])
+            .filter(([, n]) => n >= 3)
+            .sort((a, b) => b[1] - a[1])
+        })()
+      : []
+
+  if (sections.length === 0 && cityTypeLinks.length === 0) return null
 
   return (
     <div style={{
@@ -577,6 +594,30 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
           </p>
         </div>
       ))}
+      {cityTypeLinks.length > 0 && regionIn && (
+        <div style={{ marginTop: 4, paddingTop: 16, borderTop: '1px solid #ECEAE5' }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: '#1A1814', margin: '0 0 12px', lineHeight: 1.3 }}>
+            Школы по типам {regionIn}
+          </h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {cityTypeLinks.map(([t, n]) => (
+              <Link
+                key={t}
+                href={`/shkoly/${region}/${t}/`}
+                style={{
+                  display: 'inline-flex', alignItems: 'baseline', gap: 6,
+                  padding: '6px 12px', borderRadius: 8, border: '1px solid #E5E3DE',
+                  fontSize: 14, fontWeight: 600, color: '#1F2937', textDecoration: 'none',
+                  background: '#FAF9F7',
+                }}
+              >
+                {typeLabels[t]}
+                <span style={{ fontSize: 13, fontWeight: 500, color: '#9CA3AF' }}>{n}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
       {hubHref && hubLabel && (
         <div style={{ marginTop: 4, paddingTop: 16, borderTop: '1px solid #ECEAE5' }}>
           <Link href={hubHref} style={{ fontSize: 15, fontWeight: 600, color: '#1D4ED8', textDecoration: 'none' }}>
