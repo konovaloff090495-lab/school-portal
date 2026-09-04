@@ -74,13 +74,13 @@ export function buildTitle(
   }
   if (region && type) {
     const cityOf = regionLabelsOf[region]
-    const suffix = count ? ` — список ${count} школ` : ''
-    return `${typeLabels[type]} школы ${cityOf} ${new Date().getFullYear()}${suffix}`
+    const suffix = count ? ` — ${pluralSchools(count)}` : ''
+    return `${typeLabels[type]} школы ${cityOf} ${new Date().getFullYear()}: рейтинг, адреса${suffix}`
   }
   if (region) {
     const cityOf = regionLabelsOf[region]
-    const suffix = count ? ` — ${count} школ` : ''
-    return `Школы ${cityOf}${suffix} — адреса, телефоны, отзывы`
+    const suffix = count ? `: ${pluralSchools(count)}` : ''
+    return `Школы ${cityOf} ${new Date().getFullYear()} — рейтинг, адреса, отзывы${suffix}`
   }
   return `Каталог школ России — государственные, частные, онлайн, вечерние, экстернат`
 }
@@ -98,13 +98,14 @@ export function buildDescription(
   if (region && type) {
     const typeLower = typeLabels[type].toLowerCase()
     const cityIn = regionLabelsIn[region]
-    const n = count ?? 'все'
-    return `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}: ${n} школ с адресами, телефонами и описаниями. Сравните и выберите лучшую школу для вашего ребёнка.`
+    const n = count ? pluralSchools(count) : 'Все школы'
+    const head = count ? `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}: ${n}` : `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}`
+    return `${head} с адресами, телефонами, рейтингами и отзывами. Сравните и выберите лучшую школу для ребёнка.`
   }
   if (region) {
     const cityIn = regionLabelsIn[region]
-    const n = count ?? 'все'
-    return `Полный список школ ${cityIn}: ${n} образовательных организаций. Государственные, частные, онлайн, вечерние школы и экстернат с адресами и контактами.`
+    const n = count ? pluralSchools(count) : 'все школы'
+    return `${n.charAt(0).toUpperCase() + n.slice(1)} ${cityIn}: рейтинги, адреса, телефоны и отзывы. Государственные, частные, онлайн, вечерние школы и экстернат — сравните и выберите лучшую для ребёнка.`
   }
   return `Крупнейший каталог школ России. Государственные, частные, онлайн-школы, вечерние школы и экстернат по всем регионам. Адреса, телефоны, описания, отзывы.`
 }
