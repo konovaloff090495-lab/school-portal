@@ -572,13 +572,15 @@
     },
     {
       "id": "t058",
-      "status": "pending",
+      "status": "error",
       "title": "Музыкальные школы Москвы: список и как поступить",
       "slug": "muzykalnye-shkoly-moskvy",
       "category": "Типы школ",
       "city": "Москва",
       "keywords": "музыкальная школа москва",
-      "freq": 2800
+      "freq": 2800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-02T03:00:02.200Z"
     },
     {
       "id": "t059",
@@ -1072,13 +1074,15 @@
     },
     {
       "id": "t103",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие частные школы Санкт-Петербурга 2026",
       "slug": "luchshie-chastnye-shkoly-spb-2026",
       "category": "Рейтинги",
       "city": "Санкт-Петербург",
       "keywords": "лучшие частные школы петербурга",
-      "freq": 2800
+      "freq": 2800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-02T03:00:02.518Z"
     },
     {
       "id": "t104",
@@ -1106,13 +1110,15 @@
     },
     {
       "id": "t106",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие лицеи Москвы 2026: рейтинг по ЕГЭ",
       "slug": "luchshie-licei-moskvy-2026",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "лучшие лицеи москвы",
-      "freq": 2700
+      "freq": 2700,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-02T03:00:03.206Z"
     },
     {
       "id": "t107",
@@ -1370,12 +1376,14 @@
     },
     {
       "id": "t130",
-      "status": "pending",
+      "status": "error",
       "title": "Льготы при поступлении в школу: кто имеет право",
       "slug": "lgoty-pri-postuplenii-v-shkolu",
       "category": "Советы родителям",
       "keywords": "льготы поступление школа",
-      "freq": 2800
+      "freq": 2800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-02T03:00:02.741Z"
     },
     {
       "id": "t131",
@@ -2037,12 +2045,14 @@
     },
     {
       "id": "t192",
-      "status": "pending",
+      "status": "error",
       "title": "Стипендии и гранты для школьников: где найти деньги на учёбу",
       "slug": "stipendii-granty-dlya-shkolnikov",
       "category": "Советы родителям",
       "keywords": "стипендии гранты школьники",
-      "freq": 2800
+      "freq": 2800,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-02T03:00:02.970Z"
     },
     {
       "id": "t193",
