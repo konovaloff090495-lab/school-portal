@@ -1137,7 +1137,7 @@ export const schools = ([
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — ЭКСТЕРНАТ =====
   {
     id: 'shkola-litsei-1580-baumanка',
-    slug: 'gbou-litsei-1580-baumanка-moskva',
+    slug: 'gbou-litsei-1580-baumanka-moskva',
     photoCount: 3,
     name: 'ГБОУ Лицей № 1580 при МГТУ им. Баумана',
     type: 'profilnye',
@@ -2573,7 +2573,7 @@ export const schools = ([
   },
   {
     id: 'semejnye-mo-5',
-    slug: 'semejnaya-shkola-ориентир-balashikha',
+    slug: 'semejnaya-shkola-orientir-balashikha',
     photoCount: 3,
     name: 'Центр семейного образования «Ориентир»',
     type: 'semejnye',
@@ -3780,7 +3780,7 @@ export const schools = ([
   },
   {
     id: 'pri-vuzakh-moskva-5',
-    slug: 'licej-mifи-moskva',
+    slug: 'licej-mifi-moskva',
     photoCount: 3,
     name: 'Лицей «Вторая школа» при МИФИ',
     type: 'pri-vuzakh',
@@ -4681,7 +4681,7 @@ export const schools = ([
   },
   {
     id: 'profilnye-mo-10',
-    slug: 'profilnaya-shkola-sport-raменское',
+    slug: 'profilnaya-shkola-sport-ramenskoye',
     photoCount: 3,
     name: 'Профильная спортивная школа Раменское',
     type: 'sportivnye',
@@ -25503,7 +25503,7 @@ export const schools = ([
   },
     {
     id: 'domas-tomsk-7',
-    slug: 'externат-uspeh-tomsk',
+    slug: 'externat-uspeh-tomsk',
     photoCount: 3,
     name: 'Школа-экстернат «Успех»',
     type: 'domashnie' as const,
@@ -27497,7 +27497,7 @@ export const schools = ([
   },
     {
     id: 'domas-saratov-8',
-    slug: 'nadomnoe-obuchenie-при-gimnazii-87-saratov',
+    slug: 'nadomnoe-obuchenie-pri-gimnazii-87-saratov',
     photoCount: 3,
     name: 'Надомное обучение при Гимназии № 87',
     type: 'domashnie' as const,
@@ -29044,7 +29044,7 @@ export const schools = ([
   },
     {
     id: 'chast-izhevsk-6',
-    slug: 'lицей-evrika-izhevsk',
+    slug: 'licey-evrika-izhevsk',
     photoCount: 3,
     name: 'Частный лицей «Эврика»',
     type: 'chastnie' as const,
@@ -29065,7 +29065,7 @@ export const schools = ([
   },
     {
     id: 'chast-izhevsk-8',
-    slug: 'shkola-lidеr-izhevsk',
+    slug: 'shkola-lider-izhevsk',
     photoCount: 3,
     name: 'Частная школа «Лидер»',
     type: 'chastnie' as const,
@@ -29953,7 +29953,7 @@ export const schools = ([
   },
     {
     id: 'profi-izhevsk-10',
-    slug: 'gimnaziya-83-estestvennонаuchnyy-profil-izhevsk',
+    slug: 'gimnaziya-83-estestvennonauchnyy-profil-izhevsk',
     photoCount: 3,
     name: 'Гимназия № 83 естественнонаучного профиля',
     type: 'gimnazii' as const,
@@ -37871,7 +37871,7 @@ export const schools = ([
   // ===== МОСКОВСКАЯ ОБЛАСТЬ — МОНТЕССОРИ =====
     {
     id: 'monte-moskovskaya-oblast-2',
-    slug: 'montessori-shkola-умничка-красногорsk',
+    slug: 'montessori-shkola-umnichka-krasnogorsk',
     photoCount: 0,
     name: 'Монтессори-школа «Умничка»',
     type: 'montessori' as const,
@@ -37892,7 +37892,7 @@ export const schools = ([
   },
     {
     id: 'monte-moskovskaya-oblast-4',
-    slug: 'montessori-centr-razvitiуa-zvezdochka-podolsk',
+    slug: 'montessori-centr-razvitiya-zvezdochka-podolsk',
     photoCount: 0,
     name: 'Монтессори-центр развития «Звёздочка»',
     type: 'montessori' as const,
@@ -37934,7 +37934,7 @@ export const schools = ([
   },
     {
     id: 'monte-moskovskaya-oblast-6',
-    slug: 'montessori-shkola-garmoniуa-balashiha',
+    slug: 'montessori-shkola-garmoniya-balashiha',
     photoCount: 3,
     name: 'Монтессори-школа «Гармония»',
     type: 'montessori' as const,
@@ -39569,7 +39569,7 @@ export const schools = ([
   },
     {
     id: 'valdo-ekaterinburg-4',
-    slug: 'valdorfskiy-centr-isток-ekaterinburg',
+    slug: 'valdorfskiy-centr-istok-ekaterinburg',
     photoCount: 0,
     name: 'Вальдорфский образовательный центр «Исток»',
     type: 'valdorfskie' as const,
@@ -41872,7 +41872,7 @@ export const schools = ([
   },
     {
     id: 'valdo-sankt-peterburg-8',
-    slug: 'valdorfskaya-shkola-vasileostrоvskaya-sankt-peterburg',
+    slug: 'valdorfskaya-shkola-vasileostrovskaya-sankt-peterburg',
     photoCount: 3,
     name: 'Васильеостровская вальдорфская школа',
     type: 'valdorfskie' as const,
