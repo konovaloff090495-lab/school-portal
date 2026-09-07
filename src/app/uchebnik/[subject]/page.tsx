@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import AdCard from '@/components/AdCard'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import {
   textbookSubjects, getSubjectBySlug, getTopicsForSubjectAndClass,
   subjectSlugs, klassLabel,
@@ -57,6 +59,8 @@ export default async function SubjectPage({ params }: Props) {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 py-10">
+        <AdCard blockId={AD_BLOCKS.gdzUchebnik} suffix="subj-top" className="mb-8" />
+
         <h2 className="text-lg font-bold text-[#0F172A] mb-6">Выберите класс</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -93,6 +97,8 @@ export default async function SubjectPage({ params }: Props) {
           })}
         </div>
 
+        <AdCard blockId={AD_SLOT_2} suffix="subj-mid" className="mt-10" />
+
         {/* Все темы списком */}
         <div className="mt-12">
           <h2 className="text-lg font-bold text-[#0F172A] mb-6">Все темы по {subject.titleGen}</h2>
@@ -126,6 +132,8 @@ export default async function SubjectPage({ params }: Props) {
             )
           })}
         </div>
+
+        <AdCard blockId={AD_SLOT_3} suffix="subj-bottom" className="mt-10" />
       </div>
     </div>
   )

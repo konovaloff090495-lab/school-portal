@@ -9,7 +9,7 @@ import {
   getGdzProblemChapter,
 } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { AD_BLOCKS } from '@/lib/ads'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
@@ -333,6 +333,14 @@ export default async function GdzNumberPage({ params }: Props) {
             <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="inline" viewport="mobile" />
           </aside>
 
+          {/* Слот 2 — все экраны */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_SLOT_2} suffix="number-mid" />
+            </div>
+          </aside>
+
           {/* Соседние номера */}
           {related.length > 1 && (
             <section className="gdz-related gdz-section">
@@ -382,6 +390,14 @@ export default async function GdzNumberPage({ params }: Props) {
               </Link>
             </section>
           )}
+
+          {/* Слот 3 — все экраны */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_SLOT_3} suffix="number-bottom" />
+            </div>
+          </aside>
         </main>
 
         {/* Рекламная колонка — sidebar */}

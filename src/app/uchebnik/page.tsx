@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
+import AdCard from '@/components/AdCard'
+import { AD_BLOCKS, AD_SLOT_2 } from '@/lib/ads'
 
 export const metadata: Metadata = {
   title: 'Онлайн учебник для школьников 1–11 класс — все предметы | pro-schools.ru',
@@ -57,6 +59,10 @@ export default function TextbookPage() {
             </Link>
           ))}
         </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4">
+        <AdCard blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-index-top" />
       </div>
 
       {/* Предметы */}
@@ -159,6 +165,8 @@ export default function TextbookPage() {
             </div>
           </div>
         </div>
+
+        <AdCard blockId={AD_SLOT_2} suffix="uchebnik-index-bottom" className="mt-10" />
       </div>
     </div>
   )

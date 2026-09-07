@@ -8,7 +8,8 @@ import {
 } from '@/data/textbook'
 import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { AD_BLOCKS } from '@/lib/ads'
+import AdCard from '@/components/AdCard'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -132,6 +133,8 @@ export default async function TopicPage({ params }: Props) {
             )}
           </div>
 
+          <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
+
           {/* Навигация prev/next */}
           <div className="flex gap-3">
             {prevTopic && (
@@ -157,6 +160,8 @@ export default async function TopicPage({ params }: Props) {
               </Link>
             )}
           </div>
+
+          <AdCard blockId={AD_SLOT_3} suffix="uchebnik-topic-bottom" className="mt-6" />
         </div>
 
         {/* Сайдбар — реклама + список тем */}
