@@ -84,9 +84,6 @@ interface Props {
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-/** Насколько ниже сгиба место считается «почти видимым» и его можно запрашивать. */
-const NEAR_VIEWPORT_PX = 800
-
 export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
@@ -125,12 +122,8 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
       if (attempt < 3) {
         window.setTimeout(() => {
-          if (cancelled || !hostRef.current) return
-          if (node.isConnected && node.childElementCount > 0) return
-          // Повтор только если место сейчас в зоне видимости: иначе РСЯ снова
-          // ответит CONTAINER_IS_HIDDEN, а запрос спишется и уронит fill rate.
-          const rect = hostRef.current.getBoundingClientRect()
-          if (rect.top < window.innerHeight + NEAR_VIEWPORT_PX) draw()
+          if (cancelled) return
+          if (!node.isConnected || node.childElementCount === 0) draw()
         }, 4000)
       }
     }
@@ -140,36 +133,8 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     // с rAF место не создавалось и реклама не запрашивалась никогда. Замер
     // 31.08: document.visibilityState === 'hidden' → узлов нет ни одного.
     // Таймеры в скрытой вкладке работают, пусть и реже.
-    // Замер 07.09 на живой странице (окно 1280x900, /gdz/6-klass/):
-    //   klass-sidebar  сверху (top 125)  → заполнен, 600px
-    //   klass-rail-2   (top 774, в сгибе) → заполнен, 400px
-    //   klass-bottom   (top 989, НИЖЕ сгиба) → пусто, в консоли CONTAINER_IS_HIDDEN
-    // То же на блоге: сайдбар (в сгибе) заполнен, инлайн в теле статьи — пуст.
-    // Значит «hidden» у РСЯ — это и «ниже сгиба в момент вызова», а не только
-    // display:none. Место ниже сгиба, запрошенное сразу, не заполняется НИКОГДА,
-    // и три попытки подряд просто жгут запросы (роняя fill rate).
-    //
-    // Поэтому: место в сгибе — рисуем сразу, как и раньше (это защищает CPM,
-    // провал 25.07 был именно от поголовной отложенной отрисовки). Место ниже
-    // сгиба — ждём, пока до него доскроллят. Терять там нечего: сейчас оно
-    // не приносит ни одного показа.
-    let io: IntersectionObserver | null = null
-    const start = () => {
-      if (cancelled || !hostRef.current) return
-      const rect = hostRef.current.getBoundingClientRect()
-      if (rect.top < window.innerHeight + NEAR_VIEWPORT_PX) { draw(); return }
-      io = new IntersectionObserver(entries => {
-        if (entries.some(e => e.isIntersecting)) {
-          io?.disconnect()
-          io = null
-          draw()
-        }
-      }, { rootMargin: `${NEAR_VIEWPORT_PX}px 0px` })
-      io.observe(hostRef.current)
-    }
-
-    const t = window.setTimeout(start, 0)
-    return () => { cancelled = true; window.clearTimeout(t); io?.disconnect() }
+    const t = window.setTimeout(draw, 0)
+    return () => { cancelled = true; window.clearTimeout(t) }
   }, [blockId, divId, viewport])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
