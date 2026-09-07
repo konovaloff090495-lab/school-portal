@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzBooks, getGdzBook, getGdzAllProblems } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { AD_BLOCKS } from '@/lib/ads'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
@@ -170,6 +170,14 @@ export default async function GdzBookPage({ params }: Props) {
           </section>
 
           {/* Теория по теме в учебнике — внутренняя перелинковка */}
+          {/* Слот 2 — все экраны */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_SLOT_2} suffix="list-mid" />
+            </div>
+          </aside>
+
           {hasTextbook && (
             <section className="gdz-textbook gdz-section">
               <h2>Теория по предмету в учебнике</h2>
@@ -194,6 +202,14 @@ export default async function GdzBookPage({ params }: Props) {
               </Link>
             </section>
           )}
+
+          {/* Слот 3 — все экраны */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_SLOT_3} suffix="list-bottom" />
+            </div>
+          </aside>
         </main>
 
         {/* Рекламная колонка — sidebar */}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { gdzKlasses, getGdzSubjects, gdzBooks } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { AD_BLOCKS } from '@/lib/ads'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -114,7 +114,16 @@ export default async function GdzKlassPage({ params }: Props) {
             ))}
           </nav>
 
+          {/* Слот 1 на телефоне: в рельсе он уезжает под весь контент */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="klass-top-mobile" viewport="mobile" />
+            </div>
+          </aside>
+
           {/* Предметы */}
+
           <section className="gdz-section">
             <div className="gdz-section-head">
               <h2>Предметы {klassNum} класса — {subjects.length} предметов</h2>
@@ -131,6 +140,14 @@ export default async function GdzKlassPage({ params }: Props) {
               ))}
             </div>
           </section>
+
+          {/* Слот 2 — все экраны */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot">
+              <YandexRTBBanner blockId={AD_SLOT_2} suffix="klass-bottom" />
+            </div>
+          </aside>
         </main>
 
         {/* Рекламная колонка */}
@@ -138,7 +155,11 @@ export default async function GdzKlassPage({ params }: Props) {
           <div className="gdz-rail-sticky">
             <div className="gdz-ad">
               <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="klass-sidebar" />
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="klass-sidebar" viewport="desktop" />
+            </div>
+            <div className="gdz-ad">
+              <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+              <YandexRTBBanner blockId={AD_SLOT_3} suffix="klass-rail-2" viewport="desktop" />
             </div>
           </div>
         </aside>

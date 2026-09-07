@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import AdCard from '@/components/AdCard'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import {
   textbookSubjects, getTopicsForSubjectAndClass, klassLabel, klassLabelIn, klassLabelOf,
 } from '@/data/textbook'
@@ -85,6 +87,8 @@ export default async function ClassPage({ params }: Props) {
           ))}
         </div>
 
+        <AdCard blockId={AD_BLOCKS.gdzUchebnik} suffix="klasshub-top" className="mb-8" />
+
         {/* Предметы этого класса */}
         <h2 className="text-base font-bold text-gray-700 mb-4">Предметы {klassLabelOf(klass)}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -112,6 +116,8 @@ export default async function ClassPage({ params }: Props) {
             </Link>
           ))}
         </div>
+
+        <AdCard blockId={AD_SLOT_2} suffix="klasshub-bottom" className="mt-8" />
       </div>
     </div>
   )

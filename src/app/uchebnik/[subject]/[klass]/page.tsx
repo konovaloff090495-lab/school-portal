@@ -6,7 +6,8 @@ import {
   textbookSubjects, klassLabel, klassLabelIn,
 } from '@/data/textbook'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { AD_BLOCKS } from '@/lib/ads'
+import AdCard from '@/components/AdCard'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 
 interface Props { params: Promise<{ subject: string; klass: string }> }
 
@@ -111,6 +112,8 @@ export default async function KlassPage({ params }: Props) {
           ))}
         </div>
 
+        <AdCard blockId={AD_SLOT_2} suffix="uchebnik-klass-mid" className="mb-8" />
+
         {/* Экзаменационные темы */}
         {examTopics.length > 0 && (
           <>
@@ -152,6 +155,8 @@ export default async function KlassPage({ params }: Props) {
             </Link>
           ))}
         </div>
+
+        <AdCard blockId={AD_SLOT_3} suffix="uchebnik-klass-bottom" className="mt-8" />
         </div>
 
         {/* Рекламный сайдбар */}
