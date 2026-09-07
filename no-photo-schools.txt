@@ -62,7 +62,7 @@ licej-mgu-moskva
 licej-hse-preduniversarij-moskva
 licej-mfti-moskva
 licej-mgtu-baumanskij-moskva
-licej-mifи-moskva
+licej-mifi-moskva
 licej-ranhigs-moskva
 licej-mai-moskva
 licej-rudn-moskva
