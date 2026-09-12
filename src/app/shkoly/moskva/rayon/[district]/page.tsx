@@ -22,8 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const full = moscowDistrictFullNames[d]
   const count = getSchoolsByDistrict(label).length
   return {
-    title: `Школы ${label} (${full} округ) Москвы — ${count} школ`,
-    description: `Каталог школ ${full} административного округа Москвы (${label}). Государственные, частные, онлайн-школы. Адреса, телефоны, рейтинги.`,
+    // Title под запрос «школы ЦАО / школы ЦАО Москвы» (Вебмастер: 484 показа,
+    // 0 кликов на позиции 8): ключ впереди, число школ и «рейтинг» — в хвосте.
+    title: `Школы ${label} Москвы — список ${count} школ с рейтингом и адресами`,
+    description: `Все школы ${label} Москвы (${full} административный округ) в одном списке: ${count} государственных, частных и онлайн-школ — рейтинг, адреса, телефоны, профили обучения и отзывы родителей.`,
     alternates: { canonical: `https://pro-schools.ru/shkoly/moskva/rayon/${district}/` },
   }
 }

@@ -96,6 +96,15 @@ const nextConfig: NextConfig = {
       { source: '/shkoly/moskva/rayon/:district/online', destination: '/shkoly/moskva/online/', permanent: true },
       { source: '/shkoly/moskva/rayon/:district/eksternal', destination: '/shkoly/moskva/eksternal/', permanent: true },
       { source: '/shkoly/moskovskaya-oblast/gorod/:city/online', destination: '/shkoly/moskovskaya-oblast/online/', permanent: true },
+      // ── Схлопывание дублей блога (SEO-аудит 13.09.2026) ─────────────────────
+      // Две-три статьи на один интент топили друг друга (позиции 6–10, 0 кликов).
+      // Победитель выбран по органике Метрики за 60 дней, уникальные разделы
+      // проигравших перенесены в него. «Координатный луч» — победил учебник
+      // (32 визита против 0 у статьи блога).
+      { source: '/blog/kak-perevesti-rebyonka-v-druguyu-shkolu', destination: '/blog/perevod-v-druguyu-shkolu/', permanent: true },
+      { source: '/blog/perevod-rebenka-v-druguyu-shkolu', destination: '/blog/perevod-v-druguyu-shkolu/', permanent: true },
+      { source: '/blog/perevod-posle-pervogo-kursa-na-druguyu-spetsialnost', destination: '/blog/perevod-na-druguyu-specialnost-v-vuze/', permanent: true },
+      { source: '/blog/koordinatnyj-luch-5-klass', destination: '/uchebnik/matematika/5-klass/koordinatnyj-luch-5/', permanent: true },
       // Удалённая недостоверная запись «Вечерняя школа № 156» (жалоба на чужой телефон,
       // несуществующая школа). Ведём на каталог вечерних школ Москвы. 2026-08-07.
       {
