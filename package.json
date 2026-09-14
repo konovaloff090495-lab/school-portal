@@ -7,6 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
+    "lint:leads": "bash scripts/check-lead-forms.sh",
     "fetch-images": "node scripts/yandex-school-images.mjs --only-missing"
   },
   "dependencies": {

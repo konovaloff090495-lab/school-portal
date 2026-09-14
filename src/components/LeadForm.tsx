@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
-import { getLeadContext } from '@/lib/leadContext'
+import { submitLead } from '@/lib/submitLead'
 
 interface LeadFormProps {
   schoolName?: string
@@ -42,22 +42,17 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
     setLoading(true)
 
     try {
-      await fetch('/api/leads/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          email: form.email,
-          question: form.question,
-          school: schoolName ?? 'Не указана',
-          city: schoolCity,
-          source: source ?? (schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы'),
-          pd_agreed: pdAgreed,
-          marketing_agreed: marketingAgreed,
-          crm,
-          ...getLeadContext(),
-        }),
+      await submitLead({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        question: form.question,
+        school: schoolName,
+        city: schoolCity,
+        source: source ?? (schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы'),
+        pd_agreed: pdAgreed,
+        marketing_agreed: marketingAgreed,
+        crm,
       })
       window.ym?.(108789843, 'reachGoal', 'lead_submit')
       window.ym?.(108789843, 'reachGoal', 'card_lead')

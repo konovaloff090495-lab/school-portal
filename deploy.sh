@@ -70,6 +70,8 @@ if [[ " $* " == *" --no-build "* ]]; then
   fi
   echo "==> Сборка пропущена (--no-build), доливаем готовый .next"
 else
+  echo "==> Проверка лид-форм (все обязаны идти через submitLead → CRM Синергии)..."
+  ./scripts/check-lead-forms.sh || { echo "❌ Лид-форма в обход CRM — деплой остановлен."; exit 1; }
   echo "==> Локальная сборка..."
   NODE_OPTIONS=--max-old-space-size=4096 npm run build
 fi
