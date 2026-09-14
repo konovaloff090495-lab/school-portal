@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sendTelegramMessage } from '@/lib/telegram'
+import { sendLeadToSynergy } from '@/lib/synergy'
 
 const FORMSPREE_ID = process.env.FORMSPREE_ID
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, phone, email, question, school, source, pd_agreed, marketing_agreed } = body
+    const {
+      name, phone, email, question, school, city, source, pd_agreed, marketing_agreed,
+      crm = true, utm, page_url, referrer, ym_client_id,
+    } = body
 
     if (!name || !phone || !email) {
       return NextResponse.json({ error: 'Заполните все обязательные поля' }, { status: 400 })
@@ -28,15 +32,46 @@ export async function POST(req: NextRequest) {
       }).catch(() => {})
     }
 
-    // Telegram notification
     const schoolLabel = school && school !== 'Не указана' ? school : null
+
+    // CRM Синергии (GraphQL sendLead). B2B-формы (crm=false) туда не идут.
+    let crmLine = ''
+    if (crm !== false) {
+      const commentParts: string[] = []
+      if (schoolLabel) commentParts.push(`Школа: ${schoolLabel}${city ? ` (${city})` : ''}`)
+      else if (city) commentParts.push(`Город: ${city}`)
+      if (question) commentParts.push(`Комментарий: ${question}`)
+      if (page_url) commentParts.push(`Страница: ${page_url}`)
+
+      const result = await sendLeadToSynergy({
+        name, phone, email,
+        formTitle: source ?? 'Заявка с сайта pro-schools.ru',
+        comment: commentParts.join('. ') || undefined,
+        utm: utm && typeof utm === 'object' ? utm : undefined,
+        pageUrl: page_url,
+        referrer,
+        ymClientId: ym_client_id,
+        personalDataAgree: pd_agreed !== false,
+        marketingAgree: marketing_agreed !== false,
+        extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source },
+      })
+      if (result.ok) {
+        crmLine = `\n✅ CRM Синергии: лид #${result.id ?? '?'}`
+      } else {
+        console.error('[Synergy] sendLead failed:', result.error)
+        crmLine = `\n⚠️ CRM Синергии: не отправлено (${result.error})`
+      }
+    }
+
+    // Telegram notification
     let msg = `🔔 <b>Новая заявка</b>\n\n`
     msg += `👤 Имя: <b>${name}</b>\n`
     msg += `📞 Телефон: <b>${phone}</b>\n`
     msg += `📧 Email: ${email}\n`
-    if (schoolLabel) msg += `🏫 Школа: ${schoolLabel}\n`
+    if (schoolLabel) msg += `🏫 Школа: ${schoolLabel}${city ? ` (${city})` : ''}\n`
     if (source) msg += `📍 Источник: <b>${source}</b>\n`
     if (question) msg += `\n💬 Вопрос: ${question}`
+    msg += crmLine
 
     await sendTelegramMessage(msg)
 

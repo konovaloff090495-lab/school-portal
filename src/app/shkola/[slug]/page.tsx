@@ -502,7 +502,7 @@ export default async function SchoolPage({ params }: Props) {
 
         {/* Sidebar */}
         <div className="space-y-6">
-          <LeadForm schoolName={school.name} />
+          <LeadForm schoolName={school.name} schoolCity={school.city} />
 
           {/* School match widget */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">
