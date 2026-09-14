@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
+import { getLeadContext } from '@/lib/leadContext'
 import Countdown from '@/components/Countdown'
 
 const YM_ID = 108789843
@@ -72,6 +73,8 @@ export default function CatalogOfferPopup() {
           source: SOURCE,
           pd_agreed: pdAgreed,
           marketing_agreed: marketingAgreed,
+          crm: true,
+          ...getLeadContext(),
         }),
       })
       window.ym?.(YM_ID, 'reachGoal', 'popup_lead')

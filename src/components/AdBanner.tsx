@@ -22,7 +22,7 @@ function BannerModal({ onClose }: { onClose: () => void }) {
           </svg>
         </button>
         <div className="p-6">
-          <LeadForm title="Разместить школу в каталоге" />
+          <LeadForm title="Разместить школу в каталоге" source="Реклама: разместить школу в каталоге" crm={false} />
         </div>
       </div>
     </div>

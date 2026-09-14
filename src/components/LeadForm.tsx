@@ -3,14 +3,20 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
+import { getLeadContext } from '@/lib/leadContext'
 
 interface LeadFormProps {
   schoolName?: string
+  schoolCity?: string
   compact?: boolean
   title?: string
+  /** Подпись источника в Telegram/CRM; по умолчанию — «Карточка школы: …» */
+  source?: string
+  /** false — не передавать в CRM Синергии (B2B-формы вроде «Разместить школу») */
+  crm?: boolean
 }
 
-export default function LeadForm({ schoolName, compact = false, title }: LeadFormProps) {
+export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true }: LeadFormProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
@@ -45,9 +51,12 @@ export default function LeadForm({ schoolName, compact = false, title }: LeadFor
           email: form.email,
           question: form.question,
           school: schoolName ?? 'Не указана',
-          source: schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы',
+          city: schoolCity,
+          source: source ?? (schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы'),
           pd_agreed: pdAgreed,
           marketing_agreed: marketingAgreed,
+          crm,
+          ...getLeadContext(),
         }),
       })
       window.ym?.(108789843, 'reachGoal', 'lead_submit')
