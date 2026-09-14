@@ -58,7 +58,7 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 
 ### Key integrations
 
-- **Leads**: `/api/leads/submit` → Formspree + Telegram webhook
+- **Leads**: `/api/leads/submit` → Telegram + CRM Синергии (GraphQL `sendLead`, `src/lib/synergy.ts`) + Formspree (если задан)
 - **Reviews**: GitHub API (fine-grained PAT) — moderation via `/admin/otzyvy`
 - **Analytics**: Yandex Metrika (no GA)
 - **Ads**: Yandex РСЯ — CSP in `next.config.ts` allows their iframes
@@ -67,6 +67,24 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 ### Scripts
 
 `/scripts/` contains Node/Python scripts for offline data enrichment and batch content generation (uses `@anthropic-ai/sdk`). These are run locally, not deployed.
+
+## Лид-формы — ОБЯЗАТЕЛЬНОЕ ПРАВИЛО
+
+**Любая форма, собирающая имя/телефон (существующая или новая — на любой новой странице,
+поп-апе, баннере, квизе), отправляет заявку ТОЛЬКО через `submitLead()` из `src/lib/submitLead.ts`.**
+Тогда заявка автоматически уходит в Telegram и в CRM Синергии (GraphQL `sendLead`,
+landCode `mo_tilda_online_school`, `utm_source=gerasimov_lav`, школа/город/комментарий
+в `latestComment`, UTM/страница/реферер/ClientID Метрики в `customAttributes`).
+
+- Каждой форме — свой уникальный `source` (это `formTitle` в CRM и подпись в Telegram).
+- Две предзаполненные галочки согласий: ПДн (обязательная, `/politika-konfidentsialnosti/`)
+  и маркетинг (`/soglasie-marketing/`); значения передаются как `pd_agreed` / `marketing_agreed`.
+- Маска/валидация телефона — `formatPhone` / `validatePhone` из `src/lib/phone.ts`.
+- B2B-формы (рекламодатели, «разместить школу») — тоже через `submitLead()`, но с `crm: false`.
+- Прямой `fetch('/api/leads/submit')`, Formspree/Tilda/Bitrix в компонентах — запрещены.
+- Гард `scripts/check-lead-forms.sh` (`npm run lint:leads`) запускается в `deploy.sh` перед сборкой
+  и **останавливает деплой**, если файл с `type="tel"` не импортирует `submitLead`.
+- Тест интеграции без dev-сервера: `SYNERGY_GRAPHQL_URL=https://api.school.syndev.ru/graphql npx tsx <скрипт с import './src/lib/synergy'>` из корня проекта.
 
 ## Deploy (VPS Бегет)
 

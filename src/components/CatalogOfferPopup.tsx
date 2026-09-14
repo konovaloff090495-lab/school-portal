@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
-import { getLeadContext } from '@/lib/leadContext'
+import { submitLead } from '@/lib/submitLead'
 import Countdown from '@/components/Countdown'
 
 const YM_ID = 108789843
@@ -62,20 +62,13 @@ export default function CatalogOfferPopup() {
     if (err) { setPhoneError(err); return }
     setLoading(true)
     try {
-      await fetch('/api/leads/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          email: form.email,
-          school: 'Не указана',
-          source: SOURCE,
-          pd_agreed: pdAgreed,
-          marketing_agreed: marketingAgreed,
-          crm: true,
-          ...getLeadContext(),
-        }),
+      await submitLead({
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        source: SOURCE,
+        pd_agreed: pdAgreed,
+        marketing_agreed: marketingAgreed,
       })
       window.ym?.(YM_ID, 'reachGoal', 'popup_lead')
     } catch {}

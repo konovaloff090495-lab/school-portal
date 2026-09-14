@@ -5,6 +5,8 @@ import {
   getUser, saveUser, getExpressResult, saveExtendedResult,
   type UserProfile, type ExtendedTestResult,
 } from '@/lib/userStorage'
+import { formatPhone, validatePhone } from '@/lib/phone'
+import { submitLead } from '@/lib/submitLead'
 
 // ── Типы ─────────────────────────────────────────────────────────────────────
 
@@ -332,12 +334,17 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
   const [name, setName] = useState(user?.name ?? '')
   const [email, setEmail] = useState(user?.email ?? '')
   const [phone, setPhone] = useState(user?.phone ?? '')
+  const [pdAgreed, setPdAgreed] = useState(true)
+  const [marketingAgreed, setMarketingAgreed] = useState(true)
   const [errors, setErrors] = useState<Record<string, string>>({})
+
+  const phoneFilled = phone.replace(/\D/g, '').length > 1
 
   const validate = () => {
     const e: Record<string, string> = {}
     if (!name.trim()) e.name = 'Введите имя'
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = 'Введите корректный email'
+    if (phoneFilled) { const pe = validatePhone(phone); if (pe) e.phone = pe }
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -345,7 +352,15 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!validate()) return
-    onContinue({ name: name.trim(), email: email.trim(), phone: phone.trim() || undefined, createdAt: new Date().toISOString() })
+    // Телефон указан → это лид: уходит в Telegram и CRM Синергии (не блокируем переход к тесту)
+    if (phoneFilled && pdAgreed) {
+      void submitLead({
+        name: name.trim(), email: email.trim(), phone,
+        source: 'Профтест: расширенный (гейт)',
+        pd_agreed: pdAgreed, marketing_agreed: marketingAgreed,
+      })
+    }
+    onContinue({ name: name.trim(), email: email.trim(), phone: phoneFilled ? phone : undefined, createdAt: new Date().toISOString() })
   }
 
   return (
@@ -430,10 +445,14 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
               <input
                 type="tel"
                 value={phone}
-                onChange={e => setPhone(e.target.value)}
-                placeholder="+7 900 000-00-00"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 transition-all"
+                onChange={e => { setPhone(e.target.value.replace(/\D/g, '').length ? formatPhone(e.target.value) : ''); if (errors.phone) setErrors(({ phone: _p, ...rest }) => rest) }}
+                placeholder="+7 (___) ___-__-__"
+                maxLength={18}
+                className={`w-full border rounded-xl px-4 py-3 text-sm outline-none transition-all ${
+                  errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100'
+                }`}
               />
+              {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
             </div>
             <button
               type="submit"
@@ -441,10 +460,22 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
             >
               Начать расширенный тест →
             </button>
-            <p className="text-xs text-gray-400 text-center leading-relaxed">
-              Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.
-              Данные хранятся только в вашем браузере.
-            </p>
+            <div className="space-y-1.5">
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input type="checkbox" checked={pdAgreed} onChange={e => setPdAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
+                <span className="text-[11px] text-gray-500 leading-relaxed">
+                  Согласен(а) с{' '}
+                  <Link href="/politika-konfidentsialnosti/" className="text-[#7C3AED] hover:underline" target="_blank">политикой обработки персональных данных</Link>
+                </span>
+              </label>
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input type="checkbox" checked={marketingAgreed} onChange={e => setMarketingAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
+                <span className="text-[11px] text-gray-500 leading-relaxed">
+                  Согласен(а) на{' '}
+                  <Link href="/soglasie-marketing/" className="text-[#7C3AED] hover:underline" target="_blank">получение маркетинговых материалов</Link>
+                </span>
+              </label>
+            </div>
           </form>
         </div>
       </div>
