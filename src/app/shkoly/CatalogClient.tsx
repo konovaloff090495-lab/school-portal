@@ -11,7 +11,7 @@ import {
   languageMetas, LanguageSlug,
   RegionSlug, SchoolType,
   metroNameToSlug,
-  MICRO_GEO_SKIP_TYPES,
+  MICRO_GEO_SKIP_TYPES, schoolMatchesType,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
@@ -493,7 +493,7 @@ export default function CatalogClient({
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
     if (skip !== 'types' && activeTypes.length) list = list.filter(s => {
-      if (activeTypes.includes(s.type)) return true
+      if (activeTypes.some(t => schoolMatchesType(s, t))) return true
       // yazykovye has no dedicated type in data — match by language keywords
       if (activeTypes.includes('yazykovye')) {
         const haystack = [s.name, s.description, s.fullDescription ?? '', ...(s.features ?? [])].join(' ').toLowerCase()
@@ -505,7 +505,8 @@ export default function CatalogClient({
       if (filters.priceCategories.length) {
         list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
       } else {
-        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || s.priceFrom === undefined)
+        // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
+        if (filters.priceMode === 'free') list = list.filter(s => (s.priceFrom === 0 || s.priceFrom === undefined) && s.type !== 'podgotovka-ege' && s.type !== 'podgotovka-oge')
         if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
       }
     }

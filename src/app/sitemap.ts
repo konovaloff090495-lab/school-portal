@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_EGE       = new Date('2026-06-01') // EGE/OGE pages
   const D_LANDINGS  = new Date('2026-06-01') // type/feature landings
   const D_ONLINE_BRANDS = new Date('2026-09-16') // страницы брендов онлайн-школ
+  const D_EGE_CENTERS = new Date('2026-09-17') // центры ЕГЭ/ОГЭ по 30 городам (Яндекс Карты)
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -83,7 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(type => isCityTypeIndexable(region, type))
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
-        lastModified: D_SCHOOLS,
+        lastModified: type === 'podgotovka-ege' || type === 'podgotovka-oge' ? D_EGE_CENTERS : D_SCHOOLS,
         changeFrequency: 'weekly',
         priority: 0.8,
       }))

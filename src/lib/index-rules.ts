@@ -20,5 +20,7 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   if (type === 'online') return ONLINE_INDEX_REGIONS.has(region)
   if (type === 'vechernie') return n > 0 || VECHERNIE_ZERO_INDEX.has(region)
   if (type === 'semejnye' || type === 'eksternal') return n > 0
+  // Центры ЕГЭ/ОГЭ: карточки собраны вручную по Яндекс Картам, страница дополнена онлайн-курсами — индексируем от 2 центров.
+  if (type === 'podgotovka-ege' || type === 'podgotovka-oge') return n >= 2
   return n >= 3
 }
