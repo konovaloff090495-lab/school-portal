@@ -11,7 +11,7 @@ import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
 import { onlineBrandSlugs } from '@/data/online-brands'
-import { ONLINE_INDEX_REGIONS } from './shkoly/[region]/[type]/CityOnlinePage'
+import { isCityTypeIndexable } from '@/lib/index-rules'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
 const STATIC_LANDINGS = [
@@ -79,8 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // programmirovanie исключён: для него есть выделенный роут /shkoly/[region]/programmirovanie/,
       // который добавляется для всех регионов в regionPodgotovkaPages (иначе дубли URL)
       .filter(type => type !== 'programmirovanie')
-      // онлайн-школы федеральные: индексируемые городские страницы задаёт ONLINE_INDEX_REGIONS
-      .filter(type => type === 'online' ? ONLINE_INDEX_REGIONS.has(region) : getSchoolsByRegionAndType(region, type).length >= 3)
+      // правила индексации (онлайн, вечерние, семейные — свои пороги) — src/lib/index-rules.ts
+      .filter(type => isCityTypeIndexable(region, type))
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
         lastModified: D_SCHOOLS,

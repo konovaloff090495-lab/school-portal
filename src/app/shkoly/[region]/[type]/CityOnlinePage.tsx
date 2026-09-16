@@ -19,9 +19,7 @@ import OnlineLeadCta from '@/components/OnlineLeadCta'
  * и лид-форма. Индексируются только крупные города (ONLINE_INDEX_REGIONS).
  */
 
-// Первые 50 регионов в regionSlugs — города-миллионники и крупные центры; у них есть
-// спрос «онлайн школа <город>» в Вебмастере (Томск, Иркутск, Ижевск, Ростов, Самара…).
-export const ONLINE_INDEX_REGIONS = new Set<RegionSlug>(regionSlugs.slice(0, 50))
+export { ONLINE_INDEX_REGIONS } from '@/lib/index-rules'
 
 export function schoolsWord(n: number): string {
   const m10 = n % 10, m100 = n % 100

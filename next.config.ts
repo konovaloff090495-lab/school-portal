@@ -109,6 +109,12 @@ const nextConfig: NextConfig = {
       // список лучших» (104 показа/14 дн., позиция 11–13, 0 кликов). Победитель — та, что
       // ранжировалась (129 показов); переписана по проверенным ценам. Проигравшая → 301.
       { source: '/blog/luchshie-onlajn-shkoly-2026', destination: '/blog/luchshie-onlayn-shkoly-rossii-2026/', permanent: true },
+      // 16.09.2026: кластер «как перейти на семейное обучение» — 4 статьи на один интент,
+      // 0 показов в Вебмастере при спросе 75 000/мес. Победитель переписан, остальные → 301.
+      { source: '/blog/semejnoe-obuchenie-2026', destination: '/blog/semejnoe-obuchenie-kak-perejti/', permanent: true },
+      { source: '/blog/semejnoe-obrazovanie-kak-perejti', destination: '/blog/semejnoe-obuchenie-kak-perejti/', permanent: true },
+      { source: '/blog/kak-oformit-semejnoe-obuchenie-dokumenty', destination: '/blog/semejnoe-obuchenie-kak-perejti/', permanent: true },
+      { source: '/blog/semejnoe-obuchenie-mnogodetnym', destination: '/blog/semejnoe-obuchenie-neskolkih-detej/', permanent: true },
       // Удалённая недостоверная запись «Вечерняя школа № 156» (жалоба на чужой телефон,
       // несуществующая школа). Ведём на каталог вечерних школ Москвы. 2026-08-07.
       {

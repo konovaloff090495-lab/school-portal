@@ -9,6 +9,11 @@ import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import CityOnlinePage, { ONLINE_INDEX_REGIONS, onlineSchoolsForCity, schoolsWord } from './CityOnlinePage'
+import VechernieCityExtras from '@/components/VechernieCityExtras'
+import OnlineLeadCta from '@/components/OnlineLeadCta'
+import OnlineBrandsTable from '@/components/OnlineBrandsTable'
+
+import { isCityTypeIndexable } from '@/lib/index-rules'
 
 interface Props {
   params: Promise<{ region: string; type: string }>
@@ -27,7 +32,7 @@ export async function generateStaticParams() {
         if (ONLINE_INDEX_REGIONS.has(region)) params.push({ region, type })
         continue
       }
-      if (getSchoolsByRegionAndType(region, type as SchoolType).length === 0) continue
+      if (getSchoolsByRegionAndType(region, type as SchoolType).length === 0 && !isCityTypeIndexable(region, type as SchoolType)) continue
       params.push({ region, type })
     }
   }
@@ -59,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
   const list = getSchoolsByRegionAndType(r, t)
-  const tooFew = list.length < 3
+  const tooFew = !isCityTypeIndexable(r, t)
   return {
     title: buildTitle(r, t, undefined, list.length),
     description: buildDescription(r, t, undefined, list.length),
@@ -118,13 +123,33 @@ export default async function TypePage({ params }: Props) {
         lockRegion
         lockType
         title={pageTitle}
-        subtitle={`${list.length} школ в каталоге`}
+        subtitle={list.length === 0 && t === 'vechernie' ? 'Отдельной вечерней школы в каталоге нет — ниже, как получить аттестат в городе' : `${list.length} ${schoolsWord(list.length)} в каталоге`}
         breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        seoContent={<SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />}
+        seoContent={
+          t === 'vechernie'
+            ? <><VechernieCityExtras region={r} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
+            : t === 'semejnye'
+            ? <>
+                <OnlineLeadCta
+                  source={`Семейные школы: город ${regionName}`}
+                  heading={`Семейное обучение ${regionIn}: подберём школу для прикрепления`}
+                  text={`Скажите класс и цель перехода — за 30 минут перезвоним, объясним, как оформить семейную форму ${regionIn} (уведомление, прикрепление, аттестации) и какая онлайн-школа возьмёт на себя уроки и аттестацию, чтобы не искать школу самим.`}
+                  bullets={['уведомление в управление образования и документы', 'прикрепление к аккредитованной школе — бесплатно или онлайн', 'аттестации дистанционно, ОГЭ/ЕГЭ — в вашем городе']}
+                  city={regionName}
+                />
+                <OnlineBrandsTable
+                  title={`Онлайн-школы для семейного обучения ${regionIn}`}
+                  intro="Все семь школ зачисляют на семейную или заочную форму из любого города и проводят аттестации дистанционно; у Синергии, Онлайн Гимназии №1 и БИТ — собственная аккредитация."
+                  compact
+                />
+                <SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />
+              </>
+            : <SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />
+        }
       />
     </>
   )
