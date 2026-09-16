@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
-import Countdown from '@/components/Countdown'
+import Countdown, { isDeadlinePassed } from '@/components/Countdown'
 
 const YM_ID = 108789843
 // Единственный жёсткий гейт — заявка оставлена в этой сессии (как «клик по CTA» на card-open.ru).
@@ -107,16 +107,20 @@ export default function CatalogOfferPopup() {
         {/* Контент */}
         <div className="p-5 sm:p-6 overflow-y-auto">
           <div className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-            Последняя волна зачисления
+            {isDeadlinePassed() ? 'Приём документов открыт' : 'Последняя волна зачисления'}
           </div>
           <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug mb-3">
-            Успейте подать документы и попасть в последнюю волну зачисления
+            {isDeadlinePassed()
+              ? 'Подайте документы в онлайн-школу — зачисляем круглый год, в том числе в середине учебного года'
+              : 'Успейте подать документы и попасть в последнюю волну зачисления'}
           </h3>
 
-          <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5 mb-3">
-            <p className="text-xs text-gray-500 mb-1.5">До конца приёма документов:</p>
-            <Countdown variant="light" />
-          </div>
+          {!isDeadlinePassed() && (
+            <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5 mb-3">
+              <p className="text-xs text-gray-500 mb-1.5">До конца приёма документов:</p>
+              <Countdown variant="light" />
+            </div>
+          )}
 
           <p className="text-sm text-gray-600 mb-4">
             Принимаем документы <b>взрослых и детей с 1 по 11 класс</b>. Перезвоним в течение 30 минут и поможем с выбором школы.

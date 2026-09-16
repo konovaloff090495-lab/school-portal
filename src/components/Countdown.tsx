@@ -3,7 +3,11 @@
 import { useState, useEffect } from 'react'
 
 // Приём документов — последняя волна: до 31 августа 2026, 23:59 МСК
+// Дедлайн акции. Истёк 31.08.2026 — таймер и подписи «до …» прячутся сами (isDeadlinePassed),
+// чтобы на сайте не висел протухший оффер. Новую дату ставить ТОЛЬКО здесь.
 const TARGET = new Date('2026-08-31T23:59:59+03:00').getTime()
+export const DEADLINE_LABEL = 'до 31 августа'
+export function isDeadlinePassed(): boolean { return Date.now() > TARGET }
 
 type Variant = 'light' | 'dark'
 

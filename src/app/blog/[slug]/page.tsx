@@ -8,6 +8,19 @@ import { sanitizeHtml } from '@/lib/sanitize'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS } from '@/lib/ads'
+import OnlineLeadCta from '@/components/OnlineLeadCta'
+import { onlineBrands } from '@/data/online-brands'
+
+// Кластер «онлайн / домашнее / семейное обучение»: ~60 статей, 13 000 визитов за квартал
+// и 1 заявка — в статьях не было лид-формы. Для них: строка «сравнить онлайн-школы» после
+// первой секции и лид-блок подбора онлайн-школы вместо общего CTA «открыть каталог».
+const ONLINE_TAGS = ['онлайн-школа', 'домашнее обучение', 'дистанционное обучение', 'семейное обучение']
+const ONLINE_SLUG_RE = /onlajn|onlayn|online|domashn|distanc|semejn|nadomn|eksternat/
+function isOnlineCluster(post: { slug: string; tags: string[]; category: string }) {
+  return post.category === 'Домашнее обучение'
+    || post.tags.some(t => ONLINE_TAGS.includes(t.toLowerCase()))
+    || ONLINE_SLUG_RE.test(post.slug)
+}
 
 // Контент статей читается с диска (content/blog/*.json), а не из бандла.
 // Новый slug, появившийся между сборками, рендерится on-demand и кэшируется.
@@ -90,6 +103,8 @@ export default async function BlogPostPage({ params }: Props) {
   const adBefore = new Set<number>()
   if (sections.length >= 2) adBefore.add(0)
   const mobileMidAd = sections.length >= 4 ? Math.floor(sections.length / 2) : -1
+  const onlineCluster = isOnlineCluster(post)
+  const brandStripAfter = onlineCluster && sections.length >= 2 ? 0 : -1
 
   return (
     <>
@@ -306,6 +321,19 @@ export default async function BlogPostPage({ params }: Props) {
                     </div>
                   )}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
+                  {i === brandStripAfter && (
+                    <div style={{
+                      margin: '20px 0 24px', padding: '14px 16px', borderRadius: 14,
+                      background: '#F0F7FB', border: '1px solid #CFE5F2', fontFamily: 'var(--font-manrope)', fontSize: 14, lineHeight: 1.6,
+                    }}>
+                      <strong>Сравнить онлайн-школы с аттестатом:</strong>{' '}
+                      {onlineBrands.map((b, k) => (
+                        <Fragment key={b.slug}>{k > 0 && ' · '}<Link href={`/shkoly/tipy/online/${b.slug}/`} style={{ color: '#0369A1', fontWeight: 600 }}>{b.name}</Link></Fragment>
+                      ))}
+                      {' '}— тарифы 2026/27, кто выдаёт аттестат, пробный период. Или сразу{' '}
+                      <Link href="/shkoly/tipy/online/" style={{ color: '#0369A1', fontWeight: 600 }}>рейтинг всех онлайн-школ</Link>.
+                    </div>
+                  )}
                 </Fragment>
               ))}
             </article>
@@ -324,7 +352,16 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             {/* CTA */}
-            <div style={{
+            {onlineCluster && (
+              <div style={{ marginTop: 32 }}>
+                <OnlineLeadCta
+                  source={`Блог (онлайн-кластер): ${post.slug}`}
+                  heading="Подобрать онлайн-школу с государственным аттестатом"
+                  text="Скажите класс, город и бюджет — за 30 минут перезвоним и подскажем, какая онлайн-школа подойдёт ребёнку, где бесплатный пробный период и как оформить перевод без потери года."
+                />
+              </div>
+            )}
+            {!onlineCluster && <div style={{
               marginTop: 40, background: 'linear-gradient(135deg, #FFB988 0%, #FF6B3D 100%)',
               borderRadius: 24, padding: '32px 28px', color: 'white',
               fontFamily: 'var(--font-manrope)',
@@ -343,7 +380,7 @@ export default async function BlogPostPage({ params }: Props) {
               }}>
                 Открыть каталог школ →
               </Link>
-            </div>
+            </div>}
 
             {/* Related posts */}
             {others.length > 0 && (

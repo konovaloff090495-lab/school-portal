@@ -10,6 +10,8 @@ import { gdzKlasses, gdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
+import { onlineBrandSlugs } from '@/data/online-brands'
+import { ONLINE_INDEX_REGIONS } from './shkoly/[region]/[type]/CityOnlinePage'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
 const STATIC_LANDINGS = [
@@ -44,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_UCHEBNIK  = new Date('2026-05-20') // textbook content (stable)
   const D_EGE       = new Date('2026-06-01') // EGE/OGE pages
   const D_LANDINGS  = new Date('2026-06-01') // type/feature landings
+  const D_ONLINE_BRANDS = new Date('2026-09-16') // страницы брендов онлайн-школ
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -76,7 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // programmirovanie исключён: для него есть выделенный роут /shkoly/[region]/programmirovanie/,
       // который добавляется для всех регионов в regionPodgotovkaPages (иначе дубли URL)
       .filter(type => type !== 'programmirovanie')
-      .filter(type => getSchoolsByRegionAndType(region, type).length >= 3)
+      // онлайн-школы федеральные: индексируемые городские страницы задаёт ONLINE_INDEX_REGIONS
+      .filter(type => type === 'online' ? ONLINE_INDEX_REGIONS.has(region) : getSchoolsByRegionAndType(region, type).length >= 3)
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
         lastModified: D_SCHOOLS,
@@ -211,6 +215,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const shkolyTypePages: MetadataRoute.Sitemap = typeSlugs.map(t => ({
     url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
   }))
+  // Страницы брендов онлайн-школ /shkoly/tipy/online/<brand>/
+  const onlineBrandPages: MetadataRoute.Sitemap = onlineBrandSlugs.map(b => ({
+    url: `${BASE_URL}/shkoly/tipy/online/${b}/`, lastModified: D_ONLINE_BRANDS, changeFrequency: 'weekly' as const, priority: 0.8,
+  }))
   const shkolyFeaturePages: MetadataRoute.Sitemap = featureSlugs.map(f => ({
     url: `${BASE_URL}/shkoly/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
   }))
@@ -309,7 +317,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
-    ...shkolyTypePages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
+    ...shkolyTypePages, ...onlineBrandPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
     ...metroTypePages, ...districtTypePages, ...moCityTypePages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,

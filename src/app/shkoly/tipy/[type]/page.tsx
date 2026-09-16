@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { typeSlugs, typeLabels, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType } from '@/data/schools'
+import { typeSlugs, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType } from '@/data/schools'
 import { buildKeywords } from '@/lib/utils'
 import Link from 'next/link'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import TypeGuide from '@/components/TypeGuide'
+import OnlineBrandsTable from '@/components/OnlineBrandsTable'
+import OnlineLeadCta from '@/components/OnlineLeadCta'
 
 interface Props {
   params: Promise<{ type: string }>
@@ -45,11 +47,11 @@ const typeDisplayTitles: Record<SchoolType, string> = {
 const typeDescriptions: Record<SchoolType, string> = {
   gosudarstvennye: 'Бесплатные государственные школы России — полный каталог с адресами, телефонами и отзывами.',
   chastnie:        'Частные школы России: малые классы, индивидуальный подход, расширенные программы.',
-  online:          'Онлайн-школы России: как проверить аккредитацию, где учиться бесплатно, сколько стоит обучение и как перейти на дистанционный формат. Каталог школ по городам.',
+  online:          'Рейтинг онлайн-школ России 2026: Фоксфорд, ИнтернетУрок, Синергия, Онлайн Гимназия №1, Skysmart, БИТ, Онлайн-школа №1 — цены 2026/27, у кого своя аккредитация, где пробный период. Как проверить аккредитацию и перейти на дистанционное обучение.',
   vechernie:       'Вечерние школы для работающих и взрослых — обучение по вечерам, аттестат гос. образца.',
   eksternal:       'Школы-экстернаты России: как пройти 10–11 класс за год, где прикрепиться бесплатно, сколько стоит платный экстернат и как оформить документы.',
   semejnye:        'Семейные школы: родители участвуют в обучении, малые группы, альтернативная педагогика.',
-  domashnie:       'Надомное обучение с официальным сопровождением и аттестацией.',
+  domashnie:       'Домашняя школа в 2026 году: чем надомное обучение отличается от семейного и онлайн-школы, сколько стоит домашняя школа онлайн (Фоксфорд, ИнтернетУрок, Синергия, Skysmart), кто выдаёт аттестат и как оформить переход. Каталог школ по городам.',
   'pri-vuzakh':    'Лицеи и школы при университетах: профильная подготовка и высокая поступаемость.',
   profilnye:       'Профильные школы: IT, медицина, право, искусство, инженерия и другие направления.',
   gimnazii:        'Гимназии и лицеи: углублённые программы, высокие баллы ЕГЭ, победители олимпиад.',
@@ -72,7 +74,8 @@ const typeDescriptions: Record<SchoolType, string> = {
 // Общий шаблон «— N в каталоге» под «онлайн школа» и «школа экстернат» не играл:
 // хабы стояли на 27 и 19 месте, кликов не было.
 const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
-  online:    n => `Онлайн-школы России — ${n} школ: аккредитация, цены, отзывы`,
+  online:    () => `Онлайн-школы России 2026: рейтинг 7 школ, цены, аккредитация`,
+  domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
 }
 
@@ -543,11 +546,30 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'eksternal'
     ? <><EksternalSubNav /><TypeGuide type={t} /></>
     : t === 'online'
-    ? <TypeGuide type={t} />
+    ? <>
+        <OnlineBrandsTable
+          intro="Все семь школ федеральные — учиться можно из любого города. Сначала идут школы с собственной государственной аккредитацией (аттестат выдают сами), дальше — по цене формата с зачислением. Нажмите на название, чтобы открыть тарифы, схему аттестации и отзывы."
+        />
+        <OnlineLeadCta source="Онлайн-школы: хаб /shkoly/tipy/online/" />
+        <TypeGuide type={t} />
+      </>
+    : t === 'domashnie'
+    ? <>
+        <DomashnieSubNav />
+        <OnlineLeadCta
+          source="Домашние школы: хаб /shkoly/tipy/domashnie/"
+          heading="Подобрать домашнюю школу онлайн"
+          text="Скажите класс, город и причину перехода — за 30 минут перезвоним и объясним, какая форма подойдёт (надомная, семейная или онлайн-школа), сколько это стоит в 2026/27 году и кто выдаст аттестат."
+        />
+        <OnlineBrandsTable
+          title="Домашние школы онлайн: сравнение цен и аттестации"
+          intro="Продукты «домашняя школа» у федеральных онлайн-школ: стоимость формата с зачислением, кто выдаёт аттестат и есть ли пробный период."
+          compact
+        />
+        <TypeGuide type={t} />
+      </>
     : t === 'semejnye'
     ? <><SemejnyeSubNav /><SeoBlock type={t} count={count} /></>
-    : t === 'domashnie'
-    ? <><DomashnieSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'pri-vuzakh'
     ? <><PriVuzakhSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'kadetskie'
