@@ -19,6 +19,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from popup_report import METRIKA_TOKEN, CID, GOAL_CONTACT, GOAL_PHONE, TG_TOKEN, TG_CHAT  # noqa: E402
 
 BASE_DAYS = 77  # 01.07–15.09.2026
+try:
+    src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src/data/schools.ts'), encoding='utf8').read()
+except Exception:
+    src = ''
 BASE = {  # визиты, заявки, звонки за базу
     'бренды /shkoly/tipy/online/<brand>/': (0, 0, 0),
     'хаб /shkoly/tipy/online/':            (7, 0, 0),
@@ -26,11 +30,21 @@ BASE = {  # визиты, заявки, звонки за базу
     'карточки онлайн-школ /shkola/':       (14, 1, 0),
     'хаб /shkoly/tipy/domashnie/':         (1, 0, 0),
     'блог: онлайн-кластер':                (258, 0, 1),   # статьи по слагу BLOG_RE (страница входа)
+    # ── вечерние и семейные (правки 16.09.2026: лид-блок, индексация 1–2 школ, гайд семейных) ──
+    'вечерние: города /shkoly/<город>/vechernie/': (6505, 240, 590),
+    'вечерние: карточки /shkola/':         (2008, 115, 128),
+    'семейные: города + хаб':              (241, 7, 3),
+    'блог: взрослым/вечерние':             (0, 0, 0),   # базу по слагам ADULT_RE не считали — CTA появился 16.09
     'ВЕСЬ САЙТ':                           (52378, 649, 985),
 }
+VECH_CARDS = set()
+try:
+    VECH_CARDS = set(re.findall(r"slug:\s*'([^']+)'[^{}]*?type:\s*'vechernie'", src, re.S))
+except Exception:
+    pass
+ADULT_RE = re.compile(r'vechern|vzrosl|zaochn|ochno-zaochn|attestat-za-|srednee-obrazovanie-dlya')
 ONLINE_CARDS = set()
 try:
-    src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src/data/schools.ts'), encoding='utf8').read()
     ONLINE_CARDS = set(re.findall(r"slug:\s*'([^']+)'[^{}]*?type:\s*'online'", src, re.S))
 except Exception:
     pass
@@ -51,7 +65,11 @@ def section(path):
     if re.match(r'^/shkoly/[a-z0-9-]+/online/?$', path): return 'города /shkoly/<город>/online/'
     m = re.match(r'^/shkola/([^/]+)/?', path)
     if m and m.group(1) in ONLINE_CARDS: return 'карточки онлайн-школ /shkola/'
+    if re.match(r'^/shkoly/[a-z0-9-]+/vechernie/?$', path): return 'вечерние: города /shkoly/<город>/vechernie/'
+    if m and m.group(1) in VECH_CARDS: return 'вечерние: карточки /shkola/'
+    if re.match(r'^/shkoly/([a-z0-9-]+|tipy)/semejnye/?$', path): return 'семейные: города + хаб'
     m = re.match(r'^/blog/([^/]+)/?', path)
+    if m and ADULT_RE.search(m.group(1)): return 'блог: взрослым/вечерние'
     if m and BLOG_RE.search(m.group(1)): return 'блог: онлайн-кластер'
     return None
 
@@ -114,7 +132,10 @@ def webmaster_report():
             out[k] = (s["IMPRESSIONS"], s["CLICKS"], sum(pos) / len(pos) if pos else 0)
         return out
     def tot(d): return sum(v[0] for v in d.values()), sum(v[1] for v in d.values())
-    lines = ["<b>Вебмастер, последние 14 дней (база 16.09: страницы /online — 128 показов / 4 клика; запросы «онлайн» — 1 084 / 31)</b>"]
+    lines = ["<b>Вебмастер, последние 14 дней (база 16.09: страницы /online — 128 показов / 4 клика; запросы «онлайн» — 1 084 / 31; /vechernie — 8 204 / 1 310; /semejnye — 281 / 23)</b>"]
+    for seg in ['/vechernie', '/semejnye']:
+        d = qa("URL", "URL", seg, cap=300); i, c = tot(d)
+        lines.append(f"страницы {seg}: {len(d)} URL, {i:.0f} показов, {c:.0f} кликов")
     u = qa("URL", "URL", "/online"); i, c = tot(u)
     lines.append(f"страницы /online: {len(u)} URL, {i:.0f} показов, {c:.0f} кликов")
     for k, v in sorted(u.items(), key=lambda x: -x[1][0])[:10]:
