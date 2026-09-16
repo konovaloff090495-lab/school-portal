@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { typeSlugs, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType } from '@/data/schools'
+import { typeSlugs, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType, getSchoolsByType } from '@/data/schools'
 import { buildKeywords } from '@/lib/utils'
 import Link from 'next/link'
 import CatalogClient from '../../CatalogClient'
@@ -8,6 +8,7 @@ import SeoBlock from '@/components/SeoBlock'
 import TypeGuide from '@/components/TypeGuide'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
+import EgeCityExtras from '@/components/EgeCityExtras'
 import { onlineBrands } from '@/data/online-brands'
 
 interface Props {
@@ -61,8 +62,8 @@ const typeDescriptions: Record<SchoolType, string> = {
   mezhdunarodnie:  'Международные школы России: программы IB и Cambridge, обучение на английском, диплом для поступления в зарубежные вузы.',
   programmirovanie:'Школы программирования России: Python, веб-разработка, ИИ, кибербезопасность. Партнёрство с Яндексом и ведущими IT-компаниями.',
   shahmatnye:      'Шахматные школы России: шахматы как учебный предмет, тренировка логики и стратегического мышления, турниры ФИДЕ.',
-  'podgotovka-ege': 'Коммерческие центры подготовки к ЕГЭ: Вебиум, Максимум Эдьюкейшн, ЕГЭхаб, 100Бальный и другие. Авторские методики, пробные экзамены, 80+ баллов.',
-  'podgotovka-oge': 'Центры подготовки к ОГЭ для учеников 8–9 классов. Тренировочные экзамены по актуальным КИМам, разбор ошибок, все предметы ОГЭ очно и онлайн.',
+  'podgotovka-ege': 'Очные центры подготовки к ЕГЭ в 30 крупных городах России — адреса, телефоны, оценки на Яндекс Картах (09.2026): Maximum, Годограф, ЕГЭбург, Умскул, 99 Баллов и другие + онлайн-курс с пробным днём. Как выбрать курсы и не переплатить.',
+  'podgotovka-oge': 'Центры подготовки к ОГЭ для 8–9 классов в 30 крупных городах: адреса, телефоны, оценки на Яндекс Картах (09.2026) + онлайн-курс по 11 предметам с пробным днём. Тренировочные экзамены по актуальным КИМам, разбор ошибок.',
   internaty:        'Школы-интернаты и частные пансионы России с проживанием. Государственные и частные учебные заведения с круглосуточным пребыванием, полным пансионом и качественным образованием.',
   valdorfskie:      'Вальдорфские школы России по педагогике Рудольфа Штайнера. Художественное воспитание, эвритмия, ритмический день, без отметок в начальной школе.',
   montessori:       'Школы Монтессори России по методу Марии Монтессори. Развивающая среда, смешанные возрастные группы, свободный выбор деятельности, AMI-сертифицированные педагоги.',
@@ -79,6 +80,8 @@ const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
   domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
   semejnye:  () => `Семейное обучение 2026: как перейти, уведомление, аттестация — семейные школы`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
+  'podgotovka-ege': n => `Курсы ЕГЭ 2026: ${n} центров подготовки в 30 городах — адреса, отзывы, цены онлайн-курсов`,
+  'podgotovka-oge': n => `Курсы ОГЭ 2026: ${n} центров подготовки для 8–9 классов — адреса, отзывы, онлайн-курсы`,
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -86,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!typeSlugs.includes(type as SchoolType)) return {}
   const t = type as SchoolType
   const displayTitle = typeDisplayTitles[t]
-  const count = schools.filter(s => s.type === t).length
+  const count = getSchoolsByType(t).length
   const title = typeTitleOverrides[t]?.(count) ?? `${displayTitle} России — ${count} в каталоге`
   return {
     title,
@@ -534,7 +537,7 @@ export default async function GlobalTypePage({ params }: Props) {
   if (!typeSlugs.includes(type as SchoolType)) notFound()
   const t = type as SchoolType
   const displayTitle = typeDisplayTitles[t]
-  const count = schools.filter(s => s.type === t).length
+  const count = getSchoolsByType(t).length
 
   const seoContent = t === 'profilnye'
     ? <><ProfileNavSection /><SeoBlock type={t} count={count} /></>
@@ -605,9 +608,9 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'sportivnye'
     ? <><SportivnyeSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-ege'
-    ? <><EgeSubNav /><SeoBlock type={t} count={count} /></>
+    ? <><EgeSubNav /><EgeCityExtras variant="ege" count={count} /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-oge'
-    ? <><OgeSubNav /><SeoBlock type={t} count={count} /></>
+    ? <><OgeSubNav /><EgeCityExtras variant="oge" count={count} /><SeoBlock type={t} count={count} /></>
     : <SeoBlock type={t} count={count} />
 
   return (
@@ -615,7 +618,7 @@ export default async function GlobalTypePage({ params }: Props) {
       initialTypes={[t]}
       lockType
       title={`${displayTitle} в России`}
-      subtitle={`${count} школ — выберите город в фильтре`}
+      subtitle={(t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} центров подготовки в 30 крупных городах — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },

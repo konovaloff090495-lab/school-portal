@@ -10,6 +10,7 @@ import SeoBlock from '@/components/SeoBlock'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import CityOnlinePage, { ONLINE_INDEX_REGIONS, onlineSchoolsForCity, schoolsWord } from './CityOnlinePage'
 import VechernieCityExtras from '@/components/VechernieCityExtras'
+import EgeCityExtras from '@/components/EgeCityExtras'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 
@@ -65,6 +66,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const list = getSchoolsByRegionAndType(r, t)
   const tooFew = !isCityTypeIndexable(r, t)
+  if (t === 'podgotovka-ege' || t === 'podgotovka-oge') {
+    const exam = t === 'podgotovka-ege' ? 'ЕГЭ' : 'ОГЭ'
+    const n = list.length
+    const title = `Курсы ${exam} ${regionLabelsIn[r]} 2026: ${n} ${n === 1 ? 'центр подготовки' : n < 5 ? 'центра подготовки' : 'центров подготовки'} — адреса, телефоны, отзывы`
+    const description = `Центры подготовки к ${exam} ${regionLabelsIn[r]}: ${n} очных ${n === 1 ? 'центр' : n < 5 ? 'центра' : 'центров'} с адресами, телефонами и оценками на Яндекс Картах (09.2026) + онлайн-курс с пробным днём от 4 132 ₽/мес в рассрочку. Как выбрать курсы и не переплатить.`
+    return {
+      title, description,
+      keywords: buildKeywords(r, t),
+      alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/${t}/` },
+      openGraph: { title, description, url: `https://pro-schools.ru/shkoly/${r}/${t}/` },
+      ...(tooFew ? { robots: { index: false, follow: true } } : {}),
+    }
+  }
   return {
     title: buildTitle(r, t, undefined, list.length),
     description: buildDescription(r, t, undefined, list.length),
@@ -94,6 +108,8 @@ export default async function TypePage({ params }: Props) {
     gimnazii:     'Гимназии',
     eksternal:    'Школы-экстернаты',
     'pri-vuzakh': 'Школы при вузах',
+    'podgotovka-ege': 'Курсы подготовки к ЕГЭ',
+    'podgotovka-oge': 'Курсы подготовки к ОГЭ',
   }
   const pageTitle = pageTitleMap[t]
     ? `${pageTitleMap[t]} ${regionIn}`
@@ -123,7 +139,7 @@ export default async function TypePage({ params }: Props) {
         lockRegion
         lockType
         title={pageTitle}
-        subtitle={list.length === 0 && t === 'vechernie' ? 'Отдельной вечерней школы в каталоге нет — ниже, как получить аттестат в городе' : `${list.length} ${schoolsWord(list.length)} в каталоге`}
+        subtitle={list.length === 0 && t === 'vechernie' ? 'Отдельной вечерней школы в каталоге нет — ниже, как получить аттестат в городе' : (t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${list.length} ${list.length === 1 ? 'центр' : list.length < 5 ? 'центра' : 'центров'} подготовки по данным Яндекс Карт, 09.2026` : `${list.length} ${schoolsWord(list.length)} в каталоге`}
         breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
@@ -132,6 +148,8 @@ export default async function TypePage({ params }: Props) {
         seoContent={
           t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
+            : t === 'podgotovka-ege' || t === 'podgotovka-oge'
+            ? <><EgeCityExtras region={r} variant={t === 'podgotovka-ege' ? 'ege' : 'oge'} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
             : t === 'semejnye'
             ? <>
                 <OnlineLeadCta

@@ -329,6 +329,8 @@ export default function SchoolCard({ school }: { school: School }) {
                   от <span className="font-semibold text-[#0F172A]">{formatPrice(school.priceFrom)}</span>
                 </span>
               )
+            ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? (
+              <span className="text-gray-500">Платно, цена по запросу</span>
             ) : (
               <span className="text-emerald-600 font-semibold">Бесплатно</span>
             )}
