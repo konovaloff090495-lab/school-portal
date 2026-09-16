@@ -16,10 +16,16 @@ import { onlineBrands } from '@/data/online-brands'
 // первой секции и лид-блок подбора онлайн-школы вместо общего CTA «открыть каталог».
 const ONLINE_TAGS = ['онлайн-школа', 'домашнее обучение', 'дистанционное обучение', 'семейное обучение']
 const ONLINE_SLUG_RE = /onlajn|onlayn|online|domashn|distanc|semejn|nadomn|eksternat/
+// Кластер «взрослым»: вечерние школы, аттестат после 18 лет, экстернат для взрослых —
+// главный лидогенерирующий интент сайта (вечерние школы = 55 % заявок), в статьях формы не было.
+const ADULT_SLUG_RE = /vechern|vzrosl|zaochn|ochno-zaochn|attestat-za-|srednee-obrazovanie-dlya/
 function isOnlineCluster(post: { slug: string; tags: string[]; category: string }) {
   return post.category === 'Домашнее обучение'
     || post.tags.some(t => ONLINE_TAGS.includes(t.toLowerCase()))
     || ONLINE_SLUG_RE.test(post.slug)
+}
+function isAdultCluster(post: { slug: string; category: string }) {
+  return post.category === 'Взрослым' || ADULT_SLUG_RE.test(post.slug)
 }
 
 // Контент статей читается с диска (content/blog/*.json), а не из бандла.
@@ -103,7 +109,8 @@ export default async function BlogPostPage({ params }: Props) {
   const adBefore = new Set<number>()
   if (sections.length >= 2) adBefore.add(0)
   const mobileMidAd = sections.length >= 4 ? Math.floor(sections.length / 2) : -1
-  const onlineCluster = isOnlineCluster(post)
+  const adultCluster = isAdultCluster(post)
+  const onlineCluster = !adultCluster && isOnlineCluster(post)
   const brandStripAfter = onlineCluster && sections.length >= 2 ? 0 : -1
 
   return (
@@ -361,7 +368,17 @@ export default async function BlogPostPage({ params }: Props) {
                 />
               </div>
             )}
-            {!onlineCluster && <div style={{
+            {adultCluster && (
+              <div style={{ marginTop: 32 }}>
+                <OnlineLeadCta
+                  source={`Блог (взрослым): ${post.slug}`}
+                  heading="Получить аттестат дистанционно — без вечерней школы"
+                  text="Онлайн-школа с государственной лицензией и аккредитацией зачисляет взрослых на заочную форму: занятия в записи и по вечерам, аттестации онлайн, ОГЭ/ЕГЭ — в вашем городе, аттестат государственного образца. Оставьте контакты — перезвоним за 30 минут и расскажем условия для вашего класса."
+                  bullets={['9 и 11 класс за один год, совместимо с работой', 'документы сканами, зачисление круглый год', 'рассрочка и налоговый вычет']}
+                />
+              </div>
+            )}
+            {!onlineCluster && !adultCluster && <div style={{
               marginTop: 40, background: 'linear-gradient(135deg, #FFB988 0%, #FF6B3D 100%)',
               borderRadius: 24, padding: '32px 28px', color: 'white',
               fontFamily: 'var(--font-manrope)',
