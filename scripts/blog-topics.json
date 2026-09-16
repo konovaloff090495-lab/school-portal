@@ -550,13 +550,15 @@
     },
     {
       "id": "t056",
-      "status": "pending",
+      "status": "error",
       "title": "Языковые школы в Москве: список и как выбрать",
       "slug": "yazykovye-shkoly-moskvy",
       "category": "Типы школ",
       "city": "Москва",
       "keywords": "языковые школы москва",
-      "freq": 2400
+      "freq": 2400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-15T03:00:05.050Z"
     },
     {
       "id": "t057",
@@ -1198,12 +1200,14 @@
     },
     {
       "id": "t114",
-      "status": "pending",
+      "status": "error",
       "title": "Коррекционная школа: виды, права ребёнка и как попасть",
       "slug": "korrektsionnaya-shkola-vidy-prava",
       "category": "Типы школ",
       "keywords": "коррекционная школа как попасть",
-      "freq": 2400
+      "freq": 2400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-15T03:00:05.563Z"
     },
     {
       "id": "t115",
@@ -1218,12 +1222,14 @@
     },
     {
       "id": "t116",
-      "status": "pending",
+      "status": "error",
       "title": "Вечерняя школа для взрослых: как получить аттестат",
       "slug": "vechernyaya-shkola-vzroslyh-kak-poluchit-attestat",
       "category": "Типы школ",
       "keywords": "вечерняя школа взрослые аттестат",
-      "freq": 2600
+      "freq": 2600,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-15T03:00:04.093Z"
     },
     {
       "id": "t117",
@@ -1575,12 +1581,14 @@
     },
     {
       "id": "t148",
-      "status": "pending",
+      "status": "error",
       "title": "Инклюзивное образование в школе: права и возможности",
       "slug": "inklyuzivnoe-obrazovanie-shkola-prava",
       "category": "Типы школ",
       "keywords": "инклюзивное образование школа",
-      "freq": 2700
+      "freq": 2700,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-15T03:00:02.984Z"
     },
     {
       "id": "t149",
@@ -1832,13 +1840,15 @@
     },
     {
       "id": "t172",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие международные школы Москвы 2026: IB и Cambridge",
       "slug": "luchshie-mezhdunarodnye-shkoly-moskvy-2026",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "международные школы москва IB",
-      "freq": 2600
+      "freq": 2600,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-15T03:00:04.491Z"
     },
     {
       "id": "t173",

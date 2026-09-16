@@ -9,7 +9,7 @@ import {
 import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import AdCard from '@/components/AdCard'
-import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3, splitForInlineAd } from '@/lib/ads'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -76,6 +76,7 @@ export default async function TopicPage({ params }: Props) {
   if (!subject || !topic || !klass) notFound()
 
   const article = getArticle(subjectSlug, klass, topicSlug)
+  const [articleHead, articleTail] = splitForInlineAd(article?.content ? sanitizeHtml(article.content) : '')
   const allTopics = getTopicsForSubjectAndClass(subjectSlug, klass)
   const currentIdx = allTopics.findIndex(t => t.slug === topicSlug)
   const prevTopic = currentIdx > 0 ? allTopics[currentIdx - 1] : null
@@ -119,10 +120,22 @@ export default async function TopicPage({ params }: Props) {
           </aside>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
-              <div
-                className="textbook-content"
-                dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
-              />
+              <>
+                <div
+                  className="textbook-content"
+                  dangerouslySetInnerHTML={{ __html: articleHead }}
+                />
+                {/* Слот 2 внутри статьи, перед вторым H2 — см. splitForInlineAd в ads.ts */}
+                {articleTail && (
+                  <>
+                    <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="my-6 border-gray-200 shadow-none" />
+                    <div
+                      className="textbook-content"
+                      dangerouslySetInnerHTML={{ __html: articleTail }}
+                    />
+                  </>
+                )}
+              </>
             ) : (
               <PlaceholderContent
                 title={topic.title}
@@ -133,7 +146,9 @@ export default async function TopicPage({ params }: Props) {
             )}
           </div>
 
-          <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
+          {!articleTail && (
+            <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
+          )}
 
           {/* Навигация prev/next */}
           <div className="flex gap-3">
