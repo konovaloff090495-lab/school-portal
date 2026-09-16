@@ -8,6 +8,7 @@ import SeoBlock from '@/components/SeoBlock'
 import TypeGuide from '@/components/TypeGuide'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
+import { onlineBrands } from '@/data/online-brands'
 
 interface Props {
   params: Promise<{ type: string }>
@@ -74,7 +75,7 @@ const typeDescriptions: Record<SchoolType, string> = {
 // Общий шаблон «— N в каталоге» под «онлайн школа» и «школа экстернат» не играл:
 // хабы стояли на 27 и 19 месте, кликов не было.
 const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
-  online:    () => `Онлайн-школы России 2026: рейтинг 7 школ, цены, аккредитация`,
+  online:    () => `Онлайн-школы России 2026: рейтинг ${onlineBrands.length} школ, цены, аккредитация`,
   domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
   semejnye:  () => `Семейное обучение 2026: как перейти, уведомление, аттестация — семейные школы`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
@@ -549,7 +550,8 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'online'
     ? <>
         <OnlineBrandsTable
-          intro="Все семь школ федеральные — учиться можно из любого города. Сначала идут школы с собственной государственной аккредитацией (аттестат выдают сами), дальше — по цене формата с зачислением. Нажмите на название, чтобы открыть тарифы, схему аттестации и отзывы."
+          intro="Все школы федеральные — учиться можно из любого города. Сначала идут школы с собственной государственной аккредитацией (аттестат выдают сами), дальше — по цене формата с зачислением; для школ без открытых цен указано «по запросу». Нажмите на название, чтобы открыть тарифы, схему аттестации и отзывы."
+          all
         />
         <OnlineLeadCta source="Онлайн-школы: хаб /shkoly/tipy/online/" />
         <TypeGuide type={t} />
