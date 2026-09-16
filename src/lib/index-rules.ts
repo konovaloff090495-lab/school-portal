@@ -19,6 +19,6 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   const n = getSchoolsByRegionAndType(region, type).length
   if (type === 'online') return ONLINE_INDEX_REGIONS.has(region)
   if (type === 'vechernie') return n > 0 || VECHERNIE_ZERO_INDEX.has(region)
-  if (type === 'semejnye') return n > 0
+  if (type === 'semejnye' || type === 'eksternal') return n > 0
   return n >= 3
 }
