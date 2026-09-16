@@ -105,6 +105,10 @@ const nextConfig: NextConfig = {
       { source: '/blog/perevod-rebenka-v-druguyu-shkolu', destination: '/blog/perevod-v-druguyu-shkolu/', permanent: true },
       { source: '/blog/perevod-posle-pervogo-kursa-na-druguyu-spetsialnost', destination: '/blog/perevod-na-druguyu-specialnost-v-vuze/', permanent: true },
       { source: '/blog/koordinatnyj-luch-5-klass', destination: '/uchebnik/matematika/5-klass/koordinatnyj-luch-5/', permanent: true },
+      // 16.09.2026: две статьи «лучшие онлайн-школы 2026» делили запрос «онлайн школы россии
+      // список лучших» (104 показа/14 дн., позиция 11–13, 0 кликов). Победитель — та, что
+      // ранжировалась (129 показов); переписана по проверенным ценам. Проигравшая → 301.
+      { source: '/blog/luchshie-onlajn-shkoly-2026', destination: '/blog/luchshie-onlayn-shkoly-rossii-2026/', permanent: true },
       // Удалённая недостоверная запись «Вечерняя школа № 156» (жалоба на чужой телефон,
       // несуществующая школа). Ведём на каталог вечерних школ Москвы. 2026-08-07.
       {
