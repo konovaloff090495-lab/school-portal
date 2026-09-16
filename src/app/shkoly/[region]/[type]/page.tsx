@@ -130,8 +130,8 @@ export default async function TypePage({ params }: Props) {
           { label: typeName },
         ]}
         seoContent={
-          t === 'vechernie'
-            ? <><VechernieCityExtras region={r} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
+          t === 'vechernie' || t === 'eksternal'
+            ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
             : t === 'semejnye'
             ? <>
                 <OnlineLeadCta

@@ -13,15 +13,18 @@ import { regionLabels, regionLabelsIn, type RegionSlug } from '@/data/schools'
  * дистанционные варианты для взрослых, (3) порядок действий для этого города.
  * Сдержанно — без выдуманных школ и адресов.
  */
-export default function VechernieCityExtras({ region, count }: { region: RegionSlug; count: number }) {
+export default function VechernieCityExtras({ region, count, variant = 'vechernie' }: { region: RegionSlug; count: number; variant?: 'vechernie' | 'eksternal' }) {
+  const ekst = variant === 'eksternal'
   const regionIn = regionLabelsIn[region]
   const regionName = regionLabels[region]
   const cityName = regionIn.replace(/^в(о)? /, '')
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', fontFamily: 'var(--font-manrope, system-ui)', color: '#1A1814' }}>
       <OnlineLeadCta
-        source={`Вечерние школы: город ${regionName}`}
-        heading={count === 0
+        source={ekst ? `Экстернат: город ${regionName}` : `Вечерние школы: город ${regionName}`}
+        heading={ekst
+          ? (count === 0 ? `Экстерната ${regionIn} нет — пройдите 10–11 класс за год дистанционно` : `Экстернат онлайн: 10–11 класс за год из ${cityName.replace(/^в /, '')}`)
+          : count === 0
           ? `Вечерней школы ${regionIn} нет — получите аттестат дистанционно`
           : `Не подходит расписание вечерней школы? Получите аттестат дистанционно`}
         text={`Онлайн-школа с государственной лицензией и аккредитацией принимает взрослых и подростков ${regionIn} на заочную форму: занятия в записи и по вечерам, аттестации онлайн, ОГЭ и ЕГЭ — в вашем городе, аттестат государственного образца. Зачисление круглый год. Оставьте контакты — перезвоним за 30 минут и расскажем условия для вашего класса.`}
@@ -34,7 +37,7 @@ export default function VechernieCityExtras({ region, count }: { region: RegionS
       />
 
       <section style={{ margin: '0 0 28px' }}>
-        <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Дистанционные варианты для взрослых {regionIn}</h2>
+        <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>{ekst ? `Экстернат дистанционно для жителей ${cityName}` : `Дистанционные варианты для взрослых ${regionIn}`}</h2>
         <p style={{ fontSize: 15, lineHeight: 1.65, color: '#3F3A35', margin: '0 0 12px' }}>
           Если вечерней школы рядом нет или расписание не совпадает с работой, аттестат можно получить, не выходя из дома:
           онлайн-школы зачисляют на заочную или семейную форму, аттестации проводят дистанционно, а ОГЭ/ЕГЭ вы сдаёте
@@ -48,7 +51,7 @@ export default function VechernieCityExtras({ region, count }: { region: RegionS
       </section>
 
       <section style={{ margin: '0 0 28px' }}>
-        <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Как получить аттестат {regionIn}, если вы взрослый</h2>
+        <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>{ekst ? `Как оформить экстернат ${regionIn}` : `Как получить аттестат ${regionIn}, если вы взрослый`}</h2>
         <ol style={{ fontSize: 15, lineHeight: 1.65, color: '#3F3A35', margin: 0, paddingLeft: 22 }}>
           <li>Позвоните в управление образования {cityName}: спросите, в каких школах открыто очно-заочное или заочное отделение для совершеннолетних — по названию такие отделения не найти, они живут внутри обычных школ и центров образования.</li>
           <li>Любая государственная школа с аккредитацией обязана зачислить вас экстерном и бесплатно провести аттестацию — с аттестатом за 9 классов или справкой о незаконченном образовании.</li>
