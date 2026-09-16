@@ -8,6 +8,7 @@ import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
+import CityOnlinePage, { ONLINE_INDEX_REGIONS, onlineSchoolsForCity, schoolsWord } from './CityOnlinePage'
 
 interface Props {
   params: Promise<{ region: string; type: string }>
@@ -21,6 +22,11 @@ export async function generateStaticParams() {
   const params: { region: string; type: string }[] = []
   for (const region of regionSlugs) {
     for (const type of typeSlugs) {
+      if (type === 'online') {
+        // онлайн-школы федеральные — пререндерим индексируемые города, остальные on-demand
+        if (ONLINE_INDEX_REGIONS.has(region)) params.push({ region, type })
+        continue
+      }
       if (getSchoolsByRegionAndType(region, type as SchoolType).length === 0) continue
       params.push({ region, type })
     }
@@ -34,6 +40,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!typeSlugs.includes(type as SchoolType)) return {}
   const r = region as RegionSlug
   const t = type as SchoolType
+  if (t === 'online') {
+    const cityIn = regionLabelsIn[r]
+    const list = onlineSchoolsForCity(r)
+    const url = `https://pro-schools.ru/shkoly/${r}/online/`
+    const title = `Онлайн-школы ${cityIn} 2026: ${list.length} ${schoolsWord(list.length)} с аттестатом, цены, отзывы`
+    const description =
+      `Онлайн-школы для жителей ${regionLabels[r]}: Фоксфорд, ИнтернетУрок, Синергия, Онлайн Гимназия №1, Skysmart и другие — ` +
+      `цены 2026/27 от 6 530 ₽/мес, у кого своя аккредитация, где бесплатный пробный период. Как перевести ребёнка ${cityIn} на дистанционное обучение.`
+    return {
+      title, description,
+      keywords: buildKeywords(r, t),
+      alternates: { canonical: url },
+      openGraph: { title, description, url },
+      // Индексируем только крупные города: у остальных запросов «онлайн школа <город>» нет,
+      // а сотня почти одинаковых страниц — это риск LOW_QUALITY у Яндекса.
+      ...(ONLINE_INDEX_REGIONS.has(r) ? {} : { robots: { index: false, follow: true } }),
+    }
+  }
   const list = getSchoolsByRegionAndType(r, t)
   const tooFew = list.length < 3
   return {
@@ -55,6 +79,9 @@ export default async function TypePage({ params }: Props) {
   const regionName = regionLabels[r]
   const regionIn = regionLabelsIn[r]
   const typeName = typeLabels[t]
+  // Онлайн-школы федеральные: страница города показывает все онлайн-школы
+  // (местные — первыми), а не пустой листинг по региону.
+  if (t === 'online') return <CityOnlinePage region={r} />
   const list = getSchoolsByRegionAndType(r, t)
 
   // Правильные русские названия для H1

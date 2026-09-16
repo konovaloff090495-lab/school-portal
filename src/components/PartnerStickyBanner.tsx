@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Countdown from '@/components/Countdown'
+import Countdown, { DEADLINE_LABEL, isDeadlinePassed } from '@/components/Countdown'
 
 const YM_ID = 108789843
 const STORAGE_KEY = 'ps_partner_banner_closed'
@@ -40,7 +40,7 @@ export default function PartnerStickyBanner() {
           Поступите в онлайн-школу на льготных условиях
         </p>
         <div className="hidden md:flex items-center gap-2 shrink-0">
-          <span className="text-[11px] text-white/70 whitespace-nowrap">до 31 августа</span>
+          {!isDeadlinePassed() && <span className="text-[11px] text-white/70 whitespace-nowrap">{DEADLINE_LABEL}</span>}
           <Countdown variant="dark" compact />
         </div>
         <a
