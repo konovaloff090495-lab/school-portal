@@ -251,6 +251,14 @@ export default async function GdzNumberPage({ params }: Props) {
             )}
           </article>
 
+          {/* Мобильный слот 1 — между условием и решением (16.09: раньше стоял ПОД
+              решением вплотную к слоту 2; телефон = 89% трафика ГДЗ, а видимых
+              на нём было 15% запросов — до низа решения-картинки не доскролливают) */}
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="inline" viewport="mobile" />
+          </aside>
+
           {hasSolution ? (
             <>
               <div className="gdz-soltabs" role="tablist">
@@ -326,12 +334,6 @@ export default async function GdzNumberPage({ params }: Props) {
               </p>
             </article>
           )}
-
-          {/* РСЯ — адаптивный баннер после решения */}
-          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
-            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-            <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="inline" viewport="mobile" />
-          </aside>
 
           {/* Слот 2 — все экраны */}
           <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">

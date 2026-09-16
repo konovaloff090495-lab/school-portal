@@ -59,3 +59,29 @@ export const AD_BLOCKS = {
  */
 export const AD_SLOT_2 = AD_BLOCKS.blogInline
 export const AD_SLOT_3 = AD_BLOCKS.blogSidebar
+
+/**
+ * ЗАМЕР 16.09.2026 — почему слот 2 в учебнике переехал ВНУТРЬ статьи.
+ * После раскладки 07.09 запросов стало вдвое больше (0,67 → 1,34 на просмотр),
+ * но видимых из них — 23% против 36% неделей раньше, на телефоне всего 15%:
+ * слоты 2 и 3 стояли ПОД статьёй (медиана 3 400 знаков, 7 абзацев), до них
+ * доскролливают единицы. Телефон — 66% запросов и 64% дохода раздела.
+ * Слот 2 теперь стоит перед вторым H2 (он есть в 100% статей), слот 3 остаётся внизу.
+ * Разрез безопасен: перед вторым H2 у 6 351 из 6 354 статей нет незакрытых
+ * ul/ol/table/blockquote; для трёх оставшихся split не делается — слот
+ * остаётся под статьёй, как раньше.
+ * Проверка через неделю: `видимые / запросы` на мобильных должно уйти с 0,15 вверх,
+ * а CPM не должен просесть.
+ */
+export function splitForInlineAd(html: string): [string, string] {
+  const marks = [...html.matchAll(/<h2[\s>]/g)]
+  if (marks.length < 2) return [html, '']
+  const cut = marks[1].index ?? 0
+  const head = html.slice(0, cut)
+  for (const tag of ['ul', 'ol', 'table', 'blockquote', 'div', 'section']) {
+    const open = head.match(new RegExp(`<${tag}[\\s>]`, 'g'))?.length ?? 0
+    const close = head.match(new RegExp(`</${tag}>`, 'g'))?.length ?? 0
+    if (open !== close) return [html, '']
+  }
+  return [head, html.slice(cut)]
+}
