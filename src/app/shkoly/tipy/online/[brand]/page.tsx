@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${b.fullName}: цены 2026/27, аттестат, отзывы — ${price}`
   const description =
     `${b.name} — онлайн-школа ${b.grades} классов. Тарифы ${b.tariffs.map(t => `«${t.name}»`).join(', ')}, ` +
-    `${b.attestation === 'own' ? 'собственная аккредитация и аттестат от самой школы' : 'аттестат через школу-партнёра'}, ` +
+    `${b.attestation === 'own' ? 'собственная аккредитация и аттестат от самой школы' : b.attestation === 'partner' ? 'аттестат через школу-партнёра' : 'схему аттестации уточняйте'}, ` +
     `${b.trial}. Плюсы, минусы, сравнение с другими онлайн-школами и отзывы родителей.`
   const url = `https://pro-schools.ru/shkoly/tipy/online/${b.slug}/`
   return {
@@ -80,7 +80,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           {b.fullName}: цены, аттестат, отзывы — обзор {b.verified.slice(-4)}
         </h1>
         <p style={{ fontSize: 17, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 20px' }}>
-          {b.name} — {b.attestation === 'own' ? 'онлайн-школа с собственной государственной аккредитацией' : 'лицензированная онлайн-школа, которая оформляет аттестат через школу-партнёра'},
+          {b.name} — {b.attestation === 'own' ? 'онлайн-школа с собственной государственной аккредитацией' : b.attestation === 'partner' ? 'лицензированная онлайн-школа, которая оформляет аттестат через школу-партнёра' : 'онлайн-школа, которая обещает аттестат государственного образца (кто его выдаёт — уточняйте)'},
           {' '}{b.grades} классы. {b.priceFrom
             ? `Полноценный формат с зачислением стоит от ${b.priceFrom.toLocaleString('ru-RU')} ₽ в месяц (${b.priceFromNote}).`
             : `Цены считаются по классу и озвучиваются на консультации (${b.priceFromNote}).`}
@@ -91,7 +91,7 @@ export default async function OnlineBrandPage({ params }: Props) {
         {/* Ключевые факты */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 10, margin: '0 0 28px' }}>
           <Fact k="Классы" v={b.grades} />
-          <Fact k="Аттестат выдаёт" v={b.attestation === 'own' ? 'сама школа' : 'школа-партнёр'} accent={b.attestation === 'own'} />
+          <Fact k="Аттестат выдаёт" v={b.attestation === 'own' ? 'сама школа' : b.attestation === 'partner' ? 'школа-партнёр' : 'уточняйте'} accent={b.attestation === 'own'} />
           <Fact k="Цена с зачислением" v={b.priceFrom ? `от ${b.priceFrom.toLocaleString('ru-RU')} ₽/мес` : 'по запросу'} />
           <Fact k="Пробный период" v={b.trial} />
           {b.since && <Fact k="Работает с" v={`${b.since} года`} />}
@@ -135,7 +135,7 @@ export default async function OnlineBrandPage({ params }: Props) {
         <p style={p}>{b.attestationText}</p>
         <p style={p}>
           <strong>Документы:</strong> {b.license}.{' '}
-          {b.attestation === 'partner' && ownAccredited.length > 0 && (
+          {b.attestation !== 'own' && ownAccredited.length > 0 && (
             <>Если важно, чтобы аттестат выдавала сама школа, смотрите {ownAccredited.map((x, i) => (
               <span key={x.slug}>{i > 0 && ', '}<Link href={`/shkoly/tipy/online/${x.slug}/`} style={{ color: '#0369A1' }}>{x.name}</Link></span>
             ))} — у них собственная государственная аккредитация.</>
@@ -173,6 +173,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           intro="Все школы из таблицы работают по всей России — город ученика не важен. Сначала идут школы с собственной аккредитацией, дальше — по цене формата с зачислением."
           exclude={b.slug}
           compact
+          all
         />
 
         {/* FAQ */}

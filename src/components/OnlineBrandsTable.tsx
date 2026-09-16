@@ -11,13 +11,16 @@ export default function OnlineBrandsTable({
   intro,
   exclude,
   compact = false,
+  all = false,
 }: {
   title?: string
   intro?: string
   exclude?: string
   compact?: boolean
+  /** true — все бренды, включая краткие обзоры второго эшелона */
+  all?: boolean
 }) {
-  const rows = onlineBrandsForTable().filter(b => b.slug !== exclude)
+  const rows = onlineBrandsForTable(all).filter(b => b.slug !== exclude)
   return (
     <section style={{ maxWidth: 960, margin: '0 auto 32px', fontFamily: 'var(--font-manrope, system-ui)' }}>
       <h2 style={{ fontSize: compact ? 18 : 22, fontWeight: 700, color: '#1A1814', margin: '0 0 8px', lineHeight: 1.3 }}>{title}</h2>
@@ -46,7 +49,9 @@ export default function OnlineBrandsTable({
                 <td style={td}>
                   {b.attestation === 'own'
                     ? <span style={{ color: '#15803D', fontWeight: 600 }}>сама школа (своя аккредитация)</span>
-                    : <span>школа-партнёр</span>}
+                    : b.attestation === 'partner'
+                    ? <span>школа-партнёр</span>
+                    : <span style={{ color: '#8A837D' }}>на сайте не раскрыто</span>}
                 </td>
                 <td style={td}>
                   <span style={{ fontWeight: 700 }}>{priceLabel(b)}</span>

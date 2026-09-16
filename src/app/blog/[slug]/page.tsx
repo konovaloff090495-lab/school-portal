@@ -334,7 +334,7 @@ export default async function BlogPostPage({ params }: Props) {
                       background: '#F0F7FB', border: '1px solid #CFE5F2', fontFamily: 'var(--font-manrope)', fontSize: 14, lineHeight: 1.6,
                     }}>
                       <strong>Сравнить онлайн-школы с аттестатом:</strong>{' '}
-                      {onlineBrands.map((b, k) => (
+                      {onlineBrands.filter(b => (b.tier ?? 1) === 1).map((b, k) => (
                         <Fragment key={b.slug}>{k > 0 && ' · '}<Link href={`/shkoly/tipy/online/${b.slug}/`} style={{ color: '#0369A1', fontWeight: 600 }}>{b.name}</Link></Fragment>
                       ))}
                       {' '}— тарифы 2026/27, кто выдаёт аттестат, пробный период. Или сразу{' '}
