@@ -51,6 +51,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Сборка идёт на Mac параллельно с другими задачами: при load > 10 страницы
+  // каталога не укладываются в дефолтные 60 с и валят весь билд.
+  staticPageGenerationTimeout: 300,
+  experimental: { staticGenerationRetryCount: 3 },
   trailingSlash: true,
 
   // Явно фиксируем корень воркспейса на этой папке. Иначе Next по ошибке

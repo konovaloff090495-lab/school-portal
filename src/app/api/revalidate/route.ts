@@ -16,13 +16,28 @@ export async function POST(req: NextRequest) {
   }
 
   let slug: unknown
+  let gdz: unknown
   try {
-    ;({ slug } = await req.json())
+    ;({ slug, gdz } = await req.json())
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
   }
 
   const revalidated: string[] = []
+
+  // Публикация решений ГДЗ (scripts/gdz_publish.sh): данные книг доехали git pull,
+  // сбрасываем весь раздел /gdz и его sitemap-индекс с чанками.
+  if (gdz === true) {
+    revalidatePath('/gdz', 'layout')
+    revalidated.push('/gdz/*')
+    revalidatePath('/sitemap-gdz.xml')
+    revalidated.push('/sitemap-gdz.xml')
+    for (let i = 1; i <= 30; i++) revalidatePath(`/sitemap-gdz/${i}`)
+    revalidated.push('/sitemap-gdz/1..30')
+    revalidatePath('/sitemap.xml')
+    revalidated.push('/sitemap.xml')
+    return NextResponse.json({ revalidated, now: Date.now() })
+  }
   // Индекс блога и sitemap — всегда (список статей изменился).
   revalidatePath('/blog')
   revalidated.push('/blog')
