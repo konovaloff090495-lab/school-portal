@@ -204,6 +204,23 @@
 "chapterCount": 34
 },
 {
+"slug": "bykova-sbornik-uprazhneniy",
+"klass": 3,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Быкова Н. И., Поспелова М. Д.",
+"type": "Сборник упражнений",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:804",
+"file": "3-angliiskiy-yazyk-bykova-sbornik-uprazhneniy.json",
+"problemCount": 313,
+"solvedCount": 313,
+"chapterCount": 27
+},
+{
 "slug": "bykova-uchebnik-chast-1",
 "klass": 3,
 "subjectSlug": "angliiskiy-yazyk",
