@@ -53,7 +53,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
 
   // 3. Стоимость обучения
   const isEgeCenter = school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge'
-  const isProgSchool = school.type === 'programmirovanie' || school.type === 'shahmatnye'
+  const isProgSchool = school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye'
   if (isProgSchool && school.priceFrom === undefined) {
     faq.push({
       q: `Сколько стоят занятия в ${school.name}?`,
@@ -334,7 +334,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' ? (
+                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>
