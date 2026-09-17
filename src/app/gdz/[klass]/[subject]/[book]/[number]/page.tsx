@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import {
   gdzNumLabel,
   getGdzBook,
+  type GdzBook,
   getGdzProblem,
   getGdzPrevNext,
   getGdzProblemChapter,
@@ -29,11 +30,19 @@ function parseKlass(slug: string): number | null {
   return n
 }
 
-function parseNumber(slug: string): string | null {
+// Slug «nomer-…» → номер задачи. В URL точка кодируется дефисом (1.23 → nomer-1-23),
+// но у номеров рабочих тетрадей дефис свой («6-s12»), поэтому ищем номер по
+// совпадению slug'а, а не по обратной замене дефисов на точки.
+function findNumber(book: GdzBook, slug: string): string | null {
   const m = slug.match(/^nomer-(.+)$/)
-  // В URL точка в номере (напр. 1.23) кодируется дефисом (nomer-1-23),
-  // т.к. точка ломает trailing slash. Декодируем обратно.
-  return m ? m[1].replace(/-/g, '.') : null
+  if (!m) return null
+  const target = m[1]
+  for (const ch of book.chapters) {
+    for (const p of ch.problems) {
+      if (numToSlug(p.number) === target) return p.number
+    }
+  }
+  return null
 }
 
 // Номер задачи → URL-безопасный slug (точку заменяем на дефис)
@@ -61,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!n) return {}
   const book = getGdzBook(n, subject, bookSlug)
   if (!book) return {}
-  const num = parseNumber(numSlug)
+  const num = findNumber(book, numSlug)
   if (!num) return {}
   const problem = getGdzProblem(book, num)
   if (!problem) return {}
@@ -113,7 +122,7 @@ export default async function GdzNumberPage({ params }: Props) {
   const book = getGdzBook(klassNum, subject, bookSlug)
   if (!book) notFound()
 
-  const num = parseNumber(numSlug)
+  const num = findNumber(book, numSlug)
   if (!num) notFound()
 
   const problem = getGdzProblem(book, num)
