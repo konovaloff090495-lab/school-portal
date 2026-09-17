@@ -107,6 +107,7 @@ export default async function TypePage({ params }: Props) {
   // Правильные русские названия для H1
   const pageTitleMap: Partial<Record<SchoolType, string>> = {
     gimnazii:     'Гимназии',
+    litsei:       'Лицеи',
     eksternal:    'Школы-экстернаты',
     'pri-vuzakh': 'Школы при вузах',
     'podgotovka-ege': 'Курсы подготовки к ЕГЭ',

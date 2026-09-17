@@ -4,7 +4,7 @@ import {
   moscowDistrictSlugs, moscowDistrictLabels, moscowDistrictFullNames,
   typeSlugs, typeLabels,
   MoscowDistrictSlug, SchoolType,
-  schools, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES} from '@/data/schools'
+  schools, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES, schoolMatchesType } from '@/data/schools'
 import CatalogClient from '../../../../CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForDistrictType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
-      if (!schools.some(s => s.region === 'moskva' && s.type === type && s.district === moscowDistrictLabels[district as MoscowDistrictSlug])) continue
+      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && s.district === moscowDistrictLabels[district as MoscowDistrictSlug])) continue
       params.push({ district, type })
     }
   }
@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const prep          = districtPrepMap[d]
 
   const count = schools.filter(
-    s => s.region === 'moskva' && s.type === t && s.district === districtLabel
+    s => s.region === 'moskva' && schoolMatchesType(s, t) && s.district === districtLabel
   ).length
 
   const countStr = count > 0 ? ` — ${count} школ` : ''
@@ -98,7 +98,7 @@ export default async function DistrictTypePage({ params }: Props) {
   const feature = TYPE_TO_FEATURE[t]
   const count = (feature
     ? getSchoolsByFeature(feature, 'moskva')
-    : schools.filter(s => s.region === 'moskva' && s.type === t)
+    : schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t))
   ).filter(s => s.district === districtLabel).length
 
   const related = count === 0 ? relatedForDistrictType(d, t, typeName, feature) : null
