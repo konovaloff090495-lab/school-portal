@@ -54,6 +54,14 @@ def strip_html(s):
     return s.strip()
 
 
+def norm_num(num):
+    """Номер задачи → фрагмент URL: латиница/цифры/дефис (в Spotlight бывают
+    номера вроде «Portfolio», «Spotlight on the UK», в русских книгах — «1а»)."""
+    n = translit(num.strip())
+    n = re.sub(r'-+', '-', n).strip('-')
+    return n or 'x'
+
+
 def make_slug(b, existing):
     base = translit(b['transliteration'])
     t = b['type']['name']
@@ -106,7 +114,7 @@ def convert(bid):
     for ch in b.get('chapters') or []:
         chapter = {'title': ch['name'].strip(), 'problems': []}
         for t in ch.get('tasks') or []:
-            num = str(t['num']).strip()
+            num = norm_num(str(t['num']))
             key = f'{num}-s{t["pageNum"]}' if with_page else num
             k2 = 2
             base = key
