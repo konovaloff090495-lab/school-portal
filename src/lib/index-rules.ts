@@ -26,5 +26,7 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   // индексируем от одной настоящей школы; коррекционные и интернаты — от двух (карточки с Яндекс Карт, 09.2026).
   if (type === 'kadetskie') return n >= 1
   if (type === 'korrektsionnye' || type === 'internaty') return n >= 2
+  // ДМШ/ДХШ/ДШИ: художественных школ в городе физически 1–3, запрос «художественная школа <город>» стабильный — от 2 школ.
+  if (type === 'muzykalnye' || type === 'hudozhestvennye' || type === 'iskusstv') return n >= 2
   return n >= 3
 }

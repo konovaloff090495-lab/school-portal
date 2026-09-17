@@ -20,6 +20,10 @@ import AdBanner from '@/components/AdBanner'
 import ExternatBanner from '@/components/ExternatBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
+// Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
+// (центры ЕГЭ/ОГЭ, кружки и допобразование, собранные с Яндекс Карт без проверенных цен).
+const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
+
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
 type EducationLevel = 'elementary' | 'middle' | 'high'
 
@@ -506,7 +510,7 @@ export default function CatalogClient({
         list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
       } else {
         // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
-        if (filters.priceMode === 'free') list = list.filter(s => (s.priceFrom === 0 || s.priceFrom === undefined) && s.type !== 'podgotovka-ege' && s.type !== 'podgotovka-oge' && s.type !== 'programmirovanie' && s.type !== 'shahmatnye' && s.type !== 'sportivnye')
+        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || (s.priceFrom === undefined && !PRICE_UNKNOWN_TYPES.has(s.type)))
         if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
       }
     }
@@ -730,6 +734,9 @@ export default function CatalogClient({
       sportivnye:       'Спортивные школы',
       yazykovye:        'Языковые школы',
       litsei:           'Лицеи',
+      muzykalnye:       'Музыкальные школы',
+      hudozhestvennye:  'Художественные школы',
+      iskusstv:         'Школы искусств',
     }
     const typeDescriptions: Record<SchoolType, string> = {
       gosudarstvennye: 'финансируются из государственного бюджета и работают по федеральным образовательным стандартам. Обучение бесплатное для всех детей',
@@ -756,6 +763,9 @@ export default function CatalogClient({
       sportivnye:       'обеспечивают двухразовые профессиональные тренировки при сохранении полноценного учебного процесса и пути в профессиональный спорт',
       yazykovye:        'специализируются на углублённом изучении иностранных языков, готовят к международным сертификатам и поступлению в зарубежные вузы',
       litsei:           'дают углублённую подготовку по профильным предметам — математике, физике, информатике, химии, гуманитарным дисциплинам — и ведут в вузы: многие работают при университетах, набирают в 5, 7 или 10 класс по конкурсу',
+      muzykalnye:       'учат игре на инструментах, вокалу и сольфеджио по предпрофессиональным и общеразвивающим программам: государственные ДМШ с бюджетными местами и частные музыкальные школы',
+      hudozhestvennye:  'дают академическую подготовку по рисунку, живописи, композиции и истории искусств — государственные ДХШ и частные художественные студии для детей',
+      iskusstv:         'объединяют музыкальное, художественное, хореографическое и театральное отделения; в ДШИ дети учатся 4–8 лет и получают свидетельство об окончании',
     }
     // Уточнение места: округ Москвы / метро / город МО — чтобы SEO-текст
     // не выглядел так, будто во всей Москве всего N школ данного типа.
