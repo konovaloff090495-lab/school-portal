@@ -1,0 +1,3913 @@
+{
+"book": {
+"slug": "kuzovlev-uchebnik-chast-1",
+"klass": 2,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Кузовлев В. П., Перегудова Э. Ш., Пастухова С. А., Стрельникова О. В.",
+"type": "Учебник (часть 1)",
+"umk": "English"
+},
+"problems": [
+{
+"number": "1-s7",
+"num": "1",
+"page": 7,
+"chapter": "Lesson 1. Hi, Helen! Hi, Mike!",
+"skyId": 138677,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно послушать, как по-английски звучат имена Хелен и Майка.",
+"Helen.\nMike."
+],
+"answer": "Helen.\nMike."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно поиграть в игру и научиться произносить звуки английского языка",
+"/h/.\n/i/.\n/l/.\n/n/.\n/ai/.\n/m/.\n/k/.\n/e/."
+],
+"answer": "/h/.\n/i/.\n/l/.\n/n/.\n/ai/.\n/m/.\n/k/.\n/e/."
+}
+]
+},
+{
+"number": "2-s8",
+"num": "2",
+"page": 8,
+"chapter": "Lesson 1. Hi, Helen! Hi, Mike!",
+"skyId": 138678,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно научиться различать на слух звуки английского языка. Выполним упражнение в рабочей тетради.",
+"1 — /h/.\n2 — /k/.\n3 — /i/.\n4 — /ai/.\n5 — /e/.\n6 — /l/.\n7 — /n/.\n8 — /m/."
+],
+"answer": "1 — /h/.\n2 — /k/.\n3 — /i/.\n4 — /ai/.\n5 — /e/.\n6 — /l/.\n7 — /n/.\n8 — /m/."
+}
+]
+},
+{
+"number": "3-s8",
+"num": "3",
+"page": 8,
+"chapter": "Lesson 1. Hi, Helen! Hi, Mike!",
+"skyId": 138679,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно послушать, как Хелен и Майк приветствуют нас.",
+"Hi, I am Helen.\nHi, I'm Mike."
+],
+"answer": "Hi, I am Helen.\nHi, I'm Mike."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно приветствовать своих новых друзей и сказать, как зовут тебя.",
+"Hi, I am Helen. Привет, я Хелен!\nHi, I'm Mike. Привет, я Майк.",
+"I'm Ann. Я Аня."
+],
+"answer": "I'm Ann. Я Аня."
+}
+]
+},
+{
+"number": "4-s9",
+"num": "4",
+"page": 9,
+"chapter": "Lesson 1. Hi, Helen! Hi, Mike!",
+"skyId": 138680,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно научиться правильно писать английские буквы.",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем буквы в рабочей тетради."
+}
+]
+},
+{
+"number": "5-s9",
+"num": "5",
+"page": 9,
+"chapter": "Lesson 1. Hi, Helen! Hi, Mike!",
+"skyId": 138681,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать задание в рабочей тетради. Начнём заполнять альбом «Всё обо мне».",
+"Hi, I'm Ann. Привет, я Аня.\nI am seven. Мне семь.\nI'm from Russia. Я из России."
+],
+"answer": "Hi, I'm Ann. Привет, я Аня.\nI am seven. Мне семь.\nI'm from Russia. Я из России."
+}
+]
+},
+{
+"number": "1-s10",
+"num": "1",
+"page": 10,
+"chapter": "Lesson 2. I like Minnie!",
+"skyId": 138682,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно узнать, как знакомятся дети в упражнении.",
+"Hi, I'm Nick.\nHi, I'm Mel.\nHi, I'm Kim.\nHi, I'm Lenny.\nHi, I'm Ike.\nHi, I'm Emily.\nHi, I'm Kylie.\nHi, I'm Kelly."
+],
+"answer": "Прочитай фразы в упражнении."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, как зовут друзей Майка и Хелен.",
+"Hi, I'm Nick.\nHi, I'm Mel.\nHi, I'm Kim.\nHi, I'm Lenny.\nHi, I'm Ike.\nHi, I'm Emily.\nHi, I'm Kylie.\nHi, I'm Kelly.",
+"Nick.\nMel.\nKim.\nLenny.\nIke.\nEmily.\nKylie.\nKelly."
+],
+"answer": "Nick.\nMel.\nKim.\nLenny.\nIke.\nEmily.\nKylie.\nKelly."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно поздороваться с друзьями Майка и Хелен и назвать своё имя.",
+"Hi, I'm Nick.\nHi, I'm Mel.\nHi, I'm Kim.\nHi, I'm Lenny.\nHi, I'm Ike.\nHi, I'm Emily.\nHi, I'm Kylie.\nHi, I'm Kelly.",
+"Hi, I'm (назови своё имя).\nНапример:\nHi, I'm Sasha.\nHi, I'm Igor.\nHi, I'm Sveta.\nHi, I'm Lena."
+],
+"answer": "Hi, I'm (назови своё имя)."
+},
+{
+"name": "4",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно спеть песенку \"Hello\".",
+"Hello.\nNick.\nMel.\nKim.\nLenny.\nIke.\nEmily.\nKylie.\nKelly.\nI'm glad you're here."
+],
+"answer": "Спой песенку."
+}
+]
+},
+{
+"number": "2-s12",
+"num": "2",
+"page": 12,
+"chapter": "Lesson 2. I like Minnie!",
+"skyId": 138683,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и узнать, о том, что на них изображено.",
+"Milne.\nMinnie.\nKen.\nMillie."
+],
+"answer": "Загляни в лингвострановедческий словарь в конце учебника на странице 91-92 и узнай, кто изображён на фотографиях."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать фразы и узнать, кто нравится Майку и Хелен.",
+"I like Minnie!\nI like Ken!",
+"Мне нравится Минни.\nМне нравится Кен."
+],
+"answer": "Майк: Мне нравится Минни.\nХелен: Мне нравится Кен."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать о том, кто тебе нравится.",
+"WORDLIST\nI — я\nlike — нравиться, любить",
+"I like Minnie!\nI like Ken!",
+"I like Winnie-the-Pooh!\nI like Piglet!\nМне нравится Винни-Пух!\nМне нравится Пятачок!"
+],
+"answer": "I like Winnie-the-Pooh!\nI like Piglet!"
+}
+]
+},
+{
+"number": "3-s13",
+"num": "3",
+"page": 13,
+"chapter": "Lesson 2. I like Minnie!",
+"skyId": 138684,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и сказать, что нарисовано н картинках, а также подобрать буквы к выделенным звукам.",
+"Milk.\nNine.\nMimi.\nLion.\nHen.",
+"Молоко. \nДевять. \nМими. \nЛев. \nКурица.",
+"K /k/.\nN /n/.\nM /m/.\nL /l/.\nH /h/."
+],
+"answer": "Milk.\nNine.\nMimi.\nLion.\nHen."
+}
+]
+},
+{
+"number": "4-s13",
+"num": "4",
+"page": 13,
+"chapter": "Lesson 2. I like Minnie!",
+"skyId": 138685,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать буквы Hh и Kk в рабочей тетради на страницах 102-103.",
+"K.",
+"",
+"H.",
+""
+],
+"answer": "Напиши буквы Hh и Kk в рабочей тетради."
+}
+]
+},
+{
+"number": "5-s13",
+"num": "5",
+"page": 13,
+"chapter": "Lesson 2. I like Minnie!",
+"skyId": 138686,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, кто из героев сказки А.А. Милна о Винни-Пухе нравится тебе больше всех.",
+"I like...\nМне нравится...",
+"I like Winnie-the-Pooh.\nI like Piglet.\nI like Eeyore.\nМне нравится Винни-Пух.\nМне нравится Пятачок.\nМне нравится ослик Иа."
+],
+"answer": "I like Winnie-the-Pooh.\nI like Piglet.\nI like Eeyore."
+}
+]
+},
+{
+"number": "1-s14",
+"num": "1",
+"page": 14,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138687,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись, ответить, как зовут персонажей, и сказать, кто из них участвовал в Параде.",
+"WORDLIST\nMickey Mouse — Микки Маус\nStuart Little — Стюарт Литл\nHenny Penny — Хенни Пенни\nPussy Cat — Пусси Кэт",
+"Микки Маус.\nСтюарт Литл.\nХенни Пенни.\nПусси Кэт.",
+"Микки Маус.\nСтюарт Литл.\nХенни Пенни.\nПусси Кэт."
+],
+"answer": "Mickey Mouse.\nStuart Little.\nHenny Penny.\nPussy Cat."
+}
+]
+},
+{
+"number": "2-s15",
+"num": "2",
+"page": 15,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138688,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Делай, как я», чтобы научиться правильно произносить имена героев.",
+"Ведущий называет звуки.\nИгроки повторяют звуки за ведущим.",
+"/t/.\n/p/.\n/s/.\n/j/.\n/ʊ/.\n/uː/.\n/aʊ/.\n/ə/.\n/æ/."
+],
+"answer": "/t/.\n/p/.\n/s/.\n/j/.\n/ʊ/.\n/uː/.\n/aʊ/.\n/ə/.\n/æ/."
+}
+]
+},
+{
+"number": "3-s15",
+"num": "3",
+"page": 15,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138689,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Фоули-артист». Соединим картинки со звуками.",
+"WORDLIST\npeck-peck — ко-ко\ns-s-s-s — с-с-с-с\npit-a-pat — кап-кап\ntoot-toot — ту-ту\ncuckoo — ку-ку\nmew — мяу",
+"Курица — ко-ко, ко-ко.",
+"Пример.\nТруба — ту-ту.\nДождь — кап-кап, кап-кап.\nЗмея — с-с-с-с.\nКукушка — ку-ку, ку-ку.\nКошка — мяу-мяу."
+],
+"answer": "Пример.\nPipe — Toot-toot!\nRain — Pit-a-pat, pit-a-pat!\nSnake — S-s-s-s!\nCuckoo — Cuckoo-cuckoo!\nCat — Mew-mew!"
+}
+]
+},
+{
+"number": "4-s15",
+"num": "4",
+"page": 15,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138690,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти пары слов, в которых отличаются всего один звук. Затем обведём одинаковые гласные звуки в каждой паре.",
+"Кошка.\nДом.\nКрюк.\nЛось.\nЛуна.\nПовар.\nМышь.\nШляпа.",
+"Cat — hat.\nПример.\nHook — cook.\nMoose — moon."
+],
+"answer": "Cat — hat.\nПример.\nHook — cook.\nMoose — moon."
+}
+]
+},
+{
+"number": "5-s16",
+"num": "5",
+"page": 16,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138691,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить, с помощью каких фраз герои сказок говорят о том, кто они и как их зовут.",
+"WORDLIST\nWords (слова)\ncat — кот\nhen — курица\nmouse — мышь\ntoo — тоже\nPhrases (фразы)\nHi — Привет\nI am... — Я...",
+"Привет! Я кошка.\nЯ Микки. Я мышь.\nПривет! Я курица.\nПривет! Я тоже мышь."
+],
+"answer": "Привет! Я кошка.\nЯ Микки. Я мышь.\nПривет! Я курица.\nПривет! Я тоже мышь."
+}
+]
+},
+{
+"number": "6-s17",
+"num": "6",
+"page": 17,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138692,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить, что нужно сказать героям о себе, чтобы их выбрали участниками Парада.",
+"WORDLIST\nnice — хороший\ncute — привлекательный\nlittle — маленький",
+"Я мышь.\nЯ кошка.\nЯ хороший.\nЯ привлекательный.\nЯ мыши.\nЯ маленький.",
+"Я хороший.\nЯ привлекательный."
+],
+"answer": "Я хороший.\nЯ привлекательный."
+}
+]
+},
+{
+"number": "7-s17",
+"num": "7",
+"page": 17,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138693,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать буквы S, U, X и Q.",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "S, s.\nU, u.\nX, x.\nQ, q."
+}
+]
+},
+{
+"number": "8-s17",
+"num": "8",
+"page": 17,
+"chapter": "Lessons 3-4. I'm nice!",
+"skyId": 138694,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подписать заявки.",
+"WORDLIST\nmouse — мышь\nmice — мыши\nnice — хорошая\nmilk — молоко\ncat — кошка\ncute — привлекательная",
+"Привет! Мне нравится Микки. Мне нравятся мыши. Я тоже мышь. Я хорошая.\nПривет! Мне нравится молоко. Я кошка. Я привлекательная.",
+"Minnie Mouse.\nPussy Cat.\nHenny Penny — лишняя."
+],
+"answer": "Minnie Mouse.\nPussy Cat.\nHenny Penny — лишняя."
+}
+]
+},
+{
+"number": "1-s18",
+"num": "1",
+"page": 18,
+"chapter": "Lesson 5. Henny Penny, you are cute!",
+"skyId": 138695,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать, что Хелен и Майк пишут Пусси Кэт и Хенни Пенни.",
+"Пусси Кэт!\nТы хорошая.\nТы мне нравишься.\nХелен\nХенни Пенни!\nТы приятная курочка.\nТы милая курочка.\nТы мне нравишь. \nМайк"
+],
+"answer": "Пусси Кэт!\nТы хорошая.\nТы мне нравишься.\nХелен\nХенни Пенни!\nТы приятная курочка.\nТы милая курочка.\nТы мне нравишь. \nМайк"
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно придумать, что сказать Пусси Кэт и Хенни Пенни, чтобы их поддержать.",
+"WORDLIST\nnice — приятный\ngood — хороший\ncute — милый\nkind — добрый",
+"Pussy Cat!\nYou are kind.\nI like you.\nAnna\nHenny Penny!\nYou are a good hen.\nYou are a cute hen.\nI like you.\nAnna",
+"Пусси Кэт!\nТы добрая.\nТы мне нравишься.\nАнна\nХенни Пенни!\nТы хорошая курица.\nТы милая курица.\nТы мне нравишься.\nАнна"
+],
+"answer": "Pussy Cat!\nYou are kind.\nI like you.\nAnna\nHenny Penny!\nYou are a good hen.\nYou are a cute hen.\nI like you.\nAnna"
+}
+]
+},
+{
+"number": "2-s19",
+"num": "2",
+"page": 19,
+"chapter": "Lesson 5. Henny Penny, you are cute!",
+"skyId": 138696,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить пропущенные буквы.",
+"WORDLIST\nhouse — дом\nhi — привет\nmouse — мышь\npie — пирог\npen — ручка\nten — десять\nhen — курица",
+"Hi.\nMouse.\nPie.\nPen.\nTen.\nHen."
+],
+"answer": "Hi.\nMouse.\nPie.\nPen.\nTen.\nHen."
+}
+]
+},
+{
+"number": "3-s20",
+"num": "3",
+"page": 20,
+"chapter": "Lesson 5. Henny Penny, you are cute!",
+"skyId": 138697,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подумать, мог ли мышонок написать такую заявку о себе.",
+"Привет!\nЯ мышь.\nЯ милая мышь.\nЯ приятная мышь.",
+"Yes. Да."
+],
+"answer": "Yes."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать, какое мнение о мышонке у кота.",
+"1.\nДа, ты приятная мышь!\nТы милая мышь!\nТы мне нравишься.\n2.\nТы глупая мышь!\nТы глупая маленькая мышь!",
+"2.\nТы глупая мышь!\nТы глупая маленькая мышь!"
+],
+"answer": "2.\nТы глупая мышь!\nТы глупая маленькая мышь!"
+}
+]
+},
+{
+"number": "4-s21",
+"num": "4",
+"page": 21,
+"chapter": "Lesson 5. Henny Penny, you are cute!",
+"skyId": 138698,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно потренироваться писать буквы Pp и Tt.",
+"",
+"",
+"",
+""
+],
+"answer": "Потренируемся писать буквы."
+}
+]
+},
+{
+"number": "5-s21",
+"num": "5",
+"page": 21,
+"chapter": "Lesson 5. Henny Penny, you are cute!",
+"skyId": 138699,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать письмо коту Леопольду и поддержать его.",
+"You are a nice cat! Ты приятный кот!\nI am cute! Я милый!\nI'm nice! Я хороший!\nI like mice. Мне нравятся мыши.\nYou are silly! Ты глупый!\nYou are cute. Ты милый. \nI like milk. Мне нравится молоко.\nI like you. Ты мне нравишься.",
+"Hi, \nYou are a nice cat! \nYou are cute.\nI like you.",
+"Привет,\nТы приятный кот!\nТы милый.\nТы мне нравишься."
+],
+"answer": "Hi, \nYou are a nice cat! \nYou are cute.\nI like you."
+}
+]
+},
+{
+"number": "1-s22",
+"num": "1",
+"page": 22,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138700,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и ответить, кто живёт в деревне Маусленд.",
+"Ангелина Мауслинг.\nДейзи.\nДжерри.\nБарни.",
+"Angelina Mouseling."
+],
+"answer": "Angelina Mouseling."
+}
+]
+},
+{
+"number": "2-s23",
+"num": "2",
+"page": 23,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138701,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Делай, как я».",
+"Ведущий называет звуки.\nИгроки повторяют звуки за ведущим.",
+"/b/.\n/r/.\n/z/.\n/d/.\n/dʒ/.\n/ŋ/.\n/ɑː/.\n/eɪ/.\n/iː/."
+],
+"answer": "/b/.\n/r/.\n/z/.\n/d/.\n/dʒ/.\n/ŋ/.\n/ɑː/.\n/eɪ/.\n/iː/."
+}
+]
+},
+{
+"number": "3-s23",
+"num": "3",
+"page": 23,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138702,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Фоули-артист». Соединим картинки со звуками.",
+"WORDLIST\nneigh-neigh — иго-го\nar-ar — ар-ар\ncreak-creak — скрип-скрип\njiggity-jig — чух-чух\nz-z-z-z — бз-з-з-з\nclink-clink-clinkety-clink — дзынь-дзынь\nboo-boo — буу-буу",
+"Поезд — чух-чух, чух-чух.",
+"Пример.\nЛошадь — иго-го.\nПчела — бз-з-з-з.\nТюлень — ар-ар\nПосуда — дзынь-дзынь\nСтрашила — буу-буу\nДверь — скрип-скрип."
+],
+"answer": "Пример.\nHorse — neigh-neigh.\nBee — z-z-z-z.\nSeal — ar-ar.\nDishes — clink-clink-clinkety-clink.\nScarecrow — boo-boo.\nDoor — creak-creak."
+}
+]
+},
+{
+"number": "4-s23",
+"num": "4",
+"page": 23,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138703,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать и обвести правильный звук.",
+"Парк.\nОзеро.\nИграй!\nТанцуй!\nРисуй!\nЧитай!\nПой!",
+"/ɑː/.\n/eɪ/.\n/eɪ/.\n/æ/.\n/eɪ/.\n/iː/.\n/ɪ/."
+],
+"answer": "/ɑː/.\n/eɪ/.\n/eɪ/.\n/æ/.\n/eɪ/.\n/iː/.\n/ɪ/."
+}
+]
+},
+{
+"number": "5-s23",
+"num": "5",
+"page": 23,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138704,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и ответить, какие мышки живут в сказочной деревне.",
+"WORDLIST\nsmart — умные\ntalented — таланливые\nkind — добрые\nmerry — весёлые",
+"Умные.\nПривлекательные.\nХорошие.\nТаланливые.\nДобрые.\nВесёлые."
+],
+"answer": "Smart.\nCute.\nNice.\nTalented.\nKind.\nMerry."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и раскрасить синим цветом слова, которые описывают хорошие качества, а зелёным — плохие качества.",
+"WORDLIST\nsmart — умные\ntalented — таланливые\nkind — добрые\nmerry — весёлые\nsilly — глупые",
+"Умные — синий.\nХорошие — синий.\nПривлекательные — синий.\nТаланливые — синий.\nВесёлые — синий.\nДобрые — синий.\nГлупые — зелёный."
+],
+"answer": "Smart — синий.\nNice — синий.\nCute — синий.\nTalented — синий.\nMerry — синий.\nKind — синий.\nSilly — зелёный."
+}
+]
+},
+{
+"number": "6-s24",
+"num": "6",
+"page": 24,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138705,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и ответить, что особенного в мышке.",
+"WORDLIST\nmouse — мышь\nballerina — балерина\ntalanted — талантливая",
+"Ангелина — мышка. Ангелина — балерина. Ангелина талантливая. Ангелина — талантливая балерина.",
+"Ангелина — талантливая балерина."
+],
+"answer": "Angelina is a talented ballerina."
+}
+]
+},
+{
+"number": "7-s24",
+"num": "7",
+"page": 24,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138706,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить, какие коротышки из Зелёного и Цветочного города.",
+"WORDLIST\nPillyulkin — Пилюлькин\nkind — добрый\nMite — коротышки\nsmart — умный",
+"Пилюлькин добрый. Пилюлькин — добый коротышка. Медуница умная. Медуница — умная коротышка.",
+"Pillyulkin is kind. (Пиллюлькин добрый.)\nMedunitsa is smart. (Медуница умная.)"
+],
+"answer": "Pillyulkin is kind.\nMedunitsa is smart."
+}
+]
+},
+{
+"number": "8-s25",
+"num": "8",
+"page": 25,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138707,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать буквы B, C, D, E, G.",
+""
+],
+"answer": "B, b.\nC, c.\nD, d.\nE, e.\nG, g."
+}
+]
+},
+{
+"number": "9-s25",
+"num": "9",
+"page": 25,
+"chapter": "Lessons 6-7. Angelina is a talented ballerina!",
+"skyId": 138708,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно перевести предложения и заполнить пропуски.",
+"WORDLIST\ntalanted — талантливый\nmite — коротышка\nmerry — весёлый",
+"Talanted.\nA mite.\nMerry.\nA merry."
+],
+"answer": "Talanted.\nA Mite.\nMerry.\nA merry."
+}
+]
+},
+{
+"number": "1-s26",
+"num": "1",
+"page": 26,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138709,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что любят делать эти персонажи.",
+"WORDLIST\ndancing — танцы\nsinging — пение\ntrick — шутка\npaint — рисовать красками\ntale — сказка",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"Я люблю танцевать.\nДейзи любит петь.\nДжерри любит подшучивать.\nТьюбик любит рисовать красками. \nБарни любит рассказывать сказки и играть."
+],
+"answer": "Я люблю танцевать.\nДейзи любит петь.\nДжерри любит подшучивать.\nТьюбик любит рисовать красками.\nБарни любит рассказывать сказки и играть."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что любят делать персонажи.",
+"WORDLIST\npaint — рисовать красками\nreading — чтение\ntale — сказка\nhelp — помогать",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"Майк любит рисовать красками.\nХелен любит читать сказки и помогать Майку."
+],
+"answer": "Майк любит рисовать красками.\nХелен любит читать сказки и помогать Майку."
+}
+]
+},
+{
+"number": "2-s28",
+"num": "2",
+"page": 28,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138710,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что любят делать персонажи.",
+"WORDLIST\npaint — рисовать красками\nreading — чтение\ntale — сказка\nhelp — помогать\ntrick — шутка\nsinging — пение\ndancing — танцы",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"Tyubik likes painting. — Тюбик любит рисовать красками.\nNeznaiyka likes telling tales and playing tricks. — Незнайка любит рассказывать сказки и подшучивать.\nPillyulkin likes helping. — Пилюлькин любит помогать.\nZnaika likes reading. — Знайка любит читать.\nKnopochka likes singing and dancing. — Кнопочка любит петь и танцевать."
+],
+"answer": "Tyubik likes painting. \nNeznaiyka likes telling tales and playing tricks. \nPillyulkin likes helping. \nZnaika likes reading. \nKnopochka likes singing and dancing."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что любят делать твои любимые персонажи.",
+"WORDLIST\nfox — лиса\ncheat — обманывать \nlie — лежать\nstove — печь",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"Fox likes cheating. — Лиса любит обманывать.\nEmelya likes to lie on the stove. — Емеля любит лежать на печи."
+],
+"answer": "Fox likes cheating.\nEmelya likes to lie on the stove."
+}
+]
+},
+{
+"number": "3-s28",
+"num": "3",
+"page": 28,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138711,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно спеть песенку.",
+"WORDLIST\ntale — сказка\ntrick — шутка\ndancing — танцы\nsinging — пение\nballet — балет",
+"Барни любит рассказывать сказки! (2 раза)\nБарни любит рассказывать сказки, сказки, рассказывать сказки!\nДжерри любит разыгрывать трюки! (2 раза)\nДжерри любит разыгрывать трюки, трюки! \nДжерри любит разыгрывать трюки!\nДейзи любит петь и танцевать! (2 раза)\nДейзи любит петь и танцевать, петь и танцевать!\nАнджелина любит танцевать балет! (2 раза)\nАнгелине нравится танцевать балет, танцевать, танцевать балет!"
+],
+"answer": "Барни любит рассказывать сказки! (2 раза)\nБарни любит рассказывать сказки, сказки, рассказывать сказки!\nДжерри любит разыгрывать трюки! (2 раза)\nДжерри любит разыгрывать трюки, трюки! \nДжерри любит разыгрывать трюки!\nДейзи любит петь и танцевать! (2 раза)\nДейзи любит петь и танцевать, петь и танцевать!\nАнджелина любит танцевать балет! (2 раза)\nАнгелине нравится танцевать балет, танцевать, танцевать балет!"
+}
+]
+},
+{
+"number": "4-s29",
+"num": "4",
+"page": 29,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138712,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Угадайка».",
+"WORDLIST\npainting — рисование\ntale — сказка\ntrick — шутка",
+"Нужно разделиться на пары.\nОдин игрок говорит предложение, в котором говорит что любит делать один из персонажей.\nВторой игрок говорит прав ли он. Если первый игрок не прав, то нужно сказать правдивое предложение.",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"Yes, you are right. — Да, ты прав.\nOh, no. — О, нет.",
+"Neznaiyka likes telling tales and playing tricks. — Yes, you are right. (Незнайка любит рассказывать сказки и проказничать. — Да ты прав.)\nNeznaiyka likes painting. — Oh, no. Neznaiyka likes telling tales and playing tricks. (Незнайка любит рисовать. — О нет. Незнайка любит рассказывать сказки и проказничать.)"
+],
+"answer": "Neznaiyka likes telling tales and playing tricks. — Yes, you are right.\nNeznaiyka likes painting. — Oh, no. Neznaiyka likes telling tales and playing tricks."
+}
+]
+},
+{
+"number": "5-s29",
+"num": "5",
+"page": 29,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138713,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать в рабочей тетради буквы Jj, Rr, Zz.",
+"J.\nR.\nZ.",
+"",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "Напиши буквы в рабочей тетради на с. 102-103."
+}
+]
+},
+{
+"number": "6-s29",
+"num": "6",
+"page": 29,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138714,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать, что ты и твои друзья любите делать.",
+"WORDLIST\nsinging — пение\nsmart — умный\nchess — шахматы\ndancing — танцы",
+"I like reading. — Я люблю читать.\nShe likes reading. — Она любит читать.",
+"I like reading books. I like singing songs. — Я люблю читать книги. Мне нравится петь песни.\nMy friend Tanya is smart. She likes playing chess. — Моя подруга Таня умная. Ей нравится играть в шахматы.\nMy friend Peter is talented. He likes dancing. — Мой друг Питер талантлив. Ему нравится танцевать."
+],
+"answer": "I like reading books. I like singing songs.\nMy friend Tanya is smart. She likes playing chess.\nMy friend Peter is talented. He likes dancing."
+}
+]
+},
+{
+"number": "7-s29",
+"num": "7",
+"page": 29,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138715,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подобрать буквы и прочитать названия рисунков.",
+"WORDLIST\nrabbit — кролик\ntree — дерево\nlion — лев\nking — король\npanda — панда\nbanana — банан\nzoo — зоопарк",
+"Bb — /b/.\nDd — /d/.\nRr — /r/.\nZz — /z/.\nPp — /p/.\nNn — /n/.\nNg— /ŋ/.",
+"Rabbit — кролик.\nTree — дерево.\nLion — лев.\nKing — король.\nPanda — панда.\nBanana — банан.\nZoo — зоопарк."
+],
+"answer": "Rabbit.\nTree.\nLion.\nKing.\nPanda.\nBanana.\nZoo."
+}
+]
+},
+{
+"number": "8-s29",
+"num": "8",
+"page": 29,
+"chapter": "Lesson 8. Angelina likes dancing",
+"skyId": 138716,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать предложения о друзьях Майка и Хелен.",
+"WORDLIST\nkind — добрый\ntalented — талантливый\nmerry — весёлый\ndancing — танцы\nsinging — пение\npainting — рисование красками\nreading — чтение",
+"Ник умный. Ник любит читать (reading).\nЭмили добрая (kind). Эмили любит помогать Мэлу.\nМэл талантливый (talented). Мэл любит рисовать красками (painting).\nКайли весёлая (merry). Кайли любит танцевать (dancing) и петь (singing)."
+],
+"answer": "Ник умный. Ник любит читать (reading).\nЭмили добрая (kind). Эмили любит помогать Мэлу.\nМэл талантливый (talented). Мэл любит рисовать красками (painting).\nКайли весёлая (merry). Кайли любит танцевать (dancing) и петь (singing)."
+}
+]
+},
+{
+"number": "let-s-play-s30",
+"num": "let-s-play",
+"page": 30,
+"chapter": "Lesson 9. Playtime (Урок повторения)",
+"skyId": 138717,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сыграть в настольную игру.",
+"Когда мы попадаем на розовую, синюю или жёлтую клеточку нам нужно назвать буквы и звуки, которые обозначают эти буквы.\nКогда мы попадаем на белую клеточку, нужно прочитать слово и найти ему соотвествующую картинку.\nПобедителем становится тот, кто первый дойдёт до финиша.",
+"",
+"Angel, park, hen, tree, ten, king, cute, silly, mice, cat, lion, Mite, nine, Hi, milk."
+],
+"answer": "Cыграем в игру."
+}
+]
+},
+{
+"number": "1-s32",
+"num": "1",
+"page": 32,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138718,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно познакомиться с героями.",
+"Sherlock Helmock — Шерлок Хемлок. \nCookie Monster — Куки Монстр. \nOrd — Орд. \nGrover — Гроувер. \nCassie — Кэсси."
+],
+"answer": "Sherlock Helmock — Шерлок Хемлок. \nCookie Monster — Куки Монстр. \nOrd — Орд. \nGrover — Гроувер. \nCassie — Кэсси."
+}
+]
+},
+{
+"number": "2-s32",
+"num": "2",
+"page": 32,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138719,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сыграть в игру.",
+"/ʃ/ — /ш/. \n/g/ — /г/. \n/v/ — /в/. \n/əʊ/ — /эу/. \n/ɒ/ — /о/. \n/ɔː/ — /о:/. \n/ɜː/ — /ё/.",
+"Sherlock Helmock — Шерлок Хемлок.\nCookie Monster — Куки Монстр.\nOrd — Орд.\nGrover — Гроувер.\nCassie — Кэсси."
+],
+"answer": "/ʃ/ — /ш/. \n/g/ — /г/. \n/v/ — /в/. \n/əʊ/ — /эу/. \n/ɒ/ — /о/. \n/ɔː/ — /о:/. \n/ɜː/ — /ё/."
+}
+]
+},
+{
+"number": "3-s33",
+"num": "3",
+"page": 33,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138720,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соотнести звуки и картинки.",
+"Лягушонок — croak-croak!\nИндюк — gobble-gobble!\nДевочка — sh-sh!\nКошка — purr-purr!\nМотоцикл — vroom-vroom!\nСорока — caw-caw!"
+],
+"answer": "Лягушонок — croak-croak!\nИндюк — gobble-gobble!\nДевочка — sh-sh!\nКошка — purr-purr!\nМотоцикл — vroom-vroom!\nСорока — caw-caw!"
+}
+]
+},
+{
+"number": "4-s33",
+"num": "4",
+"page": 33,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138721,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно познакомиться с новыми цветами.",
+"WORDLIST\nred — красный\nyellow — жёлтый\npink — розовый\ngreen — зелёный\npurple — пурпурный\nbrown — коричневый\norange — оранжевый\nblue — синий\ngrey — серый\nviolet (purple) — фиолетовый\nblack — чёрный",
+""
+],
+"answer": "WORDLIST\nred — красный\nyellow — жёлтыйй\npink — розовый\ngreen — зелёный\npurple — пурпурный\nbrown — коричневый\norange — оранжевый\nblue — синий\ngrey — серый\nviolet (purple) — фиолетовый\nblack — чёрный"
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно назвать цвета радуги.",
+"WORDLIST\nred — красный\nyellow — жёлтый\npink — розовый\ngreen — зелёный\npurple — пурпурный\nbrown — коричневый\norange — оранжевый\nblue — синий\ngrey — серый\nviolet (purple) — фиолетовый\nblack — чёрный",
+"Red, orange, yellow, green, blue, purple, violet."
+],
+"answer": "Red, orange, yellow, green, blue, purple, violet."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно спеть песенку про радугу.",
+"Красный и жёлтый, и розовый, и зелёный.\nПурпурный и оранжевый, и синий.\nЯ могу спеть радугу\nСпой радугу\nСпой радугу тоже."
+],
+"answer": "Красный и жёлтый, и розовый, и зелёный.\nПурпурный и оранжевый, и синий.\nЯ могу спеть радугу\nСпой радугу\nСпой радугу тоже."
+}
+]
+},
+{
+"number": "5-s34",
+"num": "5",
+"page": 34,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138722,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать, почему Хелен и Майк решили нарисовать этих персонажей.",
+"WORDLIST\nred — красный\nyellow — жёлтый\npink — розовый\ngreen — зелёный\npurple — пурпурный\nbrown — коричневый\norange — оранжевый\nblue — синий\ngrey — серый\nviolet (purple) — фиолетовый\nblack — чёрный",
+"Майку нравится рисовать. Ему нравятся синий, зелёный и пурпурный цвета. Майку нравится рисовать Орда. Он синий, зелёный и пурпурный.\nХелен тоже нравится рисовать. Ей нравится розовый и жёлтый цвета. Эй нравятся рисовать Кэсси. Она розовая и жёлтая."
+],
+"answer": "Майку нравится рисовать. Ему нравятся синий, зелёный и пурпурный цвета. Майку нравится рисовать Орда. Он синий, зелёный и пурпурный.\nХелен тоже нравится рисовать. Ей нравится розовый и жёлтый цвета. Эй нравятся рисовать Кэсси. Она розовая и жёлтая."
+}
+]
+},
+{
+"number": "6-s35",
+"num": "6",
+"page": 35,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138723,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соотнести предложения с портретами персонажей, где 1 — это Кэсси, а 2 — Орд.",
+"Кэсси — монстр.\nКэсси — дракон.\nОн — синий. \nОн — розовый и жёлтый.",
+"Майку нравится рисовать. Ему нравятся синий, зелёный и пурпурный цвета. Майку нравится рисовать Орда. Он синий, зелёный и пурпурный.\nХелен тоже нравится рисовать. Ей нравится розовый и жёлтый цвета. Эй нравятся рисовать Кэсси. Она розовая и жёлтая.",
+"Cassie is a dragon. Кэсси — дракон.\nHe is blue. Он — розовый и жёлтый."
+],
+"answer": "Cassie is a dragon. Кэсси — дракон.\nHe is blue. Он — розовый и жёлтый."
+}
+]
+},
+{
+"number": "7-s35",
+"num": "7",
+"page": 35,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138724,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прописать буквы Аа, Oo и Vv.",
+"",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем буквы Аа, Oo и Vv."
+}
+]
+},
+{
+"number": "8-s35",
+"num": "8",
+"page": 35,
+"chapter": "Lesson 10. Ord likes painting",
+"skyId": 138725,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать заметки и понять, каких героев Майк и Хелен хотят видеть на параде. Нарисуем портреты этих героев.",
+"Мне нравится _____.\nОн синий.\nОн весёлый.\nЕму нравится печенье.\nМне нравится _____.\nОна розовая и жёлтая.\nОна милая.\nЕй нравится рисовать.",
+"Сookie Monster.\nCassie."
+],
+"answer": "Сookie Monster.\nCassie."
+}
+]
+},
+{
+"number": "1-s36",
+"num": "1",
+"page": 36,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138726,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать, как нужно сказать о неточностях в портретах.",
+"Oh, no! He is blue. — О, нет! Он синий.\nНе is not yellow. — Он не жёлтый.\nAnd he is not a small monster. — И он не маленький монстр.\nShe is pink. — Она розовая.\nShe is not red. — Она не красная.\nShe is not a red dragon. — Она не красный дракон.\nAnd she is not a big dragon. — И она не большой дракон."
+],
+"answer": "Oh, no! He is blue. — О, нет! Он синий.\nНе is not yellow. — Он не жёлтый.\nAnd he is not a small monster. — И он не маленький монстр.\nShe is pink. — Она розовая.\nShe is not red. — Она не красная.\nShe is not a red dragon. — Она не красный дракон.\nAnd she is not a big dragon. — И она не большой дракон."
+}
+]
+},
+{
+"number": "2-s38",
+"num": "2",
+"page": 38,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138727,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассмотреть рисунки и отгадать, кого Майк описывает.",
+"Он не дракон.\nОн не зелёный.\nИ он не маленький монстр.\nОн большой синий монстр.",
+"It is a Cookie Monster. Это Коржик."
+],
+"answer": "It is a Cookie Monster. Это Коржик."
+}
+]
+},
+{
+"number": "3-s38",
+"num": "3",
+"page": 38,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138728,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать задание в рабочей тетради. Нужно описать одного из монстров, глядя на картинки и используя is или is not.",
+"He is a monster. Он монстр.\nHe is a dragon. Он дракон.\nHe is big. Он большой.\nHe is kind. Он добрый.\nHe is not evil. Он не злой."
+],
+"answer": "He is a monster. Он монстр.\nHe is a dragon. Он дракон.\nHe is big. Он большой.\nHe is kind. Он добрый.\nHe is not evil. Он не злой."
+}
+]
+},
+{
+"number": "4-s39",
+"num": "4",
+"page": 39,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138729,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать, как описывают того, кто украл царевну из Тридевятого царства.",
+"Он большой и голубой.\nОн — монстр.\nОн злой."
+],
+"answer": "Он большой и голубой.\nОн — монстр.\nОн злой."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинку и описать того, кто украл царевну из Тридевятого царства.",
+"WORDLIST\nsmall — маленький\nbig — большой\nkind — добрый\nevil — злой",
+"He is big. Он большой.\nHe is green. Он зелёный.\nHe is evil. Он злой.\nHe is a dragon. Он дракон."
+],
+"answer": "He is big. Он большой.\nHe is green. Он зелёный.\nHe is evil. Он злой.\nHe is a dragon. Он дракон."
+}
+]
+},
+{
+"number": "5-s39",
+"num": "5",
+"page": 39,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138730,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать задание в рабочей тетради. Нужно помочь Шерлоку и описать того, кто съел в доме всё печенье.",
+"WORDLIST\nsmall — маленький\nbig — большой\nkind — добрый\nevil — злой",
+"He is not a dragon. Он не дракон.\nHe is a blue monster. Он монстр.\nHe is big. Он большой.\nHe is not evil. Он не злой.\nHe is a kind monster. Он добрый монстр.\nHe likes cookies. Он любит печенье."
+],
+"answer": "He is not a dragon. Он не дракон.\nHe is a blue monster. Он монстр.\nHe is big. Он большой.\nHe is not evil. Он не злой.\nHe is a kind monster. Он добрый монстр.\nHe likes cookies. Он любит печенье."
+}
+]
+},
+{
+"number": "6-s39",
+"num": "6",
+"page": 39,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138731,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать задание в рабочей тетради. Нужно пройти лабиринт, раскрасить дракона и написать, какого он цвета.",
+"",
+"He is green, blue and purple. Он зелёный, синий и фиолетовый."
+],
+"answer": "He is green, blue and purple. Он зелёный, синий и фиолетовый."
+}
+]
+},
+{
+"number": "7-s39",
+"num": "7",
+"page": 39,
+"chapter": "Lesson 11. Cassie is not a monster!",
+"skyId": 138732,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать задание в рабочей тетради. Нужно написать о монстре Зелибобе, используя слова в рамочке.",
+"Zeliboba is a monster. Зелибоба — монстр.\nHe is big. Он большой.\nHe is blue. Он синий.\nHe is kind. Он добрый.\nHe likes singing and dancing. Он любит петь и танцевать."
+],
+"answer": "Zeliboba is a monster. Зелибоба — монстр.\nHe is big. Он большой.\nHe is blue. Он синий.\nHe is kind. Он добрый.\nHe likes singing and dancing. Он любит петь и танцевать."
+}
+]
+},
+{
+"number": "1-s40",
+"num": "1",
+"page": 40,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138733,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно назвать героев, которые могли бы сопровождать Матушку Гусыню на Параде.",
+"",
+"Матушка Гусыня, Винни Пух, Доктор Фостер, Элизабет, Полинезия."
+],
+"answer": "Mother Goose, Winnie the Pooh, Doctor Foster, Elisabeth, Polynesia."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прослушать стихи и назвать героев, которые участвовали в Параде.",
+"WORDLIST\nwander — бродить\nthrough — сквозь\ngander —гусак\nshower of rain — проливной дождь\nstep — шагать\npuddle — лужа\nmiddle — середина\nseek — искать\nnest — гнездо\nleave — оставлять",
+"Старая Матушка Гусыня,\nКогда она хотела побродить,\nПоднялась в воздух\nНа очень славном гусаке.",
+"Доктор Фостер отправился в Глостер\nПод проливным дождем;\nОн наступил в лужу, прямо по середине,\nИ больше туда никогда не ходил.",
+"Элизабет, Элспес, Бэтси и Бэсс.\nОни все вместе отправились на поиски птичьего гнезда.\nОни нашли птичье гнездо с пятью яйцами,\nОни все взяли одно и четыре вернули назад."
+],
+"answer": "Mother Goose, Doctor Foster, Elisabeth."
+}
+]
+},
+{
+"number": "2-s41",
+"num": "2",
+"page": 41,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138734,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В это задании нам предлагают поиграть в игру «Делай, как я».",
+"Учитель или ученик исполняет роль лидера, а остальные участники игры следуют его указаниям — прослушать запись, произнести английский звук и сравнить его с русским звуком (можно пользоваться таблицей «Звуки и буквы»).",
+"/f/, /w/, /θ/, /ð/, /ʒ /, /ʌ/.",
+"/f/ — похож на русский звук /ф/, но звучит энергичнее, отчётливее. Для того, чтобы произнести звук правильно надо зубами коснуться нижней губы и выпустить струю воздуха.\n/w/ — нет такого звука в русском языке. Для того, чтобы произнести звук правильно надо вытянуть губы в трубочку и произнести что-то похожее на русское словосочетание /ув/.\n/θ/ — нет такого звука в русском языке. Для того, чтобы произнести звук правильно надо улыбнуться так, чтобы показались верхние и нижние зубы, а кончик языка расположите между зубами и слегка касайтесь им верхних зубов, теперь произнесите звук /с/.\n/ð/ — нет такого звука в русском языке. Для того, чтобы произнести звук правильно надо улыбнуться так, чтобы показались верхние и нижние зубы, а кончик языка расположите между зубами и слегка касайтесь им верхних зубов, теперь произнесите звук /з/.\n/ʒ/ — похож на русский звук /ж'/. Для того, чтобы произнести звук правильно надо кончик языка поднять к альвеолам, но не касаться и их и произнести /ж/ как в слове «жили», но «и» как /и/, а не как /ы/.\n/ʌ/ — похож на русский звук /а/, как в слове «оса», «пошёл». Для того, чтобы произнести звук правильно надо расположить язык в центральной части ротовой полости, слегка отодвинуть назад, при произношении задняя спинка языка приподнимается к передней части мягкого нёба не до конца.",
+"Fell – well, /f/ —/w/.\nWhale – veil, /w/ — /v/.\nWorse – verse, /w/ — /v/.\nWiper – viper, /w/ — /v/.\nFree – three, /f/ — /θ/.\nClose – clothe, /s/ — /θ/.\nFace – faith, /s/ — /θ/.\nFan – van, /f/ — /v/.\nSave – safe, /v/ — /f/.\nFeel– wheel, /f/ — /w/."
+],
+"answer": "Познакомимся с новыми звуками: /f/, /w/, /θ/, /ð/, /ʒ /, /ʌ/ и закрепим их произношение с помощью игры «Делай, как я»."
+}
+]
+},
+{
+"number": "3-s41",
+"num": "3",
+"page": 41,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138735,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В это задании нам предлагают поиграть в игру «Фоули-артист». Откроем рабочую тетрадь на странице 21 упражнение 1.",
+"Внимательно прослушайте запись как артисты студии \"Foley Artist\" («Фоули артист») передают звуки, которые издают животные и предметы, изображённые на картинках. Найдите тех, кто издаёт эти звуки, и соедините линией картинку и звукоподражание.",
+"Thump-thump! — проводим линию к великану. \nWoof-woof! — проводим линию к собаке. \nBuzz-buzz, buzz-buzz! — проводим линию к пчеле. \nSqueak-squeak! — проводим линию к мышке. \nQuack-quack! — проводим линию к утке."
+],
+"answer": "Thump-thump! — проводим линию к великану. \nWoof-woof! — проводим линию к собаке. \nBuzz-buzz, buzz-buzz! — проводим линию к пчеле. \nSqueak-squeak! — проводим линию к мышке. \nQuack-quack! — проводим линию к утке."
+}
+]
+},
+{
+"number": "4-s41",
+"num": "4",
+"page": 41,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138736,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно спеть песенку.",
+"WORDLIST\nMuffin man — человечек‐маффин\nknow — знать\nlive — жить\nall — все\ntwo ot us — двое из нас",
+"Человечек‐маффин.\nО, ты знаешь человечка‐маффина\nЧеловечка‐маффина, человечка‐маффина?\nО, ты знаешь человечка‐маффина,\nКоторый живёт на Друри-Лейн?\nО, да, я знаю, человечка‐маффина, \nЧеловечка‐маффина, человечка‐маффина,\nО, да, я знаю человечка‐маффина,\nКоторый живет на Друри-Лейн.\nТеперь двое из нас знают человечка‐маффина,\nЧеловечка‐маффина, человечка‐маффина,\nТеперь двое из нас знают человечка‐маффина,\nКоторый живет на Друри-Лейн.\nТеперь мы все знаем человечка‐маффина,\nЧеловечка‐маффина, человечка‐маффина,\nТеперь мы все знаем человечка‐маффина,\nКоторый живет на Друри-Лейн."
+],
+"answer": "Человечек‐маффин.\nО, ты знаешь человечка‐маффина\nЧеловечка‐маффина, человечка‐маффина?\nО, ты знаешь человечка‐маффина,\nКоторый живёт на Друри-Лейн?\nО, да, я знаю, человечка‐маффина, \nЧеловечка‐маффина, человечка‐маффина,\nО, да, я знаю человечка‐маффина,\nКоторый живет на Друри-Лейн.\nТеперь двое из нас знают человечка‐маффина,\nЧеловечка‐маффина, человечка‐маффина,\nТеперь двое из нас знают человечка‐маффина,\nКоторый живет на Друри-Лейн.\nТеперь мы все знаем человечка‐маффина,\nЧеловечка‐маффина, человечка‐маффина,\nТеперь мы все знаем человечка‐маффина,\nКоторый живет на Друри-Лейн."
+}
+]
+},
+{
+"number": "5-s41",
+"num": "5",
+"page": 41,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138737,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать слова, которыми описываются Матушка Гусыня и герои её стихотворений.",
+"Unlucky — невезучие.\nFriendly — дружелюбные.\nSilly — глупые.\nBrave — храбрые.\nFunny — смешные.\nMerry — весёлые.\nSmart — умные.\n Nice — хорошие."
+],
+"answer": "Unlucky — невезучие, friendly — дружелюбные, silly — глупые, brave — храбрые, funny — смешные, merry — весёлые, smart — умные, nice — хорошие."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прослушать три стихотворения о наших героях в переводе С. Я. Маршака и сказать какие они.",
+"WORDLIST\nbrave — храбрый\nfriendly — дружелюбный\nfunny — смешной\nmerry — весёлый\nnice — хороший\nsmart — умный\nsilly — глупый\nunlucky — невезучий",
+"Mother Goose is funny and friendly. Матушка Гусыня забавная и дружелюбная.\nDoctor Foster is unlucky and nice. Доктор Фостер невезучий и милый.\nElisabeth is brave and smart. Элизабет храбрая и умная."
+],
+"answer": "Mother Goose is funny and friendly.\nDoctor Foster is unlucky and nice.\nElisabeth is brave and smart."
+}
+]
+},
+{
+"number": "6-s42",
+"num": "6",
+"page": 42,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138738,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и сказать, что было сказано о Полинезии.",
+"WORDLIST\nfriend — друг\nfriendly —дружелюбный\nhelp — помогать\nlike — нравиться\npet —домашний питомец\nsmart — умный\ntalk to — разговаривать с",
+"Полинезия — мой питомец. Полинезия — мой друг. Она умная. Мне нравится разговаривать с Полинезией. Она дружелюбная. Она любит помогать мне. Мне нравится Полинезия.",
+"She is smart. She is friendly. She likes helping Doctor Dolittle."
+],
+"answer": "She is smart. She is friendly. She likes helping Doctor Dolittle."
+}
+]
+},
+{
+"number": "7-s42",
+"num": "7",
+"page": 42,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138739,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно открыть рабочую тетрадь на странице 103 и прописать буквы Ff, Ww, Yy.",
+"",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем в рабочей тетради на странице 103 буквы Ff, Ww, Yy."
+}
+]
+},
+{
+"number": "8-s42",
+"num": "8",
+"page": 42,
+"chapter": "Lesson 12. I like Mother Goose rhymes",
+"skyId": 138740,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать недостающие слова в кроссворд.",
+"WORDLIST\nfunny — смешной\nfriendly — дружелюбный\nmerry — весёлый",
+"MERRY. \nFUNNY. \nFRIENDLY."
+],
+"answer": "MERRY. \nFUNNY. \nFRIENDLY."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно выбрать подходящие слова и дополнить стихотворение.",
+"Мне нравится Винни-Пух.\nВинни храбрый и милый/весёлый.\nВинни-Пух забавный.\nОн любит бананы/мед.\nОн не глупый. \nОн любит петь/читать.",
+"Cute. \nHoney. \nSinging."
+],
+"answer": "Cute.\nHoney.\nSinging."
+}
+]
+},
+{
+"number": "1-s43",
+"num": "1",
+"page": 43,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138741,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и скажем, какие питомцы есть у доктора Дулитла.",
+"WORDLIST\nparrot — попугай\npig — свинья\nduck — утка\ndog — собака\nowl — сова",
+"Я люблю своих домашних питомцев. Мои питомцы: попугай Полинезия, свинья Каб-Каб, утка Дэб-Дэб, собака Джип, сова Ту-Ту. Они дружелюбные и забавные! Мы хорошие друзья!",
+"Polynesia the parrot.\nCub-Cub the pig.\nDab-Dab the duck.\nJip the dog.\nThe owl Too-Too."
+],
+"answer": "Polynesia the parrot.\nCub-Cub the pig.\nDab-Dab the duck.\nJip the dog.\nThe owl Too-Too."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и скажем, доктор Дулитл говорит о своих питомцах.",
+"WORDLIST\nparrot — попугай\npig — свинья\nduck — утка\ndog — собака\nowl — сова",
+"Я люблю своих домашних питомцев. Мои питомцы: попугай Полинезия, свинья Каб-Каб, утка Дэб-Дэб, собака Джип, сова Ту-Ту. Они дружелюбные и забавные! Мы хорошие друзья!",
+"They are friendly and funny. We are good friends.\nОни дружелюбные и забавные! Мы хорошие друзья!"
+],
+"answer": "They are friendly and funny. We are good friends."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Сестра доктора Дулитла другого мнения о его питомцах. Прочитаем и узнаем, что она говорит по этому поводу.",
+"WORDLIST\nfunny — забавный\nfriendly — дружелюбный\nat all — совсем",
+"Они не забавные!\nОни не дружелюбные!\nМы совсем не друзья!"
+],
+"answer": "Они не забавные!\nОни не дружелюбные!\nМы совсем не друзья!"
+}
+]
+},
+{
+"number": "2-s44",
+"num": "2",
+"page": 44,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138742,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Дополним песенку попугая Полинезии, которую она бы могла спеть о своих друзьях.",
+"We — мы.\nThey — они.\nWe и they согласуются с глаголом to be во множественном числе — are. (We are, they are.)",
+"We are friends and they are friends, \nWe are friends, they are friends,\nWe are friends and they are friends,\nWe are merry friends.\nМы друзья, и они друзья,\nМы друзья, они друзья,\nМы друзья, и они друзья,\nМы весёлые друзья."
+],
+"answer": "We are friends and they are friends,\nWe are friends, they are friends,\nWe are friends and they are friends,\nWe are merry friends."
+}
+]
+},
+{
+"number": "3-s45",
+"num": "3",
+"page": 45,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138743,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игру «Мы друзья, и они друзья».",
+"Бросаем кубик и выбираем одного героя.\nБросаем кубик во второй раз и выбираем другого героя. \nТеперь нужно решить, дружат ли выбранные тобою герои или не дружат совсем. Если дружат, то что они любят вместе делать.",
+"_____ и ______ не друзья. Они совсем не друзья.\n_____ и _____ друзья. Они хорошие друзья.\nОни любят разговаривать / играть / петь / танцевать / рисовать / рассказывать сказки вместе.",
+"Тебе выпали доктор Пилюлькин и Незнайка.\nDoctor Pilulkin and Neznaika are not friends. They are not friends at all.\nТебе выпали Пятачок и Мальвина.\nPiglet and Malvina are friends. They are good friends. They like playing together."
+],
+"answer": "Поиграем в игру."
+}
+]
+},
+{
+"number": "4-s46",
+"num": "4",
+"page": 46,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138744,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и узнаем, с кем дружат Мел и Эмили и почему.",
+"WORDLIST\nnice — хороший\nmerry — весёлый\nfriendly — дружелюбный\nplaying tricks — дурачиться",
+"Мы друзья с Ником и Келли. Они хорошие и весёлые. Мы любим вместе играть.\nНо мы не друзья с Айком и Ленни. Они не дружелюбные. Они любят дурачиться."
+],
+"answer": "Мы друзья с Ником и Келли. Они хорошие и весёлые. Мы любим вместе играть.\nНо мы не друзья с Айком и Ленни. Они не дружелюбные. Они любят дурачиться."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Расскажем, с кем дружишь ты и почему.",
+"WORDLIST\ntalking — разговаривать\nplaying — играть\nsinging — петь\ndancing — танцевать\npainting — рисовать\ntelling tales — рассказывать сказки\nnice — хороший\nmerry — весёлый",
+"We're friends with Gosha and Sveta. Мы друзья с Гошей и Светой. \nThey're nice and merry. Они хорошие и весёлые.\nWe like playing and painting together. Мы любим играть и рисовать вместе.\nWe're good friends! Мы хорошие друзья!"
+],
+"answer": "We're friends with Gosha and Sveta.\nThey're nice and merry.\nWe like playing and painting together.\nWe're good friends!"
+}
+]
+},
+{
+"number": "5-s46",
+"num": "5",
+"page": 46,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138745,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Выберем героев, которые дружат, и впишем подходящие слова из рамочки в письмо-заявку. Имена героев напишем по-русски.",
+"WORDLIST\nfunny — весёлый, забавные\nsilly — глупый\nbrave — храбрый\nevil — злой\nplaying — играть\nsinging — петь\nfriendly — дружелюбный\ngood — хороший",
+"Привет! \nЯ люблю Дядю Фёдора и кота Матроскина.\nОни забавные (funny) и дружелюбные (friendly).\nОна не глупые (silly) и не злые (evil).\nОни любят играть (playing) вместе.\nЯ думаю, что они хорошие (good) друзья.\nМарк (Mark)"
+],
+"answer": "Привет! \nЯ люблю Дядю Фёдора и кота Матроскина.\nОни забавные (funny) и дружелюбные (friendly).\nОна не глупые (silly) и не злые (evil).\nОни любят играть (playing) вместе.\nЯ думаю, что они хорошие (good) друзья.\nМарк (Mark)"
+}
+]
+},
+{
+"number": "6-s46",
+"num": "6",
+"page": 46,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138746,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем подходящие буквы в слова, чтобы узнать, что видели Хрюша и Степашка в Диснейленде.",
+"WORDLIST\ncave — пещера\nflamingo — фламинго\nforest — лес\ngoldfish — золотая рыба\nsea — море\nThumbelina — Дюймовочка\nwigwam — вигвам",
+"Sea.\nForest.\nCave.\nGoldfish.\nWigwam.\nThumbelina.\nFlamingo."
+],
+"answer": "Sea.\nForest.\nCave.\nGoldfish.\nWigwam.\nThumbelina.\nFlamingo."
+}
+]
+},
+{
+"number": "7-s46",
+"num": "7",
+"page": 46,
+"chapter": "Lesson 13. We are friends",
+"skyId": 138747,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем, что вы с друзьями любите делать вместе. Для этого заполним раздел «Мои друзья» в рабочей тетради на с. 104.",
+"WORDLIST\ntalking — разговаривать\nplaying — играть\nsinging — петь\ndancing — танцевать\npainting — рисовать\ntelling tales — рассказывать сказки\nnice — хороший\nmerry — весёлый\nfriendly — дружелюбный\nevil — злой",
+"Мои друзья\nМакс (Max) и я друзья. \nЯ люблю своих друзей.\nОни дружелюбные (friendly) и весёлые (merry).\nОни не злые (evil).\nМы любим играть (playing) и рисовать (panting) вместе."
+],
+"answer": "Мои друзья\nМакс (Max) и я друзья. \nЯ люблю своих друзей.\nОни дружелюбные (friendly) и весёлые (merry).\nОни не злые (evil).\nМы любим играть (playing) и рисовать (panting) вместе."
+}
+]
+},
+{
+"number": "1-s47",
+"num": "1",
+"page": 47,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138748,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на героев американских и английских сказок и мультиков и научимся читать их имена.",
+"Ariel.\nАриэль.\nBombur.\nБомбуа.\nOin.\nОйн.\nCharlie Brown.\nЧарли Браун.\nTeddy Bear.\nМедвежонок Тедди."
+],
+"answer": "Научимся читать имена героев."
+}
+]
+},
+{
+"number": "2-s47",
+"num": "2",
+"page": 47,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138749,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно слушать, как учитель произносит звуки, и показывать на соответствующий значок транскрипции.",
+"Звуки /eə/ и /ɪə/\nAriel.\nАриэль.\nЗвук /ʊə/\nBombur.\nБомбуа.\nЗвук /ɔɪ/\nOin.\nОйн.\nЗвук /ʧ/\nCharlie Brown.\nЧарли Браун.\nЗвук /eə/\nTeddy Bear.\nМедвежонок Тедди."
+],
+"answer": "Будем слушать звуки и показывать на соответствующие значки."
+}
+]
+},
+{
+"number": "3-s48",
+"num": "3",
+"page": 48,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138750,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подберём подходящие по смыслу слова, которые отличаются одним звуком.",
+"WORDLIST\ndeer — олень\nhere — здесь\ntoys — игрушки\nbows — луки\nchips — чипсы\nships — корабли",
+"1. Олень здесь.\nThe deer is here.",
+"2. Мальчики (1. boys) любят играть с игрушками. \n3. Чарли любит играть с кораблями (2. ships)."
+],
+"answer": "2. Мальчики (1. boys) любят играть с игрушками. \n3. Чарли любит играть с кораблями (2. ships)."
+}
+]
+},
+{
+"number": "4-s48",
+"num": "4",
+"page": 48,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138751,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Споём песенку про медвежонка Тедди.",
+"WORDLIST\nWords (слова)\nnose — нос\nground — земля\nlight — свет\nPhrases (фразы)\nturn around — обернуться\nswitch off — выключить\ntoes — пальцы на ногах",
+"Медвежонок Тедди, медвежонок Тедди, дотронься до носа.\nМедвежонок Тедди, медвежонок Тедди, дотронься до пальцев ног.\nМедвежонок Тедди, медвежонок Тедди, дотронься до земли.\nМедвежонок Тедди, медвежонок Тедди, повернись.\nМедвежонок Тедди, медвежонок Тедди, выключи свет.\nМедвежонок Тедди, медвежонок Тедди, скажи «спокойной ночи»."
+],
+"answer": "Медвежонок Тедди, медвежонок Тедди, дотронься до носа.\nМедвежонок Тедди, медвежонок Тедди, дотронься до пальцев ног.\nМедвежонок Тедди, медвежонок Тедди, дотронься до земли.\nМедвежонок Тедди, медвежонок Тедди, повернись.\nМедвежонок Тедди, медвежонок Тедди, выключи свет.\nМедвежонок Тедди, медвежонок Тедди, скажи «спокойной ночи»."
+}
+]
+},
+{
+"number": "5-s48",
+"num": "5",
+"page": 48,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138752,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Хелен, Майк и их друзья готовят плакаты в поддержку своих любимых героев. Скажем, как зовут друзей Хелен и Майка.",
+"WORDLIST\njoyful — жизнерадостный\ncute — милый\nbrave — храбрый\nnice — милый\nfunny — забавный\nmerry — весёлый\nunlucky — неудачливый",
+"Клэр и Джой: … хорошая! Она жизнерадостная.\nРичард: Мы любим… Он милый и храбрый.\nДаниэль: Ойн и… хорошие! Они забавные и весёлые!\nДжошуа: … ! Ты неудачливый, но мы любим тебя.",
+"Clare and Joy, Richard, Daniel, Joshua."
+],
+"answer": "Clare and Joy, Richard, Daniel, Joshua."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, в поддержку каких героев сделаны плакаты и почему.",
+"WORDLIST\njoyful — жизнерадостный\ncute — милый\nbrave — храбрый\nnice — милый\nfunny — забавный\nmerry — весёлый\nunlucky — невезучий",
+"Клэр и Джой: … хорошая! Она жизнерадостная.\nРичард: Мы любим… Он милый и храбрый.\nДаниэль: Ойн и… хорошие! Они забавные и весёлые!\nДжошуа: … ! Ты невезучий, но мы любим тебя.",
+"Ariel is nice! She is joyful. (Потому что Ариэль жизнерадостная.)\nWe like Teddy Bear. He is cute and brave. (Потому что медвежонок Тедди милый и храбрый.)\nOin and Bombur are nice! They are funny and merry! (Потому что Ойн и Бомбуа забавные и весёлые.)\nCharlie Brown! You are unlucky, but we like you. (Потому что Чарли Браун невезучий, но его все любят.)"
+],
+"answer": "Ariel is nice! She is joyful.\nWe like Teddy Bear. He is cute and brave.\nOin and Bombur are nice! They are funny and merry!\nCharlie Brown! You are unlucky, but we like you."
+}
+]
+},
+{
+"number": "6-s49",
+"num": "6",
+"page": 49,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138753,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игру-пантомиму «Изобразите, что вы чувствуете». Определим, какие чувства и настроения изображают дети.",
+"WORDLIST\njoyful — жизнерадостный\nbrave — храбрый\nunlucky — невезучий\nsmart — умный\nfriendly — дружелюбный",
+"Richard is unlucky. Ричард невезучий.\nJoy is joyful. Джой жизнерадостная.\nJoshua is friendly. Джошуа дружелюбный.\nClare is brave. Клэр храбрая.\nDaniel is smart. Даниэль умный."
+],
+"answer": "Сыграем в классе в игру-пантомиму."
+}
+]
+},
+{
+"number": "7-s49",
+"num": "7",
+"page": 49,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138754,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим, как Хелен и её подруга Джой приветствуют друг друга.",
+"А: Привет, Джой! Как дела?\nБ: Привет, Хелен! Хорошо. Спасибо. Как у тебя дела?\nА: У меня тоже хорошо. Спасибо.",
+"Хелен спрашивает: «Как дела?» — по-английски это будет «How are you?».\nДжой отвечает: «Хорошо» — по-английски это будет «I'm fine»."
+],
+"answer": "А: Привет, Джой! Как дела?\nБ: Привет, Хелен! Хорошо. Спасибо. Как у тебя дела?\nА: У меня тоже хорошо. Спасибо."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В парах поучимся приветствовать друг друга.",
+"Хелен спрашивает: «Как дела?» — по-английски это будет «How are you?».\nДжой отвечает: «Хорошо» — по-английски это будет «I'm fine».",
+"A: Hi! How are you?\nB: Hi! I'm fine. Thanks. How are you?\nA: I'm fine, too. Thank you."
+],
+"answer": "A: Hi! How are you?\nB: Hi! I'm fine. Thanks. How are you?\nA: I'm fine, too. Thank you."
+}
+]
+},
+{
+"number": "8-s49",
+"num": "8",
+"page": 49,
+"chapter": "Lesson 14. Charlie is nice!",
+"skyId": 138755,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на описание в рамочке и скажем, в поддержку какого героя задуман плакат. Нарисуем портрет этого героя.",
+"Емеля.\nКолобок.\nБаба Яга.",
+"Он хороший!\nОн дружелюбный и храбрый.\nОн жизнерадостный.\nОн любит петь.",
+"Это Колобок."
+],
+"answer": "Это Колобок."
+}
+]
+},
+{
+"number": "1-s50",
+"num": "1",
+"page": 50,
+"chapter": "Lesson 15. His name is Teddy",
+"skyId": 138756,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем, какие вопросы задаёт один из репортёров Хелен, Майку и их друзьям.",
+"Привет, дети! Я Ник.\nКто вы?\nКак вас зовут?"
+],
+"answer": "Привет, дети! Я Ник.\nКто вы?\nКак вас зовут?"
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем, как Хелен, Майк и их друзья отвечают на вопросы репортёра.",
+"Привет, дети! Я Ник.\nКто вы?\nКак вас зовут?",
+"Я маленький мальчик. Меня зовут Чарли.\nОн медведь. Его зовут Тедди.\nОна маленькая русалка. Её зовут Ариэль.\nМы гномы. Наши имена Ойн и Бомбуа.\nОни мыши. Их имена — Анжелина и Стюарт."
+],
+"answer": "Я маленький мальчик. Меня зовут Чарли.\nОн медведь. Его зовут Тедди.\nОна маленькая русалка. Её зовут Ариэль.\nМы гномы. Наши имена Ойн и Бомбуа.\nОни мыши. Их имена — Анжелина и Стюарт."
+}
+]
+},
+{
+"number": "2-s52",
+"num": "2",
+"page": 52,
+"chapter": "Lesson 15. His name is Teddy",
+"skyId": 138757,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Давайте споём песню «Как твоё имя? / Как тебя зовут?».",
+"Как тебя зовут? Как тебя зовут?\nТеперь скажи мне, пожалуйста. Как тебя зовут?\nМеня зовут Тедди. Меня зовут Тедди.\nМеня зовут Тедди. Так меня зовут."
+],
+"answer": "Как тебя зовут? Как тебя зовут?\nТеперь скажи мне, пожалуйста. Как тебя зовут?\nМеня зовут Тедди. Меня зовут Тедди.\nМеня зовут Тедди. Так меня зовут."
+}
+]
+},
+{
+"number": "3-s53",
+"num": "3",
+"page": 53,
+"chapter": "Lesson 15. His name is Teddy",
+"skyId": 138758,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поможет детям подобрать подходящие слова из рамочек, чтобы у них получились стихотворения.",
+"Kerry. Керри.\nVicky. Вики.\nBart. Барт.",
+"",
+"1. \nShe is Kerry.\nHer dog is Cherry.\nЕё зовут Керри.\nЕё собака — Керри.",
+"2.\nWe are Vicky and Bart.\nOur pets are smart.\nThey are friendly and funny.\nTheir names are Lucky and Bunny.\nМы Вики и Брит.\nНаши питомцы умные.\nОни дружелюбные и забавные.\nИх имена — Лаки и Банни."
+],
+"answer": "1. \nShe is Kerry.\nHer dog is Cherry.\n2.\nWe are Vicky and Bart.\nOur pets are smart.\nThey are friendly and funny.\nTheir names are Lucky and Bunny."
+}
+]
+},
+{
+"number": "4-s53",
+"num": "4",
+"page": 53,
+"chapter": "Lesson 15. His name is Teddy",
+"skyId": 138759,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем пропущенные слова из рамочки и завершим стихотворения друзей Хелен и Майка.",
+"My — мой.\nYour — твой.\nHis — его.\nOur — наш.\nHer — её.\nIts — его/её.\nTheir — их.",
+"1. \nЯ Нед.\nМой (my) питомец — кот.\nОн забавный и чёрный.\nЕго (its) имя — Шрек.",
+"2. \nЭто Нэт.\nЕё (her) питомец — крыса.\nОна весёлая и забавная.\nЕё (its) имя — Хани.",
+"3.\nМы Энн и Майлз.\nНаши (our) питомцы — мыши.\nОни очень хорошие.\nИх (their) имена — Пеппер и Спайс."
+],
+"answer": "1. \nЯ Нед.\nМой (my) питомец — кот.\nОн забавный и чёрный.\nЕго (its) имя — Шрек.\n2. \nЭто Нэт.\nЕё (her) питомец — крыса.\nОна весёлая и забавная.\nЕё (its) имя — Хани.\n3.\nМы Энн и Майлз.\nНаши (our) питомцы — мыши.\nОни очень хорошие.\nИх (their) имена — Пеппер и Спайс."
+}
+]
+},
+{
+"number": "5-s53",
+"num": "5",
+"page": 53,
+"chapter": "Lesson 15. His name is Teddy",
+"skyId": 138760,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем о твоём домашнем любимце или о питомце твоего друга.",
+"WORDLIST\ndog — собака\ncat — кошка\nfunny — забавный\nfriendly — дружелюбный\nsmart — умный\nbrave — храбрый",
+"Мой питомец\nМой питомец — кошка (a cat).\nОна дружелюбная (friendly).\nЕё зовут Жанна (Zhanna).\nМы любим вместе играть (playing together).\nМы хорошие друзья (good friends).",
+"Питомец моего друга\nМой друг — Максим (Maxim).\nЕго питомец — собака (dog).\nЕго собаку зовут Линда (Linda).\nОни любят вместе гулять (walking together).\nОни хорошие друзья (good friends)."
+],
+"answer": "Мой питомец\nМой питомец — кошка (a cat).\nОна дружелюбная (friendly).\nЕё зовут Жанна (Zhanna).\nМы любим вместе играть (playing together).\nМы хорошие друзья (good friends).\nПитомец моего друга\nМой друг — Максим (Maxim).\nЕго питомец — собака (dog).\nЕго собаку зовут Линда (Linda).\nОни любят вместе гулять (walking together).\nОни хорошие друзья (good friends)."
+}
+]
+},
+{
+"number": "1-s54",
+"num": "1",
+"page": 54,
+"chapter": "Lesson 16. I like English! (Урок повторения)",
+"skyId": 138761,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные слова из рамочки.",
+"",
+"Я собака. Моё (my) имя — Филя.\nОна коротышка. Её (her) имя — Медуница.\nЭто игрушка. Его (his) имя Петрушка.\nМы коротышки. Наши (our) имена — Незнайка и Знайка.\nОни тоже коротышки. Их (their) имена — Пилюлькин и Тюбик."
+],
+"answer": "Я собака. Моё (my) имя — Филя.\nОна коротышка. Её (her) имя — Медуница.\nЭто игрушка. Его (his) имя Петрушка.\nМы коротышки. Наши (our) имена — Незнайка и Знайка.\nОни тоже коротышки. Их (their) имена — Пилюлькин и Тюбик."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Послушаем и проверим свои ответы.",
+"Я собака. Моё (my) имя — Филя.\nОна коротышка. Её (her) имя — Медуница.\nЭто игрушка. Его (his) имя Петрушка.\nМы коротышки. Наши (our) имена — Незнайка и Знайка.\nОни тоже коротышки. Их (their) имена — Пилюлькин и Тюбик."
+],
+"answer": "My.\nHer.\nHis.\nOur.\nTheir."
+}
+]
+},
+{
+"number": "2-s55",
+"num": "2",
+"page": 55,
+"chapter": "Lesson 16. I like English! (Урок повторения)",
+"skyId": 138762,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим правильно части предложения и составим рассказ о Чарли и его питомце.",
+"WORDLIST\npet — питомец\nname — имя\ndog — собака\ngood — хороший\nnice — милый\njoyful — жизнерадостный\ntogether — вместе",
+"I am Charlie. My pet is a dog. His name is Snoopy. He is nice and joyful. We are good friends. We like playing together.\nЯ Чарли. Мой питомец — собака. Его зовут Снупи. Он милый и жизнерадостный. Мы хорошие друзья. Нам нравится играть вместе."
+],
+"answer": "I am Charlie. My pet is a dog. His name is Snoopy. He is nice and joyful. We are good friends. We like playing together."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Прослушаем и проверим себя.",
+"WORDLIST\npet — питомец\nname — имя\ndog — собака\ngood — хороший\nnice — милый\njoyful — жизнерадостный\ntogether — вместе",
+"I am Charlie. My pet is a dog. His name is Snoopy. He is nice and joyful. We are good friends. We like playing together.\nЯ Чарли. Мой питомец — собака. Его зовут Снупи. Он милый и жизнерадостный. Мы хорошие друзья. Нам нравится играть вместе."
+],
+"answer": "I am Charlie. My pet is a dog. His name is Snoopy. He is nice and joyful. We are good friends. We like playing together."
+}
+]
+},
+{
+"number": "3-s55",
+"num": "3",
+"page": 55,
+"chapter": "Lesson 16. I like English! (Урок повторения)",
+"skyId": 138763,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем письмо кота Леопольда и найдём ошибки в нём. Перепишем предложения, в которых есть ошибки.",
+"",
+"В русском мы опускаем глагол-связку: Я Маша. Ты хороший.\nВ английском мы не опускаем глагол-связку: I am Masha. You are nice.",
+"Мистер Мауслинг,\nЯ кот Леопольд.\nМне нравится деревня Маусленд, и вы мне нравитесь. Вы (are) добрый и умный.\nМне нравится Анжелина. Анжелина (is) хорошая. Она (is) талантливая балерина.\nЯ (am) дружелюбный и весёлый. Мне нравятся мыши. Я люблю петь и играть.\nЛео"
+],
+"answer": "Мистер Мауслинг,\nЯ кот Леопольд.\nМне нравится деревня Маусленд, и вы мне нравитесь. Вы (are) добрый и умный.\nМне нравится Анжелина. Анжелина (is) хорошая. Она (is) талантливая балерина.\nЯ (am) дружелюбный и весёлый. Мне нравятся мыши. Я люблю петь и играть.\nЛео"
+}
+]
+},
+{
+"number": "4-s56",
+"num": "4",
+"page": 56,
+"chapter": "Lesson 16. I like English! (Урок повторения)",
+"skyId": 138764,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Будем слушать, что говорит учитель, находить эти предложения на русском и ставить рядом соответствующий номер. Выполним последнее задание.",
+"Откройте учебники на странице восемь.\nПосмотрите на доску.\nДавайте споём песню «We are friends!».\nНапишите букву «М».\nПрочитайте, пожалуйста, слово «English».\nПовторите за мной «I like English!».\nИди(те), пожалуйста, к доске.\nРассмотрите рисунки, прочитайте слова. Что они значат?",
+"Street — улица.\nHouse — дом.\nLake — озеро.\nBridge — мост.\nPark — парк.\nRiver — река."
+],
+"answer": "Предложения:\nОткройте учебники на странице восемь.\nПосмотрите на доску.\nДавайте споём песню «We are friends!».\nНапишите букву «М».\nПрочитайте, пожалуйста, слово «English».\nПовторите за мной «I like English!».\nИди(те), пожалуйста, к доске.\nРассмотрите рисунки, прочитайте слова. Что они значат?\nЗадание 8:\nStreet — улица.\nHouse — дом.\nLake — озеро.\nBridge — мост.\nPark — парк.\nRiver — река."
+}
+]
+},
+{
+"number": "1-s57",
+"num": "1",
+"page": 57,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138765,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на английский алфавит и назовём все буквы в нём.",
+"Ну вот, теперь ты видишь. Это английский алфавит.\nОбратим внимание, что по-английски мы говорим и пишем the English ABC.",
+""
+],
+"answer": "Посмотрим на алфавит и будем называть каждую букву."
+}
+]
+},
+{
+"number": "2-s58",
+"num": "2",
+"page": 58,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138766,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Выучим песню, которая поможет нам быстро запомнить английский алфавит.",
+""
+],
+"answer": "Споём песенку, чтобы выучить алфавит."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Давай поиграем в игру «Найди букву». Учитель будет показывать вам заглавные буквы, а вы должны найти на своих карточках соответствующие им строчные буквы.",
+"What is this? Что это?\nIt is a letter. Это буква.",
+"Ученик 1: Это буква «А».\nУченик 2: Это тоже буква «а».",
+""
+],
+"answer": "Поиграем в игру. Будем смотреть, какие буквы показывает учитель, и находить такие же, только строчные."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игру «Кто первый?». Для этого найдём в словаре значения и произношение слов sorry, spell и please.",
+"Слова в словаре расположены в алфавитном порядке. Но место слова в словаре также определяется не только первой буквой, но и последующими. \nAnimal будет стоять перед apple, так как N стоит раньше P в алфавите.\nРядом с каждым словом есть транскрипция.\nСлово может иметь несколько значений.",
+"",
+"Please /pliːz/ — пожалуйста.\nSorry /'sɒrɪ/; I'm sorry! — Виноват, извините!\nSpell /spel/ — писать или произносить (слово) по буквам."
+],
+"answer": "Please /pliːz/ — пожалуйста.\nSorry /'sɒrɪ/; I'm sorry! — Виноват, извините!\nSpell /spel/ — писать или произносить (слово) по буквам."
+}
+]
+},
+{
+"number": "3-s58",
+"num": "3",
+"page": 58,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138767,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим буквы в алфавитном порядке, сначала заглавные, а затем строчные. Узнаем, что за герой сказки здесь изображён. Напишем его имя.",
+"",
+"A→B→C→D→E→F→G→H→I→J→K→L→M→N→O→P→Q→R→S→T→U→V→W→X→Y→Z.\na→b→c→d→e→f→g→h→i→j→k→l→m→n→o→p→q→r→s→t→u→v→w→x→y→z.",
+"This is Pinocchio. Это Пиноккио."
+],
+"answer": "This is Pinocchio."
+}
+]
+},
+{
+"number": "4-s58",
+"num": "4",
+"page": 58,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138768,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поможем Пиноккио расшифровать сообщение. Для этого сначала впишем буквы, а потом прочитаем и переведём сообщение с помощью словаря.",
+"",
+"23\n 5\n 12\n 3\n 15\n 13\n 5\n W\n e\n l\n c\n o\n m\n e",
+"Welcome.\nWelcome /'welkəm/ — приветствовать; Welcome! Добро пожаловать!"
+],
+"answer": "Welcome /'welkəm/ — приветствовать; Welcome! Добро пожаловать!"
+}
+]
+},
+{
+"number": "5-s59",
+"num": "5",
+"page": 59,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138769,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Поможем Пиноккио правильно произнести его имя по буквам.",
+"",
+"А: Привет. Это Пиноккио.\nБ: Привет. Можешь, пожалуйста, произнести своё имя по буквам?",
+"Pinocchio.\nP — I — N — O — C — C — H — I — O.\n/pi:/ — /aɪ/ — /en/ — /əʊ/ — /si:/ — /si:/ — /eɪtʃ/ — /aɪ/ — /əʊ/."
+],
+"answer": "P — I — N — O — C — C — H — I — O.\n/pi:/ — /aɪ/ — /en/ — /əʊ/ — /si:/ — /si:/ — /eɪtʃ/ — /aɪ/ — /əʊ/."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Попробуем произнести свои имена по буквам.",
+"",
+"Irina.\nI — R — I — N — A.\n/aɪ/ — /ɑː/ — /aɪ/ — /en/ — /ei/."
+],
+"answer": "Произнесём своё имя по буквам, как в примере."
+}
+]
+},
+{
+"number": "6-s59",
+"num": "6",
+"page": 59,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138770,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вычеркнуть буквы русского алфавита.",
+""
+],
+"answer": "Вычеркнем буквы Д, И, Я."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти буквы, написание которых похоже в русском и английском алфавите.",
+"",
+"Pp.\nH.\nCc.\nAa.\nBb.\nKk.\nMm.\nXx."
+],
+"answer": "Pp.\nH.\nCc.\nAa.\nBb.\nKk.\nMm.\nXx."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вписать пропущенные буквы.",
+""
+],
+"answer": "Впиши недостающие буквы."
+}
+]
+},
+{
+"number": "7-s59",
+"num": "7",
+"page": 59,
+"chapter": "Lesson 17. This is the English ABC",
+"skyId": 138771,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать каких 4 букв из английского алфавита не хватает.",
+"",
+"Aa, Ee, Ll, Ss."
+],
+"answer": "Aa, Ee, Ll, Ss."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слово из данных букв и тех, которых не хватает в волшебной шляпе.",
+"Aa, Ee, Ll, Ss.",
+"Please — пожалуйста."
+],
+"answer": "Please."
+}
+]
+},
+{
+"number": "1-s60",
+"num": "1",
+"page": 60,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138772,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку и скажем, фигуры каких животных ты видишь.",
+"WORDLIST\nraccoon — енот\nhorse — лошадь\nfox — лиса\nrabbit — кролик\nparrot — попугай\nwolf — волк\ntiger — тигр",
+"Raccoon.\nHorse.\nRabbit.\nFox.\nParrot.\nWolf.\nTiger."
+],
+"answer": "Raccoon.\nHorse.\nRabbit.\nFox.\nParrot.\nWolf.\nTiger."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем, на фигуры каких животных обратили внимание Хелен и Майк и почему.",
+"WORDLIST\nraccoon — енот\nhorse — лошадь\nfox — лиса\nrabbit — кролик\nparrot — попугай\nwolf — волк\ntiger — тигр",
+"Хелен: Посмотри! Тигр! Я боюсь тигров! А что это?\nМайк: Это енот. Я люблю енотов. Они забавные."
+],
+"answer": "Хелен: Посмотри! Тигр! Я боюсь тигров! А что это?\nМайк: Это енот. Я люблю енотов. Они забавные."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, как Хелен говорит о том, что тигры вызывают у неё страх.",
+"WORDLIST\nraccoon — енот\nhorse — лошадь\nfox — лиса\nrabbit — кролик\nparrot — попугай\nwolf — волк\ntiger — тигр",
+"Хелен: Посмотри! Тигр! Я боюсь тигров! А что это?\nМайк: Это енот. Я люблю енотов. Они забавные.",
+"I'm afraid of tigers!\nЯ боюсь тигров!"
+],
+"answer": "I'm afraid of tigers!"
+},
+{
+"name": "4",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, какие животные нравятся Майку, и как он о них говорит.",
+"WORDLIST\nraccoon — енот\nhorse — лошадь\nfox — лиса\nrabbit — кролик\nparrot — попугай\nwolf — волк\ntiger — тигр",
+"Хелен: Посмотри! Тигр! Я боюсь тигров! А что это?\nМайк: Это енот. Я люблю енотов. Они забавные.",
+"I like raccoons.\nЯ люблю енотов."
+],
+"answer": "I like raccoons."
+}
+]
+},
+{
+"number": "2-s62",
+"num": "2",
+"page": 62,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138773,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игру «Боюсь — не боюсь». Учитель будет говорить, что он боится или не боится какого-либо животного, и будет бросать мяч. Если вы не боитесь этого животного, то мяч ловите и говорите, что не боитесь этого животного. Если вы всё-таки боитесь, то не ловите мяч, а говорите, что боитесь этого животного.",
+"WORDLIST\nraccoon — енот\nhorse — лошадь\nfox — лиса\nrabbit — кролик\nparrot — попугай\nwolf — волк\ntiger — тигр",
+"Учитель: Я не боюсь енотов. Я люблю енотов.\nУченик 1: Я не боюсь енотов. (Ловит мяч.)\nУченик 2: Я боюсь енотов. (Не ловит мяч.)",
+"I am afraid of tigers.\nЯ боюсь тигров.\nI am not afraid of tigers.\nЯ не боюсь тигров.\nI like tigers.\nЯ люблю тигров."
+],
+"answer": "Поиграем в игру."
+}
+]
+},
+{
+"number": "3-s62",
+"num": "3",
+"page": 62,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138774,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и обвести названия животных и птиц.",
+"WORDLIST\nfoxes — лисы\nraccoons — еноты\nducks — утки\nhens — курицы\ntigers — тигры\npigs — поросята\nhorses — лошади\nparrots — попугаи\nwolves — волки\ncats — кошки\ndogs — собаки\nowls — совы\nrabbits — кролики\nbears — медведи\nlions — львы",
+"Foxes.\nRaccoons.\nDucks.\nHens.\nTigers.\nPigs.\nHorses.\nParrots.\nWolves.\nCats.\nDogs.\nOwls.\nRabbits.\nBears.\nLions."
+],
+"answer": "Foxes.\nRaccoons.\nDucks.\nHens.\nTigers.\nPigs.\nHorses.\nParrots.\nWolves.\nCats.\nDogs.\nOwls.\nRabbits.\nBears.\nLions."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и распределить их по трём группам в соответствии со звуком.",
+"WORDLIST\nfoxes — лисы\nraccoons — еноты\nducks — утки\nhens — курицы\ntigers — тигры\npigs — поросята\nhorses — лошади\nparrots — попугаи\nwolves — волки\ncats — кошки\ndogs — собаки\nowls — совы\nrabbits — кролики\nbears — медведи\nlions — львы",
+"/z/\nRaccoons.\nTigers.\nPigs.\nHens.\nWolves.\nDogs.\nOwls.\nBears.\nLions.\n/s/\nDucks.\nParrots.\nCats.\nRabbits.\n/iz/\nFoxes.\nHorses."
+],
+"answer": "/z/\nRaccoons.\nTigers.\nPigs.\nHens.\nWolves.\nDogs.\nOwls.\nBears.\nLions.\n/s/\nDucks.\nParrots.\nCats.\nRabbits.\n/iz/\nFoxes.\nHorses."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и распределить их по трём группам в соответствии со звуком.",
+"WORDLIST\nfoxes — лисы\nraccoons — еноты\nducks — утки\nhens — курицы\ntigers — тигры\npigs — поросята\nhorses — лошади\nparrots — попугаи\nwolves — волки\ncats — кошки\ndogs — собаки\nowls — совы\nrabbits — кролики\nbears — медведи\nlions — львы",
+"/z/\nRaccoons.\nTigers.\nPigs.\nHens.\nWolves.\nDogs.\nOwls.\nBears.\nLions.\n/s/\nDucks.\nParrots.\nCats.\nRabbits.\n/iz/\nFoxes.\nHorses."
+],
+"answer": "/z/\nRaccoons.\nTigers.\nPigs.\nHens.\nWolves.\nDogs.\nOwls.\nBears.\nLions.\n/s/\nDucks.\nParrots.\nCats.\nRabbits.\n/iz/\nFoxes.\nHorses."
+}
+]
+},
+{
+"number": "4-s62",
+"num": "4",
+"page": 62,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138775,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и скажем, каких животных любит Хелен и почему.",
+"Я люблю животных. Мои любимые животные — кошки. Они милые и забавные. Я люблю играть со своей кошкой Флаффи.",
+"Cats. They are nice and funny."
+],
+"answer": "Cats. They are nice and funny."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Расскажем Хелен и Майку о своих любимых животных. Будем использовать слова из рамочки.",
+"WORDLIST 1\nraccoons — еноты\nhorses — лошади\nfoxes — лисы\nrabbits — кролики\nparrots — попугаи\nwolves — волки\ntigers — тигры\nmice — мыши\ndogs — собаки\nbears — медведи\ncats — кошки\npigs — свиньи",
+"WORDLIST 2\nfunny — забавный\nbrave — храбрый\nnice — красивый\ncute — милый\njoyful — жизнерадостный\nevil — злой\nmerry — весёлый\nfriendly — дружелюбный",
+"I like animals.\nЯ люблю животных.\nMy favourite animals are wolves and foxes.\nМои любимые животные — волки и лисы.\nThey are nice and brave.\nОни красивые и храбрые."
+],
+"answer": "I like animals.\nMy favourite animals are wolves and foxes.\nThey are nice and brave."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем, куда приглашает Хелен Майка и как она это делает.",
+"А: Давай пойдём в зоопарк.\nБ: Почему нет? Я люблю животных.",
+"Let's go to the Zoo.\nДавай пойдём в зоопарк."
+],
+"answer": "А: Давай пойдём в зоопарк.\nБ: Почему нет? Я люблю животных."
+}
+]
+},
+{
+"number": "5-s63",
+"num": "5",
+"page": 63,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138776,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова в открытом и закрытом слоге.",
+"WORDLIST 1\ngame — игра\nlake — озеро\nname — имя\ntale — сказка\ncave — пещера\ntake — брать\nbrave — храбрый\nskate — кататься\nWORDLIST 2\nmap — карта\ncat — кот\ntag — салочки\nblack — чёрный\nfat — толстый\nrat — крыса\nhat — шапка\nthat — тот",
+"",
+"Открытый слог:\nGame.\nLake.\nName.\nTale.\nCave.\nTake.\nBrave.\nSkate.\nЗакрытый слог:\nMap.\nCat.\nTag.\nBlack.\nFat.\nRat.\nHat.\nThat."
+],
+"answer": "Открытый слог:\nGame (игра).\nLake (озеро).\nName (имя).\nTale (сказка).\nCave (пещера).\nTake (брать).\nBrave (храбрый).\nSkate (кататься).\nЗакрытый слог:\nMap (карта).\nCat (кот).\nTag (салочки).\nBlack (чёрный).\nFat (толстый).\nRat (крыса).\nHat (шапка).\nThat (тот)."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова в открытом и закрытом слоге.",
+"WORDLIST\nbake — печь\nplane — самолёт\ndad — папа\ntake — брать\nman — мужчина\nflag — флаг\nchase — догонять\nhand — рука",
+"",
+"Открытый слог:\nBake.\nPlane.\nTake.\nChase.\nЗакрытый слог:\nDad.\nMan.\nFlag.\nHand."
+],
+"answer": "Открытый слог:\nBake (печь).\nPlane (самолёт).\nTake (брать).\nChase (догонять).\nЗакрытый слог:\nDad (папа).\nMan (мужчина).\nFlag (флаг).\nHand (рука)."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти слова, которые читаются не так, как остальные слова в строчке.",
+"WORDLIST 1\ncave — пещера\nlake — озеро\nskate — кататься\nblack — чёрный\nname — имя\nbrave — храбрый\nWORDLIST 2\nmap — карта\ntag — салочки\ncat — кот\ntale — сказка\nfat — толстый\nrat — крыса",
+"",
+"Первая строчка:\nCave.\nLake.\nSkate.\nBlack.\nName.\nBrave.\nВторая строчка:\nMap.\nTag.\nCat.\nTale.\nFat.\nRat.",
+"Black (закрытый слог).\nTale (открытый слог)."
+],
+"answer": "Black (закрытый слог).\nTale (открытый слог)."
+},
+{
+"name": "4",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти слова, которые читаются как первое слово в каждой строчке.",
+"WORDLIST\ncat — кот\ntale — сказка\ncave — пещера\nmap — карта\nlake — озеро\nname — имя\nskate — кататься\nblack — чёрный\ntag — салочки\nhat — шапка",
+"",
+"Cat.\nTale.\nCave.\nMap.\nLake.\nName.\nSkate.\nBlack.\nTag.\nHat.",
+"Map (карта).\nTale (сказка)."
+],
+"answer": "Map (карта).\nTale (сказка)."
+},
+{
+"name": "5",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать короткие стихотворения.",
+"",
+"Пэт — торт, Пэт — торт.\nPat — a cake, pat — a cake,\nПекарь,\nBaker's man,\nИспеки мне торт\nBake me a cake\nТак быстро, как можешь.\nAs fast as you can.\nПохлопай здесь,\nClap it here,\nПохлопай там,\nClap it there,\nЧапатти в твоей руке,\nChappatti in your hand,\nChappatti in your hand,\nChappatti in your hand."
+],
+"answer": "Пэт — торт, Пэт — торт.\nПекарь,\nИспеки мне торт\nТак быстро, как можешь.\nПохлопай здесь,\nПохлопай там,\nЧапатти в твоей руке,\nЧапатти в твоей руке,\nЧапатти в твоей руке."
+}
+]
+},
+{
+"number": "6-s63",
+"num": "6",
+"page": 63,
+"chapter": "Lesson 18. I like animals",
+"skyId": 138777,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расскажем о своих любимых животных. Для этого перейдём на с. 105 рабочей тетради и заполним раздел «Мои любимые животные».",
+"WORDLIST 1\nraccoons — еноты\nhorses — лошади\nfoxes — лисы\nrabbits — кролики\nparrots — попугаи\nwolves — волки\ntigers — тигры\nmice — мыши\ndogs — собаки\nbears — медведи\ncats — кошки\npigs — свиньи",
+"WORDLIST 2\nfunny — забавный\nbrave — храбрый\nnice — красивый\ncute — милый\njoyful — жизнерадостный\nevil — злой\nmerry — весёлый\nfriendly — дружелюбный",
+"Мои любимые животные\nМои любимые животные — кошки (cats) и собаки (dogs).\nОни забавные (funny), милые (cute) и дружелюбные (friendly).\nОни мои хорошие друзья (good friends)."
+],
+"answer": "Мои любимые животные\nМои любимые животные — кошки (cats) и собаки (dogs).\nОни забавные (funny), милые (cute) и дружелюбные (friendly).\nОни мои хорошие друзья (good friends)."
+}
+]
+},
+{
+"number": "1-s64",
+"num": "1",
+"page": 64,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138778,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки, прослушаем аудиозапись и узнаем, в какие игры любят играть Барни и его друзья.",
+"WORDLIST\nhide-and-seek — прятки\nsports — спорт\ncomputer games — компьютерные игры\nbingo — бинго\nhopscotch — классики\ntag — салочки",
+"Они любят играть в прятки, заниматься спортом, играть в компьютерные игры, бинго, классики и салочки."
+],
+"answer": "Они любят играть в прятки, заниматься спортом, играть в компьютерные игры, бинго, классики и салочки."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, в какие из этих игр ты любишь играть с друзьями.",
+"WORDLIST\nhide-and-seek — прятки\nsports — спорт\ncomputer games — компьютерные игры\nbingo — бинго\nhopscotch — классики\ntag — салочки",
+"We like playing hide-and-seek and tag.\nМы люблю играть в прятки и салочки."
+],
+"answer": "We like playing hide-and-seek and tag."
+}
+]
+},
+{
+"number": "2-s66",
+"num": "2",
+"page": 66,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138779,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Послушаем любимую считалочку Майка и скажем, что он считает.",
+"",
+"Одна маленькая, две маленькие, три маленькие рыбки,\nЧетыре маленькие, пять маленьких, шесть маленьких,\nСемь маленьких, восемь маленьких, девять маленьких рыбок,\nДесять маленьких рыбок!",
+"Fishes.\nРыбок."
+],
+"answer": "Fishes."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, сколько рыбок насчитал Майк и как он их считал.",
+"",
+"Одна маленькая, две маленькие, три маленькие рыбки,\nЧетыре маленькие, пять маленьких, шесть маленьких,\nСемь маленьких, восемь маленьких, девять маленьких рыбок,\nДесять маленьких рыбок!",
+"Ten fishes.\nДесять рыбок.\nOne, two, three, four, five, six, seven, eight, nine, ten little fishes.\nОдна, две, три, четыре, пять, шесть, семь, восемь, девять, десять маленьких рыбок."
+],
+"answer": "Ten fishes.\nOne, two, three, four, five, six, seven, eight, nine, ten little fishes."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Выучим любимую считалочку Майка.",
+"",
+"Одна маленькая, две маленькие, три маленькие рыбки,\nЧетыре маленькие, пять маленьких, шесть маленьких,\nСемь маленьких, восемь маленьких, девять маленьких рыбок,\nДесять маленьких рыбок!"
+],
+"answer": "Одна маленькая, две маленькие, три маленькие рыбки,\nЧетыре маленькие, пять маленьких, шесть маленьких,\nСемь маленьких, восемь маленьких, девять маленьких рыбок,\nДесять маленьких рыбок!"
+}
+]
+},
+{
+"number": "3-s66",
+"num": "3",
+"page": 66,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138780,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игры «Обведи цифру» и «Сколько?».",
+"Игроки делятся на две команды и должны построиться друг за другом у доски. Учитель называет любое число и та команда, чей игрок первым обведёт мелком на доске названное число, получает очко. Затем первые игроки меняются и игра продолжается.",
+"Учитель загадывает число и хлопает в ладоши количество раз, соответствующее загаданной цифре, спрашивая: «How many?». Участники говорят это число и хлопают в ладоши.",
+""
+],
+"answer": "Поиграем в игры."
+}
+]
+},
+{
+"number": "4-s67",
+"num": "4",
+"page": 67,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138781,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Узнаем, в какую игру Майк предлагает Хелен поиграть и как он это делает.",
+"WORDLIST\nhide-and-seek — прятки\ncount — считать(-ся)",
+"А: Давай поиграем.\nБ: Почему бы и нет?\nА: Давай поиграем в прятки.\nБ: Да. Давай посчитаемся.",
+"Let's play.\nДавай поиграем."
+],
+"answer": "А: Давай поиграем.\nБ: Почему бы и нет?\nА: Давай поиграем в прятки.\nБ: Да. Давай посчитаемся."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Скажем, соглашается ли Хелен поиграть с Майком и что она говорит.",
+"WORDLIST\nhide-and-seek — прятки\ncount — считать(-ся)",
+"А: Давай поиграем.\nБ: Почему бы и нет?\nА: Давай поиграем в прятки.\nБ: Да. Давай посчитаемся.",
+"Why not?\nПочему бы и нет?"
+],
+"answer": "Хелен соглашается поиграть, сказав: «Why not?»."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"В парах будем предлагать друг другу поиграть в ваши любимые игры. Не забудем посчитаться.",
+"WORDLIST\nhide-and-seek — прятки\nsports — спорт\ncomputer games — компьютерные игры\nbingo — бинго\nhopscotch — классики\ntag — салочки",
+"A: Let's play. Давай поиграем.\nB: Why not? Почему бы и нет?\nA: Let's play tag. Давай поиграем в салочки.\nB: Yes. Let's count. Да. Давай посчитаемся."
+],
+"answer": "A: Let's play.\nB: Why not?\nA: Let's play tag.\nB: Yes. Let's count."
+}
+]
+},
+{
+"number": "5-s67",
+"num": "5",
+"page": 67,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138782,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заполним информацию о себе на с. 104 рабочей тетради.",
+"I am…\nHi, I am Nastya. Привет, я Настя.\nI am eight. Мне восемь лет.\nI'm from Russia. Я из России."
+],
+"answer": "I am…\nHi, I am Nastya.\nI am eight.\nI'm from Russia."
+}
+]
+},
+{
+"number": "6-s67",
+"num": "6",
+"page": 67,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138783,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вспомнить, как читаются буквы I и Y в словах, а затем потренироваться в чтении (страница 105 в учебнике).",
+"",
+"",
+"/aɪ/\nПривет, милый, нравиться, мыши, девять, тигр, кататься, пять, велосипед.\n/aɪ/\nМой, у, пока, летать, почему.\n/ɪ/\nВ, это, сидеть, большой, свинья, молоко, этот, шесть, рыба, плавать."
+],
+"answer": "/aɪ/\nПривет, милый, нравиться, мыши, девять, тигр, кататься, пять, велосипед.\n/aɪ/\nМой, у, пока, летать, почему.\n/ɪ/\nВ, это, сидеть, большой, свинья, молоко, этот, шесть, рыба, плавать."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вспомнить, как читаются буквы I и Y в словах, а затем потренироваться в чтении (страница 105 в учебнике).",
+"",
+"",
+"/aɪ/\nБелый тигр. Девять труб. Пять мышей. Мой велосипед. Майк, прячься!\n/ɪ/\nБольшая рыба. Маленькая розовая свинка. Шесть сестёр. Сёстры-близнецы. Маленькие дети. \n/aɪ/ / /ɪ/\nМоя маленькая свинка. Девять детей. Шесть мышей. Большой тигр. Пять рыбок. Белая зима."
+],
+"answer": "/aɪ/\nБелый тигр. Девять труб. Пять мышей. Мой велосипед. Майк, прячься!\n/ɪ/\nБольшая рыба. Маленькая розовая свинка. Шесть сестёр. Сёстры-близнецы. Маленькие дети.\n/aɪ/ / /ɪ/\nМоя маленькая свинка. Девять детей. Шесть мышей. Большой тигр. Пять рыбок. Белая зима."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вспомнить, как читаются буквы I и Y в словах, а затем потренироваться в чтении (страница 105 в учебнике). В этом задании нам нужно в каждой строчке найти по два слова, в которых i и y читаются не так, как в остальных словах.",
+"",
+"",
+"1. Кататься, поездка (trip), мой, велосипед, милый, корабль (ship).\nВ словах trip и ship звук /ɪ/, а в остальных — /aɪ/.\n2. Большой, розовый, тигр (tiger), с, белый (white), весна. \nВ словах tiger и white звук /aɪ/, а в остальных — /ɪ/.\n3. Хорошо, маленький (little), пока, почему, у, деревня (village).\nВ словах little и village звук /ɪ/, а в остальных — /aɪ/.\n4. Петь, слушать, летать (fly), плавать, рыба, нравиться (like). \nВ словах fly и like звук /aɪ/, а в остальных — /ɪ/."
+],
+"answer": "Trip, ship.\nTiger, white.\nLittle, village.\nFly, like."
+}
+]
+},
+{
+"number": "7-s67",
+"num": "7",
+"page": 67,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138784,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем названия пяти любимых игр Барни по-английски.",
+"WORDLIST\nhide-and-seek — прятки\nsports — спортивные игры\ncomputer games — компьютерные игры\nbingo — бинго\nhopscotch — классики\ntag — салки",
+"Hide-and-seek.\nHopscotch.\nBingo.\nTag.\nSports."
+],
+"answer": "Hide-and-seek.\nHopscotch.\nBingo.\nTag.\nSports."
+}
+]
+},
+{
+"number": "8-s67",
+"num": "8",
+"page": 67,
+"chapter": "Lesson 19. Let's play!",
+"skyId": 138785,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заменим слова цифрами на игровом поле Незнайки и проверим, все ли цифры от 1 до 10 есть на его игровом поле, и каких цифр нет.",
+"",
+"4\n 1\n 5\n 7\n 9\n 2\n 3\n 1\n 4\n 8\n 2\n 5",
+"Нет цифр 6 и 10."
+],
+"answer": "Нет цифр 6 и 10."
+}
+]
+},
+{
+"number": "1-s68",
+"num": "1",
+"page": 68,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138786,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем вопросы, которые задавали о символе Олимпиады. Также прочитаем ответы на эти вопросы.",
+"WORDLIST\nmascot — талисман\nanimal — животное\ncomputer — компьютер\ncharacter — персонаж, герой",
+"Что такое Иззи?\nИззи — это талисман.\nИззи — животное?\nНет. Иззи не животное. Иззи — это компьютерный герой.",
+""
+],
+"answer": "Что такое Иззи?\nИззи — это талисман.\nИззи — животное?\nНет. Иззи не животное. Иззи — это компьютерный герой."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем, кто такой Иззи.",
+"WORDLIST\nmascot — талисман\nanimal — животное\ncomputer — компьютер\ncharacter — персонаж, герой",
+"Что такое Иззи?\nИззи — это талисман.\nИззи — животное?\nНет. Иззи не животное. Иззи — это компьютерный герой.",
+"Izzy is a mascot. He is a computer character. Иззи — это талисман. Он — компьютерный персонаж."
+],
+"answer": "Izzy is a mascot. He is a computer character."
+}
+]
+},
+{
+"number": "2-s69",
+"num": "2",
+"page": 69,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138787,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Костюм талисмана украшен кольцами. Они обозначают материки. Прочитаем их названия и найдём на карте.",
+"WORDLIST\nAmerica — Америка\nAsia — Азия\nAustralia — Австралия\nEurope — Европа\nAfrica — Африка",
+"America.\nAsia.\nAustralia.\nEurope.\nAfrica.",
+"Это Америка.\nЭто Азия.\nЭто Австралия.\nЭто Европа.\nЭто Африка."
+],
+"answer": "Это Америка.\nЭто Азия.\nЭто Австралия.\nЭто Европа.\nЭто Африка."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Зададим вопросы создателям талисмана, из какой они части света.",
+"WORDLIST\nAmerica — Америка\nAsia — Азия\nAustralia — Австралия\nEurope — Европа\nAfrica — Африка",
+"Иззи из Австралии?",
+"",
+"Is Izzy from America? Иззи из Америки?\nIs Izzy from Asia? Иззи из Азии?\nIs Izzy from Europe? Иззи из Европы?\nIs Izzy from Africa? Иззи из Африки?"
+],
+"answer": "Is Izzy from America?\nIs Izzy from Asia?\nIs Izzy from Europe?\nIs Izzy from Africa?"
+}
+]
+},
+{
+"number": "3-s70",
+"num": "3",
+"page": 70,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138788,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Ознакомимся с новыми словами и составим мини диалоги.",
+"WORDLIST\nmouse — мышь\ncomputer — компьютер\ncomputer mouse — компьютерная мышь\nteddy bear — плюшевый медведь\nfootball — футбольный мяч\nskateboard — скейтборд\nbicycle — велосипед\nbook — книга\narrow — стрела\nbow — лук\ncar — машина",
+"",
+"A: Is Izzy + новое слово?\nB: Here it is.",
+"1.\nA: Is Izzy a mouse? А: Иззи — мышь?\nB: Here it is. Б: Вот.\n2.\nA: Is Izzy a computer? А: Иззи — компьютер?\nB: Here it is. Б: Вот.\n3.\nA: Is Izzy a computer mouse? А: Иззи — компьютерная мышь?\nB: Here it is. Б: Вот.\n4.\nA: Is Izzy a teddy bear? А: Иззи — плюшевый медведь?\nB: Here it is. Б: Вот.\n5.\nA: Is Izzy a football? А: Иззи — футбольный мяч?\nB: Here it is. Б: Вот.\n6.\nA: Is Izzy a skateboard? А: Иззи — скейтборд?\nB: Here it is. Б: Вот.\n7.\nA: Is Izzy a bicycle? А: Иззи — велосипед?\nB: Here it is. Б: Вот.\n8.\nA: Is Izzy a book? А: Иззи — книга?\nB: Here it is. Б: Вот.\n9.\nA: Is Izzy an arrow? А: Иззи — стрела?\nB: Here it is. Б: Вот.\n10.\nA: Is Izzy a bow? А: Иззи — лук?\nB: Here it is. Б: Вот.\n11.\nA: Is Izzy a car? А: Иззи — машина?\nB: Here it is. Б: Вот."
+],
+"answer": "1.\nA: Is Izzy a mouse?\nB: Here it is.\n2.\nA: Is Izzy a computer?\nB: Here it is.\n3.\nA: Is Izzy a computer mouse?\nB: Here it is.\n4.\nA: Is Izzy a teddy bear?\nB: Here it is.\n5.\nA: Is Izzy a football?\nB: Here it is.\n6.\nA: Is Izzy a skateboard?\nB: Here it is.\n7.\nA: Is Izzy a bicycle?\nB: Here it is.\n8.\nA: Is Izzy a book?\nB: Here it is.\n9.\nA: Is Izzy an arrow?\nB: Here it is.\n10.\nA: Is Izzy a bow?\nB: Here it is.\n11.\nA: Is Izzy a car?\nB: Here it is."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим мини диалоги. Напишем, кем является Иззи. Ответим утвердительно или отрицательно.",
+"WORDLIST\nmouse — мышь\ncomputer — компьютер\ncomputer mouse — компьютерная мышь\nteddy bear — плюшевый медведь\nfootball — футбольный мяч\nskateboard — скейтборд\nbicycle — велосипед\nbook — книга\narrow — стрела\nbow — лук\ncar — машина",
+"A: Is Izzy + новое слово?\nB: Yes, he is. / No, he is not.",
+"1.\nA: Is Izzy a mouse? А: Иззи — мышь?\nB: No, he is not. Б: Нет.\n2.\nA: Is Izzy a computer? А: Иззи — компьютер?\nB: No, he is not. Б: Нет.\n3.\nA: Is Izzy a computer mouse? А: Иззи — компьютерная мышь?\nB: No, he is not. Б: Нет.\n4.\nA: Is Izzy a teddy bear? А: Иззи — плюшевый медведь?\nB: No, he is not. Б: Нет.\n5.\nA: Is Izzy a football? А: Иззи — футбольный мяч?\nB: No, he is not. Б: Нет."
+],
+"answer": "1.\nA: Is Izzy a mouse?\nB: No, he is not. \n2.\nA: Is Izzy a computer?\nB: No, he is not. \n3.\nA: Is Izzy a computer mouse? \nB: No, he is not. \n4.\nA: Is Izzy a teddy bear? \nB: No, he is not. \n5.\nA: Is Izzy a football?\nB: No, he is not."
+}
+]
+},
+{
+"number": "4-s71",
+"num": "4",
+"page": 71,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138789,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова и словосочетания, обращая внимание на звук.",
+"WORDLIST\nstar — звезда\nred — красный\nbig — большой\nchimp — шимпанзе\nfunny — весёлый\nqueen — королева\nchick — цыплёнок\ntroll — тролль\nkid — козлёнок\nquilt — одеяло\nfarm — ферма\npark — парк\nelf — эльф\ndog — собака\nhorse — лошадь\ncherry — вишня\nfox — лиса\nfish — рыба",
+"1.\nЗвезда.\nКрасная звезда.\nБольшая красная звезда.\nШимпанзе.\nСчастливый шимпанзе.\nСчастливый весёлый шипанзе.\nЛошадь.\nМаленькая лошадь.\nМаленькая чёрная лошадь.\n2.\nГрустная королева.\nГрустный цыплёнок.\nГрустный тролль.\nВесёлый тролль.\nВесёлый кот.\nВесёлый козлёнок.\nСчастливая королева.\nСчастливый эльф.\nСчастливая собака.\n3.\nХорошее маленькое одеяло.\nХорошая большая ферма.\nХороший зелёный парк.\nПлохая красная лиса.\nПлохая большая рыба.\nПлохя зелёная вишня.",
+""
+],
+"answer": "1.\nЗвезда.\nКрасная звезда.\nБольшая красная звезда.\nШимпанзе.\nСчастливый шимпанзе.\nСчастливый весёлый шипанзе.\nЛошадь.\nМаленькая лошадь.\nМаленькая чёрная лошадь.\n2.\nГрустная королева.\nГрустный цыплёнок.\nГрустный тролль.\nВесёлый тролль.\nВесёлый кот.\nВесёлый козлёнок.\nСчастливая королева.\nСчастливый эльф.\nСчастливая собака.\n3.\nХорошее маленькое одеяло.\nХорошая большая ферма.\nХороший зелёный парк.\nПлохая красная лиса.\nПлохая большая рыба.\nПлохя зелёная вишня."
+}
+]
+},
+{
+"number": "5-s71",
+"num": "5",
+"page": 71,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138790,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Раскрасим олимпийские кольца в нужные цвета.",
+"",
+"Europe — blue. Европа — голубой.\nAfrica — black. Африка — чёрный.\nAmerica — red. Америка — красный.\nAsia — yellow. Азия — жёлтый.\nAustralia — green. Австралия — зелёный."
+],
+"answer": "Europe — blue. \nAfrica — black. \nAmerica — red. \nAsia — yellow. \nAustralia — green."
+}
+]
+},
+{
+"number": "6-s71",
+"num": "6",
+"page": 71,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138791,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Рассмотрим талисман летних Олимпийских игр, проходивших в Москве в 1980 году. Ответьтим на вопросы, используя подходящие по смыслу слова из рамочки.",
+"Что это? \nОн что, животное? \nКак его зовут? \nОн из России? \nОн дружелюбен?",
+"Это талисман.\nОн бурый медведь.\nЕго зовут Миша.\nОн из России.\nОн дружелюбный и добрый.",
+"WORDLIST\nmascot — талисман\nbear — медведь\nRussia — Россия\nfriendly — дружелюбный\nkind — добрый",
+"It is a mascot.\nHe is a brown bear.\nHis name is Misha.\nHe is from Russia.\nHe is friendly and kind.",
+"Леопард, полярный медвежонок и зайчишка."
+],
+"answer": "It is a mascot.\nHe is a brown bear.\nHis name is Misha.\nHe is from Russia.\nHe is friendly and kind."
+}
+]
+},
+{
+"number": "7-s71",
+"num": "7",
+"page": 71,
+"chapter": "Lesson 20. Is Izzy an animal?",
+"skyId": 138792,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем несколько предложений о себе и о том, отк",
+"WORDLIST\nRussian — русский, русская\nRussia — Россия",
+"Я...\nЯ являюсь...\nЯ из...",
+"I am Ann. Я — Анна.\nI am Russian. Я — русская.\nI am from Russia. Я из России."
+],
+"answer": "I am Ann.\nI am Russian.\nI am from Russia."
+}
+]
+},
+{
+"number": "1-s72",
+"num": "1",
+"page": 72,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138793,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно изучить названия видов спорта и сказать, какие из них летние, а какие зимние.",
+"WORDLIST\ntennis — теннис\nswimming — плавание\nskating — фигурное катание\nfootball — футбол\nskiing — лыжи",
+"Skating and skiing are winter sports.\nTennis, swimming and football are summer sports."
+],
+"answer": "Skating and skiing are winter sports.\nTennis, swimming and football are summer sports."
+}
+]
+},
+{
+"number": "2-s73",
+"num": "2",
+"page": 73,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138794,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать диалог.",
+"— Иззи! Ты талисман зимних игр?\n— Отгадайте!\n— Ты хорошо умеешь кататься на коньках?\n— Нет.\n— Ты хорошо умеешь плавать?\n— Да.\n— Ты талисман летних игр!\n— Да!"
+],
+"answer": "— Иззи! Ты талисман зимних игр?\n— Отгадайте!\n— Ты хорошо умеешь кататься на коньках?\n— Нет.\n— Ты хорошо умеешь плавать?\n— Да.\n— Ты талисман летних игр!\n— Да!"
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно ответить, удалось ли Хелен и Майку отгадать, талисманом каких игр является Иззи. Скажем, как Хелен и Майк об этом говорят.",
+"— Иззи! Ты талисман зимних игр?\n— Отгадайте!\n— Ты хорошо умеешь кататься на коньках?\n— Нет.\n— Ты хорошо умеешь плавать?\n— Да.\n— Ты талисман летних игр!\n— Да!",
+"Yes. (Да.)",
+"Izzy is a summer mascot. Иззи — талисман летних игр."
+],
+"answer": "Izzy is a summer mascot."
+}
+]
+},
+{
+"number": "3-s74",
+"num": "3",
+"page": 74,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138795,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно построить вопросы, для того, чтобы узнать побольше об олимпийском талисмане Рони.",
+"Are you a dog? Ты собака?\nAre you a rabbit? Ты кролик?\nAre you a wolf? Ты волк?\nAre you a fox? Ты лиса?\nAre you a raccoon? Ты енот?\nAre you from Australia? Ты из Австралии?\nAre you from Europe? Ты из Европы?\nAre you from Asia? Ты из Азии?\nAre you from Africa? Ты из Африки?\nAre you from America? Ты из Америки?\nAre you good at football? Ты хорошо играешь в футбол? \nAre you good at swimming? Ты хорошо плаваешь?\nAre you good at skiing? Ты хорошо катаешься на лыжах?\nAre you good at skating? Ты хорошо катаешься на коньках?\nAre you good at tennis? Ты хорошо играешь в теннис?\nAre you good at summer sports? Ты хорош в летних видах спорта?\nAre you good at winter sports? Ты хорош в зимних видах спорта?",
+"Pupil: Are you a wolf?\nRoni: No, I'm not.\nPupil: Are you a fox?\nRoni: No, I'm not.\nPupil: Are you a raccoon?\nRoni: Yes, I am.\nPupil: Are you from Asia?\nRoni: No, I'm not.\nPupil: Are you from America?\nRoni: Yes, I am.\nPupil: Are you good at swimming?\nRoni: No, I'm not.\nPupil: Are you good at summer sports?\nRoni: No, I'm not.\nPupil: Are you good at winter sports?\nRoni: Yes, I am.\nPupil: Are you good at skating?\nRoni: Yes, I am.",
+"Ученик: Ты волк?\nРони: Нет.\nУченик: Ты лиса?\nРони: Нет.\nУченик: Ты енот?\nРони: Да.\nУченик: Ты из Азии?\nРони: Нет.\nУченик: Ты из Америки?\nРони: Да.\nУченик: Ты хорошо плаваешь?\nРони: Нет.\nУченик: Ты хорош в летних видах спорта?\nРони: Нет.\nУченик: Ты хорош в зимних видах спорта?\nРони: Да.\nУченик: Ты хорошо катаешься на коньках?\nРони: Да."
+],
+"answer": "Pupil: Are you a wolf?\nRoni: No, I'm not.\nPupil: Are you a fox?\nRoni: No, I'm not.\nPupil: Are you a raccoon?\nRoni: Yes, I am.\nPupil: Are you from Asia?\nRoni: No, I'm not.\nPupil: Are you from America?\nRoni: Yes, I am.\nPupil: Are you good at swimming?\nRoni: No, I'm not.\nPupil: Are you good at summer sports?\nRoni: No, I'm not.\nPupil: Are you good at winter sports?\nRoni: Yes, I am.\nPupil: Are you good at skating?\nRoni: Yes, I am."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сказать, талисманом каких игр (летних или зимних) является Рони.",
+"Pupil: Are you a wolf?\nRoni: No, I'm not.\nPupil: Are you a fox?\nRoni: No, I'm not.\nPupil: Are you a raccoon?\nRoni: Yes, I am.\nPupil: Are you from Asia?\nRoni: No, I'm not.\nPupil: Are you from America?\nRoni: Yes, I am.\nPupil: Are you good at swimming?\nRoni: No, I'm not.\nPupil: Are you good at summer sports?\nRoni: No, I'm not.\nPupil: Are you good at winter sports?\nRoni: Yes, I am.\nPupil: Are you good at skating?\nRoni: Yes, I am.",
+"Roni is a winter mascot. Рони — зимний талисман."
+],
+"answer": "Roni is a winter mascot."
+}
+]
+},
+{
+"number": "4-s75",
+"num": "4",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138796,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно расспросить Иззи о том, талисманами каких игр являются Олли, Сид и Милли.",
+"Are Olly, Syd and Millie from Australia? Олли, Сид и Милли из Австралии?\nAre Olly, Syd and Millie from Europe? Олли, Сид и Милли из Европы?\nAre Olly, Syd and Millie from Asia? Олли, Сид и Милли из Азии?\nAre Olly, Syd and Millie from Africa? Олли, Сид и Милли из Африки?\nAre Olly, Syd and Millie from America? Олли, Сид и Милли из Америки?\nAre Olly, Syd and Millie good at football? Олли, Сид и Милли хорошо играют в футбол?\nAre Olly, Syd and Millie good at swimming? Олли, Сид и Милли хорошо плавают?\nAre Olly, Syd and Millie good at skiing? Олли, Сид и Милли хорошо катаются на лыжах?\nAre Olly, Syd and Millie good at skating? Олли, Сид и Милли хорошо катаются на коньках?\nAre Olly, Syd and Millie good at tennis? Олли, Сид и Милли хорошо играют в теннис?\nAre Olly, Syd and Millie at summer sports? Олли, Сид и Милли хороши в летних видах спорта?\nAre Olly, Syd and Millie at winter sports? Олли, Сид и Милли хороши в зимних видах спорта?\nAre Olly, Syd and Millie winter mascots? Олли, Сид и Милли зимние талисманы?\nAre Olly, Syd and Millie summer mascots? Олли, Сид и Милли летние талисманы?",
+"Pupils: Are Olly, Syd and Millie from America?\nIzzy: No, they aren't.\nPupils: Are Olly, Syd and Millie from Australia?\nIzzy: Yes, they are.\nPupils: Are they good at summer sports?\nIzzy: Yes, they are.\nPupils: Are they summer mascots?\nIzzy: Yes, they are.",
+"Ученики: Олли, Сид и Милли из Америки?\nИззи: Нет.\nУченики: Олли, Сид и Милли из Австралии?\nИззи: Да.\nУченики: Хорошо ли они занимаются летними видами спорта?\nИззи: Да.\nУченики: Это летние талисманы?\nИззи: Да."
+],
+"answer": "Pupils: Are Olly, Syd and Milli from America?\nIzzy: No, they aren't.\nPupils: Are Olly, Syd and Milli from Australia?\nIzzy: Yes, they are.\nPupils: Are they good at summer sports?\nIzzy: Yes, they are.\nPupils: Are they summer mascots?\nIzzy: Yes, they are."
+}
+]
+},
+{
+"number": "5-s75",
+"num": "5",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138797,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно расспросить своих одноклассников о том, в каких видах спорта они преуспевают.",
+"Имя\n Игры\n Спорт\n Ваня\n Салки, бинго\n Футбол, плавание",
+"Are you good at football? Ты хорошо играешь в футбол?\nAre you good at swimming? Ты хорошо плаваешь?\nAre you good at skiing? Ты хорошо катаешься на лыжах?\nAre you good at skating? Ты хорошо катаешься на коньках?\nAre you good at tennis? Ты хорошо играешь в теннис?\nAre you good at tag? Ты хорошо играешь в салки?\nAre you good at bingo? Ты хорошо играешь в бинго?\nAre you good at hide-and-seek? Ты хорошо играешь в прятки?",
+"Name\n Games\n Sports\n Sasha\n Tag, hide-and-seek\n Skiing\n Katya\n Tag, hide-and-seek\n Gymnastic\n Arina\n Bingo\n Skating"
+],
+"answer": "Name\n Games\n Sports\n Sasha\n Tag, hide-and-seek\n Skiing\n Katya\n Tag, hide-and-seek\n Gymnastic\n Arina\n Bingo\n Skating"
+}
+]
+},
+{
+"number": "6-s75",
+"num": "6",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138798,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно заполнить информацию о себе в графе «Sports and games I like» в рабочей тетради.",
+"WORDLIST\nsummer games — летние игры \nwinter games — зимние игры",
+"I like summer games. \nI like playing tennis.\nI am good at swimming.\nI like basketball and volleyball.\nI like playing tag with my friends.",
+"Мне нравятся летние игры.\nМне нравится играть в теннис.\nЯ хорошо плаваю.\nЯ люблю баскетбол и волейбол.\nМне нравится играть в салки со своими друзьями."
+],
+"answer": "I like summer games. \nI like playing tennis.\nI am good at swimming.\nI like basketball and volleyball.\nI like playing tag with my friends."
+}
+]
+},
+{
+"number": "7-s75",
+"num": "7",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138799,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и предложения с буквой Oo.",
+"WORDLIST\nhome — дом\nfox — лиса\nsong — песня\nfrog — лягушка\norange — апельсин, оранжевый",
+"",
+"О нет! Иди домой! Пойдём! Привет! Я дома!\nна, нет, лиса, собака, из, песня, лягушка, жаль.\nАпельсин оранжевый. Собака и лягушка. Доктор Фостер.\nО, нет. Мне жаль. Здравствуйте, доктор Фостер. Том, пойдём домой!"
+],
+"answer": "О нет! Иди домой! Пойдём! Привет! Я дома!\nна, нет, лиса, собака, из, песня, лягушка, жаль.\nАпельсин оранжевый. Собака и лягушка. Доктор Фостер.\nО, нет. Мне жаль. Здравствуйте, доктор Фостер. Том, пойдём домой!"
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать четвёртую строчку упражнения 1 по правилу чтения открытого, а затем закрытого слова.",
+"WORDLIST\nsorry — жаль\nhello — здравствуй\ndoctor — врач\ngo — идти\nhome — дом",
+"",
+"О, нет. Мне жаль. Здравствуйте, доктор Фостер. Том, пойдём домой!"
+],
+"answer": "О, нет. Мне жаль. Здравствуйте, доктор Фостер. Том, пойдём домой!"
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно в каждой строчке найти слово, которое читается не так как остальные.",
+"WORDLIST\nfox — лиса\ndog — собака\nhome — дом\nsong — песня\nfrog — лягушка\nlog — бревно",
+"",
+"Not.\nFox.\nDog.\nHome.\nFrom.\nSong.\nFrog.\nLog.",
+"Home.\nNo.\nGo.\nSo.\nDoctor.\nHello.",
+"Home.\nDoctor."
+],
+"answer": "Home.\nDoctor."
+}
+]
+},
+{
+"number": "8-s75",
+"num": "8",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138800,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать как называются талисманы.",
+"WORDLIST\nraccoon — енот\nbear — медведь\nskater — конькобежец\nskier — лыжник\nmascot — талисман",
+"Raccoon.",
+"Bear.",
+"Skier.",
+"Skater."
+],
+"answer": "Скажем как называются талисманы."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вписать буквы выбранных нами вариантов ответов в клеточки. Мы узнаем имена талисманов летних Олимпийских игр в Афинах в 2004 году.",
+"A\n T\n H\n E\n N\n A\n P\n H\n E\n V\n O\n S",
+"Талисманы — брат и сестра. Их имена восходят к двум богам, участникам Олимпийских Игр: Фивос, бог света и музыки, известный как Аполлон; и Афина — богиня мудрости."
+],
+"answer": "Талисманы — брат и сестра. Их имена восходят к двум богам, участникам Олимпийских Игр: Фивос, бог света и музыки, известный как Аполлон; и Афина — богиня мудрости."
+}
+]
+},
+{
+"number": "9-s75",
+"num": "9",
+"page": 75,
+"chapter": "Lesson 21. Are you good at football?",
+"skyId": 138801,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно рассказать о нашем любимом талисмане зимних Олимпийских игр в Сочи в 2014 году.",
+"WORDLIST\nmascot — символ, талисман (спортивный, командный)",
+"This is my favourite mascot. \nHe is a bear.\nHis name is Mishka. \nHe is a winter macot. \nHe is good at skiing and ice skating.\nHe is nice.",
+"Это мой любимый талисман.\nОн — медведь.\nЕго зовут Мишка.\nОн — зимний талисман.\nОн хорошо катается на лыжах и коньках.\nОн милый."
+],
+"answer": "This is my favourite mascot. \nHe is a bear.\nHis name is Mishka. \nHe is a winter macot. \nHe is good at skiing and ice skating.\nHe is nice."
+}
+]
+},
+{
+"number": "1-s76",
+"num": "1",
+"page": 76,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138802,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В задании речь идёт о параде в честь Дня благодарения (Thanksgiving Day). Огромная движущаяся фигура индюка (Том Тёки) возглавляет этот парад. Нам нужно прослушать запись, посмотреть на картинки и сказать, что ещё находится на платформе с индейцами на параде.",
+"Tom Turkey, arrows, a bird, a boat, a turkey,Indians, a wigwam, a bow.",
+"WORDLIST\nTom Turkey — Том Тёки\narrows — стрелы\na bird — птица\na boat — лодка\na turkey — индейка\nIndians — индейцы\na wigwam — вигвам\na bow — лук",
+"Вигвам, лодка, лук и стрелы. A wigwam, a boat, arrows and a bow."
+],
+"answer": "A wigwam, a boat, arrows and a bow."
+}
+]
+},
+{
+"number": "2-s77",
+"num": "2",
+"page": 77,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138803,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно открыть рабочую тетрадь на странице 35. В упражнении 1 мы видим много предметов из деревни индейцев. Нам надо прослушать, как называются эти предметы и какого они цвета. Затем нам надо их раскрасить и записать их названия в соответствующие предложения.",
+"WORDLIST\nan arrow — стрела\na bird — птица\na boat — лодка\na turkey — индейка\nIndians — индейцы\na wigwam — вигвам\na bow — лук",
+"",
+"Лодка — жёлто‐голубая. Луки — коричневые. Стрелы — красные. Птица — чёрно‐зелёная. Индейка — коричневая, серая и красная. Вигвам — оранжевый, зелёный и коричневый.",
+"The boat is yellow and blue. The bows are brown. The arrows are red. The bird is green and black. The turkey is brown, grey and red. The wigwam is orange, green and brown."
+],
+"answer": "The boat is yellow and blue. The bows are brown. The arrows are red. The bird is green and black. The turkey is brown, grey and red. The wigwam is orange, green and brown."
+}
+]
+},
+{
+"number": "3-s77",
+"num": "3",
+"page": 77,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138804,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать и спеть песню «Десять маленьких индейцев».",
+"",
+"1 маленький, 2 маленьких, 3 маленьких индейца, 4 маленьких, 5 маленьких, 6 маленьких индейцев, 7 маленьких, 8 маленьких, 9 маленьких индейцев, 10 маленьких мальчиков индейцев.",
+"1 little, 2 little, 3 little Indians, 4 little, 5 little, 6 little Indians, 7 little, 8 little, 9little Indians, 10 little Indian boys."
+],
+"answer": "1 little, 2 little, 3 little Indians, 4 little, 5 little, 6 little Indians, 7 little, 8 little, 9little Indians, 10 little Indian boys."
+}
+]
+},
+{
+"number": "4-s77",
+"num": "4",
+"page": 77,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138805,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать стихотворение о вожде индейцев и сказать, что у него есть.",
+"WORDLIST\nan arrow — стрела\na boat — лодка\nan Indian — индеец\na wigwam — вигвам\na bow — лук",
+"Это — индеец.\nЭто — его вигвам.\nЭто — его лодка\nЭто — его стрелы и лук.\nА вот так он сидит.",
+"Это — индеец.\nЭто — его вигвам.\nЭто — его лодка\nЭто — его стрелы и лук.\nА вот так он сидит."
+],
+"answer": "A wigwam, a boat, arrows and a bow."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"На картинке мы видим дочь вождя индейцев Покахонтас. Нам нужно, глядя на картинку, дописать о ней стихотворение.",
+"WORDLIST\na bird — птица\na boat — лодка\na wigwam — вигвам\na girl — девочка\na raccoon — енот",
+"Это — маленькая индейская девочка.\nЭто — это её...\nЭто — это её...\nЭто — это её енот и её...\nА так она сидит.",
+"A girl — a bird.\nA boat — so.",
+"This is a little Indian girl.\nThis is her wigwam.\nThis is her boat.\nThis is her raccoon and her bird.\nThis is the way she sits just so."
+],
+"answer": "This is a little Indian girl.\nThis is her wigwam.\nThis is her boat.\nThis is her raccoon and her bird.\nThis is the way she sits just so."
+}
+]
+},
+{
+"number": "5-s78",
+"num": "5",
+"page": 78,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138806,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова, в которых буква U произносится по-разному.",
+"",
+"Cute.\nMusic.\nStudent.\nComputer.\nUse.\nTune.",
+"Duck.\nFunny.\nPlum.\nRun. \nHunt.\nBut.\nUnlucky."
+],
+"answer": "/juː/ Cute, music, student, computer, use, tune.\n/ʌ/ Duck, funny, plum, run, hunt, but, unlucky."
+}
+]
+},
+{
+"number": "6-s78",
+"num": "6",
+"page": 78,
+"chapter": "Lesson 22. This is a little Indian girl",
+"skyId": 138807,
+"subTasks": [
+{
+"name": "2.1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и обвести названия предметов и животных, отметить соответствующие картинки.",
+"Индюшка.\nTurkey.\nСтрела.\nArrow.\nЛодка.\nBoat.\nВигвам.\nWigwam.\nПтичка.\nBird.\nЛук.\nBow."
+],
+"answer": "Turkey.\nArrow.\nBoat.\nWigwam.\nBird.\nBow."
+},
+{
+"name": "2.2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и выписать название предмета, которого нет в деревне индейцев.",
+"Компьютер.\nComputer."
+],
+"answer": "Computer."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно нарисовать индейскую деревню и написать, что в ней есть.",
+"Индюшка.\nTurkey.\nСтрела.\nArrow.\nЛодка.\nBoat.\nВигвам.\nWigwam.\nПтичка.\nBird.\nКаное.\nCanoe.\nРека.\nRiver.\nЕнот.\nRaccoon.\nЛук.\nBow.\nЦветы.\nFlowers."
+],
+"answer": "Turkey.\nArrow.\nBoat.\nWigwam.\nBird.\nCanoe.\nRiver.\nRaccoon.\nBow.\nFlowers."
+}
+]
+},
+{
+"number": "1-s79",
+"num": "1",
+"page": 79,
+"chapter": "Lesson 23. There is a river in my village",
+"skyId": 138808,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать, что есть в деревне Покахонтас.",
+"",
+"В моей деревне есть река.\nВ моей деревне есть хижины."
+],
+"answer": "В моей деревне есть река. There is a river in my village.\nВ моей деревне есть хижины. There are wigwams in my village."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать, что есть в деревне Покахонтас.",
+"WORDLIST\nrabbit — кролик\nturkey — индюшка\nbows and arrows — лук и стрелы\nbirds and animals — птицы и животные\nboats — лодки",
+"",
+"В моей деревне есть кролик.\nВ моей деревне есть индюшка.\nВ моей деревне есть лук и стрелы.\nВ моей деревне есть птицы и животные.\nВ моей деревне есть лодки."
+],
+"answer": "Она использует конструкцию there is / there are."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинку и сказать, сколько предметов, животных и птиц есть в деревне Покахонтас.",
+"WORDLIST\nrabbit — кролик\nturkey — индюшка\nbows and arrows — лук и стрелы\nbirds and animals — птицы и животные\nboats — лодки",
+"",
+"",
+"There is 1 turkey in her village. В её деревне 1 индюшка.\nThere are 7 wigwams in her village. В её деревне 7 хижин.\nThere is 1 rabbit in her village. В её деревне 1 кролик.\nThere are 3 bows and 9 arrows in her village. В её деревне 3 лука и 9 стрел.\nThere are 4 boats in her village. В её деревне 4 лодки.\nThere are 3 birds in her village. В её деревне 3 птицы."
+],
+"answer": "There is 1 turkey in her village.\nThere are 7 wigwams in her village.\nThere is 1 rabbit in her village.\nThere are 3 bows and 9 arrows in her village.\nThere are 4 boats in her village.\nThere are 3 birds in her village."
+}
+]
+},
+{
+"number": "2-s80",
+"num": "2",
+"page": 80,
+"chapter": "Lesson 23. There is a river in my village",
+"skyId": 138809,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинку и сказать, сколько животных пришло в гости к Покахонтас.",
+"WORDLIST\nbear — медведь\nowl — сова\nfox — лиса\nrabbit — кролик\nraccoon — енот\nbird — птица",
+"",
+"",
+"There is 1 bear in her village. В её деревне 1 медведь.\nThere is 1 owl in her village. В её деревне 1 сова.\nThere are 2 foxes in her village. В её деревне 2 лисы.\nThere are 5 rabbits in her village. В её деревне 5 кроликов.\nThere are 3 raccoons in her village. В её деревне 3 енота.\nThere are 4 birds in her village. В её деревне 4 птицы."
+],
+"answer": "There is 1 bear in her village.\nThere is 1 owl in her village.\nThere are 2 foxes in her village.\nThere are 5 rabbits in her village.\nThere are 3 raccoons in her village.\nThere are 4 birds in her village."
+}
+]
+},
+{
+"number": "3-s80",
+"num": "3",
+"page": 80,
+"chapter": "Lesson 23. There is a river in my village",
+"skyId": 138810,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на фотографию и описать Лондон.",
+"WORDLIST\nbridge — мост\nhouse — дом\nstreet — улица",
+"",
+"There are bridges in London. В Лондоне есть мосты.\nThere are houses in London. В Лондоне есть дома.\nThere are streets in London. В Лондоне есть улицы."
+],
+"answer": "There are bridges in London. \nThere are houses in London. \nThere are streets in London."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать диалог и написать отличия Лондона от деревни Покахонтас.",
+"WORDLIST\nbridge — мост\nhouse — дом\nstreet — улица",
+"",
+"Покахонтас: Лондон — это деревня?\nДжон Смит: Нет. Лондон — очень большой город. В Лондоне много улиц.\nПокахонтас: В моей деревне нет улиц.\nДжон Смит: В Лондоне большие дома.\nПокахонтас: В моей деревне нет больших домов.\nДжон Смит: В Лондоне много мостов.\nПокахонтас: В моей деревне нет мостов.",
+"There are no bridges in her village. В её деревне нет мостов.\nThere are no streets in her village. В её деревне нет улиц.\nThere are no big houses in her village. В её деревне нет больших домов."
+],
+"answer": "There are no bridges in her village.\nThere are no streets in her village.\nThere are no big houses in her village."
+},
+{
+"name": "3",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, почему Покахонтас хочет увидеть Лондон.",
+"WORDLIST\nbridge — мост\nhouse — дом\nstreet — улица",
+"",
+"Покахонтас: Лондон — это деревня?\nДжон Смит: Нет. Лондон — очень большой город. В Лондоне много улиц.\nПокахонтас: В моей деревне нет улиц.\nДжон Смит: В Лондоне большие дома.\nПокахонтас: В моей деревне нет больших домов.\nДжон Смит: В Лондоне много мостов.\nПокахонтас: В моей деревне нет мостов.",
+"There are big houses in London. В Лондоне большие дома.\nThere are streets and bridges there. Там есть улицы и мосты.\nThere are wigwams and animals in her village. В её деревне есть вигвамы и животные.\nBut there are no streets or bridges there. Но там нет улиц и мостов."
+],
+"answer": "There are big houses in London.\nThere are streets and bridges there.\nThere are wigwams and animals in her village.\nBut there are no streets or bridges there."
+}
+]
+},
+{
+"number": "4-s81",
+"num": "4",
+"page": 81,
+"chapter": "Lesson 23. There is a river in my village",
+"skyId": 138811,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, что есть в нашей деревне.",
+"WORDLIST\nriver — река\nwigwam — хижина\nboat — лодка\nbows and arrows — лук и стрелы\nwolf — волк\nbear — медведь\nowl — сова\nfox — лиса\nrabbit — кролик\nraccoon — енот\nbird — птица\nfish — рыба",
+"",
+"There is a river in my village. В моей деревне есть река.\nThere are wigwams in my village. В моей деревне есть хижины.\nThere are boats in my village. В моей деревне есть лодки.\nThere are wolfs and foxes in my village. В моей деревне есть волки и лисы.\nThere is fish in my village. В моей деревне есть рыба."
+],
+"answer": "There is a river in my village.\nThere are wigwams in my village.\nThere are boats in my village.\nThere are wolfs and foxes in my village.\nThere is fish in my village."
+}
+]
+},
+{
+"number": "1-s82",
+"num": "1",
+"page": 82,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138812,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прослушаем, кем себя считает злая ведьма и как она представляется.",
+"WORDLIST\nwitch — ведьма\nprincess — принцесса\nkind — добрый\nnice — милый\ndwarf — гном\nfunny — весёлый\nfriendly — дружелюбный\nsing — петь\ndance — танцевать",
+"Я — принцесса.\nЯ добрая и милая.\nМои друзья — гномы.\nОни весёлые и дружелюбные.\nМы любим петь и танцевать."
+],
+"answer": "Я — принцесса.\nЯ добрая и милая.\nМои друзья — гномы.\nОни весёлые и дружелюбные.\nМы любим петь и танцевать."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Заполним пропуски словами, чтобы узнать, какая ведьма на самом деле.",
+"WORDLIST\nwicked — злой\nwitch — ведьма\nevil — злой\nblack cat — чёрная кошка\nfriendly — дружелюбная\nplay trick — разыграть трюк",
+"Злая ведьма _____ добрая.\nОна _____ злая.\nЕё друзья _____ чёрные кошки.\nОни _____ дружелюбные.\nОни _____ разыгрывают трюки.",
+"",
+"Является.\nНе является.\nНе являются.\nЯвляются.\nНравиться.",
+"Is not. Злая ведьма не добрая.\nIs. Она злая.\nAre. Её друзья — чёрные кошки.\nAre not. Они — дружелюбные.\nLike. Они любят разыгрывать трюки."
+],
+"answer": "Is not.\nIs.\nAre.\nAre not.\nLike."
+}
+]
+},
+{
+"number": "2-s83",
+"num": "2",
+"page": 83,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138813,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Прослушаем аудиозапись и ответим какого персонажа для карнавала выбрал мальчик.",
+"WORDLIST\nmerry — весёлый\nbear — медведь\nkind — добрый\nfunny — весёлый\nhoney — мёд\nowl — сова\ntogether — вместе",
+"Привет! Я весёлый маленький медведь. Я добрый и смешной. Я люблю мёд. Мои друзья — маленький поросёнок и сова. Мы любим играть вместе.",
+"Winnie the Pooh. Винни Пух."
+],
+"answer": "Winnie the Pooh."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем текст и вставим в него походящие слова.",
+"WORDLIST\nmerry — весёлый\nbear — медведь\nkind — добрый\nfunny — весёлый\nhoney — мёд\nowl — сова\ntogether — вместе",
+"Он _____ весёлый маленький медведь. \n_____ добрый и смешной. \nОн _____ мёд. \nЕго друзья _____ маленькими поросёноком и совой. \nОни _____ играть вместе.",
+"Является.\nЯвляются.\nЛюбит.\nЛюбит.\nОн.",
+"Is. Он — весёлый маленький медведь.\nHe. Он добрый и смешной.\nLikes. Он любит мёд.\nAre. Его друзья являются маленькими поросёноком и совой.\nLike. Они любят играть вместе."
+],
+"answer": "Is.\nHe.\nLikes.\nAre.\nLike."
+}
+]
+},
+{
+"number": "3-s83",
+"num": "3",
+"page": 83,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138814,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Опишем героев известной сказки. Воспользуемся словами из упражнения.",
+"WORDLIST\nmascot — талисман\nmerry — весёлый\nevil — злой\nfootball — футбол\ntennis — теннис\nswimming — плавание\nIndian girl — индейская девушка\nkind — добрый\nbrave — смелый\nsilly — глупый\nmermaid — русалочка\nboy — мальчик\nunlucky — неудачливый",
+"I am a... — Я...\nI am not... —Я не...\nI like... — Я люблю...\nI am good at... — Я хорош в...",
+"",
+"Я — талисман. Я весёлый, дружелюбный и забавный. Я не злой. Мне нравится играть в футбол и теннис. Я хорошо плаваю.\nЯ индийская девушка. Я добрая, дружелюбная и храбрая. Я не глупая. Я люблю петь, танцевать и плавать. Я хорошо плаваю и танцую.\nОна — русалка. Она милая, весёлая русалка. Она не злая. Она добрая и дружелюбная. Она любит петь. Она хорошо плавает.\nОн — мальчик. Он дружелюбный и добрый. Но ему не повезло. Он любит играть в футбол. Но он не очень хорошо играет в футбол.",
+"I am a mascot. I am merry, friendly and funny. I am not evil. I like playing football and tennis. I am good at swimming.\nI am an Indian girl. I am kind, friendly and brave. I am not silly. I like singing, dancing and swimming. I am good at swimming and dancing.\nShe is a mermaid. She is a nice, merry mermaid. She is not evil. She is kind and friendly. She likes singing. She is good at swimming.\nHe is a boy. He is friendly and kind. But he is unlucky. He likes playing football. But he is not good at playing football."
+],
+"answer": "I am a mascot. I am merry, friendly and funny. I am not evil. I like playing football and tennis. I am good at swimming.\nI am an Indian girl. I am kind, friendly and brave. I am not silly. I like singing, dancing and swimming. I am good at swimming and dancing.\nShe is a mermaid. She is a nice, merry mermaid. She is not evil. She is kind and friendly. She likes singing. She is good at swimming.\nHe is a boy. He is friendly and kind. But he is unlucky. He likes playing football. But he is not good at playing football."
+}
+]
+},
+{
+"number": "4-s84",
+"num": "4",
+"page": 84,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138815,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поиграем в игру. Составим предложения о себе, воспользуемся вспомогательными фразами.",
+"WORDLIST\nmascot — талисман\nmerry — весёлый\nevil — злой\nfootball — футбол\ntennis — теннис\nswimming — плавание\nIndian girl — индейская девушка\nkind — добрый\nbrave — смелый\nsilly — глупый\nmermaid — русалочка\nboy — мальчик\nunlucky — неудачливый",
+"Я...\nЯ ... и ... .\nЯ не...\nЯ люблю...\nМои друзья...\nОни ... и ... .\nМы любим ... вместе.",
+"I am a mouse. Я — мышь.\nI am funny and little. Я смешной и маленький.\nI'm not brave. Я не храбрая.\nI like cheese. Я люблю сыр.\nMy friends are birds. Мои друзья — птицы.\nThey are kind. Они добрые.\nWe like singing together. Нам нравится петь вместе."
+],
+"answer": "I am a mouse. I am funny and little. I'm not brave. I like cheese. My friends are birds. They are kind. We like singing together."
+}
+]
+},
+{
+"number": "5-s84",
+"num": "5",
+"page": 84,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138816,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения так, чтобы получилось стихотворение.",
+"WORDLIST\npig — свинья\ncat — кошка\npuppy — щенок\nhen — курица\nclock — часы\nfrog — лягушка\nblack — чёрный\nfunny — забавный",
+"A pig is big.\nA cat as black.\nA puppy is funny. \nA hen is red.\nA clock goes tick-a-tock.\nA frog sits on the log.",
+"Свинья большая.\nКошка как чёрная.\nЩенок забавный.\nКурица рыжая.\nЧасы идут тик-так.\nЛягушка сидит на бревне."
+],
+"answer": "A pig is big.\nA cat as black.\nA puppy is funny. \nA hen is red.\nA clock goes tick-a-tock.\nA frog sits on the log."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подобрать по два слова из рамки к каждому слову из столбика.",
+"WORDLIST\nfrog — лягушка\nfly — муха\nfat — толстый\nlion — лев\nlake — озеро\nhunt — охотиться\nwitch — ведьма",
+"",
+"",
+"",
+"",
+"",
+"Cat — fat — black.\nNice — mice — lion.\nMy — fly — mice.\nMe — we — he.\nBig — witch — fish.\nFrog — dog — hot.\nTell — spell — help.\nJump — run — hunt.\nMusic — cute — use.\nNo — go — home.\nTake — name — lake."
+],
+"answer": "Cat — fat — black.\nNice — mice — lion.\nMy — fly — mice.\nMe — we — he.\nBig — witch — fish.\nFrog — dog — hot.\nTell — spell — help.\nJump — run — hunt.\nMusic — cute — use.\nNo — go — home.\nTake — name — lake."
+}
+]
+},
+{
+"number": "6-s84",
+"num": "6",
+"page": 84,
+"chapter": "Lesson 24. Who are you? (Урок повторения)",
+"skyId": 138817,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим предложения, чтобы у нас получился текст о парке Лапландии.",
+"Дорогой Санта Клаус,\nМеня зовут...\nЯ...\nМои любимые персонажи...\nОни...\nОни любят...\nИх друзья...\nОни...\nПостарайся, Санта.\nС любовью,\n...",
+"WORDLIST\nmerry — весёлый\nevil — злой\nfootball — футбол\ntennis — теннис\nswimming — плавание\nIndian girl — индейская девушка\nkind — добрый\nbrave — смелый\nsilly — глупый\nmermaid — русалочка\nboy — мальчик\nunlucky — неудачливый",
+"Dear Santa Claus,\nMy name is Misha.\nI am nine.\nMy favourite character is the Nutcracker.\nHe is kind.\nHe likes nuts.\nHis friend is a girl Mary.\nThey like dancing.\nDo your best, Santa.\nLove,\nAndrew\nДорогой Санта Клаус,\nМеня зовут Миша.\nМне девять.\nМой любимый персонаж — Щелкунчик.\nОн добрый.\nОн любит орехи.\nЕго подруга — девочка Мэри.\nОни любят танцевать.\nДелай все, что в твоих силах, Санта.\nС любовью,\nЭндрю"
+],
+"answer": "Dear Santa Claus,\nMy name is Misha.\nI am nine.\nMy favourite character is the Nutcracker.\nHe is kind.\nHe likes nuts.\nHis friend is a girl Mary.\nThey like dancing.\nDo your best, Santa.\nLove,\nAndrew"
+}
+]
+},
+{
+"number": "1-s85",
+"num": "1",
+"page": 85,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения)",
+"skyId": 138818,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать отрывок из стихотворения об эльфах, вписать недостающие транскрипционные знаки, и мы узнаем имена некоторых из его помощников.",
+"Here's to the elves,\nBill /bɪl/ and Harry /'hærɪ/,\nCharley /'ʃa:lɪ/, Roger /'rɒdʒə/, Willy /'wɪlɪ/, Mary /'meərɪ/,\nEdgar /'edgə/, Rosie /rəʊzɪ/, Lucy /'luːsɪ/ and Fred /fred/,\nJoe /ʤəʊ/ and Howie /'haʊɪ/, Ruth /ruːθ/ and Ted /ted/."
+],
+"answer": "Here's to the elves,\nBill /bɪl/ and Harry /'hærɪ/,\nCharley /'ʃa:lɪ/, Roger /'rɒdʒə/, Willy /'wɪlɪ/, Mary /'meərɪ/,\nEdgar /'edgə/, Rosie /rəʊzɪ/, Lucy /'luːsɪ/ and Fred /fred/,\nJoe /ʤəʊ/ and Howie /'haʊɪ/, Ruth /ruːθ/ and Ted /ted/."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать стихотворение и проверить правильно ли мы вставили транскрипционные знаки.",
+"Here's to the elves,\nBill [bɪl] and Harry ['hærɪ],\nCharley [ 'ʃa:lɪ], Roger ['rɒdʒə], Willy ['wɪlɪ], Mary ['meərɪ],\nEdgar ['edgə], Rosie [rəʊzɪ], Lucy ['luːsɪ] and Fred [fred],\nJoe [ʤəʊ] and Howie ['haʊɪ], Ruth [ruːθ] and Ted [ted].",
+"Да здравствуют эльфы,\nБилл и Гарри, \nЧарли, Роджер, Вилли, Мэри,\nЭдгар, Рози, Люси и Фред,\nДжо и Хови, Рус и Тед."
+],
+"answer": "Да здравствуют эльфы,\nБилл и Гарри, \nЧарли, Роджер, Вилли, Мэри,\nЭдгар, Рози, Люси и Фред,\nДжо и Хови, Рус и Тед."
+}
+]
+},
+{
+"number": "2-s85",
+"num": "2",
+"page": 85,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения)",
+"skyId": 138819,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать пары предложений и выбрать букву рядом с правильным предложением. В итоге мы получим имя вожака оленьей упряжки Санты Клауса.",
+"Это хороший мальчик. Это хороший мальчик.\nОна любит танцевать. Она любит танцевать.\nДавай поиграем в прятки. Давай поиграем в прятки.\nОни неглупые. Они неглупые.\nВ моей деревне есть вигвам. В моей деревне есть вигвам.\nОни глупые? Они глупые?\nОна хорошая девочка, её зовут Хелен. Она хорошая девочка, её зовут Хелен.",
+"This is a nice boy. — Потому что нужен артикль.\nShe likes dancing. — Потому что с местоимением «она» после глагола ставим окончание -s.\nLet's play hide and seek! — Потому что после Let's не ставится частица to.\nThey are not silly. — Потому что в предложении должен быть глагол.\nThere is a wigwam in my village. — Потому что вигвам один.\nAre they evil? — Потому что вместе с they используем are.\nShe is a nice girl. Her name is Helen. — Потому что his — его.",
+"R.\nU.\nD.\nO.\nL.\nP.\nH."
+],
+"answer": "Rudolph. (Рудольф.)"
+}
+]
+},
+{
+"number": "3-s86",
+"num": "3",
+"page": 86,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения)",
+"skyId": 138820,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру «Волшебное письмо Санта Клаусу».",
+"Нужно бросить кубик.\nЧисло, выпавшее на кубике, укажет на номер колонки в таблице на странице 87.\nСлова из этой колонки нужно подставить в соответствующие предложения в письме.",
+"Дорогой Санта Клаус,\nЯ Ник (6). Мне 8 лет (3). Мне нравится рисовать (2). У меня хорошо получается играть в теннис (5). Мой любимый цвет зелёный (3). Мой любимое животное кролик (6). На Рождество я хочу кошку (5).\nС наилучшими пожеланиями,\nНик"
+],
+"answer": "Кидай кубик и заполни пропуски."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски, чтобы получилось письмо Санте Клаусу.",
+"WORDLIST\npainting — рисовать\ntennis — теннис\nrabbit — кролик",
+"Masha.\n8.\nPainting.\nTennis.\nGreen.\nRabbit.\nA cat.\nMasha.",
+"Дорогой Санта Клаус,\nЯ Маша. Мне 8 лет. Мне нравится рисовать. У меня хорошо получается играть в теннис. Мой любимый цвет зелёный. Мой любимое животное кролик. На Рождество я хочу кошку.\nС любовью,\nМаша"
+],
+"answer": "Masha.\n8.\nPainting.\nTennis.\nGreen.\nRabbit.\nA cat.\nMasha."
+}
+]
+},
+{
+"number": "4-s88",
+"num": "4",
+"page": 88,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения)",
+"skyId": 138821,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить рассказ про кота тома, который любит смотреть телевизор, а затем прослушать аудиозапись и проверить себя.",
+"WORDLIST\njoyful — радостный\nmice — мыши\nmaster — хозяин\nMew-Mew — мяу-мяу",
+"Tom is a cat. Tom is a big cat. He is joyful and funny. Tom likes eating mice. He likes singing Mew-Mew. (Том — кот. Том большой кот. Он радостный и весёлый. Том любит есть мышей. Он любит петь мяу-мяу.)",
+"Том — кот. Том большой кот. Он радостный и весёлый. Том любит есть мышей. Он хорошо помогает своему хозяину. Он любит петь мяу-мяу."
+],
+"answer": "Том — кот. Том большой кот. Он радостный и весёлый. Том любит есть мышей. Он любит петь мяу-мяу."
+}
+]
+},
+{
+"number": "1-s88",
+"num": "1",
+"page": 88,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения). Lesson 27. Merry Christmas and Happy New Year!",
+"skyId": 144897,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать что является символами Рождества.",
+"Santa Claus.",
+"Christmas tree.",
+"Elves.",
+"Angels.",
+"Reindeer.",
+"Christmas stockings."
+],
+"answer": "Скажи что является символами Рождества."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вписать выделенные буквы из упражнения 1 во флажки и узнать, как называется любимый праздник детей в англоязычных странах.",
+"Christmas — Рождество."
+],
+"answer": "Christmas."
+}
+]
+},
+{
+"number": "2-s88",
+"num": "2",
+"page": 88,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения). Lesson 27. Merry Christmas and Happy New Year!",
+"skyId": 144898,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что является символами Нового года в России.",
+"Snow maiden.",
+"Troika.",
+"Lights.",
+"Garlands.",
+"Bubbles.",
+"New Year tree.",
+"Father Frost."
+],
+"answer": "Скажи как называются символы Нового года."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выписать выделенные буквы в открытки и узнать, как называется любимый зимний праздник российских детей.",
+"New Year - Новый год."
+],
+"answer": "New Year."
+}
+]
+},
+{
+"number": "3-s88",
+"num": "3",
+"page": 88,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения). Lesson 27. Merry Christmas and Happy New Year!",
+"skyId": 144899,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дописать открытки и сделать к ним рисунки.",
+"WORDLIST\ndear — дорогой\nwish — желать\nmerry — счастливый\nChristmas — Рождество",
+"Дорогой/Дорогая _____, \nЖелаю тебе счастливого Нового года и Рождества.\nС любовью, \n_____"
+],
+"answer": "Впиши на месте первого пропуска имя того, кому отправляешь открытку. В конце напиши своё имя. Сделай рисунки к открыткам."
+}
+]
+},
+{
+"number": "4-s88-2",
+"num": "4",
+"page": 88,
+"chapter": "Lessons 25-26. I am a Christmas Elf! (Урок повторения). Lesson 27. Merry Christmas and Happy New Year!",
+"skyId": 144900,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать историю про кота Тома, который очень любит смотреть телевизор.",
+"WORDLIST\ncat — кот\nbig — большой\nred — рыжий\nwhite — белый\neat — есть\nmaster — хозяин\nsing — петь",
+"Tom, the TV cat\nTom is a big cat. He is red and white. He is funny. Tom likes eating mice. He usually helps his master. He likes to sing \"Mew-mew!\".",
+"Том, телевизионный кот\nТом большой кот. Он рыжий с белым. Он весёлый. Том любит есть мышей. Обычно он помогает своему хозяину. Он любит петь «Мяу-мяу!»."
+],
+"answer": "Tom, the TV cat\nTom is a big cat. He is red and white. He is funny. Tom likes eating mice. He usually helps his master. He likes to sing \"Mew-mew!\"."
+}
+]
+}
+]
+}
