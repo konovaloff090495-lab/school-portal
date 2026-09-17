@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { schools, typeSlugs, typeLabels, SchoolType, getSchoolsByFeature } from '@/data/schools'
+import { schools, typeSlugs, typeLabels, SchoolType, getSchoolsByFeature, schoolMatchesType } from '@/data/schools'
 
 // ── Card metadata ─────────────────────────────────────────────────────────────
 const TYPE_META: {
@@ -95,6 +95,14 @@ const TYPE_META: {
     image: '/school-types/gimnazii.png',
     href: '/shkoly/tipy/gimnazii/',
     sub: 'Углублённые программы, высокие баллы ЕГЭ, победители олимпиад',
+  },
+  {
+    slug: 'litsei',
+    name: 'Лицеи',
+    tint: '#4F46E5',
+    image: null,
+    href: '/shkoly/tipy/litsei/',
+    sub: 'Физмат, IT, естественно-научные и гуманитарные — при вузах и муниципальные',
   },
   {
     slug: 'korrektsionnye',
@@ -378,7 +386,7 @@ function SchoolTypeCard({ item, count }: { item: typeof TYPE_META[number]; count
 export default function SchoolTypesSection() {
   const counts: Record<string, number> = {}
   for (const t of typeSlugs) {
-    counts[t] = schools.filter(s => s.type === t).length
+    counts[t] = schools.filter(s => schoolMatchesType(s, t)).length
   }
 
   return (

@@ -52,6 +52,7 @@ export const TYPE_FULL_NAME: Record<SchoolType, string> = {
   pravoslavnye:      'Православные школы',
   sportivnye:        'Спортивные школы',
   yazykovye:         'Языковые школы',
+  litsei:            'Лицеи',
 }
 
 const LIMIT = 12

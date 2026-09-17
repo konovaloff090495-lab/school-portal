@@ -87,6 +87,8 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `С какого класса принимают учеников в ${school.name}?`,
     a: isEgeCenter
       ? `Центр готовит к ОГЭ учеников 8–9 классов и к ЕГЭ — 10–11 классов; набор в группы и индивидуальные занятия обычно идёт весь учебный год. Уточняйте ${callTo}.`
+      : school.type === 'litsei'
+      ? `Набор в лицей, как правило, конкурсный: основные точки входа — 5, 7 и 10 класс, у части лицеев есть и начальная школа. С какого класса идёт набор именно здесь и какие вступительные испытания проводятся — уточняйте ${callTo}${school.website ? ` или на сайте лицея (${school.website.replace(/^https?:\/\//, '')})` : ''}.`
       : isProgSchool
       ? `Детские школы программирования обычно берут с 6–7 лет: младшим дают Scratch и визуальные среды, с 10–12 лет — Python и Roblox, подросткам — «взрослые» языки и проекты. Возраст набора в конкретные группы уточняйте ${callTo}.`
       : startsFrom1
@@ -334,7 +336,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' ? (
+                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>

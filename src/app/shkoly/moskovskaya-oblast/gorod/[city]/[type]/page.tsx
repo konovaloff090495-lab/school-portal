@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { moCitySlugs, moCityLabels, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature } from '@/data/schools'
+import { moCitySlugs, moCityLabels, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature, schoolMatchesType } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForMoCityType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -61,7 +61,7 @@ export function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (type === 'online') continue
-      if (!schools.some(s => s.region === 'moskovskaya-oblast' && s.type === type && s.city === moCityLabels[city as keyof typeof moCityLabels])) continue
+      if (!schools.some(s => s.region === 'moskovskaya-oblast' && schoolMatchesType(s, type) && s.city === moCityLabels[city as keyof typeof moCityLabels])) continue
       params.push({ city, type })
     }
   }
@@ -104,7 +104,7 @@ export default async function MoCityTypePage({ params }: Props) {
   const feature = TYPE_TO_FEATURE[t]
   const count = (feature
     ? getSchoolsByFeature(feature, 'moskovskaya-oblast')
-    : schools.filter(s => s.region === 'moskovskaya-oblast' && s.type === t)
+    : schools.filter(s => s.region === 'moskovskaya-oblast' && schoolMatchesType(s, t))
   ).filter(s => s.city === cityLabel).length
 
   const related = count === 0

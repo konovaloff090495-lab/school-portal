@@ -26,6 +26,7 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   pravoslavnye:     ['православная школа', 'православная гимназия', 'церковная школа', 'религиозная школа', 'закон Божий'],
   sportivnye:       ['спортивная школа', 'школа для спортсменов', 'школа при спортклубе', 'олимпийский резерв', 'спортивный класс'],
   yazykovye:        ['языковая школа', 'лингвистическая гимназия', 'углублённый английский', 'школа с иностранным языком', 'языковой профиль'],
+  litsei:           ['лицей', 'лицеи города', 'физико-математический лицей', 'лицей при вузе', 'поступление в лицей', 'лицей 5 класс', 'лицей 10 класс'],
 }
 
 export function buildKeywords(
@@ -63,6 +64,23 @@ export function buildKeywords(
   return 'школы России, каталог школ, частные школы, онлайн школы, вечерние школы, экстернат'
 }
 
+// Типы, у которых typeLabels — не прилагательное к слову «школы»: «Гимназии школы Казани»
+// и «При вузах школы Казани» читались как ошибка. Здесь — готовое существительное.
+const TYPE_NOUN: Partial<Record<SchoolType, string>> = {
+  gimnazii:         'Гимназии',
+  litsei:           'Лицеи',
+  'pri-vuzakh':     'Школы при вузах',
+  eksternal:        'Школы-экстернаты',
+  internaty:        'Школы-интернаты',
+  programmirovanie: 'Школы программирования',
+  montessori:       'Школы Монтессори',
+  'podgotovka-ege': 'Центры подготовки к ЕГЭ',
+  'podgotovka-oge': 'Центры подготовки к ОГЭ',
+}
+export function typeNoun(type: SchoolType): string {
+  return TYPE_NOUN[type] ?? `${typeLabels[type]} школы`
+}
+
 export function buildTitle(
   region?: RegionSlug,
   type?: SchoolType,
@@ -75,7 +93,7 @@ export function buildTitle(
   if (region && type) {
     const cityOf = regionLabelsOf[region]
     const suffix = count ? ` — ${pluralSchools(count)}` : ''
-    return `${typeLabels[type]} школы ${cityOf} ${new Date().getFullYear()}: рейтинг, адреса${suffix}`
+    return `${typeNoun(type)} ${cityOf} ${new Date().getFullYear()}: рейтинг, адреса${suffix}`
   }
   if (region) {
     const cityOf = regionLabelsOf[region]
@@ -96,10 +114,9 @@ export function buildDescription(
     return `${schoolName} ${cityIn} — адрес, телефон, описание, особенности. Актуальная информация о школе на портале pro-schools.ru.`
   }
   if (region && type) {
-    const typeLower = typeLabels[type].toLowerCase()
     const cityIn = regionLabelsIn[region]
     const n = count ? pluralSchools(count) : 'Все школы'
-    const head = count ? `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}: ${n}` : `${typeLower.charAt(0).toUpperCase() + typeLower.slice(1)} школы ${cityIn}`
+    const head = count ? `${typeNoun(type)} ${cityIn}: ${n}` : `${typeNoun(type)} ${cityIn}`
     return `${head} с адресами, телефонами, рейтингами и отзывами. Сравните и выберите лучшую школу для ребёнка.`
   }
   if (region) {
@@ -135,6 +152,7 @@ export function getTypeColor(type: SchoolType): string {
     pravoslavnye:     'bg-yellow-100 text-yellow-800',
     sportivnye:       'bg-orange-100 text-orange-800',
     yazykovye:        'bg-cyan-100 text-cyan-800',
+    litsei:           'bg-indigo-100 text-indigo-800',
   }
   return colors[type]
 }
@@ -164,6 +182,7 @@ export function getTypeBorderColor(type: SchoolType): string {
     pravoslavnye:     'border-yellow-200',
     sportivnye:       'border-orange-200',
     yazykovye:        'border-cyan-200',
+    litsei:           'border-indigo-200',
   }
   return colors[type]
 }

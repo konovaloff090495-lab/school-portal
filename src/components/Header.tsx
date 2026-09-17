@@ -11,6 +11,7 @@ const SCHOOL_TYPES = [
   { slug: 'gosudarstvennye', icon: '🏫', desc: 'Бесплатно · по прописке' },
   { slug: 'chastnie',        icon: '✨', desc: 'Платно · малые классы' },
   { slug: 'gimnazii',        icon: '🏛️', desc: 'Профильное · олимпиады' },
+  { slug: 'litsei',          icon: '📐', desc: 'Физмат, IT · при вузах' },
   { slug: 'kadetskie',       icon: '🎖️', desc: 'Дисциплина · НВП' },
   { slug: 'online',          icon: '💻', desc: 'Дистанционно · из любой точки' },
   { slug: 'profilnye',       icon: '🎓', desc: 'IT, медицина, право, искусство' },

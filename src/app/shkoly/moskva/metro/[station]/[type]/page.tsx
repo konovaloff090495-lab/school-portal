@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES} from '@/data/schools'
+import { metroSlugToName, metroSlugs, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature , MICRO_GEO_SKIP_TYPES, schoolMatchesType } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForMetroType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
-      if (!schools.some(s => s.region === 'moskva' && s.type === type && s.metro === metroSlugToName[station])) continue
+      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && s.metro === metroSlugToName[station])) continue
       params.push({ station, type })
     }
   }
@@ -77,7 +77,7 @@ export default async function MetroTypePage({ params }: Props) {
   const nearHere = (list: typeof schools) => list.filter(s => s.metro === metroName)
   const count = feature
     ? nearHere(getSchoolsByFeature(feature, 'moskva')).length
-    : nearHere(schools.filter(s => s.region === 'moskva' && s.type === t)).length
+    : nearHere(schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t))).length
 
   const related = count === 0 ? relatedForMetroType(station, t, typeName, feature) : null
 
