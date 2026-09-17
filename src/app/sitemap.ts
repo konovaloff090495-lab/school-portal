@@ -6,7 +6,7 @@ import {
   type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
 import { regionProfileIds } from '@/data/region-profiles'
-import { gdzKlasses, gdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
+import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
@@ -137,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   )
 
-  const gdzBookPages: MetadataRoute.Sitemap = gdzBooks
+  const gdzBookPages: MetadataRoute.Sitemap = getAllGdzBooks()
     .filter(b => b.solvedCount > 0)
     .map(b => ({
       url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/`,

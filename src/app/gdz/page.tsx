@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { gdzSubjectsByClass } from '@/data/gdz'
+import { getGdzSubjectsByClass } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+
+// ISR: данные ГДЗ доезжают git pull без пересборки — страницы обновляются раз в час
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'ГДЗ — готовые домашние задания по всем предметам · pro-schools.ru',

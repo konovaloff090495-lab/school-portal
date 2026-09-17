@@ -7,6 +7,9 @@ import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 
 const SITE = 'https://pro-schools.ru'
 
+// ISR: данные ГДЗ доезжают git pull без пересборки — страницы обновляются раз в час
+export const revalidate = 3600
+
 interface Props {
   params: Promise<{ klass: string; subject: string }>
 }

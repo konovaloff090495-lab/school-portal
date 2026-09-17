@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { gdzKlasses, getGdzSubjects, gdzBooks } from '@/data/gdz'
+import { gdzKlasses, getGdzSubjects, getAllGdzBooks } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 
 const SITE = 'https://pro-schools.ru'
+
+// ISR: данные ГДЗ доезжают git pull без пересборки — страницы обновляются раз в час
+export const revalidate = 3600
 
 interface Props {
   params: Promise<{ klass: string }>
@@ -62,7 +65,7 @@ export default async function GdzKlassPage({ params }: Props) {
 
   // Показываем только предметы у которых есть хотя бы одна книга для этого класса
   const subjectsHasBooks = new Set(
-    gdzBooks
+    getAllGdzBooks()
       .filter(b => b.klass === klassNum && b.solvedCount > 0)
       .map(b => b.subjectSlug)
   )

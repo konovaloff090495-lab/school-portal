@@ -323,6 +323,23 @@
 "chapterCount": 5
 },
 {
+"slug": "biboletova-rabochaya-tetrad",
+"klass": 7,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Биболетова М. З., Бабушис Е. Е.",
+"type": "Рабочая тетрадь",
+"years": "2021",
+"publisher": "Дрофа",
+"fgos": true,
+"parts": "",
+"source": "skysmart:93",
+"file": "7-angliiskiy-yazyk-biboletova-rabochaya-tetrad.json",
+"problemCount": 190,
+"solvedCount": 12,
+"chapterCount": 41
+},
+{
 "slug": "pasechnik",
 "klass": 7,
 "subjectSlug": "biologiya",
