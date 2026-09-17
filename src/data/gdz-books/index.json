@@ -340,6 +340,23 @@
 "chapterCount": 26
 },
 {
+"slug": "bykova-uchebnik-chast-1",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Быкова Н. И., Дули Д., Поспелова М. Д., Эванс В.",
+"type": "Учебник (часть 1)",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:647",
+"file": "4-angliiskiy-yazyk-bykova-uchebnik-chast-1.json",
+"problemCount": 173,
+"solvedCount": 173,
+"chapterCount": 30
+},
+{
 "slug": "moro-4",
 "klass": 4,
 "subjectSlug": "matematika",
