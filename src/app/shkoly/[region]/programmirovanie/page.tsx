@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const regionIn = regionLabelsIn[r]
   const count = getSchoolsByRegionAndType(r, 'programmirovanie').length
   const itCount = getSchoolsByFeature('it-klass', r).length
-  const w = count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'
+  const w = count % 10 === 1 && count % 100 !== 11 ? 'школа' : count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 10 || count % 100 >= 20) ? 'школы' : 'школ'
   const title = count > 0
     ? `Школы программирования для детей ${regionIn} 2026: ${count} ${w} — адреса, цены, отзывы`
     : `Школы программирования для детей ${regionIn} — IT-классы и онлайн-курсы`
@@ -71,6 +71,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ...(count < 2 && itCount < 3 ? { robots: { index: false, follow: true } } : {}),
   }
 }
+
+const w2 = (n: number) => n % 10 === 1 && n % 100 !== 11 ? 'школа' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'школы' : 'школ'
 
 export default async function ProgrammirovaniePage({ params }: Props) {
   const { region } = await params
@@ -115,7 +117,7 @@ export default async function ProgrammirovaniePage({ params }: Props) {
       lockRegion
       lockType
       title={`Школы программирования для детей ${regionIn}`}
-      subtitle={`${count} ${count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'} и клубов по данным Яндекс Карт, 09.2026`}
+      subtitle={`${count} ${w2(count)} и клубов по данным Яндекс Карт, 09.2026`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: regionName, href: `/shkoly/${r}/` },
