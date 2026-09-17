@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/lk/', '/admin/'],
       },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/sitemap-gdz.xml`],
     host: BASE_URL,
   }
 }

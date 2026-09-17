@@ -1,0 +1,5546 @@
+[
+{
+"id": 43,
+"klass": 7,
+"subject": "algebra",
+"slug": "makarychev-43",
+"tasks": 1272
+},
+{
+"id": 45,
+"klass": 7,
+"subject": "algebra",
+"slug": "makarychev-45",
+"tasks": 290
+},
+{
+"id": 47,
+"klass": 7,
+"subject": "algebra",
+"slug": "merzlyak-47",
+"tasks": 1396
+},
+{
+"id": 48,
+"klass": 7,
+"subject": "algebra",
+"slug": "merzlyak-48",
+"tasks": 247
+},
+{
+"id": 49,
+"klass": 7,
+"subject": "algebra",
+"slug": "merzlyak-49",
+"tasks": 144
+},
+{
+"id": 51,
+"klass": 7,
+"subject": "algebra",
+"slug": "mordkovich-51",
+"tasks": 222
+},
+{
+"id": 52,
+"klass": 7,
+"subject": "algebra",
+"slug": "mordkovich-52",
+"tasks": 1646
+},
+{
+"id": 53,
+"klass": 7,
+"subject": "algebra",
+"slug": "mordkovich-53",
+"tasks": 339
+},
+{
+"id": 55,
+"klass": 7,
+"subject": "algebra",
+"slug": "nikolskij-55",
+"tasks": 1168
+},
+{
+"id": 112,
+"klass": 7,
+"subject": "algebra",
+"slug": "nikolskij-112",
+"tasks": 141
+},
+{
+"id": 114,
+"klass": 7,
+"subject": "algebra",
+"slug": "makarychev-114",
+"tasks": 293
+},
+{
+"id": 116,
+"klass": 7,
+"subject": "algebra",
+"slug": "nikolskij-116",
+"tasks": 215
+},
+{
+"id": 204,
+"klass": 7,
+"subject": "algebra",
+"slug": "dorofeev-204",
+"tasks": 1214
+},
+{
+"id": 489,
+"klass": 7,
+"subject": "algebra",
+"slug": "minaeva-489",
+"tasks": 257
+},
+{
+"id": 1186,
+"klass": 7,
+"subject": "algebra",
+"slug": "mordkovich-1186",
+"tasks": 0
+},
+{
+"id": 1201,
+"klass": 7,
+"subject": "algebra",
+"slug": "makarychev-1201",
+"tasks": 0
+},
+{
+"id": 1202,
+"klass": 7,
+"subject": "algebra",
+"slug": "merzlyak-1202",
+"tasks": 0
+},
+{
+"id": 1203,
+"klass": 7,
+"subject": "algebra",
+"slug": "nikolskij-1203",
+"tasks": 0
+},
+{
+"id": 117,
+"klass": 8,
+"subject": "algebra",
+"slug": "merzlyak-117",
+"tasks": 163
+},
+{
+"id": 118,
+"klass": 8,
+"subject": "algebra",
+"slug": "merzlyak-118",
+"tasks": 192
+},
+{
+"id": 119,
+"klass": 8,
+"subject": "algebra",
+"slug": "minaeva-119",
+"tasks": 134
+},
+{
+"id": 120,
+"klass": 8,
+"subject": "algebra",
+"slug": "minaeva-120",
+"tasks": 106
+},
+{
+"id": 123,
+"klass": 8,
+"subject": "algebra",
+"slug": "mindyuk-123",
+"tasks": 248
+},
+{
+"id": 203,
+"klass": 8,
+"subject": "algebra",
+"slug": "makarychev-203",
+"tasks": 1207
+},
+{
+"id": 352,
+"klass": 8,
+"subject": "algebra",
+"slug": "dorofeev-352",
+"tasks": 1127
+},
+{
+"id": 432,
+"klass": 8,
+"subject": "algebra",
+"slug": "merzlyak-432",
+"tasks": 1017
+},
+{
+"id": 450,
+"klass": 8,
+"subject": "algebra",
+"slug": "mordkovich-450",
+"tasks": 240
+},
+{
+"id": 451,
+"klass": 8,
+"subject": "algebra",
+"slug": "mordkovich-451",
+"tasks": 1702
+},
+{
+"id": 491,
+"klass": 8,
+"subject": "algebra",
+"slug": "mindyuk-491",
+"tasks": 239
+},
+{
+"id": 578,
+"klass": 8,
+"subject": "algebra",
+"slug": "klyuchnikova-578",
+"tasks": 195
+},
+{
+"id": 579,
+"klass": 8,
+"subject": "algebra",
+"slug": "klyuchnikova-579",
+"tasks": 149
+},
+{
+"id": 1195,
+"klass": 8,
+"subject": "algebra",
+"slug": "mordkovich-1195",
+"tasks": 0
+},
+{
+"id": 1196,
+"klass": 8,
+"subject": "algebra",
+"slug": "mindyuk-1196",
+"tasks": 0
+},
+{
+"id": 1197,
+"klass": 8,
+"subject": "algebra",
+"slug": "merzlyak-1197",
+"tasks": 0
+},
+{
+"id": 1198,
+"klass": 8,
+"subject": "algebra",
+"slug": "minaeva-1198",
+"tasks": 0
+},
+{
+"id": 1199,
+"klass": 8,
+"subject": "algebra",
+"slug": "klyuchnikova-1199",
+"tasks": 0
+},
+{
+"id": 124,
+"klass": 9,
+"subject": "algebra",
+"slug": "merzlyak-124",
+"tasks": 188
+},
+{
+"id": 125,
+"klass": 9,
+"subject": "algebra",
+"slug": "merzlyak-125",
+"tasks": 229
+},
+{
+"id": 131,
+"klass": 9,
+"subject": "algebra",
+"slug": "makarychev-131",
+"tasks": 155
+},
+{
+"id": 132,
+"klass": 9,
+"subject": "algebra",
+"slug": "makarychev-132",
+"tasks": 228
+},
+{
+"id": 368,
+"klass": 9,
+"subject": "algebra",
+"slug": "dorofeev-368",
+"tasks": 965
+},
+{
+"id": 435,
+"klass": 9,
+"subject": "algebra",
+"slug": "merzlyak-435",
+"tasks": 1253
+},
+{
+"id": 469,
+"klass": 9,
+"subject": "algebra",
+"slug": "makarychev-469",
+"tasks": 1140
+},
+{
+"id": 470,
+"klass": 9,
+"subject": "algebra",
+"slug": "mordkovich-470",
+"tasks": 184
+},
+{
+"id": 471,
+"klass": 9,
+"subject": "algebra",
+"slug": "mordkovich-471",
+"tasks": 1226
+},
+{
+"id": 492,
+"klass": 9,
+"subject": "algebra",
+"slug": "minaeva-492",
+"tasks": 87
+},
+{
+"id": 493,
+"klass": 9,
+"subject": "algebra",
+"slug": "minaeva-493",
+"tasks": 90
+},
+{
+"id": 522,
+"klass": 9,
+"subject": "algebra",
+"slug": "klyuchnikova-522",
+"tasks": 200
+},
+{
+"id": 1189,
+"klass": 9,
+"subject": "algebra",
+"slug": "mordkovich-1189",
+"tasks": 0
+},
+{
+"id": 1190,
+"klass": 9,
+"subject": "algebra",
+"slug": "makarychev-1190",
+"tasks": 0
+},
+{
+"id": 1191,
+"klass": 9,
+"subject": "algebra",
+"slug": "merzlyak-1191",
+"tasks": 0
+},
+{
+"id": 1192,
+"klass": 9,
+"subject": "algebra",
+"slug": "minaeva-1192",
+"tasks": 0
+},
+{
+"id": 336,
+"klass": 10,
+"subject": "algebra",
+"slug": "kolyagin-336",
+"tasks": 1435
+},
+{
+"id": 445,
+"klass": 10,
+"subject": "algebra",
+"slug": "nikolskij-445",
+"tasks": 1236
+},
+{
+"id": 446,
+"klass": 10,
+"subject": "algebra",
+"slug": "mordkovich-446",
+"tasks": 293
+},
+{
+"id": 447,
+"klass": 10,
+"subject": "algebra",
+"slug": "mordkovich-447",
+"tasks": 2046
+},
+{
+"id": 1108,
+"klass": 10,
+"subject": "algebra",
+"slug": "alimov-1108",
+"tasks": 802
+},
+{
+"id": 1114,
+"klass": 10,
+"subject": "algebra",
+"slug": "merzlyak-1114",
+"tasks": 523
+},
+{
+"id": 1188,
+"klass": 10,
+"subject": "algebra",
+"slug": "mordkovich-1188",
+"tasks": 0
+},
+{
+"id": 320,
+"klass": 11,
+"subject": "algebra",
+"slug": "nikolskij-320",
+"tasks": 1233
+},
+{
+"id": 323,
+"klass": 11,
+"subject": "algebra",
+"slug": "kolyagin-323",
+"tasks": 1300
+},
+{
+"id": 448,
+"klass": 11,
+"subject": "algebra",
+"slug": "mordkovich-448",
+"tasks": 199
+},
+{
+"id": 449,
+"klass": 11,
+"subject": "algebra",
+"slug": "mordkovich-449",
+"tasks": 1499
+},
+{
+"id": 1111,
+"klass": 11,
+"subject": "algebra",
+"slug": "alimov-1111",
+"tasks": 871
+},
+{
+"id": 1187,
+"klass": 11,
+"subject": "algebra",
+"slug": "mordkovich-1187",
+"tasks": 0
+},
+{
+"id": 619,
+"klass": 1,
+"subject": "english",
+"slug": "bykova-619",
+"tasks": 126
+},
+{
+"id": 622,
+"klass": 1,
+"subject": "english",
+"slug": "bykova-622",
+"tasks": 52
+},
+{
+"id": 652,
+"klass": 1,
+"subject": "english",
+"slug": "baranova-652",
+"tasks": 73
+},
+{
+"id": 763,
+"klass": 1,
+"subject": "english",
+"slug": "vereshchagina-763",
+"tasks": 697
+},
+{
+"id": 764,
+"klass": 1,
+"subject": "english",
+"slug": "vereshchagina-764",
+"tasks": 168
+},
+{
+"id": 771,
+"klass": 1,
+"subject": "english",
+"slug": "baranova-771",
+"tasks": 243
+},
+{
+"id": 612,
+"klass": 2,
+"subject": "english",
+"slug": "afanaseva-612",
+"tasks": 248
+},
+{
+"id": 616,
+"klass": 2,
+"subject": "english",
+"slug": "bykova-616",
+"tasks": 113
+},
+{
+"id": 617,
+"klass": 2,
+"subject": "english",
+"slug": "bykova-617",
+"tasks": 117
+},
+{
+"id": 621,
+"klass": 2,
+"subject": "english",
+"slug": "afanaseva-621",
+"tasks": 291
+},
+{
+"id": 640,
+"klass": 2,
+"subject": "english",
+"slug": "afanaseva-640",
+"tasks": 253
+},
+{
+"id": 643,
+"klass": 2,
+"subject": "english",
+"slug": "kuzovlev-643",
+"tasks": 131
+},
+{
+"id": 648,
+"klass": 2,
+"subject": "english",
+"slug": "bykova-648",
+"tasks": 101
+},
+{
+"id": 653,
+"klass": 2,
+"subject": "english",
+"slug": "kuzovlev-653",
+"tasks": 149
+},
+{
+"id": 654,
+"klass": 2,
+"subject": "english",
+"slug": "kuzovlev-654",
+"tasks": 164
+},
+{
+"id": 658,
+"klass": 2,
+"subject": "english",
+"slug": "verbickaya-658",
+"tasks": 191
+},
+{
+"id": 704,
+"klass": 2,
+"subject": "english",
+"slug": "komarova-704",
+"tasks": 222
+},
+{
+"id": 705,
+"klass": 2,
+"subject": "english",
+"slug": "komarova-705",
+"tasks": 141
+},
+{
+"id": 767,
+"klass": 2,
+"subject": "english",
+"slug": "verbickaya-767",
+"tasks": 177
+},
+{
+"id": 768,
+"klass": 2,
+"subject": "english",
+"slug": "verbickaya-768",
+"tasks": 227
+},
+{
+"id": 806,
+"klass": 2,
+"subject": "english",
+"slug": "afanaseva-806",
+"tasks": 168
+},
+{
+"id": 1150,
+"klass": 2,
+"subject": "english",
+"slug": "afanaseva-1150",
+"tasks": 0
+},
+{
+"id": 1151,
+"klass": 2,
+"subject": "english",
+"slug": "bykova-1151",
+"tasks": 0
+},
+{
+"id": 1152,
+"klass": 2,
+"subject": "english",
+"slug": "kuzovlev-1152",
+"tasks": 0
+},
+{
+"id": 1153,
+"klass": 2,
+"subject": "english",
+"slug": "verbickaya-1153",
+"tasks": 0
+},
+{
+"id": 618,
+"klass": 3,
+"subject": "english",
+"slug": "bykova-618",
+"tasks": 169
+},
+{
+"id": 620,
+"klass": 3,
+"subject": "english",
+"slug": "afanaseva-620",
+"tasks": 173
+},
+{
+"id": 639,
+"klass": 3,
+"subject": "english",
+"slug": "afanaseva-639",
+"tasks": 285
+},
+{
+"id": 641,
+"klass": 3,
+"subject": "english",
+"slug": "afanaseva-641",
+"tasks": 277
+},
+{
+"id": 644,
+"klass": 3,
+"subject": "english",
+"slug": "kuzovlev-644",
+"tasks": 118
+},
+{
+"id": 646,
+"klass": 3,
+"subject": "english",
+"slug": "bykova-646",
+"tasks": 181
+},
+{
+"id": 649,
+"klass": 3,
+"subject": "english",
+"slug": "bykova-649",
+"tasks": 111
+},
+{
+"id": 650,
+"klass": 3,
+"subject": "english",
+"slug": "verbickaya-650",
+"tasks": 149
+},
+{
+"id": 655,
+"klass": 3,
+"subject": "english",
+"slug": "kuzovlev-655",
+"tasks": 135
+},
+{
+"id": 656,
+"klass": 3,
+"subject": "english",
+"slug": "kuzovlev-656",
+"tasks": 138
+},
+{
+"id": 687,
+"klass": 3,
+"subject": "english",
+"slug": "verbickaya-687",
+"tasks": 193
+},
+{
+"id": 706,
+"klass": 3,
+"subject": "english",
+"slug": "komarova-706",
+"tasks": 132
+},
+{
+"id": 761,
+"klass": 3,
+"subject": "english",
+"slug": "biboletova-761",
+"tasks": 446
+},
+{
+"id": 762,
+"klass": 3,
+"subject": "english",
+"slug": "biboletova-762",
+"tasks": 210
+},
+{
+"id": 766,
+"klass": 3,
+"subject": "english",
+"slug": "komarova-766",
+"tasks": 222
+},
+{
+"id": 769,
+"klass": 3,
+"subject": "english",
+"slug": "verbickaya-769",
+"tasks": 212
+},
+{
+"id": 804,
+"klass": 3,
+"subject": "english",
+"slug": "bykova-804",
+"tasks": 313
+},
+{
+"id": 807,
+"klass": 3,
+"subject": "english",
+"slug": "afanaseva-807",
+"tasks": 215
+},
+{
+"id": 1154,
+"klass": 3,
+"subject": "english",
+"slug": "kuzovlev-1154",
+"tasks": 0
+},
+{
+"id": 1155,
+"klass": 3,
+"subject": "english",
+"slug": "bykova-1155",
+"tasks": 0
+},
+{
+"id": 1156,
+"klass": 3,
+"subject": "english",
+"slug": "afanaseva-1156",
+"tasks": 0
+},
+{
+"id": 1157,
+"klass": 3,
+"subject": "english",
+"slug": "verbickaya-1157",
+"tasks": 0
+},
+{
+"id": 613,
+"klass": 4,
+"subject": "english",
+"slug": "afanaseva-613",
+"tasks": 245
+},
+{
+"id": 614,
+"klass": 4,
+"subject": "english",
+"slug": "afanaseva-614",
+"tasks": 235
+},
+{
+"id": 615,
+"klass": 4,
+"subject": "english",
+"slug": "afanaseva-615",
+"tasks": 172
+},
+{
+"id": 623,
+"klass": 4,
+"subject": "english",
+"slug": "bykova-623",
+"tasks": 187
+},
+{
+"id": 624,
+"klass": 4,
+"subject": "english",
+"slug": "bykova-624",
+"tasks": 102
+},
+{
+"id": 642,
+"klass": 4,
+"subject": "english",
+"slug": "kuzovlev-642",
+"tasks": 98
+},
+{
+"id": 647,
+"klass": 4,
+"subject": "english",
+"slug": "bykova-647",
+"tasks": 173
+},
+{
+"id": 651,
+"klass": 4,
+"subject": "english",
+"slug": "vereshchagina-651",
+"tasks": 565
+},
+{
+"id": 657,
+"klass": 4,
+"subject": "english",
+"slug": "kuzovlev-657",
+"tasks": 94
+},
+{
+"id": 659,
+"klass": 4,
+"subject": "english",
+"slug": "vereshchagina-659",
+"tasks": 110
+},
+{
+"id": 688,
+"klass": 4,
+"subject": "english",
+"slug": "biboletova-688",
+"tasks": 397
+},
+{
+"id": 689,
+"klass": 4,
+"subject": "english",
+"slug": "kuzovlev-689",
+"tasks": 109
+},
+{
+"id": 702,
+"klass": 4,
+"subject": "english",
+"slug": "verbickaya-702",
+"tasks": 191
+},
+{
+"id": 703,
+"klass": 4,
+"subject": "english",
+"slug": "verbickaya-703",
+"tasks": 174
+},
+{
+"id": 729,
+"klass": 4,
+"subject": "english",
+"slug": "biboletova-729",
+"tasks": 149
+},
+{
+"id": 733,
+"klass": 4,
+"subject": "english",
+"slug": "komarova-733",
+"tasks": 161
+},
+{
+"id": 734,
+"klass": 4,
+"subject": "english",
+"slug": "komarova-734",
+"tasks": 227
+},
+{
+"id": 760,
+"klass": 4,
+"subject": "english",
+"slug": "vereshchagina-760",
+"tasks": 514
+},
+{
+"id": 770,
+"klass": 4,
+"subject": "english",
+"slug": "verbickaya-770",
+"tasks": 185
+},
+{
+"id": 805,
+"klass": 4,
+"subject": "english",
+"slug": "bykova-805",
+"tasks": 314
+},
+{
+"id": 808,
+"klass": 4,
+"subject": "english",
+"slug": "afanaseva-808",
+"tasks": 207
+},
+{
+"id": 1158,
+"klass": 4,
+"subject": "english",
+"slug": "bykova-1158",
+"tasks": 0
+},
+{
+"id": 1159,
+"klass": 4,
+"subject": "english",
+"slug": "verbickaya-1159",
+"tasks": 0
+},
+{
+"id": 1160,
+"klass": 4,
+"subject": "english",
+"slug": "kuzovlev-1160",
+"tasks": 0
+},
+{
+"id": 1161,
+"klass": 4,
+"subject": "english",
+"slug": "afanaseva-1161",
+"tasks": 0
+},
+{
+"id": 1169,
+"klass": 4,
+"subject": "english",
+"slug": "vereshchagina-1169",
+"tasks": 0
+},
+{
+"id": 59,
+"klass": 5,
+"subject": "english",
+"slug": "afanaseva-59",
+"tasks": 285
+},
+{
+"id": 60,
+"klass": 5,
+"subject": "english",
+"slug": "afanaseva-60",
+"tasks": 284
+},
+{
+"id": 61,
+"klass": 5,
+"subject": "english",
+"slug": "afanaseva-61",
+"tasks": 179
+},
+{
+"id": 63,
+"klass": 5,
+"subject": "english",
+"slug": "biboletova-63",
+"tasks": 586
+},
+{
+"id": 64,
+"klass": 5,
+"subject": "english",
+"slug": "biboletova-64",
+"tasks": 244
+},
+{
+"id": 65,
+"klass": 5,
+"subject": "english",
+"slug": "vaulina-65",
+"tasks": 532
+},
+{
+"id": 66,
+"klass": 5,
+"subject": "english",
+"slug": "vaulina-66",
+"tasks": 288
+},
+{
+"id": 68,
+"klass": 5,
+"subject": "english",
+"slug": "verbickaya-68",
+"tasks": 241
+},
+{
+"id": 69,
+"klass": 5,
+"subject": "english",
+"slug": "verbickaya-69",
+"tasks": 156
+},
+{
+"id": 71,
+"klass": 5,
+"subject": "english",
+"slug": "kuzovlev-71",
+"tasks": 332
+},
+{
+"id": 72,
+"klass": 5,
+"subject": "english",
+"slug": "kuzovlev-72",
+"tasks": 164
+},
+{
+"id": 249,
+"klass": 5,
+"subject": "english",
+"slug": "komarova-249",
+"tasks": 561
+},
+{
+"id": 251,
+"klass": 5,
+"subject": "english",
+"slug": "komarova-251",
+"tasks": 310
+},
+{
+"id": 267,
+"klass": 5,
+"subject": "english",
+"slug": "baranova-267",
+"tasks": 601
+},
+{
+"id": 520,
+"klass": 5,
+"subject": "english",
+"slug": "verbickaya-520",
+"tasks": 258
+},
+{
+"id": 571,
+"klass": 5,
+"subject": "english",
+"slug": "baranova-571",
+"tasks": 324
+},
+{
+"id": 1148,
+"klass": 5,
+"subject": "english",
+"slug": "afanaseva-1148",
+"tasks": 0
+},
+{
+"id": 1149,
+"klass": 5,
+"subject": "english",
+"slug": "verbickaya-1149",
+"tasks": 0
+},
+{
+"id": 74,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-74",
+"tasks": 293
+},
+{
+"id": 75,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-75",
+"tasks": 223
+},
+{
+"id": 79,
+"klass": 6,
+"subject": "english",
+"slug": "vaulina-79",
+"tasks": 499
+},
+{
+"id": 80,
+"klass": 6,
+"subject": "english",
+"slug": "vaulina-80",
+"tasks": 359
+},
+{
+"id": 82,
+"klass": 6,
+"subject": "english",
+"slug": "verbickaya-82",
+"tasks": 256
+},
+{
+"id": 83,
+"klass": 6,
+"subject": "english",
+"slug": "verbickaya-83",
+"tasks": 311
+},
+{
+"id": 85,
+"klass": 6,
+"subject": "english",
+"slug": "kuzovlev-85",
+"tasks": 291
+},
+{
+"id": 86,
+"klass": 6,
+"subject": "english",
+"slug": "kuzovlev-86",
+"tasks": 174
+},
+{
+"id": 231,
+"klass": 6,
+"subject": "english",
+"slug": "komarova-231",
+"tasks": 576
+},
+{
+"id": 408,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-408",
+"tasks": 255
+},
+{
+"id": 502,
+"klass": 6,
+"subject": "english",
+"slug": "verbickaya-502",
+"tasks": 231
+},
+{
+"id": 515,
+"klass": 6,
+"subject": "english",
+"slug": "komarova-515",
+"tasks": 526
+},
+{
+"id": 557,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-557",
+"tasks": 258
+},
+{
+"id": 558,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-558",
+"tasks": 351
+},
+{
+"id": 572,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-572",
+"tasks": 294
+},
+{
+"id": 1162,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-1162",
+"tasks": 0
+},
+{
+"id": 1163,
+"klass": 6,
+"subject": "english",
+"slug": "verbickaya-1163",
+"tasks": 0
+},
+{
+"id": 1164,
+"klass": 6,
+"subject": "english",
+"slug": "afanaseva-1164",
+"tasks": 0
+},
+{
+"id": 88,
+"klass": 7,
+"subject": "english",
+"slug": "afanaseva-88",
+"tasks": 295
+},
+{
+"id": 89,
+"klass": 7,
+"subject": "english",
+"slug": "afanaseva-89",
+"tasks": 295
+},
+{
+"id": 90,
+"klass": 7,
+"subject": "english",
+"slug": "afanaseva-90",
+"tasks": 217
+},
+{
+"id": 92,
+"klass": 7,
+"subject": "english",
+"slug": "biboletova-92",
+"tasks": 558
+},
+{
+"id": 93,
+"klass": 7,
+"subject": "english",
+"slug": "biboletova-93",
+"tasks": 190
+},
+{
+"id": 94,
+"klass": 7,
+"subject": "english",
+"slug": "vaulina-94",
+"tasks": 487
+},
+{
+"id": 95,
+"klass": 7,
+"subject": "english",
+"slug": "vaulina-95",
+"tasks": 244
+},
+{
+"id": 97,
+"klass": 7,
+"subject": "english",
+"slug": "verbickaya-97",
+"tasks": 281
+},
+{
+"id": 98,
+"klass": 7,
+"subject": "english",
+"slug": "verbickaya-98",
+"tasks": 337
+},
+{
+"id": 100,
+"klass": 7,
+"subject": "english",
+"slug": "kuzovlev-100",
+"tasks": 363
+},
+{
+"id": 101,
+"klass": 7,
+"subject": "english",
+"slug": "kuzovlev-101",
+"tasks": 174
+},
+{
+"id": 232,
+"klass": 7,
+"subject": "english",
+"slug": "komarova-232",
+"tasks": 567
+},
+{
+"id": 234,
+"klass": 7,
+"subject": "english",
+"slug": "komarova-234",
+"tasks": 482
+},
+{
+"id": 521,
+"klass": 7,
+"subject": "english",
+"slug": "verbickaya-521",
+"tasks": 265
+},
+{
+"id": 1165,
+"klass": 7,
+"subject": "english",
+"slug": "afanaseva-1165",
+"tasks": 0
+},
+{
+"id": 1166,
+"klass": 7,
+"subject": "english",
+"slug": "verbickaya-1166",
+"tasks": 0
+},
+{
+"id": 235,
+"klass": 8,
+"subject": "english",
+"slug": "komarova-235",
+"tasks": 590
+},
+{
+"id": 237,
+"klass": 8,
+"subject": "english",
+"slug": "komarova-237",
+"tasks": 481
+},
+{
+"id": 246,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-246",
+"tasks": 211
+},
+{
+"id": 247,
+"klass": 8,
+"subject": "english",
+"slug": "vaulina-247",
+"tasks": 684
+},
+{
+"id": 248,
+"klass": 8,
+"subject": "english",
+"slug": "biboletova-248",
+"tasks": 537
+},
+{
+"id": 252,
+"klass": 8,
+"subject": "english",
+"slug": "verbickaya-252",
+"tasks": 492
+},
+{
+"id": 254,
+"klass": 8,
+"subject": "english",
+"slug": "kuzovlev-254",
+"tasks": 286
+},
+{
+"id": 277,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-277",
+"tasks": 193
+},
+{
+"id": 497,
+"klass": 8,
+"subject": "english",
+"slug": "biboletova-497",
+"tasks": 124
+},
+{
+"id": 503,
+"klass": 8,
+"subject": "english",
+"slug": "verbickaya-503",
+"tasks": 343
+},
+{
+"id": 508,
+"klass": 8,
+"subject": "english",
+"slug": "kuzovlev-508",
+"tasks": 136
+},
+{
+"id": 527,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-527",
+"tasks": 210
+},
+{
+"id": 559,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-559",
+"tasks": 539
+},
+{
+"id": 563,
+"klass": 8,
+"subject": "english",
+"slug": "vaulina-563",
+"tasks": 320
+},
+{
+"id": 566,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-566",
+"tasks": 151
+},
+{
+"id": 1167,
+"klass": 8,
+"subject": "english",
+"slug": "afanaseva-1167",
+"tasks": 0
+},
+{
+"id": 239,
+"klass": 9,
+"subject": "english",
+"slug": "komarova-239",
+"tasks": 586
+},
+{
+"id": 240,
+"klass": 9,
+"subject": "english",
+"slug": "komarova-240",
+"tasks": 506
+},
+{
+"id": 271,
+"klass": 9,
+"subject": "english",
+"slug": "vaulina-271",
+"tasks": 317
+},
+{
+"id": 272,
+"klass": 9,
+"subject": "english",
+"slug": "vaulina-272",
+"tasks": 145
+},
+{
+"id": 274,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-274",
+"tasks": 326
+},
+{
+"id": 275,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-275",
+"tasks": 115
+},
+{
+"id": 281,
+"klass": 9,
+"subject": "english",
+"slug": "kuzovlev-281",
+"tasks": 306
+},
+{
+"id": 282,
+"klass": 9,
+"subject": "english",
+"slug": "kuzovlev-282",
+"tasks": 162
+},
+{
+"id": 284,
+"klass": 9,
+"subject": "english",
+"slug": "kuzovlev-284",
+"tasks": 15
+},
+{
+"id": 504,
+"klass": 9,
+"subject": "english",
+"slug": "verbickaya-504",
+"tasks": 477
+},
+{
+"id": 505,
+"klass": 9,
+"subject": "english",
+"slug": "verbickaya-505",
+"tasks": 261
+},
+{
+"id": 507,
+"klass": 9,
+"subject": "english",
+"slug": "vaulina-507",
+"tasks": 709
+},
+{
+"id": 511,
+"klass": 9,
+"subject": "english",
+"slug": "biboletova-511",
+"tasks": 169
+},
+{
+"id": 524,
+"klass": 9,
+"subject": "english",
+"slug": "biboletova-524",
+"tasks": 473
+},
+{
+"id": 567,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-567",
+"tasks": 164
+},
+{
+"id": 568,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-568",
+"tasks": 227
+},
+{
+"id": 569,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-569",
+"tasks": 230
+},
+{
+"id": 1168,
+"klass": 9,
+"subject": "english",
+"slug": "afanaseva-1168",
+"tasks": 0
+},
+{
+"id": 241,
+"klass": 10,
+"subject": "english",
+"slug": "komarova-241",
+"tasks": 635
+},
+{
+"id": 242,
+"klass": 10,
+"subject": "english",
+"slug": "komarova-242",
+"tasks": 389
+},
+{
+"id": 276,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-276",
+"tasks": 338
+},
+{
+"id": 280,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-280",
+"tasks": 77
+},
+{
+"id": 285,
+"klass": 10,
+"subject": "english",
+"slug": "baranova-285",
+"tasks": 1124
+},
+{
+"id": 286,
+"klass": 10,
+"subject": "english",
+"slug": "baranova-286",
+"tasks": 586
+},
+{
+"id": 287,
+"klass": 10,
+"subject": "english",
+"slug": "baranova-287",
+"tasks": 45
+},
+{
+"id": 499,
+"klass": 10,
+"subject": "english",
+"slug": "verbickaya-499",
+"tasks": 532
+},
+{
+"id": 500,
+"klass": 10,
+"subject": "english",
+"slug": "verbickaya-500",
+"tasks": 258
+},
+{
+"id": 509,
+"klass": 10,
+"subject": "english",
+"slug": "biboletova-509",
+"tasks": 197
+},
+{
+"id": 512,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-512",
+"tasks": 148
+},
+{
+"id": 523,
+"klass": 10,
+"subject": "english",
+"slug": "biboletova-523",
+"tasks": 507
+},
+{
+"id": 525,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-525",
+"tasks": 513
+},
+{
+"id": 1103,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-1103",
+"tasks": 729
+},
+{
+"id": 1104,
+"klass": 10,
+"subject": "english",
+"slug": "afanaseva-1104",
+"tasks": 300
+},
+{
+"id": 243,
+"klass": 11,
+"subject": "english",
+"slug": "komarova-243",
+"tasks": 694
+},
+{
+"id": 288,
+"klass": 11,
+"subject": "english",
+"slug": "baranova-288",
+"tasks": 44
+},
+{
+"id": 289,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-289",
+"tasks": 98
+},
+{
+"id": 501,
+"klass": 11,
+"subject": "english",
+"slug": "verbickaya-501",
+"tasks": 585
+},
+{
+"id": 506,
+"klass": 11,
+"subject": "english",
+"slug": "verbickaya-506",
+"tasks": 295
+},
+{
+"id": 510,
+"klass": 11,
+"subject": "english",
+"slug": "biboletova-510",
+"tasks": 183
+},
+{
+"id": 514,
+"klass": 11,
+"subject": "english",
+"slug": "komarova-514",
+"tasks": 273
+},
+{
+"id": 526,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-526",
+"tasks": 394
+},
+{
+"id": 561,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-561",
+"tasks": 277
+},
+{
+"id": 562,
+"klass": 11,
+"subject": "english",
+"slug": "biboletova-562",
+"tasks": 541
+},
+{
+"id": 565,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-565",
+"tasks": 138
+},
+{
+"id": 1100,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-1100",
+"tasks": 787
+},
+{
+"id": 1105,
+"klass": 11,
+"subject": "english",
+"slug": "afanaseva-1105",
+"tasks": 271
+},
+{
+"id": 32,
+"klass": 7,
+"subject": "geometriya",
+"slug": "atanasyan-32",
+"tasks": 434
+},
+{
+"id": 33,
+"klass": 7,
+"subject": "geometriya",
+"slug": "atanasyan-33",
+"tasks": 154
+},
+{
+"id": 35,
+"klass": 7,
+"subject": "geometriya",
+"slug": "merzlyak-35",
+"tasks": 692
+},
+{
+"id": 36,
+"klass": 7,
+"subject": "geometriya",
+"slug": "merzlyak-36",
+"tasks": 172
+},
+{
+"id": 37,
+"klass": 7,
+"subject": "geometriya",
+"slug": "merzlyak-37",
+"tasks": 159
+},
+{
+"id": 39,
+"klass": 7,
+"subject": "geometriya",
+"slug": "pogorelov-39",
+"tasks": 16
+},
+{
+"id": 41,
+"klass": 7,
+"subject": "geometriya",
+"slug": "pogorelov-41",
+"tasks": 30
+},
+{
+"id": 42,
+"klass": 7,
+"subject": "geometriya",
+"slug": "smirnov-42",
+"tasks": 109
+},
+{
+"id": 1200,
+"klass": 7,
+"subject": "geometriya",
+"slug": "merzlyak-1200",
+"tasks": 0
+},
+{
+"id": 138,
+"klass": 8,
+"subject": "geometriya",
+"slug": "atanasyan-138",
+"tasks": 114
+},
+{
+"id": 139,
+"klass": 8,
+"subject": "geometriya",
+"slug": "merzlyak-139",
+"tasks": 250
+},
+{
+"id": 140,
+"klass": 8,
+"subject": "geometriya",
+"slug": "merzlyak-140",
+"tasks": 192
+},
+{
+"id": 327,
+"klass": 8,
+"subject": "geometriya",
+"slug": "merzlyak-327",
+"tasks": 894
+},
+{
+"id": 584,
+"klass": 8,
+"subject": "geometriya",
+"slug": "atanasyan-584",
+"tasks": 619
+},
+{
+"id": 1194,
+"klass": 8,
+"subject": "geometriya",
+"slug": "merzlyak-1194",
+"tasks": 0
+},
+{
+"id": 141,
+"klass": 9,
+"subject": "geometriya",
+"slug": "atanasyan-141",
+"tasks": 91
+},
+{
+"id": 143,
+"klass": 9,
+"subject": "geometriya",
+"slug": "merzlyak-143",
+"tasks": 226
+},
+{
+"id": 529,
+"klass": 9,
+"subject": "geometriya",
+"slug": "merzlyak-529",
+"tasks": 1025
+},
+{
+"id": 585,
+"klass": 9,
+"subject": "geometriya",
+"slug": "atanasyan-585",
+"tasks": 474
+},
+{
+"id": 598,
+"klass": 9,
+"subject": "geometriya",
+"slug": "merzlyak-598",
+"tasks": 215
+},
+{
+"id": 1193,
+"klass": 9,
+"subject": "geometriya",
+"slug": "merzlyak-1193",
+"tasks": 0
+},
+{
+"id": 135,
+"klass": 10,
+"subject": "geometriya",
+"slug": "atanasyan-135",
+"tasks": 110
+},
+{
+"id": 528,
+"klass": 10,
+"subject": "geometriya",
+"slug": "atanasyan-528",
+"tasks": 346
+},
+{
+"id": 1109,
+"klass": 10,
+"subject": "geometriya",
+"slug": "merzlyak-1109",
+"tasks": 833
+},
+{
+"id": 136,
+"klass": 11,
+"subject": "geometriya",
+"slug": "atanasyan-136",
+"tasks": 136
+},
+{
+"id": 592,
+"klass": 11,
+"subject": "geometriya",
+"slug": "atanasyan-592",
+"tasks": 779
+},
+{
+"id": 1110,
+"klass": 11,
+"subject": "geometriya",
+"slug": "merzlyak-1110",
+"tasks": 1125
+},
+{
+"id": 1101,
+"klass": 11,
+"subject": "literatura",
+"slug": "korovin-1101",
+"tasks": 775
+},
+{
+"id": 1102,
+"klass": 11,
+"subject": "literatura",
+"slug": "korovin-1102",
+"tasks": 575
+},
+{
+"id": 1249,
+"klass": 11,
+"subject": "literatura",
+"slug": "korovin-1249",
+"tasks": 0
+},
+{
+"id": 664,
+"klass": 1,
+"subject": "matematika",
+"slug": "dorofeev-664",
+"tasks": 470
+},
+{
+"id": 673,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-673",
+"tasks": 223
+},
+{
+"id": 690,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-690",
+"tasks": 223
+},
+{
+"id": 691,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-691",
+"tasks": 595
+},
+{
+"id": 697,
+"klass": 1,
+"subject": "matematika",
+"slug": "moro-697",
+"tasks": 636
+},
+{
+"id": 698,
+"klass": 1,
+"subject": "matematika",
+"slug": "moro-698",
+"tasks": 505
+},
+{
+"id": 719,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-719",
+"tasks": 205
+},
+{
+"id": 720,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-720",
+"tasks": 136
+},
+{
+"id": 775,
+"klass": 1,
+"subject": "matematika",
+"slug": "dorofeev-775",
+"tasks": 138
+},
+{
+"id": 1220,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-1220",
+"tasks": 0
+},
+{
+"id": 1221,
+"klass": 1,
+"subject": "matematika",
+"slug": "peterson-1221",
+"tasks": 0
+},
+{
+"id": 1222,
+"klass": 1,
+"subject": "matematika",
+"slug": "moro-1222",
+"tasks": 0
+},
+{
+"id": 1223,
+"klass": 1,
+"subject": "matematika",
+"slug": "dorofeev-1223",
+"tasks": 0
+},
+{
+"id": 666,
+"klass": 2,
+"subject": "matematika",
+"slug": "dorofeev-666",
+"tasks": 667
+},
+{
+"id": 692,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-692",
+"tasks": 421
+},
+{
+"id": 693,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-693",
+"tasks": 531
+},
+{
+"id": 694,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-694",
+"tasks": 558
+},
+{
+"id": 699,
+"klass": 2,
+"subject": "matematika",
+"slug": "moro-699",
+"tasks": 614
+},
+{
+"id": 700,
+"klass": 2,
+"subject": "matematika",
+"slug": "moro-700",
+"tasks": 776
+},
+{
+"id": 711,
+"klass": 2,
+"subject": "matematika",
+"slug": "dorofeev-711",
+"tasks": 495
+},
+{
+"id": 722,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-722",
+"tasks": 222
+},
+{
+"id": 1216,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-1216",
+"tasks": 0
+},
+{
+"id": 1217,
+"klass": 2,
+"subject": "matematika",
+"slug": "peterson-1217",
+"tasks": 0
+},
+{
+"id": 1218,
+"klass": 2,
+"subject": "matematika",
+"slug": "moro-1218",
+"tasks": 0
+},
+{
+"id": 1219,
+"klass": 2,
+"subject": "matematika",
+"slug": "dorofeev-1219",
+"tasks": 0
+},
+{
+"id": 674,
+"klass": 3,
+"subject": "matematika",
+"slug": "peterson-674",
+"tasks": 533
+},
+{
+"id": 675,
+"klass": 3,
+"subject": "matematika",
+"slug": "peterson-675",
+"tasks": 486
+},
+{
+"id": 676,
+"klass": 3,
+"subject": "matematika",
+"slug": "moro-676",
+"tasks": 769
+},
+{
+"id": 677,
+"klass": 3,
+"subject": "matematika",
+"slug": "peterson-677",
+"tasks": 418
+},
+{
+"id": 701,
+"klass": 3,
+"subject": "matematika",
+"slug": "moro-701",
+"tasks": 712
+},
+{
+"id": 725,
+"klass": 3,
+"subject": "matematika",
+"slug": "peterson-725",
+"tasks": 134
+},
+{
+"id": 778,
+"klass": 3,
+"subject": "matematika",
+"slug": "dorofeev-778",
+"tasks": 623
+},
+{
+"id": 1213,
+"klass": 3,
+"subject": "matematika",
+"slug": "peterson-1213",
+"tasks": 0
+},
+{
+"id": 1214,
+"klass": 3,
+"subject": "matematika",
+"slug": "moro-1214",
+"tasks": 0
+},
+{
+"id": 1215,
+"klass": 3,
+"subject": "matematika",
+"slug": "dorofeev-1215",
+"tasks": 0
+},
+{
+"id": 668,
+"klass": 4,
+"subject": "matematika",
+"slug": "dorofeev-668",
+"tasks": 772
+},
+{
+"id": 678,
+"klass": 4,
+"subject": "matematika",
+"slug": "moro-678",
+"tasks": 808
+},
+{
+"id": 679,
+"klass": 4,
+"subject": "matematika",
+"slug": "peterson-679",
+"tasks": 604
+},
+{
+"id": 680,
+"klass": 4,
+"subject": "matematika",
+"slug": "moro-680",
+"tasks": 880
+},
+{
+"id": 695,
+"klass": 4,
+"subject": "matematika",
+"slug": "peterson-695",
+"tasks": 503
+},
+{
+"id": 696,
+"klass": 4,
+"subject": "matematika",
+"slug": "peterson-696",
+"tasks": 420
+},
+{
+"id": 779,
+"klass": 4,
+"subject": "matematika",
+"slug": "dorofeev-779",
+"tasks": 635
+},
+{
+"id": 1210,
+"klass": 4,
+"subject": "matematika",
+"slug": "peterson-1210",
+"tasks": 0
+},
+{
+"id": 1211,
+"klass": 4,
+"subject": "matematika",
+"slug": "moro-1211",
+"tasks": 0
+},
+{
+"id": 1212,
+"klass": 4,
+"subject": "matematika",
+"slug": "dorofeev-1212",
+"tasks": 0
+},
+{
+"id": 2,
+"klass": 5,
+"subject": "matematika",
+"slug": "merzlyak-2",
+"tasks": 1532
+},
+{
+"id": 3,
+"klass": 5,
+"subject": "matematika",
+"slug": "merzlyak-3",
+"tasks": 303
+},
+{
+"id": 4,
+"klass": 5,
+"subject": "matematika",
+"slug": "merzlyak-4",
+"tasks": 220
+},
+{
+"id": 6,
+"klass": 5,
+"subject": "matematika",
+"slug": "vilenkin-6",
+"tasks": 1835
+},
+{
+"id": 7,
+"klass": 5,
+"subject": "matematika",
+"slug": "vilenkin-7",
+"tasks": 162
+},
+{
+"id": 8,
+"klass": 5,
+"subject": "matematika",
+"slug": "vilenkin-8",
+"tasks": 134
+},
+{
+"id": 10,
+"klass": 5,
+"subject": "matematika",
+"slug": "dorofeev-10",
+"tasks": 1127
+},
+{
+"id": 12,
+"klass": 5,
+"subject": "matematika",
+"slug": "dorofeev-12",
+"tasks": 171
+},
+{
+"id": 14,
+"klass": 5,
+"subject": "matematika",
+"slug": "nikolskij-14",
+"tasks": 1150
+},
+{
+"id": 16,
+"klass": 5,
+"subject": "matematika",
+"slug": "nikolskij-16",
+"tasks": 192
+},
+{
+"id": 313,
+"klass": 5,
+"subject": "matematika",
+"slug": "bunimovich-313",
+"tasks": 185
+},
+{
+"id": 487,
+"klass": 5,
+"subject": "matematika",
+"slug": "potapov-487",
+"tasks": 152
+},
+{
+"id": 1205,
+"klass": 5,
+"subject": "matematika",
+"slug": "merzlyak-1205",
+"tasks": 0
+},
+{
+"id": 1206,
+"klass": 5,
+"subject": "matematika",
+"slug": "vilenkin-1206",
+"tasks": 0
+},
+{
+"id": 1207,
+"klass": 5,
+"subject": "matematika",
+"slug": "potapov-1207",
+"tasks": 0
+},
+{
+"id": 1208,
+"klass": 5,
+"subject": "matematika",
+"slug": "bunimovich-1208",
+"tasks": 0
+},
+{
+"id": 18,
+"klass": 6,
+"subject": "matematika",
+"slug": "merzlyak-18",
+"tasks": 1623
+},
+{
+"id": 19,
+"klass": 6,
+"subject": "matematika",
+"slug": "merzlyak-19",
+"tasks": 238
+},
+{
+"id": 20,
+"klass": 6,
+"subject": "matematika",
+"slug": "merzlyak-20",
+"tasks": 166
+},
+{
+"id": 21,
+"klass": 6,
+"subject": "matematika",
+"slug": "merzlyak-21",
+"tasks": 214
+},
+{
+"id": 23,
+"klass": 6,
+"subject": "matematika",
+"slug": "vilenkin-23",
+"tasks": 1594
+},
+{
+"id": 24,
+"klass": 6,
+"subject": "matematika",
+"slug": "vilenkin-24",
+"tasks": 541
+},
+{
+"id": 26,
+"klass": 6,
+"subject": "matematika",
+"slug": "nikolskij-26",
+"tasks": 1247
+},
+{
+"id": 27,
+"klass": 6,
+"subject": "matematika",
+"slug": "nikolskij-27",
+"tasks": 313
+},
+{
+"id": 30,
+"klass": 6,
+"subject": "matematika",
+"slug": "bunimovich-30",
+"tasks": 434
+},
+{
+"id": 301,
+"klass": 6,
+"subject": "matematika",
+"slug": "dorofeev-301",
+"tasks": 457
+},
+{
+"id": 302,
+"klass": 6,
+"subject": "matematika",
+"slug": "dorofeev-302",
+"tasks": 587
+},
+{
+"id": 303,
+"klass": 6,
+"subject": "matematika",
+"slug": "dorofeev-303",
+"tasks": 768
+},
+{
+"id": 1204,
+"klass": 6,
+"subject": "matematika",
+"slug": "dorofeev-1204",
+"tasks": 0
+},
+{
+"id": 1209,
+"klass": 6,
+"subject": "matematika",
+"slug": "merzlyak-1209",
+"tasks": 0
+},
+{
+"id": 822,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "andersen-822",
+"tasks": 1
+},
+{
+"id": 825,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "astafev-825",
+"tasks": 1
+},
+{
+"id": 828,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "bazhov-828",
+"tasks": 1
+},
+{
+"id": 832,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "belov-832",
+"tasks": 1
+},
+{
+"id": 838,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "brekhdberi-838",
+"tasks": 1
+},
+{
+"id": 841,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "bulychyov-841",
+"tasks": 1
+},
+{
+"id": 851,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gauf-851",
+"tasks": 1
+},
+{
+"id": 852,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "genri-852",
+"tasks": 1
+},
+{
+"id": 879,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "dostoevskij-879",
+"tasks": 1
+},
+{
+"id": 885,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "zheleznikov-885",
+"tasks": 1
+},
+{
+"id": 886,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "zhukovskij-886",
+"tasks": 1
+},
+{
+"id": 887,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "zhukovskij-887",
+"tasks": 1
+},
+{
+"id": 891,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "zoshchenko-891",
+"tasks": 1
+},
+{
+"id": 897,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "kipling-897",
+"tasks": 1
+},
+{
+"id": 898,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "konan-898",
+"tasks": 1
+},
+{
+"id": 902,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "krapivin-902",
+"tasks": 1
+},
+{
+"id": 908,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "kuprin-908",
+"tasks": 1
+},
+{
+"id": 918,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "lindgren-918",
+"tasks": 1
+},
+{
+"id": 920,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "london-920",
+"tasks": 1
+},
+{
+"id": 921,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "london-921",
+"tasks": 1
+},
+{
+"id": 937,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "nosov-937",
+"tasks": 1
+},
+{
+"id": 938,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "nosov-938",
+"tasks": 1
+},
+{
+"id": 939,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "nosov-939",
+"tasks": 1
+},
+{
+"id": 944,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "paustovskij-944",
+"tasks": 1
+},
+{
+"id": 945,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "paustovskij-945",
+"tasks": 1
+},
+{
+"id": 946,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "paustovskij-946",
+"tasks": 1
+},
+{
+"id": 950,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "platonov-950",
+"tasks": 1
+},
+{
+"id": 957,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "pogorelskij-957",
+"tasks": 1
+},
+{
+"id": 964,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "pushkin-964",
+"tasks": 1
+},
+{
+"id": 965,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "pushkin-965",
+"tasks": 1
+},
+{
+"id": 967,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "pushkin-967",
+"tasks": 1
+},
+{
+"id": 979,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "rodari-979",
+"tasks": 1
+},
+{
+"id": 996,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "seton-tompson-996",
+"tasks": 1
+},
+{
+"id": 997,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "seton-tompson-997",
+"tasks": 1
+},
+{
+"id": 1000,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "stivenson-1000",
+"tasks": 1
+},
+{
+"id": 1003,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "stivenson-1003",
+"tasks": 1
+},
+{
+"id": 1005,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "tven-1005",
+"tasks": 1
+},
+{
+"id": 1011,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "tolkin-1011",
+"tasks": 1
+},
+{
+"id": 1021,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "tolstoj-1021",
+"tasks": 1
+},
+{
+"id": 1024,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "turgenev-1024",
+"tasks": 1
+},
+{
+"id": 1029,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "turgenev-1029",
+"tasks": 1
+},
+{
+"id": 1050,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "chekhov-1050",
+"tasks": 1
+},
+{
+"id": 1078,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1078",
+"tasks": 1
+},
+{
+"id": 1079,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1079",
+"tasks": 1
+},
+{
+"id": 1080,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1080",
+"tasks": 1
+},
+{
+"id": 1081,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1081",
+"tasks": 1
+},
+{
+"id": 1082,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1082",
+"tasks": 1
+},
+{
+"id": 1083,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1083",
+"tasks": 1
+},
+{
+"id": 1084,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1084",
+"tasks": 1
+},
+{
+"id": 1085,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "gogol-1085",
+"tasks": 1
+},
+{
+"id": 1099,
+"klass": 5,
+"subject": "pereskazy",
+"slug": "chekhov-1099",
+"tasks": 1
+},
+{
+"id": 869,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "grin-869",
+"tasks": 1
+},
+{
+"id": 873,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "defo-873",
+"tasks": 1
+},
+{
+"id": 884,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "zheleznikov-884",
+"tasks": 1
+},
+{
+"id": 893,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "iskander-893",
+"tasks": 1
+},
+{
+"id": 901,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "krapivin-901",
+"tasks": 1
+},
+{
+"id": 903,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "kuper-903",
+"tasks": 1
+},
+{
+"id": 909,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "kuprin-909",
+"tasks": 1
+},
+{
+"id": 913,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "leskov-913",
+"tasks": 1
+},
+{
+"id": 919,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "london-919",
+"tasks": 1
+},
+{
+"id": 933,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "narodnoe-933",
+"tasks": 1
+},
+{
+"id": 958,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "prishvin-958",
+"tasks": 1
+},
+{
+"id": 968,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "pushkin-968",
+"tasks": 1
+},
+{
+"id": 974,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "mify-974",
+"tasks": 1
+},
+{
+"id": 975,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "mify-975",
+"tasks": 1
+},
+{
+"id": 976,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "mify-976",
+"tasks": 1
+},
+{
+"id": 993,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "svift-993",
+"tasks": 1
+},
+{
+"id": 995,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "seton-tompson-995",
+"tasks": 1
+},
+{
+"id": 1001,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "stivenson-1001",
+"tasks": 1
+},
+{
+"id": 1002,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "stivenson-1002",
+"tasks": 1
+},
+{
+"id": 1016,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "tolstoj-1016",
+"tasks": 1
+},
+{
+"id": 1025,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "turgenev-1025",
+"tasks": 1
+},
+{
+"id": 1032,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "ulickaya-1032",
+"tasks": 1
+},
+{
+"id": 1037,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "fraerman-1037",
+"tasks": 1
+},
+{
+"id": 1049,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "chekhov-1049",
+"tasks": 1
+},
+{
+"id": 1051,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "chekhov-1051",
+"tasks": 1
+},
+{
+"id": 1052,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "chekhov-1052",
+"tasks": 1
+},
+{
+"id": 1053,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "chekhov-1053",
+"tasks": 1
+},
+{
+"id": 1098,
+"klass": 6,
+"subject": "pereskazy",
+"slug": "chekhov-1098",
+"tasks": 1
+},
+{
+"id": 816,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "abramov-816",
+"tasks": 1
+},
+{
+"id": 821,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "aleksin-821",
+"tasks": 1
+},
+{
+"id": 823,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "astafev-823",
+"tasks": 1
+},
+{
+"id": 835,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "brekhdberi-835",
+"tasks": 1
+},
+{
+"id": 845,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "bunin-845",
+"tasks": 1
+},
+{
+"id": 846,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "bunin-846",
+"tasks": 1
+},
+{
+"id": 853,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "genri-853",
+"tasks": 1
+},
+{
+"id": 859,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "gogol-859",
+"tasks": 1
+},
+{
+"id": 866,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "gorkij-866",
+"tasks": 1
+},
+{
+"id": 868,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "grin-868",
+"tasks": 1
+},
+{
+"id": 904,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "kuper-904",
+"tasks": 1
+},
+{
+"id": 911,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "lermontov-911",
+"tasks": 1
+},
+{
+"id": 922,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "majn-922",
+"tasks": 1
+},
+{
+"id": 926,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "merime-926",
+"tasks": 1
+},
+{
+"id": 947,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "paustovskij-947",
+"tasks": 1
+},
+{
+"id": 948,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "platonov-948",
+"tasks": 1
+},
+{
+"id": 951,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "platonov-951",
+"tasks": 1
+},
+{
+"id": 952,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "po-952",
+"tasks": 1
+},
+{
+"id": 953,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "po-953",
+"tasks": 1
+},
+{
+"id": 954,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "po-954",
+"tasks": 1
+},
+{
+"id": 955,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "po-955",
+"tasks": 1
+},
+{
+"id": 956,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "po-956",
+"tasks": 1
+},
+{
+"id": 980,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "rozov-980",
+"tasks": 1
+},
+{
+"id": 985,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-985",
+"tasks": 1
+},
+{
+"id": 988,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-988",
+"tasks": 1
+},
+{
+"id": 989,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-989",
+"tasks": 1
+},
+{
+"id": 994,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "sent-ekhkzyuperi-994",
+"tasks": 1
+},
+{
+"id": 1006,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "tven-1006",
+"tasks": 1
+},
+{
+"id": 1007,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "tven-1007",
+"tasks": 1
+},
+{
+"id": 1008,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "tven-1008",
+"tasks": 1
+},
+{
+"id": 1009,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "tven-1009",
+"tasks": 1
+},
+{
+"id": 1026,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "turgenev-1026",
+"tasks": 1
+},
+{
+"id": 1027,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "turgenev-1027",
+"tasks": 1
+},
+{
+"id": 1054,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "chekhov-1054",
+"tasks": 1
+},
+{
+"id": 1065,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "sholohov-1065",
+"tasks": 1
+},
+{
+"id": 1069,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "shukshin-1069",
+"tasks": 1
+},
+{
+"id": 1070,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "shukshin-1070",
+"tasks": 1
+},
+{
+"id": 1086,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "pushkin-1086",
+"tasks": 1
+},
+{
+"id": 1087,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "pushkin-1087",
+"tasks": 1
+},
+{
+"id": 1088,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "pushkin-1088",
+"tasks": 1
+},
+{
+"id": 1089,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "pushkin-1089",
+"tasks": 1
+},
+{
+"id": 1090,
+"klass": 7,
+"subject": "pereskazy",
+"slug": "pushkin-1090",
+"tasks": 1
+},
+{
+"id": 817,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "averchenko-817",
+"tasks": 1
+},
+{
+"id": 824,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "astafev-824",
+"tasks": 1
+},
+{
+"id": 833,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "birs-833",
+"tasks": 1
+},
+{
+"id": 839,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "bulgakov-839",
+"tasks": 1
+},
+{
+"id": 847,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "bunin-847",
+"tasks": 1
+},
+{
+"id": 860,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "gogol-860",
+"tasks": 1
+},
+{
+"id": 880,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "dostoevskij-880",
+"tasks": 1
+},
+{
+"id": 890,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "zoshchenko-890",
+"tasks": 1
+},
+{
+"id": 899,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "konan-899",
+"tasks": 1
+},
+{
+"id": 912,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "lermontov-912",
+"tasks": 1
+},
+{
+"id": 928,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "moler-928",
+"tasks": 1
+},
+{
+"id": 969,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "pushkin-969",
+"tasks": 1
+},
+{
+"id": 998,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "solzhenicyn-998",
+"tasks": 1
+},
+{
+"id": 1018,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "tolstoj-1018",
+"tasks": 1
+},
+{
+"id": 1019,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "tolstoj-1019",
+"tasks": 1
+},
+{
+"id": 1022,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "turgenev-1022",
+"tasks": 1
+},
+{
+"id": 1023,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "turgenev-1023",
+"tasks": 1
+},
+{
+"id": 1030,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "tekhffi-1030",
+"tasks": 1
+},
+{
+"id": 1036,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "fonvizin-1036",
+"tasks": 1
+},
+{
+"id": 1063,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "shekspir-1063",
+"tasks": 1
+},
+{
+"id": 1066,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "sholohov-1066",
+"tasks": 1
+},
+{
+"id": 1091,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "pushkin-1091",
+"tasks": 1
+},
+{
+"id": 1092,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "pushkin-1092",
+"tasks": 1
+},
+{
+"id": 1093,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "pushkin-1093",
+"tasks": 1
+},
+{
+"id": 1094,
+"klass": 8,
+"subject": "pereskazy",
+"slug": "pushkin-1094",
+"tasks": 1
+},
+{
+"id": 854,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gyote-854",
+"tasks": 1
+},
+{
+"id": 855,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gyote-855",
+"tasks": 1
+},
+{
+"id": 856,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-856",
+"tasks": 1
+},
+{
+"id": 857,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-857",
+"tasks": 1
+},
+{
+"id": 867,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "griboedov-867",
+"tasks": 1
+},
+{
+"id": 871,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gyugo-871",
+"tasks": 1
+},
+{
+"id": 872,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "dante-872",
+"tasks": 1
+},
+{
+"id": 881,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "drevnerusskaya-881",
+"tasks": 1
+},
+{
+"id": 888,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "zhukovskij-888",
+"tasks": 1
+},
+{
+"id": 895,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "karamzin-895",
+"tasks": 1
+},
+{
+"id": 910,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "lermontov-910",
+"tasks": 1
+},
+{
+"id": 959,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-959",
+"tasks": 1
+},
+{
+"id": 960,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-960",
+"tasks": 1
+},
+{
+"id": 961,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-961",
+"tasks": 1
+},
+{
+"id": 962,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-962",
+"tasks": 1
+},
+{
+"id": 963,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-963",
+"tasks": 1
+},
+{
+"id": 971,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "pushkin-971",
+"tasks": 1
+},
+{
+"id": 972,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "radishchev-972",
+"tasks": 1
+},
+{
+"id": 982,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "roshchin-982",
+"tasks": 1
+},
+{
+"id": 1010,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "tendryakov-1010",
+"tasks": 1
+},
+{
+"id": 1062,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "shekspir-1062",
+"tasks": 1
+},
+{
+"id": 1072,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "yamamoto-1072",
+"tasks": 1
+},
+{
+"id": 1073,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-1073",
+"tasks": 1
+},
+{
+"id": 1074,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-1074",
+"tasks": 1
+},
+{
+"id": 1075,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-1075",
+"tasks": 1
+},
+{
+"id": 1076,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-1076",
+"tasks": 1
+},
+{
+"id": 1077,
+"klass": 9,
+"subject": "pereskazy",
+"slug": "gogol-1077",
+"tasks": 1
+},
+{
+"id": 829,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "balzak-829",
+"tasks": 1
+},
+{
+"id": 830,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "balzak-830",
+"tasks": 1
+},
+{
+"id": 836,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "brekhdberi-836",
+"tasks": 1
+},
+{
+"id": 837,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "brekhdberi-837",
+"tasks": 1
+},
+{
+"id": 863,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "goncharov-863",
+"tasks": 1
+},
+{
+"id": 874,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dzhovanoli-874",
+"tasks": 1
+},
+{
+"id": 875,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dikkens-875",
+"tasks": 1
+},
+{
+"id": 876,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dikkens-876",
+"tasks": 1
+},
+{
+"id": 877,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dikkens-877",
+"tasks": 1
+},
+{
+"id": 878,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dostoevskij-878",
+"tasks": 1
+},
+{
+"id": 882,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "dyuma-882",
+"tasks": 1
+},
+{
+"id": 914,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "leskov-914",
+"tasks": 1
+},
+{
+"id": 915,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "leskov-915",
+"tasks": 1
+},
+{
+"id": 916,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "leskov-916",
+"tasks": 1
+},
+{
+"id": 917,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "leskov-917",
+"tasks": 1
+},
+{
+"id": 927,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "meterlink-927",
+"tasks": 1
+},
+{
+"id": 929,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "mopassan-929",
+"tasks": 1
+},
+{
+"id": 936,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "nekrasov-936",
+"tasks": 1
+},
+{
+"id": 941,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "ostrovskij-941",
+"tasks": 1
+},
+{
+"id": 942,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "ostrovskij-942",
+"tasks": 1
+},
+{
+"id": 983,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "rybakov-983",
+"tasks": 1
+},
+{
+"id": 984,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-984",
+"tasks": 1
+},
+{
+"id": 986,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-986",
+"tasks": 1
+},
+{
+"id": 987,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-987",
+"tasks": 1
+},
+{
+"id": 990,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-990",
+"tasks": 1
+},
+{
+"id": 991,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-991",
+"tasks": 1
+},
+{
+"id": 992,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "saltykov-shchedrin-992",
+"tasks": 1
+},
+{
+"id": 1004,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "sekhlindzher-1004",
+"tasks": 1
+},
+{
+"id": 1014,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "tolstoj-1014",
+"tasks": 1
+},
+{
+"id": 1015,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "tolstoj-1015",
+"tasks": 1
+},
+{
+"id": 1017,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "tolstoj-1017",
+"tasks": 1
+},
+{
+"id": 1020,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "tolstoj-1020",
+"tasks": 1
+},
+{
+"id": 1028,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "turgenev-1028",
+"tasks": 1
+},
+{
+"id": 1035,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "flober-1035",
+"tasks": 1
+},
+{
+"id": 1048,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chernyshevskij-1048",
+"tasks": 1
+},
+{
+"id": 1056,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1056",
+"tasks": 1
+},
+{
+"id": 1057,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1057",
+"tasks": 1
+},
+{
+"id": 1058,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1058",
+"tasks": 1
+},
+{
+"id": 1059,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1059",
+"tasks": 1
+},
+{
+"id": 1095,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1095",
+"tasks": 1
+},
+{
+"id": 1096,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1096",
+"tasks": 1
+},
+{
+"id": 1097,
+"klass": 10,
+"subject": "pereskazy",
+"slug": "chekhov-1097",
+"tasks": 1
+},
+{
+"id": 815,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "gorkij-815",
+"tasks": 1
+},
+{
+"id": 818,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "averchenko-818",
+"tasks": 1
+},
+{
+"id": 819,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "ajtmatov-819",
+"tasks": 1
+},
+{
+"id": 820,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "ajtmatov-820",
+"tasks": 1
+},
+{
+"id": 826,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "astafev-826",
+"tasks": 1
+},
+{
+"id": 827,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "ahmatova-827",
+"tasks": 1
+},
+{
+"id": 831,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bah-831",
+"tasks": 1
+},
+{
+"id": 834,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "blok-834",
+"tasks": 1
+},
+{
+"id": 840,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bulgakov-840",
+"tasks": 1
+},
+{
+"id": 842,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bunin-842",
+"tasks": 1
+},
+{
+"id": 843,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bunin-843",
+"tasks": 1
+},
+{
+"id": 844,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bunin-844",
+"tasks": 1
+},
+{
+"id": 848,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bunin-848",
+"tasks": 1
+},
+{
+"id": 849,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "bykov-849",
+"tasks": 1
+},
+{
+"id": 850,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "vampilov-850",
+"tasks": 1
+},
+{
+"id": 862,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "golding-862",
+"tasks": 1
+},
+{
+"id": 864,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "gorkij-864",
+"tasks": 1
+},
+{
+"id": 865,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "gorkij-865",
+"tasks": 1
+},
+{
+"id": 870,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "grossman-870",
+"tasks": 1
+},
+{
+"id": 883,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "esenin-883",
+"tasks": 1
+},
+{
+"id": 889,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "zamyatin-889",
+"tasks": 1
+},
+{
+"id": 892,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "ibsen-892",
+"tasks": 1
+},
+{
+"id": 894,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kamyu-894",
+"tasks": 1
+},
+{
+"id": 896,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kafka-896",
+"tasks": 1
+},
+{
+"id": 900,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kondratev-900",
+"tasks": 1
+},
+{
+"id": 905,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kuprin-905",
+"tasks": 1
+},
+{
+"id": 906,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kuprin-906",
+"tasks": 1
+},
+{
+"id": 907,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "kuprin-907",
+"tasks": 1
+},
+{
+"id": 923,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "markes-923",
+"tasks": 1
+},
+{
+"id": 924,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "mayakovskij-924",
+"tasks": 1
+},
+{
+"id": 925,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "mayakovskij-925",
+"tasks": 1
+},
+{
+"id": 930,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "moekhm-930",
+"tasks": 1
+},
+{
+"id": 931,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "moekhm-931",
+"tasks": 1
+},
+{
+"id": 932,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "nabokov-932",
+"tasks": 1
+},
+{
+"id": 934,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "vorobev-934",
+"tasks": 1
+},
+{
+"id": 935,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "nekrasov-935",
+"tasks": 1
+},
+{
+"id": 940,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "oruekhll-940",
+"tasks": 1
+},
+{
+"id": 943,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "pasternak-943",
+"tasks": 1
+},
+{
+"id": 949,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "platonov-949",
+"tasks": 1
+},
+{
+"id": 973,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "rasputin-973",
+"tasks": 1
+},
+{
+"id": 977,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "remark-977",
+"tasks": 1
+},
+{
+"id": 978,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "remark-978",
+"tasks": 1
+},
+{
+"id": 981,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "rozov-981",
+"tasks": 1
+},
+{
+"id": 999,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "solzhenicyn-999",
+"tasks": 1
+},
+{
+"id": 1012,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "tolstaya-1012",
+"tasks": 1
+},
+{
+"id": 1013,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "tolstaya-1013",
+"tasks": 1
+},
+{
+"id": 1031,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "uajld-1031",
+"tasks": 1
+},
+{
+"id": 1033,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "uekhlls-1033",
+"tasks": 1
+},
+{
+"id": 1034,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "uekhlls-1034",
+"tasks": 1
+},
+{
+"id": 1038,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "haggard-1038",
+"tasks": 1
+},
+{
+"id": 1039,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "haggard-1039",
+"tasks": 1
+},
+{
+"id": 1040,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "haggard-1040",
+"tasks": 1
+},
+{
+"id": 1041,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "haggard-1041",
+"tasks": 1
+},
+{
+"id": 1042,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "haksli-1042",
+"tasks": 1
+},
+{
+"id": 1043,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "harper-1043",
+"tasks": 1
+},
+{
+"id": 1044,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "heminguekhj-1044",
+"tasks": 1
+},
+{
+"id": 1045,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "heminguekhj-1045",
+"tasks": 1
+},
+{
+"id": 1046,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "cvetaeva-1046",
+"tasks": 1
+},
+{
+"id": 1047,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "cvetaeva-1047",
+"tasks": 1
+},
+{
+"id": 1060,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "shalamov-1060",
+"tasks": 1
+},
+{
+"id": 1061,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "shalamov-1061",
+"tasks": 1
+},
+{
+"id": 1064,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "shelli-1064",
+"tasks": 1
+},
+{
+"id": 1067,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "sholohov-1067",
+"tasks": 1
+},
+{
+"id": 1068,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "shou-1068",
+"tasks": 1
+},
+{
+"id": 1071,
+"klass": 11,
+"subject": "pereskazy",
+"slug": "ekhko-1071",
+"tasks": 1
+},
+{
+"id": 629,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "krylova-629",
+"tasks": 280
+},
+{
+"id": 634,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "tihomirova-634",
+"tasks": 200
+},
+{
+"id": 660,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "solovejchik-660",
+"tasks": 198
+},
+{
+"id": 661,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "solovejchik-661",
+"tasks": 34
+},
+{
+"id": 737,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "kanakina-737",
+"tasks": 262
+},
+{
+"id": 738,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "kanakina-738",
+"tasks": 114
+},
+{
+"id": 755,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "golfman-755",
+"tasks": 85
+},
+{
+"id": 758,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "churakova-758",
+"tasks": 159
+},
+{
+"id": 781,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "yacenko-781",
+"tasks": 340
+},
+{
+"id": 798,
+"klass": 1,
+"subject": "russkij-yazyk",
+"slug": "buneev-798",
+"tasks": 74
+},
+{
+"id": 739,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-739",
+"tasks": 111
+},
+{
+"id": 740,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-740",
+"tasks": 85
+},
+{
+"id": 789,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-789",
+"tasks": 262
+},
+{
+"id": 790,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-790",
+"tasks": 257
+},
+{
+"id": 794,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-794",
+"tasks": 259
+},
+{
+"id": 795,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-795",
+"tasks": 292
+},
+{
+"id": 796,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-796",
+"tasks": 139
+},
+{
+"id": 797,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-797",
+"tasks": 138
+},
+{
+"id": 1170,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1170",
+"tasks": 0
+},
+{
+"id": 1171,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1171",
+"tasks": 0
+},
+{
+"id": 1172,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1172",
+"tasks": 0
+},
+{
+"id": 1173,
+"klass": 2,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1173",
+"tasks": 0
+},
+{
+"id": 625,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-625",
+"tasks": 195
+},
+{
+"id": 626,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-626",
+"tasks": 182
+},
+{
+"id": 632,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kuznecova-632",
+"tasks": 163
+},
+{
+"id": 635,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "ivanov-635",
+"tasks": 345
+},
+{
+"id": 637,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-637",
+"tasks": 165
+},
+{
+"id": 662,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-662",
+"tasks": 281
+},
+{
+"id": 663,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-663",
+"tasks": 270
+},
+{
+"id": 741,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-741",
+"tasks": 153
+},
+{
+"id": 742,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "ivanov-742",
+"tasks": 306
+},
+{
+"id": 783,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-783",
+"tasks": 318
+},
+{
+"id": 784,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-784",
+"tasks": 308
+},
+{
+"id": 1174,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1174",
+"tasks": 0
+},
+{
+"id": 1175,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1175",
+"tasks": 0
+},
+{
+"id": 1176,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1176",
+"tasks": 0
+},
+{
+"id": 1177,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1177",
+"tasks": 0
+},
+{
+"id": 1178,
+"klass": 3,
+"subject": "russkij-yazyk",
+"slug": "ivanov-1178",
+"tasks": 0
+},
+{
+"id": 627,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-627",
+"tasks": 188
+},
+{
+"id": 628,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-628",
+"tasks": 182
+},
+{
+"id": 630,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "bajkova-630",
+"tasks": 97
+},
+{
+"id": 631,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "ivanov-631",
+"tasks": 321
+},
+{
+"id": 633,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kalenchuk-633",
+"tasks": 48
+},
+{
+"id": 636,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "ivanov-636",
+"tasks": 346
+},
+{
+"id": 638,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kalenchuk-638",
+"tasks": 199
+},
+{
+"id": 735,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kuznecova-735",
+"tasks": 201
+},
+{
+"id": 736,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "zheltovskaya-736",
+"tasks": 349
+},
+{
+"id": 744,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kalenchuk-744",
+"tasks": 159
+},
+{
+"id": 752,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-752",
+"tasks": 255
+},
+{
+"id": 753,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-753",
+"tasks": 126
+},
+{
+"id": 754,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-754",
+"tasks": 147
+},
+{
+"id": 756,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "zheltovskaya-756",
+"tasks": 68
+},
+{
+"id": 757,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "zheltovskaya-757",
+"tasks": 71
+},
+{
+"id": 785,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-785",
+"tasks": 299
+},
+{
+"id": 786,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-786",
+"tasks": 346
+},
+{
+"id": 791,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-791",
+"tasks": 244
+},
+{
+"id": 1179,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1179",
+"tasks": 0
+},
+{
+"id": 1180,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kanakina-1180",
+"tasks": 0
+},
+{
+"id": 1181,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "kalenchuk-1181",
+"tasks": 0
+},
+{
+"id": 1182,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "ivanov-1182",
+"tasks": 0
+},
+{
+"id": 1183,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1183",
+"tasks": 0
+},
+{
+"id": 1184,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "klimanova-1184",
+"tasks": 0
+},
+{
+"id": 1185,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "zheltovskaya-1185",
+"tasks": 0
+},
+{
+"id": 1252,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "zheltovskaya-1252",
+"tasks": 0
+},
+{
+"id": 1253,
+"klass": 4,
+"subject": "russkij-yazyk",
+"slug": "bajkova-1253",
+"tasks": 0
+},
+{
+"id": 175,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-175",
+"tasks": 434
+},
+{
+"id": 176,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-176",
+"tasks": 416
+},
+{
+"id": 207,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-207",
+"tasks": 478
+},
+{
+"id": 208,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-208",
+"tasks": 370
+},
+{
+"id": 219,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-219",
+"tasks": 170
+},
+{
+"id": 257,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-257",
+"tasks": 173
+},
+{
+"id": 258,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-258",
+"tasks": 160
+},
+{
+"id": 260,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-260",
+"tasks": 280
+},
+{
+"id": 261,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-261",
+"tasks": 309
+},
+{
+"id": 262,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-262",
+"tasks": 158
+},
+{
+"id": 263,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-263",
+"tasks": 150
+},
+{
+"id": 378,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "shmelyov-378",
+"tasks": 510
+},
+{
+"id": 379,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "shmelyov-379",
+"tasks": 592
+},
+{
+"id": 576,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-576",
+"tasks": 239
+},
+{
+"id": 603,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "efremova-603",
+"tasks": 151
+},
+{
+"id": 1224,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-1224",
+"tasks": 0
+},
+{
+"id": 1225,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-1225",
+"tasks": 0
+},
+{
+"id": 1226,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-1226",
+"tasks": 0
+},
+{
+"id": 1227,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-1227",
+"tasks": 0
+},
+{
+"id": 1228,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1228",
+"tasks": 0
+},
+{
+"id": 1229,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1229",
+"tasks": 0
+},
+{
+"id": 1230,
+"klass": 5,
+"subject": "russkij-yazyk",
+"slug": "shmelyov-1230",
+"tasks": 0
+},
+{
+"id": 178,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-178",
+"tasks": 383
+},
+{
+"id": 179,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-179",
+"tasks": 330
+},
+{
+"id": 180,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-180",
+"tasks": 168
+},
+{
+"id": 181,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-181",
+"tasks": 193
+},
+{
+"id": 183,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-183",
+"tasks": 379
+},
+{
+"id": 205,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-205",
+"tasks": 423
+},
+{
+"id": 206,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-206",
+"tasks": 283
+},
+{
+"id": 212,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "baranov-212",
+"tasks": 91
+},
+{
+"id": 213,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "baranov-213",
+"tasks": 104
+},
+{
+"id": 218,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "gosteva-218",
+"tasks": 157
+},
+{
+"id": 533,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-533",
+"tasks": 377
+},
+{
+"id": 534,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-534",
+"tasks": 344
+},
+{
+"id": 605,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-605",
+"tasks": 140
+},
+{
+"id": 606,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-606",
+"tasks": 137
+},
+{
+"id": 611,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "larionova-611",
+"tasks": 253
+},
+{
+"id": 1231,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-1231",
+"tasks": 0
+},
+{
+"id": 1232,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1232",
+"tasks": 0
+},
+{
+"id": 1233,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1233",
+"tasks": 0
+},
+{
+"id": 1234,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-1234",
+"tasks": 0
+},
+{
+"id": 1235,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "baranov-1235",
+"tasks": 0
+},
+{
+"id": 1236,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-1236",
+"tasks": 0
+},
+{
+"id": 1237,
+"klass": 6,
+"subject": "russkij-yazyk",
+"slug": "ladyzhenskaya-1237",
+"tasks": 0
+},
+{
+"id": 184,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "baranov-184",
+"tasks": 418
+},
+{
+"id": 185,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "baranov-185",
+"tasks": 255
+},
+{
+"id": 186,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-186",
+"tasks": 264
+},
+{
+"id": 187,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-187",
+"tasks": 304
+},
+{
+"id": 188,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-188",
+"tasks": 114
+},
+{
+"id": 189,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-189",
+"tasks": 146
+},
+{
+"id": 215,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-215",
+"tasks": 660
+},
+{
+"id": 421,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-421",
+"tasks": 127
+},
+{
+"id": 422,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-422",
+"tasks": 99
+},
+{
+"id": 604,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "efremova-604",
+"tasks": 135
+},
+{
+"id": 1238,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "baranov-1238",
+"tasks": 0
+},
+{
+"id": 1239,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "yanchenko-1239",
+"tasks": 0
+},
+{
+"id": 1240,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1240",
+"tasks": 0
+},
+{
+"id": 1241,
+"klass": 7,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1241",
+"tasks": 0
+},
+{
+"id": 517,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "pichugov-517",
+"tasks": 605
+},
+{
+"id": 535,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "shmelev-535",
+"tasks": 639
+},
+{
+"id": 536,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "barhudarov-536",
+"tasks": 578
+},
+{
+"id": 542,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "efremova-542",
+"tasks": 120
+},
+{
+"id": 543,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "narushevich-543",
+"tasks": 379
+},
+{
+"id": 544,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-544",
+"tasks": 109
+},
+{
+"id": 545,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-545",
+"tasks": 137
+},
+{
+"id": 577,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "litvinova-577",
+"tasks": 190
+},
+{
+"id": 599,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-599",
+"tasks": 473
+},
+{
+"id": 600,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-600",
+"tasks": 512
+},
+{
+"id": 1242,
+"klass": 8,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1242",
+"tasks": 0
+},
+{
+"id": 494,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "eremeeva-494",
+"tasks": 481
+},
+{
+"id": 518,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "zagorovskaya-518",
+"tasks": 102
+},
+{
+"id": 537,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "barhudarov-537",
+"tasks": 495
+},
+{
+"id": 546,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "litvinova-546",
+"tasks": 157
+},
+{
+"id": 547,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "narushevich-547",
+"tasks": 397
+},
+{
+"id": 548,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "zagovorovskaya-548",
+"tasks": 110
+},
+{
+"id": 549,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-549",
+"tasks": 298
+},
+{
+"id": 581,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "efremova-581",
+"tasks": 123
+},
+{
+"id": 601,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "razumovskaya-601",
+"tasks": 351
+},
+{
+"id": 1243,
+"klass": 9,
+"subject": "russkij-yazyk",
+"slug": "zagorovskaya-1243",
+"tasks": 0
+},
+{
+"id": 516,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "gusarova-516",
+"tasks": 314
+},
+{
+"id": 530,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "lvova-530",
+"tasks": 477
+},
+{
+"id": 550,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "narushevich-550",
+"tasks": 413
+},
+{
+"id": 812,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "golcova-812",
+"tasks": 433
+},
+{
+"id": 813,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "golcova-813",
+"tasks": 250
+},
+{
+"id": 1106,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "grekov-1106",
+"tasks": 503
+},
+{
+"id": 1107,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "rybchenkova-1107",
+"tasks": 518
+},
+{
+"id": 1244,
+"klass": 10,
+"subject": "russkij-yazyk",
+"slug": "golcova-1244",
+"tasks": 0
+},
+{
+"id": 531,
+"klass": 11,
+"subject": "russkij-yazyk",
+"slug": "lvova-531",
+"tasks": 463
+},
+{
+"id": 532,
+"klass": 11,
+"subject": "russkij-yazyk",
+"slug": "gusarova-532",
+"tasks": 323
+},
+{
+"id": 551,
+"klass": 11,
+"subject": "russkij-yazyk",
+"slug": "maslov-551",
+"tasks": 152
+}
+]

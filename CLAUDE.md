@@ -25,7 +25,7 @@ No test runner is configured.
 | File | Size | Contents |
 |------|------|----------|
 | `src/data/schools.ts` | ~6MB | 10k+ schools with typed structs |
-| `src/data/gdz-books.json` | ~6MB | GDZ catalog |
+| `src/data/gdz-books/` | ~6MB+ | GDZ: `index.json` (метаданные книг) + JSON на книгу, читаются с диска лениво (`src/data/gdz.ts`); правки через `scripts/gdz_lib.py` |
 | `src/data/textbook-articles.json` | ~37MB | Textbook content |
 | `src/data/blog.ts` | — | Blog posts |
 | `src/data/ege-oge.ts` | — | Exam resource links |

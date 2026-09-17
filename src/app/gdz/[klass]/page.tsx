@@ -63,7 +63,7 @@ export default async function GdzKlassPage({ params }: Props) {
   // Показываем только предметы у которых есть хотя бы одна книга для этого класса
   const subjectsHasBooks = new Set(
     gdzBooks
-      .filter(b => b.klass === klassNum && b.chapters.length > 0)
+      .filter(b => b.klass === klassNum && b.solvedCount > 0)
       .map(b => b.subjectSlug)
   )
   const subjects = getGdzSubjects(klassNum).filter(s => subjectsHasBooks.has(s.slug))
