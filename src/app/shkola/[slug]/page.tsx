@@ -5,7 +5,7 @@ import {
   schools, regionLabels, typeLabels,
   getSchoolBySlug, getAllSchoolSlugs, formatPrice,
 } from '@/data/schools'
-import { getTypeColor, getTypeBorderColor } from '@/lib/utils'
+import { getTypeColor, getTypeBorderColor, typeNoun } from '@/lib/utils'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 import SchoolCard from '@/components/SchoolCard'
@@ -53,8 +53,14 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
 
   // 3. Стоимость обучения
   const isEgeCenter = school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge'
+  const isArtSchool = school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv'
   const isProgSchool = school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye'
-  if (isProgSchool && school.priceFrom === undefined) {
+  if (isArtSchool && school.priceFrom === undefined) {
+    faq.push({
+      q: `Сколько стоит обучение в ${school.name}?`,
+      a: `Занятия платные; стоимость зависит от отделения, программы и частоты занятий. На этой странице мы не приводим цены, которые не проверили, — уточняйте ${callTo}${school.website ? ` или на сайте школы (${school.website.replace(/^https?:\/\//, '')})` : ''}.`,
+    })
+  } else if (isProgSchool && school.priceFrom === undefined) {
     faq.push({
       q: `Сколько стоят занятия в ${school.name}?`,
       a: `Занятия платные; стоимость зависит от возраста, направления и частоты занятий (обычно 1–2 раза в неделю). На этой странице мы не приводим цены, которые не проверили, — уточняйте ${callTo}${school.website ? ` или на сайте школы (${school.website.replace(/^https?:\/\//, '')})` : ''}. У большинства детских IT-школ первое занятие пробное.`,
@@ -87,6 +93,8 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `С какого класса принимают учеников в ${school.name}?`,
     a: isEgeCenter
       ? `Центр готовит к ОГЭ учеников 8–9 классов и к ЕГЭ — 10–11 классов; набор в группы и индивидуальные занятия обычно идёт весь учебный год. Уточняйте ${callTo}.`
+      : isArtSchool
+      ? `В государственные музыкальные и художественные школы и ДШИ принимают по прослушиванию или просмотру: на инструменты — с 6,5–7 лет, на художественное отделение — с 10–11 лет, на хореографию и раннее развитие — с 5–6 лет; на платные общеразвивающие программы — без конкурса. Возраст набора на конкретное отделение уточняйте ${callTo}.`
       : school.type === 'litsei'
       ? `Набор в лицей, как правило, конкурсный: основные точки входа — 5, 7 и 10 класс, у части лицеев есть и начальная школа. С какого класса идёт набор именно здесь и какие вступительные испытания проводятся — уточняйте ${callTo}${school.website ? ` или на сайте лицея (${school.website.replace(/^https?:\/\//, '')})` : ''}.`
       : isProgSchool
@@ -336,7 +344,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' ? (
+                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>
@@ -502,7 +510,7 @@ export default async function SchoolPage({ params }: Props) {
           {similar.length > 0 && (
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-4">
-                {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? 'Другие центры подготовки к ЕГЭ и ОГЭ' : school.type === 'programmirovanie' ? 'Другие школы программирования для детей' : `Похожие ${typeLabels[school.type].toLowerCase()} школы`}
+                {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? 'Другие центры подготовки к ЕГЭ и ОГЭ' : school.type === 'programmirovanie' ? 'Другие школы программирования для детей' : `Похожие ${typeNoun(school.type).toLowerCase()}`}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {similar.map(s => (
@@ -514,7 +522,7 @@ export default async function SchoolPage({ params }: Props) {
                   href={`/shkoly/${school.region}/${school.type}/`}
                   className="inline-flex items-center gap-2 text-blue-600 text-sm font-medium hover:underline"
                 >
-                  {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : school.type === 'programmirovanie' ? `Все школы программирования — ${regionLabels[school.region]} →` : `Все ${typeLabels[school.type].toLowerCase()} школы ${regionLabels[school.region]} →`}
+                  {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : school.type === 'programmirovanie' ? `Все школы программирования — ${regionLabels[school.region]} →` : `Все ${typeNoun(school.type).toLowerCase()} — ${regionLabels[school.region]} →`}
                 </Link>
               </div>
             </div>
@@ -587,7 +595,7 @@ export default async function SchoolPage({ params }: Props) {
                 href={`/shkoly/${school.region}/${school.type}/`}
                 className="block text-sm text-blue-600 hover:underline"
               >
-                ← {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}` : school.type === 'programmirovanie' ? `Школы программирования — ${regionLabels[school.region]}` : `${typeLabels[school.type]} школы ${regionLabels[school.region]}`}
+                ← {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}` : school.type === 'programmirovanie' ? `Школы программирования — ${regionLabels[school.region]}` : `${typeNoun(school.type)} — ${regionLabels[school.region]}`}
               </Link>
               <Link
                 href={`/shkoly/${school.region}/`}

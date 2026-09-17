@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_LANDINGS  = new Date('2026-06-01') // type/feature landings
   const D_ONLINE_BRANDS = new Date('2026-09-16') // страницы брендов онлайн-школ
   const D_EGE_CENTERS = new Date('2026-09-17') // центры ЕГЭ/ОГЭ по 30 городам (Яндекс Карты)
-  const D_LITSEI = new Date('2026-09-17') // тип «лицеи» — алиас по названию, 780+ карточек
+  const D_LITSEI = new Date('2026-09-17') // типы «лицеи», музыкальные/художественные/школы искусств (Яндекс Карты)
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -86,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(type => isCityTypeIndexable(region, type))
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
-        lastModified: type === 'podgotovka-ege' || type === 'podgotovka-oge' ? D_EGE_CENTERS : type === 'litsei' ? D_LITSEI : D_SCHOOLS,
+        lastModified: type === 'podgotovka-ege' || type === 'podgotovka-oge' ? D_EGE_CENTERS : type === 'litsei' || type === 'muzykalnye' || type === 'hudozhestvennye' || type === 'iskusstv' ? D_LITSEI : D_SCHOOLS,
         changeFrequency: 'weekly',
         priority: 0.8,
       }))
@@ -202,7 +202,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Лендинги школ: типы, особенности, профили, языки, метро ──
   const shkolyTypePages: MetadataRoute.Sitemap = typeSlugs.map(t => ({
-    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: t === 'litsei' ? D_LITSEI : D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
+    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: t === 'litsei' || t === 'muzykalnye' || t === 'hudozhestvennye' || t === 'iskusstv' ? D_LITSEI : D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
   }))
   // Страницы брендов онлайн-школ /shkoly/tipy/online/<brand>/
   const onlineBrandPages: MetadataRoute.Sitemap = onlineBrandSlugs.map(b => ({

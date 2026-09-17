@@ -27,6 +27,9 @@ const typeKeywordMap: Record<SchoolType, string[]> = {
   sportivnye:       ['спортивная школа', 'школа для спортсменов', 'школа при спортклубе', 'олимпийский резерв', 'спортивный класс'],
   yazykovye:        ['языковая школа', 'лингвистическая гимназия', 'углублённый английский', 'школа с иностранным языком', 'языковой профиль'],
   litsei:           ['лицей', 'лицеи города', 'физико-математический лицей', 'лицей при вузе', 'поступление в лицей', 'лицей 5 класс', 'лицей 10 класс'],
+  muzykalnye:       ['музыкальная школа', 'ДМШ', 'детская музыкальная школа', 'школа музыки для детей', 'уроки фортепиано', 'вокал для детей'],
+  hudozhestvennye:  ['художественная школа', 'ДХШ', 'детская художественная школа', 'школа рисования для детей', 'изостудия'],
+  iskusstv:         ['школа искусств', 'ДШИ', 'детская школа искусств', 'музыкальное отделение', 'хореография для детей'],
 }
 
 export function buildKeywords(
@@ -74,6 +77,7 @@ const TYPE_NOUN: Partial<Record<SchoolType, string>> = {
   internaty:        'Школы-интернаты',
   programmirovanie: 'Школы программирования',
   montessori:       'Школы Монтессори',
+  iskusstv:         'Школы искусств',
   'podgotovka-ege': 'Центры подготовки к ЕГЭ',
   'podgotovka-oge': 'Центры подготовки к ОГЭ',
 }
@@ -153,6 +157,9 @@ export function getTypeColor(type: SchoolType): string {
     sportivnye:       'bg-orange-100 text-orange-800',
     yazykovye:        'bg-cyan-100 text-cyan-800',
     litsei:           'bg-indigo-100 text-indigo-800',
+    muzykalnye:       'bg-fuchsia-100 text-fuchsia-800',
+    hudozhestvennye:  'bg-rose-100 text-rose-800',
+    iskusstv:         'bg-pink-100 text-pink-800',
   }
   return colors[type]
 }
@@ -183,6 +190,9 @@ export function getTypeBorderColor(type: SchoolType): string {
     sportivnye:       'border-orange-200',
     yazykovye:        'border-cyan-200',
     litsei:           'border-indigo-200',
+    muzykalnye:       'border-fuchsia-200',
+    hudozhestvennye:  'border-rose-200',
+    iskusstv:         'border-pink-200',
   }
   return colors[type]
 }
