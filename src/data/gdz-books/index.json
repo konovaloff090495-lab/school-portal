@@ -340,6 +340,23 @@
 "chapterCount": 40
 },
 {
+"slug": "biboletova-rabochaya-tetrad",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Биболетова М. З., Денисенко О. А., Трубанева Н. Н.",
+"type": "Рабочая тетрадь",
+"years": "2021",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:729",
+"file": "4-angliiskiy-yazyk-biboletova-rabochaya-tetrad.json",
+"problemCount": 149,
+"solvedCount": 149,
+"chapterCount": 41
+},
+{
 "slug": "bykova-rabochaya-tetrad",
 "klass": 4,
 "subjectSlug": "angliiskiy-yazyk",
