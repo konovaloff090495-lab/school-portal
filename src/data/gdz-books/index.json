@@ -629,6 +629,23 @@
 "chapterCount": 15
 },
 {
+"slug": "vereshchagina-uchebnik-chast-2",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Верещагина И. Н., Афанасьева О. В.",
+"type": "Учебник (часть 2)",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:651",
+"file": "4-angliiskiy-yazyk-vereshchagina-uchebnik-chast-2.json",
+"problemCount": 565,
+"solvedCount": 145,
+"chapterCount": 27
+},
+{
 "slug": "moro-4",
 "klass": 4,
 "subjectSlug": "matematika",
