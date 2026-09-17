@@ -170,6 +170,23 @@
 "chapterCount": 35
 },
 {
+"slug": "afanaseva-uchebnik-chast-2",
+"klass": 3,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Афанасьева О. В., Михеева И. В.",
+"type": "Учебник (часть 2)",
+"years": "2016",
+"publisher": "Дрофа",
+"fgos": true,
+"parts": "",
+"source": "skysmart:620",
+"file": "3-angliiskiy-yazyk-afanaseva-uchebnik-chast-2.json",
+"problemCount": 173,
+"solvedCount": 173,
+"chapterCount": 22
+},
+{
 "slug": "moro-3",
 "klass": 3,
 "subjectSlug": "matematika",
