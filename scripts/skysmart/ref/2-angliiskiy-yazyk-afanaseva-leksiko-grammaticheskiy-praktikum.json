@@ -1,0 +1,3706 @@
+{
+"book": {
+"slug": "afanaseva-leksiko-grammaticheskiy-praktikum",
+"klass": 2,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Афанасьева О. В., Баранова К. М., Михеева И. В.",
+"type": "Лексико-грамматический практикум",
+"umk": "Rainbow English"
+},
+"problems": [
+{
+"number": "1-s3",
+"num": "1",
+"page": 3,
+"chapter": "Steps 1-7",
+"skyId": 144729,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные буквы по строчке.",
+"",
+"Dd Dd Dd Dd Dd\nMm Mm Mm Mm Mm\nTt Tt Tt Tt Tt\nIi Ii Ii Ii Ii\nWw Ww Ww Ww Ww\nJj Jj Jj Jj Jj\nHh Hh Hh Hh Hh\nYy Yy Yy Yy Yy\nLl Ll Ll Ll Ll\nZz Zz Zz Zz Zz"
+],
+"answer": "Dd Dd Dd Dd Dd\nMm Mm Mm Mm Mm\nTt Tt Tt Tt Tt\nIi Ii Ii Ii Ii\nWw Ww Ww Ww Ww\nJj Jj Jj Jj Jj\nHh Hh Hh Hh Hh\nYy Yy Yy Yy Yy\nLl Ll Ll Ll Ll\nZz Zz Zz Zz Zz"
+}
+]
+},
+{
+"number": "2-s3",
+"num": "2",
+"page": 3,
+"chapter": "Steps 1-7",
+"skyId": 144730,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дописать строчные буквы к данным заглавным.",
+"",
+"Bb, Dd, Ss, Pp, Tt, Ff, Ii, Ww, Jj."
+],
+"answer": "Bb, Dd, Ss, Pp, Tt, Ff, Ii, Ww, Jj."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дописать заглавные буквы к данным строчным.",
+"",
+"Kk, Zz, Gg, Mm, Nn, Ll, Vv, Hh, Yy."
+],
+"answer": "Kk, Zz, Gg, Mm, Nn, Ll, Vv, Hh, Yy."
+}
+]
+},
+{
+"number": "3-s4",
+"num": "3",
+"page": 4,
+"chapter": "Steps 1-7",
+"skyId": 144731,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить данные буквы со звуками, которые они передают.",
+"Ff — /f/.\nWw — /w/.\nKk — /k/.\nVv —/v/.\nSs — /s/.\nGg — /g/.\nHh — /h/.\nIi — /i/.",
+"Yy — /j/. Например, слово you /juː/.\nJj — /dʒ/. Например, слово jeans /dʒiːnz/."
+],
+"answer": "Ff — /f/.\nWw — /w/.\nKk — /k/.\nVv —/v/.\nSs — /s/.\nGg — /g/.\nHh — /h/.\nIi — /i/.\nYy — /j/. \nJj — /dʒ/."
+}
+]
+},
+{
+"number": "4-s4",
+"num": "4",
+"page": 4,
+"chapter": "Steps 1-7",
+"skyId": 144732,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные слова по строчке.",
+"WORDLIST\na tent — палатка\na bed — кровать\na belt — ремень\na net — сачок\nan egg — яйцо\nan elf — эльф\na pen — ручка\na desk — письменный стол, парта\na bell — колокольчик\na nest — гнездо",
+"",
+"tent tent tent tent tent \nbed bed bed bed bed \nbelt belt belt belt belt \nnet net net net net \negg egg egg egg egg\nelf elf elf elf elf \npen pen pen pen pen \ndesk desk desk desk desk \nbell bell bell bell bell \nnest nest nest nest nest"
+],
+"answer": "tent tent tent tent tent \nbed bed bed bed bed \nbelt belt belt belt belt \nnet net net net net \negg egg egg egg egg\nelf elf elf elf elf \npen pen pen pen pen \ndesk desk desk desk desk \nbell bell bell bell bell \nnest nest nest nest nest"
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные имена по строчке.",
+"",
+"Jimmy Jimmy Jimmy Jimmy Jimmy\nWill Will Will Will Will\nGwen Gwen Gwen Gwen Gwen\nJess Jess Jess Jess Jess\nTim Tim Tim Tim Tim\nMeggy Meggy Meggy Meggy Meggy\nPeggy Peggy Peggy Peggy Peggy\nBen Ben Ben Ben Ben\nBess Bess Bess Bess Bess"
+],
+"answer": "Jimmy Jimmy Jimmy Jimmy Jimmy\nWill Will Will Will Will\nGwen Gwen Gwen Gwen Gwen\nJess Jess Jess Jess Jess\nTim Tim Tim Tim Tim\nMeggy Meggy Meggy Meggy Meggy\nPeggy Peggy Peggy Peggy Peggy\nBen Ben Ben Ben Ben\nBess Bess Bess Bess Bess"
+}
+]
+},
+{
+"number": "5-s5",
+"num": "5",
+"page": 5,
+"chapter": "Steps 1-7",
+"skyId": 144733,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и соединить их с соответствующими картинками.",
+"WORDLIST\na tent — палатка\na bed — кровать\na belt — ремень\na net — сачок\nan egg — яйцо\nan elf — эльф\na pen — ручка\na desk — письменный стол, парта\na bell — колокольчик\na nest — гнездо",
+"A bed.\nA nest.\nA belt\nAn elf.\nAn egg.\nA pen.\nA desk.\nA tent.\nA bell.\nA net."
+],
+"answer": "A bed.\nA nest.\nA belt\nAn elf.\nAn egg.\nA pen.\nA desk.\nA tent.\nA bell.\nA net."
+}
+]
+},
+{
+"number": "6-s6",
+"num": "6",
+"page": 6,
+"chapter": "Steps 1-7",
+"skyId": 144734,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинку и сказать, у какой вещи нет хозяина.",
+"WORDLIST\na pen — ручка\na tent — палатка\na desk — парта, письменный стол\na bell — колокольчик\na net — сачок\na bed — кровать\na belt — ремень",
+"Tim has got a pen.\nJess has got a tent.\nMeggy has got a desk.\nGwen has got a net.\nWill has got a bed.\nJimmy has got a belt.",
+"A bell. Колокольчик."
+],
+"answer": "A bell. Колокольчик."
+}
+]
+},
+{
+"number": "7-s6",
+"num": "7",
+"page": 6,
+"chapter": "Steps 1-7",
+"skyId": 144735,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова в рамке, посмотреть на картинку и сказать, что из перечисленного не нарисовал художник.",
+"WORDLIST\na tent — палатка\na bed — кровать\na belt — ремень\na net — сачок\nan egg — яйцо\nan elf — эльф\na pen — ручка\na desk — парта, письменный стол\na bell — колокольчик\na nest — гнездо",
+"A desk, a belt, a bell, a pen, a net.",
+"A tent, a bed, an egg, an elf, a nest."
+],
+"answer": "A tent, a bed, an egg, an elf, a nest."
+}
+]
+},
+{
+"number": "8-s7",
+"num": "8",
+"page": 7,
+"chapter": "Steps 1-7",
+"skyId": 144736,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы в слова под картинками.",
+"WORDLIST\na tent — палатка\na bed — кровать\na belt — ремень\na net — сачок\nan egg — яйцо\nan elf — эльф\na pen — ручка\na desk — парта, письменный стол\na bell — колокольчик\na nest — гнездо",
+"Desk.\nPen.\nElf.\nBed.\nBelt.\nEgg.\nBell.\nTent.\nNest.\nNet."
+],
+"answer": "Desk.\nPen.\nElf.\nBed.\nBelt.\nEgg.\nBell.\nTent.\nNest.\nNet."
+}
+]
+},
+{
+"number": "9-s7",
+"num": "9",
+"page": 7,
+"chapter": "Steps 1-7",
+"skyId": 144737,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в змейке ещё 9 знакомых тебе слов и обвести их.",
+"WORDLIST\na tent — палатка\na bed — кровать\na belt — ремень\na net — сачок\nan egg — яйцо\nan elf — эльф\na pen — ручка\na desk — парта, письменный стол\na bell — колокольчик\na nest — гнездо",
+"."
+],
+"answer": "."
+}
+]
+},
+{
+"number": "10-s8",
+"num": "10",
+"page": 8,
+"chapter": "Steps 1-7",
+"skyId": 144738,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить рифмующиеся имена.",
+"Nell.\nWill.\nTess.\nKim.\nTeddy.\nBen.\nPeggy.\nEddy.\nTim.\nMel.\nKen.\nBess.\nMeggy.\nJill.",
+"Nell — Mel.\nWill — Jill.\nTess — Bess.\nKim — Tim.\nTeddy — Eddy.\nBen — Ken.\nPeggy — Meggy."
+],
+"answer": "Nell — Mel.\nWill — Jill.\nTess — Bess.\nKim — Tim.\nTeddy — Eddy.\nBen — Ken.\nPeggy — Meggy."
+}
+]
+},
+{
+"number": "11-s8",
+"num": "11",
+"page": 8,
+"chapter": "Steps 1-7",
+"skyId": 144739,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно закончить рифмовку, выбрав недостающие имена из второй колонки.",
+"Meggy.\nTess.\nTeddy.\nNell.",
+"Mel.\nPeggy.\nEddy.\nBess.",
+"Meggy — Peggy.\nTess — Bess.\nTeddy — Eddy.\nNell — Mel.",
+"I'm Meggy.\nI'm Tess.\nI'm Peggy.\nI'm Bess.\nI'm Teddy.\nI'm Nell.\nI'm Eddy.\nI'm Mel."
+],
+"answer": "I'm Meggy.\nI'm Tess.\nI'm Peggy.\nI'm Bess.\nI'm Teddy.\nI'm Nell.\nI'm Eddy.\nI'm Mel."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, сколько мужских и сколько женских имён в рифмовке.",
+"Meggy.\nTess.\nPeggy.\nBess.\nTeddy.\nNell.\nEddy.\nMel.",
+"Женские имена: Meggy, Tess, Peggy, Bess, Nell (5 имён).\nМужские имена: Teddy, Eddy, Mel (3 имени)."
+],
+"answer": "Женские имена: Meggy, Tess, Peggy, Bess, Nell (5 имён).\nМужские имена: Teddy, Eddy, Mel (3 имени)."
+},
+{
+"name": "в",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, как иначе можно расположить строчки в рифмовке.",
+"Meggy — Peggy.\nTess — Bess.\nTeddy — Eddy.\nNell — Mel.",
+"I'm Peggy.\nI'm Bess.\nI'm Meggy.\nI'm Tess.\nI'm Eddy.\nI'm Mel.\nI'm Teddy.\nI'm Nell."
+],
+"answer": "I'm Peggy.\nI'm Bess.\nI'm Meggy.\nI'm Tess.\nI'm Eddy.\nI'm Mel.\nI'm Teddy.\nI'm Nell."
+}
+]
+},
+{
+"number": "12-s9",
+"num": "12",
+"page": 9,
+"chapter": "Steps 1-7",
+"skyId": 144740,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и выбрать правильный ответ (A или B).",
+"1. \n— Я — Бен.\nA. Приятно познакомиться, Бен.\nB. Как тебя зовут?\n2. \n— Как тебя зовут?\nA. Приятно познакомиться, Мэгги.\nB. Я — Мэгги.\n3. \n— Я — Бесс. Приятно познакомиться.\nA. Привет, Бесс.\nB. Приятно познакомиться, Бесс.",
+"1. \n— Я — Бен.\nA. Приятно познакомиться, Бен.\nB. Как тебя зовут?\n2. \n— Как тебя зовут?\nA. Приятно познакомиться, Мэгги.\nB. Я — Мэгги.\n3. \n— Я — Бесс. Приятно познакомиться.\nA. Привет, Бесс.\nB. Приятно познакомиться, Бесс."
+],
+"answer": "A.\nB.\nB."
+}
+]
+},
+{
+"number": "13-s9",
+"num": "13",
+"page": 9,
+"chapter": "Steps 1-7",
+"skyId": 144741,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить диалог из предложенных фраз.",
+"— Как тебя зовут?\n— Здравствуй!\n— Привет!\n— Я — Сид.",
+"— Здравствуй!\n— Привет!\n— Как тебя зовут?\n— Я — Сид."
+],
+"answer": "— Hello! Здравствуй!\n— Hi! Привет!\n— What's your name? Как тебя зовут?\n— I'm Sid. Я — Сид."
+}
+]
+},
+{
+"number": "14-s9",
+"num": "14",
+"page": 9,
+"chapter": "Steps 1-7",
+"skyId": 144742,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова в рамке, посмотреть на картинку и сказать, какие лишние предметы нарисовал художник.",
+"WORDLIST\na belt — ремень\nan elf — эльф\na net — сачок\na tent — палатка",
+"A bed (кровать).\nA bell (колокольчик)."
+],
+"answer": "A bed (кровать), a bell (колокольчик)."
+}
+]
+},
+{
+"number": "15-s10",
+"num": "15",
+"page": 10,
+"chapter": "Steps 1-7",
+"skyId": 144743,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно назвать по-английски 6 предметов, изображённых на данной картинке, и написать их названия.",
+"WORDLIST\na car — машина\na teddy bear — плюшевый медведь\na desk — парта, письменный стол\na fox — лиса\na nest — гнездо\na bell — колокольчик\nan elf — эльф\na bed — кровать\na tree — дерево\na spinning top — юла",
+"A car, a teddy bear, a desk, a fox, a nest, a bell."
+],
+"answer": "A car, a teddy bear, a desk, a fox, a nest, a bell."
+}
+]
+},
+{
+"number": "16-s10",
+"num": "16",
+"page": 10,
+"chapter": "Steps 1-7",
+"skyId": 144744,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Злая волшебница заколдовала принцессу. Что её расколдовать нам необходимо правильно написать зашифрованные слова.",
+"Bell.\nEgg.\nElf.\nPen.\nBed.\nTen.\nBelt.\nNest.\nDesk.\nTent.",
+"Bell — колокольчик.\nEgg — яйцо.\nElf — эльф.\nPen — ручка.\nBed —кровать. \nTen — десять.\nBelt — ремень.\nNest — гнездо.\nDesk — парта.\nTent — палатка."
+],
+"answer": "Bell.\nEgg.\nElf.\nPen.\nBed.\nTen.\nBelt.\nNest.\nDesk.\nTent."
+}
+]
+},
+{
+"number": "1-s11",
+"num": "1",
+"page": 11,
+"chapter": "Steps 8-14",
+"skyId": 144745,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем буквы по строчке.",
+"",
+"R.\nC.\nX.\nU.\nO.\nK.\nN.\nE.\nS."
+],
+"answer": "Напишем буквы по строчке."
+}
+]
+},
+{
+"number": "2-s12",
+"num": "2",
+"page": 12,
+"chapter": "Steps 8-14",
+"skyId": 144746,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Допишем строчные буквы к данным заглавным.",
+"",
+"Cc.\nEe.\nNn.\nIi.\nJj.\nTt.\nVv.\nGg."
+],
+"answer": "Cc.\nEe.\nNn.\nIi.\nJj.\nTt.\nVv.\nGg."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Допишем заглавные буквы к данным строчным.",
+"",
+"Oo.\nRR.\nUu.\nXx.\nWw.\nFf.\nIi.\nSs."
+],
+"answer": "Oo.\nRR.\nUu.\nXx.\nWw.\nFf.\nIi.\nSs."
+}
+]
+},
+{
+"number": "3-s12",
+"num": "3",
+"page": 12,
+"chapter": "Steps 8-14",
+"skyId": 144747,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соеденим буквы со звуками, которые они передают.",
+"",
+"U — cut.\nR — red.\nY — yellow.\nO — hot.\nC — coconut.\nE — eagle.\nP — peach.\nX — xylophone.\nJ — jeans.\nG — grey.",
+"Uu — /ʌ/.\nRr — /r/.\nYy — /e/.\nOo — /ɒ/.\nCc — /k/.\nEe — /i/.\nPp — /p/.\nXx — /ks/.\nJj — /ʤ/.\nGg — /g/."
+],
+"answer": "Uu — /ʌ/.\nRr — /r/.\nYy — /e/.\nOo — /ɒ/.\nCc — /k/.\nEe — /i/.\nPp — /p/.\nXx — /ks/.\nJj — /ʤ/.\nGg — /g/."
+}
+]
+},
+{
+"number": "4-s12",
+"num": "4",
+"page": 12,
+"chapter": "Steps 8-14",
+"skyId": 144748,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем данные слова по строчке.",
+"WORDLIST\nmilk — молоко\npig — поросёнок\nsun — солнце\nwind — ветер\nsix — шесть\nlorry — грузовик\ntroll — тролль\npond — пруд\njug — кувшин",
+"Milk.\nPig.\nSun.\nWind.\nSix.\nLorry.\nFox.\nTroll.\nPond.\nJug."
+],
+"answer": "Напишем данные слова по строчке.\nWORDLIST\nmilk — молоко\npig — поросёнок\nsun — солнце\nwind — ветер\nsix — шесть\nlorry — грузовик\ntroll — тролль\npond — пруд\njug — кувшин"
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем данные имена по строчке.",
+"WORDLIST\nGreg — Грэг\nPolly — Полли\nRobin — Робин\nVic — Вик\nKitty — Китти\nCliff — Клифф\nSid — Сид\nLizzy — Лиззи\nGlen — Глен\nDustin — Дастин",
+"Greg.\nPolly.\nRobin.\nVic.\nKitty.\nCliff.\nSid.\nLizzy.\nGlen.\nDustin."
+],
+"answer": "Напишем данные имена по строчке.\nWORDLIST\nGreg — Грэг\nPolly — Полли\nRobin — Робин\nVic — Вик\nKitty — Китти\nCliff — Клифф\nSid — Сид\nLizzy — Лиззи\nGlen — Глен\nDustin — Дастин"
+}
+]
+},
+{
+"number": "5-s14",
+"num": "5",
+"page": 14,
+"chapter": "Steps 8-14",
+"skyId": 144749,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем звуки, которые могут передавать данные буквы и допишем слова, которые с них начинаются.",
+"H.\nE.\nT.\nF.\nD.\nB.\nP.\nS.",
+"H — /h/.\nE — /i/.\nT — /t/.\nF — /f/.\nD — /d/.\nB — /b/.\nP — /p/.\nS — /s/.",
+"H — /h/ — hill.\nE — /i/ — eagle.\nT — /t/ — tea.\nF — /f/ — flag.\nD — /d/ — drama.\nB — /b/ — bean.\nP — /p/ — peach.\nS — /s/ — seal.",
+"WORDLIST\nhill — холм\neagle — орёл\ntea — чай\nflag — флаг\ndrama — драма\nbean — фасолинка\npeach — прсик\nseal — морской котик"
+],
+"answer": "H — /h/ — hill.\nE — /i/ — eagle.\nT — /t/ — tea.\nF — /f/ — flag.\nD — /d/ — drama.\nB — /b/ — bean.\nP — /p/ — peach.\nS — /s/ — seal."
+}
+]
+},
+{
+"number": "6-s14",
+"num": "6",
+"page": 14,
+"chapter": "Steps 8-14",
+"skyId": 144750,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова. Соеденим их с картинками.",
+"WORDLIST\nbox — коробка\nstreet — улица\nlorry — грузовик\nbee — пчела\npond — пруд\nbus — автобус\nsun — солнце\nmug — кружка\ntroll — тролль\nkid — козлёнок",
+"Box — 5.\nStreet — 10.\nLorry — 1.\nBee — 8.\nPond — 6.\nBus — 9.\nSun — 4.\nMug — 2.\nTroll — 7.\nKid — 3."
+],
+"answer": "Box — 5.\nStreet — 10.\nLorry — 1.\nBee — 8.\nPond — 6.\nBus — 9.\nSun — 4.\nMug — 2.\nTroll — 7.\nKid — 3."
+}
+]
+},
+{
+"number": "7-s15",
+"num": "7",
+"page": 15,
+"chapter": "Steps 8-14",
+"skyId": 144751,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные буквы в слова под каринками.",
+"Автобус.\nУлица.\nШесть.\nКувшин.\nВетер.\nПруд.\nКоробка.\nСолнце.\nПчела.\nЧашка.\nКозлёнок.\nХолм.",
+"Автобус — bus.\nУлица — street.\nШесть — six.\nКувшин — jug.\nВетер — wind.\nПруд — pond.\nКоробка — box.\nСолнце — sun.\nПчела — bee.\nЧашка — cup.\nКозлёнок — kid.\nХолм — hill.",
+"B.\nE.\nI.\nU.\nI.\nP.\nX.\nS.\nB.\nU.\nK.\nH."
+],
+"answer": "B.\nE.\nI.\nU.\nI.\nP.\nX.\nS.\nB.\nU.\nK.\nH."
+}
+]
+},
+{
+"number": "8-s15",
+"num": "8",
+"page": 15,
+"chapter": "Steps 8-14",
+"skyId": 144752,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку и напишем, кого мы на ней видим.",
+"WORDLIST\npig — поросёнок\ndog — собака\nbee — пчела\nfox — лиса\nfrog — лягушка\nkid — козлёнок",
+"I can see + название того, что мы видим.",
+"I can see a pig. Я вижу поросёнка.\nI can see a dog. Я вижу собаку.\nI can see a fox. Я вижу лису.\nI can see a frog. Я вижу лягушку.\nI can see a bee. Я вижу пчелу.\nI can see a kid. Я вижу козлёнка."
+],
+"answer": "I can see a pig.\nI can see a dog.\nI can see a fox.\nI can see a frog.\nI can see a bee.\nI can see a kid."
+}
+]
+},
+{
+"number": "9-s16",
+"num": "9",
+"page": 16,
+"chapter": "Steps 8-14",
+"skyId": 144753,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём в змейке еще 9 знакомых нам слов. Обведём их.",
+"Lorry.\nSix.\nFox.\nCup.\nMug.\nHill.\nPond.\nSweet.\nBox.\nSun.",
+"Lorry — грузовик.\nSix — шесть.\nFox — лиса.\nCup — чашка.\nMug — кружка.\nHill — холм.\nPond — пруд.\nSweet — конфета.\nBox — коробка.\nSun — солнце."
+],
+"answer": "Lorry.\nSix.\nFox.\nCup.\nMug.\nHill.\nPond.\nSweet.\nBox.\nSun.\nНе забудем выделить эти слова в змейке."
+}
+]
+},
+{
+"number": "10-s16",
+"num": "10",
+"page": 16,
+"chapter": "Steps 8-14",
+"skyId": 144754,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на слова в каждой строчке. По картинке определим, какое слово лишнее.",
+"WORDLIST\npig — поросёнок\nkid — козлёнок\nwind — ветер\nhill — холм\ndog — собака\nfrog — лягушка\nbed — кровать\npen — ручка\nstreet — улица\nsweet — конфета\ntroll — тролль\nelf — эльф\nten — десять\nsix — шесть\nbox — коробка\ndoll — кукла\nsun — солнце\ncup — чашка\njug — кружка\nbus — автобус\ndesk — парта\ntent — палатка\nlorry — грузовик\npond — пруд",
+"Kid.\nHill.\nFrog.\nBed.\nSweet.\nTroll.\nSix.\nDoll.\nCup.\nBus.\nDesk.\nLorry."
+],
+"answer": "Kid.\nHill.\nFrog.\nBed.\nSweet.\nTroll.\nSix.\nDoll.\nCup.\nBus.\nDesk.\nLorry."
+}
+]
+},
+{
+"number": "11-s17",
+"num": "11",
+"page": 17,
+"chapter": "Steps 8-14",
+"skyId": 144755,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем предложения и выберем правильный ответ.",
+"WORDLIST\ngoodbye — пока, до свидания\nsee — видеть\nnice — милый\nname — имя\nmeet — встречаться",
+"1. \nA: До свидания, Полли. \nБ: A. Пока, Дон. Увидимся. Б. Рада познакомиться с тобой.\n2. \nA: Как тебя зовут?\nБ: A. Увидимся, Вик. Б. Я — Клифф Уэбб.\n3.\nA: Рад увидется с тобой, Китти.\nБ: A. Пока, Джилл. Б. Рад увидется с тобой, Джилл.",
+"A.\nB.\nB."
+],
+"answer": "A.\nB.\nB."
+}
+]
+},
+{
+"number": "12-s17",
+"num": "12",
+"page": 17,
+"chapter": "Steps 8-14",
+"skyId": 144756,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим рифмующиеся слова.",
+"WORDLIST\nfrog — лягушка\nten — десять\nmug — кружка\ntree — дерево\nhill — холм\nbox — коробка\nbee — пчела\ndog — собака\nfox — лиса\npen — ручка\njug — кувшин\nmill — мельница",
+"Frog.\nTen.\nMug.\nTree.\nHill.\nBox.\nBee.\nDog.\nFox.\nPen.\nJug.\nMill.",
+"Dog — frog.\nTen — pen.\nMug — jug.\nTree — bee.\nHill — mill.\nBox — fox."
+],
+"answer": "Dog — frog.\nTen — pen.\nMug — jug.\nTree — bee.\nHill — mill.\nBox — fox."
+}
+]
+},
+{
+"number": "13-s17",
+"num": "13",
+"page": 17,
+"chapter": "Steps 8-14",
+"skyId": 144757,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем фразы и составвим диалог.",
+"WORDLIST\ngoodbye — пока, до свидания\nsee — видеть\nnice — милый\nname — имя\nmeet — встречаться",
+"Привет! Меня зовут Полли. Как тебя зовут?\nРада с тобой познакомиться, Сид.\nПока, Сид.\nПривет! Я — Сид. Рад с тобой познакомиться, Полли.\nПока, Полли.",
+"А: 1. Привет! Меня зовут Полли. Как тебя зовут?\nБ: 4. Привет! Я — Сид. Рад с тобой познакомиться, Полли.\nА: 2. Рада с тобой познакомиться, Сид.\nБ: 5. Пока, Полли.\nА: 3. Пока, Сид."
+],
+"answer": "А: 1. Привет! Меня зовут Полли. Как тебя зовут?\nБ: 4. Привет! Я — Сид. Рад с тобой познакомиться, Полли.\nА: 2. Рада с тобой познакомиться, Сид.\nБ: 5. Пока, Полли.\nА: 3. Пока, Сид."
+}
+]
+},
+{
+"number": "14-s18",
+"num": "14",
+"page": 18,
+"chapter": "Steps 8-14",
+"skyId": 144758,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова и распределим их в колонки согласно произношению гласных букв в них.",
+"WORDLIST\nstreet — улица\nbee — пчела\npond — пруд\nbus — автобус\nmug — кружка\nfox — лиса\nsix — шесть\ntree — дерево\ncup — чашка\npen — ручка\npig — поросёнок\ndoll — кукла\ndesk — парта\nten — десять\nwind — ветер",
+"",
+"Еще долгий звук /i:/ передаёт буквосочетание ee.",
+"",
+"",
+"/e/\n /i/\n /i:/\n /ʌ/\n /ɒ/\nPen.\nDesk.\nTen.\nPig.\nWind\nTree.\nBee.\nStreet.\nBus.\nCup.\nMug.\nFox.\nDoll.\nPond."
+],
+"answer": "/e/\n /i/\n /i:/\n /ʌ/\n /ɒ/\nPen.\nDesk.\nTen.\nPig.\nWind\nTree.\nBee.\nStreet.\nBus.\nCup.\nMug.\nFox.\nDoll.\nPond."
+}
+]
+},
+{
+"number": "15-s18",
+"num": "15",
+"page": 18,
+"chapter": "Steps 8-14",
+"skyId": 144759,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем как можно больше слов для каждой группы.",
+"",
+"Животные:\nfrog — лягушка;\nlion — лев;\ncat — кошка;\ndog — собака;\nsnake — змея;\nelephant — слон;\ntiger — тигр;\nmonkey — обезьяна\nЦифры:\none — один;\ntwo — два;\nthree — три;\nfour — четыре;\nfive — пять;\nsix — шесть;\nseven — семь;\neight — восемь;\nnine — девять\nПредметы мебели:\ncarpet — ковёр;\nbed — кровать;\narmchair — кресло;\nchair — стул;\ntable — стол;\nbookcase — книжный шкаф;\nshelf — полка;\ncooker — плита\nПосуда:\nspoon — ложка;\nteaspoon — чайная ложка;\nfork — вилка;\nknife — нож\nТранспорт:\nbike — велосипед;\ncar — машина;\nbus — автобус;\ntram — трамвай;\ntrain — поезд;\nmetro — метро;\nplane — самолёт\nЕда и питьё:\nbread — хлеб;\nmilk — молоко;\ntea — чай;\ncoffee — кофе;\npotato — картофель;\ncarrot — морковь;\nhoney — мёд"
+],
+"answer": "Животные:\nfrog,\nlion,\ncat,\ndog,\nsnake,\nelephant,\ntiger,\nmonkey\nЦифры:\none,\ntwo,\nthree,\nfour,\nfive,\nsix,\nseven,\neight,\nnine\nПредметы мебели:\ncarpet,\nbed,\narmchair,\nchair,\ntable,\nbookcase,\nshelf,\ncooker\nПосуда:\nspoon,\nteaspoon,\nfork,\nknife\nТранспорт:\nbike,\ncar,\nbus,\ntram,\ntrain,\nmetro,\nplane\nЕда и питьё:\nbread,\nmilk,\ntea,\ncoffee,\npotato,\ncarrot,\nhoney"
+}
+]
+},
+{
+"number": "16-s19",
+"num": "16",
+"page": 19,
+"chapter": "Steps 8-14",
+"skyId": 144760,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расшифруем слова и правильно запишем их.",
+"Milk.\nSix.\nLorry.\nDog.\nMug.\nSun.\nPig.\nDoll.\nFrog.\nSweet.\nTree.\nCup.",
+"Milk. Молоко.\nSix. Шесть.\nLorry. Грузовик.\nDog. Собака.\nMug. Кружка.\nSun. Солнце.\nPig. Свинья.\nDoll. Кукла.\nFrog. Лягушка.\nSweet. Конфета.\nTree. Дерево.\nCup. Чашка."
+],
+"answer": "Milk.\nSix.\nLorry.\nDog.\nMug.\nSun.\nPig.\nDoll.\nFrog.\nSweet.\nTree.\nCup."
+}
+]
+},
+{
+"number": "1-s20",
+"num": "1",
+"page": 20,
+"chapter": "Steps 15-21",
+"skyId": 144761,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем буквы по строчке.",
+"",
+"Aa, Mm, Ww, Ii, Yy, Jj, Hh, Rr, Ss, Zz."
+],
+"answer": "Аккуратно напишем буквы по строчке, используя прописи из решения: Aa, Mm, Ww, Ii, Yy, Jj, Hh, Rr, Ss, Zz."
+}
+]
+},
+{
+"number": "2-s20",
+"num": "2",
+"page": 20,
+"chapter": "Steps 15-21",
+"skyId": 144762,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Допишем строчные буквы к данным заглавным.",
+"",
+"Xx, Dd, Gg, Pp, Aa, Ff, Ii, Ww, Jj."
+],
+"answer": "Xx, Dd, Gg, Pp, Aa, Ff, Ii, Ww, Jj."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Допишем заглавные буквы к данным строчным.",
+"",
+"Kk, Zz, Gg, Rr, Cc, Ll, Vv, Ee, Yy."
+],
+"answer": "Kk, Zz, Gg, Rr, Cc, Ll, Vv, Ee, Yy."
+}
+]
+},
+{
+"number": "3-s21",
+"num": "3",
+"page": 21,
+"chapter": "Steps 15-21",
+"skyId": 144763,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим буквы и сочетания букв со звуками, которые они передают.",
+"Ck — /k/.\nEe — /e/.\nHh — /h/.\nSh — /ʃ/.\nAa — /æ/.\nJj — /dʒ/.\nXx — /ks/.\nIi — /ɪ/.\nOo — /ɒ/.\nRr — /r/."
+],
+"answer": "Ck — /k/.\nEe — /e/.\nHh — /h/.\nSh — /ʃ/.\nAa — /æ/.\nJj — /dʒ/.\nXx — /ks/.\nIi — /ɪ/.\nOo — /ɒ/.\nRr — /r/."
+}
+]
+},
+{
+"number": "4-s21",
+"num": "4",
+"page": 21,
+"chapter": "Steps 15-21",
+"skyId": 144764,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем данные слова по строчке.",
+"WORDLIST\nduck — утка\nhook — крюк\nlamp — лампа\nvan — фургон\nclock — часы\ncat — кот\ncock — петух\nwood — дерево\nfish — рыба\nship — корабль",
+""
+],
+"answer": "Напишем данные слова по строчке."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем данные имена по строчке.",
+"WORDLIST\nDenis — Денис\nBetsy — Бетси\nJustin — Джастин\nLarry — Ларри\nMax — Макс\nAnn — Энн\nPam — Пэм\nGarry — Гэрри\nSandy — Сэнди\nNed — Нэд",
+""
+],
+"answer": "Напишем данные имена по строчке."
+}
+]
+},
+{
+"number": "5-s22",
+"num": "5",
+"page": 22,
+"chapter": "Steps 15-21",
+"skyId": 144765,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова и соединим их с соответствующими картинками.",
+"WORDLIST\nduck — утка\ncock — петух\nship — корабль\ndish — блюдо\nsheep — овца\nant — муравей\ncap — кепка\nbook — книга\nhat — шляпа\ncook — повар\nmap — карта\nsock — носок\nshelf — полка",
+"Cap.\nSock.\nShip.\nShelf.\nDish.\nBook.\nAnt.\nCock.\nCook.\nHat.\nMap.\nSheep."
+],
+"answer": "Cap.\nSock.\nShip.\nShelf.\nDish.\nBook.\nAnt.\nCock.\nCook.\nHat.\nMap.\nSheep."
+}
+]
+},
+{
+"number": "6-s23",
+"num": "6",
+"page": 23,
+"chapter": "Steps 15-21",
+"skyId": 144766,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Допишем недостающие строчные и прописные буквы.",
+"",
+"Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz."
+],
+"answer": "Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz."
+}
+]
+},
+{
+"number": "7-s23",
+"num": "7",
+"page": 23,
+"chapter": "Steps 15-21",
+"skyId": 144767,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные буквы в слова под картинками.",
+"Sheep. Овца.\nMap. Карта.\nShip. Корабль.\nSock. Носок.\nDuck. Утка.\nCat. Кот.\nBlack. Чёрный. \nShelf. Полка.\nCock. Петух.\nHook. Крюк.\nAnt. Муравей.\nWood. Лес.",
+"Sheep.\nMap.\nShip.\nSock.\nDuck.\nCat.\nBlack.\nShelf.\nCock.\nHook.\nAnt.\nWood."
+],
+"answer": "Sheep.\nMap.\nShip.\nSock.\nDuck.\nCat.\nBlack.\nShelf.\nCock.\nHook.\nAnt.\nWood."
+}
+]
+},
+{
+"number": "8-s24",
+"num": "8",
+"page": 24,
+"chapter": "Steps 15-21",
+"skyId": 144768,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим 10 слов из букв и буквосочетаний из рамочки и запишем их.",
+"Pig. Свинья.\nCup. Чашка.\nMug. Кружка.\nShip. Корабль.\nCap. Кепка.\nCock. Петух.\nDog. Собака.\nCook. Повар.\nDish. Блюдо.\nMap. Карта.",
+"Pig.\nCup.\nMug.\nShip.\nCap.\nCock.\nDog.\nCook.\nDish.\nMap."
+],
+"answer": "Pig.\nCup.\nMug.\nShip.\nCap.\nCock.\nDog.\nCook.\nDish.\nMap."
+}
+]
+},
+{
+"number": "9-s24",
+"num": "9",
+"page": 24,
+"chapter": "Steps 15-21",
+"skyId": 144769,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём в змейке ещё 10 знакомых тебе слов.",
+"WORDLIST\nshelf — полка\nsock — носок\nduck — утка\ncook — повар\nship — корабль\nclock — часы\nvan — фургон\nbook — книга\nlamp — лампа\ncat — кот\nshop — магазин\nwood — лес",
+"Lamp, cat, clock, sock, duck, van, book, shelf, shop, wood."
+],
+"answer": "Lamp, cat, clock, sock, duck, van, book, shelf, shop, wood."
+}
+]
+},
+{
+"number": "10-s24",
+"num": "10",
+"page": 24,
+"chapter": "Steps 15-21",
+"skyId": 144770,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку и напишем, что ты на ней видишь.",
+"WORDLIST\nfrog — лягушка\ntree — дерево\nblack — чёрный\nlorry — грузовик\nbus — автобус\nant — муравей\ndog — собака\npond — пруд\nlittle — маленький",
+"Я вижу большой фургон. (Пример.)\nI can see a little black ant. Я вижу маленького чёрного муравья.\nI can see a big tree. Я вижу большое дерево.\nI can see a little black dog. Я вижу маленькую чёрную собаку.\nI can see a little frog. Я вижу маленькую лягушку. \nI can see a big black lorry. Я вижу большой чёрный грузовик.\nI can see a big bus. Я вижу большой автобус.\nI can see a little pond. Я вижу маленький пруд."
+],
+"answer": "2. I can see a little black ant.\n3. I can see a big tree.\n4. I can see a little black dog.\n5. I can see a little frog.\n6. I can see a big black lorry.\n7. I can see a big bus.\n8. I can see a little pond."
+}
+]
+},
+{
+"number": "11-s25",
+"num": "11",
+"page": 25,
+"chapter": "Steps 15-21",
+"skyId": 144771,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова, посмотрим на картинку и выделим лишние слова в каждой строчке.",
+"Красный, зелёный, холм.\nМуравей, кот, пчела.\nКозлёнок, блюдо, чашка.\nШляпа, кепка, сумка.\nУлица, грузовик, фургон.\nОвца, лиса, свинья.\nКнига, петух, утка.\nКрюк, холм, лес.",
+"Red, green.\nAnt, cat.\nDish, cup.\nHat, cap.\nLorry, van.\nSheep, pig.\nCock, duck.\nHill, wood."
+],
+"answer": "Red, green.\nAnt, cat.\nDish, cup.\nHat, cap.\nLorry, van.\nSheep, pig.\nCock, duck.\nHill, wood."
+}
+]
+},
+{
+"number": "12-s26",
+"num": "12",
+"page": 26,
+"chapter": "Steps 15-21",
+"skyId": 144772,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем предложения и выберем правильный ответ — a или b.",
+"1. Как у тебя дела?\nа) Всё хорошо, спасибо.\nb) Приятно с тобой познакомиться.\n2. Откуда ты, Ларри?\nа) Увидимся, Ларри.\nb) Я из Лондона.\n3. Приятно с тобой познакомиться, Китти.\nа) Приятно с тобой познакомиться, Сид.\nb) Я из Москвы.",
+"1. Как у тебя дела?\nа) Всё хорошо, спасибо.\n2. Откуда ты, Ларри?\nb) Я из Лондона.\n3. Приятно с тобой познакомиться, Китти.\nа) Приятно с тобой познакомиться, Сид."
+],
+"answer": "a.\nb.\na."
+}
+]
+},
+{
+"number": "13-s26",
+"num": "13",
+"page": 26,
+"chapter": "Steps 15-21",
+"skyId": 144773,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим рифмующиеся слова.",
+"Кепка,\nрыба,\nкнига,\nпетух,\nхолм, \nкоробка,\nдесять\nМельница,\nручка,\nносок,\nлиса,\nкрюк,\nкарта,\nблюдо",
+"Cap — map.\nFish — dish.\nBook — hook.\nCock — sock.\nHill — mill.\nBox — fox.\nTen — pen."
+],
+"answer": "Cap — map.\nFish — dish.\nBook — hook.\nCock — sock.\nHill — mill.\nBox — fox.\nTen — pen."
+}
+]
+},
+{
+"number": "14-s26",
+"num": "14",
+"page": 26,
+"chapter": "Steps 15-21",
+"skyId": 144774,
+"subTasks": [
+{
+"name": "I",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим диалоги из предложенных фраз. Пронумеруем реплики в порядке их следования.",
+"1\n Привет! Меня зовут Ольга. Как тебя зовут?\n 3\n Приятно познакомиться, Дастин\n 4\n Откуда ты, Ольга?\n 2\n Привет! Я Дастин. Приятно познакомиться, Ольга\n 7\n Пока, Дастин\n 6\n Я из Лондона\n 5\n Я из Москвы. А ты откуда?\n 8\n Пока, Ольга",
+"А: Привет! Меня зовут Ольга. Как тебя зовут?\nБ: Привет! Я Дастин. Приятно познакомиться, Ольга.\nА: Приятно познакомиться, Дастин.\nБ: Откуда ты, Ольга?\nА: Я из Москвы. А ты откуда?\nБ: Я из Лондона.\nА: Пока, Дастин.\nБ: Пока, Ольга."
+],
+"answer": "А: Привет! Меня зовут Ольга. Как тебя зовут?\nБ: Привет! Я Дастин. Приятно познакомиться, Ольга.\nА: Приятно познакомиться, Дастин.\nБ: Откуда ты, Ольга?\nА: Я из Москвы. А ты откуда?\nБ: Я из Лондона.\nА: Пока, Дастин.\nБ: Пока, Ольга."
+},
+{
+"name": "II",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим диалоги из предложенных фраз. Пронумеруем реплики в порядке их следования.",
+"3\n У меня всё хорошо. Спасибо. Откуда ты, Энн?\n 2\n Всё хорошо, спасибо. А как у тебя дела, Ларри?\n 5\n Я из Лондона\n 6\n Пока, Ларри\n 1\n Привет, Энн! Как дела?\n 4\n Я из Москвы. А ты откуда?\n 7\n Пока, Энн",
+"А: Привет, Энн! Как дела?\nБ: Всё хорошо, спасибо. А как у тебя дела, Ларри?\nА: У меня всё хорошо. Спасибо. Откуда ты, Энн?\nБ: Я из Москвы. А ты откуда?\nА: Я из Лондона.\nБ: Пока, Ларри.\nА: Пока, Энн."
+],
+"answer": "А: Привет, Энн! Как дела?\nБ: Всё хорошо, спасибо. А как у тебя дела, Ларри?\nА: У меня всё хорошо. Спасибо. Откуда ты, Энн?\nБ: Я из Москвы. А ты откуда?\nА: Я из Лондона.\nБ: Пока, Ларри.\nА: Пока, Энн."
+}
+]
+},
+{
+"number": "15-s27",
+"num": "15",
+"page": 27,
+"chapter": "Steps 15-21",
+"skyId": 144775,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем как можно больше слов в каждую группу.",
+"Дикие животные: frog (лягушка), fish (рыба), fox (лиса).\nДомашние животные: cat (кот), dog (собака), parrot (попугай), sheep (овца), kid (козлёнок), pig (свинья), cow (корова).\nНасекомые: ant (муравей), bee (пчела).\nПредметы мебели: bed (кровать), desk (кровать), table (стол), chair (стул).\nПосуда: dish (блюдо), jug (кувшин), cup (чашка), mug (кружка).\nТранспорт: bus (автобус), car (машина), lorry (грузовик), van (фургон), ship (корабль).\nЦвета: red (красный), green (зелёный), black (чёрный).\nОдежда: hat (шляпа), cap (кепка), sock (носок)."
+],
+"answer": "Дикие животные: frog, fish, fox.\nДомашние животные: cat, dog, parrot, sheep, kid, pig, cow.\nНасекомые: ant, bee.\nПредметы мебели: bed, desk, table, chair.\nПосуда: dish, jug, cup, mug.\nТранспорт: bus, car, lorry, van, ship.\nЦвета: red, green, black.\nОдежда: hat, cap, sock."
+}
+]
+},
+{
+"number": "16-s28",
+"num": "16",
+"page": 28,
+"chapter": "Steps 15-21",
+"skyId": 144776,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на слова, буквы в которых перепутались, и написать их правильно.",
+"Hook. (Крючок.)\nMap. (Карта.)\nCook. (Повар.)\nShelf. (Полка.)\nRed. (Красный.)\nBlack. (Чёрный.)\nGreen. (Зелёный.)\nSheep. (Овечка.)\nCap. (Кепка.)\nSock. (Носок.)\nShop. (Магазин.)\nWood. (Лес.)"
+],
+"answer": "Hook.\nMap.\nCook.\nShelf.\nRed.\nBlack.\nGreen.\nSheep.\nCap.\nSock.\nShop.\nWood."
+}
+]
+},
+{
+"number": "1-s29",
+"num": "1",
+"page": 29,
+"chapter": "Steps 22-28",
+"skyId": 144777,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прописать буквы.",
+"",
+"D d, E e, I i, J j, N n, P p, Q q, R r, T t, U u."
+],
+"answer": "D d, E e, I i, J j, N n, P p, Q q, R r, T t, U u."
+}
+]
+},
+{
+"number": "2-s29",
+"num": "2",
+"page": 29,
+"chapter": "Steps 22-28",
+"skyId": 144778,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести звуки и буквосочетания.",
+"",
+"",
+"",
+"",
+"",
+"",
+"Ar — /ɑː/.\nCh — /tʃ/.\nCk — /k/.\nEe — /i:/.\nOo — /ʊ/.\nOr — /ɔː/.\nQu — /kw/.\nSh — /ʃ/."
+],
+"answer": "Ar — /ɑː/.\nCh — /tʃ/.\nCk — /k/.\nEe — /i:/.\nOo — /ʊ/.\nOr — /ɔː/.\nQu — /kw/.\nSh — /ʃ/."
+}
+]
+},
+{
+"number": "3-s30",
+"num": "3",
+"page": 30,
+"chapter": "Steps 22-28",
+"skyId": 144779,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прописать строки слов.",
+"",
+"Bench — лавочка.\nCar — машина.\nCherry — вишня.\nDoor — дверь.\nFarm — ферма.\nFloor — пол.\nHappy — счастливый.\nHorse — лошадь.\nLittle — маленький."
+],
+"answer": "Bench — лавочка.\nCar — машина.\nCherry — вишня.\nDoor — дверь.\nFarm — ферма.\nFloor — пол.\nHappy — счастливый.\nHorse — лошадь.\nLittle — маленький."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прописать строки имён.",
+"",
+"Barney — Барни.\nCharley — Чарли.\nDan —Дэн.\nDick — Дик.\nDobbin — Доббин.\nGordon — Гордон.\nHarry — Гарри.\nMark — Марк.\nOrson — Орсон.\nSally — Салли."
+],
+"answer": "Barney — Барни.\nCharley — Чарли.\nDan —Дэн.\nDick — Дик.\nDobbin — Доббин.\nGordon — Гордон.\nHarry — Гарри.\nMark — Марк.\nOrson — Орсон.\nSally — Салли."
+}
+]
+},
+{
+"number": "4-s31",
+"num": "4",
+"page": 31,
+"chapter": "Steps 22-28",
+"skyId": 144780,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова с картинками, которые их обозначают.",
+"Bench — лавочка.\nCar — машина.\nCherry — вишня.\nChick — цыплёнок.\nChimp — обезьянка. \nFarm — ферма.\nHorse — лошадь.\nMatch — спичка.\nPark — парк.\nPort — порт.\nQueen — королева.\nStar — звезда.",
+"Chimp.\nStar.\nHorse.\nCherry.\nFarm.\nCar.\nQueen.\nChick.\nPark.\nMatch.\nPort.\nBench."
+],
+"answer": "Chimp.\nStar.\nHorse.\nCherry.\nFarm.\nCar.\nQueen.\nChick.\nPark.\nMatch.\nPort.\nBench."
+}
+]
+},
+{
+"number": "5-s31",
+"num": "5",
+"page": 31,
+"chapter": "Steps 22-28",
+"skyId": 144781,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в алфавите.",
+"",
+"A, B, C, D, E.\nF, G, H, I, J.\nK, L, M, N, O.\nP, Q, R, S, T.\nU, V, W, X, Y, Z."
+],
+"answer": "A, B, C, D, E.\nF, G, H, I, J.\nK, L, M, N, O.\nP, Q, R, S, T.\nU, V, W, X, Y, Z."
+}
+]
+},
+{
+"number": "6-s32",
+"num": "6",
+"page": 32,
+"chapter": "Steps 22-28",
+"skyId": 144782,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, какие дети на картинках.",
+"WORDLIST\nfunny — весёлый\nhappy — счастливый\nsad — грустный",
+"Bess is happy. Бесс счастливая.\nEmily is sad. Эмили грустная.\nDick is funny. Дик весёлый.\nEddy is happy. Эдди счастливый.\nKitty is funny. Китти весёлая."
+],
+"answer": "Bess is happy.\nEmily is sad.\nDick is funny.\nEddy is happy.\nKitty is funny."
+}
+]
+},
+{
+"number": "7-s32",
+"num": "7",
+"page": 32,
+"chapter": "Steps 22-28",
+"skyId": 144783,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить местоимение It в пропуски.",
+"Я вижу овцу. Она большая. Она чёрная.\nЯ вижу дерево. Оно маленькое. Оно зелёное.\nЯ вижу кота. Он большой. Он рыжий.\nЯ вижу собаку. Она маленькая. Она чёрная.\nЯ вижу машину. Она большая. Она красная.\nЯ вижу обезьянку. Она маленькая. Она чёрная.\nЯ вижу лягушку. Она маленькая. Она зелёная.\nЯ вижу лампу. Она большая. Она красная.",
+"It. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It."
+],
+"answer": "It. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It.\nIt. It."
+}
+]
+},
+{
+"number": "8-s33",
+"num": "8",
+"page": 33,
+"chapter": "Steps 22-28",
+"skyId": 144784,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разбить одно предложение на два.",
+"Я вижу смешную обезьянку.\nЯ вижу обезьянку. Она смешная.",
+"—.\nЯ вижу большую лошадь.\nЯ вижу чёрный фургон.\nЯ вижу маленькую звезду.\nЯ вижу хорошую собаку.\nЯ вижу плохого кота.\nЯ вижу красную дверь.\nЯ вижу зелёную лавочку.\nЯ вижу красную вишню.\nЯ вижу зелёный пол.",
+"—.\nI can see a horse. It is big.\nI can see a van. It is black.\nI can see a star. It is little.\nI can see a dog. It is good.\nI can see a cat. It is bad.\nI can see a door. It is red.\nI can see a bench. It is green.\nI can see a cherry. It is red.\nI can see a floor. It is green.",
+"—.\nЯ вижу лошадь. Она большая.\nЯ вижу фургон. Он чёрный.\nЯ вижу звезду. Она маленькая.\nЯ вижу собаку. Она хорошая.\nЯ вижу кота. Он плохой.\nЯ вижу дверь. Она красная.\nЯ вижу лавочку. Она зелёная.\nЯ вижу вишню. Она красная.\nЯ вижу пол. Он зелёный."
+],
+"answer": "—.\nI can see a horse. It is big.\nI can see a van. It is black.\nI can see a star. It is little.\nI can see a dog. It is good.\nI can see a cat. It is bad.\nI can see a door. It is red.\nI can see a bench. It is green.\nI can see a cherry. It is red.\nI can see a floor. It is green."
+}
+]
+},
+{
+"number": "9-s34",
+"num": "9",
+"page": 34,
+"chapter": "Steps 22-28",
+"skyId": 144785,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова по смыслу.",
+"Car — машина.\nChick — цыплёнок.\nCock — петух.\nDoor — дверь.\nFish — рыба.\nFloor — пол.\nGreen — зелёный.\nHorse — лошадь.\nPond — пруд.\nRed — красный.\nSheep — овца.\nShop — магазин.\nStreet — улица.\nTree — дерево.\nVan — фургон.\nWood — древесина.",
+"Horse — sheep.\nChick — cock.\nCar — van.\nTree — wood.\nFish — pond.\nGreen — red.\nShop — street.\nDoor — floor."
+],
+"answer": "Horse — sheep.\nChick — cock.\nCar — van.\nTree — wood.\nFish — pond.\nGreen — red.\nShop — street.\nDoor — floor."
+}
+]
+},
+{
+"number": "10-s34",
+"num": "10",
+"page": 34,
+"chapter": "Steps 22-28",
+"skyId": 144786,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно назвать предметы, которые мы видим на картинке.",
+"WORDLIST\ncherry — вишня\nchick — цыплёнок\ndoor — дверь\nfarm — ферма\nfloor — пол\nhorse — лошадь\nmatch — спичка\npark — парк\nshop — магазин",
+"Это лошадь.",
+"—.\nIt is a chick. Это цыплёнок.\nIt is a door. Это дверь.\nIt is a shop. Это магазин.\nIt is a cherry. Это вишня.\nIt is a park. Это парк.\nIt is a farm. Это ферма.\nIt is a floor. Это пол.\nIt is a match. Это спичка."
+],
+"answer": "—.\nIt is a chick.\nIt is a door.\nIt is a shop.\nIt is a cherry.\nIt is a park.\nIt is a farm.\nIt is a floor.\nIt is a match."
+}
+]
+},
+{
+"number": "11-s35",
+"num": "11",
+"page": 35,
+"chapter": "Steps 22-28",
+"skyId": 144787,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно угадать, кто спрятан в коробке.",
+"WORDLIST\nbird — птица\ncat — кот\nchick — цыплёнок\nchimp — обезьянка\ndog — собака\nfox — лиса\nhorse — лошадь\nmouse — мышь\nwolf — волк",
+"It is not a cat. Это не кот.\nIt is not a dog. Это не собака.\nIt is not a bird. Это не птица.\nIt is not a wolf. Это не волк.\nIt is not a fox. Это не лиса.\nIt is not a mouse. Это не мышь.\nIt is not a horse. Это не лошадь.\nIt is not a chimp. Это не обезьянка.\nIt is a chick. Это цыплёнок."
+],
+"answer": "It is not a cat.\nIt is not a dog.\nIt is not a bird.\nIt is not a wolf.\nIt is not a fox.\nIt is not a mouse.\nIt is not a horse.\nIt is not a chimp.\nIt is a chick."
+}
+]
+},
+{
+"number": "12-s35",
+"num": "12",
+"page": 35,
+"chapter": "Steps 22-28",
+"skyId": 144788,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы.",
+"",
+"Это одеяло?\nЭто пруд?\nЭто пол?\nЭто порт?\nЭто парк?\nЭто королева?\nЭто лавочка?\nЭто цыплёнок?\nЭто ручка?\nЭто машина?",
+"Yes, it is. Да.\nNo, it is not. Нет.\nYes, it is. Да.\nNo, it is not. Нет.\nNo, it is not. Нет.\nYes, it is. Да.\nYes, it is. Да.\nNo, it is not. Нет.\nNo, it is not. Нет.\nYes, it is. Да."
+],
+"answer": "Yes, it is.\nNo, it is not.\nYes, it is.\nNo, it is not.\nNo, it is not.\nYes, it is.\nYes, it is.\nNo, it is not.\nNo, it is not.\nYes, it is."
+}
+]
+},
+{
+"number": "13-s36",
+"num": "13",
+"page": 36,
+"chapter": "Steps 22-28",
+"skyId": 144789,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова в зависимости от звуков, которые в них звучат.",
+"",
+"",
+"",
+"Bee — пчела.\nCar — машина.\nDoor — дверь.\nFarm — ферма.\nFloor — пол.\nHorse — лошадь.\nPark — парк.\nPort — порт.\nSheep — овца.\nStar — звезда.\nSweet — сладкий.\nTree — дерево.",
+"/ɑː/\n /i:/\n /ɔː/\nStar.\nCar.\nFarm.\nPark\nTree.\nSheep.\nSweet.\nBee\nPort.\nDoor.\nFloor.\nHorse"
+],
+"answer": "/ɑː/\n /i:/\n /ɔː/\nStar.\nCar.\nFarm.\nPark\nTree.\nSheep.\nSweet.\nBee\nPort.\nDoor.\nFloor.\nHorse"
+}
+]
+},
+{
+"number": "14-s37",
+"num": "14",
+"page": 37,
+"chapter": "Steps 22-28",
+"skyId": 144790,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить из слов предложения.",
+"",
+"What is your name? Как тебя зовут?\nWhat is it? Что это?\nWhere are you from? Откуда ты родом?\nIs it a shop? Это магазин?\nIt is not a chicken. Это не курица.\nWho is it? Кто это?\nIt is not a red book. Это не красная книга.\nIt is a black and red quilt. Это чёрно-красное одеяло.\nBess can see a green van. Бесс может увидеть зелёный фургон.\nQueen Victoria is happy. Королева Виктория счастлива."
+],
+"answer": "What is your name?\nWhat is it?\nWhere are you from?\nIs it a shop?\nIt is not a chicken.\nWho is it?\nIt is not a red book.\nIt is a black and red quilt.\nBess can see a green van.\nQueen Victoria is happy."
+}
+]
+},
+{
+"number": "15-s38",
+"num": "15",
+"page": 38,
+"chapter": "Steps 22-28",
+"skyId": 144791,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы в слова.",
+"Королева.\nЛошадь.\nДверь.\nПорт.\nЦыплёнок.\nВишня.\nСпичка.\nМагазин.\nОбезьянка.\nОдеяло.\nФерма.\nЗвезда.",
+"Queen.\nHorse.\nDoor.\nPlot.\nChick.\nCherry.\nMatch.\nShop.\nChimp.\nQuilt.\nFarm.\nStar."
+],
+"answer": "Queen.\nHorse.\nDoor.\nPlot.\nChick.\nCherry.\nMatch.\nShop.\nChimp.\nQuilt.\nFarm.\nStar."
+}
+]
+},
+{
+"number": "16-s38",
+"num": "16",
+"page": 38,
+"chapter": "Steps 22-28",
+"skyId": 144792,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить вопросы вопросительными слова what или who.",
+"WORDLIST\nwhat — что\nwho — кто",
+"Пример: Что это? — Это чёрная собака.\n2. Что это? (What is it?) — Это маленький магазин.\n3. Кто это? (Who is it?) — Это королева Виктория.\n4. Кто это? (Who is it?) — Это Бесс.\n5. Кто это? (Who is it?) — Это королева Анна.\n6. Кто это? (Who is it?) — Это Чарли Кук.\n7. Что это? (What is it?) — Это большой красный автобус.\n8. Кто это? (Who is it?) — Это Дон Скотт.\n9. Что это? (What is it?) — Это рыжая лошадь.\n10. Кто это? (Who is it?) — Это Сид Блэк."
+],
+"answer": "2. What.\n3. Who.\n4. Who.\n5. Who.\n6. Who.\n7. What.\n8. Who.\n9. What.\n10. Who."
+}
+]
+},
+{
+"number": "17-s39",
+"num": "17",
+"page": 39,
+"chapter": "Steps 22-28",
+"skyId": 144793,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно назвать животных на картинках, а также сказать, маленькие они или большие.",
+"WORDLIST\nfrog — лягушка\nsheep — овечка\nbig — большой\nlittle — маленький",
+"Образец: 1. Что это? — Это автобус. Это большой автобус.\n2. Что это?\nIt is a frog. (Это лягушка.)\nIt is a little frog. (Это маленькая лягушка.)\n3. Что это?\nIt is a sheep. (Это овца.)\nIt is a big sheep. (Это большая овца.)"
+],
+"answer": "2. It is a frog. It is a little frog. \n3. It is a sheep. It is a big sheep."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно назвать предметы на картинках, а также сказать, хорошие они или плохие.",
+"WORDLIST\ncup — чашка\nhorse — лошадка\ncar — машинка\ngood — хороший\nbad — плохой",
+"Образец: 1. Что это? — Это чашка. Это плохая чашка.\n2. Что это?\nIt is a horse. (Это лошадка.)\nIt is a good horse. (Это хорошая лошадка.)\n3. Что это?\nIt is a car. (Это машинка.)\nIt is a bad car. (Это плохая машинка.)"
+],
+"answer": "2. It is a horse. It is a good horse.\n3. It is a car. It is a bad car."
+}
+]
+},
+{
+"number": "18-s40",
+"num": "18",
+"page": 40,
+"chapter": "Steps 22-28",
+"skyId": 144794,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать вопросы и выбрать правильный ответ из двух предложенных.",
+"1. Кто это?\nA. Это большая чёрная собака. B. Это Джек Кларк.\n2. Что это?\nA. Это маленькая звёздочка. B. Это королева Анна.\n3. Это большая лошадь?\nA. Нет, небольшая. B. Да, небольшая."
+],
+"answer": "B.\nA.\nA."
+}
+]
+},
+{
+"number": "19-s41",
+"num": "19",
+"page": 41,
+"chapter": "Steps 22-28",
+"skyId": 144795,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расположить фразы в правильном порядке, чтобы получился диалог.",
+"Да. — 2.\nНет. Она чёрная. — 4.\nЭто лошадь? — 1.\nЭто рыжая лошадь? — 3.\nЭто хорошая лошадь? — 5.\nДа. — 6."
+],
+"answer": "2, 4, 1, 3, 5, 6."
+}
+]
+},
+{
+"number": "20-s41",
+"num": "20",
+"page": 41,
+"chapter": "Steps 22-28",
+"skyId": 144796,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на слова, буквы в которых перепутались, и написать их правильно.",
+"Horse. (Лошадь.)\nQuilt. (Стёганое одеяло.)\nQueen. (Королева.)\nShop. (Магазин.)\nPort. (Порт.)\nFloor. (Пол.)\nDoor. (Дверь.)\nChick. (Цыплёнок.)\nMatch. (Матч.)\nFarm. (Ферма.)\nPark. (Парк.)\nStar. (Звезда.)"
+],
+"answer": "Horse.\nQuilt.\nQueen.\nShop.\nPort.\nFloor.\nDoor.\nChick.\nMatch.\nFarm.\nPark.\nStar."
+}
+]
+},
+{
+"number": "1-s42",
+"num": "1",
+"page": 42,
+"chapter": "Steps 29-35",
+"skyId": 144797,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прописать новые слова по строчке.",
+"WORDLIST\nname — имя\nstone — камень\nplate — тарелка\ncake — торт\nplane — самолёт\nlake — озеро\nboat — лодка\nphone — телефон\ncold — холодный\nold — старый\ncoat — пальто\nrose — роза",
+"Name.\nStone.\nPlate.\nCake.\nPlane.\nLake.\nBoat.\nPhone.\nCold.\nOld.\nCoat.\nRose."
+],
+"answer": "Name (имя).\nStone (камень).\nPlate (тарелка).\nCake (торт).\nPlane (самолёт).\nLake (озеро).\nBoat (лодка).\nPhone (телефон).\nCold (холодный).\nOld (старый).\nCoat (пальто).\nRose (роза)."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прописать имена по строчке.",
+"WORDLIST\nPete — Пит\nSteve — Стив\nEve — Ева\nLena — Лена\nWendy — Венди\nKen — Кен\nCely — Сили\nAlex — Алекс\nHarry — Гарри\nPam — Пэм",
+"Pete.\nSteve.\nEve.\nLena.\nWendy.\nKen.\nCely.\nAlex.\nHarry.\nPam."
+],
+"answer": "Pete (Пит).\nSteve (Стив).\nEve (Ева).\nLena (Лена).\nWendy (Венди).\nKen (Кен).\nCely (Сили).\nAlex (Алекс).\nHarry (Гарри).\nPam (Пэм)."
+}
+]
+},
+{
+"number": "2-s43",
+"num": "2",
+"page": 43,
+"chapter": "Steps 29-35",
+"skyId": 144798,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова по трём группам в соответствии со звуком.",
+"WORDLIST\nbone — кость\nbox — коробка\nor — или\nfrog — лягушка\ncoat — пальтто\ntroll — троль\nport — порт\nstone — камень\ndoor — дверь\ndoll — кукла\nfloor — пол\nboat — лодка\nhorse — лошадь\npond — пруд\nphone — телефон",
+"/ɔ:/\nOr.\nDoor.\nFloor.\nHorse.\n/ɒ/\nBox.\nFrog.\nTroll.\nPort.\nDoll.\nPond.\n/әʊ/\nBone.\nCoat.\nStone.\nBoat.\nPhone."
+],
+"answer": "/ɔ:/\nOr.\nDoor.\nFloor.\nHorse.\n/ɒ/\nBox.\nFrog.\nTroll.\nPort.\nDoll.\nPond.\n/әʊ/\nBone.\nCoat.\nStone.\nBoat.\nPhone."
+}
+]
+},
+{
+"number": "3-s44",
+"num": "3",
+"page": 44,
+"chapter": "Steps 29-35",
+"skyId": 144799,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова по группам в соответствии с произношением.",
+"WORDLIST\nbag — сумка\nname — имя\nvan — фургон\nstar — звезда\nCharley — Чарли\nAnn — Энн\ncake — торт\npark — парк\nplate — тарелка\ncar — машина\nfarm — ферма\nmap — карта\nJane — Джейн\ngame — игра\nhat — шапка",
+"/ӕ/\nBag.\nVan.\nAnn.\nMap.\nHat.\n/eɪ/\nName.\nCake.\nPlate.\nJane.\nGame.\n/а:/\nStar.\nCharley.\nPark.\nCar.\nFarm."
+],
+"answer": "/ӕ/\nBag.\nVan.\nAnn.\nMap.\nHat.\n/eɪ/\nName.\nCake.\nPlate.\nJane.\nGame.\n/а:/\nStar.\nCharley.\nPark.\nCar.\nFarm."
+}
+]
+},
+{
+"number": "4-s44",
+"num": "4",
+"page": 44,
+"chapter": "Steps 29-35",
+"skyId": 144800,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова на группы в соответствии с произношением гласных.",
+"WORDLIST\nbone — кость\nlake — озеро\nport — порт\nbad — плохой\ncar — машина\nbox — коробка\nsad — грустный\ndoor — дверь\nstar — звезда\ngame — игра\ncoat — пальто\nsock — носок",
+"/ɔ:/\nDoor.\n/ɒ/\nPort.\nBox.\nSock.\n/әʊ/\nBone.\nCoat.\n/ӕ/\nBad.\n/eɪ/\nLake.\nGame.\n/а:/\nCar.\nSad.\nStar."
+],
+"answer": "/ɔ:/\nDoor.\n/ɒ/\nPort.\nBox.\nSock.\n/әʊ/\nBone.\nCoat.\n/ӕ/\nBad.\n/eɪ/\nLake.\nGame.\n/а:/\nCar.\nSad.\nStar."
+}
+]
+},
+{
+"number": "5-s45",
+"num": "5",
+"page": 45,
+"chapter": "Steps 29-35",
+"skyId": 144801,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях неопределённым артиклем a/an.",
+"",
+"Это (a) часы. Это (an) старые часы.\nБетти видит (a) тролля. Это (an) старый тролль.\nЭто (an) яйцо. Это (a) плохое яйцо.\nЭто (an) муравей. Это (a) чёрный муравей.\nМарк видит (an) эльфа. Это (a) маленький эльф."
+],
+"answer": "Это (a) часы. Это (an) старые часы.\nБетти видит (a) тролля. Это (an) старый тролль.\nЭто (an) яйцо. Это (a) плохое яйцо.\nЭто (an) муравей. Это (a) чёрный муравей.\nМарк видит (an) эльфа. Это (a) маленький эльф."
+}
+]
+},
+{
+"number": "6-s45",
+"num": "6",
+"page": 45,
+"chapter": "Steps 29-35",
+"skyId": 144802,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно описать людей и животных на картинках подходящими прилагательными.",
+"WORDLIST\nold — старый\nsad — грустный\nhappy — счастливый\nfunny — забавный\ncold — холодный\nbig — большой\nlittle — маленький",
+"",
+"Мистер Росс старый (old).\nСтив грустный (sad).\nСпот большой (big).\nОбезьянка забавная (funny).\nСалли холодно (cold).\nВенди счастливая (happy).\nРекс маленький (little)."
+],
+"answer": "Мистер Росс старый (old).\nСтив грустный (sad).\nСпот большой (big).\nОбезьянка забавная (funny).\nСалли холодно (cold).\nВенди счастливая (happy).\nРекс маленький (little)."
+}
+]
+},
+{
+"number": "7-s46",
+"num": "7",
+"page": 46,
+"chapter": "Steps 29-35",
+"skyId": 144803,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заменить имена собственные подходящими личными местоимениями.",
+"WORDLIST\nold — старый\nsad — грустный\nhappy — счастливый\nfunny — забавный\ncold — холодный\nbig — большой\nlittle — маленький",
+"",
+"Венди видит зелёную лягушку. Она (she) видит зелёную лягушку. \nПапа счастлив. Он (he) счастлив.\nРоза и я грустные. Мы (we) грустные.\nРекс видит маленького цыплёнка. Он (it) видит маленького цыплёнка.\nТом плохой повар. Он (he) плохой повар.\nБетси холодно. Ей (she) холодно.\nСпот забавный. Он (it) забавный.\nОльга и я не старые. Мы (we) не старые."
+],
+"answer": "She.\nHe.\nWe.\nIt.\nHe.\nShe.\nIt.\nWe."
+}
+]
+},
+{
+"number": "8-s46",
+"num": "8",
+"page": 46,
+"chapter": "Steps 29-35",
+"skyId": 144804,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно превратить утвердительные предложения в отрицательные.",
+"WORDLIST\nold — старый\nsad — грустный\nhappy — счастливый\nfunny — забавный\ncold — холодный\nbig — большой\nlittle — маленький",
+"",
+"Мистер Блэк (is not) не старый.\nМама (is not) несчастна.\nКим и я не (are not) грустные.\nРекс — не (is not) большой и счастливый пёс.\nЭто — не (is not) хороший вишнёвый торт.\nКитти не (is not) хороший повар.\nБетси не (is not) холодно.\nСпот не (is not) забавный.\nМы не (is not) старые.\nЭто не (is not) большой грузовик."
+],
+"answer": "Мистер Блэк (is not) не старый.\nМама (is not) несчастна.\nКим и я не (are not) грустные.\nРекс — не (is not) большой и счастливый пёс.\nЭто — не (is not) хороший вишнёвый торт.\nКитти не (is not) хороший повар.\nБетси не (is not) холодно.\nСпот не (is not) забавный.\nМы не (is not) старые.\nЭто не (is not) большой грузовик."
+}
+]
+},
+{
+"number": "9-s47",
+"num": "9",
+"page": 47,
+"chapter": "Steps 29-35",
+"skyId": 144805,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и выписать слова из змейки.",
+"Самолёт.\nPlane.\nЭльф.\nElf.\nКормить.\nFeed.\nУтка.\nDuck.\nЦеловать.\nKiss.\nСтоять.\nStand.\nПапа.\nDad.\nСобака.\nDog.\nИгра.\nGame.\nМег.\nMeg.\nБабуля.\nGranny."
+],
+"answer": "Plane.\nElf.\nFeed.\nDuck.\nKiss.\nStand.\nDad.\nDog.\nGame.\nMeg.\nGranny."
+}
+]
+},
+{
+"number": "10-s48",
+"num": "10",
+"page": 48,
+"chapter": "Steps 29-35",
+"skyId": 144806,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова так, чтобы получились новые слова или словосочетания.",
+"WORDLIST 1\ndoor — дверь\nsweet — сладкий\ncherry — вишня\nfloor — пол\nsheep — овечка\ncook — готовить\nstreet — улица\ncar — машина\nWORDLIST 2\nfarm — ферма\ncake — торт\nshop — магазин\nclock — часы\nbell — колокол\nbook — книга\nlamp — лампа",
+"Дверной звонок.\nDoorbell.\nМагазни сладосей.\nSweet shop.\nВишнёвый пирог.\nCherry cake.\nНапольная лампа.\nFloor lamp.\nОвцеферма.\nSheep farm.\nКнига рецептов.\nCook book.\nУличные часы.\nStreet clock.\nМашинная фара.\nCar lamp."
+],
+"answer": "Doorbell.\nSweet shop.\nCherry cake.\nFloor lamp.\nSheep farm.\nCook book.\nStreet clock.\nCar lamp."
+}
+]
+},
+{
+"number": "11-s48",
+"num": "11",
+"page": 48,
+"chapter": "Steps 29-35",
+"skyId": 144807,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать вопросы к ответам.",
+"WORDLIST\ndoll — кукла\nhappy — счастливый\nbig — большой\ngood — хороший",
+"",
+"Что это? (What is it?) — Это Бесс.\nЭто кукла? (Is it a doll?) — Да, это кукла.\nОна грустная? (Is it sad?) — Нет, она счастливая.\nБесс большая или маленькая? (Is Bess big or small?) — Бесс большая.\nБесс хорошая кукла? (Is Bess a good doll?) — Бесс хорошая кукла."
+],
+"answer": "What is it?\nIs it a doll?\nIs it sad?\nIs Bess big or small?\nIs Bess a good doll?"
+}
+]
+},
+{
+"number": "12-s49",
+"num": "12",
+"page": 49,
+"chapter": "Steps 29-35",
+"skyId": 144808,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова по ассоциации.",
+"Бабушка — Дедушка.\nGranny — Grandad.\nКот — Молоко.\nCat — Milk.\nЧашка — Кружка.\nCup — Mug.\nИ — Или.\nAnd — Or.\nЛодка — Корабль.\nBoat — Ship.\nОна — Он.\nShe — He.\nПруд — Озеро.\nPond — Lake.\nСобака — Кость.\nDog — Bone.\nВишня — Торт.\nCherry — Cake.\nПоросёнок — Ферма.\nPig — Farm."
+],
+"answer": "Granny — Grandad.\nCat — Milk.\nCup — Mug.\nAnd — Or.\nBoat — Ship.\nShe — He.\nPond — Lake.\nDog — Bone.\nCherry — Cake.\nPig — Farm."
+}
+]
+},
+{
+"number": "13-s49",
+"num": "13",
+"page": 49,
+"chapter": "Steps 29-35",
+"skyId": 144809,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и написать команды или пожелания.",
+"Покачай головой!\nShake your head!\nПотопай ногами!\nStomp your feet!\nПотанцуй со мной!\nDance with me!\nПоцелуй меня!\nKiss me!\nВстань!\nStand up!\nХлопни в ладоши!\nClap your hands!\nСядь!\nSit down!\nПоцелуй меня перед сном!\nKiss me goodnight!"
+],
+"answer": "Shake your head!\nStomp your feet!\nDance with me!\nKiss me!\nStand up!\nClap your hands!\nSit down!\nKiss me goodnight!"
+}
+]
+},
+{
+"number": "14-s50",
+"num": "14",
+"page": 50,
+"chapter": "Steps 29-35",
+"skyId": 144810,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения из слов.",
+"",
+"Бабуля старая?\nIs granny old?\nЯ вижу старую королеву.\nI can see an old queen.\nЭто книга и коробка?\nIs it a book or a box?\nОна видит красную розу.\nShe can see a red rose.\nМистер Росс — дедушка.\nMr Ross is a grandad.\nБетти видит папу.\nBetty can see dad.\nЭто не хорошая книга.\nIt is not a good book.\nЛен видит старого тролля и счастливого эльфа.\nLen can see an old troll and a happy elf.\nБен — хороший повар.\nBen is a good cook.\nРекс — маленькая рыжая собачка.\nRex is a little red dog."
+],
+"answer": "Is granny old?\nI can see an old queen.\nIs it a book or a box?\nShe can see a red rose.\nMr Ross is a grandad.\nBetty can see dad.\nIt is not a good book.\nLen can see an old troll and a happy elf.\nBen is a good cook.\nRex is a little red dog."
+}
+]
+},
+{
+"number": "15-s51",
+"num": "15",
+"page": 51,
+"chapter": "Steps 29-35",
+"skyId": 144811,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы в слова под картинками.",
+"Лодка.\nBoat.\nДедушка.\nGrandad.\nХлопать.\nClap.\nТелефон.\nPhone.\nТрясти.\nShake.\nТорт.\nCake.\nРоза.\nRose.\nХолодно.\nCold.\nТарелка.\nPlate.\nПередать.\nGive.\nЗемля.\nLand.\nСамолёт.\nPlane."
+],
+"answer": "Boat.\nGrandad.\nClap.\nPhone.\nShake.\nCake.\nRose.\nCold.\nPlate.\nGive.\nLand.\nPlane."
+}
+]
+},
+{
+"number": "16-s51",
+"num": "16",
+"page": 51,
+"chapter": "Steps 29-35",
+"skyId": 144812,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно написать восемь предложений, используя таблицу.",
+"Начало предложения\n Отрицательная частица\n Артикль\n Прилагательное\n Существительное\n It is\n (Not)\n A\nHappy (счастливый),\nred (красный),\ngreen (зелёный),\nbad (плохой),\nlittle (маленький),\ngood (хороший),\nbig (большой),\nsad (грустный)\nDog (собака),\ngame (игра),\nbox (коробка),\ncar (машина),\ncup (чашка),\nplane (самолёт),\nphone (телефон),\ndoll (кукла)",
+"Это не хорошая машина. Это плохая машина. (Данные предложения даны нам в качестве примера).\nIt is not a sad dog. It is a happy dog. Это не грустная собака. Это счастливая собака.\nIt is not a red phone. It is a green phone. Это не красный телефон. Это зелёный телефон.\nIt is not a bad plane. It is a good plane. Это не плохой самолёт. Это хороший самолёт.\nIt is not a big doll. It is a little doll. Это не большая кукла. Это маленькая кукла.\nIt is not a green cup. It is a red cup. Это не зелёная чашка. Это красная чашка.\nIt is not a little box. It is a big box. Это не маленькая коробка. Это большая коробка.\nIt is not a bad game. It is a good game. Это не плохая игра. Это хорошая игра."
+],
+"answer": "Возможный вариант ответа:\n2. It is not a sad dog. It is a happy dog.\n3. It is not a red phone. It is a green phone.\n4. It is not a bad plane. It is a good plane.\n5. It is not a big doll. It is a little doll.\n6. It is not a green cup. It is a red cup.\n7. It is not a little box. It is a big box.\n8. It is not a bad game. It is a good game."
+}
+]
+},
+{
+"number": "17-s52",
+"num": "17",
+"page": 52,
+"chapter": "Steps 29-35",
+"skyId": 144813,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно дополнить текст подходящими по смыслу словами из рамочки.",
+"WORDLIST\nmilk — молоко\nhappy — счастливый\ncat — кошка\nold — старый\nblack — чёрный",
+"Счастливая кошка\nКитти кошка (cat). Это старая (old) кошка. Китти чёрная (black). Китти видит молоко. Это хорошее молоко (milk). Китти счастлива (happy)."
+],
+"answer": "Cat, old, black, milk, happy."
+}
+]
+},
+{
+"number": "18-s53",
+"num": "18",
+"page": 53,
+"chapter": "Steps 29-35",
+"skyId": 144814,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно выбрать правильный вариант ответа.",
+"WORDLIST\ncold — холодный/замёрзсший\nqueen — королева\nstone — камень\nship — корабль\nboat — лодка",
+"1. Энн замёрзла?\nA. Нет. Она королева.\nB. Нет. Она в порядке.\n2. Кто это?\nA. Это маленький камень.\nB. Это моя бабушка.\n3. Это большой корабль или маленькая лодка?\nA. Это большой корабль.\nB. Да, это маленькая лодка."
+],
+"answer": "B.\nB.\nA."
+}
+]
+},
+{
+"number": "19-s53",
+"num": "19",
+"page": 53,
+"chapter": "Steps 29-35",
+"skyId": 144815,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно составить диалог из предложенных фраз.",
+"Дик: Я в порядке. Спасибо.\nБэтси: Привет, Сид! Приятно познакомиться.\nДик: Я вижу Бэтси. Б-э-э-тси! Привет! Как дела?\nБэтси: Кто это, Дик?\nСид: Привет, Бэтси! Приятно познакомиться.\nБэтси: Привет, Дик! Я в порядке. А как у тебя дела?\nДик: Это Сид Блэк. Сид, знакомься с Бэтси.",
+"Dick: I can see Betsy. Be-e-tsy! Hello! How are you? Я вижу Бэтси. Б-э-э-тси! Привет! Как дела?\nBetsy: Hi, Dick! I'm fine. And how are you? Привет, Дик! Я в порядке. А как у тебя дела?\nDick: I'm OK. Thank you. Я в порядке. Спасибо.\nBetsy: Who is it, Dick? Кто это, Дик?\nDick: It's Sid Black. Sid, meet Betsy. Это Сид Блэк. Сид, знакомься с Бэтси.\nSid: Hi, Betsy! Nice to meet you. Привет, Бэтси! Приятно познакомиться.\nBetsy: Hello, Sid! Nice to meet you. Привет, Сид! Приятно познакомиться."
+],
+"answer": "Dick: I can see Betsy. Be-e-tsy! Hello! How are you? Я вижу Бэтси. Б-э-э-тси! Привет! Как дела?\nBetsy: Hi, Dick! I'm fine. And how are you? Привет, Дик! Я в порядке. А как у тебя дела?\nDick: I'm OK. Thank you. Я в порядке. Спасибо.\nBetsy: Who is it, Dick? Кто это, Дик?\nDick: It's Sid Black. Sid, meet Betsy. Это Сид Блэк. Сид, знакомься с Бэтси.\nSid: Hi, Betsy! Nice to meet you. Привет, Бэтси! Приятно познакомиться.\nBetsy: Hello, Sid! Nice to meet you. Привет, Сид! Приятно познакомиться."
+}
+]
+},
+{
+"number": "20-s53",
+"num": "20",
+"page": 53,
+"chapter": "Steps 29-35",
+"skyId": 144816,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Буквы в словах перепутаны. Нужно правильно записать слова.",
+"Granny — бабушка.\nPlane — самолёт.\nLake — озеро.\nCake — торт.\nFeed — кормить.\nHug — обнимать.\nGame — игра.\nKiss — поцелуй.\nGrandad — дедушка.\nSleep — спать.\nPhone — телефон.\nCoat — пальто."
+],
+"answer": "Granny.\nPlane.\nLake.\nCake.\nFeed.\nHug.\nGame.\nKiss.\nGrandad.\nSleep.\nPhone.\nCoat."
+}
+]
+},
+{
+"number": "1-s54",
+"num": "1",
+"page": 54,
+"chapter": "Steps 36-42",
+"skyId": 144817,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать в каждой строчке несколько раз новые слова.",
+"",
+"Тюльпан, тюльпан, тюльпан.\nМилый, милый, милый.\nУченик, ученик, ученик.\nСтудент, студент, студент.\nЯвляются, являются, являются.\nПрыгать, прыгать, прыгать.\nОна, она, она.\nОн, он, он.\nТы, ты, ты.\nЯвляюсь, являюсь, являюсь.\nЯвляется, является, является.\nОни, они, они."
+],
+"answer": "Напиши в каждой строчке несколько раз новые слова."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно в каждой строчке несколько раз написать названия городов.",
+"",
+"Бостон, Бостон, Бостон.\nМосква, Москва, Москва.\nПариж, Париж, Париж.\nРостов, Ростов, Ростов.\nТамбов, Тамбов, Тамбов.\nЛондон, Лондон, Лондон.\nНовгород, Новгород, Новгород,.\nМадрид, Мадрид, Мадрид.\nМинск, Минск, Минск.\nРим, Рим, Рим."
+],
+"answer": "Напиши в каждой строчке несколько раз названия городов."
+}
+]
+},
+{
+"number": "2-s56",
+"num": "2",
+"page": 56,
+"chapter": "Steps 36-42",
+"skyId": 144818,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно в каждой строчке написать несколько раз сокращённые формы глагола to be.",
+"",
+"Мы есть, мы есть, мы есть.\nТы есть, ты есть, ты есть.\nОн есть, он есть, он есть.\nОни есть, они есть, они есть.\nОна есть, она есть, она есть.\nЭто есть, это есть, это есть.\nЯ есть, я есть, я есть."
+],
+"answer": "Напиши в каждой строчке несколько раз сокращённые формы глагола to be."
+}
+]
+},
+{
+"number": "3-s56",
+"num": "3",
+"page": 56,
+"chapter": "Steps 36-42",
+"skyId": 144819,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова из рамки в соответствии с произношением гласной буквы U.",
+"WORDLIST\nstudent — студент\nbus — автобус\ncute — милый\ncup — чашка\njug — кувшин\npupil — ученик\nmum — мама\ntulip — тюльпан\nmug — кружка",
+"",
+"student,\nbus,\ncute,\ncup,\njug,\npupil,\nmum,\ntulip,\nmug.",
+"/ʌ/\n /juː/\n Bus, cup, jug, mum, mug\n Student, cute, pupil, tulip"
+],
+"answer": "/ʌ/: bus, cup, jug, mum, mug.\n/juː/: student, cute, pupil, tulip."
+}
+]
+},
+{
+"number": "4-s57",
+"num": "4",
+"page": 57,
+"chapter": "Steps 36-42",
+"skyId": 144820,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести фразы с картинками.",
+"Он из Бостона.\nМы из Москвы.\nТы из Пскова.\nЯ из Парижа.\nОна из Рима.\nОни из Лондона.",
+"E.\nC.\nD.\nB.\nF.\nA."
+],
+"answer": "E.\nC.\nD.\nB.\nF.\nA."
+}
+]
+},
+{
+"number": "5-s57",
+"num": "5",
+"page": 57,
+"chapter": "Steps 36-42",
+"skyId": 144821,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно завершить предложения сокращённой формой глагола to be.",
+"",
+"Ты из Лондона.\nПит из Рима.\nСью из Бостона.\nЛена из Тамбова.\nОни из Бонна.\nМы из Тулы.\nЯ из Парижа.\nОни из Мадрида."
+],
+"answer": "Пример.\n's.\n's.\n's.\n're.\n're.\n'm.\n're."
+}
+]
+},
+{
+"number": "6-s58",
+"num": "6",
+"page": 58,
+"chapter": "Steps 36-42",
+"skyId": 144822,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски подходящими местоимениями.",
+"",
+"Моя мама — поворка. Она (She) хорошая поворка.",
+"Пример.\nБесс видит тюльпан. Это (It) красный тюльпан.\nЛена и Ольга из Москвы. Они (They) милые.\nЯ (I) хороший ученик.\nТом и Боб не из Москвы. Они (They) из Томска.\nТом видит голубую коробку. Она (She) большая.\nМоя бабушка и дедушка не грустят. Они (They) счастливы.\n— Как дела у Дона? — Он (He) в порядке, спасибо."
+],
+"answer": "Пример.\nIt.\nThey.\nI.\nThey.\nShe.\nThey.\nHe."
+}
+]
+},
+{
+"number": "7-s58",
+"num": "7",
+"page": 58,
+"chapter": "Steps 36-42",
+"skyId": 144823,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заменить подчёркнутые слова местоимениями.",
+"",
+"Виктория — хорошая королева.\nМайк видит милую кошку.\nНикола и Сью из Парижа.\nЛена и я из Пскова.\nШимпанзе смешной.\nБесс милая?\nМайку и мне холодно и грустно.\nДастин и Тесс из Лондона.",
+"Пример.\nМайк — он (he).\nНикола и Сью — они (they).\nЛена и я — мы (we).\nШимпанзе — он (it). (В русском языке шимпанзе мужского рода, однако в английском мы используем «it», когда имеем в виду животное.)\nБесс — она (she).\nМайку и мне — мы (we).\nДастин и Тесс — они (they)."
+],
+"answer": "Пример.\nHe.\nThey.\nWe.\nIt.\nShe.\nWe.\nThey."
+}
+]
+},
+{
+"number": "8-s59",
+"num": "8",
+"page": 59,
+"chapter": "Steps 36-42",
+"skyId": 144824,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать ответы на вопросы.",
+"Как тебя зовут?\nТы ученик(-ца)?\nТы студент(-ка)?\nТы из Лондона?\nТы из Москвы?\nОткуда ты?\nТы счастлив(-а)?\nТебе грустно?\nТы плохой ученик?\nТы хороший ученик?",
+"My name is Selim. (Меня зовут Селим.)\nYes, I am. (Да.)\nNo, I'm not. (Нет.)\nNo, I'm not. (Нет.)\nNo, I'm not. (Нет.)\nI'm from Kemerovo. (Я из Кемерово.)\nYes, I am. (Да.)\nNo, I'm not. (Нет.)\nNo, I'm not. (Нет.)\nYes, I am. (Да.)"
+],
+"answer": "My name is Selim.\nYes, I am.\nNo, I'm not.\nNo, I'm not.\nNo, I'm not.\nI'm from Kemerovo.\nYes, I am.\nNo, I'm not.\nNo, I'm not.\nYes, I am."
+}
+]
+},
+{
+"number": "9-s60",
+"num": "9",
+"page": 60,
+"chapter": "Steps 36-42",
+"skyId": 144825,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать утвердительные предложения в отрицательные и записать их.",
+"Меня зовут Бетти. — Меня не зовут Бетти.",
+"",
+"Пример.\nЯ нестарый.\nОн не из Бостона.\nРоуз неплохая поворка.\nЭто не красный тюльпан.\nОни не из Ростова.\nЯ несмешной.\nЭто не милая собака.\nЛягушка небольшая.\nМы несчастливы.",
+"Пример.\nI am not old. (Я нестарый.)\nHe is not from Boston. (Он не из Бостона.)\nRose is not a bad cook. (Роуз неплохая поворка.)\nIt is not a red tulip. (Это не красный тюльпан.)\nThey are not from Rostov. (Они не из Ростова.)\nI am not funny. (Я несмешной.)\nIt is not a cute dog. (Это не милая собака.)\nThe frog is not big. (Лягушка небольшая.)\nWe are not happy. (Мы несчастливы.)"
+],
+"answer": "Пример.\nI am not old.\nHe is not from Boston.\nRose is not a bad cook.\nIt is not a d tulip.\nThey are not from Rostov.\nI am not funny.\nIt is not a cute dog.\nThe frog is not big.\nWe are not happy."
+}
+]
+},
+{
+"number": "10-s61",
+"num": "10",
+"page": 61,
+"chapter": "Steps 36-42",
+"skyId": 144826,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать текст о мальчике.",
+"WORDLIST\nLondon — Лондон\nhappy — счастливый\ngood — хороший\npupil — ученик",
+"He is Tom. He is from London. He is a good pupil. He is happy. (Он Том. Он из Лондона. Он хороший ученик. Он счастлив.)"
+],
+"answer": "He is Tom. He is from London. He is a good pupil. He is happy."
+}
+]
+},
+{
+"number": "11-s61",
+"num": "11",
+"page": 61,
+"chapter": "Steps 36-42",
+"skyId": 144827,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заменить подчёркнутые буквы так, чтобы получились новые слова.",
+"Кувшин (jug) — кружка (mug).",
+"Sad — bad. (Грустно — плохо.)\nCap — cup. (Крышка — чашка.)\nBook — look. (Книга — смотреть.)\nPlane — place. (Самолёт — место.)\nShip — shop. (Корабль — магазин.)\nGame — same. (Игра — та же.)\nPen — men. (Ручка — мужчины.)\nFish — dish. (Рыбное блюдо.)\nCap — car. (Кепка — автомобиль.)\nFox — box. (Лиса — коробка.)\nCoat — boat. (Пальто — лодочка.)\nNot — net. (Нет — сеть.)\nCake — make. (Торт — сделать.)\nVan — can. (Ван — может.)\nBig — pig. (Большая — свинья.)"
+],
+"answer": "Bad.\nCup.\nLook.\nPlace.\nShop.\nSame.\nMen.\nDish.\nCar.\nBox.\nBoat.\nNet.\nMake.\nCan.\nPig."
+}
+]
+},
+{
+"number": "12-s62",
+"num": "12",
+"page": 62,
+"chapter": "Steps 36-42",
+"skyId": 144828,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить слова в правильном порядке и записать предложения, обращая внимание на знаки препинания.",
+"Ты из Бостона или Бонна?",
+"",
+"",
+"Пример.\nWhere is Kitty from? (Откуда Китти?)\nIs Bess a good student? (Бесс хорошо учится?)\nIs little Rex a cute dog? (Маленький Рекс — милая собачка?)\nMy mum and dad are not from Moscow. (Мои мама и папа не из Москвы.)\nAlex can see a blue box. (Алекс видит синюю коробку.)\nIs Mark a bad student? (Марк — плохой ученик?)\nNice to meet you, Ted. (Приятно познакомиться, Тед.)"
+],
+"answer": "Пример.\nWhere is Kitty from?\nIs Bess a good student?\nIs little Rex a cute dog?\nMy mum and dad are not from Moscow.\nAlex can see a blue box.\nIs Mark a bad student?\nNice to meet you, Ted."
+}
+]
+},
+{
+"number": "13-s63",
+"num": "13",
+"page": 63,
+"chapter": "Steps 36-42",
+"skyId": 144829,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно к каждой картинке подобрать правильную подпись.",
+"WORDLIST\nbluebell — колокольчик\ndish — блюдо\ntulip — тюльпан\nplate — тарелка\nstudent — ученик\nhappy — счастливый\ncherry — вишня\nkid — козлёнок",
+"A) Роза. B) Тюльпан. C) Колокольчик.\nA) Тарелка. B) Блюдо. C) Кружка.\nA) Девочка. B) Повар. C) Студент.\nA) Милый. B) Смешной. C) Счастливый.\nA) Яйцо. B) Молоко. C) Вишня.\nA) Лиса. B) Козлёнок. C) Лягушка.",
+"B) Тюльпан.\nA) Тарелка.\nC) Студент.\nC) Счастливый.\nC) Вишня.\nB) Козлёнок."
+],
+"answer": "B.\nA.\nC.\nC.\nC.\nB."
+}
+]
+},
+{
+"number": "14-s63",
+"num": "14",
+"page": 63,
+"chapter": "Steps 36-42",
+"skyId": 144830,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать рассказ, а затем написать аналогичный рассказ о себе.",
+"WORDLIST\nRome — Рим\nLondon — Лондон\nstudent — ученик(-ца)\nold — взрослая\nhappy — счастливая",
+"Меня зовут Джейн. Я не из Рима. Я из Лондона. Я ученица. Я хорошая ученица. Я не взрослая. Мне 12 лет. Я счастлива.",
+"My name is Kira. I am not from London. I'm from Kudymkar. I am a student. I am a good student. I am not old. I am 10. I am happy. (Меня зовут Кира. Я не из Лондона. Я из Кудымкара. Я ученица. Я хорошая ученица. Я не взрослая. Мне 10 лет. Я счастлива.)"
+],
+"answer": "My name is Kira. I am not from London. I'm from Kudymkar. I am a student. I am a good student. I am not old. I am 10. I am happy."
+}
+]
+},
+{
+"number": "15-s64",
+"num": "15",
+"page": 64,
+"chapter": "Steps 36-42",
+"skyId": 144831,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно в каждой строчке вычеркнуть одно лишнее слово.",
+"Красная, голубая, ручка, зелёная, чёрная.\nМилая, коробка, счастливая, весёлая, холодная.\nКоробка, студентка, ученица, повар, дедушка.\nЛидс, Бонн, Москва, Бостон, Дон.\nВишня, звезда, молоко, яйцо, кость.\nМама, папа, бабушка, кошка, дедушка.",
+"Pen — не относится к группе «Цвет».\nSix — не относится к группе «Прилагательные».\nBox — не относится к группе «Люди».\nMoscow — не относится к группе «Зарубежные города».\nStar — не относится к группе «Еда».\nCat — не относится к группе «Семья»."
+],
+"answer": "Pen.\nSix.\nBox.\nMoscow.\nStar.\nCat."
+}
+]
+},
+{
+"number": "16-s64",
+"num": "16",
+"page": 64,
+"chapter": "Steps 36-42",
+"skyId": 144832,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соеденим слова с рисунками.",
+"",
+"WORDLIST\nten — десять\nnine — девять\nsix — шесть\nfive — пять",
+"Ten. (Тюльпаны.)\nNine. (Звёзды.)\nSix. (Собаки.)\nFive. (Кошки.)"
+],
+"answer": "Ten. (Тюльпаны.)\nNine. (Звёзды.)\nSix. (Собаки.)\nFive. (Кошки.)"
+}
+]
+},
+{
+"number": "17-s64",
+"num": "17",
+"page": 64,
+"chapter": "Steps 36-42",
+"skyId": 144833,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем текст и заполним пропуски словами.",
+"WORDLIST\nhappy — счастливый\nold — старый\nParis — Париж\nstudent — студент\ngood — хорошо, хороший\nMoscow — Москва\npupil — ученик",
+"Счастливый студент\nНиколя не из _____. Она из _____. Николя — _____. Она не _____. Она — _____ студент. Николя не _____. Николя _____.",
+"Счастливый студент\nНиколя не из Москвы Moscow. Она из Парижа Paris. Николя — студент student. Она не ученик pupil. Она — хороший good студент. Николя не старая old. Николя счастливая happy."
+],
+"answer": "Moscow, Paris, student, pupil, good, old, happy."
+}
+]
+},
+{
+"number": "18-s65",
+"num": "18",
+"page": 65,
+"chapter": "Steps 36-42",
+"skyId": 144834,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем вопросы и выберем правильные варианты ответов.",
+"WORDLIST\nMoscow — Москва\nMadrid — Мадрид\ngood — хороший\nbad — плохой\npupil — ученик\nfine — замечательный\ncute — милый\nfrom — из",
+"1. \nА: Педро из Москвы или из Мадрида? \nБ: A. Педро из Мадрида. B. Я из Москвы.\n2. \nА: Ты хороший или плохой ученик?\nБ: A. Я хороший ученик. B. Я в порядке.\n3. \nА: Откуда Сью?\nБ: A. Она милая. B. Она из Бонна.",
+"A.\nA.\nB."
+],
+"answer": "A.\nA.\nB."
+}
+]
+},
+{
+"number": "19-s65",
+"num": "19",
+"page": 65,
+"chapter": "Steps 36-42",
+"skyId": 144835,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим диалог из предложенных фраз. Цифры порядка напишем в квадратики.",
+"WORDLIST\nmeet — видеться, встречаться\nTomsk — Томск\nwhere — где\nfine — замечательно, в порядке\nhow — как\nLondon — Лондон\npupil — ученик",
+"Алекс: Привет, Нина! Рад тебя видеть.\nВиктор: Привет, Алекс! Как дела?\nНина: Я из Томска. А ты откуда?\nАлекс: Привет, Виктор! У меня всё в порядке. Как у тебя дела?\nНина: Привет, Алекс! Рада тебя видеть.\nАлекс: Ты откуда, Нина?\nАлекс: Я из Лондона.\nВиктор: У меня все хорошо. Спасибо. Это — Нина. Она — ученик.",
+"Виктор: Привет, Алекс! Как дела?\nАлекс: Привет, Виктор! У меня всё в порядке. Как у тебя дела?\nВиктор: У меня все хорошо. Спасибо. Это — Нина. Она — ученик.\nАлекс: Привет, Нина! Рад тебя видеть.\nНина: Привет, Алекс! Рада тебя видеть.\nАлекс: Ты откуда, Нина?\nНина: Я из Томска. А ты откуда?\nАлекс: Я из Лондона."
+],
+"answer": "Верный порядок цифр в квадратиках: 4.1.7.2.5.6.8.3."
+}
+]
+},
+{
+"number": "20-s66",
+"num": "20",
+"page": 66,
+"chapter": "Steps 36-42",
+"skyId": 144836,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поменяем буквы в словах, чтобы узнать, что это за слова.",
+"See.\nHe.\nWe.\nThey.\nCute.\nBlue.\nPupil.\nTulip.\nStudent.\nShe.\nYou.\nHappy.",
+"WORDLIST\nsee — видеть\nhe — он\nwe — мы\nthey — они\ncute — милый\nblue — голубой\npupil — ученик\ntulip — тюльпан\nstudent — студент\nshe — она\nyou — ты\nhappy — счастливый",
+"See.\nHe.\nWe.\nThey.\nCute.\nBlue.\nPupil.\nTulip.\nStudent.\nShe.\nYou.\nHappy."
+],
+"answer": "See.\nHe.\nWe.\nThey.\nCute.\nBlue.\nPupil.\nTulip.\nStudent.\nShe.\nYou.\nHappy."
+}
+]
+},
+{
+"number": "1-s66",
+"num": "1",
+"page": 66,
+"chapter": "Steps 43-49",
+"skyId": 144837,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем данные слова по строчке.",
+"WORDLIST\nthin — тонкий, худой\nmother — мама\nbike — велосипед\nfather — папа\nsky — небо\npie — пирог\nfly — летать\nbye-bye — пока-пока\nsister — сестра\nthick — толстый\nbrother — брат",
+"Thin.\nMother.\nBike.\nFather.\nSky.\nPie.\nFly.\nBye-bye.\nSister.\nThick.\nBrother."
+],
+"answer": "Напишем данные слова по строчке.\nWORDLIST\nthin — тонкий, худой\nmother — мама\nbike — велосипед\nfather — папа\nsky — небо\npie — пирог\nfly — летать\nbye-bye — пока-пока\nsister — сестра\nthick — толстый\nbrother — брат"
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем числительные по строчке.",
+"",
+"One.\nEleven.\nFour.\nNine.\nThree.\nSix.\nTwo.\nEight.\nTwelve.\nTen.\nSeven."
+],
+"answer": "Напишем по строчке эти цифры."
+}
+]
+},
+{
+"number": "2-s68",
+"num": "2",
+"page": 68,
+"chapter": "Steps 43-49",
+"skyId": 144838,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Распределим слова из рамки в 2 колонки в соотвествии с произношением буквосочетания TH.",
+"WORDLIST\nthick — толстый\nthey — они\nthrone — трон\nbrother — брат\nmother — мама\nthin — тонкий\nfather — папа\nthree — три",
+"",
+"/ð/\n /θ/\nThey.\nBrother.\nMother.\nFather.\nThrone.\nThick.\nThin.\nThree."
+],
+"answer": "/ð/\n /θ/\nThey.\nBrother.\nMother.\nFather.\nThrone.\nThick.\nThin.\nThree."
+}
+]
+},
+{
+"number": "3-s68",
+"num": "3",
+"page": 68,
+"chapter": "Steps 43-49",
+"skyId": 144839,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заполним пропуски в предложениях с помощью форм глагола to be.",
+"WORDLIST\nhow old — сколько\ngranny — бабушка\nthey — они\nyou — ты\ngrandad — дедушка",
+"Сколько лет _____ Питу?\nСколько лет _____ им?\nСколько лет _____ Ольге?\nСколько лет _____ моей бабушке?\nСколько лет _____ тебе?\nСколько лет _____ Споту?\nСколько лет _____ Люси и Тиму?\nСколько лет _____ моему дедушке?",
+"",
+"Is.\nAre.\nIs.\nIs.\nAre.\nIs.\nAre.\nIs."
+],
+"answer": "Is.\nAre.\nIs.\nIs.\nAre.\nIs.\nAre.\nIs."
+}
+]
+},
+{
+"number": "4-s69",
+"num": "4",
+"page": 69,
+"chapter": "Steps 43-49",
+"skyId": 144840,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заполним пропуски в предложениях с помощью форм глагола to be.",
+"WORDLIST\nhow old — сколько\ngranny — бабушка\nthey — они\nyou — ты\ngrandad — дедушка\npupil — ученик\nParis — Париж\nbox — коробка\nfunny — весёлый\nold — старый\ntwelve — двенадцать\nrose — роза",
+"Мои бабушка и дедушка из Тамбова.\n_____ он Дон или Дик?\nЭто — _____ красная роза.\nЯ — _____ хороший ученик.\nМы _____ из Парижа.\nМег может увидеть коробку. Она _____ старая.\nДжек — _____ весёлая собака.\nТвоим сестре и брату _____ двенадцать.\nЯ _____ из Владивостока.\nОни _____ в Ростове.",
+"",
+"Are.\nIs.\nIs.\nAm.\nAre.\nIs.\nIs.\nAre.\nAm.\nAre."
+],
+"answer": "Are.\nIs.\nIs.\nAm.\nAre.\nIs.\nIs.\nAre.\nAm.\nAre."
+}
+]
+},
+{
+"number": "5-s69",
+"num": "5",
+"page": 69,
+"chapter": "Steps 43-49",
+"skyId": 144841,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Спросим, сколько лет детям и ответим на вопросы.",
+"How old is + имя?\nHow old are + имена?",
+"How old is Kate?\nHow old is Viktor?\nHow old is Pam?\nHow old is Meg?\nHow old are Sally and Jane?\nHow old is Sue?\nHow old is Olga?\nHow old are Don and Tess?\nHow old is Jack?\nHow old is Larry?",
+"",
+"He/She is + цифра возраста.\nThey are + цифра возраста.",
+"A: How old is Kate? B: She is eight.\nA: How old is Viktor? B: He is five.\nA: How old is Pam? B: She is eleven.\nA: How old is Meg? B: She is two.\nA: How old are Sally and Jane? B: They are twelve.\nA: How old is Sue? B: She is nine.\nA: How old is Olga? B: She is seven.\nA: How old are Don and Tess? B: They are four.\nA: How old is Jack? B: He is three.\nA: How old is Larry? B: He is three."
+],
+"answer": "A: How old is Kate? B: She is eight.\nA: How old is Viktor? B: He is five.\nA: How old is Pam? B: She is eleven.\nA: How old is Meg? B: She is two.\nA: How old are Sally and Jane? B: They are twelve.\nA: How old is Sue? B: She is nine.\nA: How old is Olga? B: She is seven.\nA: How old are Don and Tess? B: They are four.\nA: How old is Jack? B: He is three.\nA: How old is Larry? B: He is three."
+}
+]
+},
+{
+"number": "6-s70",
+"num": "6",
+"page": 70,
+"chapter": "Steps 43-49",
+"skyId": 144842,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Переделаем утвердительные предложения в вопросительные.",
+"WORDLIST\nplane — самолёт \neight — восемь\nclock — часы\nold — старый\nMoscow — Москва\nfine — замечательный\ncar — машина\nblack — чёрный\nRome — Рим\ncute — милый\nstudent — студент",
+"Этот самолёт большой. Большой ли этот самолёт?\nТебе — восемь лет.\nЭти часы — старые.\nВиктор из Москвы.\nМы в порядке.\nЭта машина — чёрная.\nМы из Рима.\nОни — милые.\nБесс — плохой студент.",
+"",
+"Is it a big plane? Это большой самолёт?\nAre you eight? Тебе восемь?\nIs it an old clock? Это старые часы?\nIs Victor from Moscow? Виктор из Москвы?\nAre you fine? Вы в порядке?\nIs it a black car? Это чёрная машина?\nAre you from Rome? Вы из Рима\nAre they cute? Они милые?\nIs Bess a bad student? Бесс — плохая ученица?"
+],
+"answer": "Is it a big plane?\nAre you eight?\nIs it an old clock?\nIs Victor from Moscow?\nAre you fine?\nIs it a black car?\nAre you from Rome?\nAre they cute?\nIs Bess a bad student?"
+}
+]
+},
+{
+"number": "7-s71",
+"num": "7",
+"page": 71,
+"chapter": "Steps 43-49",
+"skyId": 144843,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заменим подчёркнутые слова местоимениями.",
+"WORDLIST\nplane — самолёт\neight — восемь\nclock — часы\nold — старый\nMoscow — Москва\nfine — замечательный\ncar — машина\nblack — чёрный\nRome — Рим\ncute — милый\nstudent — студент",
+"Мэри — хороший студент.\nМайк и Ларри могут видеть большой фургон.\nНик из Лидса.\nДик и я — грустные.\nТим и я — счастливые.\nКейт — милая?\nЛиса — большая.\nОльга и Пит из Лондона.",
+"",
+"Мэри — she.\nМайк и Ларри — they.\nНик — he.\nДик и я — we.\nТим и я — we.\nКейт — she.\nЛиса — it.\nОльга и Пит — they."
+],
+"answer": "She.\nThey.\nHe.\nWe.\nWe.\nShe.\nIt.\nThey."
+}
+]
+},
+{
+"number": "8-s71",
+"num": "8",
+"page": 71,
+"chapter": "Steps 43-49",
+"skyId": 144844,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Переделаем утвердительные предложения в отрицательные.",
+"WORDLIST\npilot — пилот\nfive — пять\nTambov — Тамбов\nBoston — Бостон\nrose — роза\nstudent — студент\nsad — грустный\nMoscow — Москва\ngreen — зелёный\nbig — большой\neight — восемь",
+"Дик — хороший пилот.\nМне пять лет.\nОн из Тамбова.\nОни в Бостоне.\nЭто красная роза.\nДжил — плохой студент.\nМне грустно.\nМы из Москвы.\nКоробка большая и зелёная.\nЕй восемь лет.",
+"",
+"Dick is not a good student. Дик не очень хорошо учится.\nI am not five. Мне не пять лет.\nHe is not from Tambov. Он не из Тамбова.\nThey are not in Boston. Они не в Бостоне.\nIt is not a red rose. Это не красная роза.\nJill is not a bad student. Джилл неплохая ученица.\nI am not sad. Мне не грустно.\nWe are not in Moscow. Мы не в Москве.\nThe box is not big and green. Коробка небольшая и зелёная.\nShe is not eight. Ей нет восьми."
+],
+"answer": "Dick is not a good student.\nI am not five.\nHe is not from Tambov.\nThey are not in Boston.\nIt is not a red rose.\nJill is not a bad student.\nI am not sad.\nWe are not in Moscow.\nThe box is not big and green.\nShe is not eight."
+}
+]
+},
+{
+"number": "9-s72",
+"num": "9",
+"page": 72,
+"chapter": "Steps 43-49",
+"skyId": 144845,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём в змейке слова, начала и концы которых соеденены. Напишем их.",
+"Seven.\nName.\nFish.\nElf.\nHat.\nThick.\nKite.\nEight.\nThin.\nNest.\nThree.\nEleven.",
+"WORDLIST\nseven — семь\nname — имя\nfish — рыба\nelf — эльф\nhat — шляпа\nthick — толстый\nkite — воздушный змей\neight — восемь\nthin — тонкий\nnest — гнездо\nthree —три\neleven — одиннадцать"
+],
+"answer": "Seven.\nName.\nFish.\nElf.\nHat.\nThick.\nKite.\nEight.\nThin.\nNest.\nThree.\nEleven."
+}
+]
+},
+{
+"number": "10-s73",
+"num": "10",
+"page": 73,
+"chapter": "Steps 43-49",
+"skyId": 144846,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем просьбы бабушки для внучки.",
+"",
+"WORDLIST\nfeed — кормить\nbe — быть\nhug — обнимать\nkiss — целовать\nsay hello — поздароваться\nsleep — спать",
+"Feed Spot! Покорми Спота!\nBe good! Будь хорошей!\nHug granny! Обними дедушку!\nKiss dad! Поцелуй папу!\nSay hello to Mr Balck! Скажи привет Мистеру Блэку!\nSleep well! Спи спокойно!"
+],
+"answer": "Feed Spot!\nBe good!\nHug granny!\nKiss dad!\nSay hello to Mr Balck!\nSleep well!"
+}
+]
+},
+{
+"number": "11-s73",
+"num": "11",
+"page": 73,
+"chapter": "Steps 43-49",
+"skyId": 144847,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соеденим вопросы с подходящими ответами.",
+"WORDLIST\nMoscow — Москва\nMadrid — Мадрид\ngood — хороший\nbad — плохой\npupil — ученик\nfine — замечательный\ncute — милый\nfrom — из",
+"1. Тебе девять?\n2. Как тебя зовут?\n3. Откуда Дон?\n4. Им весело?\n5. Он из Мадрида?\n6. Сколько тебе лет?\n7. Ты счастливая или грустная?\n8. Он — студент или ученик?\n9. Мэри — повар?\n10. Мистер Блэк — пожилой?\nA. Мне одиннадцать.\nB. Нет. Мне восемь.\nC. Да. Он из Мадрида.\nD. Я счастлива.\nE. Он из Лондона.\nF. Да, она хороший повар.\nG. Нет. Он не пожилой.\nH. Меня зовут Мэри.\nI. Нет.\nJ. Он — студент.",
+"B.\nH.\nE.\nI.\nC.\nA.\nD.\nJ.\nF.\nG."
+],
+"answer": "B.\nH.\nE.\nI.\nC.\nA.\nD.\nJ.\nF.\nG."
+}
+]
+},
+{
+"number": "12-s74",
+"num": "12",
+"page": 74,
+"chapter": "Steps 43-49",
+"skyId": 144848,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Объединим слова в ассоциации.",
+"Queen (королева) and throne (трон).\nАссоциация — это слова, которые кажутся нам объединёнными одной темой. Они могут быть синонимами и антонимами, но входить в одно и тоже ассоциативное поле.\nТоесть королева у нас ассоциируется с властью. А власть это трон.",
+"WORDLIST\ncat — кошка\npie — пирог\npilot — пилот\nkite — воздушный змей\neleven — одиннадцать\nmy — мой\nbye-bye — пока\nfly — летать\nthrone — трон\nsky — небо\nhello — привет\neight — восемь\ncherry — вишня\nfish — рыба\nyour — твой",
+"B.\nG.\nF.\nA.\nC.\nE.\nH.\nD."
+],
+"answer": "B.\nG.\nF.\nA.\nC.\nE.\nH.\nD."
+}
+]
+},
+{
+"number": "13-s74",
+"num": "13",
+"page": 74,
+"chapter": "Steps 43-49",
+"skyId": 144849,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим слова с рисунками.",
+"",
+"WORDLIST\npen — ручка\nplate — тарелка\npig — поросёнок\nstar — звезда\nrose — роза\nbell — колокольчик\nchair — стул\ncube — кубик\ntulip — тюльпан\nbook — книга\ncat — кошка\nbiscuit — печенье",
+"One. Поросёнок.\nTwo. Стулья.\nThree. Печеньки.\nFour. Тарелки. \nFive. Розы.\nSix. Кубики.\nSeven. Ручки.\nEight. Кошки.\nNine. Книги.\nTen. Звёзды.\nEleven. Тюльпаны.\nTwelve. Колокольчики."
+],
+"answer": "One. Поросёнок.\nTwo. Стулья.\nThree. Печеньки.\nFour. Тарелки.\nFive. Розы.\nSix. Кубики.\nSeven. Ручки.\nEight. Кошки.\nNine. Книги.\nTen. Звёзды.\nEleven. Тюльпаны.\nTwelve. Колокольчики."
+}
+]
+},
+{
+"number": "14-s75",
+"num": "14",
+"page": 75,
+"chapter": "Steps 43-49",
+"skyId": 144850,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расставим слова так, чтобы получились предложения.",
+"WORDLIST\ngranny — бабушка\nsad — грустный\nold — старый\nParis — Париж\nLondon — Лондон\ngood — хороший\npilot — пилот\nhappy — счастливый\nRostov — Ростов\nchimp — шимпанзе\ncute — милый",
+"",
+"Все прилагательные стоят перед существительными.\nВсе артикли (a/an/the) так же стоят перед существительными или в словосочтаниях прилагательное+существительное.\nВ вопросах на первое место выходит вспомогательный глагол (am/is/are).",
+"Granny is old and sad. Бабушка пожилая и грустная.\nIs Kitty in Paris or in London? Китти в Париже или в Лондоне?\nIt is a sad book. Это печальная книга.\nLen is a good pilot. Лен — хороший пилот.\nMr Green is not happy. Мистер Грин недоволен.\nThey are in Rostov. Они находятся в Ростове.\nShe can see a funny chimp. Она может видеть забавного шимпанзе.\nIs it a cute little dog? Это милая маленькая собачка?\nWhere is Ben from? Откуда Бен?\nHow old is Betty?Сколько лет Бетти?"
+],
+"answer": "Granny is old and sad.\nIs Kitty in Paris or in London?\nIt is a sad book.\nLen is a good pilot.\nMr Green is not happy.\nThey are in Rostov.\nShe can see a funny chimp.\nIs it a cute little dog?\nWhere is Ben from?\nHow old is Betty?"
+}
+]
+},
+{
+"number": "15-s76",
+"num": "15",
+"page": 76,
+"chapter": "Steps 43-49",
+"skyId": 144851,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущеные буквы в слова под картинками.",
+"Пирог.\nВосемь.\nТри.\nДвенадцать.\nВелосипед.\nЧетыре.\nДевять.\nТюльпан.\nОдиннадцать.\nПилот.\nВоздушный змей.\nТрон.",
+"Пирог — pie.\nВосемь — eight.\nТри — three.\nДвенадцать — twelve.\nВелосипед — bike.\nЧетыре — four.\nДевять — nine.\nТюльпан — tulip.\nОдиннадцать — eleven.\nПилот — pilot.\nВоздушный змей — kite.\nТрон — throne."
+],
+"answer": "Pie.\nEight.\nThree.\nTwelve.\nBikb.\nFour.\nNine.\nTulip.\nEleven.\nPilot.\nKite.\nThrone."
+}
+]
+},
+{
+"number": "16-s76",
+"num": "16",
+"page": 76,
+"chapter": "Steps 43-49",
+"skyId": 144852,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать недостающие числительные.",
+"",
+"Три.\nThree.\nЧетыре.\nFour.\nСемь.\nSeven.\nВосемь.\nEight.\nОдиннадцать.\nEleven.\nДвенадцать.\nTwelve."
+],
+"answer": "Three.\nFour.\nSeven.\nEight.\nEleven.\nTwelve."
+}
+]
+},
+{
+"number": "17-s77",
+"num": "17",
+"page": 77,
+"chapter": "Steps 43-49",
+"skyId": 144853,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в тексте словами из таблицы.",
+"WORDLIST\nlittle — маленький\ncat — кошка\nLeeds — Лидс\nsee — видеть\nhappy — счастливый\nold — старый",
+"Мисси\nЯ могу видеть (see) Мисси. Мисси — кошка (cat). Она чёрная. Она не большая, а маленькая (little). Мисси из Лидса (Leeds). Мисси — старая (old) кошка, ей восемь лет. Она хорошая и счастливая (happy), она не грустная."
+],
+"answer": "Мисси\nЯ могу видеть (see) Мисси. Мисси — кошка (cat). Она чёрная. Она не большая, а маленькая (little). Мисси из Лидса (Leeds). Мисси — старая (old) кошка, ей восемь лет. Она хорошая и счастливая (happy), она не грустная."
+}
+]
+},
+{
+"number": "18-s77",
+"num": "18",
+"page": 77,
+"chapter": "Steps 43-49",
+"skyId": 144854,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать вопросы и отметить верные ответы.",
+"",
+"1. Сколько тебе лет?\nА. Мне восемь. Б. Я в порядке.\n2. Как Мэри?\nА. Ей семь лет. Б. Она в порядке.\n3. Откуда Ким?\nА. Она из Рима. Б. Она грустная."
+],
+"answer": "A.\nB.\nA."
+}
+]
+},
+{
+"number": "19-s78",
+"num": "19",
+"page": 78,
+"chapter": "Steps 43-49",
+"skyId": 144855,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и записать диалог из фраз в учебнике.",
+"Pete: Hello, Eve! Привет, Ева!\nEve: Hello, Pete! Привет, Пит!\nPete: Are you in Madrid? Ты в Мадриде?\nEve: No, I am not. Нет.\nPete: Where are you? Где ты?\nEve: I am in Rome. Я в Риме."
+],
+"answer": "Pete: Hello, Eve!\nEve: Hello, Pete!\nPete: Are you in Madrid?\nEve: No, I am not.\nPete: Where are you?\nEve: I am in Rome."
+}
+]
+},
+{
+"number": "20-s78",
+"num": "20",
+"page": 78,
+"chapter": "Steps 43-49",
+"skyId": 144856,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно «расколдовать» зашифрованные слова.",
+"",
+"Двенадцать.\nTwelve.\nОдиннадцать.\nEleven.\nВосемь.\nEight.\nТри.\nThree.\nПилот.\nPilot.\nЧетыре.\nFour.\nВелосипед.\nBike.\nПирог.\nPie.\nВоздушный змей.\nKite.\nДевять.\nNine.\nСемь.\nSeven.\nДва.\nTwo."
+],
+"answer": "Twelve.\nEleven.\nEight.\nThree.\nPilot.\nFour.\nBike.\nPie.\nKite.\nNine.\nSeven.\nTwo."
+}
+]
+},
+{
+"number": "1-s79",
+"num": "1",
+"page": 79,
+"chapter": "Steps 50-56",
+"skyId": 144857,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные слова по строчке.",
+"WORDLIST\nbirch — берёза\nturtle — черепаха\ngirl — девочка\nservant — слуга, прислуга\nnurse — медсестра\nfern — папоротник\nmermaid — русалка\npurple — фиолетовый\nbird — птица\non — на\nunder — под\nby — к, у, около",
+""
+],
+"answer": "Берёза, черепаха, девочка, слуга, медсестра, папоротник, русалка, фиолетовый, птица, на, под, около."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные слова по строчке.",
+"WORDLIST\napple — яблоко\nplum — слива\ngrape — виноград\nlemon — лимон\nbanana — банан\norange — апельсин",
+""
+],
+"answer": "Яблоки, сливы, виноград, лимоны, бананы, апельсины."
+}
+]
+},
+{
+"number": "2-s80",
+"num": "2",
+"page": 80,
+"chapter": "Steps 50-56",
+"skyId": 144858,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова по колонкам в зависимости от чтения окончания существительных.",
+"WORDLIST\nnurse — медсестра\nbirch — берёза\ngirl — девочка\nservant — слуга, прислуга\npie — пирог\nchick — цыплёнок\nbell — колокольчик, звонок\ntent — палатка\norange — апельсин\napple — яблоко\ngrape — виноград\nfox — лиса",
+"После звонких согласных звуков или гласных -s звучит как /z/:\nhouses /haʊzəz/ (дома), hands /hændz/ (руки), keys /kiːz/ (ключи).\nПосле глухих согласных звуков -s звучит как /s/:\nboats /bəʊts/ (лодки), cats /kæts/ (коты), rivers /rɪv.ərs/ (реки).\nОкончание -es мы произносим как /iz/ после звуков /ʤ/, /ʧ/, /ʃ/, /s/ или /z/:\nboxes /bɒksiz/ (коробки), buses /bʌsiz/ (автобусы), wishes /wɪʃiz/ (желания).",
+"/s/:\nservants,\nchicks,\ntents,\ngrapes.\n/z/:\ngirls,\npies,\nbells,\napples.\n/iz/:\nnurses,\nbirches,\nfoxes,\noranges."
+],
+"answer": "/s/:\nservants,\nchicks,\ntents,\ngrapes.\n/z/:\ngirls,\npies,\nbells,\napples.\n/iz/:\nnurses,\nbirches,\nfoxes,\noranges."
+}
+]
+},
+{
+"number": "3-s81",
+"num": "3",
+"page": 81,
+"chapter": "Steps 50-56",
+"skyId": 144859,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова в три колонки в зависимости от произношения.",
+"WORDLIST\nbus — автобус\ncup — чашка\nmug — кружка\nnurse — медсестра\npurple — фиолетовый\nstudent — студент\ntulip — тюльпан\nturtle — черепаха\npupil — ученик",
+"Bus.\nCup.\nMug.\nNurse.\nPurple.\nStudent.\nTulip.\nTurtle.\nPupil.",
+"/juː/:\ntulip\npupil\nstudent\n/ʌ/:\ncup\nbus\nmug\n/ɜː/:\nturtle\nnurse\npurple"
+],
+"answer": "/juː/:\ntulip\npupil\nstudent\n/ʌ/:\ncup\nbus\nmug\n/ɜː/:\nturtle\nnurse\npurple"
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова в три колонки в зависимости от произношения.",
+"WORDLIST\nmermaid — русалка\npen — ручка\nwe — мы\nLena — Лена (женское имя)\nfern — папоротник\nred — красный\nten — десять\nPete — Пит (мужское имя)\nservant — слуга",
+"Mermaid.\nPen.\nWe.\nLena.\nFern.\nRed.\nTen.\nPete.\nServant.",
+"/e/:\npen\nred\nten\n/iː/:\nwe\nLena\nPete\n/ɜː/:\nmermaid\nfern\nservant"
+],
+"answer": "/e/:\npen\nred\nten\n/iː/:\nwe\nLena\nPete\n/ɜː/:\nmermaid\nfern\nservant"
+},
+{
+"name": "c",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова в три колонки в зависимости от произношения.",
+"WORDLIST\nbirch — берёза\nbird — птица\nfish — рыба\nfive — пять\ngirl — девочка\nhill — холм\nkite — воздушный змей\nnine — девять\nship — корабль",
+"Birch.\nBird.\nFish.\nFive.\nGirl.\nHill.\nKite.\nNine.\nShip.",
+"/ɪ/:\nfish\nship\nhill\n/aɪ/:\nnine\nkite\nfive\n/ɜː/:\nbird\ngirl\nbirch"
+],
+"answer": "/ɪ/:\nfish\nship\nhill\n/aɪ/:\nnine\nkite\nfive\n/ɜː/:\nbird\ngirl\nbirch"
+}
+]
+},
+{
+"number": "4-s82",
+"num": "4",
+"page": 82,
+"chapter": "Steps 50-56",
+"skyId": 144860,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать множественное число существительных.",
+"WORDLIST\nnurse — медсестра\nbirch — берёза\ngirl — девочка\nqueen — королева\nfern — папоротник\nmatch — спичка\nmermaid — русалка\nturtle — черепаха\npie — пирог\nbird — птица\nservant — слуга\ntoy — игрушка",
+"",
+"Nurse — nurses.\nBirch — birches.\nGirl — girls.\nQueen — queens.\nFern — ferns.\nMatch — matches.\nMermaid — mermaids.\nTurtle — turtles.\nPie — pies.\nBird — birds.\nServant — servants.\nToy — toys."
+],
+"answer": "Nurses, birches, girls, queens, ferns, matches, mermaids, turtles, pies, birds, servants, toys."
+}
+]
+},
+{
+"number": "5-s82",
+"num": "5",
+"page": 82,
+"chapter": "Steps 50-56",
+"skyId": 144861,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать вопросы, используя предложенные фразы.",
+"WORDLIST\nlamp — лампа\nbook — книга\npen — ручка\nbag — сумка\ntoy — игрушка\ndesk — письменный стол\nfloor — пол\nbox — коробка\nbed — кровать",
+"",
+"Is your lamp on the desk? Твоя лампа на столе?\nAre your books in the bag? Твои книги в сумке?\nAre your pens under the bed? Твои ручки под кроватью?\nIs your bag by the desk? Твоя сумка у стола?\nAre your toys in the box? Твои игрушки в коробке? \nIs your desk on the floor? Твой стол на полу?"
+],
+"answer": "Is your lamp on the desk?\nAre your books in the bag?\nAre your pens under the bed?\nIs your bag by the desk?\nAre your toys in the box?\nIs your desk on the floor?"
+}
+]
+},
+{
+"number": "6-s83",
+"num": "6",
+"page": 83,
+"chapter": "Steps 50-56",
+"skyId": 144862,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно завершить предложения, используя am, is, are.",
+"WORDLIST\nstudent — студент \nhappy — счастливый\nshop — магазин\npupil — ученик\ncat — кошка\ncute — милый, умный\nfunny — смешной, забавный\nsad — грустный, печальный",
+"Лен _____ хороший студент. Мама Мэри и отец Джек _____ счастливы. \nМы _____ у магазина. Это _____ старый магазин.\nЯ _____ ученик, я _____ не студент.\nОткуда _____ ты? Ты _____ из Лидса?\nМисси _____ моя кошка. Она _____ милая и забавная.\nЛарри и я _____ в Москве. Бесс _____ тоже в Москве.\nТвои братья _____ не в Риме. Они _____ в Париже. \nМама и папа _____ не в Мадриде. Я _____ грустный.",
+"",
+"Лен (he is) хороший студент. Мама Мэри и отец Джек (they are) счастливы.\nМы (we are) у магазина. Это (it is) старый магазин.\nЯ (I am) ученик, я (I am) не студент.\nОткуда (are you) ты? Ты (are you) из Лидса?\nМисси (it is) моя кошка. Она (it is) милая и забавная.\nЛарри и я (we are) в Москве. Бесс (she is) тоже в Москве.\nТвои братья (they are) не в Риме. Они (they are) в Париже.\nМама и папа (they are) не в Мадриде. Я (I am) грустный."
+],
+"answer": "Is, are.\nAre, is.\nAm, am.\nAre, are.\nIs, is.\nAre, is.\nAre, are.\nAre, am."
+}
+]
+},
+{
+"number": "7-s83",
+"num": "7",
+"page": 83,
+"chapter": "Steps 50-56",
+"skyId": 144863,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу, изменив единственное число на множественное.",
+"WORDLIST\nbox — коробка\nmermaid — русалка\nnurse — медсестра\ncold — холодный\nbirch — берёза\npie — пирог\nplane — самолёт\nbench — скамейка\ngirl — девочка",
+"Это коробка.\nЭто русалка.\nОна хорошая медсестра.\nОн холодный.\nЭто зелёная берёза.\nЭто вишнёвый пирог.\nЭто самолёт.\nЭто фиолетовая скамейка.\nОна милая девочка.",
+"",
+"Это коробка. — Это коробки. They are boxes.\nЭто русалка. — Они русалки. They are mermaids.\nОна хорошая медсестра. — Они хорошие медсёстры. They are good nurses.\nОн холодный. — Они холодные. They are cold.\nЭто зелёная берёза. — Это зелёные берёзы. They are green birches.\nЭто вишнёвый пирог. — Это вишнёвые пироги. They are cherry pies. \nЭто самолёт. — Это самолёты. They are planes. \nЭто фиолетовая скамейка. — Это фиолетовые скамейки. They are purple benches. \nОна милая девочка. — Они милые девочки. They are cute girls."
+],
+"answer": "They are boxes.\nThey are mermaids.\nThey are good nurses.\nThey are cold.\nThey are green birches.\nThey are cherry pies. \nThey are planes. \nThey are purple benches. \nThey are cute girls."
+}
+]
+},
+{
+"number": "8-s84",
+"num": "8",
+"page": 84,
+"chapter": "Steps 50-56",
+"skyId": 144864,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и дать краткие ответы на вопросы.",
+"WORDLIST\nbox — коробка\nmermaid — русалка\ncherry tree — вишнёвое дерево\nfern — папоротник\norange — апельсин\nlemon — лимон\nplum — слива\ngirl — девочка",
+"Это русалки?\nЭто вишнёвые деревья?\nЭто коробки?\nЭто папоротники?\nЭто апельсины?\nЭто лимоны?\nЭто девочки?\nЭто сливы?",
+"",
+"Это русалки? — Да (Yes, they are). \nЭто вишнёвые деревья? — Нет (No, they aren't). \nЭто коробки? — Нет (No, they aren't). \nЭто папоротники? — Да (Yes, they are). \nЭто апельсины? — Да (Yes, they are). \nЭто лимоны? — Нет (No, they aren't). \nЭто девочки? — Да (Yes, they are). \nЭто сливы? — Да (Yes, they are)."
+],
+"answer": "Yes, they are.\nNo, they aren't.\nNo, they aren't.\nYes, they are.\nYes, they are.\nNo, they aren't.\nYes, they are.\nYes, they are."
+}
+]
+},
+{
+"number": "9-s85",
+"num": "9",
+"page": 85,
+"chapter": "Steps 50-56",
+"skyId": 144865,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в змейке 10 слов и написать их.",
+"WORDLIST\ndog — собака\neight — восемь\neleven — одиннадцать\nelf — эльф\nfern — папоротник\ngirl — девочка\nlamp — лампа\nmermaid — русалка\nnine — девять\nnurse — медсестра\npie — пирог\nturtle — черепаха",
+"Mermaid.\nDog.\nGirl.\nLamp.\nPie.\nEleven.\nNurse.\nEight.\nTurlte.\nElf.\nFern.\nNine."
+],
+"answer": "Mermaid.\nDog.\nGirl.\nLamp.\nPie.\nEleven.\nNurse.\nEight.\nTurlte.\nElf.\nFern.\nNine."
+}
+]
+},
+{
+"number": "10-s85",
+"num": "10",
+"page": 85,
+"chapter": "Steps 50-56",
+"skyId": 144866,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, используя краткую отрицательную форму глагола.",
+"WORDLIST\nbird — птица\nservant — слуга\nmermaid — русалка\ngirl — девочка\nturtle — черепаха\nnurse — медсестра\nfern — папоротник\nbirch — берёза",
+"Они не птицы.\nДон не слуга.\nЭто маленькая русалочка.\nОни милые девочки.\nОни не черепахи.\nКитти не медсестра.\nЭто старый папоротник.\nЭто зелёные берёзы.",
+"",
+"Они не птицы. They aren't birds.\nДон не слуга. Don isn't a servant.\nЭто не маленькая русалочка. It isn't a little mermaid. \nОни не милые девочки. They aren't cute girls.\nОни не черепахи. They aren't turtles. \nКитти не медсестра. Kitty isn't a nurse. \nЭто не старый папоротник. It isn't an old fern. \nЭто не зелёные берёзы. They aren't green birches."
+],
+"answer": "They aren't birds.\nDon isn't a servant.\nIt isn't a little mermaid. \nThey aren't cute girls.\nThey aren't turtles. \nKitty isn't a nurse. \nIt isn't an old fern. \nThey aren't green birches."
+}
+]
+},
+{
+"number": "11-s86",
+"num": "11",
+"page": 86,
+"chapter": "Steps 50-56",
+"skyId": 144867,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать шесть предложений о том, кого или что ты любишь, и объяснить почему.",
+"WORDLIST\nchimp — шимпанзе\nfunny — смешной\ncat — кошка\ncute — милый\nelephant — слон\nbig — большой\nnew — новый\nhouse — дом\nmodern — современный\nmilk — молоко\ntasty — вкусный\nice cream — мороженое\ncold — холодный\nfriend — друг\ngood — хороший",
+"Энн: Я люблю шимпанзе. Они смешные.",
+"I like cats. They are cute. Я люблю кошек. Они милые.\nI like elephants. They are big. Я люблю слонов. Они большие.\nI like new houses. They are modern. Я люблю новые дома. Они современные.\nI like milk. It is tasty. Я люблю молоко. Оно вкусное. \nI like ice cream. It is cold. Я люблю мороженое. Оно холодное.\nI like my friends. They are good. Я люблю своих друзей. Они хорошие."
+],
+"answer": "Возможные варианты ответов:\nI like cats. They are cute.\nI like elephants. They are big.\nI like new houses. They are modern.\nI like milk. It is tasty.\nI like ice cream. It is cold.\nI like my friends. They are good."
+}
+]
+},
+{
+"number": "12-s87",
+"num": "12",
+"page": 87,
+"chapter": "Steps 50-56",
+"skyId": 144868,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски недостающими предлогами из рамки.",
+"WORDLIST\nstreet — улица\nshop — магазин\nsweet — конфета\ncake — торт, пирог",
+"Мэри и Кейт _____ улице. Они _____ магазина. Кейт видит торты и конфеты _____ магазине. Они хорошие.",
+"Мэри и Кейт на (in) улице. Они около (by) магазина. Кейт видит торты и конфеты в (in) магазине. Они хорошие."
+],
+"answer": "In.\nBy.\nIn."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски недостающими предлогами из рамки.",
+"WORDLIST\npark — парк\nbench — скамейка\nhappy — счастливый, весёлый",
+"Ким и Рекс _____ парке. Ким _____ скамейке. Рекс _____ скамейкой. Они счастливы.",
+"Ким и Рекс в (in) парке. Ким на (on) скамейке. Рекс под/у (under/by) скамейкой. Они счастливы."
+],
+"answer": "In.\nOn.\nUnder/by."
+}
+]
+},
+{
+"number": "13-s87",
+"num": "13",
+"page": 87,
+"chapter": "Steps 50-56",
+"skyId": 144869,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно придумать и написать окончания предложений.",
+"WORDLIST\ngranny — бабушка\nhappy — счастливый\nstudent — студент\npond — пруд\nthick — толстый\nbook — книга\nplate — тарелка",
+"Мы не из Рима, мы _____.\nКейт не в Париже, она _____.\nБабушка не счастлива, она _____.\nЯ не студент, я _____.\nКену и Лен не по восемь лет, им _____.\nМама не у пруда, она _____.\nЭто не толстые книги, это _____.\nЭто не большая тарелка, это _____.",
+"Мы не из Рима, мы из Москвы.",
+"",
+"Мы не из Рима, мы из Москвы. ...we are from Moscow.\nКейт не в Париже, она в Лондоне. ...she is in London.\nБабушка не счастлива, она устала. ...she is tired.\nЯ не студент, я ученик. ...I am a pupil.\nКену и Лен не по восемь лет, им по десять. ...they are ten.\nМама не у пруда, она дома. ...she is at home.\nЭто не толстые книги, это учебники. ...they are textbooks.\nЭто не большая тарелка, это маленькая тарелка. ...it is a small plate."
+],
+"answer": "Возможные варианты ответов:\n...we are from Moscow.\n...she is in London.\n...she is tired.\n...I am a pupil.\n...they are ten.\n...she is at home.\n...they are textbooks.\n...it is a small plate."
+}
+]
+},
+{
+"number": "14-s88",
+"num": "14",
+"page": 88,
+"chapter": "Steps 50-56",
+"skyId": 144870,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно завершить предложения, используя подходящие местоимения.",
+"WORDLIST\nwood — лес\nbike — велосипед\nnurse — медсестра\nhappy — счастливый\nplum — слива\ngrapes — виноград",
+"Сколько тебе лет? — _____ семь.\nГде Тесс? — _____ в лесу.\nЭто мой велосипед. — _____ голубой.\nКитти моя сестра. — _____ медсестра.\nЯ и Мисси в парке. — _____ счастливы. \nБоб мой брат. — _____ пилот.\nАнна и Ольга студентки. — _____ в Лондоне.\nЯ вижу сливу. — _____ фиолетовая.\nЯ вижу виноград. — _____ зелёный.",
+"",
+"Сколько тебе лет? — Мне семь (I).\nГде Тесс? — Она в лесу (She).\nЭто мой велосипед. — Он голубой (It — неодушевлённый предмет).\nКитти моя сестра. — Она медсестра (She).\nЯ и Мисси в парке. — Мы счастливы (We).\nБоб мой брат. — Он пилот (He).\nАнна и Ольга студентки. — Они в Лондоне (They).\nЯ вижу сливу. — Она фиолетовая (It — неодушевлённый предмет).\nЯ вижу виноград. — Он зелёный (It — неодушевлённый предмет)."
+],
+"answer": "I.\nShe.\nIt.\nShe.\nWe.\nHe.\nThey.\nIt.\nIt."
+}
+]
+},
+{
+"number": "15-s88",
+"num": "15",
+"page": 88,
+"chapter": "Steps 50-56",
+"skyId": 144871,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вычеркнуть по лишнему слову в каждой строчке.",
+"Медсестра, петух, цыплёнок, утка, птица.\nАпельсины, лимоны, папоротники, бананы, сливы.\nТюльпан, грузовик, роза, папоротник, берёза.\nФиолетовый, красный, синий, чёрный, вишня.\nЧерепаха, утка, козлёнок, девочка, петух.\nПилот, повар, медсестра, русалка, студент.",
+"Медсестра, петух, цыплёнок, утка, птица. Лишнее слово «медсестра», так как это не пернатое.\nАпельсины, лимоны, папоротники, бананы, сливы. Лишнее слово «папоротники», так как это несъедобное растение.\nТюльпан, грузовик, роза, папоротник, берёза. Лишнее слово «грузовик», так как это не растение.\nФиолетовый, красный, синий, чёрный, вишня. Лишнее слово «вишня», так как это не цвет. \nЧерепаха, утка, козлёнок, девочка, петух. Лишнее слово «девочка», так как это не животное. \nПилот, повар, медсестра, русалка, студент. Лишнее слово «русалка», так как это не профессия."
+],
+"answer": "Nurse.\nFerns.\nLorry.\nCherry.\nGirl.\nMermaid."
+}
+]
+},
+{
+"number": "16-s89",
+"num": "16",
+"page": 89,
+"chapter": "Steps 50-56",
+"skyId": 144872,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы в слова.",
+"WORDLIST\nfern — папоротник\nmerchant — торговец\nnurse — медсестра\nturtle — черепаха",
+"Fern — папоротник. \nBird — птица. \nMermaid — русалка.\nGirl — девочка.\nBirch — берёза.\nMerchant — торговец. \nPlum — слива.\nGrapes — виноград.\nApple — яблоко.\nTurtle — черепаха.\nOrange — апельсин. \nNurse — медсестра."
+],
+"answer": "Fern.\nBird.\nMermaid.\nGirl.\nBirch.\nMerchant.\nPlum.\nGrapes.\nApple.\nTurtle.\nOrange.\nNurse."
+}
+]
+},
+{
+"number": "17-s89",
+"num": "17",
+"page": 89,
+"chapter": "Steps 50-56",
+"skyId": 144873,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить неопределённый артикль там, где это необходимо.",
+"WORDLIST\nbirch — берёза\nsweet — сладкий\norange — апельсин\nant — муравей\nelf — эльф\nturtle — черепаха",
+"Помни, что неопределённый артикль ставится только перед существительным в единственном числе.",
+"Я вижу берёзу. Это старая берёза. Я вижу берёзы.\nБетти видит апельсин. Это сладкий апельсин. Она видит апельсины.\nЭто яйцо. Это хорошее яйцо. Это яйца.\nЭто муравей. Это забавный муравей. Это муравьи.\nМарк видит эльфа. Это маленький эльф. Он видит эльфов. \nБетти видит черепаху. Это старая черепаха. Она видит черепах.",
+"A, an, —.\nAn, a, —.\nAn, a, —.\nAn, a, —.\nAn, a, —.\nA, an, —."
+],
+"answer": "A, an, —.\nAn, a, —.\nAn, a, —.\nAn, a, —.\nAn, a, —.\nA, an, —."
+}
+]
+},
+{
+"number": "18-s90",
+"num": "18",
+"page": 90,
+"chapter": "Steps 50-56",
+"skyId": 144874,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения их слов.",
+"WORDLIST\nnurse — няня, медсестра \nservant — слуга\nturtle — черепаха\nplane — самолёт\nshelf — полка\ndish — блюдо",
+"",
+"They can see red roses and green ferns.\nAre they nurses or servants?\nHe can see a little funny turtle.\nI like sweet oranges.\nThe girl is on the bike.\nThe plane is in the sky. \nThe books are in the bag under the shelf.\nKitty and Mark are in the street.\nDogs like big, good bones.\nGreen and red apples are on the dish.",
+"Они могут видеть красные розы и зелёные папоротники.\nОни медсёстры или слуги?\nОн может увидеть маленькую забавную черепаху.\nЯ люблю сладкие апельсины.\nДевушка на велосипеде.\nСамолёт в небе.\nКниги в сумке под полкой.\nКитти и Марк на улице.\nСобаки любят большие, хорошие кости.\nЗелёные и красные яблоки на блюде."
+],
+"answer": "They can see red roses and green ferns.\nAre they nurses or servants?\nHe can see a little funny turtle.\nI like sweet oranges.\nThe girl is on the bike.\nThe plane is in the sky.\nThe books are in the bag under the shelf.\nKitty and Mark are in the street.\nDogs like big, good bones.\nGreen and red apples are on the dish."
+}
+]
+},
+{
+"number": "19-s91",
+"num": "19",
+"page": 91,
+"chapter": "Steps 50-56",
+"skyId": 144875,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать предложения без ошибок.",
+"WORDLIST\norange — апельсин\nlemon — лимон\ngrapes — виноград\nkite — воздушный змей\nchick — цыплёнок\nbench — лавочка",
+"",
+"",
+"a) Я вижу хороший апельсин. b) Я вижу хороший апельсин.\na) Я люблю лимон и виноградину. b) Я люблю лимоны и виноград.\na) Я вижу большого воздушного змея в небе. b) Я вижу большого воздушного змея в небе.\na) Цыплята на ферме. b) Цыплята на ферме.\na) Кошка не под лавочкой, она на ней. b) Кошка не под лавочкой, она на ней.",
+"A.\nB.\nA.\nA.\nB."
+],
+"answer": "A.\nB.\nA.\nA.\nB."
+}
+]
+},
+{
+"number": "20-s92",
+"num": "20",
+"page": 92,
+"chapter": "Steps 50-56",
+"skyId": 144876,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слова из букв.",
+"WORDLIST\npurple — фиолетовый\nbanana — банан\nlemon — лимон\nnurse — медсестра, няня\nfern — папоротник",
+"The — определённый артикль.\nLike — нравиться.\nPurple — фиолетовый.\nBananas — бананы.\nLemons — лимоны.\nMermaid — русалка. \nNurse — медсестра, няня. \nPlums — сливы.\nBirch — берёза.\nUnder — под.\nServant — слуга. \nFern — папоротник."
+],
+"answer": "The.\nLike.\nPurple.\nBananas.\nLemons.\nMermaid.\nNurse.\nPlums.\nBirch.\nUnder.\nServant.\nFern."
+}
+]
+},
+{
+"number": "1-s93",
+"num": "1",
+"page": 93,
+"chapter": "Steps 57-63",
+"skyId": 144877,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные слова по строчке.",
+"WORDLIST\na cow — корова\ndown — вниз \nbrown — коричневый\na mouse — мышь\na clown — клоун\na blouse — блуза\na house — дом \na school — школа\na spoon — ложка\nan afternoon — день\na room — комната\na boot — ботинок",
+"Сow.\nDown. \nBrown. \nMouse. \nClown. \nBlouse. \nHouse. \nSchool. \nSpoon.\nAfternoon. \nRoom.\nBoot.",
+"",
+"сow сow сow сow сow\ndown down down down down\nbrown brown brown brown brown\nmouse mouse mouse mouse mouse \nclown clown clown clown clown\nblouse blouse blouse blouse blouse \nhouse house house house house\nschool school school school school\nspoon spoon spoon spoon spoon\nafternoon afternoon afternoon afternoon afternoon\nroom room room room room\nboot boot boot boot boot"
+],
+"answer": "сow сow сow сow сow\ndown down down down down\nbrown brown brown brown brown\nmouse mouse mouse mouse mouse \nclown clown clown clown clown\nblouse blouse blouse blouse blouse \nhouse house house house house\nschool school school school school\nspoon spoon spoon spoon spoon\nafternoon afternoon afternoon afternoon afternoon\nroom room room room room\nboot boot boot boot boot"
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать данные глаголы по строчке.",
+"WORDLIST\nto like — любить\nto swim — плавать\nto run — бегать\nto jump— прыгать\ncan — уметь\nto see — видеть\nto ride — кататься, ездить\nto help — помогать\nto play — играть",
+"",
+"like like like like like \nswim swim swim swim swim \nrun run run run run\njump jump jump jump jump\ncan can can can can \nsee see see see see \nride ride ride ride ride \nhelp help help help help\nplay play play play play"
+],
+"answer": "like like like like like \nswim swim swim swim swim \nrun run run run run\njump jump jump jump jump\ncan can can can can \nsee see see see see \nride ride ride ride ride \nhelp help help help help\nplay play play play play"
+}
+]
+},
+{
+"number": "2-s94",
+"num": "2",
+"page": 94,
+"chapter": "Steps 57-63",
+"skyId": 144878,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить буквосочетания и буквы из рамки в соответствующие колонки. Нам также нужно написать по три слова на каждый звук.",
+"",
+"",
+"",
+"/aʊ/\n /ɜː/\n /iː/\n ow, ou\n ur, ir, er\n e, ee",
+"/aʊ/\n /ɜː/\n /iː/\n ow, ou\n ur, ir, er\n e, ee\n brown, down, house\n turn, sir, her\n she, see, tree"
+],
+"answer": "/aʊ/\n /ɜː/\n /iː/\n ow, ou\n ur, ir, er\n e, ee\n brown, down, house\n turn, sir, her\n she, see, tree"
+}
+]
+},
+{
+"number": "3-s94",
+"num": "3",
+"page": 94,
+"chapter": "Steps 57-63",
+"skyId": 144879,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разделить слова из рамки на две группы в зависимости от произношения определённого артикля the.",
+"Если следом за артиклем идёт слово, которое начинается на согласный звук, то надо произносить /ðə/ (the book /ðə bʊk/, the table /ðə ˈteɪbl/). Если слово начинается с гласного звука, то произносим /ði/ (the umbrella /ði ʌmˈbrelə/, the egg /ði eɡ/).",
+"/ði/\n /ðə/\n The elf\n The mouse\n The orange\n The boot\n The egg\n The house\n The ant\n The cow\n The apple\n The room"
+],
+"answer": "/ði/\n /ðə/\n The elf\n The mouse\n The orange\n The boot\n The egg\n The house\n The ant\n The cow\n The apple\n The room"
+}
+]
+},
+{
+"number": "4-s95",
+"num": "4",
+"page": 95,
+"chapter": "Steps 57-63",
+"skyId": 144880,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить в предложения am, is, are.",
+"",
+"Меня зовут Бен. Я — пилот. Я — хороший пилот. Я люблю самолёты. Они большие и красивые. Я вижу два красных самолёта и три зелёных. Они — в синем небе.",
+"Am.\nAm.\nAre.\nAre."
+],
+"answer": "Am.\nAm.\nAre.\nAre."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить в предложения am, is, are.",
+"",
+"Том Браун и Китти Браун — брат и сестра. Тому — десять лет, а Китти — семь. Китти и Том — ученики. Они — в школе днём. Школа — приятная и хорошая.",
+"Are.\nIs.\nIs.\nAre.\nAre.\nIs."
+],
+"answer": "Are.\nIs.\nIs.\nAre.\nAre.\nIs."
+}
+]
+},
+{
+"number": "5-s95",
+"num": "5",
+"page": 95,
+"chapter": "Steps 57-63",
+"skyId": 144881,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сделать утвердительные предложения вопросительными.",
+"",
+"Это — большая ферма.\nЭто — коричневая машина.\nОни — смешные клоуны.\nМы — в Бонне.\nМэри родом из Лондона.\nЛена — хорошая медсестра.\nЭти яблоки — сладкие.\nЭти девочки — симпатичные.\nЕй девять лет.",
+"Is it a big farm? Это большая ферма?\nIs it a brown car? Это коричневая машина?\nAre they funny clowns? Они смешные клоуны?\nAre we in Bonn? Мы в Бонне?\nIs Mary from London? Мэри родом из Лондона?\nIs Lena a good nurse? Лена хорошая медсестра?\nAre the apples sweet? Эти яблоки сладкие?\nAre the girls cute? Эти девочки симпатичные?\nIs she nine? Ей девять лет?"
+],
+"answer": "Is it a big farm? \nIs it a brown car? \nAre they funny clowns? \nAre we in Bonn? \nIs Mary from London?\nIs Lena a good nurse? \nAre the apples sweet? \nAre the girls cute? \nIs she nine?"
+}
+]
+},
+{
+"number": "6-s96",
+"num": "6",
+"page": 96,
+"chapter": "Steps 57-63",
+"skyId": 144882,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно записать вопросы к данным ответам.",
+"У нас всё хорошо.\nСью восемь лет.\nОльга — родом из Москвы.\nПит — в парке.\nЛен и Роб — родом из Лидс.\nСобаки — под кроватью.\nЯ в школе днём.\nИм 11 лет.",
+"",
+"How? — Как?\nHow old? — Сколько лет?\nWhere? — Где?\nWhere ... from? — Откуда (родом)?\nWhen? — Когда?",
+"How are you? Как у тебя дела?\nHow old is Sue? Сколько лет Сью?\nWhere is Olga from? Откуда родом Ольга?\nWhere is Pete? Где Пит?\nWhere are Len and Bob from? Откуда родом Лен и Боб?\nWhere are the dogs? Где собаки?\nWhere are you in the afternoon? Где ты бываешь днём?\nHow old are they? Сколько им лет?"
+],
+"answer": "How are you?\nHow old is Sue?\nWhere is Olga from?\nWhere is Pete?\nWhere are Len and Bob from?\nWhere are the dogs?\nWhere are you in the afternoon?\nHow old are they?"
+}
+]
+},
+{
+"number": "7-s97",
+"num": "7",
+"page": 97,
+"chapter": "Steps 57-63",
+"skyId": 144883,
+"subTasks": [
+{
+"name": "а",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать, что любит делать днём девочка по имени Мэри, и написать три предложения о том, что ТЫ любишь делать днём.",
+"Мэри: Я люблю кататься на велосипеде днём.",
+"WORDLIST\nto ride a bike — кататься на велосипеде\nto run and jump — бегать и прыгать\nto sleep — спать\nto cook — готовить еду\nto play computer games — играть в компьютерные игры\nto run in the park — бегать в парке\nto help mum and dad — помогать маме и папе",
+"I like to sleep in the afternoon. Я люблю спать днём.\nI like to play computer games in the afternoon. Я люблю играть в компьютерные игры днём.\nI like to help my mum and dad in the afternoon. Я люблю помогать маме с папой днём."
+],
+"answer": "I like to sleep in the afternoon. \nI like to play computer games in the afternoon. \nI like to help my mum and dad in the afternoon."
+},
+{
+"name": "б",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать, что Мэри написала о своих друзьях, и написать три предложения о том, что любят делать днём ТВОИ друзья.",
+"Мэри: Они любят играть днём.",
+"WORDLIST\nto ride a bike — кататься на велосипеде\nto run and jump — бегать и прыгать\nto sleep — спать\nto cook — готовить еду\nto play computer games — играть в компьютерные игры\nto run in the park — бегать в парке\nto help mum and dad — помогать маме и папе",
+"They like to ride a bike in the afternoon. Они любят кататься на велосипеде днём.\nThey like to run in the park in the afternoon. Они любят бегать в парке днём.\nThey like to cook in the afternoon. Они любят готовить еду днём."
+],
+"answer": "They like to ride a bike in the afternoon.\nThey like to run in the park in the afternoon. \nThey like to cook in the afternoon."
+}
+]
+},
+{
+"number": "8-s98",
+"num": "8",
+"page": 98,
+"chapter": "Steps 57-63",
+"skyId": 144884,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу, то есть заменить единственное число множественным.",
+"",
+"",
+"Это — смешной клоун. \nЭто — красная блуза.\nОна — хорошая сестра.\nОн старый.\nЭто — фиолетовая слива.\nЭто — лимонный торт.\nЭто — под партой.\nЭто — сладкое яблоко.\nОна — счастливая мать.",
+"They are funny clowns. Они — смешные клоуны.\nThey are red blouses. Это — красные блузы.\nThey are good sisters. Они — хорошие сёстры.\nThey are old. Они старые.\nThey are purple plums. Это — фиолетовые сливы.\nThey are lemon cakes. Это — лимонные торты.\nThey are under the desk. Они — под партой.\nThey are sweet apples. Это — сладкие яблоки.\nThey are happy mothers. Они — счастливые матери."
+],
+"answer": "They are funny clowns. \nThey are red blouses. \nThey are good sisters. \nThey are old. \nThey are purple plums.\nThey are lemon cakes. \nThey are under the desk. \nThey are sweet apples. \nThey are happy mothers."
+}
+]
+},
+{
+"number": "9-s98",
+"num": "9",
+"page": 98,
+"chapter": "Steps 57-63",
+"skyId": 144885,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в змейке слова, начала и окончания которых соединены, и написать эти слова отдельно.",
+".",
+"Cow. Корова.\nWe. Мы.\nEight. Восемь.\nTwelve. Двенадцать.\nElf. Эльф.\nFeed. Кормить.\nDown. Вниз.\nOr. Или.\nRun. Бегать.\nNurse. Медсестра.\nEgg. Яйцо.\nCup. Чашка.\nPlay. Играть."
+],
+"answer": "Cow.\nWe.\nEight.\nTwelve.\nElf.\nFeed.\nDown.\nOr.\nRun.\nNurse.\nEgg.\nCup.\nPlay."
+}
+]
+},
+{
+"number": "10-s99",
+"num": "10",
+"page": 99,
+"chapter": "Steps 57-63",
+"skyId": 144886,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, используя краткую форму глагола to be.",
+"Am — 'm.\nIs — 's.\nAre — 're.\nAm not — 'm not.\nIs not — isn't.\nAre not — aren't.",
+"Это — фиолетовые блузы.\nДон — плохой слуга.\nЭто — не коричневая корова.\nОни — не смешные клоуны.\nЭто — не ложки.\nКитти — не медсестра.\nЭто — не маленькая мышь.\nЭто — зелёные берёзы.",
+"They're purple blouses.\nDon's a bad servant.\nIt isn't a brown cow.\nThey aren't funny clowns.\nThey aren't spoons.\nKitty isn't a nurse.\nIt isn't a little mouse.\nThey're green birches."
+],
+"answer": "They're purple blouses.\nDon's a bad servant.\nIt isn't a brown cow.\nThey aren't funny clowns.\nThey aren't spoons.\nKitty isn't a nurse.\nIt isn't a little mouse.\nThey're green birches."
+}
+]
+},
+{
+"number": "11-s99",
+"num": "11",
+"page": 99,
+"chapter": "Steps 57-63",
+"skyId": 144887,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать, что любят братья Джона, и завершить предложения, написав в них, что любишь ты и твои друзья.",
+"Они любят лимонные торты, а мы ...\nОни любят большие машины, а мы ...\nОни любят фиолетовые шляпы, а мы ...\nОни любят чёрные сумки, а мы ...\nОни любят смешных клоунов, а мы ...\nОни любят красные тюльпаны, а мы ...\nОни любят сладкие апельсины, а мы ...\nОни любят милые игрушки, а мы ...\nОни любят маленьких кошек, а мы ...",
+"Они любят лимонные торты, а мы любим вишнёвые пироги (like cherry pies).\nОни любят большие машины, а мы любим маленькие велосипеды (like little bikes).\nОни любят фиолетовые шляпы, а мы любим синие кепки (like blue caps).\nОни любят чёрные сумки, а мы любим жёлтые школьные портфели (yellow school bags).\nОни любят смешных клоунов, а мы любим милых русалочек (like nice mermaids).\nОни любят красные тюльпаны, а мы любим белые розы (like white roses).\nОни любят сладкие апельсины, а мы любим хорошие яблоки (like good apples).\nОни любят милые игрушки, а мы любим хорошие игры (like good games).\nОни любят маленьких кошек, а мы любим больших собак (like big dogs)."
+],
+"answer": "... like cherry pies.\n... like little bikes.\n... like blue caps.\n... yellow school bags.\n... like nice mermaids.\n... like white roses.\n... like good apples.\n... like goog games.\n... like big dogs."
+}
+]
+},
+{
+"number": "12-s100",
+"num": "12",
+"page": 100,
+"chapter": "Steps 57-63",
+"skyId": 144888,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях предлогами.",
+"",
+"Самолёт _____ небе.\nБлуза _____ кровати.\nСобака _____ парты.\nДевочка _____ велосипеде.\nМедсёстры _____ магазина.\nФерма _____ озера.\nРучки _____ коробке.\nЯблоки _____ тарелке.",
+"Самолёт в (in) небе.\nБлуза на (on) кровати.\nСобака у (by) парты.\nДевочка на (on) велосипеде.\nМедсёстры у (by) магазина.\nФерма у (by) озера.\nРучки в (in) коробке.\nЯблоки на (on) тарелке."
+],
+"answer": "In.\nOn.\nBy.\nOn.\nBy.\nBy.\nIn.\nOn."
+}
+]
+},
+{
+"number": "13-s101",
+"num": "13",
+"page": 101,
+"chapter": "Steps 57-63",
+"skyId": 144889,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно завершить предложения, используя нужные местоимения.",
+"WORDLIST\nI — я\nhe — он\nshe — она\nit — относится к животным и неодушевленным объектам\nwe — мы\nyou — ты, вы\nthey — они",
+"Сколько лет Алексу и Дэну? Им (they) одиннадцать лет.\nГде корова? _____ на ферме.\nЭто — моя комната. _____ большая и синяя.\nМарио — мой брат. _____ в Мадриде.\nМисси и я — в доме. _____ грустно.\nЭто — мышь. _____ под ботинком.\nБорис и Анна — ученики. _____ счастливы.\nЯ вижу банан. _____ сладкий.\nЯ вижу ложки. _____ в коробке.\nКак тебя зовут? _____ Боб.",
+"Сколько лет Алексу и Дэну? Им (They) одиннадцать лет.\nГде корова? Она (It) — на ферме. \nЭто — моя комната. Она (It) большая и синяя.\nМарио — мой брат. Он (He) — в Мадриде.\nМисси и я — в доме. Нам (We) грустно.\nЭто — мышь. Она (it) — под ботинком.\nБорис и Анна — ученики. Они (They)счастливы.\nЯ вижу банан. Он (It) сладкий.\nЯ вижу ложки. Они (They) — в коробке.\nКак тебя зовут? Я (I) — Боб."
+],
+"answer": "They.\nIt.\nIt.\nHe.\nWe.\nIt.\nThey.\nIt.\nThey.\nI."
+}
+]
+},
+{
+"number": "14-s102",
+"num": "14",
+"page": 102,
+"chapter": "Steps 57-63",
+"skyId": 144890,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и написать, который час.",
+"",
+"It is twelve o'clock. Двенадцать часов.\nIt is nine o'clock. Девять часов.\nIt is six o'clock. Шесть часов.\nIt is two o'clock. Два часа.\nIt is one o'clock. Час.\nIt is four o'clock. Четыре часа.\nIt is eight o'clock. Восемь часов.\nIt is five o'clock. Пять часов.\nIt is seven o'clock. Семь часов.\nIt is ten o'clock. Десять часов.\nIt is three o'clock. Три часа.\nIt is eleven o'clock. Одиннадцать часов."
+],
+"answer": "It is twelve o'clock.\nIt is nine o'clock. \nIt is six o'clock. \nIt is two o'clock.\nIt is one o'clock. \nIt is four o'clock. \nIt is eight o'clock. \nIt is five o'clock.\nIt is seven o'clock.\nIt is ten o'clock. \nIt is three o'clock.\nIt is eleven o'clock."
+}
+]
+},
+{
+"number": "15-s103",
+"num": "15",
+"page": 103,
+"chapter": "Steps 57-63",
+"skyId": 144891,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, как люди, о которых идёт речь, любят проводить дневное время.",
+"WORDLIST\nto run in the park — бегать в парке\nto ride bikes — кататься на велосипедах\nto play video games — играть в видео игры\nto sleep — спать\nto ride in the car — кататься на машине\nto feed — кормить\nto swim in the lake — плавать в озере",
+"Mary and Tom like to run in the park in the afternoon. Мэри и Том любят бегать в парке днём.\nMy mum and dad like to ride bikes in the park in the afternoon. Мои мама и папа любят кататься на велосипедах в парке днём.\nMy sisters like to play video games in the afternoon. Мои сёстры любят играть в видео игры днём.\nMy little brothers like to sleep in the afternoon. Мои маленькие братья любят спать днём.\nMark and Steve like to ride in the car in the afternoon. Марк и Стив любят кататься на машине днём.\nI like to feed Spot in the afternoon. Я люблю кормить Спота днём.\nMy granny and grandad like to swim in the lake in the afternoon. Мои бабушка и дедушка любят плавать в озере днём."
+],
+"answer": "Mary and Tom like to run in the park in the afternoon.\nMy mum and dad like to ride bikes in the park in the afternoon.\nMy sisters like to play video games in the afternoon.\nMy little brothers like to sleep in the afternoon.\nMark and Steve like to ride in the car in the afternoon.\nI like to feed Spot in the afternoon.\nMy granny and grandad like to swim in the lake in the afternoon."
+}
+]
+},
+{
+"number": "16-s104",
+"num": "16",
+"page": 104,
+"chapter": "Steps 57-63",
+"skyId": 144892,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные буквы в слова под картинками.",
+"Meet.\nPlay.\nClown.\nHouse.\nDown.\nMoon.\nRoof.\nSpoon.\nRoom.\nJump.\nFeed.\nRide.",
+"WORDLIST\nmeet — встречаться/знакомиться\nplay — играть\nclown — клоун\nhouse — дом\ndown — вниз\nmoon — луна\nroof — крыша\nspoon — ложка\nroom — комната\njump — прыгать\nfeed — кормить\nride — ездить"
+],
+"answer": "Meet.\nPlay.\nClown.\nHouse.\nDown.\nMoon.\nRoof.\nSpoon.\nRoom.\nJump.\nFeed.\nRide."
+}
+]
+},
+{
+"number": "17-s105",
+"num": "17",
+"page": 105,
+"chapter": "Steps 57-63",
+"skyId": 144893,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расставим слова так, чтобы получились предложения, и запишем их. При этом обратим внимание на знаки препинания.",
+"to / a / like / I / ride / horse. — I like to ride a horse.",
+"I like to ride a horse.\nWhat is the time?\nMy granny and grandad like to sleep in the afternoon.\nI like sweet bananas and oranges.\nIs your brother a good pilot?\nThe cat is under the bed.\nSpot is a big red dog.\nAnna and Victor are by the house.\nChimps like sweet bananas and oranges.\nRed and green grapes are on the dish.",
+"Я люблю кататься на лошади.\nСколько времени?\nМои бабушка и дедушка любят поспать днём.\nЯ люблю сладкие бананы и апельсины.\nТвой брат хороший пилот?\nКот под кроватью.\nСпот — большая рыжая собака.\nАнна и Виктор у дома.\nШимпанзе любят сладкие бананы и апельсины.\nНа блюде красный и зелёный виноград."
+],
+"answer": "I like to ride a horse.\nWhat is the time?\nMy granny and grandad like to sleep in the afternoon.\nI like sweet bananas and oranges.\nIs your brother a good pilot?\nThe cat is under the bed.\nSpot is a big red dog.\nAnna and Victor are by the house.\nChimps like sweet bananas and oranges.\nRed and green grapes are on the dish."
+}
+]
+},
+{
+"number": "18-s106",
+"num": "18",
+"page": 106,
+"chapter": "Steps 57-63",
+"skyId": 144894,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем вопросы и выберем правильные ответы — A или B.",
+"1. Где блузки?\nа) Они на кровати.\nб) Это в сумке.\n2. Сколько времени?\nа) 3 часа.\nб) Не 3 часа.\n3. Этот дом большой?\nа) Да, это так.\nб) Нет."
+],
+"answer": "A.\nA.\nB."
+}
+]
+},
+{
+"number": "19-s106",
+"num": "19",
+"page": 106,
+"chapter": "Steps 57-63",
+"skyId": 144895,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем текст об обезьянке и отметим верные предложения после текста.",
+"Меня зовут Бенни. Я маленькая, весёлая, чёрная обезьянка. Мне нравятся апельсины и бананы. Они славные и вкусные. Моя белая тарелка на полу. На ней лежат мои бананы. Я не грустная, я счастливая.",
+"Бенни — весёлая обезьянка.\nБенни коричневого цвета.\nБенни в лесу.\nТарелка белого цвета.\nБананы под тарелкой.\nБенни счастлива."
+],
+"answer": "4, 6."
+}
+]
+},
+{
+"number": "20-s107",
+"num": "20",
+"page": 107,
+"chapter": "Steps 57-63",
+"skyId": 144896,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно правильно написать слова, чтобы злая волшебница расколдовала принцессу.",
+"Boot.\nSchool.\nAfternoon.\nBlouse.\nDown.\nMouse.\nCow.\nBrown.\nPlay.\nSleep.\nJump.\nRide.",
+"Ботинок.\nШкола.\nПосле полудня.\nБлузка.\nВниз.\nМышь.\nКорова.\nКоричневый.\nИграть.\nСпать.\nПрыгать.\nЕздить."
+],
+"answer": "Boot.\nSchool.\nAfternoon.\nBlouse.\nDown.\nMouse.\nCow.\nBrown.\nPlay.\nSleep.\nJump.\nRide."
+}
+]
+}
+]
+}

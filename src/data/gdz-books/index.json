@@ -34,6 +34,23 @@
 "chapterCount": 1
 },
 {
+"slug": "afanaseva-leksiko-grammaticheskiy-praktikum",
+"klass": 2,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Афанасьева О. В., Баранова К. М., Михеева И. В.",
+"type": "Лексико-грамматический практикум",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:806",
+"file": "2-angliiskiy-yazyk-afanaseva-leksiko-grammaticheskiy-praktikum.json",
+"problemCount": 168,
+"solvedCount": 0,
+"chapterCount": 9
+},
+{
 "slug": "afanaseva-uchebnik-chast-1",
 "klass": 2,
 "subjectSlug": "angliiskiy-yazyk",
@@ -66,6 +83,23 @@
 "problemCount": 253,
 "solvedCount": 253,
 "chapterCount": 67
+},
+{
+"slug": "bykova-rabochaya-tetrad",
+"klass": 2,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Быкова Н. И., Дули Д., Поспелова М. Д., Эванс В.",
+"type": "Рабочая тетрадь",
+"years": "2021",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:648",
+"file": "2-angliiskiy-yazyk-bykova-rabochaya-tetrad.json",
+"problemCount": 101,
+"solvedCount": 101,
+"chapterCount": 28
 },
 {
 "slug": "bykova-uchebnik-chast-1",
@@ -134,6 +168,23 @@
 "problemCount": 22,
 "solvedCount": 22,
 "chapterCount": 5
+},
+{
+"slug": "afanaseva-leksiko-grammaticheskiy-praktikum",
+"klass": 3,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Афанасьева О. В., Сьянов А. В., Михеева И. В.",
+"type": "Лексико-грамматический практикум",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:807",
+"file": "3-angliiskiy-yazyk-afanaseva-leksiko-grammaticheskiy-praktikum.json",
+"problemCount": 215,
+"solvedCount": 0,
+"chapterCount": 8
 },
 {
 "slug": "afanaseva-rabochaya-tetrad",
