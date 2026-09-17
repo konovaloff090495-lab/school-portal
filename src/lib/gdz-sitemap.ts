@@ -1,4 +1,4 @@
-import { gdzBooks, loadGdzBook, hasGdzSolution, gdzNumToSlug, type GdzBookMeta } from '@/data/gdz'
+import { getAllGdzBooks, loadGdzBook, hasGdzSolution, gdzNumToSlug, type GdzBookMeta } from '@/data/gdz'
 
 // Sitemap номеров ГДЗ: книги нарезаются на чанки по ≤ CHUNK_MAX решённых
 // номеров (лимит одного sitemap — 50 000 URL). Нарезка детерминирована
@@ -11,7 +11,7 @@ export function gdzSitemapChunks(): GdzBookMeta[][] {
   const chunks: GdzBookMeta[][] = []
   let cur: GdzBookMeta[] = []
   let size = 0
-  for (const b of gdzBooks) {
+  for (const b of getAllGdzBooks()) {
     if (b.solvedCount === 0) continue
     if (size + b.solvedCount > CHUNK_MAX && cur.length) {
       chunks.push(cur); cur = []; size = 0

@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { gdzBooks, getGdzBook, getGdzAllProblems } from '@/data/gdz'
+import { getAllGdzBooks, getGdzBook, getGdzAllProblems, gdzNumLabel } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
+
+// ISR: данные ГДЗ доезжают git pull без пересборки — страницы обновляются раз в час
+export const revalidate = 3600
 
 interface Props {
   params: Promise<{ klass: string; subject: string; book: string }>
@@ -21,7 +24,7 @@ function parseKlass(slug: string): number | null {
 }
 
 export async function generateStaticParams() {
-  return gdzBooks
+  return getAllGdzBooks()
     .filter(b => b.solvedCount > 0)
     .map(b => ({
       klass: `${b.klass}-klass`,
@@ -159,7 +162,7 @@ export default async function GdzBookPage({ params }: Props) {
                         className="gdz-num"
                         href={`/gdz/${klass}/${subject}/${bookSlug}/nomer-${p.number.replace(/\./g, "-")}/`}
                       >
-                        {p.number}
+                        {gdzNumLabel(p.number)}
                         <small>с. {p.page}</small>
                       </Link>
                     ))}

@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 
 // ════════════════════════════════════════════════════
@@ -105,36 +105,58 @@ export const gdzKlasses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 // ────────────────────────────────────────────────────
 
 const DATA_DIR = join(process.cwd(), 'src/data/gdz-books')
+const cache = new Map<string, GdzBook>()
 
-export const gdzBookIndex: GdzBookMeta[] = JSON.parse(
-  readFileSync(join(DATA_DIR, 'index.json'), 'utf8'),
-) as GdzBookMeta[]
+// Индекс перечитывается, когда index.json меняется на диске (git pull новых
+// решений без рестарта процесса): stat дешёвый, парсинг — только при изменении.
+let indexMtime = 0
+let indexAll: GdzBookMeta[] = []
+let indexVisible: GdzBookMeta[] = []
+let subjectsByClass: Record<number, GdzSubject[]> = {}
 
-// Наружу (списки, sitemap, роуты) идут только книги хотя бы с одним решённым
-// номером: книга, у которой ещё только импортирована структура, не светится.
-export const gdzBooks: GdzBookMeta[] = gdzBookIndex.filter(b => b.solvedCount > 0)
-
-// Предметы по классам — собираются из реальных книг, bookCount = фактическое число.
-export const gdzSubjectsByClass: Record<number, GdzSubject[]> = (() => {
+function refreshIndex(): void {
+  const mtime = statSync(join(DATA_DIR, 'index.json')).mtimeMs
+  if (mtime === indexMtime) return
+  indexMtime = mtime
+  indexAll = JSON.parse(readFileSync(join(DATA_DIR, 'index.json'), 'utf8')) as GdzBookMeta[]
+  // Наружу (списки, sitemap, роуты) идут только книги хотя бы с одним решённым
+  // номером: книга, у которой ещё только импортирована структура, не светится.
+  indexVisible = indexAll.filter(b => b.solvedCount > 0)
   const out: Record<number, GdzSubject[]> = {}
   for (const n of gdzKlasses) {
     const counts = new Map<string, number>()
-    for (const b of gdzBooks) {
+    for (const b of indexVisible) {
       if (b.klass === n) counts.set(b.subjectSlug, (counts.get(b.subjectSlug) ?? 0) + 1)
     }
     out[n] = SUBJECT_CATALOG
       .filter(s => counts.has(s.slug))
       .map(s => ({ ...s, bookCount: counts.get(s.slug)! }))
   }
-  return out
-})()
+  subjectsByClass = out
+  cache.clear()
+}
+
+export function getGdzBookIndex(): GdzBookMeta[] {
+  refreshIndex()
+  return indexAll
+}
+
+export function getAllGdzBooks(): GdzBookMeta[] {
+  refreshIndex()
+  return indexVisible
+}
+
+// Предметы по классам — собираются из реальных книг, bookCount = фактическое число.
+export function getGdzSubjectsByClass(): Record<number, GdzSubject[]> {
+  refreshIndex()
+  return subjectsByClass
+}
 
 // ────────────────────────────────────────────────────
 // Ленивая загрузка книг с LRU-кешем
 // ────────────────────────────────────────────────────
 
 const CACHE_MAX = 80
-const cache = new Map<string, GdzBook>()
 
 function readBook(meta: GdzBookMeta): GdzBook {
   const hit = cache.get(meta.file)
@@ -158,15 +180,15 @@ function readBook(meta: GdzBookMeta): GdzBook {
 // ────────────────────────────────────────────────────
 
 export function getGdzSubjects(klass: number): GdzSubject[] {
-  return gdzSubjectsByClass[klass] ?? []
+  return getGdzSubjectsByClass()[klass] ?? []
 }
 
 export function getGdzBooks(klass: number, subjectSlug: string): GdzBookMeta[] {
-  return gdzBooks.filter(b => b.klass === klass && b.subjectSlug === subjectSlug)
+  return getAllGdzBooks().filter(b => b.klass === klass && b.subjectSlug === subjectSlug)
 }
 
 export function getGdzBookMeta(klass: number, subjectSlug: string, bookSlug: string): GdzBookMeta | undefined {
-  return gdzBooks.find(b => b.klass === klass && b.subjectSlug === subjectSlug && b.slug === bookSlug)
+  return getAllGdzBooks().find(b => b.klass === klass && b.subjectSlug === subjectSlug && b.slug === bookSlug)
 }
 
 export function getGdzBook(klass: number, subjectSlug: string, bookSlug: string): GdzBook | undefined {
@@ -203,4 +225,11 @@ export function getGdzProblemChapter(book: GdzBook, number: string): GdzChapter 
 // Номер задачи → URL-безопасный slug (точка в номере кодируется дефисом)
 export function gdzNumToSlug(n: string): string {
   return n.replace(/\./g, '-')
+}
+
+// Человеческая подпись номера: в рабочих тетрадях номера повторяются на разных
+// страницах, поэтому ключ «6-s12» = номер 6 на странице 12.
+export function gdzNumLabel(n: string): string {
+  const m = n.match(/^(.+?)-s(\d+)(?:-\d+)?$/)
+  return m ? `${m[1]} (с. ${m[2]})` : n
 }

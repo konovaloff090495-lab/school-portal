@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
+  gdzNumLabel,
   getGdzBook,
   getGdzProblem,
   getGdzPrevNext,
@@ -12,6 +13,9 @@ import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
 const SITE = 'https://pro-schools.ru'
+
+// ISR: данные ГДЗ доезжают git pull без пересборки — страницы обновляются раз в час
+export const revalidate = 3600
 
 interface Props {
   params: Promise<{ klass: string; subject: string; book: string; number: string }>
@@ -63,6 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!problem) return {}
 
   const firstAuthor = book.authors.split(',')[0].trim()
+  const numLabel = gdzNumLabel(num)
   const hasSolution = !!(
     (problem.steps?.length && problem.condition) ||
     (problem.imageUrls?.length && problem.condition)
@@ -74,12 +79,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : null
 
   const title = hasSolution
-    ? `Номер ${num} — ГДЗ ${book.subject} ${n} класс ${firstAuthor.split(' ')[0]} · pro-schools.ru`
-    : `Номер ${num} — ${book.subject} ${n} класс ${firstAuthor.split(' ')[0]} · pro-schools.ru`
+    ? `Номер ${numLabel} — ГДЗ ${book.subject} ${n} класс ${firstAuthor.split(' ')[0]} · pro-schools.ru`
+    : `Номер ${numLabel} — ${book.subject} ${n} класс ${firstAuthor.split(' ')[0]} · pro-schools.ru`
 
   const description = hasSolution && conditionSnippet
     ? `${conditionSnippet.slice(0, 110)}. Пошаговое решение и ответ — ГДЗ ${book.subject.toLowerCase()} ${n} класс, учебник ${firstAuthor}.`
-    : `ГДЗ номер ${num} по ${book.subject.toLowerCase()} ${n} класс, учебник ${firstAuthor}. Условие, пошаговое решение и ответ.`
+    : `ГДЗ номер ${numLabel} по ${book.subject.toLowerCase()} ${n} класс, учебник ${firstAuthor}. Условие, пошаговое решение и ответ.`
 
   return {
     title,
@@ -116,6 +121,7 @@ export default async function GdzNumberPage({ params }: Props) {
 
   const { prev, next } = getGdzPrevNext(book, num)
   const chapter = getGdzProblemChapter(book, num)
+  const numLabel = gdzNumLabel(num)
 
   // Related: ±4 соседа из параграфа
   let related: typeof problem[] = []
@@ -152,15 +158,15 @@ export default async function GdzNumberPage({ params }: Props) {
       { '@type': 'ListItem', position: 2, name: `${klassNum} класс`, item: `${SITE}/gdz/${klass}/` },
       { '@type': 'ListItem', position: 3, name: book.subject, item: `${SITE}/gdz/${klass}/${subject}/` },
       { '@type': 'ListItem', position: 4, name: firstAuthor.split(' ')[0], item: `${SITE}${bookBase}/` },
-      { '@type': 'ListItem', position: 5, name: `Номер ${num}`, item: canonicalUrl },
+      { '@type': 'ListItem', position: 5, name: `Номер ${numLabel}`, item: canonicalUrl },
     ],
   }
 
   const howToLd = hasSolution ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: `Решение номера ${num} — ${book.subject} ${klassNum} класс ${firstAuthor.split(' ')[0]}`,
-    description: problem.condition ? stripTags(problem.condition) : `Номер ${num}, страница ${problem.page}.`,
+    name: `Решение номера ${numLabel} — ${book.subject} ${klassNum} класс ${firstAuthor.split(' ')[0]}`,
+    description: problem.condition ? stripTags(problem.condition) : `Номер ${numLabel}, страница ${problem.page}.`,
     step: problem.steps!.map((step, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
@@ -192,26 +198,26 @@ export default async function GdzNumberPage({ params }: Props) {
             <span className="sep">/</span>
             <Link href={`${bookBase}/`}>{firstAuthor.split(' ')[0]}</Link>
             <span className="sep">/</span>
-            <span className="cur">Номер {num}</span>
+            <span className="cur">Номер {numLabel}</span>
           </nav>
 
           <div className="gdz-pagehead">
             <div className="gdz-eyebrow"><span className="dot"></span>Решение без ошибок · проверено преподавателем</div>
-            <h1>Номер {num} — {book.subject} {klassNum} класс</h1>
+            <h1>Номер {numLabel} — {book.subject} {klassNum} класс</h1>
             <p className="lede">{lede}</p>
           </div>
 
           {/* Навигация по номерам */}
           <nav className="gdz-exnav" aria-label="Соседние номера">
             {prev ? (
-              <Link href={`${bookBase}/nomer-${numToSlug(prev)}/`}>← Номер {prev}</Link>
+              <Link href={`${bookBase}/nomer-${numToSlug(prev)}/`}>← Номер {gdzNumLabel(prev)}</Link>
             ) : (
               <span style={{ visibility: 'hidden' }}>← Номер 0</span>
             )}
             <Link href={`${bookBase}/`} className="to-list">Все номера</Link>
             <span className="spacer"></span>
             {next ? (
-              <Link href={`${bookBase}/nomer-${numToSlug(next)}/`}>Номер {next} →</Link>
+              <Link href={`${bookBase}/nomer-${numToSlug(next)}/`}>Номер {gdzNumLabel(next)} →</Link>
             ) : (
               <span style={{ visibility: 'hidden' }}>Номер 0 →</span>
             )}
@@ -231,7 +237,7 @@ export default async function GdzNumberPage({ params }: Props) {
               <p dangerouslySetInnerHTML={{ __html: problem.condition }} />
             ) : (
               <p>
-                Номер {num} из {chapter ? chapter.title : book.subject}, страница {problem.page}.{' '}
+                Номер {numLabel} из {chapter ? chapter.title : book.subject}, страница {problem.page}.{' '}
                 Учебник: {book.authors.split(',')[0].trim()}, {book.years}, {book.publisher}.
               </p>
             )}
@@ -269,7 +275,7 @@ export default async function GdzNumberPage({ params }: Props) {
                       <img
                         key={i}
                         src={url}
-                        alt={`Решение номера ${num}, часть ${i + 1}`}
+                        alt={`Решение номера ${numLabel}, часть ${i + 1}`}
                         className="gdz-solution-img"
                         loading={i === 0 ? 'eager' : 'lazy'}
                       />
@@ -314,7 +320,7 @@ export default async function GdzNumberPage({ params }: Props) {
                 </span>
                 Решение
               </div>
-              <p>Пошаговое решение для номера {num} готовится и скоро будет добавлено.</p>
+              <p>Пошаговое решение для номера {numLabel} готовится и скоро будет добавлено.</p>
               <p style={{ fontSize: '14px', color: 'var(--ink-3)', marginTop: '8px' }}>
                 Пока можно посмотреть соседние номера этого параграфа — многие уже решены.
               </p>
@@ -345,7 +351,7 @@ export default async function GdzNumberPage({ params }: Props) {
                       color: 'var(--coral-600)',
                     } : undefined}
                   >
-                    {p.number}
+                    {gdzNumLabel(p.number)}
                     <small>с. {p.page}</small>
                   </Link>
                 ))}
