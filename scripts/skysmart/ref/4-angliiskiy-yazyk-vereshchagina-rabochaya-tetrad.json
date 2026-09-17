@@ -1,0 +1,2340 @@
+{
+"book": {
+"slug": "vereshchagina-rabochaya-tetrad",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Верещагина И. Н., Афанасьева О. В.",
+"type": "Рабочая тетрадь",
+"umk": "English"
+},
+"problems": [
+{
+"number": "1-s4",
+"num": "1",
+"page": 4,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142605,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно исправить предложения, добавив нужную форму глагола be: am, is или are.",
+"",
+"Пример: (Is) это письмо длинное?\nМои ботинки (are) очень чистые.\n(Are) твои родители дома?\nКакого цвета (is) эта сумка?\nКто (is) твой любимый учитель?\nКакие (are) твои любимые книги?\nЯ (am) голоден.\nОсень и зима (are) — холодные времена года."
+],
+"answer": "Are.\nAre.\nIs.\nIs.\nAre.\nAm.\nAre."
+}
+]
+},
+{
+"number": "2-s4",
+"num": "2",
+"page": 4,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142606,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки на странице 5 и написать, какие питомцы есть у девочки и какого они цвета, как показано в примере.",
+"WORDLIST\nchicken — цыплёнок\nparrot — попугай\nhorse — лошадь\nbrother — брат\ngrey — серый",
+"",
+"Пример: Цыплята девочки жёлтые. \nKate's cat is grey. (Кошечка Кейт серая.)\nDonald's dog is black and white. (Собака Дональда белая с чёрным.)\nThe friends' parrot is green. (Попугай друзей зелёный.)\nThe brothers' cat is red. (Кошечка братьев рыжая.)\nThe Browns' horses are brown. (Лошади семьи Браун коричневые.)\nThe teacher's dogs are white. (Собачки учительницы белые.)"
+],
+"answer": "Kate's cat is grey.\nDonald's dog is black and white.\nThe friends' parrot is green.\nThe brothers' cat is red.\nThe Browns' horses are brown.\nThe teacher's dogs are white."
+}
+]
+},
+{
+"number": "3-s5",
+"num": "3",
+"page": 5,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142607,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения have got или haven't got, как показано в примере.",
+"WORDLIST\nbutter — сливочное масло\npuppy — щенок\nbread — хлеб\neye — глаз\nwhite coffee — кофе с молоком",
+"",
+"Пример: У меня есть кукла, но у меня _____ мяча. — У меня есть кукла, но у меня нет (haven't got) мяча.\nНику нравится читать. У него есть (has got) много книг. \nУ вас есть (Have you got) сливочное масло на столе?\nУ этих собачек есть (have got) много щенков.\nУ меня нет (haven't got) хлеба. Пойдём в магазин.\nУ неё нет (hasn't got) молока. Она не может пить кофе с молоком.\n«В чём проблема?» — «У меня есть (have got) что-то в глазу». \nПусси — большая чёрная кошечка. У неё есть (has got) много смешных котят."
+],
+"answer": "Has got.\nHave you got.\nHave got.\nHaven't got.\nHasn't got.\nHave got.\nHas got."
+}
+]
+},
+{
+"number": "4-s6",
+"num": "4",
+"page": 6,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142608,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно образовать множественное число от предложенных существительных.",
+"",
+"",
+"Ботинок. — Shoes. (Ботинки.)\nВечеринка. — Parties. (Вечеринки.)\nДень рождения. — Birthdays. (Дни рождения.)\nЧерепаха. — Tortoises. (Черепахи.)\nГлаз. — Eyes. (Глаза.)\nМагазин. — Shops. (Магазины.)\nСемья. — Families. (Семьи.)\nДом. — Houses. (Дома.)\nМышь. — Mice. (Мыши.)\nВолк. — Wolves. (Волки.)\nКоробка. — Boxes. (Коробки.)\nРебёнок. — Children. (Дети.)\nЖена. — Wives. (Жёны.)\nЗаяц. — Hares. (Зайцы.)\nНога. — Feet. (Ноги.)\nЛисток. — Leaves. (Листочки.)\nКартофелина. — Potatoes. (Картофель.)\nСтакан. — Glasses. (Стаканы.)\nЗуб. — Teeth. (Зубы.)\nУпражнение. — Exercises. (Упражнения.)\nЩеночек. — Puppies. (Щеночки.)\nОвечка. — Sheep. (Овечки.)"
+],
+"answer": "Shoes.\nParties.\nBirthdays.\nTortoises.\nEyes.\nShops.\nFamilies.\nHouses.\nMice.\nWolves.\nBoxes.\nChildren.\nWives.\nHares.\nFeet.\nLeaves.\nPotatoes.\nGlasses.\nTeeth.\nExercises.\nPuppies.\nSheep."
+}
+]
+},
+{
+"number": "5-s6",
+"num": "5",
+"page": 6,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142609,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения правильной формой конструкции There is / There are.",
+"",
+"Пример: _____ стулья в комнате? — Да, _____. — Есть ли (Are there) стулья в комнате? — Да, есть (there are).\nЕсть (There are) семь дней в неделе. \nЕсть (Are there) четыре или пять времён года в году?\nСколько месяцев есть (are there) в году?\nЕсть (There is) симпатичная птичка на дереве.\nНет (There aren't) цветов зимой.\nНет (There isn't) воды в стакане."
+],
+"answer": "There are.\nAre there.\nAre there.\nThere is.\nThere aren't.\nThere isn't."
+}
+]
+},
+{
+"number": "6-s7",
+"num": "6",
+"page": 7,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142610,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения, используя some или any.",
+"",
+"Пример: У моей сестры нет _____ картошки, но у неё есть _____ морковка. — У моей сестры нет никакой (any) картошки, но у неё есть немного (some) морковки.\nЕсть немного (some) сока в чашке.\nЕсть какие-нибудь (any) деньги у тебя в кармане?\nНет никаких (any) старых деревьев в парке.\nУ нас нет никаких (any) маленьких питомцев.\nЕсть немного (some) мяса в магазине.\nУ неё есть какие-нибудь (any) колготки?"
+],
+"answer": "Some.\nAny.\nAny.\nAny.\nSome.\nAny."
+}
+]
+},
+{
+"number": "7-s7",
+"num": "7",
+"page": 7,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142611,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения и распределить их на две группы: те, в которых употребляется much, и те, в которых употребляется many.",
+"Есть много (many) ярких цветков здесь.\nНет много (much) супа на ужин.\nНет много (many) овощей в магазине.\nЕсть много (many) хороших учебников в школе?\nЕсть много (much) горячей каши?\nЕсть много (much) мороженого для тебя.\nЕсть много (many) людей на улице.",
+"Much\n Many\n Пример\n Нет много (much) молока на столе\n Есть много (many) бутербродов на тарелках\n1. Есть много (many) ярких цветков здесь.\n3. Нет много (many) овощей в магазине.\n4. Есть много (many) хороших учебников в школе?\n7. Есть много (many) людей на улице\n2. Нет много (much) супа на ужин.\n5. Есть много (much) горячей каши?\n6. Есть много (much) мороженого для тебя"
+],
+"answer": "Much: 1, 3, 4, 7.\nMany: 2, 5, 6."
+}
+]
+},
+{
+"number": "8-s8",
+"num": "8",
+"page": 8,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142612,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова в табличке, а затем составить предложения про Роберта, как показано в примере.",
+"Пример: Роберт носит джинсы, но не носит брюки.\n Носит\n Джинсы, куртки, свитера, рубашки\n Никогда не носит\n Брюки, перчатки, кроссовки, пальто\n Покупает\n Яблоки, мороженое, молоко, варенье\n Никогда не покупает\n Морковку, картофель, сладости, соль\n Любит\n Рыбу, фрукты, сок, яйца\n Не любит\n Кофе, холодную кашу, суп, сливочное масло",
+"Robert wears jackets but he doesn't wear coats. (Роберт носит куртки, но он не носит пальто.)\nRobert wears sweaters but he doesn't wear gloves. (Роберт носит свитера, но он не носит перчатки.)\nRobert buys ice cream but he doesn't buy carrots. (Роберт покупает мороженое, но он не покупает морковку.)\nRobert buys milk but he doesn't buy salt. (Роберт покупает молоко, но он не покупает соль.)\nRobert likes fish but he dislikes cold porridge. (Роберт любит рыбу, но он не любит холодную кашу.)\nRobert likes juice but he dislikes coffee. (Роберт любит сок, но он не любит кофе.)"
+],
+"answer": "Robert wears jackets but he doesn't wear coats.\nRobert wears sweaters but he doesn't wear gloves.\nRobert buys ice cream but he doesn't buy carrots.\nRobert buys milk but he doesn't buy salt.\nRobert likes fish but he dislikes cold porridge.\nRobert likes juice but he dislikes coffee."
+}
+]
+},
+{
+"number": "9-s8",
+"num": "9",
+"page": 8,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142613,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, раскрыв скобки, как показано в примере.",
+"WORDLIST\nsometimes — иногда\noften — часто\nusually — обычно\nalways — всегда\nlate — поздно",
+"Пример: Ты ходишь в школу в воскресенье (иногда?) — Ты иногда ходишь в школу в воскресенье?\nWhen does Helen usually get up? (Когда Хелен обычно встаёт?)\nDoes he often come home late? (Он часто приходит домой поздно?)\nHe doesn't often go to the cinema. (Он нечасто ходит в кино.)\nWe don't usually wear shorts in autumn. (Мы обычно не носим шорты осенью.)\nShe sometimes has fish for lunch. (Она иногда ест рыбу на обед.)"
+],
+"answer": "When does Helen usually get up?\nDoes he often come home late?\nHe doesn't often go to the cinema.\nWe don't usually wear shorts in autumn.\nShe sometimes has fish for lunch."
+}
+]
+},
+{
+"number": "10-s9",
+"num": "10",
+"page": 9,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142614,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно раскрыть скобки в предложениях и поставить глаголы в нужную форму.",
+"",
+"",
+"",
+"Пример: Родители Ника обычно (смотреть телевизор) вечером — Родители Ника обычно смотрят телевизор вечером.\nСмотри, сестра Ника идёт (is going) на прогулку.\nОна никогда не ходит (goes) на прогулку вечером.\nДвоюродные братья Ника пьют (are drinking) яблочный сок сейчас.\nНик играет (plays football) в футбол каждый день.\nБрат Ника обычно ухаживает (looks after) за их питомцами.\n«Где папа?» — «О, он плавает (is swimming) в бассейне»."
+],
+"answer": "Is going.\nGoes.\nAre drinking.\nPlays football.\nLooks after.\nIs swimming."
+}
+]
+},
+{
+"number": "11-s9",
+"num": "11",
+"page": 9,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142615,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения и сказать, что эти люди делали в прошлом (вчера, на прошлой неделе, три дня назад и т.д.)",
+"",
+"Пример: Она покупает (buys) хлеб. — Она купила (bought) хлеб вчера.\nОн пьёт (has) кофе на завтрак. — He had coffee for breakfast yesterday. (Он пил кофе на завтрак вчера.)\nМоя двоюродная сестра опаздывает (is late) в школу. — My cousin was late for school three days ago. (Моя двоюродная сестра опоздала в школу три дня назад.)\nОни не приходят (don't come) в школу в 11 утра. — They didn't come to school at 11 in the morning last year. (Они не приходили в школу в 11 утра в прошлом году.)\nУроки начинаются (begin) в 8:30. — The lessons began at 8.30 last Friday. (Уроки начались в 8:30 в прошлую пятницу.)\nМоя мама обычно приносит (brings) интересные книги для чтения. — My mother brought interesting books to read last week. (Моя мама принесла интересные книги для чтения на прошлой неделе.)\nОн носит (wears) тёплую одежду зимой. — He wore warm clothes last winter. (Он носил тёплую одежду прошлой зимой.)"
+],
+"answer": "He had coffee for breakfast yesterday.\nMy cousin was late for school three days ago.\nThey didn't come to school at 11 in the morning last year.\nThe lessons began at 8.30 last Friday.\nMy mother brought interesting books to read last week.\nHe wore warm clothes last winter."
+}
+]
+},
+{
+"number": "12-s10",
+"num": "12",
+"page": 10,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142616,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сравнить животных, как показано в примере.",
+"",
+"Пример: Стол Сью не очень большой (big). Стол Анны _____. — Стол Сью не очень большой. Стол Анны больше (bigger).\nБрат Нелли умный (clever), но его сестра умнее (cleverer).\nЧерепаха медленная (slow). Она медленнее (slower), чем собака.\nМои куклы не очень симпатичные (nice). Твои куклы симпатичнее (nicer).\nКартошка не очень хорошая (good). Купи картошку получше (better).\nТа женщине не очень красивая (beautiful). Моя сестра красивее (more beautiful).\nБольшая коричневая обезьяна не очень смешная (funny). Маленькая серая обезьянка смешнее (funnier).\nПит — очень плохой (bad) ученик, но Ганс даже хуже (worse)."
+],
+"answer": "Cleverer.\nSlower.\nNicer.\nBetter.\nMore beautiful.\nFunnier.\nWorse."
+}
+]
+},
+{
+"number": "13-s10",
+"num": "13",
+"page": 10,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142617,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать историю, а затем сказать, что умеет, а чего не умеет делать мистер Браун.",
+"Мистер Браун — лесник. Он живёт в лесу рядом с большим озером. Он очень хорошо умеет ловить рыбу и выращивать множество овощей в своём саду. Он не особенно много знает о цветах и никогда не выращивает их. У него много животных, и он знает, как разговаривать с ними. Я думаю, что птицы и животные понимают его, и он понимает их тоже.\nЗимой, когда он не очень занят, он часто рассказывает нам истории о чудесах леса, и нам нравится слушать их. Мистер Браун любит смотреть телепрограммы, но он плохой спортсмен и никогда не играет в игры. У мистера Брауна есть компьютер дома, но он никогда не работает на нём, поскольку он не знает, как это делать.",
+"Пример: Мистер Браун умеет ловить рыбу. Мистер Браун не умеет выращивать цветы.\nMr Brown can grow vegetables. (Мистер Браун умеет выращивать овощи.)\nMr Brown can talk with animals. (Мистер Браун умеет разговаривать с животными.)\nMr Brown can understand birds and animals. (Мистер Браун умеет понимать птиц и животных.)\nMr Brown can tell people stories about the forest's wonders. (Мистер Браун умеет рассказывать людям истории о чудесах леса.)\nMr Brown can't play games. (Мистер Браун не умеет играть в игры.)\nMr Brown can't work on his computer. (Мистер Браун не умеет работать на своём компьютере.)"
+],
+"answer": "Mr Brown can grow vegetables.\nMr Brown can talk with animals.\nMr Brown can understand birds and animals.\nMr Brown can tell people stories about the forest's wonders.\nMr Brown can't play games.\nMr Brown can't work on his computer."
+}
+]
+},
+{
+"number": "14-s11",
+"num": "14",
+"page": 11,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142618,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения, выбрав в скобках правильную форму глагола.",
+"1. Часто идёт снег (It often snows) зимой здесь.\nPresent Simple. Подсказка: often (часто). Речь идёт о регулярном действии.\n2. Никогда не идёт снег (It never snows) в Африке.\nPresent Simple. Подсказка: never (никогда). Речь идёт о явлении, которое не происходит никогда.\n3. «Какая сейчас погода?» — «Идёт дождь (It is raining)».\nPresent Continuous. Человек спрашивает о том, какая погода в данный момент.\n4. Шёл дождь (It rained) весь день вчера.\nPast Simple. Подсказка: yesterday (вчера). Речь идёт о прошлом.\n5. Дождя не было (It didn't rain) в прошлом месяце.\nPast Simple. Подсказка: last month (в прошлом месяце). Речь идёт о прошлом.\nЕсли есть отрицание didn't, то окоание -ed у глагола пропадает.\n6. Сейчас холодно, но снег не идёт (it isn't snowing).\nPresent Continuous. Речь идёт о погоде в настоящий момент."
+],
+"answer": "Snows.\nSnows.\nIs raining.\nRained.\nRain.\nIsn't snowing."
+}
+]
+},
+{
+"number": "15-s11",
+"num": "15",
+"page": 11,
+"chapter": "Round-up Lessons. Lessons 1-8",
+"skyId": 142619,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно перевести предложения с русского языка на английский.",
+"WORDLIST\nrain — дождь, идёт дождь\nsnow — снег, идёт снег\nstay — оставаться",
+"It rained yesterday.\nIt often snows in November.\nIt is raining but it isn't cold outside.\nIs it snowing now?\nStay home. It is raining.\nWe like to watch TV when it rains.\nIt doesn't often rain here.\nDid it snow yesterday?"
+],
+"answer": "It rained yesterday.\nIt often snows in November.\nIt is raining but it isn't cold outside.\nIs it snowing now?\nStay home. It is raining.\nWe like to watch TV when it rains.\nIt doesn't often rain here.\nDid it snow yesterday?"
+}
+]
+},
+{
+"number": "1-s13",
+"num": "1",
+"page": 13,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142620,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, когда у девочки есть уроки физкультуры, искусствоведения, музыки и рукоделия.",
+"Arts — искусствоведение\nDrawing — рисование.\nEnglish — английский язык.\nHandicraft — рукоделие.\nMaths — математика.\nP.E. — физкультура.\nRussian — русский язык.",
+"Понедельник\n Вторник\n Среда\n Четверг\n Пятница\n Суббота\nАнглийский язык.\nРусский язык.\nМатематика.\nМатематика\nФизкультура.\nИскусствоведение.\nРусский язык.\nМатематика\nРисование.\nМатематика.\nАнглийский язык.\nРусский язык.\nМузыка\nИскусствоведение\nРусский язык.\nРусский язык.\nМатематика\nМузыка.\nМатематика.\nРукоделие.\nАнглийский.\nФизкультура\nВыходной",
+"She has got P.E. on Tuesday and Friday. У неё физкультура во вторник и пятницу.\nShe has got Arts on Tuesday and Thursday. У неё искусствоведение во вторник и четверг.\nShe has got Music on Wednesday and Friday. У неё музыка в среду и в пятницу.\nShe has got Handicraft on Friday. У неё рукоделие в пятницу."
+],
+"answer": "She has got P.E. on Tuesday and Friday.\nShe has got Arts on Tuesday and Thursday.\nShe has got Music on Wednesday and Friday.\nShe has got Handicraft on Friday."
+}
+]
+},
+{
+"number": "2-s13",
+"num": "2",
+"page": 13,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142621,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать о расписании мальчика.",
+"WORDLIST\nbaseball — бейсбол\nbasketball — баскетбол\nfootball — футбол\nrunning — бег\nskating — катание на коньках\nskiing — катание на лыжах\nswimming — плавание\ntennis — теннис\nvolleyball — волейбол",
+"Зимой он играет в теннис в 3 часа в понедельник.\nЛетом он играет в футбол в 11 часов в понедельник.",
+"Winter:\nIn winter he plays football at 5 o'clock on Tuesday.\nIn winter he plays volleyball at 3 o'clock on Wednesday.\nIn winter he plays basketball at 11 o'clock on Thursday.\nIn winter he swims at 6 o'clock on Friday.\nIn winter he plays skiing at 9 o'clock on Saturday.\nIn winter he skates at 10 o'clock on Sunday.\nSummer:\nIn summer he plays tennis at 2 o'clock on Tuesday.\nIn summer he plays volleyball at 12 o'clock on Wednesday.\nIn summer he plays baseball at 1 o'clock on Thursday.\nIn summer he runs at 7 o'clock on Friday.\nIn summer he swims at 12 o'clock on Saturday.\nIn summer he plays basketball at 10 o'clock on Sunday.",
+"Зима:\nЗимой он играет в футбол в 5 часов во вторник.\nЗимой он играет в волейбол в 3 часа в среду.\nЗимой он играет в баскетбол в 11 часов в четверг.\nЗимой он плавает в 6 часов в пятницу.\nЗимой он катается на лыжах в 9 часов в субботу.\nЗимой он катается на коньках в 10 часов в воскресенье.\nЛето:\nЛетом он играет в теннис в 2 часа по вторникам.\nЛетом он играет в волейбол в 12 часов в среду.\nЛетом он играет в бейсбол в час дня по четвергам.\nЛетом он бегает в 7 часов в пятницу.\nЛетом он плавает в 12 часов в субботу.\nЛетом он играет в баскетбол в 10 часов в воскресенье."
+],
+"answer": "Winter:\nIn winter he plays football at 5 o'clock on Tuesday.\nIn winter he plays volleyball at 3 o'clock on Wednesday.\nIn winter he plays basketball at 11 o'clock on Thursday.\nIn winter he swims at 6 o'clock on Friday.\nIn winter he plays skiing at 9 o'clock on Saturday.\nIn winter he skates at 10 o'clock on Sunday.\nSummer:\nIn summer he plays tennis at 2 o'clock on Tuesday.\nIn summer he plays volleyball at 12 o'clock on Wednesday.\nIn summer he plays baseball at 1 o'clock on Thursday.\nIn summer he runs at 7 o'clock on Friday.\nIn summer he swims at 12 o'clock on Saturday.\nIn summer he plays basketball at 10 o'clock on Sunday."
+}
+]
+},
+{
+"number": "3-s15",
+"num": "3",
+"page": 15,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142622,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в тексте.",
+"",
+"",
+"В четверг утром после уроков Нора была на улице. Она обычно шла гулять в час дня летом. Внезапно она увидела мальчика, который бежал по улице. Он выглядел смешно, и Нора рассмеялась, но затем она поняла, что это был её младший брат Алан. «Привет», — сказала Нора, глядя на него. «Почему ты так быстро бежишь? Ты же не на уроке физкультуры, не так ли?» «Нет», — прокричал Алан. «Я просто пытаюсь остановить драку двух мальчиков». «Это интересно», — сказала Нора. «Кто эти два мальчика?» «Это Том и я», — ответил её брат.",
+"On.\nAfter.\nIn.\nAt.\nIn.\nIn.\nAt.\nAt.\nAt."
+],
+"answer": "On.\nAfter.\nIn.\nAt.\nIn.\nIn.\nAt.\nAt.\nAt."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить прочитать текст и исправить предложения.",
+"Нора обычно гуляла в 3 часа вечера.\nВ этот день Нора гуляла перед школой.\nНора посмеялась над Аланом, потому что он был грязным.\nАлан бежал, потому что он был на уроке физкультуры.\nНора обычно ходила на прогулку днём зимой.",
+"В четверг утром после уроков Нора была на улице. Она обычно шла гулять в час дня летом. Внезапно она увидела мальчика, который бежал по улице. Он выглядел смешно, и Нора рассмеялась, но затем она поняла, что это был её младший брат Алан. «Привет», — сказала Нора, глядя на него. «Почему ты так быстро бежишь? Ты же не на уроке физкультуры, не так ли?» «Нет», — прокричал Алан. «Я просто пытаюсь остановить драку двух мальчиков». «Это интересно», — сказала Нора. «Кто эти два мальчика?» «Это Том и я», — ответил её брат.",
+"She usually had a walk at 1 o'clock in the afternoon. Она обычно гуляла в час дня.\nThat day she had a walk after classes. В этот день она гуляла после школы.\nShe laughed at the boy because he looked funny. Она смеялась над мальчиком, потому что он выглядел смешно.\nThe boy ran, because he wanted to stop two boys from fighting. Он бежал, потому что хотел остановить драку двух мальчиков.\nShe usually went for a walk at noon in summer. Она обычно ходила гулять в обед летом."
+],
+"answer": "She usually had a walk at 1 o'clock in the afternoon.\nThat day she had a walk after classes.\nShe laughed at the boy because he looked funny.\nThe boy ran, because he wanted to stop two boys from fighting.\nShe usually went for a walk at noon in summer."
+}
+]
+},
+{
+"number": "4-s15",
+"num": "4",
+"page": 15,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142623,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, в какое время идут передачи.",
+"Для указания времени в английском языке необходимо знать следующее:\nперед началом надо ставить it's;\nдо половины часа надо использовать past, а после половины — to;\nвместо слова «пятнадцать» надо использовать quarter (четверть), а вместо «половина» — half;\n слово minutes (минуты) в английском языке обычно опускается.\nНапример:\n It's five past three\n Пять минут четвертого\n It's a quarter past five\n Пятнадцать минут шестого\n It's twenty past six\n Двадцать минут седьмого\n It's half past eight\n Половина девятого\n It is twenty five to ten\n Без двадцати пяти десять\n It is a quarter to twelve\n Без пятнадцати двенадцать\n It is ten to two\n Без десяти два",
+"Время\n Передача\n 6:30\n Новости\n 8:30\n Погода\n 10:30\n Спорт\n 9:30\n Фильм\n 11:30\n Фильм\n 12:30\n Мультфильм",
+"«Новости» идут в половину седьмого.",
+"\"The Weather\" is on at half past eight. Прогноз погоды идёт в половину девятого.\n\"Sports\" is on at half past ten. Спортивная передача идёт в половину одиннадцатого.\nThe film is on at half past nine. Фильм идёт в половину десятого.\nThe film is on at half past eleven. Фильм идёт в половину двенадцатого.\nThe cartoon is on at half past twelve. Мультфильм идёт в половину первого."
+],
+"answer": "\"The Weather\" is on at half past eight.\n\"Sports\" is on at half past ten.\nThe film is on at half past nine.\nThe film is on at half past eleven.\nThe cartoon is on at half past twelve."
+}
+]
+},
+{
+"number": "5-s16",
+"num": "5",
+"page": 16,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142624,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"Tag Questions (Разделительные вопросы)\nРазделительный вопрос представляет собой вопросительное предложение, состоящее из двух частей. Первая часть включает в себя утвердительное или отрицательное предложение, вторая — короткую фразу, которая формируется из вспомогательного или модального глагола и местоимения и переводится на русский язык как «не правда ли?», «не так ли?».\nHe is going to Paris, isn't she? — Он едет в Париж, не правда ли?\n1. Если первая часть разделительного вопроса является утвердительной, то вторая — отрицательная. Во второй части используется вспомогательный или модальный глагол, соответствующий сказуемому из первой части разделительного вопроса, и местоимение, соответствующее подлежащему.\n Positive statement\n Negative tag\n Snow is white,\n isn't it?\nDave looks well, doesn't he? — Дэйвид хорошо выглядит, не так ли?\nFrank is a shy boy, isn't he? — Фрэнк застенчивый парень, не правда ли?\n2. Если первая часть разделительного вопроса является отрицательной, то вторая — утвердительная.\n Negative statement\n Positive tag\n You don't like me,\n do you?\nYou don't like fish, do you? — Ты не любишь рыбу, не так ли?\nYou didn't go to England, did you? — Ты не ездил в Англию, не правда ли?",
+"Мы не можем хранить молоко здесь, не так ли?\nМы пойдём на физкультуру, не так ли?\nОн никогда не опаздывает на уроки, не так ли?\nОни уехали из Лондона 3 дня назад, не так ли?\nМаленькая мышь живёт под полом, не так ли?\nВ классе нет доски, не так ли?",
+"Can we?\nShan't we?\nIsn't he?\nDidn't they?\nDoesn't it?\nIsn't it?"
+],
+"answer": "Can we?\nShan't we?\nIsn't he?\nDidn't they?\nDoesn't it?\nIsn't it?"
+}
+]
+},
+{
+"number": "6-s16",
+"num": "6",
+"page": 16,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142625,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы.",
+"",
+"Почему бы тебе не поработать в саду?\nПочему бы тебе не посчитать книги?\nПочему бы тебе не встретиться с друзьями?\nПочему бы тебе не выпить молоко?\nПочему бы тебе не написать письмо?",
+"I worked in the garden yesterday. Я работал в саду вчера.\nI counted books yesterday. Я считал книги вчера.\nI met my friends yesterday. Я встречался с друзьями вчера.\nI drank milk yesterday. Я пил молоко вчера.\nI wrote a letter yesterday. Я писал письмо вчера."
+],
+"answer": "I worked in the garden yesterday.\nI counted books yesterday.\nI met my friends yesterday.\nI drank milk yesterday.\nI wrote a letter yesterday."
+}
+]
+},
+{
+"number": "7-s16",
+"num": "7",
+"page": 16,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142626,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в поговорках и вспомнить русские поговорки с похожим значением.",
+"WORDLIST\nbeginning — начало\nbetter — лучше\nending — конец\ngood — хороший\nlate — поздно\nmake — делать\nnever — никогда\ntoo — слишком",
+"Late, learn.\nNever, never.\nMakes, ending.",
+"Никогда не поздно учиться.\nЛучше поздно, чем никогда.\nЗачин дело красит."
+],
+"answer": "Late, learn.\nNever, never.\nMakes, ending.\nНикогда не поздно учиться.\nЛучше поздно, чем никогда.\nЗачин дело красит."
+}
+]
+},
+{
+"number": "8-s17",
+"num": "8",
+"page": 17,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142627,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разделить слова на группы.",
+"Book — книга.\nCarpet — ковёр.\nComfortable — комфортный.\nCount — считать.\nDifferent — разный.\nEasy — простой.\nExercise — упражнение.\nFamous — известный.\nFloor — пол.\nImportant — важный.\nJoin — присоединяться.\nLaugh — смеятся.\nLearn — учится.\nLeave — уходить.\nMeet — встречаться.\nMuseum — музей.\nPicture — картинка.\nPoor — бедный.\nRubber — тёрка.\nSong — песня.\nSpend — тратить.\nStudy — учиться.\nSubject — предмет.\nUniform — форма.\nWindow — окно",
+"Существительные\n Глаголы\n Прилагательные\nBook.\nCarpet.\nExercise.\nFloor.\nMuseum.\nPicture.\nRubber.\nSong.\nSubject.\nUniform.\nWindow\nCount.\nJoin.\nLaugh.\nLearn.\nLeave.\nMeet.\nSpend.\nStudy\nDifferent.\nComfortable.\nEasy.\nFamous.\nImportant.\nPoor"
+],
+"answer": "Существительные\n Глаголы\n Прилагательные\nBook.\nCarpet.\nExercise.\nFloor.\nMuseum.\nPicture.\nRubber.\nSong.\nSubject.\nUniform.\nWindow\nCount.\nJoin.\nLaugh.\nLearn.\nLeave.\nMeet.\nSpend.\nStudy\nDifferent.\nComfortable.\nEasy.\nFamous.\nImportant.\nPoor"
+}
+]
+},
+{
+"number": "9-s17",
+"num": "9",
+"page": 17,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142628,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно предложить свою помощь.",
+"Модальный глагол Shall используется для того, чтобы предложить сделать что-либо.\nShall I give you a hand? Тебе подать руку?\nShall I talk to the manager? Мне поговорить с менеджером?",
+"Мне закрыть окно?",
+"Shall I make the bed? Мне заправить кровать?\nShall I wash the floor? Мне помыть пол?\nShall I wash the dishes? Мне помыть посуду?\nShall I put books in the bookcase? Мне положить книги в книжный шкаф?\nShall I close the bookcase? Мне закрыть книжный шкаф?"
+],
+"answer": "Shall I make the bed?\nShall I wash the floor?\nShall I wash the dishes?\nShall I put books in the bookcase?\nShall I close the bookcase?"
+}
+]
+},
+{
+"number": "10-s18",
+"num": "10",
+"page": 18,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142629,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сгруппировать вместе правильные и неправильные глаголы.",
+"",
+"To be — быть.\nTo count — считать.\nTo get — получать.\nTo join — присоединяться.\nTo laugh — смеяться.\nTo leave — уходить.\nTo meet — встречаться.\nTo sing — петь.\nTo study — учится.\nTo work — работать.",
+"Правильные\n Неправильные\nCount.\nJoin.\nLaugh.\nStudy.\nWork\nBe.\nGet.\nLeave.\nMeet.\nSing"
+],
+"answer": "Правильные\n Неправильные\nCount.\nJoin.\nLaugh.\nStudy.\nWork\nBe.\nGet.\nLeave.\nMeet.\nSing"
+}
+]
+},
+{
+"number": "11-s18",
+"num": "11",
+"page": 18,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142630,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"WORDLIST\nbe late for — опаздывать\nby — на\nfamous for — известен\nget up — просыпаться\nlaugh at — смеятся над\nsubject — предмет\ntimetable — расписание\nwith — с",
+"",
+"",
+"По вторникам мы обычно просыпаемся достаточно рано.\nОн никогда не добирается в школу на машине.\nНаши занятия заканчиваются в половине третьего.\nЧто случилось с ним в пятницу?\nЭто школа известна своим школьным музеем.\nВ расписании много предметов.\nОн никогда не опаздывает в школу.\nТы присоединишься ко мне.\nОн никогда не смеётся над детьми.\nМы очень хорошо с ним ладим. Мы сидим за одним столом.",
+"On.\nBy.\nAt.\nTo, on.\nFor.\nIn.\nFor.\n—.\nAt.\nOn, with, at."
+],
+"answer": "On.\nBy.\nAt.\nTo, on.\nFor.\nIn.\nFor.\n—.\nAt.\nOn, with, at."
+}
+]
+},
+{
+"number": "12-s19",
+"num": "12",
+"page": 19,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142631,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать, как часто девочка делает разные вещи.",
+"WORDLIST\ncinema — кинотеатр\nmuseum — музей\nschool — школа\nswimming pool — бассейн\ntheatre — театр\nZoo — зоопарк",
+"Она отправляется к бабушке и дедушке три раза в неделю.",
+"She goes to school five times a week. Она ходит в школу пять раз в неделю.\nShe goes to the cinema two times a week. Она ходит в кино два раза в неделю.\nShe goes to the swimming pool two times a week. Она ходит в бассейн два раза в неделю.\nShe goes to the theatre once a week. Она ходит в театр раз в неделю.\nShe goes to the museum once a week. Она ходит в музей раз в неделю.\nShe goes to the Zoo once a week. Она ходит в зоопарк раз в неделю."
+],
+"answer": "She goes to school five times a week.\nShe goes to the cinema two times a week.\nShe goes to the swimming pool two times a week.\nShe goes to the theatre once a week.\nShe goes to the museum once a week.\nShe goes to the Zoo once a week."
+}
+]
+},
+{
+"number": "13-s19",
+"num": "13",
+"page": 19,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142632,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и ответить на вопросы.",
+"Когда новый мальчик пришёл в школу?\nКак его зовут?\nГде учительница попросила сесть Питера?\nКакой урок был перед обедом?\nНасколько хорошо считал Питер? Он был плох в математике?\nКогда у детей был обед? В какое время?\nЧто вытащил из сумки Том?\nПочему дети смеялись?\nЧто Питер предложил съесть Тому?",
+"В четверг новенький пришёл в класс. На нём не было формы. Только брюки, пиджак и рубашка. Том мог видеть, что мальчику было не совсем комфортно. У него была пластмассовая сумка с книгами, ручками, карандашами, линейками и тёрками. Мальчик стоял у доски. Учительниц говорила с ним, заем она сказала: «Мальчики и девочки, это Питер. Он ваш новый одноклассник. Пожалуйста, сделайте что возможно, чтобы сделать его счастливым. Он ваш ровесник. Покажите ему наше расписание. Я надеюсь, вы хорошо поладите друг с другом. Он будет проводить много времени с вами, а также на улице. А теперь урок окончен». Учительница попросила его сесть рядом с Томом за стол рядом с окном.\nУ учеников после этого была математика, и Том заметил, что Питер неплох в ней. Он хорошо считал. Ему было несложно работать на уроке. Это было легко. Затем учительница сказала: «Сейчас половина первого. Пора обедать». Питер присоединился к Тому и пошёл мыть руки, затем мальчики сели на ковёр и стали открывать свои сумки с обедом. Том открыл свою сумку и засунул в неё руку. Он достал старое коричневое яблоко, немного строго сыра и несколько кусочков рыбы с ужина. «О нет», — прокричал Том. «Это мусор. У меня не тот пакет. Я взял пакет с мусором и оставил сумку с обедом дома. У меня на обед сегодня только мусор». Все дети смеялись и смеялись. Затем Питер сказал: «У меня есть два яйца. Почему бы тебе не взять одно? Мне не нужно два. А не хочешь ли ты немного хлеба?». Том улыбнулся: «Спасибо. Теперь я всегда буду заглядывать в свою сумку перед тем, как нести её в школу».",
+"He came on Thursday.\nHis name was Peter Rivers.\nMiss Fair asked him to sit next to Tom.\nIt was Maths.\nHe counted well. No, he wasn't.\nThe children had lunch after Maths. It was half past twelve.\nHe took out fish, an old apple, and old cheese.\nThey laughed at Tom because he brought a bag with garbage.\nPeter asked him to eat an egg and some bread.",
+"Он пришёл в четверг.\nЕго звали Питер Риверс.\nМисс Фэйр попросила его сесть рядом с Томом.\nЭто была математика.\nОн хорошо считал. Нет, не был.\nДети обедали после математики. Было половина первого.\nОн достал рыбу, старое яблоко и старый сыр.\nОни смеялись над Томом, потому что он принёс мешок с мусором.\nПитер попросил его съесть яйцо и немного хлеба."
+],
+"answer": "He came on Thursday.\nHis name was Peter Rivers.\nMiss Fair asked him to sit next to Tom.\nIt was Maths.\nHe counted well. No, he wasn't.\nThe children had lunch after Maths. It was half past twelve.\nHe took out fish, an old apple, and old cheese.\nThey laughed at Tom because he brought a bag with garbage.\nPeter asked him to eat an egg and some bread."
+}
+]
+},
+{
+"number": "14-s21",
+"num": "14",
+"page": 21,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142633,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и фразы.",
+"Слова:\nAge — возраст.\nBlackboard — доска.\nBookcase — книжный шкаф.\nCarpet — ковёр.\nClass — класс.\nComfortable — комфортный.\nCount — считать.\nDesk — стол.\nDifficult — сложный.\nDoor — дверь.\nEasy — простой.\nExercise book — рабочая тетрадь.\nFamous — известный.\nFloor — пол.\nHalf — половина.\nHandicraft — рукоделие.\nImportant — важный.\nJoin — присоединяться.\nLaugh at — смеяться над.\nLearn — учится.\nLeave for — отправляться.\nLesson — урок.\nMaths — математика.\nMeet — встречаться.\nMuseum — музей.\nMusic — музыка.\nP.E. — физкультура.\nPast — после.\nPen — ручка.\nPencil — карандаш.\nPicture — картинка.\nPoor — бедный.\nRubber — тёрка.\nSing — петь.\nSong — песня.\nSpend — тратить.\nStudy — учиться.\nSubject — предмет.\nTimetable — расписание.\nUniform — форма.\nWall — стена.\nWindow — окно.\nWork — работать.\nYet — ещё.\nФразы: \nAfter classes — после уроков.\nAt the age of — в возрасте.\nAt the desk — за столом.\nBy the way — кстати.\nGood luck — удачи.\nI'm late — я опоздал.\nIn class — в классе.\nIn the timetable — в расписании.\nOnce a week — раз в неделю.\nOutdoors — двери.\nSee you later — увидимся позже.\nTo be famous for — быть известным.\nWhy don't you? — Почему бы тебе не?\nWhy? — Почему?"
+],
+"answer": "Слова:\nAge — возраст.\nBlackboard — доска.\nBookcase — книжный шкаф.\nCarpet — ковёр.\nClass — класс.\nComfortable — комфортный.\nCount — считать.\nDesk — стол.\nDifficult — сложный.\nDoor — дверь.\nEasy — простой.\nExercise book — рабочая тетрадь.\nFamous — известный.\nFloor — пол.\nHalf — половина.\nHandicraft — рукоделие.\nImportant — важный.\nJoin — присоединяться.\nLaugh at — смеяться над.\nLearn — учится.\nLeave for — отправляться.\nLesson — урок.\nMaths — математика.\nMeet — встречаться.\nMuseum — музей.\nMusic — музыка.\nP.E. — физкультура.\nPast — после.\nPen — ручка.\nPencil — карандаш.\nPicture — картинка.\nPoor — бедный.\nRubber — тёрка.\nSing — петь.\nSong — песня.\nSpend — тратить.\nStudy — учиться.\nSubject — предмет.\nTimetable — расписание.\nUniform — форма.\nWall — стена.\nWindow — окно.\nWork — работать.\nYet — ещё.\nФразы: \nAfter classes — после уроков.\nAt the age of — в возрасте.\nAt the desk — за столом.\nBy the way — кстати.\nGood luck — удачи.\nI'm late — я опоздал.\nIn class — в классе.\nIn the timetable — в расписании.\nOnce a week — раз в неделю.\nOutdoors — двери.\nSee you later — увидимся позже.\nTo be famous for — быть известным.\nWhy don't you? — Почему бы тебе не?\nWhy? — Почему?"
+}
+]
+},
+{
+"number": "15-s22",
+"num": "15",
+"page": 22,
+"chapter": "Basic course. School life. Lessons 9-16",
+"skyId": 142634,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и вспомнить их перевод.",
+"Существительные:\nAnswer — ответ.\nAtmosphere — атмосфера.\nComputer — компьютер.\nDiary — дневник.\nGeography — география.\nHistory — история.\nHour — час.\nKilometre — километр.\nMetre — метр.\nMidnight — полночь.\nPost office — почта.\nProblem — проблема.\nTest — тест.\nГлаголы:\nFinish — закончить.\nKeep — продолжать.\nStart — начать.\nПрилагательные:\nCentral — центральный.\nExtra — излишний.\nFormal — официальный.\nInfant — для малышей.\nInformal — неформальный.\nJunior — средняя.\nPacked — упакованный.\nPlastic — пластмассовый.\nPrimary — начальный.\nReady — готовый.\nReal — настоящий.\nRegular — обычный."
+],
+"answer": "Существительные:\nAnswer — ответ.\nAtmosphere — атмосфера.\nComputer — компьютер.\nDiary — дневник.\nGeography — география.\nHistory — история.\nHour — час.\nKilometre — километр.\nMetre — метр.\nMidnight — полночь.\nPost office — почта.\nProblem — проблема.\nTest — тест.\nГлаголы:\nFinish — закончить.\nKeep — продолжать.\nStart — начать.\nПрилагательные:\nCentral — центральный.\nExtra — излишний.\nFormal — официальный.\nInfant — для малышей.\nInformal — неформальный.\nJunior — средняя.\nPacked — упакованный.\nPlastic — пластмассовый.\nPrimary — начальный.\nReady — готовый.\nReal — настоящий.\nRegular — обычный."
+}
+]
+},
+{
+"number": "1-s23",
+"num": "1",
+"page": 23,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142635,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения о том, чем являются эти предметы.",
+"WORDLIST\nplant — растение\ndevice — устройство\nchange — переодеваться\nbuilding — здание",
+"Гостиная — это комната (место), где мы читаем книги, смотрим телевизор...",
+"Пример.\nA kitchen is a place where we cook. (Кухня — это место, где мы готовим.)\nA bathroom is a room where we wash ourselves. (Ванная — это комната, в которой мы моемся.)\nA flower is a plant. (Цветок — это растение.)\nA key is a device for opening doors. (Ключ — это устройство для открывания дверей.)\nA bedroom is place where we sleep. (Спальня — это место, где мы спим.)\nA hall is a place where we change. (Холл — это место, где мы переодеваемся.)\nA house is a building where we live. (Дом — это здание, в котором мы живём.)"
+],
+"answer": "Пример.\nA kitchen is a place where we cook.\nA bathroom is a room where we wash ourselves.\nA flower is a plant.\nA key is a device for opening doors.\nA bedroom is place where we sleep.\nA hall is a place where we change.\nA house is a building where we live."
+}
+]
+},
+{
+"number": "2-s23",
+"num": "2",
+"page": 23,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142636,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски, вставив предлоги на и место.",
+"",
+"Я живу в (in) старом деревенском домике. Перед (In front of) моим домиком растёт много красивых цветов. За (behind) ним есть сад. Там (over) рядом с домом есть собачья конура. И много (of) деревьев за (in the back of) садом."
+],
+"answer": "In.\nIn.\nOf.\nBehind.\nOver.\nOf.\nIn.\nOf."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст ещё раз и выбрать подходящую под описание картинку.",
+"Я живу в старом деревенском домике. Перед моим домиком растёт много красивых цветов. За ним есть сад. Там рядом с домом есть собачья конура. И много деревьев за садом.",
+"Рисунок 1 подходит под описание."
+],
+"answer": "Рисунок 1 подходит под описание."
+}
+]
+},
+{
+"number": "3-s25",
+"num": "3",
+"page": 25,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142637,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно нарисовать план своей квартиры и подписать названия комнат.",
+"WORDLIST\nhall — коридор\nbathroom — ванная\nkitchen — кухня\nliving room — гостиная\nbedroom — спальня"
+],
+"answer": "WORDLIST\nhall — коридор\nbathroom — ванная\nkitchen — кухня\nliving room — гостиная\nbedroom — спальня"
+}
+]
+},
+{
+"number": "4-s25",
+"num": "4",
+"page": 25,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142638,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать слова, которые могли бы описать комнату.",
+"WORDLIST\nsmall — маленький\nlarge — огромный\nwarm — тёплый\nquite — тихий\ncomfortable — удобный\nclean — чистый",
+"Комната, где всё стоит на своих местах — чистая.",
+"Комната с прекрасной мебелью, коврами на полу и на стене и камином в углу — удобная (comfortable).\nПомещение, где температура всегда около +20° — тёплое (warm).\nДом, стоящий на улице, где редко ездят машины — тихий (quite).\nКомната, где можно поставить только кровать и стул — маленькая (small).\nКомната, где можно поставить много мебели — огромная (large)."
+],
+"answer": "Comfortable.\nWarm.\nQuite.\nSmall.\nLarge."
+}
+]
+},
+{
+"number": "5-s25",
+"num": "5",
+"page": 25,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142639,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и ответить, правдивые они (True) или ложные (False).",
+"WORDLIST\nground floor — первый этаж\nliving room — гостиная\nfire — камин\nflats — квартиры",
+"Спальни обычно находятся на первом этаже в традиционных английских домах.\nВ традиционных английских домах обычно 3 этажа.\nСамая маленькая комната в доме — гостиная.\nВ традиционных английских домах нет каминов.\nГостиная обычно находится внизу.\nНекоторые англичане живут в квартирах.",
+"Неверно. Обычно спальни располагаются на втором этаже.\nНеверно. Обычно в домах два этажа.\nНеверно. Гостиная не является самой маленькой комнатой в доме.\nНеверно. В традиционных домах есть камины.\nВерно.\nВерно."
+],
+"answer": "False.\nFalse.\nFalse.\nFalse.\nTrue.\nTrue."
+}
+]
+},
+{
+"number": "6-s26",
+"num": "6",
+"page": 26,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142640,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить вопросы о твоей квартире.",
+"Сколько комнат есть в твоей квартире?\nНа твоей кухне есть раковина?",
+"Пример.\nПример.\nIs there a table in your living room? (В твоей гостиной есть стол?)\nIs there an armchair in your living room? (В твоей гостиной есть кресло?)\nIs there a sofa in your living room? (В твоей гостиной есть диван?)\nIs there a TV in your living room? (В твоей гостиной есть телевизор?)\nIs there a carpet in your living room? (В твоей гостиной есть ковёр?)\nAre there curtains in your living room? (В твоей гостиной есть шторы?)\nIs there a piano in your living room? (В твоей гостиной есть пианино?)\nIs there a mirror in your bedroom? (В твоей спальне есть зеркало?)\nIs there a standard lamp in your bedroom? (В твоей спальне есть торшер?)\nIs there a wardrobe in your bedroom? (В твоей спальне есть шкаф?)\nIs there a bed in your bedroom? (В твоей спальне есть кровать?)\nIs there a carpet in your bedroom? (В твоей спальне есть ковёр?)\nAre there curtains in your bedroom? (В твоей спальне есть шторы?)\nIs there a chair in your bedroom? (В твоей спальне есть стул?)\nIs there a desk in your study? (В твоём кабинете есть письменный стол?)\nIs there a chair in your study? (В твоём кабинете есть стул?)\nIs there a computer in your study? (В твоём кабинете есть компьютер?)\nIs there a table in your study? (В твоём кабинете есть стол?)\nIs there a bookcase in your study? (В твоём кабинете есть книжный шкаф?)\nIs there a lamp in your study? (В твоём кабинете есть лампа?)\nIs there a cooker in your kitchen? (На твоей кухне есть плита?)\nIs there a fridge in your kitchen? (На твоей кухне есть холодильник?)\nIs there a cupboard in your kitchen? (На твоей кухне есть шкаф?)\nIs there a chair in your kitchen? (На твоей кухне есть стул?)\nIs there a table in your kitchen? (На твоей кухне есть стол?)\nIs there a bath in your bathroom? (В твоей ванной есть ванна?)\nIs there a shower in your bathroom? (В твоей ванной комнате есть душ?)\nIs there a mirror in your bathroom? (В твоей ванной есть зеркало?)"
+],
+"answer": "Пример.\nПример.\nIs there a table in your living room?\nIs there an armchair in your living room?\nIs there a sofa in your living room?\nIs there a TV in your living room?\nIs there a carpet in your living room?\nAre there curtains in your living room?\nIs there a piano in your living room?\nIs there a mirror in your bedroom?\nIs there a standard lamp in your bedroom?\nIs there a wardrobe in your bedroom?\nIs there a bed in your bedroom?\nIs there a carpet in your bedroom?\nAre there curtains in your bedroom?\nIs there a chair in your bedroom?\nIs there a desk in your study?\nIs there a chair in your study?\nIs there a computer in your study?\nIs there a table in your study?\nIs there a bookcase in your study?\nIs there a lamp in your study?\nIs there a cooker in your kitchen?\nIs there a fridge in your kitchen?\nIs there a cupboard in your kitchen?\nIs there a chair in your kitchen?\nIs there a table in your kitchen?\nIs there a bath in your bathroom?\nIs there a shower in your bathroom?\nIs there a mirror in your bathroom?"
+}
+]
+},
+{
+"number": "7-s26",
+"num": "7",
+"page": 26,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142641,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и ответить, где обедали мальчики.",
+"WORDLIST\nopposite — напротив\nupstairs — вверх по лестнице\nfurniture — мебель\nwardrobe — гардероб\ncooker — плита\nfridge — холодильник\nindeed — действительно",
+"Новая квартира Эндрю\nВ прошлый вторник после занятий я пошёл посмотреть новую квартиру Эндрю. Она была недалеко от нашей школы. Напротив был красивый сад с множеством деревьев и цветов. Мы вошли и поднялись на второй этаж. Эндрю открыл входную дверь ключом, так как она была заперта. Войдя в зал, мы сняли шапки и куртки. Зал был не большой, но ковёр на полу делал его очень уютным. Я увидел большой книжный шкаф в углу, зеркало и три картины на стенах. На самом деле зал был похож на маленькую комнату.\nПотом мы пошли в комнату Эндрю, которая находилась за гостиной и рядом со спальней его родителей. В комнате Эндрю было немного мебели. Возле дивана стоял шкаф, а рядом с ним под окном его письменный стол с множеством тетрадей. В середине комнаты ничего не было, так что мы могли играть там с мячом. Мне очень понравилось кресло Эндрю. Он был рядом с дверью и был очень большим и красивым.\nМамы Эндрю не было дома. Мы пошли на кухню обедать. Мы разогрели суп на плите и взяли из холодильника немного холодного мяса и овощей. Эндрю достал из шкафа печенье, и мы съели его с молоком. Всё было очень вкусно. Мы умылись после еды. В половине пятого я ушёл. Я думаю, что новая квартира Эндрю действительно очень хороша.",
+"The boys had lunch in the kitchen. (Мальчики обедали на кухне.) — «Мы пошли на кухню обедать»."
+],
+"answer": "The boys had lunch in the kitchen."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать утверждения и отметить, какие утверждения являются правдивыми (True), какие — ложными (False), а какие неизвестные (Don't know).",
+"WORDLIST\nopposite — напротив\nupstairs — вверх по лестнице\nfurniture — мебель\nwardrobe — гардероб\ncooker — плита\nfridge — холодильник\nindeed — действительно",
+"Новая квартира Эндрю\nВ прошлый вторник после занятий я пошёл посмотреть новую квартиру Эндрю. Она была недалеко от нашей школы. Напротив был красивый сад с множеством деревьев и цветов. Мы вошли и поднялись на второй этаж. Эндрю открыл входную дверь ключом, так как она была заперта. Войдя в зал, мы сняли шапки и куртки. Зал был не большой, но ковёр на полу делал его очень уютным. Я увидел большой книжный шкаф в углу, зеркало и три картины на стенах. На самом деле зал был похож на маленькую комнату.\nПотом мы пошли в комнату Эндрю, которая находилась за гостиной и рядом со спальней его родителей. В комнате Эндрю было немного мебели. Возле дивана стоял шкаф, а рядом с ним под окном его письменный стол с множеством тетрадей. В середине комнаты ничего не было, так что мы могли играть там с мячом. Мне очень понравилось кресло Эндрю. Он был рядом с дверью и был очень большим и красивым.\nМамы Эндрю не было дома. Мы пошли на кухню обедать. Мы разогрели суп на плите и взяли из холодильника немного холодного мяса и овощей. Эндрю достал из шкафа печенье, и мы съели его с молоком. Всё было очень вкусно. Мы умылись после еды. В половине пятого я ушёл. Я думаю, что новая квартира Эндрю действительно очень хороша.",
+"В прошлый вторник Эндрю пошёл посмотреть квартиру Майка. — Неверно. («В прошлый вторник после занятий я пошёл посмотреть новую квартиру Эндрю.»)\nМальчики играли в футбол в зале. — Неверно. («В середине комнаты ничего не было, так что мы могли играть там с мячом.»)\nВ спальне родителей Эндрю был шкаф. — Не знаю.\nМальчики умылись после еды. — Верно.\nУ Эндрю очень маленькая кухня. — Не знаю.\nВ комнате Эндрю было немного мебели. — Верно."
+],
+"answer": "False.\nFalse.\nDon't know.\nTrue.\nDon't know.\nTrue."
+}
+]
+},
+{
+"number": "8-s28",
+"num": "8",
+"page": 28,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142642,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и фразы и выучить их.",
+"WORDLIST\ntoilet — туалет\nstudy — кабинет\nfurniture — мебель\nwardrobe — гардероб\nstandard lamp — торшер\nsink — раковина\nfireplace — камин\ndescribe — описывать\nunderstand — понимать\nexpensive — дорого",
+"Слова:\nСуществительные — дом, квартира, кухня, ванная, туалет, гостиная, спальня, столовая, кабинет, коридор, ключ, машина, мебель, диван, кресло, зеркало, штора, гардероб, шкаф, лампа, торшер, плита, раковина, холодильник , камин (камин), середина/центр, садовый, цветочный, угловой, этаж (цокольный этаж).\nГлаголы — кричать, запирать, описывать, случиться (с кем-то), поверить, понимать (понял), ладить (с кем-либо), закончиться.\nПрилагательные — задний, милый, маленький, тихий, дорогой, чудесный.\nНаречия — скорее, наверху, внизу, вдруг, назад.\nПредлоги — впереди, позади, рядом, напротив, вдали.\nФразы:\nУрок 17: Приходи ко мне как-нибудь! Пожалуйста! Быть далеко от чего-то.\nУрок 18: боюсь...; быть сзади; Боюсь, он опаздывает. О, Боже! Посмотри туда! Ехать на машине.\nУрок 20: накрыть на стол; Это звучит неплохо! в середине; на углу; я возьму то же самое; спешить; чтобы идти к...\nУрок 21: рядом; Как тебе это нравится? Мне это очень нравится. Когда лучше всего...? Чтобы быть уверенным.\nУрок 22: случиться с..."
+],
+"answer": "Слова:\nСуществительные — дом, квартира, кухня, ванная, туалет, гостиная, спальня, столовая, кабинет, коридор, ключ, машина, мебель, диван, кресло, зеркало, штора, гардероб, шкаф, лампа, торшер, плита, раковина, холодильник , камин (камин), середина/центр, садовый, цветочный, угловой, этаж (цокольный этаж).\nГлаголы — кричать, запирать, описывать, случиться (с кем-то), поверить, понимать (понял), ладить (с кем-либо), закончиться.\nПрилагательные — задний, милый, маленький, тихий, дорогой, чудесный.\nНаречия — скорее, наверху, внизу, вдруг, назад.\nПредлоги — впереди, позади, рядом, напротив, вдали.\nФразы:\nУрок 17: Приходи ко мне как-нибудь! Пожалуйста! Быть далеко от чего-то.\nУрок 18: боюсь...; быть сзади; Боюсь, он опаздывает. О, Боже! Посмотри туда! Ехать на машине.\nУрок 20: накрыть на стол; Это звучит неплохо! в середине; на углу; я возьму то же самое; спешить; чтобы идти к...\nУрок 21: рядом; Как тебе это нравится? Мне это очень нравится. Когда лучше всего...? Чтобы быть уверенным.\nУрок 22: случиться с..."
+}
+]
+},
+{
+"number": "9-s28",
+"num": "9",
+"page": 28,
+"chapter": "Basic course. School life. Lessons 17-23",
+"skyId": 142643,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и понять значение слов.",
+"WORDLIST\nautomobile — автомобиль\nstairs — лестница\nburglar — грабитель\nchimney — печная труба\nclose — закрыть\nstrange — странный\nexpensive — дорогой",
+"Nouns:\nautomobile,\nhotel,\npolice,\nofficer,\naddress,\nstairs,\nperson,\nburglar,\nchimney.\nVerbs:\nclose.\nAdjectives:\nstrange,\ntraditional,\nexpensive.",
+"Существительные:\nавтомобиль,\nотель,\nполиция,\nофицер,\nадрес,\nлестница,\nчеловек,\nграбитель,\nпечная труба.\nГлаголы:\nзакрывать.\nПрилагательные:\nстранный,\nтрадиционный,\nдорого."
+],
+"answer": "Существительные:\nавтомобиль,\nотель,\nполиция,\nофицер,\nадрес,\nлестница,\nчеловек,\nграбитель,\nпечная труба.\nГлаголы:\nзакрывать.\nПрилагательные:\nстранный,\nтрадиционный,\nдорого."
+}
+]
+},
+{
+"number": "1-s29",
+"num": "1",
+"page": 29,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142644,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем подходящий неопределённый артикль (a/an).",
+"",
+"(A) Главная дорога.\n(An) Старая церковь.\n(An) Американский город.\n(A) Площадь.\n(A) Театр.\n(A) Кинотеатр.\n(A) Камин.\n(A) Церковь.\n(An) Кресло.\n(An) Англичанин.\n(A) Начальная школа.\n(An) Африканский город.\n(A) Современный город.\n(An) Английская школа."
+],
+"answer": "(A) Главная дорога.\n(An) Старая церковь.\n(An) Американский город.\n(A) Площадь.\n(A) Театр.\n(A) Кинотеатр.\n(A) Камин.\n(A) Церковь.\n(An) Кресло.\n(An) Англичанин.\n(A) Начальная школа.\n(An) Африканский город.\n(A) Современный город.\n(An) Английская школа."
+}
+]
+},
+{
+"number": "2-s29",
+"num": "2",
+"page": 29,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142645,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем три формы глагола. Распределим их по трём группам (/t/, /d/, /ɪd/), в зависимости от того, как читается окончание глагола во второй и третьей формах.",
+"WORDLIST\nlaugh — смеяться\nstudy — учить\njoin — присоединиться\ncount — считать\nwork — работать\nlock — запирать\nshout — кричать\ndescribe — описывать\nhappen — случаться\nbelieve — верить\nstart — начинать",
+"",
+"",
+"/t/:\nto laugh — laughed — laughed;\nwork — worked — worked;\nlock — locked — locked.\n/d/:\nstudy — studied — studied;\njoin — joined — joined;\ndescribe — described — described;\nhappen — happened — happened;\nbelieve — believed — believed.\n/ɪd/:\ncount — counted — counted;\nshout — shouted — shouted;\nstart — started — started."
+],
+"answer": "/t/:\nto laugh — laughed — laughed;\nwork — worked — worked;\nlock — locked — locked.\n/d/:\nstudy — studied — studied;\njoin — joined — joined;\ndescribe — described — described;\nhappen — happened — happened;\nbelieve — believed — believed.\n/ɪd/:\ncount — counted — counted;\nshout — shouted — shouted;\nstart — started — started."
+}
+]
+},
+{
+"number": "3-s30",
+"num": "3",
+"page": 30,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142646,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки и запишем, где ты уже был, а где ты ещё не бывал.",
+"",
+"WORDLIST\nchurch — церковь\nBolshoi Theatre — Большой театр\nthe USA — США\nzoo — зоопарк\nMoscow — Москва\ncinema — кинотеатр\nLondon — Лондон\nmuseum — музей\nSt Petersburg — Санкт-Петербург\npark — парк\nAfrica — Африка",
+"Я уже был в зоопарке.\nЯ никогда не был в Африке.\nЯ ещё не был в Большом театре.",
+"I have already been to the church. Я уже бывал в церкви.\nI have never been to the USA. Я никогда не был в США.\nI haven't been to London yet. Я ещё не был в Лондоне.\nI have already been to the cinema. Я уже бывал в кино.\nI have never been to St Petersburg. Я никогда не бывал в Санкт-Петербург.\nI haven't been to the museum yet. Я ещё не бывал в музее.\nI have already been to the park. Я уже был в парке."
+],
+"answer": "I have already been to the church.\nI have never been to the USA.\nI haven't been to London yet.\nI have already been to the cinema.\nI have never been to St Petersburg.\nI haven't been to the museum yet.\nI have already been to the park."
+}
+]
+},
+{
+"number": "4-s31",
+"num": "4",
+"page": 31,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142647,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем недостающие формы глаголов.",
+"",
+"Be (быть) — was/were — been.\nSee (видеть) — saw — seen.\nRead (читать) — read — read.\nBuy (покупать) — bought — bought.\nBring (приносить) — brought — brought.\nMeet (встречать) — met — met.\nBuild (строить) — built — built.\nWake (просыпаться) — woke — woken.\nBurn (сжигать) — burnt — burnt.\nBecome (становиться) — became — become."
+],
+"answer": "Be — was/were — been.\nSee — saw — seen.\nRead — read — read.\nBuy — bought — bought.\nBring — brought — brought.\nMeet — met — met.\nBuild — built — built.\nWake — woke — woken.\nBurn — burnt — burnt.\nBecome — became — become."
+}
+]
+},
+{
+"number": "5-s31",
+"num": "5",
+"page": 31,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142648,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем недостающие предлоги.",
+"It's a monument to…\nЭто памятник кому-либо.",
+"Это памятник (to) Ю. Долгорукому.\nЭто памятник (to) Л. Толстому.\nЭто памятник (to) Н. Гоголю.\nЭто памятник (to) адмиралу Нельсону.\nЭто памятник (to) Петру Великому.\nЭто памятник (to) А. Пушкину.\nЭто памятник (to) Ю. Гагарину."
+],
+"answer": "Это памятник (to) Ю. Долгорукому.\nЭто памятник (to) Л. Толстому.\nЭто памятник (to) Н. Гоголю.\nЭто памятник (to) адмиралу Нельсону.\nЭто памятник (to) Петру Великому.\nЭто памятник (to) А. Пушкину.\nЭто памятник (to) Ю. Гагарину."
+}
+]
+},
+{
+"number": "6-s32",
+"num": "6",
+"page": 32,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142649,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Дополним вопросы.",
+"",
+"Ты ходишь в кино в воскресенье или в субботу?",
+"Ты делаешь свои уроки в рабочем кабинете или в гостиной (in the living room)?\nШкаф для посуды стоит в прихожей или на кухне (in the kitchen)?\nЭто случилось с твоим двоюродным братом или с твоей тётей (to your aunt)?\nУ тебя новый холодильник или новая плита (a new cooker)?\nОн верит твоим словам или не верит (doesn't he believe them)?\nОн был в Вестминстерском аббатстве или в Лондонском Тауэре (to London Tower)?\nТы был в поездке в Англию или в поездке в Шотландию (to the trip to Scotland)?\nОна повернулась направо или налево (to the left)?"
+],
+"answer": "Ты делаешь свои уроки в рабочем кабинете или в гостиной (in the living room)?\nШкаф для посуды стоит в прихожей или на кухне (in the kitchen)?\nЭто случилось с твоим двоюродным братом или с твоей тётей (to your aunt)?\nУ тебя новый холодильник или новая плита (a new cooker)?\nОн верит твоим словам или не верит (doesn't he believe them)?\nОн был в Вестминстерском аббатстве или в Лондонском Тауэре (to London Tower)?\nТы был в поездке в Англию или в поездке в Шотландию (to the trip to Scotland)?\nОна повернулась направо или налево (to the left)?"
+}
+]
+},
+{
+"number": "7-s32",
+"num": "7",
+"page": 32,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142650,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напиши, сколько тебе нужно времени, чтобы добраться до места.",
+"WORDLIST\nchurch — церковь\ntheatre — театр\nbridge — мост\nsquare — площадь\nmonument — памятник",
+"Мне нужно 20 минут, чтобы добраться до церкви.\nВ этом случае мы используем конструкцию it takes me (время) to get to (место).",
+"2. It takes me one hour to get to the theatre. Мне требуется час, чтобы добраться до театра.\n3. It takes me half an hour to get to the cinema. Мне нужно полчаса, чтобы добраться до кинотеатра.\n4. It takes me 10 minutes to get to the museum. Мне нужно 10 минут, чтобы добраться до музея.\n5. It takes me 15 minutes to get to school. Мне нужно 15 минут, чтобы добраться до школы.\n6. It takes me 45 minutes to get to the bridge. Мне нужно 45 минут, чтобы добраться до моста.\n7. It takes me 5 minutes to get to my friend's house. Мне нужно 5 минут, чтобы добраться до дома моего друга.\n8. It takes me half an hour to get to the main square. Мне нужно полчаса, чтобы добраться до главной площади.\n9. It takes me 10 minutes to get to the monument. Мне нужно 10 минут, чтобы добраться до памятника.\n10. It takes me two hours to get to my Granny's house. Мне нужно два часа, чтобы добраться до дома моей бабушки."
+],
+"answer": "2. It takes me one hour to get to the theatre.\n3. It takes me half an hour to get to the cinema.\n4. It takes me 10 minutes to get to the museum.\n5. It takes me 15 minutes to get to school.\n6. It takes me 45 minutes to get to the bridge.\n7. It takes me 5 minutes to get to my friend's house.\n8. It takes me half an hour to get to the main square.\n9. It takes me 10 minutes to get to the monument.\n10. It takes me two hours to get to my Granny's house."
+}
+]
+},
+{
+"number": "8-s32",
+"num": "8",
+"page": 32,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142651,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем подходящие предлоги там, где это необходимо.",
+"WORDLIST\nWords (слова)\nbridge — мост\npalace — дворец\ntower — башня\nwardrobe — гардероб, шкаф для одежды\nsquare — площадь\nPhrases (фразы)\nin front — перед\nin the back — в задней части\nby car — на машине\nin the middle of — в середине\nin a hurry — в спешке\nnext to — рядом с\nbe sure of — быть уверенным в\nin the corner — в углу\nhappen to — случаться с",
+"Мост находится перед (in front of) дворцом, а башня — за ним.\nСпальня моих родителей находится в задней части (in) дома.\nМы часто ездим в Лондон на (by) машине.\nБольшой камин находится в (in) углу, а ковёр лежит в (in) середине (of) комнаты.\n«Я не могу с тобой (to) разговаривать. Я спешу (in)».\nШкаф для посуды стоит рядом с (to) гардеробом.\nМы уверены в (of) нём.\nЧто случилось с (to) мистером Грином?\nЯ никогда не бывал в (to) Нью-Йорке.\nПамятник (to) королю находится на (in) главной площади (of) столицы."
+],
+"answer": "Мост находится перед (in front of) дворцом, а башня — за ним.\nСпальня моих родителей находится в задней части (in) дома.\nМы часто ездим в Лондон на (by) машине.\nБольшой камин находится в (in) углу, а ковёр лежит в (in) середине (of) комнаты.\n«Я не могу с тобой (to) разговаривать. Я спешу (in)».\nШкаф для посуды стоит рядом с (to) гардеробом.\nМы уверены в (of) нём.\nЧто случилось с (to) мистером Грином?\nЯ никогда не бывал в (to) Нью-Йорке.\nПамятник (to) королю находится на (in) главной площади (of) столицы."
+}
+]
+},
+{
+"number": "9-s33",
+"num": "9",
+"page": 33,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142652,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем, что, по твоему мнению, собираются делать эти люди.",
+"",
+"На Нелли её школьная форма, а у неё в руке школьная сумка.\nНик у входной двери. Она закрыта, а у него в руке ключи.\nСейчас урок музыки, учитель играет на пианино. Его ученики стоят вокруг него.\nМальчик за письменным столом. У него разноцветные карандаши и сборник упражнений.\nМистер Грин и его жена в мебельном магазине. Они смотрят на шкаф для одежды и очень им заинтересованы. У них также есть много денег.",
+"Nelly is going to go to school. Нелли собирается пойти в школу.\nNick is going to open the door and enter the house. Ник собирается открыть дверь и войти в дом.\nThe pupils are going to sing. Ученики собираются петь.\nThe boy is going to draw or colour something. Мальчик собирается что-то нарисовать или раскрасить.\nThey are going to buy the wardrobe. Они собираются купить шкаф для одежды."
+],
+"answer": "Nelly is going to go to school.\nNick is going to open the door and enter the house.\nThe pupils are going to sing.\nThe boy is going to draw or colour something.\nThey are going to buy the wardrobe."
+}
+]
+},
+{
+"number": "10-s34",
+"num": "10",
+"page": 34,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142653,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Зададим вопросы другу, который собирается купить машину. Будем использовать конструкцию to be going to.",
+"",
+"Are you going to buy a car? Ты собираешься купить машину?\nWhen are you going to buy it? Когда ты собираешься её купить?\nWhat colour is your car going to be? Какого цвета будет твоя машина?\nAre you going to buy an expensive car? Ты собираешься купить дорогую машину?\nAre you going to buy a big or small car? Ты собираешься купить большую или маленькую машину?"
+],
+"answer": "Are you going to buy a car?\nWhen are you going to buy it?\nWhat colour is your car going to be?\nAre you going to buy an expensive car?\nAre you going to buy a big or small car?"
+}
+]
+},
+{
+"number": "11-s34",
+"num": "11",
+"page": 34,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142654,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Дополним предложения словами yet, already, ever, never, just.",
+"Yet — ещё, уже.\nAlready — уже.\nEver — когда-либо.\nNever — никогда.\nJust — только что.",
+"We have already been to the Tower of London. Мы уже побывали в Лондонском Тауэре.\nShe hasn't waken up yet. Она ещё не проснулась.\nPeter Brown has never seen Westminster Abbey. Питер Браун никогда не видел Вестминстерское аббатство.\nHas he become an architect yet? Он уже стал архитектором?\nHave they ever been to Buckingham Palace? Они когда-либо были в Букингемском дворце?\nThey haven't built a monument in the square yet. Они ещё не построили памятник на площади."
+],
+"answer": "We have already been to the Tower of London. \nShe hasn't waken up yet. \nPeter Brown has never seen Westminster Abbey. \nHas he become an architect yet? \nHave they ever been to Buckingham Palace? \nThey haven't built a monument in the square yet."
+}
+]
+},
+{
+"number": "12-s34",
+"num": "12",
+"page": 34,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142655,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и переведём слова и фразы из задания. Постараемся их запомнить.",
+"WORDLIST 1\nNouns (существительные)\nsquare — площадь\ncinema — кинотеатр\ntheatre — театр\nchurch — церковь\nroad — дорога\ntown — город (маленький)\ncity — город (большой)\nbridge — мост\ncentury — век\ncapital — столица\nplace — место\ntower — башня\nbell — звонок\nmonument — памятник\nsound — звук\narchitect — архитектор\ntrip — поездка\nqueen — королева\nVerbs (глаголы)\nbuild — строить\nwake up — просыпаться\nburn — сжигать\nbecome — становиться\nlead — приводить\nAdjectives (прилагательные)\nmain — главный\nrich — богатый\ndark — тёмный\ndirty — грязный\nsquare — квадратный\ntall — высокий\nwide — широкий\nkind — добрый\nafraid — боящийся\nAdverbs (наречия)\never — когда-либо\njust — только что\nalready — уже",
+"Build — built — built.\nWake up — woke up — woken up.\nBurn — burnt — burnt.\nBecome — became — become.\nLead — led — led.",
+"WORDLIST 2\nPhrases (фразы)\nbe lost — быть потерянным\nturn to the left — повернуть налево\nturn to the right — повернуть направо\nbe afraid of — бояться\na monument to smb — памятник кому-либо\nSentences (предложения)\nI haven't seen you for ages. — Я давно тебя не видел.\nJust fine. — Отлично.\nI have been to London. — Я побывал в Лондоне.\nShe has never been to America. — Она никогда не была в Америке.\nIt takes smb… to do smth. — Нужно… кому-то, чтобы сделать что-то."
+],
+"answer": "Прочитаем и переведём слова и фразы и постараемся их запомнить."
+}
+]
+},
+{
+"number": "13-s35",
+"num": "13",
+"page": 35,
+"chapter": "Basic course. Town. London. Lessons 24-30",
+"skyId": 142656,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем слова и переведём их.",
+"WORDLIST 1\nsupermarket — супермаркет\nopera — опера\nhospital — больница\npost office — почта\noffice — офис\nfact — факт\nmillion — миллион\nthousand — тысяча\nbusiness — бизнес\ntourist — турист\ntourism — туризм\ntrolleybus — тролейбус\nFrance — Франция\nNormandy — Нормандия\nParis — Париж\nSpain — Испания\nMexico — Мексика\nRomans — римляне\nthe Thames — Темза\ncentre — центр\ntunnel — тоннель\nconqueror — завоеватель\nbaker — пекарь\nParliament — парламент\nstatue — статуя\npalace — дворец\ncastle — замок\ncolumn — колонна\nadmiral — адмирал\ngallery — галерея\nraven — ворон\nprime minister — премьер-министр\nking — король\nnickname — прозвище\ntraffic lights — светофор",
+"WORDLIST 2\nfound — найденный\nwalk barefoot — ходить босиком\nbe in trouble — быть в беде\nbe buried — быть захороненным",
+"WORDLIST 3\nliterary — литературный\npolitical — политический\nbronze — бронзовый",
+"Supermarket,\nopera,\nhospital,\npost office,\noffice,\nfact,\nmillion,\nthousand,\nbusiness,\ntourist,\ntourism,\ntrolleybus,\nFrance,\nNormandy,\nParis,\nSpain,\nMexico,\nRomans,\nthe Thames,\ncentre,\ntunnel,\nconqueror,\nbaker,\nParliament,\nstatue,\npalace,\ncastle,\ncolumn,\nadmiral,\ngallery,\nraven,\nprime minister,\nking,\nnickname,\ntraffic lights,\nfound,\nwalk barefoot,\nbe in trouble,\nbe buried,\nliterary,\npolitical,\nbronze."
+],
+"answer": "WORDLIST 1\nsupermarket — супермаркет\nopera — опера\nhospital — больница\npost office — почта\noffice — офис\nfact — факт\nmillion — миллион\nthousand — тысяча\nbusiness — бизнес\ntourist — турист\ntourism — туризм\ntrolleybus — тролейбус\nFrance — Франция\nNormandy — Нормандия\nParis — Париж\nSpain — Испания\nMexico — Мексика\nRomans — римляне\nthe Thames — Темза\ncentre — центр\ntunnel — тоннель\nconqueror — завоеватель\nbaker — пекарь\nParliament — парламент\nstatue — статуя\npalace — дворец\ncastle — замок\ncolumn — колонна\nadmiral — адмирал\ngallery — галерея\nraven — ворон\nprime minister — премьер-министр\nking — король\nnickname — прозвище\ntraffic lights — светофор\nWORDLIST 2\nfound — найденный\nwalk barefoot — ходить босиком\nbe in trouble — быть в беде\nbe buried — быть захороненным\nWORDLIST 3\nliterary — литературный\npolitical — политический\nbronze — бронзовый"
+}
+]
+},
+{
+"number": "1-s36",
+"num": "1",
+"page": 36,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 142657,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Образуем три формы глаголов и распределим их по группам: правильные и неправильные глаголы.",
+"",
+"Regular Verbs\n I\n II\n III\n Laugh (смеяться)\n Laughed\n Laughed\n Study (учиться)\n Studied\n Studied\n Happen (случаться)\n Happened\n Happened\n Describe (описывать)\n Described\n Described\n Lock (запирать)\n Locked\n Locked\n Count (считать)\n Counted\n Counted\n Work (работать)\n Worked\n Worked\n Join (присоединяться)\n Joined\n Joined\nIrregular Verbs\n I\n II\n III\n Be (быть)\n Was/Were\n Been\n Build (строить)\n Built\n Built\n Become (становиться)\n Became\n Become\n Burn (гореть)\n Burnt\n Burnt\n Read (читать)\n Read\n Read\n Lead (вести)\n Led\n Led\n Come (приходить)\n Came\n Come\n Keep (держать)\n Kept\n Kept\n Learn (учить)\n Learnt\n Learnt\n Take (брать)\n Took\n Taken\n Say (говорить)\n Said\n Said\n Wake (просыпаться)\n Woke\n Woken\n Go (идти)\n Went\n Gone\n Get (получать)\n Got\n Got\n Know (знать)\n Knew\n Known\n Hear (слышать)\n Heard\n Heard\n Do (делать)\n Did\n Done"
+],
+"answer": "Regular Verbs\n I\n II\n III\n Laugh (смеяться)\n Laughed\n Laughed\n Study (учиться)\n Studied\n Studied\n Happen (случаться)\n Happened\n Happened\n Describe (описывать)\n Described\n Described\n Lock (запирать)\n Locked\n Locked\n Count (считать)\n Counted\n Counted\n Work (работать)\n Worked\n Worked\n Join (присоединяться)\n Joined\n Joined\nIrregular Verbs\n I\n II\n III\n Be (быть)\n Was/Were\n Been\n Build (строить)\n Built\n Built\n Become (становиться)\n Became\n Become\n Burn (гореть)\n Burnt\n Burnt\n Read (читать)\n Read\n Read\n Lead (вести)\n Led\n Led\n Come (приходить)\n Came\n Come\n Keep (держать)\n Kept\n Kept\n Learn (учить)\n Learnt\n Learnt\n Take (брать)\n Took\n Taken\n Say (говорить)\n Said\n Said\n Wake (просыпаться)\n Woke\n Woken\n Go (идти)\n Went\n Gone\n Get (получать)\n Got\n Got\n Know (знать)\n Knew\n Known\n Hear (слышать)\n Heard\n Heard\n Do (делать)\n Did\n Done"
+}
+]
+},
+{
+"number": "2-s37",
+"num": "2",
+"page": 37,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 142658,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем диалог и напишем, как люди ехали до Мурманска, Архангельска, Белого моря и какой транспорт они использовали в Архангельске и Мурманске.",
+"А: Как прошла твоя поездка на север?\nБ: Отлично!\nА: Ты ездил в Мурманск?\nБ: Да. Мы летели туда на самолёте, а затем мы поехали в Архангельск на поезде.\nА: Вы ездили на машине или на автобусе?\nБ: Да, мы поехали на Белое море на машине, а путешествовали в городах на автобусах.",
+"They travelled to Murmansk by plane. Они прилетеле в Мурманск на самолёте.\nThey travelled to Arkhangelsk by train. Они ехали в Архангельск на поезде.\nThey travelled to the White Sea by car. Они ехали на Белое море на машине.\nThey travelled in Murmansk and in Arkhangelsk by bus. Они ездили в Мурманске и Архангельске на автобусе."
+],
+"answer": "They travelled to Murmansk by plane.\nThey travelled to Arkhangelsk by train.\nThey travelled to the White Sea by car.\nThey travelled in Murmansk and in Arkhangelsk by bus."
+}
+]
+},
+{
+"number": "3-s37",
+"num": "3",
+"page": 37,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 142659,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Дополним предложения, используя глаголы в подходящем времени.",
+"",
+"Наши занятия начались (began) в 8:30 в прошлом году.\nМоя маленькая сестра ещё не выпила (hasn't drunk) свой стакан молока.\nМы только что выбрали (have just chosen) подарки на Рождество.\nНелли нарисовала (drew) забавную картинку в прошлый четверг.\nОни уже пообедали (have already had).\n«Мы съели (have eaten) все бананы!» — сказал он.\nВчера я потратил (spent) все деньги.\nМы никогда не плавали (have never swum) в океане."
+],
+"answer": "Наши занятия начались (began) в 8:30 в прошлом году.\nМоя маленькая сестра ещё не выпила (hasn't drunk) свой стакан молока.\nМы только что выбрали (have just chosen) подарки на Рождество.\nНелли нарисовала (drew) забавную картинку в прошлый четверг.\nОни уже пообедали (have already had).\n«Мы съели (have eaten) все бананы!» — сказал он.\nВчера я потратил (spent) все деньги.\nМы никогда не плавали (have never swum) в океане."
+}
+]
+},
+{
+"number": "4-s38",
+"num": "4",
+"page": 38,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133399,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"",
+"Строить.\nВидеть.\nЗабыть.\nТрясти.\nЧитать.\nБыть.\nЛетать.\nНести.\nПокупать.\nИскать.\nВстречаться.\nПросыпаться.\nВоровать.\nГореть.\nВести.\nСтановиться.",
+"Built, built.\nSee, saw.\nForgot, forgotten.\nShake, shaken.\nRead, read.\nBe, was/were.\nFlew, flown.\nBring, brought.\nBuy, bought.\nFound, found.\nMeet, met.\nWoke, woken.\nSteal, stole.\nBurnt, burnt.\nLead, led.\nBecame, become."
+],
+"answer": "Built, built.\nSee, saw.\nForgot, forgotten.\nShake, shaken.\nRead, read.\nBe, was/were.\nFlew, flown.\nBring, brought.\nBuy, bought.\nFound, found.\nMeet, met.\nWoke, woken.\nSteal, stole.\nBurnt, burnt.\nLead, led.\nBecame, become."
+}
+]
+},
+{
+"number": "5-s39",
+"num": "5",
+"page": 39,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133400,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно описать картинки.",
+"Relative pronouns (относительные местоимения) используются, чтобы связывать главное предложение с придаточным определительным.\nwho(m)/that — употребляем по отношению к лицам: My neighbour is a man who works in that shop. Мой сосед — человек, который работает в этом магазине.\nwhich/that — употребляем по отношению к предметам: The film that we watched yesterday was interesting. Фильм, который мы смотрели вчера, был интересным.",
+"This is a man who likes to travel by plane.\nThis is a man who bought a ticket.\nThese are gloves which were bought in Scotland.\nThis is a woman who missed a train.\nThis picture which is taken in Trafalgar Square.\nThis is a girl who met me at the railway station.\nThis is a train which is seen at the railway station.\nThis is me who bought a book.\nThis is me who like to travel very much.",
+"Это человек, который любит путешествовать на самолёте.\nЭто человек, который купил билет.\nЭто перчатки, которые были куплены в Шотландии.\nЭто женщина, которая опоздала на поезд.\nЭта фотография сделана на Трафальгарской площади.\nЭто девушка, которая встретила меня на вокзале.\nЭто поезд, который виден на вокзале.\nЭто я купила книгу.\nЭто я очень люблю путешествовать."
+],
+"answer": "This is a man who likes to travel by plane.\nThis is a man who bought a ticket.\nThese are gloves which were bought in Scotland.\nThis is a woman who missed a train.\nThis picture which is taken in Trafalgar Square.\nThis is a girl who met me at the railway station.\nThis is a train which is seen at the railway station.\nThis is me who bought a book.\nThis is me who like to travel very much."
+}
+]
+},
+{
+"number": "6-s40",
+"num": "6",
+"page": 40,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133401,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать словосочетания, противоположные по значению.",
+"Сесть в машину.\nВыйти из поезда.\nСесть в поезд.\nИдти вверх по лестнице.\nСесть на лошадь.\nВыйти из такси.\nПропустить поезд.",
+"To get out of the car.\nTo take the train.\nTo miss a train.\nTo go downstairs.\nTo get off a horse.\nTo get into a taxi.\nTo catch a plane.",
+"Выйти из машины.\nСесть на поезд.\nОпоздать на поезд.\nСпуститься вниз.\nСлезть с лошади.\nСесть в такси.\nУспеть на самолет."
+],
+"answer": "To get out of the car.\nTo take the train.\nTo miss a train.\nTo go downstairs.\nTo get off a horse.\nTo get into a taxi.\nTo catch a plane."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подобрать антонимы.",
+"Уродливый.\nСложный.\nЧистый.\nДорогой.\nСильный.\nКупить.\nПеред.",
+"Pretty. Красивый.\nEasy. Простой.\nDirty. Грязный.\nCheap. Дешёвый.\nWeak. Слабый.\nSell. Продавать.\nBehind. Позади."
+],
+"answer": "Pretty.\nEasy.\nDirty.\nCheap.\nWeak.\nSell.\nBehind."
+}
+]
+},
+{
+"number": "7-s41",
+"num": "7",
+"page": 41,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133402,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, на чём можно добраться из одного места в другое.",
+"В Санкт-Петербург из Москвы.\nВ Лондон из Нью-Йорка.\nК Большому театру с Красной площади.\nК Ярославскому вокзалу с Кремля.",
+"By train. На поезде.\nBy plane. На самолёте.\nBy tube. На метро.\nBy taxi. На такси."
+],
+"answer": "By train.\nBy plane.\nBy tube.\nBy taxi."
+}
+]
+},
+{
+"number": "8-s41",
+"num": "8",
+"page": 41,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133403,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"At — на.\nBy — рядом; на чём-то.\nOf — от.\nOn — на.\nTo — к.",
+"Он никогда не ездит на машине, он всегда ходит пешком.\nКогда мы жили у моря в прошлом году, мы останавливались в отеле.\nОн ждёт меня на остановке.\nМы решили встретиться на вокзале.\nТы купил билет в Москву?\nКогда ты отправляешься в поездку?\nОн никогда не устаёт от того, чтобы играть в компьютер.\nОн увидел своего друга на борту судна.",
+"By.\nBy, in.\nAt.\nAt.\nTo.\nOn.\nOf.\nOn."
+],
+"answer": "By.\nBy, in.\nAt.\nAt.\nTo.\nOn.\nOf.\nOn."
+}
+]
+},
+{
+"number": "9-s41",
+"num": "9",
+"page": 41,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133404,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопрос с использованием глагола to get.",
+"To get off — вылезать.\nTo get out — выходить.",
+"Что он делает?",
+"He is getting out of the car. Он выходит из машины.\nHe is getting off the car. Он выходит из машины."
+],
+"answer": "He is getting out of the car.\nHe is getting off the car."
+}
+]
+},
+{
+"number": "10-s41",
+"num": "10",
+"page": 41,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133405,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу.",
+"",
+"Тебе нельзя приходить поздно.\nТебе нужно приходить вовремя.",
+"Тебе нельзя ходить по траве.\nТебе нельзя говорить громко в библиотеке.\nТебе нельзя опаздывать на выступление.\nТебе нельзя фотографировать в музее.\nТебе нельзя слушать радио в классе.\nТебе нельзя идти спать в полночь.",
+"You have to walk the path. Ты должен ходить по тропинке.\nYou have to speak quite in the library. Ты должен говорить тихо в библиотеке.\nYou have to be in time for performance. Ты должен быть вовремя на представлении.\nYou have to visit the museum without a camera. Ты должен посещать музей без камеры.\nYou have to listen to the teacher in class. Ты должен слушать учителя в классе.\nYou have to go to bed at 10 o'clock. Ты должен идти спать в 10 часов."
+],
+"answer": "You have to walk the path.\nYou have to speak quite in the library.\nYou have to be in time for performance.\nYou have to visit the museum without a camera.\nYou have to listen to the teacher in class.\nYou have to go to bed at 10 o'clock."
+}
+]
+},
+{
+"number": "11-s42",
+"num": "11",
+"page": 42,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133406,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вспомнить и записать как можно больше неправильных глаголов.",
+"1 форма\n 2 форма\n 3 форма\n Перевод\nBe.\nBecome.\nBuild.\nBuy.\nMeet.\nRead.\nSee.\nBurn.\nCome.\nDo.\nGet.\nGo.\nHear.\nKeep.\nKnow.\nLearn.\nSay.\nTake.\nWake.\nBegin.\nChoose.\nDraw.\nDrink.\nEat.\nHave.\nLead.\nSpend.\nSwim.\nFall.\nFind.\nFly.\nGive.\nGrow.\nMake.\nShake.\nSteal.\nUnderstand.\nForget.\nPut.\nRun.\nSend.\nShine.\nSing.\nSit.\nSleep.\nCatch.\nFeel.\nSpeak.\nStand.\nTeach.\nThink.\nWear\nWas/were.\nBecame.\nBuilt.\nBought.\nMet.\nRead.\nSaw.\nBurnt.\nCame.\nDid.\nGot.\nWent.\nHeard.\nKept.\nKnew.\nLearnt.\nSaid.\nTook.\nWoke.\nBegan.\nChose.\nDrew.\nDrank.\nAte.\nHad.\nLed.\nSpent.\nSwam.\nFell.\nFound.\nFlew.\nGave.\nGrew.\nMade.\nShook.\nStole.\nUnderstood.\nForgot.\nPut.\nRun.\nSent.\nShone.\nSang.\nSat.\nSlept.\nCaught.\nFelt.\nSpoke.\nStood.\nTaught.\nThought.\nWore\nBeen.\nBecome.\nBuilt.\nBought.\nMet.\nRead.\nSeen.\nBurnt.\nCome.\nDone.\nGotten.\nGone.\nHeard.\nKept.\nKnown.\nLearnt.\nSaid.\nTaken.\nWoken.\nBegun.\nChosen.\nDrawn.\nDrunk.\nEaten.\nHad.\nLed.\nSpent.\nSwum.\nFallen.\nFound.\nFlown.\nGiven.\nGrown.\nMade.\nShaken.\nStolen.\nUnderstood.\nForgotten.\nPut.\nRun.\nSent.\nShone.\nSung.\nSat.\nSlept.\nCaught.\nFelt.\nSpoken.\nStood.\nTaught.\nThought.\nWorn\nБыть.\nСтать.\nСтроить.\nПокупать.\nВстречать.\nЧитать.\nВидеть.\nГореть.\nПриходить.\nДелать.\nПолучать.\nИдти.\nСлышать.\nХранить.\nЗнать.\nУчить.\nГоворить.\nБрать.\nБудить.\nНачинать.\nВыбирать.\nРисовать.\nПить.\nЕсть.\nИметь.\nВести.\nПроводить.\nПлавать.\nПадать.\nНаходить.\nЛетать.\nДать.\nРасти.\nСделать.\nТрясти.\nВоровать.\nПонимать.\nЗабывать.\nПомещать.\nБегать.\nОтправлять.\nБлестеть.\nПеть.\nСидеть.\nСпать.\nЛовить.\nЧувствовать.\nРазговаривать.\nСтоять.\nУчить.\nДумать.\nНосить"
+],
+"answer": "1 форма\n 2 форма\n 3 форма\n Перевод\nBe.\nBecome.\nBuild.\nBuy.\nMeet.\nRead.\nSee.\nBurn.\nCome.\nDo.\nGet.\nGo.\nHear.\nKeep.\nKnow.\nLearn.\nSay.\nTake.\nWake.\nBegin.\nChoose.\nDraw.\nDrink.\nEat.\nHave.\nLead.\nSpend.\nSwim.\nFall.\nFind.\nFly.\nGive.\nGrow.\nMake.\nShake.\nSteal.\nUnderstand.\nForget.\nPut.\nRun.\nSend.\nShine.\nSing.\nSit.\nSleep.\nCatch.\nFeel.\nSpeak.\nStand.\nTeach.\nThink.\nWear\nWas/were.\nBecame.\nBuilt.\nBought.\nMet.\nRead.\nSaw.\nBurnt.\nCame.\nDid.\nGot.\nWent.\nHeard.\nKept.\nKnew.\nLearnt.\nSaid.\nTook.\nWoke.\nBegan.\nChose.\nDrew.\nDrank.\nAte.\nHad.\nLed.\nSpent.\nSwam.\nFell.\nFound.\nFlew.\nGave.\nGrew.\nMade.\nShook.\nStole.\nUnderstood.\nForgot.\nPut.\nRun.\nSent.\nShone.\nSang.\nSat.\nSlept.\nCaught.\nFelt.\nSpoke.\nStood.\nTaught.\nThought.\nWore\nBeen.\nBecome.\nBuilt.\nBought.\nMet.\nRead.\nSeen.\nBurnt.\nCome.\nDone.\nGotten.\nGone.\nHeard.\nKept.\nKnown.\nLearnt.\nSaid.\nTaken.\nWoken.\nBegun.\nChosen.\nDrawn.\nDrunk.\nEaten.\nHad.\nLed.\nSpent.\nSwum.\nFallen.\nFound.\nFlown.\nGiven.\nGrown.\nMade.\nShaken.\nStolen.\nUnderstood.\nForgotten.\nPut.\nRun.\nSent.\nShone.\nSung.\nSat.\nSlept.\nCaught.\nFelt.\nSpoken.\nStood.\nTaught.\nThought.\nWorn\nБыть.\nСтать.\nСтроить.\nПокупать.\nВстречать.\nЧитать.\nВидеть.\nГореть.\nПриходить.\nДелать.\nПолучать.\nИдти.\nСлышать.\nХранить.\nЗнать.\nУчить.\nГоворить.\nБрать.\nБудить.\nНачинать.\nВыбирать.\nРисовать.\nПить.\nЕсть.\nИметь.\nВести.\nПроводить.\nПлавать.\nПадать.\nНаходить.\nЛетать.\nДать.\nРасти.\nСделать.\nТрясти.\nВоровать.\nПонимать.\nЗабывать.\nПомещать.\nБегать.\nОтправлять.\nБлестеть.\nПеть.\nСидеть.\nСпать.\nЛовить.\nЧувствовать.\nРазговаривать.\nСтоять.\nУчить.\nДумать.\nНосить"
+}
+]
+},
+{
+"number": "12-s42",
+"num": "12",
+"page": 42,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133407,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и вспомнить изученные слова.",
+"Существительные:\nAirport — аэропорт.\nBus — автобус.\nBus stop — автобусная остановка.\nBusiness class — бизнес-класс.\nFlight — полёт.\nJourney — поездка.\nLuggage — багаж.\nPlane — самолёт.\nPlate — тарелка.\nPlatform — платформа.\nRailway station — вокзал.\nReturn ticket — возврат билета.\nSeaside — морское побережье.\nShip — корабль.\nSingle — одинокий.\nTaxi — такси.\nThrough — через.\nTicket — билет.\nTourist class — экономкласс.\nTrain — поезд.\nVoyage — круиз.\nWind — ветер.\nГлаголы:\nArrive — прибывать\nCatch — ловить.\nChange — менять.\nCry — плакать.\nExplain — объяснять.\nFeel — чувствовать.\nFly — летать.\nForget — забыть.\nHave to — должен.\nMiss — пропустить.\nShake — трясти.\nStay — оставаться.\nSteal — воровать.\nTravel — путешествовать.\nПрилагательные:\nCheap — дешёвый.\nExcellent — отличный.\nFantastic — фантастический.\nFast — быстрый.\nFriendly — дружелюбный.\nKind — добрый.\nSad — грустный.\nSilver — серебряный.\nStraight — прямой.\nStrong — сильный.\nTired — уставший.\nUgly — некрасивый.\nWeak — слабый.\nНаречия:\nNearly — около.\nPerhaps — пожалуй.\nФразы:\nA ticket to a city — билет до города.\nAt the bus stop — на остановке.\nAt the railway station — на вокзале.\nAt the seaside — на побережье.\nBy bus — на автобусе.\nBy plane — на самолёте.\nBy train — на поезде.\nOn board the ship — на борту корабля.\nSo many countries, so many customs — сколько стран, столько и обычаев.\nStraight ahead — прямо.\nThere is a lot of traffic now — сейчас час пик.\nTo be tired of — быть уставшим от.\nTo carry mail — носить почту.\nTo catch train — успеть на поезд.\nTo get into/out of a car — сесть / выйти из машины.\nTo get on/off the train — сесть / выйти из поезда.\nTo go on a journey — отправится в поездку.\nTo go on foot — идти пешком.\nTo miss train — пропустить поезд.\nTo take a train — сесть на поезд.\nTo take pictures — делать фотографии."
+],
+"answer": "Существительные:\nAirport — аэропорт.\nBus — автобус.\nBus stop — автобусная остановка.\nBusiness class — бизнес-класс.\nFlight — полёт.\nJourney — поездка.\nLuggage — багаж.\nPlane — самолёт.\nPlate — тарелка.\nPlatform — платформа.\nRailway station — вокзал.\nReturn ticket — возврат билета.\nSeaside — морское побережье.\nShip — корабль.\nSingle — одинокий.\nTaxi — такси.\nThrough — через.\nTicket — билет.\nTourist class — экономкласс.\nTrain — поезд.\nVoyage — круиз.\nWind — ветер.\nГлаголы:\nArrive — прибывать\nCatch — ловить.\nChange — менять.\nCry — плакать.\nExplain — объяснять.\nFeel — чувствовать.\nFly — летать.\nForget — забыть.\nHave to — должен.\nMiss — пропустить.\nShake — трясти.\nStay — оставаться.\nSteal — воровать.\nTravel — путешествовать.\nПрилагательные:\nCheap — дешёвый.\nExcellent — отличный.\nFantastic — фантастический.\nFast — быстрый.\nFriendly — дружелюбный.\nKind — добрый.\nSad — грустный.\nSilver — серебряный.\nStraight — прямой.\nStrong — сильный.\nTired — уставший.\nUgly — некрасивый.\nWeak — слабый.\nНаречия:\nNearly — около.\nPerhaps — пожалуй.\nФразы:\nA ticket to a city — билет до города.\nAt the bus stop — на остановке.\nAt the railway station — на вокзале.\nAt the seaside — на побережье.\nBy bus — на автобусе.\nBy plane — на самолёте.\nBy train — на поезде.\nOn board the ship — на борту корабля.\nSo many countries, so many customs — сколько стран, столько и обычаев.\nStraight ahead — прямо.\nThere is a lot of traffic now — сейчас час пик.\nTo be tired of — быть уставшим от.\nTo carry mail — носить почту.\nTo catch train — успеть на поезд.\nTo get into/out of a car — сесть / выйти из машины.\nTo get on/off the train — сесть / выйти из поезда.\nTo go on a journey — отправится в поездку.\nTo go on foot — идти пешком.\nTo miss train — пропустить поезд.\nTo take a train — сесть на поезд.\nTo take pictures — делать фотографии."
+}
+]
+},
+{
+"number": "13-s43",
+"num": "13",
+"page": 43,
+"chapter": "Basic course. Travelling and transport. Lessons 31-36",
+"skyId": 133408,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно убедиться, что мы умеем правильно читать слова.",
+"Существительные:\nAppetite — аппетит.\nCentre — центр.\nLine —линия.\nMail — почта.\nMap — карта.\nMetro — метро.\nMustard — горчица.\nOffice — офис.\nPassenger — пассажир.\nPepper — перец.\nPlain — плоский.\nPort — порт.\nPrince — принц.\nSeat — сиденье.\nSpice — специи.\nTicket — билет.\nTraffic — движение.\nVinegar — уксус.\nWitch — ведьма.\nПрилагательные:\nForeign — иностранный.\nFree — бесплатный.\nYoung — молодой.",
+"Appetite.\nCentre.\nForeign.\nFree.\nLine.\nMail.\nMap.\nMetro.\nMustard.\nOffice.\nPassenger.\nPepper.\nPlain.\nPort.\nPrince.\nSeat.\nSpice.\nTicket.\nTraffic.\nVinegar.\nWitch.\nYoung."
+],
+"answer": "Существительные:\nAppetite — аппетит.\nCentre — центр.\nLine —линия.\nMail — почта.\nMap — карта.\nMetro — метро.\nMustard — горчица.\nOffice — офис.\nPassenger — пассажир.\nPepper — перец.\nPlain — плоский.\nPort — порт.\nPrince — принц.\nSeat — сиденье.\nSpice — специи.\nTicket — билет.\nTraffic — движение.\nVinegar — уксус.\nWitch — ведьма.\nПрилагательные:\nForeign — иностранный.\nFree — бесплатный.\nYoung — молодой."
+}
+]
+},
+{
+"number": "1-s44",
+"num": "1",
+"page": 44,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133409,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, когда Эндрю приехал в эти места.",
+"Andrew arrived in Paris at quarter past two. Эндрю приехал в Париж в 14:15.\nAndrew arrived at the bus stop at quarter past twelve. Эндрю приехал на автобусную остановку в 12:15.\nAndrew arrived in New York at quarter past five. Эндрю приехал в Нью-Йорк в 17:15.\nAndrew arrived at the port at quarter to seven. Эндрю приехал в порт в 18:45.\nAndrew arrived at the railway station at quarter to twelve. Эндрю приехал на вокзал в 11:45.\nAndrew arrived in Klin at quarter to nine. Эндрю приехал в Клин в 20:45."
+],
+"answer": "Andrew arrived in Paris at quarter past two.\nAndrew arrived at the bus stop at quarter past twelve.\nAndrew arrived in New York at quarter past five.\nAndrew arrived at the port at quarter to seven.\nAndrew arrived at the railway station at quarter to twelve.\nAndrew arrived in Klin at quarter to nine."
+}
+]
+},
+{
+"number": "2-s44",
+"num": "2",
+"page": 44,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133410,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам необходимо заполнить пропуски в диалогах.",
+"",
+"Диалог 1\nA: What did you buy yesterday? Что ты вчера купил?\nB: I bought some stamps, coins and badges. Я купил марки, монеты и значки.\nA: Where did you buy them? Где ты их купил?\nB: I bought them near the special shop. Я купил их рядом со специальным магазином.\nДиалог 2\nA: Have you ever been to the theatre? Ты когда-нибудь был в театре?\nB: Yes, I have. Да, был.\nA: When were you there? Когда ты там был?\nB: I was there yesterday. Я был там вчера.\nA: Who took part in the performance? Кто принимал участие в представлении?\nB: A lot of actors did. Множество актёров.\nДиалог 3\nA: Have you been to the children's theatre? Ты когда-нибудь был в детском театре?\nB: Unfortunately, not. I haven't bought tickets for the play yet. К сожалению, нет. Я ещё не купил билеты на спектакль.\nДиалог 4\nA: Were you at the theatre with your group three days ago? Ты был в театре со своей группой три дня назад?\nB: Yes, I was. Да, был.\nA: Where were your seats? Were they in the stalls? Где были ваши места? В партере?\nB: Yes, they were. I could see the stage well. Да, в партере. Я хорошо видел сцену.\nДиалог 5\nA: Have you ever met any famous travellers? Ты когда-нибудь встречал знаменитых путешественников?\nB: Yes, I have. Да, встречал.\nA: When did you meet them? Когда ты их встретил?\nB: I met them last January. Я встретил их в прошлом январе."
+],
+"answer": "Диалог 1\nA: What did you buy yesterday?\nB: I bought some stamps, coins and badges.\nA: Where did you buy them?\nB: I bought them near the special shop.\nДиалог 2\nA: Have you ever been to the theatre?\nB: Yes, I have.\nA: When were you there?\nB: I was there yesterday.\nA: Who took part in the performance?\nB: A lot of actors did.\nДиалог 3\nA: Have you been to the children's theatre?\nB: Unfortunately, not. I haven't bought tickets for the play yet.\nДиалог 4\nA: Were you at the theatre with your group three days ago?\nB: Yes, I was.\nA: Where were your seats? Were they in the stalls?\nB: Yes, they were. I could see the stage well.\nДиалог 5\nA: Have you ever met any famous travellers?\nB: Yes, I have.\nA: When did you meet them?\nB: I met them last January."
+}
+]
+},
+{
+"number": "3-s46",
+"num": "3",
+"page": 46,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133411,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать описания и назвать людей или профессии.",
+"",
+"Кто-то, кто переводит книги — это переводчик (translator).\nКто-то, кто читает книги — это читатель (reader).\nКто-то, кто учит детей — это учитель (teacher).\nКто-то, кто работает на заводе — это инженер (engineer).\nКто-то, кто путешествует в разные страны — это путешественник (traveller).\nКто-то, кто собирает разные предметы — это коллекционер (collector).\nКто-то, кто играет в футбол — это футболист (football player)."
+],
+"answer": "Tanslator.\nReader.\nTeacher.\nEngineer.\nTraveller.\nCollector.\nFootball player."
+}
+]
+},
+{
+"number": "4-s46",
+"num": "4",
+"page": 46,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133412,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно использовать «a few» или «a little» со словами из списка.",
+"",
+"A few apples. Немного яблок.\nA little bread. Немного хлеба.\nA few bananas. Немного бананов.\nA few carrots. Немного моркови.\nA little coffee. Немного кофе.\nA few biscuits. Немного печенья.\nA few eggs. Немного яиц.\nA little fish. Немного рыбы.\nA little fruit. Немного фруктов.\nA few potatoes. Немного картофеля.\nA little jam. Немного джема.\nA few hamburgers. Немного гамбургеров.\nA little juice. Немного сока.\nA few vegetables. Немного овощей.\nA little meat. Немного мяса.\nA little milk. Немного молока.\nA little salt. Немного соли.\nA few sweets. Немного конфет."
+],
+"answer": "A few apples.\nA little bread.\nA few bananas.\nA few carrots.\nA little coffee.\nA few biscuits.\nA few eggs.\nA little fish.\nA little fruit.\nA few potatoes.\nA little jam.\nA few hamburgers.\nA little juice.\nA few vegetables.\nA little meat.\nA little milk.\nA little salt.\nA few sweets."
+}
+]
+},
+{
+"number": "5-s47",
+"num": "5",
+"page": 47,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133413,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях.",
+"",
+"",
+"Картофель (are) на столе. Он (they are) на тарелке.\nЭтот совет (is) хороший. Но я не могу ему (it) последовать.\nПочему (is) твоя одежда грязная? Ты надел её (it) этим утром.\nКуда ты положил морковь? — Она в (they are) холодильнике.\nГде (is) молоко? Оно (it is) в кружке."
+],
+"answer": "Картофель (are) на столе. Он (they are) на тарелке.\nЭтот совет (is) хороший. Но я не могу ему (it) последовать.\nПочему (is) твоя одежда грязная? Ты надел её (it) этим утром.\nКуда ты положил морковь? — Она в (they are) холодильнике.\nГде (is) молоко? Оно (it is) в кружке."
+}
+]
+},
+{
+"number": "6-s47",
+"num": "6",
+"page": 47,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133414,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях глаголами say или tell.",
+"",
+"Не говори (say), куда ты направляешься.\nОн никогда не рассказывает (tells) мне о своих увлечениях.\nЧто ты сказал (say)?\nОни рассказывают (tell) друзьям о своих каникулах.\nНик говорит (says): «Я люблю мультфильмы»."
+],
+"answer": "Не говори (say), куда ты направляешься.\nОн никогда не рассказывает (tells) мне о своих увлечениях.\nЧто ты сказал (say)?\nОни рассказывают (tell) друзьям о своих каникулах.\nНик говорит (says): «Я люблю мультфильмы»."
+}
+]
+},
+{
+"number": "7-s47",
+"num": "7",
+"page": 47,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133415,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать антонимы слов.",
+"WORDLIST\nfriendly — дружелюбный\nkind — добрый\nrich — богатый\nhappy — счастливый\ncomfortable — удобный\neasy — простой\nimportant — важный\nlong — длинный\ncheap — дешёвый\ntrue — правдивый\nfast — быстрый\ninteresting — интересный",
+"Unfriendly. Недружелюбный.\nEvil. Злой.\nPoor. Дешёвый.\nSad. Грустный.\nUncomfortable. Неудобный.\nDifficult. Сложный.\nUnimportant. Неважный.\nShort. Короткий.\nExpensive. Дорогой.\nFalse. Ложный.\nSlow. Медленный.\nBoring. Скучный."
+],
+"answer": "Unfriendly.\nEvil.\nPoor.\nSad.\nUncomfortable.\nDifficult.\nUnimportant.\nShort.\nExpensive.\nFalse.\nSlow.\nBoring."
+}
+]
+},
+{
+"number": "8-s48",
+"num": "8",
+"page": 48,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133416,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать формы глаголов.",
+"WORDLIST\nrise — вставать\ndecide — решать\ncare (for) — заботиться\nmean — иметь в виду\ncreate — создавать\nsay — рассказывать\ntell — говорить\nlisten (to) — слушать",
+"Rose — risen.\nDecided — decided.\nCared — cared.\nMeant — meant.\nCreated — created.\nSaid — said.\nTold — told.\nListened — listened."
+],
+"answer": "Rose — risen.\nDecided — decided.\nCared — cared.\nMeant — meant.\nCreated — created.\nSaid — said.\nTold — told.\nListened — listened."
+}
+]
+},
+{
+"number": "9-s48",
+"num": "9",
+"page": 48,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133417,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в тексте верными предлогами.",
+"WORDLIST\nbe fond of — любить \ntake part in — принимать участие\ncare about — заботиться (о чём-то)\na ticket for a play — билет на спектакль\nsit in the stalls — в партере\npopular with — популярен (среди)\nby heart — наизусть\nbe proud of — гордиться (чем-то)\non the stage — на сцене \nbe full of — быть полным (чего-то)\nwhenever — когда, всякий раз\nlisten to sth — слушать\nup to the end — до конца",
+"Моя сестра\nУ меня есть сестра. Ее зовут Рози. Я очень люблю (1) её (of). Мы часто играем вместе, и она всегда принимает участие (2) во (in) всех наших играх. Моей младшей сестре (3) не нравится (about) кино, но она очень любит театр. Она покупает билеты (4) на (for) все спектакли и любит сидеть (5) в (in) партере, где она может увидеть популярных (6) у (with) публики актёров. Она знает много диалогов (7) из (from) разных выступлений (8) наизусть (by), и (9) гордится (of) этим. Она использует своё воображение и придумывает свои собственные истории. Она хочет увидеть их (10) на (on) сцене (11) в (of) театре. Она пишет свои рассказы и читает их (12) для (for) меня. Они очень интересные и (13) полные (of) добрых и дружелюбных персонажей. Она любит читать мне свои рассказы (14) когда (whenever) мы ложимся (15) спать, и я всегда (16) слушаю (to) их (17) до (up) самого (18) конца (to)."
+],
+"answer": "Моя сестра\nУ меня есть сестра. Ее зовут Рози. Я очень люблю (1) её (of). Мы часто играем вместе, и она всегда принимает участие (2) во (in) всех наших играх. Моей младшей сестре (3) не нравится (about) кино, но она очень любит театр. Она покупает билеты (4) на (for) все спектакли и любит сидеть (5) в (in) партере, где она может увидеть популярных (6) у (with) публики актёров. Она знает много диалогов (7) из (from) разных выступлений (8) наизусть (by), и (9) гордится (of) этим. Она использует своё воображение и придумывает свои собственные истории. Она хочет увидеть их (10) на (on) сцене (11) в (of) театре. Она пишет свои рассказы и читает их (12) для (for) меня. Они очень интересные и (13) полные (of) добрых и дружелюбных персонажей. Она любит читать мне свои рассказы (14) когда (whenever) мы ложимся (15) спать, и я всегда (16) слушаю (to) их (17) до (up) самого (18) конца (to)."
+}
+]
+},
+{
+"number": "10-s48",
+"num": "10",
+"page": 48,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133418,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, чем любит заниматься Эдриан.",
+"WORDLIST\ncollect stamps (coins, badges) — собирать марки (монеты, значки)\nwatch cartoons — смотреть мультфильмы\ngo to the theatre — ходить в театр\nread novels (fiction, poems) — читать книги (романы, стихи)",
+"Adrian is fond of collecting stamps, coins and badges. Эдриан любит собирать марки, монеты и значки.\nAdrian is fond of watching cartoons. Эдриан любит смотреть мультфильмы.\nAdrian is fond of going to the theatre. Эдриан любит ходить в театр.\nAdrian is fond of reading novels (fiction and poems). Эдриан любит читать книги (романы, стихи)"
+],
+"answer": "Adrian is fond of collecting stamps, coins and badges.\nAdrian is fond of watching cartoons.\nAdrian is fond of going to the theatre.\nAdrian is fond of reading novels (fiction and poems)."
+}
+]
+},
+{
+"number": "11-s49",
+"num": "11",
+"page": 49,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133419,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и перевести новые слова и выражения.",
+"Слова:\nСуществительные: коллекционер, коллекция, марка, монета, тема, значок, четверть, место, сцена, представление, роль, зрители, мультфильм, художественный фильм, экран, успех, земля, роман, библиотека, мыльная опера, киноман, театрал, партер, хобби, специалист.\nГлаголы: любить что-то, гордиться чем-то, коллекционировать, вставать, выступать, решить, заботиться (о ком-то), быть наполненным чем-то, значить, создавать, рассказывать, говорить, рождаться, слушать.\nПрилагательные: тематический, особенный, популярный, правдивый, скучный, немногие, несколько, некомфортный, нелёгкий, недобрый, гордый, полный.\nНаречия: также, к сожалению.\nМестоимения: что-либо, кто-либо, где-либо, когда-либо.\nПредлоги: кроме.\nСоюз: хотя.\nВыражения:\nУрок 38: в четверть, без четверти, принимать участие, в театре, в кинотеатре, в партере, билет на спектакль.\nУрок 40: говорить неправду, говорить правду, иметь большой успех, быть успешным, что сейчас идёт?\nУрок 41: до конца, использовать своё воображение."
+],
+"answer": "Слова:\nСуществительные: коллекционер, коллекция, марка, монета, тема, значок, четверть, место, сцена, представление, роль, зрители, мультфильм, художественный фильм, экран, успех, земля, роман, библиотека, мыльная опера, киноман, театрал, партер, хобби, специалист.\nГлаголы: любить что-то, гордиться чем-то, коллекционировать, вставать, выступать, решить, заботиться (о ком-то), быть наполненным чем-то, значить, создавать, рассказывать, говорить, рождаться, слушать.\nПрилагательные: тематический, особенный, популярный, правдивый, скучный, немногие, несколько, некомфортный, нелёгкий, недобрый, гордый, полный.\nНаречия: также, к сожалению.\nМестоимения: что-либо, кто-либо, где-либо, когда-либо.\nПредлоги: кроме.\nСоюз: хотя.\nВыражения:\nУрок 38: в четверть, без четверти, принимать участие, в театре, в кинотеатре, в партере, билет на спектакль.\nУрок 40: говорить неправду, говорить правду, иметь большой успех, быть успешным, что сейчас идёт?\nУрок 41: до конца, использовать своё воображение."
+}
+]
+},
+{
+"number": "12-s49",
+"num": "12",
+"page": 49,
+"chapter": "Hobbies. Lessons 37- 42",
+"skyId": 133420,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и перевести слова.",
+"Персонаж.\nКонцерт.\nОптимизм.\nПроблема.\nФакт.\nМеталл.\nСолдат.\nПрограмма.\nБалет.\nОпера.\nМюзикл.\nГангстер.\nАктёр.\nБурные апплодисменты.\nИнтервал.\nВидео.\nКомедия.\nДетективный (исторический, чёрно-белый, цветной) фильм.\nБалкон."
+],
+"answer": "Персонаж.\nКонцерт.\nОптимизм.\nПроблема.\nФакт.\nМеталл.\nСолдат.\nПрограмма.\nБалет.\nОпера.\nМюзикл.\nГангстер.\nАктёр.\nБурные апплодисменты.\nИнтервал.\nВидео.\nКомедия.\nДетективный (исторический, чёрно-белый, цветной) фильм.\nБалкон."
+}
+]
+},
+{
+"number": "1-s50",
+"num": "1",
+"page": 50,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133421,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова, приведенные в рамке, на три труппы а, b, с.",
+"a) Bag, textbook, exercise-book, ruler, rubber, pen, pencil.\nb) Room, bed, sofa, fridge, carpet, picture, mirror, wardrobe, fire, cupboard, desk, curtains.\nс) Town, square, airport, cinema, car, theatre, bus, автобус, road, church, house, bridge.",
+"а) Сумка, учебник, тетрадь, линейка, стирательная резинка, ручка, карандаш.\nб) Комната, кровать, диван, холодильник, ковер, картина, зеркало, шкаф, камин, шкаф, письменный стол, шторы.\nв) Город, площадь, аэропорт, кинотеатр, машина, театр, автобус, автобус, дорога, церковь, дом, мост."
+],
+"answer": "a) Bag, textbook, exercise-book, ruler, rubber, pen, pencil.\nb) Room, bed, sofa, fridge, carpet, picture, mirror, wardrobe, fire, cupboard, desk, curtains.\nс) Town, square, airport, cinema, car, theatre, bus, автобус, road, church, house, bridge."
+}
+]
+},
+{
+"number": "2-s52",
+"num": "2",
+"page": 52,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133422,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать как можно больше слов, обозначающих a) хобби b) транспорт.",
+"a) Хобби:\nmaking models — создание моделей;\ngrowing flowers — выращивание цветов;\ncollecting — коллекционирование;\ntravelling — путешествия;\ngardening — садоводство;\ngoing in for sports — занятия спортом;\ntaking pictures — фотографирование;\nreading — чтение;\nmusic — музыка;\nstudying animals — изучение животных;\nstudying birds — изучение птиц;\n b) Транспорт:\nBicycle — велосипед;\nBus — автобус (городской);\nCar — автомобиль;\nCoach — автобус (туристический, междугородний);\nMotorbike — мотоцикл;\nTrain — поезд;\nTram — трамвай;\nUnderground, subway — метро.\nShip — корабль;\nFerry — паром;\nMotorboat — моторная лодка.\nAeroplane, plane — cамолёт;\nHelicopter — вертолет;\nJet — реактивный самолет;\nSpaceship — космический корабль."
+],
+"answer": "a) Хобби:\nmaking models — создание моделей;\ngrowing flowers — выращивание цветов;\ncollecting — коллекционирование;\ntravelling — путешествия;\ngardening — садоводство;\ngoing in for sports — занятия спортом;\ntaking pictures — фотографирование;\nreading — чтение;\nmusic — музыка;\nstudying animals — изучение животных;\nstudying birds — изучение птиц;\n b) Транспорт:\nBicycle — велосипед;\nBus — автобус (городской);\nCar — автомобиль;\nCoach — автобус (туристический, междугородний);\nMotorbike — мотоцикл;\nTrain — поезд;\nTram — трамвай;\nUnderground, subway — метро.\nShip — корабль;\nFerry — паром;\nMotorboat — моторная лодка.\nAeroplane, plane — cамолёт;\nHelicopter — вертолет;\nJet — реактивный самолет;\nSpaceship — космический корабль."
+}
+]
+},
+{
+"number": "3-s52",
+"num": "3",
+"page": 52,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133423,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова, обозначающие профессии, на три группы.",
+"Суффикс —er: officer, soldier, writer, worker, announcer, reader, performer, traveller, teacher, singer, forester, farmer, football player.\nСуффикс —or: sailor, doctor, actor, narrator.\nСуффикс —man: fireman, seaman, postman, policeman, milkman, fisherman.",
+"Суффикс —er: офицер, солдат, писатель, рабочий, диктор, чтец, исполнитель, путешественник, учитель, певец, лесник, фермер, футболист.\nСуффикс — или: моряк, врач, актёр, рассказчик.\nСуффикс —man: пожарный, матрос, почтальон, полицейский, молочник, рыбак."
+],
+"answer": "Суффикс —er: officer, soldier, writer, worker, announcer, reader, performer, traveller, teacher, singer, forester, farmer, football player.\nСуффикс —or: sailor, doctor, actor, narrator.\nСуффикс —man: fireman, seaman, postman, policeman, milkman, fisherman."
+}
+]
+},
+{
+"number": "4-s53",
+"num": "4",
+"page": 53,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133424,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно согласиться или не согласиться с утверждениями.",
+"Южная Америка — это остров. \nХристофор Колумб открыл Африку в 1492году.\nСША — это большая страна в Северной Америке. \nМоряки никогда не путешествуют на самолёте.\nХристофор Колумб достиг ЦентральнойАмерики в 1992 году. \nКороль и королева Испании дали Христофору Колумбу деньги, чтобы он отправился в Индию. \nКогда Христофор Колумб начал свое морское путешествие, он поплыл на запад.",
+"False. South America is a continent. Неправда. Южная Америка — это континент.\nFalse. Christopher Columbus discovered America in 1492. Это неправда. Христофор Колумб открыл Америку в 1492 году.\nTrue. Правда. \nFalse. Sailors often travel by plane. Неправда. Моряки часто путешествуют самолетом.\nFalse. Christopher Columbus reached Central America in 1492. Это неправда. Христофор Колумб достиг Центральной Америки в 1492.\nTrue. Правда. \nTrue. Правда."
+],
+"answer": "False. South America is a continent. Неправда. Южная Америка — это континент.\nFalse. Christopher Columbus discovered America in 1492. Это неправда. Христофор Колумб открыл Америку в 1492 году.\nTrue. Правда.\nFalse. Sailors often travel by plane. Неправда. Моряки часто путешествуют самолетом.\nFalse. Christopher Columbus reached Central America in 1492. Это неправда. Христофор Колумб достиг Центральной Америки в 1492.\nTrue. Правда.\nTrue. Правда."
+}
+]
+},
+{
+"number": "5-s54",
+"num": "5",
+"page": 54,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133425,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения из данных слов.",
+"",
+"Christopher Columbus was interested in the sea. Христофор Колумб интересовался морем. \nThe first English settlements appeared in America in the seventeenth century. Первые английские поселения появились в Америке в семнадцатом столетии. \nThe Indians prepared turkey for the celebration. Индейцы готовили индейку для празднования.\nThat year the harvest was rich. B том году урожай был богатым. \nThey thanked God together. Они вместе поблагодарили Бога. \nThe new land was full of danger. Новая земля была полна опасностей.\nIt is raining hard. Идёт сильный дождь."
+],
+"answer": "Christopher Columbus was interested in the sea. Христофор Колумб интересовался морем.\nThe first English settlements appeared in America in the seventeenth century. Первые английские поселения появились в Америке в семнадцатом столетии.\nThe Indians prepared turkey for the celebration. Индейцы готовили индейку для празднования.\nThat year the harvest was rich. B том году урожай был богатым.\nThey thanked God together. Они вместе поблагодарили Бога.\nThe new land was full of danger. Новая земля была полна опасностей.\nIt is raining hard. Идёт сильный дождь."
+}
+]
+},
+{
+"number": "6-s54",
+"num": "6",
+"page": 54,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133426,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить в предложения слова for или since.",
+"",
+"We've known each other for 10 years. Мы знаем друг друга уже 10 лет. (В течение какого-то времени.)\nShe has been in danger since that meeting. C той встречи ей грозит опасность. (Начало действия в прошлом.)\nThey have been in this little settlement since last year. Они живут в этом маленьком поселении с прошлого года. (Начало действия в прошлом.)\nI have been up since five o'clock this morning. Этим утром я бодрствую уже с пяти часов. (Начало действия в прошлом.)\nYou haven't seen Alec, a sailor, since Tuesday, have you? Вы не видели Алека, матроса, со вторника, не так ли? (Начало действия в прошлом.)\nSince when have you known her? С каких пор ты её знаешь? (Начало действия в прошлом.)\nI have had this Teddy Bear for years. Этот плюшевый мишка у меня уже многие годы. (В течение какого-то времени.)"
+],
+"answer": "For.\nSince.\nSince.\nSince.\nSince.\nSince.\nFor."
+}
+]
+},
+{
+"number": "7-s54",
+"num": "7",
+"page": 54,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133427,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать из рамки прилагательные, при помощи которых мы можем описать а) работу, b) страну, с) коробку.",
+"а) Boring, hard, dangerous.\nb) Native, peaceful, dangerous.\nс) Wooden, empty, golden.",
+"а) Скучная, тяжелая, опасная.\nb) Родная, мирная, опасная.\nс) Деревянная, пустая, золотая."
+],
+"answer": "а) Boring, hard, dangerous.\nb) Native, peaceful, dangerous.\nс) Wooden, empty, golden."
+}
+]
+},
+{
+"number": "8-s55",
+"num": "8",
+"page": 55,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133428,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать вопросы для получения дополнительной информации.",
+"Специальные вопросы в английском языке, как и в русском, задаются с целью выяснить какую-то конкретную информацию о предмете или явлении.\nОтличительной чертой специальных вопросов в английском является обязательное наличие вопросительных слов.\n Слово\n Транскрипция\n Перевод\n Пример\n Who\n /huː/\nКто?\n Who is it? Кто это?\n What\n /wɔt/\nЧто?\nКакой?\nWhat is it? Что это?\nWhat is your favourite colour? Какой у тебя любимый цвет?\n When\n /wen/\nКогда?\n When is your birthday? Когда твой день рождения?\n Where\n /weə/\nГде?\nКуда?\n Where are my socks? Где мои носки?\n How\n /hau/\nКак?\n How are you? Как ты?\n How old\n /haʊ əʊld/\nСколько лет?\nКакой возраст?\n How old is he? Сколько ему лет?\nПри формировании специального вопроса за основу берётся общий. Например, общий вопрос к предложению She saw this movie (она смотрела этот фильм) будет звучать как Did she see this movie? — Она смотрела этот фильм?\nДля того чтобы преобразовать его в специальный, необходимо добавить в начало предложения одно из вопросительных слов.\nПример:\nWhen did she see this movie? — Когда она смотрела этот фильм?",
+"Он полетел туда.",
+"1. Who flew there? Кто полетел туда?\n2. Where did he fly? Куда он полетел?\n3. When did he fly there? Когда он полетел туда?\n4. Why did he fly there? Зачем он полетел туда?\n5: With whom did he fly there? С кем он полетел туда?\n6. How many times did he fly there? Сколько раз он летал туда?\n7. How often did he fly there? Как часто он туда летал?"
+],
+"answer": "1. Who flew there? Кто полетел туда?\n2. Where did he fly? Куда он полетел?\n3. When did he fly there? Когда он полетел туда?\n4. Why did he fly there? Зачем он полетел туда?\n5: With whom did he fly there? С кем он полетел туда?\n6. How many times did he fly there? Сколько раз он летал туда?\n7. How often did he fly there? Как часто он туда летал?"
+}
+]
+},
+{
+"number": "9-s55",
+"num": "9",
+"page": 55,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133429,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст про День Благодарения ещё раз и ответить на вопросы.",
+"1. Какой праздник американцы отмечают в конце ноября?\n2. На какой день недели выпадает этот праздник?\n3. Куда люди ходят в тот день?\n4. Американцы украшают свои дома в День Благодарения, не так ли? \n5. Что является символом этого дня?\nС каких пор индейка стала символом Дня Благодарения?",
+"История Дня Благодарения\nПоследний четверг ноября, как известно, в Америке выходной. В народе этот праздник называют Днём благодарения. Это, пожалуй, самый важный день в американском году. Люди ходят в церковь, и семьи собираются на целый день. Они украшают свои дома осенними фруктами и цветами и готовят традиционную американскую еду: запечённую индейку, картофель и тыкву. Это похоже на Рождество, но что люди празднуют? За что они благодарят?\nВы помните первых колонистов в Новой Англии? В 1620 году они прибыли в Америку и начали там новую жизнь. Это была очень тяжёлая жизнь. Колонисты начали возделывать землю. Работа была трудной и полной опасностей. В Новой Англии, где они жили, было много диких индеек. Осенью 1621 года колонисты собрали первый урожай. Он был довольно хорошим. Колонисты решили устроить особый ужин. Они хотели благодарить Бога — благодарить его за многое. Это был трудный год, но у людей всё ещё была еда. Колонисты устроили обед благодарения для всех людей. Он продолжался три дня. Целых три дня они благодарили за хороший урожай и счастливый год в новой стране.\nНа столе во время этой трапезы были дикие индейки, и с тех пор индейка стала символом Дня благодарения.",
+"1. At the end of November, they celebrate Thanksgiving Day В конце ноября они празднуют День Благодарения. \n2. It is the last Thursday in November. В последний четверг ноября.\n3. People usually go to church that day. Люди обычно ходят в церковь в этот день.\n4. Yes, they do. People decorate their houses on Thanksgiving Day. Да. Люди украшают свои дома в День Благодарения. \n5. The turkey is a symbol of the day. Индейка является символом этого дня.\n6. The turkey has become а symbol of Thanksgiving Day since 1621, the first celebration of Thanksgiving Day. Индейка стала Символом Дня Благодарения в 1621 году, первого празднования Дня благодарения."
+],
+"answer": "1. At the end of November, they celebrate Thanksgiving Day В конце ноября они празднуют День Благодарения. \n2. It is the last Thursday in November. В последний четверг ноября.\n3. People usually go to church that day. Люди обычно ходят в церковь в этот день.\n4. Yes, they do. People decorate their houses on Thanksgiving Day. Да. Люди украшают свои дома в День Благодарения. \n5. The turkey is a symbol of the day. Индейка является символом этого дня.\n6. The turkey has become а symbol of Thanksgiving Day since 1621, the first celebration of Thanksgiving Day. Индейка стала Символом Дня Благодарения в 1621 году, первого празднования Дня благодарения."
+}
+]
+},
+{
+"number": "10-s56",
+"num": "10",
+"page": 56,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133430,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, какие праздники американцы отмечают на протяжении года. 12–13 уроки домашнего чтения помогут тебе заполнить таблицу.",
+"Январь:\n1) New Year's Day — Новый Год, 1, 2 числа.\n2) Martin Luther King's Birthday — День рождения Мартина Лютера Кинга, третий понедельник.\nФевраль:\n3) St Valentine's Day — День Святого Валентина, 14 числа.\n4) President's Day — День Президента, третий понедельник.\nМарт:\n5) St. Patrick 's Day — День Святого Патрика, 17 числа.\n6) Easter — Пасха, в конце марта или в начале апреля.\nАпрель:\n7) April Fools Day — День смеха, первого апреля.\nМай:\n8) Memorial Day — День Памяти, понедельник.\n9) Mother's Day or Father's Day — День матери или День отца, воскресенье.\nИюнь:\n10) Flag day — День флага, 14 числа.\nИюль:\n11) Independence Day — День Независимости, 4 числа.\nСентябрь:\n12) Labor Day — День труда, первый понедельник.\nОктябрь:\n13) Columbus Day — День Колумба, второй понедельник.\n14) Halloween — Хэллоуин, 31 ноября.\n15) Veteran's Day — День ветеранов, 11 число.\n16) Thanksgiving Day — День Благодарения, четвертый четверг декабря.\nДекабрь:\n17) Christmas — Рождество, 25 число.\n18) New Year's Eve — канун Нового Года, 31 число."
+],
+"answer": "Январь:\n1) New Year's Day — Новый Год, 1, 2 числа.\n2) Martin Luther King's Birthday — День рождения Мартина Лютера Кинга, третий понедельник.\nФевраль:\n3) St Valentine's Day — День Святого Валентина, 14 числа.\n4) President's Day — День Президента, третий понедельник.\nМарт:\n5) St. Patrick 's Day — День Святого Патрика, 17 числа.\n6) Easter — Пасха, в конце марта или в начале апреля.\nАпрель:\n7) April Fools Day — День смеха, первого апреля.\nМай:\n8) Memorial Day — День Памяти, понедельник.\n9) Mother's Day or Father's Day — День матери или День отца, воскресенье.\nИюнь:\n10) Flag day — День флага, 14 числа.\nИюль:\n11) Independence Day — День Независимости, 4 числа.\nСентябрь:\n12) Labor Day — День труда, первый понедельник.\nОктябрь:\n13) Columbus Day — День Колумба, второй понедельник.\n14) Halloween — Хэллоуин, 31 ноября.\n15) Veteran's Day — День ветеранов, 11 число.\n16) Thanksgiving Day — День Благодарения, четвертый четверг декабря.\nДекабрь:\n17) Christmas — Рождество, 25 число.\n18) New Year's Eve — канун Нового Года, 31 число."
+}
+]
+},
+{
+"number": "11-s57",
+"num": "11",
+"page": 57,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133431,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать пять вежливых просьб. Нужно начать так: Мау I...? Могу ли я...? Используем данные слова.",
+"",
+"Попросить совет, взять газету, купить журнал, съесть немного индейки, взять немного орехов.",
+"1. May I ask you for advice? Можно попросить у тебя совет? \n2. Мау I take the newspaper? Можно я возьму газету?\n3. Мау I buy a magazine? Можно я куплю журнал?\n4. May I eat some turkey? Можно я съем немного индейки?\n5. May I have some nuts? Можно мне взять немного орехов?"
+],
+"answer": "1. May I ask you for advice? Можно попросить у тебя совет? \n2. Мау I take the newspaper? Можно я возьму газету?\n3. Мау I buy a magazine? Можно я куплю журнал?\n4. May I eat some turkey? Можно я съем немного индейки?\n5. May I have some nuts? Можно мне взять немного орехов?"
+}
+]
+},
+{
+"number": "12-s57",
+"num": "12",
+"page": 57,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133432,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы, используя: Yes, you may / No, you mustn't (Да, можно / Нет, нельзя).",
+"",
+"",
+"1. May I watch TV? — No, you mustn't. It's time to sleep. Могу я посмотреть телевизор? — Нет. Время идти спать.\n2. May I go to the cinema? — Yes, you may. An interesting comedy is on. Могу я пойти в кино? — Да, сходи. Идёт интересная комедия.\n3. May I prepare turkey? — Yes, vou may, It's in the fridhe. Можно я приготовлю индейку? — Да. Она в холодильнике.\n4. May I play the piano here? — No, you mustn't. The child is sleeping in the room. Можно я поиграю на пианино здесь? — Нет. Ребёнок спит в комнате.\n5. May I sell this book? — No, you mustn't, I am going to give it to your cousin. Можно я продам эту книгу? — Нет. Я собираюсь отдать eё твоему двоюродному брату / двоюродной сестре."
+],
+"answer": "1. May I watch TV? — No, you mustn't. It's time to sleep. Могу я посмотреть телевизор? — Нет. Время идти спать.\n2. May I go to the cinema? — Yes, you may. An interesting comedy is on. Могу я пойти в кино? — Да, сходи. Идёт интересная комедия.\n3. May I prepare turkey? — Yes, vou may, It's in the fridhe. Можно я приготовлю индейку? — Да. Она в холодильнике.\n4. May I play the piano here? — No, you mustn't. The child is sleeping in the room. Можно я поиграю на пианино здесь? — Нет. Ребёнок спит в комнате.\n5. May I sell this book? — No, you mustn't, I am going to give it to your cousin. Можно я продам эту книгу? — Нет. Я собираюсь отдать eё твоему двоюродному брату / двоюродной сестре."
+}
+]
+},
+{
+"number": "13-s57",
+"num": "13",
+"page": 57,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133433,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, что они смогут сделать (завтра, на следующей неделе, в следующем месяце).",
+"",
+"Эдвард не может выучить это правило сейчас.\nЭлис не может приготовить индейку на ужин.\nМоя семья не может переехать в другую квартиру в субботу.\nМой хозяин сможет пригласить своего друга на выходные.\nМоряк не может отправиться в плавание вокруг этого острова на этой неделе.",
+"1. Edward will be able to learn this rule next week. Эдвард сможет выучить это правило на следующей неделе.\n2. Alice will be able to prepare turkey for dinner tomorrow. Элис сможет приготовить индейку на обед завтра.\n3. My family will be able to move to another flat next month. Моя семья сможет переехать в другую квартиру в следующем месяце.\n4. My host will be able to invite his friend to come for the weekend next week. Мой хозяин сможет пригласить своего друга на выходные на следующей неделе.\n5. The sailor will be able to sail round this island next week. Моряк сможет отправиться в плавание вокруг этого острова на следующей неделе."
+],
+"answer": "1. Edward will be able to learn this rule next week. Эдвард сможет выучить это правило на следующей неделе.\n2. Alice will be able to prepare turkey for dinner tomorrow. Элис сможет приготовить индейку на обед завтра.\n3. My family will be able to move to another flat next month. Моя семья сможет переехать в другую квартиру в следующем месяце.\n4. My host will be able to invite his friend to come for the weekend next week. Мой хозяин сможет пригласить своего друга на выходные на следующей неделе.\n5. The sailor will be able to sail round this island next week. Моряк сможет отправиться в плавание вокруг этого острова на следующей неделе."
+}
+]
+},
+{
+"number": "14-s58",
+"num": "14",
+"page": 58,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133434,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Джейн и Майк говорят о Диком Западе. Ниже приведены ответы Джейн, нам нужно написать вопросы Майка.",
+"Джейн: Они появились в 17 веке.\nДжейн: Они прибыли из Англии, Испании и Германии.\nДжейн: В 1733 году в Америке было 13 колоний.\nДжейн: Потому они не хотели зависеть от английского короля.\nДжейн: Джордж Вашингтон.\nДжейн: Они отправились на Запал в поисках золота и новых земель.\nДжейн: Они вели рискованную жизнь, она действительно была полна опасностей.",
+"Специальные вопросы в английском языке, как и в русском, задаются с целью выяснить какую-то конкретную информацию о предмете или явлении.\nОтличительной чертой специальных вопросов в английском является обязательное наличие вопросительных слов.\n Слово\n Транскрипция\n Перевод\n Пример\n Who\n /huː/\nКто?\n Who is it? Кто это?\n What\n /wɔt/\nЧто?\nКакой?\nWhat is it? Что это?\nWhat is your favourite colour? Какой у тебя любимый цвет?\n When\n /wen/\nКогда?\n When is your birthday? Когда твой день рождения?\n Where\n /weə/\nГде?\nКуда?\n Where are my socks? Где мои носки?\n How\n /hau/\nКак?\n How are you? Как ты?\n How old\n /haʊ əʊld/\nСколько лет?\nКакой возраст?\n How old is he? Сколько ему лет?\nПри формировании специального вопроса за основу берётся общий. Например, общий вопрос к предложению She saw this movie (она смотрела этот фильм) будет звучать как Did she see this movie? — Она смотрела этот фильм?\nДля того чтобы преобразовать его в специальный, необходимо добавить в начало предложения одно из вопросительных слов.\nПример:\nWhen did she see this movie? — Когда она смотрела этот фильм?",
+"When did the first colonists appear in America? Когда первые колонисты появились в Америке?\n Where were the colonists from? Откуда прибыли колонисты?\nWhat did they grow? Что они выращивали?\nHow many colonies were there in America in1733? Сколько колоний было в Америке в 1733 году?\n Why did they begin to fight for independence? Почему они начали бороться за свою независимость?\nWho was the first American President? Кто был первым президентом Америки?\nWhy did the colonists go west? Зачем колонисты отправились на Запад?\nWhat kind of life did they have in the Wild West? Какая у них была жизнь нa Диком Западе?"
+],
+"answer": "When did the first colonists appear in America? Когда первые колонисты появились в Америке?\nWhere were the colonists from? Откуда прибыли колонисты?\nWhat did they grow? Что они выращивали?\nHow many colonies were there in America in1733? Сколько колоний было в Америке в 1733 году?\nWhy did they begin to fight for independence? Почему они начали бороться за свою независимость?\nWho was the first American President? Кто был первым президентом Америки?\nWhy did the colonists go west? Зачем колонисты отправились на Запад?\nWhat kind of life did they have in the Wild West? Какая у них была жизнь нa Диком Западе?"
+}
+]
+},
+{
+"number": "15-s58",
+"num": "15",
+"page": 58,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133435,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать названия пяти американских монет.",
+"Dollars. Доллары.\nPennies. Центы.\nNickels. Монеты в пять центов, пятицентовики.\nDimes. Даймы, монеты в 10 центов.\nQuarters. Монеты в 25 центов, четвертаки."
+],
+"answer": "Dollars. Доллары.\nPennies. Центы.\nNickels. Монеты в пять центов, пятицентовики.\nDimes. Даймы, монеты в 10 центов.\nQuarters. Монеты в 25 центов, четвертаки."
+}
+]
+},
+{
+"number": "16-s58",
+"num": "16",
+"page": 58,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133436,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы.",
+"WORDLIST\nnickels — пятицентовик\ndime — десятицентовик\ndollar — доллар\nquarter — четвертак",
+"Сколько пятицентовиков в десятицентовике?\nСколько десятицентовиков в одном долларе?\nСколько пятицентовиков в одном долларе?\nСколько пятицентовиков в четвертаке?\nСколько четвертаков в одном долларе?",
+"Two nickles are in a dime. (В десятицентовике два пятицентовика.)\nTen dimes are in a dollar. (В одном долларе десять десятицентовиков.)\nTwenty nickles are in a dollar. (В одном долларе двадцать пятицентовиков.)\nFive nickles are in a quarter. (В четвертаке пять пятицентовиков.)\nFour quarter are in a dollar. (В одном долларе четыре четвертака.)"
+],
+"answer": "Two nickles are in a dime.\nTen dimes are in a dollar.\nTwenty nickles are in a dollar.\nFive nickles are in a quarter.\nFour quarter are in a dollar."
+}
+]
+},
+{
+"number": "17-s59",
+"num": "17",
+"page": 59,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133437,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и ответить, является ли дядя Сэм настоящим человеком.",
+"WORDLIST\ncartoon — мультик\ngovernment — правительство\nappear — появляться\nposter — плакат\nsoldier — солдат",
+"«Дядя Сэм» — мультипликационный символ американского правительства. Он появлялся в журналах, газетах и на плакатах в течение последних 150 лет. В 1812 году человек по имени Сэмюэл Уилсон продавал мясо американскому правительству для солдат. Все называли его дядя Сэм. Первые буквы дяди Сэма US были такими же, как и первые буквы Соединённых Штатов (United States). Очень скоро впервые стали появляться карикатуры на дядю Сэма в роли американского правительства.\nВ Соединённых Штатах Америки тоже есть официальная песня. Это — «Звёздное знамя».",
+"Uncle Sam was a real man. (Дядя Сэм был настоящим человеком.)"
+],
+"answer": "Uncle Sam was a real man."
+}
+]
+},
+{
+"number": "18-s59",
+"num": "18",
+"page": 59,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133438,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать всё, что ты знаешь об американских символах.",
+"WORDLIST\nstripes — полосы\ncolonies — колонии\ncurrent — современный\ncolonies — колонии",
+"Цвет: красный, голубой и белый.\nНазвание: «Звёзды и полосы».\nКоличество звёзд: пятьдесят.\nКоличество полос: тринадцать.\nЦвет полос: красный и белый.\nПолосы означают: первые тринадцать колоний США.\nЗвёзды означают: современное количество штатов США.\nМеста, где можно увидеть флаг: школы, улицы, площади, магазины, офисы."
+],
+"answer": "Red, blue and white.\nStars and Stripes.\nFifty.\nThirteen.\nRed and white.\nThe first thirteen US colonies.\nThe current number of US states.\nSchools, streets, squares, shops, offices."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы о США.",
+"WORDLIST\nappear — появляться\ncountry — страна\nreason — причина",
+"Год, когда появилась в США: 1884.\nСтрана, из которой она прибыла: Франция.\nПричина, по которой она появилась в США: символ дружбы Франции и США.\nМестоположение: Нью-Йорк."
+],
+"answer": "1884.\nFrance.\nIt is the symbol of friendship between France and the USA.\nNew York."
+},
+{
+"name": "c",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы о США.",
+"WORDLIST\nofficial — официальный\nolive branch — ветка оливы\narrows — стрелы\nsymbol — символ",
+"Год, когда это стало официальным символом: 1782.\nОливковая ветвь означает: мир.\nСтрелы означают: силу.\nМестоположение символа: оборот американского доллара."
+],
+"answer": "1782\nPeace.\nStrength.\nThe back of the dollar bill."
+},
+{
+"name": "d",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы о США.",
+"WORDLIST\nkind — тип\nsymbol — символ",
+"Тип символа: мультипликационный символ.\nКого обозначают: американское правительство.\nГде можно увидеть этот символ: в журналах, постерах, газетах.\nКогда дядя Сэм появился в качестве символа США: в XIX веке.\n«US» означает: а) США; б) дядя Сэм."
+],
+"answer": "Cartoon symbol.\nAmerical government.\nIn magazines, posters, newspapers.\nThe 19th century.\nA) United States; b) Uncle Sam."
+}
+]
+},
+{
+"number": "19-s61",
+"num": "19",
+"page": 61,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133439,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, что люди могут читать, продавать, защищать, готовить и чем могут интересоваться.",
+"WORDLIST\nnewspaper — газета\nfurniture — мебель\nhuman rights — права человека\nspeech — речь\nart — искусство",
+"Люди умеют читать письма...\nЛюди могут продавать овощи...\nЛюди могут защищать растения...\nЛюди могут готовить еду...\nЛюди могут интересоваться языками...",
+"Люди умеют читать письма, книги и газеты (books and newspapers).\nЛюди могут продавать овощи, фрукты и мебель (fruits and furniture).\nЛюди могут защищать растения, животных и права человека (animals and human rights).\nЛюди могут готовить еду, уроки и речь (lessons and speeches).\nЛюди могут интересоваться языками, литературой и искусством (literature and art)."
+],
+"answer": "Books and newspapers.\nFruits and furniture.\nAnimals and human rights.\nLessons and speeches.\nLiterature and art."
+}
+]
+},
+{
+"number": "20-s61",
+"num": "20",
+"page": 61,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133440,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно придумать предложения, используя данные слова.",
+"WORDLIST\nadvice — совет\nclever — умный\nkind — добрый\ndangerous — опасный\nexcellent — замечательный",
+"Это хороший совет. Я последую ему.",
+"It is bad advice. I won't follow it. (Это плохой совет. Я не буду следовать ему.)\nIt is clever advice. I will follow it. (Это умный совет. Я последую ему.)\nIt is kind advice. I will follow it. (Это добрый совет. Я последую ему.)\nIt is dangerous advice. I won't follow it. (Это опасный совет. Я не буду следовать ему.)\nIt is excellent advice. I will follow it. (Это замечательный совет. Я последую ему.)"
+],
+"answer": "It is bad advice. I won't follow it.\nIt is clever advice. I will follow it.\nIt is kind advice. I will follow it.\nIt is dangerous advice. I won't follow it.\nIt is excellent advice. I will follow it."
+}
+]
+},
+{
+"number": "21-s61",
+"num": "21",
+"page": 61,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133441,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и словосочетания, выучить их значение и уметь их писать.",
+"Существительные: первооткрыватель, открытие, парус, моряк, остров, поселение, индейка, опасность, урожай, бог, орех, лес, мир, охотник, дружба, независимость, золото, ружьё, змея, портной, государство, правительство, журнал, газета, письмо, совет, человек, хозяин, хозяйка, правило.\nГлаголы: обнаруживать, плыть, достигать, интересоваться (чем-либо), появляться, готовиться, охотиться, курить, зависеть (от чего-либо), бороться (боролся, боровшийся), располагаться, защищать, продавать (продавал, продавший), советовать, двигаться, расслабляться.\nПрилагательные: круглый, твёрдый, родной, деревянный, мирный, золотой, пустой, опасный, каждый, свой, личный.\nНаречие: вместе, может быть.\nПредлог: вдоль, через, так как.",
+"Фразы\nУрок 46: Как дела? Как давно ты здесь? Джек, ты вернулся! Давно не виделись. Я так много слышал о вас!\nУрок 47: Это зависит; Золотая монета; золотые волосы.\nУрок 48: просмотреть.\nУрок 50: — Можно мне? — Да. — Сделай, пожалуйста. — Боюсь, что нет. — Нет, нельзя; пенни, пятаки, десять центов, четвертаки, доллары.\nУрок 51: может — мог — смог; Я могу сделать это; Тогда он не мог этого сделать; Она сможет сделать это на следующей неделе. Совет хороший. Это был хороший совет."
+],
+"answer": "Существительные: первооткрыватель, открытие, парус, моряк, остров, поселение, индейка, опасность, урожай, бог, орех, лес, мир, охотник, дружба, независимость, золото, ружьё, змея, портной, государство, правительство, журнал, газета, письмо, совет, человек, хозяин, хозяйка, правило.\nГлаголы: обнаруживать, плыть, достигать, интересоваться (чем-либо), появляться, готовиться, охотиться, курить, зависеть (от чего-либо), бороться (боролся, боровшийся), располагаться, защищать, продавать (продавал, продавший), советовать, двигаться, расслабляться.\nПрилагательные: круглый, твёрдый, родной, деревянный, мирный, золотой, пустой, опасный, каждый, свой, личный.\nНаречие: вместе, может быть.\nПредлог: вдоль, через, так как.\nФразы\nУрок 46: Как дела? Как давно ты здесь? Джек, ты вернулся! Давно не виделись. Я так много слышал о вас!\nУрок 47: Это зависит; Золотая монета; золотые волосы.\nУрок 48: просмотреть.\nУрок 50: — Можно мне? — Да. — Сделай, пожалуйста. — Боюсь, что нет. — Нет, нельзя; пенни, пятаки, десять центов, четвертаки, доллары.\nУрок 51: может — мог — смог; Я могу сделать это; Тогда он не мог этого сделать; Она сможет сделать это на следующей неделе. Совет хороший. Это был хороший совет."
+}
+]
+},
+{
+"number": "22-s62",
+"num": "22",
+"page": 62,
+"chapter": "America (the USA). Lessons 43-52",
+"skyId": 133442,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и догадаться об их значениях.",
+"Continent,\nplanet,\nFrance,\nterritory,\ncolony,\nsoldier,\ncolonist,\nSpain,\nstripe,\nCuba,\nfestival,\nsymbol,\nstatue,\nnational,\neagle,\nsauce,\nIndian,\nliberty,\nceremony,\nculture,\ncostume,\nAsia,\nAlaska,\nNegro,\nplantation,\nrice,\ntobacco,\npresident,\ncowboy,\ngroup, \nrow, \nattack, \ndisplay, \nfold,\ntraditional, \nofficial, \nAmerican, \nIndian, \nSpanish, \nroast, \nwhole.",
+"Континент,\nпланета,\nФранция,\nтерритория,\nколония,\nсолдат,\nколонист,\nИспания,\nполоса,\nКуба,\nфестиваль,\nсимвол,\nстатуя,\nнациональный,\nорёл,\nсоус,\nиндийский,\nсвобода,\nцеремония,\nкультура,\nкостюм,\nАзия,\nАляска,\nтемнокожий,\nплантация,\nрис,\nтабак,\nпрезидент,\nковбой,\nгруппа,\nряд,\nатака,\nотображать,\nскладывать,\nтрадиционный,\nофициальный,\nамериканский,\nиндийский,\nИспанский язык,\nжарить,\nцелый."
+],
+"answer": "Континент,\nпланета,\nФранция,\nтерритория,\nколония,\nсолдат,\nколонист,\nИспания,\nполоса,\nКуба,\nфестиваль,\nсимвол,\nстатуя,\nнациональный,\nорёл,\nсоус,\nиндийский,\nсвобода,\nцеремония,\nкультура,\nкостюм,\nАзия,\nАляска,\nтемнокожий,\nплантация,\nрис,\nтабак,\nпрезидент,\nковбой,\nгруппа,\nряд,\nатака,\nотображать,\nскладывать,\nтрадиционный,\nофициальный,\nамериканский,\nиндийский,\nИспанский язык,\nжарить,\nцелый."
+}
+]
+},
+{
+"number": "1-s63",
+"num": "1",
+"page": 63,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133443,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно образовать отглагольные существительные с помощью суффикса -tion.",
+"",
+"WORDLIST\ncollect — собирать \nexplain — объяснять\nprotect — защищать \nрrеparе — подготавливать \nfound — основывать \ninform — информировать\ncelebrate — отмечать \ncompose — составлять \ncreate — изобретать \ndecorate — украшать",
+"Сollect — collection — коллекция. \nExplain — explanation — объяснение. \nProtect — protection — защита. \nPrеparе — preparation — подготовка. \nFound — foundation — основание. \nInform — information — информация. \nCelebrate — celebration — празднование. \nCompose — composition — композиция. \nCreate — creation — создание. \nDecorate — decoration — украшение."
+],
+"answer": "Сollect — collection — коллекция.\nExplain — explanation — объяснение.\nProtect — protection — защита.\nPrеparе — preparation — подготовка.\nFound — foundation — основание.\nInform — information — информация.\nCelebrate — celebration — празднование.\nCompose — composition — композиция.\nCreate — creation — создание.\nDecorate — decoration — украшение."
+}
+]
+},
+{
+"number": "2-s63",
+"num": "2",
+"page": 63,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133444,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно определить, какие из предложений 1–8 верны (true), а какие нет (false).",
+"Россия богата золотом и серебром.\nОдним из российских символов является российский государственный флаг.\nНа российском флаге четыре полосы.\nДругой символ России — ель.\nНева — самая длинная река в России.\nРоссия — самая маленькая страна в Европе.\nРусский народ всегда был предан своей Родине.\nУрал образует естественную границу между Европой и Азией.",
+"True. \nTrue. \nFalse. \nFalse. \nFalse. \nFalse. \nTrue. \nTrue."
+],
+"answer": "True.\nTrue.\nFalse.\nFalse.\nFalse.\nFalse.\nTrue.\nTrue."
+}
+]
+},
+{
+"number": "3-s64",
+"num": "3",
+"page": 64,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133445,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно задать вопросы, чтобы получить больше информации.",
+"Он основал столицу.",
+"",
+"Когда мы задаём вопрос к подлежащему, мы не используем вспомогательный глагол и не меням слова в предложении местами. Нужно просто поставить вопросительное слово после вместо подлежащего.\nWho likes apples? (Кто любит яблоки?)",
+"Who founded the capital?\nWhat capital did he found?\nWhen did he found the capital?\nWhere did he found the capital?\nWhy did he found the capital?",
+"Кто основал столицу?\nКакую столицу он основал?\nКогда он основал столицу?\nГде он основал столицу?\nПочему он основал столицу?"
+],
+"answer": "Who founded the capital?\nWhat capital did he found?\nWhen did he found the capital?\nWhere did he found the capital?\nWhy did he found the capital?"
+}
+]
+},
+{
+"number": "4-s64",
+"num": "4",
+"page": 64,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133446,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно распределить слова на группы: а) слова, которые описывают Россию; b) слова, которые описывают русский народ.",
+"(The) biggest — самый большой. \nNoble — благородный. \nRich — богатый. \nHonest — честный. \nDevoted — преданный. \nBrave — храбрый. \nIndependent — независимый. \nPeaceful — мирный. \n(Be) full of — полон. \n(Be) proud of — горд. \n(Be) found of — быть основанным. \nKind — добрый. \nClever — умный. \nFriendly — дружелюбный.",
+"a) Russia: the biggest, rich, independent, peaceful, (be) full of, (be) found of. \nb) Russian people: noble, honest, devoted, brave, (be) proud of, kind, clever, friendly."
+],
+"answer": "a) Russia: the biggest, rich, independent, peaceful, (be) full of, (be) found of. \nb) Russian people: noble, honest, devoted, brave, (be) proud of, kind, clever, friendly."
+}
+]
+},
+{
+"number": "5-s64",
+"num": "5",
+"page": 64,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133447,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно согласиться или не согласиться с утверждениями 1–4.",
+"Столица России — Киев. \nМосква — не старый город, ей меньше 100 лет.\nСердце Москвы — Кремль. \nМосква была основана Юрием Долгоруким в 1147 году.\nВ 16 веке Москва была одним из крупнейших городов Европы.\nМосква всегда была столицей России.\nПётр Великий перенёс столицу России в Санкт-Петербург.\nВ 1918 году Москва снова стала столицей России.",
+"No, the capital of Russia is Moscow. \nNo, moscow is an old city. \nYes.\nYes.\nYes. \nNo, other cities have been the capital of Russia too. \nYes. \nYes."
+],
+"answer": "No, the capital of Russia is Moscow.\nNo, moscow is an old city.\nYes.\nYes.\nYes.\nNo, other cities have been the capital of Russia too.\nYes.\nYes."
+}
+]
+},
+{
+"number": "6-s65",
+"num": "6",
+"page": 65,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133448,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно объяснить данные нам слова в письменной форме.",
+"An honest man — честный человек. \nBrave — храбрый. \nA rich woman — богатая женщина. \nYoung — молодой. \nWar — война. \nEnemy — враг.",
+"An honest man — a man who always tells the truth. \nBrave — afraid of nothing.\nA rich woman — a woman who has a lot of money.\nYoung — not old.\nWar — a situation in which two or more countries fight against each other.\nEnemy — a person or a country who is being against you.",
+"Честный человек — человек, который всегда говорит правду.\nХрабрый — ничего не боится.\nБогатая женщина — это женщина, у которой много денег.\nМолодой — не старый.\nВойна — ситуация, в которой две или более стран воюют друг против друга.\nВраг — человек или страна, которые настроены против вас."
+],
+"answer": "An honest man — a man who always tells the truth.\nBrave — afraid of nothing.\nA rich woman — a woman who has a lot of money.\nYoung — not old.\nWar — a situation in which two or more countries fight against each other.\nEnemy — a person or a country who is being against you."
+}
+]
+},
+{
+"number": "7-s66",
+"num": "7",
+"page": 66,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133449,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно ответить на вопросы Ника.",
+"Ник: Почему Россия была в большой опасности в 1812 году?\nНик: Был ли Наполеон уверен, что сможет легко выиграть войну против России? Почему?\nНик: Когда была страшная битва в Смоленске?\nНик: Почему армия Наполеона так быстро покинула Смоленск?\nНик: Почему русский царь пригласил Михаила Кутузова возглавить русскую армию?\nНик: Где Кутузов решил дать бой Наполеону?\nНик: Какое сражение положило начало величайшей победе России над Наполеоном в войне 1812 года?",
+"Russia was in great danger in 1812 because Napoleon wanted to conquer it. \nYes, he was, because he has captured the Europe. \nA terrible battle in Smolensk was in August 1812. \nBecause the city was empty. \nKutuzov was the greatest commander. \nIn Borodino. \nThe Battle of Borodino.",
+"Россия была в большой опасности в 1812 году, потому что Наполеон хотел завоевать её.\nДа, он был, потому что он захватил Европу.\nСтрашная битва под Смоленском произошла в августе 1812 года.\nПотому что город был пуст.\nКутузов был величайшим полководцем.\nВ Бородино.\nБородинская битва."
+],
+"answer": "Russia was in great danger in 1812 because Napoleon wanted to conquer it.\nYes, he was, because he has captured the Europe.\nA terrible battle in Smolensk was in August 1812.\nBecause the city was empty.\nKutuzov was the greatest commander.\nIn Borodino.\nThe Battle of Borodino."
+}
+]
+},
+{
+"number": "8-s66",
+"num": "8",
+"page": 66,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133450,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить артикль the там, где это необходимо.",
+"The article (артикль)\nВ английском языке многие существительные употребляются с артиклями a/an и the.\nАртикль ставится перед существительными.\n1. Артикль, как правило, не используется с существительными во множествен­ном числе или неисчисляемыми существительными, значения которых являются обобщёнными:\nI like English novels. — Мне нравятся английские романы.\nWe study American history. — Мы изучаем американскую историю.\nОднако, если существительные во множественном числе или неисчисляемые су­ществительные конкретизируются каким-либо образом, с ними используется оп­ределённый артикль the:\nI like the novels of England. — Мне нравятся романы из Англии.\nWe study the history of America. — Мы изучаем историю Америки.\n(В обоих примерах существительные конкретизируются с помощью фразы с of.)\n2. Артикль а/аn не употребляется перед исчисляемыми существительными в единственном числе после слов a type of, a sort of, a kind of:\na type of book,\na sort of book,\na kind of book.\n3. Articles with geographical names (артикли с географическими назва­ниями).\n3. 1. Артикль не употребляется с названиями:\nконтинентов (South Africa);\nбольшинства стран (Holland, Spain);\nгородов (London);\nулиц и площадей (Fleet Street, Trafalgar Square);\nпарков (Hyde Park);\nотдельных горных вершин (Ben Nevis);\nозёр, если в названии есть слово lake (Lake Superior, но the Baikal).\n3. 2. Артикль the употребляется с названиями:\nстран, если в названии есть слова «союз», «федерация», «королевство», «штат» (the UK — the United Kingdom, the USA — the United States, the Russian Federation);\nгеографических объектов в форме множественного числа (the Netherlands — Нидерланды (страна));\nгорных цепей (the Caucasus);\nрек (the Thames);\nокеанов, морей и заливов (the Pacific Ocean, the Black Sea, the Gulf of Mexico).\n4. Articles with nouns denoting professions (артикли с существительными, обозначающи­ми профессию).\n4. 1. Определённый артикль the используется, если профессия человека пред­шествует имени собственному:\nThe famous composer Beethoven wrote \"Moonlight Sonata\". — Знаменитый композитор Бетховен написал «Лунную сонату».\n4. 2. Определённый артикль the используется, если должность/титул/звание являет­ся частью составного именного сказуемого и указывает на то, что данный человек единственный, кто занимает эту должность, имеет этот титул или звание:\nCharles is the Prince of Wales. — Чарльз — принц Уэльский.\n4. 3. Определённый артикль the используется с прозвищами людей/монархов и с порядковыми числительными в именах монархов:\nPeter the Great — Пётр Великий. (Пишем Peter I, читаем Peter the First.)\n4. 4. Неопределённый артикль а/аn может использоваться, если профессия следу­ет за именем собственным, т. е. выполняет в предложении функцию приложения:\nBeethoven, a famous composer, wrote \"Moonlight Sonata\". — Бетховен, известный композитор, написал «Лунную сонату».\n4. 5. Неопределённый артикль a/an используется, если профессия/титул/звание является частью составного именного сказуемого и указывает на то, что данный человек один из тех, кто имеет эту профессию/титул/звание:\nI. Shishkin is a famous Russian painter. — И. Шишкин — известный русский художник.\n4. 6. Артикль не используется, если существительное в дополнении или в составном именном сказуемом указывает на положение, которое человек имеет или достиг:\nIn 1952, Elizabeth became queen. Elizabeth II is queen. — В 1952 году Елизавета стала королевой. Елизавета II — королева.\n5. Articles with proper names (артикли с именами собственными).\n5. 1. Артикль не используется:\nс названиями общественных зданий, мест отдыха и городских организаций, имеющими в качестве определения имя собственное (имя человека или назва­ние местности), а также с названиями главных общественных зданий или орга­низаций города (Oxford University, Buckingham Palace, Moscow Zoo, нo the White House, the Royal Palace (white и royal не являются именами собственными));\nс существительными, имеющими в качестве определения имя собственное или географическое название в притяжательном падеже (McDonald's, Lermontov's poems, St Paul's Cathedral).\n5. 2. Определённый артикль the употребляется с названиями:\nтеатров, кинотеатров, музеев, памятников, концертных залов (the Bolshoi Theatre, the Odeon, the Tretyakov Gallery);\nмест, зданий с предлогом of (the Houses of Parliament, the Tower of London);\nфестивалей, конкурсов, соревнований, оркестров, которые имеют в качестве опре­деления имя собственное (имя человека или название местности) (the Liverpool band, the Tchaikovsky Contest);\nсоборов/церквей/храмов, если определением перед ними является существи­тельное, обозначающее религиозный праздник (the Uspensky Cathedral = the Assumption Cathedral — Успенский собор).\n6. Articles with unique things (артикль с уникальными предметами/вещами/объектами).\nОпределённый артикль the используется:\nс предметами/вещами/объектами, существующими в единственном экземпля­ре (the sky, the world);\nс названиями планет и полюсов (the Saturn, the Moon, the South Pole).",
+"Red Square. \nThe Volga. \nThe Urals. \nMoscow. \nThe USA. \nBaikal\nAsia. \nEurope. \nThe Arctic Ocean. \nThe Neva. \nThe Black Sea. \nThe Alps\nRussia. \nKiev. \nApple Street. \nAmerica. \nThe Indian Ocean. \nGreen Street"
+],
+"answer": "Red Square. \nThe Volga. \nThe Urals. \nMoscow. \nThe USA. \nBaikal\nAsia. \nEurope. \nThe Arctic Ocean. \nThe Neva. \nThe Black Sea. \nThe Alps\nRussia. \nKiev. \nApple Street. \nAmerica. \nThe Indian Ocean. \nGreen Street"
+}
+]
+},
+{
+"number": "9-s67",
+"num": "9",
+"page": 67,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133451,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить недостающие степени существительных.",
+"",
+"Brave — braver — the bravest. \nHappy — happier — the happiest. \nGood — better — the best. \nComfortable — more comfortable — the most comfortable. \nBad — worse — the worst. \nEarly — earlier — the earliest. \nClever — cleverer — the cleverest. \nInteresting — more interesting — the most interesting."
+],
+"answer": "Brave — braver — the bravest. \nHappy — happier — the happiest. \nGood — better — the best. \nComfortable — more comfortable — the most comfortable. \nBad — worse — the worst. \nEarly — earlier — the earliest. \nClever — cleverer — the cleverest. \nInteresting — more interesting — the most interesting."
+}
+]
+},
+{
+"number": "10-s67",
+"num": "10",
+"page": 67,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133452,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно выучить данные нам слова и фразы.",
+"Words (слова):\nBank, enemy, bravery, birch, top, map, stone, war, army, battle, victory, soul, heart, found (founded), win (won, won), die, kill, noble, honest, devoted, brave, young, hospitable, real, really, between, against.\nPhrases (фразы):\nTo travel east (west), to be founded, to be made of.",
+"WORDLIST\nWords (слова):\nbank — банк, берег \nenemy — враг\nbravery — храбрость\nbirch — берёза\ntop — наивысший, максимальный\nmap — карта\nstone — камень\nwar — война\narmy — армия\nbattle — битва\nvictory — победа\nsoul — душа\nheart — сердце\nfound (founded) — основывать (основал)\nwin (won, won) — выиграть (выиграл)\ndie — умирать\nkill — убивать \nnoble — благородный\nhonest — честный\ndevoted — преданный\nbrave — храбрый\nyoung — молодой\nhospitable — гостеприимный\nreal — настоящий\nreally — действительно\nbetween — между\nagainst — против\nPhrases (фразы):\ntravel east (west) — путешествие на восток (запад) \nto be founded — быть основанным\nto be made of — быть сделанным из"
+],
+"answer": "WORDLIST\nWords (слова):\nbank — банк, берег\nenemy — враг\nbravery — храбрость\nbirch — берёза\ntop — наивысший, максимальный\nmap — карта\nstone — камень\nwar — война\narmy — армия\nbattle — битва\nvictory — победа\nsoul — душа\nheart — сердце\nfound (founded) — основывать (основал)\nwin (won, won) — выиграть (выиграл)\ndie — умирать\nkill — убивать\nnoble — благородный\nhonest — честный\ndevoted — преданный\nbrave — храбрый\nyoung — молодой\nhospitable — гостеприимный\nreal — настоящий\nreally — действительно\nbetween — между\nagainst — против\nPhrases (фразы):\ntravel east (west) — путешествие на восток (запад)\nto be founded — быть основанным\nto be made of — быть сделанным из"
+}
+]
+},
+{
+"number": "11-s67",
+"num": "11",
+"page": 67,
+"chapter": "My country. Lessons 53-57",
+"skyId": 133453,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно изучить новые слова.",
+"WORDLIST\nyouth — молодежь\nborder — граница\nmineral — минерал\nprince — принц\nchronicle — хроника\nfortress — крепость \nbreak — ломать\nflow — течь\nconquer — завоевание\ncriticize — критиковать\nsymbolic — символичный\npoetic — поэтичный\npractically — практически"
+],
+"answer": "WORDLIST\nyouth — молодежь\nborder — граница\nmineral — минерал\nprince — принц\nchronicle — хроника\nfortress — крепость\nbreak — ломать\nflow — течь\nconquer — завоевание\ncriticize — критиковать\nsymbolic — символичный\npoetic — поэтичный\npractically — практически"
+}
+]
+}
+]
+}
