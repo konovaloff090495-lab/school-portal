@@ -62,11 +62,9 @@ const NEAR_RADIUS_M = 3000
  * фильтром по типу. Для трёх из них есть эквивалент среди «особенностей»
  * (keyword-матч по описанию), им отдаём featureFilter вместо типа.
  */
-export const TYPE_TO_FEATURE: Partial<Record<SchoolType, FeatureSlug>> = {
-  'programmirovanie': 'it-klass',
-  'podgotovka-ege':   'podgotovka-k-ege',
-  'podgotovka-oge':   'podgotovka-k-oge',
-}
+// 17.09.2026: у всех трёх типов появились настоящие карточки (Яндекс Карты), подмена
+// фичей больше не нужна — карта пустая, но экспорт оставлен для страниц метро/округов.
+export const TYPE_TO_FEATURE: Partial<Record<SchoolType, FeatureSlug>> = {}
 
 function byRating(a: School, b: School): number {
   const ra = a.rating ?? 0, rb = b.rating ?? 0

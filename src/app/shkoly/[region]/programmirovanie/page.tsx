@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   regionSlugs, regionLabels, regionLabelsIn,
-  getSchoolsByFeature, RegionSlug,
+  getSchoolsByFeature, getSchoolsByRegionAndType, RegionSlug,
 } from '@/data/schools'
+import ProgCityExtras from '@/components/ProgCityExtras'
 import CatalogClient from '../../CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForRegionFeature } from '@/lib/related-schools'
@@ -16,7 +17,7 @@ function ProgrammingRegionSeoBlock({ regionIn, count }: { regionIn: string; coun
           Школы программирования {regionIn}
         </h2>
         <p style={{ fontSize: 15, lineHeight: 1.75, margin: 0, color: '#4B5563' }}>
-          В каталоге {count} школ с IT-классами и углублённым программированием {regionIn}. Здесь собраны учебные заведения, в которых дети изучают Python, веб-разработку, робототехнику, кибербезопасность и искусственный интеллект в рамках основной образовательной программы или в формате углублённых профильных классов.
+          В каталоге {count} {count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'} программирования для детей {regionIn} — очные детские IT-школы и клубы (KIBERone, «Алгоритмика», Coddy, «Лига Роботов», Компьютерная академия TOP, местные центры), собранные по Яндекс Картам в сентябре 2026 года. Здесь дети 6–17 лет изучают Scratch, Python, Roblox, веб-разработку, робототехнику и создание игр во внеурочное время; адрес, телефон и оценка на Картах есть у каждой школы.
         </p>
       </div>
       <div style={{ marginBottom: 24 }}>
@@ -32,7 +33,7 @@ function ProgrammingRegionSeoBlock({ regionIn, count }: { regionIn: string; coun
           С какого класса начинать программирование
         </h2>
         <p style={{ fontSize: 15, lineHeight: 1.75, margin: 0, color: '#4B5563' }}>
-          Большинство IT-школ принимают с 5–6 класса. Логика и алгоритмическое мышление формируются в 10–13 лет — это оптимальный возраст для старта. Некоторые школы предлагают программирование с 1 класса (Scratch, визуальные языки), но углублённые курсы — с 7–8 класса. Профильный IT-класс в большинстве случаев открывается с 8–9 класса.
+          Детские школы программирования берут с 6–7 лет: младшим дают Scratch и визуальные языки, с 10–12 лет — Roblox, Minecraft и первые шаги в Python, с 13 лет — «взрослые» языки и проекты. Профильный IT-класс в общеобразовательной школе открывается обычно с 8–9 класса — такие школы города перечислены ниже отдельным списком.
         </p>
       </div>
     </div>
@@ -52,14 +53,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!regionSlugs.includes(region as RegionSlug)) return {}
   const r = region as RegionSlug
   const regionIn = regionLabelsIn[r]
-  const count = getSchoolsByFeature('it-klass', r).length
-  const title = `Школы программирования ${regionIn} — ${count} школ | pro-schools.ru`
-  const description = `Школы с IT-классами и углублённым программированием ${regionIn}: робототехника, веб-разработка, искусственный интеллект. Адреса, телефоны, отзывы.`
+  const count = getSchoolsByRegionAndType(r, 'programmirovanie').length
+  const itCount = getSchoolsByFeature('it-klass', r).length
+  const w = count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'
+  const title = count > 0
+    ? `Школы программирования для детей ${regionIn} 2026: ${count} ${w} — адреса, цены, отзывы`
+    : `Школы программирования для детей ${regionIn} — IT-классы и онлайн-курсы`
+  const description = count > 0
+    ? `${count} ${w} программирования для детей ${regionIn}: KIBERone, Алгоритмика, Coddy, Лига Роботов и местные IT-клубы — адреса, телефоны, оценки на Яндекс Картах (09.2026). Как выбрать по возрасту и языку + онлайн-школа с пробным уроком от 5 500 ₽/мес.`
+    : `Школы с IT-классами и углублённым программированием ${regionIn} и онлайн-школа программирования для детей 7–17 лет с пробным уроком. Адреса, телефоны, отзывы.`
   return {
     title,
     description,
     alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/programmirovanie/` },
     openGraph: { title, description, url: `https://pro-schools.ru/shkoly/${r}/programmirovanie/` },
+    // тонкие страницы (ни одной детской IT-школы и <3 школ с IT-классами) не индексируем
+    ...(count < 2 && itCount < 3 ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
@@ -69,30 +78,50 @@ export default async function ProgrammirovaniePage({ params }: Props) {
   const r = region as RegionSlug
   const regionName = regionLabels[r]
   const regionIn = regionLabelsIn[r]
-  const count = getSchoolsByFeature('it-klass', r).length
+  const count = getSchoolsByRegionAndType(r, 'programmirovanie').length
+  const itCount = getSchoolsByFeature('it-klass', r).length
 
-  // Как на соседних выборках (osobennosti/profilnye/метро×тип): вместо пустой
-  // страницы — честно подписанный блок ближайшего расширения выборки.
-  const related = count === 0 ? relatedForRegionFeature(r, 'it-klass') : null
+  // Есть настоящие детские школы программирования (собраны по Яндекс Картам) —
+  // показываем их. Нет — как раньше, общеобразовательные школы с IT-классами,
+  // а при их отсутствии честно подписанный блок ближайшего расширения выборки.
+  const related = count === 0 && itCount === 0 ? relatedForRegionFeature(r, 'it-klass') : null
+  const extras = <ProgCityExtras region={r} count={count} />
+
+  if (count === 0) {
+    return (
+      <CatalogClient
+        emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
+        initialRegions={[r]}
+        lockRegion
+        featureFilter="it-klass"
+        title={`Школы программирования для детей ${regionIn}`}
+        subtitle={itCount > 0
+          ? `Очных детских IT-школ в каталоге пока нет — ${itCount} ${itCount === 1 ? 'школа' : itCount < 5 ? 'школы' : 'школ'} с IT-классами`
+          : 'Школ в базе пока нет — ниже, как заниматься онлайн'}
+        breadcrumbs={[
+          { label: 'Все школы', href: '/shkoly/' },
+          { label: regionName, href: `/shkoly/${r}/` },
+          { label: 'Программирование' },
+        ]}
+        seoContent={<>{extras}<ProgrammingRegionSeoBlock regionIn={regionIn} count={itCount} /></>}
+      />
+    )
+  }
 
   return (
     <CatalogClient
-      emptyFallback={related ? <RelatedSchools block={related} /> : undefined}
       initialRegions={[r]}
+      initialTypes={['programmirovanie']}
       lockRegion
-      featureFilter="it-klass"
-      title={`Школы программирования ${regionIn}`}
-      subtitle={
-        count > 0
-          ? `${count} ${count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'} с IT-классами`
-          : 'Школ в базе пока нет — скоро добавим'
-      }
+      lockType
+      title={`Школы программирования для детей ${regionIn}`}
+      subtitle={`${count} ${count === 1 ? 'школа' : count < 5 ? 'школы' : 'школ'} и клубов по данным Яндекс Карт, 09.2026`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: regionName, href: `/shkoly/${r}/` },
         { label: 'Программирование' },
       ]}
-      seoContent={<ProgrammingRegionSeoBlock regionIn={regionIn} count={count} />}
+      seoContent={<>{extras}<ProgrammingRegionSeoBlock regionIn={regionIn} count={count} /></>}
     />
   )
 }
