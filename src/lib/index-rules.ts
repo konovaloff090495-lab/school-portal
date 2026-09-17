@@ -22,5 +22,9 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   if (type === 'semejnye' || type === 'eksternal') return n > 0
   // Центры ЕГЭ/ОГЭ: карточки собраны вручную по Яндекс Картам, страница дополнена онлайн-курсами — индексируем от 2 центров.
   if (type === 'podgotovka-ege' || type === 'podgotovka-oge') return n >= 2
+  // Кадетских школ в городе физически 1–2 (Н.Новгород, Уфа, Иркутск…), а спрос «кадетская школа <город>» 1–2 тыс./мес —
+  // индексируем от одной настоящей школы; коррекционные и интернаты — от двух (карточки с Яндекс Карт, 09.2026).
+  if (type === 'kadetskie') return n >= 1
+  if (type === 'korrektsionnye' || type === 'internaty') return n >= 2
   return n >= 3
 }
