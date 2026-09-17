@@ -75,13 +75,16 @@ const typeDescriptions: Record<SchoolType, string> = {
 // Title под головной запрос — для хабов с развёрнутым гайдом (TypeGuide).
 // Общий шаблон «— N в каталоге» под «онлайн школа» и «школа экстернат» не играл:
 // хабы стояли на 27 и 19 месте, кликов не было.
+// 1 центр / 2 центра / 5 центров
+function centersWord(n: number) { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? 'центр' : m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? 'центра' : 'центров' }
+
 const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
   online:    () => `Онлайн-школы России 2026: рейтинг ${onlineBrands.length} школ, цены, аккредитация`,
   domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
   semejnye:  () => `Семейное обучение 2026: как перейти, уведомление, аттестация — семейные школы`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
-  'podgotovka-ege': n => `Курсы ЕГЭ 2026: ${n} центров подготовки в 30 городах — адреса, отзывы, цены онлайн-курсов`,
-  'podgotovka-oge': n => `Курсы ОГЭ 2026: ${n} центров подготовки для 8–9 классов — адреса, отзывы, онлайн-курсы`,
+  'podgotovka-ege': n => `Курсы ЕГЭ 2026: ${n} ${centersWord(n)} подготовки в 30 городах — адреса, отзывы, цены онлайн-курсов`,
+  'podgotovka-oge': n => `Курсы ОГЭ 2026: ${n} ${centersWord(n)} подготовки для 8–9 классов — адреса, отзывы, онлайн-курсы`,
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -618,7 +621,7 @@ export default async function GlobalTypePage({ params }: Props) {
       initialTypes={[t]}
       lockType
       title={`${displayTitle} в России`}
-      subtitle={(t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} центров подготовки в 30 крупных городах — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
+      subtitle={(t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} ${centersWord(count)} подготовки в 30 крупных городах — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
