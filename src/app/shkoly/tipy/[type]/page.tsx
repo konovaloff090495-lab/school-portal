@@ -9,6 +9,7 @@ import TypeGuide from '@/components/TypeGuide'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 import EgeCityExtras from '@/components/EgeCityExtras'
+import ProgCityExtras from '@/components/ProgCityExtras'
 import { onlineBrands } from '@/data/online-brands'
 
 interface Props {
@@ -60,7 +61,7 @@ const typeDescriptions: Record<SchoolType, string> = {
   korrektsionnye:  'Коррекционные школы для детей с ОВЗ: профессиональные дефектологи, адаптированные программы.',
   kadetskie:       'Кадетские школы и корпуса: военно-патриотическое воспитание, строевая подготовка, НВП.',
   mezhdunarodnie:  'Международные школы России: программы IB и Cambridge, обучение на английском, диплом для поступления в зарубежные вузы.',
-  programmirovanie:'Школы программирования России: Python, веб-разработка, ИИ, кибербезопасность. Партнёрство с Яндексом и ведущими IT-компаниями.',
+  programmirovanie:'Школы программирования для детей в 40 городах России — KIBERone, Алгоритмика, Coddy, Лига Роботов, Компьютерная академия TOP и местные IT-клубы: адреса, телефоны, оценки на Яндекс Картах (09.2026). Как выбрать по возрасту и языку + онлайн-школа с пробным уроком.',
   shahmatnye:      'Шахматные школы России: шахматы как учебный предмет, тренировка логики и стратегического мышления, турниры ФИДЕ.',
   'podgotovka-ege': 'Очные центры подготовки к ЕГЭ в 30 крупных городах России — адреса, телефоны, оценки на Яндекс Картах (09.2026): Maximum, Годограф, ЕГЭбург, Умскул, 99 Баллов и другие + онлайн-курс с пробным днём. Как выбрать курсы и не переплатить.',
   'podgotovka-oge': 'Центры подготовки к ОГЭ для 8–9 классов в 30 крупных городах: адреса, телефоны, оценки на Яндекс Картах (09.2026) + онлайн-курс по 11 предметам с пробным днём. Тренировочные экзамены по актуальным КИМам, разбор ошибок.',
@@ -83,6 +84,7 @@ const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
   domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
   semejnye:  () => `Семейное обучение 2026: как перейти, уведомление, аттестация — семейные школы`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
+  programmirovanie: n => `Школы программирования для детей 2026: ${n} ${n % 10 === 1 && n % 100 !== 11 ? 'школа' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'школы' : 'школ'} в 40 городах — адреса, отзывы, как выбрать`,
   'podgotovka-ege': n => `Курсы ЕГЭ 2026: ${n} ${centersWord(n)} подготовки в 30 городах — адреса, отзывы, цены онлайн-курсов`,
   'podgotovka-oge': n => `Курсы ОГЭ 2026: ${n} ${centersWord(n)} подготовки для 8–9 классов — адреса, отзывы, онлайн-курсы`,
 }
@@ -610,6 +612,8 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <><MezhdunarodnieSubNav /><SeoBlock type={t} count={count} /></>
     : t === 'sportivnye'
     ? <><SportivnyeSubNav /><SeoBlock type={t} count={count} /></>
+    : t === 'programmirovanie'
+    ? <><ProgCityExtras count={count} /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-ege'
     ? <><EgeSubNav /><EgeCityExtras variant="ege" count={count} /><SeoBlock type={t} count={count} /></>
     : t === 'podgotovka-oge'
@@ -621,7 +625,7 @@ export default async function GlobalTypePage({ params }: Props) {
       initialTypes={[t]}
       lockType
       title={`${displayTitle} в России`}
-      subtitle={(t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} ${centersWord(count)} подготовки в 30 крупных городах — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
+      subtitle={(t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} ${centersWord(count)} подготовки в 30 крупных городах — выберите город в фильтре` : t === 'programmirovanie' ? `${count} школ и клубов в 40 городах по данным Яндекс Карт — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },

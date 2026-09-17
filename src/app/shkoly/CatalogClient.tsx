@@ -506,7 +506,7 @@ export default function CatalogClient({
         list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
       } else {
         // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
-        if (filters.priceMode === 'free') list = list.filter(s => (s.priceFrom === 0 || s.priceFrom === undefined) && s.type !== 'podgotovka-ege' && s.type !== 'podgotovka-oge')
+        if (filters.priceMode === 'free') list = list.filter(s => (s.priceFrom === 0 || s.priceFrom === undefined) && s.type !== 'podgotovka-ege' && s.type !== 'podgotovka-oge' && s.type !== 'programmirovanie')
         if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
       }
     }

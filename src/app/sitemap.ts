@@ -3,6 +3,7 @@ import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
   featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs, MICRO_GEO_SKIP_TYPES,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
+  getSchoolsByFeature,
   type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
 import { regionProfileIds } from '@/data/region-profiles'
@@ -266,7 +267,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionPodgotovkaPages: MetadataRoute.Sitemap = regionSlugs.flatMap(r => [
     { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-ege/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/shkoly/${r}/podgotovka-k-oge/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/shkoly/${r}/programmirovanie/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.65 },
+    // страница школ программирования — только там, где она не тонкая (тот же порог, что noindex в роуте)
+    ...(getSchoolsByRegionAndType(r, 'programmirovanie').length >= 2 || getSchoolsByFeature('it-klass', r).length >= 3
+      ? [{ url: `${BASE_URL}/shkoly/${r}/programmirovanie/`, lastModified: getSchoolsByRegionAndType(r, 'programmirovanie').length >= 2 ? D_EGE_CENTERS : D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7 }]
+      : []),
   ])
   const staticLandingPages: MetadataRoute.Sitemap = STATIC_LANDINGS.map(path => ({
     url: `${BASE_URL}${path}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,

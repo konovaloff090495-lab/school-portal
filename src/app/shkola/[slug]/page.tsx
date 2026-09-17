@@ -53,7 +53,13 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
 
   // 3. Стоимость обучения
   const isEgeCenter = school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge'
-  if (isEgeCenter && !school.priceFrom) {
+  const isProgSchool = school.type === 'programmirovanie'
+  if (isProgSchool && school.priceFrom === undefined) {
+    faq.push({
+      q: `Сколько стоят занятия в ${school.name}?`,
+      a: `Занятия платные; стоимость зависит от возраста, направления и частоты занятий (обычно 1–2 раза в неделю). На этой странице мы не приводим цены, которые не проверили, — уточняйте ${callTo}${school.website ? ` или на сайте школы (${school.website.replace(/^https?:\/\//, '')})` : ''}. У большинства детских IT-школ первое занятие пробное.`,
+    })
+  } else if (isEgeCenter && !school.priceFrom) {
     // курсы ЕГЭ/ОГЭ платные, но цены с сайтов центров мы не проверяли — не выдумываем
     faq.push({
       q: `Сколько стоят курсы в ${school.name}?`,
@@ -81,6 +87,8 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `С какого класса принимают учеников в ${school.name}?`,
     a: isEgeCenter
       ? `Центр готовит к ОГЭ учеников 8–9 классов и к ЕГЭ — 10–11 классов; набор в группы и индивидуальные занятия обычно идёт весь учебный год. Уточняйте ${callTo}.`
+      : isProgSchool
+      ? `Детские школы программирования обычно берут с 6–7 лет: младшим дают Scratch и визуальные среды, с 10–12 лет — Python и Roblox, подросткам — «взрослые» языки и проекты. Возраст набора в конкретные группы уточняйте ${callTo}.`
       : startsFrom1
       ? `Школа принимает детей с 1 класса (обучение по программе ${school.grades} класс). Приём в первый класс ведётся в соответствии с требованиями законодательства — ребёнку должно исполниться 6,5–8 лет на 1 сентября.`
       : `Школа ведёт обучение с ${school.grades.split('–')[0]} по ${school.grades.split('–')[1] ?? school.grades} класс. Условия и сроки подачи документов уточняйте ${callTo}.`,
@@ -326,7 +334,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? (
+                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>
@@ -492,7 +500,7 @@ export default async function SchoolPage({ params }: Props) {
           {similar.length > 0 && (
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-4">
-                {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? 'Другие центры подготовки к ЕГЭ и ОГЭ' : `Похожие ${typeLabels[school.type].toLowerCase()} школы`}
+                {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? 'Другие центры подготовки к ЕГЭ и ОГЭ' : school.type === 'programmirovanie' ? 'Другие школы программирования для детей' : `Похожие ${typeLabels[school.type].toLowerCase()} школы`}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {similar.map(s => (
@@ -504,7 +512,7 @@ export default async function SchoolPage({ params }: Props) {
                   href={`/shkoly/${school.region}/${school.type}/`}
                   className="inline-flex items-center gap-2 text-blue-600 text-sm font-medium hover:underline"
                 >
-                  {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : `Все ${typeLabels[school.type].toLowerCase()} школы ${regionLabels[school.region]} →`}
+                  {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : school.type === 'programmirovanie' ? `Все школы программирования — ${regionLabels[school.region]} →` : `Все ${typeLabels[school.type].toLowerCase()} школы ${regionLabels[school.region]} →`}
                 </Link>
               </div>
             </div>
@@ -577,7 +585,7 @@ export default async function SchoolPage({ params }: Props) {
                 href={`/shkoly/${school.region}/${school.type}/`}
                 className="block text-sm text-blue-600 hover:underline"
               >
-                ← {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}` : `${typeLabels[school.type]} школы ${regionLabels[school.region]}`}
+                ← {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}` : school.type === 'programmirovanie' ? `Школы программирования — ${regionLabels[school.region]}` : `${typeLabels[school.type]} школы ${regionLabels[school.region]}`}
               </Link>
               <Link
                 href={`/shkoly/${school.region}/`}
