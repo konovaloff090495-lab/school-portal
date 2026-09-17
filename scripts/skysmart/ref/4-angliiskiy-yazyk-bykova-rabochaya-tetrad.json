@@ -1,0 +1,2187 @@
+{
+"book": {
+"slug": "bykova-rabochaya-tetrad",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Быкова Н. И., Дули Д., Поспелова М. Д., Эванс В.",
+"type": "Рабочая тетрадь",
+"umk": "Spotlight"
+},
+"problems": [
+{
+"number": "1-s4",
+"num": "1",
+"page": 4,
+"chapter": "Starter Unit. a. Back together!",
+"skyId": 120595,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски во втором тексте.",
+"Ты помнишь меня? Это моё имя! Я счастлива, что ты снова с нами! Надеюсь, ты тоже рад!",
+"Ты помнишь меня? Это моё (1) _____! Я (2) _____, что ты снова с нами! Надеюсь, (3) _____ тоже рад!",
+"Ты помнишь меня? Это моё (1) имя (name)! Я (2) счастлив (happy), что ты снова с нами! Надеюсь, (3) ты (you) тоже рад!"
+],
+"answer": "Name.\nHappy.\nYou."
+}
+]
+},
+{
+"number": "2-s4",
+"num": "2",
+"page": 4,
+"chapter": "Starter Unit. a. Back together!",
+"skyId": 120596,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать подходящие ответы на вопросы и разыграть получившиеся диалоги.",
+"1. Как тебя зовут?\nA. Меня зовут Фред. B. Её зовут Элис.\n2. Что это?\nA. Это игрушка. B. Она маленькая.\n3. Какой у тебя любимый цвет?\nA. Красный. B. Моя футболка красная.\n4. Сколько тебе лет?\nA. Мне семь лет. B. Я во втором классе.\n5. Кому принадлежит эта лошадь?\nA. Это Билл. B. Биллу.",
+"Dialogue 1\nA: Как тебя зовут?\nB: Меня зовут Фред (A).\nDialogue 2\nA: Что это?\nB: Это игрушка (A).\nDialogue 3\nA: Какой у тебя любимый цвет?\nB: Красный (A).\nDialogue 4\nA: Сколько тебе лет?\nB: Мне семь лет (A). \nDialogue 5\nA: Кому принадлежит эта лошадь?\nB: Биллу (B)."
+],
+"answer": "A.\nA.\nA.\nA.\nB."
+}
+]
+},
+{
+"number": "3-s5",
+"num": "3",
+"page": 5,
+"chapter": "Starter Unit. b. Back together!",
+"skyId": 120597,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки, найдём слова и обведём их.",
+"WORDLIST\na doll — кукла\na parrot — попугай\na lamp — лампа\na cooker — плита\nan apple — яблоко\na cat — кот\na triangle — треугольник\na circle — круг\na glass — стакан\nTV — телевизор\nan armchair — кресло\nradio — радио\na square — квадрат\nan airplane — самолёт",
+"Cooker — плита.\nApple — яблоко.\nTV — телевизор.\nArmchair — кресло.\nRadio — радио.\nCat — кот.\nTriangle — треугольник.\nCircle — круг.\nGlass — стакан.\nSquare — квадрат.\nAirplane — самолёт.\nDoll — кукла.\nParrot — попугай.\nLamp — лампа."
+],
+"answer": "Надём слова и обведём их."
+}
+]
+},
+{
+"number": "4-s5",
+"num": "4",
+"page": 5,
+"chapter": "Starter Unit. b. Back together!",
+"skyId": 120598,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки, зададим вопросы и ответим на них.",
+"WORDLIST\nto play — играть\nsoccer — футбол\nto swim — плавать\nto watch — смотреть\nto ride — ездить \na bicycle — велосипед\nto dance — танцевать",
+"Глагол can используется, когда мы говорим, что умеем или можем что-то делать.\nЭтот глагол не меняется по лицам и числам.\nПосле него всегда ставится смысловой глагол без частицы to.\nОтрицательная форма: полная — cannot, краткая — can't.\nВопрос\nCan I/you/he/we/they read? Я/ты/он/мы/они умеют читать?\nКраткий ответ\nYes, I/you/he/we/they can. Да, я/ты/он/мы/они умеют.\nNo, I/you/he/we/they can't. Нет, я/ты/он/мы/они не умеют.",
+"(1)\nA: Can he play basketball? (A: Может ли он играть в баскетбол?)\nB: Yes, he can. (Б: Да, он может).\n(2)\nA: Can he play soccer? (А: Он может играть в футбол?)\nB: N, he can't. (Б: Нет, он не может).",
+"(3)\nA: Can he swim? (А: Он умеет плавать?)\nB: Yes, he can. (Б: Да, он умеет).\n(4)\nA: Can they watch TV? (A: Могут ли они смотреть телевизор?)\nB: No, they can't. (Б: Нет, они не могут).\n(5)\nA: Can he ride a bicycle? (А: Он умеет ездить на велосипеде?)\nB: No, he can't. (Б: Нет, он не умеет).\n(6)\nA: Can she dance? (А: Она умеет танцевать?)\nB: Yes, she can. (Б: Да, она умеет)."
+],
+"answer": "(1)\nA: Can he play basketball? \nB: Yes, he can.\n(2)\nA: Can he play soccer? \nB: N, he can't.\n(3)\nA: Can he swim? \nB: Yes, he can. \n(4)\nA: Can they watch TV? \nB: No, they can't. \n(5)\nA: Can he ride a bicycle? \nB: No, he can't. \n(6)\nA: Can she dance? \nB: Yes, she can."
+}
+]
+},
+{
+"number": "1-s6",
+"num": "1",
+"page": 6,
+"chapter": "Module 1. Unit 1. One big happy family!",
+"skyId": 120599,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить предложения по образцу.",
+"У него нет шлема.",
+"WORDLIST\nhairbrush — расчёска\nwatch — часы\nmobile phone — телефон \nroller blades — ролики\ncamera — фотоаппарат",
+"Конструкция have / has got обозначает «получить», «иметь», «у кого-либо есть» и соответствует русским предложениям, начинающимся со слов: «У меня есть...», «у него есть...» и т. д.\nОбразование\n I/you/we/they\n He/she/it\n +\n They have got a car. (У них есть машина.)\n She has got a car. (У неё есть машина.)\n −\n They haven't got a car. (У них нет машины.)\n She hasn't got a car. (У неё нет машины.)\n ?\n Have you got any cars? (У тебя есть машины?)\n Has she got any cars? (У неё есть машины?)\nВажно помнить, что в вопросительных предложениях используем слово any, а в ответах, если один предмет, то a/an (a car), а если несколько — some (some cars).\nПримеры:\nHe has got a dog. У него есть собака.\nWe have got some dogs. У нас есть собаки (несколько).\nHave they got any dogs? У них есть собаки?\nNo, they haven't got any dogs. Нет, у них нет собак.",
+"Possessive Adjectives (Притяжательные прилагательные)\n Личное местоимение\n Притяжательное прилагательное\n I\n My\n You\n Your\n He\n His\n She\n Her\n It\n Its\n We\n Our\n You\n Your\n They\n Their",
+"2. She hasn't got her hairbrush. У неё нет расчески для волос.\n3. She hasn't got her watch. У неё нет часов.\n4. He hasn't got his mobile phone. У него нет мобильного телефона.\n5. He hasn't got his roller blades. У него нет своих роликов. \n6. She hasn't got her camera. У неё нет фотоаппарата."
+],
+"answer": "2. She hasn't got her hairbrush. У неё нет расчески для волос.\n3. She hasn't got her watch. У неё нет часов.\n4. He hasn't got his mobile phone. У него нет мобильного телефона.\n5. He hasn't got his roller blades. У него нет своих роликов. \n6. She hasn't got her camera. У неё нет фотоаппарата."
+}
+]
+},
+{
+"number": "2-s6",
+"num": "2",
+"page": 6,
+"chapter": "Module 1. Unit 1. One big happy family!",
+"skyId": 120600,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить диалоги 2–3 по образцу.",
+"А: Как она выглядит?\nБ: Она низкая и полная. У неё светлые волосы и карие глаза. \nА: Какая она?\nБ: Она очень дружелюбная!",
+"WORDLIST\ntall — высокий\nslim — худой\nfair — светлый\nhair — волосы\neyes — глаза\nkind — добрый\nshort — низкий\nplump — полный\ndark — тёмный\nfunny — смешной",
+"What does she look like? Как она выглядит?\nWhat is she like? Какая она?",
+"2. \nA: What does she look like? \nB: She's tall and slim. She's got fair hair and blue eyes. \nA: What is she like?\nB: She is kind.\n3. \nA: What does he look like? \nB: He's short and plump. He's got dark hair and green eyes. \nA: What is he like?\nB: He's funny.",
+"2.\nА: Как она выглядит?\nБ: Она высокая и стройная. У неё светлые волосы и голубые глаза.\nА: Какая она?\nБ: Она добрая.\n3.\nА: Как он выглядит?\nБ: Он невысокий и пухлый. У него темные волосы и зелёные глаза.\nА: Какой он?\nБ: Он забавный."
+],
+"answer": "2. \nA: What does she look like? \nB: She's tall and slim. She's got fair hair and blue eyes. \nA: What is she like?\nB: She is kind.\n3. \nA: What does he look like? \nB: He's short and plump. He's got dark hair and green eyes. \nA: What is he like?\nB: He's funny."
+}
+]
+},
+{
+"number": "3-s7",
+"num": "3",
+"page": 7,
+"chapter": "Module 1. Unit 1. One big happy family!",
+"skyId": 120601,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения, а затем провести линии между соответствующими предметами.",
+"WORDLIST\nmobile phone — телефон \ncupboard — шкаф\ncamera — фотоаппарат\ngloves — перчатки\nguitar — гитара \nhelmet — шлем\narmchair — кресло\nwindow — окно",
+"Prepositions of Place (Предлоги места)\nКогда мы хотим сказать о расположении лица или предмета, нам нужны предлоги места. Именно они указывают, где находится лицо или предмет в пространстве, и как он расположен относительно других объектов.\n Preposition of place (предлог места)\n Употребление\n In (в)\n The sofa is in the room (Диван находится в комнате)\n On (на)\n The book is on the floor (Книга лежит на полу)\n Under (под)\n The book is under the sofa (Книга лежит под диваном)\n In front of (перед)\n The flowers are in front of the window (Цветы растут перед окном)\n Next to (рядом, возле)\n The desk is next to the sofa (Письменный стол находится рядом с диваном)\n Behind (за, позади)\n The book is behind the chair (Книга находится за стулом)\n Near (рядом)\n The sofa is near the window (Диван находится рядом с окном)",
+"Мобильный телефон лежит на столе.\nКамера в шкафу.\nКоробка стоит под окном.\nПерчатки лежат за креслом.\nГитара стоит рядом со шкафом.\nШлем лежит перед креслом."
+],
+"answer": "Мобильный телефон лежит на столе.\nКамера в шкафу.\nКоробка стоит под окном.\nПерчатки лежат за креслом.\nГитара стоит рядом со шкафом.\nШлем лежит перед креслом."
+}
+]
+},
+{
+"number": "1-s8",
+"num": "1",
+"page": 8,
+"chapter": "Module 1. Unit 2. My best friend!",
+"skyId": 120602,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку, прочитаем слова и выберем подходящие.",
+"WORDLIST\nWords (слова)\nto ski — кататься на лыжах \nto skate — кататься на коньках \nto swim — плавать\nto sail — идти под парусами\nto surf — заниматься сёрфингом\nto sing — петь\nto dance — танцевать\nto dive — нырять\nPhrases (фразы)\nto play the guitar — играть на гитаре\nto play the violin — играть на скрипке",
+"Ski/skate — кататься на лыжах/кататься на коньках. \nSwim/sail — плавать/идти под парусами.\nSurf/sing — заниматься сёрфингом/петь.\nPlay the guitar/play the violin — играть на гитаре/играть на скрипке.\nSkate/dance — кататься на коньках/танцевать.\nSurf/dive — заниматься сёрфингом/нырять.",
+"Ski /skiː/ — кататься на лыжах.\nSail /seɪl/ — идти под парусами.\nSurf /sɜːf/ — заниматься сёрфингом.\nPlay the violin /pleɪ ðə ˌvaɪəˈlɪn/ — играть на скрипке.\nSkate /skeɪt/ — кататься на коньках.\nDive /daɪv/ — нырять."
+],
+"answer": "Ski.\nSail.\nSurf.\nPlay.\nSkate.\nDive."
+}
+]
+},
+{
+"number": "2-s8",
+"num": "2",
+"page": 8,
+"chapter": "Module 1. Unit 2. My best friend!",
+"skyId": 120603,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки из упражнения 1 (с.8) и составим предложения, используя глагол can.",
+"WORDLIST\nWords (слова)\nto ski — кататься на лыжах\nto skate — кататься на коньках\nto sail — идти под парусами\nto surf — заниматься сёрфингом\nto dive — нырять\nPhrases (фразы)\nto play the violin — играть на скрипке",
+"Глагол can используется, когда мы говорим, что умеем или можем что-то делать.\nЭтот глагол не меняется по лицам и числам.\nПосле него всегда ставится смысловой глагол без частицы to.\nОтрицательная форма: полная — cannot, краткая — can't.\nУтверждение\nI/you/he/we/they can read. Я/ты/он/мы/они умеют читать.",
+"He can ski. — Он умеет кататься на лыжах.",
+"2. He can sail. — Он умеет плавать под парусом.\n3. She can surf. — Она умеет заниматься серфингом.\n4. He can play the violin. — Он умеет играть на скрипке.\n5. She can skate. — Она умеет кататься на коньках.\n6. He can dive. — Он умеет нырять."
+],
+"answer": "He can ski. \n He can sail.\nShe can surf. \nHe can play the violin. \nShe can skate. \nHe can dive."
+}
+]
+},
+{
+"number": "3-s9",
+"num": "3",
+"page": 9,
+"chapter": "Module 1. Unit 2. My best friend!",
+"skyId": 120604,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на числа и поставим их в правильном порядке.",
+"В английском языке существуют 13 основных числительных, от которых с помощью суффиксов -teen и -ty образуются многие другие числительные. Суффикс -teen используется для чисел от 13 до 19 (14 — fourteen, 17 — seventeen). А суффикс -ty используем, когда необходимо считать десятками (60 — sixty, 30 — thirty).\n 20 \n twenty\n 21 \n twenty-one\n 22 \n twenty-two\n 23\n twenty-three\n 24 \n twenty-four\n 25 \n twenty-five\n 26 \n twenty-six\n 27 \n twenty-seven\n 28 \n twenty-eight\n 29 \n twenty-nine\n 30 \n thirty\n 40\n forty\n 50 \n fifty\n 60 \n sixty\n 70 \n seventy\n 80 \n eighty\n 90 \n ninety",
+"Thirty. — Тридцать.\nThirty-two. — Тридцать два.\nForty-seven. — Сорок семь.\nFifty-five. — Пятьдесят пять.\nSixty-one. — Шестьдесят один.\nSeventy-eight. — Семьдесят восемь.\nEighty-three. — Восемьдесят три.\nNinety-nine. — Девяносто девять."
+],
+"answer": "Thirty. \nThirty-two. \nForty-seven.\nFifty-five. \nSixty-one. \nSeventy-eight. \nEighty-three.\nNinety-nine."
+}
+]
+},
+{
+"number": "4-s9",
+"num": "4",
+"page": 9,
+"chapter": "Module 1. Unit 2. My best friend!",
+"skyId": 120605,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинки, прочитаем предложения и выберем подходящие картинки к предложениям.",
+"WORDLIST\nWords (слова)\nto sail — идти под парусами\nto dive — нырять\nto read — читать\nto carry — нести\nice cream — мороженное\nPhrases (фразы)\nto play the violin — играть на скрипке",
+"A man is diving. — Человек ныряет.\nA girl is reading a book. — Девушка читает книгу.\nA boy is drinking Coke. — Мальчик пьёт кока-колу.\nTwo boys are playing soccer. — Два мальчика играют в футбол.\nA man is playing the violin. — Мужчина играет на скрипке.\nTwo boys are eating ice cream. — Два мальчика едят мороженое.\nTwo boys are carrying a bag. — Два мальчика несут сумку.\nA woman is sailing. — Женщина плывёт под парусом.",
+"A.\nF.\nG.\nD.\nC.\nH.\nE.\nB."
+],
+"answer": "A.\nF.\nG.\nD.\nC.\nH.\nE.\nB."
+}
+]
+},
+{
+"number": "1-s10",
+"num": "1",
+"page": 10,
+"chapter": "Module 1. I Love English!",
+"skyId": 120606,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и выбрать подходящие картинки.",
+"Какой из мальчиков — Фрэнк?\nКакие перчатки принадлежат Сью?\nЧто есть у Барри в комнате?",
+"Диалог 1\nA: Это твой друг, Фрэнк? Высокий темноволосый мальчик?\nB: Нет, Фрэнк не высокий, а низкий.\nA: У него тёмные волосы?\nB: Нет. Посмотри, это Фрэнк. Невысокий мальчик со светлыми волосами.\nДиалог 2\nA: Можешь дать мне свои перчатки?\nB: Какие? Синие или жёлтые?\nA: Нет. Мои перчатки красные. Смотри, вот они.\nДиалог 3\nA: У тебя есть письменный стол в комнате?\nB: Нет, у меня нет письменного стола, но есть обычный.\nA: А компьютер у тебя тоже есть?\nB: Нет, компьютера нет."
+],
+"answer": "B.\nB.\nA."
+}
+]
+},
+{
+"number": "2-s10",
+"num": "2",
+"page": 10,
+"chapter": "Module 1. I Love English!",
+"skyId": 120607,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и выбрать девочку, которая подходит под описание, а затем разыграть диалог в парах.",
+"WORDLIST\nslim — стройный\nlong — длинный\ndark — тёмный\ntall — высокий\nshort — низкий, короткий",
+"A: Ты знаешь Эллен?\nB: Нет, кто такая Эллен?\nA: Она вон там — она стройная и у неё длинные тёмные волосы.\nB: Она высокая?\nA: Нет, она довольно низкая.\nB: Ах, да! Теперь я вижу, о ком ты говоришь.\nA: Эллен! Подойди и познакомься с моими друзьями!",
+"First girl from the left. Первая девочка слева.",
+"A: Ты знаешь Эллен?\nB: Нет, кто такая Эллен?\nA: Она вон там — она стройная и у неё длинные тёмные волосы.\nB: Она высокая?\nA: Нет, она довольно низкая.\nB: Ах, да! Теперь я вижу, о ком ты говоришь.\nA: Эллен! Подойди и познакомься с моими друзьями!"
+],
+"answer": "A: Ты знаешь Эллен?\nB: Нет, кто такая Эллен?\nA: Она вон там — она стройная и у неё длинные тёмные волосы.\nB: Она высокая?\nA: Нет, она довольно низкая.\nB: Ах, да! Теперь я вижу, о ком ты говоришь.\nA: Эллен! Подойди и познакомься с моими друзьями!"
+}
+]
+},
+{
+"number": "3-s11",
+"num": "3",
+"page": 11,
+"chapter": "Module 1. I Love English!",
+"skyId": 120608,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и отметить правдивые (yes) и ложные (no).",
+"Мы используем Present Continuous, чтобы показать, что действие происходит сейчас, в момент речи.\n +\nI am + V-ing.\nI'm dancing now. Сейчас я танцую\nHe/she/it + V-ing.\nHe is dancing now. Он сейчас танцует\nWe/you/they are + V-ing.\nWe are dancing now. Мы сейчас танцуем\n −\nI am + not + V-ing.\nI'm not dancing now. Я сейчас не танцую\nHe/she/it + not + V-ing.\nHe is not dancing now. Он сейчас не танцует\nWe/you/they are + not + V-ing.\nThey are not dancing now. Они сейчас не танцуют\n ?\nAm + I + V-ing.\nAm I dancing now? Я сейчас танцую?\nIs + he/she/it + V-ing.\nIs he dancing now? Он сейчас танцует?\nAre + we/you/they + V-ing.\nAre they dancing now? Они сейчас танцуют?\nКраткие\nответы\nYes, I am. (Да.)\nNo, I'm not. (Нет.)\nYes, he/she/it is. (Да.)\nNo, he/she/it isn't. (Нет.)\nYes, you/we/they are. (Да.)\nNo, you/we/they aren't. (Нет.)",
+"Девочки танцуют.\nДва мальчика играют в баскетбол.\nСобака плавает.\nДедушка говорит по телефону.\nМужчина слушает музыку.\nЖенщина пишет письмо."
+],
+"answer": "No.\nNo.\nYes.\nYes.\nYes.\nYes."
+}
+]
+},
+{
+"number": "let-s-play-s12",
+"num": "let-s-play",
+"page": 12,
+"chapter": "Module 1. Let`s Play!",
+"skyId": 120609,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо сыграть в игру.",
+"Выложим на игральное поле фишку (это может быть любой небольшой предмет — монетка, ластик и т. д.).\nНачнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратов вперёд, сколько показывает кубик.\nКогда фишка попадает на кружок с заданием, игроку нужно его выполнить. В данной игре есть 5 типов заданий: 1. Crash — вернуться на старт. 2. Cиний кружок — назвать предмет. 3. Розовый кружок — дополнить предложение. 4. Жёлтый кружок — выполнить задание. 5. Зелёный кружок — сказать, что происходит на картинке. \nВыигрывает тот, кто первым дойдёт до финиша.",
+"What does he look like?\n20 + 30 = 50 (fifty). \nHairbrush. \nWhat is he doing?\nGuitar. \nСпоём песню «One big happy family». \nCrash (вернись на старт). \nСamera. \nCrash (вернись на старт). \nHe is skiing. \nShe can dive really well. \nCrash (вернись на старт). \nSkiing, swimming, playing guitar, running. \nWhat is he like?\nThe pencil is behind the box. \nShe is skating. \nMother, father, sister, brother, grandmother. \nCrash (вернись на старт). \nGloves. \nПосчитаем от 80 до 100. \nMobile phone. \nShe has got blue eyes. \nHelmet, hairbrush, watch, gloves."
+],
+"answer": "Выложим на игральное поле фишку (это может быть любой небольшой предмет — монетка, ластик и т. д.).\nНачнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратов вперёд, сколько показывает кубик.\nКогда фишка попадает на кружок с заданием, игроку нужно его выполнить. В данной игре есть 5 типов заданий: 1. Crash — вернуться на старт. 2. Cиний кружок — назвать предмет. 3. Розовый кружок — дополнить предложение. 4. Жёлтый кружок — выполнить задание. 5. Зелёный кружок — сказать, что происходит на картинке.\nВыигрывает тот, кто первым дойдёт до финиша."
+}
+]
+},
+{
+"number": "1-s14",
+"num": "1",
+"page": 14,
+"chapter": "Module 2. Unit 3. The Animal Hospital!",
+"skyId": 120610,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо соотнести задания профессий 1–6 с картинками a–f.",
+"Greengrocer — провадец овощей. \nBaker — пекарь. \nWaiter — официант. \nMechanic — механик. \nNurse — медсестра. \nPostman — почтальон.",
+"Greengrocer — провадец овощей. — В. \nBaker — пекарь. — F. \nWaiter — официант. — A. \nMechanic — механик. — E. \nNurse — медсестра. — C. \nPostman — почтальон. — D."
+],
+"answer": "B. \nF. \nA. \nE. \nC. \nD."
+}
+]
+},
+{
+"number": "2-s14",
+"num": "2",
+"page": 14,
+"chapter": "Module 2. Unit 3. The Animal Hospital!",
+"skyId": 120611,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соотнести названия профессий с местом, где люди этой профессии работают и их деятельностью. Затем составим предложения по примеру.",
+"Клоун работает в цирке. Он заставляет людей смеяться.",
+"WORDLIST\nteacher — учитель\nfarmer — фермер \ngreengrocer — провадец овощей и фруктов\npostman — почтальон\nwaiter — официант",
+"Post office — почта. \nCafe — кафе. \nSchool — школа. \nFarm — ферма. \nGreengrocer's — овощная лавка.",
+"Grow vegetables — выращивать овощи. \nTake letters to people — доставлять людям письма. \nSell fruit and vegetables — продавать фрукты и овощи. \nServe people — обслуживать людей. \nTeach students — обучать учеников.",
+"Профессия\n Место \n Деятельность\n 2. Teacher\n School — школа\n Teach students — обучать учеников\n 3. Farmer\n Farm — ферма\n Grow vegetables — выращивать овощи\n 4. Greengrocer\n Greengrocer's — овощная лавка\n Sell fruit and vegetables — продавать фрукты и овощи\n 5. Postman\n Post office — почта\n Take letters to people — доставлять людям письма\n 6. Waiter\n Cafe — кафе\n Serve people — обслуживать людей",
+"2. A teacher works at a school. He teaches students. Учитель работает в школе. Он учит учеников.\n3. A farmer works on a farm. He grows vegetables. Фермер работает на ферме. Он выращивает овощи.\n4. A greengrocer works at a greengrocer's. He sells fruit and vegetables. Продавец фруктов и овощей работает в магазине фруктов и офощей. Он продаёт фрукты и овощи.\n5. A postman works at a post office. He takes letters to people. Почтальон работает в почтовом отделении. Он разносит письма людям.\n6. A waiter works in a café. He serves people. Официант работает в кафе. Он обслуживает людей."
+],
+"answer": "2. A teacher works at a school. He teaches students. Учитель работает в школе. Он учит учеников.\n3. A farmer works on a farm. He grows vegetables. Фермер работает на ферме. Он выращивает овощи.\n4. A greengrocer works at a greengrocer's. He sells fruit and vegetables. Продавец фруктов и овощей работает в магазине фруктов и офощей. Он продаёт фрукты и овощи.\n5. A postman works at a post office. He takes letters to people. Почтальон работает в почтовом отделении. Он разносит письма людям.\n6. A waiter works in a café. He serves people. Официант работает в кафе. Он обслуживает людей."
+}
+]
+},
+{
+"number": "3-s15",
+"num": "3",
+"page": 15,
+"chapter": "Module 2. Unit 3. The Animal Hospital!",
+"skyId": 120612,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинки и сказать, чем занимаются и не занимаются ребята в разных местах по примеру.",
+"Мы всегда смотрим фильмы в кинотеатре. Мы иногда пьём колу, но никогда не раскрашиваем картинки.",
+"1 картинка отображает действие, которое мы всегда выполняем в данном месте. \n2 картинка отображает действие, которое мы иногда выполняем в данном месте. \n3 картинка отображает действие, которое мы никогда не выполняем в данном месте.",
+"WORDLIST\nplay basketball — играть в баскетбол\nswim — плавать \nwatch TV — смотреть телевизор \neat ice-cream — есть мороженое\nski — кататься на лыжах",
+"Adverbs of frequency — наречия частотности.\nPresent Simple Tense употребляется для описания постоянных, обычных, регулярно повторяющихся действий или событий. Наречия частотности не только определяют, как часто данное действие происходит (всегда, редко, никогда), но и являются индикаторами времени Present Simple.\n 100 %\n Always\n Всегда\n 85 %\n Usually\n Обычно\n 70 %\n Often\n Часто\n 30 %\n Sometimes\n Иногда\n 0 %\n Never\n Никогда\nРассмотрим примеры. Наречия частотности ставятся в предложении после подлежащего.\nThey usually play football every week. — Они обычно играют в футбол каждую неделю.\nShe never drinks coffee, but she often drinks tea. — Она никогда не пьёт кофе, но часто пьёт чай.\nIt always snows in winter. — Зимой всегда идёт снег.\nЕсли в предложении есть глагол to be, то наречие ставится после него.\nI am always at school on time. — Я всегда прихожу в школу вовремя.",
+"We always play basketball at sports centre. We sometimes swim, but we never watch TV.\nWe always swim at a beach. We sometimes eat ice-cream, but we never ski.",
+"Мы всегда играем в баскетбол в спортивном центре. Мы иногда плаваем, но никогда не смотрим телевизор.\nМы всегда плаваем на пляже. Мы иногда едим мороженое, но никогда не катаемся на лыжах."
+],
+"answer": "We always play basketball at sports centre. We sometimes swim, but we never watch TV.\nWe always swim at a beach. We sometimes eat ice-cream, but we never ski."
+}
+]
+},
+{
+"number": "4-s15",
+"num": "4",
+"page": 15,
+"chapter": "Module 2. Unit 3. The Animal Hospital!",
+"skyId": 120613,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить предложения, используя данные нам слова.",
+"Ты обычно ходишь в кино по воскресеньям?",
+"WORDLIST\nplay basketball — играть в баскетбол\nwake up — вставать \nlate — поздно \nwash dishes — мыть посуду\nafternoon — день",
+"Adverbs of frequency — наречия частотности.\nPresent Simple Tense употребляется для описания постоянных, обычных, регулярно повторяющихся действий или событий. Наречия частотности не только определяют, как часто данное действие происходит (всегда, редко, никогда), но и являются индикаторами времени Present Simple.\n 100 %\n Always\n Всегда\n 85 %\n Usually\n Обычно\n 70 %\n Often\n Часто\n 30 %\n Sometimes\n Иногда\n 0 %\n Never\n Никогда\nРассмотрим примеры. Наречия частотности ставятся в предложении после подлежащего. \nThey usually play football every week. — Они обычно играют в футбол каждую неделю.\nShe never drinks coffee, but she often drinks tea. — Она никогда не пьёт кофе, но часто пьёт чай.\nIt always snows in winter. — Зимой всегда идёт снег.\nЕсли в предложении есть глагол to be, то наречие ставится после него. \nI am always at school on time. — Я всегда прихожу в школу вовремя.",
+"2. I always play basketball on Saturdays. \n3. We never wake up late. \n4. Do you always wash dishes after supper?\n5. I don't usually sleep late. \n6. He sometimes goes to the park in the afternoon.",
+"2. Я всегда играю в баскетбол по субботам.\n3. Мы никогда не просыпаемся поздно.\n4. Вы всегда моете посуду после ужина?\n5. Обычно я не сплю допоздна.\n6. Он иногда ходит в парк днём."
+],
+"answer": "2. I always play basketball on Saturdays. \n3. We never wake up late. \n4. Do you always wash dishes after supper?\n5. I don't usually sleep late. \n6. He sometimes goes to the park in the afternoon."
+}
+]
+},
+{
+"number": "1-s16",
+"num": "1",
+"page": 16,
+"chapter": "Module 2. Unit 4. Work and play!",
+"skyId": 120614,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно проследить за линиями и сказать, во что любят играть ребята.",
+"WORDLIST\ntable tennis — настольный теннис\nhockey — хоккей\nbaseball — бейсбол\nbadminton — бадминтон\nvolleyball — воллейбол",
+"Мы используем Present Continuous, чтобы показать, что действие происходит сейчас, в момент речи.\n +\nI am + глагол-ing\nI'm dancing now. Сейчас я танцую\nHe/She/It + глагол-ing\nHe is dancing now. Он сейчас танцует\nWe/You/They are + глагол-ing\nWe are dancing now. Мы сейчас танцуем\n -\nI am + not + глагол-ing\nI'm not dancing now. Я сейчас не танцую\nHe/She/It + not + глагол-ing\nHe is not dancing now. Он сейчас не танцует\nWe/You/They are + not + глагол-ing\nThey are not dancing now. Они сейчас не танцуют\n ?\nAm + I + глагол-ing\nAm I dancing now? Я сейчас танцую?\nIs + he/she/it + глагол-ing\nIs he dancing now? Он сейчас танцует?\nAre + we/you/they + глагол-ing\nAre they dancing now? Они сейчас танцуют?\nКраткие\nответы\nYes, I am (Да)\nNo, I'm not (Нет)\nYes, he/she/it is (Да)\nNo, he/she/it isn't (Нет)\nYes, you/we/they are (Да)\nNo, you/we/they aren't (Нет)",
+"Sam likes playing volleyball. Сэм любит играть в волейбол.\nBonnie likes playing table tennis. Бонни любит играть в настольный теннис.\nKylie likes playing hockey. Кайли любит играть в хоккей.\nAlex likes playing baseball. Алекс любит играть в бейсбол.\nAdam likes playing badminton. Адам любит играть в бадминтон."
+],
+"answer": "Sam likes playing voleyball.\nBonnie likes playing table tennis.\nKylie likes playing hockey.\nAlex likes playing baseball.\nAdam likes playing badminton."
+}
+]
+},
+{
+"number": "2-s17",
+"num": "2",
+"page": 17,
+"chapter": "Module 2. Unit 4. Work and play!",
+"skyId": 120615,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и нарисовать стрелки на часах.",
+"WORDLIST\nquarter — четверть\nhalf — половина",
+"В какое время Пако просыпается?\nВ какое время Пако обедает?\nВ какое время Пако делает домашнее задание?\nВ какое время Пако ложится спать?",
+"Мужчина: Пако, во сколько ты просыпаешься утром?\nПако: Обычно я просыпаюсь в 7:15.\nМужчина: В 7:15? Это рано! Что ты делаешь потом?\nПако: Я завтракаю и иду в школу.\nМужчина: Ты обедаешь в школе?\nПако: Да. Мы обедаем в 12:30.\nМужчина: В 12:30. Понятно. А что ты делаешь после школы?\nПако: Я делаю домашнюю работу, конечно. Я всегда делаю её в 17:00.\nМужчина: В 17:00?\nПако: Да, я прихожу домой в 16:30 и делаю домашнюю работу в 17:00.\nМужчина: А во сколько ты ложишься спать, Пако?\nПако: В 21:30. Это довольно рано.",
+"7:15 (quarter past seven).\n12:30 (half past twelve).\n17:00 (five o'clock).\n21:30 (half past nine)."
+],
+"answer": "7:15 (quarter past seven).\n12:30 (half past twelve).\n17:00 (five o'clock).\n21:30 (half past nine)."
+}
+]
+},
+{
+"number": "3-s17",
+"num": "3",
+"page": 17,
+"chapter": "Module 2. Unit 4. Work and play!",
+"skyId": 120616,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях верными формами глаголов.",
+"Have to (приходится, обязан)\nГлагол have (has) to + V употребляется, когда говорится о том, что кто-то вынужден что-либо делать. На русский язык он переводится как «приходится, обязан, должен».\nВ вопросительных и отрицательных предложениях модальный глагол have to ведёт себя как обычный глагол действия:\nDo you have to wear a school uniform? Вам нужно носить школьную форму?\nShe has to wear a school uniform. Ей приходится носить школьную форму.\nI don't have to wear a school uniform. Мне не нужно носить школьную форму.",
+"Медсестра _____ носить форму на работе.\nЛинда _____ выгуливать собаку по вечерам.\nМы _____ носить тёплую одежду зимой.\nПитер _____ каждый день играть на скрипке.\nТиму приходится работать по вечерам? — Нет, _____.\nТы _____ помогать мне. Всё в порядке.\nЯ _____ работать по субботам?\nДжим должен _____ посуду после ужина.",
+"Медсестра должна (has to) носить форму на работе.\nЛинда не должна (doesn't have to) выгуливать собаку по вечерам.\nМы должны (have to) носить тёплую одежду зимой.\nПитер должен (has to) каждый день играть на скрипке.\nТиму приходится работать по вечерам? — Нет, не приходится (he doesn't).\nТы не должен (don't have to) помогать мне. Всё в порядке.\nЯ должен (Do I have to) работать по субботам?\nДжим должен мыть (wash) посуду после ужина."
+],
+"answer": "A.\nC.\nA.\nB.\nC.\nB.\nC.\nA."
+}
+]
+},
+{
+"number": "1-s18",
+"num": "1",
+"page": 18,
+"chapter": "Module 2. I Love English!",
+"skyId": 120617,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать диалог и заполнить пропуски в предложениях.",
+"Имя: Моника Блейк.\nВозраст: _____.\nЛюбимый вид спорта: _____.\nЛюбимое занятие: ходить по магазинам.\nРабота: _____.\nНачинает работу: _____.",
+"Мужчина: Добрый день! Можно задать несколько вопросов? \nМоника: Да, конечно.\nМужчина: Как вас зовут?\nМоника: Моника Блейк.\nМужчина: Блейк? Можете продиктовать по буквам?\nМоника: Б-л-е-й-к.\nМужчина: Хорошо. Сколько вам лет, мисс Блейк?\nМоника: Мне 29 лет.\nМужчина: 29? Хорошо. Какой ваш любимый вид спорта?\nМоника: Любимый вид спорта? Дайте подумать... Волейбол. Да, мне нравится волейбол.\nМужчина: А что вы любите делать в свободное время?\nМоника: Ох! Дайте подумать. Что я люблю делать? Ну, люблю ходить по магазинам.\nМужчина: По магазинам? Ясно. А кем вы работаете, мисс Блейк?\nМоника: Я работаю в больнице. Я — медсестра.\nМужчина: Медсестра? Прекрасно. И когда начинается ваш рабочий день?\nМоника: Обычно я начинаю работать в 6:30 утра.\nМужчина: В 6:30 утра? Это очень рано! Хорошо, спасибо, мисс Блейк.",
+"Имя: Моника Блейк.\nВозраст: 29.\nЛюбимый вид спорта: волейбол (volleyball).\nЛюбимое занятие: ходить по магазинам.\nРабота: медсестра (nurse).\nНачинает работу: 6:30."
+],
+"answer": "Имя: Моника Блейк.\nВозраст: 29.\nЛюбимый вид спорта: волейбол (volleyball).\nЛюбимое занятие: ходить по магазинам.\nРабота: медсестра (nurse).\nНачинает работу: 6:30."
+}
+]
+},
+{
+"number": "2-s18",
+"num": "2",
+"page": 18,
+"chapter": "Module 2. I Love English!",
+"skyId": 120618,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать друг другу вопросы в парах.",
+"Adverbs of frequency (наречия частотности)\nPresent Simple употребляется для описания постоянных, обычных, регулярно повторяющихся действий или событий. В этом времени можно встретить наречия частотности.\n 100 %\n Always\n Всегда\n 85 %\n Usually\n Обычно\n 70 %\n Often\n Часто\n 30 %\n Sometimes\n Иногда\n 0 %\n Never\n Никогда\nРассмотрим примеры:\nI go to school every day. — Я хожу в школу каждый день.\nThey usually play football every week. — Они обычно играют в футбол каждую неделю.\nSometimes she dances in the morning. — Иногда она танцует утром.\nShe never drinks coffee, but she often drinks tea. — Она никогда не пьёт кофе, но часто пьёт чай.\nIt always snows in winter. — Зимой всегда идёт снег.",
+"1. Как часто ты поздно ложишься спать?\nA. Раз в неделю. B. Два раза в неделю. C. Больше трёх раз в неделю.\n2. Как часто ты прибираешься в комнате?\nA. Иногда. B. Каждый день. C. Никогда.\n3. Как часто ты слушаешь музыку?\nA. Иногда. B. Никогда. C. Каждый день. \n4. Как часто ты встречаешься с другом по выходным?\nA. Каждые выходные. B. Иногда. C. Никогда.\n5. Как часто ты помогаешь маме на кухне?\nA. Никогда. B. Иногда. C. Раз в неделю.",
+"Диалог 1:\nA: Как часто ты поздно ложишься спать?\nB: Два раза в неделю (twice a week). \nДиалог 2:\nA: Как часто ты прибираешься в комнате?\nB: Иногда (sometimes).\nДиалог 3:\nA: Как часто ты слушаешь музыку?\nB: Каждый день (every day). \nДиалог 4:\nA: Как часто ты встречаешься с другом по выходным?\nB: Каждые выходные (every weekend).\nДиалог 5:\nA: Как часто ты помогаешь маме на кухне?\nB: Иногда (sometimes)."
+],
+"answer": "Диалог 1:\nA: Как часто ты поздно ложишься спать?\nB: Два раза в неделю (twice a week). \nДиалог 2:\nA: Как часто ты прибираешься в комнате?\nB: Иногда (sometimes).\nДиалог 3:\nA: Как часто ты слушаешь музыку?\nB: Каждый день (every day). \nДиалог 4:\nA: Как часто ты встречаешься с другом по выходным?\nB: Каждые выходные (every weekend).\nДиалог 5:\nA: Как часто ты помогаешь маме на кухне?\nB: Иногда (sometimes)."
+}
+]
+},
+{
+"number": "3-s18",
+"num": "3",
+"page": 18,
+"chapter": "Module 2. I Love English!",
+"skyId": 120619,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать друг другу вопросы в парах и рассказать классу, что мы узнали о партнёре.",
+"Adverbs of frequency (наречия частотности)\nPresent Simple употребляется для описания постоянных, обычных, регулярно повторяющихся действий или событий. В этом времени можно встретить наречия частотности.\n 100 %\n Always\n Всегда\n 85 %\n Usually\n Обычно\n 70 %\n Often\n Часто\n 30 %\n Sometimes\n Иногда\n 0 %\n Never\n Никогда\nРассмотрим примеры:\nI go to school every day. — Я хожу в школу каждый день.\nThey usually play football every week. — Они обычно играют в футбол каждую неделю.\nSometimes she dances in the morning. — Иногда она танцует утром.\nShe never drinks coffee, but she often drinks tea. — Она никогда не пьёт кофе, но часто пьёт чай.\nIt always snows in winter. — Зимой всегда идёт снег.",
+"Диалог 1:\nA: Как часто ты поздно ложишься спать?\nB: Два раза в неделю (twice a week). \nДиалог 2:\nA: Как часто ты прибираешься в комнате?\nB: Иногда (sometimes).\nДиалог 3:\nA: Как часто ты слушаешь музыку?\nB: Каждый день (every day). \nДиалог 4:\nA: Как часто ты встречаешься с другом по выходным?\nB: Каждые выходные (every weekend).\nДиалог 5:\nA: Как часто ты помогаешь маме на кухне?\nB: Иногда (sometimes).",
+"Misha goes to bed late twice a week. Sometimes he cleans his room. He listens to music every day. Misha visits his friend every weekend. Sometimes he helps his mother to cook.\nМиша поздно ложится спать дважды в неделю. Иногда он прибирается в комнате. Он слушает музыку каждый день. Миша каждые выходные видится с другом. Иногда он помогает маме на кухне."
+],
+"answer": "Misha goes to bed late twice a week. Sometimes he cleans his room. He listens to music every day. Misha visits his friend every weekend. Sometimes he helps his mother to cook."
+}
+]
+},
+{
+"number": "4-s19",
+"num": "4",
+"page": 19,
+"chapter": "Module 2. I Love English!",
+"skyId": 120620,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и заполнить карточку с фактами о человеке.",
+"Имя:\nВозраст:\nСтрана:\nКомментарии\nЯ хочу работать (1) _____ или (2) _____ (3) _____.",
+"Ричи Брауну 24 года. Он из Англии. Он хочет найти работу на лето. Он хочет работать днём или вечером. Ричи ищет работу официантом.",
+"Имя: Ричи Браун (Ritchie Brown).\nВозраст: 24 года (24 years old).\nСтрана: Англия (England).\nКомментарии\nЯ хочу работать (1) днём (in the afternoon) или (2) вечером (evening) (3) официантом (waiter)."
+],
+"answer": "Имя: Ричи Браун (Ritchie Brown).\nВозраст: 24 года (24 years old).\nСтрана: Англия (England).\nКомментарии\nЯ хочу работать (1) днём (in the afternoon) или (2) вечером (evening) (3) официантом (waiter)."
+}
+]
+},
+{
+"number": "let-s-play-s20",
+"num": "let-s-play",
+"page": 20,
+"chapter": "Module 2. Let`s Play!",
+"skyId": 120621,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в игру.",
+"Красный. Вернись в начало.\nГолубой. Скажи, кто это или что это.\nРозовый. Назови пропущенное слово или слова.\nЖёлтый. Скажи или сделай.",
+"Скажем кто это.\nНазовём четыре вида спорта.\nСкажем что это.\nЧто ____ делаешь? Я медсестра. Заполним пропуск.\nНазовём четыре вида зданий.\nСкажем что это.\nСкажем что это.\nПекарь _____ в пекарне. Заполним пропуск.\nИзвините, _____ находиться почта? Заполним пропуск.\nСкажем, кто это.\nКоторый _____? Пятнадцать минут одиннадцатого. Заполним пропуск.\nВернёмся на квадрат «Старт».\nСкажем кто это.\nСкажем кто это.\nЯ люблю _____ футбол.\nВернёмся на квадрат «Старт».\nСпоём песню «My favourite kind of person».\nСкажем что это.\nВернёмся на квадрат «Старт».\nНазовём пять профессий.\nВернёмся на квадрат «Старт».\nСкажем что это.\nБольница находится _____ Бридж Стрит.\nСкажем что это.",
+"Postman.\nVolleyball, hockey, tennis, table tennis.\nBadminton.\nDo you.\nВернёмся на квадрат «Старт».\nTheatre, garage, post office, hospital.\n(Train) station.\nWorks.\nWhere.\nMechanic.\nTime.\nВернёмся на квадрат «Старт».\nGreengrocer.\nNurse.\nPlaying.\nВернёмся на квадрат «Старт».\nСпоём песню «My favourite kind of person».\n(Petrol) station.\nВернёмся на квадрат «Старт».\nNurse, postman, mechanic, baker, greengrocer.\nВернёмся на квадрат «Старт».\nTennis.\nIn.\nHospital.",
+"Postman Pete, what's in your bag?\nA parcel or a letter?\nPostman Pete, what's in your bag?\nA card—or something better?\nOh, my postman's very special,\nHe whistles and he sings!\nI wait for him each morning,\nI love the things he brings!\nPostman Pete, what's in your bag?\nA postcard or a prize?\nPostman Pete, what's in your bag?\nGive me a surprise!",
+"Почтальон Пит, что у вас в сумке?\nПосылка или письмо?\nПочтальон Пит, что у вас в сумке?\nОткрытка или что-то получше?\nО, мой почтальон особенный,\nОн свистит и поёт!\nЯ жду его каждое утро,\nЯ люблю вещи, которые он приносит!\nПочтальон Пит, что у вас в сумке?\nОткрытка или приз?\nПочтальон Пит, что у вас в сумке?\nСделайте мне сюрприз!"
+],
+"answer": "Postman — почтальон.\nVolleyball, hockey, tennis, table tennis — волейбол, хоккей, теннис, настольный теннис.\nBadminton — бадминтон.\nDo you.\nВернёмся на квадрат «Старт».\nTheatre, garage, post office, hospital — театр, гараж, почта, больницы.\n(Train) station — вокзал.\nWorks — работает.\nWhere — где.\nMechanic — механик.\nTime — время.\nВернёмся на квадрат «Старт».\nGreengrocer — продавец фруктов.\nNurse — медсестра.\nPlaying — играть.\nВернёмся на квадрат «Старт».\nСпоём песню «My favourite kind of person».\n(Petrol) station — заправка.\nВернёмся на квадрат «Старт».\nNurse, postman, mechanic, baker, greengrocer — медсестра, почтальон, механик, повар, продавец фруктов.\nВернёмся на квадрат «Старт».\nTennis — теннис.\nIn — в.\nHospital — больница."
+}
+]
+},
+{
+"number": "1-s22",
+"num": "1",
+"page": 22,
+"chapter": "Module 3. Unit 5. The Animal Hospital!",
+"skyId": 120622,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть, прочитать и соотнести слова с картинками.",
+"WORDLIST\npineapple — ананас\ncoconut — кокос\nbeans — горох\nsalt — соль\nflour — мука\nolive oil — оливковое масло\nmango — манго\nlemon — лимон\ntomato — помидор\npepper — перец\nsugar — сахар\nbutter — сливочное масло",
+"Ананас — k. \nКокос — h. \nГорох — g. \nСоль — b. \nМука — d. \nОливковое масло — j. \nМанго — i. \nЛимон — l. \nПомидор — a. \nПерец — f. \nСахар — e. \nСливочное масло — c."
+],
+"answer": "Pineapple — k.\nCoconut — h.\nBeans — g.\nSalt — b.\nFlour — d.\nOlive oil — j.\nMango — i.\nLemon — l.\nTomato — a.\nPepper — f.\nSugar— e.\nButter — c."
+}
+]
+},
+{
+"number": "2-s23",
+"num": "2",
+"page": 23,
+"chapter": "Module 3. Unit 5. The Animal Hospital!",
+"skyId": 120623,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях, вставив правильные слова.",
+"Вопросительное слово «how many» означает «сколько» и используется с предметами, которые мы можем посчитать (исчисляемыми существительными). \nHow many English books have you got ? Сколько у тебя английских книг?\nHow many brothers has he got? Сколько у него братьев?\nВ вопросе после слова how many используется существительное во множественном числе.\nHow many children have they got? Сколько у них детей?\nThey have two daughters and one son. У них две дочери и один сын.\nВопросительное слово «how much» тоже означает «сколько», но используется с предметами, которые мы не можем посчитать (неисчисляемыми существительными). \nHow much butter do you want to buy?",
+"_____ хлеба ты хочешь купить?\n_____ есть помидоров?\n_____ молока ты хочешь в кофе?\n_____ картошки у нас есть?\n_____ масла в торте?\n_____ апельсинов в корзине?\n_____ сахара нам надо?\n_____ ананасов в холодильнике?",
+"Сколько (how much) хлеба ты хочешь купить? (Хлеб — неисчисляемое существительное.)\nСколько (how many) есть помидоров? (Помидор — исчисляемое существительное.)\nСколько (how much) молока ты хочешь в кофе? (Молоко — неисчисляемое существительное.)\nСколько (how many) картошки у нас есть? (Картошка — исчисляемое существительное.)\nСколько (how much) масла в торте? (Масло — неисчисляемое существительное.)\nСколько (how many) апельсинов в корзине? (Апельсин — исчисляемое существительное.)\nСколько (how much) сахара нам надо? (Сахар — неисчисляемое существительное.)\nСколько (how many) ананасов в холодильнике? (Ананас — исчисляемое существительное.)"
+],
+"answer": "How much. \nHow many. \nHow much. \nHow many. \nHow much. \nHow many. \nHow much. \nHow many."
+}
+]
+},
+{
+"number": "3-s23",
+"num": "3",
+"page": 23,
+"chapter": "Module 3. Unit 5. The Animal Hospital!",
+"skyId": 120624,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно по примеру задать вопрос и ответить на него, а затем записать получившиеся предложения.",
+"Any в английском языке является неопределённым местоимением, которое часто употребляется перед исчисляемыми и неисчисляемыми существительными во множественном числе.\n Утвердительное предложение\n Отрицательное предложение\n Вопросительное предложение\n Any\n -\nI haven't got any books. У меня нет книг.\nHe hasn't got any apples. У него нет яблок\nHave you got any books? У тебя есть книги?\nHas she got any apples? У неё есть яблоки?",
+"3. \nA: Are there any lemons? (Ставим are, так как лимоны — исчисляемое существительное.)\nB: Yes, but not many. (Ставим many, так как лимоны — исчисляемое существительное.)\n4. \nA: Is there any butter? (Ставим is, так как масло — неисчисляемое существительное.)\nB: Yes, but not much. (Ставим much, так как масло — неисчисляемое существительное.)\n5. \nA: Are there any bananas? (Ставим are, так как бананы — исчисляемое существительное.)\nB: Yes, but not many. (Ставим many, так как бананы — исчисляемое существительное.)\n6. \nA: Are there any coconuts? (Ставим are, так как кокосы — исчисляемое существительное.)\nB: Yes, but not many. (Ставим many, так как кокосы — исчисляемое существительное.)\n7. \nA: Is there any olive oil? (Ставим is, так как оливковое масло — неисчисляемое существительное.)\nB: Yes, but not much. (Ставим much, так как оливковое масло — неисчисляемое существительное.)",
+"3.\nA: Есть ли лимоны?\nB: Да, но немного.\n4.\nА: Есть ли масло?\nB: Да, но немного.\n5.\nA: Есть ли бананы?\nB: Да, но немного.\n6.\nA: Есть ли кокосы?\nB: Да, но немного.\n7.\nA: Есть ли оливковое масло?\nB: Да, но немного."
+],
+"answer": "3. \nA: Are there any lemons? \nB: Yes, but not many. \n4. \nA: Is there any butter? \nB: Yes, but not much. \n5. \nA: Are there any bananas? \nB: Yes, but not many. \n6. \nA: Are there any coconuts? \nB: Yes, but not many. \n7. \nA: Is there any olive oil? \nB: Yes, but not much."
+}
+]
+},
+{
+"number": "1-s24",
+"num": "1",
+"page": 24,
+"chapter": "Module 3. Unit 6. Make a meal of it!",
+"skyId": 120625,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать фразы и выбрать правильные варианты ответа.",
+"WORDLIST \nbar — плитка\nbiscuits — печенье \nbread — хлеб\ncartoon — картонная коробка \njam — джем\njar — банка\nkilo — килограм\npacket — упаковка \ntin — консервная банка\nloaf — буханка",
+"Печенье. \nХлеб.\nКока-кола.\nКартошка.\nДжем.\nШоколад.",
+"В английском языке есть слова, которые помогают нам сказать о количестве еды и напитков. Познакомимся с некоторыми из них:\nbar — плитка,\ncarton — картонная коробка,\njar — банка,\nkilo — килограм,\npacket — упаковка,\ntin — консервная банка,\nloaf — буханка.\nИспользование этих слов с названиями еды и напитков нужно запомнить:\na cartoon of juice — упаковка сока,\na jar of jam — банка джема,\na packet of biscuits — упаковка печенья,\na loaf of bread — буханка хлеба,\na bottle of Coke — бутылка кока-колы,\na kilo of tomatoes — килограмм помидоров,\na bar of chocolate — плитка шоколада,\na tin of beans — консервная банка фасоли.",
+"Упаковка печенья.\nБуханка хлеба.\nБутылка кока-колы.\nКилограм картошки.\nБанка джема.\nПлитка шоколада."
+],
+"answer": "Packet (пример).\nLoaf.\nBottle.\nKilo.\nJar.\nBar."
+}
+]
+},
+{
+"number": "2-s24",
+"num": "2",
+"page": 24,
+"chapter": "Module 3. Unit 6. Make a meal of it!",
+"skyId": 120626,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что из еды и напитков на картинке, мы бы съели и выпили.",
+"Biscuits — печенье.\nMeat — мясо.\nIce-cream — мороженое.\nSandwiches — сандвичи.\nRice — рис.\nChicken — курица.\nMilk — молоко.\nBananas — бананы.\nEggs — яйца.\nCarrots — морковь.\nVegetables — овощи.\nChips — жареный картофель.",
+"Я ем много печений. Я не ем много печений.",
+"Существительные бывают исчисляемые и неисчисляемые. Исчисляемые существительные — те существительные, которые мы можем посчитать. А неисчисляемые — те, которые мы посчитать не можем.\n Можем посчитать\n Не можем посчитать \nmany / a lot of — много (many / a lot of toys — много игрушек)\nmuch / a lot of — много (much / a lot of time — много времени)",
+"I eat a lot of meat. (Мясо не можем посчитать, используем lot of.)\nI eat much ice-cream. (Мороженое не можем посчитать, используем much.)\nI don't eat much rice. (Рис не можем посчитать, используем much.)\nI eat a lot of sandwiches. (Сэндвичи можем посчитать, используем lot of.)\nI don't eat much chicken. (Курицу не можем посчитать, используем much.)\nI don't drink much milk. (Молоко не можем посчитать, используем much.)\nI eat many bananas. (Бананы можем посчитать, используем many.)\nI eat many vegetables. (Овощи можем посчитать, используем many.)\nI don't eat many eggs. (Яйца можем посчитать, используем many.)\nI eat many carrots. (Морковь можем посчитать, используем many.)\nI don't eat many chips. (Жареный картофель можем посчитать, используем many.)",
+"Я ем много мяса.\nЯ ем много мороженого.\nЯ не ем много риса.\nЯ ем много бутербродов.\nЯ не ем много курицы.\nЯ не пью много молока.\nЯ ем много бананов.\nЯ ем много овощей.\nЯ не ем много яиц.\nЯ ем много моркови.\nЯ не ем много чипсов."
+],
+"answer": "I eat a lot of meat.\nI eat much ice-cream.\nI don't eat much rice.\nI eat a lot of sandwiches.\nI don't eat much chicken.\nI don't drink much milk.\nI eat many bananas.\nI eat many vegetables.\nI don't eat many eggs.\nI eat many carrots.\nI don't eat many chips."
+}
+]
+},
+{
+"number": "3-s25",
+"num": "3",
+"page": 25,
+"chapter": "Module 3. Unit 6. Make a meal of it!",
+"skyId": 120627,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки, прочитать и подчеркнуть правильный вариант ответа.",
+"WORDLIST \nChina — Китай\nfish and chips — рыба и жаренная картошка\nItaly — Италия\nJapan — Япония\npaella — паэлья \nRussia — Россия\nSpain — Испания\nsushi — суши \nUK — Великобритания \nUSA — США",
+"Рис из Китая (пример). \nРыба и жареный картофель из _____(Великобритании/США). \nПаэлья из _____ (Италии/Испании). \nСуши из _____ (Китая/Японии).",
+"Рис из Китая (пример).\nРыба и жареный картофель из Великобритании (UK).\nПаэлья из Испании (Spain).\nСуши из Японии (Japan)."
+],
+"answer": "China (пример).\nUK.\nSpain. \nJapan."
+}
+]
+},
+{
+"number": "4-s25",
+"num": "4",
+"page": 25,
+"chapter": "Module 3. Unit 6. Make a meal of it!",
+"skyId": 120628,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и заполнить пропуски правильными словами.",
+"Для того чтобы верно употреблять модальный глагол в предложении, нам нужно вспомнить его значение.\n Модальный глагол\n Значение\n Пример\n May\n Разрешение сделать что-то\n May I go out? Можно мне выйти?",
+"1.\nA: Могу я видеть мистера Джексона?\nВ: Конечно.\n2.\nА: _____ я открыть окно?\nВ: Конечно _____.\n3.\nА: _____ я съесть свой обед в моей спальне?\nВ: Нет, ты _____. Поешь на кухне, пожалуйста.\n4.\nА: _____ я задать тебе вопрос?\nВ: Да, конечно.\n5.\nА: _____ мне ещё немного шоколада, пожалуйста?\nВ: Нет, тебе _____.\n6.\nА: _____ мне стакан воды?\nВ: Да, конечно.",
+"1.\nA: Могу я видеть мистера Джексона?\nВ: Конечно.\n2.\nА: Могу (may) я открыть окно?\nВ: Конечно можешь (may).\n3.\nА: Могу (may) я съесть свой обед в моей спальне?\nВ: Нет, ты не можешь (may not). Поешь на кухне, пожалуйста.\n4.\nА: Могу (may) я задать тебе вопрос?\nВ: Да, конечно.\n5.\nА: Можно (may) мне ещё немного шоколада, пожалуйста?\nВ: Нет, тебе нельзя (may not).\n6.\nА: Можно (may) мне стакан воды?\nВ: Да, конечно."
+],
+"answer": "May. \nMay, may. \nMay, may not. \nMay. \nMay, may not. \nMay."
+}
+]
+},
+{
+"number": "1-s26",
+"num": "1",
+"page": 26,
+"chapter": "Module 3. I Love English!",
+"skyId": 120629,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и нарисовать линию.",
+"WORDLIST 1\nmilk — молоко\nbread — хлеб\njam — варенье\npizza — пицца\nmouse — мышь\ndog — собака\nsheep — овца\ngoat — козёл\ncow — корова",
+"WORDLIST 2\nnext to — рядом\nunder — под\nin — в\nbetween — между",
+"Женщина: Положи шоколад под корову.\nЛэрри: Простите? Положить под корову?\nЖенщина: Положи шоколад под корову.\nЛэрри: Хорошо.\nВедущий: Ты видишь линию? Это пример. Теперь слушай и рисуй линии.\nЖенщина: Ты видишь мышь? Размести молоко рядом с мышью.\nЛэрри: Извините? \nЖенщина: Размести молоко рядом с мышью.\nЛэрри: Хорошо.\nЖенщина: Теперь, размести хлеб между собакой и овцой. \nЛэрри: Хлеб? \nЖенщина: Да, хлеб между собакой и овцой. \nЖенщина: Поставь варенье в рот козла.\nЛэрри: Варенье? В рот козла?\nЖенщина: Да.\nЛэрри: Хорошо.\nЖенщина: Теперь, помести пиццу рядом с собакой.\nЛэрри: Простите? Куда нужно поместить пиццу?\nЖенщина: Рядом с собакой.",
+"We put milk next to the mouse. Мы помещаем молоко рядом с мышью.\nWe put bread between the dog and the sheep. Мы помещаем хлеб между собакой и овцой.\nWe put jam in the goat's mouth. Мы помещаем варенье в рот козлу.\nWe put pizza next to the dog. Мы помещаем пиццу рядом с собакой."
+],
+"answer": "We put milk next to the mouse. Мы помещаем молоко рядом с мышью.\nWe put bread between the dog and the sheep. Мы помещаем хлеб между собакой и овцой.\nWe put jam in the goat's mouth. Мы помещаем варенье в рот козлу.\nWe put pizza next to the dog. Мы помещаем пиццу рядом с собакой."
+}
+]
+},
+{
+"number": "2-s26",
+"num": "2",
+"page": 26,
+"chapter": "Module 3. I Love English!",
+"skyId": 120630,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и потренироваться читать диалог.",
+"WORDLIST\na packet of biscuits — упаковка печенья\na carton of milk — пакет молока\na bottle of lemonade — бутылка лимонада\na jar of jam — банка варенья\na kilo of potatoes — килограмм картошки\na tin of pineapples — банка консервированных ананасов",
+"90p — ninety pence (девяносто пенсов).\n42p — forty-two pence (сорок два пенса).\n£2.05 — two pounds five pence (два фунта пять пенсов).\n70p — seventy pence (семьдесят пенсов).\n59p — fifty-nine pence (пятьдесят девять пенсов).\n£1.20 — one pound twenty pence (один фунт двадцать пенсов).",
+"А: Можно мне упаковку печенья, пожалуйста?\nБ: Конечно, держи.\nА: Сколько она стоит?\nБ: Девяносто пенсов.",
+"2. \nA: Can I have a carton of milk, please? (Можно мне, пожалуйста, пакет молока?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько он стоит?)\nB: Forty-two pence. (Сорок два пенса.)\n3. \nA: Can I have a kilo of potatoes, please? (Можно мне, пожалуйста, килограмм картошки?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько он стоит?)\nB: Two pounds five pence. (Два фунта пять пенсов.)\n4. \nA: Can I have a bottle of lemonade, please? (Можно мне, пожалуйста, бутылку лимонада?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: Seventy pence. (Семьдесят пенсов.)\n5. \nA: Can I have a tin of pineapples, please? (Можно мне, пожалуйста, банку консервированных ананасов?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: Fifty-nine pence. (Пятьдесят девять пенсов.)\n6. \nA: Can I have a jar of jam, please? (Можно мне, пожалуйста, банку варенья?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: One pound twenty pence. (Один фунт двадцать пенсов.)"
+],
+"answer": "2. \nA: Can I have a carton of milk, please? (Можно мне, пожалуйста, пакет молока?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько он стоит?)\nB: Forty-two pence. (Сорок два пенса.)\n3. \nA: Can I have a kilo of potatoes, please? (Можно мне, пожалуйста, килограмм картошки?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько он стоит?)\nB: Two pounds five pence. (Два фунта пять пенсов.)\n4. \nA: Can I have a bottle of lemonade, please? (Можно мне, пожалуйста, бутылку лимонада?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: Seventy pence. (Семьдесят пенсов.)\n5. \nA: Can I have a tin of pineapples, please? (Можно мне, пожалуйста, банку консервированных ананасов?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: Fifty-nine pence. (Пятьдесят девять пенсов.)\n6. \nA: Can I have a jar of jam, please? (Можно мне, пожалуйста, банку варенья?)\nB: Certainly, here you are. (Конечно, держи.)\nA: How much is it? (Сколько она стоит?)\nB: One pound twenty pence. (Один фунт двадцать пенсов.)"
+}
+]
+},
+{
+"number": "3-s27",
+"num": "3",
+"page": 27,
+"chapter": "Module 3. I Love English!",
+"skyId": 120631,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и прочитать вопросы. После этого запишем ответ одним словом.",
+"WORDLIST\nsupermarket — супермаркет\nbottle — бутылка\ndrink — пить\ndrinking — пить (длительное действие)\nkitchen — кухня\ntwo — два\nsix — шесть",
+"Где находятся дети? — В супермаркете. (Пример.)\nСколько ты видишь детей?\nЧто у женщины в руках? — _____ колы.\nЧто делают дети?\nГде сейчас дети? — На _____.\nСколько на столе бутылок?",
+"2. Two. Двое.\n3. Bottle. Бутылка.\n4. Drinking. Пьют.\n5. Kitchen. Кухня.\n6. Six. Шесть."
+],
+"answer": "2. Two. Двое.\n3. Bottle. Бутылка.\n4. Drinking. Пьют.\n5. Kitchen. Кухня.\n6. Six. Шесть."
+}
+]
+},
+{
+"number": "let-s-play-s28",
+"num": "let-s-play",
+"page": 28,
+"chapter": "Module 3. Let`s Play!",
+"skyId": 120632,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сыграть в игру.",
+"1. Выложим на игральное поле фишку (это может быть небольшой предмет — монетка, ластик и т. д.).\n2. Начнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратиков вперёд, сколько показывает кубик.\n3. Когда фишка попадает на квадратик с заданием, игроку нужно его выполнить. В игре есть 4 типа заданий: \ngo back to start — вернуться на старт;\nсиний квадратик — назвать предмет;\nрозовый квадратик — дополнить предложение;\nжёлтый квадратик — выполнить задание. \n4. Выигрывает тот, кто первым дойдёт до финиша.",
+"WORDLIST\nbutter — сливочное масло\nflour — мука\nmango — манго\npineapple — ананас\nsugar — сахар\ntomato — помидор",
+"1.How much butter is there? — Используем much, так как butter — неисчисляемое.\n4. A loaf of bread — булка хлеба.\n15. How many tomatoes do we need? — Используем many, так как tomatoes — исчисляемое.\n18. Can you pass me the butter, please? Sure. Here you are. Можешь передать мне масло, пожалуйста? Конечно. Держи.\n19. A packet of biscuits — пачка печенья.",
+"6. Назови три овоща (tomato — помидор, potato — картошка, onion — лук).\n7. Спой песню «All over the world!». (Ты найдёшь песню в учебнике на странице 48 в упражнении № 2).\n9. Назови четыре молочных продукта (yogurt — йогурт, milk — молоко, cheese — сыр, butter — сливочное масло).\n11. Назови три напитка (coke — кола, milk — молоко, juice — сок).\n12. Назови три фрукта (lemon — лимон, mango — манго, pineapple — ананас).",
+"Much.\nButter.\nВернись на старт.\nLoaf.\nPineapple.\nTomato, potato, onion.\nСпой песню «All over the world!».\nВернись на старт.\nYogurt, milk, cheese, butter.\nMango.\nCoke, milk, juice.\nLemon, mango, pineapple.\nВернись на старт.\nSugar.\nMany.\nFlour.\nВернись на старт.\nPass, you.\nPacket.\nВернись на старт.\nTomato."
+],
+"answer": "Much.\nButter.\nВернись на старт.\nLoaf.\nPineapple.\nTomato, potato, onion.\nСпой песню «All over the world!».\nВернись на старт.\nYogurt, milk, cheese, butter.\nMango.\nCoke, milk, juice.\nLemon, mango, pineapple.\nВернись на старт.\nSugar.\nMany.\nFlour.\nВернись на старт.\nPass, you.\nPacket.\nВернись на старт.\nTomato."
+}
+]
+},
+{
+"number": "1-s30",
+"num": "1",
+"page": 30,
+"chapter": "Module 4. Unit 7. My best friend!",
+"skyId": 120633,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задание нам нужно посмотреть на картинки и решить кроссворд.",
+"WORDLIST\ncrocodile — крокодил\ndolphin — дельфин\ngiraffe — жираф\nhippo — бегемот\nlizard — ящерица\nmonkey — обезьяна\nseal — тюлень\nwhale — кит",
+"Monkey.\nGiraffe.\nCrocodile.\nWhale.\nHippo.\nSeal.\nLizard.\nDolphin."
+],
+"answer": "Monkey.\nGiraffe.\nCrocodile.\nWhale.\nHippo.\nSeal.\nLizard.\nDolphin."
+}
+]
+},
+{
+"number": "2-s31",
+"num": "2",
+"page": 31,
+"chapter": "Module 4. Unit 7. My best friend!",
+"skyId": 120634,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и выбрать верные ответы.",
+"Мы используем Present Simple, когда говорим о регулярных действиях или распорядке дня.\nСлова-маркеры: always (всегда), usually (обычно), often (часто), sometimes (иногда), never (никогда); in the morning/afternoon/evening (утром/днём/вечером); every day/week/month/year (каждый день/неделю/месяц/год).",
+"Мы используем Present Continuous, когда говорим о том, что происходит в данный момент.\nСлова-маркеры: now (сейчас), at the moment (в данный момент).",
+"Джим обычно ходит пешком в школу. (Используем walks, потому что действие происходит обычно.)",
+"Джим обычно ходит пешком в школу.\nМы делаем домашнее задание днём.\nТы видишь Дэвида? Он играет в футбол.\nТы смотришь телевизор каждую ночь?\nТом пишет письмо сейчас.\nМарк никогда не ходит в парк по воскресеньям.\nГде дети? Они спят?\nОни не катаются на велосипедах каждый день.",
+"Предложение\n Объяснение\n Ответ\n Джим обычно ходит пешком в школу\n Действие происходит обычно, используем Present Simple\n Walks\n Мы делаем домашнее задание днём\n Регулярное действие, происходит днём, используем Present Simple\n Do\n Ты видишь Дэвида? Он играет в футбол\n Действие происходит в данный момент, используем Present Continuous\n Is playing\n Ты смотришь телевизор каждой ночью?\n Регулярное действие, происходит каждую ночь, используем Present Simple\n Do you watch\n Том пишет письмо сейчас\n Действие происходит сейчас, используем Present Continuous\n Is writing\n Марк никогда не ходит в парк по воскресеньям\n Регулярное действие, никогда не происходит, используем Present Simple\n Goes\n Где дети? Они спят?\n Действие происходит в данный момент, используем Present Continuous\n Are they sleeping\n Они не катаются на велосипедах каждый день\n Регулярное действие, происходит не каждый день, используем Present Simple\n Don't ride"
+],
+"answer": "A.\nB.\nA.\nB.\nA.\nA.\nA.\nB."
+}
+]
+},
+{
+"number": "3-s31",
+"num": "3",
+"page": 31,
+"chapter": "Module 4. Unit 7. My best friend!",
+"skyId": 120635,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и выбрать верные варианты ответов.",
+"Мы используем Present Simple, когда говорим о регулярных действиях или распорядке дня.\nСлова-маркеры: always (всегда), usually (обычно), often (часто), sometimes (иногда), never (никогда); in the morning/afternoon/evening (утром/днём/вечером); every day/week/month/year (каждый день/неделю/месяц/год).",
+"Мы используем Present Continuous, когда говорим о том, что происходит в данный момент.\nСлова-маркеры: now (сейчас), at the moment (в данный момент).",
+"A: Том играет в бейсбол (в данный момент)! — Мы спрашиваем о действии в данный момент (Present Continuous), значит, в ответе не может быть регулярного действия (Present Simple).\nB: a) Да, он любит бейсбол.\nb) Да, играет (регулярное действие).",
+"1. A: Том играет в бейсбол (в данный момент)!\n B: a) Да, он любит бейсбол.\n b) Да, играет (регулярное действие).\n2. A: Ты всегда ходишь в кино по воскресеньям? \n B: a) Я иду куда-нибудь по воскресеньям (в данный момент).\n b) Не каждое воскресенье.\n3. A: Что она делает (в данный момент)?\n B: a) Она делает фруктовый салат (регулярное действие).\n b) Она делает фруктовый салат (в данный момент).\n4. A: Ты разговариваешь со мной (в данный момент)?\n B: a) Да (в данный момент).\n b) Да (регулярное действие).",
+"1. A: Том играет в бейсбол (в данный момент)! — Мы спрашиваем о действии в данный момент (Present Continuous), значит, в ответе не может быть регулярного действия (Present Simple).\nB: a) Да, он любит бейсбол.\nb) Да, играет (регулярное действие).\n2. A: Ты всегда ходишь в кино по воскресеньям? — Мы спрашиваем о регулярном действии (Present Simple).\nB: a) Я иду куда-нибудь по воскресеньям (в данный момент).\nb) Не каждое воскресенье.\n3. A: Что она делает (в данный момент)? — Мы спрашиваем о действии в данный момент (Present Continuous).\nB: a) Она делает фруктовый салат (регулярное действие).\nb) Она делает фруктовый салат (в данный момент).\n4. A: Ты разговариваешь со мной (в данный момент)? — Мы спрашиваем о действии в данный момент (Present Continuous).\nB: a) Да (в данный момент).\nb) Да (регулярное действие)."
+],
+"answer": "A.\nB.\nB.\nA."
+}
+]
+},
+{
+"number": "1-s32",
+"num": "1",
+"page": 32,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120636,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и выбрать животное, о котором идёт речь.",
+"Он очень высокий и он есть деревья. — Жираф/обезьяна.",
+"WORDLIST\ncrocodile — крокодил\nseal — тюлень\nwhale — кит\nhippo — бегемот \nmonkey — обезьяна\ngiraffe — жираф",
+"2. Он достаточно маленький и живёт в море. \nКрокодил/тюлень. \n3. Он полный и у него четыре ноги. \nКит/бегемот. \n4. Она ест бананы и лазает по деревьям. \nОбезьяна/бегемот. \n5. У него длинный хвост и много зубов. \nКрокодил/жираф.",
+"2. Seal — тюлень. \n3. Hippo — бегемот. \n4. Monkey — обезьяна. \n5. Crocodile — крокодил."
+],
+"answer": "2. Seal — тюлень. \n3. Hippo — бегемот. \n4. Monkey — обезьяна. \n5. Crocodile — крокодил."
+}
+]
+},
+{
+"number": "2-s32",
+"num": "2",
+"page": 32,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120637,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо дополнить стишок, используя названия месяцев.",
+"January — Январь. \nFebruary — Февраль. \nMarch — Март. \nApril — Апрель. \nMay — Май. \nJune — Июнь. \nJuly — Июль. \nAugust — Август. \nSeptember — Сентябрь. \nOctober — Октябрь. \nNovember — Ноябрь. \nDecember — Декабрь.",
+"Тридцать дней в Сентябре, Апреле, Июне и Ноябре. \nВо всех остальных тридцать один. \nКроме Февраля\nВ котором двадцать восемь дней\nИ двадцать девять дней в каждом високосном году!",
+"September. \nApril. \nJune. \nNovember. \nFebruary."
+],
+"answer": "September.\nApril.\nJune.\nNovember.\nFebruary."
+}
+]
+},
+{
+"number": "3-s32",
+"num": "3",
+"page": 32,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120638,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо прочитать стишок снова и ответить на вопросы 1–2.",
+"January — Январь. \nFebruary — Февраль. \nMarch — Март. \nApril — Апрель. \nMay — Май. \nJune — Июнь. \nJuly — Июль. \nAugust — Август. \nSeptember — Сентябрь. \nOctober — Октябрь. \nNovember — Ноябрь. \nDecember — Декабрь.",
+"Тридцать дней в Сентябре, Апреле, Июне и Ноябре.\nВо всех остальных тридцать один.\nКроме Февраля\nВ котором двадцать восемь дней\nИ двадцать девять дней в каждом високосном году!",
+"В каких месяцах тридцать дней?\nВ каких месяцах тридцать один день?",
+"September, April, June, November.\nOctober, December, January, March, May, July, August."
+],
+"answer": "September, April, June, November.\nOctober, December, January, March, May, July, August."
+}
+]
+},
+{
+"number": "4-s32",
+"num": "4",
+"page": 32,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120639,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать сравнительные степени прилагательных, как в примере.",
+"Большой — больше.",
+"Обычно мы возводим прилагательное в степень, когда что-то с чем-то сравниваем:\nhard (трудно) — harder (труднее) — the hardest (труднее всего).\nСуществуют три степени сравнения прилагательных:\npositive degree — положительная степень;\ncomparative degree — сравнительная степень;\nsuperlative degree — превосходная степень.\nВ основном существуют односложные, двухсложные и многосложные прилагательные, в которых применяются степени сравнения.\nРассмотрим положительную и сравнительную степень прилагательных. \n1. Степень сравнения односложных прилагательных.\nОбычно это короткие слова, сравнительная степень которых образуется при помощи суффикса -er. \n Положительная степень\n Сравнительная степень\n Big (большой)\n Bigger (больше)\n Cold (холодный)\n Colder (холоднее)\n Safe (безопасный)\n Safer (безопаснее)\n Cute (милый)\n Cuter (милее)\nToday is colder than yesterday. Сегодня холоднее, чем вчера..\nЕсли прилагательное заканчивается на -e, добавляем -r:\nSafe (безопасно) — safer (безопаснее).\nCute (милый) — cuter (милее).\nЕсли прилагательное заканчивается на согласную, то согласная удваивается:\nBig (большой) — bigger (больше).\nHot (горячо) — hotter (горячее).\nЕсли прилагательное заканчивается на -y, то суффикс -y заменятся на -i:\nDirty (грязный) — dirtier (грязнее).\nHappy (счастливый) — happier (счастливее).\n2. Степень сравнения двухсложных и многосложных прилагательных.\nДвухсложные и многосложные прилагательные — это те прилагательные, которые имеют два или более слогов. Обычно такие прилагательные возводятся в сравнительную степень с помощью more (более). \n Положительная степень\n Сравнительная степень\n Difficult (сложный)\n More difficult (сложнее)\n Beautiful (красивый)\n More beautiful (красивее)\n Polite (вежливый)\n More polite (вежливее)\n Famous (известный)\n More famous (известнее)\nHe is more polite than he was before. Он более вежливый, чем был раньше.\n3. Степени сравнения прилагательных: исключения.\nСтепени сравнения следующих прилагательных не образуются по общим правилам. Поэтому их лучше запомнить.\n Положительная степень\n Сравнительная степень\nGood (хороший).\nLittle (маленький).\nBad (плохой).\nMuch (много — с неисчисл.) и many (многие — с исчисл.).\nLate (поздно).\nFar (далёкий).\nOld (старый)\nBetter (лучше).\nLess (меньше).\nWorse (хуже).\nMore (больше).\nLater (более поздний — о времени), latter (последний из двух упомянутых).\nFarther (дальше — в значении физического расстояния), further (дальше — в более широком смысле).\nOlder (старше, старее по возрасту), elder (старше по старшинству в семье)\nShe got worse. Ей стало хуже.",
+"2. Happier — счастливее. \n3. Nicer — милее. \n4. Taller — выше. \n5. Fatter — полнее. \n6. Smaller — меньше. \n7. Cleverer — умнее. \n8. Funnier — смешнее\n9. Shorter — короче. \n10. Thinner — тоньше. \n11. Slimmer — худее. \n12. Faster — быстрее."
+],
+"answer": "2. Happier — счастливее. \n3. Nicer — милее. \n4. Taller — выше. \n5. Fatter — полнее. \n6. Smaller — меньше. \n7. Cleverer — умнее. \n8. Funnier — смешнее\n9. Shorter — короче. \n10. Thinner — тоньше. \n11. Slimmer — худее. \n12. Faster — быстрее."
+}
+]
+},
+{
+"number": "5-s33",
+"num": "5",
+"page": 33,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120640,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дополнить вопросы, используя сравнительную степень прилагательных. Затем ответим на вопросы викторины",
+"Обычно мы возводим прилагательное в степень, когда что-то с чем-то сравниваем:\nhard (трудно) — harder (труднее) — the hardest (труднее всего).\nСуществуют три степени сравнения прилагательных:\npositive degree — положительная степень;\ncomparative degree — сравнительная степень;\nsuperlative degree — превосходная степень.\nВ основном существуют односложные, двухсложные и многосложные прилагательные, в которых применяются степени сравнения.\nРассмотрим положительную и сравнительную степень прилагательных. \n1. Степень сравнения односложных прилагательных.\nОбычно это короткие слова, сравнительная степень которых образуется при помощи суффикса -er. \n Положительная степень\n Сравнительная степень\n Big (большой)\n Bigger (больше)\n Cold (холодный)\n Colder (холоднее)\n Safe (безопасный)\n Safer (безопаснее)\n Cute (милый)\n Cuter (милее)\nToday is colder than yesterday. Сегодня холоднее, чем вчера..\nЕсли прилагательное заканчивается на -e, добавляем -r:\nSafe (безопасно) — safer (безопаснее).\nCute (милый) — cuter (милее).\nЕсли прилагательное заканчивается на согласную, то согласная удваивается:\nBig (большой) — bigger (больше).\nHot (горячо) — hotter (горячее).\nЕсли прилагательное заканчивается на -y, то суффикс -y заменятся на -i:\nDirty (грязный) — dirtier (грязнее).\nHappy (счастливый) — happier (счастливее).\n2. Степень сравнения двухсложных и многосложных прилагательных.\nДвухсложные и многосложные прилагательные — это те прилагательные, которые имеют два или более слогов. Обычно такие прилагательные возводятся в сравнительную степень с помощью more (более). \n Положительная степень\n Сравнительная степень\n Difficult (сложный)\n More difficult (сложнее)\n Beautiful (красивый)\n More beautiful (красивее)\n Polite (вежливый)\n More polite (вежливее)\n Famous (известный)\n More famous (известнее)\nHe is more polite than he was before. Он более вежливый, чем был раньше.\n3. Степени сравнения прилагательных: исключения.\nСтепени сравнения следующих прилагательных не образуются по общим правилам. Поэтому их лучше запомнить.\n Положительная степень\n Сравнительная степень\nGood (хороший).\nLittle (маленький).\nBad (плохой).\nMuch (много — с неисчисл.) и many (многие — с исчисл.).\nLate (поздно).\nFar (далёкий).\nOld (старый)\nBetter (лучше).\nLess (меньше).\nWorse (хуже).\nMore (больше).\nLater (более поздний — о времени), latter (последний из двух упомянутых).\nFarther (дальше — в значении физического расстояния), further (дальше — в более широком смысле).\nOlder (старше, старее по возрасту), elder (старше по старшинству в семье)\nShe got worse. Ей стало хуже.",
+"Какое животное больше?\nУ какого животного хвост _____ (короткий)?\nКакое из животных _____ (высокий)?\nКакое из животных _____ (стройный/худой)?\nКакое из животных _____ (умный)?\nУ какого животного глаза _____ (маленькие)?",
+"2. Shorter — короче. \n3. Taller — выше. \n4. Thinner — худее. \n5. Cleverer — умнее. \n6. Smaller — меньше.",
+"Какое животное больше? А. Кит. В. Бегемот. \nУ какого животного хвост короче? А. Кенгуру. В. Овца. \nКакое из животных выше? А. Жираф. В. Слон. \nКакое из животных худее? А. Тюлень. В. Ящерица. \nКакое из животных умнее? А. Мышь. В. Дельфин. \nУ какого животного глаза меньше? А. Лягушка. В. Насекомое.",
+"Какое животное больше? А. Кит. \nУ какого животного хвост короче? В. Овца.\nКакое из животных выше? А. Жираф. \nКакое из животных худее? В. Ящерица.\nКакое из животных умнее? В. Дельфин.\nУ какого животного глаза меньше? В. Насекомое."
+],
+"answer": "2. Shorter — ниже. \n3. Taller — выше. \n4. Thinner — тоньше. \n5. Cleverer — умнее. \n6. Smaller — меньше. \nА. \nВ. \nА. \nВ. \nВ. \nВ."
+}
+]
+},
+{
+"number": "6-s33",
+"num": "6",
+"page": 33,
+"chapter": "Module 4. Unit 8. Wild about animals!",
+"skyId": 120641,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать правила фермы.",
+"Нужно закрывать ворота.",
+"Walk slowly and quietly — ходите медленно и тихо. \nKeep your hands away from the animals' mouths — держите руки подальше от пастей животных. \nFeed the animals — кормите животных. \nPark your car inside the farm — паркуйте свой автомобиль на территории фермы.",
+"Modal verb \"must\"\nMust (должен, обязан)\nГлагол must используется, когда сообщается о необходимости что-то делать. На русский язык переводится «должен», «обязан». Отрицательная форма на русский язык переводится как «нельзя».\nA doctor must care about his patients. — Врач должен заботиться о своих пациентах.\nThey mustn't enter the room. — Им нельзя входить в комнату.\nMust he go to to work? — Он должен ходить на работу?",
+"2. You must walk slowly and quietly. \n3. You must keep your hands away from the animals' mouths. \n4. You mustn't feed the animals. \n5. You mustn't park your car inside the farm."
+],
+"answer": "2. You must walk slowly and quietly. \n3. You must keep your hands away from the animals' mouths. \n4. You mustn't feed the animals. \n5. You mustn't park your car inside the farm."
+}
+]
+},
+{
+"number": "1-s34",
+"num": "1",
+"page": 34,
+"chapter": "Module 4. I Love English!",
+"skyId": 120642,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения, подчеркнуть верные глаголы (must или mustn't), а затем разыграть диалоги.",
+"WORDLIST\nput up — поднимать\nask — задавать, спрашивать\na question — вопрос\npark — парковать\nbuy — покупать\na ticket — билет\nget on — садиться (в автобус)",
+"",
+"Must. (Должен.)\nMustn't. (Нельзя.)\nMustn't. (Нельзя.)\nMust. (Должен.)",
+"1.\n— Ты должен поднять руку, чтобы задать вопрос.\n— Хорошо, мисс.\n2.\n— В чём дело, офицер?\n— Здесь нельзя парковать машину.\n3.\n— Вам нельзя заниматься спортом в течение двух недель.\n— Хорошо, спасибо, доктор.\n4.\n— Ты должен купить билет до того, как сядешь в автобус.\n— Правда? Где мне его взять?"
+],
+"answer": "Must.\nMustn't.\nMustn't.\nMust."
+}
+]
+},
+{
+"number": "2-s34",
+"num": "2",
+"page": 34,
+"chapter": "Module 4. I Love English!",
+"skyId": 120643,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать диалог и заполнить пропуски.",
+"WORDLIST\narea — секция, район\nseal — тюлень\nfeeding time — время кормления\nwonderful — замечательный\ndolphin — дельфин\nwhale — кит\nsound — звучать\nforget — забывать\nhippo — гиппопотам, бегемот\ncost — стоить",
+"Женщина: Здравствуйте, добро пожаловать в «Сплэш Си Уолд»!\nМужчина: О, здравствуйте!\nЖенщина: Вы здесь в первый раз?\nМужчина: Да! Не могли бы вы сказать мне, что находится в этой секции 1, пожалуйста?\nЖенщина: Конечно. В секции 1 вы можете увидеть тюленей. Уже почти время кормления, и если вы пойдёте туда сейчас, то сможете понаблюдать, как тюлени обедают. Это очень весело!\nМужчина: О, замечательно. А как насчёт секции 2? Что там?\nЖенщина: Ну, в секции 2 вы можете наблюдать за дельфинами и китами!\nМужчина: Дельфины и киты? Ух ты! Звучит заманчиво.\nЖенщина: И не забудьте про секцию 3! Вы можете прокатиться на лодке по реке и посмотреть на крокодилов и бегемотов.\nМужчина: Отлично.\nЖенщина: Билет стоит всего 50 фунтов.\nМужчина: 50 фунтов, хорошо. Вот, пожалуйста.\nЖенщина: Спасибо.",
+"Seals.\nWhales.\nHippos.\n50 (fifty).",
+"«Сплэш Си Уолд»\nВ секции 1 вы увидите: 1) тюленей.\nВ секции 2 вы увидите: дельфинов и 2) китов.\nВ секции 3 вы можете наблюдать за: крокодилами и 3) бегемотами.\nБилет стоит: 4) 50 фунтов."
+],
+"answer": "Seals.\nWhales.\nHippos.\n50 (fifty)."
+}
+]
+},
+{
+"number": "3-s35",
+"num": "3",
+"page": 35,
+"chapter": "Module 4. I Love English!",
+"skyId": 120644,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и заполнить в нём пропуски верными словами, которые даны после текста.",
+"WORDLIST\nelephant — слон\nwork — работать\nstrong — сильный\ncarry — носить\nowner — владелец\ntired — усталый, уставший\nhave a rest — отдыхать\nsick — больной\ncook — готовить",
+"Work. (Работают, elephants — множественное число; настоящее время, окончание не нужно.)\nTheir. (Их; things for their owners — вещи для их владельцев.)\nIn. (В; in India — в Индии.)\nEvery. (Каждый; every year — каждый год.)\nFor. (Для; hospital for sick elephants — больница для больных слонов.)\nHave. (Have a swim — плавать, купаться.)",
+"Многие слоны в Индии 1) работают по много часов каждый день. Эти сильные животные помогают переносить вещи для 2) своих владельцы. Теперь, 3) в Индии есть лагерь отдыха для уставших слонов!\nСлоны отправляются туда на месяц 4) каждый год, чтобы отдохнуть! В лагере есть специальная больница 5)для больных слонов и кухня для приготовления пищи для слонов. Там тоже есть река, так что слоны могут 6) купаться каждый день!\nСчастливых каникул, слоны!"
+],
+"answer": "Work.\nTheir.\nIn.\nEvery.\nFor.\nHave."
+}
+]
+},
+{
+"number": "let-s-play-s36",
+"num": "let-s-play",
+"page": 36,
+"chapter": "Module 4. Let`s Play!",
+"skyId": 120645,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо сыграть в игру.",
+"Выложим на игральное поле фишку (это может быть любой небольшой предмет — монетка, ластик и т. д.).\nНачнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратов вперёд, сколько показывает кубик.\nКогда фишка попадает на квадратик с заданием, игроку нужно его выполнить. В данной игре есть 4 типа заданий: 1. Go back to start — вернуться на старт. 2. Cиний квадратик — назвать предмет. 3. Розовый квадратик — дополнить предложение. 4. Жёлтый квадратик — выполнить задание.\nВыигрывает тот, кто первым дойдёт до финиша.",
+"WORDLIST\ndolphin — дельфин\nwhale — кит\nlizard — ящерица\ncrocodile — крокодил\nseal — тюлень\ngiraffe — жираф",
+"1. The seal always clap at lunchtime. (Мы знаем, что тюлени всегда хлопают.)\n4. You must leave your pets at home. (Это правило, используем модальный глагол must.)\n15. You mustn't play loud music. (Это правило, используем модальный глагол must.)\n18. Whales are biggger than dolphins. (Cравнение.)\n19. She always listens to music in the afternoon. (Listen to music — слушать музыку; She — третье лицо единственное число, добавляем окончание -s.)",
+"6. Назови 5 животных из зоопарка. (Животные из зоопарка есть в упражнении 3 на странице 62 в учебнике.)\n7. Спой песню «When I'm at the zoo!». (Песня в упражнении 1 на странице 58.)\n9. Назови двух животных из Австралии. (О животных из Австралии нужно прочитать в упражнении 1 на странице 69.)\n11. Назови все месяцы. (Все месяцы есть в упражнении 1 на странице 62 в учебнике.)\n12. Спой песню «The yellow giraffe!». (Песня в упражнении 3 на странице 64.)"
+],
+"answer": "Clap. \nDolphin\nВернись на поле «старт». \nMust. \nWhale. \nMonkey, hippo, giraffe, elephant, seal. \nCпой пеcню «When I'm at the zoo!». \nВернись на поле «старт». \nKoala, kangaroo. \nLizard. \nJanuary, February, March, April, May, June, July, August, September, October, November, November. \nCпой пеcню «The yellow giraffe!». \nВернись на поле «старт». \nCrocodile. \nMustn't. \nSeal. \nВернись на поле «старт». \nThan. \nListens. \nВернись на поле «старт». \nGiraffe."
+}
+]
+},
+{
+"number": "1-s38",
+"num": "1",
+"page": 38,
+"chapter": "Module 5. Unit 9. Tea party!",
+"skyId": 120646,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на порядковые числительные и расположить их в правильном порядке.",
+"12th — twelfth (двадцатый).\n3rd — third (третий).\n5th — fifth (пятый).\n11th — eleventh (одиннадцатый).\n4th — fourth (четвёртый).\n2nd — second (второй).\n21st — twenty-first (двадцать первый).\n1st — first (первый).\n15th — fifteenth (пятнадцатый).\n20th — twentieth (двадцатый).",
+"1st — first.\n2nd — second.\n3rd — third.\n4th — fourth.\n5th — fifth.\n11th — eleventh.\n12th — twelfth.\n15th — fifteenth.\n20th — twentieth.\n21st — twenty-first."
+],
+"answer": "1st — first.\n2nd — second.\n3rd — third.\n4th — fourth.\n5th — fifth.\n11th — eleventh.\n12th — twelfth.\n15th — fifteenth.\n20th — twentieth.\n21st — twenty-first."
+}
+]
+},
+{
+"number": "2-s38",
+"num": "2",
+"page": 38,
+"chapter": "Module 5. Unit 9. Tea party!",
+"skyId": 120647,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно изучить квадрат с буквами и найти в нём порядковые числительные, которые записаны вокруг квадрата.",
+"1st — first (первый).\n2nd — second (второй).\n3rd — third (третий).\n4th — fourth (четвёртый).\n5th — fifth (пятый).\n6th — sixth (шестой).\n10th — tenth (десятый).\n11th — eleventh (одиннадцатый).\n12th — twelfth (двадцатый).\n20th — twentieth (двадцатый).",
+"По горизонтали:\ntenth,\nfirst,\nsixth,\ntwelfth,\nthird,\nfifth,\nsecond.\nПо вертикали:\nfourth,\neleventh,\ntwentieth."
+],
+"answer": "По горизонтали:\ntenth,\nfirst,\nsixth,\ntwelfth,\nthird,\nfifth,\nsecond.\nПо вертикали:\nfourth,\neleventh,\ntwentieth."
+}
+]
+},
+{
+"number": "3-s39",
+"num": "3",
+"page": 39,
+"chapter": "Module 5. Unit 9. Tea party!",
+"skyId": 120648,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что дети делали вчера.",
+"WORDLIST\ntheatre — театр\nzoo — зоопарк\ncinema — кинотеатр, кино\ncafé — кафе\npark — парк",
+"Мы используем глагол «быть» (to be) в форме прошедшего времени, чтобы сказать, что мы где-то были в прошлом (вчера, в прошлом году). Есть две прошедшие формы глагола to be — was и were.\nМы используем форму was, когда речь идёт о: I (я), he (он), she (она), it (оно).\nI was at school yesterday. Я бы в школе вчера.\nHe was at home yesterday. Он был дома вчера.\nМы используем форму were, когда речь идёт о: you (ты/вы), they (они), we (мы).\nThey were at school yesterday. Они были в школе вчера.\nYou were at home yesterday. Ты был дома вчера. / Вы были дома вчера.",
+"Он был в спортивном центре.",
+"2. He was at the theatre. Он был в театре.\n3. She was at the zoo. Она была в зоопарке.\n4. They were at the cinema. Они были в кино.\n5. They were at the café. Они были в кафе.\n6. He was in the park. Он был в парке."
+],
+"answer": "2. He was at the theatre. Он был в театре.\n3. She was at the zoo. Она была в зоопарке.\n4. They were at the cinema. Они были в кино.\n5. They were at the café. Они были в кафе.\n6. He was in the park. Он был в парке."
+}
+]
+},
+{
+"number": "1-s40",
+"num": "1",
+"page": 40,
+"chapter": "Module 5. Unit 10. All our yesterdays!",
+"skyId": 120649,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова и картинки.",
+"WORDLIST\nhungry — голодный\nscared — испуганный\nbored — скучающий\nangry — злой\nsad — грустный\ntired — уставший",
+"Hungry",
+"Scared",
+"Bored",
+"Angry",
+"Tired",
+"Sad"
+],
+"answer": "hungry — голодный\nscared — испуганный\nbored — скучающий\nangry — злой\nsad — грустный\ntired — уставший"
+}
+]
+},
+{
+"number": "2-s40",
+"num": "2",
+"page": 40,
+"chapter": "Module 5. Unit 10. All our yesterdays!",
+"skyId": 120650,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно полностью написать даты.",
+"Написание дат\nВариантов оформления дат несколько:\n23 October;\n23 Oct 2019;\n23 October 2019;\nthe 23rd of October.\nПроизношение дат\n1. Число и месяц. Используем порядковые числительные.\n30 May (британский вариант): the thirtieth of May;\nMay 30 (американский вариант): May the thirtieth.\n2. Год. Четырёхзначное число нужно разделить на две части.\n1855: eighteen (18) fifty-five (55);\n1792: seventeen (17) ninety-two (92).\nЕсли в числе на месте десятков — ноль, произносим его как oh [əʊ] или hundred. Если ноли стоят и в десятках, и в единицах, тогда подойдёт только hundred.\n1402: fourteen hundred and two / fourteen oh two;\n1300: thirteen hundred.\nЧтобы назвать годы первого десятилетия XXI века, используем two thousand.\n2000: two thousand;\n2006: two thousand and six / twenty oh six.\nДля того чтобы прочитать года позже 2010-го, числа можно разложить на две части или использовать конструкцию two thousand.\n2011: two thousand and eleven / twenty eleven;\n2018: two thousand and eighteen / twenty eighteen.",
+"22 августа.\n13 апреля.\n25 октября.\n3 июня.\n29 мая.\n31 декабря.",
+"The twenty-second of August.\nThe thirteenth of April.\nThe twenty-fifth of October.\nThe third of June.\nThe twenty-ninth of May.\nThe thirty-first of December."
+],
+"answer": "The twenty-second of August.\nThe thirteenth of April.\nThe twenty-fifth of October.\nThe third of June.\nThe twenty-ninth of May.\nThe thirty-first of December."
+}
+]
+},
+{
+"number": "3-s41",
+"num": "3",
+"page": 41,
+"chapter": "Module 5. Unit 10. All our yesterdays!",
+"skyId": 120651,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"Yesterday — вчера.\nAgo — назад. \nLast — прошлый.",
+"Том был вчера у Питера дома.\nБилл и Джин были в Испании на прошлой неделе.\nЭлисон и Кейт опоздали в школу вчера.\nТы был с Тиной прошлым вечером?\nЯ был в Италии одну неделю назад.\nМама и папа вчера были дома.\nКарен была в кинотеатре два дня назад.\nГде ты была в прошлую пятницу.",
+"Yesterday.\nLast.\nYesterday.\nLast.\nAgo.\nYesterday.\nAgo.\nLast."
+],
+"answer": "Yesterday.\nLast.\nYesterday.\nLast.\nAgo.\nYesterday.\nAgo.\nLast."
+}
+]
+},
+{
+"number": "4-s41",
+"num": "4",
+"page": 41,
+"chapter": "Module 5. Unit 10. All our yesterdays!",
+"skyId": 120652,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить вопросы. Затем нужно подобрать к ним ответы.",
+"В английском языке есть разные типы вопросов, рассмотрим некоторые из них.\n1. Yes/No Question — общий вопрос (можем ответить «да/нет»).\nСтруктура\n Вспомогательный глагол\n Подлежашее\n Сказуемое\n Дополнение\n Остальные члены предложения\n Did\n He (ему)\n Like (понравилось)\n Your photo (твоё фото)\n On Instagram (в Инстаграме)?\n2. Wh-question — специальный вопрос (начинается с вопросительных слов).\nСтруктура\n Вопросительное слово\n Вспомогательный глагол\n Подлежашее\n Сказуемое\n Остальные члены предложения\n What time (Во сколько)\n Does\n The party (вечеринка)\n Start (начинается)\n On Saturday (в субботу)?\n3. Subject Question — вопрос к подлежащему (частный случай специального вопроса).\nСтруктура\nВопросительное слово\nWho (кто) / What (что)\n Сказуемое\n Остальные члены предложения\n Who (кто)\n Said (сказал)\n That (это)?",
+"Кто с тобой был?\nКак тебе фильм?\nТы был дома вчера вечером?\nГде были дети вчера?\nЧто вчера вечером шло по телевизору?\nМагазин был открыт?",
+"Who was with you?\nHow was the film?\nWere you at home last night?\nWhere were the children yesterday?\nWhat was on TV last night?\nWas the shop opened?",
+"A. Нет.\nB. Фильм про дельфинов.\nC. Они были в кино.\nD. Ну, он был не очень хороший.\nE. Моя подруга Дженни.\nF. Нет, я гулял.",
+"E.\nD.\nF.\nC.\nB.\nA."
+],
+"answer": "Who was with you?\nHow was the film?\nWere you at home last night?\nWhere were the children yesterday?\nWhat was on TV last night?\nWas the shop opened?\nE.\nD.\nF.\nC.\nB.\nA."
+}
+]
+},
+{
+"number": "1-s42",
+"num": "1",
+"page": 42,
+"chapter": "Module 5. I Love English!",
+"skyId": 120653,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и определить, кто ограбил банк.",
+"Полицейский: Один из вас троих был сегодня утром в банке. А теперь скажите мне правду. С., где вы были?\nС.: Ну, я не был в банке. Я был в больнице с моим братом. Я не грабитель. Это был не я!\nПолицейский: А как насчет вас, Ф.?\nФ.: Это был не я. Я был в парке со своей собакой! Я не был в банке, честно!\nПолицейский: Хм. А Б.? Какова ваша история?\nБ.: Ну, сегодня утром я был в кино.\nПолицейский: В кинотеатре?\nБ.: Да, я был там со своим другом.\nПолицейский: Но сегодня утром в кинотеатре не было фильма.\nБ.: О, не было?\nПолицейский: Нет, Б., не было. Вы были в банке, не так ли? Пройдёмте со мной.\nБ.: О, хорошо!",
+"Б. был в банке этим утром."
+],
+"answer": "Б. был в банке этим утром."
+}
+]
+},
+{
+"number": "2-s42",
+"num": "2",
+"page": 42,
+"chapter": "Module 5. I Love English!",
+"skyId": 120654,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в диалогах. Затем разыграть их.",
+"School — школа.\nWas — был.\nSad — грустный.\nTest — тест.",
+"1.\nA: Как прошёл твой день, Энн?\nB: О, Мама! Мне сегодня было так грустно. Сегодня был последний день Бэкки в школе.\nA: О, дорогая! Какая жалость!\n2.\nA: Как дела в школе, сын?\nB: Отлично, папа. Текст был очень лёгкий!\nA: Отлично!",
+"Sad.\nWas.\nSchool.\nTest.",
+"How was school today?\nHow was your day?\nOh dear!\nThat's a shame!\nWell done!",
+"Как сегодня дела в школе?\nКак твой день?\nО, дорогая!\nКакая жалость!\nОтлично!"
+],
+"answer": "Sad.\nWas.\nSchool.\nTest."
+}
+]
+},
+{
+"number": "3-s43",
+"num": "3",
+"page": 43,
+"chapter": "Module 5. I Love English!",
+"skyId": 120655,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать карточки и заполнить пропуски.",
+"WORDLIST\ndelicious — вкусный\nan elephant — слон\neven — даже\na family — семья\na father — папа\n a mother — мама\nother — другие\na waiter — официант",
+"A. Я был там с мамой и попой. Там было много животных; там даже был большой слон!\nГде я был?\nЯ был в зоопарке!\nB. Я был там со своей семьёй. Там также было много других людей. Еда была вкусная! Официант был очень хорошим.\nГде я был?\nЯ был в ресторане!",
+"1. Father.\n2. Elephant.\nZoo.\n3. Family.\n4. Waiter.\nRestaurant."
+],
+"answer": "1. Father.\n2. Elephant.\nZoo.\n3. Family.\n4. Waiter.\nRestaurant."
+}
+]
+},
+{
+"number": "let-s-play-s44",
+"num": "let-s-play",
+"page": 44,
+"chapter": "Module 5. Let`s Play!",
+"skyId": 120656,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сыграть в игру.",
+"Выложим на игральное поле фишку (это может быть любой небольшой предмет — монетка, ластик и т. д.).\nНачнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратиков вперёд, сколько показывает кубик.\nКогда фишка падает на квадратик с заданием, игроку нужно его выполнить. В данной игре есть четыре типа заданий. 1. Go back to start — вернуться на старт. 2. Синий квадратик — сказать, как они себя чувствуют. 3. Розовый квадратик — дополнить предложение. 4. Жёлтый квадратик — выполнить задание.\nВыигрывает тот, кто первым дойдёт до финиша.",
+"WORDLIST\nsad — грустный\nhungry — голодный\ntired — уставший\nbored — скучающий\nangry — злой, сердитый",
+"1. Were you at school yesterday? (Используем глагольную форму were с местоимением you в прошедшем времени.) \n3. Were you in the park yesterday morning? (Используем слово yesterday при указании на прошедшее время.)\n15. It was dark outside and he was scared. (Используем название чувства.)\n19. I was at the zoo two weeks ago. (Используем это слово при указании на прошедшее время.)\n20. I was at the cinema last night. (Используем глагольную форму was с местоимением I в прошедшем времени.)",
+"7. Спой песню «I wasn't happy yesterday». (Песня в упражнении № 1 на странице 10 учебника.)\n10. Спой песню «In my dreams». (Песня в упражнении № 2 на странице 12 учебника.)\n12. Назови порядковые числительные к цифрам один, два и три. (О порядковых числительных можно посмотреть в упражнении № 1 на странице 6 учебника.)\n13. Скажи, где ты был прошлым вечером. (Названия мест можно посмотреть в тексте упражнения № 1 на странице 8 учебника.)\n17. Назови пять порядковых чисел. (О порядковых числительных можно посмотреть в упражнении № 1 на странице 6 учебника.)\n18. Скажи, где был твой лучший друг в субботу. (Названия мест можно посмотреть в тексте упражнения № 1 на странице 8 учебника.)"
+],
+"answer": "Were.\nSad.\nYesterday.\nHungry.\nGo back to start.\nTired. \nSing the song.\nGo back to start.\nAngry.\nSing the song. \nGo back to start.\nFirst, second, third.\nAt home.\nGo back to start.\nScared.\nGo back to start.\nFirst, second, third, fourth, fifth. \nIn the park.\nAgo.\nWas.\nBored."
+}
+]
+},
+{
+"number": "1-s46",
+"num": "1",
+"page": 46,
+"chapter": "Module 6. Unit 11. The Hare and the Tortoise!",
+"skyId": 120657,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно добавить к глаголам окончание -ed.",
+"The Past Simple Tense (Прошедшее простое время)\nМы употребляем это время для того, чтобы сказать о событиях, которые произошли в прошлом. Нам важно, когда именно в прошлом было совершено это действие. В предложениях с Past Simple мы можем встретить слова last (прошлый; например, last month — в прошлом месяце), ago (назад; например, 5 years ago — 5 лет назад), yesterday (вчера) и другие указатели прошедшего времени.\nЭто время образуется с помощью добавления окончания -ed к правильным глаголам (regular verbs): stay + ed = stayed (остался), love + ed = loved (любил).\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you play yesterday?\nТы вчера играл?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't play yesterday\nЯ не играл вчера\nокончание -ed произносится как /t/, если глагол оканчивается на глухую согласную: booked (забронировал), looked (посмотрел), helped (помог).\nокончание -ed произносится как /id/, если глагол оканчивается на звук /t/ или /d/: painted (раскрасил), waited (ждал), started (начал).\nво всех остальных случаях окончание -ed произносится как /d/: lived (жил), called (позвонил), turned (повернул).\nДля того, что образовать время Past Simple для неправильных глаголов (irregular verbs), нужно выучить табличку специальных форм этих глаголов. Например:\n Начальная форма (V)\n Форма Past Simple (V2)\ngo (идти);\nsee (видеть);\nmeet (встретить);\neat (есть);\nhave (иметь);\ndo (делать)\nwent (пошёл);\nsaw (увидел);\nmet (встретил);\nate (ел);\nhad (имел);\ndid (сделал)\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you go to school yesterday?\nТы вчера ходил в школу?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't go to school yesterday\nЯ не ходил в школу вчера",
+"Пропускать.\nСмеятся.\nПропускать.\nОстанавливать.\nПытаться.\nХотеть.\nКарабкаться.\nПлакать.",
+"Skipped.\nLaughed.\nPassed.\nStopped.\nTried.\nWanted.\nClimbed.\nCried."
+],
+"answer": "Skipped.\nLaughed.\nPassed.\nStopped.\nTried.\nWanted.\nClimbed.\nCried."
+}
+]
+},
+{
+"number": "2-s46",
+"num": "2",
+"page": 46,
+"chapter": "Module 6. Unit 11. The Hare and the Tortoise!",
+"skyId": 120658,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно поставить глаголы в правильную форму.",
+"The Past Simple Tense (Прошедшее простое время)\nМы употребляем это время для того, чтобы сказать о событиях, которые произошли в прошлом. Нам важно, когда именно в прошлом было совершено это действие. В предложениях с Past Simple мы можем встретить слова last (прошлый; например, last month — в прошлом месяце), ago (назад; например, 5 years ago — 5 лет назад), yesterday (вчера) и другие указатели прошедшего времени.\nЭто время образуется с помощью добавления окончания -ed к правильным глаголам (regular verbs): stay + ed = stayed (остался), love + ed = loved (любил).\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you play yesterday?\nТы вчера играл?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't play yesterday\nЯ не играл вчера\nокончание -ed произносится как /t/, если глагол оканчивается на глухую согласную: booked (забронировал), looked (посмотрел), helped (помог).\nокончание -ed произносится как /id/, если глагол оканчивается на звук /t/ или /d/: painted (раскрасил), waited (ждал), started (начал).\nво всех остальных случаях окончание -ed произносится как /d/: lived (жил), called (позвонил), turned (повернул).",
+"Мы проведали нашу бабушку в прошлую субботу.\nЯ говорил со своим другом вчера вечером.\nДети играли в игру два часа.\nЯ звонил марку вчера.\nМы путешествовали в Испании прошлым летом.\nСью помогла мне вчера с домашней работой.\nМы покрасили наш дом пять дней назад.\nОни вчера посмотрели очень хороший фильм.",
+"Visited.\nTalked.\nPlayed.\nPhones.\nTraveled.\nHelped.\nPainted.\nWatched."
+],
+"answer": "Visited.\nTalked.\nPlayed.\nPhones.\nTraveled.\nHelped.\nPainted.\nWatched."
+}
+]
+},
+{
+"number": "3-s46",
+"num": "3",
+"page": 46,
+"chapter": "Module 6. Unit 11. The Hare and the Tortoise!",
+"skyId": 120659,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, то мальчик не делал все эти действия.",
+"WORDLIST\nto climb — залезать\nto paint — красить\nto stay — оставаться\nto walk — ходить\nto wash — мыть",
+"The Past Simple Tense (Прошедшее простое время)\nМы употребляем это время для того, чтобы сказать о событиях, которые произошли в прошлом. Нам важно, когда именно в прошлом было совершено это действие. В предложениях с Past Simple мы можем встретить слова last (прошлый; например, last month — в прошлом месяце), ago (назад; например, 5 years ago — 5 лет назад), yesterday (вчера) и другие указатели прошедшего времени.\nЭто время образуется с помощью добавления окончания -ed к правильным глаголам (regular verbs): stay + ed = stayed (остался), love + ed = loved (любил).\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you play yesterday?\nТы вчера играл?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't play yesterday\nЯ не играл вчера\nокончание -ed произносится как /t/, если глагол оканчивается на глухую согласную: booked (забронировал), looked (посмотрел), helped (помог).\nокончание -ed произносится как /id/, если глагол оканчивается на звук /t/ или /d/: painted (раскрасил), waited (ждал), started (начал).\nво всех остальных случаях окончание -ed произносится как /d/: lived (жил), called (позвонил), turned (повернул).",
+"Я вчера залез на высокое дерево.\nЯ помыл машину отца в прошлую субботу.\nЯ шёл по парку поздно вечером.\nЯ вчера весь день был дома.\nЯ вчера красил сою комнату.",
+"I didn't climb.\nI didn't wash.\nI didn't walk.\nI didn't stay.\nI didn't paint.",
+"Я вчера не залез на высокое дерево.\nЯ не помыл машину отца в прошлую субботу.\nЯ не шёл по парку поздно вечером.\nЯ вчера весь день не был дома.\nЯ вчера не красил сою комнату."
+],
+"answer": "I didn't climb.\nI didn't wash.\nI didn't walk.\nI didn't stay.\nI didn't paint."
+}
+]
+},
+{
+"number": "4-s47",
+"num": "4",
+"page": 47,
+"chapter": "Module 6. Unit 11. The Hare and the Tortoise!",
+"skyId": 120660,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дописать предложения.",
+"The Past Simple Tense (Прошедшее простое время)\nМы употребляем это время для того, чтобы сказать о событиях, которые произошли в прошлом. Нам важно, когда именно в прошлом было совершено это действие. В предложениях с Past Simple мы можем встретить слова last (прошлый; например, last month — в прошлом месяце), ago (назад; например, 5 years ago — 5 лет назад), yesterday (вчера) и другие указатели прошедшего времени.\nЭто время образуется с помощью добавления окончания -ed к правильным глаголам (regular verbs): stay + ed = stayed (остался), love + ed = loved (любил).\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you play yesterday?\nТы вчера играл?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't play yesterday\nЯ не играл вчера\nокончание -ed произносится как /t/, если глагол оканчивается на глухую согласную: booked (забронировал), looked (посмотрел), helped (помог).\nокончание -ed произносится как /id/, если глагол оканчивается на звук /t/ или /d/: painted (раскрасил), waited (ждал), started (начал).\nво всех остальных случаях окончание -ed произносится как /d/: lived (жил), called (позвонил), turned (повернул).",
+"To dance — танцевать.\nTo play soccer — играть в футбол.\nTo travel — путешествовать.\nTo visit — посещать.",
+"Она посещала Королеву.\nОн играл в футбол с Дэвидом Бэкхемом.\nОна танцевала с Дженнифер Лопес.\nОн путешествовал с Христофором Колумбом.",
+"She visited.\nHe played soccer.\nShe danced.\nHe traveled."
+],
+"answer": "She visited.\nHe played soccer.\nShe danced.\nHe traveled."
+}
+]
+},
+{
+"number": "5-s47",
+"num": "5",
+"page": 47,
+"chapter": "Module 6. Unit 11. The Hare and the Tortoise!",
+"skyId": 120661,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести людей и картинки.",
+"WORDLIST\nbasketball — баскетбол\nmusic — музыка\nto play — играть\nto stay — оставаться\nto visit — навещать\nto watch — смотреть",
+"«Меня зовут Х Вчера я навещала своего брата. Мы играли в баскетбол и смотрели телевизор.»\n«Меня зовут Д. Вчера вечером я была дома. Я играла в компьютерные игры и слушала музыку.»",
+"H.\nJ."
+],
+"answer": "H.\nJ."
+}
+]
+},
+{
+"number": "1-s48",
+"num": "1",
+"page": 48,
+"chapter": "Module 6. Unit 12. Once upon a time!",
+"skyId": 120662,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать части предложений и составить предложения.",
+"WORDLIST\ncook — готовить\nclean — убираться\nprince — принц\npalace — дворец\nunkind — недобрый\nhelp — помогать\ndance — танцевать\nmarry — жениться / выходить замуж\nlive — жить",
+"",
+"Она жила с двумя недобрыми сёстрами. (Пример.)\nИ / готовила / весь день / убиралась / она.\nПригласил / принц / во дворец / недобрых сестёр.\nФея-Крёстная / её / посетила / однажды.\nФея-Крёстная / попросила / о помощи / она.\nТанцевала / с принцем / она / во дворце.\nЖенился / принц / на ней.\nЖили / долго и счастливо / они.",
+"2. She cleaned and cooked all day. Она готовилась и убиралась весь день.\n3. The prince invited the unkind sisters to the palace. Принц пригласил недобрых сестёр во дворец.\n4. One day a Fairy Godmother visited her. Однажды Фея-Крёстная посетила её.\n5. She asked the Fairy Godmother for help. Она попросила Фею-Крёстную о помощи.\n6. She danced with the prince at the palace. Она танцевала с принцем во дворце.\n7. The prince married her. Принц женился на ней.\n8. They lived happily ever after. Они жили долго и счастливо."
+],
+"answer": "2. She cleaned and cooked all day. Она готовилась и убиралась весь день.\n3. The prince invited the unkind sisters to the palace. Принц пригласил недобрых сестёр во дворец.\n4. One day a Fairy Godmother visited her. Однажды Фея-Крёстная посетила её.\n5. She asked the Fairy Godmother for help. Она попросила Фею-Крёстную о помощи.\n6. She danced with the prince at the palace. Она танцевала с принцем во дворце.\n7. The prince married her. Принц женился на ней.\n8. They lived happily ever after. Они жили долго и счастливо."
+}
+]
+},
+{
+"number": "2-s48",
+"num": "2",
+"page": 48,
+"chapter": "Module 6. Unit 12. Once upon a time!",
+"skyId": 120663,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать, что это за сказка. Затем нарисовать картинку этой истории.",
+"A. Спящая красавица.\nB. Золушка.\nC. Белоснежка.",
+"1. She lived with her two unkind sisters. Она жила с двумя недобрыми сёстрами.\n2. She cleaned and cooked all day. Она готовилась и убиралась весь день.\n3. The prince invited the unkind sisters to the palace. Принц пригласил недобрых сестёр во дворец.\n4. One day a Fairy Godmother visited her. Однажды Фея-Крёстная посетила её.\n5. She asked the Fairy Godmother for help. Она попросила Фею-Крёстную о помощи.\n6. She danced with the prince at the palace. Она танцевала с принцем во дворце.\n7. The prince married her. Принц женился на ней.\n8. They lived happily ever after. Они жили долго и счастливо.",
+"B. Cinderella. Золушка."
+],
+"answer": "B. Cinderella. Золушка."
+}
+]
+},
+{
+"number": "3-s49",
+"num": "3",
+"page": 49,
+"chapter": "Module 6. Unit 12. Once upon a time!",
+"skyId": 120664,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать информацию и сказать, что Сьюзен делала и не делала вчера.",
+"25, четверг\nУбраться дома — V.\nПриготовить обед — X.\nПостирать одежду — V.\nПолить цветы — X.\nПомочь сестре с её домашним заданием — V.\nПосетить её бабушку и дедушку — V.\nПоиграть в компьютерные игры со своим братом — X.\nПосмотреть видео — V.",
+"",
+"Вчера Сьюзен убиралась дома.",
+"2. Yesterday Susan didn't cook lunch. Вчера Сьюзен не готовила обед.\n3. Yesterday Susan washed her clothes. Вчера Сьюзен стирала одежду.\n4. Yesterday Susan didn't water the flowers. Вчера Сьюзен не поливала цветы.\n5. Yesterday Susan helped her sister with her homework. Вчера Сьюзен помогала своей сестре с её домашним заданием.\n6. Yesterday Susan visited her grandparents. Вчера Сьюзен посетила своих бабушку и дедушку.\n7. Yesterday Susan didn't play computer games with her brother. Вчера Сьюзен не играла в компьютерные игры со своим братом.\n8. Yesterday Susan watched a video. Вчера Сьюзен смотрела видео."
+],
+"answer": "2. Yesterday Susan didn't cook lunch. Вчера Сьюзен не готовила обед.\n3. Yesterday Susan washed her clothes. Вчера Сьюзен стирала одежду.\n4. Yesterday Susan didn't water the flowers. Вчера Сьюзен не поливала цветы.\n5. Yesterday Susan helped her sister with her homework. Вчера Сьюзен помогала своей сестре с её домашним заданием.\n6. Yesterday Susan visited her grandparents. Вчера Сьюзен посетила своих бабушку и дедушку.\n7. Yesterday Susan didn't play computer games with her brother. Вчера Сьюзен не играла в компьютерные игры со своим братом.\n8. Yesterday Susan watched a video. Вчера Сьюзен смотрела видео."
+}
+]
+},
+{
+"number": "4-s49",
+"num": "4",
+"page": 49,
+"chapter": "Module 6. Unit 12. Once upon a time!",
+"skyId": 120665,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать вопросы и ответить, что они делали вчера.",
+"WORDLIST\nplay soccer — играть в футбол\npaint a picture — рисовать картину\nwatch TV — смотреть телевизор\nclean his room — убираться в комнате\nwash the dishes — мыть посуду\ndance — танцевать",
+"",
+"1. Они / играть / в футбол. \nОни играли в футбол? — Да, играли.\n2. Она / рисовать / картину.\nОна рисовала картину? — Нет, не рисовала.",
+"3. Она / смотреть / телевизор.\n4. Он / убираться / в своей комнате.\n5. Он / мыть / посуду.\n6. Они / танцевать / на вечеринке.",
+"3. Did she watch TV? — No, she didn't. Она смотрела телевизор? — Нет, не смотрела.\n4. Did he clean his room? — No, he didn't. Он убирался в комнате? — Нет, не убирался.\n5. Did he wash the dishes? — Yes, he did. Он мыл посуду? — Да, мыл.\n6. Did they dance at the party? — Yes, they did. Они танцевали на вечеринке? — Да, танцевали."
+],
+"answer": "3. Did she watch TV? — No, she didn't. Она смотрела телевизор? — Нет, не смотрела.\n4. Did he clean his room? — No, he didn't. Он убирался в комнате? — Нет, не убирался.\n5. Did he wash the dishes? — Yes, he did. Он мыл посуду? — Да, мыл.\n6. Did they dance at the party? — Yes, they did. Они танцевали на вечеринке? — Да, танцевали."
+}
+]
+},
+{
+"number": "1-s50",
+"num": "1",
+"page": 50,
+"chapter": "Module 6. I Love English!",
+"skyId": 120666,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и разыграть диалоги в парах.",
+"WORDLIST\nwatch video — посмотреть видео\npaint picture — нарисовать картину\nclean room — убраться в комнате \nstay home — остаться дома\nwash dog — помыть собаку\nvisit grandmother — навестить бабушку\nplay tennis — поиграть в теннис",
+"The Past Simple Tense (Прошедшее простое время)\nМы употребляем это время для того, чтобы сказать о событиях, которые произошли в прошлом. \nЭто время образуется с помощью добавления окончания -ed к правильным глаголам (regular verbs): stay + ed = stayed (остался), love + ed = loved (любил).\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you play yesterday?\nТы вчера играл?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't play yesterday\nЯ не играл вчера\nДля того, что образовать время Past Simple для неправильных глаголов (irregular verbs), нужно выучить табличку специальных форм этих глаголов. Например:\n Начальная форма (V)\n Форма Past Simple (V2)\ngo (идти);\nsee (видеть);\nmeet (встретить);\neat (есть);\nhave (иметь);\ndo (делать)\nwent (пошёл);\nsaw (увидел);\nmet (встретил);\nate (ел);\nhad (имел);\ndid (сделал)\nВопросительные и отрицательные предложения формируются с помощью вспомогательного глагола did и смыслового глагола в начальной форме:\n Вопросы\n Краткие ответы\n Отрицания\nDid you go to school yesterday?\nТы вчера ходил в школу?\nYes, I did. Да\nNo, I didn't. Нет\nI didn't go to school yesterday\nЯ не ходил в школу вчера",
+"A: When did you paint a picture? Когда ты рисовал картину?\nB: I painted a picture on Wednesday. What about you? Я рисовал картину в среду. А ты?\nA: Oh, I painted a picture on Monday. When did you clean your room? Я рисовал картину в понедельник. Когда ты убирался в комнате?\nB: I cleaned my room on Thursday. What about you? Я убирался в комнате в четверг. А ты?\nA: Oh, I cleaned my room on Friday. When did you stay home? Я убирался в комнате в пятницу. Когда ты оставался дома? \nB: I stayed home on Saturday. What about you? Я оставался дома в субботу. А ты?\nA: Oh, I stayed home on Sunday. When did you wash the dog? Я оставался дома в воскресенье. Когда ты мыл свою собаку?\nB: I washed the dog on Monday. What about you? Я мыл свою собаку в понедельник. А ты?\nA: Oh, I washed the dog on Tuesday. When did you visit your grandmother? Я мыл свою собаку во вторник. Когда ты навещал бабушку?\nB: I visited my grandmother on Friday. What about you? Я навещал бабушку в пятницу. А ты?\nA: Oh, I visited my grandmother on Saturday. When did you play tennis? Я навещал бабушку в субботу. Когда ты играл в теннис?\nB: I played tennis on Sunday. What about you? Я играл в теннис в воскресенье. А ты?\nA: Oh, I played tennis on Thursday. Я играл в теннис во вторник."
+],
+"answer": "A: When did you paint a picture?\nB: I painted a picture on Wednesday. What about you?\nA: Oh, I painted a picture on Monday. When did you clean your room?\nB: I cleaned my room on Thursday. What about you?\nA: Oh, I cleaned my room on Friday. When did you stay home?\nB: I stayed home on Saturday. What about you?\nA: Oh, I stayed home on Sunday. When did you wash the dog?\nB: I washed the dog on Monday. What about you?\nA: Oh, I washed the dog on Tuesday. When did you visit your grandmother?\nB: I visited my grandmother on Friday. What about you?\nA: Oh, I visited my grandmother on Saturday.When did you play tennis?\nB: I played tennis on Sunday. What about you?\nA: Oh, I played tennis on Thursday."
+}
+]
+},
+{
+"number": "2-s50",
+"num": "2",
+"page": 50,
+"chapter": "Module 6. I Love English!",
+"skyId": 120667,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и отметить, что делали мальчики в походе.",
+"WORDLIST\nclimb a mountain — забираться на гору\ngo sailing — отправиться в плавание\nvisit a big castle — посетить большой замок\nstay in a tent — жить в палатке",
+"Мама: Привет, мальчики. Как прошёл поход?\nМальчик 1: Отлично! Мы жили в палатке. И угадай, что. Мы забирались на гору!\nМальчик 2: Да, было классно.\nМама: Вы плавали на лодке? \nМальчик 1: Нет. Мы хотели, но пошёл дождь.\nМама: Как жалко! Что ещё вы делали?\nМальчик 2: Мы посетили большой замок. Мы сделали фотографию. Хочешь посмотреть?\nМама: Да, конечно!"
+],
+"answer": "V.\nV.\nX.\nV."
+}
+]
+},
+{
+"number": "3-s51",
+"num": "3",
+"page": 51,
+"chapter": "Module 6. I Love English!",
+"skyId": 120668,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и заполнить пропуски в рассказе.",
+"Это история о (1) девочке (girl) Люси и её собачке. Однажды она была на (2) пляже (beach). Там был маленький (3) тюленёнок (seal)! Люси осмотрелась в поисках его мамы. Люси взяла на руки (4) тюленёнка (seal) и прошла долгий путь. Её собака помогла ей найти маму тюленёнка за (5) лодкой (boat). Она была счастлива снова увидеть своего малыша!"
+],
+"answer": "Это история о (1) девочке (girl) Люси и её собачке. Однажды она была на (2) пляже (beach). Там был маленький (3) тюленёнок (seal)! Люси осмотрелась в поисках его мамы. Люси взяла на руки (4) тюленёнка (seal) и прошла долгий путь. Её собака помогла ей найти маму тюленёнка за (5) лодкой (boat). Она была счастлива снова увидеть своего малыша!"
+}
+]
+},
+{
+"number": "4-s51",
+"num": "4",
+"page": 51,
+"chapter": "Module 6. I Love English!",
+"skyId": 120669,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать подходящий заголовок для истории.",
+"Тюленёнок.\nДень в парке\nЯ и моя собака.",
+"Тюленёнок (The baby seal)\nЭто история о девочке Люси и её собачке. Однажды она была на пляже. Там был маленький тюленёнок! Люси осмотрелась в поисках его мамы. Люси взяла на руки тюленёнка и прошла долгий путь. Её собака помогла ей найти маму тюленёнка за лодкой. Она была счастлива снова увидеть своего малыша!"
+],
+"answer": "Тюленёнок (The baby seal)\nЭто история о девочке Люси и её собачке. Однажды она была на пляже. Там был маленький тюленёнок! Люси осмотрелась в поисках его мамы. Люси взяла на руки тюленёнка и прошла долгий путь. Её собака помогла ей найти маму тюленёнка за лодкой. Она была счастлива снова увидеть своего малыша!"
+}
+]
+},
+{
+"number": "let-s-play-s52",
+"num": "let-s-play",
+"page": 52,
+"chapter": "Module 6. Let`s Play!",
+"skyId": 120670,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сыграть в игру.",
+"Выложим на игральное поле фишку (это может быть любой небольшой предмет — монетка, ластик и т.д.).\nНачнём игру. Участники по очереди бросают кубик и продвигают фишку на столько квадратиков вперёд, сколько показывает кубик.\nКогда фишка падает на квадратик с заданием, игроку нужно его выполнить. В данной игре есть 4 типа заданий: 1. Go back to start — вернуться на старт. 2. Синий квадратик — назвать, кто или что это. 3. Розовый квадратик — дополнить предложение. 4. Жёлтый квадратик — выполнить задание.\nВыигрывает тот, кто первым дойдёт до финиша.",
+"WORDLIST\ntortoise — черепаха\nboat — лодка\nhare — заяц\nsheep — овца\nprince — принц",
+"1. Did you play in the park yesterday? (Используем глагольную форму did в вопросе в прошедшем времени.)\n3. We watched a film last night. (Используем глагол watch с окончанием -ed в прошедшем времени.)\n15. She painted a picture yesterday. (Используем глагол paint с окончанием -ed в прошедшем времени.)\n19. Ron washed the dishes this morning. (Используем глагол wash с окончанием -ed в прошедшем времени.)\n20. They played soccer last Friday. (Используем глагол play с окончанием -ed в прошедшем времени.)",
+"7. Назови три дела, которые ты сделал в прошлую субботу. (Подходящие глаголы можно посмотреть в упражнении 1 на странице 28 учебника.)\n10. Спой песню \"In my dreams\". (Песня в упражнении 2 на странице 12 учебника.)\n12. Спой песню \"Oh, what a mystery\". (Песня в упражнении 2 на странице 28 учебника.)\n13. Скажи, что ты делал прошлым вечером. (Подходящие глаголы можно посмотреть в упражнении 1 на странице 28 учебника.)\n17. Скажи, что твой друг делал в прошлую субботу. (Подходящие глаголы можно посмотреть в упражнении 1 на странице 28 учебника.)\n18. Назови три сказки (Названия сказок можно посмотреть на страницах учебника.)"
+],
+"answer": "Did.\nTortoise.\nWatched.\nBoat.\nGo back to start.\nHare.\nStudied history, painted a picture, played soccer.\nGo back to start.\nSheep.\nSing the song.\nGo back to start.\nSing the song.\nWatched a film.\nGo back to start.\nPainted.\nGo back to start.\nListened to music.\nThe hare and the tortoise; Three bears; the Ugly Duckling.\nWashed.\nPlayed.\nPrince."
+}
+]
+},
+{
+"number": "1-s54",
+"num": "1",
+"page": 54,
+"chapter": "Module 7. Unit 13. The best of times!",
+"skyId": 120671,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам необходимо соединить слова и картинки.",
+"WORDLIST\nfunfair — ярмарка\nconcert — концерт\nmuseum — музей\ndinosaur — динозавр",
+"Dinosaur — динозавр.",
+"Museum — музей.",
+"Concert — концерт.",
+"Funfair — ярмарка.",
+"D. Dinosaur.\nC. Museum.\nB. Concert.\nA. Funfair."
+],
+"answer": "D.\nC.\nB.\nA."
+}
+]
+},
+{
+"number": "2-s54",
+"num": "2",
+"page": 54,
+"chapter": "Module 7. Unit 13. The best of times!",
+"skyId": 120672,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем и заполним пропуски в предложениях.",
+"WORDLIST\nbike — велосипед\nSunday — воскресенье\nlast week — на прошлой неделе\npicture — картина, рисунок\nschool project — школьный проект\nparty — вечеринка\nsong — песня\ncomic — комический\nlunch — обед\ndelicious — вкусный\ncake — торт\ncome back — возвращаться",
+"Вы ездили (вы/ездить) на велосипеде в воскресенье?\nПэм _____ (не смотреть) фильм на прошлой неделе.\nЯ _____ (рисовать) картинку для своего школьного проекта два дня назад.\nМы _____ (петь) песни на школьной вечеринке.\n_____ (он/купить) вчера комикс?\nДети _____ (не брать) обед в школу вчера.\nМама _____ (сделать) восхитительный торт в прошлую субботу.\n_____ (она/придти) назад поздно?",
+"Past Simple — прошедшее простое время. Мы употребляем его для того, чтобы сказать о событиях, которые произошли в прошлом.\nВ предложениях с Past Simple мы можем встретить слова last (прошлый; например, last month — в прошлом месяце), ago (назад; например, five years ago — пять лет назад), yesterday (вчера) и другие указатели прошедшего времени.\nВспомним, как образуется это время. Для образования этого времени к правильным глаголам будет достаточно добавить окончание -ed. У неправильных поменяется форма глагола: нужную форму мы сможем найти во втором столбике специальных таблиц неправильных глаголов.\n Утвердительные\n Отрицательные\n Вопросительные\nПравильные глаголы:\nПодлежащее + глагол с окончанием -ed.\nНеправильные глаголы:\nПодлежащее + нужная форма глагола (2-й столбик в таблице неправильных глаголов).\nI/we/you/they/he/she/it played tennis.\nI/we/you/they/he/she/it wrote a letter\nВ отрицательной форме правильные и неправильные глаголы ничем не отличаются, в обоих случаях используем вспомогательный глагол did и частицу not.\nПодлежащее + didn't + глагол в 1-й форме (инфинитив без частицы to).\nI/we/you/they/he/she/it didn't play tennis.\nI/we/you/they/he/she/it didn't write a letter\nВ вопросительной форме правильные и неправильные глаголы ничем не отличаются, в обоих случаях используем вспомогательный глагол did.\nDid + I/we/you/they/he/she/it + глагол в 1-й форме (инфинитив без частицы to)?\nDid I/we/you/they/he/she/it play tennis?\nDid I/we/you/they/he/she/it write a letter?",
+"Did you ride. — В вопросительных предложениях выносим did на первое место, после этого необходимо добавить местоимение и глагол в первой форме без частицы to.\nDidn't see. — В отрицательных предложениях после местоимения идёт вспомогательный глагол did с отрицательной частицей not (didn't not) и глагол в первой форме без частицы to.\nDrew. — В повествовательных предложениях в Past Simple глагол необходимо поставить во вторую форму, добавить окончание -ed или преобразовать форму неправильного глагола. Здесь глагол неправильный.\nSang. — В повествовательных предложениях в Past Simple глагол необходимо поставить во вторую форму, добавить окончание -ed или преобразовать форму неправильного глагола. Здесь глагол неправильный.\nDid he buy. — В вопросительных предложениях выносим did на первое место, после этого необходимо добавить местоимение и глагол в первой форме без частицы to.\nDidn't take. — В отрицательных предложениях после местоимения идёт вспомогательный глагол did с отрицательной частицей not (didn't not) и глагол в первой форме без частицы to.\nMade. — В повествовательных предложениях в Past Simple глагол необходимо поставить во вторую форму, добавить окончание -ed или преобразовать форму неправильного глагола. Здесь глагол неправильный.\nDid she come. — В вопросительных предложениях выносим did на первое место, после этого необходимо добавить местоимение и глагол в первой форме без частицы to.",
+"Вы ездили на велосипеде в воскресенье?\nПэм не смотрела фильм на прошлой неделе.\nДва дня назад я нарисовал картинку для своего школьного проекта.\nМы пели песни на школьной вечеринке.\nОн вчера купил комикс?\nВчера дети не обедали в школе.\nВ прошлую субботу мама испекла восхитительный торт.\nОна вернулась поздно?"
+],
+"answer": "Did you ride.\nDidn't see.\nDrew.\nSang.\nDid he buy.\nDidn't take.\nMade.\nDid she come."
+}
+]
+},
+{
+"number": "3-s55",
+"num": "3",
+"page": 55,
+"chapter": "Module 7. Unit 13. The best of times!",
+"skyId": 120673,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В данном задании необходимо спрашивать и отвечать согласно примеру. Используем лексику с картинки.",
+"WORDLIST\nin the morning — утром\nin the afternoon — днём \nin the evening — вечером\nat night — ночью\nwake up — просыпаться\nmake bed — заправлять постель\nhave breakfast — завтракать\ngo to school — ходить в школу\nhave lunch — обедать\ncome home — приходить домой\ndo homework — делать домашнюю работу\nmeet friends — встретиться с друзьями\ngo to cinema — сходить в кино \neat pizza — есть пиццу \nhave bath — принять ванну \nwrite diary — писать дневник\ngo to bed — ложиться спать",
+"A: Что Шейла делала утром?\nB: Она проснулась... Что Шейла делала днем?\nA: Она...",
+"Present Simple\n Past Simple\nwake up \nmake bed \nhave breakfast\ngo to school\nhave lunch \ncome home\ndo homework\nmeet friends\ngo to cinema \neat pizza \nhave bath \nwrite diary \ngo to bed\nwoke up\nmade bed\nhad breakfast\nwnt to school\nhad lunch\ncame home\ndid homework\nmet friends\nwent to cinema\nate pizza\nhad bath\nwrote diary\nwent to bed",
+"Вопрос\n Перевод\n A:\n What did Sheila do\n in the morning /in the afternoon / in the evening / at night?\n A: Что Шейла делала утром /днем / вечером / ночью?\n Ответ\n B:\n She\nwoke up\nmade bed\nhad breakfast\nwnt to school\nhad lunch\ncame home\ndid homework\nmet friends\nwent to cinema\nate pizza\nhad bath\nwrote diary\nwent to bed\n in the morning /in the afternoon / in the evening / at night.",
+"A: What did Sheila do in the morning? (A: Что Шейла делала утром?)\nB: She woke up, made bed, had breakfast and went to school. What did Sheila do in the afternoon? (B: Она проснулась, застелила постель, позавтракала и пошла в школу. Что Шейла делала днём?)\nA: She had lunch, came home and did her homework. What did Sheila do in the evening? (A: Она пообедала, пришла домой и сделала уроки. Что Шейла делала вечером?)\nB: She met her friends, went to cinema and ate pizza. What did Sheila do at night? (B: Она встретила своих друзей, ходила в кино и ела пиццу. Что Шейла делала ночью?)\nA: She had bath, write diary and went to bed. (A: Она приняла ванну, написала дневник и легла спать.)"
+],
+"answer": "A: What did Sheila do in the morning?\nB: She woke up, made bed, had breakfast and went to school. What did Sheila do in the afternoon?\nA: She had lunch, came home and did her homework. What did Sheila do in the evening?\nB: She met her friends, went to cinema and ate pizza. What did Sheila do at night?\nA: She had bath, write diary and went to bed."
+}
+]
+},
+{
+"number": "1-s56",
+"num": "1",
+"page": 56,
+"chapter": "Module 7. Unit 14. Magic moments!",
+"skyId": 120674,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения, посмотреть на слова и кар­тинки слева и вставить соответствующее пропущенное слово.",
+"WORDLIST\nshy — скромный\ngood — хороший\nloud — громкий\nstrong — сильный\npretty — симпатичный\nkind — добрый",
+"John is very loud. He always makes so much noise. — Джон очень громкий. Он всегда так сильно шумит.\nJames never talks to the girls in his class. He is very shy. — Джеймс никогда не разговаривает с девочками в классе. Он очень скромный.\nMarry looks very pretty in that dress. — Мэри очень симпатичная в этом платье.\nShe found a kitten in the street and took it home. She is so kind to the animals. — Она нашла котёнка на улице и взяла его домой. Она очень добра к животным.\nRoss is a very good student. He always gets the best marks in the class. — Росс очень хороший ученик. Он всегда получает самые лучшие оценки в классе.\nТоm is so strong that he can lift Charles. — Том такой сильный, что может поднять Чарльза."
+],
+"answer": "John is very loud. He always makes so much noise. — Джон очень громкий. Он всегда так сильно шумит.\nJames never talks to the girls in his class. He is very shy. — Джеймс никогда не разговаривает с девочками в классе. Он очень скромный.\nMarry looks very pretty in that dress. — Мэри очень симпатичная в этом платье.\nShe found a kitten in the street and took it home. She is so kind to the animals. — Она нашла котёнка на улице и взяла его домой. Она очень добра к животным.\nRoss is a very good student. He always gets the best marks in the class. — Росс очень хороший ученик. Он всегда получает самые лучшие оценки в классе.\nТоm is so strong that he can lift Charles. — Том такой сильный, что может поднять Чарльза."
+}
+]
+},
+{
+"number": "2-s56",
+"num": "2",
+"page": 56,
+"chapter": "Module 7. Unit 14. Magic moments!",
+"skyId": 120675,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и исправить ошибки: заме­нить выделенные слова на правильные.",
+"Прилагательные можно сравнить между собой.\nСравнительная степень используется, чтобы показать, что предмет или лицо обладает каким-то качеством в большей мере, чем то, с чем мы его сравниваем.\nЧтобы сравнить короткое прилагательное, достаточно добавить к нему окончание -er:\n Dry (сухой)\n Dryer (суше)\n Cheap (дешевый)\n Cheaper (дешевле),\n Black (черный)\n Blacker (чернее)\n Smart (умный)\n Smarter (умнее)\nКогда короткое односложное прилагательное оканчивается на сочетание гласной и согласной, то конечная согласная удваивается:\n Hot (горячий)\n Hotter (горячее)\n Fat (жирный)\n Fatter (жирнее)\n Big (большой)\n Bigger (больше)\nСравнительная степень для прилагательных длиннее двух слогов может образовываться при помощи слов more (более). Само слово при этом не меняется:\n Pleasant (приятный)\n More pleasant (приятнее)\n Serious (серьезный)\n More serious (серьезнее)\n Expensive (дорогой)\n More expensive (дороже)\n Difficult (трудный)\n More difficult (труднее)\n Famous (знаменитый)\n More famous (более знаменитый)\nКогда мы сравниваем что-то между собой, мы используем слово than (чем).",
+"The giraffe is taller than the elephant. — Жираф выше, чем слон.\nOur room is nicer than their room. — Наша комната лучше, чем их комната.\nOur holidays in Italy were the best. — Наши каникулы в Италии были самыми лучшими.\nJanet is the kindest person I know. — Джанет — самый добрый человек из всех, кого я знаю.\nIt is easier to make a salad than a cake. — Легче приготовить салат, чем торт.\nНе was the strongest person of all. — Он был самым сильным из всех.\nThe Arctic is the coldest place in the world. — Арктика — самое холодное место на земле.\nHippos are fatter than monkeys. — Бегемоты толще, чем обезь­яны."
+],
+"answer": "The giraffe is taller than the elephant. — Жираф выше, чем слон.\nOur room is nicer than their room. — Наша комната лучше, чем их комната.\nOur holidays in Italy were the best. — Наши каникулы в Италии были самыми лучшими.\nJanet is the kindest person I know. — Джанет — самый добрый человек из всех, кого я знаю.\nIt is easier to make a salad than a cake. — Легче приготовить салат, чем торт.\nНе was the strongest person of all. — Он был самым сильным из всех.\nThe Arctic is the coldest place in the world. — Арктика — самое холодное место на земле.\nHippos are fatter than monkeys. — Бегемоты толще, чем обезь­яны."
+}
+]
+},
+{
+"number": "3-s57",
+"num": "3",
+"page": 57,
+"chapter": "Module 7. Unit 14. Magic moments!",
+"skyId": 120676,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно решить кроссворд, поставив выде­ленные прилагательные в соответствующую форму, если это необходимо.",
+"По горизонтали\n2. Джим был (громкий) человеком в классе.\n7. Рэй (сильный), чем Боб.\n8. Сегодня (жаркий).\n9. Шэрон (хороший) по математике, чем я.\n10. Мои волосы (длинный), но у моей сестры короткие.\nПо вертикали\n1. Я уверена, что Диана (симпатичный) девушка, которую я знаю.\n2. Ящерицы (ленивый) мышей.\n3. Джоанна (скромный) своего брата.\n4. Кто самый (худой) в вашей семье?\n5. Мисс Харт (добрый) учительница в школе.\n6. У зайцев есть (короткий) хвосты.\n9. Джон − мой (большой) брат.",
+"Прилагательные можно сравнить между собой.\nСравнительная степень используется, чтобы показать, что предмет или лицо обладает каким-то качеством в большей мере, чем то, с чем мы его сравниваем.\nЧтобы сравнить короткое прилагательное, достаточно добавить к нему окончание -er:\n Dry (сухой)\n Dryer (суше)\n Cheap (дешевый)\n Cheaper (дешевле),\n Black (черный)\n Blacker (чернее)\n Smart (умный)\n Smarter (умнее)\nКогда короткое односложное прилагательное оканчивается на сочетание гласной и согласной, то конечная согласная удваивается:\n Hot (горячий)\n Hotter (горячее)\n Fat (жирный)\n Fatter (жирнее)\n Big (большой)\n Bigger (больше)\nСравнительная степень для прилагательных длиннее двух слогов может образовываться при помощи слов more (более). Само слово при этом не меняется:\n Pleasant (приятный)\n More pleasant (приятнее)\n Serious (серьезный)\n More serious (серьезнее)\n Expensive (дорогой)\n More expensive (дороже)\n Difficult (трудный)\n More difficult (труднее)\n Famous (знаменитый)\n More famous (более знаменитый)\nКогда мы сравниваем что-то между собой, мы используем слово than (чем).",
+"По горизонтали\n2. Loudest.\n7. Stronger.\n8. Hot.\n9. Better.\n10. Long.\nПо вертикали\n1. Prettiest.\n2. Lazier.\n3. Shier/shyer.\n4. Slimmest.\n5. Kindest.\n6. Short.\n9. Big.",
+"По горизонтали\n2. Самый громкий.\n7. Сильнее.\n8. Жарко.\n9. Лучше.\n10. Длинный.\nПо вертикали\n1. Самый красивый.\n2. Более ленивый.\n3. Застенчивее.\n4. Самый худой.\n5. Самый добрый.\n6. Короткий.\n9. Большой."
+],
+"answer": "По горизонтали\n2. Loudest.\n7. Stronger.\n8. Hot.\n9. Better.\n10. Long.\nПо вертикали\n1. Prettiest.\n2. Lazier.\n3. Shier/shyer.\n4. Slimmest.\n5. Kindest.\n6. Short.\n9. Big."
+}
+]
+},
+{
+"number": "4-s57",
+"num": "4",
+"page": 57,
+"chapter": "Module 7. Unit 14. Magic moments!",
+"skyId": 120677,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать предложения и подчеркнуть правильный вариант ответа.",
+"",
+"I did my homework an hour ago. — Я сделала домашнюю рабо­ту час назад. (Есть показатель прошедшего времени — ago.)\nWe went to Spain last week. — Мы ездили в Испанию на прошлой неделе. (Есть показатель прошедшего времени — last week.)\nWhere did you go on holiday last summer? — Куда ты ездил на каникулы прошлым летом? (Есть показатель прошедшего времени — last summer.)\nChris didn't come to my party yesterday. — Крис не пришёл вчера ко мне на вечеринку. (Есть показатель прошедшего времени — yesterday.)\nI didn't watch TV last night. — Я не смотрел телевизор вчера вечером. (После вспомогательного глагола did мы используем начальную форму глагола.)\nThe Smiths bought a new house two months ago. — Семья Смитов купила новый дом два месяца назад. (Есть показатель прошедшего времени — ago.)\nWe saw a really good film at the cinema last night. — Мы посмот­рели в кинотеатре очень хороший фильм вчера вечером. (Есть показатель прошедшего времени — last night.)\nDid you meet your friends last Friday? — Ты встречался со своими друзьями в прошлую пятницу? (После вспомогательного глагола did мы используем начальную форму глагола.)"
+],
+"answer": "Did.\nWent.\nDid you go.\nDidn't come.\nWatch.\nBought.\nSaw.\nMeet."
+}
+]
+},
+{
+"number": "1-s58",
+"num": "1",
+"page": 58,
+"chapter": "Module 7. I Love English!",
+"skyId": 120678,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и отметить, чем занимались ребята на прошлой неделе.",
+"На прошлой неделе были школьные каникулы, и все дети веселились. Сэму нравятся динозавры, но он не ходил в музей. Он пошёл в кино и посмотрел фильм о динозаврах. Это было здорово! \nВики тоже хорошо провела время! Она пошла на концерт и увидела свою любимую группу. Она танцевала и пела весь вечер!\nТим и Джейн отправились со своими родителями на ярмарку развлечений. Они покатались на всех аттракционах и прекрасно провели день!\nЭдди хотел пойти в зоопарк, но он был закрыт. Поэтому вместо этого он отправился кататься верхом в парк. Парк очень большой, и там много людей катается на лошадях."
+],
+"answer": "F.\nB.\nC.\nE."
+}
+]
+},
+{
+"number": "2-s58",
+"num": "2",
+"page": 58,
+"chapter": "Module 7. I Love English!",
+"skyId": 120679,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно в парах спросить друг друга, что мы делали на прошлых выходных.",
+"WORDLIST 1\ngo — идти\ndo — делать\neat — есть\nwatch — смотреть\nlisten — слушать\nWORDLIST 2\ncinema — кинотеатр\nconcert — концерт\nfamily — семья\nfriend — друг\nmusic — музыка\nfilm — фильм\nice cream — мороженое\nburger — бургер",
+"",
+"A: Where did you go last weekend? Куда ты ходил на прошлых выходных?\nB: I went to the cinema. Я ходил в кино.\nA: Who did you go with? С кем ты ходил?\nB: I went with my friend. Я ходил с другом.\nA: What did you do? Что вы делали?\nB: We watched a film. Мы смотрели фильм.\nA: What did you eat? Что вы ели?\nB: We ate burgers. Мы ели бургеры."
+],
+"answer": "A: Where did you go last weekend?\nB: I went to the cinema.\nA: Who did you go with?\nB: I went with my friend.\nA: What did you do?\nB: We watched a film.\nA: What did you eat?\nB: We ate burgers."
+}
+]
+},
+{
+"number": "3-s59",
+"num": "3",
+"page": 59,
+"chapter": "Module 7. I Love English!",
+"skyId": 120680,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать историю и ответить на вопросы (не более 3-х слов).",
+"Какой это был день?\nКакой была погода?\nКуда отец отвёз Фила?\nКакую музыку они слушали?\nЧто они ели?\nМимо кого они проехали?\nКуда они отвезли собаку?\nКак Фил назвал свою собаку?",
+"В прошлую субботу было жарко и солнечно. Фил захотел куда-нибудь поехать. Отец взял его покататься за городом.\nОтец Фила включил какую-то поп-музыку, и они пели песни и ели шоколад. Вдруг они проехали мимо собаки на обочине дороги. «Останови машину, папа!», крикнул Фил.\nСобака не двигалась. Отец Фила посмотрел на её ногу и решил отвезти собаку к ветеринару. В тот день они не поехали за город. Но теперь у Фила есть собака. Он назвал пса Счастливчиком!",
+"Saturday. Суббота.\nHot and sunny. Жаркой и солнечной.\nTo the countryside. За город.\nPop music. Поп-музыка.\nChocolate. Шоколад.\nA dog. Мимо собаки.\nTo the vet's. К ветеринару.\nLucky. Счастливчик."
+],
+"answer": "Saturday. \nHot and sunny. \nTo the countryside. \nPop music.\nChocolate. \nA dog. \nTo the vet's.\nLucky."
+}
+]
+},
+{
+"number": "let-s-play-s60",
+"num": "let-s-play",
+"page": 60,
+"chapter": "Module 7. Let`s Play!",
+"skyId": 120681,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно поиграть в игру.",
+"Играющие бросают кубик по очереди.\nКвадрат с изображением собак — возвратись на Start.\nГолубой квадрат — назови изображённый там предмет или явление.\nРозовый квадрат — вставь пропущенное слово.\nЖёлтый квад­рат — выполни данное задание.\nЗелёный квадрат — назови правильное прилага­тельное.",
+"WORDLIST\nshy — скромный\ngood — хороший\nloud — громкий\nstrong — сильный\npretty — симпатичный\nkind — добрый",
+"I went to a party last night — Я ходил на вечеринку прошлым вечером.\nВернись на Старт\nShe is pretty — Она милая.\nAndy was the best student in the class — Энди был лучшим учеником в классе.\nВернись на Старт.\nIt's a funfair — Это ярмарка с аттракционами.\nIt's a band — Это музыкальная группа.\nHe is shy — Он стеснительный.\nWhere did you go yesterday? — Куда ты ходил вчера?\nВернись на Старт.\nIt's a museum — Это музей.\nI bought a ticket an hour ago — Я купил билет час назад.\nHe is loud — Он шумный.\nСпой песню «Вот это были самые лучшие времена» из учебника.\nHe is strong — Он сильный.\nНазови пять музыкальных инструментов. Возможные ответы: piano, flute, drums, violin, guitar.\nWe sang songs in class yesterday — Мы пели песни в классе вчера.\nСпой песню «Самый лучший год» из учебника.\nIt's a dinosaur — Это динозавр\nСравни трех своих друзей. Возможный ответ: Marina is the prettiest. Anna is the shyest. Alex is the tallest. Марина самая красивая. Анна самая застенчивая. Алекс самый высокий."
+],
+"answer": "I went to a party last night — Я ходил на вечеринку прошлым вечером.\nВернись на Старт\nShe is pretty — Она милая.\nAndy was the best student in the class — Энди был лучшим учеником в классе.\nВернись на Старт.\nIt's a funfair — Это ярмарка с аттракционами.\nIt's a band — Это музыкальная группа.\nHe is shy — Он стеснительный.\nWhere did you go yesterday? — Куда ты ходил вчера?\nВернись на Старт.\nIt's a museum — Это музей.\nI bought a ticket an hour ago — Я купил билет час назад.\nHe is loud — Он шумный.\nСпой песню «Вот это были самые лучшие времена» из учебника.\nHe is strong — Он сильный.\nНазови пять музыкальных инструментов. Возможные ответы: piano, flute, drums, violin, guitar.\nWe sang songs in class yesterday — Мы пели песни в классе вчера.\nСпой песню «Самый лучший год» из учебника.\nIt's a dinosaur — Это динозавр\nСравни трех своих друзей. Возможный ответ: Marina is the prettiest. Anna is the shyest. Alex is the tallest. Марина самая красивая. Анна самая застенчивая. Алекс самый высокий."
+}
+]
+},
+{
+"number": "1-s62",
+"num": "1",
+"page": 62,
+"chapter": "Module 7. Unit 15. Good times ahead!",
+"skyId": 120682,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить бувквы в словах так, чтобы получились названия стран.",
+"Португалия.\nИталия.\nПольша.\nМексика.\nТурция.\nГреция.\nРоссия.\nИспания.",
+"Portugal.\nItaly.\nPoland.\nMexico.\nTurkey.\nGreece.\nRussia.\nSpain."
+],
+"answer": "Portugal.\nItaly.\nPoland.\nMexico.\nTurkey.\nGreece.\nRussia.\nSpain."
+}
+]
+},
+{
+"number": "2-s62",
+"num": "2",
+"page": 62,
+"chapter": "Module 7. Unit 15. Good times ahead!",
+"skyId": 120683,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать о своих планах на лето.",
+"WORDLIST\na beach — пляж\na lake — озеро\na mountain — гора\nto go camping — идти в поход",
+"Оборот to be going to do something (собираться что-то сделать) используется, когда мы хотим сообщить о своих планах или намерениях.\nДля того чтобы сформировать предложение с этим оборотом, глагол to be необходимо поставить в нужную форму (am, is, are), а после оборота поставить смысловой глагол в начальной форме: I am going to read a book. Я собираюсь почитать книгу.\nВопросительные и отрицательные предложения формируются следующим образом:\n Вопросы\n Краткие ответы\n Отрицания\nAm I going to read? Я собираюсь читать?\nAre you going to read? Ты собираешься читать?\nIs he going to read? Он собирается читать?\nYes, I am / you are / he is. Да.\nNo, I am not / you are not / he is not. Нет\nI am not going to read. Я не собираюсь читать.\nYou are not going to read. Ты не собираешься читать.\nShe is not going to read. Она не собирается читать",
+"I'm going to go to Turkey this summer. I'm going to go camping. Я собираюсь поехать в Турцию этим летом. Я собираюсь пойти в поход.\nI'm going to go to Russia this summer. I am going to go to the mountains. Я собираюсь поехать в Россию этим летом. Я собираюсь пойти в горы.\nI'm going to go to Spain this summer. I'm going to go to the beach. Я собираюсь поехать в Испанию этим летом. Я собираюсь пойти на пляж.\nI'm going to go to Poland this summer. I'm going to go to the lake. Я собираюсь поехать в Польшу этим летом. Я собираюсь пойти на озеро."
+],
+"answer": "I'm going to go to Turkey this summer. I'm going to go camping.\nI'm going to go to Russia this summer. I am going to go to the mountains.\nI'm going to go to Spain this summer. I'm going to go to the beach.\nI'm going to go to Poland this summer. I'm going to go to the lake."
+}
+]
+},
+{
+"number": "3-s63",
+"num": "3",
+"page": 63,
+"chapter": "Module 7. Unit 15. Good times ahead!",
+"skyId": 120684,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно определить, что собираются делать дети.",
+"WORDLIST\na beach — пляж\na lake — озеро\na mountain — гора\nto go camping — идти в поход",
+"Сью собирается на побережье моря.\nАлекс собирается в горы.\nТони собирается на озеро.\nПэм собирается идти в поход.",
+"Yes.\nNo.\nYes.\nNo."
+],
+"answer": "Yes.\nNo.\nYes.\nNo."
+}
+]
+},
+{
+"number": "4-s63",
+"num": "4",
+"page": 63,
+"chapter": "Module 7. Unit 15. Good times ahead!",
+"skyId": 120685,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести части предложений по смыслу.",
+"WORDLIST\nto buy — покупать\na cinema — кинотеатр\na dinosaur — динозавр\nto look — смотреть\na museum — музей\na salad — салат\na suitcase — чемодан",
+"Он собирается взять свою камеру с собой…\nОна хочет сделать салат…\nОни собираются пойти в музей…\nМы собираем чемоданы…\nЯ собираюсь пойти в кино…\nA. …чтобы посмотреть на динозавров.\nB. …чтобы посмотреть новый фильм.\nC. …поэтому она собирается купить немного овощей.\nD. …чтобы сделать много фотографий.\nE. ...потому что мы собираемся поехать в отпуск.",
+"D.\nC.\nA.\nE.\nB."
+],
+"answer": "D.\nC.\nA.\nE.\nB."
+}
+]
+},
+{
+"number": "5-s63",
+"num": "5",
+"page": 63,
+"chapter": "Module 7. Unit 15. Good times ahead!",
+"skyId": 120686,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать, что собирается делать мальчик на следующей неделе.",
+"Оборот to be going to do something (собираться что-то сделать) используется, когда мы хотим сообщить о своих планах или намерениях.\nДля того чтобы сформировать предложение с этим оборотом, глагол to be необходимо поставить в нужную форму (am, is, are), а после оборота поставить смысловой глагол в начальной форме: I am going to read a book. Я собираюсь почитать книгу.\nВопросительные и отрицательные предложения формируются следующим образом:\n Вопросы\n Краткие ответы\n Отрицания\nAm I going to read? Я собираюсь читать?\nAre you going to read? Ты собираешься читать?\nIs he going to read? Он собирается читать?\nYes, I am / you are / he is. Да.\nNo, I am not / you are not / he is not. Нет\nI am not going to read. Я не собираюсь читать.\nYou are not going to read. Ты не собираешься читать.\nShe is not going to read. Она не собирается читать",
+"Понедельник: помочь папе в саду.\nВторник: купить подарок маме.\nСреда: играть в теннис с Джилл.\nЧетверг: убрать в моей комнате.\nПятница: пойти в кинотеатр.",
+"1.\nA: What's Robbie going to do on Monday?\nB: He's going to help his Dad in the garden.\n2.\nA: What's Robbie going to do on Tuesday?\nB: He's going to buy a present for Mum.\n3.\nA: What's Robbie going to do on Wednesday?\nB: He's going to play tennis with Jill.\n4.\nA: What's Robbie going to do on Thursday?\nB: He's going to clean his room.\n5.\nA: What's Robbie going to do on Friday?\nB: He's going to go to the cinema.",
+"1.\nA: Что Робби собирается делать в понедельник?\nB: Он собирается помочь отцу в саду.\n2.\nA: Что Робби собирается делать во вторник?\nB: Он собирается купить подарок для мамы.\n3.\nA: Что Робби собирается делать в среду?\nB: Он собирается играть в теннис с Джилл.\n4.\nA: Что Робби собирается делать в четверг?\nB: Он собирается убрать свою комнату.\n5.\nA: Что Робби собирается делать в пятницу?\nB: Он собирается пойти в кино."
+],
+"answer": "1.\nA: What's Robbie going to do on Monday?\nB: He's going to help his Dad in the garden.\n2.\nA: What's Robbie going to do on Tuesday?\nB: He's going to buy a present for Mum.\n3.\nA: What's Robbie going to do on Wednesday?\nB: He's going to play tennis with Jill.\n4.\nA: What's Robbie going to do on Thursday?\nB: He's going to clean his room.\n5.\nA: What's Robbie going to do on Friday?\nB: He's going to go to the cinema."
+}
+]
+},
+{
+"number": "1-s64",
+"num": "1",
+"page": 64,
+"chapter": "Module 7. Unit 16. Hello, sunshine!",
+"skyId": 120687,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в головоломке слова и выписать их.",
+"Sleeping bag. Спальный мешок.\nSwimsuit. Купальник.\nBoots. Ботинки.\nFlippers. Ласты.\nJeans. Джинсы.\nTent. Палатка.\nSunglasses. Солнечные очки."
+],
+"answer": "Sleeping bag.\nSwimsuit.\nBoots.\nFlippers.\nJeans.\nTent.\nSunglasses."
+}
+]
+},
+{
+"number": "2-s64",
+"num": "2",
+"page": 64,
+"chapter": "Module 7. Unit 16. Hello, sunshine!",
+"skyId": 120688,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки и заполнить пропуски в предложениях.",
+"WORDLIST\nhot — жарко\nwindy — ветрено\ncold — холодно\nsunny — солнечно\ncloudy — облачно\nrainy — дождливо",
+"Завтра в Испании будет жарко (hot).\nЗавтра во Франции будет ветрено (windy).\nЗавтра в Шотландии будет холодно (cold).\nЗавтра в Италии будет солнечно (sunny).\nЗавтра в России будет облачно (cloudy).\nЗавтра в Греции будет дождливо (rainy)."
+],
+"answer": "Завтра в Испании будет жарко (hot).\nЗавтра во Франции будет ветрено (windy).\nЗавтра в Шотландии будет холодно (cold).\nЗавтра в Италии будет солнечно (sunny).\nЗавтра в России будет облачно (cloudy).\nЗавтра в Греции будет дождливо (rainy)."
+}
+]
+},
+{
+"number": "3-s65",
+"num": "3",
+"page": 65,
+"chapter": "Module 7. Unit 16. Hello, sunshine!",
+"skyId": 120689,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать верные вопросительные слова в предложениях.",
+"Вопросительные слова в английском языке\n Слово\n Транскрипция\n Перевод\n Пример\n Who\n /huː/\nКто?\n Who is it? Кто это?\n What\n /wɔt/\nЧто?\nКакой?\nWhat is it? Что это?\nWhat is your favourite colour? Какой у тебя любимый цвет?\n When\n /wen/\nКогда?\n When is your birthday? Когда твой день рождения?\n Where\n /weə/\nГде?\nКуда?\n Where are my socks? Где мои носки?\n How\n /hau/\nКак?\n How are you? Как ты?",
+"Чем (What) занимается мистер Джонс? — Он полицейский.\nЧто (What) такое суши? — Это рыба.\nГде (Where) Рим? — В Италии.\nПочему (Why) черепаха была счастливой? — Потому что победила в гонке.\nКогда (When) День дурака? — Первого апреля."
+],
+"answer": "Чем (What) занимается мистер Джонс? — Он полицейский.\nЧто (What) такое суши? — Это рыба.\nГде (Where) Рим? — В Италии.\nПочему (Why) черепаха была счастливой? — Потому что победила в гонке.\nКогда (When) День дурака? — Первого апреля."
+}
+]
+},
+{
+"number": "4-s65",
+"num": "4",
+"page": 65,
+"chapter": "Module 7. Unit 16. Hello, sunshine!",
+"skyId": 120690,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и соотнести вопросы и ответы.",
+"Когда день рождения Тома?\nКто это?\nКак у тебя дела?\nКакой твой любимый месяц?\nГде Лондон?\nПочему ты хочешь уйти?",
+"A. Хорошо, спасибо.\nB. Потому что мне скучно.\nC. В Англии.\nD. В мае.\nE. Апрель.\nF. Это мой друг Джон."
+],
+"answer": "D.\nF.\nA.\nE.\nC.\nB."
+}
+]
+},
+{
+"number": "5-s65",
+"num": "5",
+"page": 65,
+"chapter": "Module 7. Unit 16. Hello, sunshine!",
+"skyId": 120691,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и заполнить пропуски словами из таблицы.",
+"WORDLIST\nholiday — каникулы\numbrella — зонт\ntea — чай\ncity — город\ngo — идти\nvisit — посетить\nsee — увидеть",
+"Дорогие Крис и Фиона,\nНадеюсь, вы хорошо проводите время в Шотландии. Сейчас я во Франции и я отлично провожу (1) каникулы (holiday)! Париж великолепен — завтра я собираюсь посетить Эйфелеву башню, затем во вторник я собираюсь (2) отправиться (go) в парк развлечений. Не могу дождаться!\nСегодня идёт дождь, так что у меня с собой (3) зонт (umbrella). Я собираюсь в (4) посетить (visit) музей Лувр. После этого я собираюсь выпить чашку (5) чая (tea) в кафе рядом с отелем.\nЭтим вечером я отправляюсь на экскурсию по (6) городу (city) и собираюсь сделать несколько фотографий. Так много всего, что нужно (7) увидеть (see) и сделать!\nВ любом случае пока это всё. Берегите себя.\nС любовью,\nКристина"
+],
+"answer": "Дорогие Крис и Фиона,\nНадеюсь, вы хорошо проводите время в Шотландии. Сейчас я во Франции и я отлично провожу (1) каникулы (holiday)! Париж великолепен — завтра я собираюсь посетить Эйфелеву башню, затем во вторник я собираюсь (2) отправиться (go) в парк развлечений. Не могу дождаться!\nСегодня идёт дождь, так что у меня с собой (3) зонт (umbrella). Я собираюсь в (4) посетить (visit) музей Лувр. После этого я собираюсь выпить чашку (5) чая (tea) в кафе рядом с отелем.\nЭтим вечером я отправляюсь на экскурсию по (6) городу (city) и собираюсь сделать несколько фотографий. Так много всего, что нужно (7) увидеть (see) и сделать!\nВ любом случае пока это всё. Берегите себя.\nС любовью,\nКристина"
+}
+]
+},
+{
+"number": "1-s66",
+"num": "1",
+"page": 66,
+"chapter": "Module 8. I Love English!",
+"skyId": 120692,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно послушать диалог, в котором Барри рассказывает о своём отдыхе. Нужно выбрать правильный ответ. Поставь галочки в клеточках напротив вариантов (А) или (В).",
+"А: Привет, Гвен, это я, Барри.\nВ: Привет, Барри. Как дела?\nА: Ну, на следующей неделе я собираюсь в Уэльс и собираюсь остановиться в Риле − твоем родном городе! Ты можешь мне сказать, сколько стоит поезд?\nВ: Думаю, около 50 фунтов.\nА: 50? Ладно, неплохо. Я собираюсь остановиться в «Пляжном отеле». Ты знаешь его?\nВ: Пляжный отель? О да, я его прекрасно знаю!\nА: В самом деле? Какой он?\nВ: Ну, это довольно старый отель − один из старейших в Риле. Не волнуйся − он очень красивый!\nА: О, хорошо!\nВ: Передай привет мистеру Райсу, хозяину от меня.\nА: Рис? Как это пишется?\nВ: R−H−Y−S.\nА: Хорошо!.Еще кое−что, я знаю, что сейчас лето, но как ты думаешь, мне нужно взять с собой куртку?\nВ: Однозначно! Погода обычно хорошая, но по вечерам бывает довольно ветрено.\nА: Хорошо, спасибо за помощь. Увидимся через две недели!\nВ: Нет проблем. Ты отлично проведешь время. Я уверена.",
+"B) — Барри собирается поехать в Уэльс.\nA) — Билет на поезд стоит 50 фунтов.\nВ) — Отель называется «Пляжный отель».\nA) — Владелец гостиницы — господин Райс.\nВ) — По вечерам пого­да обычно ветреная."
+],
+"answer": "B) — Барри собирается поехать в Уэльс.\nA) — Билет на поезд стоит 50 фунтов.\nВ) — Отель называется «Пляжный отель».\nA) — Владелец гостиницы — господин Райс.\nВ) — По вечерам пого­да обычно ветреная."
+}
+]
+},
+{
+"number": "2-s66",
+"num": "2",
+"page": 66,
+"chapter": "Module 8. I Love English!",
+"skyId": 120693,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Тина и Лео собираются этим летом на отдых. Даны две карточки с информацией об их планах. Глядя на схематичные вопросы, потренируйся в составлении полных вопросов и отве­тов, пользуясь информацией в таблицах.",
+"Куда/ехать?\nКогда?\nКак/путешествовать?\nЧто/делать?\nС кем/ехать?",
+"",
+"В: Where is Tina going to go? — Куда собирается поехать Тина?\nA: She's going to go to Spain. — Она собирается поехать в Испанию.\nВ: When is Tina going to go to Spain? — Когда Тина собирается поехать в Испанию?\nA: She's going to go to Spain in July. — Она собирается поехать в Испанию в июле.\nВ: How is Tina going to travel to Spain? — Как Тина собирается путешествовать в Испанию?\nА: She's going to travel to Spain by plane. — Она собирается путешествовать на самолете.\nВ: What is Tina going to do in Spain? — Что Тина собирается делать в Испании?\nA: She's going to go swimming and sailing. — Она собирается плавать и кататься на лодке.\nВ: Who is Tina going to go with? — С кем собирается поехать Тина?\nA: She's going to go with her family. — Она собирается поехать с семьей.\nA: Where is Leo going to go? — Куда собирается поехать Лео?\nВ: He's going to go to Italy. — Он собирается поехать в Италию.\nA: When is Leo going to go to Italy? — Когда Лео собирается поехать в Италию?\nВ: He's going to go to Italy in August. — Он собирается поехать в Италию в августе.\nA: How is Leo going to travel to Italy? — Как Лео собирается путешествовать в Италию?\nВ: He's going to travel to Italy by boat. — Он собирается путешествовать в Италию на корабле.\nA: What is Leo going to do in Italy? — Что Лео собирается делать в Италии?\nВ: He's going to go camping and climbing. — Он собирается жить в палатке и ходить в горы.\nA: Who is Leo going to go with? — С кем собирается поехать Лео?\nВ: Не's going to go with his friends. — Он собирается поехать со своими друзьями."
+],
+"answer": "В: Where is Tina going to go? — Куда собирается поехать Тина?\nA: She's going to go to Spain. — Она собирается поехать в Испанию.\nВ: When is Tina going to go to Spain? — Когда Тина собирается поехать в Испанию?\nA: She's going to go to Spain in July. — Она собирается поехать в Испанию в июле.\nВ: How is Tina going to travel to Spain? — Как Тина собирается путешествовать в Испанию?\nА: She's going to travel to Spain by plane. — Она собирается путешествовать на самолете.\nВ: What is Tina going to do in Spain? — Что Тина собирается делать в Испании?\nA: She's going to go swimming and sailing. — Она собирается плавать и кататься на лодке.\nВ: Who is Tina going to go with? — С кем собирается поехать Тина?\nA: She's going to go with her family. — Она собирается поехать с семьей.\nA: Where is Leo going to go? — Куда собирается поехать Лео?\nВ: He's going to go to Italy. — Он собирается поехать в Италию.\nA: When is Leo going to go to Italy? — Когда Лео собирается поехать в Италию?\nВ: He's going to go to Italy in August. — Он собирается поехать в Италию в августе.\nA: How is Leo going to travel to Italy? — Как Лео собирается путешествовать в Италию?\nВ: He's going to travel to Italy by boat. — Он собирается путешествовать в Италию на корабле.\nA: What is Leo going to do in Italy? — Что Лео собирается делать в Италии?\nВ: He's going to go camping and climbing. — Он собирается жить в палатке и ходить в горы.\nA: Who is Leo going to go with? — С кем собирается поехать Лео?\nВ: Не's going to go with his friends. — Он собирается поехать со своими друзьями."
+}
+]
+},
+{
+"number": "3-s67",
+"num": "3",
+"page": 67,
+"chapter": "Module 8. I Love English!",
+"skyId": 120694,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст и обвести в кружок правильный ответ.",
+"",
+"Ray, I'm going to 1) go to the supermarket later. Is there anything that you want? Please 2) can you get some tomatoes from the garden? We're 3) going to have spaghetti and salad for supper. Love, Liz.\nP.S. I'm going to visit Pam and Dave after supper. Do you want to come?\nРэй, я собираюсь пойти в супермаркет. Ты что-нибудь хочешь? Пожалуйста, возьми несколько помидоров в саду? У нас будет спагетти и салат на ужин. С любовью, Лиз. \nP.S. После ужина я пойду к Пэм и Дейву. Не хочешь со мной?\nLiz, Can you get some chocolate ice cream, please? I'm sorry, but I can't 4) come to Pam and Dave's — I've got a soccer match 5) this evening! \nRay\nЛиз, ты можешь купить шоколадное мороженое? Извини, но я не смогу пойти к Пэм и Дейву — у меня футбольный матч вечером. \nРэй"
+],
+"answer": "Ray, I'm going to 1) go to the supermarket later. Is there anything that you want? Please 2) can you get some tomatoes from the garden? We're 3) going to have spaghetti and salad for supper. Love, Liz. \nP.S. I'm going to visit Pam and Dave after supper. Do you want to come?\nРэй, я собираюсь пойти в супермаркет. Ты что-нибудь хочешь? Пожалуйста, возьми несколько помидоров в саду? У нас будет спагетти и салат на ужин. С любовью, Лиз.\n P.S. После ужина я пойду к Пэм и Дейву. Не хочешь со мной?\nLiz, Can you get some chocolate ice cream, please? I'm sorry, but I can't 4) come to Pam and Dave's — I've got a soccer match 5) this evening! \nRay\nЛиз, ты можешь купить шоколадное мороженое? Извини, но я не смогу пойти к Пэм и Дейву — у меня футбольный матч вечером. \nРэй"
+}
+]
+},
+{
+"number": "4-s67",
+"num": "4",
+"page": 67,
+"chapter": "Module 8. I Love English!",
+"skyId": 120695,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать текст ещё раз и отве­тить на вопросы.",
+"1. Куда Лиз собирается пойти?\n2. Что Рэй должен принести из сада?\n3. Что они собираются есть на ужин?\n4. Что будет делать Лиз после ужина?\n5. Что Рэй хочет от супермаркета?\n6. Что Рэй собирается делать после ужина?",
+"Рэй, я собираюсь пойти в супермаркет. Ты что-нибудь хочешь? Пожалуйста, возьми несколько помидоров в саду? У нас будет спагетти и салат на ужин. С любовью, Лиз. \nP.S. После ужина я пойду к Пэм и Дейву. Не хочешь со мной?\nЛиз, ты можешь купить шоколадное мороженое? Извини, но я не смогу пойти к Пэм и Дейву — у меня футбольный матч вечером.\n Рэй",
+"1. Liz is going to go to the supermarket. Лиз собирается пойти в супермаркет.\n2. Ray has to get some tomatoes from the garden. Рэй должен принести помидоры из сада.\n3. They're going to have spaghetti and salad for supper. На ужин они собираются есть спагетти и салат.\n4. Liz is going to visit Pam and Dave after supper. Лиз собирается навестить Пэм и Дэйва после ужина.\n5. Ray wants some chocolate ice cream from the supermarket. Рэй хочет шоколадного мороженого из супермаркета.\n6. Ray is going to play soccer / watch a soccer match after supper. Рэй собирается играть в футбол / смотреть футбольный матч после ужина."
+],
+"answer": "1. Liz is going to go to the supermarket. Лиз собирается пойти в супермаркет.\n2. Ray has to get some tomatoes from the garden. Рэй должен принести помидоры из сада.\n3. They're going to have spaghetti and salad for supper. На ужин они собираются есть спагетти и салат.\n4. Liz is going to visit Pam and Dave after supper. Лиз собирается навестить Пэм и Дэйва после ужина.\n5. Ray wants some chocolate ice cream from the supermarket. Рэй хочет шоколадного мороженого из супермаркета.\n6. Ray is going to play soccer / watch a soccer match after supper. Рэй собирается играть в футбол / смотреть футбольный матч после ужина."
+}
+]
+},
+{
+"number": "let-s-play-s68",
+"num": "let-s-play",
+"page": 68,
+"chapter": "Module 8. Let`s Play!",
+"skyId": 120696,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сыграть в настольную игру.",
+"Возвращайся в начало.\nНазови предмет.\nВставь пропущенное слово.\nСкажи или сделай.",
+"Где (Where) Лондон? В Англии.\nВозвращайся в начало.\nIt's a Spanish flag. Это флаг Испании.\nКуда ты планируешь (going) поехать на каникулах?\nВозвращайся в начало.\nFlippers. Ласты.\nSwimsuit. Купальник.\nВозвращайся в начало.\nЧто (What) это? Это шлем.\nВозвращайся в начало.\nSunglasses. Солнечные очки.\nКто (Who) это? Это моя подруга Пэм.\nIt's an Italian flag. Это флаг Италии.\nНазови 3 предмета, которые можно взять в поход. Sunglasses, cream, blanket (солнечные очки, крем, плед).\nВозвращайся в начало.\nНазови 5 стран. Russia, Britain, Spain, Greece, Japan (Россия, Британия, Испания, Греция, Япония).\nКогда (When) начнётся матч? В 5 часов.\nСпой песенку «Привет, солнышко».\nСапоги (boots).\nНазови 4 вещи, которые можно взять в отпуск на острове. Swimsuit, flippers, hat, flip-flops (купальник, ласты, шляпа, шлёпанцы)."
+],
+"answer": "Где (Where) Лондон? В Англии.\nВозвращайся в начало.\nIt's a Spanish flag. Это флаг Испании.\nКуда ты планируешь (going) поехать на каникулах?\nВозвращайся в начало.\nFlippers. Ласты.\nSwimsuit. Купальник.\nВозвращайся в начало.\nЧто (What) это? Это шлем.\nВозвращайся в начало.\nSunglasses. Солнечные очки.\nКто (Who) это? Это моя подруга Пэм.\nIt's an Italian flag. Это флаг Италии.\nНазови 3 предмета, которые можно взять в поход. Sunglasses, cream, blanket (солнечные очки, крем, плед).\nВозвращайся в начало.\nНазови 5 стран. Russia, Britain, Spain, Greece, Japan (Россия, Британия, Испания, Греция, Япония).\nКогда (When) начнётся матч? В 5 часов.\nСпой песенку «Привет, солнышко».\nСапоги (boots).\nНазови 4 вещи, которые можно взять в отпуск на острове. Swimsuit, flippers, hat, flip-flops (купальник, ласты, шляпа, шлёпанцы)."
+}
+]
+}
+]
+}
