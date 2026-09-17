@@ -4,7 +4,7 @@ import {
   regionSlugs, regionLabels, regionLabelsIn, typeSlugs, typeLabels,
   getSchoolsByRegionAndType, RegionSlug, SchoolType,
 } from '@/data/schools'
-import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
+import { buildTitle, buildDescription, buildKeywords, typeNoun } from '@/lib/utils'
 import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
@@ -115,11 +115,11 @@ export default async function TypePage({ params }: Props) {
   }
   const pageTitle = pageTitleMap[t]
     ? `${pageTitleMap[t]} ${regionIn}`
-    : `${typeName} школы ${regionIn}`
+    : `${typeNoun(t)} ${regionIn}`
 
   // Название национального хаба (без региона) для контекстной ссылки-расшивки каннибализации:
   // городская страница ведёт head-term сигнал вверх на /shkoly/tipy/{type}/.
-  const hubLabel = pageTitleMap[t] ?? `${typeName} школы`
+  const hubLabel = pageTitleMap[t] ?? typeNoun(t)
 
   return (
     <>
