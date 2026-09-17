@@ -1,0 +1,2978 @@
+{
+"book": {
+"slug": "komarova-rabochaya-tetrad",
+"klass": 2,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Комарова Ю. А., Ларионова И. В., Перретт Ж.",
+"type": "Рабочая тетрадь",
+"umk": "Английский язык"
+},
+"problems": [
+{
+"number": "1-s4",
+"num": "1",
+"page": 4,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131556,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать новые буквы.",
+"L",
+"",
+"M",
+"",
+"N",
+"",
+"R",
+""
+],
+"answer": "Ll, Mm, Nn, Rr."
+}
+]
+},
+{
+"number": "2-s4",
+"num": "2",
+"page": 4,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131557,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные буквы, строчные и соответствующие им звуки.",
+"L.\nM.\nN.\nR.",
+"L — l — /l/.\nM — m — /m/.\nN — n — /n/.\nR — r — /r/."
+],
+"answer": "L — l — /l/.\nM — m — /m/.\nN — n — /n/.\nR — r — /r/."
+}
+]
+},
+{
+"number": "3-s4",
+"num": "3",
+"page": 4,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131558,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам надо подчеркнуть слова с нужной буквой.",
+"WORDLIST\nhello — здравствуй(те)\nMick — Мик (мужское имя)\nDenzil — Дензил (мужское имя)\nname — имя\nAlice — Элис (женское имя)\nmy — мой\nNora — Нора (женское имя)\nrun — бегать\nBrill — Брилл (мужское имя)\nRon — Рон (мужское имя)",
+"Hello.\nMick.\nDenzil.\nName.\nAlice.\nMy.\nNora.\nRun.\nBrill.\nRon.",
+"Ll: здравствуй, Дензил. \nMm: имя, мой. \nNn: Нора, бегать. \nRr: Брилл, Рон."
+],
+"answer": "Ll: hello, Denzil.\nMm: name, my.\nNn: Nora, run.\nRr: Brill, Ron."
+}
+]
+},
+{
+"number": "4-s4",
+"num": "4",
+"page": 4,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131559,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы.",
+"WORDLIST\nmy — мой\nname — имя \nNora — Нора",
+"My.\nName's.\nNora."
+],
+"answer": "M, n, N, r."
+}
+]
+},
+{
+"number": "5-s5",
+"num": "5",
+"page": 5,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131560,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать новые буквы.",
+"B",
+"",
+"P",
+"",
+"S",
+""
+],
+"answer": "Bb, Pp, Ss."
+}
+]
+},
+{
+"number": "6-s5",
+"num": "6",
+"page": 5,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131561,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные буквы, строчные и соответствующие им звуки.",
+"P.\nB.\nS.",
+"P — p — /p/.\nB — b — /b/.\nS — s — /s/."
+],
+"answer": "P — p — /p/.\nB — b — /b/.\nS — s — /s/."
+}
+]
+},
+{
+"number": "7-s5",
+"num": "7",
+"page": 5,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131562,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам надо подчеркнуть слова с нужной буквой.",
+"WORDLIST\nand — и\nBen — Бен (мужское имя)\nbin — ведро, корзина\nBob — Боб (мужское имя)\npen — ручка\npin — булавка\npirate — пират\nsister — сестра\nsix — шесть",
+"And.\nBen.\nBin.\nBob.\nPen.\nPin.\nPirate.\nSister.\nSix.",
+"Bb: корзина, Боб.\nPp: пират, ручка.\nSs: сестра, шесть."
+],
+"answer": "Bb: bin, Bob.\nPp: pirate, pen.\nSs: sister, six."
+}
+]
+},
+{
+"number": "8-s5",
+"num": "8",
+"page": 5,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131563,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно собрать половинки слов и записать получившиеся слова.",
+"WORDLIST\nsister — сестра\nparrot — попугай\npencil — карандаш",
+"Sister (sis + ter).\nParrot (par + rot).\nPencil (pen + cil).",
+"Sister.\nParrot.\nPencil."
+],
+"answer": "Сестра, попугай, карандаш."
+}
+]
+},
+{
+"number": "9-s6",
+"num": "9",
+"page": 6,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131564,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать новые буквы.",
+"D",
+"",
+"T",
+"",
+"F",
+"",
+"V",
+""
+],
+"answer": "Dd, Tt, Ff, Vv."
+}
+]
+},
+{
+"number": "10-s6",
+"num": "10",
+"page": 6,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131565,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные буквы, строчные и соответствующие им звуки.",
+"D.\nT.\nF.\nV.",
+"D — d — /d/.\nT — t — /t/.\nF — f — /f/.\nV — v — /v/."
+],
+"answer": "D — d — /d/.\nT — t — /t/.\nF — f — /f/.\nV — v — /v/."
+}
+]
+},
+{
+"number": "11-s6",
+"num": "11",
+"page": 6,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131566,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам надо подчеркнуть слова с нужной буквой.",
+"WORDLIST\nand — и\ndog — собака\neleven — одиннадцать\nfive — пять\nFred — Фред (мужское имя)\nfriend — друг\ngood — хороший\nis — есть, является\nparrot — попугай\ntwelve — двенадцать\ntwo — два",
+"And.\nDog.\nEleven.\nFive .\nFred.\nFriend.\nGood.\nIs.\nParrot.\nTwelve.\nTwo.",
+"Dd: собака, Фред.\nTt: два, попугай.\nFf: пять, друг.\nVv: двенадцать, пять."
+],
+"answer": "Dd: dog, Fred.\nTt: two, parrot.\nFf: five, friend.\nVv: twelve, five."
+}
+]
+},
+{
+"number": "12-s6",
+"num": "12",
+"page": 6,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131567,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно решить примеры и записать ответы словами.",
+"",
+"Пять и два есть...",
+"5 + 2 = 7\nFive and two is seven. \nПять и два есть семь. \n5 + 6 = 11\nFive and six is eleven. \nПять и шесть есть одиннадцать."
+],
+"answer": "Пять и два есть семь. \nПять и шесть есть одиннадцать."
+}
+]
+},
+{
+"number": "13-s7",
+"num": "13",
+"page": 7,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131568,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать новые буквы.",
+"C",
+"",
+"K",
+"",
+"G",
+""
+],
+"answer": "Cc, Kk, Gg."
+}
+]
+},
+{
+"number": "14-s7",
+"num": "14",
+"page": 7,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131569,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные буквы, строчные и соответствующие им звуки.",
+"C.\nK.\nG.",
+"C — c — /k/.\nK — k — /k/.\nG — g — /g/."
+],
+"answer": "C — c — /k/.\nK — k — /k/.\nG — g — /g/."
+}
+]
+},
+{
+"number": "15-s7",
+"num": "15",
+"page": 7,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131570,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам надо подчеркнуть слова с нужной буквой.",
+"WORDLIST\ncake — пирог\ncut — резать\ndog — собака\neleven — одиннадцать\nfriend — друг\nfrog — лягушка\nhi — привет\nkey — ключ\nsky — небо",
+"Cake.\nCut.\nDog.\nEleven.\nFriend.\nFrog.\nHi.\nKey.\nSky.",
+"Cc: резать, пирог.\nKk: ключ, небо.\nGg: лягушка, собака."
+],
+"answer": "Cc: cut, cake.\nKk: key, sky.\nGg: frog, dog."
+}
+]
+},
+{
+"number": "16-s7",
+"num": "16",
+"page": 7,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131571,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти шесть слов в цепочке и записать их.",
+"WORDLIST\ndog — собака\neleven — одиннадцать\ngoat — козёл\ngood — хороший\nNora — Нора (имя)\ntwelve — двенадцать",
+"Good, dog, goat, twelve, eleven, Nora."
+],
+"answer": "Good, dog, goat, twelve, eleven, Nora."
+}
+]
+},
+{
+"number": "17-s8",
+"num": "17",
+"page": 8,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131572,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать заглавные и строчные буквы Hh, Jj, Qq.",
+"",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем заглавные буквы H, J, Q и строчные буквы h, j, q."
+}
+]
+},
+{
+"number": "18-s8",
+"num": "18",
+"page": 8,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131573,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные, строчные буквы и звуки, которые они дают.",
+"/h/.",
+"/dʒ/.",
+"/kw/.",
+"H — h — /h/.",
+"J — j — /dʒ/.\nQ — q — /kw/."
+],
+"answer": "H — h — /h/.\nJ — j — /dʒ/.\nQ — q — /kw/."
+}
+]
+},
+{
+"number": "19-s8",
+"num": "19",
+"page": 8,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131574,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подчеркнуть слова с буквами Hh, Jj, Qq.",
+"",
+"",
+"",
+"",
+"",
+"",
+"Hh: hello, key, how.\nJj: Jack, for, jelly,\nQq: queen, grey, quiet."
+],
+"answer": "Hh: hello, how.\nJj: Jack, jelly,\nQq: queen, quiet."
+}
+]
+},
+{
+"number": "20-s8",
+"num": "20",
+"page": 8,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131575,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно по линиям соединить имена и десерты и написать, для кого они приготовлены.",
+"Hugh.\nJerry.\nJack.",
+"Jelly.\nJam.\nCake.",
+"WORDLIST\ncake — торт\njam — джем\njelly — желе",
+"Jelly for Jerry. — Желе для Джерри.\nJam for Jack. — Джем для Джека.\nCake for Hugh. — Торт для Хью."
+],
+"answer": "Jelly for Jerry.\nJam for Jack.\nCake for Hugh."
+}
+]
+},
+{
+"number": "21-s9",
+"num": "21",
+"page": 9,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131576,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать заглавные и строчные буквы Ww, Xx, Zz.",
+"",
+"",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем заглавные буквы W, X, Z и строчные буквы h, x, z."
+}
+]
+},
+{
+"number": "22-s9",
+"num": "22",
+"page": 9,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131577,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить заглавные, строчные буквы и звуки, которые они дают.",
+"/w/.",
+"/ks/.",
+"/z/.",
+"W — w — /w/.",
+"X — x — /ks/.\nZ — z — /z/."
+],
+"answer": "W — w — /w/.\nX — x — /ks/.\nZ — z — /z/."
+}
+]
+},
+{
+"number": "23-s9",
+"num": "23",
+"page": 9,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131578,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подчеркнуть слова с буквами Ww, Xx, Zz.",
+"",
+"",
+"",
+"",
+"",
+"",
+"Ww: how, what, for.\nXx: be, box, next.\nZz: Denzil, zoo, two."
+],
+"answer": "Ww: how, what, for.\nXx: be, box, next.\nZz: Denzil, zoo, two."
+}
+]
+},
+{
+"number": "24-s9",
+"num": "24",
+"page": 9,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131579,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти зашифрованные слова и записать их.",
+"WORDLIST\nnext — следующий\nwhale — кит\nwhat — что, какой\nwhite — белый\nzebra — зебра\nZelda — Зельда",
+"Next.\nWhat.\nZebra.\nWhite.\nWhale.\nZelda."
+],
+"answer": "Next.\nWhat.\nZebra.\nWhite.\nWhale.\nZelda."
+}
+]
+},
+{
+"number": "25-s10",
+"num": "25",
+"page": 10,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131580,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать заглавные и строчные буквы Aa и Ee.",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем заглавные буквы A, E и строчные буквы a, e."
+}
+]
+},
+{
+"number": "26-s10",
+"num": "26",
+"page": 10,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131581,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вписать пропущенную букву и обвести, какой звук она даёт.",
+"",
+"",
+"WORDLIST\nbat — летучая мышь\ncake — торт\ncat — кошка\negg — яйцо\nKate — Кэйт\npen — ручка\nPete — Пит\nten — десять",
+"Bat.\nKate.\nCat.\nCake.\nEgg.\nPete.\nTen.\nPen.",
+"Bat — /æ/.\nKate — /eɪ/.\nCat — /æ/.\nCake — /eɪ/.\nEgg — /e/.\nPete — /i:/.\nTen — /e/.\nPen — /e/."
+],
+"answer": "Bat — /æ/.\nKate — /eɪ/.\nCat — /æ/.\nCake — /eɪ/.\nEgg — /e/.\nPete — /i:/.\nTen — /e/.\nPen — /e/."
+}
+]
+},
+{
+"number": "27-s10",
+"num": "27",
+"page": 10,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131582,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти 7 спрятанных слов и записать их.",
+"WORDLIST\nbag — сумка\ncake — торт\ncat — кошка\neleven — одиннадцать\ngreen — зелёный\nneat — аккуратный\nseven — семь",
+"Cat.\nBag.\nSeven.\nEleven.\nNeat.\nCake.\nGreen."
+],
+"answer": "Cat.\nBag.\nSeven.\nEleven.\nNeat.\nCake.\nGreen."
+}
+]
+},
+{
+"number": "28-s11",
+"num": "28",
+"page": 11,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131583,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать заглавные и строчные буквы Ii и Oo.",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем заглавные буквы I, O и строчные буквы i, o."
+}
+]
+},
+{
+"number": "29-s11",
+"num": "29",
+"page": 11,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131584,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вписать пропущенную букву и обвести, какой звук она даёт.",
+"",
+"",
+"WORDLIST\nbike — велосипед\nfrog — лягушка\nhome — дом\nhot dog — хот-дог\nMike — Майк\npencil — карандаш\nsix — шесть\ntomato — помидор",
+"Six.\nBike.\nMike.\nPencil.\nFrog.\nHome.\nHot dog.\nTomato.",
+"Six — /i/.\nBike — /aɪ/.\nMike — /aɪ/.\nPencil — /i/.\nFrog — /ɒ/.\nHome — /əʊ/.\nHot dog — /ɒ/.\nTomato — /əʊ/."
+],
+"answer": "Six — /i/.\nBike — /aɪ/.\nMike — /aɪ/.\nPencil — /i/.\nFrog — /ɒ/.\nHome — /əʊ/.\nHot dog — /ɒ/.\nTomato — /əʊ/."
+}
+]
+},
+{
+"number": "30-s11",
+"num": "30",
+"page": 11,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131585,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить по линиям слова и записать их.",
+"WORDLIST\nbike — велосипед\nfish — рыба\nhome — дом\nMike — Майк\nride — кататься\nshop — магазин",
+"Ride.\nShop.\nBike.\nMike.\nHome.\nFish."
+],
+"answer": "Ride.\nShop.\nBike.\nMike.\nHome.\nFish."
+}
+]
+},
+{
+"number": "31-s12",
+"num": "31",
+"page": 12,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131586,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать заглавные и строчные буквы Uu, Yy.",
+"",
+"",
+"",
+""
+],
+"answer": "Пропишем заглавные буквы U, Y и строчные буквы u, y."
+}
+]
+},
+{
+"number": "32-s12",
+"num": "32",
+"page": 12,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131587,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить пропущенную букву и обвести в кружок звук, который она обозначает в этом слове.",
+"a pupil — ученик.\nto jump — прыгать.\na uniform — форма.\nsun — солнце.",
+"",
+"A pupil.\nВ этом слове буква u произвонисится как [ju:], обводим этот звук под словом.\nTo jump.\nВ этом слове буква u произвонисится как [ʌ], обводим этот звук под словом.\nA uniform.\nВ этом слове буква u произвонисится как [ju:], обводим этот звук под словом.\nSun.\nВ этом слове буква u произвонисится как [ʌ], обводим этот звук под словом.",
+"Funny — смешной.\nTo fly — летать.\nA puppy — щенок.\nSky — небо.",
+"",
+"Funny.\nВ этом слове буква y произвонисится как [ɪ], обводим этот звук под словом.\nTo fly.\nВ этом слове буква y произвонисится как [aɪ], обводим этот звук под словом.\nA puppy.\nВ этом слове буква y произвонисится как [ɪ], обводим этот звук под словом.\nSky.\nВ этом слове буква y произвонисится как [aɪ], обводим этот звук под словом."
+],
+"answer": "A pupil — [ju:].\nTo jump — [ʌ].\nA uniform — [ju:].\nSun — [ʌ].\nFunny — [ɪ].\nTo fly — [aɪ].\nA puppy — [ɪ].\nSky — [aɪ]."
+}
+]
+},
+{
+"number": "33-s12",
+"num": "33",
+"page": 12,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131588,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать, что любит делать попугай. Первые буквы слов указаны.",
+"to walk — ходить/гулять\nto jump — прыгать\nto run — бегать\nto fly — летать"
+],
+"answer": "Walk \nJump\nRun \nFly"
+}
+]
+},
+{
+"number": "34-s13",
+"num": "34",
+"page": 13,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131589,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно разгадать имя.",
+"Внимательно посмотрим и увидим, что первая буква уже известна B, она написана с большой буквы.\nТеперь расставим остальные буквы и получаем имя Brill."
+],
+"answer": "Загаданное имя Brill."
+}
+]
+},
+{
+"number": "35-s13",
+"num": "35",
+"page": 13,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131590,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно разгадать кроссворд с помощью картинок, а затем вписать главное слово в клеточки ниже.",
+"Коза — goat.\nЛягушка — frog.\nКоробка — box. \nСобака —dog. \nПять — five. \nПопугай — parrot.\nШесть — six. \nОдиннадцать — eleven.\nКоролева — queen.\nСвеча — candle.",
+"goodfriend",
+"good friend — хороший друг."
+],
+"answer": "Запишем слова по картинкам:\ngoat\nfrog\nbox\ndog\nfive\nparrot\nsix\neleven\nqueen\ncandle\nИз букв, которые попали в серые клеточки, запишем слово: good friend."
+}
+]
+},
+{
+"number": "36-s13",
+"num": "36",
+"page": 13,
+"chapter": "Раздел 1. Знакомимся с буквами и звуками",
+"skyId": 131591,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно предложение из слов, с которыми мы отгадали в упражнениях 34 и 35.",
+"",
+"Brill is a good friend. Брилл хороший друг."
+],
+"answer": "Составим предложение: Brill is a good friend."
+}
+]
+},
+{
+"number": "1-s14",
+"num": "1",
+"page": 14,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131592,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вспомнить имена ребят и подписать их.",
+"а. I'm Brill.\nb. I'm Alice.\nc. I'm Denzil.\nd. I'm Bertie."
+],
+"answer": "а. I'm Brill.\nb. I'm Alice.\nc. I'm Denzil.\nd. I'm Bertie."
+}
+]
+},
+{
+"number": "2-s15",
+"num": "2",
+"page": 15,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131593,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать слова к картинкам и вписать их.",
+"Goodbye! — До свидания!\nBye! — Пока!\nHello! — Привет!\nHi! — Привет!",
+"2. Bye! Bye!\n3. Goodbye! Goodbye!\n4. Hello! Hi!"
+],
+"answer": "2. Bye! Bye!\n3. Goodbye! Goodbye!\n4. Hello! Hi!"
+}
+]
+},
+{
+"number": "3-s15",
+"num": "3",
+"page": 15,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131594,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать предложения 1–5 и подобрать к ним рисунки a–d.",
+"I'm Alice. Я Элис.",
+"2. I'm Bertie. Я Берти.\n3. I'm Denzil. Я Дензил.\n4. I'm Brill. Я Брилл.\n5. I'm a pirate. Я пират.",
+"2. I'm Bertie. — e.\n3. I'm Denzil. — a.\n4. I'm Brill. — b.\n5. I'm a pirate. — c."
+],
+"answer": "2. I'm Bertie. — e.\n3. I'm Denzil. — a.\n4. I'm Brill. — b.\n5. I'm a pirate. — c."
+}
+]
+},
+{
+"number": "4-s16",
+"num": "4",
+"page": 16,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131595,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соединить линиями одинаковые предложения.",
+"",
+"— b.\n— d.\n— a.\n— e.\n— f.\n— c."
+],
+"answer": "— b.\n— d.\n— a.\n— e.\n— f.\n— c."
+}
+]
+},
+{
+"number": "5-s16",
+"num": "5",
+"page": 16,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131596,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно обвести подходщие реплики.",
+"— Как тебя зовут?\n— Меня зовут Брилл. / Я Дензил.\n— Я Берти. / Меня зовут Элис.\n— Я Элис. / Я Дензил.\n— Я Берти. / Меня зовут Брилл.",
+"My name's Alice.\nI'm Denzil.\nI'm Bertie."
+],
+"answer": "My name's Alice.\nI'm Denzil.\nI'm Bertie."
+}
+]
+},
+{
+"number": "6-s16",
+"num": "6",
+"page": 16,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131597,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать предложения по примеру.",
+"Я Элис.\nЯ Брилл.\nЯ Берти.\nЯ Дензил.",
+"",
+"2. I am Brill.\n3. I am Bertie.\n4. I am Denzil."
+],
+"answer": "2. I am Brill.\n3. I am Bertie.\n4. I am Denzil."
+}
+]
+},
+{
+"number": "7-s17",
+"num": "7",
+"page": 17,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131598,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать слова к картинкам и дополнить предложения.",
+"WORDLIST\nhouse — дом\nkey — ключ\ncomputer — компьютер\nfish — рыба\ngoat — коза\nmountain — гора\ntiger — тигр\npirate — пират\nstar — звезда",
+"House. \nGoat.\nTiger.\nComputer.\nBoat.\nFish.\nMountain.\nKey.\nStar. \nPirate."
+],
+"answer": "House.\nGoat.\nTiger.\nComputer.\nBoat.\nFish.\nMountain.\nKey.\nStar.\nPirate."
+}
+]
+},
+{
+"number": "8-s18",
+"num": "8",
+"page": 18,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131599,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно нарисовать друзей, написать приветствия и записать их имена.",
+"— Привет! Меня зовут Роберт.",
+"Hello — здравствуйте, привет.\nHi — привет.",
+"Hello! My name is Sasha.\nHi! My name is Masha.\nHello! My name is Dasha."
+],
+"answer": "Hello! My name is Sasha.\nHi! My name is Masha.\nHello! My name is Dasha."
+}
+]
+},
+{
+"number": "9-s18",
+"num": "9",
+"page": 18,
+"chapter": "Раздел 2. Hello!",
+"skyId": 131600,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить предложения, используя данные нам слова.",
+"Повествовательное — Подлежащее + сказуемое + второстепенные члены.\nI am Alice.\nВопросительное — Вопросительное слово + вспомогательный глагол + подлежащее + сказуемое + второстепенные члены.\nWhat is your name?",
+"Hello. I'm Brill. What's your name?\nHello. I'm Alice."
+],
+"answer": "Hello. I'm Brill. What's your name?\nHello. I'm Alice."
+}
+]
+},
+{
+"number": "1-s19",
+"num": "1",
+"page": 19,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131601,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соотнести предложения с картинками.",
+"Нам необходимо рядом с предложением в окошко записать букву, под которой находится картинка с этим персонажем. \n Это Берти — картинка b. \nЭто Нора — картинка a.\nЭто Дэнзил — картинка d.\nЭто Элис — картинка c.",
+"a — This is Nora.\nb — This is Bertie.\nc — This is Alice.\nd — This is Denzil."
+],
+"answer": "Нам необходимо рядом с предложением в окошко записать букву, под которой находится картинка с этим персонажем. \nЭто Берти — картинка b.\nЭто Нора — картинка a.\nЭто Дэнзил — картинка d.\nЭто Элис — картинка c.\nНад картинками в окошко перепишем предложение, в котором называем кто это:\na — This is Nora.\nb — This is Bertie.\nc — This is Alice.\nd — This is Denzil."
+}
+]
+},
+{
+"number": "2-s20",
+"num": "2",
+"page": 20,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131602,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинку и закончить предложения, дописав слово boy или girl.",
+"WORDLIST\na boy — мальчик\na girl — девочка\nI'm — я это",
+"На первой картинке изображена девочка, поэтому предложение:\nI'm a girl. Я девочка.",
+"На второй картинке изображена девочка, поэтому в предложение дописываем слово girl.\nI'm a girl. Я девочка.\nНа третьей картинке изображён мальчик, поэтому предложение дописываем слово boy.\nI'm a boy. Я мальчик."
+],
+"answer": "I'm a girl.\nI'm a boy."
+}
+]
+},
+{
+"number": "3-s20",
+"num": "3",
+"page": 20,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131603,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соединить линиями вопрос и ответ.",
+"Ты девочка?\nКак тебя зовут?\nПривет!\nДо свидания!",
+"a. Пока!\nb. Да.\nc. Я — Кэти.\nd. Привет!",
+"1 — b. (Ты девочка? — Да)\n2 — c. (Как тебя зовут? Я — Кэти)\n3 — d. (Привет! — Привет!)\n4 — a. (До свидания! — Пока!)\nПроведём соответствующии линии от вопроса к ответу."
+],
+"answer": "Проведём соответствующии линии от вопроса к ответу.\n1 — b. \n2 — c.\n3 — d.\n4 — a."
+}
+]
+},
+{
+"number": "4-s20",
+"num": "4",
+"page": 20,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131604,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать предложения согласно образцу: поздороваться, назвать имя и сказать кто это мальчик или девочка.",
+"WORDLIST\nhi — привет\nI'm — Я – это\na boy — мальчик\na girl — девочка",
+"Привет. Я — Берти. Я мальчик.",
+"Hi. I'm Nora. I'm a girl. Привет. Я — Нора. Я девочка.\nHi. I'm Denzil. I'm a boy. Привет. Я — Дэнзил. Я мальчик."
+],
+"answer": "1. Hi. I'm Nora. I'm a girl. \n2. Hi. I'm Denzil. I'm a boy."
+}
+]
+},
+{
+"number": "5-s21",
+"num": "5",
+"page": 21,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131605,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно по лабиринту и отвечать на вопрос. Правильный ответ отмечаем галочкой.",
+"",
+"1. Ты зебра? \nСмотрим на картинку, там зебра. Значит ставим галочку с ответом «Да» (Yes, I am)",
+"2. Ты рыбка? — Нет (No, I'm not.)\n3. Ты собака? — Да (Yes, I am.)\n4. Ты кролик? — Нет (No, I'm not.)\n5. Ты собака? — Нет (No, I'm not.)"
+],
+"answer": "2. No, I'm not.\n3. Yes, I am.\n4. No, I'm not.\n5. No, I'm not."
+}
+]
+},
+{
+"number": "6-s22",
+"num": "6",
+"page": 22,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131606,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно закончить предложения.",
+"WORDLIST\nHow are you? — как дела?\nfine — хорошо/в порядке\nthank you — спасибо",
+"How are you? \nI'm fine, thank you. Хорошо, спасибо."
+],
+"answer": "В пропуски нужно вписать: \n1. are; \n2. I'm."
+}
+]
+},
+{
+"number": "7-s22",
+"num": "7",
+"page": 22,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131607,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать цифру вместо слова.",
+"",
+"three — 3,\nzero — 0,\nsix — 6,\nfive — 5,\nfour — 4, \nten — 10,\ntwo — 2,\neight — 8,\neleven — 11, \none — 1,\ntwelve — 12,\nnine — 9,\nseven — 7."
+],
+"answer": "three — 3,\nzero — 0,\nsix — 6,\nfive — 5,\nfour — 4, \nten — 10,\ntwo — 2,\neight — 8,\neleven — 11, \none — 1,\ntwelve — 12,\nnine — 9,\nseven — 7."
+}
+]
+},
+{
+"number": "8-s22",
+"num": "8",
+"page": 22,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131608,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соединить две части листа. Для этого посчитаем количество точек на первой части (a – h) и проведём линию к цифре равной количеству точек. Затем на второй части листочка записать количество точек словом.",
+"",
+"От первой части листочка проводим линию ко второй части.\na. 4 — four\nb. 7 — seven\nc. 2 — two\nd. 8 — eight\ne. 11 — eleven\nf. 3 — three\ng. 12 — twelve\nh. 0 — zero"
+],
+"answer": "От первой части листочка проводим линию ко второй части.\na. 4 — four\nb. 7 — seven\nc. 2 — two\nd. 8 — eight\ne. 11 — eleven\nf. 3 — three\ng. 12 — twelve\nh. 0 — zero"
+}
+]
+},
+{
+"number": "9-s23",
+"num": "9",
+"page": 23,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131609,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить из слов в рамочках диалог.",
+"Первая рамочка:\nAl —Эл;\nname's — имя;\nhow are you? — Как дела?;\nhello —привет;\nmy — моё.\nВторая рамочка:\nAl —Эл;\nthank — спасибо;\nI'm fine — я в порядке/всё хорошо;\nhello — привет;\nyou — ты.",
+"A: Hello, my name's Al. How are you?\nB: Hello, Al. I'm fine, thank you.\nА: Привет, меня зовут Эл. Как твои дела?\nБ: Привет, Эл. Все хорошо, спасибо."
+],
+"answer": "A: Hello, my name's Al. How are you?\nB: Hello, Al. I'm fine, thank you."
+}
+]
+},
+{
+"number": "10-s23",
+"num": "10",
+"page": 23,
+"chapter": "Раздел 3. This Is Nora",
+"skyId": 131610,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно нарисовать себя и написать пару предложений о себе.",
+"Hello! Привет!\nMy name's Misha. Я — Миша.\nI'm a boy. Я мальчик.\nBye! Пока!",
+"Hello! Привет!\nMy name's Dasha. Я —Даша.\nI'm a girl. Я девочка.\nBye! Пока!"
+],
+"answer": "Для мальчиков:\nHello!\nMy name's Misha.\nI'm a boy.\nBye!\nДля девочек:\nHello!\nMy name's Dasha.\nI'm a girl.\nBye!"
+}
+]
+},
+{
+"number": "1-s24",
+"num": "1",
+"page": 24,
+"chapter": "Проверь себя! Разделы 2 и 3",
+"skyId": 131611,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно нарисовать картинки и записать слова.",
+"Apple — яблоко.\nComputer — компьютер.\nBoat — лодка\nFish — рыба.\nHouse — дом.\nStar — звезда.\nMountain — гора.\nOctopus — осьминог.",
+"Apple — яблоко.\nComputer — компьютер.\nBoat — лодка\nFish — рыба.\nHouse — дом.\nStar — звезда.\nMountain — гора.\nOctopus — осьминог."
+],
+"answer": "Apple — яблоко.\nComputer — компьютер.\nBoat — лодка\nFish — рыба.\nHouse — дом.\nStar — звезда.\nMountain — гора.\nOctopus — осьминог."
+}
+]
+},
+{
+"number": "2-s24",
+"num": "2",
+"page": 24,
+"chapter": "Проверь себя! Разделы 2 и 3",
+"skyId": 131612,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать буквы, следуя образцу.",
+"b, c, d\n B\n C\n D",
+"",
+"g, h i\n G\n H\n I\n j, k, l\n J\n K\n L\n m, n, o\n M\n N\n O"
+],
+"answer": "g, h i\n G\n H\n I\n j, k, l\n J\n K\n L\n m, n, o\n M\n N\n O"
+}
+]
+},
+{
+"number": "3-s25",
+"num": "3",
+"page": 25,
+"chapter": "Проверь себя! Разделы 2 и 3",
+"skyId": 131613,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать: I'm a boy (я мальчик) / I'm a girl (я девочка).",
+"Меня зовут Элис. Я девочка.\nЯ королева.\nМеня зовут Берти.\nЯ пират.\nМеня зовут Нора.",
+"2. I'm a girl.\n3. I'm a boy.\n4. I'm a boy.\n5. I'm a girl."
+],
+"answer": "2. I'm a girl.\n3. I'm a boy.\n4. I'm a boy.\n5. I'm a girl."
+}
+]
+},
+{
+"number": "4-s25",
+"num": "4",
+"page": 25,
+"chapter": "Проверь себя! Разделы 2 и 3",
+"skyId": 131614,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать числа словами и цифрами.",
+"One, two, three\n 1\n 2\n 3",
+"",
+"Six, seven, eight — 6, 7, 8.\nZero, one, two — 0, 1, 2.\nFour, five, six — 4, 5, 6.\nEight, nine, ten — 8, 9, 10.\nTwo, three, four — 2, 3, 4.\nFive, six, seven — 5, 6, 7.\nSeven, eight, nine — 7, 8, 9.\nThree, four, five — 3, 4, 5.\nTen, eleven, twelve — 10, 11, 12."
+],
+"answer": "Six, seven, eight — 6, 7, 8.\nZero, one, two — 0, 1, 2.\nFour, five, six — 4, 5, 6.\nEight, nine, ten — 8, 9, 10.\nTwo, three, four — 2, 3, 4.\nFive, six, seven — 5, 6, 7.\nSeven, eight, nine — 7, 8, 9.\nThree, four, five — 3, 4, 5.\nTen, eleven, twelve — 10, 11, 12."
+}
+]
+},
+{
+"number": "1-s26",
+"num": "1",
+"page": 26,
+"chapter": "Раздел 4. Come In",
+"skyId": 131615,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать предложения к картинкам и записать их.",
+"Что это? Это компьютер.\nЧто это? Это моя школа.\nЧто это? Это пират? Да.",
+"— b.\n— a.\n— c."
+],
+"answer": "— b.\n— a.\n— c."
+}
+]
+},
+{
+"number": "2-s27",
+"num": "2",
+"page": 27,
+"chapter": "Раздел 4. Come In",
+"skyId": 131616,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дописать вопросы и записать ответы.",
+"Что это? Это кровать?\nЧто это? Это _____.",
+"WORDLIST\nchair — стул\ndoor — дверь\ntable — стол\ndesk — пиьменный стол\nphone — телефон",
+"",
+"2. What's that? It's a table.\n3. What's that? It's a chair.\n4. What's this? It's a phone.\n5. What's this? It's a desk.\n6. What's that? It's a door."
+],
+"answer": "2. What's that? It's a table.\n3. What's that? It's a chair.\n4. What's this? It's a phone.\n5. What's this? It's a desk.\n6. What's that? It's a door."
+}
+]
+},
+{
+"number": "3-s28",
+"num": "3",
+"page": 28,
+"chapter": "Раздел 4. Come In",
+"skyId": 131617,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинки, обвести верное слово и вписать подходящий артикль a/an.",
+"Зонтик/осьминог.\nКнига/лодка.\nЯблоко/карандаш.\nЗонтик/слон.\nСлон/яблоко.\nКомпьютер/книга.",
+"2. Book.\n3. Apple.\n4. Umbrella.\n5. Elephant.\n6. Computer.",
+"",
+"2. A book.\n3. An apple.\n4. An umbrella.\n5. An elephant.\n6. A computer."
+],
+"answer": "2. A book.\n3. An apple.\n4. An umbrella.\n5. An elephant.\n6. A computer."
+}
+]
+},
+{
+"number": "4-s28",
+"num": "4",
+"page": 28,
+"chapter": "Раздел 4. Come In",
+"skyId": 131618,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинки и обвести подходящие предложения.",
+"Это не насекомое. / Это насекомое.\nЭто зонтик. / Это не зонтик.\nЭто кровать. / Это не кровать. \nЭто не стул. / Это стул.\nЭто яблоко. / Это не яблоко. \nЭто не дверь. / Это дверь.",
+"2. It isn't an umbrella.\n3. It isn't a bed.\n4. It's a chair.\n5. It is an apple.\n6. It isn't a door."
+],
+"answer": "2. It isn't an umbrella.\n3. It isn't a bed.\n4. It's a chair.\n5. It is an apple.\n6. It isn't a door."
+}
+]
+},
+{
+"number": "5-s29",
+"num": "5",
+"page": 29,
+"chapter": "Раздел 4. Come In",
+"skyId": 131619,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать вопросы и обвести нужные ответы.",
+"Это письменный стол? Да.",
+"",
+"2. Is it a chair? Это стул?\n3. Is it a school? Это школа?\n4. Is it a computer? Это компьютер?\n5. Is it an apple? Это яблоко?\n6. Is it a phone? Это телефон?",
+"2. Is it a chair? No, it isn't.\n3. Is it a school? Yes, it is.\n4. Is it a computer? No, it isn't.\n5. Is it an apple? Yes, it is.\n6. Is it a phone? Yes, it is."
+],
+"answer": "2. Is it a chair? No, it isn't.\n3. Is it a school? Yes, it is.\n4. Is it a computer? No, it isn't.\n5. Is it an apple? Yes, it is.\n6. Is it a phone? Yes, it is."
+}
+]
+},
+{
+"number": "6-s29",
+"num": "6",
+"page": 29,
+"chapter": "Раздел 4. Come In",
+"skyId": 131620,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дописать предложения.",
+"WORDLIST\nbed — кровать \ndesk — писименный стол \ncomputer — компьютер",
+"That's my bed. Это моя кровать.\nThat's my desk. Это мой стол.\nThat's my computer. Это мой компьютер."
+],
+"answer": "That's my bed. Это моя кровать.\nThat's my desk. Это мой стол.\nThat's my computer. Это мой компьютер."
+}
+]
+},
+{
+"number": "7-s30",
+"num": "7",
+"page": 30,
+"chapter": "Раздел 4. Come In",
+"skyId": 131621,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дорисовать картинки и подписать их.",
+"WORDLIST\nbed — кровать\ncomputer — компьютер\ntable — стол\ndoor — дверь\nchair — стул\nbook — книга",
+"Table.\nDoor.\nChair.\nBed.\nBook.\nComputer."
+],
+"answer": "Table.\nDoor.\nChair.\nBed.\nBook.\nComputer."
+}
+]
+},
+{
+"number": "8-s30",
+"num": "8",
+"page": 30,
+"chapter": "Раздел 4. Come In",
+"skyId": 131622,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать о себе и нарисовать твой дом.",
+"Привет. Меня зовут (твоё имя).\nЯ из (твой город).\nЭто мой дом.",
+"Hello. My name's Anna. \nI'm from Moscow.\nThis is my house."
+],
+"answer": "Hello. My name's Anna. \nI'm from Moscow.\nThis is my house."
+}
+]
+},
+{
+"number": "1-s31",
+"num": "1",
+"page": 31,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131623,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать предложения к картинкам и записать их.",
+"Сколько тебе лет, Осьминог? Мне восемь.\nСколько тебе лет, Рыбка? Мне четыре.\nСегодня мой день рождения! С днём рождения!",
+"— с.\n— a.\n— b."
+],
+"answer": "— с.\n— a.\n— b."
+}
+]
+},
+{
+"number": "2-s32",
+"num": "2",
+"page": 32,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131624,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать имена в нужные колонки.",
+"She\n He\nNora,\nAlice, \nBecky,\nKaty\nBrill,\nJason,\nDenzil, \nBertie"
+],
+"answer": "She\n He\nNora,\nAlice, \nBecky,\nKaty\nBrill,\nJason,\nDenzil, \nBertie"
+}
+]
+},
+{
+"number": "3-s32",
+"num": "3",
+"page": 32,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131625,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать предложения по примеру и подобрать к ним картинки.",
+"Ему восемь.\nЕй девять.\nЕму девять.\nЕй восемь.",
+"",
+"2. She's nine.\n3. He's nine.\n4. She's eight.",
+"— b.\n— d.\n— a.\n— c."
+],
+"answer": "2. She's nine — d.\n3. He's nine — a.\n4. She's eight — c."
+}
+]
+},
+{
+"number": "4-s32",
+"num": "4",
+"page": 32,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131626,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать вопросы и ответы.",
+"How old is he? Сколько ему лет?\nHe's nine. Ему девять.",
+"How old is she? Сколько ей лет?\nShe's eight. Ей восемь."
+],
+"answer": "How old is he? He's nine. \nHow old is she? She's eight."
+}
+]
+},
+{
+"number": "5-s33",
+"num": "5",
+"page": 33,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131627,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соотнести предложентя 1–8 и картинки a–h.",
+"Это карандаши.\nЭто книга.\nЭто линейки.\nЭто сумка.\nЭто ручки.\nЭто сумки.\nЭто линейка.\nЭто ручка.",
+"— b.\n— d.\n— a.\n— c.\n— f.\n— g.\n— h.\n— e."
+],
+"answer": "— b.\n— d.\n— a.\n— c.\n— f.\n— g.\n— h.\n— e."
+}
+]
+},
+{
+"number": "6-s33",
+"num": "6",
+"page": 33,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131628,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подписать картинки.",
+"Это карандаш.\nЭто карандаши.",
+"WORDLIST\npencil — карандаш\nruler — линейка\nbag — сумка",
+"",
+"3. These are rulers.\n4. This is a ruler.\n5. This is a bag.\n6. These are bags."
+],
+"answer": "3. These are rulers.\n4. This is a ruler.\n5. This is a bag.\n6. These are bags."
+}
+]
+},
+{
+"number": "7-s34",
+"num": "7",
+"page": 34,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131629,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно обвести слова и раскрасить картинки.",
+"WORDLIST\nrubber — ластик\nruler — линейка\npencil — карандаш\npen — ручка\nbook — книга",
+"Это красный ластик.\nЭто жёлтый карандаш/ручка.\nЭто синяя ручка/книга.\nЭто зелёная линейка/ластик.",
+"2. Pencil.\n3. Book.\n4. Ruler."
+],
+"answer": "2. Pencil.\n3. Book.\n4. Ruler."
+}
+]
+},
+{
+"number": "8-s34",
+"num": "8",
+"page": 34,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131630,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно раскрасить картинку.",
+"",
+"Зелёный.\nКрасный.\nЖёлтый.\nСиний."
+],
+"answer": "Раскрасим картинку."
+}
+]
+},
+{
+"number": "9-s34",
+"num": "9",
+"page": 34,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131631,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и раскрасить картинки.",
+"",
+"Это красные ручки.\nЭто жёлтый карандаш.\nЭто зелёная книга."
+],
+"answer": "Раскрасим картинки."
+}
+]
+},
+{
+"number": "10-s35",
+"num": "10",
+"page": 35,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131632,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дорисовать картинки и подписать их.",
+"WORDLIST\nrubber — ластик\nruler — линейка\npencil — карандаш\npen — ручка\nbook — книга\ndesk — письменный стол\nbag — сумка",
+"Rubber.\nPencil.\nTable.\nRuler.\nBag.\nPen."
+],
+"answer": "Rubber.\nPencil.\nTable.\nRuler.\nBag.\nPen."
+}
+]
+},
+{
+"number": "11-s35",
+"num": "11",
+"page": 35,
+"chapter": "Раздел 5. Happy Birthday",
+"skyId": 131633,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать, какого цвета твой портфель, затем нарисовать его и раскрасить.",
+"",
+"This is my school bag. It is yellow and red. Это мой портфель. Он жёлтый и красный."
+],
+"answer": "This is my school bag. It is yellow and red."
+}
+]
+},
+{
+"number": "1-s36",
+"num": "1",
+"page": 36,
+"chapter": "Проверь себя! Разделы 4 и 5",
+"skyId": 131634,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать предложение и нарисовать к нему картинку.",
+"This is a chair. Это стул.",
+"This is a house. Это дом.",
+"This is an umbrella. Это зонт.",
+"This is a phone. Это телефон.",
+"This is an apple. Это яблоко.",
+"This is an elephant. Это слон.",
+"This is a door. Это дверь.",
+"This is a desk. Это парта."
+],
+"answer": "This is a chair. (Рисуем стул.)\nThis is a house. (Рисуем дом.)\nThis is an umbrella. (Рисуем зонт.)\nThis is a phone. (Рисуем телефон.)\nThis is an apple. (Рисуем яблоко.)\nThis is an elephant. (Рисуем слона.)\nThis is a door. (Рисуем дверь.)\nThis is a desk. (Рисуем парту.)"
+}
+]
+},
+{
+"number": "2-s37",
+"num": "2",
+"page": 37,
+"chapter": "Проверь себя! Разделы 4 и 5",
+"skyId": 131635,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и вписать в словах пропущенные буквы, а предметы раскрасить указанным цветом.",
+"",
+"Книга зелёная.\nЛастик красный с синим.\nЛенейка красная.\nРучка жёлтая. \nРюкзак зелёный с жёлтым.\nКарандаш голубой.",
+"pen. Раскрасим ручку жёлтым.\npencil. Раскрасим карандаш голубым.\nruler. Раскрасим ленейку красным.\nbag. Раскрасим рюкзак зелёным и жёлтым.\nbook. Раскрасим книгу зелёным.\nrubber. Раскрасим ластик красным и синим."
+],
+"answer": "pen. Раскрасим ручку жёлтым.\npencil. Раскрасим карандаш голубым.\nruler. Раскрасим ленейку красным.\nbag. Раскрасим рюкзак зелёным и жёлтым.\nbook. Раскрасим книгу зелёным.\nrubber. Раскрасим ластик красным и синим."
+}
+]
+},
+{
+"number": "1-s38",
+"num": "1",
+"page": 38,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131636,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать к картинку к каждому предложению.",
+"WORDLIST\nwe — мы\nyour — твой\nfriend — друг\npirate — пират",
+"Мы твои друзья — картинка b.\nМы хорошие пираты — картинка a."
+],
+"answer": "1 — b.\n2 — a."
+}
+]
+},
+{
+"number": "2-s38",
+"num": "2",
+"page": 38,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131637,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать что изображено на картинках.",
+"Они звёзды.",
+"2. They're girls. Они девочки.\n3. They're boys. Они мальчики.\n4. They're pirates. Они пираты.\n5. They're parrots. Они попугаи."
+],
+"answer": "2. They're girls. \n3. They're boys.\n4. They're pirates.\n5. They're parrots."
+}
+]
+},
+{
+"number": "3-s39",
+"num": "3",
+"page": 39,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131638,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подписать картинки.",
+"",
+"Мы пираты.",
+"2. We are girls. Мы девочки.\n3. We are parrots.Мы попугаи.\n4. We are boys. Мы мальчики."
+],
+"answer": "2. We are girls. \n3. We are parrots.\n4. We are boys."
+}
+]
+},
+{
+"number": "4-s39",
+"num": "4",
+"page": 39,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131639,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать сокращенную форму глагола to be и соединить предложение с картинкой.",
+"WORDLIST\ndog — собака\ngoat — коза\ninsect — насекомое",
+"I am = I'm\nHe is =He's\nShe is = She's\nIt is = It's\nWe are = We're\nYou are = You're\nThey are = They're",
+"1. They're insects. Это насекомые. Картинка b.",
+"2. They're dogs. Это собаки. Картинка c.\n3. They're goats. Это козы. Картинка a."
+],
+"answer": "2. They're dogs. — соединяем с картинкой c.\n3. They're goats. — соединяем с картинкой a."
+}
+]
+},
+{
+"number": "5-s39",
+"num": "5",
+"page": 39,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131640,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать сокращённую форму и соединить с правильной строкой.",
+"They are = They're",
+"1 — b. (Cоединяем по принципу с какой буквы начинается слово, обозначающее предмет)\nЭто горы. \nThey're mountains.",
+"2. — c. They're stars. Это звёзды.\n3. — a. They're rabbits. Это кролики."
+],
+"answer": "2. — c. They're stars. \n3. — a. They're rabbits."
+}
+]
+},
+{
+"number": "6-s40",
+"num": "6",
+"page": 40,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131641,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить по смыслу фразу «Они...» (They are...) или «Они не...» (They are not...).",
+"WORDLIST\ninsect — насекомое\ntiger — тигр\nboat — лодка\nkey — ключ",
+"Переведём слово — это насекомое. Смотрим на картинку, там нарисованы яблоки значит вставляем «Они не...».\nПолучается предложение: Они не насекомые.",
+"2. They are boats. Это лодки.\n3. They are not tigers. Это не тигры.\n4. They are keys. Это ключи."
+],
+"answer": "2. They are.\n3. They are not.\n4. They are."
+}
+]
+},
+{
+"number": "7-s40",
+"num": "7",
+"page": 40,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131642,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно ответить на вопросы согласно картинкам.",
+"WORDLIST\nbag — рюкзак\ncomputer — компьютер\ndog — собака\nelephant — слон\ngoat — коза\nrabbit — кролик\ntiger — тигр",
+"Это компьютеры?\nНет. Это рюкзаки.",
+"2. Are they elephants? Это слоны? No, they aren't. Нет. They are rabbits. Это кролики.\n3. Are they dogs? Это собаки? No, they aren't. Нет. They are goats. Это козы.\n4. Are they tigers? Это тигры? No, they aren't. Нет. They are elephants. Это слоны."
+],
+"answer": "2. No, they aren't. They are rabbits.\n3. No, they aren't. They are goats. \n4. No, they aren't. They are elephants."
+}
+]
+},
+{
+"number": "8-s41",
+"num": "8",
+"page": 41,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131643,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно к каждой картинке подобрать предложение.",
+"WORDLIST\nLook! — смотри!\nlisten — слушать\nread — читать\nwrite — писать\nstand up — встать\nsit down — сесть\nopen the door — открыть дверь\nclose the door — закрыть дверь",
+"Stand up. Вставай.\nListen. Слушай.\nLook! Смотри!\nWrite. Пиши.\nOpen the door. Открой дверь.\nSit down. Сядь.\nRead. Читай.\nClose the door. Закрой дверь."
+],
+"answer": "Stand up. \nListen. \nLook! \nWrite. \nOpen the door. \nSit down. \nRead. \nClose the door."
+}
+]
+},
+{
+"number": "9-s42",
+"num": "9",
+"page": 42,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131644,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно раскрасить две картинки.",
+"",
+"Необходимо раскрасить рыбок согласно условным обозначениям. Каждая цифра соответствует определённому цвету:\nЖёлтый.\nОранжевый.\nРозовый.\nЧёрный.\nКоричневый.\nБелый.\nЗелёный.\nКрасный.\nГолубой."
+],
+"answer": "Необходимо раскрасить рыбок согласно условным обозначениям. Каждая цифра соответствует определённому цвету."
+}
+]
+},
+{
+"number": "10-s42",
+"num": "10",
+"page": 42,
+"chapter": "Раздел 6. We Are Pirates",
+"skyId": 131645,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно нарисовать животное и дописать предложения.",
+"",
+"Is this a rabbit? Это кролик?\nNo, it's a tiger. Нет, это тигр. \nIt's orange, black and white. Он оранжевый, черный и белый."
+],
+"answer": "Is this a rabbit? No, it's a tiger. It's orange, black and white."
+}
+]
+},
+{
+"number": "1-s43",
+"num": "1",
+"page": 43,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131646,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно назвать комнату, которая изображена на картинке.",
+"WORDLIST\nbathroom — ванная комната\nbedroom — спальня\nliving room — гостиная\nkitchen — кухня",
+"a. — 1. This is the bathroom. Это ванная комната.\nb. — 3. This is the living room. Это гостиная.\nc. — 2. This is the bedroom. Это спальня\nd. — 4. This is the kitchen. Это кухня."
+],
+"answer": "a. — 1. \nb. — 3. \nc. — 2. \nd. — 4."
+}
+]
+},
+{
+"number": "2-s44",
+"num": "2",
+"page": 44,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131647,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно раскрасить звёзды указанным цветом.",
+"",
+"Звёзды в коробке раскрасить оранжевым.\nЗвёзды на столе жёлтым. Звезду под столом розовым.\nЗвезду на стуле голубым. Звёзды около стула зелёным."
+],
+"answer": "Звёзды в коробке раскрасить оранжевым.\nЗвёзды на столе жёлтым. Звезду под столом розовым.\nЗвезду на стуле голубым. Звёзды около стула зелёным."
+}
+]
+},
+{
+"number": "3-s44",
+"num": "3",
+"page": 44,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131648,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить is или are.",
+"",
+"is — употребляется с единственным числом.\nare — употребляется с множественным числом.",
+"2. Где находится (is) голубая звезда?\n3. Где находятся (are) оранжевые звёзды?\n4. Где находятся (are) жёлтые звёзды?\n5. Где находятся (are) зелёные звёзды?"
+],
+"answer": "2. is.\n3. are.\n4. are.\n5. are."
+}
+]
+},
+{
+"number": "4-s44",
+"num": "4",
+"page": 44,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131649,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вставить предлоги.",
+"",
+"Жёлтые звёзды на (on) столе.\nОранжевые звёзды в (in) коробке.\nРозовая звезда под (under) столом.\nЗелёные звёзды рядом со (near to) стулом.\nГолубая звезда за (behind) стулом."
+],
+"answer": "2. in.\n3. under.\n4. near to.\n5. behind."
+}
+]
+},
+{
+"number": "5-s45",
+"num": "5",
+"page": 45,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131650,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать где какой член семьи находится.",
+"WORDLIST\ngrandmother — бабушка\ngrandfather — дедушка\nmum — мама\ndad — папа\nbrother — брат\nsister — сестра",
+"Grandmother, dad, mum, grandfather, sister, Eddie, brother.\nБабушка, папа, мама, дедушка, сестра, Эдди, брат."
+],
+"answer": "Grandmother, dad, mum, grandfather, sister, Eddie, brother."
+}
+]
+},
+{
+"number": "6-s45",
+"num": "6",
+"page": 45,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131651,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно нарисовать свою семью и подписать всех членов семьи.",
+"WORDLIST\ngrandmother — бабушка\ngrandfather — дедушка\nmum — мама\ndad — папа\nbrother — брат\nsister — сестра",
+"",
+"Mum, I (Misha), sister, dad.\nМама, я (Миша), сестра, папа."
+],
+"answer": "Mum, I (Misha), sister, dad."
+}
+]
+},
+{
+"number": "7-s46",
+"num": "7",
+"page": 46,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131652,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложение и вставить his/her.",
+"",
+"Меня зовут Алекс.\nЕго (His) имя Алекс.",
+"2. Меня зовут Нина. Её (Her) имя Нина.\n3. Меня зовут Анна. Её (Her) имя Анна.\n4. Меня зовут Билл. Его (His) имя Билл."
+],
+"answer": "2. Her.\n3. Her.\n4. His."
+}
+]
+},
+{
+"number": "8-s46",
+"num": "8",
+"page": 46,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131653,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно соединить предложения с картинками.",
+"",
+"1 — a. Это моя собака.\n2 — c. Это твой карандаш.\n3 — b. Это мой карандаш.\n4 — d. Это твоя собака."
+],
+"answer": "1 — a.\n2 — c.\n3 — b.\n4 — d."
+}
+]
+},
+{
+"number": "9-s47",
+"num": "9",
+"page": 47,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131654,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинки и назвать что это за комната.",
+"WORDLIST\nbathroom — ванная комната\nbedroom — спальня\nliving room — гостиная\nkitchen — кухня",
+"Bedroom. Спальня.\nKitchen. Кухня.\nBathroom. Ванная комната.\nLiving room. Гостиная."
+],
+"answer": "Bedroom.\nKitchen.\nBathroom.\nLiving room."
+}
+]
+},
+{
+"number": "10-s47",
+"num": "10",
+"page": 47,
+"chapter": "Раздел 7. Where Are the Stars?",
+"skyId": 131655,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно ответить на вопросы.",
+"WORDLIST\ndog — собака\nzebra — зебра\nrabbit — кролик\ntiger — тигр\ngoat — коза\narmchair — кресло\nbed — кровать\nbathroom — ванная комната\nbedroom — спальня\nliving room — гостиная\nkitchen — кухня",
+"Где собаки? Они в спальне (in the bedroom).\nГде зебра? Она в гостиной (in the living room).\nГде кролики. Они в ванной комнате (in the bathroom).\nГде тигр? Он на кухне (in the kitchen).\nГде козы? Они в ванной комнате (in the bathroom).\nГде кресло? Оно в гостиной (in the living room).\nГде кровать? Она в спальне (in the bedroom)."
+],
+"answer": "2. in the living room.\n3. in the bathroom.\n4. in the kitchen.\n5. in the bathroom.\n6. in the living room.\n7. in the bedroom."
+}
+]
+},
+{
+"number": "1-s48",
+"num": "1",
+"page": 48,
+"chapter": "Проверь себя! Разделы 6 и 7",
+"skyId": 131656,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подберём картинки к предложениям и впишем формы глагола to be.",
+"WORDLIST\ngirl — девочка\nname — имя\nhouse — дом\nfriend — друг\npirate — пират\nboy — мальчик\nbook — книга\nblack — чёрный\nfish — рыба",
+"Я — девочка.\nМоё имя _____ Кэти.\nЭто _____ моим домом.\nЭти _____ моими друзьями.\nМы _____ пиратами.\nОни _____ мальчиками.\nМне _____ девять.\nЭто _____ книгой.\nОни _____ собаками.\nЭто _____ чёрной рыбой.",
+"",
+"Am.\nIs.\nIs.\nAre.\nAre.\nAre.\nAm.\nIs.\nAre.\nIs.",
+"Я — девочка.\nМоё имя это Кэти.\nЭто является моим домом.\nЭти являются моими друзьями.\nМы являемся пиратами.\nОни являются мальчиками.\nМне — девять.\nЭто является книгой.\nОни являются собаками.\nЭто является чёрной рыбой.",
+"H.\nE.\nG.\nC.\nI.\nD.\nB.\nJ.\nF.\nA."
+],
+"answer": "Am. H.\nIs. E.\nIs. G.\nAre. C.\nAre. I.\nAre. D.\nAm. B.\nIs. J.\nAre. F.\nIs. A."
+}
+]
+},
+{
+"number": "2-s49",
+"num": "2",
+"page": 49,
+"chapter": "Проверь себя! Разделы 6 и 7",
+"skyId": 131657,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём спрятанные слова и обведём их.",
+"WORDLIST\nmum — мама\nsister — сестра\nbedroom — спальня\ndad — папа\nliving room — гостиная\ngrandmother — бабушка\nkitchen — кухня\ngrandfather — дедушка\nbrother — брат\nbathroom — ванная"
+],
+"answer": "Выделенные слова."
+}
+]
+},
+{
+"number": "3-s49",
+"num": "3",
+"page": 49,
+"chapter": "Проверь себя! Разделы 6 и 7",
+"skyId": 131658,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и обведём лишнее слово в каждой строке.",
+"WORDLIST\nbathroom — ванная комната\nbedroom — спальня\nruler — линейка\nkitchen — кухня\nbook — книга\nliving room — гостиная\nin — в\non — на\nbag — сумка\nbehind — позади\nmum — мама\nsister — сестра\nrubber — стиралка, резинка\ngrey — серый\ndad — отец\nbrown — коричневый\nhis — его\nunder — под\nnext to — рядом\nread — читать\nwrite — писать\nbrother — брат",
+"1.\n Ванная\n Спальня\n Линейка\n 2.\n Кухня\n Книга\n Гостиная\n 3.\n В\n На\n Сумка\n 4.\n Позади\n Мама\n Сестра\n 5.\n Линейка\n Стиралка\n Ванная\n 6.\n Серый\n Папа\n Коричневый\n 7.\n Его\n Под\n Рядом\n 8.\n Читать\n Писать\n Брат",
+"Ruler. — 2 слова обозначают виды комнат, лишнее — канцелярию.\nBook. — 2 слова обозначают виды комнат, лишнее — предмет.\nBag. — 2 слова обозначают предлоги, лишнее — предмет.\nBehind. — 2 слова обозначают членов семьи, лишнее — предлог.\nBathroom. — 2 слова обозначают канцелярию, лишнее — название комнаты.\nDad. — 2 слова обозначают цвета, лишнее — члена семьи.\nHis. — 2 слова обозначают предлоги, лишнее — притяжательное местоимение.\nBrother. — 2 слова обозначают глаголы, лишнее — существительное."
+],
+"answer": "Ruler.\nBook.\nBag.\nBehind.\nBathroom.\nDad.\nHis.\nBrother."
+}
+]
+},
+{
+"number": "1-s50",
+"num": "1",
+"page": 50,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131659,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно соотнести предложения (1—4) и картинки (a—d).",
+"WORDLIST\nafraid — испуганный\ntouch — трогать\nkey — ключ\nmust — должен\nghost — привидение",
+"Я боюсь привидений.\nУходи! Ты не смеешь трогать меня!\nО нет! Тут нет ключа!\nМы должны пойти и посмотреть.",
+"A.\nD.\nC.\nB."
+],
+"answer": "A.\nD.\nC.\nB."
+}
+]
+},
+{
+"number": "2-s51",
+"num": "2",
+"page": 51,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131660,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно заполнить пропуски в предложениях словами must или mustn't.",
+"WORDLIST\ntree — дерево\nclimb — карабкаться/взбираться\ntouch — трогать\nlion — лев\nquiet — тихий\ngo to bed — ложиться спать",
+"",
+"Вам _____ карабкаться на дерево.\nВы _____ ложиться спать.\nВы _____ быть очень тихими.\nВам _____ трогать льва.",
+"Вам нельзя (mustn't) карабкаться на дерево.\nВы должны (must) ложиться спать.\nВы должны (must) быть очень тихими.\nВам нельзя (mustn't) трогать льва."
+],
+"answer": "Mustn't.\nMust.\nMust.\nMustn't."
+}
+]
+},
+{
+"number": "3-s51",
+"num": "3",
+"page": 51,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131661,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дописать правила поведения в музее, используя слова must или mustn't.",
+"WORDLIST\nWords (слова)\npainting — картина\nguide — гид\nlisten — слушать\nquiet — тихий\nPhrase (фразы)\ntake photos — делать фотографии",
+"",
+"Трогать картины.\nСоблюдать тишину.\nДелать фотографии.\nЕсть или пить.\nСлушать гида.",
+"Образец: Нельзя трогать картины.\nПравила\nYou must be quiet. Вы должны соблюдать тишину.\nYou mustn't take photos. Нельзя делать фотографии.\nYou mustn't eat or drink. Нельзя есть или пить.\nYou must listen to the guide. Вы должны слушать гида."
+],
+"answer": "You must be quiet.\nYou mustn't take photos.\nYou mustn't eat or drink.\nYou must listen to the guide."
+}
+]
+},
+{
+"number": "4-s52",
+"num": "4",
+"page": 52,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131662,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно дописать пропущенные буквы в словах.",
+"WORDLIST\nbetween — между\nabove — над/выше\nin the middle — в середине",
+"In the middle.\nBetween.\nAbove."
+],
+"answer": "In the middle.\nBetween.\nAbove."
+}
+]
+},
+{
+"number": "5-s52",
+"num": "5",
+"page": 52,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131663,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно соотнести предлоги (1—5) и картинки (a—e).",
+"WORDLIST\nunder — под\nabove — над\nin the middle — в середине / в центре\nbehind — за\nbetween — между",
+"D.\nA.\nE.\nC.\nB."
+],
+"answer": "D.\nA.\nE.\nC.\nB."
+}
+]
+},
+{
+"number": "6-s53",
+"num": "6",
+"page": 53,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131664,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно описать комнату, используя указанные предлоги.",
+"WORDLIST (предлоги)\nin the middle — в середине / в центре\nabove — над\nbetween — между\nWORDLIST 2 (предметы)\nsofa — диван\nbookcase — книжный шкаф\npicture — картина\nphoto — фотография\nshelves — полки\ntable — стол\narmchair — кресло\ncarpet — ковёр\nwardrobe — шкаф\nflower pot — цветочный горшок\nbed — кровать",
+"Кресло между книжным шкафом и цветочным горшком.",
+"The table is in the middle of the carpet. Стол в центре ковра.\nThe picture is above the sofa. Картина над диваном.\nThe carpet is in the middle of the room. Ковёр в центре комнаты.\nThe sofa is between the wardrobe and the flower pot. Диван между шкафом и цветочным горшком.\nThe photo is above the shelves. Фотография над полками."
+],
+"answer": "The table is in the middle of the carpet.\nThe picture is above the sofa.\nThe carpet is in the middle of the room.\nThe sofa is between the wardrobe and the flower pot.\nThe photo is above the shelves."
+}
+]
+},
+{
+"number": "7-s54",
+"num": "7",
+"page": 54,
+"chapter": "Раздел 8. We Must Find It!",
+"skyId": 131665,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно дописать, что должны и не должны делать люди разных профессий, используя фразы из упражнения.",
+"WORDLIST\nknow a lot — знать много\nlove children — любить детей\nbe late for school — опаздывать в школу\nbe careful on the road — быть осторожным на дороге\nhave a driving licence — иметь водительское удостоверение\nbreak traffic rules — нарушать правила дорожного движения",
+"",
+"Картинка 1\nЗдравствуйте! Я Джейн. Я учитель. Чтобы быть хорошим учителем, вы должны _____, вы _____, вам нельзя _____.\nКартинка 2\nЗдравствуйте! Я Джек. Я водитель. Чтобы быть хорошим водителем, вы _____, вы _____, но вы _____.",
+"To be a good teacher, you must know a lot, you must love children, but you mustn't be late for school.\nЧтобы быть хорошим учителем, надо много знать, надо любить детей, но нельзя опаздывать в школу.\nTo be a good driver, you must have a driving licence, you must be careful on the road, but you mustn't break traffic rules.\nЧтобы быть хорошим водителем, вы должны иметь водительские права, вы должны быть осторожны на дороге, но нельзя нарушать правила дорожного движения."
+],
+"answer": "To be a good teacher, you must know a lot, you must love children, but you mustn't be late for school.\nTo be a good driver, you must have a driving licence, you must be careful on the road, but you mustn't break traffic rules."
+}
+]
+},
+{
+"number": "1-s55",
+"num": "1",
+"page": 55,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131666,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подберём к картинкам предложения и напишем их.",
+"WORDLIST\nmay — можно, разрешается\nonly — только\nice cream — мороженое\nwould — был бы\npeach — персик, персиковый",
+"Можем ли мы идти сейчас?\nМожно мне только одно, одно мороженое?\nТы хотел бы мороженое?\nЯ бы хотел персиковое мороженое.",
+"A.\nD.\nB.\nC."
+],
+"answer": "A.\nD.\nB.\nC."
+}
+]
+},
+{
+"number": "2-s56",
+"num": "2",
+"page": 56,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131667,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соеденим линиями.",
+"WORDLIST\nbanana — банан\nonion — лук\nice cream — мороженое\nlemon — лимон",
+"Она бы хотела банан.\nОна бы не хотела лук.\nОн бы хотел мороженое.\nОн не хотел бы лимон.",
+"C.\nD.\nA.\nB."
+],
+"answer": "C.\nD.\nA.\nB."
+}
+]
+},
+{
+"number": "3-s56",
+"num": "3",
+"page": 56,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131668,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем вопросы и ответы, воспользовавшись образцом.",
+"WORDLIST\ncheese — сыр\njam — джем, варенье\njelly — желе\ntomato — помидор\npotato — картофель",
+"A: Хотел бы ты сыр?\nБ: Да, хотел бы.",
+"",
+"1.\nA: Would you like jam? А: Хотите варенья?\nB: No, I wouldn't. Б: Нет.\n2.\nA: Would you like jelly? А: Хотите желе?\nB: Yes, I would. Б: Да.\n3.\nA: Would you like tomatoes? А: Хотите помидоры?\nB: No, I wouldn't. Б: Нет.\n4.\nA: Would you like potatoes? А: Хотите картофель?\nB: Yes, I would. Б: Да."
+],
+"answer": "1.\nA: Would you like jam?\nB: No, I wouldn't.\n2.\nA: Would you like jelly?\nB: Yes, I would.\n3.\nA: Would you like tomatoes?\nB: No, I wouldn't.\n4.\nA: Would you like potatoes?\nB: Yes, I would."
+}
+]
+},
+{
+"number": "4-s57",
+"num": "4",
+"page": 57,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131669,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и напишем вопросы.",
+"WORDLIST\nopen — открывать\nwindow — окно\nlisten — слушать\nradio — радио\ntake — брать\npen — ручка\nclean — чистить, мыть\nblackboard — доска",
+"",
+"May I open the window? Могу я открыть окно?\nMay I clean the blackboard? Могу я почистить классную доску?\nMay I take the pen? Могу я взять ручку?\nMay I listen to the radio? Могу я послушать радио?"
+],
+"answer": "May I open the window?\nMay I clean the blackboard?\nMay I take the pen?\nMay I listen to the radio?"
+}
+]
+},
+{
+"number": "5-s57",
+"num": "5",
+"page": 57,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131670,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем ответы на вопросы.",
+"WORDLIST\nsandwich — бутерброд\ndoor — дверь\nopen — открывать\neat — есть\ngo home — идти домой\nnow — сейчас\nred — красный\nwrite — писать\nclean — чистый\nboard — доска",
+"Можно мне сьесть бутерброд?\nМожно мне открыть дверь?\nМожно мне пойти домой сейчас?\nМожно мне писать красным?\nМожно мне помыть доску?",
+"",
+"No, you may not. Нет.\nYes, you may. Да.\nYes, you may. Да.\nNo, you may not. Нет.\nYes, you may. Да."
+],
+"answer": "No, you may not.\nYes, you may.\nYes, you may.\nNo, you may not.\nYes, you may."
+}
+]
+},
+{
+"number": "6-s58",
+"num": "6",
+"page": 58,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131671,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Изучим таблицу. Напишем предложения. Используем конструкцию «would like / wouldn't like».",
+"WORDLIST\njelly — желе\npeach — персик, персиковый\npear — груша, грушевый\nstrawberry — клубника, клубничный",
+"",
+"Катя не хотела бы персиковое желе.",
+"Kate wouldn't like peach jelly. Кейт не хотела бы персиковое желе.\nKate would like pear jelly. Кейт хотела бы грушевое желе.\nKate wouldn't like strawberry jelly. Кейт не хотела бы клубничное желе.\nKevin would like peach jelly. Кевин хотел бы персиковое желе.\nKevin wouldn't like pear jelly. Кевин не хотел бы грушевое желе.\nKevin wouldn't like strawberry jelly. Кевин не хотел бы клубничное желе."
+],
+"answer": "Kate wouldn't like peach jelly.\nKate would like pear jelly.\nKate wouldn't like strawberry jelly.\nKevin would like peach jelly.\nKevin wouldn't like pear jelly.\nKevin wouldn't like strawberry jelly."
+}
+]
+},
+{
+"number": "7-s58",
+"num": "7",
+"page": 58,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131672,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и обведём названия шести фруктов. Напишем их.",
+"b\n (a)\n n\n a\n n\n a\n c\n (p)\n e\n a\n c\n h\n g\n (p)\n e\n a\n r\n y\n a\n (l)\n e\n m\n o\n n\n b\n (e)\n f\n d\n k\n s\n o\n (r)\n a\n n\n g\n e",
+"Banana — банан.\nPeach — персик.\nPear — груша.\nLemon — лимон.\nOrange — апельсин.\nApple — яблоко."
+],
+"answer": "Banana.\nPeach.\nPear.\nLemon.\nOrange.\nApple."
+}
+]
+},
+{
+"number": "8-s59",
+"num": "8",
+"page": 59,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131673,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Выберем и напишем слова, распределим на две группы.",
+"WORDLIST\npupil — ученик\ntraffic light — светофор\nboard — доска\nzebra crossing — пешеходный переход\nchalk — мел\nstreet — улица\nclassroom — классная комната\ntraffic — дорожное движение\ntraffic policeman — дорожный инспектор\nteacher — учитель",
+"Traffic policeman: street, traffic light, zebra crossing, traffic.\nTeacher: pupils, board, chalk, classroom."
+],
+"answer": "Traffic policeman: street, traffic light, zebra crossing, traffic.\nTeacher: pupils, board, chalk, classroom."
+}
+]
+},
+{
+"number": "9-s59",
+"num": "9",
+"page": 59,
+"chapter": "Раздел 9. What Would You Like?",
+"skyId": 131674,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соеденим линиями и раскрасим светофор.",
+"Красный свет.\n Стоп!\n Жёлтый свет.\nДа, ты можешь.\nНет, ты не можешь.\n Подожди!\n Зелёный свет.\n Иди!",
+"The light is red. No, you may not. (Stop! — red.)\nThe light is yellow. No, you may not. (Wait! — yellow.)\nThe light is green. Yes, you may. (Go! — green.)"
+],
+"answer": "Stop! — red.\nWait! — yellow.\nGo! — green."
+}
+]
+},
+{
+"number": "1-s60",
+"num": "1",
+"page": 60,
+"chapter": "Проверь себя! Разделы 8 и 9",
+"skyId": 131675,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно выбрать и обвести подходящие варианты.",
+"Нельзя фотографировать в музее.",
+"",
+"2. Ты должен заботиться о своём питомце.\n3. Нельзя разговаривать в библиотеке.\n4. Нельзя опаздывать в школу.\n5. Нельзя есть бутербродв классе.\n6. Ты должен выбрасывать свой мусор в мусорное ведро.",
+"Mustn't.\nMust.\nMustn't.\nMustn't.\nMustn't.\nMust."
+],
+"answer": "Mustn't.\nMust.\nMustn't.\nMustn't.\nMustn't.\nMust."
+}
+]
+},
+{
+"number": "2-s60",
+"num": "2",
+"page": 60,
+"chapter": "Проверь себя! Разделы 8 и 9",
+"skyId": 131676,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать предлоги в предложения и соотнести их с картинками.",
+"Above — над.\nBetween — между.\nUnder — под.\nIn the middle — в середине.",
+"Ключ посреди (in the middle) стены. (Picture b.)\nКлюч между (between) фотографий. (Picture d.)\nКлюч над (above) фото. (Picture a.)\nКлюч под (under) фото. (Picture c.)"
+],
+"answer": "In the middle (b).\nBetween (d).\nAbove (a).\nUnder (c)."
+}
+]
+},
+{
+"number": "3-s61",
+"num": "3",
+"page": 61,
+"chapter": "Проверь себя! Разделы 8 и 9",
+"skyId": 131677,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить и записать предложения.",
+"Он не хотел бы лук.",
+"",
+"2. Would you like a pear ice cream? Не хотите ли грушевого мороженого?\n3. I would like strawberry jelly. Я бы хотел клубничного желе."
+],
+"answer": "2. Would you like a pear ice cream?\n3. I would like strawberry jelly."
+}
+]
+},
+{
+"number": "4-s61",
+"num": "4",
+"page": 61,
+"chapter": "Проверь себя! Разделы 8 и 9",
+"skyId": 131678,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать вопросы и ответы по образцу.",
+"— Можно мне помыть доску?\n— Да, можно.",
+"",
+"2. May I cross the street? No, you may not.\n3. May I take your pen? Yes, you may.\n4. May I eat the sandwich? No, you may not.",
+"2. Могу я перейти улицу? Нет.\n3. Могу я взять твою ручку? Да.\n4. Могу я съесть бутерброд? Нет."
+],
+"answer": "2. May I cross the street? No, you may not.\n3. May I take your pen? Yes, you may.\n4. May I eat the sandwich? No, you may not."
+}
+]
+},
+{
+"number": "1-s62",
+"num": "1",
+"page": 62,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131679,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать предложеия к картинкам и записать их.",
+"Птицы умеют летать!\nЯ не вижу пиратов!\nМы можем летать по небу!\nЯ вижу мальчика!",
+"— b.\n— a.\n— d.\n— c."
+],
+"answer": "— b.\n— a.\n— d.\n— c."
+}
+]
+},
+{
+"number": "2-s63",
+"num": "2",
+"page": 63,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131680,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать слова в картинкам и записать их.",
+"WORDLIST\nrun — бегать \nswim — плавать \ndance — танцевать\njump — прыгать \nplay volleyball — играть в волейбол\nride a bike — кататься на велосипеде",
+"Dance.\nRide a bike.\nRun.\nPlay volleyball.\nJump.\nSwim."
+],
+"answer": "Dance.\nRide a bike.\nRun.\nPlay volleyball.\nJump.\nSwim."
+}
+]
+},
+{
+"number": "3-s63",
+"num": "3",
+"page": 63,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131681,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить вопросы, задать их другу и записать его ответы.",
+"WORDLIST\nrun — бегать \nswim — плавать \ndance — танцевать\njump — прыгать \nplay volleyball — играть в волейбол\nride a bike — кататься на велосипеде",
+"",
+"Can you dance?\nCan you swim?\nCan you ride a bike?\nCan you play volleyball?",
+"Can you dance? Yes, I can.\nCan you swim? No, I can't.\nCan you ride a bike? Yes, I can.\nCan you play volleyball? No, I can't."
+],
+"answer": "Can you dance? Yes, I can.\nCan you swim? No, I can't.\nCan you ride a bike? Yes, I can.\nCan you play volleyball? No, I can't."
+}
+]
+},
+{
+"number": "4-s64",
+"num": "4",
+"page": 64,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131682,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно подобрать предложения к картинкам и дописать их.",
+"WORDLIST\nrun — бегать \nswim — плавать \ndance — танцевать\njump — прыгать \nplay volleyball — играть в волейбол\nride a bike — кататься на велосипеде",
+"Он умеет говорить по-английски. — С.\nОна не умеет играть в баскетбол. — В.\n_____ прыгать. — E.\n_____ плавать. — D.\n_____ играть в волейбол. — A.\n_____ танцевать. — F.",
+"",
+"3. She can jump.\n4. He can't swim.\n5. She can play volleyball.\n6. He can't dance."
+],
+"answer": "3. She can jump. — E.\n4. He can't swim. — D.\n5. She can play volleyball. — A.\n6. He can't dance. — F."
+}
+]
+},
+{
+"number": "5-s64",
+"num": "5",
+"page": 64,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131683,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на картинки и подобрать подходящие ответы на вопросы.",
+"",
+"Вики умеет плавать? Нет.\nНик умеет плавать?\nНик умеет кататься на велосипеде?\nВики умеет кататься на велосипеде?",
+"2. Yes, he can.\n3. No, he can't.\n4. Yes, she can."
+],
+"answer": "2. Yes, he can.\n3. No, he can't.\n4. Yes, she can."
+}
+]
+},
+{
+"number": "6-s65",
+"num": "6",
+"page": 65,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131684,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и раскрасить картинку, а затем сказать, что на ней изображено.",
+"",
+"Номер тринадцать — жёлтый.\nНомер четырнадцать — зелёный.\nНомер пятнадцать — оранжевый.\nНомер шестнадцать — чёрный.\nНомер семнадцать — синий.\nНомер восемнадцать — белый.\nНомер девятнадцать — красный.\nНомер двадцать — серый.",
+"I can see a ship (boat). Я вижу корабль (лодку)."
+],
+"answer": "I can see a ship (boat)."
+}
+]
+},
+{
+"number": "7-s66",
+"num": "7",
+"page": 66,
+"chapter": "Раздел 10. I Can Fly!",
+"skyId": 131685,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать предложения и отметить галочкой нужные рисунки.",
+"Я умею бегать.\nЯ умею плавать.\nЯ умею летать.\nЯ умею петь.\nЯ умею разговаривать по-английски.",
+"Отметим льва, так как змея не умеет бегать.\nОтметим рыбку, так как она умеет плавать.\nОтметим попугая, так как верблюд не умеет летать.\nОтметим птичку, так как бегемот не умеет петь.\nОтметим слово «you», так как коза не говорит по-английски."
+],
+"answer": "Отметим льва, так как змея не умеет бегать.\nОтметим рыбку, так как она умеет плавать.\nОтметим попугая, так как верблюд не умеет летать.\nОтметим птичку, так как бегемот не умеет петь.\nОтметим слово «you», так как коза не говорит по-английски."
+}
+]
+},
+{
+"number": "1-s67",
+"num": "1",
+"page": 67,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131686,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подберём к картинкам предложения и напишем их.",
+"WORDLIST\nnever — никогда\nmind — думать\nswim — плавать\nrainbow — радуга\nschool — школа\nfly — летать",
+"Не волнуйся! Они умеют плавать.\nДавай полетим к радуге!\nСмотри! Я могу увидеть мою школу.\nТы умеешь летать?",
+"C.\nD.\nB.\nA."
+],
+"answer": "C.\nD.\nB.\nA."
+}
+]
+},
+{
+"number": "2-s68",
+"num": "2",
+"page": 68,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131687,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Выберем нужные ответы и напишем их.",
+"WORDLIST\nfly — летать\noctopus — осьминог\ncan — мочь, уметь",
+"",
+"Варианты ответов:\nНет, они не могут.\nДа, она может.\nДа, он может.\nДа, они могут.\nНет, он не может.\nВопросы:\nМожет ли Дэнзил летать?\nМожет ли Нора и Брилл летать?\nМожет ли Осьминог летать?\nМожет ли Роб и Боб летать?\nМожет ли Алиса летать?",
+"Yes, he can.\nYes, they can.\nNo, he can't.\nNo, they can't.\nYes, she can."
+],
+"answer": "Yes, he can.\nYes, they can.\nNo, he can't.\nNo, they can't.\nYes, she can."
+}
+]
+},
+{
+"number": "3-s68",
+"num": "3",
+"page": 68,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131688,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подпишем картинки.",
+"Зебры.\nСлоны.\nСобаки.\nТигры.\nМорские коньки.\nКозы.\nПопугаи.\nЗайцы.",
+"WORDLIST\nzebra — зебра\nelephant — слон\ndog — собака\ntiger — тигр\nseahorse — морской конёк\ngoat — коза\nparrot — попугай\nrabbit — заяц",
+"",
+"Zebras.\nElephants.\nDogs.\nTigers.\nSeahorses.\nGoats.\nParrots.\nRabbits."
+],
+"answer": "Zebras.\nElephants.\nDogs.\nTigers.\nSeahorses.\nGoats.\nParrots.\nRabbits."
+}
+]
+},
+{
+"number": "4-s69",
+"num": "4",
+"page": 69,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131689,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим и напишем предложения.",
+"WORDLIST\nelephant — слон\ndog — собака\ntiger — тигр\nfish — рыба\nbird — птица\nrabbit — кролик\nrun — бегать\nswim — плавать\nfly — летать\nread — читать",
+"",
+"Elephants can't fly. Слоны не умеют летать.\nDogs can run. Собаки умеют бегать.\nTigers can't read. Тигры не умеют читать.\nFish can't fly. Рыба не может летать.\nBirds cant fly. Птицы не умеют летать.\nRabbits can't swim. Кролики не умеют плавать."
+],
+"answer": "Elephants can't fly.\nDogs can run.\nTigers can't read.\nFish can't fly.\nBirds cant fly.\nRabbits can't swim."
+}
+]
+},
+{
+"number": "5-s69",
+"num": "5",
+"page": 69,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131690,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку и напишем о том, что в ней не так.",
+"WORDLIST\ntiger — тигр\nzebra — зебра\ndog — собака\nseashorse — морской конёк\nride a bike — кататься на велосипеде\nread — читать\ndance — танцевать\nrun — бегать",
+"",
+"2. A tiger can't ride a bike. Тигр не может ездить на велосипеде.\n3. A zebra can't read. Зебра не умеет читать.\n4. Dogs can't dance. Собаки не умеют танцевать.\n5. Seahorses can't run. Морские коньки не умеют бегать."
+],
+"answer": "2. A tiger can't ride a bike.\n3. A zebra can't read.\n4. Dogs can't dance.\n5. Seahorses can't run."
+}
+]
+},
+{
+"number": "6-s70",
+"num": "6",
+"page": 70,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131691,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на картинку и напишем предложения, следуя образцу.",
+"WORDLIST\nlet's — давайте\nclimb — карабкаться\nrun — бегать\nswim — плавать\nfly — летать\ndance — танцевать",
+"Let's переводится как «давай» и обозначает предложение что-либо делать.\nLet's read. Давай почитаем.\nLet's talk. Давай поговорим.",
+"Let's climb. Давай поднимемся.\nLet's fly. Давай полетим.\nLet's dance. Давай потанцуем.\nLet's swim. Давай поплаваем.\nLet's run. Давай убежим."
+],
+"answer": "Let's climb.\nLet's fly.\nLet's dance.\nLet's swim.\nLet's run."
+}
+]
+},
+{
+"number": "7-s71",
+"num": "7",
+"page": 71,
+"chapter": "Раздел 11. Can Rabbits Fly?",
+"skyId": 131692,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем предложения и впишем пропущенные слова. Раскрасим рисунки.",
+"WORDLIST\norange — оранжевый\nwhite — белый\nrun — бегать\njump — прыгать\nclimb — карабкаться, взбираться\nred — красный\nsea — море\nswim — плавать\nblack — чёрный",
+"1.\nОни оранжевые и белые.\nОни могут бегать и прыгать и карабкаться.\nОни _____ летать.\nОни _____.\n2.\nОн красный и белый.\nОн живёт в море.\nОн _____ плавать, но не может _____. Он _____.\n3.\nОни чёрные и белые.\nОни _____ бегать.\nОни _____.",
+"1. Can't, tigers.\n2. Can, fly, octopus.\n3. Can, zebras.",
+"1.\nОни оранжевые и белые.\nОни могут бегать и прыгать и карабкаться.\nОни не могут летать.\nОни тигры.\n2.\nОн красный и белый.\nОн живёт в море.\nОн умеет плавать, но не может летать. Он осьминог.\n3.\nОни чёрные и белые.\nОни могут бегать.\nОни зебры."
+],
+"answer": "1. Can't, tigers.\n2. Can, fly, octopus.\n3. Can, zebras."
+}
+]
+},
+{
+"number": "1-s72",
+"num": "1",
+"page": 72,
+"chapter": "Проверь себя! Разделы 10 и 11",
+"skyId": 131693,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно написать числа словами и цифрами.",
+"",
+"Sixteen, seventeen, eighteen\n 16\n 17\n 18\n Fifteen, sixteen, seventeen\n 15\n 16\n 17\n Twelve, thirteen, fourteen\n 12\n 13\n 14\n Seventeen, eighteen, nineteen\n 17\n 18\n 19\n Fourteen, fifteen, sixteen\n 14\n 15\n 16\n Eighteen, nineteen, twenty\n 18\n 19\n 20"
+],
+"answer": "Sixteen, seventeen, eighteen\n 16\n 17\n 18\n Fifteen, sixteen, seventeen\n 15\n 16\n 17\n Twelve, thirteen, fourteen\n 12\n 13\n 14\n Seventeen, eighteen, nineteen\n 17\n 18\n 19\n Fourteen, fifteen, sixteen\n 14\n 15\n 16\n Eighteen, nineteen, twenty\n 18\n 19\n 20"
+}
+]
+},
+{
+"number": "2-s72",
+"num": "2",
+"page": 72,
+"chapter": "Проверь себя! Разделы 10 и 11",
+"skyId": 131694,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать пропущенные буквы и подобрать картинки a–f к словам 1–6.",
+"WORDLIST\nrun — бегать\nswim — плавать\ndance — танцевать\njump — прыгать\nplay basketball — играть в баскетбол\nride a bike — кататься на велосипеде",
+"Swim.\nRun.\nJump.\nDance.\nRide a bike.\nPlay basketball.",
+"Swim. — B.\nRun. — A.\nJump. — E.\nDance. — D.\nRide a bike. — F.\nPlay basketball. — C."
+],
+"answer": "Swim. — B.\nRun. — A.\nJump. — E.\nDance. — D.\nRide a bike. — F.\nPlay basketball. — C."
+}
+]
+},
+{
+"number": "3-s73",
+"num": "3",
+"page": 73,
+"chapter": "Проверь себя! Разделы 10 и 11",
+"skyId": 131695,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дополнить предложения, используя can/can't.",
+"",
+"Зебра не умеет кататься на велосипеде.\nОсьминог не умеет играть в компьютерные игры.\nРыбы умеют плавать, но они не умею летать.\nТигры умеют бегать и лазать.\nМы умеем говорить по-английски.",
+"2. Can't.\n3. Can, can't.\n4. Can.\n5. Can."
+],
+"answer": "2. Can't.\n3. Can, can't.\n4. Can.\n5. Can."
+}
+]
+},
+{
+"number": "4-s73",
+"num": "4",
+"page": 73,
+"chapter": "Проверь себя! Разделы 10 и 11",
+"skyId": 131696,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно дописать вопросы и ответы.",
+"WORDLIST\nclimb — лазать\nswim — плавать\ndance — танцевать\nplay football — играть в футбол\nplay basketball — играть в баскетбол\nride a bike — кататься на велосипеде",
+"",
+"2. Can you swim? No, I can't.\n3. Can she ride a bike? Yes, she can.\n4. Can he play football? Yes, she can.\n5. Can you dance? Yes, we can.\n6. Can it play basketball? No, it can't."
+],
+"answer": "2. Can you swim? No, I can't.\n3. Can she ride a bike? Yes, she can.\n4. Can he play football? Yes, she can.\n5. Can you dance? Yes, we can.\n6. Can it play basketball? No, it can't."
+}
+]
+}
+]
+}
