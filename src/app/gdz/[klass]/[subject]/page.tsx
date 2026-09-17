@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { gdzBooks, getGdzBooks, getGdzSubjects, gdzKlasses } from '@/data/gdz'
+import { getGdzBooks, getGdzSubjects, gdzKlasses } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 

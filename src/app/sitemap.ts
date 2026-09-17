@@ -138,7 +138,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
 
   const gdzBookPages: MetadataRoute.Sitemap = gdzBooks
-    .filter(b => b.chapters.length > 0)
+    .filter(b => b.solvedCount > 0)
     .map(b => ({
       url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/`,
       lastModified: D_GDZ,
@@ -146,24 +146,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     }))
 
-  const gdzProblemPages: MetadataRoute.Sitemap = gdzBooks.flatMap(b =>
-    b.chapters.flatMap(ch =>
-      ch.problems
-        // Критерий индексируемости должен совпадать с hasSolution в
-        // /gdz/[klass]/[subject]/[book]/[number]/page.tsx: решение = шаги ИЛИ
-        // картинки разбора, плюс условие. Иначе индексируемые страницы
-        // (условие + imageUrls, без steps) не попадают в sitemap.
-        .filter(p => p.condition && (p.steps?.length || p.imageUrls?.length))
-        .map(p => ({
-          url: `${BASE_URL}/gdz/${b.klass}-klass/${b.subjectSlug}/${b.slug}/nomer-${p.number.replace(/\./g, "-")}/`,
-          lastModified: D_GDZ,
-          changeFrequency: 'monthly' as const,
-          priority: 0.7,
-        }))
-    )
-  )
+  // Страницы номеров ГДЗ (сотни тысяч URL) вынесены в отдельный sitemap-индекс
+  // /sitemap-gdz.xml → /sitemap-gdz/{n} (см. src/lib/gdz-sitemap.ts): один файл
+  // sitemap ограничен 50 000 URL, а здесь и так ~30 000.
 
-  // ── Учебник (textbook) pages ───────────────────────
   const uchebnikIndex: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/uchebnik/`, lastModified: D_UCHEBNIK, changeFrequency: 'weekly', priority: 0.9 },
   ]
@@ -315,7 +301,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const all: MetadataRoute.Sitemap = [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
     ...blogIndex, ...blogPostPages,
-    ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages, ...gdzProblemPages,
+    ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages,
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...shkolyTypePages, ...onlineBrandPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,

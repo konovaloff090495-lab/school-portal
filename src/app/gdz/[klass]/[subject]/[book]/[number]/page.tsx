@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
-  gdzBooks,
   getGdzBook,
   getGdzProblem,
   getGdzPrevNext,
@@ -48,21 +47,8 @@ function stripTags(s: string) {
 export const dynamicParams = true
 
 export async function generateStaticParams() {
-  const out: { klass: string; subject: string; book: string; number: string }[] = []
-  for (const b of gdzBooks) {
-    if (b.chapters.length === 0) continue
-    const allProblems = b.chapters.flatMap(ch => ch.problems)
-    // только первые 3 задачи книги как статические; остальные — on-demand
-    for (const p of allProblems.slice(0, 3)) {
-      out.push({
-        klass: `${b.klass}-klass`,
-        subject: b.subjectSlug,
-        book: b.slug,
-        number: `nomer-${numToSlug(p.number)}`,
-      })
-    }
-  }
-  return out
+  // Ничего не пре-рендерим: книги грузятся лениво, страницы номеров — по запросу (ISR).
+  return [] as { klass: string; subject: string; book: string; number: string }[]
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

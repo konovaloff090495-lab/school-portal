@@ -48,3 +48,4 @@ rsya.py
 recrawl.py
 recrawl_state.json
 recrawl_priority.txt
+scripts/skysmart/raw/

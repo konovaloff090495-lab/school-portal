@@ -22,7 +22,7 @@ function parseKlass(slug: string): number | null {
 
 export async function generateStaticParams() {
   return gdzBooks
-    .filter(b => b.chapters.length > 0)
+    .filter(b => b.solvedCount > 0)
     .map(b => ({
       klass: `${b.klass}-klass`,
       subject: b.subjectSlug,
