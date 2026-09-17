@@ -1,0 +1,4669 @@
+{
+"book": {
+"slug": "biboletova-rabochaya-tetrad",
+"klass": 3,
+"subjectSlug": "angliiskiy-yazyk",
+"authors": "Биболетова М. З., Денисенко О. А., Tрубанева Н. Н.",
+"type": "Рабочая тетрадь",
+"umk": "Enjoy English"
+},
+"problems": [
+{
+"number": "1-s3",
+"num": "1",
+"page": 3,
+"chapter": "1. Welcome to green school! Lesson 1",
+"skyId": 143448,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем в английский алфавит недостающие буквы.",
+"",
+"Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz."
+],
+"answer": "Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Ww, Xx, Yy, Zz."
+}
+]
+},
+{
+"number": "2-s3",
+"num": "2",
+"page": 3,
+"chapter": "1. Welcome to green school! Lesson 1",
+"skyId": 143449,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим звуки и слова, в которых они встречаются.",
+"WORDLIST\nslim — стройный\nnose — нос\nstrong — сильный\nbrave — храбрый\ncat — кот\nmice — мыши",
+"Slim — /ɪ/.\nNose — /əʊ/.\nStrong — /ɒ/.\nBrave — /eɪ/.\nCat — /æ/.\nMice — /aɪ/."
+],
+"answer": "Slim — /ɪ/.\nNose — /əʊ/.\nStrong — /ɒ/.\nBrave — /eɪ/.\nCat — /æ/.\nMice — /aɪ/."
+}
+]
+},
+{
+"number": "3-s3",
+"num": "3",
+"page": 3,
+"chapter": "1. Welcome to green school! Lesson 1",
+"skyId": 143450,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные буквы и прочитаем приветствие мистера Гринвуда и его учеников.",
+"WORDLIST\nrun — бегать\nskip — скакать через скакалку\nforest — лес\ntogether — вместе",
+"Dear friends, \nДорогие друзья,\nWelcome to Green School!\nДобро пожаловать в Зелёную школу!\nLet's read and write in English.\nДавайте читать и писать по-английски.\nLet's run and skip in the forest!\nДавайте бегать и прыгать через скакалку в лесу!\nLet's go to school together!\nДавайте пойдём в школу вместе!\nMr Greenwood and his pupils \nМистер Гринвуд и его ученики"
+],
+"answer": "Dear friends, \nДорогие друзья,\nWelcome to Green School!\nДобро пожаловать в Зелёную школу!\nLet's read and write in English.\nДавайте читать и писать по-английски.\nLet's run and skip in the forest!\nДавайте бегать и прыгать через скакалку в лесу!\nLet's go to school together!\nДавайте пойдём в школу вместе!\nMr Greenwood and his pupils \nМистер Гринвуд и его ученики"
+}
+]
+},
+{
+"number": "4-s3",
+"num": "4",
+"page": 3,
+"chapter": "1. Welcome to green school! Lesson 1",
+"skyId": 143451,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Мэри не успела дописать сочинение о своём друге. Поможем ей закончить предложения.",
+"He is an elephant.\nHis name is Thomas.\nHe is big.\nHe isn't slim.\nHe can run and jump.\nHe can't dance and sing.\nWe go to school together.",
+"Он слон.\nЕго зовут Томас.\nОн большой.\nОн не стройный.\nОн умеет бегать и прыгать.\nОн не умеет танцевать и петь.\nМы вместе ходим в школу."
+],
+"answer": "He is an elephant.\nHis name is Thomas.\nHe is big.\nHe isn't slim.\nHe can run and jump.\nHe can't dance and sing.\nWe go to school together."
+}
+]
+},
+{
+"number": "1-s4",
+"num": "1",
+"page": 4,
+"chapter": "1. Welcome to green school! Lesson 2",
+"skyId": 143452,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить заглавные буквы в алфавитном порядке. Затем нам нужно прочитать предложение, которое получится из строчных букв.",
+"",
+"A, B, C, D, E, F, G, H, I, J, K, L, M, N, O.",
+"Welcome to school. — Добро пожаловать в школу."
+],
+"answer": "Welcome to school."
+}
+]
+},
+{
+"number": "2-s4",
+"num": "2",
+"page": 4,
+"chapter": "1. Welcome to green school! Lesson 2",
+"skyId": 143453,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти лишние слова в цепочках слов.",
+"WORDLIST\nshy — застенчивый\nskip — прыгать\ncount — считать\ncockerel — петушок\nfox — лиса",
+"Сильный, стройный, плавать, застенчивый, грустный, счастливый.\nПрыгать, считать, сидеть, шесть, остановиться, идти.\nКот, петушок, крокодил, банка, собака, лиса.",
+"Swim — плавать. (Все остальные слова — прилагательные.)\nSix — шесть. (Все остальные слова — глаголы.)\nCan — банка. (Все остальные слова обозначают животных.)"
+],
+"answer": "Swim.\nSix.\nCan."
+}
+]
+},
+{
+"number": "3-s4",
+"num": "3",
+"page": 4,
+"chapter": "1. Welcome to green school! Lesson 2",
+"skyId": 143454,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слова и написать что умеют делать ученики лесной школы.",
+"WORDLIST\nskip — прыгать\ncount — считать\nwrite — писать\nsing — петь",
+"Read — читать.\nCount — считать.\nWrite — писать.\nSing — петь.\nDance — танцевать.",
+"",
+"They can read.\nThey can count. \nThey can write.\nThey can sing.\nThey can dance.",
+"Они умеют читать.\nОни умеют считать.\nОни могут писать.\nОни умеют петь.\nОни умеют танцевать."
+],
+"answer": "They can read.\nThey can count.\nThey can write.\nThey can sing.\nThey can dance."
+}
+]
+},
+{
+"number": "4-s4",
+"num": "4",
+"page": 4,
+"chapter": "1. Welcome to green school! Lesson 2",
+"skyId": 143455,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать задания для учеников лесной школы.",
+"WORDLIST\nread — читать\npencil — карандаш\ncount — считать\nbag — сумка\nsong — песня",
+"Bess! Count from 1 to 10, please.\nJack! Give me three pencils, please. \nMartin! Give me your bag, please. \nNick! Read the story, please. \nPam! Sing a new song, please.",
+"Бесс! Посчитай от 1 до 10, пожалуйста.\nДжек! Дай мне три карандаша, пожалуйста.\nМартин! Дай мне свою сумку, пожалуйста.\nНик! Прочитай историю, пожалуйста.\nПэм! Спой новую песню, пожалуйста."
+],
+"answer": "Bess! Count from 1 to 10, please.\nJack! Give me three pencils, please.\nMartin! Give me your bag, please.\nNick! Read the story, please.\nPam! Sing a new song, please."
+}
+]
+},
+{
+"number": "1-s5",
+"num": "1",
+"page": 5,
+"chapter": "1. Welcome to green school! Lesson 3",
+"skyId": 143456,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разукрасить бабочку.",
+""
+],
+"answer": "Разукрась бабочку и назови цвета, которые ты использовал."
+}
+]
+},
+{
+"number": "2-s5",
+"num": "2",
+"page": 5,
+"chapter": "1. Welcome to green school! Lesson 3",
+"skyId": 143457,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и написать предложения.",
+"WORDLIST\nname — имя\ndance — танцевать\ngreen — зелёный\nhat — шляпа",
+"",
+"Her name is Jane.\nShe is a nice cat.\nShe can dance well.\nShe has got a green hat.",
+"Её зовут Джейн.\nОна хорошая кошка.\nОна умеет хорошо танцевать.\nУ неё есть зелёная шляпа."
+],
+"answer": "Her name is Jane.\nShe is a nice cat.\nShe can dance well.\nShe has got a green hat."
+}
+]
+},
+{
+"number": "3-s5",
+"num": "3",
+"page": 5,
+"chapter": "1. Welcome to green school! Lesson 3",
+"skyId": 143458,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы от имени ученика лесной школы.",
+"WORDLIST\nname — имя\nlive — жить\nsing — петь\nchess — шахматы\npet — питомец",
+"Как тебя зовут?\nКто ты?\nСколько тебе лет?\nГде ты живёшь?\nТы умеешь петь?\nТы умеешь танцевать?\nТы умеешь играть в шахматы?\nУ тебя есть домашнее животное?",
+"My name is Martin. — Меня зовут Мартин.\nI am a rabbit. — Я кролик.\nI am nine. — Мне девять.\nI live in the forest. — Я живу в лесу.\nYes, I can. — Да, я могу. \nNo, I can't. — Нет, я не умею.\nI can play chess. — Я умею играть в шахматы.\nNo, I haven't. I haven't got a pet. — Нет. У меня нет питомца."
+],
+"answer": "My name is Martin.\nI am a rabbit.\nI am nine.\nI live in the forest.\nYes, I can. \nNo, I can't.\nI can play chess.\nNo, I haven't. I haven't got a pet."
+}
+]
+},
+{
+"number": "1-s6",
+"num": "1",
+"page": 6,
+"chapter": "1. Welcome to green school! Lesson 4",
+"skyId": 143459,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слова из букв.",
+"Eggs.\nBread.\nCake.\nButter.\nJuice.",
+"Яйца.\nХлеб.\nТорт.\nМасло.\nСок."
+],
+"answer": "Eggs.\nBread.\nCake.\nButter.\nJuice."
+}
+]
+},
+{
+"number": "2-s6",
+"num": "2",
+"page": 6,
+"chapter": "1. Welcome to green school! Lesson 4",
+"skyId": 143460,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на буквы и составить из них слова.",
+"Car. Машина.\nMark. Оценка.\nDark. Тёмный.\nPark. Парк.\nEar. Ухо."
+],
+"answer": "Car.\nMark.\nDark.\nPark.\nEar."
+}
+]
+},
+{
+"number": "3-s6",
+"num": "3",
+"page": 6,
+"chapter": "1. Welcome to green school! Lesson 4",
+"skyId": 143461,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разгадать головоломку.",
+"I.\nL.\nI.\nV.\nE.\nO.\nN.\nT.\nH.\nE.\nF.\nA.\nR.\nM.",
+"I live on the farm. Я живу на ферме."
+],
+"answer": "I live on the farm."
+}
+]
+},
+{
+"number": "4-s6",
+"num": "4",
+"page": 6,
+"chapter": "1. Welcome to green school! Lesson 4",
+"skyId": 143462,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения.",
+"",
+"We are students.\nDo you like sweets?\nI like black cars.\nDo they go to school?",
+"Мы ученики.\nТебе нравятся сладости?\nМне нравятся чёрные машины.\nОни ходят в школу?"
+],
+"answer": "We are students.\nDo you like sweets?\nI like black cars.\nDo they go to school?"
+}
+]
+},
+{
+"number": "1-s7",
+"num": "1",
+"page": 7,
+"chapter": "1. Welcome to green school! Lesson 5",
+"skyId": 143463,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать слова и вставить пропущенные буквы.",
+"Hot. (Жаркий.)\nHen. (Курица.)\nCar. (Машина.)\nNose. (Нос.)\nPark. (Парк.)\nAre. (Форма глагола Be.)\nPlease. (Пожалуйста.)\nThanks. (Спасибо.)\nDark. (Тёмный.)\nFarm. (Ферма.)"
+],
+"answer": "Hot.\nHen.\nCar.\nNose.\nPark.\nAre.\nPlease.\nThanks.\nDark.\nFarm."
+}
+]
+},
+{
+"number": "2-s7",
+"num": "2",
+"page": 7,
+"chapter": "1. Welcome to green school! Lesson 5",
+"skyId": 143464,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соотнести слова и их транскрипцию.",
+"Образец: Car — /kɑː/. (Машина.)\nEgg. — /eɡ/. (Яйцо.)\nPark. — /pɑːk/. (Парк.)\nAre. — /ɑː/. (Форма глагола Be.)\nThey. — /ðeɪ/. (Они.)\nButter. — /ˈbʌtə/. (Сливочное масло.)\nCake. — /keɪk/. (Пирожное.)\nMilk. — /mɪlk/. (Молоко.)"
+],
+"answer": "Egg. — /eɡ/.\nPark. — /pɑːk/.\nAre. — /ɑː/.\nThey. — /ðeɪ/.\nButter. — /ˈbʌtə/.\nCake. — /keɪk/.\nMilk. — /mɪlk/."
+}
+]
+},
+{
+"number": "3-s7",
+"num": "3",
+"page": 7,
+"chapter": "1. Welcome to green school! Lesson 5",
+"skyId": 143465,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить фразы в нужном порядке так, чтобы получился диалог.",
+"Билли: Да, я бы хотел. — 4.\nМартин: Тебе нравится играть в футбол? — 1.\nБилли: Да, нравится. — 2.\nМартин: Ты бы хотел поиграть в футбол в парке? — 3."
+],
+"answer": "4, 1, 2, 3."
+}
+]
+},
+{
+"number": "4-s7",
+"num": "4",
+"page": 7,
+"chapter": "1. Welcome to green school! Lesson 5",
+"skyId": 143466,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы анкеты.",
+"Как тебя зовут?\nТебе нравится бегать в парке?\nТы хорошо прыгаешь и прыгаешь со скакалкой?\nТы умеешь плавать?\nТы играешь в теннис?\nТы катаешься на велосипеде?\nТы умеешь кататься на лыжах и коньках?\nТы сильный?",
+"Как тебя зовут? — Иван. (Ivan.)\nТебе нравится бегать в парке? — Да. (Yes, I do.)\nТы хорошо прыгаешь и прыгаешь со скакалкой? — Да. (Yes, I do.)\nТы умеешь плавать? — Да. (Yes, I can.)\nТы играешь в теннис? — Нет. (No, I don't.)\nТы катаешься на велосипеде? — Да. (Yes, I do.)\nТы умеешь кататься на лыжах и коньках? — Нет. (No, I can't.)\nТы сильный? — Да. (Yes, I am.)"
+],
+"answer": "Ivan.\nYes, I do.\nYes, I do.\nYes, I can.\nNo, I don't.\nYes, I do.\nNo, I can't.\nYes, I am."
+}
+]
+},
+{
+"number": "1-s8",
+"num": "1",
+"page": 8,
+"chapter": "1. Welcome to green school! Lesson 6",
+"skyId": 143467,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слова из букв.",
+"Hat.\nCorn.\nForest.\nShore.",
+"Шляпа.\nКукуруза.\nЛес.\nПобережье."
+],
+"answer": "Hat.\nCorn.\nForest.\nShore."
+}
+]
+},
+{
+"number": "2-s8",
+"num": "2",
+"page": 8,
+"chapter": "1. Welcome to green school! Lesson 6",
+"skyId": 143468,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать не мнее 2 слов с некоторыми звуками.",
+"",
+"",
+"",
+"",
+"",
+"/ʌ/: мама.\n/ɑː/: парк.\n/aɪ/: красивый.\n/ɔː/: кукуруза.",
+"/ʌ/: come, love, but.\n/ɑː/: dark, art, start.\n/aɪ/: like, bike, smile.\n/ɔː/: call, salt, always.",
+"Come, love, but.\nDark, art, start.\nLike, bike, smile.\nCall, salt, always."
+],
+"answer": "/ʌ/: come, love, but.\n/ɑː/: dark, art, start.\n/aɪ/: like, bike, smile.\n/ɔː/: call, salt, always."
+}
+]
+},
+{
+"number": "3-s8",
+"num": "3",
+"page": 8,
+"chapter": "1. Welcome to green school! Lesson 6",
+"skyId": 143469,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"",
+"Мне (1) девять. У меня есть пёс. Его зовут (2) Рекс. Рекс (3) храбрый, сильный и добрый. Мы (4) друзья. Мы (5) счастливы вместе.",
+"Am.\nIs.\nIs.\nAre.\nAre."
+],
+"answer": "Am.\nIs.\nIs.\nAre.\nAre."
+}
+]
+},
+{
+"number": "4-s8",
+"num": "4",
+"page": 8,
+"chapter": "1. Welcome to green school! Lesson 6",
+"skyId": 143470,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить предложения.",
+"WORDLIST\nbook — книга\ndance — танцевать\nforest — лес\nlive — жить\nsing — петь\nskip — прогуливаться\ntennis — теннис\ntogether — вместе\nvisit — посещать\nwell — хорошо",
+"",
+"I like to sing and dance well. Мне нравится хорошо петь и танцевать.\nYou like to play tennis. Тебе нравится играть в теннис.\nHe likes to skip in the park. Ему нравится прогуливаться в парке.\nShe likes to read books at home. Ей нравится читать книги дома.\nIt likes to live in the forest. Ему нравится жить в лесу.\nWe like to go home together. Нам нравится ходить домой вместе.\nThey like to visit school. Им нравится ходить в школу."
+],
+"answer": "I like to sing and dance well.\nYou like to play tennis.\nHe likes to skip in the park.\nShe likes to read books at home.\nIt likes to live in the forest.\nWe like to go home together.\nThey like to visit school."
+}
+]
+},
+{
+"number": "1-s9",
+"num": "1",
+"page": 9,
+"chapter": "1. Welcome to green school! Lesson 7",
+"skyId": 143471,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в головоломке названия овощей и фруктов.",
+"1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 1\n C\n A\n B\n B\n A\n G\n E\n T\n 2\n A\n P\n P\n C\n O\n 3\n R\n O\n P\n O\n M\n 4\n R\n T\n L\n R\n A\n 5\n O\n A\n E\n N\n T\n 6\n T\n T\n O\n O",
+"Cabbage — капуста.\nTomato — помидор.\nPotato — картошка.\nCarrot — Морковка.\nCorn — Кукуруза\nApple — Яблоко."
+],
+"answer": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 1\n C\n A\n B\n B\n A\n G\n E\n T\n 2\n A\n P\n P\n C\n O\n 3\n R\n O\n P\n O\n M\n 4\n R\n T\n L\n R\n A\n 5\n O\n A\n E\n N\n T\n 6\n T\n T\n O\n O"
+}
+]
+},
+{
+"number": "2-s9",
+"num": "2",
+"page": 9,
+"chapter": "1. Welcome to green school! Lesson 7",
+"skyId": 143472,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно раделить строки так, чтобы получились предложения.",
+"WORDLIST\nfriend — друг\nhorse — лошадь\npark — парк\nride — кататься\nsix — шесть\nskate — кататься на коньках",
+"I would like to have six friends. Я бы хотела иметь пять друзей.\nI would like to skate in the park. Я бы хотела покататься на коньках в парке.\nI would like to ride a horse. Я бы хотел покататься на лошади."
+],
+"answer": "I would like to have six friends.\nI would like to skate in the park.\nI would like to ride a horse."
+}
+]
+},
+{
+"number": "3-s9",
+"num": "3",
+"page": 9,
+"chapter": "1. Welcome to green school! Lesson 7",
+"skyId": 143473,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова в зависимости от части речи.",
+"",
+"A cake — торт.\nA car — машина.\nA farm — ферма.\nA frog — лягушка.\nA horse — лошадь.\nA park — парк.\nA school — школа.\nAm — быть.\nAre — быть.\nButter — масло.\nCount — считать.\nGo — идти.\nIs — быть.\nLike — нравится.\nLive — жить.\nMilk — молоко.\nPlay — играть.\nRead — читать.\nRide — кататься.\nSkip — прогуливаться.\nSweets — сладости.",
+"Существительные\n Формы глагола To be\n Глаголы\n Ферма\n Быть\n Идти",
+"Nouns\n Verb \"To be\"\n Verbs\nA cake.\nA car.\nA farm.\nA frog.\nA horse.\nA park.\nA school.\nButter.\nMilk.\nSweets\nAm.\nAre.\nIs\nCount.\nGo.\nLike.\nLive.\nPlay.\nRead.\nRide.\nSkip"
+],
+"answer": "Nouns\n Verb \"To be\"\n Verbs\nA cake.\nA car.\nA farm.\nA frog.\nA horse.\nA park.\nA school.\nButter.\nMilk.\nSweets\nAm.\nAre.\nIs\nCount.\nGo.\nLike.\nLive.\nPlay.\nRead.\nRide.\nSkip"
+}
+]
+},
+{
+"number": "1-s10",
+"num": "1",
+"page": 10,
+"chapter": "1. Welcome to green school! Lesson 8",
+"skyId": 143474,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно вписать буквы в клетки под номерами, прочитать получившийся вопрос и ответить на него.",
+"15\n 10\n 13\n 7\n 2\n W\n O\n U\n L\n D\n 16\n 10\n 13\n Y\n O\n U\n 7\n 5\n 6\n 3\n L\n I\n K\n E\n 12\n 10\n T\n O\n 4\n 1\n 14\n 3\n H\n A\n V\n E\n 11\n 10\n 8\n 3\n S\n O\n M\n E\n 4\n 10\n 9\n 3\n 16\n H\n O\n N\n E\n Y",
+"Would you like to have some honey? Не хотели бы вы мёда?\nМожно ответить на данный вопрос положительно:\nYes, I would. Да.\nYes, please. Да, пожалуйста.\nЛибо можно ответить отрицательно:\nNo, I wouldn't. Нет.\nNo, thank you. Нет, спасибо."
+],
+"answer": "Would you like to have some honey?\nYes, I would. / Yes, please.\nNo, I wouldn't. / No, thank you."
+}
+]
+},
+{
+"number": "2-s10",
+"num": "2",
+"page": 10,
+"chapter": "1. Welcome to green school! Lesson 8",
+"skyId": 143475,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В данном задании нам даны ответы, опираясь на которые, нужно восстановить вопросы. А затем нужно догадаться, кто является другом кролика.",
+"",
+"Образец: «Он грустит?» — «Нет. Он счастлив».\nОтветы:\nДа. Он живёт в Английском лесу.\nДа. У него много друзей.\nДа. Он ходит в лесную школу.\nНет. Ему нравятся варенье, мёд и бутерброды.",
+"Does he live in the forest? — «Он живёт в лесу?» — «Да. Он живёт в Английском лесу».\nHas he got many friends? — «У него много друзей?» — «Да. У него много друзей».\nDoes he go to school? — «Он ходит в школу?» — «Да. Он ходит в лесную школу».\nDoes he like cabbage and corn? — «Ему нравится капуста и кукуруза?» — «Нет. Ему нравятся варенье, мёд и бутерброды».\nThe bear is the friend of the rabbit. Медведь — друг кролика."
+],
+"answer": "Does he live in the forest? \nHas he got many friends? \nDoes he go to school?\nDoes he like cabbage and corn?\nThe bear is the friend of the rabbit."
+}
+]
+},
+{
+"number": "3-s10",
+"num": "3",
+"page": 10,
+"chapter": "1. Welcome to green school! Lesson 8",
+"skyId": 143476,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно заполнить пропуски в рассказе словами из рамочки.",
+"WORDLIST\ncorn — кукуруза\ngo — идти\nlike — нравиться\nnice — красивый\nforest — лес\nsweets — сладости/конфеты\nhave — иметь",
+"Я Билли. Я живу в Английском _____. У меня _____ друг. Его зовут Мартин. Он _____. Мы _____ в школу вместе. Я умею писать. Мне нравятся _____, мёд, варенье и бутерброды. Но мне не нравится капуста и _____. Вам _____ торты и сладости?",
+"Я Билли. Я живу в Английском лесу (forest). У меня есть (have) друг. Его зовут Мартин. Он красивый (nice). Мы ходим (go) в школу вместе. Я умею писать. Мне нравятся сладости (sweets), мёд, варенье и бутерброды. Но мне не нравится капуста и кукуруза (corn). Вам нравятся (like) торты и сладости?"
+],
+"answer": "Я Билли. Я живу в Английском лесу (forest). У меня есть (have) друг. Его зовут Мартин. Он красивый (nice). Мы ходим (go) в школу вместе. Я умею писать. Мне нравятся сладости (sweets), мёд, варенье и бутерброды. Но мне не нравится капуста и кукуруза (corn). Вам нравятся (like) торты и сладости?"
+}
+]
+},
+{
+"number": "1-s11",
+"num": "1",
+"page": 11,
+"chapter": "1. Welcome to green school! Lesson 9",
+"skyId": 143477,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать вопросительные слова на английском языке.",
+"",
+"Where.\nWhat.\nWho.\nWhy."
+],
+"answer": "Where.\nWhat.\nWho.\nWhy."
+}
+]
+},
+{
+"number": "2-s11",
+"num": "2",
+"page": 11,
+"chapter": "1. Welcome to green school! Lesson 9",
+"skyId": 143478,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить слова из букв.",
+"Egg.\nEat.\nSugar.\nCoffee.\nCheese.\nSalt.",
+"Яйцо.\nЕсть.\nСахар.\nКофе.\nСыр.\nСоль."
+],
+"answer": "Egg.\nEat.\nSugar.\nCoffee.\nCheese.\nSalt."
+}
+]
+},
+{
+"number": "3-s11",
+"num": "3",
+"page": 11,
+"chapter": "1. Welcome to green school! Lesson 9",
+"skyId": 143479,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно пронумеровать разы так, чтобы получился диалог.",
+"WORDLIST\ncheese — сыр\nhungry — голодный\nlike — нравится\nporridge — каша\nsandwich — бутерброд\ntake — брать",
+"Мама: Ты бы хотел немного каши?\nДжим: Доброе утро! Я голоден.\nМама: Хорошо! Возьми, пожалуйста, бутерброд с сыром!\nДжим: Мне не нравится каша. Я бы хотел бутерброд с сыром.\nМама: Доброе утро, Джим!\nДжим: Спасибо!",
+"3. Мама: Ты бы хотел немного каши?\n2. Джим: Доброе утро! Я голоден.\n5. Мама: Хорошо! Возьми, пожалуйста, бутерброд с сыром!\n4. Джим: Мне не нравится каша. Я бы хотел бутерброд с сыром.\n1. Мама: Доброе утро, Джим!\n6. Джим: Спасибо!"
+],
+"answer": "3. Мама: Ты бы хотел немного каши?\n2. Джим: Доброе утро! Я голоден.\n5. Мама: Хорошо! Возьми, пожалуйста, бутерброд с сыром!\n4. Джим: Мне не нравится каша. Я бы хотел бутерброд с сыром.\n1. Мама: Доброе утро, Джим!\n6. Джим: Спасибо!"
+}
+]
+},
+{
+"number": "4-s11",
+"num": "4",
+"page": 11,
+"chapter": "1. Welcome to green school! Lesson 9",
+"skyId": 143480,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать о своём меню в течение дня.",
+"A cake — торт.\nA lemon — лимон.\nA sandwich — бутерброд.\nAn egg — яйцо.\nAn orange — апельчин.\nBread — хлеб.\nCheese — сыр.\nCoffee — кофе.\nCornflakes — хлопья.\nFish — рыба.\nHam — ветчина.\nJam — варенье.\nMilk — молоко.\nPorridge — каша.\nPotatoes — картофель.\nSoup — суп.\nTea — чай.",
+"Завтрак: чай, бутерброд с ветчиной, апельсины.",
+"Breaksaft: porridge, tea, an egg.\nLunch: soup, bread, cheese.\nDinner: potatoes, fish, a cake.",
+"Завтрак: каша, чай, яйцо.\nОбед: суп, хлеб, сыр.\nУжин: картофель, рыба, торт."
+],
+"answer": "Breaksaft: porridge, tea, an egg.\nLunch: soup, bread, cheese.\nDinner: potatoes, fish, a cake."
+}
+]
+},
+{
+"number": "1-s12",
+"num": "1",
+"page": 12,
+"chapter": "1. Welcome to green school! Lesson 10",
+"skyId": 143481,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно составить из букв слова и написать их.",
+"WORDLIST\nbread — хлеб\nsoup — суп\njuice — сок\nfish — рыба\nporridge — каша",
+"Fish.\nBread.\nJuice.\nPorridge.\nSoup.\nPorridge, soup, fish, juice, bread."
+],
+"answer": "Fish.\nBread.\nJuice.\nPorridge.\nSoup."
+}
+]
+},
+{
+"number": "2-s12",
+"num": "2",
+"page": 12,
+"chapter": "1. Welcome to green school! Lesson 10",
+"skyId": 143482,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно дописать слова в строчках в зависимости от звука (не менее двух слов).",
+"Образец: /ɑː/ — умный, парк, есть (форма глагола to be), машина.\n/ɔː/ — короткий, _____.\n/æ/ — плохой, _____.\n/ju:/ — музыка, _____.\n/ʌ/ — но, _____.\n/w/ — белый, _____.",
+"/ɔː/ — salt (соль), also (также).\n/æ/ — lamp (лампа), map (карта).\n/ju:/ — new (новый), use (использовать).\n/ʌ/ — summer (лето), cup (чашка).\n/w/ — why (почему), where (где).",
+"/ɔː/\nSalt, also.\n/æ/\nLamp, map.\n/ju:/\nNew, use.\n/ʌ/\nSummer, cup.\n/w/\nWhy, where."
+],
+"answer": "/ɔː/ — salt, also.\n/æ/ — lamp, map.\n/ju:/ — new, use.\n/ʌ/ — summer, cup.\n/w/ — why, where."
+}
+]
+},
+{
+"number": "3-s12",
+"num": "3",
+"page": 12,
+"chapter": "1. Welcome to green school! Lesson 10",
+"skyId": 143483,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно составить из слов предложения об одной из учениц лесной школы.",
+"WORDLIST\nnice — красивый\nlazy — ленивый\nporridge — каша\nham — ветчина\nhappy — счастливый/весёлый",
+"",
+"Образец: хорошая, артикль a, Она, is (форма глагола to be), ученица. — Она хорошая ученица.\nHer name is Bess. Её зовут Бэсс.\nShe is nice and happy. Она красивая и весёлая.\nShe is not lazy. Она не ленивая.\nShe can dance and sing. Она умеет танцевать и петь.\nBess does not like porridge. Бэсс не нравится каша.\nShe likes ham. Ей нравится ветчина."
+],
+"answer": "Her name is Bess. \nShe is nice and happy. \nShe is not lazy. \nShe can dance and sing. \nBess does not like porridge. \nShe likes ham."
+}
+]
+},
+{
+"number": "4-s12",
+"num": "4",
+"page": 12,
+"chapter": "1. Welcome to green school! Lesson 10",
+"skyId": 143484,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно составить вопросы к одному из учеников. В упражнении 6 в учебнике даны идеи, как можно начать вопросы:\nWhy do you ...? Почему ты ...?\nWhere do you ...? Где ты ...?\nWhen do you ...? Когда ты ...?",
+"WORDLIST\nfree time — свободное время\nusually — обычно\nhomework — домашнее задание\nlive — жить\nlike — нравиться\neat — есть",
+"",
+"What do you usually do in your free time? Чем ты обычно занимаешься в свободное время?\nWhen do you do your homework? Когда ты делаешь домашнее задание?\nWhere do you live? Где ты живёшь?\nWhat do you like to eat? Что тебе нравится есть?\nWhy do you like school? Почему ты любишь школу?"
+],
+"answer": "Возможный вариант ответа:\nWhat do you usually do in your free time? \nWhen do you do your homework? \nWhere do you live? \nWhat do you like to eat? \nWhy do you like school?"
+}
+]
+},
+{
+"number": "1-s13",
+"num": "1",
+"page": 13,
+"chapter": "1. Welcome to green school! Lesson 11",
+"skyId": 143485,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подписать рисунки, используя подходящие слова.",
+"WORDLIST\nwhite — белый\ndirty — грязный\nblack — чёрный\nbird — птица\nshirt — рубашка\npen — ручка",
+"Нарисована девочка. Подпись: «a nice girl» (красивая девочка).",
+"Пример.\nA white bird. (Белая птица.)\nA dirty shirt. (Грязная рубашка.)\nA black pen. (Чёрная ручка.)"
+],
+"answer": "Пример.\nA white bird.\nA dirty shirt.\nA black pen."
+}
+]
+},
+{
+"number": "2-s13",
+"num": "2",
+"page": 13,
+"chapter": "1. Welcome to green school! Lesson 11",
+"skyId": 143486,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить буквы/буквосочетания в словах и соответствующие им звуки.",
+"Corn — /ɔː/.",
+"Нравиться.\nЖить.\nБрать.\nВидеть.\nКукуруза.\nПтица.\nПарк.",
+"Like — /aɪ/.\nLive — /ɪ/.\nTake — /eɪ/.\nSee — /iː/.\nПример.\nBird — /ɜː/.\nPark — /ɑː/."
+],
+"answer": "Like — /aɪ/.\nLive — /ɪ/.\nTake — /eɪ/.\nSee — /iː/.\nПример.\nBird — /ɜː/.\nPark — /ɑː/."
+}
+]
+},
+{
+"number": "3-s13",
+"num": "3",
+"page": 13,
+"chapter": "1. Welcome to green school! Lesson 11",
+"skyId": 143487,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные слова в предложения.",
+"WORDLIST\nis — есть\nlikes — нравится\nhas got — имеет\ncan — умеет",
+"Её зовут (is) Элис.",
+"Is — глагол «быть» в третьем лице.\nCan — перед глаголами без частицы to.\nHas got — глагол «иметь» в третьем лице. Is — глагол «быть» в третьем лице.\nLikes — глагол «нравится» в третьем лице.",
+"Ей семь лет. Она милая.\nОна умеет петь, танцевать и играть в теннис.\nУ Элис есть питомец. Это весёлая собачка.\nЕй нравятся собачки."
+],
+"answer": "Is.\nCan.\nHas got, is.\nLikes."
+}
+]
+},
+{
+"number": "4-s13",
+"num": "4",
+"page": 13,
+"chapter": "1. Welcome to green school! Lesson 11",
+"skyId": 143488,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать текст о Питере.",
+"WORDLIST\nlazy — ленивый\ndark — тёмный\nham — ветчина\njam — варенье",
+"",
+"Му friend is not big. He is funny and kind. He is brave and strong. He is not lazy. His nose is short. His eyes are dark. He can run and jump. He can count and read. He likes potatoes and ham. He doesn't like bananas and jam. We go to school together. (Мой друг небольшой. Он весёлый и добрый. Он смелый и сильный. Он неленивый. У него нос короткий. Его глаза тёмные. Он умеет бегать и прыгать. Он умеет считать и читать. Он любит картошку и ветчину. Он не любит бананы и варенье. Мы идём в школу вместе.)"
+],
+"answer": "Му friend is not big. He is funny and kind. He is brave and strong. He is not lazy. His nose is short. His eyes are dark. He can run and jump. He can count and read. He likes potatoes and ham. He doesn't like bananas and jam. We go to school together."
+}
+]
+},
+{
+"number": "1-s14",
+"num": "1",
+"page": 14,
+"chapter": "1. Welcome to green school! Lesson 12",
+"skyId": 143489,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и записать названия овощей и фруктов.",
+"WORDLIST\ncarrot — морковь \ncabbage — капуста\ntomato — помидор\napple — яблоко\npotato — картофель",
+"Carrot.\nCabbage.\nTomato. \nApple. \nPotato."
+],
+"answer": "Carrot.\nCabbage.\nTomato.\nApple.\nPotato."
+}
+]
+},
+{
+"number": "2-s14",
+"num": "2",
+"page": 14,
+"chapter": "1. Welcome to green school! Lesson 12",
+"skyId": 143490,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить буквы в словах со звуками.",
+"",
+"",
+"",
+"",
+"",
+"Why.\nWith.\nWho.\nMorning.\nGirl.\nShort.",
+"Why /w/.\nWith /ð/.\nWho /h/.\nMorning /ŋ/.\nGirl /g/.\nShort /ʃ/."
+],
+"answer": "Why /w/.\nWith /ð/.\nWho /h/.\nMorning /ŋ/.\nGirl /g/.\nShort /ʃ/."
+}
+]
+},
+{
+"number": "3-s14",
+"num": "3",
+"page": 14,
+"chapter": "1. Welcome to green school! Lesson 12",
+"skyId": 143491,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить текст словами football, nice, shirt, brave, boy, not.",
+"WORDLIST\nfootball — футбол\nnice — хороший, красивый\nshirt — рубашка\nbrave — храбрый, смелый\nboy — мальчик \nlike — любить, нравиться\ndirty — грязный",
+"Boy.\nBrave.\nFootball.\nShirt. \nNice. \nNot.",
+"Он милый мальчик. Он храбрый.\nОн любит футбол.\nУ него голубая рубашка. Его рубашка красивая. Она не грязная."
+],
+"answer": "Boy.\nBrave.\nFootball.\nShirt.\nNice.\nNot."
+}
+]
+},
+{
+"number": "4-s14",
+"num": "4",
+"page": 14,
+"chapter": "1. Welcome to green school! Lesson 12",
+"skyId": 143492,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, заменяя выделенные слова местоимениями she, he, they, it, we.",
+"",
+"WORDLIST\nslim — худощавый, стройный\nsweet — конфета\nsing — петь\nfunny — смешной, забавный",
+"Тим худощавый. Он худощавый.",
+"Я и Том друзья.\nЭлис любит конфеты.\nТрики, Тим и Том умеют хорошо петь.\nУ Тима есть шляпа. Шляпа смешная.",
+"We. (Мы.)\nShe. (Она.)\nThey. (Они.)\nIt. (Она; неодушевлённое.)"
+],
+"answer": "We.\nShe.\nThey.\nIt."
+}
+]
+},
+{
+"number": "1-s15",
+"num": "1",
+"page": 15,
+"chapter": "1. Welcome to green school! Lesson 13",
+"skyId": 143493,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать названия дней недели на английском.",
+"",
+"Воскресенье — Sunday.\nПонедельник — Monday.\nВторник — Tuesday.\nСреда — Wednesday.\nЧетверг — Thursday.\nПятница — Friday.\nСуббота — Saturday."
+],
+"answer": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday."
+}
+]
+},
+{
+"number": "2-s15",
+"num": "2",
+"page": 15,
+"chapter": "1. Welcome to green school! Lesson 13",
+"skyId": 143494,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить и записать предложения.",
+"WORDLIST\nplay — играть\nfootball — футбол\nride — ездить\nbike — велосипед\nread — читать\ncount — считать\nski — кататься на лыжах\nwrite — писать\nchess — шахматы\nMonday — понедельни\nTuesday — вторник \nWednesday — среда\nThursday — четверг\nFriday — пятница",
+"Jack reads and counts on Mondays. — Джек читает и считает по понедельникам.",
+"Bess and Billy play football on Tuesdays. \nNick rides a bike on Wednesdays. \nWe ski on Fridays.\nMary writes and reads on Thursdays. \nPeter plays chess on Mondays.",
+"Бесс и Билли играют в футбол по вторникам.\n Ник ездит на велосипеде по средам.\nМы катаемся на лыжах по пятницам.\nМэри пишет и читает по четвергам.\nПитер играет в шахматы по понедельникам."
+],
+"answer": "Bess and Billy play football on Tuesdays.\nNick rides a bike on Wednesdays.\nWe ski on Fridays.\nMary writes and reads on Thursdays.\nPeter plays chess on Mondays."
+}
+]
+},
+{
+"number": "3-s15",
+"num": "3",
+"page": 15,
+"chapter": "1. Welcome to green school! Lesson 13",
+"skyId": 143495,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно составить предложения со словами из рамочки по образцу I like/I don't like.",
+"WORDLIST\ncheese — сыр\ncabbage — капуста\ncoffee — кофе\ncarrot — морковь\ncake — торт\nham — ветчина\npotato — картофель\nbanana — банан\ntea — чай\norange — апельсин\ncornflakes — кукурузные хлопья\nsandwich — сэндвич\nsweet — конфета\napple —яблоко\njam — варенье",
+"I like coffee. But I don't like tea. - Я люблю кофе. Но я не люблю чай.",
+"I like potatoes. But I don't like cabbage.\nI like bananas. But I don't like oranges.\nI like cakes. But I don't like jam.\nI like ham. But I don't like sandwiches.",
+"Я люблю картошку. Но я не люблю капусту.\nЯ люблю бананы. Но я не люблю апельсины.\nЯ люблю торты. Но я не люблю варенье.\nЯ люблю ветчину. Но я не люблю бутерброды."
+],
+"answer": "I like potatoes. But I don't like cabbage.\nI like bananas. But I don't like oranges.\nI like cakes. But I don't like jam.\nI like ham. But I don't like sandwiches."
+}
+]
+},
+{
+"number": "1-s16",
+"num": "1",
+"page": 16,
+"chapter": "1. Welcome to green school! Lesson 14",
+"skyId": 143496,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно вставить в слова пропущенные словосочетания ea или ee.",
+"Bread (хлеб), eat (есть), coffee (кофе), sweet (сладости), ice cream (мороженое), tea (чай), cheese (сыр), meat (мясо), speak (сказать), clean (убирать), please (пожалуйста).",
+"Bread, meat, speak, clean, please, eat, ice cream, tea.\nCoffee, sweet, cheese."
+],
+"answer": "Bread, eat, coffee, sweet, ice cream, tea, cheese, meat, speak, clean, please."
+}
+]
+},
+{
+"number": "2-s16",
+"num": "2",
+"page": 16,
+"chapter": "1. Welcome to green school! Lesson 14",
+"skyId": 143497,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно соединить линиями антонимы (слова с противоположным значением).",
+"WORDLIST\ndirty — грязный\nslim — тонкий\nwhite — белый\nsad — грустный\nshort — короткий\ngood — хороший\nclean — чистый\nblack — чёрный\nbad — плохой\nhappy — счастливый\nlong — длинный\nfat — толстый",
+"Два слова уже соединены в качестве примера: fat (толстый) — slim (тонкий).\nLong (длинный) — short (короткий).\nClean (чистый) — dirty (грязный).\nBlack (чёрный) — white (белый).\nHappy (счастливый) — sad (грустный).\nBad (плохой) — good (хороший)."
+],
+"answer": "Fat — slim.\nLong — short.\nClean — dirty.\nBlack — white.\nHappy — sad.\nBad — good."
+}
+]
+},
+{
+"number": "3-s16",
+"num": "3",
+"page": 16,
+"chapter": "1. Welcome to green school! Lesson 14",
+"skyId": 143498,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно исправить утверждения по образцу:\nКошки любят есть бананы. — Нет. Они любят есть сливки.",
+"WORDLIST\nham — ветчина\ncheese — сыр\ncream — сливки\nhoney — мёд\nmeat — мясо\ncarrot — морковка",
+"Кроликам нравится есть ветчину. — No, they don't. They like to eat carrots. Нет. Им нравится есть морковку.\nСобакам нравится есть мёд. — No, they don't. They like to eat meat. Нет. Им нравится есть мясо.\nМедведям нравится есть сыр. — No, they don't. They like to eat honey. Нет. Им нравится есть мёд.\nОбезьянам нравится есть мясо. — No, they don't. They like to eat bananas. Нет. Им нравится есть бананы.\nМышам нравится есть сливки. — No, they don't. They like to eat cheese. Нет. Им нравится есть сыр."
+],
+"answer": "No, they don't. They like to eat carrots. \nNo, they don't. They like to eat meat. \nNo, they don't. They like to eat honey. \nNo, they don't. They like to eat bananas. \nNo, they don't. They like to eat cheese."
+}
+]
+},
+{
+"number": "4-s16",
+"num": "4",
+"page": 16,
+"chapter": "1. Welcome to green school! Lesson 14",
+"skyId": 143499,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно написать по образцу, чем вы любите заниматься в субботу и воскресенье.",
+"Предложения следует строить по следующей схеме:\nI (я) + like + инфинитив + день недели.\nОбразец: Мне нравится бегать по субботам и воскресеньям.",
+"I like to walk on Saturday. Мне нравится гулять по субботам.\nI like to play on Sunday. Мне нравится играть по воскресеньям.\nI like to cook on Saturday and Sunday. Мне нравится готовить по субботам и воскресеньям.\nI like to swim on Saturday and Sunday. Мне нравится плавать по субботам и воскресеньям."
+],
+"answer": "Возможные варианты ответа:\nI like to walk on Saturday.\nI like to play on Sunday.\nI like to cook on Saturday and Sunday.\nI like to swim on Saturday and Sunday."
+}
+]
+},
+{
+"number": "1-s17",
+"num": "1",
+"page": 17,
+"chapter": "1. Welcome to green school! Lesson 15",
+"skyId": 143500,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и записать названия продуктов.",
+"WORDLIST\nhoney — мёд \nmilk — молоко\ncoffee — кофе\ncheese — сыр\nbutter — масло\nsugar —сахар\ncream — сливки",
+"Honey. \nMilk. \nCoffee. \nCheese. \nButter. \nSugar. \nCream."
+],
+"answer": "Honey.\nMilk.\nCoffee.\nCheese.\nButter.\nSugar.\nCream."
+}
+]
+},
+{
+"number": "2-s17",
+"num": "2",
+"page": 17,
+"chapter": "1. Welcome to green school! Lesson 15",
+"skyId": 143501,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки в рабочей тетради и написать, что делают ученики лесной школы по воскресеньям.",
+"",
+"WORDLIST\ncount — считать\nsing — петь\nswim — плавать\nski — кататься на лыжах",
+"Том считает.",
+"Jane sings. (Джейн поёт.)\nPeter swims. (Питер плавает.)\nMartin skis. (Мартин катается на лыжах.)\nJack plays football. (Джек играет в футбол.)"
+],
+"answer": "Jane sings. \nPeter swims. \nMartin skis. \nJack plays football."
+}
+]
+},
+{
+"number": "3-s17",
+"num": "3",
+"page": 17,
+"chapter": "1. Welcome to green school! Lesson 15",
+"skyId": 143502,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и записать вопросы.",
+"WORDLIST\npet — домашний питомец\nstrong — сильный\nhappy — счастливый\nbrave — храбрый, смелый\nnice — хороший, красивый, милый\nsmart — умный\nfunny — смешной, забавный",
+"",
+"Джек смелый?\n(Глагол-связка + действующее лицо + качество, объект.)",
+"Is Mary nice? (Мэри милая?)\nAre they strong? (Они сильные?)\nIs Mr. Greenwood smart? (Мистер Гринвуд умный?)\nAre pupils happy? (Ученики счастливые?)\nIs her pet funny? (Её питомец забавный?)"
+],
+"answer": "Is Mary nice? \nAre they strong? \nIs Mr. Greenwood smart? \nAre pupils happy?\nIs her pet funny?"
+}
+]
+},
+{
+"number": "part-1-s18",
+"num": "part-1",
+"page": 18,
+"chapter": "1. Welcome to green school! Lesson 16. Progress check",
+"skyId": 143503,
+"subTasks": [
+{
+"name": "Listening (1)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно прослушать аудиозапись и отметить галочкой, о ком идёт речь.",
+"WORDLIST\nnice — красивый/хороший\nsmart — умный\nshort — невысокий\nslim — худой\ngray — серый\ntail — хвост\nlazy — ленивый\ncount — считать\nskate — кататься на коньках\nbread — хлеб\ncheese — сыр",
+"Здравствуйте! Я мистер Гринвуд. Я учитель в лесной школе. У меня есть 10 учеников. Все мои ученики хорошие и умные. Сегодня я хочу рассказать вам об одном из моих учеников. Она невысокая и худая. Она серая. Её нос чёрный. Её хвост длинный. Она не ленивая. Ей нравится читать и считать. Она умеет хорошо танцевать. Она не умеет кататься на коньках. Ей нравится хлеб и сыр. Но ей не нравятся бананы.\nПравильный ответ: b (речь идёт о мышке)."
+],
+"answer": "B."
+},
+{
+"name": "Spelling (2-3)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно подчеркнуть слова, в которых буквы O и U читаются не так, как в остальных словах.",
+"",
+"",
+"2. Strong (сильный), corn (кукуруза), short (короткий), horse (лошадь), morning (утро).\n3. But (но), music (музыка), butter (масло), duck (утка), funny (смешной).",
+"Strong, corn, short, horse, morning.\nBut, music, butter, duck, funny.\nСлова, в которых произношение отличается: strong и music."
+],
+"answer": "2. Strong.\n3. Music."
+},
+{
+"name": "Text (4)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно прочитать загадку и обвести правильный вариант ответа:\na) попугай,\nb) кролик,\nc) собака.",
+"WORDLIST\nwhite — белый\nblack — чёрный\nshort — короткий\nkind — добрый\nfunny — смешной\nfly — летать\njump — прыгать\ncarrot — морковка\nmeat — мясо\ntail — хвост",
+"У Хелен есть домашний питомец. Её питомец белый и его зовут Сноуи. Сноуи небольшой. Он белый, но его нос чёрный. У него короткий хвост. Сноуи добрый и смешной. Хелен часто берёт с собой питомца в парк. Сноуи хорошо умеет прыгать, он умеет играть с мячом. Но он не умеет летать. Он не умеет бегать. Сноуи нравится морковка. Ему не нравится мясо и сладости. Хелен любит своего _____.\nПравильный ответ: rabbit (кролик)."
+],
+"answer": "B."
+},
+{
+"name": "Text (5-6)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно дописать предложения, опираясь на текст из предыдущего упражнения.",
+"5. Питомец Хелен не умеет _____.\n6. Питомец Хелен не любит мясо, но любит _____.",
+"У Хелен есть домашний питомец. Её питомец белый и его зовут Сноуи. Сноуи небольшой. Он белый, но его нос чёрный. У него короткий хвост. Сноуи добрый и смешной. Хелен часто берёт с собой питомца в парк. Сноуи хорошо умеет прыгать, он умеет играть с мячом. Но он не умеет летать. Он не умеет бегать. Сноуи нравится морковка. Ему не нравится мясо и сладости.",
+"5. Helen's pet can't fly and run. Питомец Хелен не умеет летать и бегать.\n6. Helen's pet doesn't like meat but he likes carrots. Питомец Хелен не любит мясо, но ему нравится морковка."
+],
+"answer": "5. Helen's pet can't fly and run.\n6. Helen's pet doesn't like meat but he likes carrots."
+},
+{
+"name": "Questions (7-9)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно выбрать правильный ответ на вопрос.",
+"WORDLIST\ncheese — сыр\nlike — нравится\nstrong — сильный \npark — парк\nshop — магазин\nmilk — молоко",
+"7. Не хотите ли немного сыра?\nA. Нет, спасибо.\nB. Пожалуйста.\nC. Да, у вас есть.\n8. Где они играют в футбол?\nA. По пятницам.\nB. Чтобы быть сильными.\nC. В парке.\n9. Почему Энн идёт в магазин?\nA. Со своей мамой.\nB. По вторникам и субботам.\nC. Чтобы купить молоко для своей кошки."
+],
+"answer": "7. A.\n8. C.\n9. C."
+},
+{
+"name": "Letter (10-15)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно прочитать письмо мисс Чэттер и заполнить пропуски словами am, is, are.",
+"WORDLIST\nnice — красивый/хороший\nsmart — умный\nbrave — храбрый\nstrong — сильный\ncount — считать\ncinema — кино\nvisit — навещать",
+"",
+"Дорогая Энн,\nБлагодарю за твоё письмо. Я сейчас учитель в лесной школе. У меня есть 10 учеников. Они (10) are хорошие и умные. Питер (11) is умный. Джек и Ник (12) are храбрые и смелые. Мэри, Бэсс, Джейн и Пэм нравится танцевать. Билли, Томасу и Мартину нравится читать и считать. По субботам мы ходим в кино вместе. Я (13) am счастлива. (14) Are ты счастлива? У тебя есть ученики? Как их (15) are зовут?\nПриезжай навестить меня в лесной школе.\nПожалуйста, пиши.\nС наилучшими пожеланиями,\nЭлис (мисс Чэттер)"
+],
+"answer": "10. Are.\n11. Is.\n12. Are.\n13. Am.\n14. Are.\n15. Are."
+}
+]
+},
+{
+"number": "part-2-s20",
+"num": "part-2",
+"page": 20,
+"chapter": "1. Welcome to green school! Lesson 16. Progress check",
+"skyId": 143504,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать о мисс Четтер небольшой рассказ по плану:\nописать её характер;\nрассказать, что она умеет делать;\nуказать, чем ей нравится заниматься.",
+"WORDLIST\nkind — добрый\nsmart — умный\nspeak — говорить\nFrench — французский\ncinema — кино\npupil — ученик",
+"Miss Chatter is a teacher at Green School. She is very kind and smart. She can speak Russian, French and English. She likes to go to the cinema with her pupils.\nМисс Четтер — учительница в лесной школе. Она очень добрая и умная. Она умеет говорить на русском, французском и английском. Ей нравится ходить в кино с учениками."
+],
+"answer": "Возможный вариант ответа:\nMiss Chatter is a teacher at Green School. She is very kind and smart. She can speak Russian, French and English. She likes to go to the cinema with her pupils."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно разыграть диалог продавца и покупателя в магазине.",
+"WORDLIST\nkilo — килограмм\ncake — торт\nsweetы — конфеты/сладости\nguest — гость\nbuy — покупать\nhelp — помогать",
+"A: Hello! Здравствуйте!\nB: Hello! Can I help you? Здравствуйте! Я могу помочь?\nA: Yes. I would like to buy a cake and some sweets for my guests. Да. Я бы хотел купить торт и конфеты для моих гостей.\nB: Sure. Here they are. Конечно. Они здесь.\nA: How much is this cake? Сколько стоит этот торт?\nB: 200 rubles. 200 рублей.\nA: How much are these sweets? Сколько стоят эти конфеты?\nB: 50 rubles per kilo. 50 рублей за килограмм.\nA: Ok. I'll take this cake and two kilos of sweets. Хорошо. Я возьму этот торт и два килограмма конфет.\nB: Anything else? Что-нибудь ещё?\nA: No, thank you. Нет, спасибо."
+],
+"answer": "Возможный вариант диалога:\nA: Hello!\nB: Hello! Can I help you?\nA: Yes. I would like to buy a cake and some sweets for my guests.\nB: Sure. Here they are.\nA: How much is this cake?\nB: 200 rubles. \nA: How much are these sweets?\nB: 50 rubles per kilo.\nA: Ok. I'll take this cake and two kilos of sweets.\nB: Anything else?\nA: No, thank you."
+}
+]
+},
+{
+"number": "1-s20",
+"num": "1",
+"page": 20,
+"chapter": "1. Welcome to green school! Lesson 17. Revision",
+"skyId": 143505,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, сколько кому лет.",
+"",
+"",
+"Ему десять лет.",
+"Ему пять лет (is five).\nЕй шесть лет (is six).\nИм семь лет (are seven)."
+],
+"answer": "Is five.\nIs six.\nAre seven."
+}
+]
+},
+{
+"number": "2-s20",
+"num": "2",
+"page": 20,
+"chapter": "1. Welcome to green school! Lesson 17. Revision",
+"skyId": 143506,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать письмо и вставить am, is, are.",
+"WORDLIST\nsmart — умный\npupil — ученик\npet — домашнее животное, питомец",
+"",
+"Дорогой друг,\nМеня зовут Маша. Мне пять лет. Я не ученица. А ты ученик? У меня есть собака. Моя собака чёрная. Мой домашний питомец умный. Я люблю своего питомца. У тебя есть питомец? Твой питомец умный?\nПока, Маша",
+"Is. (После существительного в единственном числе.)\nAm. (После I.)\nAm. (После I.)\nAre. (Подлежащее выражено местоимением you.)\nIs. (После существительного в единственном числе.)\nIs. (После существительного в единственном числе.)\nIs. (Подлежащее выражено существительным в единственном числе.)"
+],
+"answer": "Is.\nAm. \nAm. \nAre. \nIs. \nIs. \nIs."
+}
+]
+},
+{
+"number": "3-s21",
+"num": "3",
+"page": 21,
+"chapter": "1. Welcome to green school! Lesson 17. Revision",
+"skyId": 143507,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно сказать, что любят есть животные.",
+"WORDLIST\nfish — рыба\negg — яйцо\ncarrot — морковка\ncabbage — капуста\npotato — картошка\nbread — хлеб",
+"",
+"",
+"Лисы любят есть рыбу (fish).\nЗмеи любят есть яйца (eggs).\nЛошади любят есть морковку (carrots).\nКролики любят есть капусту (cabbage).\nСвиньи любят есть картошку (potatoes).\nПтицы любят есть хлеб (bread)."
+],
+"answer": "Fish.\nEggs.\nCarrots.\nCabbage.\nPotatoes.\nBread."
+}
+]
+},
+{
+"number": "4-s21",
+"num": "4",
+"page": 21,
+"chapter": "1. Welcome to green school! Lesson 17. Revision",
+"skyId": 143508,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать объявление о пропаже собаки, используя модели из учебника.",
+"WORDLIST\nmeat — мясо\npotato — картошка\nnice — милый",
+"Помогите! Помогите!\nМой друг — собака.",
+"His name is Jack. He is nice. He can run and jump. He likes meat and potatoes. He doesn't like cakes. — Его зовут Джек. Он милый. Он умеет бегать и прыгать. Он любит мясо и картошку. Он не любит пирожные."
+],
+"answer": "His name is Jack. He is nice. He can run and jump. He likes meat and potatoes. He doesn't like cakes."
+}
+]
+},
+{
+"number": "5-s21",
+"num": "5",
+"page": 21,
+"chapter": "1. Welcome to green school! Lesson 17. Revision",
+"skyId": 143509,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно помочь мисс Четтер ответить на вопросы.",
+"WORDLIST\nnice — милый\nslim — худой",
+"",
+"Ты милая. — Да, я милая.",
+"Ты худая? — Да, я худая (Yes, I am).\nТы любишь пирожные? — Да, я люблю (Yes, I do).\nТы умеешь танцевать? — Да, я умею (Yes, I can).\nУ тебя есть шляпа? — Да, есть (Yes, I have).\nОна милая? — Да, она милая (Yes, it is)."
+],
+"answer": "Yes, I am.\nYes, I do.\nYes, I can.\nYes, I have.\nYes, it is."
+}
+]
+},
+{
+"number": "project-s22",
+"num": "project",
+"page": 22,
+"chapter": "1. Welcome to green school! Lesson 18. Project",
+"skyId": 143510,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить меню и нарисовать рисунок.",
+"",
+"WORDLIST\ncheese sandwich — сэндвич с сыром\nmilk — молоко\nbread — хлеб\nbutter — масло\nham — ветчина\norange juice — апельсиновый сок\nfish — рыба\npotato — картофель\ncoffee — кофе\nrice — рис \napple juice — яблочный сок\ncake — торт, пирожное\nice cream — мороженое",
+"Tuesday\nApple juice.\nEggs.\nHam.\nBread.\nWednesday\nCoffee.\nSugar.\nMilk.\nA chicken sandwich.\nThursday\nOrange juice.\nFish.\nRice.\nBread.\nFriday\nTea. \nA lemon.\nA cake.\nAn ice cream."
+],
+"answer": "Нарисуй рисунок в рабочей тетради."
+}
+]
+},
+{
+"number": "1-s23",
+"num": "1",
+"page": 23,
+"chapter": "2. Happy green lessons. Lesson 19",
+"skyId": 143511,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно назвать животное на картинке и подписать его части тела.",
+"A head. (Голова.)\nA nose. (Нос.)\nA mouth. (Рот.)\nEars. (Уши.)\nAn eye. (Глаз.)\nA neck. (Шея.)\nA tail. (Хвост.)\nThis is a giraffe. (Это жираф.)"
+],
+"answer": "A head.\nA nose.\nA mouth.\nEars.\nAn eye.\nA neck.\nA tail.\nThis is a giraffe."
+}
+]
+},
+{
+"number": "2-s23",
+"num": "2",
+"page": 23,
+"chapter": "2. Happy green lessons. Lesson 19",
+"skyId": 143512,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расположить фразы в таком порядке, чтобы получился диалог.",
+"Да, пожалуйста. Можно мне немного хлеба? — 2.\nТы бы хотел сыра? — 1.\nПожалуйста. — 5.\nВот, держи. — 3.\nСпасибо. — 4."
+],
+"answer": "2, 1, 5, 3, 4."
+}
+]
+},
+{
+"number": "3-s23",
+"num": "3",
+"page": 23,
+"chapter": "2. Happy green lessons. Lesson 19",
+"skyId": 143513,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать правильную форму глагола из двух предложенных и дополнить предложения.",
+"",
+"Образец: Мой учитель говорит (speaks) по-английски хорошо.\nЕго друг живёт (lives) в лесу.\nСобаки любят (like) мясо и молоко.\nФермер пьёт (drinks) сок утром.\nЯ пью (drink) чай с молоком.\nПтички едят (eat) кукурузу."
+],
+"answer": "Lives.\nLike.\nDrinks.\nDrink.\nEat."
+}
+]
+},
+{
+"number": "1-s24",
+"num": "1",
+"page": 24,
+"chapter": "2. Happy green lessons. Lesson 20",
+"skyId": 143514,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расшифровать выписанный Джиму рецепт.",
+"T.\nE.\nA.\nW.\nI.\nT.\nH.\nL.\nE.\nM.\nO.\nN.",
+"Jim must drink tea with lemon. \nДжим должен пить чай с лимоном."
+],
+"answer": "Jim must drink tea with lemon. \nДжим должен пить чай с лимоном."
+}
+]
+},
+{
+"number": "2-s24",
+"num": "2",
+"page": 24,
+"chapter": "2. Happy green lessons. Lesson 20",
+"skyId": 143515,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить таблицу.",
+"WORDLIST\nanimal — животное\nrabbit — кролик\nfox — лиса\ncat — кошка\nhorse — лощадь\ncolour — цвет\nblack — чёрный\ngrey — серый \nwhite — белый\nfood — еда\ncabbage — капуста\nhome — дом\nfarm — ферма\ncan — может\nrun — бегать\njump — прыгать\nsing — петь",
+"",
+"Животное\n Цвет\n Еда\n Дом\n Может\n Не может\n Лиса\n Рыжий\n Рыба\n Лес\n Бегать, плавать\n Танцевать\n Кошка\n Чёрный, серый, белый\n Молоко\n Дом\n Бегать, прыгать, скакать\n Считать\n Лошадь\n Рыжий, белый, чёрный\n Овёс\n Ферма\n Бегать\n Читать"
+],
+"answer": "Animal\n Colour\n Food\n Home\n Can\n Can't\n A fox\n Red\n Fish\n Forest\n Run, swim\n Dance\n A cat\n Black, grey, white\n Milk\n Home\n Run, jump, skip\n Count\n A horse\n Red, white, black\n Corn\n Farm\n Run\n Read"
+}
+]
+},
+{
+"number": "3-s24",
+"num": "3",
+"page": 24,
+"chapter": "2. Happy green lessons. Lesson 20",
+"skyId": 143516,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно ответить на вопросы.",
+"WORDLIST\nlike — нравиться, любить\neat — есть\ndrink — пить\nlunch — обед",
+"Что ты любишь есть на обед?\nЧто ты любишь пить на обед?",
+"I like to eat soup and a cheese sandwich for lunch. Я люблю есть суп и бутерброд с сыром на обед. \nI like to drink tea with lemon for lunch. Я люблю пить чай с лимоном на обед."
+],
+"answer": "I like to eat soup and a cheese sandwich for lunch. Я люблю есть суп и бутерброд с сыром на обед.\nI like to drink tea with lemon for lunch. Я люблю пить чай с лимоном на обед."
+}
+]
+},
+{
+"number": "1-s25",
+"num": "1",
+"page": 25,
+"chapter": "2. Happy green lessons. Lesson 21",
+"skyId": 143517,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные буквосочетания «ee» и «ea» и прочитаем слова, которые получились.",
+"Coffee, bread, please, meat, cheese, three, tea, green, breakfast, teeth, sweet, head, teacher, see. \nКофе, хлеб, пожалуйста, сыр, три, чай, зелёный, завтрак, зубы, сладкий, голова, учитель, видеть.",
+"Coffee, bread, please, meat, cheese, three, tea, green, breakfast, teeth, sweet, head, teacher, see."
+],
+"answer": "Coffee, bread, please, meat, cheese, three, tea, green, breakfast, teeth, sweet, head, teacher, see."
+}
+]
+},
+{
+"number": "2-s25",
+"num": "2",
+"page": 25,
+"chapter": "2. Happy green lessons. Lesson 21",
+"skyId": 143518,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"С помощью волшебного цветка напишем, как зовут друзей учеников. Переведём эти имена на русский язык.",
+"When? — Когда?",
+"Why? — Почему?\nWhere? — Где?\nWho? — Кто?\nWhat? — Что?"
+],
+"answer": "Why? — Почему?\nWhere? — Где?\nWho? — Кто?\nWhat? — Что?"
+}
+]
+},
+{
+"number": "3-s25",
+"num": "3",
+"page": 25,
+"chapter": "2. Happy green lessons. Lesson 21",
+"skyId": 143519,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Закончим предложения.",
+"WORDLIST\ncoffee — кофе\ncorn — кукуруза\nmeat — мясо\nmilk — молоко\norange juice — апельсиновый сок",
+"Собаки едят мясо (meat).\nКоты любят молоко (milk).\nДевочки пью апельсиновый сок (orange juice).\nМальчики любят кофе (coffee).\nПтицы едят кукурузу (corn)."
+],
+"answer": "Собаки едят мясо (meat).\nКоты любят молоко (milk).\nДевочки пью апельсиновый сок (orange juice).\nМальчики любят кофе (coffee).\nПтицы едят кукурузу (corn)."
+}
+]
+},
+{
+"number": "4-s25",
+"num": "4",
+"page": 25,
+"chapter": "2. Happy green lessons. Lesson 21",
+"skyId": 143520,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Закончим рассказ Марка о себе. Будем использовать слова из рамочки.",
+"WORDLIST\nspeak — разговаривать\nschool — школа\nbreakfast — завтрак",
+"Я Марк. Мне девять лет (nine). Я хожу в школу (school). Я умею разговаривать (speak) по-английски. Я люблю (like) плавать и играть в футбол. На завтрак (breakfast) я пью чай и ем сэндвичи. У меня много друзей (friends). Мы играем в футбол (football) по субботам."
+],
+"answer": "Я Марк. Мне девять лет (nine). Я хожу в школу (school). Я умею разговаривать (speak) по-английски. Я люблю (like) плавать и играть в футбол. На завтрак (breakfast) я пью чай и ем сэндвичи. У меня много друзей (friends). Мы играем в футбол (football) по субботам."
+}
+]
+},
+{
+"number": "1-s26",
+"num": "1",
+"page": 26,
+"chapter": "2. Happy green lessons. Lesson 22",
+"skyId": 143521,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Раскрасим клоуна. Назовё, какие цвета мы использовали.",
+"",
+"Black.\nOrange.\nRed.\nBlue.\nGreen.\nPink.\nBrown.\nYellow.\nWhite.",
+"Red.\nYellow.\nGreen.\nBrown."
+],
+"answer": "Red.\nYellow.\nGreen.\nBrown.\nЦвета могут быть различные, в зависимости от тех, что мы выбрали для раскрашивания."
+}
+]
+},
+{
+"number": "2-s26",
+"num": "2",
+"page": 26,
+"chapter": "2. Happy green lessons. Lesson 22",
+"skyId": 143522,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим словосочетания. Запишем их.",
+"Играть.\nЧистить.\nМыть.\nИметь.\nПить.\nОбед.\nСок.\nЗубы.\nРуки.\nТеннис.",
+"Play tennis — играть в теннис.\nClean teeth — чистить зубы.\nWash hands — мыть руки.\nHave lunch — обедать.\nDrink juice — пить сок."
+],
+"answer": "Play tennis.\nClean teeth.\nWash hands.\nHave lunch.\nDrink juice."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим получившиеся словосочетания. Прочитаем предложения.",
+"WORDLIST 1\nplay tennis — играть в теннис\nclean teeth — чистить зубы\nwash hands — мыть руки\nhave lunch — обедать\ndrink juice — пить сок",
+"Томас _____ утром.\nДжек хорошо умеет _____.\nОни должны _____ каждый день.\nЯ голоден. Давайте _____.\nДжилл любит _____ апельсин.",
+"Washes hands / cleans teeth. Томас моет руки / чистит зубы по утрам.\nPlay tennis. Джек хорошо играет в теннис. \nWash hands / clean teeth. Они должны мыть руки / чистить зубы каждый день.\nHave lunch. Я голоден. Давайте пообедаем.\nDrink, juice. Джилл любит пить апельсиновый сок.\nПримечание: допускаются разные варианты ответов в некоторых предложениях."
+],
+"answer": "Washes hands / cleans teeth.\nPlay tennis.\nWash hands / clean teeth.\nHave lunch.\nDrink, juice."
+}
+]
+},
+{
+"number": "3-s26",
+"num": "3",
+"page": 26,
+"chapter": "2. Happy green lessons. Lesson 22",
+"skyId": 143523,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем, что Джим должен делать и чего не должен делать, чтобы быть здоровым.",
+"",
+"WORDLIST\neat — есть\ncarrot — морковь\napple — яблоко\ncabbage — капуста\nporridge — каша\ncheese — сыр\nmilk — молоко\njuice — сок\nwash face and hands — мыть лицо и руки\nclean teeth — чистить зубы\nrun — бегать\neat a lot of sweets — есть много сладкого\nbe lazy — лениться",
+"Jim must eat carrots, apples and cabbage. Джим должен есть морковь, яблоки и капусту. \nJim must have porridge, cheese and milk for breakfast. Джиму на завтрак нужна каша, сыр и молоко.\nJim must drink juice every day. Джим должен пить сок каждый день.\nJim must wash his face and hands. Джим должен мыть лицо и руки.\nJim must clean his teeth every day. Джим должен чистить свои зубы каждый день.\nJim must run in the morning. Джим должен бегать по утрам.\nJim mustn't eat a lot of sweets. Джиму нельзя есть много конфет.\nJim mustn't be lazy. Джим не должен быть ленивым."
+],
+"answer": "Jim must eat carrots, apples and cabbage.\nJim must have porridge, cheese and milk for breakfast.\nJim must drink juice every day.\nJim must wash his face and hands.\nJim must clean his teeth every day.\nJim must run in the morning.\nJim mustn't eat a lot of sweets.\nJim mustn't be lazy."
+}
+]
+},
+{
+"number": "1-s27",
+"num": "1",
+"page": 27,
+"chapter": "2. Happy green lessons. Lesson 23",
+"skyId": 143524,
+"subTasks": [
+{
+"name": "a",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно посмотреть на картинки, разгадать кроссворд и найти спрятанное слово.",
+"Cabbage. (Капуста.)\nBread. (Хлеб.)\nCheese. (Сыр.)\nMeat. (Мясо.)\nCake. (Торт.)\nCoffee. (Кофе.)\nCarrot. (Морковка.)\nSweet. (Сладость.)\nButter. (Сливочное масло.)\nBreakfast. (Завтрак.)"
+],
+"answer": "Cabbage.\nBread.\nCheese.\nMeat.\nCake.\nCoffee.\nCarrot.\nSweet.\nButter.\nBreakfast."
+},
+{
+"name": "b",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложение и сказать, что ты предпочитаешь на завтрак.",
+"I like to have a cheese sandwich and coffee for breakfast. (Мне нравится есть бутерброд с сыром и кофе на завтрак.)"
+],
+"answer": "I like to have a cheese sandwich and coffee for breakfast."
+}
+]
+},
+{
+"number": "2-s27",
+"num": "2",
+"page": 27,
+"chapter": "2. Happy green lessons. Lesson 23",
+"skyId": 143525,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно распределить слова на две группы: исчисляемые (much) и неисчисляемые (many).",
+"Much\n Many\nCheese. (Сыр.)\nCoffee. (Кофе.)\nTea. (Чай.)\nMeat. (Мясо.)\nPorridge. (Каша.)\nButter. (Сливочное масло.)\nJuice. (Сок.)\nBread. (Хлеб.)\nMilk. (Молоко)\nSweets. (Сладости.)\nSandwiches. (Бутерброды.)\nCarrots. (Морковь.)\nApples. (Яблоки.)\nCakes. (Пирожные.)\nPotatoes. (Картофель.)\nLemons. (Лимоны.)\nEggs. (Яйца.)\nBananas. (Бананы.)\nCorns. (Кукуруза.)\nTomatoes. (Помидоры)"
+],
+"answer": "Much\nMany\nCheese.\nCoffee.\nTea.\nMeat.\nPorridge.\nButter.\nJuice.\nBread.\nMilk\nSweets.\nSandwiches.\nCarrots.\nApples.\nCakes.\nPotatoes.\nLemons.\nEggs.\nBananas.\nCorns.\nTomatoes"
+}
+]
+},
+{
+"number": "3-s27",
+"num": "3",
+"page": 27,
+"chapter": "2. Happy green lessons. Lesson 23",
+"skyId": 143526,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно нарисовать своё любимое животное и написать о нём.",
+"My favourite pet is a dog. I have got a dog. His name is Jack. Jack is smart and funny. He likes to play with toys. He likes meat. He can jump and run well.",
+"Моё любимое животное — собака. У меня есть собака. Его зовут Джек. Джек умный и смешной. Он любит играть с игрушками. Он любят мясо. Он умеет хорошо прыгать и бегать."
+],
+"answer": "My favourite pet is a dog. I have got a dog. His name is Jack. Jack is smart and funny. He likes to play with toys. He likes meat. He can jump and run well."
+}
+]
+},
+{
+"number": "1-s28",
+"num": "1",
+"page": 28,
+"chapter": "2. Happy green lessons. Lesson 24",
+"skyId": 143527,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём лишнее слово в каждой строчке.",
+"Торт, банан, апельсин, яблоко.\nРыба, чай, кофе, сок, молоко.\nМолоко, сыр, масло, хлеб.\nМясо, помидор, картофель, капуста.",
+"Cake. Торт не относится к фруктам.\nFish. Рыба не является напитком.\nBread. Хлеб не является молочным продуктом.\nMeat. Мясо не является овощем."
+],
+"answer": "Cake.\nFish.\nBread.\nMeat."
+}
+]
+},
+{
+"number": "2-s28",
+"num": "2",
+"page": 28,
+"chapter": "2. Happy green lessons. Lesson 24",
+"skyId": 143528,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Придумаем и напишем, какие продукты и в каком количестве мисс Четтер купила в магазине.",
+"WORDLIST\nbanana — банан\norange — апельсин\napple — яблоко\ncake — торт\npotato — картошка\ncarton — пакет\njuice — сок\nmilk — молоко",
+"",
+"Miss Chatter has got five tomatoes, ten potatoes, three cartons of milk, six oranges and two apples.\nМисс Чаттер купила пять помидоров, десять картофелин, три пакета молока, шесть апельсинов и два яблока."
+],
+"answer": "Miss Chatter has got five tomatoes, ten potatoes, three cartons of milk, six oranges and two apples."
+}
+]
+},
+{
+"number": "3-s28",
+"num": "3",
+"page": 28,
+"chapter": "2. Happy green lessons. Lesson 24",
+"skyId": 143529,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расколдуем волшебный цветок. Запишем цифры словами.",
+"",
+"14 — fourteen; \n15 — fifteen; \n16 — sixteen; \n19 — nineteen; \n17 — seventeen; \n13 — thirteen; \n18 — eighteen."
+],
+"answer": "14 — fourteen;\n15 — fifteen;\n16 — sixteen;\n19 — nineteen;\n17 — seventeen;\n13 — thirteen;\n18 — eighteen."
+}
+]
+},
+{
+"number": "4-s28",
+"num": "4",
+"page": 28,
+"chapter": "2. Happy green lessons. Lesson 24",
+"skyId": 143530,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем цифры и продукты словами.",
+"",
+"Eleven tomatoes. Одиннадцать помидоров.\nThirteen sweets. Тринадцать конфет.\nFifteen apples. Пятнадцать яблок.\nSeventeen oranges. Семнадцать апельсинов.\nEighteen carrots. Восемнадцать морковок."
+],
+"answer": "Eleven tomatoes.\nThirteen sweets.\nFifteen apples.\nSeventeen oranges.\nEighteen carrots."
+}
+]
+},
+{
+"number": "1-s29",
+"num": "1",
+"page": 29,
+"chapter": "2. Happy green lessons. Lesson 25",
+"skyId": 143531,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем словами название предметов и их количество.",
+"",
+"WORDLIST\ncake — торт\napple — яблоко\nlemon — лимон\norange — апельсин",
+"Twelve cakes. Двенадцать тортов.\nSixteen apples. Шестнадцать яблок.\nThirteen lemons. Тринадцать лимонов.\nTwenty oranges. Двадцать апельсинов."
+],
+"answer": "Twelve cakes.\nSixteen apples.\nThirteen lemons.\nTwenty oranges."
+}
+]
+},
+{
+"number": "2-s29",
+"num": "2",
+"page": 29,
+"chapter": "2. Happy green lessons. Lesson 25",
+"skyId": 143532,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим в пропуски much, many, a lot of.",
+"WORDLIST\nfarmer — фермер\nsweet — конфета, сладкий\npen — ручка\ntea — чай\nhoney — мёд\ncarrot — морковь",
+"У фермера есть _____ морковок.\nВы должны пить _____ чая с мёдом.\nУ неё есть _____ друзей?\nУ него нет _____ конфет.\nУ школьников есть _____ ручек.",
+"",
+"A lot of / many. — В повествовательных предложениях возможен вариант a lot of либо с исчисляемыми существительными — many.\nA lot of / much. — В повествовательных предложениях возможен вариант a lot of либо с неисчисляемыми существительными — much.\nMany. — В вопросительных предложениях с исчисляемыми предметами только many.\nMany. — В отрицательных предложениях с исчисляемыми предметами только many.\nA lot of / many. — В повествовательных предложениях возможен вариант a lot of либо с исчисляемыми существительными — many."
+],
+"answer": "A lot of / many.\nA lot of / much.\nMany.\nMany.\nA lot of / many."
+}
+]
+},
+{
+"number": "3-s29",
+"num": "3",
+"page": 29,
+"chapter": "2. Happy green lessons. Lesson 25",
+"skyId": 143533,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Поможем продавцу сделать рекламу его товара. Впишем нужные слова в объявление.",
+"WORDLIST\nred — красный\ngreen — зелёный\ngood — хороший\nbig — большой\nwhite — белый\na lot of — много\nstrong — сильный\nnice — замечательный",
+"У меня есть: красная и большая морковь, _____ сыр, _____ пирожные, _____ чай, _____ капуста, _____ конфеты, _____ яйца.",
+"У меня есть: красная и большая red and big морковь, хороший good сыр, замечательные nice пирожные, крепкий strong чай, зелёная green капуста, много a lot of конфет, белые white яйца."
+],
+"answer": "Red and big.\nGood.\nNice.\nStrong.\nGreen.\nA lot of.\nWhite."
+}
+]
+},
+{
+"number": "4-s29",
+"num": "4",
+"page": 29,
+"chapter": "2. Happy green lessons. Lesson 25",
+"skyId": 143534,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Расставим вопросы. Расположим слова в нужном порядке.",
+"",
+"",
+"",
+"May I come in? Могу я войти?\nCan you play tennis? Ты умеешь играть в теннис?\nMay I take a pencil? Могу я взять карандаш?\nDo you run in the morning? Вы бегаете по утрам?"
+],
+"answer": "May I come in?\nCan you play tennis?\nMay I take a pencil?\nDo you run in the morning?"
+}
+]
+},
+{
+"number": "1-s30",
+"num": "1",
+"page": 30,
+"chapter": "2. Happy green lessons. Lesson 26",
+"skyId": 143535,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно записать числа, расположенные на лепестках цветка, десятками.",
+"20 — twenty.\n90 — ninety.\n40 — forty.\n80 — eighty.\n30 — thirty.\n70 — seventy.\n50 — fifty.\n60 — sixty."
+],
+"answer": "20 — twenty.\n90 — ninety.\n40 — forty.\n80 — eighty.\n30 — thirty.\n70 — seventy.\n50 — fifty.\n60 — sixty."
+}
+]
+},
+{
+"number": "2-s30",
+"num": "2",
+"page": 30,
+"chapter": "2. Happy green lessons. Lesson 26",
+"skyId": 143536,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить таблицу, вписав в неё то, что ты любишь и не любишь делать.",
+"I like to... (Мне нравится...)\n I don't like to... (Мне не нравится...)\nPlay hockey. (Играть в хоккей.)\nPlay football. (Играть в футбол.)\nSwim. (Плавать.)\nPlay chess. (Играть в шахматы)\nEat honey. (Есть мёд.)\nDo my homework. (Делать свою домашнюю работу.)\nWatch TV. (Смотреть телевизор.)\nSkip. (Прыгать со скакалкой)"
+],
+"answer": "I like to...\nI don't like to...\nPlay hockey.\nPlay football.\nSwim.\nPlay chess\nEat honey.\nDo my homework.\nWatch TV.\nSkip"
+}
+]
+},
+{
+"number": "3-s30",
+"num": "3",
+"page": 30,
+"chapter": "2. Happy green lessons. Lesson 26",
+"skyId": 143537,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить четыре общих вопроса об учениках лесной школы, как показано в образце.",
+"",
+"Образец: Собачка любит играть в футбол? Лисичка делает свою домашнюю работу каждый день?\nDoes the hen like to read books? (Курочка любит читать книги?)\nDoes the bear eat honey every day? (Медвежонок ест мёд каждый день?)\nDoes the cat like to dance? (Котик любит танцевать?)\nDoes the pig ride his bike every day? (Поросёнок катается на своём велосипеде каждый день?)"
+],
+"answer": "Does the hen like to read books?\nDoes the bear eat honey every day?\nDoes the cat like to dance?\nDoes the pig ride his bike every day?"
+}
+]
+},
+{
+"number": "1-s31",
+"num": "1",
+"page": 31,
+"chapter": "2. Happy green lessons. Lesson 27",
+"skyId": 143538,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно словами написать количество предметов.",
+"WORDLIST\nbike — велосипед\npencil — карандаш\npen — ручка\nbag — портфель",
+"Thirty-two bikes. (32 велосипеда.)\nTwenty-six pencils. (26 карандашей.)\nFifty-four pens. (54 ручки.)\nEighty-seven bags. (87 портфелей.)"
+],
+"answer": "Thirty-two bikes.\nTwenty-six pencils.\nFifty-four pens.\nEighty-seven bags."
+}
+]
+},
+{
+"number": "2-s31",
+"num": "2",
+"page": 31,
+"chapter": "2. Happy green lessons. Lesson 27",
+"skyId": 143539,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения, выбрав наиболее подходящий по смыслу вариант из трёх предложенных.",
+"1. Курицы едят _____.\nA. Сливочное масло. B. Мороженое. C. Кукурузу.\n2. Моя лошадь не ест _____.\nA. Морковку. B. Яблоки. C. Мясо.\n3. Медведи любят _____.\nA. Мёд. B. Кукурузу. C. Ветчину.\n4. Обезьяны любят _____.\nA. Рыбу. B. Бананы. C. Лимоны.\n5. Кролики любят _____.\nA. Пирожные. B. Морковку. C. Мёд."
+],
+"answer": "C.\nC.\nA.\nB.\nB."
+}
+]
+},
+{
+"number": "3-s31",
+"num": "3",
+"page": 31,
+"chapter": "2. Happy green lessons. Lesson 27",
+"skyId": 143540,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно превратить утверждения в общие вопросы, как показано в образце.",
+"",
+"Образец: Его питомцы любят молоко и сыр. — Его питомцы любят молоко и сыр?\n1. Мы ходим в зоопарк. \nDo we go to the zoo? (Мы ходим в зоопарк?)\n2. Его друзья играют в футбол по воскресеньям.\nDo his friends play football on Sundays? (Его друзья играют в футбол по воскресеньям?)\n3. Они ходят в школу вместе.\nDo they go to school together? (Они ходят в школу вместе?)\n4. Ты говоришь и читаешь по-французски хорошо.\nDo you speak and read French well? (Ты говоришь и читаешь по-французски хорошо?)\n5. Братья пьют чай на завтрак. \nDo the brothers drink tea for breakfast? (Братья пьют чай на завтрак?)"
+],
+"answer": "1. Do we go to the zoo?\n2. Do his friends play football on Sundays?\n3. Do they go to school together?\n4. Do you speak and read French well?\n5. Do the brothers drink tea for breakfast?"
+}
+]
+},
+{
+"number": "1-s32",
+"num": "1",
+"page": 32,
+"chapter": "2. Happy green lessons. Lesson 28",
+"skyId": 143541,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно раскрасить картинку и назвать цвета по-английски.",
+"",
+"Чёрный.\nОранжевый.\nКрасный.\nСиний.\nЗелёный.\nРозовый.\nКоричневый.\nЖёлтый.\nБелый.\nСерый."
+],
+"answer": "Чёрный.\nОранжевый.\nКрасный.\nСиний.\nЗелёный.\nРозовый.\nКоричневый.\nЖёлтый.\nБелый.\nСерый."
+}
+]
+},
+{
+"number": "2-s32",
+"num": "2",
+"page": 32,
+"chapter": "2. Happy green lessons. Lesson 28",
+"skyId": 143542,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно придумать праздничное новогоднее меню для лесного кафе.",
+"WORDLIST\npie — пирог\ncream — сливки\ncake — пирожное\nhot chocolate — горячий шоколад",
+"Menu (Меню)\nFor breakfast: cakes and coffee. (На завтрак: пирожные и кофе.)\nFor lunch: ham and cheese sandwiches, oranges and juice. (На обед: бутерброды с ветчиной и сыром, апельсины и сок.)\nFor dinner: apples pies, cream and hot chocolate. (На ужин: яблочные пироги, сливки и горячий шоколад.)"
+],
+"answer": "Menu\nFor breakfast: cakes and coffee.\nFor lunch: ham and cheese sandwiches, oranges and juice.\nFor dinner: apples pies, cream and hot chocolate."
+}
+]
+},
+{
+"number": "3-s32",
+"num": "3",
+"page": 32,
+"chapter": "2. Happy green lessons. Lesson 28",
+"skyId": 143543,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать письмо Санта Клаусу по предложенной модели.",
+"Dear Santa Claus,\nMy name is Ivan. I am ten.\nI can read, write and count well. \nCan I have a new bike and three new books for Christmas, please?\nMerry Christmas and a Happy New Year!\nWith love,\nIvan",
+"Дорогой Санта Клаус,\nМеня зовут Иван. Мне десять лет.\nЯ умею хорошо читать, писать и считать.\nМожно мне новый велосипед и три новые книги на Рождество, пожалуйста? \nСчастливого Рождества и Нового года!\nС любовью,\nИван"
+],
+"answer": "Dear Santa Claus,\nMy name is Ivan. I am ten.\nI can read, write and count well. \nCan I have a new bike and three new books for Christmas, please?\nMerry Christmas and a Happy New Year!\nWith love,\nIvan"
+}
+]
+},
+{
+"number": "1-s33",
+"num": "1",
+"page": 33,
+"chapter": "2. Happy green lessons. Lesson 29",
+"skyId": 143544,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в квадрате слова, связанные с новогодними праздниками.",
+"Year. (Год.)\nPresent. (Подарок.)\nCake. (Торт.)\nChristmas. (Рождество.)\nHappy. (Счастливый.)\nMerry. (Радостный.)\nSanta. (Санта.)\nClaus. (Клаус.)\nNew. (Новый.)\nSing. (Петь.)\nOrange. (Апельсин.)\nTree. (Дерево.)"
+],
+"answer": "Year.\nPresent.\nCake.\nChristmas.\nHappy.\nMerry.\nSanta.\nClaus.\nNew.\nSing.\nOrange.\nTree."
+}
+]
+},
+{
+"number": "2-s33",
+"num": "2",
+"page": 33,
+"chapter": "2. Happy green lessons. Lesson 29",
+"skyId": 143545,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить предложения, вставив в пропуски правильный предлог: in, for, on или with.",
+"Образец: Мэри любит есть сыр утром.\nМы не ходим в школу по воскресеньям (on Sundays).\nДжим гуляет со своей собакой (with his dog) каждое утро.\nМои друзья играют в хоккей в парке (in the park).\nЯ играю со своими друзьями (with my friends) по субботам.\nОни пьют чай на завтрак (for breakfast).\nБилли живёт в лесу (in the forest)."
+],
+"answer": "On.\nWith.\nIn.\nWith.\nFor.\nIn."
+}
+]
+},
+{
+"number": "3-s33",
+"num": "3",
+"page": 33,
+"chapter": "2. Happy green lessons. Lesson 29",
+"skyId": 143546,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно дополнить письмо динозаврика к Санта Клаусу по картинкам.",
+"WORDLIST\ncount — считать\nwrite — писать\nsweets — сладости\nbutterfly — бабочка",
+"Дорогой Санта Клаус (Santa Claus),\nМеня зовут... Я ученик. Я хожу в школу (school). Я умею считать (count) и писать (write). Мне нравятся сладости (sweets). Я бы хотел получить бабочку (butterfly).\nСчастливого Рождества!\nС любовью,\nДинозаврик"
+],
+"answer": "Santa Claus.\nSchool.\nCount.\nWrite.\nSweets.\nButterfly."
+}
+]
+},
+{
+"number": "part-1-s34",
+"num": "part-1",
+"page": 34,
+"chapter": "2. Happy green lessons. Lesson 30. Progress check",
+"skyId": 143547,
+"subTasks": [
+{
+"name": "Listening (1)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать аудиозапись и отметить галочкой, с кем разговаривает медвежонок.",
+"А: Рад видеть тебя! У меня есть сладости и симпатичный торт для тебя. Бананы и яблоки, ветчина и сыр, чай и кофе. Угощайся! Хочешь банан?\nБ: Нет, спасибо. Я не ем бананы.\nА: Извини. Ветчину тогда?\nБ: Нет, я не люблю ветчину. Можно мне немного сыра, пожалуйста?\nА: Хорошо! У меня есть немного сыра для тебя. Вот... угощайся!\nБ: Спасибо!\nА: Пожалуйста!\nA. The mouse. (A. Мышка.)"
+],
+"answer": "A. The mouse."
+},
+{
+"name": "Spelling (2-3)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в каждой строчке слово, в котором выделенное сочетание читается иначе, чем в других словах.",
+"2. \nea\n/iː/ Read, teacher, speak, please. (Читать, учитель, говорить, пожалуйста.)\n/e/ Head. (Голова.)\n3. \nth\n/ð/ The, they, together, with. (Определённый артикль, они, вместе, с.)\n/θ/ Teeth. (Зубы.)"
+],
+"answer": "2. Head.\n3. Teeth."
+},
+{
+"name": "Letter (4)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать письмо и узнать, какой подарок Бесс хочет получить на Рождество.",
+"WORDLIST\ncount — считать\nkind — добрый\npresent — подарок\na box of sweets — коробка конфет",
+"Дорогой Санта,\nМеня зовут Бесс. Мне семь лет. У меня есть брат Оливер. Ему десять лет. Оливер — хороший ученик. Он любит читать и считать. Оливер добрый, он часто играет со мной вечером.\nОливер не хочет писать тебе письмо. Но я знаю, что он хотел бы велосипед на Рождество. И можно мне тоже подарок? Я хочу книгу про Африку. И, пожалуйста, красный мячик для моего котика. И коробку конфет для моей мамы.\nУ нас симпатичная ёлка и праздничный торт. Приходи посмотреть.\nСчастливого Рождества!\nБесс",
+"4. Бесс хотела бы получить _____ на Рождество.\nA. Велосипед. B. Мячик. C. Книгу."
+],
+"answer": "4. C."
+},
+{
+"name": "Numbers (5-6)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно записать слова количество предметов.",
+"5. Fifteen pencils. (Пятнадцать карандашей.)\n6. Twenty-one cakes. (Двадцать одно пирожное.)"
+],
+"answer": "5. Fifteen pencils.\n6. Twenty-one cakes."
+},
+{
+"name": "Sentences (7-10)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно выбрать правильную форму глагола в каждом предложении.",
+"",
+"7. Кейт ходит (goes) в школу каждый день, кроме воскресенья.\n8. Его сестра не играет (doesn't play) в футбол. Но она умеет играть в теннис хорошо.\n9. Где друзья катаются на лыжах (do the friends ski)? — В лесу.\n10. Когда девочки поют (do the girls sing) песни? — Вечером."
+],
+"answer": "7. Goes.\n8. Doesn't.\n9. Do.\n10. Sing."
+},
+{
+"name": "Story (11-15)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и дополнить рассказ. В пропуски нужно вставить слова count, together, his, healthy, can.",
+"WORDLIST\nstrong — сильный\ncount — считать\nhealthy — здоровый\ncarrot — морковка",
+"У меня есть друг. (11) Его (His) зовут Томас. Томас большой и сильный. Томас — хороший ученик. Он умеет читать, писать и (12) считать (count). Мы делаем домашнюю работу (13) вместе (together). Томас любит футбол. Он (14) умеет (can) играть в футбол хорошо. Томас любит морковку, апельсины и яблоки. Поэтому он (15) здоровый (healthy). Мы хорошие друзья!"
+],
+"answer": "11. His.\n12. Count.\n13. Together.\n14. Can.\n15. Healthy."
+}
+]
+},
+{
+"number": "part-2-s36",
+"num": "part-2",
+"page": 36,
+"chapter": "2. Happy green lessons. Lesson 30. Progress check",
+"skyId": 143548,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать о животном, которое тебе нравится, по предложенному плану.",
+"I have got a dog. I love it very much. His name is Jack. He is big and brown. He is fluffy. He is very funny and he is smart. He can run and jump but he can't skip. He likes to play with his toys and walk in the park. He likes meat. He doesn't like fish or milk.",
+"У меня есть собака. Я её очень люблю. Его зовут Джек. Он большой и коричневый. Он пушистый. Он очень смешной, и он умный. Он умеет бегать и прыгать, но он не умеет прыгать со скакалкой. Он любит играть со своими игрушками и гулять в парке. Он любит мясо. Он не любит рыбу и молоко."
+],
+"answer": "I have got a dog. I love it very much. His name is Jack. He is big and brown. He is fluffy. He is very funny and he is smart. He can run and jump but he can't skip. He likes to play with his toys and walk in the park. He likes meat. He doesn't like fish or milk."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно придумать диалог между Санта Клаусом и учеником лесной школы. Затем нужно разыграть этот разговор в паре с одноклассником.",
+"Santa Claus: What do you like to do?\nPig: I like to ride my bike and eat sweets.\nSanta Claus: What can you do well?\nPig: I can swim, jump and play football well.\nSanta Claus: Are you a good pupil?\nPig: Yes, I am. I can read, write and count.\nSanta Claus: What present would you like to have for Christmas?\nPig: I would like to have a new bike and a lot of sweets for Christmas.",
+"Санта Клаус: Что тебе нравится делать?\nПоросёнок: Мне нравится кататься на своём велосипеде и есть сладости.\nСанта Клаус: Что ты умеешь делать хорошо?\nПоросёнок: Я умею плавать, прыгать и играть в футбол хорошо.\nСанта Клаус: Ты хороший ученик?\nПоросёнок: Да. Я умею читать, писать и считать.\nСанта Клаус: Какой подарок ты хотел бы получить на Рождество?\nПоросёнок: Я хотел бы получить новый велосипед и много сладостей на Рождество."
+],
+"answer": "Santa Claus: What do you like to do?\nPig: I like to ride my bike and eat sweets.\nSanta Claus: What can you do well?\nPig: I can swim, jump and play football well.\nSanta Claus: Are you a good pupil?\nPig: Yes, I am. I can read, write and count.\nSanta Claus: What present would you like to have for Christmas?\nPig: I would like to have a new bike and a lot of sweets for Christmas."
+}
+]
+},
+{
+"number": "1-s36",
+"num": "1",
+"page": 36,
+"chapter": "2. Happy green lessons. Lesson 31. Revision",
+"skyId": 143549,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подписать предметы на картинке.",
+"WORDLIST\nbear — медведь\nbike — велосипед\npresent — подарок\nSanta Claus — Санта-Клаус\nskates — коньки\nsweet — конфета",
+"Santa Claus.",
+"Present.",
+"Bear.",
+"Bike.",
+"Skates.",
+"Sweet."
+],
+"answer": "Bear — медведь.\nBike — велосипед.\nPresent — подарок.\nSanta Claus — Санта-Клаус.\nSkates — коньки.\nSweet — конфета."
+}
+]
+},
+{
+"number": "2-s37",
+"num": "2",
+"page": 37,
+"chapter": "2. Happy green lessons. Lesson 31. Revision",
+"skyId": 143550,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать вопросы по ответам.",
+"WORDLIST\nsleep — спать\nwell — хорошо\ncan — уметь, мочь\nswim — плавать\nplay — играть\nrun — бегать\ndrink — пить\nmilk — молоко\nbreakfast — завтрак",
+"Да, я умею. Я умею плавать.\nНет. Я играю в теннис.\nДа. Я бегаю в парке.\nНет. Я пью молоко на завтрак.",
+"Да. Я хорошо сплю. — Ты хорошо спишь?",
+"",
+"Ты умеешь плавать? Can you swim?\nТы играешь в баскетбол? Do you play basketball?\nТы бегаешь в парке? Do you run in the park?\nТы пьёшь чай на завтрак? Do you drink tea for breakfast?"
+],
+"answer": "Can you swim?\nDo you play basketball?\nDo you run in the park?\nDo you drink tea for breakfast?"
+}
+]
+},
+{
+"number": "3-s37",
+"num": "3",
+"page": 37,
+"chapter": "2. Happy green lessons. Lesson 31. Revision",
+"skyId": 143551,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, как показано в образце.",
+"WORDLIST\nfish — рыба\nbreakfast — завтрак\nread — читать\nspeak — говорить\nlive — жить\nforest — лес\nskate — кататься на коньках\nplay — играть\nchess — шахматы",
+"Джек хорошо читает и говорит по-английски.\nМэри живёт в лесу.\nДжилл катается на коньках в парке.\nМартин хорошо играет в шахматы.",
+"Бесс любит есть рыбу на завтрак. — Бесс любит есть рыбу на завтрак?*\n* В английском предложении появился вспомогательный глагол (does) и исчезло окончание у основного глагола (like).",
+"",
+"Does Jack read and speak English well? Джек хорошо читает и говорит по-английски?\nDoes Mary live in the forest? Мэри живёт в лесу?\nDoes Jill skate in the park? Джилл катается на коньках в парке?\nDoes Martin play chess well? Мартин хорошо играет в шахматы?"
+],
+"answer": "Does Jack read and speak English well? Джек хорошо читает и говорит по-английски?\nDoes Mary live in the forest? Мэри живёт в лесу?\nDoes Jill skate in the park? Джилл катается на коньках в парке?\nDoes Martin play chess well? Мартин хорошо играет в шахматы?"
+}
+]
+},
+{
+"number": "4-s37",
+"num": "4",
+"page": 37,
+"chapter": "2. Happy green lessons. Lesson 31. Revision",
+"skyId": 143552,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения, как показано в образце.",
+"WORDLIST\nlive — жить\neat — есть\nplay — играть\nride — кататься, ездить верхом\nhorse — лошадь\nsing — петь\nat home — дома\nteacher — учитель\npupil — ученик\nlazy — ленивый",
+"Джейн любит поесть.\nДжилл и Пэм играют в хоккей.\nПэм умеет ездить верхом на лошади.\nРокки поёт дома.\nДино учитель.\nУченики ленивые.",
+"Билли живёт в парке. — Билли не живёт в парке.",
+"",
+"Jane doesn't (does not) like to eat. Джейн не любит поесть.\nJill and Pam don't (do not) play hockey. Джилл и Пэм не играют в хоккей.\nPam can't (cannot) ride a horse. Пэм не умеет ездить верхом на лошади.\nRocky doesn't (does not) sing at home. Рокки не поёт дома.\nDino isn't (is not) a teacher. Дино не учитель.\nPupils aren't (are not) lazy. Ученики не ленивые."
+],
+"answer": "Jane doesn't (does not) like to eat. Джейн не любит поесть.\nJill and Pam don't (do not) play hockey. Джилл и Пэм не играют в хоккей.\nPam can't (cannot) ride a horse. Пэм не умеет ездить верхом на лошади.\nRocky doesn't (does not) sing at home. Рокки не поёт дома.\nDino isn't (is not) a teacher. Дино не учитель.\nPupils aren't (are not) lazy. Ученики не ленивые."
+}
+]
+},
+{
+"number": "project-s38",
+"num": "project",
+"page": 38,
+"chapter": "2. Happy green lessons. Lesson 32. Project",
+"skyId": 143553,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам необходимо изготовить новогоднюю игрушку.",
+"WORDLIST 1\nsheet of paper — лист бумаги\ncarton — картон\nscissors — ножницы\ncrayon — фломастер",
+"WORDLIST 2\nbell — колокольчик\nstar — звезда\nbird — птичка\nmushroom — грибочек\nsnowflake — снежинка",
+""
+],
+"answer": "Merry Christmas! / A Happy New Year!"
+}
+]
+},
+{
+"number": "1-s39",
+"num": "1",
+"page": 39,
+"chapter": "3. Speaking about a new friend. Lesson 33",
+"skyId": 132477,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и соедини стрелками слова, противоположные по значению.",
+"Black — white (чёрный — белый).\nFat — slim (толстый — худой).\nBig — small (большой — маленький).\nNice — ugly (милый — уродливый).\nGood — bad (хороший — плохой).\nShort — long (короткий — длинный).\nKind — angry (добрый — злой).\nSad — happy (грустный — счастливый).\nSmart – stupid (умный — глупый)."
+],
+"answer": "Black — white (чёрный — белый).\nFat — slim (толстый — худой).\nBig — small (большой — маленький).\nNice — ugly (милый — уродливый).\nGood — bad (хороший — плохой).\nShort — long (короткий — длинный).\nKind — angry (добрый — злой).\nSad — happy (грустный — счастливый).\nSmart – stupid (умный — глупый)."
+}
+]
+},
+{
+"number": "2-s39",
+"num": "2",
+"page": 39,
+"chapter": "3. Speaking about a new friend. Lesson 33",
+"skyId": 132478,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные слова: am, is, are, can, has.",
+"1) Я думаю, Тайни _____ добрый и умный.\n2) Томас и Мэри _____ хорошо играют в шахматы.\n3) Сколько тебе лет? — Мне _____ восемь.\n4) _____ У мисс Чаттер много английских книг? — Да, много книг.\n5) Ты — ученик? — Да, я _____.",
+"1) Я думаю, Тайни (is) добрый и умный.\n2) Томас и Мэри хорошо умеют (can) играть в шахматы.\n3) Сколько тебе лет? − Мне (am) восемь.\n4) У (Has) Мисс Чаттер много английских книг? − Да, много книг.\n5) Ты − ученик? – Да (am)."
+],
+"answer": "1) Я думаю, Тайни (is) добрый и умный.\n2) Томас и Мэри хорошо умеют (can) играть в шахматы.\n3) Сколько тебе лет? − Мне (am) восемь.\n4) У (Has) Мисс Чаттер много английских книг? − Да, много книг.\n5) Ты − ученик? – Да (am)."
+}
+]
+},
+{
+"number": "3-s39",
+"num": "3",
+"page": 39,
+"chapter": "3. Speaking about a new friend. Lesson 33",
+"skyId": 132479,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Джим хочет найти друзей по переписке. Поможем ему рассказать о себе. Закончим предложения.",
+"Дорогой друг,\nЯ — Джим.\nЯ — _____.\nЯ думаю, что я _____.\nНо я не _____.\nЯ умею _____.\nНо я не умею _____.\nМне нравится _____.\nМне нравится кофе _____.\nУ меня есть _____.\nНапиши мне.\nДжим",
+"Dear friend, Дорогой друг,\nI am Jim. Я Джим.\nI am ten. Мне десять.\nI think I am kind and funny. Я думаю, что я добрый и весёлый.\nBut I am not lazy. Но я не ленивый.\nI can speak English and draw. Я могу говорить по-английски и рисовать.\nBut I can't ride a bike. Но я не умею кататься на велосипеде.\nI like to play computer games. Я люблю играть в компьютерные игры.\nI like coffee and sandwiches. Я люблю кофе и бутерброды.\nI have got a lot of books. У меня много книг.\nPlease write back. Напиши мне.\nJim Джим"
+],
+"answer": "Dear friend, Дорогой друг,\nI am Jim. Я Джим.\nI am ten. Мне десять.\nI think I am kind and funny. Я думаю, что я добрый и весёлый.\nBut I am not lazy. Но я не ленивый.\nI can speak English and draw. Я могу говорить по-английски и рисовать.\nBut I can't ride a bike. Но я не умею кататься на велосипеде.\nI like to play computer games. Я люблю играть в компьютерные игры.\nI like coffee and sandwiches. Я люблю кофе и бутерброды.\nI have got a lot of books. У меня много книг.\nPlease write back. Напиши мне.\nJim Джим"
+}
+]
+},
+{
+"number": "1-s40",
+"num": "1",
+"page": 40,
+"chapter": "3. Speaking about a new friend. Lesson 34",
+"skyId": 132480,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти в квадрате знакомые слова и выписать названия дней недели.",
+"1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n 1\n W\n E\n E\n K\n 2\n E\n T\n S\n F\n I\n V\n E\n 3\n D\n H\n U\n R\n S\n D\n A\n Y\n 4\n N\n N\n I\n A\n 5\n E\n D\n D\n T\n 6\n S\n A\n A\n U\n R\n 7\n D\n Y\n Y\n R\n O\n 8\n A\n M\n O\n N\n D\n A\n Y\n O\n 9\n Y\n Y\n M\n 10\n T\n E\n N",
+"Monday — понедельник.\nWednesday — среда.\nThursday — четверг.\nFriday — пятница.\nSunday — воскресенье.\nSaturday — суббота."
+],
+"answer": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n 1\n W\n E\n E\n K\n 2\n E\n T\n S\n F\n I\n V\n E\n 3\n D\n H\n U\n R\n S\n D\n A\n Y\n 4\n N\n N\n I\n A\n 5\n E\n D\n D\n T\n 6\n S\n A\n A\n U\n R\n 7\n D\n Y\n Y\n R\n O\n 8\n A\n M\n O\n N\n D\n A\n Y\n O\n 9\n Y\n Y\n M\n 10\n T\n E\n N\nMonday.\nWednesday.\nThursday.\nFriday.\nSunday.\nSaturday."
+}
+]
+},
+{
+"number": "2-s40",
+"num": "2",
+"page": 40,
+"chapter": "3. Speaking about a new friend. Lesson 34",
+"skyId": 132481,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить словосочетания.",
+"Draw — рисовать.\nListen to — слушать.\nPlay — играть.\nWatch — смотреть.\nWrite — писать.",
+"Books — книги.\nComputer games — компьютерные игры.\nFunny pictures — смешные картинки.\nMusic — музыка.\nTV — телевизор.",
+"Draw funny pictures — рисовать смешные картинки.\nListen to music — слушать музыку.\nPlay computer games — играть в компьютерные игры.\nWatch TV — смотреть телевизор.\nWrite books — писать книги."
+],
+"answer": "Draw funny pictures.\nListen to music.\nPlay computer games.\nWatch TV.\nWrite books."
+}
+]
+},
+{
+"number": "3-s40",
+"num": "3",
+"page": 40,
+"chapter": "3. Speaking about a new friend. Lesson 34",
+"skyId": 132482,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски.",
+"Big — большой.\nCountry — деревенская.\nDraw — рисовать.\nFriend — друг.",
+"Деревенская мышь живёт в деревне. Её дом не (1) большой, но красивый. (2) Деревенская мышь любит читать. Она умеет (3) рисовать смешные картинки. По понедельникам её (4) друг приходит к ней в гости.",
+"Big.\nCountry.\nDraw.\nFriend."
+],
+"answer": "Big.\nCountry.\nDraw.\nFriend."
+}
+]
+},
+{
+"number": "1-s41",
+"num": "1",
+"page": 41,
+"chapter": "3. Speaking about a new friend. Lesson 35",
+"skyId": 132483,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы и прочитать стихотворение.",
+"",
+"Spring is green.\nSummer is bright.\nAutumn is yellow,\nWinter is white.",
+"Весна зелёная.\nЛето яркое.\nОсень жёлтая,\nЗима белая."
+],
+"answer": "Spring is green.\nSummer is bright.\nAutumn is yellow,\nWinter is white."
+}
+]
+},
+{
+"number": "2-s41",
+"num": "2",
+"page": 41,
+"chapter": "3. Speaking about a new friend. Lesson 35",
+"skyId": 132484,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно пронумеровать фразы так, чтобы получился разговор.",
+"Да, я хочу зеленое яблоко.\n1 − Хочешь яблоко?\nСпасибо.\nДержи.\nПожалуйста.",
+"2 − Yes, I'd like a green apple. Да, я хочу зелёное яблоко.\n1 − Would you like an apple? Хочешь яблоко?\n4 − Thank you. Спасибо.\n3 − Here you are. Держи.\n5 − You are welcome. Пожалуйста."
+],
+"answer": "2 − Yes, I'd like a green apple. Да, я хочу зелёное яблоко.\n1 − Would you like an apple? Хочешь яблоко?\n4 − Thank you. Спасибо.\n3 − Here you are. Держи.\n5 − You are welcome. Пожалуйста."
+}
+]
+},
+{
+"number": "3-s41",
+"num": "3",
+"page": 41,
+"chapter": "3. Speaking about a new friend. Lesson 35",
+"skyId": 132485,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу. Используем модели.",
+"I skate in winter. — Billy skates in winter, too. Зимой я катаюсь на коньках. — Билли тоже зимой катается на коньках.",
+"1) Весной мы гуляем по лесу. \nМэри _____.\n2) Зимой они навещают друзей. \nМартин _____.\n3) Ты играешь в теннис летом. \nТомас _____.\n4) Осенью я катаюсь на велосипеде. \nТайни _____.",
+"1) Mary walks in the forest in spring, too. Мэри тоже гуляет по лесу весной.\n2) Martin visits friends in winter, too. Мартин тоже зимой навещает друзей.\n3) Thomas plays tennis in summer, too. Томас тоже летом играет в теннис.\n4) Tiny rides his bike in autumn, too. Тайни тоже катается на своём велосипеде осенью."
+],
+"answer": "1) Mary walks in the forest in spring, too. Мэри тоже гуляет по лесу весной.\n2) Martin visits friends in winter, too. Мартин тоже зимой навещает друзей.\n3) Thomas plays tennis in summer, too. Томас тоже летом играет в теннис.\n4) Tiny rides his bike in autumn, too. Тайни тоже катается на своём велосипеде осенью."
+}
+]
+},
+{
+"number": "1-s42",
+"num": "1",
+"page": 42,
+"chapter": "3. Speaking about a new friend. Lesson 36",
+"skyId": 132486,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно записать, что можно делать только летом, только зимой, в любое время года.",
+"Летом\n Зимой\n В любое время года\n Мы можем бегать\n Мы можем кататься на лыжах",
+"Летом\n Зимой\n В любое время года\nWe can run. Мы можем бегать.\nWe can play football. Мы можем играть в футбол.\nWe can swim. Мы можем плавать.\nWe can ride the bike. Мы можем кататься на велосипеде\nWe can ski. Мы можем кататься на лыжах.\nWe can skate. Мы можем кататься на коньках.\nWe can make a snowman. Можем слепить снеговика.\nWe can play snowballs. Мы можем играть в снежки\nWe can play boardgames. Мы можем играть в настольные игры.\nWe can do puzzles. Мы можем собирать пазлы.\nWe can sing. Мы можем петь.\nWe can dance. Мы можем танцевать.\nWe can draw. Мы можем рисовать"
+],
+"answer": "Летом\n Зимой\n В любое время года\nWe can run. Мы можем бегать.\nWe can play football. Мы можем играть в футбол.\nWe can swim. Мы можем плавать.\nWe can ride the bike. Мы можем кататься на велосипеде\nWe can ski. Мы можем кататься на лыжах.\nWe can skate. Мы можем кататься на коньках.\nWe can make a snowman. Можем слепить снеговика.\nWe can play snowballs. Мы можем играть в снежки\nWe can play boardgames. Мы можем играть в настольные игры.\nWe can do puzzles. Мы можем собирать пазлы.\nWe can sing. Мы можем петь.\nWe can dance. Мы можем танцевать.\nWe can draw. Мы можем рисовать"
+}
+]
+},
+{
+"number": "2-s42",
+"num": "2",
+"page": 42,
+"chapter": "3. Speaking about a new friend. Lesson 36",
+"skyId": 132487,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно догадаться, какие вопросы мисс Четтер задала своим ученикам. Прочитаем ответы, запишем вопросы.",
+"1) Нет, я не люблю зиму.\n2) Да. Летом мы играем в футбол.\n3) Да. Я умею кататься на коньках и лыжах.\n4) Да. У нее есть хороший велосипед.\n5) Да. Ему нравится весна.",
+"А: Do you swim in summer? В: Yes, I do. I swim in summer. А: Ты плаваешь летом? В: Да. Я плаваю летом.",
+"Общие вопросы (General questions) — это вопросы, на которые можно ответить «да» или «нет».\nПосмотрим, как они образуются.\nPresent Simple\nВспомогательный глагол: Do/does;\nПодлежащее: he/she/it/we и. т. д.;\nСмысловой глагол: finish;\nДополнение: his homework?\nВсё предложение: Does he finish his homework? Он заканчивает домашнюю работу?\nНекоторые глаголы не могут образовать вопросительную форму без помощи вспомогательных глаголов. Например, to be, некоторые модальные глаголы (can, must…), глагол have в составе конструкции have got.\nCan you go to school? (Можешь ли ты пойти в школу?)\nMay I go out? (Могу ли я выйти?)\nIs she your friend? (Она твоя подруга?)\nHave you got a dog? (У тебя есть собака?)",
+"1) Do you like winter? Тебе нравится зима?\n2) Do you play football in summer? Ты играешь в футбол летом?\n3) Can you skate and ski? Ты умеешь кататься на коньках и лыжах?\n4) Has she got a bike? У неё есть велосипед?\n5) Does he like spring? Он любит весну?"
+],
+"answer": "1) Do you like winter? Тебе нравится зима?\n2) Do you play football in summer? Ты играешь в футбол летом?\n3) Can you skate and ski? Ты умеешь кататься на коньках и лыжах?\n4) Has she got a bike? У неё есть велосипед?\n5) Does he like spring? Он любит весну?"
+}
+]
+},
+{
+"number": "3-s42",
+"num": "3",
+"page": 42,
+"chapter": "3. Speaking about a new friend. Lesson 36",
+"skyId": 132488,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить слова в предложениях в нужном порядке.",
+"",
+"1) I live in the country. Я живу в деревне.\n2) I can read and write. Я умею читать и писать.\n3) I do not like jam and carrots. Я не люблю варенье и морковь.\n4) I have got a friend. У меня есть друг.\n5) I visit my friend on Sundays. Я навещаю друга по воскресеньям."
+],
+"answer": "1) I live in the country. Я живу в деревне.\n2) I can read and write. Я умею читать и писать.\n3) I do not like jam and carrots. Я не люблю варенье и морковь.\n4) I have got a friend. У меня есть друг.\n5) I visit my friend on Sundays. Я навещаю друга по воскресеньям."
+}
+]
+},
+{
+"number": "1-s43",
+"num": "1",
+"page": 43,
+"chapter": "3. Speaking about a new friend. Lesson 37",
+"skyId": 132489,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить слова в предложениях в нужном порядке. Скажем, какое время года любит Тайни и почему.",
+"",
+"1) I like spring and autumn. Я люблю весну и осень.\n2) I swim in the river in summer. Летом я купаюсь в реке.\n3) I can skate in winter. Зимой я могу кататься на коньках.\n4) I like May and September. Мне нравится май и сентябрь.\n5) I do not like March and November. Я не люблю март и ноябрь.",
+"He likes spring and autumn. Он любит весну и осень.\nHe likes summer because he can swim in the river in summer. Ему нравится лето, потому что летом он может купаться в реке.\nHe likes winter because he can skate in winter. Ему нравится зима, потому что зимой он может кататься на коньках."
+],
+"answer": "He likes spring and autumn. Он любит весну и осень.\nHe likes summer because he can swim in the river in summer. Ему нравится лето, потому что летом он может купаться в реке.\nHe likes winter because he can skate in winter. Ему нравится зима, потому что зимой он может кататься на коньках."
+}
+]
+},
+{
+"number": "2-s43",
+"num": "2",
+"page": 43,
+"chapter": "3. Speaking about a new friend. Lesson 37",
+"skyId": 132490,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения. Используем, где надо, заглавные буквы.",
+"В вопросительном предложении на первом месте будет стоять вспомогательный глагол (do/does/can и. т. д.).",
+"1) December, January and February are winter months. Декабрь, январь и февраль − зимние месяцы.\n2) I like May and October. Мне нравится май и октябрь.\n3) What month do you like? – August. Какой месяц тебе нравится? − Август.\n4) They skate on Sundays and Saturdays. Они катаются на коньках по воскресеньям и субботам."
+],
+"answer": "1) December, January and February are winter months. Декабрь, январь и февраль − зимние месяцы.\n2) I like May and October. Мне нравится май и октябрь.\n3) What month do you like? – August. Какой месяц тебе нравится? − Август.\n4) They skate on Sundays and Saturdays. Они катаются на коньках по воскресеньям и субботам."
+}
+]
+},
+{
+"number": "3-s43",
+"num": "3",
+"page": 43,
+"chapter": "3. Speaking about a new friend. Lesson 37",
+"skyId": 132491,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить таблицу, вписав названия месяцев.",
+"",
+"Дни\n Месяцы\n 31 день\n January, March, May, July, August, October, December\n 30 дней\n April, June, September, November\n 28 или 29 дней\n February"
+],
+"answer": "Дни\n Месяцы\n 31 день\n January, March, May, July, August, October, December\n 30 дней\n April, June, September, November\n 28 или 29 дней\n February"
+}
+]
+},
+{
+"number": "1-s44",
+"num": "1",
+"page": 44,
+"chapter": "3. Speaking about a new friend. Lesson 38",
+"skyId": 132492,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно зачеркнуть лишнее слово.",
+"1) Осень, второй, зима, весна, лето.\n2) Первый, второй, думать, четвертый, пятый.\n3) Декабрь, январь, июнь, февраль.",
+"1) Second — второй (все остальные слова — название времен года).\n2) Think — думать (все остальные слова — порядковые числительные).\n3) June — июнь (все остальные слова — зимние месяцы)."
+],
+"answer": "1) Second — второй (все остальные слова — название времен года).\n2) Think — думать (все остальные слова — порядковые числительные).\n3) June — июнь (все остальные слова — зимние месяцы)."
+}
+]
+},
+{
+"number": "2-s44",
+"num": "2",
+"page": 44,
+"chapter": "3. Speaking about a new friend. Lesson 38",
+"skyId": 132493,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать три желания, которые ты хотел(-а) бы загадать в новогоднюю ночь.",
+"I would like to meet Santa Claus. Я хотел бы встретиться с Санта Клаусом.",
+"Когда мы чего-то хотим, мы говорим: I would like to + глагол — мне бы хотелось что-то сделать.",
+"I would like to get a new bike. Я хотел бы получить новый велосипед.\nI would like to learn English. Я хотел бы выучить английский язык.\nI would like to eat a tasty cake on my birthday. Я хотел бы съесть вкусный торт на мой день рождения."
+],
+"answer": "I would like to get a new bike. Я хотел бы получить новый велосипед.\nI would like to learn English. Я хотел бы выучить английский язык.\nI would like to eat a tasty cake on my birthday. Я хотел бы съесть вкусный торт на мой день рождения."
+}
+]
+},
+{
+"number": "3-s44",
+"num": "3",
+"page": 44,
+"chapter": "3. Speaking about a new friend. Lesson 38",
+"skyId": 132494,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить верные числительные и закончить предложения.",
+"February is the second month of the year. Февраль — второй месяц в году.",
+"",
+"1) May is the fifth month of the year. Май — пятый месяц в году.\n2) July is the seventh month of the year. Июль — седьмой месяц в году.\n3) August is the eighth month of the year. Август — восьмой месяц в году.\n4) October is the tenth month of the year. Октябрь — десятый месяц в году.\n5) December is the twelfth month of the year. Декабрь — двенадцатый месяц в году."
+],
+"answer": "1) May is the fifth month of the year. Май — пятый месяц в году.\n2) July is the seventh month of the year. Июль — седьмой месяц в году.\n3) August is the eighth month of the year. Август — восьмой месяц в году.\n4) October is the tenth month of the year. Октябрь — десятый месяц в году.\n5) December is the twelfth month of the year. Декабрь — двенадцатый месяц в году."
+}
+]
+},
+{
+"number": "4-s44",
+"num": "4",
+"page": 44,
+"chapter": "3. Speaking about a new friend. Lesson 38",
+"skyId": 132495,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и вспомнить правило на с. 67 учебника. Заполним таблицу.",
+"",
+"1 — one — (the) first.\n9 — nine — (the) ninth.\n13 – thirteen — (the) thirteenth.\n15 – fifteen – (the) fifteenth.\n18 – eighteen – (the) eighteenth.\n20 – twenty — (the) twentieth.\n29 – twenty nine – (the) twenty-ninth.",
+"1 — один — первый.\n9 — девять — девятый.\n13 — тринадцать — тринадцатый.\n15 — пятнадцать — пятнадцатый.\n18 — восемнадцать — восемнадцатый.\n20 — двадцать — двадцатый.\n29 — двадцать девять — двадцать девятый."
+],
+"answer": "1 — one — (the) first.\n9 — nine — (the) ninth.\n13 – thirteen — (the) thirteenth.\n15 – fifteen – (the) fifteenth.\n18 – eighteen – (the) eighteenth.\n20 – twenty — (the) twentieth.\n29 – twenty nine – (the) twenty-ninth."
+}
+]
+},
+{
+"number": "1-s45",
+"num": "1",
+"page": 45,
+"chapter": "3. Speaking about a new friend. Lesson 39",
+"skyId": 132496,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, какой по счёту каждый день недели в английском календаре.",
+"WORDLIST\nday — день\nweek — неделя\n(the) first — первый\n(the) second — второй\n(the) third — третий\n(the) fourth — четвёртый\n(the) fifth — пятый\n(the) sixth — шестой\n(the) seventh — седьмой",
+"",
+"Воскресенье — первый день недели.",
+"Monday is the second day of the week. Понедельник — второй день недели. \nTuesday is the third day of the week. Вторник — третий день недели. \nWednesday is the fourth day of the week. Среда — четвёртый день недели. \nThursday is the fifth day of the week. Четверг — пятый день недели. \nFriday is the sixth day of the week. Пятница — шестой день недели. \nSaturday is the seventh day of the week. Суббота — седьмой день недели."
+],
+"answer": "Monday is the second day of the week. Понедельник — второй день недели.\nTuesday is the third day of the week. Вторник — третий день недели.\nWednesday is the fourth day of the week. Среда — четвёртый день недели.\nThursday is the fifth day of the week. Четверг — пятый день недели.\nFriday is the sixth day of the week. Пятница — шестой день недели.\nSaturday is the seventh day of the week. Суббота — седьмой день недели."
+}
+]
+},
+{
+"number": "2-s45",
+"num": "2",
+"page": 45,
+"chapter": "3. Speaking about a new friend. Lesson 39",
+"skyId": 132497,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, когда ученики празднуют свой день рождения.",
+"WORDLIST\nbirthday — день рождения\n(the) third — третий\n(the) sixth — шестой\n(the) ninth — девятый\n(the) twenty-first — двадцать первый\n(the) twenty-second — двадцать второй",
+"",
+"Шестое октября — день рождения Пэм.",
+"The twenty-first of January is Bess's birthday. Двадцать первое января — день рождения Бесс.\nThe third of June is Martin's birthday. Третье июня — день рождения Мартина.\nThe ninth of March is Mary's birthday. Девятое марта — день рождения Мэри. \nThe twenty-second of August is Billy's birthday. Двадцать второе августа — день рождения Билли."
+],
+"answer": "The twenty-first of January is Bess's birthday. Двадцать первое января — день рождения Бесс.\nThe third of June is Martin's birthday. Третье июня — день рождения Мартина.\nThe ninth of March is Mary's birthday. Девятое марта — день рождения Мэри. \nThe twenty-second of August is Billy's birthday. Двадцать второе августа — день рождения Билли."
+}
+]
+},
+{
+"number": "3-s45",
+"num": "3",
+"page": 45,
+"chapter": "3. Speaking about a new friend. Lesson 39",
+"skyId": 132498,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать цифры словами.",
+"WORDLIST\n(the) third — третий\n(the) twelfth — двенадцатый\n(the) thirteenth — тринадцатый\n(the) sixteenth — шестнадцатый\n(the) eighteenth — восемнадцатый\n(the) twentieth — двадцатый\n(the) twenty-first — двадцать первый\n(the) twenty-second — двадцать второй\n(the) twenty-fifth — двадцать пятый\n(the) thirtieth — тридцатый",
+"",
+"The sixteenth of September.\nThe twentieth of March.\nThe twelfth of April.\nThe twenty-fifth of May.\nThe third of August.\nThe twenty-first of July.\nThe twenty-second of June.\nThe eighteenth of November.\nThe thirteenth of February.\nThe thirtieth of October."
+],
+"answer": "The sixteenth of September.\nThe twentieth of March.\nThe twelfth of April.\nThe twenty-fifth of May.\nThe third of August.\nThe twenty-first of July.\nThe twenty-second of June.\nThe eighteenth of November.\nThe thirteenth of February.\nThe thirtieth of October."
+}
+]
+},
+{
+"number": "1-s46",
+"num": "1",
+"page": 46,
+"chapter": "3. Speaking about a new friend. Lesson 40",
+"skyId": 132499,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно разгадать кроссворд, вписав в клеточки названия предметов, изображённых на картинке.",
+"WORDLIST\ndoll — кукла\nelephant — слон\nbicycle — велосипед\nbear — медведь\nscooter — самокат\nball — мяч\ncomputer — компьютер\nrabbit — кролик\nbirthday — День рождения",
+"Bear.\nRabbit.\nComputer.\nScooter.\nElephant.\nDoll.\nBall.\nBicycle.\nЕсли все слова вписаны правильно, то по вертикали получается слово birthday."
+],
+"answer": "Bear.\nRabbit.\nComputer.\nScooter.\nElephant.\nDoll.\nBall.\nBicycle."
+}
+]
+},
+{
+"number": "2-s46",
+"num": "2",
+"page": 46,
+"chapter": "3. Speaking about a new friend. Lesson 40",
+"skyId": 132500,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно перевести предложения с русского на английский.",
+"WORDLIST\nvisit — навещать/приезжать\nbirthday — день рождения\nwhen — когда\ncomputer — компьютер\nwould like — хотел бы",
+"Would you like to visit us?\nWhen is his birthday?\nHe would like to have a computer for his birthday."
+],
+"answer": "Would you like to visit us?\nWhen is his birthday?\nHe would like to have a computer for his birthday."
+}
+]
+},
+{
+"number": "3-s46",
+"num": "3",
+"page": 46,
+"chapter": "3. Speaking about a new friend. Lesson 40",
+"skyId": 132501,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нужно написать важные для твоей семьи даты.",
+"Для написания дат используем схему:\nthe + порядковое числительное + of + название месяца. \nПримеры:\nthe thirtieth of May (тридцатое мая);\nthe fifteenth of July (пятнадцатое июля);\nthe third of November (третье ноября).",
+"",
+"Образец: Второго сентября день рождения моей мамы.\nОбратим внимание на то, что в английском языке названия месяцев пишутся с заглавной буквы.",
+"The fifth of May is my mother's birthday. Пятого мая день рождения моей мамы.\nThe sixth of April is my brother's birthday. Шестого апреля день рождения моего брата.\nThe twenty-third of October is my birthday. Двадцать третьего октября мой день рождения."
+],
+"answer": "Возможный вариант ответа:\nThe fifth of May is my mother's birthday. \nThe sixth of April is my brother's birthday. \nThe twenty-third of October is my birthday."
+}
+]
+},
+{
+"number": "1-s47",
+"num": "1",
+"page": 47,
+"chapter": "3. Speaking about a new friend. Lesson 41",
+"skyId": 132502,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расшифровать письмо, заменив значки буквами.",
+"WORDLIST\nhappy — счастливый\nbirthday — день рождения",
+"Happy birthday to you",
+"Happy birthday to you! С днём рождения тебя!"
+],
+"answer": "Happy birthday to you! С днём рождения тебя!"
+}
+]
+},
+{
+"number": "2-s47",
+"num": "2",
+"page": 47,
+"chapter": "3. Speaking about a new friend. Lesson 41",
+"skyId": 132503,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы.",
+"WORDLIST\nball — мячик\nbicycle — велосипед\ncomputer — компьютер\ndoll — кукла\ngame — игра\npresent — подарок\npuzzle — головоломка, пазл\nroller skates — роликовые коньки\nteddy bear — медвежонок",
+"Медвежонок — буква Y.\nГоловоломка — буква U.\nМячик — буква A.\nКомпьютер — буква U.\nИгра — буква A.\nПодарок — буква E.\nРоликовые коньки — буквы O и A.\nКукла — буква O.\nВелосипед — буква Y."
+],
+"answer": "Y.\nU.\nA.\nU.\nA.\nE.\nO, A.\nO.\nY."
+}
+]
+},
+{
+"number": "3-s47",
+"num": "3",
+"page": 47,
+"chapter": "3. Speaking about a new friend. Lesson 41",
+"skyId": 132504,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно пронумеровать фразы, чтобы получился диалог.",
+"WORDLIST\nbirthday — день рождения\ntoday — сегодня\ngive — дать\nsweet — конфета\ngreat — великолепно, здорово\na lot of — много",
+"Я бы хотел сегодня иметь день рождения.\nО, я могу дать тебе конфету. Держи.\nЗдорово! Спасибо!\nЯ бы хотел много конфет. \nЧего бы тебе хотелось на свой день рождения?",
+"Я бы хотел сегодня иметь день рождения (1).\nО, я могу дать тебе конфету. Держи (4).\nЗдорово! Спасибо (5)!\nЯ бы хотел много конфет (3).\nЧего бы тебе хотелось на свой день рождения (2)?"
+],
+"answer": "Я бы хотел сегодня иметь день рождения.\nЧего бы тебе хотелось на свой день рождения?\nЯ бы хотел много конфет.\nО, я могу дать тебе конфету. Держи.\nЗдорово! Спасибо!"
+}
+]
+},
+{
+"number": "4-s47",
+"num": "4",
+"page": 47,
+"chapter": "3. Speaking about a new friend. Lesson 41",
+"skyId": 132505,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать о том, как ты отмечаешь свой день рождения.",
+"WORDLIST\nbirthday — день рождения\nparty — вечеринка, праздник\nfriend — друг\nhide-and-seek — прятки\ncake — торт\npresent — подарок\nhappy — счастливый",
+"Мой день рождения\nМой день рождения _____. Я устраиваю вечеринку. Я и мои друзья _____.",
+"Мой день рождения\nМой день рождения первого мая (the first of May). Я устраиваю вечеринку. Я и мои друзья играем в прятки (play hide-and-seek). У нас есть большой торт (We have got a big birthday cake). Друзья дарят мне много подарков (My friends give me a lot of presents). Я счастлив (I am happy!)!"
+],
+"answer": "My birthday is on the first of May. I have got a birthday party. My friends and I play hide-and-seek. We have got a big birthday cake. My friends give me a lot of presents. I am happy!"
+}
+]
+},
+{
+"number": "1-s48",
+"num": "1",
+"page": 48,
+"chapter": "3. Speaking about a new friend. Lesson 42",
+"skyId": 132506,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Разгадаем кроссворд и прочитаем слово по вертикали. Скажем, какие два значения есть у этого слова.",
+"Envelope.\nPen.\nPost card.\nStamp.\nPaper.\nStreet.",
+"Letter — 1. Письмо; 2. Буква."
+],
+"answer": "Letter — 1. Письмо; 2. Буква."
+}
+]
+},
+{
+"number": "2-s48",
+"num": "2",
+"page": 48,
+"chapter": "3. Speaking about a new friend. Lesson 42",
+"skyId": 132507,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Впишем слова и прочитаем рекламное объявление.",
+"WORDLIST\npost office — почтовое отделение\nenvelopes — конверты\npostcards — открытки\nstamps — марки\nwriting paper — почтовая бумага\nposters — плакаты",
+"Добро пожаловать в почтовое отделение!\nУ нас есть много конвертов, новые (new) марки, голубая и розовая (blue and pink) почтовая бумага, рождественские (Christmas) открытки, чёрные и синие (black and blue) ручки и красивые (nice) плакаты. Ты можешь написать своим друзьям и семье."
+],
+"answer": "New.\nBlue and pink.\nChristmas.\nBlack and blue.\nNice."
+}
+]
+},
+{
+"number": "3-s48",
+"num": "3",
+"page": 48,
+"chapter": "3. Speaking about a new friend. Lesson 42",
+"skyId": 132508,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем числа и предметы словами.",
+"",
+"WORDLIST\nenvelopes — конверты\npostcards — открытки\nstamps — марки\nwriting paper — почтовая бумага\nposters — плакаты\nletterbox — почтовый ящик\nletter — письмо",
+"Три почтовых ящика. (Пример.)\nFour Christmas postcards. Четыре рождественские открытки.\nEight letters. Восемь писем.\nFive envelopes. Пять конвертов.\nNine stamps. Девять марок.\nTwo posters. Два плаката."
+],
+"answer": "2. Four Christmas postcards.\n3. Eight letters.\n4. Five envelopes.\n5. Nine stamps.\n6. Two posters."
+}
+]
+},
+{
+"number": "1-s49",
+"num": "1",
+"page": 49,
+"chapter": "3. Speaking about a new friend. Lesson 43",
+"skyId": 132509,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и выпишем слова, связанные с почтой.",
+"WORDLIST\nenvelope — конверт\nposter — плакат\nletterbox — почтовый ящик\nletter — письмо\npen — ручка\nsend — отправлять\npostman — почтальон\nletterbox — почтовый ящик\npaper — бумага\nposter — плакат\nget — получать\nput — класть\nnew — новый\naddress — адрес\nstreet — улица\ntake — брать",
+"Pen.\nSend.\nPostman.\nLetterbox.\nPoster.\nPaper.\nGet.\nPut.\nNew.\nAddress.\nStreet.\nTake."
+],
+"answer": "Pen.\nSend.\nPostman.\nLetterbox.\nPoster.\nPaper.\nGet.\nPut.\nNew.\nAddress.\nStreet.\nTake."
+}
+]
+},
+{
+"number": "2-s49",
+"num": "2",
+"page": 49,
+"chapter": "3. Speaking about a new friend. Lesson 43",
+"skyId": 132510,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим буквы и сочетания букв с нужными значками транскрипции.",
+"WORDLIST\nenvelope — конверт\npostcard — открытка\nstamp — марка\npaper — бумага\nposter — плакат\nletter — письмо\naddress — адрес\nget — получать\nwrite — писать\nstreet — улица\nread — читать\nsend — отправлять",
+"Envelope — /e/.\nAddress — /ə/.\nLetter — /e/.\nPost — /əʊ/.\nPaper — /eɪ/.\nGet — /e/.\nWrite — /aɪ/.\nStreet — /iː/.\nRead — /iː/.\nSend — /e/.\nStamp — /æ/.\nPoster — /əʊ/."
+],
+"answer": "Envelope — /e/.\nAddress — /ə/.\nLetter — /e/.\nPost — /əʊ/.\nPaper — /eɪ/.\nGet — /e/.\nWrite — /aɪ/.\nStreet — /iː/.\nRead — /iː/.\nSend — /e/.\nStamp — /æ/.\nPoster — /əʊ/."
+}
+]
+},
+{
+"number": "3-s49",
+"num": "3",
+"page": 49,
+"chapter": "3. Speaking about a new friend. Lesson 43",
+"skyId": 132511,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подпишем рисунки.",
+"WORDLIST\nget — получать\nletter — письмо\nwrite — писать\nput — класть\nletterbox — почтовый ящик\nbag — сумка\ntake — брать",
+"Утром он получает письмо Тайни.",
+"2. Next, he writes a letter to Tiny. После этого он пишет письмо Тайни.\n3. Then he puts the letter in his bag. Затем он кладёт письмо в свою сумку.\n4. In the afternoon, he puts the letter in the letterbox. Днём он кладёт письмо в почтовый ящик."
+],
+"answer": "2. Next, he writes a letter to Tiny.\n3. Then he puts the letter in his bag.\n4. In the afternoon, he puts the letter in the letterbox."
+}
+]
+},
+{
+"number": "1-s50",
+"num": "1",
+"page": 50,
+"chapter": "3. Speaking about a new friend. Lesson 44",
+"skyId": 132512,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Подпишем рисунки, составив слова из букв.",
+"Letter. Письмо.\nPoster. Плакат.\nStamp. Марка.\nPaper. Бумага.\nPostman. Почтальон."
+],
+"answer": "2. Poster.\n3. Stamp.\n4. Paper.\n5. Postman."
+}
+]
+},
+{
+"number": "2-s50",
+"num": "2",
+"page": 50,
+"chapter": "3. Speaking about a new friend. Lesson 44",
+"skyId": 132513,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим и запишем предложения.",
+"",
+"Формула вопроса: Вопросительное слово + to be (am/is/are) + подлежащее?\nWhere are they? Где они?\nWhere is my bag? Где моя сумка?",
+"Tiny writes letters to his friends. Тайни пишет письма своим друзья.\nWe like to get letters. Мы любим получать письма.\nWhere are the envelopes? Где конверты? \nI do not like this postcard. Мне не нравится эта открытка."
+],
+"answer": "Tiny writes letters to his friends.\nWe like to get letters.\nWhere are the envelopes?\nI do not like this postcard."
+}
+]
+},
+{
+"number": "3-s50",
+"num": "3",
+"page": 50,
+"chapter": "3. Speaking about a new friend. Lesson 44",
+"skyId": 132514,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Придумаем и напишем по-английски адрес на конверте.",
+"Внимательно посмотрим на расположение элементов на конверте.",
+"From: Alex Smith\n84, Karl Marx Street\nMoscow 3085726\nRussia\nTo: Homer Wood\n30, Carnaby Street\nLonson K 84 IR\nGreat Britain"
+],
+"answer": "From: Alex Smith\n84, Karl Marx Street\nMoscow 3085726\nRussia\nTo: Homer Wood\n30, Carnaby Street\nLonson K 84 IR\nGreat Britain"
+}
+]
+},
+{
+"number": "1-s51",
+"num": "1",
+"page": 51,
+"chapter": "3. Speaking about a new friend. Lesson 45",
+"skyId": 132515,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем даты цифрами.",
+"",
+"Первое января — the 1st of January.",
+"Второе июля — the 2nd of July.\nПятое ноября — the 5th of November.\nДвенадцатое апреля — the 12th of April.\nТринадцатое мая — the 13th of May.\nДвадцать третье июля — the 23rd of July."
+],
+"answer": "The 2nd of July.\nThe 5th of November.\nThe 12th of April.\nThe 13th of May.\nThe 23rd of July."
+}
+]
+},
+{
+"number": "2-s51",
+"num": "2",
+"page": 51,
+"chapter": "3. Speaking about a new friend. Lesson 45",
+"skyId": 132516,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Догадаемся и напишем, чьи это вещи.",
+"WORDLIST\nsweets — конфеты\ncap — фуражка\ncomputer game — компьютерная игра\nletter — письмо\nflowers — цветы\nMP3-player — MP3-проигрыватель",
+"",
+"Tiny's letter. Письмо Тайни.\nGirl's MP3-player. МP3-проигрыватель девочки.\nWoman's flowers. Цветы женщины.\nBoy's sweets. Конфеты мальчика.\nPostman's cap. Фуражка почтальона.\nBen's computer game. Компьютерная игра Бена."
+],
+"answer": "Tiny's letter.\nGirl's MP3-player.\nWoman's flowers.\nBoy's sweets.\nPostman's cap.\nBen's computer game."
+}
+]
+},
+{
+"number": "3-s51",
+"num": "3",
+"page": 51,
+"chapter": "3. Speaking about a new friend. Lesson 45",
+"skyId": 132517,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Переделаем предложения по образцу.",
+"У Джил новый проигрыватель. — Проигрыватель Джил новый.",
+"",
+"Питер обычно пишет длинные письма.\nДжим отправляет красивые открытки.\nУ моих друзей красивые плакаты.\nУ почтальона большая сумка.\nУ девочки есть английские марки.",
+"Peter's letters are usually long. Письма Питера обычно длинные.\nJim's postcards are nice. Открытки Джима красивые.\nMy friends' posters are nice. Плакаты моих друзей красивые.\nThe postman's bag is big. Сумка почтальона большая.\nThe girl's stamps are English. Марки девочки английские."
+],
+"answer": "Peter's letters are usually long.\nJim's postcards are nice.\nMy friends' posters are nice.\nThe postman's bag is big.\nThe girl's stamps are English."
+}
+]
+},
+{
+"number": "1-s52",
+"num": "1",
+"page": 52,
+"chapter": "3. Speaking about a new friend. Lesson 46",
+"skyId": 132518,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и зачеркнём лишнее слово.",
+"Сегодня, понедельник, воскресенье, среда, суббота.\nМама, брат, сестра, мальчик, папа.\nМилый, красивый, плохой, хороший, чудесный.\nОдин, два, третий, четыре, пять.\nСентябрь, октябрь, ноябрь, декабрь.",
+"Today — сегодня, это не день недели.\nBoy — мальчик, это не член семьи.\nBad — плохой, отрицательное значение.\nThird — третий, это порядковое числительное.\nDecember — декабрь, это зимний месяц."
+],
+"answer": "Today.\nBoy.\nBad.\nThird.\nDecember."
+}
+]
+},
+{
+"number": "2-s52",
+"num": "2",
+"page": 52,
+"chapter": "3. Speaking about a new friend. Lesson 46",
+"skyId": 132519,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Выберем соответствующую букву.",
+"Открытка Джил — a.",
+"",
+"b. Карандаши Тайни.\nb. Компьютеры учителей.\na. Куклы сестры."
+],
+"answer": "b. Карандаши Тайни.\nb. Компьютеры учителей.\na. Куклы сестры."
+}
+]
+},
+{
+"number": "3-s52",
+"num": "3",
+"page": 52,
+"chapter": "3. Speaking about a new friend. Lesson 46",
+"skyId": 132520,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Переведём словосочетания на английский язык.",
+"WORDLIST\nletter — письмо\nenvelopes — конверты\nbag — сумка\nposters — плакаты\npostcards — открытки\ncat — кошка",
+"",
+"Mother's letter.\nTiny's envelopes.\nPostman's bag.\nJim's posters.\nGirls' postcards.\nSisters' cat."
+],
+"answer": "Mother's letter.\nTiny's envelopes.\nPostman's bag.\nJim's posters.\nGirls' postcards.\nSisters' cat."
+}
+]
+},
+{
+"number": "1-s53",
+"num": "1",
+"page": 53,
+"chapter": "3. Speaking about a new friend. Lesson 47",
+"skyId": 132521,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Соединим транскрипцию с нужным словом.",
+"WORDLIST\nwhy — почему\nhow — как\nwhen — когда\nwho — кто\nwhat — что\nwhere — где\nwhich — который, что",
+"Why — /waɪ/.\nHow — /haʊ/.\nWhen — /wen/.\nWho — /huː/.\nWhat — /wɒt/.\nWhere — /weə/.\nWhich — /wɪʧ/."
+],
+"answer": "Why — /waɪ/.\nHow — /haʊ/.\nWhen — /wen/.\nWho — /huː/.\nWhat — /wɒt/.\nWhere — /weə/.\nWhich — /wɪʧ/."
+}
+]
+},
+{
+"number": "2-s53",
+"num": "2",
+"page": 53,
+"chapter": "3. Speaking about a new friend. Lesson 47",
+"skyId": 132522,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Выберем и обведём верные вопросительные слова.",
+"Почему счастлив почтальон?",
+"WORDLIST\nwhy — почему\nhow — как\nwhen — когда\nwho — кто\nwhat — что, какой\nwhere — где\nwhich — который, что\nhow many — сколько (с исчисляемыми существительными)\nhow much — сколько (с неисчисляемыми существительными)",
+"Что (What) бы ты хотел получить на день рождения?\nОткуда (Where) он родом?\nСколько (How many) писем ты отправляешь своим друзьям?\nКакие (What) компьютерные игры у тебя есть?"
+],
+"answer": "What.\nWhere.\nHow many.\nWhat."
+}
+]
+},
+{
+"number": "3-s53",
+"num": "3",
+"page": 53,
+"chapter": "3. Speaking about a new friend. Lesson 47",
+"skyId": 132523,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Напишем ответ одному из авторов писем, используя вопросы из упр. 6 на с. 87 учебника как план.",
+"What is your name? Как тебя зовут?\nWhat is your surname? Какая у тебя фамилия?\nWhen is your birthday? Когда твой день рождения?\nHow old are you? Сколько тебе лет?\nWhere are you from? Откуда ты?",
+"Dear Ben,\nMy name is Dasha. My surname is Vasilyeva. I am ten years old. My birthday is on the 2nd of July. I am from Russia.\nYour friend, \nDasha",
+"Дорогой Бен,\nМеня зовут Даша. Моя фамилия — Васильева. Мне десять лет. Мой день рождения второго июля. Я из России.\nТвоя подруга,\nДаша"
+],
+"answer": "Dear Ben,\nMy name is Dasha. My surname is Vasilyeva. I am ten years old. My birthday is on the 2nd of July. I am from Russia.\nYour friend, \nDasha"
+}
+]
+},
+{
+"number": "1-s54",
+"num": "1",
+"page": 54,
+"chapter": "3. Speaking about a new friend. Lesson 48",
+"skyId": 132524,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим и запишем возможные словосочетания.",
+"Слушать\nРисовать\nЕздить\nИграть\nСмотреть\nПолучать\nна скутере\nписьма\nтелевизор\nкартины\nмузыку\nв компьютерные игры",
+"To listen to music. Слушать музыку. (Пример.)\nTo draw pictures — рисовать картины.\nTo ride a scooter — ездить на скутере.\nTo play computer games — играть в компьютерные игры.\nTo watch TV — смотреть телевизор.\nTo get letters — получать письма."
+],
+"answer": "To draw pictures.\nTo ride a scooter.\nTo play computer games.\nTo watch TV.\nTo get letters."
+}
+]
+},
+{
+"number": "2-s54",
+"num": "2",
+"page": 54,
+"chapter": "3. Speaking about a new friend. Lesson 48",
+"skyId": 132525,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Сделаем предложения вопросительными, поставив вопросы к выделенным словам.",
+"У Джима новый компьютер. — У кого новый компьютер?",
+"Если есть вспомогательный глагол do/does: Вопросительное слово + do/does + подлежащее + основной глагол + всё остальное.\nWhen do you want to eat? — Когда ты хочешь поесть?\nWhat does he like? — Что ему нравится?\nЕсли в вопросе есть глагол to be (am/is/are): Вопросительное слово + am/is/are + подлежащее + всё остальное.\nWhere are you from? Откуда ты?\nWhen is the time to have breakfast? Когда будет время завтракать?",
+"Весной они посещают свою бабушку.\nМисс Чаттер отправляет письма по воскресеньям.\nОткрытка из Англии.\nБилли любит мороженое и конфеты.",
+"When do they visit their grandma? Когда они посещают свою бабушку?\nWhat does Miss Chatter post on Sundays? Что отправляет мисс Чаттер по воскресеньям?\nWhere is the postcard from? Откуда эта открытка?\nWhat does Billy like? Что любит Билли?"
+],
+"answer": "When do they visit their grandma?\nWhat does Miss Chatter post on Sundays?\nWhere is the postcard from?\nWhat does Billy like?"
+}
+]
+},
+{
+"number": "3-s54",
+"num": "3",
+"page": 54,
+"chapter": "3. Speaking about a new friend. Lesson 48",
+"skyId": 132526,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем ответы мисс Четтер. Догадаемся и запишем, какие вопросы ей задавали и о ком её расспрашивали.",
+"Если есть вспомогательный глагол do/does: Вопросительное слово + do/does + подлежащее + основной глагол + всё остальное.\nWhen do you want to eat? — Когда ты хочешь поесть?\nWhat does he like? — Что ему нравится?\nЕсли в вопросе есть глагол to be (am/is/are): Вопросительное слово + am/is/are + подлежащее + всё остальное.\nWhere are you from? Откуда ты?\nWhen is the time to have breakfast? Когда будет время завтракать?\nЕсли в вопросе есть конструкция have/has got: Вопросительное слово или вопросительная фраза + have/has + подлежащее + got?\nHow much sugar have we got? Сколько у нас есть сахара?\nHow many letters has he got? Сколько писем у него есть?",
+"Что он любит? — Он любит джем, конфеты и торты.",
+"2. Какое его любимое время года?\n3. Лето яркое и красивое.\n4. Он живёт в лесу.\n5. У него много друзей.",
+"2. His favourite season is summer. Его любимое время года — лето.\n3. Why does he like summer? Почему он любит лето?\n4. Where does he live? Где он живёт?\n5. How many friends has he got? Сколько у него друзей?",
+"Tiny. Тайни."
+],
+"answer": "2. His favourite season is summer.\n3. Why does he like summer?\n4. Where does he live?\n5. How many friends has he got?"
+}
+]
+},
+{
+"number": "1-s55",
+"num": "1",
+"page": 55,
+"chapter": "3. Speaking about a new friend. Lesson 49",
+"skyId": 132527,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти вопросительные слова и придумать с ними вопросы.",
+"",
+"Where? (Где?)\nWho? (Кто?)\nWhy? (Почему?)\nWhat? (Что?)\nWhen? (Когда?)\nWhich? (Какой?)",
+"Where are you from? (Откуда ты?)\nWho is your friend? (Кто твой друг?)\nWhy are you sad? (Почему ты грустный?)\nWhat do you like? (Что ты любишь?)\nWhen do you get up? (Когда ты просыпаешься?)\nWhich is your book? (Какая твоя книга?)"
+],
+"answer": "Where are you from?\nWho is your friend?\nWhy are you sad?\nWhat do you like?\nWhen do you get up?\nWhich is your book?"
+}
+]
+},
+{
+"number": "2-s55",
+"num": "2",
+"page": 55,
+"chapter": "3. Speaking about a new friend. Lesson 49",
+"skyId": 132528,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, что ты можешь делать с вопросами, используя слова ask, answer, read, write, count.",
+"WORDLIST\nask — спрашивать \nquestion — вопрос\nanswer — отвечать\ncount — считать",
+"",
+"Я могу задавать вопросы.",
+"I can answer questions. (Я могу отвечать на вопросы.)\nI can read questions. (Я могу читать вопросы.)\nI can write questions. (Я могу писать вопросы.)\nI can count questions. (Я могу считать вопросы.)"
+],
+"answer": "I can answer questions. \nI can read questions. \nI can write questions.\nI can count questions."
+}
+]
+},
+{
+"number": "3-s55",
+"num": "3",
+"page": 55,
+"chapter": "3. Speaking about a new friend. Lesson 49",
+"skyId": 132529,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно задать вопросы ученикам лесной школы.",
+"",
+"What do you do at school? (Что вы делаете в школе?)\nCan you read and write? (Вы умеете читать и писать?)\nWho is your favourite teacher? (Кто ваш любимый учитель?)"
+],
+"answer": "What do you do at school?\nCan you read and write? \nWho is your favourite teacher?"
+}
+]
+},
+{
+"number": "4-s55",
+"num": "4",
+"page": 55,
+"chapter": "3. Speaking about a new friend. Lesson 49",
+"skyId": 132530,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить вопросы.",
+"WORDLIST\nfairy tale — сказка\nbirthday — день рождения\nseason — время года\ndraw — рисовать",
+"",
+"",
+"",
+"Do you like fairy tales? (Ты любишь сказки?)\nWhen is your birthday? (Когда у тебя день рождения?)\nHow old are you? (Сколько тебе лет?)\nWhat season do you like? (Какое время года тебе нравится?)\nCan you draw funny pictures? (Ты умеешь рисовать смешные рисунки?)"
+],
+"answer": "Do you like fairy tales? \nWhen is your birthday? \nHow old are you? \nWhat season do you like? \nCan you draw funny pictures?"
+}
+]
+},
+{
+"number": "part-1-s56",
+"num": "part-1",
+"page": 56,
+"chapter": "3. Speaking about a new friend. Lesson 50. Progress check",
+"skyId": 132531,
+"subTasks": [
+{
+"name": "Listening (1)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прослушать аудиозапись и отметить, какой подарок Оливия выбрала для сестры.",
+"WORDLIST\nWords (слова)\nbuy — купить\ndraw — рисовать\nbook — книга\ndoll — кукла\nfairy tale — сказка\nfunny — смешной\npresent — подарок\nteddy bear — плюшевый медведь\ntoy — игрушка\nwonderful — замечательный\nPrases (фразы)\nCan I help you? — Я могу вам помочь?\nHere you are — Вот, пожалуйста.\nlike to do — нравится делать\nwant to do — хотеть что-то сделать",
+"А: Здравствуйте! Я могу вам помочь?\nБ: Да, пожалуйста. Я хочу купить подарок для своей младшей сестры Алисы.\nА: Чем любит заниматься Алиса?\nБ: О...много чем. Алиса любит рисовать. Она также любит играть со своими игрушками.\nА: Я поняла... как насчёт плюшевого медведя? Маленькие девочки любят забавных плюшевых медведей.\nБ: Нет, спасибо. У Алисы четыре плюшевых медведя и пять кукол.\nА: Я поняла, вы не хотите никакие игрушки. Алиса умеет читать?\nБ: Да, умеет, но не очень хорошо.\nА: Посмотрите, у нас есть замечательная книга сказок. Вот, пожалуйста!\nБ: О.. Какая чудесная книга!\nА: Я думаю это очень хороший подарок.\nБ: Спасибо! Алиса очень сильно любит сказки! До свидания!\nА: До свидания!",
+"Olivia buys a book for his little sister Alice.\nОливия купила младшей сестре Алисе книгу."
+],
+"answer": "A book. Ответ b."
+},
+{
+"name": "Spelling (2-3)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вспомнить как читаются слова и найти в каждой строке лишнее.",
+"",
+"What, when, why, which, who.\nПодчеркнуть: who",
+"Как читается\n Правило\n Пример\n [s]\n После глухого согласного\nParents' house\n/ˈpeərənts haʊs/\n [z]\n После гласного звука и звонкого согласного\nBrother's car\n/ˈbrʌðəz kɑː/\n [ɪz]\n После шипящих и свистящих звуков\nRich's car\n/rɪʧɪz kɑː/",
+"Elephant's, duck's Kate's, sisters', cat's.\nПодчеркнуть: sisters'..."
+],
+"answer": "Подчёркиваем:\n2. who\n3. sisters'..."
+},
+{
+"name": "Letter (4-7)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать письмо и ответить на вопросы по его содержанию.",
+"WORDLIST\nchess — шахматы\nread — читать\ndraw — рисовать\nanimal — животное\nelephant — слон\ncrocodile — крокодил\ngiraffe — жираф\nrabbit — кролик\nparrot — попугай\npoem — стихотворение\nautumn — осень\nsummer — лето\nspring — весна\nholiday — каникулы\nroller skate — ролики\nhide-and-seek — прятки\ntogether — вместе\npet — домашний питомец",
+"Дорогой друг,\nМеня зовут Марк. Мне 10 лет. Я из Британии. Я живу в Оксфорде. Я живу с папой и мамой. У меня есть брат Джон, Джону 15 лет. Он умеет очень хорошо играть в шахматы.\nДжон любит читать о животных. Он умеет рисовать слонов, обезьян, крокодилов и жирафов. Я не умею играть в шахматы и не умею рисовать. Но я умею писать короткие смешные стихи о животных Джона. Что ты любишь делать?\nУ меня день рождения 10го октября. Поэтому моё любимое время года осень. Мои друзья любят лето, потому что это длинные каникулы. Джон любит весну, потому что может кататься на роликах в парке. А какое у тебя любимое время года?\nУ меня два друга. Мы ходим в школу вместе. Мои друзья часто приходят ко мне, чтоб поиграть с моими домашними питомцами. У меня кролик и попугай. Мои питомцы любят играть в прятки. Джон учит птицу говорить. Попугай может сказать: «Привет!», «Я умный!», «Пока!». У меня много стихов о моих питомцах. А у тебя есть домашние животные?\nЖду ответа.\nС наилучшими пожеланиями,\nМарк",
+"4. Марк умеет...\na) играть в шахматы,\nb) писать стихи — правильный ответ,\nc) рисовать.",
+"5. Марк любит осень, потому что...\na) у него длинные каникулы,\nb) он может кататься на роликах,\nc) у него день рождения — правильный ответ.",
+"6. Друзья Марка приходят к нему...\na) играть с домашними питомцами Марка — правильный ответ,\nb) послушать стихи Марка,\nc) поиграть в прятки с Марком.",
+"7. .... учит попугая говорить.\na) Друзья Марка,\nb) Брат Марка — правильный ответ,\nc) Марк."
+],
+"answer": "4 — b, 5 — c, 6 —a, 7—b."
+},
+{
+"name": "Questions (8-10)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно ответить на вопросы.",
+"8. Какое любимое время года у мисс Чэттер?\na) Она любит зиму — правильный ответ.\nb) Зима белая.\nc) Она катается на кольках в парке.",
+"9. Кто пришел уведеть Тайни?\na) По пятницам.\nb) Играть в шахматы.\nc) Его друзья — правильный ответ.",
+"10. Сколько подарков получил Эван на день рождения?\na) Игрушки, плеер и мяч.\nb) Я думаю 10 или 15 — правильный ответ.\nc) Пятнадцатого марта."
+],
+"answer": "8 — a, 9 — c, 10 — b."
+},
+{
+"name": "Sentences (11-12)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на две картинки и выбрать правильное предложение.",
+"",
+"a) Шляпа кошки хороша — правильный ответ.\nb) Шляпы кошки хороши.\nc) Шлыпа кошек хороша",
+"a) Коробка лис белая.\nb) Коробки лисы белые — правильный ответ.\nc) Коробка лисы белая."
+],
+"answer": "11 — a, 12 — b."
+},
+{
+"name": "Questions (13-16)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно расставить слова в правильном порядке.",
+"",
+"13. When does he visit his granny? Когда он навещал бабушку?\n14. What colour are stamps? Какого цвета марки?\n15. Where does she play puzzle? Где она собирала пазл?\n16. Why do they send letters? Почему они отправили письма?"
+],
+"answer": "13. When does he visit his granny?\n14. What colour are stamps?\n15. Where does she play puzzle?\n16. Why do they send letters?"
+},
+{
+"name": "Text (17-20)",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать текст и вставить пропущенные слова.",
+"WORDLIST\nthird — третий\nseason — время года\nskate — кататься на коньках\nski — кататься на лыжах\nwonderful — замечательный\nwinter — зима\nDecember — декабрь\nJanuary — январь\nFebruary — февраль",
+"Я люблю зиму. Это хорошее 17) время года (season). В декабре и январе есть два 18) замечательных (wonderful) праздника: Рождество и Новый год. День рождение у меня в феврале, 19) третьем (third) зимнем месяце. Зимой я люблю кататься на коньках и лыжах в парке. Я умею очень хорошо 20) кататься на коньках (skate)."
+],
+"answer": "17) season.\n18) wonderful.\n19) third.\n20) skate."
+}
+]
+},
+{
+"number": "part-2-s59",
+"num": "part-2",
+"page": 59,
+"chapter": "3. Speaking about a new friend. Lesson 50. Progress check",
+"skyId": 132532,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно рассказать о своём друге с опорой на план.",
+"Имя, возраст.\nДень рождения.\nХарактер.\nЧто умеет делать.\nЧто вы делаете вместе.",
+"",
+"My friend's name is Masha. She is 9. Masha's birthday is twenty-seventh of April. She is kind and brave. Masha can draw very well. We go for a walk together, play computer games and watch TV.",
+"Мою подругу зовут Маша. Ей 9 лет. У Маши день рождения двадцать седьмого апреля. Она добрая и храбрая. Маша умеет очень хорошо рисовать. Мы вместе гуляем, играем в компьютерные игры и смотрим телевизор."
+],
+"answer": "My friend's name is Masha. She is 9. Masha's birthday is twenty-seventh of April. She is kind and brave. Masha can draw very well. We go for a walk together, play computer games and watch TV."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно разыграть диалог и уточнить у собеседника требуемую информацию.",
+"Что любит делать.\nЛюбимое время года и почему.\nКогда день рождения.\nКакой подарок хочет на день рождение.",
+"",
+"A: Good morning! May I ask you some questions?\nB: Morning! You are welcome.\nA: What do you like to do?\nB: I like to read books.\nA: It's great! What is your favourite season?\nB: Spring is my favourite season.\nA: Why do you like spring?\nB: I can roller skate with my friends in the park.\nA: When is your birthday?\nB: My birthday is 15th of March.\nA: Oh! Your birthday is on Friday. What present do you want to get?\nB: I want to get a new book about travelling. Do you have any more questions?\nA: No, I haven't. Thank you. Goodbye!\nB: Bye!",
+"А: Доброе утро! Могу я задать вам несколько вопросов?\nБ: Доброе утро! Конечно, пожалуйста.\nА: Чем вам нравится заниматься?\nБ: Я люблю читать книги.\nА: Это здорово! Какое ваше любимое время года?\nБ: Моё любимое время года — весна.\nА: Почему ты любишь весну?\nБ: Я могу кататься на роликах со своими друзьями в парке.\nА: Когда у тебя день рождения?\nБ: Мой день рождения 15 марта.\nА: О! Твой день рождения в пятницу. Какой подарок ты хочешь получить?\nБ: Я хочу получить новую книгу о путешествиях. У вас есть ещё какие-нибудь вопросы?\nА: Нет. Спасибо. До свидания!\nБ: Пока!"
+],
+"answer": "A: Good morning! May I ask you some questions?\nB: Morning! You are welcome.\nA: What do you like to do?\nB: I like to read books.\nA: It's great! What is your favourite season?\nB: Spring is my favourite season.\nA: Why do you like it?\nB: I can roller skate with my friends in the park.\nA: When is your birthday?\nB: My birthday is 15th of March.\nA: Oh! Your birthday is on Friday. What present do you want to get?\nB: I want to get a new book about travelling. Do you have any more questions?\nA: No, I haven't. Thank you. Goodbye!\nB: Bye!"
+}
+]
+},
+{
+"number": "1-s59",
+"num": "1",
+"page": 59,
+"chapter": "3. Speaking about a new friend. Lesson 51. Revision",
+"skyId": 132533,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Прочитаем письмо маленькой Роуз и впишем слова вместо картинок.",
+"WORDLIST\ngrandparents — бабушка и дедушка\ntoys — игрушки\ndolls — куклы\nteddy bears — плюшевые мишки\nball — мяч\nforest — лес\nMP3-player — МР3-проигрыватель\nscooter — самокат",
+"Дорогой Тайни,\nМеня зовут Роуз. Мне пять лет (five). Я живу со своими мамой, папой, бабушкой и дедушкой (grandparents) и братом Эндрю. У меня много игрушек: две куклы (dolls), кукольный дом, два плюшевых мишки (two teddy bears) и три мяча (balls). Я люблю играть с моими игрушками.\nЯ умею петь и танцевать. Я люблю задавать много вопросов (questions).\nЯ бы хотела спросить:\nТы живёшь в лесу (forest)?\nУ тебя есть МР3-проигрыватель (MP3-player)?\nТы умеешь кататься на самокате (scooter)?\nПожалуйста, напиши мне в ответ и ответь на мои вопросы (questions).\nРоуз"
+],
+"answer": "Five.\nGrandparents.\nDolls.\nTwo teddy bears.\nBalls.\nQuestions.\nForest.\nMP3-player.\nScooter.\nQuestions."
+}
+]
+},
+{
+"number": "2-s60",
+"num": "2",
+"page": 60,
+"chapter": "3. Speaking about a new friend. Lesson 51. Revision",
+"skyId": 132534,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Переведём словосочетания на английский язык.",
+"WORDLIST\npoems — стихи\nfairy tales — сказки\nscooter — самокат\npostcards — открытки\nseason — время года",
+"Speak English.\nWrite poems.\nListen to music.\nRead fairy tales.\nWatch TV.\nRide a scooter.\nGet letters and postcards.\nFavourite season.\nBeautiful flowers."
+],
+"answer": "Speak English.\nWrite poems.\nListen to music.\nRead fairy tales.\nWatch TV.\nRide a scooter.\nGet letters and postcards.\nFavourite season.\nBeautiful flowers."
+}
+]
+},
+{
+"number": "project-s61",
+"num": "project",
+"page": 61,
+"chapter": "3. Speaking about a new friend. Lesson 52. Project",
+"skyId": 132535,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно сделать поздравительную открытку.",
+"Happy Birthday — с днём рождения.\nBest wishes — с наилучшими пожеланиями.\nCongratulations — поздравлять, поздравления.",
+"Dear Tiny,\nCongratulations and best wishes! Happy Birthday!\nAnna",
+"Дорогая Тайни,\nПоздравляю и наилучшие пожелания! С Днём Рождения!\nАнна"
+],
+"answer": "Сделаем открытку и напишем поздравление.\nDear Tiny,\nCongratulations and best wishes! Happy Birthday!\nAnna"
+}
+]
+},
+{
+"number": "1-s62",
+"num": "1",
+"page": 62,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 53",
+"skyId": 132536,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно подписать названия частей лица и тела робота.",
+"WORDLIST\nhair — волосы\nhead — голова\nnose — нос\neyes — глаза\nteeth — зубы\nears — уши\narm — рука\nhand — ладонь\nleg — нога\nknee — колено\nfoot — стопа",
+"Hair.\nHead.\nNose.\nEyes.\nTeeth.\nEars.\nArm.\nHand.\nLeg.\nKnee.\nFoot."
+],
+"answer": "Hair.\nHead.\nNose.\nEyes.\nTeeth.\nEars.\nArm.\nHand.\nLeg.\nKnee.\nFoot."
+}
+]
+},
+{
+"number": "2-s62",
+"num": "2",
+"page": 62,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 53",
+"skyId": 132537,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные буквы в словах.",
+"WORDLIST\nhair — волосы\nhead — голова\nnose — нос\neyes — глаза\nteeth — зубы\nears — уши\narm — рука\nhand — ладонь\nleg — нога\nknee — колено\nfoot — стопа\nface — лицо\ntoe — палец ноги\nmouth — рот",
+"Face.\nNose.\nEars.\nEyes.\nMouth.\nTeeth.\nHead.\nHand.\nArm.\nLeg.\nHair.\nFeet.\nToes.\nKnee."
+],
+"answer": "Face.\nNose.\nEars.\nEyes.\nMouth.\nTeeth.\nHead.\nHand.\nArm.\nLeg.\nHair.\nFeet.\nToes.\nKnee."
+}
+]
+},
+{
+"number": "3-s62",
+"num": "3",
+"page": 62,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 53",
+"skyId": 132538,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно описать внешность инопланетянина.",
+"WORDLIST\nhair — волосы\nhead — голова\nnose — нос\neyes — глаза\nteeth — зубы\nears — уши\narm — рука\nhand — ладонь\nleg — нога\nknee — колено\nfoot — стопа\nface — лицо\ntoe — палец ноги\nmouth — рот",
+"It is funny and nice. It has got four big ears, two eyes and a long nose. It has got black hair. It has got two arms and four legs. \nОн забавный и милый. У него четыре больших уха, два глаза и длинный нос. У него чёрные волосы. У него две руки и четыре ноги."
+],
+"answer": "It is funny and nice. It has got four big ears, two eyes and a long nose. It has got black hair. It has got two arms and four legs."
+}
+]
+},
+{
+"number": "1-s63",
+"num": "1",
+"page": 63,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 54",
+"skyId": 132539,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно обвести слова в цепочке, прочитать их вслух и перевести.",
+"WORDLIST\narm — рука\near — ухо\neye — глаз\nface — лицо\nfoot — ступня\nhair — волосы\nhand — рука (кисть)\nhead — голова\nknee — колено\nmouth — рот\nneck — шея\nnose — нос\nshoulder — плечо\ntoe — палец на ноге\ntooth — зуб",
+"Head, face, nose, mouth, tooth, hair, ear, eye, shoulder, arm, hand, knee, neck, toe, foot.",
+"Head.\n Face.\nNose.\nMouth.\nTooth.\nHair.\nEar.\nEye.\nShoulder.\nArm.\nHand.\nKnee.\nNeck.\nToe.\nFoot."
+],
+"answer": "Head, face, nose, mouth, tooth, hair, ear, eye, shoulder, arm, hand, knee, neck, toe, foot."
+}
+]
+},
+{
+"number": "2-s63",
+"num": "2",
+"page": 63,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 54",
+"skyId": 132540,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать рассказ и заполнить пропуски данными словами.",
+"WORDLIST 1\ndoll — кукла\neyes — глаза\ngreen — зелёный\nhouse — дом\njeans — джинсы\nlong — длинный\nteddy bear — плюшевый медведь\nwith — с",
+"WORDLIST 2\ntoy — игрушка\neye — глаз\nnose — нос\nhair — волосы\nshirt — рубашка\nhat — шляпа",
+"У меня много игрушек. Но мне нравится Бетси и мой 1) плюшевый медведь. Бетси — это моя 2) _____. У Бетси 3) _____ глаза и маленький нос. У моей куклы 4) _____ волосы. На Бетси надета зелёная рубашка, голубые 5) _____ и жёлтая шляпа. У меня есть кукольный 6) _____ для Бетси. У меня есть замечательный плюшевый медведь. Мой плюшевый медведь коричневого цвета. Я люблю играть 7)_____ моими игрушками.",
+"У меня много игрушек. Но мне нравится Бетси и мой 1) плюшевый медведь. Бетси — это моя 2) кукла. У Бетси 3) зелёные глаза и маленький нос. У моей куклы 4) длинные волосы. На Бетси надета зелёная рубашка, голубые 5) джинсы и жёлтая шляпа. У меня есть кукольный 6) домик для Бетси. У меня есть замечательный плюшевый медведь. Мой плюшевый медведь коричневого цвета. Я люблю играть 7) с моими игрушками.\nTeddy bear.\nDoll.\nGreen.\nLong.\nJeans.\nHouse.\nWith."
+],
+"answer": "Teddy bear.\nDoll.\nGreen.\nLong.\nJeans.\nHouse.\nWith."
+}
+]
+},
+{
+"number": "3-s63",
+"num": "3",
+"page": 63,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 54",
+"skyId": 132541,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переписать предложения по образцу.",
+"",
+"",
+"",
+"У Тины карие глаза. — Глаза Тины — карие.",
+"WORDLIST\near — ухо\narm — рука\nleg — нога\neye — глаз\ntooth (teeth) — зуб (зубы)\nhand — рука (кисть)\nfoot (feet) — стопа (ступни)\nstrong — сильный\nkind — добрый",
+"У Тины большие уши.\nУ Джима сильные руки и ноги.\nУ Джилл добрые глаза.\nУ Мартина белые зубы.\nУ Билли маленькие руки и ступни.",
+"Tiny's ears are big.\nJim's arms and legs are strong.\nJill's eyes are kind.\nMartin's teeth are white.\nBilly's hands and feet are small.",
+"Уши Тины — большие.\nРуки и ноги Джима — сильные.\nГлаза Джилл — добрые.\nЗубы Мартина — белые.\nРуки и ступни Билли — маленькие."
+],
+"answer": "Tiny's ears are big.\nJim's arms and legs are strong.\nJill's eyes are kind.\nMartin's teeth are white.\nBilly's hands and feet are small."
+}
+]
+},
+{
+"number": "1-s64",
+"num": "1",
+"page": 64,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 55",
+"skyId": 132542,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Найдём и запишем знакомые слова.",
+"Знакомые слова:",
+"Head — голова. \nKnee — колено.\nFoot — ступня.\nToe — палец ноги.\nShoulder — плечо.\nTeeth — зубы.\nFace — лицо.\nArm — рука.\nNose — нос.\nHead — голова.\nEye — глаз.\nEar — ухо."
+],
+"answer": "Head.\nKnee.\nFoot.\nToe.\nShoulder.\nTeeth.\nFace.\nArm.\nNose.\nHead.\nEye.\nEar."
+}
+]
+},
+{
+"number": "2-s64",
+"num": "2",
+"page": 64,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 55",
+"skyId": 132543,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Заполним пропуски.",
+"Ты.\nОна.\nОн.\nОно.",
+"",
+"You – your (твой).\nShe – her (её).\nHe – his (его).\nIt – its (его)."
+],
+"answer": "You – your.\nShe – her.\nHe – his.\nIt – its."
+}
+]
+},
+{
+"number": "3-s64",
+"num": "3",
+"page": 64,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 55",
+"skyId": 132544,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Закончим предложения. Вставим в пропуски my, her, his, its, your.",
+"Какое твоё имя?",
+"WORDLIST\nhand — рука\nface — лицо\nclean — мыть, чистить\ntooth — зуб\nbike — велосипед\nspring — весна\nseason — сезон, время года\nball — мяч",
+"Утром я мою _____ руки и лицо.\nДжим любит играть со _____ друзьями.\nДжилл! Не забывай почистить _____ зубы.\nГде Боб катается на _____ велосипеде?\nЯ люблю весну. Какое _____ любимое время года?\nСобаке нравится _____ мяч.",
+"",
+"My.Утром я мою свои руки и лицо.\nHis. Джим любит играть со своими (его) друзьями.\nYour. Джилл! Не забывай почистить свои (твои) зубы.\nHis. Где Боб катается на своём (его) велосипеде?\nYour. Я люблю весну. Какое ваше любимое время года?\nIts. Собаке нравится её мяч."
+],
+"answer": "My.\nHis.\nYour.\nHis.\nYour.\nIts."
+}
+]
+},
+{
+"number": "4-s64",
+"num": "4",
+"page": 64,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 55",
+"skyId": 132545,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные слова в текст.",
+"WORDLIST\nchocolate — шоколад\nsmall — маленький\nlike — нравится\near — ухо\nkind — добрый\nmusic — музыка\nfairytale — сказка\ngame — игра\nforest — лес\nboy — мальчик\nnose — нос\njam — джем, варенье\ncomputer — компьютер",
+"Тайни живёт в _____ лесу. Он выглядит _____ мальчик. У Тайни большие _____ и _____ нос. Его глаза _____. Он сладкоежка. Он любит _____ и джем. Тайни слушает _____ и играет в компьютерные _____.",
+"Тайни живёт в сказочном (fairytale) лесу. Он выглядит (like) как мальчик. У Тайни большие уши (ears) и маленький (small) нос. Его глаза добрые (kind). Он сладкоежка. Он любит шоколад (chocolate) и джем. Тайни слушает музыку (music) и играет в компьютерные игры (games)."
+],
+"answer": "Fairytale, like, ears, small, kind, chocolate, music, games."
+}
+]
+},
+{
+"number": "1-s65",
+"num": "1",
+"page": 65,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 56",
+"skyId": 132546,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно посмотреть на часы и записать, какое время они указывают.",
+"WORDLIST\no'clock — часов\nhalf — половина\npast — после",
+"It's half past ten.\nIt's three o'clock.\nIt's nine o'clock.\nIt's half past four.\nIt's seven o'clock.\nIt's half past eight."
+],
+"answer": "It's half past ten.\nIt's three o'clock.\nIt's nine o'clock.\nIt's half past four.\nIt's seven o'clock.\nIt's half past eight."
+}
+]
+},
+{
+"number": "2-s65",
+"num": "2",
+"page": 65,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 56",
+"skyId": 132547,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать рассказ и вставить пропущенные слова.",
+"Watches — смотрит.\nCleans — чистит.\nWashes — моет.\nDoes — делает. \nHas — имеет.",
+"Энн встаёт в 7 часов. Энн чистит (cleans) зубы, и умывает (washes) лицо и руки. Потом она завтракает. В два часа Энн (has) обедает. Затем она делает (does) свою домашнюю работу. Вечером она играет в теннис, смотрит (watches) телевизор и читает книги. Она не играет в компьютерные игры. В половине девятого Энн ложится спать."
+],
+"answer": "Cleans.\nWashes.\nHas.\nDoes.\nWatches."
+}
+]
+},
+{
+"number": "3-s65",
+"num": "3",
+"page": 65,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 56",
+"skyId": 132548,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно прочитать программу телепередач и отметить на часах время, когда эти телепередачи будут показывать.",
+"В половине десятого — «Том и Тим».\nВ двенадцать часов — «Беги, плавай и прыгай».\nВ час дня — «Мы и они».\nВ половине пятого — «Оглянись».\nВ половине седьмого — «Сказочные новости».\nВ восемь часов — «Крепко спи»."
+],
+"answer": "Нарисуем стрелочки на часах."
+}
+]
+},
+{
+"number": "1-s66",
+"num": "1",
+"page": 66,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 57",
+"skyId": 132549,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Отметим на циферблатах время, указанное в каждом предложении.",
+"",
+"Сейчас четыре сорок пять.\nСейчас десять часов.\nСейчас шесть тридцать.\nСейчас восемь часов десять минут.\nСейчас три часа тридцать минут.\nСейчас два часа двадцать минут."
+],
+"answer": "Сейчас четыре сорок пять.\nСейчас десять часов.\nСейчас шесть тридцать.\nСейчас восемь часов десять минут.\nСейчас три часа тридцать минут.\nСейчас два часа двадцать минут."
+}
+]
+},
+{
+"number": "2-s66",
+"num": "2",
+"page": 66,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 57",
+"skyId": 132550,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Составим вопросы из слов и ответим на них.",
+"",
+"When do you get up? Когда ты встаёшь?\nWhere do you go in the morning? Куда ты идёшь утром?\nWhen do you go to bed? Когда ты ложишься спать?\nDo you clean your teeth in the morning? Ты чистишь зубы утром?\nDo you like Green School? Тебе нравится Зелёная школа?",
+"I get up at seven a.m. Я встаю в семь утра.\nI go to school in the morning. Утром я иду в школу.\nI go to bed at nine p.m. Я ложусь спать в девять часов.\nYes, I do. Да.\nYes, I do. Да."
+],
+"answer": "When do you get up?\nWhere do you go in the morning?\nWhen do you go to bed?\nDo you clean your teeth in the morning?\nDo you like Green School?"
+}
+]
+},
+{
+"number": "3-s66",
+"num": "3",
+"page": 66,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 57",
+"skyId": 132551,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Запишем, что обычно в это время происходит в твоей семье по воскресеньям.",
+"WORDLIST\nget up — вставать\ngo home — идти домой\nhave breakfast — завтракать\ngo to bed — идти спать\nwash your hand and face — мыть руки и лицо\ndo your homework — делать домашнее задание\nhave lunch — обедать\nplay computer games — играет в компьютерные игры\nwatch TV — смотреть телевизор\nwalk in the park — гулять в парке",
+"A.m. — с полуночи до полудня.\n8 a.m. — 8 часов утра.\nP.m. — с полудня до полуночи.\n8 p.m. — 8 часов вечера.",
+"В 8 вечера моя мама обычно смотрит телевизор.",
+"At 8 a.m. my dad, my mother and I usually get up. В 8 утра мы с папой и мамой обычно встаём.\nAt 9:40 a.m. we usually have breakfast. В 9:40 утра мы обычно завтракаем.\nAt 10:30 a.m. we usually walk in the park. В 10:30 утра мы обычно гуляем в парке.\nAt 12:50 p.m. we usually have lunch. В 12:50 мы обычно обедаем.\nAt 1:30 p.m. we usually watch TV. В 13:30 мы обычно смотрим телевизор.\nAt 6:15 p.m. we usually play computer games. В 18:15 мы обычно играем в компьютерные игры."
+],
+"answer": "At 8 a.m. my dad, my mother and I usually get up.\nAt 9:40 a.m. we usually have breakfast.\nAt 10:30 a.m. we usually walk in the park.\nAt 12:50 p.m. we usually have lunch.\nAt 1:30 p.m. we usually watch TV.\nAt 6:15 p.m. we usually play computer games."
+}
+]
+},
+{
+"number": "1-s67",
+"num": "1",
+"page": 67,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 58",
+"skyId": 132552,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно найти и вычеркнуть лишнее слово в каждом ряду.",
+"WORDLIST\nhair — волосы\nhead — голова\nnose — нос\neyes — глаза\nteeth — зубы\nears — уши\narm — рука\nhand — ладонь\nleg — нога\nknee — колено\nfoot — стопа\nface — лицо\ntoe — палец ноги\nmouth — рот",
+"Глаз, рот, нос, рука, ухо.\nНога, колено, стопа, палец ноги, голова.\nУши, глаза, рот, стопы, зубы.\nКогда, почему, мыть, где, что."
+],
+"answer": "Hand.\nHead.\nFeet.\nWash."
+}
+]
+},
+{
+"number": "2-s67",
+"num": "2",
+"page": 67,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 58",
+"skyId": 132553,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить вопросы и ответить на них.",
+"Do you wash your hands and face? — Yes, I do. Ты можешь руки и лицо? — Да.\nWhen do you have breakfast? — In the morning. Когда ты завтракаешь? — Утром.\nWhen do you do your homework? — In the afternoon. Когда ты делаешь домашнюю работу? — Днём.\nDo you walk in the park? — Yes, I do. Ты гуляешь в парке? — Да.\nWhen do you go to bed? — In the evening. Когда ты ложишься спать? — Вечером."
+],
+"answer": "Do you wash your hands and face? — Yes, I do.\nWhen do you have breakfast? — In the morning.\nWhen do you do your homework? — In the afternoon. \nDo you walk in the park? — Yes, I do. \nWhen do you go to bed? — In the evening."
+}
+]
+},
+{
+"number": "3-s67",
+"num": "3",
+"page": 67,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 58",
+"skyId": 132554,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно закончить письмо.",
+"",
+"Дорогой Малыш,\nЯ люблю весенние каникулы. Утром мне не нужно в школу. \nЯ читаю книгу или рисую (read a book or paint).\nВечером я смотрю телевизор (watch TV). \nЯ ложусь спать в 10 вечера.\nПожалуйста, напиши ответ.\nВсего наилучшего,\nДинозаврик"
+],
+"answer": "Дорогой Малыш,\nЯ люблю весенние каникулы. Утром мне не нужно в школу. \nЯ читаю книгу или рисую (read a book or paint).\nВечером я смотрю телевизор (watch TV). \nЯ ложусь спать в 10 вечера.\nПожалуйста, напиши ответ.\nВсего наилучшего,\nДинозаврик"
+}
+]
+},
+{
+"number": "1-s68",
+"num": "1",
+"page": 68,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 59",
+"skyId": 132555,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в тексте, используя данные слова.",
+"WORDLIST\nporridge — каша\ncakes — торты\nmorning — утро\nto like — любить\nmay — можно",
+"Ане — 5 лет. _____ её мама даёт Ане вкусную кашу. Аня не любит кашу. Ей нравятся конфеты и _____. Аня говорит: «_____ мне немного кофет, мама?» Её мама отвечает: «Да, можно, но после _____.»",
+"Ане — 5 лет. Утром её мама даёт Ане вкусную кашу. Аня не любит кашу. Ей нравятся конфеты и торты. Аня говорит: «Можно мне немного кофет, мама?» Её мама отвечает: «Да, можно, но после каши.»"
+],
+"answer": "Ann is five. In the morning her mother gives Ann tasty porridge. Ann doesn't like porridge. She likes sweets and cakes. Ann says, \"May I have some sweets, Mum?\" Her mum says, \"Yes, you may, but after the porridge.\""
+}
+]
+},
+{
+"number": "2-s68",
+"num": "2",
+"page": 68,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 59",
+"skyId": 132556,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно, глядя на слонёнка, исправить фактические ошибки в каждом из предложений.",
+"WORDLIST\nlunch — обед\na.m. — обозначает время до полудня\np.m. — обозначает время после полудня\nhair — волосы\neyes — глаза\nears — уши\nbig — большой\nsmall — маленький\nlong — длинный\nshort — короткий",
+"Я обедаю в 2 часа ночи.\nУ меня — длинные волосы.\nУ меня — розовые глаза.\nУ меня — маленькие уши.",
+"Я обедаю в 2 часа ночи. — Нет, ты не обедаешь в 2 часа ночи. Ты обедаешь в 2 часа дня.\nУ меня — длинные волосы. — Нет, у тебя — не длинные волосы. У тебя — короткие волосы.\nУ меня — розовые глаза. — Нет, у тебя — не розовые глаза. У тебя — карие глаза.\nУ меня — маленькие уши. — Нет, у тебя — не маленькие уши. У тебя — большие уши."
+],
+"answer": "I have lunch at 2 a.m. — No, you don't have lunch at 2 a.m. You have lunch at 2 p.m.\nI have long hair. — No, you don't have long hair . You have short hair.\nI have pink eyes. — No, you don't have pink eyes. You have brown eyes.\nI have small ears. — No, you don't have small ears. You have big ears."
+}
+]
+},
+{
+"number": "3-s68",
+"num": "3",
+"page": 68,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 59",
+"skyId": 132557,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить вопросы, используя данные слова и фразы.",
+"WORDLIST\nfunny — забавный\nbig — большой\nnice — милый, хороший\na toy — игрушка\na dog — собака\na bird — птица\na scooter — скутер\nroller skates — роликовые коньки",
+"Do they have funny toys? (У них есть забавные игрушки?)\nDoes she have a big dog? (У неё есть большая собака?)\nDoes he have a nice bird? (У него есть милая птичка?)\nDo the boys have scooters? (У мальчиков есть скутеры?)\nDo you have roller skates? (У тебя есть роликовые коньки?)"
+],
+"answer": "Do they have funny toys? \nDoes she have a big dog?\nDoes he have a nice bird? \nDo the boys have scooters? \nDo you have roller skates?"
+}
+]
+},
+{
+"number": "1-s69",
+"num": "1",
+"page": 69,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 60",
+"skyId": 132558,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вычеркнуть лишнее слово в каждой строчке.",
+"Лето, зима, весна, время, осень.\nМай, уметь, июнь, декабрь, март.\nУтро, завтрак, полдень, вечер, ночь.\nПонедельник, среда, четверг, февраль, воскресенье.",
+"Время — потому что не входит в группу «времена года».\nУметь — потому что не входит в группу «месяца».\nЗавтрак — потому что не входит в группу «времена суток».\nФевраль — потому что не входит в группу «дни недели»."
+],
+"answer": "Время.\nУметь.\nЗавтрак.\nФевраль."
+}
+]
+},
+{
+"number": "2-s69",
+"num": "2",
+"page": 69,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 60",
+"skyId": 132559,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно вставить пропущенные слова.",
+"WORDLIST\nrides — катается\nplays — играет, собирает\nwaters — поливает\ngets — встаёт\ncleans — убирается",
+"Она _____ цветы утром.\nОна _____ на пианино днём.\nОна _____ дома вечером.\nОн _____ рано утром.\nОн _____ на скутере днём.\nОн _____ паззлы вечером.",
+"Она поливает (waters) цветы утром.\nОна играет (plays) на пианино днём.\nОна убирается (cleans) дома вечером.\nОн встаёт (gets) рано утром.\nОн катается (rides) на скуторе днём.\nОн собирает (plays) паззлы вечером."
+],
+"answer": "Waters.\nPlays.\nCleans.\nGets.\nRides.\nPlays."
+}
+]
+},
+{
+"number": "3-s69",
+"num": "3",
+"page": 69,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 60",
+"skyId": 132560,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать и исправить утверждения.",
+"Тайни смотрит телевизор. — Утром Тайни не смотрит телевизор. Она ходит в школу.",
+"После завтрака Тайни делает домашнее задание.\nТайни обедает в половине третьего.\nПосле обеда Тайни играет на пианино.\nЕго друзья навещают его во второй половине дня.",
+"After breakfast Tiny doesn't do his homework. He goes to school. (После завтрака Тайни не делает домашнее задание. Он идёт в школу.)\nTiny doesn't have lunch at half past two. He has lunch in the afternoon. (Тайни не обедает в половине третьего. Он обедает во второй половине дня.)\nAfter lunch Tiny doesn't play the piano. He does his homework. (После обеда Тайни не играет на пианино. Он делает своё домашнее задание.)\nHis friends don't visit him in the afternoon. They visit him in the evening. (Его друзья не навещают его во второй половине дня. Они навещают его вечером.)"
+],
+"answer": "After breakfast Tiny doesn't do his homework. He goes to school.\nTiny doesn't have lunch at half past two. He has lunch in the afternoon.\nAfter lunch Tiny doesn't play the piano. He does his homework.\nHis friends don't visit him in the afternoon. They visit him in the evening."
+}
+]
+},
+{
+"number": "1-s70",
+"num": "1",
+"page": 70,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 61",
+"skyId": 132561,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно найти, обвести и записать известные нам глаголы.",
+"Go.\nCome.\nShave.\nWant.\nBlow.\nClean.\nMake.\nDo.\nWatch.\nWash."
+],
+"answer": "Go.\nCome.\nShave.\nWant.\nBlow.\nClean.\nMake.\nDo.\nWatch.\nWash."
+}
+]
+},
+{
+"number": "2-s70",
+"num": "2",
+"page": 70,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 61",
+"skyId": 132562,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно вписать недостающие слова в парах.",
+"",
+"One\n Many\n Tooth\n Teeth\n Man\n Men\n Mouse\n Mice\n Woman\n Women\n Child\n Children\n Fish\n Fish",
+"",
+"One\n Many\n Room\n Rooms\n Box\n Boxes\n Fox\n Foxes\n Horse\n Horses\n Hen\n Hens\n Letter\n Letters"
+],
+"answer": "One\n Many\n Tooth\n Teeth\n Man\n Men\n Mouse\n Mice\n Woman\n Women\n Child\n Children\n Fish\n Fish\n.\n One\n Many\n Room\n Rooms\n Box\n Boxes\n Fox\n Foxes\n Horse\n Horses\n Hen\n Hens\n Letter\n Letters"
+}
+]
+},
+{
+"number": "3-s70",
+"num": "3",
+"page": 70,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 61",
+"skyId": 132563,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно записать словами данные нам картинки и цифры.",
+"",
+"Six men. Шесть мужчин.\nFourteen mice. Четырнадцать мышей.\nSeven letters. Семь букв.\nThree women. Три женщины.\nEleven stamps. Одиннадцать марок.\nTwo feet. Две ноги.\nNine clocks. Девять часов."
+],
+"answer": "Six men.\nFourteen mice.\nSeven letters.\nThree women.\nEleven stamps.\nTwo feet.\nNine clocks."
+}
+]
+},
+{
+"number": "1-s71",
+"num": "1",
+"page": 71,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 62",
+"skyId": 132564,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно переписать предложения и где необходимо поставить заглавные буквы.",
+"В начале предложения слово пишется с заглавной буквы.\nМестоимение я (I) всегда пишется с заглавной буквы.\nИмена собственные: фамилии, имена, названия стран и городов и т.д. — пишутся с заглавной буквы.\nПри обращении Miss, Mr., Doctor и т.д. пишутся с заглавной буквы.\nНазвания дней недели, месяцев пишутся с заглавной буквы.\nНазвания школьных предметов.",
+"Does Tom live in Moscow?\nMy birthday is on the third of October.\nJack is from Great Britain.\nMay I have some coffee, Miss Chatter?",
+"Том живет в Москве?\nМой день рождения третьего октября.\nДжек из Великобритании.\nМожно мне кофе, мисс Чэттер?"
+],
+"answer": "Does Tom live in Moscow?\nMy birthday is on the third of October.\nJack is from Great Britain.\nMay I have some coffee, Miss Chatter?"
+}
+]
+},
+{
+"number": "2-s71",
+"num": "2",
+"page": 71,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 62",
+"skyId": 132565,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно образовать множественное число указанных существительных.",
+"",
+"foot (нога) — feet,\nmouse (мышь) — mice,\nfish (рыба) — fish,\nhorse (лощадь) — horses,\nchild (ребёнок) — children,\nfriend (друг) — friends,\nboy (мальчик) — boys, \ngirl (девочка) — girls,\nmonth (месяц) — months,\ntooth (зуб) — teeth,\neye (глаз) — eyes."
+],
+"answer": "Feet, mice, fish, horses, children, friends, boys, girls, months, teeth, eyes."
+}
+]
+},
+{
+"number": "3-s71",
+"num": "3",
+"page": 71,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 62",
+"skyId": 132566,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"В этом задании нам нужно расставить слова в вопросах в правильном порядке и ответить на эти вопросы.",
+"",
+"",
+"When do you get up? Когда ты просыпаешься?\nDo you go to school on Saturdays? Ты ходишь в школу по субботам?\nWho cleans your room? Кто убирает твою комнату?\nDo you water the flowers? Ты поливаешь цветы?\nWhen do you have lunch? Когда ты обедаешь?",
+"I get ut at 7 o'clock. Я просыпаюсь в 7 часов.\nNo, I don't. Нет.\nI clean my room. Я убираю свою комнату.\nYes, I do. Да.\nI have lunch at 12.00. Я обедаю в 12.00."
+],
+"answer": "When do you get up?— I get ut at 7 o'clock.\nDo you go to school on Saturdays? — No, I don't.\nWho cleans your room? — I clean my room.\nDo you water the flowers? — Yes, I do.\nWhen do you have lunch? — I have lunch at 12.00."
+}
+]
+},
+{
+"number": "1-s72",
+"num": "1",
+"page": 72,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 63",
+"skyId": 132567,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно соединить стрелками числа и слова. Затем прочитаем эти слова.",
+"",
+"11 — eleven.\n12 — twelve.\n13 — thirteen.\n14 — fourteen.\n15 — fifteen.\n16 — sixteen.\n17 — seventeen.\n18 — eighteen.\n19 — nineteen.\n20 — twenty.",
+"Eleven.\nTwelve.\nThirteen.\nFourteen.\nFifteen.\nSixteen.\nSeventeen.\nEighteen.\nNineteen.\nTwenty."
+],
+"answer": "11 — eleven.\n12 — twelve.\n13 — thirteen.\n14 — fourteen.\n15 — fifteen.\n16 — sixteen.\n17 — seventeen.\n18 — eighteen.\n19 — nineteen.\n20 — twenty."
+}
+]
+},
+{
+"number": "2-s72",
+"num": "2",
+"page": 72,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 63",
+"skyId": 132568,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить таблицу.",
+"",
+"Do\n Do not\n Don't\n Does\n Does not\n Doesn't\n Have\n Have not\n Haven't\n Has\n Has not\n Hasn't\n Is\n Is not\n Isn't\n Are\n Are not\n Aren't\n Can\n Cannot\n Cann't"
+],
+"answer": "Do\n Do not\n Don't\n Does\n Does not\n Doesn't\n Have\n Have not\n Haven't\n Has\n Has not\n Hasn't\n Is\n Is not\n Isn't\n Are\n Are not\n Aren't\n Can\n Cannot\n Cann't"
+}
+]
+},
+{
+"number": "3-s72",
+"num": "3",
+"page": 72,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 63",
+"skyId": 132569,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу.",
+"Тайни пишем десять писем по воскресеньям. Когда Тайни пишет десять писем?",
+"",
+"Тайни отправляет тринадцать писем по понедельникам.\nТайни рисует красивые открытки.\nТайни читает одиннадцать писем каждый день.\nМисс Чаттер ходит на почту по средам.\nМисс Чаттер получает двадцать открыток в мае.",
+"When does Tiny send thirteen letters? (Когда Тайни отправляет тринадцать писем?)\nWhat postcards does Tiny draw? (Какие открытки рисует Тайни?)\nHow many letters does Tiny read every day? (Сколько писем Тайни читает каждый день?)\nWhere does Miss Chatter go on Wednesdays? (Куда ходит мисс Чаттер по средам?)\nWhy does Miss Chatter get twenty postcards in May? (Почему мисс Чаттер получает двадцать открыток в мае?)"
+],
+"answer": "When does Tiny send thirteen letters?\nWhat postcards does Tiny draw?\nHow many letters does Tiny read every day?\nWhere does Miss Chatter go on Wednesdays?\nWhy does Miss Chatter get twenty postcards in May?"
+}
+]
+},
+{
+"number": "1-s73",
+"num": "1",
+"page": 73,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 64",
+"skyId": 132570,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Зачеркнём лишнее слово.",
+"WORDLIST\nmilk — молоко\ncheese — сыр\nbutter — масло\nbread — хлеб\nbanana — банан\negg — яйцо\ncabbage — капуста\norange — апельсин\ntomato — помидор\nlemon — лимон\npotato — картофель\napple — яблоко\ntennis — теннис\nfootball — футбол\nchess — шахматы\npiano — пианино\nbadminton — бадминтон",
+"Bread (все остальное – молочные продукты).\nEgg (все остальное – растёт в саду).\nPotato (все остальное – фрукты).\nPiano (все остальное – виды спорта)."
+],
+"answer": "Bread.\nEgg.\nPotato.\nPiano."
+}
+]
+},
+{
+"number": "2-s73",
+"num": "2",
+"page": 73,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 64",
+"skyId": 132571,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Посмотрим на рисунок и ответим на вопрос: «How many ... can you see?»",
+"WORDLIST\nwoman — женщина\nchild — ребёнок\ngirl — девочка\nboy — мальчик\nbird — птица\ncat — кошка\ndog — собака\nfrog — лягушка\nmouse — мышь\ntree — дерево\nflower — цветок\nclown — клоун\nball — мяч",
+"",
+"I can see... — Я вижу...\nНапример: I can see six women. Я вижу шесть женщин.",
+"",
+"",
+"Six women. Шесть женщин.\nNine children. Девять детей.\nFour girls. Четыре девушки.\nFive boys. Пять мальчиков.\nThirteen birds. Тринадцать птиц.\nTwo cats. Две кошки.\nThree dogs. Три собаки.\nTwo frogs. Две лягушки.\nSeven mice. Семь мышей.\nOne tree. Одно дерево.\nThirteen flowers. Тринадцать цветов.\nOne clown. Один клоун.\nSeven balls. Семь мячей.",
+"I can see six women.\nI can see nine children.\nI can see four girls.\nI can see five boys.\nI can see thirteen birds.\nI can see two cats.\nI can see three dogs.\nI can see two frogs.\nI can see seven mice.\nI can see one tree.\nI can see thirteen flowers.\nI can see one clown.\nI can see seven balls."
+],
+"answer": "I can see six women.\nI can see nine children.\nI can see four girls.\nI can see five boys.\nI can see thirteen birds.\nI can see two cats.\nI can see three dogs.\nI can see two frogs.\nI can see seven mice.\nI can see one tree.\nI can see thirteen flowers.\nI can see one clown.\nI can see seven balls."
+}
+]
+},
+{
+"number": "3-s73",
+"num": "3",
+"page": 73,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 64",
+"skyId": 132572,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Вставим пропущенные слова и прочитаем, как живут ребята.",
+"WORDLIST\nwash — мыть\nforest — лес\nsix — шесть\nevening — вечер\nwrite — писать\no'clock — часы\nsong — песня\nafter — после\nfairy tale — сказка\npoem — поэма",
+"Юфо живёт со своими друзьями. Они живут в красивом доме в лесу. Юфо встаёт в семь _____. Он счастлив, потому что у него есть _____ друзей. Юфо _____ лицо и руки. Потом он гуляет по _____ и поёт песни. После завтрака Юфо _____ забавные сказки и стихи. _____ он читает свои рассказы своим друзьям. Им нравятся сказки Юфо.",
+"Юфо живёт со своими друзьями. Они живут в красивом доме в лесу. Юфо встаёт в семь часов o'clock. Он счастлив, потому что у него есть шесть six друзей. Юфо моет washes лицо и руки. Потом он гуляет по лесу forest и поёт песни. После завтрака Юфо пишет writes забавные сказки и стихи. Вечером evening он читает свои рассказы своим друзьям. Им нравятся сказки Юфо."
+],
+"answer": "O'clock, six, washes, forest, writes, evening."
+}
+]
+},
+{
+"number": "part-1-s74",
+"num": "part-1",
+"page": 74,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 65. Progress check",
+"skyId": 132573,
+"subTasks": [
+{
+"name": "Listening (1)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прослушать рассказ Джилл и отметить её подругу на рисунке.",
+"WORDLIST\nshort — короткий\nslim — стройный\nred — рыжий\ngreen — зелёный",
+"Взгляни на это фото! Ты можешь увидеть трёх милых девочек. Мы вместе учимся в школе. Одна из девочек — моя подруга Кэсси. Она стройная, у неё зелёные глаза. У неё короткие рыжие волосы. Кэсси любит музыку. Она хорошо играет на пианино. Тебе нравится моя подруга?"
+],
+"answer": "C."
+},
+{
+"name": "Text (2-6)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать письмо Пенни и отметить верные и ложные утверждения.",
+"Дорогой друг,\nМеня зовут Пенни. Мне 9 лет. Я живу с мамой и папой. Мы живём в Лондоне. Мой брат Эндрю учится и живёт в Оксфорде. Он часто нас навещает. Эндрю хорошо играет на пианино. Мне нравится слушать музыку Эндрю. Я не умею играть на пианино, но я умею танцевать и петь. Как тебя зовут? Что ты умеешь делать?\nЯ ученица. Мне нравится моя школа, но я не люблю рано вставать. После школы я делаю домашнюю работу, читаю книги или смотрю телевизор. По средам и пятницам я играю в теннис. Но мой любимый день недели — воскресенье. По воскресеньям к нам приезжает Эндрю. Мы играем и общаемся.\nЧто ты делаешь после школы? Какой твой любимый день недели? Почему ты его любишь?\nУ меня есть песик, Макс. Он небольшой. Он добрый и умный. Макс любит играть с мячиком. Я люблю Макса, но я также хотела бы завести попугая. А какие питомцы есть у тебя?\nПожалуйста, напиши ответ.\nВсего наилучшего,\nПенни",
+"Пенни живёт в Лондоне (True).\nПенни умеет играть на пианино (False).\nПенни играет в теннис два раза в неделю (True).\nПитомца Пенни зовут Макс (True).\nУ Пенни есть попугай (False)."
+],
+"answer": "True.\nFalse.\nTrue.\nTrue.\nFalse."
+},
+{
+"name": "Sentences (7-11)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в предложениях.",
+"",
+"",
+"",
+"Ты занят по утрам? — Да, занят (am).\nУ моего друга есть (has) две сестры, Элис и Кейт.\nКогда Тайни завтракает (have)? — В 8 утра.\nНекоторые дети не любят (do not) чистить зубы.\nСколько ног (feet) у Юффо? — Четыре."
+],
+"answer": "Ты занят по утрам? — Да, занят (am).\nУ моего друга есть (has) две сестры, Элис и Кейт.\nКогда Тайни завтракает (have)? — В 8 утра.\nНекоторые дети не любят (do not) чистить зубы.\nСколько ног (feet) у Юффо? — Четыре."
+},
+{
+"name": "Story (12-16)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно заполнить пропуски в тексте.",
+"WORDLIST\nbreakfast — завтрак\nwash — мыть\ntogether — вместе",
+"Моей сестре Сью 4 года. Она милая и добрая девочка. Сью не ходит (doesn't) в школу, но она рано встаёт, в 7 часов утра. Она умывает (washes) лицо и руки, чистит зубы. После завтрака (breakfast) она играет с игрушками. В 10 часов утра Сью идёт в парк с мамой. Сью катается на своём (her) скутере и играет с другими детьми. Вечером я читаю Сью сказки и мы вместе (together) рисуем. Думаю, Сью счастлива, потому что ей не нужно делать домашнюю работу."
+],
+"answer": "Моей сестре Сью 4 года. Она милая и добрая девочка. Сью не ходит (doesn't) в школу, но она рано встаёт, в 7 часов утра. Она умывает (washes) лицо и руки, чистит зубы. После завтрака (breakfast) она играет с игрушками. В 10 часов утра Сью идёт в парк с мамой. Сью катается на своём (her) скутере и играет с другими детьми. Вечером я читаю Сью сказки и мы вместе (together) рисуем. Думаю, Сью счастлива, потому что ей не нужно делать домашнюю работу."
+},
+{
+"name": "Letter (17-20)",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать письмо Пенни и написать на него ответ.",
+"Дорогой друг,\nМеня зовут Пенни. Мне 9 лет. Я живу с мамой и папой. Мы живём в Лондоне. Мой брат Эндрю учится и живёт в Оксфорде. Он часто нас навещает. Эндрю хорошо играет на пианино. Мне нравится слушать музыку Эндрю. Я не умею играть на пианино, но я умею танцевать и петь. Как тебя зовут? Что ты умеешь делать?\nЯ ученица. Мне нравится моя школа, но я не люблю рано вставать. После школы я делаю домашнюю работу, читаю книги или смотрю телевизор. По средам и пятницам я играю в теннис. Но мой любимый день недели — воскресенье. По воскресеньям к нам приезжает Эндрю. Мы играем и общаемся.\nЧто ты делаешь после школы? Какой твой любимый день недели? Почему ты его любишь?\nУ меня есть песик, Макс. Он небольшой. Он добрый и умный. Макс любит играть с мячиком. Я люблю Макса, но я также хотела бы завести попугая. А какие питомцы есть у тебя?\nПожалуйста, напиши ответ.\nВсего наилучшего,\nПенни",
+"Дорогая Пенни, \nСпасибо за твоё письмо. Меня зовут Юля (July). Я умею играть на гитаре (play the guitar). После школы я слушаю музыку или играю с друзьями (listen to music or play with my friends). Мне нравится пятница (Friday), потому что мы всей семьёй идём в кино (I go to the cinema with my family). У меня есть золотая рыбка (a goldfish).\nС наилучшими пожеланиями,\nЮля (July)"
+],
+"answer": "Дорогая Пенни, \nСпасибо за твоё письмо. Меня зовут Юля (July). Я умею играть на гитаре (play the guitar). После школы я слушаю музыку или играю с друзьями (listen to music or play with my friends). Мне нравится пятница (Friday), потому что мы всей семьёй идём в кино (I go to the cinema with my family). У меня есть золотая рыбка (a goldfish).\nС наилучшими пожеланиями,\nЮля (July)"
+}
+]
+},
+{
+"number": "part-2-s76",
+"num": "part-2",
+"page": 76,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 65. Progress check",
+"skyId": 132574,
+"subTasks": [
+{
+"name": "1",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно рассказать о нашем распорядке дня на летних каникулах.",
+"",
+"I wake up at 9 a.m. I wash my face, clean my teeth and have breakfast with my family. In the afternoon I go to the park with my dog. In the evening I play the piano. I go to bed at 10 p.m.\nЯ встаю в 9 утра. Я умываюсь, чищу зубы и завтракаю с моей семьёй. Днём я гуляю в парке с моей собакой. Вечером я играю на пианино. Я ложусь спать в 10 часов вечера."
+],
+"answer": "I wake up at 9 a.m. I wash my face, clean my teeth and have breakfast with my family. In the afternoon I go to the park with my dog. In the evening I play the piano. I go to bed at 10 p.m."
+},
+{
+"name": "2",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно составить и разыграть диалог в парах.",
+"",
+"A: What does Tiny do in the morning? Что делает Тайни по утрам?\nB: He cleans his teeth and cooks breakfast. Он чистит зубы и готовит завтрак.\nA: What does Tiny do in the evening? Что делает Тайни по вечерам?\nB: He watches his favourite cartoons. Он смотрит любимые мультфильмы.\nA: What season does Tiny like? Какое время года любит Тайни?\nB: He likes summer. Он любит лето.\nA: Does Tiny have summer holidays? У Тайни есть летние каникулы?\nB: Yes, he does. Да, есть."
+],
+"answer": "A: What does Tiny do in the morning?\nB: He cleans his teeth and cooks breakfast.\nA: What does Tiny do in the evening?\nB: He watches his favourite cartoons.\nA: What season does Tiny like?\nB: He likes summer.\nA: Does Tiny have summer holidays?\nB: Yes, he does."
+}
+]
+},
+{
+"number": "1-s77",
+"num": "1",
+"page": 77,
+"chapter": "4. Telling stories and writing letters to your friends. Lessons 66-67. Revision",
+"skyId": 132575,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно прочитать стихотворение и заполнить пропуски. Затем скажем, что любят Сэм и Фред.",
+"WORDLIST\nmilk — молоко\nbread — хлеб\ntea — чай\njam — варенье",
+"«Я люблю _____ и хлеб,» сказал маленький Фред.\n«А я люблю чай и _____,» сказал маленький Сэм.",
+"«Я люблю молоко (milk) и хлеб,» сказал маленький Фред.\n«А я люблю чай и варенье (jam),» сказал маленький Сэм.",
+"Fred likes milk and bread. (Фред любит молоко и хлеб.)\nSam likes tea and jam. (Сэм любит чай с джемом.)"
+],
+"answer": "Fred likes milk and bread.\nSam likes tea and jam."
+}
+]
+},
+{
+"number": "2-s77",
+"num": "2",
+"page": 77,
+"chapter": "4. Telling stories and writing letters to your friends. Lessons 66-67. Revision",
+"skyId": 132576,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно написать, что есть у Питера, чтобы угостить друзей.",
+"WORDLIST\nsweets — конфеты\ntomatoes — помидоры\nbananas — бананы\noranges — апельсины\ncakes — пирожные\ncarrots — морковь\napples — яблоки",
+"",
+"Peter has got eight apples, seven oranges, four carrots, five bananas, three tomatoes, six cakes, nine sweets. (У Питера восемь яблок, семь апельсинов, четыре морковки, пять бананов, три помидора, шесть пирожных, девять конфет.)"
+],
+"answer": "Peter has got eight apples, seven oranges, four carrots, five bananas, three tomatoes, six cakes, nine sweets."
+}
+]
+},
+{
+"number": "3-s78",
+"num": "3",
+"page": 78,
+"chapter": "4. Telling stories and writing letters to your friends. Lessons 66-67. Revision",
+"skyId": 132577,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно переделать предложения по образцу.",
+"Сэм ест чай и сыр на завтрак. — Сэм ест чай и сыр на завтрак?",
+"",
+"У Фреда на завтрак молоко и хлеб.\nУ Алисы голубые глаза.\nУ Томаса есть кот.\nУ Стива много друзей.\nУ Мэри хороший мяч.",
+"Does Fred have milk and bread for breakfast? (У Фреда молоко и хлеб на завтрак?)\nDoes Alice have blue eyes? (У Алисы голубые глаза?)\nDoes Thomas have a cat? (У Томаса есть кошка?)\nDoes Steve have a lot of friends? (У Стива много друзей?)\nDoes Mary have a nice ball? (У Мэри хороший мяч?)"
+],
+"answer": "Does Fred have milk and bread for breakfast?\nDoes Alice have blue eyes?\nDoes Thomas have a cat?\nDoes Steve have a lot of friends?\nDoes Mary have a nice ball?"
+}
+]
+},
+{
+"number": "5-s78",
+"num": "5",
+"page": 78,
+"chapter": "4. Telling stories and writing letters to your friends. Lessons 66-67. Revision",
+"skyId": 132578,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно расставить предложения в правильном порядке, чтобы получился связный рассказ. Затем прочитаем его.",
+"WORDLIST\nhomework — домашнее задание\nbreakfast — завтрак\nplay puzzles — собирать пазлы\nearly — рано",
+"Энн делает домашнее задание после обеда.\nВ 9 часов Энн ложится спать.\nПосле завтрака Энн идёт в школу.\nВечером Энн любит собирать в пазлы.\nЭнн встаёт рано.",
+"Энн встаёт рано.\nПосле завтрака Энн идёт в школу.\nЭнн делает домашнее задание после обеда.\nВечером Энн любит собирать в пазлы.\nВ 9 часов Энн ложится спать."
+],
+"answer": "Ann gets up early.\nAfter breakfast Ann goes to school.\nAnn does her homework after lunch.\nIn the evening Ann likes to play puzzles.\nAt 9 o'clock Ann goes to bed."
+}
+]
+},
+{
+"number": "6-s78",
+"num": "6",
+"page": 78,
+"chapter": "4. Telling stories and writing letters to your friends. Lessons 66-67. Revision",
+"skyId": 132579,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Нам нужно перевести на английский язык фразы.",
+"WORDLIST\nwater — поливать\nwalk — гулять\ngo to bed — ложиться спать\npiano — пианино",
+"Поливать цветы — water the flowers.\nСмотреть телевизор — watch TV.\nСлушать музыку — listen to music.\nГулять в парке — walk in the park.\nЛожиться спать — go to bed.\nИграть на пианино — play the piano."
+],
+"answer": "Water the flowers.\nWatch TV.\nListen to music.\nWalk in the park.\nGo to bed.\nPlay the piano."
+}
+]
+},
+{
+"number": "project-s79",
+"num": "project",
+"page": 79,
+"chapter": "4. Telling stories and writing letters to your friends. Lesson 68. Project",
+"skyId": 132580,
+"subTasks": [
+{
+"name": "Без подзадания",
+"given": "",
+"toFind": "",
+"steps": [
+"Проект. Составим письмо другу о семье.",
+"",
+"WORDLIST\nmum — мама\ndad — папа\nbrother — брат\nsister — сестра\ngrandmother — бабушка\ngrandfather — дедушка\nsmart — умный\nstrong — сильный\nkind — добрый\nbeautiful — красивый\nclever — умный\nplay tennis — играть в теннис\ncollect stamps — коллекционировать марки\ncook — готовить\nlisten to music — слушать музыку\nwatch TV — смотреть телевизор\nplay computer game — играть в компьютерные игры\nride a bike — кататься на велосипеде\ncat — кошка\ndog — собака\nbird — птица",
+"Dear... — Дорогой...\nMy name is... — Моё имя...\nI am... — Я...\nMy birthday is on... — Мой день рождения...\nI live with... — Я живу с...\nHis name is... — Его имя...\nHe is... — Он...\nI like to... — Я люблю...\nI can... — Я могу...\nI have got... — У меня есть...",
+"Dear Martin,\nMy name is Liza. I am nine. My birthday is on the 11th of September. I live with my mum, dad and my brother. His name is Dima. He is fifteen. He is smart and strong. I like to play chess with Dima. I can dance and sing well. I like to ride a bike in the park. I have got two cats.\nBest wishes,\nLiza",
+"Дин Мартин,\nМеня зовут Лиза. Мне девять. Мой день рождения 11 сентября. Я живу с мамой, папой и братом. Его зовут Дима. Ему пятнадцать. Он умён и силён. Мне нравится играть в шахматы с Димой. Я умею хорошо танцевать и петь. Мне нравится кататься на велосипеде по парку. У меня есть две кошки.\nС наилучшими пожеланиями,\nЛиза"
+],
+"answer": "Dear Martin,\nMy name is Liza. I am nine. My birthday is on the 11th of September. I live with my mum, dad and my brother. His name is Dima. He is fifteen. He is smart and strong. I like to play chess with Dima. I can dance and sing well. I like to ride a bike in the park. I have got two cats.\nBest wishes,\nLiza"
+}
+]
+}
+]
+}
