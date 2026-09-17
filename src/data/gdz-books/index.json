@@ -136,6 +136,23 @@
 "chapterCount": 5
 },
 {
+"slug": "afanaseva-uchebnik-chast-1",
+"klass": 3,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Афанасьева О. В., Михеева И. В.",
+"type": "Учебник (часть 1)",
+"years": "2022",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:639",
+"file": "3-angliiskiy-yazyk-afanaseva-uchebnik-chast-1.json",
+"problemCount": 285,
+"solvedCount": 285,
+"chapterCount": 35
+},
+{
 "slug": "moro-3",
 "klass": 3,
 "subjectSlug": "matematika",
