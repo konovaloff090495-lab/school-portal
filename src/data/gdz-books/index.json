@@ -323,6 +323,23 @@
 "chapterCount": 4
 },
 {
+"slug": "bykova-sbornik-uprazhneniy",
+"klass": 4,
+"subjectSlug": "angliiskiy-yazyk",
+"subject": "Английский язык",
+"authors": "Быкова Н. И., Поспелова М. Д.",
+"type": "Сборник упражнений",
+"years": "2021",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "skysmart:805",
+"file": "4-angliiskiy-yazyk-bykova-sbornik-uprazhneniy.json",
+"problemCount": 314,
+"solvedCount": 210,
+"chapterCount": 26
+},
+{
 "slug": "moro-4",
 "klass": 4,
 "subjectSlug": "matematika",
