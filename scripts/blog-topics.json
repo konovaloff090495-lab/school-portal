@@ -519,12 +519,14 @@
     },
     {
       "id": "t053",
-      "status": "pending",
+      "status": "error",
       "title": "Школы при вузах: список, преимущества, как поступить",
       "slug": "shkoly-pri-vuzah-rossiya",
       "category": "Типы школ",
       "keywords": "школа при университете",
-      "freq": 2200
+      "freq": 2200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-19T03:00:02.619Z"
     },
     {
       "id": "t054",
@@ -736,13 +738,15 @@
     },
     {
       "id": "t072",
-      "status": "pending",
+      "status": "error",
       "title": "Лицеи Санкт-Петербурга: топ-10 и поступление",
       "slug": "litsej-sankt-peterburga-top",
       "category": "Рейтинги",
       "city": "Санкт-Петербург",
       "keywords": "лицеи санкт-петербурга",
-      "freq": 2200
+      "freq": 2200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-19T03:00:02.811Z"
     },
     {
       "id": "t073",
@@ -1540,13 +1544,15 @@
     },
     {
       "id": "t144",
-      "status": "pending",
+      "status": "error",
       "title": "Школы с бассейном в Москве: список и где найти",
       "slug": "shkoly-s-bassejnom-moskva-spisok",
       "category": "Типы школ",
       "city": "Москва",
       "keywords": "школы с бассейном москва",
-      "freq": 2400
+      "freq": 2400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-19T03:00:01.784Z"
     },
     {
       "id": "t145",
@@ -1773,12 +1779,14 @@
     },
     {
       "id": "t166",
-      "status": "pending",
+      "status": "error",
       "title": "ЕГЭ по географии 2026: как подготовиться за год",
       "slug": "ege-geografiya-2026-za-god",
       "category": "Советы родителям",
       "keywords": "ЕГЭ география 2026",
-      "freq": 2400
+      "freq": 2400,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-19T03:00:02.197Z"
     },
     {
       "id": "t167",
@@ -1852,12 +1860,14 @@
     },
     {
       "id": "t173",
-      "status": "pending",
+      "status": "error",
       "title": "Лучшие школы Подмосковья 2026: рейтинг",
       "slug": "luchshie-shkoly-podmoskovya-2026",
       "category": "Рейтинги",
       "keywords": "лучшие школы подмосковья",
-      "freq": 2300
+      "freq": 2300,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-19T03:00:02.389Z"
     },
     {
       "id": "t174",
