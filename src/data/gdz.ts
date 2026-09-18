@@ -237,10 +237,10 @@ export function gdzNumLabel(n: string): string {
   if (q) return `§ ${q[1]}, вопрос ${q[2]}`
   q = n.match(/^p(\d+)-dop$/)
   if (q) return `§ ${q[1]}, доп. задание`
-  q = n.match(/^p(\d+)-lab$/)
-  if (q) return `§ ${q[1]}, лабораторный опыт`
-  q = n.match(/^p(\d+)-test$/)
-  if (q) return `§ ${q[1]}, тестовые задания`
+  q = n.match(/^p(\d+)-lab(\d*)$/)
+  if (q) return `§ ${q[1]}, лабораторный опыт${q[2] ? ' ' + q[2] : ''}`
+  q = n.match(/^p(\d+)-test(\d*)$/)
+  if (q) return `§ ${q[1]}, тест${q[2] ? ' ' + q[2] : 'овые задания'}`
   q = n.match(/^lab-(\d+)$/)
   if (q) return `Лабораторный опыт ${q[1]}`
   q = n.match(/^pr-(\d+)$/)
