@@ -231,5 +231,17 @@ export function gdzNumToSlug(n: string): string {
 // страницах, поэтому ключ «6-s12» = номер 6 на странице 12.
 export function gdzNumLabel(n: string): string {
   const m = n.match(/^(.+?)-s(\d+)(?:-\d+)?$/)
-  return m ? `${m[1]} (с. ${m[2]})` : n
+  if (m) return `${m[1]} (с. ${m[2]})`
+  // Книги с вопросами после параграфов (химия/история/география): p12-3, lab-5, pr-2, t3-1
+  let q = n.match(/^p(\d+)-(\d+)$/)
+  if (q) return `§ ${q[1]}, вопрос ${q[2]}`
+  q = n.match(/^p(\d+)-dop$/)
+  if (q) return `§ ${q[1]}, доп. задание`
+  q = n.match(/^lab-(\d+)$/)
+  if (q) return `Лабораторный опыт ${q[1]}`
+  q = n.match(/^pr-(\d+)$/)
+  if (q) return `Практическая работа ${q[1]}`
+  q = n.match(/^t(\d+)-(\d+)$/)
+  if (q) return q[1] === '0' ? `Введение, тема ${q[2]}` : `Глава ${q[1]}, тема ${q[2]}`
+  return n
 }

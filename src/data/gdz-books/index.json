@@ -1666,6 +1666,23 @@
 "chapterCount": 4
 },
 {
+"slug": "gabrielyan",
+"klass": 8,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Габриелян О. С., Остроумов И. Г., Сладков С. А.",
+"type": "Учебник",
+"years": "2019",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:gabrielyan8",
+"file": "8-khimiya-gabrielyan.json",
+"problemCount": 312,
+"solvedCount": 0,
+"chapterCount": 52
+},
+{
 "slug": "ladyzhenskaya-8",
 "klass": 8,
 "subjectSlug": "russkiy-yazyk",
