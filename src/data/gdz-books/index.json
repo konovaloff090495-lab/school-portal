@@ -1683,6 +1683,23 @@
 "chapterCount": 52
 },
 {
+"slug": "rudzitis",
+"klass": 8,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Рудзитис Г. Е., Фельдман Ф. Г.",
+"type": "Учебник",
+"years": "2019",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:rudzitis8",
+"file": "8-khimiya-rudzitis.json",
+"problemCount": 319,
+"solvedCount": 0,
+"chapterCount": 60
+},
+{
 "slug": "ladyzhenskaya-8",
 "klass": 8,
 "subjectSlug": "russkiy-yazyk",
@@ -1800,6 +1817,23 @@
 "problemCount": 280,
 "solvedCount": 280,
 "chapterCount": 38
+},
+{
+"slug": "rudzitis",
+"klass": 9,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Рудзитис Г. Е., Фельдман Ф. Г.",
+"type": "Учебник",
+"years": "2019",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:rudzitis9",
+"file": "9-khimiya-rudzitis.json",
+"problemCount": 325,
+"solvedCount": 0,
+"chapterCount": 58
 },
 {
 "slug": "kolmogorov-10",
