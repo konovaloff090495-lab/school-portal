@@ -1326,6 +1326,23 @@
 "chapterCount": 4
 },
 {
+"slug": "vigasin",
+"klass": 5,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Вигасин А. А., Годер Г. И., Свенцицкая И. С.",
+"type": "Учебник",
+"years": "2019–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:vigasin5_qa",
+"file": "5-istoriya-vigasin.json",
+"problemCount": 547,
+"solvedCount": 0,
+"chapterCount": 74
+},
+{
 "slug": "merzlyak-5",
 "klass": 5,
 "subjectSlug": "matematika",

@@ -235,8 +235,10 @@ export function gdzNumLabel(n: string): string {
   // Книги с вопросами после параграфов (химия/история/география): p12-3, lab-5, pr-2, t3-1
   let q = n.match(/^p(\d+)-(\d+)$/)
   if (q) return `§ ${q[1]}, вопрос ${q[2]}`
-  q = n.match(/^p(\d+)-dop$/)
-  if (q) return `§ ${q[1]}, доп. задание`
+  q = n.match(/^p(\d+)-dop(\d*)$/)
+  if (q) return `§ ${q[1]}, доп. задание${q[2] ? ' ' + q[2] : ''}`
+  q = n.match(/^itogi(\d+)-(\d+)$/)
+  if (q) return `Итоги главы ${q[1]}, вопрос ${q[2]}`
   q = n.match(/^p(\d+)-lab(\d*)$/)
   if (q) return `§ ${q[1]}, лабораторный опыт${q[2] ? ' ' + q[2] : ''}`
   q = n.match(/^p(\d+)-test(\d*)$/)
