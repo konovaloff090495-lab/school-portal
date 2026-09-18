@@ -1445,6 +1445,23 @@
 "chapterCount": 4
 },
 {
+"slug": "agibalova",
+"klass": 6,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Агибалова Е. В., Донской Г. М.",
+"type": "Учебник",
+"years": "2014–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:agibalova6_qa",
+"file": "6-istoriya-agibalova.json",
+"problemCount": 591,
+"solvedCount": 0,
+"chapterCount": 44
+},
+{
 "slug": "arsentev",
 "klass": 6,
 "subjectSlug": "istoriya",
