@@ -2055,5 +2055,22 @@
 "problemCount": 163,
 "solvedCount": 163,
 "chapterCount": 2
+},
+{
+"slug": "gabrielyan",
+"klass": 11,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Габриелян О. С., Остроумов И. Г., Сладков С. А.",
+"type": "Учебник",
+"years": "2019–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:gabrielyan11u",
+"file": "11-khimiya-gabrielyan.json",
+"problemCount": 306,
+"solvedCount": 0,
+"chapterCount": 28
 }
 ]
