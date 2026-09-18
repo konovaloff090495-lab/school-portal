@@ -104,6 +104,14 @@ def to_key(k):
     m = re.match(r'^povtor(\d+)-(\d+)$', k)
     if m:
         return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
+    # Боголюбов: practN-M, vivodN-M, examN-M, voprN-M, ponyatiyaN-M … (раздел к главе N, заголовок из h1);
+    # zakluchenie-N («Заключение»), vpr-N (ВПР) — разделы без главы
+    m = re.match(r'^([a-z]+)(\d+)-(\d+)$', k)
+    if m:
+        return k, ('sec', int(m.group(2)))
+    m = re.match(r'^([a-z]+)-(\d+)$', k)
+    if m:
+        return k, ('sec', 0)
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
@@ -117,6 +125,7 @@ def main():
     seen = set()
     # заголовки параграфов из split_qa (head «§ 3. Название») — один на параграф
     par_heads = {}
+    sec_order = {}
     for it in d['items']:
         h = it.get('head', '')
         m = re.match(r'^(?:§|Параграф)\s*(\d+)(?:\s*[-–]\s*(\d+))?\.?\s*(.*)$', h)
@@ -141,6 +150,12 @@ def main():
             title = f'Итоги главы {n}' if n else 'Итоговые вопросы и задания'
         elif kind == 'exam':
             title = 'Готовимся к экзамену'
+        elif kind == 'sec':
+            title = re.sub(r'\s*ГДЗ.*$', '', it['h1']).strip()
+            title = re.sub(r'\s+(Глава|Тема)\s*(\d+)', r'. \1 \2', title)
+            title = re.sub(r'^Ответы на вопросы\s*', '', title)[:90]
+            if title not in sec_order:
+                sec_order[title] = (n, len(sec_order))
         elif kind == 'topic':
             title = 'Темы для дискуссии' + (f' (глава {n})' if n else ' (введение)')
         else:
@@ -192,6 +207,9 @@ def main():
         m = re.match(r'Итоги главы (\d+)', t)
         if m:
             return (1, int(m.group(1)), 0)
+        if t in sec_order:
+            n, seq = sec_order[t]
+            return (1 if n else 3, n, seq)
         return (2, 0, t)
     book = {'slug': slug, 'klass': klass, 'subjectSlug': subject_slug, 'subject': SUBJ[subject_slug],
             'authors': authors, 'type': 'Учебник', 'years': years, 'publisher': publisher, 'fgos': True,
