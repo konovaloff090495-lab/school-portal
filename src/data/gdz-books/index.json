@@ -1955,6 +1955,23 @@
 "chapterCount": 60
 },
 {
+"slug": "bogolyubov",
+"klass": 8,
+"subjectSlug": "obshchestvoznanie",
+"subject": "Обществознание",
+"authors": "Боголюбов Л.Н., Лазебникова А.Ю., Городецкая Н.И.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:bogolyubov8_qa",
+"file": "8-obshchestvoznanie-bogolyubov.json",
+"problemCount": 616,
+"solvedCount": 0,
+"chapterCount": 39
+},
+{
 "slug": "ladyzhenskaya-8",
 "klass": 8,
 "subjectSlug": "russkiy-yazyk",
