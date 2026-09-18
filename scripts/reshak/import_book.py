@@ -93,9 +93,13 @@ def to_key(k):
     m = re.match(r'^glava(\d+)-(\d+)$', k)
     if m:
         return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
-    m = re.match(r'^itogi-(\d+)$', k)
+    m = re.match(r'^itogi?-(\d+)$', k)
     if m:
         return f'itogi0-{m.group(1)}', ('itogi', 0)
+    # Алексеев 9: exam-3 («Готовимся к экзамену»)
+    m = re.match(r'^exam-(\d+)$', k)
+    if m:
+        return f'exam-{m.group(1)}', ('exam', 0)
     # Герасимова: povtor3-5 (вопросы для повторения к разделу 3)
     m = re.match(r'^povtor(\d+)-(\d+)$', k)
     if m:
@@ -135,6 +139,8 @@ def main():
             title = 'Практические работы'
         elif kind == 'itogi':
             title = f'Итоги главы {n}' if n else 'Итоговые вопросы и задания'
+        elif kind == 'exam':
+            title = 'Готовимся к экзамену'
         elif kind == 'topic':
             title = 'Темы для дискуссии' + (f' (глава {n})' if n else ' (введение)')
         else:
@@ -181,6 +187,8 @@ def main():
             return (0, int(m.group(2)), 0)
         if t == 'Вопросы к иллюстрациям':
             return (4, 0, t)
+        if t == 'Готовимся к экзамену':
+            return (3, 1, 0)
         m = re.match(r'Итоги главы (\d+)', t)
         if m:
             return (1, int(m.group(1)), 0)
