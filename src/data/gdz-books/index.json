@@ -1751,6 +1751,23 @@
 "chapterCount": 20
 },
 {
+"slug": "bogolyubov",
+"klass": 7,
+"subjectSlug": "obshchestvoznanie",
+"subject": "Обществознание",
+"authors": "Боголюбов Л.Н., Лазебникова А.Ю., Половникова А.В.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:bogolyubov7_qa",
+"file": "7-obshchestvoznanie-bogolyubov.json",
+"problemCount": 329,
+"solvedCount": 0,
+"chapterCount": 21
+},
+{
 "slug": "ladyzhenskaya-7",
 "klass": 7,
 "subjectSlug": "russkiy-yazyk",
