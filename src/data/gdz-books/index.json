@@ -1649,6 +1649,23 @@
 "chapterCount": 4
 },
 {
+"slug": "gabrielyan",
+"klass": 7,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Габриелян О. С., Остроумов И. Г., Ахлебинин А. К.",
+"type": "Учебник",
+"years": "2013–2023",
+"publisher": "Дрофа",
+"fgos": true,
+"parts": "",
+"source": "reshak:gabrielyan7",
+"file": "7-khimiya-gabrielyan.json",
+"problemCount": 166,
+"solvedCount": 0,
+"chapterCount": 21
+},
+{
 "slug": "ladyzhenskaya-7",
 "klass": 7,
 "subjectSlug": "russkiy-yazyk",
