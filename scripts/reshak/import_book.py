@@ -48,6 +48,16 @@ def to_key(k):
     m = re.match(r'^(\d+)-test(\d*)$', k)
     if m:
         return f'p{m.group(1)}-test{m.group(2)}', ('par', int(m.group(1)))
+    # Арсентьев 7: 7-8-3 (сдвоенный § 7-8, вопрос 3); Коринская: intro-2, itog1-4
+    m = re.match(r'^(\d+)-(\d+)-(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-{m.group(3)}', ('par', int(m.group(1)))
+    m = re.match(r'^intro-(\d+)$', k)
+    if m:
+        return f'p0-{m.group(1)}', ('par', 0)
+    m = re.match(r'^itog(\d+)-(\d+)$', k)
+    if m:
+        return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
     # Рудзитис 10/11: 12/3 (§12 вопрос 3), 12/test1
     m = re.match(r'^(\d+)/(\d+)$', k)
     if m:
@@ -105,11 +115,12 @@ def main():
     par_heads = {}
     for it in d['items']:
         h = it.get('head', '')
-        m = re.match(r'^(?:§|Параграф)\s*(\d+)\.?\s*(.*)$', h)
+        m = re.match(r'^(?:§|Параграф)\s*(\d+)(?:\s*[-–]\s*(\d+))?\.?\s*(.*)$', h)
         if not m and h.startswith('§ ') and 0 not in par_heads:
             par_heads[0] = h[2:].strip()
-        if m and int(m.group(1)) not in par_heads and m.group(2):
-            par_heads[int(m.group(1))] = f'§ {m.group(1)}. {m.group(2).strip()}'[:90]
+        if m and int(m.group(1)) not in par_heads and m.group(3):
+            num = m.group(1) + (f'–{m.group(2)}' if m.group(2) else '')
+            par_heads[int(m.group(1))] = f'§ {num}. {m.group(3).strip()}'[:90]
     for it in d['items']:
         key, (kind, n) = to_key(it['key'])
         base = key; k2 = 2
