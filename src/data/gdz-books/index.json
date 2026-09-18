@@ -1836,6 +1836,23 @@
 "chapterCount": 4
 },
 {
+"slug": "yudovskaya",
+"klass": 8,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Юдовская А.Я., Баранов П.А., Ванюшкина Л.М.",
+"type": "Учебник",
+"years": "2023–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:yudovskaya8new_qa",
+"file": "8-istoriya-yudovskaya.json",
+"problemCount": 270,
+"solvedCount": 0,
+"chapterCount": 50
+},
+{
 "slug": "gabrielyan",
 "klass": 8,
 "subjectSlug": "khimiya",
