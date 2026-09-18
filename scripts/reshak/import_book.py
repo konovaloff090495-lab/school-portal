@@ -146,6 +146,8 @@ def main():
         if mp:
             pg, gl = int(mp.group(2)), mp.group(3)
             title = (f'Глава {gl}. ' if gl else '') + (('Итоговые вопросы и задания, стр. ' if mp.group(1).startswith('Итог') else 'Вопросы и задания к главе, стр. ') if mp.group(1) else 'Стр. ') + str(pg)
+        elif re.match(r'^Итоговые вопросы и задания', it['h1']):
+            title = 'Итоговые вопросы и задания'
         if it['key'].startswith('pictures'):
             title = 'Вопросы к иллюстрациям'
         if kind == 'par' and n == 0:
@@ -159,7 +161,7 @@ def main():
     def ch_sort(t):
         if t.startswith('Введение'):
             return (-1, 0, 0)
-        if t.startswith('Итоговые вопросы'):
+        if t.startswith('Итоговые вопросы') and 'стр.' not in t:
             return (3, 0, 0)
         m = re.match(r'§ (\d+)', t)
         if m:
@@ -168,7 +170,7 @@ def main():
         if m:
             return (0, int(m.group(2)), 0)
         if t == 'Вопросы к иллюстрациям':
-            return (2, 0, t)
+            return (4, 0, t)
         m = re.match(r'Итоги главы (\d+)', t)
         if m:
             return (1, int(m.group(1)), 0)
