@@ -1530,6 +1530,23 @@
 "chapterCount": 3
 },
 {
+"slug": "bogolyubov",
+"klass": 6,
+"subjectSlug": "obshchestvoznanie",
+"subject": "Обществознание",
+"authors": "Боголюбов Л.Н., Рутковская Е.Л., Иванова Л.Ф.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:bogolyubov6_qa",
+"file": "6-obshchestvoznanie-bogolyubov.json",
+"problemCount": 331,
+"solvedCount": 0,
+"chapterCount": 20
+},
+{
 "slug": "ladyzhenskaya",
 "klass": 6,
 "subjectSlug": "russkiy-yazyk",
