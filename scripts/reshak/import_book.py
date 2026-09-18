@@ -52,6 +52,16 @@ def to_key(k):
     m = re.match(r'^par/(\d+)/test(\d*)$', k)
     if m:
         return f'p{m.group(1)}-test{m.group(2)}', ('par', int(m.group(1)))
+    # split_qa: p12-3 (§ 12, вопрос 3), itogi2-4 (итоги главы 2), 1dop-2 (§ 1, доп. материал)
+    m = re.match(r'^p(\d+)-(\d+)$', k)
+    if m:
+        return k, ('par', int(m.group(1)))
+    m = re.match(r'^itogi(\d+)-(\d+)$', k)
+    if m:
+        return k, ('itogi', int(m.group(1)))
+    m = re.match(r'^(\d+)dop-(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-dop{m.group(2)}', ('par', int(m.group(1)))
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
@@ -63,6 +73,13 @@ def main():
     order = []
     ref = {'book': {'slug': slug, 'klass': klass, 'subjectSlug': subject_slug, 'authors': authors}, 'problems': []}
     seen = set()
+    # заголовки параграфов из split_qa (head «§ 3. Название») — один на параграф
+    par_heads = {}
+    for it in d['items']:
+        h = it.get('head', '')
+        m = re.match(r'^§\s*(\d+)\.?\s*(.*)$', h)
+        if m and int(m.group(1)) not in par_heads and m.group(2):
+            par_heads[int(m.group(1))] = f'§ {m.group(1)}. {m.group(2).strip()}'[:90]
     for it in d['items']:
         key, (kind, n) = to_key(it['key'])
         base = key; k2 = 2
@@ -75,10 +92,14 @@ def main():
             title = 'Лабораторные опыты'
         elif kind == 'pract':
             title = 'Практические работы'
+        elif kind == 'itogi':
+            title = f'Итоги главы {n}'
         elif kind == 'topic':
             title = 'Темы для дискуссии' + (f' (глава {n})' if n else ' (введение)')
         else:
             title = 'Прочее'
+        if kind == 'par' and n in par_heads:
+            title = par_heads[n]
         if title not in chapters:
             chapters[title] = {'title': title, 'problems': []}; order.append(title)
         chapters[title]['problems'].append({'number': key, 'condition': it['condition']})
