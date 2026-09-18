@@ -30,7 +30,7 @@ def to_key(k):
     m = re.match(r'^lab/(\d+)$', k)
     if m:
         return f'lab-{m.group(1)}', ('lab', 0)
-    m = re.match(r'^pract/(\d+)$', k)
+    m = re.match(r'^pract/?(\d+)$', k)
     if m:
         return f'pr-{m.group(1)}', ('pract', 0)
     m = re.match(r'^(\w+)-topic(\d+)$', k)
