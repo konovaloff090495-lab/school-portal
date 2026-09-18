@@ -2006,6 +2006,23 @@
 "chapterCount": 4
 },
 {
+"slug": "arsentev",
+"klass": 9,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Арсентьев Н.М., Данилов А.А., Левандовский А.А., Токарева А.Я.",
+"type": "Учебник",
+"years": "2016–2024",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:arsentev9_qa",
+"file": "9-istoriya-arsentev.json",
+"problemCount": 609,
+"solvedCount": 0,
+"chapterCount": 40
+},
+{
 "slug": "yudovskaya",
 "klass": 9,
 "subjectSlug": "istoriya",
