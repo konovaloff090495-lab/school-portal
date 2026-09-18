@@ -1,17 +1,2 @@
 /Users/dmitriikonovalov/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
-rudzitis10: ссылок 341, уже есть 0
-  25/341
-  50/341
-  75/341
-  100/341
-  125/341
-  150/341
-  175/341
-  200/341
-  225/341
-  250/341
-  275/341
-  300/341
-  325/341
-rudzitis10: готово 341, с текстом ответа 174
