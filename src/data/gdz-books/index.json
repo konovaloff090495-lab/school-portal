@@ -2261,6 +2261,23 @@
 "chapterCount": 47
 },
 {
+"slug": "bogolyubov",
+"klass": 10,
+"subjectSlug": "obshchestvoznanie",
+"subject": "Обществознание",
+"authors": "Боголюбов Л.Н., Лазебникова А.Ю., Матвеев А.И.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:bogolyubov10_qa",
+"file": "10-obshchestvoznanie-bogolyubov.json",
+"problemCount": 622,
+"solvedCount": 60,
+"chapterCount": 48
+},
+{
 "slug": "kolmogorov-11",
 "klass": 11,
 "subjectSlug": "algebra-nachala-analiza",
