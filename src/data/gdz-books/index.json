@@ -1700,6 +1700,23 @@
 "chapterCount": 25
 },
 {
+"slug": "yudovskaya",
+"klass": 7,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Юдовская А.Я., Баранов П.А., Ванюшкина Л.М.",
+"type": "Учебник",
+"years": "2019–2024",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:yudovskaya7_qa",
+"file": "7-istoriya-yudovskaya.json",
+"problemCount": 253,
+"solvedCount": 0,
+"chapterCount": 59
+},
+{
 "slug": "gabrielyan",
 "klass": 7,
 "subjectSlug": "khimiya",

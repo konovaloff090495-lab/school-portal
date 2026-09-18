@@ -141,6 +141,13 @@ def main():
             title = 'Прочее'
         if kind == 'par' and n in par_heads:
             title = par_heads[n]
+        # постраничные решебники (Юдовская): h1 «Стр.5 Глава 1 …» / «Вопросы и задания Стр.30 …»
+        mp = re.match(r'^(Вопросы и задания\s+|Итоговые вопросы и задания\s+)?Стр\.\s*(\d+)(?:\s+Глава\s*(\d+))?', it['h1'])
+        if mp:
+            pg, gl = int(mp.group(2)), mp.group(3)
+            title = (f'Глава {gl}. ' if gl else '') + (('Итоговые вопросы и задания, стр. ' if mp.group(1).startswith('Итог') else 'Вопросы и задания к главе, стр. ') if mp.group(1) else 'Стр. ') + str(pg)
+        if it['key'].startswith('pictures'):
+            title = 'Вопросы к иллюстрациям'
         if kind == 'par' and n == 0:
             title = 'Введение. ' + re.sub(r'^§\s*0?\.?\s*', '', par_heads.get(0, it.get('head', '')))[:80]
         if title not in chapters:
@@ -157,6 +164,11 @@ def main():
         m = re.match(r'§ (\d+)', t)
         if m:
             return (0, int(m.group(1)), 0)
+        m = re.match(r'(?:Глава (\d+)\. )?(?:Вопросы и задания к главе, стр\. |Итоговые вопросы и задания, стр\. |Стр\. )(\d+)$', t)
+        if m:
+            return (0, int(m.group(2)), 0)
+        if t == 'Вопросы к иллюстрациям':
+            return (2, 0, t)
         m = re.match(r'Итоги главы (\d+)', t)
         if m:
             return (1, int(m.group(1)), 0)
