@@ -1445,6 +1445,23 @@
 "chapterCount": 4
 },
 {
+"slug": "gerasimova",
+"klass": 6,
+"subjectSlug": "geografiya",
+"subject": "География",
+"authors": "Герасимова Т. П., Неклюкова Н. П.",
+"type": "Учебник",
+"years": "2013–2023",
+"publisher": "Дрофа",
+"fgos": true,
+"parts": "",
+"source": "reshak:gerasimova6_qa",
+"file": "6-geografiya-gerasimova.json",
+"problemCount": 342,
+"solvedCount": 0,
+"chapterCount": 38
+},
+{
 "slug": "agibalova",
 "klass": 6,
 "subjectSlug": "istoriya",

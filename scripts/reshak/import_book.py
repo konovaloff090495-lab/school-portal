@@ -79,6 +79,10 @@ def to_key(k):
     m = re.match(r'^itogi-(\d+)$', k)
     if m:
         return f'itogi0-{m.group(1)}', ('itogi', 0)
+    # Герасимова: povtor3-5 (вопросы для повторения к разделу 3)
+    m = re.match(r'^povtor(\d+)-(\d+)$', k)
+    if m:
+        return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
