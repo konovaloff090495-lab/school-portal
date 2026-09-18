@@ -48,6 +48,13 @@ def to_key(k):
     m = re.match(r'^(\d+)-test(\d*)$', k)
     if m:
         return f'p{m.group(1)}-test{m.group(2)}', ('par', int(m.group(1)))
+    # Рудзитис 10/11: 12/3 (§12 вопрос 3), 12/test1
+    m = re.match(r'^(\d+)/(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-{m.group(2)}', ('par', int(m.group(1)))
+    m = re.match(r'^(\d+)/test(\d*)$', k)
+    if m:
+        return f'p{m.group(1)}-test{m.group(2)}', ('par', int(m.group(1)))
     # Рудзитис 9: par/12/test1
     m = re.match(r'^par/(\d+)/test(\d*)$', k)
     if m:

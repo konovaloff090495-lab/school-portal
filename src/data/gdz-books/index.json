@@ -2006,6 +2006,23 @@
 "chapterCount": 24
 },
 {
+"slug": "rudzitis",
+"klass": 10,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Рудзитис Г. Е., Фельдман Ф. Г.",
+"type": "Учебник",
+"years": "2019–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:rudzitis10",
+"file": "10-khimiya-rudzitis.json",
+"problemCount": 341,
+"solvedCount": 0,
+"chapterCount": 47
+},
+{
 "slug": "kolmogorov-11",
 "klass": 11,
 "subjectSlug": "algebra-nachala-analiza",
@@ -2072,5 +2089,22 @@
 "problemCount": 306,
 "solvedCount": 306,
 "chapterCount": 28
+},
+{
+"slug": "rudzitis",
+"klass": 11,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Рудзитис Г. Е., Фельдман Ф. Г.",
+"type": "Учебник",
+"years": "2019–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:rudzitis11",
+"file": "11-khimiya-rudzitis.json",
+"problemCount": 309,
+"solvedCount": 0,
+"chapterCount": 47
 }
 ]
