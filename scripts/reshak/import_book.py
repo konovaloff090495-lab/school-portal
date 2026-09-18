@@ -42,7 +42,7 @@ def to_key(k):
     m = re.match(r'^(\d+)-(\d+)$', k)
     if m:
         return f'p{m.group(1)}-{m.group(2)}', ('par', int(m.group(1)))
-    m = re.match(r'^(\d+)-lab(\d*)$', k)
+    m = re.match(r'^(?:par/)?(\d+)/?-?lab(\d*)$', k) or re.match(r'^par/(\d+)/lab(\d*)$', k)
     if m:
         return f'p{m.group(1)}-lab{m.group(2)}', ('par', int(m.group(1)))
     m = re.match(r'^(\d+)-test(\d*)$', k)
