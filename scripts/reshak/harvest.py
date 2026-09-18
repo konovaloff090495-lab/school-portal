@@ -69,11 +69,11 @@ def main():
     seen = set()
     for a in soup.find_all('a', href=True):
         h = a['href']
-        if '/otvet/' in h and 'otvet1=' in h and h not in seen:
+        if '/otvet/' in h and ('otvet1=' in h or 'otvet=' in h) and h not in seen:
             seen.add(h); links.append(h)
     print(f'{name}: ссылок {len(links)}, уже есть {len(done)}')
     for i, h in enumerate(links):
-        key = h.split('otvet1=')[1]
+        key = h.split('otvet1=')[1] if 'otvet1=' in h else h.split('otvet=')[1].split('&')[0]
         if key in done:
             continue
         page = get(BASE + h)

@@ -1785,6 +1785,23 @@
 "chapterCount": 4
 },
 {
+"slug": "gabrielyan",
+"klass": 9,
+"subjectSlug": "khimiya",
+"subject": "Химия",
+"authors": "Габриелян О. С., Остроумов И. Г., Сладков С. А.",
+"type": "Учебник",
+"years": "2019",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:gabrielyan9",
+"file": "9-khimiya-gabrielyan.json",
+"problemCount": 280,
+"solvedCount": 0,
+"chapterCount": 38
+},
+{
 "slug": "kolmogorov-10",
 "klass": 10,
 "subjectSlug": "algebra-nachala-analiza",
