@@ -38,6 +38,16 @@ def to_key(k):
         g = m.group(1)
         g = '0' if not g.isdigit() else g
         return f't{g}-{m.group(2)}', ('topic', int(g))
+    # Рудзитис: 12-3 (§12 вопрос 3), 12-lab, 12-test
+    m = re.match(r'^(\d+)-(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-{m.group(2)}', ('par', int(m.group(1)))
+    m = re.match(r'^(\d+)-lab$', k)
+    if m:
+        return f'p{m.group(1)}-lab', ('par', int(m.group(1)))
+    m = re.match(r'^(\d+)-test$', k)
+    if m:
+        return f'p{m.group(1)}-test', ('par', int(m.group(1)))
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
