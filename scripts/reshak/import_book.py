@@ -62,6 +62,13 @@ def to_key(k):
     m = re.match(r'^(\d+)dop-(\d+)$', k)
     if m:
         return f'p{m.group(1)}-dop{m.group(2)}', ('par', int(m.group(1)))
+    # Арсентьев: 26dop2-3 (§ 26, второй доп. материал), test1-4 («Повторяем и делаем выводы», глава 1)
+    m = re.match(r'^(\d+)dop(\d+)-(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-dop{m.group(2)}-{m.group(3)}', ('par', int(m.group(1)))
+    m = re.match(r'^test(\d+)-(\d+)$', k)
+    if m:
+        return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
@@ -77,7 +84,7 @@ def main():
     par_heads = {}
     for it in d['items']:
         h = it.get('head', '')
-        m = re.match(r'^§\s*(\d+)\.?\s*(.*)$', h)
+        m = re.match(r'^(?:§|Параграф)\s*(\d+)\.?\s*(.*)$', h)
         if m and int(m.group(1)) not in par_heads and m.group(2):
             par_heads[int(m.group(1))] = f'§ {m.group(1)}. {m.group(2).strip()}'[:90]
     for it in d['items']:

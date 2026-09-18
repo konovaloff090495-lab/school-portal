@@ -1445,6 +1445,23 @@
 "chapterCount": 4
 },
 {
+"slug": "arsentev",
+"klass": 6,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Арсентьев Н. М., Данилов А. А., Стефанович П. С., Токарева А. Я.",
+"type": "Учебник",
+"years": "2016–2023",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:arsentev6_qa",
+"file": "6-istoriya-arsentev.json",
+"problemCount": 463,
+"solvedCount": 0,
+"chapterCount": 32
+},
+{
 "slug": "merzlyak",
 "klass": 6,
 "subjectSlug": "matematika",
