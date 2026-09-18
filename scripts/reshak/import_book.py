@@ -69,6 +69,16 @@ def to_key(k):
     m = re.match(r'^test(\d+)-(\d+)$', k)
     if m:
         return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
+    # Агибалова: par-3-5 (§ 3, вопрос 5), glava2-4 (вопросы к главе 2), itogi-7 (итоговые вопросы курса)
+    m = re.match(r'^par-(\d+)-(\d+)$', k)
+    if m:
+        return f'p{m.group(1)}-{m.group(2)}', ('par', int(m.group(1)))
+    m = re.match(r'^glava(\d+)-(\d+)$', k)
+    if m:
+        return f'itogi{m.group(1)}-{m.group(2)}', ('itogi', int(m.group(1)))
+    m = re.match(r'^itogi-(\d+)$', k)
+    if m:
+        return f'itogi0-{m.group(1)}', ('itogi', 0)
     return re.sub(r'[^a-z0-9]+', '-', k.lower()).strip('-'), ('other', 0)
 
 
@@ -85,6 +95,8 @@ def main():
     for it in d['items']:
         h = it.get('head', '')
         m = re.match(r'^(?:§|Параграф)\s*(\d+)\.?\s*(.*)$', h)
+        if not m and h.startswith('§ ') and 0 not in par_heads:
+            par_heads[0] = h[2:].strip()
         if m and int(m.group(1)) not in par_heads and m.group(2):
             par_heads[int(m.group(1))] = f'§ {m.group(1)}. {m.group(2).strip()}'[:90]
     for it in d['items']:
@@ -100,13 +112,15 @@ def main():
         elif kind == 'pract':
             title = 'Практические работы'
         elif kind == 'itogi':
-            title = f'Итоги главы {n}'
+            title = f'Итоги главы {n}' if n else 'Итоговые вопросы и задания'
         elif kind == 'topic':
             title = 'Темы для дискуссии' + (f' (глава {n})' if n else ' (введение)')
         else:
             title = 'Прочее'
         if kind == 'par' and n in par_heads:
             title = par_heads[n]
+        if kind == 'par' and n == 0:
+            title = 'Введение. ' + re.sub(r'^§\s*0?\.?\s*', '', par_heads.get(0, it.get('head', '')))[:80]
         if title not in chapters:
             chapters[title] = {'title': title, 'problems': []}; order.append(title)
         chapters[title]['problems'].append({'number': key, 'condition': it['condition']})
@@ -114,6 +128,10 @@ def main():
                                 'answer': it['answer'], 'images': it['images']})
     # порядок глав: параграфы по номеру, остальное в конец
     def ch_sort(t):
+        if t.startswith('Введение'):
+            return (-1, 0, 0)
+        if t.startswith('Итоговые вопросы'):
+            return (3, 0, 0)
         m = re.match(r'§ (\d+)', t)
         if m:
             return (0, int(m.group(1)), 0)
