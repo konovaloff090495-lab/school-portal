@@ -1819,6 +1819,23 @@
 "chapterCount": 4
 },
 {
+"slug": "alekseev",
+"klass": 8,
+"subjectSlug": "geografiya",
+"subject": "География",
+"authors": "Алексеев А.И., Николина В.В., Липкина Е.К.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:alekseev8_qa",
+"file": "8-geografiya-alekseev.json",
+"problemCount": 444,
+"solvedCount": 0,
+"chapterCount": 55
+},
+{
 "slug": "atanasyan-8",
 "klass": 8,
 "subjectSlug": "geometriya",
