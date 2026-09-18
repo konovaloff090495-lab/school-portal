@@ -108,7 +108,12 @@ def main():
     # порядок глав: параграфы по номеру, остальное в конец
     def ch_sort(t):
         m = re.match(r'§ (\d+)', t)
-        return (0, int(m.group(1))) if m else (1, t)
+        if m:
+            return (0, int(m.group(1)), 0)
+        m = re.match(r'Итоги главы (\d+)', t)
+        if m:
+            return (1, int(m.group(1)), 0)
+        return (2, 0, t)
     book = {'slug': slug, 'klass': klass, 'subjectSlug': subject_slug, 'subject': SUBJ[subject_slug],
             'authors': authors, 'type': 'Учебник', 'years': years, 'publisher': publisher, 'fgos': True,
             'parts': '', 'umk': '', 'level': '', 'source': f'reshak:{name}',
