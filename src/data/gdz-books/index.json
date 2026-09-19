@@ -2361,5 +2361,22 @@
 "problemCount": 309,
 "solvedCount": 309,
 "chapterCount": 47
+},
+{
+"slug": "bogolyubov",
+"klass": 11,
+"subjectSlug": "obshchestvoznanie",
+"subject": "Обществознание",
+"authors": "Боголюбов Л.Н., Лазебникова А.Ю., Городецкая Н.И.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:bogolyubov11_qa",
+"file": "11-obshchestvoznanie-bogolyubov.json",
+"problemCount": 593,
+"solvedCount": 0,
+"chapterCount": 49
 }
 ]
