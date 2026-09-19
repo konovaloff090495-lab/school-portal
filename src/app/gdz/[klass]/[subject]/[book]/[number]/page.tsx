@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!problem) return {}
 
   const firstAuthor = book.authors.split(',')[0].trim()
-  const numLabel = gdzNumLabel(num)
+  const numLabel = gdzNumLabel(num, subject)
   const hasSolution = !!(
     (problem.steps?.length && problem.condition) ||
     (problem.imageUrls?.length && problem.condition)
@@ -130,7 +130,7 @@ export default async function GdzNumberPage({ params }: Props) {
 
   const { prev, next } = getGdzPrevNext(book, num)
   const chapter = getGdzProblemChapter(book, num)
-  const numLabel = gdzNumLabel(num)
+  const numLabel = gdzNumLabel(num, subject)
 
   // Related: ±4 соседа из параграфа
   let related: typeof problem[] = []

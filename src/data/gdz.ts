@@ -229,7 +229,7 @@ export function gdzNumToSlug(n: string): string {
 
 // Человеческая подпись номера: в рабочих тетрадях номера повторяются на разных
 // страницах, поэтому ключ «6-s12» = номер 6 на странице 12.
-export function gdzNumLabel(n: string): string {
+export function gdzNumLabel(n: string, subject?: string): string {
   const m = n.match(/^(.+?)-s(\d+)(?:-\d+)?$/)
   if (m) return `${m[1]} (с. ${m[2]})`
   // Книги с вопросами после параграфов (химия/история/география): p12-3, lab-5, pr-2, t3-1
@@ -244,7 +244,7 @@ export function gdzNumLabel(n: string): string {
   q = n.match(/^p(\d+)-test(\d*)$/)
   if (q) return `§ ${q[1]}, тест${q[2] ? ' ' + q[2] : 'овые задания'}`
   q = n.match(/^lab-(\d+)$/)
-  if (q) return `Лабораторная работа ${q[1]}`
+  if (q) return subject === 'fizika' ? `Лабораторная работа ${q[1]}` : `Лабораторный опыт ${q[1]}`
   // Физика (Пёрышкин): upr7-4 = упражнение 7, задание 4; zad-37 = задание к § 37; povtor-12 = задача для повторения
   q = n.match(/^upr(\d+)-(\d+)$/)
   if (q) return `Упражнение ${q[1]}, задание ${q[2]}`
