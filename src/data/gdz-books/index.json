@@ -2046,15 +2046,15 @@
 "subject": "Физика",
 "authors": "Пёрышкин А. В., Гутник Е. М.",
 "type": "Учебник",
-"years": "2020–2023",
+"years": "2019–2023",
 "publisher": "Дрофа",
 "fgos": true,
 "parts": "1",
 "source": "reshak",
 "file": "9-fizika-peryshkin.json",
-"problemCount": 0,
+"problemCount": 653,
 "solvedCount": 0,
-"chapterCount": 4
+"chapterCount": 79
 },
 {
 "slug": "alekseev",
