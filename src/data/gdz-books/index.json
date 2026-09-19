@@ -1638,15 +1638,15 @@
 "subject": "Физика",
 "authors": "Пёрышкин А. В.",
 "type": "Учебник",
-"years": "2020–2023",
+"years": "2019–2023",
 "publisher": "Дрофа",
 "fgos": true,
 "parts": "1",
 "source": "reshak",
 "file": "7-fizika-peryshkin.json",
-"problemCount": 320,
-"solvedCount": 320,
-"chapterCount": 4
+"problemCount": 460,
+"solvedCount": 0,
+"chapterCount": 74
 },
 {
 "slug": "alekseev",
