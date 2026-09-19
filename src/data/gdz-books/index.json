@@ -2227,6 +2227,23 @@
 "chapterCount": 3
 },
 {
+"slug": "gorinov",
+"klass": 10,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Горинов М.М., Данилов А.А., Моруков М.Ю.",
+"type": "Учебник",
+"years": "2019–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:gorinov10_qa",
+"file": "10-istoriya-gorinov.json",
+"problemCount": 773,
+"solvedCount": 0,
+"chapterCount": 66
+},
+{
 "slug": "gabrielyan",
 "klass": 10,
 "subjectSlug": "khimiya",
