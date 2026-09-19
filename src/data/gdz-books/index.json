@@ -1321,9 +1321,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "5-biologiya-pasechnik.json",
-"problemCount": 26,
-"solvedCount": 26,
-"chapterCount": 4
+"problemCount": 224,
+"solvedCount": 0,
+"chapterCount": 26
 },
 {
 "slug": "alekseev",
@@ -1440,9 +1440,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "6-biologiya-pasechnik.json",
-"problemCount": 32,
-"solvedCount": 32,
-"chapterCount": 4
+"problemCount": 372,
+"solvedCount": 0,
+"chapterCount": 27
 },
 {
 "slug": "gerasimova",
@@ -1627,9 +1627,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "7-biologiya-pasechnik.json",
-"problemCount": 26,
-"solvedCount": 26,
-"chapterCount": 5
+"problemCount": 385,
+"solvedCount": 0,
+"chapterCount": 26
 },
 {
 "slug": "peryshkin",
@@ -1831,9 +1831,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "8-biologiya-kolesov.json",
-"problemCount": 64,
-"solvedCount": 64,
-"chapterCount": 8
+"problemCount": 823,
+"solvedCount": 0,
+"chapterCount": 64
 },
 {
 "slug": "peryshkin-8",
@@ -2035,9 +2035,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "9-biologiya-pasechnik.json",
-"problemCount": 25,
-"solvedCount": 25,
-"chapterCount": 4
+"problemCount": 325,
+"solvedCount": 0,
+"chapterCount": 49
 },
 {
 "slug": "peryshkin",
@@ -2205,9 +2205,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "10-biologiya-pasechnik.json",
-"problemCount": 27,
-"solvedCount": 27,
-"chapterCount": 3
+"problemCount": 301,
+"solvedCount": 0,
+"chapterCount": 27
 },
 {
 "slug": "maksakovskiy",
@@ -2341,9 +2341,9 @@
 "parts": "1",
 "source": "reshak",
 "file": "11-biologiya-pasechnik.json",
-"problemCount": 30,
-"solvedCount": 30,
-"chapterCount": 4
+"problemCount": 302,
+"solvedCount": 0,
+"chapterCount": 30
 },
 {
 "slug": "atanasyan-11",
