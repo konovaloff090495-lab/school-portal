@@ -2346,6 +2346,23 @@
 "chapterCount": 2
 },
 {
+"slug": "zagladin",
+"klass": 11,
+"subjectSlug": "istoriya",
+"subject": "История",
+"authors": "Загладин Н.В., Петров Ю.А.",
+"type": "Учебник",
+"years": "2014–2025",
+"publisher": "Русское слово",
+"fgos": true,
+"parts": "",
+"source": "reshak:zagladin11_qa",
+"file": "11-istoriya-zagladin.json",
+"problemCount": 445,
+"solvedCount": 0,
+"chapterCount": 61
+},
+{
 "slug": "gabrielyan",
 "klass": 11,
 "subjectSlug": "khimiya",
