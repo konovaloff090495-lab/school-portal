@@ -16,7 +16,7 @@ BOOKS = {9: '9-fizika-peryshkin.json', 7: '7-fizika-peryshkin.json', 8: '8-fizik
 BOOK = os.path.join(os.path.dirname(__file__), '../../src/data/gdz-books/' + BOOKS[KLASS])
 KEYS = {9: dict(par='new/paragraph/{}', upr='new/Upr/{}', zad='new/zad/{}', itogi='new/itogi/{}', lab='lab/{}', povtor='new/povtor/{}'),
         7: dict(par='par/{}', upr='upr/{}', zad='zad/{}', itogi='test/{}', lab='lab/{}', povtor=None),
-        8: dict(par='par/{}', upr='upr/{}', zad='zad/{}', itogi='test/{}', lab='lab/{}', povtor=None)}[KLASS]
+        8: dict(par='paragraph/{}', upr='Upr/{}', zad='zad/{}', itogi='test/{}', lab='lab/{}', povtor=None)}[KLASS]
 
 h = open(IDX, encoding='utf-8', errors='ignore').read()
 t = re.sub(r'<script.*?</script>|<style.*?</style>', '', h, flags=re.S)
