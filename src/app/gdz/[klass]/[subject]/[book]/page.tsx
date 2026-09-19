@@ -162,7 +162,7 @@ export default async function GdzBookPage({ params }: Props) {
                         className="gdz-num"
                         href={`/gdz/${klass}/${subject}/${bookSlug}/nomer-${p.number.replace(/\./g, "-")}/`}
                       >
-                        {gdzNumLabel(p.number)}
+                        {gdzNumLabel(p.number, subject)}
                         <small>с. {p.page}</small>
                       </Link>
                     ))}
