@@ -2210,6 +2210,23 @@
 "chapterCount": 3
 },
 {
+"slug": "maksakovskiy",
+"klass": 10,
+"subjectSlug": "geografiya",
+"subject": "География",
+"authors": "Максаковский В.П.",
+"type": "Учебник",
+"years": "2014–2025",
+"publisher": "Просвещение",
+"fgos": true,
+"parts": "",
+"source": "reshak:maksakovskiy10p",
+"file": "10-geografiya-maksakovskiy.json",
+"problemCount": 417,
+"solvedCount": 0,
+"chapterCount": 24
+},
+{
 "slug": "atanasyan-10",
 "klass": 10,
 "subjectSlug": "geometriya",
