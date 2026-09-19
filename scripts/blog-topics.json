@@ -81,13 +81,15 @@
     },
     {
       "id": "t012",
-      "status": "pending",
+      "status": "error",
       "title": "Частные школы Санкт-Петербурга: цены и список",
       "slug": "chastnie-shkoly-sankt-peterburga-tseny",
       "category": "Советы родителям",
       "city": "Санкт-Петербург",
       "keywords": "частные школы санкт-петербурга",
-      "freq": 2100
+      "freq": 2100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-20T03:00:04.744Z"
     },
     {
       "id": "t013",
@@ -319,13 +321,15 @@
     },
     {
       "id": "t035",
-      "status": "pending",
+      "status": "error",
       "title": "IT-классы в школах Москвы: где учат программированию",
       "slug": "it-klassy-v-shkolah-moskvy",
       "category": "Рейтинги",
       "city": "Москва",
       "keywords": "it классы в школах москвы",
-      "freq": 2100
+      "freq": 2100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-20T03:00:05.194Z"
     },
     {
       "id": "t036",
@@ -588,13 +592,15 @@
     },
     {
       "id": "t059",
-      "status": "pending",
+      "status": "error",
       "title": "Художественные школы Москвы: список, отбор, программы",
       "slug": "hudozhestvennye-shkoly-moskvy",
       "category": "Типы школ",
       "city": "Москва",
       "keywords": "художественная школа москва",
-      "freq": 2100
+      "freq": 2100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-20T03:00:05.643Z"
     },
     {
       "id": "t060",
@@ -806,12 +812,14 @@
     },
     {
       "id": "t078",
-      "status": "pending",
+      "status": "error",
       "title": "IB-школы в России: что такое программа IB и где учат",
       "slug": "ib-shkoly-rossiya",
       "category": "Типы школ",
       "keywords": "IB школа россия",
-      "freq": 2100
+      "freq": 2100,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-20T03:00:06.240Z"
     },
     {
       "id": "t079",
@@ -1567,12 +1575,14 @@
     },
     {
       "id": "t146",
-      "status": "pending",
+      "status": "error",
       "title": "Медицинские классы в школах России: что это и где",
       "slug": "medicinskie-klassy-shkoly-rossii",
       "category": "Типы школ",
       "keywords": "медицинские классы школа",
-      "freq": 2200
+      "freq": 2200,
+      "error": "401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"API key is invalid.\"},\"request_id\":null}",
+      "retryAt": "2026-09-20T03:00:03.530Z"
     },
     {
       "id": "t147",
