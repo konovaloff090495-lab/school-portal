@@ -90,6 +90,30 @@ export function ArticleJsonLd({
   return <ScriptTag data={data} />
 }
 
+// ── Тема «Учебника» (Article + educationalLevel) ───────────────────────────
+
+export function TextbookTopicJsonLd({
+  title, description, url, subject, klass, publishedAt,
+}: {
+  title: string; description: string; url: string; subject: string; klass: number; publishedAt?: string
+}) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    about: `${subject}, ${klass} класс`,
+    educationalLevel: `${klass} класс`,
+    inLanguage: 'ru',
+    isAccessibleForFree: true,
+    ...(publishedAt ? { datePublished: publishedAt } : {}),
+    author: { '@type': 'Organization', name: 'Pro Schools' },
+    publisher: { '@type': 'Organization', name: 'pro-schools.ru', url: 'https://pro-schools.ru' },
+    mainEntityOfPage: url,
+  }
+  return <ScriptTag data={data} />
+}
+
 // ── EducationalOrganization ────────────────────────────────────────────────
 
 export function SchoolOrgJsonLd({
