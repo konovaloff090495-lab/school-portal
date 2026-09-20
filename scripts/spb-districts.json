@@ -1862,28 +1862,37 @@
 "house": "17"
 },
 "gimnaziya-397-imeni-g-v-starovoytovoy-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Говорова, д 9",
+"rev": true,
+"street": "ул Маршала Говорова",
+"house": "9"
 },
 "gimnaziya-41-imeni-e-kestnera-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Новикова, д 1 к 3",
+"rev": true,
+"street": "ул Маршала Новикова",
+"house": "1"
 },
 "shkola-634-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Щербакова, д 16",
+"rev": true,
+"street": "ул Щербакова",
+"house": "16"
 },
 "shkola-29-sankt-peterburg": {
 "district": "Василеостровский р-н",
@@ -1894,148 +1903,202 @@
 "value": "г Санкт-Петербург, пр-кт Малый В.О., д 34"
 },
 "shkola-640-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Савушкина, д 111 к 2",
+"rev": true,
+"street": "ул Савушкина",
+"house": "111"
 },
 "gimnaziya-293-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ленинский пр-кт, д 94 к 2",
+"rev": true,
+"street": "Ленинский пр-кт",
+"house": "94"
 },
 "shkola-553-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ярослава Гашека, д 4 к 4",
+"rev": true,
+"street": "ул Ярослава Гашека",
+"house": "4"
 },
 "shkola-259-imeni-m-t-loris-melikova-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Крюкова канала, д 3",
+"rev": true,
+"street": "наб Крюкова канала",
+"house": "3"
 },
 "shkola-349-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Осипенко, д 5 к 2",
+"rev": true,
+"street": "ул Осипенко",
+"house": "5"
 },
 "shkola-531-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Осипенко, д 6",
+"rev": true,
+"street": "ул Осипенко",
+"house": "6"
 },
 "litsey-82-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Большая Монетная, д 23 к 2 литера Б",
+"rev": true,
+"street": "ул Большая Монетная",
+"house": "23"
 },
 "gimnaziya-540-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Оптиков, д 46 к 3",
+"rev": true,
+"street": "ул Оптиков",
+"house": "46"
 },
 "gimnaziya-363-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Димитрова, д 15 к 3",
+"rev": true,
+"street": "ул Димитрова",
+"house": "15"
 },
 "shkola-318-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Будапештская, д 64 к 2",
+"rev": true,
+"street": "ул Будапештская",
+"house": "64"
 },
 "shkola-253-imeni-p-i-derzhavina-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Новоколомяжский пр-кт, д 4 к 4",
+"rev": true,
+"street": "Новоколомяжский пр-кт",
+"house": "4"
 },
 "shkola-630-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Мебельная, д 21 к 3",
+"rev": true,
+"street": "ул Мебельная",
+"house": "21"
 },
 "shkola-59-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Серебристый б-р, д 34 к 1 литера Б",
+"rev": true,
+"street": "Серебристый б-р",
+"house": "34"
 },
 "gimnaziya-196-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ударников, д 31",
+"rev": true,
+"street": "пр-кт Ударников",
+"house": "31"
 },
 "gimnaziya-116-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новосибирская, д 16 к 2",
+"rev": true,
+"street": "ул Новосибирская",
+"house": "16"
 },
 "shkola-109-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Омская, д 16",
+"rev": true,
+"street": "ул Омская",
+"house": "16"
 },
 "shkola-388-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Огородный пер, д 9",
+"rev": true,
+"street": "Огородный пер",
+"house": "9"
 },
 "shkola-80-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Мира, д 18",
+"rev": true,
+"street": "ул Мира",
+"house": "18"
 },
 "shkola-305-sankt-peterburg": {
 "district": "Фрунзенский р-н",
@@ -2046,20 +2109,26 @@
 "value": "г Санкт-Петербург, ул Будапештская, д 8 к 3"
 },
 "shkola-502-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лёни Голикова, д 78",
+"rev": true,
+"street": "ул Лёни Голикова",
+"house": "78"
 },
 "shkola-236-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пражская, д 7 к 4",
+"rev": true,
+"street": "ул Пражская",
+"house": "7"
 },
 "shkola-102-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -2070,12 +2139,15 @@
 "value": "г Санкт-Петербург, ул Поклонногорская, д 17/2 литера А"
 },
 "shkola-72-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ушинского, д 21",
+"rev": true,
+"street": "ул Ушинского",
+"house": "21"
 },
 "litsey-101-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -2110,44 +2182,59 @@
 "value": "г Санкт-Петербург, ул Бутлерова, д 22"
 },
 "shkola-111-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Фаворского, д 16",
+"rev": true,
+"street": "ул Фаворского",
+"house": "16"
 },
 "shkola-145-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Науки, д 13 к 4",
+"rev": true,
+"street": "пр-кт Науки",
+"house": "13"
 },
 "gimnaziya-148-imeni-servantesa-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Академика Константинова, д 10 к 2",
+"rev": true,
+"street": "ул Академика Константинова",
+"house": "10"
 },
 "shkola-593-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Солидарности, д 11 к 2",
+"rev": true,
+"street": "пр-кт Солидарности",
+"house": "11"
 },
 "shkola-217-imeni-n-a-alekseeva-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 140 к 2",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "140"
 },
 "shkola-246-nachalnaya-i-srednyaya-shkola-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -2166,84 +2253,114 @@
 "value": "г Санкт-Петербург, Ленинский пр-кт, д 80 к 2"
 },
 "vtoraya-sankt-peterburgskaya-gimnaziya-nachalnaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Казанская, д 48",
+"rev": true,
+"street": "ул Казанская",
+"house": "48"
 },
 "shkola-131-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Захарова, д 16 к 5",
+"rev": true,
+"street": "ул Маршала Захарова",
+"house": "16"
 },
 "shkola-370-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Благодатная, д 11",
+"rev": true,
+"street": "ул Благодатная",
+"house": "11"
 },
 "shkola-menakhem-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новолитовская, д 7 литера А",
+"rev": true,
+"street": "ул Новолитовская",
+"house": "7"
 },
 "shkola-123-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Александра Матросова, д 11",
+"rev": true,
+"street": "ул Александра Матросова",
+"house": "11"
 },
 "gimnaziya-498-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новосёлов, д 17",
+"rev": true,
+"street": "ул Новосёлов",
+"house": "17"
 },
 "progimnaziya-130-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ивана Фомина, д 7 к 4",
+"rev": true,
+"street": "ул Ивана Фомина",
+"house": "7"
 },
 "shkola-692-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Демьяна Бедного, д 6 к 2",
+"rev": true,
+"street": "ул Демьяна Бедного",
+"house": "6"
 },
 "shkola-12-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кораблестроителей, д 21 к 3",
+"rev": true,
+"street": "ул Кораблестроителей",
+"house": "21"
 },
 "shkola-89-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Гражданский пр-кт, д 117 к 5",
+"rev": true,
+"street": "Гражданский пр-кт",
+"house": "117"
 },
 "shkola-62-nachalnye-klassy-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -2254,12 +2371,15 @@
 "value": "г Санкт-Петербург, ул Руднева, д 8 к 1"
 },
 "shkola-291-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Захарова, д 16 к 4",
+"rev": true,
+"street": "ул Маршала Захарова",
+"house": "16"
 },
 "litsey-fiziko-tekhnicheskaya-shkola-spbau-ran-sankt-peterburg": {
 "district": "Калининский р-н",
@@ -2270,12 +2390,15 @@
 "value": "г Санкт-Петербург, ул Хлопина, д 8 к 3"
 },
 "shkola-219-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Казакова, д 70 к 1 стр 2",
+"rev": true,
+"street": "ул Маршала Казакова",
+"house": "70"
 },
 "gimnaziya-73-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -2286,52 +2409,70 @@
 "value": "г Санкт-Петербург, пр-кт Энгельса, д 115 к 2"
 },
 "shkola-394-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Брестский б-р, д 19 к 2",
+"rev": true,
+"street": "Брестский б-р",
+"house": "19"
 },
 "shkola-200-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Рихарда Зорге, д 13 к 2",
+"rev": true,
+"street": "ул Рихарда Зорге",
+"house": "13"
 },
 "shkola-internat-576-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пер Каховского, д 4",
+"rev": true,
+"street": "пер Каховского",
+"house": "4"
 },
 "shkola-121-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Софьи Ковалевской, д 4 литера Б",
+"rev": true,
+"street": "ул Софьи Ковалевской",
+"house": "4"
 },
 "shkola-521-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бестужевская, д 63",
+"rev": true,
+"street": "ул Бестужевская",
+"house": "63"
 },
 "litsey-144-nachalnaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тимуровская, д 15 к 2",
+"rev": true,
+"street": "ул Тимуровская",
+"house": "15"
 },
 "gimnaziya-63-sankt-peterburg": {
 "district": "Калининский р-н",
@@ -2350,20 +2491,26 @@
 "value": "г Санкт-Петербург, ул Корякова, д 18 литера А"
 },
 "shkola-392-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 87 к 2",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "87"
 },
 "litsey-486-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Выборгское шоссе, д 17 к 3",
+"rev": true,
+"street": "Выборгское шоссе",
+"house": "17"
 },
 "shkola-580-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -2374,52 +2521,70 @@
 "value": "г Санкт-Петербург, пр-кт Авиаконструкторов, д 29 к 3"
 },
 "shkola-341-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Дыбенко, д 24 к 4",
+"rev": true,
+"street": "ул Дыбенко",
+"house": "24"
 },
 "pravoslavnaya-shkola-aleksandra-nevskogo-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тельмана, д 48 к 2",
+"rev": true,
+"street": "ул Тельмана",
+"house": "48"
 },
 "shkola-186-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Замшина, д 58 к 2",
+"rev": true,
+"street": "ул Замшина",
+"house": "58"
 },
 "shkola-547-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Адмирала Коновалова, д 6 к 2",
+"rev": true,
+"street": "ул Адмирала Коновалова",
+"house": "6"
 },
 "shkola-147-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Индустриальный пр-кт, д 10 к 2",
+"rev": true,
+"street": "Индустриальный пр-кт",
+"house": "10"
 },
 "litsey-244-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 80",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "80"
 },
 "shkola-312-sankt-peterburg": {
 "district": "Фрунзенский р-н",
@@ -2430,252 +2595,345 @@
 "value": "г Санкт-Петербург, ул Малая Балканская, д 36 к 3"
 },
 "shkola-313-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Олеко Дундича, д 25 к 3",
+"rev": true,
+"street": "ул Олеко Дундича",
+"house": "25"
 },
 "shkola-218-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Олеко Дундича, д 26 к 2",
+"rev": true,
+"street": "ул Олеко Дундича",
+"house": "26"
 },
 "shkola-603-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Малая Балканская, д 60 к 3",
+"rev": true,
+"street": "ул Малая Балканская",
+"house": "60"
 },
 "gimnaziya-441-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Олеко Дундича, д 37 к 2",
+"rev": true,
+"street": "ул Олеко Дундича",
+"house": "37"
 },
 "shkola-322-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Олеко Дундича, д 38 к 3",
+"rev": true,
+"street": "ул Олеко Дундича",
+"house": "38"
 },
 "shkola-367-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Дунайский пр-кт, д 43 к 2",
+"rev": true,
+"street": "Дунайский пр-кт",
+"house": "43"
 },
 "shkola-301-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ярослава Гашека, д 10 к 2",
+"rev": true,
+"street": "ул Ярослава Гашека",
+"house": "10"
 },
 "shkola-8-muzyka-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Малая Бухарестская, д 5 к 1",
+"rev": true,
+"street": "ул Малая Бухарестская",
+"house": "5"
 },
 "shkola-448-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Малая Бухарестская, д 7 к 1",
+"rev": true,
+"street": "ул Малая Бухарестская",
+"house": "7"
 },
 "gimnaziya-587-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Будапештская, д 79 к 2",
+"rev": true,
+"street": "ул Будапештская",
+"house": "79"
 },
 "shkola-444-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Купчинская, д 15 к 3",
+"rev": true,
+"street": "ул Купчинская",
+"house": "15"
 },
 "shkola-298-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Альпийский пер, д 19 к 2",
+"rev": true,
+"street": "Альпийский пер",
+"house": "19"
 },
 "litsey-299-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Славы, д 6 к 2",
+"rev": true,
+"street": "пр-кт Славы",
+"house": "6"
 },
 "shkola-213-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белградская, д 20 к 2",
+"rev": true,
+"street": "ул Белградская",
+"house": "20"
 },
 "shkola-311-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белградская, д 14 к 2",
+"rev": true,
+"street": "ул Белградская",
+"house": "14"
 },
 "shkola-303-imeni-fridrikha-shillera-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Турку, д 29 к 2",
+"rev": true,
+"street": "ул Турку",
+"house": "29"
 },
 "shkola-202-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белградская, д 8 к 2",
+"rev": true,
+"street": "ул Белградская",
+"house": "8"
 },
 "shkola-292-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Будапештская, д 42 к 6",
+"rev": true,
+"street": "ул Будапештская",
+"house": "42"
 },
 "litsey-226-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бухарестская, д 33 к 6",
+"rev": true,
+"street": "ул Бухарестская",
+"house": "33"
 },
 "shkola-215-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белы Куна, д 24 к 2",
+"rev": true,
+"street": "ул Белы Куна",
+"house": "24"
 },
 "shkola-230-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пражская, д 25",
+"rev": true,
+"street": "ул Пражская",
+"house": "25"
 },
 "shkola-296-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пражская, д 30 к 1",
+"rev": true,
+"street": "ул Пражская",
+"house": "30"
 },
 "shkola-227-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Турку, д 30",
+"rev": true,
+"street": "ул Турку",
+"house": "30"
 },
 "litsey-299-mladshie-klassy-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белградская, д 22 к 3",
+"rev": true,
+"street": "ул Белградская",
+"house": "22"
 },
 "shkola-191-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белорусская, д 26 к 2",
+"rev": true,
+"street": "ул Белорусская",
+"house": "26"
 },
 "shkola-125-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Рябовское шоссе, д 75 литера А",
+"rev": true,
+"street": "Рябовское шоссе",
+"house": "75"
 },
 "shkola-137-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Вавиловых, д 8 к 3",
+"rev": true,
+"street": "ул Вавиловых",
+"house": "8"
 },
 "shkola-98-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Гражданский пр-кт, д 92 к 3",
+"rev": true,
+"street": "Гражданский пр-кт",
+"house": "92"
 },
 "shkola-78-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Софьи Ковалевской, д 8 к 3",
+"rev": true,
+"street": "ул Софьи Ковалевской",
+"house": "8"
 },
 "shkola-348-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Шлиссельбургский пр-кт, д 43",
+"rev": true,
+"street": "Шлиссельбургский пр-кт",
+"house": "43"
 },
 "shkola-664-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Маршала Блюхера, д 57 к 3",
+"rev": true,
+"street": "пр-кт Маршала Блюхера",
+"house": "57"
 },
 "shkola-234-sankt-peterburg": {
 "district": "Адмиралтейский р-н",
@@ -2686,12 +2944,15 @@
 "value": "г Санкт-Петербург, ул Канонерская, д 33"
 },
 "shkola-252-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тамбасова, д 2 к 4",
+"rev": true,
+"street": "ул Тамбасова",
+"house": "2"
 },
 "litsey-144-sankt-peterburg": {
 "district": "Калининский р-н",
@@ -2710,20 +2971,26 @@
 "value": "г Санкт-Петербург, Богатырский пр-кт, д 19"
 },
 "shkola-277-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 14 литера Б",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "14"
 },
 "shkola-43-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Серебристый б-р, д 16 к 3",
+"rev": true,
+"street": "Серебристый б-р",
+"house": "16"
 },
 "shkola-457-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -2734,36 +3001,48 @@
 "value": "г Санкт-Петербург, ул Асафьева, д 6 к 1"
 },
 "shkola-515-imeni-i-v-gete-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шепетовская, д 5",
+"rev": true,
+"street": "ул Шепетовская",
+"house": "5"
 },
 "shkola-358-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Варшавская, д 40",
+"rev": true,
+"street": "ул Варшавская",
+"house": "40"
 },
 "shkola-106-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Сердобольская, д 50-52",
+"rev": true,
+"street": "ул Сердобольская",
+"house": "50-52"
 },
 "shkola-355-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Благодатная, д 32",
+"rev": true,
+"street": "ул Благодатная",
+"house": "32"
 },
 "gimnaziya-11-sankt-peterburg": {
 "district": "Василеостровский р-н",
@@ -2774,132 +3053,180 @@
 "value": "г Санкт-Петербург, лн 16-я В.О., д 65"
 },
 "shkola-138-imeni-aleksandra-nevskogo-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Антоновская, д 16",
+"rev": true,
+"street": "ул Антоновская",
+"house": "16"
 },
 "shkola-139-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Пискарёвский пр-кт, д 14",
+"rev": true,
+"street": "Пискарёвский пр-кт",
+"house": "14"
 },
 "shkola-336-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Седова, д 66",
+"rev": true,
+"street": "ул Седова",
+"house": "66"
 },
 "shkola-331-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бабушкина, д 65",
+"rev": true,
+"street": "ул Бабушкина",
+"house": "65"
 },
 "shkola-538-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, б-р Новаторов, д 40",
+"rev": true,
+"street": "б-р Новаторов",
+"house": "40"
 },
 "shkola-381-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зои Космодемьянской, д 4",
+"rev": true,
+"street": "ул Зои Космодемьянской",
+"house": "4"
 },
 "vechernyaya-shkola-162-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Турбинная, д 50",
+"rev": true,
+"street": "ул Турбинная",
+"house": "50"
 },
 "shkola-274-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Дачный пр-кт, д 34 к 2",
+"rev": true,
+"street": "Дачный пр-кт",
+"house": "34"
 },
 "gimnaziya-271-imeni-p-i-fedulova-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Кузнецова, д 25 к 4",
+"rev": true,
+"street": "пр-кт Кузнецова",
+"house": "25"
 },
 "shkola-375-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Кузнецова, д 19",
+"rev": true,
+"street": "пр-кт Кузнецова",
+"house": "19"
 },
 "shkola-508-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ленсовета, д 43 к 2",
+"rev": true,
+"street": "ул Ленсовета",
+"house": "43"
 },
 "shkola-549-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Захарова, д 28",
+"rev": true,
+"street": "ул Маршала Захарова",
+"house": "28"
 },
 "shkola-548-korpus-1-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Казакова, д 30",
+"rev": true,
+"street": "ул Маршала Казакова",
+"house": "30"
 },
 "litsey-64-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Богатырский пр-кт, д 61 к 2",
+"rev": true,
+"street": "Богатырский пр-кт",
+"house": "61"
 },
 "gimnaziya-61-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Художников, д 29 к 3",
+"rev": true,
+"street": "пр-кт Художников",
+"house": "29"
 },
 "gimnaziya-405-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Наставников, д 40 к 2",
+"rev": true,
+"street": "пр-кт Наставников",
+"house": "40"
 },
 "gimnaziya-42-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -2926,68 +3253,92 @@
 "value": "г Санкт-Петербург, пр-кт Королёва, д 11"
 },
 "shkola-617-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Щербакова, д 18",
+"rev": true,
+"street": "ул Щербакова",
+"house": "18"
 },
 "shkola-535-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Софьи Ковалевской, д 13 к 6",
+"rev": true,
+"street": "ул Софьи Ковалевской",
+"house": "13"
 },
 "shkola-561-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Карпинского, д 38 к 8",
+"rev": true,
+"street": "ул Карпинского",
+"house": "38"
 },
 "shkola-633-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Науки, д 24 к 3",
+"rev": true,
+"street": "пр-кт Науки",
+"house": "24"
 },
 "shkola-88-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Науки, д 30 к 3",
+"rev": true,
+"street": "пр-кт Науки",
+"house": "30"
 },
 "litsey-95-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Верности, д 14 к 4",
+"rev": true,
+"street": "ул Верности",
+"house": "14"
 },
 "shkola-184-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Верности, д 38 к 4",
+"rev": true,
+"street": "ул Верности",
+"house": "38"
 },
 "shkola-473-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Верности, д 28 к 4",
+"rev": true,
+"street": "ул Верности",
+"house": "28"
 },
 "shkola-65-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3038,12 +3389,15 @@
 "value": "г Санкт-Петербург, Поэтический б-р, д 15 к 2"
 },
 "shkola-116-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ланское шоссе, д 5 к 2",
+"rev": true,
+"street": "Ланское шоссе",
+"house": "5"
 },
 "litsey-623-imeni-i-p-pavlova-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3086,12 +3440,15 @@
 "value": "г Санкт-Петербург, Морская наб, д 15 к 2"
 },
 "shkola-372-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Витебский пр-кт, д 73 к 2",
+"rev": true,
+"street": "Витебский пр-кт",
+"house": "73"
 },
 "shkola-71-sankt-peterburg": {
 "district": "Калининский р-н",
@@ -3102,28 +3459,37 @@
 "value": "г Санкт-Петербург, ул Вавиловых, д 5 к 5"
 },
 "shkola-83-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Сиреневый б-р, д 16 к 2",
+"rev": true,
+"street": "Сиреневый б-р",
+"house": "16"
 },
 "shkola-653-imeni-rabindranata-tagora-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Мечникова, д 5",
+"rev": true,
+"street": "пр-кт Мечникова",
+"house": "5"
 },
 "shkola-494-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Композиторов, д 22 к 2 литера Б",
+"rev": true,
+"street": "ул Композиторов",
+"house": "22"
 },
 "shkola-229-nachalnaya-shkola-sankt-peterburg": {
 "district": "Адмиралтейский р-н",
@@ -3134,60 +3500,81 @@
 "value": "г Санкт-Петербург, ул Садовая, д 52"
 },
 "gimnaziya-399-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Добровольцев, д 60 к 2",
+"rev": true,
+"street": "ул Добровольцев",
+"house": "60"
 },
 "shkola-487-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Композиторов, д 22 к 3",
+"rev": true,
+"street": "ул Композиторов",
+"house": "22"
 },
 "kulturologicheskaya-shkola-individualnogo-razvitiya-prazdnik-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Октябрьская наб, д 48",
+"rev": true,
+"street": "Октябрьская наб",
+"house": "48"
 },
 "shkola-385-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Чекистов, д 52 к 2",
+"rev": true,
+"street": "ул Чекистов",
+"house": "52"
 },
 "shkola-440-imeni-p-v-vittenburga-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Хвойная, д 35",
+"rev": true,
+"street": "ул Хвойная",
+"house": "35"
 },
 "shkola-663-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Витебский пр-кт, д 49 к 2",
+"rev": true,
+"street": "Витебский пр-кт",
+"house": "49"
 },
 "gimnaziya-513-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Латышских Стрелков, д 9 к 3",
+"rev": true,
+"street": "ул Латышских Стрелков",
+"house": "9"
 },
 "shkola-485-sankt-peterburg": {
 "district": "Московский р-н",
@@ -3206,12 +3593,15 @@
 "value": "г Санкт-Петербург, пр-кт Юрия Гагарина"
 },
 "shkola-443-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Купчинская, д 11 к 4",
+"rev": true,
+"street": "ул Купчинская",
+"house": "11"
 },
 "shkola-536-imeni-t-i-goncharovoy-sankt-peterburg": {
 "district": "Московский р-н",
@@ -3222,20 +3612,26 @@
 "value": "г Санкт-Петербург, пр-кт Космонавтов"
 },
 "shkola-340-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ольги Берггольц, д 27",
+"rev": true,
+"street": "ул Ольги Берггольц",
+"house": "27"
 },
 "shkola-26-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Товарищеский пр-кт, д 28 к 2",
+"rev": true,
+"street": "Товарищеский пр-кт",
+"house": "28"
 },
 "shkola-463-imeni-v-i-minakova-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3246,164 +3642,224 @@
 "value": "г Санкт-Петербург, ул Асафьева, д 7 к 2"
 },
 "litsey-590-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Котина, д 6 к 3",
+"rev": true,
+"street": "ул Котина",
+"house": "6"
 },
 "shkola-81-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Демьяна Бедного, д 22 к 5",
+"rev": true,
+"street": "ул Демьяна Бедного",
+"house": "22"
 },
 "shkola-96-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Черкасова, д 15 к 1",
+"rev": true,
+"street": "ул Черкасова",
+"house": "15"
 },
 "shkola-333-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Белышева, д 6",
+"rev": true,
+"street": "ул Белышева",
+"house": "6"
 },
 "shkola-23-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Дыбенко, д 20 к 4",
+"rev": true,
+"street": "ул Дыбенко",
+"house": "20"
 },
 "shkola-internat-2-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Трамвайный пр-кт, д 24",
+"rev": true,
+"street": "Трамвайный пр-кт",
+"house": "24"
 },
 "shkola-140-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Большеохтинский пр-кт, д 18 к 1",
+"rev": true,
+"street": "Большеохтинский пр-кт",
+"house": "18"
 },
 "shkola-504-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, б-р Новаторов, д 43",
+"rev": true,
+"street": "б-р Новаторов",
+"house": "43"
 },
 "shkola-414-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Сергиево, Российский б-р, д 4/2",
+"rev": true,
+"street": "Российский б-р",
+"house": "4/2"
 },
 "litsey-533-obrazovatelnyy-kompleks-malaya-okhta-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Таллинская, д 21",
+"rev": true,
+"street": "ул Таллинская",
+"house": "21"
 },
 "litsey-387-imeni-n-v-belousova-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зины Портновой, д 25 к 2",
+"rev": true,
+"street": "ул Зины Портновой",
+"house": "25"
 },
 "gimnaziya-505-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тамбасова, д 26 к 1",
+"rev": true,
+"street": "ул Тамбасова",
+"house": "26"
 },
 "gimnaziya-248-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Народного Ополчения, д 103",
+"rev": true,
+"street": "пр-кт Народного Ополчения",
+"house": "103"
 },
 "shkola-383-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Авангардная, д 21",
+"rev": true,
+"street": "ул Авангардная",
+"house": "21"
 },
 "litsey-572-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Латышских Стрелков, д 9 к 1",
+"rev": true,
+"street": "ул Латышских Стрелков",
+"house": "9"
 },
 "progimnaziya-instituta-ekonomiki-i-prava-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Петергофское шоссе, д 1 к 2",
+"rev": true,
+"street": "Петергофское шоссе",
+"house": "1"
 },
 "shkola-684-bereginya-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Краснопутиловская, д 60",
+"rev": true,
+"street": "ул Краснопутиловская",
+"house": "60"
 },
 "gimnaziya-192-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Брюсовская, д 10",
+"rev": true,
+"street": "ул Брюсовская",
+"house": "10"
 },
 "shkola-347-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Солидарности, д 3 к 4",
+"rev": true,
+"street": "пр-кт Солидарности",
+"house": "3"
 },
 "shkola-618-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гаккелевская, д 24",
+"rev": true,
+"street": "ул Гаккелевская",
+"house": "24"
 },
 "shkola-657-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -3414,12 +3870,15 @@
 "value": "г Санкт-Петербург, Комендантский пр-кт, д 29 к 2"
 },
 "gimnaziya-344-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тельмана, д 47",
+"rev": true,
+"street": "ул Тельмана",
+"house": "47"
 },
 "shkola-453-imeni-s-zhukova-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3438,12 +3897,15 @@
 "value": "г Санкт-Петербург, ул Композиторов, д 11 к 2"
 },
 "shkola-558-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Симонова, д 8 к 2",
+"rev": true,
+"street": "ул Симонова",
+"house": "8"
 },
 "shkola-94-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3454,20 +3916,26 @@
 "value": "г Санкт-Петербург, ул Симонова, д 8 к 1"
 },
 "shkola-172-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Демьяна Бедного, д 12 к 2",
+"rev": true,
+"street": "ул Демьяна Бедного",
+"house": "12"
 },
 "gimnaziya-114-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Есенина, д 34 к 2",
+"rev": true,
+"street": "ул Есенина",
+"house": "34"
 },
 "shkola-110-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3478,20 +3946,26 @@
 "value": "г Санкт-Петербург, Сиреневый б-р, д 8 к 2"
 },
 "shkola-559-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Есенина, д 36 к 2",
+"rev": true,
+"street": "ул Есенина",
+"house": "36"
 },
 "shkola-146-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Замшина, д 31 к 2",
+"rev": true,
+"street": "ул Замшина",
+"house": "31"
 },
 "shkola-112-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -3502,20 +3976,26 @@
 "value": "г Санкт-Петербург, ул Кустодиева, д 18 к 2"
 },
 "shkola-103-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Руднева, д 23",
+"rev": true,
+"street": "ул Руднева",
+"house": "23"
 },
 "shkola-38-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Авиаконструкторов, д 15 к 2",
+"rev": true,
+"street": "пр-кт Авиаконструкторов",
+"house": "15"
 },
 "shkola-579-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -3534,52 +4014,70 @@
 "value": "г Санкт-Петербург, ул Аэродромная, д 13 к 2"
 },
 "shkola-156-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Меншиковский пр-кт, д 15 к 3",
+"rev": true,
+"street": "Меншиковский пр-кт",
+"house": "15"
 },
 "shkola-619-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Черкасова, д 7 к 2",
+"rev": true,
+"street": "ул Черкасова",
+"house": "7"
 },
 "litsey-126-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Замшина, д 14",
+"rev": true,
+"street": "ул Замшина",
+"house": "14"
 },
 "shkola-149-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Черкасова, д 4 к 2",
+"rev": true,
+"street": "ул Черкасова",
+"house": "4"
 },
 "shkola-175-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Просвещения, д 106 к 2",
+"rev": true,
+"street": "пр-кт Просвещения",
+"house": "106"
 },
 "shkola-89-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Черкасова, д 8 к 2",
+"rev": true,
+"street": "ул Черкасова",
+"house": "8"
 },
 "shkola-internat-9-sankt-peterburg": {
 "district": "Калининский р-н",
@@ -3590,44 +4088,59 @@
 "value": "г Санкт-Петербург, ул Старцева, д 7"
 },
 "shkola-68-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ушинского, д 33 к 2",
+"rev": true,
+"street": "ул Ушинского",
+"house": "33"
 },
 "shkola-237-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Авангардная, д 43",
+"rev": true,
+"street": "ул Авангардная",
+"house": "43"
 },
 "shkola-509-1-ya-ploschadka-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Капитана Грищенко, д 3 к 1",
+"rev": true,
+"street": "ул Капитана Грищенко",
+"house": "3"
 },
 "shkola-625-imeni-v-e-dudkina-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Джона Рида, д 8",
+"rev": true,
+"street": "ул Джона Рида",
+"house": "8"
 },
 "shkola-519-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ленсовета, д 87 к 2",
+"rev": true,
+"street": "ул Ленсовета",
+"house": "87"
 },
 "shkola-478-sankt-peterburg": {
 "district": "Красногвардейский р-н",
@@ -3638,60 +4151,81 @@
 "value": "г Санкт-Петербург, Муринская дорога, д 70 к 2 стр 1"
 },
 "shkola-269-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Трамвайный пр-кт, д 22",
+"rev": true,
+"street": "Трамвайный пр-кт",
+"house": "22"
 },
 "shkola-390-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Здоровцева, д 33 к 2",
+"rev": true,
+"street": "ул Здоровцева",
+"house": "33"
 },
 "shkola-285-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пограничника Гарькавого, д 46 к 4",
+"rev": true,
+"street": "ул Пограничника Гарькавого",
+"house": "46"
 },
 "shkola-internat-7-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тамбасова, д 27 к 3",
+"rev": true,
+"street": "ул Тамбасова",
+"house": "27"
 },
 "shkola-352-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 151 к 3",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "151"
 },
 "shkola-290-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пионерстроя, д 10 к 2",
+"rev": true,
+"street": "ул Пионерстроя",
+"house": "10"
 },
 "shkola-362-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Витебский пр-кт, д 85 к 2",
+"rev": true,
+"street": "Витебский пр-кт",
+"house": "85"
 },
 "shkola-601-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -3702,68 +4236,92 @@
 "value": "г Санкт-Петербург, Приморский пр-кт, д 143 к 3"
 },
 "shkola-591-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Большевиков, д 28",
+"rev": true,
+"street": "пр-кт Большевиков",
+"house": "28"
 },
 "litsey-568-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Маршала Жукова, д 33 к 2",
+"rev": true,
+"street": "пр-кт Маршала Жукова",
+"house": "33"
 },
 "shkola-507-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Московский пр-кт, д 169",
+"rev": true,
+"street": "Московский пр-кт",
+"house": "169"
 },
 "shkola-136-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ольги Форш, д 11",
+"rev": true,
+"street": "ул Ольги Форш",
+"house": "11"
 },
 "shkola-495-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Варшавская, д 33",
+"rev": true,
+"street": "ул Варшавская",
+"house": "33"
 },
 "shkola-496-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Варшавская, д 51 к 2",
+"rev": true,
+"street": "ул Варшавская",
+"house": "51"
 },
 "shkola-689-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Пятилеток, д 6 к 2",
+"rev": true,
+"street": "пр-кт Пятилеток",
+"house": "6"
 },
 "shkola-231-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Володи Ермака, д 7",
+"rev": true,
+"street": "ул Володи Ермака",
+"house": "7"
 },
 "shkola-594-sankt-peterburg": {
 "district": "Московский р-н",
@@ -3774,108 +4332,147 @@
 "value": "г Санкт-Петербург, ул Победы, д 10"
 },
 "shkola-260-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Лермонтовский пр-кт, д 21",
+"rev": true,
+"street": "Лермонтовский пр-кт",
+"house": "21"
 },
 "nemetskaya-gimnaziya-petershule-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Заневский пр-кт, д 53 к 2",
+"rev": true,
+"street": "Заневский пр-кт",
+"house": "53"
 },
 "vtoraya-sankt-peterburgskaya-gimnaziya-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Казанская, д 27",
+"rev": true,
+"street": "ул Казанская",
+"house": "27"
 },
 "shkola-243-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пер Гривцова, д 18 литера А",
+"rev": true,
+"street": "пер Гривцова",
+"house": "18"
 },
 "shkola-235-imeni-d-d-shostakovicha-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Английский пр-кт, д 3 литера Б",
+"rev": true,
+"street": "Английский пр-кт",
+"house": "3"
 },
 "shkola-220-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бестужевская, д 3 к 4",
+"rev": true,
+"street": "ул Бестужевская",
+"house": "3"
 },
 "shkola-287-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бумажная, д 5",
+"rev": true,
+"street": "ул Бумажная",
+"house": "5"
 },
 "shkola-229-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пер Бойцова, д 3",
+"rev": true,
+"street": "пер Бойцова",
+"house": "3"
 },
 "shkola-255-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Фонарный пер, д 4",
+"rev": true,
+"street": "Фонарный пер",
+"house": "4"
 },
 "shkola-306-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Верейская, д 20",
+"rev": true,
+"street": "ул Верейская",
+"house": "20"
 },
 "shkola-100-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бестужевская, д 5 к 1",
+"rev": true,
+"street": "ул Бестужевская",
+"house": "5"
 },
 "shkola-165-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Комендантский пр-кт, д 69 стр 1",
+"rev": true,
+"street": "Комендантский пр-кт",
+"house": "69"
 },
 "shkola-240-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бурцева, д 12",
+"rev": true,
+"street": "ул Бурцева",
+"house": "12"
 },
 "shkola-185-sankt-peterburg": {
 "district": "Центральный р-н",
@@ -3886,12 +4483,15 @@
 "value": "г Санкт-Петербург, ул Шпалерная, д 33"
 },
 "gimnaziya-107-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Нейшлотский пер, д 2 литера Б",
+"rev": true,
+"street": "Нейшлотский пер",
+"house": "2"
 },
 "shkola-636-sankt-peterburg": {
 "district": "Центральный р-н",
@@ -3902,332 +4502,455 @@
 "value": "г Санкт-Петербург, наб Реки Мойки, д 38"
 },
 "shkola-51-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Чкаловский пр-кт, д 22 литера Б",
+"rev": true,
+"street": "Чкаловский пр-кт",
+"house": "22"
 },
 "shkola-50-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Малая Разночинная, д 2-4",
+"rev": true,
+"street": "ул Малая Разночинная",
+"house": "2-4"
 },
 "shkola-308-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бородинская, д 8-10",
+"rev": true,
+"street": "ул Бородинская",
+"house": "8-10"
 },
 "litsey-211-imeni-pera-de-kubertena-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гороховая, д 20",
+"rev": true,
+"street": "ул Гороховая",
+"house": "20"
 },
 "shkola-586-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кораблестроителей, д 37 к 5",
+"rev": true,
+"street": "ул Кораблестроителей",
+"house": "37"
 },
 "shkola-9-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Наличная, д 44 к 4",
+"rev": true,
+"street": "ул Наличная",
+"house": "44"
 },
 "shkola-16-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Наличная, д 44 к 5",
+"rev": true,
+"street": "ул Наличная",
+"house": "44"
 },
 "shkola-10-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кораблестроителей, д 42 к 2",
+"rev": true,
+"street": "ул Кораблестроителей",
+"house": "42"
 },
 "shkola-31-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кораблестроителей, д 38 к 2",
+"rev": true,
+"street": "ул Кораблестроителей",
+"house": "38"
 },
 "shkola-18-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт КИМа, д 11 литера Б",
+"rev": true,
+"street": "пр-кт КИМа",
+"house": "11"
 },
 "shkola-4-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гаванская, д 52",
+"rev": true,
+"street": "ул Гаванская",
+"house": "52"
 },
 "shkola-19-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гаванская, д 54",
+"rev": true,
+"street": "ул Гаванская",
+"house": "54"
 },
 "shkola-15-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шевченко, д 36",
+"rev": true,
+"street": "ул Шевченко",
+"house": "36"
 },
 "fiziko-matematicheskiy-litsey-30-mladshee-otdelenie-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шевченко, д 23 к 2",
+"rev": true,
+"street": "ул Шевченко",
+"house": "23"
 },
 "shkola-6-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шевченко, д 3 литера А",
+"rev": true,
+"street": "ул Шевченко",
+"house": "3"
 },
 "shkola-163-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кирочная, д 54 литера Е",
+"rev": true,
+"street": "ул Кирочная",
+"house": "54"
 },
 "shkola-183-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кирочная, д 28 литера А",
+"rev": true,
+"street": "ул Кирочная",
+"house": "28"
 },
 "shkola-197-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Фурштатская, д 29а",
+"rev": true,
+"street": "ул Фурштатская",
+"house": "29а"
 },
 "gimnaziya-alma-mater-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шпалерная, д 50 литера А",
+"rev": true,
+"street": "ул Шпалерная",
+"house": "50"
 },
 "gimnaziya-157-imeni-printsessy-e-m-oldenburgskoy-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лафонская, д 1 литера А",
+"rev": true,
+"street": "ул Лафонская",
+"house": "1"
 },
 "shkola-174-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Дегтярный пер, д 24",
+"rev": true,
+"street": "Дегтярный пер",
+"house": "24"
 },
 "shkola-212-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ярослава Гашека, д 9 к 2",
+"rev": true,
+"street": "ул Ярослава Гашека",
+"house": "9"
 },
 "litsey-214-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маяковского, д 8",
+"rev": true,
+"street": "ул Маяковского",
+"house": "8"
 },
 "gimnaziya-190-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Реки Фонтанки, д 22",
+"rev": true,
+"street": "наб Реки Фонтанки",
+"house": "22"
 },
 "shkola-368-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ярослава Гашека, д 28",
+"rev": true,
+"street": "ул Ярослава Гашека",
+"house": "28"
 },
 "shkola-20-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Большевиков, д 23",
+"rev": true,
+"street": "пр-кт Большевиков",
+"house": "23"
 },
 "shkola-189-shans-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Пестеля, д 16б",
+"rev": true,
+"street": "ул Пестеля",
+"house": "16б"
 },
 "shkola-525-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Орджоникидзе, д 47 стр 2",
+"rev": true,
+"street": "ул Орджоникидзе",
+"house": "47"
 },
 "shkola-693-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Нерчинская, д 4 стр 1",
+"rev": true,
+"street": "ул Нерчинская",
+"house": "4"
 },
 "shkola-294-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Коломенская, д 6",
+"rev": true,
+"street": "ул Коломенская",
+"house": "6"
 },
 "shkola-167-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Херсонская, д 9-11",
+"rev": true,
+"street": "ул Херсонская",
+"house": "9-11"
 },
 "shkola-581-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Авиаконструкторов, д 22 к 1",
+"rev": true,
+"street": "пр-кт Авиаконструкторов",
+"house": "22"
 },
 "shkola-79-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Брянцева, д 10",
+"rev": true,
+"street": "ул Брянцева",
+"house": "10"
 },
 "shkola-703-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Глеба Успенского, д 9",
+"rev": true,
+"street": "ул Глеба Успенского",
+"house": "9"
 },
 "litsey-373-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Московский пр-кт, д 112",
+"rev": true,
+"street": "Московский пр-кт",
+"house": "112"
 },
 "rossiyskaya-gimnaziya-pri-gosudarstvennom-russkom-muzee-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пл Искусств, д 2",
+"rev": true,
+"street": "пл Искусств",
+"house": "2"
 },
 "shkola-491-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Энергетиков, д 9 литера К",
+"rev": true,
+"street": "пр-кт Энергетиков",
+"house": "9"
 },
 "shkola-211-imeni-pera-de-kubertena-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Графский пер, д 8",
+"rev": true,
+"street": "Графский пер",
+"house": "8"
 },
 "shkola-360-imeni-a-v-germana-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бухарестская, д 5",
+"rev": true,
+"street": "ул Бухарестская",
+"house": "5"
 },
 "shkola-5-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Батайский пер, д 6-8",
+"rev": true,
+"street": "Батайский пер",
+"house": "6-8"
 },
 "gimnaziya-171-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маяковского, д 26 литера А",
+"rev": true,
+"street": "ул Маяковского",
+"house": "26"
 },
 "shkola-371-sankt-peterburg": {
 "district": "Московский р-н",
@@ -4238,52 +4961,70 @@
 "value": "г Санкт-Петербург, ул Благодатная, д 36 литера А"
 },
 "shkola-497-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Октябрьская наб, д 70 к 2",
+"rev": true,
+"street": "Октябрьская наб",
+"house": "70"
 },
 "shkola-181-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Соляной пер, д 12",
+"rev": true,
+"street": "Соляной пер",
+"house": "12"
 },
 "shkola-193-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Гродненский пер, д 8-10",
+"rev": true,
+"street": "Гродненский пер",
+"house": "8-10"
 },
 "shkola-17-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 19-я В.О., д 22",
+"rev": true,
+"street": "лн 19-я В.О.",
+"house": "22"
 },
 "shkola-543-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Космонавтов, д 28 к 4",
+"rev": true,
+"street": "пр-кт Космонавтов",
+"house": "28"
 },
 "shkola-351-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Витебский пр-кт, д 57",
+"rev": true,
+"street": "Витебский пр-кт",
+"house": "57"
 },
 "shkola-225-sankt-peterburg": {
 "district": "Адмиралтейский р-н",
@@ -4294,100 +5035,136 @@
 "value": "г Санкт-Петербург, Адмиралтейская наб, д 4"
 },
 "shkola-119-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тимуровская, д 8 к 2",
+"rev": true,
+"street": "ул Тимуровская",
+"house": "8"
 },
 "litsey-179-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ушинского, д 35 к 2",
+"rev": true,
+"street": "ул Ушинского",
+"house": "35"
 },
 "shkola-612-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Звенигородская, д 30а",
+"rev": true,
+"street": "ул Звенигородская",
+"house": "30а"
 },
 "shkola-69-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Культуры, д 27 к 3",
+"rev": true,
+"street": "пр-кт Культуры",
+"house": "27"
 },
 "shkola-128-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ольги Форш, д 17 к 2",
+"rev": true,
+"street": "ул Ольги Форш",
+"house": "17"
 },
 "shkola-gran-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гаккелевская, д 19",
+"rev": true,
+"street": "ул Гаккелевская",
+"house": "19"
 },
 "progimnaziya-698-pansion-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Благодатная, д 45",
+"rev": true,
+"street": "ул Благодатная",
+"house": "45"
 },
 "shkola-152-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Стахановцев, д 15 к 2",
+"rev": true,
+"street": "ул Стахановцев",
+"house": "15"
 },
 "gimnaziya-343-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Крыленко, д 33 к 2",
+"rev": true,
+"street": "ул Крыленко",
+"house": "33"
 },
 "shkola-398-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Торики, ул Политрука Пасечника, д 3",
+"rev": true,
+"street": "ул Политрука Пасечника",
+"house": "3"
 },
 "shkola-182-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Наставников, д 11 к 2",
+"rev": true,
+"street": "пр-кт Наставников",
+"house": "11"
 },
 "shkola-690-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Русановская, д 15 к 2",
+"rev": true,
+"street": "ул Русановская",
+"house": "15"
 },
 "shkola-309-sankt-peterburg": {
 "district": "Центральный р-н",
@@ -4406,532 +5183,730 @@
 "value": "г Санкт-Петербург, ул Аэродромная, д 11 к 2"
 },
 "shkola-490-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Новочеркасский пр-кт, д 50 к 3",
+"rev": true,
+"street": "Новочеркасский пр-кт",
+"house": "50"
 },
 "shkola-532-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Большая Пороховская, д 38",
+"rev": true,
+"street": "ул Большая Пороховская",
+"house": "38"
 },
 "litsey-aristos-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Большая Пороховская, д 52 к 2",
+"rev": true,
+"street": "ул Большая Пороховская",
+"house": "52"
 },
 "shkola-77-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Блохина, д 31",
+"rev": true,
+"street": "ул Блохина",
+"house": "31"
 },
 "shkola-350-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Тельмана, д 34",
+"rev": true,
+"street": "ул Тельмана",
+"house": "34"
 },
 "shkola-356-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ленсовета, д 68",
+"rev": true,
+"street": "ул Ленсовета",
+"house": "68"
 },
 "shkola-577-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Хасанская, д 6 к 2",
+"rev": true,
+"street": "ул Хасанская",
+"house": "6"
 },
 "shkola-55-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Левашовский пр-кт, д 5 литера А",
+"rev": true,
+"street": "Левашовский пр-кт",
+"house": "5"
 },
 "shkola-493-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зины Портновой, д 15",
+"rev": true,
+"street": "ул Зины Портновой",
+"house": "15"
 },
 "shkola-654-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лёни Голикова, д 23 к 6",
+"rev": true,
+"street": "ул Лёни Голикова",
+"house": "23"
 },
 "gimnaziya-261-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ленинский пр-кт, д 110 к 3",
+"rev": true,
+"street": "Ленинский пр-кт",
+"house": "110"
 },
 "shkola-582-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ильюшина, д 15 к 3",
+"rev": true,
+"street": "ул Ильюшина",
+"house": "15"
 },
 "gimnaziya-24-imeni-i-a-krylova-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 4-я В.О., д 27/20",
+"rev": true,
+"street": "лн 4-я В.О.",
+"house": "27/20"
 },
 "shkola-27-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 10-я В.О., д 1/15",
+"rev": true,
+"street": "лн 10-я В.О.",
+"house": "1/15"
 },
 "fiziko-matematicheskiy-litsey-30-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 7-я В.О., д 52",
+"rev": true,
+"street": "лн 7-я В.О.",
+"house": "52"
 },
 "shkola-4-imeni-zh-i-kusto-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Большой В.О., д 88",
+"rev": true,
+"street": "пр-кт Большой В.О.",
+"house": "88"
 },
 "shkola-21-imeni-e-p-shaffe-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 5-я В.О., д 16/17",
+"rev": true,
+"street": "лн 5-я В.О.",
+"house": "16/17"
 },
 "shkola-641-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Пятилеток, д 6 к 3",
+"rev": true,
+"street": "пр-кт Пятилеток",
+"house": "6"
 },
 "shkola-516-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Народная, д 63",
+"rev": true,
+"street": "ул Народная",
+"house": "63"
 },
 "shkola-512-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Народная, д 44",
+"rev": true,
+"street": "ул Народная",
+"house": "44"
 },
 "shkola-323-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Солидарности, д 1 к 2",
+"rev": true,
+"street": "пр-кт Солидарности",
+"house": "1"
 },
 "shkola-olimpiyskogo-rezerva-2-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Подвойского, д 31 к 3 стр 2",
+"rev": true,
+"street": "ул Подвойского",
+"house": "31"
 },
 "shkola-528-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Подвойского, д 50 к 4",
+"rev": true,
+"street": "ул Подвойского",
+"house": "50"
 },
 "shkola-34-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Коллонтай, д 27 к 4",
+"rev": true,
+"street": "ул Коллонтай",
+"house": "27"
 },
 "shkola-268-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Большевиков, д 4 к 2",
+"rev": true,
+"street": "пр-кт Большевиков",
+"house": "4"
 },
 "shkola-609-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Новочеркасский пр-кт, д 44 к 2",
+"rev": true,
+"street": "Новочеркасский пр-кт",
+"house": "44"
 },
 "shkola-639-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Реки Оккервиль, д 10",
+"rev": true,
+"street": "наб Реки Оккервиль",
+"house": "10"
 },
 "shkola-zdorovya-i-individualnogo-razvitiya-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Хасанская, д 18 к 3",
+"rev": true,
+"street": "ул Хасанская",
+"house": "18"
 },
 "litsey-265-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ленская, д 21 литера Б",
+"rev": true,
+"street": "ул Ленская",
+"house": "21"
 },
 "shkola-233-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Косыгина, д 25 к 2",
+"rev": true,
+"street": "пр-кт Косыгина",
+"house": "25"
 },
 "shkola-151-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Хасанская, д 14 к 2",
+"rev": true,
+"street": "ул Хасанская",
+"house": "14"
 },
 "gimnaziya-528-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Солидарности, д 10 к 3",
+"rev": true,
+"street": "пр-кт Солидарности",
+"house": "10"
 },
 "shkola-134-imeni-s-dudko-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Отечественная, д 5",
+"rev": true,
+"street": "ул Отечественная",
+"house": "5"
 },
 "shkola-187-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Энтузиастов, д 46 к 3",
+"rev": true,
+"street": "пр-кт Энтузиастов",
+"house": "46"
 },
 "shkola-562-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ириновский пр-кт, д 17 к 5",
+"rev": true,
+"street": "Ириновский пр-кт",
+"house": "17"
 },
 "shkola-127-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ударников, д 22 к 3",
+"rev": true,
+"street": "пр-кт Ударников",
+"house": "22"
 },
 "shkola-195-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Энтузиастов, д 47 к 2",
+"rev": true,
+"street": "пр-кт Энтузиастов",
+"house": "47"
 },
 "shkola-141-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Коммуны, д 32 к 4",
+"rev": true,
+"street": "ул Коммуны",
+"house": "32"
 },
 "shkola-164-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Косыгина, д 28 к 3",
+"rev": true,
+"street": "пр-кт Косыгина",
+"house": "28"
 },
 "shkola-499-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Весенняя, д 10",
+"rev": true,
+"street": "ул Весенняя",
+"house": "10"
 },
 "shkola-internat-6-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Большая Пороховская, д 52 к 2 литера В",
+"rev": true,
+"street": "ул Большая Пороховская",
+"house": "52"
 },
 "shkola-133-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Петра Смородина, д 10",
+"rev": true,
+"street": "ул Петра Смородина",
+"house": "10"
 },
 "shkola-143-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Синявинская, д 15",
+"rev": true,
+"street": "ул Синявинская",
+"house": "15"
 },
 "shkola-188-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Тухачевского, д 17",
+"rev": true,
+"street": "ул Маршала Тухачевского",
+"house": "17"
 },
 "shkola-180-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Тухачевского, д 29",
+"rev": true,
+"street": "ул Маршала Тухачевского",
+"house": "29"
 },
 "shkola-627-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новосёлов, д 11",
+"rev": true,
+"street": "ул Новосёлов",
+"house": "11"
 },
 "shkola-342-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бабушкина, д 50",
+"rev": true,
+"street": "ул Бабушкина",
+"house": "50"
 },
 "shkola-334-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Александровской Фермы, д 11",
+"rev": true,
+"street": "пр-кт Александровской Фермы",
+"house": "11"
 },
 "shkola-569-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Рыбацкий пр-кт, д 29 к 2",
+"rev": true,
+"street": "Рыбацкий пр-кт",
+"house": "29"
 },
 "shkola-316-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Софийская, д 34 к 3",
+"rev": true,
+"street": "ул Софийская",
+"house": "34"
 },
 "gimnaziya-166-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Прудковский пер, д 1/8",
+"rev": true,
+"street": "Прудковский пер",
+"house": "1/8"
 },
 "shkola-208-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Добровольцев, д 6",
+"rev": true,
+"street": "ул Добровольцев",
+"house": "6"
 },
 "shkola-207-korpus-6-11-klassov-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Невский пр-кт, д 100 литера А",
+"rev": true,
+"street": "Невский пр-кт",
+"house": "100"
 },
 "shkola-207-korpus-1-5-klassov-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Невский пр-кт, д 108 литера Б",
+"rev": true,
+"street": "Невский пр-кт",
+"house": "108"
 },
 "gimnaziya-209-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Восстания, д 8",
+"rev": true,
+"street": "ул Восстания",
+"house": "8"
 },
 "shkola-359-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Лиговский пр-кт, д 241",
+"rev": true,
+"street": "Лиговский пр-кт",
+"house": "241"
 },
 "shkola-210-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Невский пр-кт, д 14",
+"rev": true,
+"street": "Невский пр-кт",
+"house": "14"
 },
 "progimnaziya-624-raduga-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул 8-я Красноармейская, д 16",
+"rev": true,
+"street": "ул 8-я Красноармейская",
+"house": "16"
 },
 "shkola-564-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Обводного канала, д 143",
+"rev": true,
+"street": "наб Обводного канала",
+"house": "143"
 },
 "shkola-307-nachalnaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Обводного канала, д 123 литера Б",
+"rev": true,
+"street": "наб Обводного канала",
+"house": "123"
 },
 "shkola-317-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Серпуховская, д 39",
+"rev": true,
+"street": "ул Серпуховская",
+"house": "39"
 },
 "gimnaziya-107-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Выборгская, д 3",
+"rev": true,
+"street": "ул Выборгская",
+"house": "3"
 },
 "shkola-691-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург",
+"rev": true,
+"street": null,
+"house": null
 },
 "shkola-337-imeni-d-v-dolonskogo-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Обуховской Обороны, д 257 литера И",
+"rev": true,
+"street": "пр-кт Обуховской Обороны",
+"house": "257"
 },
 "shkola-707-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Архивная, д 11 к 3",
+"rev": true,
+"street": "ул Архивная",
+"house": "11"
 },
 "shkola-283-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Стойкости, д 33",
+"rev": true,
+"street": "ул Стойкости",
+"house": "33"
 },
 "shkola-376-sankt-peterburg": {
 "district": "Московский р-н",
@@ -4942,324 +5917,444 @@
 "value": "г Санкт-Петербург, ул Идрицкая, д 5 к 2 стр 1"
 },
 "shkola-304-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Лиговский пр-кт, д 100-104 литера Ж",
+"rev": true,
+"street": "Лиговский пр-кт",
+"house": "100-104"
 },
 "shkola-509-3-ya-ploschadka-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Патриотов, д 26 к 2 стр 1",
+"rev": true,
+"street": "пр-кт Патриотов",
+"house": "26"
 },
 "nachalnaya-shkola-391-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Горелово, ул Коммунаров, д 114 к 2",
+"rev": true,
+"street": "ул Коммунаров",
+"house": "114"
 },
 "shkola-391-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Горелово, Красносельское шоссе, д 34",
+"rev": true,
+"street": "Красносельское шоссе",
+"house": "34"
 },
 "gazprom-shkola-sankt-peterburg-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Крестовский пр-кт, соор 14/1",
+"rev": true,
+"street": "Крестовский пр-кт",
+"house": "14/1"
 },
 "shkola-99-start-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Депутатская, д 6",
+"rev": true,
+"street": "ул Депутатская",
+"house": "6"
 },
 "shkola-377-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Стачек, д 107 к 4",
+"rev": true,
+"street": "пр-кт Стачек",
+"house": "107"
 },
 "shkola-223-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Стойкости, д 17 к 2",
+"rev": true,
+"street": "ул Стойкости",
+"house": "17"
 },
 "shkola-254-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бурцева, д 9",
+"rev": true,
+"street": "ул Бурцева",
+"house": "9"
 },
 "shkola-378-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 114 к 2",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "114"
 },
 "shkola-242-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лётчика Пилютова, д 50",
+"rev": true,
+"street": "ул Лётчика Пилютова",
+"house": "50"
 },
 "shkola-251-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Солдата Корзуна, д 15 к 2",
+"rev": true,
+"street": "ул Солдата Корзуна",
+"house": "15"
 },
 "shkola-250-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Козлова, д 37 к 1",
+"rev": true,
+"street": "ул Козлова",
+"house": "37"
 },
 "shkola-506-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Козлова, д 49 к 2",
+"rev": true,
+"street": "ул Козлова",
+"house": "49"
 },
 "shkola-575-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лидии Зверевой, д 3 к 2",
+"rev": true,
+"street": "ул Лидии Зверевой",
+"house": "3"
 },
 "shkola-481-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ленинский пр-кт, д 124 к 2",
+"rev": true,
+"street": "Ленинский пр-кт",
+"house": "124"
 },
 "shkola-503-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ленинский пр-кт, д 123 к 4",
+"rev": true,
+"street": "Ленинский пр-кт",
+"house": "123"
 },
 "shkola-504-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зины Портновой, д 56",
+"rev": true,
+"street": "ул Зины Портновой",
+"house": "56"
 },
 "shkola-386-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зайцева, д 14",
+"rev": true,
+"street": "ул Зайцева",
+"house": "14"
 },
 "shkola-509-2-ya-ploschadka-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Патриотов, д 24 к 1 стр 1",
+"rev": true,
+"street": "пр-кт Патриотов",
+"house": "24"
 },
 "shkola-632-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, наб Реки Каменки, соор 17/1",
+"rev": true,
+"street": "наб Реки Каменки",
+"house": "17/1"
 },
 "shkola-39-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Октябрьская наб, д 118 к 9",
+"rev": true,
+"street": "Октябрьская наб",
+"house": "118"
 },
 "gimnaziya-159-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Мечникова, д 16",
+"rev": true,
+"street": "пр-кт Мечникова",
+"house": "16"
 },
 "litsey-393-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Автовская, д 5",
+"rev": true,
+"street": "ул Автовская",
+"house": "5"
 },
 "shkola-557-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Караваевская, д 6",
+"rev": true,
+"street": "ул Караваевская",
+"house": "6"
 },
 "shkola-717-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Дыбенко, д 8 к 2",
+"rev": true,
+"street": "ул Дыбенко",
+"house": "8"
 },
 "shkola-353-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Пулковское шоссе, д 73 к 6",
+"rev": true,
+"street": "Пулковское шоссе",
+"house": "73"
 },
 "gimnaziya-49-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Богатырский пр-кт, д 55 к 3",
+"rev": true,
+"street": "Богатырский пр-кт",
+"house": "55"
 },
 "chastnaya-shkola-shostakovichey-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 6-я В.О., д 15 литера Д",
+"rev": true,
+"street": "лн 6-я В.О.",
+"house": "15"
 },
 "shkola-560-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Комиссара Смирнова, д 17",
+"rev": true,
+"street": "ул Комиссара Смирнова",
+"house": "17"
 },
 "shkola-704-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Пулковское шоссе, д 20 к 6",
+"rev": true,
+"street": "Пулковское шоссе",
+"house": "20"
 },
 "shkola-598-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Ситцевая, д 15",
+"rev": true,
+"street": "ул Ситцевая",
+"house": "15"
 },
 "shkola-385-korpus-3-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Петергофское шоссе, д 78 к 3 стр 1",
+"rev": true,
+"street": "Петергофское шоссе",
+"house": "78"
 },
 "shkola-199-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Оптиков, д 43 к 3",
+"rev": true,
+"street": "ул Оптиков",
+"house": "43"
 },
 "shkola-158-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Светлановский пр-кт, д 40 к 3",
+"rev": true,
+"street": "Светлановский пр-кт",
+"house": "40"
 },
 "litsey-150-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Светлановский пр-кт, д 38 к 2",
+"rev": true,
+"street": "Светлановский пр-кт",
+"house": "38"
 },
 "gimnaziya-74-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Болотная, д 6",
+"rev": true,
+"street": "ул Болотная",
+"house": "6"
 },
 "shkola-87-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Введенская, д 16-18",
+"rev": true,
+"street": "ул Введенская",
+"house": "16-18"
 },
 "shkola-555-belogore-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Комендантский пр-кт, д 17 к 3",
+"rev": true,
+"street": "Комендантский пр-кт",
+"house": "17"
 },
 "shkola-566-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Усть-Славянка, Советский пр-кт, д 49 литера В",
+"rev": true,
+"street": "Советский пр-кт",
+"house": "49"
 },
 "shkola-708-sankt-peterburg": {
 "district": "Василеостровский р-н",
@@ -5270,28 +6365,37 @@
 "value": "г Санкт-Петербург, Миклухо-Маклая наб, д 3 к 2 стр 1"
 },
 "shkola-203-2-y-korpus-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, тер Сергиево, ул Энгельса, д 15",
+"rev": true,
+"street": "ул Энгельса",
+"house": "15"
 },
 "shkola-548-korpus-2-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Морской Пехоты, д 26 к 1 стр 1",
+"rev": true,
+"street": "ул Морской Пехоты",
+"house": "26"
 },
 "srednyaya-shkola-635-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Авиаконструкторов, д 63",
+"rev": true,
+"street": "пр-кт Авиаконструкторов",
+"house": "63"
 },
 "shkola-internat-formula-uspekha-sankt-peterburg": {
 "district": "Центральный р-н",
@@ -5302,12 +6406,15 @@
 "value": "г Санкт-Петербург, пр-кт Бакунина, д 8"
 },
 "shkola-104-imeni-m-s-kharchenko-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Харченко, д 27",
+"rev": true,
+"street": "ул Харченко",
+"house": "27"
 },
 "shkola-379-sankt-peterburg": {
 "district": "Центральный р-н",
@@ -5326,180 +6433,246 @@
 "value": "г Санкт-Петербург, ул Малая Конюшенная, д 1-3"
 },
 "spetsialnaya-shkola-2-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Аккуратова, д 11 литера Б",
+"rev": true,
+"street": "ул Аккуратова",
+"house": "11"
 },
 "litsey-597-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул 3-я линия 1-й половины, д 10а",
+"rev": true,
+"street": "ул 3-я линия 1-й половины",
+"house": "10а"
 },
 "shkola-616-dinamika-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Курляндская, д 29",
+"rev": true,
+"street": "ул Курляндская",
+"house": "29"
 },
 "litsey-281-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Советский пер, д 4 литера Б",
+"rev": true,
+"street": "Советский пер",
+"house": "4"
 },
 "shkola-522-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Малодетскосельский пр-кт, д 17-19/34",
+"rev": true,
+"street": "Малодетскосельский пр-кт",
+"house": "17-19/34"
 },
 "shkola-534-imeni-t-sirazetdinova-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Светлановский пр-кт, д 31",
+"rev": true,
+"street": "Светлановский пр-кт",
+"house": "31"
 },
 "gimnaziya-105-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Орбели, д 24",
+"rev": true,
+"street": "ул Орбели",
+"house": "24"
 },
 "shkola-1-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Варшавская, д 30",
+"rev": true,
+"street": "ул Варшавская",
+"house": "30"
 },
 "sankt-peterburgskaya-klassicheskaya-gimnaziya-610-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Зверинская, д 18",
+"rev": true,
+"street": "ул Зверинская",
+"house": "18"
 },
 "shkola-608-imeni-ziny-portnovoy-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Промышленная, д 18/2",
+"rev": true,
+"street": "ул Промышленная",
+"house": "18/2"
 },
 "litsey-384-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Стачек, д 5",
+"rev": true,
+"street": "пр-кт Стачек",
+"house": "5"
 },
 "shkola-570-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Шлиссельбургский пр-кт, д 10",
+"rev": true,
+"street": "Шлиссельбургский пр-кт",
+"house": "10"
 },
 "shkola-327-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бабушкина, д 21 литера В",
+"rev": true,
+"street": "ул Бабушкина",
+"house": "21"
 },
 "shkola-365-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Будапештская, д 93",
+"rev": true,
+"street": "ул Будапештская",
+"house": "93"
 },
 "shkola-571-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Караваевская, д 10 к 2",
+"rev": true,
+"street": "ул Караваевская",
+"house": "10"
 },
 "gimnaziya-177-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ириновский пр-кт, д 23 к 2",
+"rev": true,
+"street": "Ириновский пр-кт",
+"house": "23"
 },
 "shkola-129-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Большая Пороховская, д 8 литера А",
+"rev": true,
+"street": "ул Большая Пороховская",
+"house": "8"
 },
 "shkola-241-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Вознесенский пр-кт, д 38/4",
+"rev": true,
+"street": "Вознесенский пр-кт",
+"house": "38/4"
 },
 "gimnaziya-652-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Тореза, д 41 литера Б",
+"rev": true,
+"street": "пр-кт Тореза",
+"house": "41"
 },
 "akademicheskaya-gimnaziya-imeni-d-k-faddeeva-spbgu-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пер Каховского, д 9 литера Т",
+"rev": true,
+"street": "пер Каховского",
+"house": "9"
 },
 "shkola-2-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Наличная, д 32 к 2",
+"rev": true,
+"street": "ул Наличная",
+"house": "32"
 },
 "tsentr-obrazovaniya-80-rozhdestvenskaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул 8-я Советская, д 62",
+"rev": true,
+"street": "ул 8-я Советская",
+"house": "62"
 },
 "gimnaziya-622-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -5510,308 +6683,422 @@
 "value": "г Санкт-Петербург, Выборгское шоссе, д 7 к 2"
 },
 "shkola-internat-1-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Энгельса, д 4 литера Б",
+"rev": true,
+"street": "пр-кт Энгельса",
+"house": "4"
 },
 "shkola-489-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Ленинский пр-кт, д 161 к 3",
+"rev": true,
+"street": "Ленинский пр-кт",
+"house": "161"
 },
 "litsey-488-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Просвещения, д 32 к 4",
+"rev": true,
+"street": "пр-кт Просвещения",
+"house": "32"
 },
 "shkola-483-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шостаковича, д 3 к 2",
+"rev": true,
+"street": "ул Шостаковича",
+"house": "3"
 },
 "shkola-slovo-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Славы, д 35 к 2",
+"rev": true,
+"street": "пр-кт Славы",
+"house": "35"
 },
 "shkola-60-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Художников, д 9 к 3",
+"rev": true,
+"street": "пр-кт Художников",
+"house": "9"
 },
 "shkola-517-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Раевского, д 18",
+"rev": true,
+"street": "пр-кт Раевского",
+"house": "18"
 },
 "shkola-514-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Непокорённых, д 12/2",
+"rev": true,
+"street": "пр-кт Непокорённых",
+"house": "12/2"
 },
 "shkola-537-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Костюшко, д 34",
+"rev": true,
+"street": "ул Костюшко",
+"house": "34"
 },
 "shkola-364-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Димитрова, д 9 к 3",
+"rev": true,
+"street": "ул Димитрова",
+"house": "9"
 },
 "shkola-284-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Народного Ополчения, д 135",
+"rev": true,
+"street": "пр-кт Народного Ополчения",
+"house": "135"
 },
 "shkola-428-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Юнтоловский пр-кт, д 49 к 7",
+"rev": true,
+"street": "Юнтоловский пр-кт",
+"house": "49"
 },
 "shkola-internat-22-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Чернова, д 13",
+"rev": true,
+"street": "ул Чернова",
+"house": "13"
 },
 "shkola-755-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, лн 7-я В.О., д 66",
+"rev": true,
+"street": "лн 7-я В.О.",
+"house": "66"
 },
 "litsey-366-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Фрунзе, д 12",
+"rev": true,
+"street": "ул Фрунзе",
+"house": "12"
 },
 "nachalnaya-shkola-gimnaziya-344-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новосёлов, д 57",
+"rev": true,
+"street": "ул Новосёлов",
+"house": "57"
 },
 "litsey-329-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Елизарова, д 7",
+"rev": true,
+"street": "пр-кт Елизарова",
+"house": "7"
 },
 "shkola-internat-31-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Елизарова, д 7а",
+"rev": true,
+"street": "пр-кт Елизарова",
+"house": "7а"
 },
 "shkola-354-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург",
+"rev": true,
+"street": null,
+"house": null
 },
 "shkola-501-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Новостроек, д 29",
+"rev": true,
+"street": "ул Новостроек",
+"house": "29"
 },
 "shkola-113-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Торжковская, д 10 к 2",
+"rev": true,
+"street": "ул Торжковская",
+"house": "10"
 },
 "shkola-132-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Свердловская наб, д 34 литера Р",
+"rev": true,
+"street": "Свердловская наб",
+"house": "34"
 },
 "gimnaziya-205-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Димитрова, д 10 к 3",
+"rev": true,
+"street": "ул Димитрова",
+"house": "10"
 },
 "shkola-302-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Дунайский пр-кт, д 48 к 2",
+"rev": true,
+"street": "Дунайский пр-кт",
+"house": "48"
 },
 "shkola-internat-18-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Шелгунова, д 5а",
+"rev": true,
+"street": "ул Шелгунова",
+"house": "5а"
 },
 "shkola-328-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Бабушкина, д 56 к 1",
+"rev": true,
+"street": "ул Бабушкина",
+"house": "56"
 },
 "shkola-288-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Курляндская, д 43",
+"rev": true,
+"street": "ул Курляндская",
+"house": "43"
 },
 "shkola-492-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Димитрова, д 41 к 2",
+"rev": true,
+"street": "ул Димитрова",
+"house": "41"
 },
 "shkola-282-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, б-р Новаторов, д 104",
+"rev": true,
+"street": "б-р Новаторов",
+"house": "104"
 },
 "gimnaziya-524-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Юрия Гагарина, д 22 к 3",
+"rev": true,
+"street": "пр-кт Юрия Гагарина",
+"house": "22"
 },
 "shkola-54-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Казакова, д 60 к 2",
+"rev": true,
+"street": "ул Маршала Казакова",
+"house": "60"
 },
 "shkola-600-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Яхтенная, д 7 к 3",
+"rev": true,
+"street": "ул Яхтенная",
+"house": "7"
 },
 "shkola-527-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, 2-й Рабфаковский пер, д 1 к 4",
+"rev": true,
+"street": "2-й Рабфаковский пер",
+"house": "1"
 },
 "shkola-596-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Камышовая, д 18",
+"rev": true,
+"street": "ул Камышовая",
+"house": "18"
 },
 "shkola-153-imeni-v-v-tatashvili-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Гончарная, д 15",
+"rev": true,
+"street": "ул Гончарная",
+"house": "15"
 },
 "shkola-578-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Комендантский пр-кт, д 37 к 3",
+"rev": true,
+"street": "Комендантский пр-кт",
+"house": "37"
 },
 "litsey-554-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Комендантский пр-кт, д 21 к 3",
+"rev": true,
+"street": "Комендантский пр-кт",
+"house": "21"
 },
 "shkola-45-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Новикова, д 8 к 2",
+"rev": true,
+"street": "ул Маршала Новикова",
+"house": "8"
 },
 "shkola-58-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -5822,244 +7109,334 @@
 "value": "г Санкт-Петербург, пр-кт Королёва, д 11"
 },
 "shkola-57-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ал Поликарпова, д 7",
+"rev": true,
+"street": "ал Поликарпова",
+"house": "7"
 },
 "litsey-40-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Комендантский пр-кт, д 22 к 3",
+"rev": true,
+"street": "Комендантский пр-кт",
+"house": "22"
 },
 "litsey-369-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Захарова, д 56 литера Б",
+"rev": true,
+"street": "ул Маршала Захарова",
+"house": "56"
 },
 "shkola-307-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Малодетскосельский пр-кт, д 23",
+"rev": true,
+"street": "Малодетскосельский пр-кт",
+"house": "23"
 },
 "shkola-585-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Дачный пр-кт, д 3 к 2",
+"rev": true,
+"street": "Дачный пр-кт",
+"house": "3"
 },
 "shkola-internat-33-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, 2-й Муринский пр-кт, д 24",
+"rev": true,
+"street": "2-й Муринский пр-кт",
+"house": "24"
 },
 "gimnaziya-330-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Хрустальная, д 10 к 2",
+"rev": true,
+"street": "ул Хрустальная",
+"house": "10"
 },
 "shkola-321-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Загородный пр-кт, д 38 литера Б",
+"rev": true,
+"street": "Загородный пр-кт",
+"house": "38"
 },
 "shkola-613-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Московский пр-кт, д 203",
+"rev": true,
+"street": "Московский пр-кт",
+"house": "203"
 },
 "shkola-583-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Авиаконструкторов, д 14",
+"rev": true,
+"street": "пр-кт Авиаконструкторов",
+"house": "14"
 },
 "shkola-160-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, шоссе Революции, д 33 к 3",
+"rev": true,
+"street": "шоссе Революции",
+"house": "33"
 },
 "shkola-ekonomiki-i-prava-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Петергофское шоссе, д 5 к 3",
+"rev": true,
+"street": "Петергофское шоссе",
+"house": "5"
 },
 "shkola-221-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Лёни Голикова, д 15 к 2",
+"rev": true,
+"street": "ул Лёни Голикова",
+"house": "15"
 },
 "litsey-395-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 139 к 2",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "139"
 },
 "shkola-291-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Красносельский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Маршала Захарова, д 14 к 3",
+"rev": true,
+"street": "ул Маршала Захарова",
+"house": "14"
 },
 "shkola-539-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Подводника Кузьмина, д 52 литера Б",
+"rev": true,
+"street": "ул Подводника Кузьмина",
+"house": "52"
 },
 "shkola-345-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, б-р Красных Зорь, д 6 к 2",
+"rev": true,
+"street": "б-р Красных Зорь",
+"house": "6"
 },
 "shkola-264-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Морской Пехоты, д 8 к 3",
+"rev": true,
+"street": "ул Морской Пехоты",
+"house": "8"
 },
 "shkola-169-imeni-a-v-voskresenskogo-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Харьковская, д 13",
+"rev": true,
+"street": "ул Харьковская",
+"house": "13"
 },
 "shkola-tauras-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Соловьиная, д 9",
+"rev": true,
+"street": "ул Соловьиная",
+"house": "9"
 },
 "shkola-153-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Лиговский пр-кт, д 156",
+"rev": true,
+"street": "Лиговский пр-кт",
+"house": "156"
 },
 "gimnaziya-70-nachalnye-klassy-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Профессора Попова, д 6б",
+"rev": true,
+"street": "ул Профессора Попова",
+"house": "6б"
 },
 "gimnaziya-70-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Литераторов, д 9-11",
+"rev": true,
+"street": "ул Литераторов",
+"house": "9-11"
 },
 "shkola-510-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Кубинская, д 62",
+"rev": true,
+"street": "ул Кубинская",
+"house": "62"
 },
 "nachalnaya-shkola-36-sankt-peterburg": {
-"district": null,
+"district": "Василеостровский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Канареечная, д 11",
+"rev": true,
+"street": "ул Канареечная",
+"house": "11"
 },
 "shkola-661-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Яхтенная, д 33 к 3",
+"rev": true,
+"street": "ул Яхтенная",
+"house": "33"
 },
 "gimnaziya-168-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Невский пр-кт, д 169",
+"rev": true,
+"street": "Невский пр-кт",
+"house": "169"
 },
 "shkola-643-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Варшавская, д 63",
+"rev": true,
+"street": "ул Варшавская",
+"house": "63"
 },
 "shkola-263-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Старо-Петергофский пр-кт, д 33",
+"rev": true,
+"street": "Старо-Петергофский пр-кт",
+"house": "33"
 },
 "shkola-14-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Крыленко, д 25 к 5",
+"rev": true,
+"street": "ул Крыленко",
+"house": "25"
 },
 "shkola-118-sankt-peterburg": {
 "district": "Выборгский р-н",
@@ -6070,156 +7447,213 @@
 "value": "г Санкт-Петербург, ул Руднева, д 5 к 3"
 },
 "gimnaziya-internat-664-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ударников, д 17 к 2",
+"rev": true,
+"street": "пр-кт Ударников",
+"house": "17"
 },
 "shkola-574-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Шлиссельбургский пр-кт, д 24 к 2",
+"rev": true,
+"street": "Шлиссельбургский пр-кт",
+"house": "24"
 },
 "shkola-339-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Дыбенко, д 12 к 2",
+"rev": true,
+"street": "ул Дыбенко",
+"house": "12"
 },
 "shkola-76-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Болотная, д 18",
+"rev": true,
+"street": "ул Болотная",
+"house": "18"
 },
 "shkola-104-imeni-m-s-kharchenko-ploschadka-2-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Александра Матросова, д 14 литера Б",
+"rev": true,
+"street": "ул Александра Матросова",
+"house": "14"
 },
 "shkola-667-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Джона Рида, д 3 к 1",
+"rev": true,
+"street": "ул Джона Рида",
+"house": "3"
 },
 "shkola-201-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Турку, д 21 к 2",
+"rev": true,
+"street": "ул Турку",
+"house": "21"
 },
 "shkola-683-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Приморский пр-кт, д 157 к 3",
+"rev": true,
+"street": "Приморский пр-кт",
+"house": "157"
 },
 "litsey-373-ekonomicheskiy-litsey-sankt-peterburg": {
-"district": null,
+"district": "Московский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Московский пр-кт, д 96",
+"rev": true,
+"street": "Московский пр-кт",
+"house": "96"
 },
 "gimnaziya-628-aleksandrinskaya-sankt-peterburg": {
-"district": null,
+"district": "Красногвардейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Коммуны, д 42 к 3",
+"rev": true,
+"street": "ул Коммуны",
+"house": "42"
 },
 "shkola-691-nevskaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Союзный пр-кт, д 3 к 2",
+"rev": true,
+"street": "Союзный пр-кт",
+"house": "3"
 },
 "gimnaziya-67-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Профессора Попова, д 25",
+"rev": true,
+"street": "ул Профессора Попова",
+"house": "25"
 },
 "shkola-266-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул 5-я Красноармейская, д 23",
+"rev": true,
+"street": "ул 5-я Красноармейская",
+"house": "23"
 },
 "shkola-154-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Королёва, д 63 к 1",
+"rev": true,
+"street": "пр-кт Королёва",
+"house": "63"
 },
 "shkola-595-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Королёва, д 47 к 2",
+"rev": true,
+"street": "пр-кт Королёва",
+"house": "47"
 },
 "shkola-573-korpus-2-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург",
+"rev": true,
+"street": null,
+"house": null
 },
 "shkola-203-1-y-korpus-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 173 к 3",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "173"
 },
 "shkola-338-sankt-peterburg": {
-"district": null,
+"district": "Невский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Октябрьская наб, д 84 к 1",
+"rev": true,
+"street": "Октябрьская наб",
+"house": "84"
 },
 "inzhenerno-tekhnologicheskaya-shkola-777-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, Лыжный пер, д 4 к 3",
+"rev": true,
+"street": "Лыжный пер",
+"house": "4"
 },
 "shkola-635-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -6230,12 +7664,15 @@
 "value": "г Санкт-Петербург, ул Планерная, д 73 к 1"
 },
 "shkola-573-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Верхне-Каменская, д 5",
+"rev": true,
+"street": "ул Верхне-Каменская",
+"house": "5"
 },
 "shkola-246-nachalnaya-shkola-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -6246,44 +7683,59 @@
 "value": "г Санкт-Петербург, ул Нижне-Каменская, д 2"
 },
 "shkola-238-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Галерная, д 36-38",
+"rev": true,
+"street": "ул Галерная",
+"house": "36-38"
 },
 "shkola-707-korpus-shkolnogo-obrazovaniya-2-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург",
+"rev": true,
+"street": null,
+"house": null
 },
 "shkola-53-sankt-peterburg": {
-"district": null,
+"district": "Приморский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Школьная, д 19",
+"rev": true,
+"street": "ул Школьная",
+"house": "19"
 },
 "shkola-314-sankt-peterburg": {
-"district": null,
+"district": "Фрунзенский р-н",
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург, ул Малая Балканская, д 44",
+"rev": true,
+"street": "ул Малая Балканская",
+"house": "44"
 },
 "shkola-246-sankt-peterburg": {
 "district": null,
 "lat": "59.939084",
 "lon": "30.315879",
-"qc": "4",
+"qc": "rev",
 "city": "Санкт-Петербург",
-"value": "г Санкт-Петербург"
+"value": "г Санкт-Петербург",
+"rev": true,
+"street": null,
+"house": null
 },
 "nekommercheskaya-obscheobrazovatelnaya-vektor-sankt-peterburg": {
 "district": "Петроградский р-н",
@@ -6342,12 +7794,15 @@
 "value": "г Санкт-Петербург, Нарвский пр-кт, д 1 к 29"
 },
 "shkola-apelsin-sankt-peterburg": {
-"district": null,
+"district": "Петроградский р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, наб Реки Карповки, д 5 к 3",
+"rev": true,
+"street": "наб Реки Карповки",
+"house": "5"
 },
 "obscheobrazovatelnoe-srednyaya-obscheobrazovatelnaya-rele-sankt-peterburg": {
 "district": "Красногвардейский р-н",
@@ -6398,12 +7853,15 @@
 "value": "г Санкт-Петербург, ул 8-я Советская, д 58 литера А"
 },
 "otkrytaya-shkola-sankt-peterburg": {
-"district": null,
+"district": "Выборгский р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, пр-кт Энгельса, д 30",
+"rev": true,
+"street": "пр-кт Энгельса",
+"house": "30"
 },
 "obscheobrazovatelnoe-lider-sankt-peterburg": {
 "district": "Красногвардейский р-н",
@@ -6534,12 +7992,15 @@
 "value": "г Санкт-Петербург, ул Союза Печатников, д 24"
 },
 "shkolnoe-vremya-sankt-peterburg": {
-"district": null,
+"district": "Калининский р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, Свердловская наб, д 38 к 5 литера Д",
+"rev": true,
+"street": "Свердловская наб",
+"house": "38"
 },
 "nekommercheskaya-obscheobrazovatelnaya-sankt-peterburgskaya-gumanitarnaya-rost-s": {
 "district": "Выборгский р-н",
@@ -6750,12 +8211,15 @@
 "value": "г Санкт-Петербург, ул 7-я Красноармейская, д 25"
 },
 "delovaya-volna-sankt-peterburg": {
-"district": null,
+"district": "Адмиралтейский р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, ул Садовая, д 121",
+"rev": true,
+"street": "ул Садовая",
+"house": "121"
 },
 "evrika-litsey-sankt-peterburg": {
 "district": "Приморский р-н",
@@ -6806,12 +8270,15 @@
 "value": "г Санкт-Петербург, ул Шпалерная, д 50а"
 },
 "shkola-ekspress-sankt-peterburg": {
-"district": null,
+"district": "Центральный р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, ул Звенигородская, д 28 литера В",
+"rev": true,
+"street": "ул Звенигородская",
+"house": "28"
 },
 "ozarenie-sankt-peterburg": {
 "district": "Петроградский р-н",
@@ -6870,12 +8337,15 @@
 "value": "г Санкт-Петербург, Лермонтовский пр-кт, д 2"
 },
 "shkola-razgovornykh-yazykov-sankt-peterburg": {
-"district": null,
+"district": "Кировский р-н",
 "lat": null,
 "lon": null,
-"qc": null,
-"city": null,
-"value": null
+"qc": "rev",
+"city": "Санкт-Петербург",
+"value": "г Санкт-Петербург, пр-кт Ветеранов, д 4",
+"rev": true,
+"street": "пр-кт Ветеранов",
+"house": "4"
 },
 "laboratoriya-nepreryvnogo-obrazovaniya-sankt-peterburg": {
 "district": "Адмиралтейский р-н",
