@@ -4,6 +4,7 @@ import { regionSlugs, regionLabels, regionLabelsIn, getSchoolsByRegion, RegionSl
 import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
+import DistrictLinks from '@/components/DistrictLinks'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 
 interface Props {
@@ -59,7 +60,7 @@ export default async function RegionPage({ params }: Props) {
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName },
         ]}
-        seoContent={<SeoBlock region={r} count={count} />}
+        seoContent={<><SeoBlock region={r} count={count} /><DistrictLinks region={r} /></>}
       />
     </>
   )

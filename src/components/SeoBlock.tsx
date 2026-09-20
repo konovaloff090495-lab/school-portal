@@ -8,6 +8,7 @@ interface SeoBlockProps {
   count?: number
   metro?: string        // название станции метро
   district?: string     // название района
+  locationPrep?: string // готовая форма места («во Фрунзенском районе») — приоритетнее district/metro/city
   city?: string         // город МО
   customTitle?: string  // произвольный заголовок (для страниц уровней)
   customText?: string   // произвольный SEO-текст
@@ -397,7 +398,7 @@ function cityFacts(region?: RegionSlug, type?: SchoolType) {
   return { total: list.length, free, paidCount: paid.length, minPrice, fullCycle, seniorOnly, boarding, withSite, topTypes }
 }
 
-export default function SeoBlock({ region, type, feature, count = 0, metro, district, city, customTitle, customText, hubHref, hubLabel }: SeoBlockProps) {
+export default function SeoBlock({ region, type, feature, count = 0, metro, district, city, locationPrep, customTitle, customText, hubHref, hubLabel }: SeoBlockProps) {
   // Кастомный вариант для страниц уровней и т.д.
   if (customTitle || customText) {
     return (
@@ -420,7 +421,9 @@ export default function SeoBlock({ region, type, feature, count = 0, metro, dist
   const info        = type ? typeInfo[type] : null
   const exam        = feature ? (examInfo[feature] ?? null) : null
 
-  const locationLabel = metro
+  const locationLabel = locationPrep
+    ? locationPrep
+    : metro
     ? `у метро «${metro}»`
     : district
     ? `в ${district}`
