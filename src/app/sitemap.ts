@@ -8,6 +8,7 @@ import {
   type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
 import { regionProfileIds } from '@/data/region-profiles'
+import { raexRegions } from '@/data/raex'
 import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
@@ -131,6 +132,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionAddressPages: MetadataRoute.Sitemap = regionSlugs
     .filter(r => schools.filter(s => s.region === r).length >= 3)
     .map(r => ({ url: `${BASE_URL}/shkoly/${r}/adresa/`, lastModified: D_SCHOOLS, changeFrequency: 'weekly' as const, priority: 0.7 }))
+
+  // Рейтинг школ города по данным RAEX (роут /shkoly/[region]/reyting/) — где ≥5 школ в рейтинге
+  const regionRatingPages: MetadataRoute.Sitemap = raexRegions(regionSlugs)
+    .map(r => ({ url: `${BASE_URL}/shkoly/${r}/reyting/`, lastModified: D_SCHOOLS, changeFrequency: 'monthly' as const, priority: 0.7 }))
 
   const moCityPages: MetadataRoute.Sitemap = moCitySlugs.map(c => ({
     url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/`,
@@ -335,7 +340,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...shkolyTypePages, ...onlineBrandPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
-    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages,
+    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,
     ...testPages,

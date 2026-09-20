@@ -71,7 +71,7 @@ export default async function CityDistrictTypePage({ params }: Props) {
         items={[
           { name: 'Все школы', href: 'https://pro-schools.ru/shkoly/' },
           { name: regionName, href: `https://pro-schools.ru/shkoly/${r}/` },
-          { name: `${d.label} район`, href: `https://pro-schools.ru/shkoly/${r}/rayon/${district}/` },
+          { name: `${d.label} ${d.kind ?? 'район'}`, href: `https://pro-schools.ru/shkoly/${r}/rayon/${district}/` },
           { name: typeName },
         ]}
       />
@@ -91,7 +91,7 @@ export default async function CityDistrictTypePage({ params }: Props) {
         breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
-          { label: `${d.label} район`, href: `/shkoly/${r}/rayon/${district}/` },
+          { label: `${d.label} ${d.kind ?? 'район'}`, href: `/shkoly/${r}/rayon/${district}/` },
           { label: typeName },
         ]}
         seoContent={

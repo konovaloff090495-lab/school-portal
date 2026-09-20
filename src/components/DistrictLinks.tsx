@@ -41,7 +41,7 @@ export default function DistrictLinks({ region, current, type, typeName }: Props
               href={type ? `/shkoly/${region}/rayon/${d.slug}/${type}/` : `/shkoly/${region}/rayon/${d.slug}/`}
               className="text-blue-700 hover:underline"
             >
-              {d.label} район
+              {d.label} {d.kind ?? 'район'}
             </Link>
             <span className="text-gray-400"> · {d.n}</span>
           </li>

@@ -68,7 +68,7 @@ export default async function AddressesPage({ params }: Props) {
   if (hasDistricts) {
     for (const d of districts) {
       const items = sortSchools(all.filter(s => s.district === d.label))
-      if (items.length) groups.push({ title: `${d.label} район`, href: `/shkoly/${r}/rayon/${d.slug}/`, items })
+      if (items.length) groups.push({ title: `${d.label} ${d.kind ?? 'район'}`, href: `/shkoly/${r}/rayon/${d.slug}/`, items })
     }
     const rest = sortSchools(all.filter(s => !s.district || !districts.some(d => d.label === s.district)))
     if (rest.length) groups.push({ title: 'Район не указан', items: rest })

@@ -59,7 +59,7 @@ export default async function CityDistrictPage({ params }: Props) {
         items={[
           { name: 'Все школы', href: 'https://pro-schools.ru/shkoly/' },
           { name: regionName, href: `https://pro-schools.ru/shkoly/${r}/` },
-          { name: `${d.label} район` },
+          { name: `${d.label} ${d.kind ?? 'район'}` },
         ]}
       />
       <SchoolListJsonLd
@@ -76,7 +76,7 @@ export default async function CityDistrictPage({ params }: Props) {
         breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
-          { label: `${d.label} район` },
+          { label: `${d.label} ${d.kind ?? 'район'}` },
         ]}
         seoContent={
           <>
