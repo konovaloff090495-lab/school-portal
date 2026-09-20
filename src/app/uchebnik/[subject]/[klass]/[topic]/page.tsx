@@ -10,6 +10,7 @@ import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import AdCard from '@/components/AdCard'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3, splitForInlineAd } from '@/lib/ads'
+import { BreadcrumbJsonLd, TextbookTopicJsonLd } from '@/lib/schema'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -89,8 +90,25 @@ export default async function TopicPage({ params }: Props) {
   const prevTopic = currentIdx > 0 ? allTopics[currentIdx - 1] : null
   const nextTopic = currentIdx < allTopics.length - 1 ? allTopics[currentIdx + 1] : null
 
+  const pageUrl = `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/${topicSlug}/`
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <BreadcrumbJsonLd items={[
+        { name: 'Главная', href: 'https://pro-schools.ru/' },
+        { name: 'Учебник', href: 'https://pro-schools.ru/uchebnik/' },
+        { name: subject.title, href: `https://pro-schools.ru/uchebnik/${subjectSlug}/` },
+        { name: klassLabel(klass), href: `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/` },
+        { name: topic.title },
+      ]} />
+      <TextbookTopicJsonLd
+        title={topic.title}
+        description={topic.excerpt}
+        url={pageUrl}
+        subject={subject.title}
+        klass={klass}
+        publishedAt={article?.publishedAt}
+      />
       {/* Header */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
@@ -128,6 +146,11 @@ export default async function TopicPage({ params }: Props) {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
               <>
+                {/* Лид = прямой ответ на запрос: excerpt сформулирован как определение/ответ,
+                    он же идёт в description. Поисковики берут первый абзац под H1 в сниппет. */}
+                <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-6 pl-4 border-l-4 border-blue-500">
+                  {topic.excerpt}
+                </p>
                 <div
                   className="textbook-content"
                   dangerouslySetInnerHTML={{ __html: articleHead }}
