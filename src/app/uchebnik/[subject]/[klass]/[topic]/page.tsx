@@ -38,8 +38,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     // Title под интент: тема впереди (совпадение с запросом), брендовый хвост
     // убран — он не тянул CTR, а хук «объяснение и примеры» тянет.
-    title: `${topic.title} — ${subject.title}, ${klass} класс: объяснение и примеры`,
-    description: `${topic.excerpt} Тема «${topic.title}» простыми словами с примерами и определениями — для ${klassLabelOf(klass)} и подготовки к уроку.`,
+    // Длинный заголовок темы (он уже сформулирован под запрос) не растягиваем
+    // хвостом — Яндекс режет title около 60 символов.
+    title: topic.title.length > 36
+      ? `${topic.title} — ${subject.title}, ${klass} класс`
+      : `${topic.title} — ${subject.title}, ${klass} класс: объяснение и примеры`,
+    // Развёрнутый excerpt (≥110 символов) — уже готовый description; короткий дополняем шаблоном.
+    description: topic.excerpt.length >= 110
+      ? topic.excerpt
+      : `${topic.excerpt} Тема «${topic.title}» простыми словами с примерами и определениями — для ${klassLabelOf(klass)} и подготовки к уроку.`,
     keywords: `${topic.title.toLowerCase()}, ${subject.title.toLowerCase()} ${klass} класс, ${topic.title.toLowerCase()} объяснение, ${topic.title.toLowerCase()} примеры`,
     alternates: { canonical: `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/${topicSlug}/` },
   }
