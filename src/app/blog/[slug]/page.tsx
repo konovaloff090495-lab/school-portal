@@ -163,6 +163,17 @@ export default async function BlogPostPage({ params }: Props) {
         .post-body li { margin-bottom: 8px; }
         .post-body strong { color: var(--ink); font-weight: 700; }
         .post-body em { color: var(--ink-2); font-style: italic; }
+        /* Фото внутри статьи (content/blog/*.json → <figure class="post-photo">) */
+        .post-body figure.post-photo { margin: 24px 0 28px; }
+        .post-body figure.post-photo img {
+          display: block; width: 100%; height: auto; border-radius: 14px;
+          border: 1px solid rgba(26,24,20,0.07);
+        }
+        .post-body figure.post-photo figcaption {
+          font-family: var(--font-manrope, sans-serif);
+          font-size: 13px; line-height: 1.5; color: var(--ink-3);
+          margin-top: 8px; padding: 0 4px;
+        }
         .in-article-ad {
           margin: 28px 0;
           padding: 12px 14px 14px;
