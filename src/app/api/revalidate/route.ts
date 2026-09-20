@@ -17,8 +17,9 @@ export async function POST(req: NextRequest) {
 
   let slug: unknown
   let gdz: unknown
+  let uchebnik: unknown
   try {
-    ;({ slug, gdz } = await req.json())
+    ;({ slug, gdz, uchebnik } = await req.json())
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
   }
@@ -34,6 +35,16 @@ export async function POST(req: NextRequest) {
     revalidated.push('/sitemap-gdz.xml')
     for (let i = 1; i <= 30; i++) revalidatePath(`/sitemap-gdz/${i}`)
     revalidated.push('/sitemap-gdz/1..30')
+    revalidatePath('/sitemap.xml')
+    revalidated.push('/sitemap.xml')
+    return NextResponse.json({ revalidated, now: Date.now() })
+  }
+  // Массовые правки тем «Учебника» (заголовки/описания, шаблон): страницы тем
+  // живут в ISR-кэше сутки (revalidate = 86400), и после деплоя прод отдаёт старый
+  // HTML — сбрасываем весь раздел.
+  if (uchebnik === true) {
+    revalidatePath('/uchebnik', 'layout')
+    revalidated.push('/uchebnik/*')
     revalidatePath('/sitemap.xml')
     revalidated.push('/sitemap.xml')
     return NextResponse.json({ revalidated, now: Date.now() })
