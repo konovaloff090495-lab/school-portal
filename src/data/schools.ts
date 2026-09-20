@@ -282845,8 +282845,14 @@ export function schoolMatchesType(s: School, type: SchoolType): boolean {
   if (s.type === type) return true
   if (type === 'podgotovka-oge' && s.type === 'podgotovka-ege') return (s.features ?? []).includes('Подготовка к ОГЭ')
   if (type === 'litsei') return isLyceum(s)
+  if (type === 'internaty') return INTERNAT_RE.test(s.name)
+  if (type === 'pravoslavnye') return PRAVOSLAV_RE.test(s.name)
   return false
 }
+// Интернаты и православные школы тоже лежат под другими типами (гос., коррекционные, частные):
+// собираем по названию (20.09.2026) — даёт +12 и +10 городов с индексируемой страницей (≥3 школ).
+const INTERNAT_RE = /интернат/i
+const PRAVOSLAV_RE = /православн/i
 
 // Лицеи — не отдельный тип в данных: 780+ лицеев лежат в профильных, при вузах,
 // частных и т. д. Страницы типа 'litsei' собирают их по названию (17.09.2026).
@@ -282905,6 +282911,48 @@ export const moscowDistrictFullNames: Record<MoscowDistrictSlug, string> = {
 
 export function getSchoolsByDistrict(district: string): School[] {
   return schools.filter(s => s.region === 'moskva' && s.district === district)
+}
+
+// ─── Районы городов (кроме Москвы — у неё округа выше) ───────────────────────
+// Поле district у карточки = label. Санкт-Петербург заполнен по DaData (адрес → район),
+// 20.09.2026, scripts/geocode-spb-districts.py. Спрос «школы {район} {город}» — 982 тыс./мес по
+// стране, у Петербурга ~80 тыс. (Приморский 11,8 тыс., Выборгский 8,1, Невский 6,5).
+export interface CityDistrict {
+  slug: string
+  label: string      // «Приморский» — совпадает с полем district карточки
+  gen: string        // «Приморского района» — для title «Школы Приморского района Санкт-Петербурга»
+  prep: string       // «в Приморском районе»
+}
+export const cityDistricts: Partial<Record<RegionSlug, CityDistrict[]>> = {
+  'sankt-peterburg': [
+    { slug: 'admiralteyskiy',   label: 'Адмиралтейский',   gen: 'Адмиралтейского района',   prep: 'в Адмиралтейском районе' },
+    { slug: 'vasileostrovskiy', label: 'Василеостровский', gen: 'Василеостровского района', prep: 'в Василеостровском районе' },
+    { slug: 'vyborgskiy',       label: 'Выборгский',       gen: 'Выборгского района',       prep: 'в Выборгском районе' },
+    { slug: 'kalininskiy',      label: 'Калининский',      gen: 'Калининского района',      prep: 'в Калининском районе' },
+    { slug: 'kirovskiy',        label: 'Кировский',        gen: 'Кировского района',        prep: 'в Кировском районе' },
+    { slug: 'kolpinskiy',       label: 'Колпинский',       gen: 'Колпинского района',       prep: 'в Колпинском районе' },
+    { slug: 'krasnogvardeyskiy',label: 'Красногвардейский',gen: 'Красногвардейского района',prep: 'в Красногвардейском районе' },
+    { slug: 'krasnoselskiy',    label: 'Красносельский',   gen: 'Красносельского района',   prep: 'в Красносельском районе' },
+    { slug: 'kronshtadtskiy',   label: 'Кронштадтский',    gen: 'Кронштадтского района',    prep: 'в Кронштадтском районе' },
+    { slug: 'kurortnyy',        label: 'Курортный',        gen: 'Курортного района',        prep: 'в Курортном районе' },
+    { slug: 'moskovskiy',       label: 'Московский',       gen: 'Московского района',       prep: 'в Московском районе' },
+    { slug: 'nevskiy',          label: 'Невский',          gen: 'Невского района',          prep: 'в Невском районе' },
+    { slug: 'petrogradskiy',    label: 'Петроградский',    gen: 'Петроградского района',    prep: 'в Петроградском районе' },
+    { slug: 'petrodvortsovyy',  label: 'Петродворцовый',   gen: 'Петродворцового района',   prep: 'в Петродворцовом районе' },
+    { slug: 'primorskiy',       label: 'Приморский',       gen: 'Приморского района',       prep: 'в Приморском районе' },
+    { slug: 'pushkinskiy',      label: 'Пушкинский',       gen: 'Пушкинского района',       prep: 'в Пушкинском районе' },
+    { slug: 'frunzenskiy',      label: 'Фрунзенский',      gen: 'Фрунзенского района',      prep: 'во Фрунзенском районе' },
+    { slug: 'tsentralnyy',      label: 'Центральный',      gen: 'Центрального района',      prep: 'в Центральном районе' },
+  ],
+}
+export function getCityDistricts(region: RegionSlug): CityDistrict[] {
+  return cityDistricts[region] ?? []
+}
+export function getCityDistrict(region: RegionSlug, slug: string): CityDistrict | undefined {
+  return getCityDistricts(region).find(d => d.slug === slug)
+}
+export function getSchoolsByRegionDistrict(region: RegionSlug, label: string): School[] {
+  return schools.filter(s => s.region === region && s.district === label)
 }
 
 export type MoCitySlug = 'balashikha' | 'dmitrov' | 'dolgoprudny' | 'domodedovo' | 'zheleznodorozhny' | 'klin' | 'kolomna' | 'korolev' | 'krasnogorsk' | 'lyubertsy' | 'mytishchi' | 'noginsk' | 'odintsovo' | 'podolsk' | 'ramenskoye' | 'reutov' | 'ruza' | 'serpukhov' | 'khimki' | 'shchyolkovo'
