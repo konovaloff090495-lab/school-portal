@@ -23,6 +23,6 @@ for title, p in todo[start:start + count]:
             idx = next((i for i, a in enumerate(ans) if marker in a), None)
             cond = ans[idx + 1] if idx is not None and idx + 1 < len(ans) else ' | '.join(ans)
         else:
-            cond = ' | '.join(ans)
+            cond = ' | '.join(ans) or e.get('condition', '')
         imgs = ' '.join(e.get('images') or [])
     print(f'{n}\t{cond}\t[{imgs}]')
