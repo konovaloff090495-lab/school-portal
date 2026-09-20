@@ -163,6 +163,16 @@ export default async function BlogPostPage({ params }: Props) {
         .post-body li { margin-bottom: 8px; }
         .post-body strong { color: var(--ink); font-weight: 700; }
         .post-body em { color: var(--ink-2); font-style: italic; }
+        /* Таблицы в теле статьи (582 статьи используют <table>, стилей не было — рендерились без рамок) */
+        .post-body table {
+          width: 100%; border-collapse: collapse; margin: 0 0 20px;
+          font-family: var(--font-manrope, sans-serif); font-size: 15px; line-height: 1.5; color: #2D2620;
+          display: block; overflow-x: auto;
+        }
+        .post-body th, .post-body td {
+          border: 1px solid rgba(26,24,20,0.12); padding: 10px 12px; text-align: left; vertical-align: top;
+        }
+        .post-body thead th { background: #FBF9F6; font-weight: 700; color: var(--ink); }
         /* Фото внутри статьи (content/blog/*.json → <figure class="post-photo">) */
         .post-body figure.post-photo { margin: 24px 0 28px; }
         .post-body figure.post-photo img {
