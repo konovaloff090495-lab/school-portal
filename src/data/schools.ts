@@ -284166,7 +284166,7 @@ export function getSchoolsByMoCity(city: string): School[] {
 }
 
 // Feature-based filtering
-export type FeatureSlug = 's-bassejnom' | 'it-klass' | 'meditsinskij-klass' | 'uglublenny-anglijskij' | 'kadety' | 'prodlyonka' | 'boarding' | 'podgotovka-k-ege' | 'podgotovka-k-oge'
+export type FeatureSlug = 's-bassejnom' | 'it-klass' | 'meditsinskij-klass' | 'uglublenny-anglijskij' | 'kadety' | 'prodlyonka' | 'boarding' | 'podgotovka-k-ege' | 'podgotovka-k-oge' | 'kadetskiy-klass' | 'inzhenernyy-klass'
 
 export interface FeatureMeta {
   slug: FeatureSlug
@@ -284218,6 +284218,25 @@ export const featureMetas: FeatureMeta[] = [
     description: 'Школы с группой продлённого дня (ГПД). Найдите школу с продлёнкой рядом с домом — удобно для работающих родителей.',
     keywords: ['продлёнк', 'продленк', 'группа продлённого', 'gpd', 'после уроков'],
   },
+  // Кадетские и инженерные классы (20.09.2026): спрос «кадетский класс» 71 тыс./мес,
+  // «инженерный класс» 39 тыс. (Вордстат). Берём из features/описаний: 281 и 97 карточек.
+  // Педагогический класс не заводим — в базе 19 карточек, ни одного города с ≥3.
+  {
+    slug: 'kadetskiy-klass',
+    label: 'Кадетские классы',
+    labelGen: 'с кадетскими классами',
+    title: 'Школы с кадетскими классами',
+    description: 'Школы с кадетскими классами: обычные школы с кадетским компонентом и кадетские школы, корпуса и училища. Как поступить, с какого класса набор, форма, строевая и военно-патриотическая подготовка.',
+    keywords: ['кадетск'],
+  },
+  {
+    slug: 'inzhenernyy-klass',
+    label: 'Инженерные классы',
+    labelGen: 'с инженерными классами',
+    title: 'Школы с инженерными классами',
+    description: 'Школы с инженерными классами и инженерным профилем: углублённые физика, математика и информатика, партнёрство с техническими вузами, робототехника и 3D-моделирование.',
+    keywords: ['инженерн'],
+  },
   {
     slug: 'boarding',
     label: 'Школы-пансионы',
@@ -284256,6 +284275,11 @@ export const regionFeatureSkipSlugs: FeatureSlug[] = [
   'podgotovka-k-oge',
   'it-klass',
 ]
+
+// Особенности с порогом тонкости: региональная страница индексируется и попадает в sitemap
+// только при ≥ FEATURE_MIN школ (иначе Яндекс выносит как малоценную).
+export const thinGuardedFeatures: FeatureSlug[] = ['kadetskiy-klass', 'inzhenernyy-klass']
+export const FEATURE_MIN = 3
 
 export function getFeatureBySlug(slug: string): FeatureMeta | undefined {
   return featureMetas.find(f => f.slug === slug)
