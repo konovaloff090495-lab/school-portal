@@ -44,6 +44,9 @@ if '--apply' in sys.argv:
                 if re.search(r"\n(\s*)district: '[^']*',",b): b=re.sub(r"district: '[^']*',",f"district: '{label}',",b,count=1)
                 else: b=re.sub(r"(\n(\s*)address: '[^']*',)",lambda m:m.group(1)+f"\n{m.group(2)}district: '{label}',",b,count=1)
                 upd+=1
+                # обратное геокодирование дало улицу и дом — заполняем пустой адрес «г. Санкт-Петербург»
+                if c.get('qc')=='rev' and c.get('street') and c.get('house') and re.search(r"address: 'г\. Санкт-Петербург'",b):
+                    b=re.sub(r"address: 'г\. Санкт-Петербург'",f"address: '{c['street']}, д. {c['house']}'",b,count=1)
                 if c.get('qc') in ('0',0) and c.get('lat'):
                     if re.search(r"\n\s*lat: ",b): b=re.sub(r"lat: [-\d.]+",f"lat: {c['lat']}",b,count=1); b=re.sub(r"lon: [-\d.]+",f"lon: {c['lon']}",b,count=1)
                     else: b=re.sub(r"(\n(\s*)district: '[^']*',)",lambda m:m.group(1)+f"\n{m.group(2)}lat: {c['lat']},\n{m.group(2)}lon: {c['lon']},",b,count=1)
