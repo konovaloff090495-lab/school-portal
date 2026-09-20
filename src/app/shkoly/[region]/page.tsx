@@ -5,6 +5,7 @@ import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import DistrictLinks from '@/components/DistrictLinks'
+import { raexRegions } from '@/data/raex'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 
 interface Props {
@@ -37,6 +38,7 @@ export default async function RegionPage({ params }: Props) {
   const regionIn = regionLabelsIn[r]
   const list = getSchoolsByRegion(r)
   const count = list.length
+  const hasRating = raexRegions([r]).length > 0
 
   return (
     <>
@@ -65,6 +67,7 @@ export default async function RegionPage({ params }: Props) {
           <DistrictLinks region={r} />
           <p className="mt-6 text-sm text-gray-700">
             Нужен полный список? <a href={`/shkoly/${r}/adresa/`} className="text-blue-700 hover:underline">Адреса и телефоны всех {count} школ {regionLabelsOf[r]}</a> одной таблицей.
+            {hasRating && <> Лучшие по результатам выпускников — в <a href={`/shkoly/${r}/reyting/`} className="text-blue-700 hover:underline">рейтинге школ {regionLabelsOf[r]} по данным RAEX</a>.</>}
           </p>
         </>}
       />

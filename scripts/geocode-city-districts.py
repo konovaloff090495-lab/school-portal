@@ -19,11 +19,13 @@ def dadata(path,body):
         except Exception as e: time.sleep(2*(i+1)); err=e
     print("  ERR dadata",body.get('query'),err); return None
 def overpass(q):
-    for m in ["https://overpass-api.de/api/interpreter","https://overpass.private.coffee/api/interpreter","https://overpass.kumi.systems/api/interpreter"]:
-        try:
-            r=urllib.request.Request(m,data=urllib.parse.urlencode({"data":q}).encode(),headers={"User-Agent":"pro-schools-districts/1.0"})
-            return json.load(urllib.request.urlopen(r,timeout=180))
-        except Exception as e: print("  overpass",m,str(e)[:60]); time.sleep(5)
+    for attempt in range(3):
+        for m in ["https://overpass-api.de/api/interpreter","https://overpass.private.coffee/api/interpreter","https://overpass.kumi.systems/api/interpreter"]:
+            try:
+                r=urllib.request.Request(m,data=urllib.parse.urlencode({"data":q}).encode(),headers={"User-Agent":"pro-schools-districts/1.0"})
+                return json.load(urllib.request.urlopen(r,timeout=240))
+            except Exception as e: print("  overpass",m,str(e)[:60],flush=True); time.sleep(10)
+        time.sleep(30)
     return None
 def rel_polygon(rel):
     lines=[]
@@ -38,7 +40,7 @@ def rel_polygon(rel):
 def translit(t):
     m={'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya',' ':'-','-':'-'}
     return ''.join(m.get(ch,'') for ch in t.lower())
-def decline(label):
+def decline(label,kind='район'):
     # прилагательные на -ский/-ый/-ой/-ий → родительный и предложный
     w=label.split(' ')[-1]; head=' '.join(label.split(' ')[:-1]); head=head+' ' if head else ''
     if w.endswith('ский') or w.endswith('цкий'): g=w[:-2]+'ого'; p=w[:-2]+'ом'
@@ -46,7 +48,8 @@ def decline(label):
     elif w.endswith('ий'): g=w[:-2]+'его'; p=w[:-2]+'ем'
     else: return None
     v='во' if re.match(r'^[фв][^аеёиоуыэюя]',label.lower()) else 'в'
-    return f"{head}{g} района", f"{v} {head}{p} районе"
+    kg,kp=('округа','округе') if kind=='округ' else ('района','районе')
+    return f"{head}{g} {kg}", f"{v} {head}{p} {kp}"
 args=[a for a in sys.argv[1:] if not a.startswith('--')]; apply='--apply' in sys.argv
 s=open(TS,encoding='utf-8').read(); blocks=re.split(r'\n(?=\s*\{\n)',s)
 _i=s.find('export const regionLabels:'); regionLabels=dict(re.findall(r"^\s*'([a-z-]+)':\s*'([^']+)',$",s[_i:s.find('\n}\n',_i)],re.M))
@@ -64,7 +67,10 @@ for region in args:
         b=cache['bbox']
         d=overpass(f'[out:json][timeout:180];rel["boundary"="administrative"]["admin_level"="9"]({b[0]},{b[1]},{b[2]},{b[3]});out geom;')
         if not d: print("  Overpass не ответил"); continue
-        cache['rels']=[e for e in d['elements'] if 'район' in (e['tags'].get('name') or '').lower()]
+        rels=[e for e in d['elements'] if 'район' in (e['tags'].get('name') or '').lower()]
+        # Краснодар и ряд городов делятся на внутригородские округа, а не районы
+        if not rels: rels=[e for e in d['elements'] if 'округ' in (e['tags'].get('name') or '').lower()]; cache['kind']='округ'
+        cache['rels']=rels
         time.sleep(8)
     polys={}
     for e in cache['rels']:
@@ -75,7 +81,9 @@ for region in args:
     recs=[]
     for i,b in enumerate(blocks):
         if f"region: '{region}'" not in b: continue
-        sid=re.search(r"id: '([^']*)'",b)[1]; addr=re.search(r"address: '([^']*)'",b); addr=addr[1] if addr else ''
+        sidm=re.search(r"id: '([^']*)'",b)
+        if not sidm: continue   # не карточка (упоминание региона в другом объекте)
+        sid=sidm[1]; addr=re.search(r"address: '([^']*)'",b); addr=addr[1] if addr else ''
         la=re.search(r"lat: ([-\d.]+)",b); lo=re.search(r"lon: ([-\d.]+)",b)
         ll=(float(la[1]),float(lo[1])) if la and lo else None
         if ll: pts[ll]+=1
@@ -99,11 +107,11 @@ for region in args:
         if not (ll and pts[ll]==1): newll[sid]=p
         pt=Point(p[1],p[0])
         for name,poly in polys.items():
-            if poly.contains(pt): assign[sid]=name.replace(' район','').strip(); cnt[assign[sid]]+=1; break
+            if poly.contains(pt): assign[sid]=re.sub(r'\s*(внутригородской\s+|административный\s+)?(район|округ)\s*','',name).strip(); cnt[assign[sid]]+=1; break
     print("  школ с районом:",len(assign),"из",len(recs),'|',cnt.most_common())
     reg=[]
     for name in sorted(cnt):
-        dec=decline(name)
+        dec=decline(name,cache.get('kind','район'))
         if not dec: print("  !! не склоняется:",name); continue
         reg.append({'slug':translit(name),'label':name,'gen':dec[0],'prep':dec[1]})
     registry[region]=reg
