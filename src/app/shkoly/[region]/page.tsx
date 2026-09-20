@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { regionSlugs, regionLabels, regionLabelsIn, getSchoolsByRegion, RegionSlug } from '@/data/schools'
+import { regionSlugs, regionLabels, regionLabelsIn, regionLabelsOf, getSchoolsByRegion, RegionSlug } from '@/data/schools'
 import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
@@ -60,7 +60,13 @@ export default async function RegionPage({ params }: Props) {
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName },
         ]}
-        seoContent={<><SeoBlock region={r} count={count} /><DistrictLinks region={r} /></>}
+        seoContent={<>
+          <SeoBlock region={r} count={count} />
+          <DistrictLinks region={r} />
+          <p className="mt-6 text-sm text-gray-700">
+            Нужен полный список? <a href={`/shkoly/${r}/adresa/`} className="text-blue-700 hover:underline">Адреса и телефоны всех {count} школ {regionLabelsOf[r]}</a> одной таблицей.
+          </p>
+        </>}
       />
     </>
   )

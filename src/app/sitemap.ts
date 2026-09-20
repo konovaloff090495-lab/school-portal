@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
-  cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType,
+  cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType, thinGuardedFeatures, FEATURE_MIN,
   featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs, MICRO_GEO_SKIP_TYPES,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
   getSchoolsByFeature,
@@ -126,6 +126,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     }
   }
+
+  // Адреса всех школ города (роут /shkoly/[region]/adresa/) — интент «адреса школ {город}»
+  const regionAddressPages: MetadataRoute.Sitemap = regionSlugs
+    .filter(r => schools.filter(s => s.region === r).length >= 3)
+    .map(r => ({ url: `${BASE_URL}/shkoly/${r}/adresa/`, lastModified: D_SCHOOLS, changeFrequency: 'weekly' as const, priority: 0.7 }))
 
   const moCityPages: MetadataRoute.Sitemap = moCitySlugs.map(c => ({
     url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/`,
@@ -281,6 +286,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionFeaturePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
     featureSlugs
       .filter(f => !regionFeatureSkipSlugs.includes(f))
+      // новые особенности с порогом тонкости — только города с ≥3 школами (в роуте там noindex)
+      .filter(f => !thinGuardedFeatures.includes(f) || getSchoolsByFeature(f, r).length >= FEATURE_MIN)
       .map(f => ({ url: `${BASE_URL}/shkoly/${r}/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65 }))
   )
   const regionPodgotovkaPages: MetadataRoute.Sitemap = regionSlugs.flatMap(r => [
@@ -328,7 +335,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...shkolyTypePages, ...onlineBrandPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
-    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages,
+    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,
     ...testPages,

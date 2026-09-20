@@ -49,7 +49,7 @@ def decline(label):
     return f"{head}{g} района", f"{v} {head}{p} районе"
 args=[a for a in sys.argv[1:] if not a.startswith('--')]; apply='--apply' in sys.argv
 s=open(TS,encoding='utf-8').read(); blocks=re.split(r'\n(?=\s*\{\n)',s)
-regionLabels=dict(re.findall(r"^\s*'([a-z-]+)':\s*'([^']+)',$",s[s.find('export const regionLabels:'):s.find('export const regionLabelsOf')],re.M))
+_i=s.find('export const regionLabels:'); regionLabels=dict(re.findall(r"^\s*'([a-z-]+)':\s*'([^']+)',$",s[_i:s.find('\n}\n',_i)],re.M))
 registry={}
 for region in args:
     city=regionLabels.get(region)

@@ -5,6 +5,7 @@ import {
   featureSlugs, featureMetas, getFeatureBySlug, getSchoolsByFeature,
   regionFeatureSkipSlugs,
   RegionSlug, FeatureSlug,
+  thinGuardedFeatures, FEATURE_MIN,
 } from '@/data/schools'
 import CatalogClient from '../../../CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
@@ -48,6 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: { canonical: `https://pro-schools.ru/shkoly/${r}/osobennosti/${f}/` },
     openGraph: { title, description, url: `https://pro-schools.ru/shkoly/${r}/osobennosti/${f}/` },
+    // Новые особенности (кадетские/инженерные классы) в городах с < 3 школами — noindex (тонкая страница).
+    ...(thinGuardedFeatures.includes(f) && count < FEATURE_MIN ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
