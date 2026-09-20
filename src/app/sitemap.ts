@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
-  cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType, RegionSlug,
+  cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType,
   featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs, MICRO_GEO_SKIP_TYPES,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
   getSchoolsByFeature,
