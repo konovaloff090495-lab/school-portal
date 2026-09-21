@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import {
   olimpSubjects, olimpPapers, getOlimpSubject, getOlimpStage, papersBySubject, papersByClass, papersByStageYear,
   classesForSubject, stageYearsForSubject, sortPapers, olimpUrl, stageYearUrl, classUrl,
-  parseStageYear, parseKlassSlug, olimpYears, textbookSubjectsFor,
+  parseStageYear, parseKlassSlug, olimpYears, textbookSubjectsFor, getOlimpPrep, prepSubjects,
 } from '@/data/olimp'
 import { getSubjectBySlug, getTopicsForSubjectAndClass } from '@/data/textbook'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
@@ -25,6 +25,7 @@ export function generateStaticParams() {
     for (const sy of stageYearsForSubject(s.slug)) out.push({ subject: s.slug, sub: `${sy.stage.slug}-${sy.year}` })
   }
   for (const k of allClasses) out.push({ subject: 'klass', sub: `${k}-klass` })
+  for (const sl of prepSubjects()) out.push({ subject: sl, sub: 'podgotovka' })
   return out
 }
 
@@ -48,6 +49,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const s = getOlimpSubject(subject)
   if (!s) return {}
+  if (sub === 'podgotovka') {
+    if (!getOlimpPrep(subject)) return {}
+    // Вордстат: «подготовка к олимпиаде по математике» 6 825, «…по русскому» 4 203, «…по английскому» 3 145
+    return {
+      title: `Подготовка к олимпиаде по ${s.dat}: как устроена ВсОШ, типы заданий, план и книги`,
+      description: `Как подготовиться к олимпиаде по ${s.dat}: структура этапов ВсОШ, какие задания встречаются, темы по классам, пошаговый план, задачники и типичные ошибки. Задания прошлых лет с ответами — в архиве.`,
+      keywords: `подготовка к олимпиаде по ${s.dat}, как подготовиться к олимпиаде по ${s.dat}, олимпиада по ${s.dat} что нужно знать, всош ${s.dat} подготовка`,
+      alternates: { canonical: `${SITE}/olimpiady/${subject}/podgotovka/` },
+    }
+  }
   if (klass) {
     const list = papersByClass(subject, klass)
     if (!list.length) return {}
@@ -169,6 +180,83 @@ export default async function OlimpSubPage({ params }: Props) {
 
   const s = getOlimpSubject(subject)
   if (!s) notFound()
+
+  // ── Подготовка к олимпиаде по предмету ──
+  if (sub === 'podgotovka') {
+    const pr = getOlimpPrep(subject)
+    if (!pr) notFound()
+    const classes = classesForSubject(subject)
+    const latest = sortPapers(papersBySubject(subject)).slice(0, 8)
+    const ld = [
+      { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Олимпиады', item: `${SITE}/olimpiady/` },
+        { '@type': 'ListItem', position: 2, name: s.name, item: `${SITE}/olimpiady/${subject}/` },
+        { '@type': 'ListItem', position: 3, name: 'Подготовка', item: `${SITE}/olimpiady/${subject}/podgotovka/` } ] },
+      { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: pr.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+      { '@context': 'https://schema.org', '@type': 'Article', headline: `Подготовка к олимпиаде по ${s.dat}`, dateModified: pr.updated, inLanguage: 'ru',
+        mainEntityOfPage: `${SITE}/olimpiady/${subject}/podgotovka/`, publisher: { '@type': 'Organization', name: 'pro-schools.ru' } },
+    ]
+    return (
+      <div className="gdz-shell">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+        <main className="gdz-main">
+          <nav className="gdz-crumbs" aria-label="Хлебные крошки">
+            <Link href="/">Главная</Link><span className="sep">/</span>
+            <Link href="/olimpiady/">Олимпиады</Link><span className="sep">/</span>
+            <Link href={`/olimpiady/${subject}/`}>{s.name}</Link><span className="sep">/</span>
+            <span className="cur">Подготовка</span>
+          </nav>
+          <div className="gdz-pagehead">
+            <div className="gdz-eyebrow"><span className="dot"></span>{s.icon} Руководство · ВсОШ по {s.dat}</div>
+            <h1>Подготовка к олимпиаде по {s.dat}</h1>
+            <p className="lede">{pr.lede}</p>
+          </div>
+          <div className="gdz-classbar">
+            {classes.map(k => <Link key={k} href={classUrl(subject, k)}>{k} класс</Link>)}
+          </div>
+          <Ads sfx="ol-prep" />
+          {pr.sections.map((sec, i) => (
+            <div key={sec.h2}>
+              <section className="ol-text ol-seo ol-guide">
+                <h2>{sec.h2}</h2>
+                <div dangerouslySetInnerHTML={{ __html: sec.html }} />
+              </section>
+              {i === 1 && (
+                <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+                  <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+                  <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_2} suffix="ol-prep-mid" /></div>
+                </aside>
+              )}
+            </div>
+          ))}
+          <section className="ol-text ol-seo">
+            <h2>Частые вопросы</h2>
+            {pr.faq.map(f => (
+              <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>
+            ))}
+          </section>
+          <section className="gdz-section">
+            <div className="gdz-section-head"><h2>Задания прошлых лет по {s.dat}</h2><Link className="more" href={`/olimpiady/${subject}/`}>Все комплекты →</Link></div>
+            <div className="ol-paper-grid">{latest.map(p => <PaperCard key={p.id} p={p} />)}</div>
+          </section>
+          <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_3} suffix="ol-prep-bottom" /></div>
+          </aside>
+        </main>
+        <Rail sfx="ol-prep">
+          <div className="ol-rail-box">
+            <h3>Подготовка по другим предметам</h3>
+            <div className="ol-rail-list">
+              {prepSubjects().filter(x => x !== subject).map(x => getOlimpSubject(x)).filter(Boolean).map(x => (
+                <Link key={x!.slug} href={`/olimpiady/${x!.slug}/podgotovka/`}>{x!.icon} {x!.name}</Link>
+              ))}
+            </div>
+          </div>
+        </Rail>
+      </div>
+    )
+  }
 
   // ── Класс внутри предмета ──
   if (klass) {

@@ -13,7 +13,7 @@ import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
-import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl } from '@/data/olimp'
+import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl, getOlimpPrep } from '@/data/olimp'
 import { olimpGuides } from '@/data/olimp-guides'
 import { onlineBrandSlugs } from '@/data/online-brands'
 import { isCityTypeIndexable } from '@/lib/index-rules'
@@ -347,6 +347,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     cls.forEach(k => olimpClassAll.add(k))
     return [
       { url: `${BASE_URL}/olimpiady/${s.slug}/`, lastModified: D_OLIMP, changeFrequency: 'weekly' as const, priority: 0.85 },
+      ...(getOlimpPrep(s.slug) ? [{ url: `${BASE_URL}/olimpiady/${s.slug}/podgotovka/`, lastModified: D_OLIMP, changeFrequency: 'monthly' as const, priority: 0.8 }] : []),
       ...cls.map(k => ({ url: `${BASE_URL}/olimpiady/${s.slug}/${k}-klass/`, lastModified: D_OLIMP, changeFrequency: 'weekly' as const, priority: 0.8 })),
       ...stageYearsForSubject(s.slug).map(sy => ({ url: `${BASE_URL}/olimpiady/${s.slug}/${sy.stage.slug}-${sy.year}/`, lastModified: D_OLIMP, changeFrequency: 'monthly' as const, priority: 0.7 })),
     ]

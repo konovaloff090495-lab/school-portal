@@ -190,3 +190,24 @@ export function textbookSubjectsFor(subject: string, klass: number): string[] {
     default: return []
   }
 }
+
+// ── Страницы «Подготовка к олимпиаде по {предмет}» (/olimpiady/{subject}/podgotovka/) ──
+// Тексты: scripts/olimp/prep_seed.py → src/data/olimp/prep.json
+export interface OlimpPrep {
+  lede: string
+  sections: { h2: string; html: string }[]
+  faq: { q: string; a: string }[]
+  updated: string
+}
+let _prep: Record<string, OlimpPrep> | null = null
+export function getOlimpPrep(subject: string): OlimpPrep | undefined {
+  if (!_prep) {
+    try { _prep = JSON.parse(readFileSync(join(DIR, 'prep.json'), 'utf8')) as Record<string, OlimpPrep> }
+    catch { _prep = {} }
+  }
+  return _prep[subject]
+}
+export function prepSubjects(): string[] {
+  getOlimpPrep('')
+  return Object.keys(_prep ?? {})
+}
