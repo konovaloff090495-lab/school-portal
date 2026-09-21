@@ -13,6 +13,7 @@ import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
+import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl } from '@/data/olimp'
 import { onlineBrandSlugs } from '@/data/online-brands'
 import { isCityTypeIndexable } from '@/lib/index-rules'
 
@@ -333,12 +334,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/test/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6 },
   ]
 
+  // ── Олимпиады (архив ВсОШ) ─────────────────────────
+  const D_OLIMP = new Date('2026-09-22')
+  const olimpIndex: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/olimpiady/`, lastModified: D_OLIMP, changeFrequency: 'weekly', priority: 0.9 },
+  ]
+  const olimpClassAll = new Set<number>()
+  const olimpHubPages: MetadataRoute.Sitemap = olimpSubjects().flatMap(s => {
+    const cls = classesForSubject(s.slug)
+    cls.forEach(k => olimpClassAll.add(k))
+    return [
+      { url: `${BASE_URL}/olimpiady/${s.slug}/`, lastModified: D_OLIMP, changeFrequency: 'weekly' as const, priority: 0.85 },
+      ...cls.map(k => ({ url: `${BASE_URL}/olimpiady/${s.slug}/${k}-klass/`, lastModified: D_OLIMP, changeFrequency: 'weekly' as const, priority: 0.8 })),
+      ...stageYearsForSubject(s.slug).map(sy => ({ url: `${BASE_URL}/olimpiady/${s.slug}/${sy.stage.slug}-${sy.year}/`, lastModified: D_OLIMP, changeFrequency: 'monthly' as const, priority: 0.7 })),
+    ]
+  })
+  const olimpClassPages: MetadataRoute.Sitemap = [...olimpClassAll].map(k => ({
+    url: `${BASE_URL}/olimpiady/klass/${k}-klass/`, lastModified: D_OLIMP, changeFrequency: 'weekly' as const, priority: 0.8,
+  }))
+  const olimpPaperPages: MetadataRoute.Sitemap = olimpPapers().map(p => ({
+    url: `${BASE_URL}${olimpUrl(p)}`, lastModified: D_OLIMP, changeFrequency: 'yearly' as const, priority: 0.7,
+  }))
+
   const all: MetadataRoute.Sitemap = [
     ...staticPages, ...regionPages, ...typePages, ...districtPages, ...moCityPages, ...schoolPages,
     ...blogIndex, ...blogPostPages,
     ...gdzIndex, ...gdzKlassPages, ...gdzSubjectPages, ...gdzBookPages,
     ...uchebnikIndex, ...uchebnikClassPages, ...uchebnikSubjectPages, ...uchebnikKlassPages, ...uchebnikTopicPages,
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
+    ...olimpIndex, ...olimpHubPages, ...olimpClassPages, ...olimpPaperPages,
     ...shkolyTypePages, ...onlineBrandPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
     ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
