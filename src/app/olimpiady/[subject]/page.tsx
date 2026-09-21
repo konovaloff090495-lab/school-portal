@@ -8,6 +8,7 @@ import {
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { olimpGuides, getOlimpGuide } from '@/data/olimp-guides'
+import { getOlimpPrep } from '@/data/olimp'
 
 const SITE = 'https://pro-schools.ru'
 interface Props { params: Promise<{ subject: string }> }
@@ -207,6 +208,14 @@ export default async function OlimpSubjectPage({ params }: Props) {
             </div>
           ))}
         </section>
+
+        {getOlimpPrep(subject) && (
+          <div className="ol-stage-block" style={{ background: 'var(--peach-50)', borderColor: 'var(--peach-200)' }}>
+            <h3>📘 Как подготовиться к олимпиаде по {s.dat}</h3>
+            <p style={{ margin: '0 0 10px', fontSize: 14, color: 'var(--ink-2)' }}>Структура этапов, типы заданий, темы по классам, план и книги — отдельное руководство.</p>
+            <div className="rows"><Link href={`/olimpiady/${subject}/podgotovka/`}>Открыть руководство →</Link></div>
+          </div>
+        )}
 
         <section className="gdz-section ol-seo">
           <h2>Как готовиться к олимпиаде по {s.dat}</h2>

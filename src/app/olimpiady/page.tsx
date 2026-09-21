@@ -4,6 +4,7 @@ import { olimpSubjects, olimpStages, olimpPapers, papersBySubject, olimpYears } 
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { olimpGuides } from '@/data/olimp-guides'
+import { prepSubjects, getOlimpSubject } from '@/data/olimp'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -101,6 +102,15 @@ export default function OlimpHub() {
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="gdz-section">
+          <div className="gdz-section-head"><h2>Подготовка к олимпиаде по предметам</h2></div>
+          <div className="ol-stage-block"><div className="rows">
+            {prepSubjects().map(sl => getOlimpSubject(sl)).filter(Boolean).map(x => (
+              <Link key={x!.slug} href={`/olimpiady/${x!.slug}/podgotovka/`}>{x!.icon} {x!.name}</Link>
+            ))}
+          </div></div>
         </section>
 
         <section className="gdz-section">
