@@ -92,7 +92,7 @@ function PaperCard({ p, showSubject }: { p: ReturnType<typeof olimpPapers>[numbe
 
 function Ads({ sfx }: { sfx: string }) {
   return (
-    <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+    <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
       <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
       <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix={`${sfx}-inline`} viewport="mobile" /></div>
     </aside>
