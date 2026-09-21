@@ -12,7 +12,7 @@ const YM_ID = 108789843
 // Пока заявки нет — поп-ап показывается на КАЖДОЙ странице каталога. Закрытие крестиком не подавляет.
 const DONE_KEY = 'ps_catalog_popup_done'
 const DELAY_MS = 6000
-const SOURCE = 'Поп-ап «последняя волна» (каталог школ)'
+const SOURCE = 'Поп-ап «перевод без потери четверти» (каталог школ)'
 
 function convertedThisSession(): boolean {
   try { return !!sessionStorage.getItem(DONE_KEY) } catch { return false }
@@ -107,23 +107,23 @@ export default function CatalogOfferPopup() {
         {/* Контент */}
         <div className="p-5 sm:p-6 overflow-y-auto">
           <div className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-            {isDeadlinePassed() ? 'Приём документов открыт' : 'Последняя волна зачисления'}
+            {isDeadlinePassed() ? 'Приём в течение всего учебного года' : 'Идёт I четверть — переход без потери оценок'}
           </div>
           <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug mb-3">
             {isDeadlinePassed()
-              ? 'Подайте документы в онлайн-школу — зачисляем круглый год, в том числе в середине учебного года'
-              : 'Успейте подать документы и попасть в последнюю волну зачисления'}
+              ? 'Переведитесь в онлайн-школу с аттестатом гособразца — неделя доступа к платформе бесплатно'
+              : 'Переведитесь в онлайн-школу до конца четверти — оценки за неё выставит уже новая школа. Неделя доступа бесплатно'}
           </h3>
 
           {!isDeadlinePassed() && (
             <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5 mb-3">
-              <p className="text-xs text-gray-500 mb-1.5">До конца приёма документов:</p>
+              <p className="text-xs text-gray-500 mb-1.5">До конца I четверти:</p>
               <Countdown variant="light" />
             </div>
           )}
 
           <p className="text-sm text-gray-600 mb-4">
-            Принимаем документы <b>взрослых и детей с 1 по 11 класс</b>. Перезвоним в течение 30 минут и поможем с выбором школы.
+            Зачисление за 1–3 дня, <b>взрослые и дети с 1 по 11 класс</b>, аттестат государственного образца. Перезвоним в течение 30 минут, откроем пробный доступ и подскажем, как оформить перевод.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-3">
