@@ -98,7 +98,7 @@ export default async function OlimpPaperPage({ params }: Props) {
           <div className="gdz-eyebrow"><span className="dot"></span>{s.icon} ВсОШ · {st.name} · {p.yearLabel}</div>
           <h1>Олимпиада по {p.subjectDat} {p.classLabel} — {st.name.toLowerCase()} ВсОШ {p.yearLabel}: задания и ответы</h1>
           <p className="lede">
-            Официальный комплект {st.gen} Всероссийской олимпиады школьников по {p.subjectDat} для {p.classLabel.replace('классы', 'классов').replace('класс', 'класса')} ({p.yearLabel} учебный год).
+            Официальный комплект {st.gen} Всероссийской олимпиады школьников по {p.subjectDat} для {p.classes.length > 1 ? `${p.classes[0]}–${p.classes[p.classes.length - 1]} классов` : `${p.classes[0]} класса`} ({p.yearLabel} учебный год).
             {p.hasSolutions ? ' Задания и решения с критериями оценивания — ' : ' Задания — '}
             скачайте PDF или прорешайте онлайн по тексту ниже.
           </p>
@@ -131,7 +131,7 @@ export default async function OlimpPaperPage({ params }: Props) {
           </div>
         )}
 
-        <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+        <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-paper-inline" viewport="mobile" /></div>
         </aside>

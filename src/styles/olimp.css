@@ -77,3 +77,14 @@
 .ol-rail-list a:hover, .ol-rail-list a.active { background: var(--peach-50); color: var(--coral-600); }
 .ol-rail-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px; margin-bottom: 14px; }
 .ol-rail-box h3 { margin: 0 0 8px; font-size: 14px; }
+
+/* Справочные страницы */
+.ol-guide table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0 14px; display: block; overflow-x: auto; }
+.ol-guide th, .ol-guide td { border: 1px solid var(--line-2); padding: 7px 10px; text-align: left; vertical-align: top; }
+.ol-guide th { background: var(--cream); font-weight: 800; white-space: nowrap; }
+.ol-guide ol { margin: 0 0 10px 20px; padding: 0; }
+.ol-guide a { color: var(--coral-600); font-weight: 700; }
+.ol-guide details { margin: 6px 0 14px; }
+.ol-guide details summary { font-size: 14px; }
+.ol-guide details p { font-size: 13.5px; }
+@media (min-width: 1024px) { .ol-ad-mobile { display: none; } }

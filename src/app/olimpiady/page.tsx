@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { olimpSubjects, olimpStages, olimpPapers, papersBySubject, olimpYears } from '@/data/olimp'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { olimpGuides } from '@/data/olimp-guides'
 
 const SITE = 'https://pro-schools.ru'
 
@@ -63,7 +64,7 @@ export default function OlimpHub() {
           </div>
         </section>
 
-        <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+        <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-index-inline" viewport="mobile" /></div>
         </aside>
@@ -89,6 +90,18 @@ export default function OlimpHub() {
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_3} suffix="ol-index-pop" /></div>
         </aside>
+
+        <section className="gdz-section">
+          <div className="gdz-section-head"><h2>Справочник: ВсОШ 2026/2027, перечневые олимпиады, подготовка</h2></div>
+          <div className="ol-paper-grid">
+            {olimpGuides.map(g => (
+              <Link key={g.slug} className="ol-paper" href={`/olimpiady/${g.slug}/`}>
+                <span className="yr">{g.eyebrow}</span>
+                <span className="t">{g.h1}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <section className="gdz-section">
           <div className="gdz-section-head"><h2>Этапы ВсОШ: как устроена олимпиада</h2></div>

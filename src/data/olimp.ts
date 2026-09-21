@@ -163,7 +163,7 @@ export function parseKlassSlug(sub: string): number | null {
 }
 export function fmtSize(bytes: number): string {
   if (!bytes) return ''
-  return bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1).replace('.', ',')} МБ` : `${Math.max(1, Math.round(bytes / 1024))} КБ`
+  return bytes >= 1000 * 1024 ? `${(bytes / 1048576).toFixed(1).replace('.', ',')} МБ` : `${Math.max(1, Math.round(bytes / 1024))} КБ`
 }
 export function pagesWord(n: number): string {
   const m10 = n % 10, m100 = n % 100

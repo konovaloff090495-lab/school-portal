@@ -14,6 +14,7 @@ import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
 import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
 import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl } from '@/data/olimp'
+import { olimpGuides } from '@/data/olimp-guides'
 import { onlineBrandSlugs } from '@/data/online-brands'
 import { isCityTypeIndexable } from '@/lib/index-rules'
 
@@ -338,6 +339,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_OLIMP = new Date('2026-09-22')
   const olimpIndex: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/olimpiady/`, lastModified: D_OLIMP, changeFrequency: 'weekly', priority: 0.9 },
+    ...olimpGuides.map(g => ({ url: `${BASE_URL}/olimpiady/${g.slug}/`, lastModified: new Date(g.updated), changeFrequency: 'weekly' as const, priority: 0.85 })),
   ]
   const olimpClassAll = new Set<number>()
   const olimpHubPages: MetadataRoute.Sitemap = olimpSubjects().flatMap(s => {

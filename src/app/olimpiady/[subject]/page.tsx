@@ -7,12 +7,13 @@ import {
 } from '@/data/olimp'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { olimpGuides, getOlimpGuide } from '@/data/olimp-guides'
 
 const SITE = 'https://pro-schools.ru'
 interface Props { params: Promise<{ subject: string }> }
 
 export function generateStaticParams() {
-  return olimpSubjects().map(s => ({ subject: s.slug }))
+  return [...olimpSubjects().map(s => ({ subject: s.slug })), ...olimpGuides.map(g => ({ subject: g.slug }))]
 }
 
 function yearsSpan(): string {
@@ -22,6 +23,10 @@ function yearsSpan(): string {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject } = await params
+  const g = getOlimpGuide(subject)
+  if (g) {
+    return { title: g.title, description: g.description, keywords: g.keywords, alternates: { canonical: `${SITE}/olimpiady/${g.slug}/` } }
+  }
   const s = getOlimpSubject(subject)
   if (!s || papersBySubject(subject).length === 0) return {}
   const classes = classesForSubject(subject)
@@ -34,8 +39,85 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+// ── Справочная страница (/olimpiady/vsosh-2026-2027/, /olimpiady/sirius/ …) ──
+function GuidePage({ g }: { g: (typeof olimpGuides)[number] }) {
+  const subj = (g.subjects ?? []).map(sl => getOlimpSubject(sl)).filter((x): x is NonNullable<typeof x> => !!x && papersBySubject(x.slug).length > 0)
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Олимпиады', item: `${SITE}/olimpiady/` },
+      { '@type': 'ListItem', position: 2, name: g.h1, item: `${SITE}/olimpiady/${g.slug}/` } ] },
+    { '@context': 'https://schema.org', '@type': 'Article', headline: g.h1, description: g.description, dateModified: g.updated,
+      inLanguage: 'ru', mainEntityOfPage: `${SITE}/olimpiady/${g.slug}/`, publisher: { '@type': 'Organization', name: 'pro-schools.ru' } },
+  ]
+  return (
+    <div className="gdz-shell">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+      <main className="gdz-main">
+        <nav className="gdz-crumbs" aria-label="Хлебные крошки">
+          <Link href="/">Главная</Link><span className="sep">/</span>
+          <Link href="/olimpiady/">Олимпиады</Link><span className="sep">/</span>
+          <span className="cur">{g.h1}</span>
+        </nav>
+        <div className="gdz-pagehead">
+          <div className="gdz-eyebrow"><span className="dot"></span>{g.eyebrow}</div>
+          <h1>{g.h1}</h1>
+          <p className="lede">{g.lede}</p>
+        </div>
+        <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
+          <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+          <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-guide-inline" viewport="mobile" /></div>
+        </aside>
+        <section className="ol-text ol-seo ol-guide" dangerouslySetInnerHTML={{ __html: g.html }} />
+        <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+          <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+          <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_2} suffix="ol-guide-mid" /></div>
+        </aside>
+        {subj.length > 0 && (
+          <section className="gdz-section">
+            <div className="gdz-section-head"><h2>Задания прошлых лет с ответами</h2></div>
+            <div className="gdz-subj-grid">
+              {subj.map(x => (
+                <Link key={x.slug} className="gdz-subj-card" href={`/olimpiady/${x.slug}/`}>
+                  <span className="gdz-subj-ic">{x.icon}</span>
+                  <span className="gdz-subj-txt"><span className="name">{x.name}</span><span className="count">{papersBySubject(x.slug).length} комплектов ВсОШ</span></span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+        <section className="gdz-section">
+          <div className="gdz-section-head"><h2>Другие справочные страницы</h2></div>
+          <div className="ol-stage-block"><div className="rows">
+            {olimpGuides.filter(x => x.slug !== g.slug).map(x => <Link key={x.slug} href={`/olimpiady/${x.slug}/`}>{x.h1}</Link>)}
+          </div></div>
+        </section>
+        <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+          <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+          <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_3} suffix="ol-guide-bottom" /></div>
+        </aside>
+      </main>
+      <aside className="gdz-rail" aria-label="Реклама">
+        <div className="gdz-rail-sticky">
+          <div className="gdz-ad">
+            <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
+            <div className="gdz-ad-slot gdz-ad-slot--tall"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-guide-sidebar" viewport="desktop" /></div>
+          </div>
+          <div className="ol-rail-box">
+            <h3>Архив ВсОШ по предметам</h3>
+            <div className="ol-rail-list">
+              {olimpSubjects().slice(0, 12).map(x => <Link key={x.slug} href={`/olimpiady/${x.slug}/`}>{x.icon} {x.name}</Link>)}
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  )
+}
+
 export default async function OlimpSubjectPage({ params }: Props) {
   const { subject } = await params
+  const g = getOlimpGuide(subject)
+  if (g) return <GuidePage g={g} />
   const s = getOlimpSubject(subject)
   if (!s) notFound()
   const papers = sortPapers(papersBySubject(subject))
@@ -83,7 +165,7 @@ export default async function OlimpSubjectPage({ params }: Props) {
           </div>
         </section>
 
-        <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
+        <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-subj-inline" viewport="mobile" /></div>
         </aside>
