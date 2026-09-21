@@ -9,7 +9,7 @@ ROOT=$(pwd)
 LOG=$ROOT/scripts/olimp/raw/update.log
 exec >> "$LOG" 2>&1
 echo "=== $(date '+%F %T') update start"
-if pgrep -f "next build|deploy.sh" >/dev/null; then echo "сборка занята — пропуск"; exit 0; fi
+if pgrep -f "n[e]xt build|d[e]ploy.sh" >/dev/null; then echo "сборка занята — пропуск"; exit 0; fi
 python3 scripts/olimp/fetch_vos.py | tail -3
 python3 scripts/olimp/build_index.py | tail -2
 if git diff --quiet -- src/data/olimp && [ -z "$(git ls-files --others --exclude-standard src/data/olimp)" ]; then
