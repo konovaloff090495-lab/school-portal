@@ -1978,15 +1978,15 @@
 "subject": "Русский язык",
 "authors": "Ладыженская Т. А., Баранов М. Т., Тростенцова Л. А.",
 "type": "Учебник",
-"years": "2019–2023",
+"years": "2023–2026",
 "publisher": "Просвещение",
 "fgos": true,
 "parts": "1, 2",
 "source": "reshak",
 "file": "8-russkiy-yazyk-ladyzhenskaya-8.json",
-"problemCount": 455,
-"solvedCount": 455,
-"chapterCount": 6
+"problemCount": 22,
+"solvedCount": 22,
+"chapterCount": 1
 },
 {
 "slug": "makarychev-9",
