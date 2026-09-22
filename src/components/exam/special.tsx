@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ExamShell, { AdInline, Crumbs, breadcrumbLd } from '@/components/exam/ExamShell'
 import { capBlocks } from '@/components/exam/ExamDocPage'
+import { renderDocText } from '@/lib/examText'
 import {
   type Exam, type ExamDoc, siteSubjects, docsFor, docsByKind, docPath, yearsOf, getDocText, minutesLabel, fmtSize, pagesWord,
   EXAM_NAME, CURRENT_YEAR, KIND_NAME,
@@ -148,6 +149,8 @@ function DocText({ d, cap = 40_000, open = false }: { d: ExamDoc; cap?: number; 
   const t = getDocText(d.id)
   if (!t) return null
   const { blocks } = capBlocks(t.texts, cap)
+  const s0 = siteSubjects(d.exam)[0]
+  const lctx = { exam: d.exam, s: s0, year: d.year, self: d }
   return (
     <>
       {blocks.map((b, i) => b.paras.length < 3 ? null : (
@@ -155,7 +158,7 @@ function DocText({ d, cap = 40_000, open = false }: { d: ExamDoc; cap?: number; 
           <details open={open && i === 0}>
             <summary>{b.label} — текст документа</summary>
             <p className="note">Текст извлечён из PDF ФИПИ автоматически; таблицы и формулы могут отображаться неточно.</p>
-            {b.paras.map((p, j) => <p key={j}>{p}</p>)}
+            {renderDocText(b.paras, lctx, { link: false, keyPrefix: `d${i}` })}
           </details>
         </section>
       ))}

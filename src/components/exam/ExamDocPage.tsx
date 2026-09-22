@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ExamShell, { AdInline, Crumbs, breadcrumbLd } from '@/components/exam/ExamShell'
+import { renderDocText } from '@/lib/examText'
 import {
   type Exam, type ExamDoc, type SiteSubject, docsFor, docPath, getDocText, docTitle, fmtSize, pagesWord, minutesLabel,
   EXAM_NAME, KIND_NAME, KIND_PLURAL, CURRENT_YEAR,
@@ -94,6 +95,7 @@ export default function ExamDocPage({ exam, s, d }: { exam: Exam; s: SiteSubject
   const main = capped.find(b => b.role === 'demo' || b.role === 'main') ?? capped[0]
   const [taskParas, answerParas] = main && (d.kind === 'demo' || d.kind === 'variant') ? splitAnswers(main.paras) : [main?.paras ?? [], []]
   const others = capped.filter(b => b !== main)
+  const lctx = { exam, s, year: d.year, self: d }
 
   const sameKind = docsFor(exam, s, d.kind).filter(x => x.id !== d.id && docPath(x))
   const sameYear = docsFor(exam, s).filter(x => x.year === d.year && x.id !== d.id && ['demo', 'spec', 'codif', 'variant', 'mr', 'criteria'].includes(x.kind) && docPath(x))
@@ -156,7 +158,7 @@ export default function ExamDocPage({ exam, s, d }: { exam: Exam; s: SiteSubject
         <section className="ol-text" id="tekst">
           <h2>{d.kind === 'demo' ? `Задания демоверсии ${ex} ${d.year} по ${s.dat} — текст` : d.kind === 'variant' ? 'Задания варианта — текст' : 'Текст документа'}</h2>
           <p className="note">Текст извлечён из официального PDF ФИПИ автоматически: формулы, таблицы и рисунки могут отображаться неточно — сверяйтесь с документом выше.</p>
-          {taskParas.map((p, j) => <p key={j}>{p}</p>)}
+          {renderDocText(taskParas, lctx, { keyPrefix: 't' })}
         </section>
       )}
 
@@ -167,7 +169,7 @@ export default function ExamDocPage({ exam, s, d }: { exam: Exam; s: SiteSubject
           <details>
             <summary>Ответы и критерии оценивания — показать</summary>
             <p className="note">Официальная система оценивания ФИПИ. Сначала решите задания самостоятельно.</p>
-            {answerParas.map((p, j) => <p key={j}>{p}</p>)}
+            {renderDocText(answerParas, lctx, { keyPrefix: 'a' })}
           </details>
         </section>
       )}
@@ -176,7 +178,7 @@ export default function ExamDocPage({ exam, s, d }: { exam: Exam; s: SiteSubject
         <section className="ol-text" key={i}>
           <details>
             <summary>{b.label} — текст</summary>
-            {b.paras.map((p, j) => <p key={j}>{p}</p>)}
+            {renderDocText(b.paras, lctx, { keyPrefix: `o${i}` })}
           </details>
         </section>
       ))}
