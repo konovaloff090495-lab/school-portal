@@ -6,6 +6,7 @@
 import json, glob, re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gdz_lib
 CHAPTERS = [
     ('Русский язык как развивающееся явление', 1, 6),
@@ -48,19 +49,8 @@ def solved(k):
 # В raw baranov7 73 пары номеров ссылаются на одну и ту же страницу учебника
 # (две нумерации разных изданий). Решённый близнец копируется на парный номер,
 # чтобы обе страницы сайта были заполнены.
-def _dup_pairs():
-    raw = json.load(open(Path(__file__).resolve().parents[1] / 'reshak' / 'raw' / 'baranov7.json', encoding='utf-8'))
-    byimg = {}
-    for x in raw['items']:
-        if x.get('images'):
-            byimg.setdefault(x['images'][0].replace('/2026/', '/'), []).append(x['key'].split('/')[-1])
-    return [v for v in byimg.values() if len(v) == 2]
-
-for a, c in _dup_pairs():
-    if solved(a) and not solved(c):
-        sols[c] = sols[a]
-    elif solved(c) and not solved(a):
-        sols[a] = sols[c]
+import dups
+dups.mirror(sols)
 
 b = gdz_lib.load_book(7, 'russkiy-yazyk', 'ladyzhenskaya-7')
 titles = [t for t, _, _ in CHAPTERS]

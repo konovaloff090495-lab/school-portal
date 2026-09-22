@@ -6,16 +6,11 @@ d = Path(__file__).parent
 sols = {}
 for f in sorted(glob.glob(str(d / 'r7_*.json'))):
     sols.update(json.load(open(f, encoding='utf-8')))
+import sys
+sys.path.insert(0, str(d))
+import dups
 raw = json.load(open(d.parents[0] / 'reshak' / 'raw' / 'baranov7.json', encoding='utf-8'))
-byimg = {}
-for x in raw['items']:
-    if x.get('images'):
-        byimg.setdefault(x['images'][0].replace('/2026/', '/'), []).append(x['key'].split('/')[-1])
-for v in byimg.values():
-    if len(v) == 2:
-        a, c = v
-        if a in sols and c not in sols: sols[c] = sols[a]
-        if c in sols and a not in sols: sols[a] = sols[c]
+dups.mirror(sols)
 nums = sorted(int(x['key'].split('/')[-1]) for x in raw['items'] if x['key'].split('/')[-1].isdigit())
 left = [n for n in nums if str(n) not in sols]
 print('решено', len(nums) - len(left), 'из', len(nums), '| осталось', len(left))
