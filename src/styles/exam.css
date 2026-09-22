@@ -20,3 +20,11 @@
 .ol-guide td { white-space: normal; }
 .ol-guide td:nth-child(n+2):not(:last-child) { white-space: nowrap; }
 .ol-guide td:last-child { min-width: 180px; }
+
+/* Текст документов ФИПИ после форматирования */
+.ol-text h3 { margin: 22px 0 8px; font-size: 16px; font-weight: 800; color: var(--ink); }
+.ol-text h4 { margin: 16px 0 6px; font-size: 14px; font-weight: 800; color: var(--ink-2); text-transform: uppercase; letter-spacing: .03em; }
+.ol-text ul { margin: 0 0 12px 20px; padding: 0; }
+.ol-text li { margin: 4px 0; font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+.ex-ilink { color: var(--coral-600); font-weight: 700; border-bottom: 1px dashed var(--peach-200); }
+.ex-ilink:hover { border-bottom-style: solid; }
