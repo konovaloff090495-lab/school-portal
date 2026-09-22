@@ -1553,15 +1553,15 @@
 "subject": "Русский язык",
 "authors": "Ладыженская Т. А., Баранов М. Т., Тростенцова Л. А.",
 "type": "Учебник",
-"years": "2019–2023",
+"years": "2023–2025",
 "publisher": "Просвещение",
 "fgos": true,
 "parts": "1, 2",
 "source": "reshak",
 "file": "6-russkiy-yazyk-ladyzhenskaya.json",
-"problemCount": 670,
-"solvedCount": 670,
-"chapterCount": 6
+"problemCount": 615,
+"solvedCount": 615,
+"chapterCount": 11
 },
 {
 "slug": "makarychev",

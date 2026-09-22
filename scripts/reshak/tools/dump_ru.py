@@ -12,7 +12,7 @@ for n in range(start, start + count):
     if not e:
         print(f'### {n} NONE'); continue
     ans = e.get('answer') or []
-    cut = next((i for i, a in enumerate(ans) if 'Задание учебника 2019' in a), len(ans))
+    cut = next((i for i, a in enumerate(ans) if a.startswith('Задание учебника')), len(ans))
     txt = '\n'.join(ans[:cut])
     imgs = ' '.join(e.get('images') or [])
     print(f'### {n} {("[img: " + imgs + "]") if imgs else ""}\n{txt[:maxlen]}\n')
