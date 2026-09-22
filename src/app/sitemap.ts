@@ -12,7 +12,9 @@ import { raexRegions } from '@/data/raex'
 import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
 import { getAllPostsMeta } from '@/lib/blog-content'
-import { egeSubjects, ogeSubjects } from '@/data/ege-oge'
+import { siteSubjects } from '@/data/exam'
+import { specialPages } from '@/components/exam/special'
+import { docParams } from '@/components/exam/routes'
 import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl, getOlimpPrep } from '@/data/olimp'
 import { olimpGuides } from '@/data/olimp-guides'
 import { onlineBrandSlugs } from '@/data/online-brands'
@@ -49,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_BLOG      = new Date('2026-06-01') // blog index (individual posts use publishedAt)
   const D_GDZ       = new Date('2026-05-20') // GDZ content (stable)
   const D_UCHEBNIK  = new Date('2026-05-20') // textbook content (stable)
-  const D_EGE       = new Date('2026-06-01') // EGE/OGE pages
   const D_LANDINGS  = new Date('2026-06-01') // type/feature landings
   const D_ONLINE_BRANDS = new Date('2026-09-16') // страницы брендов онлайн-школ
   const D_EGE_CENTERS = new Date('2026-09-17') // центры ЕГЭ/ОГЭ по 30 городам (Яндекс Карты)
@@ -216,19 +217,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // ── ЕГЭ / ОГЭ ──────────────────────────────────────
+  // ── ЕГЭ / ОГЭ: материалы ФИПИ (src/data/exam.ts) + разборы заданий (ege-oge.ts) ──
+  const D_EXAM = new Date('2026-09-22')
   const egeIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/ege/`, lastModified: D_EGE, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE_URL}/oge/`, lastModified: D_EGE, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE_URL}/ege/`, lastModified: D_EXAM, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/oge/`, lastModified: D_EXAM, changeFrequency: 'weekly', priority: 0.9 },
   ]
-  const egeSubjectPages: MetadataRoute.Sitemap = [
-    ...egeSubjects.map(s => ({ url: `${BASE_URL}/ege/${s.slug}/`, lastModified: D_EGE, changeFrequency: 'weekly' as const, priority: 0.8 })),
-    ...ogeSubjects.map(s => ({ url: `${BASE_URL}/oge/${s.slug}/`, lastModified: D_EGE, changeFrequency: 'weekly' as const, priority: 0.8 })),
-  ]
-  const egeTaskPages: MetadataRoute.Sitemap = [
-    ...egeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/ege/${s.slug}/${t.slug}/`, lastModified: D_EGE, changeFrequency: 'monthly' as const, priority: 0.7 }))),
-    ...ogeSubjects.flatMap(s => s.tasks.map(t => ({ url: `${BASE_URL}/oge/${s.slug}/${t.slug}/`, lastModified: D_EGE, changeFrequency: 'monthly' as const, priority: 0.7 }))),
-  ]
+  const egeSubjectPages: MetadataRoute.Sitemap = (['ege', 'oge'] as const).flatMap(ex => [
+    ...siteSubjects(ex).map(s => ({ url: `${BASE_URL}/${ex}/${s.slug}/`, lastModified: D_EXAM, changeFrequency: 'weekly' as const, priority: 0.85 })),
+    ...specialPages(ex).map(p => ({ url: `${BASE_URL}/${ex}/${p.slug}/`, lastModified: D_EXAM, changeFrequency: 'weekly' as const, priority: p.hub ? 0.8 : 0.6 })),
+  ])
+  const egeTaskPages: MetadataRoute.Sitemap = (['ege', 'oge'] as const).flatMap(ex => docParams(ex).map(x => {
+    const isDoc = !x.task.startsWith('zadanie-')
+    const fresh = /-(2027|2026)$/.test(x.task)
+    return { url: `${BASE_URL}/${ex}/${x.subject}/${x.task}/`, lastModified: D_EXAM, changeFrequency: isDoc ? 'monthly' as const : 'monthly' as const, priority: fresh ? 0.8 : isDoc ? 0.6 : 0.65 }
+  }))
 
   // ── Лендинги школ: типы, особенности, профили, языки, метро ──
   const shkolyTypePages: MetadataRoute.Sitemap = typeSlugs.map(t => ({

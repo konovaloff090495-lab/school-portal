@@ -226,6 +226,16 @@ export default function Header() {
             onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'transparent')}
             >🏆 Олимпиады</Link>
 
+            {/* ЕГЭ/ОГЭ — материалы ФИПИ (~2 000 страниц), сезонный трафик; ссылка в шапке по той же логике */}
+            <Link href="/ege/" style={{
+              padding: '8px 12px', borderRadius: 10, cursor: 'pointer',
+              textDecoration: 'none', color: 'inherit', transition: 'background .12s',
+              fontFamily: 'var(--font-manrope, system-ui)',
+            }}
+            onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'rgba(0,0,0,0.04)')}
+            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'transparent')}
+            >🎓 ЕГЭ</Link>
+
             {/* Blog */}
             <Link href="/blog" style={{
               padding: '8px 12px', borderRadius: 10, cursor: 'pointer',

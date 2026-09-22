@@ -119,11 +119,11 @@ export default function Footer() {
                 Экзамены
               </h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
-                <li><Link href="/ege/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Разборы заданий ЕГЭ →</Link></li>
+                <li><Link href="/ege/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">ЕГЭ 2027: демоверсии ФИПИ, варианты, разборы →</Link></li>
                 <li><Link href="/olimpiady/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Олимпиады: задания прошлых лет →</Link></li>
                 <li><Link href="/olimpiady/matematika/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Олимпиада по математике</Link></li>
                 <li><Link href="/olimpiady/russkiy-yazyk/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Олимпиада по русскому языку</Link></li>
-                <li><Link href="/oge/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">Разборы заданий ОГЭ →</Link></li>
+                <li><Link href="/oge/" style={{ fontSize: 13, color: '#FF6B3D', textDecoration: 'none' }} className="footer-link">ОГЭ 2027: демоверсии ФИПИ, разборы →</Link></li>
                 <li><Link href="/shkoly/osobennosti/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Школы — подготовка к ЕГЭ</Link></li>
                 <li><Link href="/shkoly/osobennosti/podgotovka-k-oge/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">Школы — подготовка к ОГЭ</Link></li>
                 <li><Link href="/shkoly/moskva/podgotovka-k-ege/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none' }} className="footer-link">ЕГЭ — Москва</Link></li>

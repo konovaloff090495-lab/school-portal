@@ -1,0 +1,22 @@
+/* ════════════════════════════════════════════════════════════
+   Pro-schools · Раздел «ЕГЭ и ОГЭ» — дополнения к gdz.css / olimp.css
+   ════════════════════════════════════════════════════════════ */
+.ex-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
+.ex-facts div { display: flex; flex-direction: column; gap: 2px; min-width: 120px; padding: 10px 14px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.ex-facts b { font-size: 18px; font-weight: 900; color: var(--coral-600); line-height: 1.1; }
+.ex-facts span { font-size: 12px; color: var(--ink-3); font-weight: 600; }
+
+.ex-hero-doc { margin: 0 0 22px; padding: 18px 20px; background: linear-gradient(135deg, #fff 0%, var(--peach-50) 100%); border: 1px solid var(--peach-200); border-radius: var(--radius-md); }
+.ex-hero-doc h2 { margin: 6px 0 6px; font-size: 20px; }
+.ex-hero-doc p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+
+.ex-changes { border-left: 4px solid var(--coral-500); }
+.ex-changes h2 { font-size: 17px; }
+.ol-stages a > div { height: 100%; }
+.ol-stages a:hover > div { border-color: var(--peach-200); background: var(--peach-50); }
+.ol-guide details { margin: 6px 0 10px; }
+.ol-guide details summary { cursor: pointer; font-weight: 700; }
+
+.ol-guide td { white-space: normal; }
+.ol-guide td:nth-child(n+2):not(:last-child) { white-space: nowrap; }
+.ol-guide td:last-child { min-width: 180px; }
