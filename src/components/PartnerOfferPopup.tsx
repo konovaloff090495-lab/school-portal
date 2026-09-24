@@ -2,13 +2,16 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { usePathname } from 'next/navigation'
+import { suUrl } from '@/lib/su-products'
 
 const YM_ID = 108789843
 // Агрессивный режим (как оффер-поп-ап card-open.ru): показ на КАЖДОЙ статье,
 // единственный гейт — клик по CTA в этой сессии. Закрытие крестиком не подавляет.
 const DONE_KEY = 'ps_partner_popup_done'
 const DELAY_MS = 6000
-const PARTNER_URL = 'https://schooluniversity.ru/online-school?utm_source=gerasimov_lav&utm_medium=lkpartners'
+// 24.09.2026: поп-ап переведён со schooluniversity.ru на нашу посадочную
+// school-university.com — метка та же (gerasimov_lav), см. src/lib/su-products.ts.
+const PARTNER_URL = suUrl('online-school', 'blog-popup')
 
 const FORMATS = ['Бюджет', 'Очная', 'Заочная', 'Семейная форма', 'Онлайн-обучение']
 
