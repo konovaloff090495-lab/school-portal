@@ -5,6 +5,7 @@
 // Прямой fetch('/api/leads/submit') из компонентов запрещён — см. scripts/check-lead-forms.sh.
 
 import { getLeadContext } from '@/lib/leadContext'
+import { saveLeadProfile } from '@/lib/leadProfile'
 
 export interface LeadPayload {
   name: string
@@ -34,6 +35,9 @@ export async function submitLead(payload: LeadPayload): Promise<boolean> {
         ...getLeadContext(),
       }),
     })
+    // Запоминаем контакты в браузере: витрина подарков (/spasibo/) предзаполняет ими
+    // форму второго оффера — см. src/lib/leadProfile.ts.
+    if (res.ok) saveLeadProfile({ name: payload.name, phone: payload.phone, email: payload.email })
     return res.ok
   } catch {
     return false
