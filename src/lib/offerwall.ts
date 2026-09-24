@@ -23,18 +23,37 @@ export type WallCategory = 'shkola' | 'ege' | 'deti' | 'posle9' | 'bonus'
 
 export const WALL_CATEGORIES: { key: WallCategory; label: string }[] = [
   { key: 'shkola', label: 'Школа 5–11' },
-  { key: 'ege', label: 'ЕГЭ, ОГЭ и репетиторы' },
-  { key: 'deti', label: 'Детям 1–9 класса' },
-  { key: 'posle9', label: 'После 9 и 11 класса' },
+  { key: 'ege', label: 'ЕГЭ и ОГЭ' },
+  { key: 'deti', label: 'Детям' },
+  { key: 'posle9', label: 'После 9 и 11' },
   { key: 'bonus', label: 'Бонусы' },
 ]
+
+/** Ключ пиктограммы на плитке оффера — рисуются в OfferIcon.tsx */
+export type WallIcon =
+  | 'school' | 'rocket' | 'home' | 'certificate' | 'moon' | 'calendar' | 'target'
+  | 'puzzle' | 'exam' | 'teacher' | 'play' | 'blocks' | 'palette' | 'code'
+  | 'heart' | 'college' | 'cap' | 'globe' | 'route' | 'pdf' | 'search'
+  | 'ticket' | 'mountain'
 
 export interface WallOffer {
   id: string
   category: WallCategory
+  /** Чей это продукт — мелкая подпись над заголовком строки */
+  brand: string
+  /** Короткий ярлык на плитке (1–2 слова) */
+  tile: string
+  /** Пиктограмма на плитке */
+  icon: WallIcon
+  /** Цвета плитки — назначаются автоматически, чтобы соседние офферы были разного цвета */
+  tint: [string, string]
   /** Крупная плашка в первом ряду «ваши подарки» */
   featured?: boolean
-  /** Бейдж — сам оффер («Первая неделя бесплатно») */
+  /**
+   * Что человек получает, в формулировке подарка («Неделя обучения в подарок»).
+   * Условие то же, что на посадочной (`offer` в su-products.ts) — меняется подача,
+   * а не обещание: витрина не может сулить больше, чем лендинг.
+   */
   badge: string
   /** Заголовок карточки */
   title: string
@@ -73,15 +92,22 @@ export function wallUrl(productKey: string, place: string): string {
 function fromSu(
   key: string,
   category: WallCategory,
+  icon: WallIcon,
+  tile: string,
   bullets: string[],
-  featured = false,
+  opts: { featured?: boolean; brand?: string; gift?: string } = {},
 ): WallOffer {
   const p = SU_PRODUCTS[key]
+  const { featured = false, brand = 'Синергия', gift } = opts
   return {
     id: key,
     category,
+    brand,
+    tile,
+    icon,
+    tint: ['', ''],
     featured,
-    badge: p.offer,
+    badge: gift ?? p.offer,
     title: p.title,
     lead: p.text,
     bullets,
@@ -92,123 +118,141 @@ function fromSu(
   }
 }
 
-export const WALL_OFFERS: WallOffer[] = [
+/** Яркие плитки: белый текст и иконка читаются на каждом из градиентов. */
+const TINTS: [string, string][] = [
+  ['#2563EB', '#4F8DF7'],
+  ['#7C3AED', '#A855F7'],
+  ['#059669', '#10B981'],
+  ['#E0561F', '#FB923C'],
+  ['#0891B2', '#22B8D9'],
+  ['#DB2777', '#F472B6'],
+  ['#4F46E5', '#6366F1'],
+  ['#B45309', '#F59E0B'],
+  ['#0F766E', '#14B8A6'],
+  ['#9333EA', '#C084FC'],
+]
+
+const OFFERS_RAW: WallOffer[] = [
   // ——— Школа 5–11 ———
-  fromSu('online-school', 'shkola', [
+  fromSu('online-school', 'shkola', 'school', 'Онлайн-школа', [
     'Уроки в прямом эфире и в записи по программе 5–11 класса',
     'Классный руководитель, наставник и психолог',
     'Аттестация и аттестат гособразца без перевода в другую школу',
-  ], true),
-  fromSu('externat', 'shkola', [
+  ], { featured: true, gift: 'Неделя обучения в подарок' }),
+  fromSu('externat', 'shkola', 'rocket', 'Экстернат', [
     'Уплотнённая программа: два класса за один учебный год',
     'Аттестации по графику ученика, а не по расписанию школы',
     'Государственный аттестат того же образца',
-  ]),
-  fromSu('semeynaya-shkola', 'shkola', [
+  ], { gift: 'Неделя экстерната в подарок' }),
+  fromSu('semeynaya-shkola', 'shkola', 'home', 'Семейная', [
     'Школа берёт на себя прикрепление и документы',
     'Промежуточные аттестации по всем предметам',
     'Родителю остаётся расписание, а не бумаги',
-  ]),
-  fromSu('attestaciya', 'shkola', [
+  ], { gift: 'Неделя семейного обучения в подарок' }),
+  fromSu('attestaciya', 'shkola', 'certificate', 'Аттестация', [
     'Для тех, кто учится сам и ищет, где аттестоваться',
     'Зачисление, аттестация по всем предметам, перевод в следующий класс',
     'Оформление онлайн, 5–11 класс',
-  ]),
-  fromSu('vechernyaya-shkola', 'shkola', [
+  ], { gift: 'Консультация по аттестации — бесплатно' }),
+  fromSu('vechernyaya-shkola', 'shkola', 'moon', 'Вечерняя', [
     'Аттестат за 9 и 11 класс взрослым — онлайн',
     'Учёба совмещается с работой',
     'Тот же государственный аттестат',
-  ]),
-  fromSu('zaochnaya-shkola', 'shkola', [
+  ], { gift: 'Неделя обучения в подарок' }),
+  fromSu('zaochnaya-shkola', 'shkola', 'calendar', 'Заочная', [
     'Заочная форма с зачислением в школу',
     'Меньше уроков в расписании, больше самостоятельной работы',
     'Аттестации и аттестат — как на очной форме',
-  ]),
-  fromSu('profilnye-klassy', 'shkola', [
+  ], { gift: 'Неделя обучения в подарок' }),
+  fromSu('profilnye-klassy', 'shkola', 'target', 'Профили', [
     'Профили: IT, дизайн, предпринимательство',
     'Углублённые предметы профиля для 9–10 класса',
     'Бесплатно ученикам онлайн-школы',
-  ]),
-  fromSu('vneurochka', 'shkola', [
+  ], { gift: 'Профильные предметы бесплатно ученикам' }),
+  fromSu('vneurochka', 'shkola', 'puzzle', 'Внеурочка', [
     '23 занятия после уроков — кружки и клубы',
     'Для учеников онлайн-школы — бесплатно',
     'Запись по интересам ребёнка',
-  ]),
+  ], { gift: '23 занятия бесплатно ученикам школы' }),
 
   // ——— ЕГЭ, ОГЭ и репетиторы ———
-  fromSu('kursy-ege', 'ege', [
+  fromSu('kursy-ege', 'ege', 'exam', 'Курсы ЕГЭ', [
     '56 тематических вебинаров на предмет и 1 000+ тренажёров',
     'Три пробника в формате КИМ с разбором ошибок',
     'Куратор, который держит план подготовки',
-  ], true),
-  fromSu('kursy-oge', 'ege', [
+  ], { featured: true, gift: 'Пробный день на курсах ЕГЭ в подарок' }),
+  fromSu('kursy-oge', 'ege', 'exam', 'Курсы ОГЭ', [
     '11 предметов, вебинары по расписанию и тренажёры',
     'Три пробника в формате КИМ: сентябрь, декабрь, май',
     'Куратор ведёт план до экзамена',
-  ]),
-  fromSu('repetitor', 'ege', [
+  ], { gift: 'Пробный день на курсах ОГЭ в подарок' }),
+  fromSu('repetitor', 'ege', 'teacher', 'Репетитор', [
     'Индивидуально, урок 40 минут',
     'Школьная программа и подготовка к ОГЭ/ЕГЭ',
     'Педагог проверяет домашние задания',
-  ], true),
-  fromSu('lektoriy', 'ege', [
+  ], { featured: true, gift: 'Первый урок с репетитором бесплатно' }),
+  fromSu('lektoriy', 'ege', 'play', 'Лекторий', [
     'Открытые занятия для школьников всей России',
     'Разборы тем и экзаменационных заданий',
     'Участие бесплатное',
-  ]),
+  ], { gift: 'Доступ к Лекторию — бесплатно' }),
 
   // ——— Детям 1–9 класса ———
-  fromSu('nachalnaya-shkola', 'deti', [
+  fromSu('nachalnaya-shkola', 'deti', 'blocks', '1–4 класс', [
     'Математика, русский, чтение и английский для 1–4 класса',
     'Занятия в мини-группах Synergy Kids',
     'Первый урок — бесплатно',
-  ]),
-  fromSu('kursy-dlya-detey', 'deti', [
+  ], { gift: 'Первый урок Synergy Kids бесплатно', brand: 'Synergy Kids' }),
+  fromSu('kursy-dlya-detey', 'deti', 'palette', 'Курсы детям', [
     '18 онлайн-курсов для детей и подростков 9–17 лет',
     'Направления от творчества до технологий',
     'Подбор по возрасту — бесплатно',
-  ]),
-  fromSu('programmirovanie', 'deti', [
+  ], { gift: 'Подбор курса по возрасту бесплатно' }),
+  fromSu('programmirovanie', 'deti', 'code', 'EasyCode', [
     'Программирование для детей 7–17 лет (EasyCode)',
     'От Scratch до настоящего кода и проектов',
     'Пробный урок с преподавателем без оплаты',
-  ]),
-  fromSu('soft-skills', 'deti', [
+  ], { gift: 'Пробный урок EasyCode бесплатно', brand: 'EasyCode' }),
+  fromSu('soft-skills', 'deti', 'heart', 'Ukids', [
     'Гибкие навыки для детей 6–15 лет (Академия Ukids)',
     'Общение, уверенность, работа в команде',
     'Диагностика 45 минут и карта навыков — бесплатно',
-  ]),
+  ], { gift: 'Диагностика Ukids 45 минут бесплатно', brand: 'Ukids' }),
 
   // ——— После 9 и 11 класса ———
-  fromSu('kolledzh', 'posle9', [
+  fromSu('kolledzh', 'posle9', 'college', 'Колледж', [
     'Колледж «Синергия» после 9 и 11 класса',
     'Расчёт стоимости со скидками, рассрочкой и маткапиталом',
     'Диплом о среднем профессиональном образовании',
-  ]),
-  fromSu('vuz', 'posle9', [
+  ], { gift: 'Расчёт цены со скидкой и рассрочкой' }),
+  fromSu('vuz', 'posle9', 'cap', 'Университет', [
     'Университет «Синергия»: 156 программ',
     'Разбор проходных баллов и вариантов оплаты',
     'Очно, онлайн и заочно',
-  ]),
-  fromSu('obuchenie-za-rubezhom', 'posle9', [
+  ], { gift: 'Разбор проходных баллов бесплатно' }),
+  fromSu('obuchenie-za-rubezhom', 'posle9', 'globe', 'За рубежом', [
     'Двойной диплом: Дубай, Китай, Малайзия, Сербия, Таиланд',
     'Часть программы — за рубежом, часть — дома',
     'Скидка 10% при оплате года',
-  ]),
-  fromSu('soprovozhdenie-do-postupleniya', 'posle9', [
+  ], { gift: 'Скидка 10% при оплате года' }),
+  fromSu('soprovozhdenie-do-postupleniya', 'posle9', 'route', 'Наставник', [
     'Наставник ведёт до зачисления',
     'Персональный план поступления',
     'Документы, сроки и запасные варианты',
-  ]),
-  fromSu('materialy', 'posle9', [
+  ], { gift: 'Персональный план поступления' }),
+  fromSu('materialy', 'posle9', 'pdf', 'Гид в PDF', [
     'Гид абитуриента в PDF',
     'Документы, сроки подачи и как платить меньше',
     'Бесплатно, сразу после заявки',
-  ], true),
+  ], { featured: true, gift: 'Гид абитуриента в PDF бесплатно' }),
 
   // ——— Партнёрские карточки: уходим на внешний сайт, формы у нас нет ———
   {
     id: 'open-college',
+    brand: 'Открытый колледж',
+    tile: 'Колледж',
+    icon: 'college',
+    tint: ['', ''],
     category: 'posle9',
     badge: 'Экскурсия по колледжу и подбор специальности',
     title: 'Московский городской открытый колледж',
@@ -228,6 +272,10 @@ export const WALL_OFFERS: WallOffer[] = [
   },
   {
     id: 'icolleges',
+    brand: 'iColleges',
+    tile: 'Каталог',
+    icon: 'search',
+    tint: ['', ''],
     category: 'posle9',
     badge: 'Бесплатный подбор колледжа',
     title: 'Каталог колледжей России: 4 900+ учебных заведений',
@@ -246,6 +294,10 @@ export const WALL_OFFERS: WallOffer[] = [
   },
   {
     id: 'promokody',
+    brand: 'Open Card',
+    tile: 'Промокоды',
+    icon: 'ticket',
+    tint: ['', ''],
     category: 'bonus',
     badge: 'Промокоды на поездку',
     title: 'Промокоды на путешествия: отели, билеты, eSIM и аренда авто',
@@ -264,6 +316,10 @@ export const WALL_OFFERS: WallOffer[] = [
   },
   {
     id: 'rossiya',
+    brand: 'Open Card',
+    tile: 'Россия',
+    icon: 'mountain',
+    tint: ['', ''],
     category: 'bonus',
     badge: 'Куда поехать на каникулах',
     title: 'Путешествия по России: маршруты по дням и сезонные идеи',
@@ -281,6 +337,12 @@ export const WALL_OFFERS: WallOffer[] = [
     partnerUrl: 'https://card-open.ru/rossiya?utm_source=proschools&utm_medium=offerwall&utm_campaign=podarki',
   },
 ]
+
+/** Цвет плитки — по позиции в списке: соседние офферы всегда разного цвета. */
+export const WALL_OFFERS: WallOffer[] = OFFERS_RAW.map((o, i) => ({
+  ...o,
+  tint: TINTS[i % TINTS.length],
+}))
 
 export const FEATURED_OFFERS = WALL_OFFERS.filter(o => o.featured)
 
