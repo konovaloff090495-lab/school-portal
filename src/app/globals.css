@@ -192,3 +192,18 @@ body {
 .textbook-content .note   { background: #fffbeb; border-left: 4px solid #f59e0b; }
 .textbook-content .example { background: #eff6ff; border-left: 4px solid #3b82f6; }
 .textbook-content .task   { background: #faf5ff; border-left: 4px solid #a855f7; }
+
+/* Витрина подарков (/spasibo/, /podarki/): выезжающая справа шторка с оффером */
+@keyframes ps-drawer-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes ps-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.ps-drawer { animation: ps-drawer-in 0.28s cubic-bezier(0.32, 0.72, 0, 1); }
+.ps-overlay { animation: ps-fade-in 0.2s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .ps-drawer, .ps-overlay { animation: none; }
+}
