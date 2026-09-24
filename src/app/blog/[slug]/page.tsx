@@ -25,6 +25,12 @@ function isOnlineCluster(post: { slug: string; tags: string[]; category: string 
     || post.tags.some(t => ONLINE_TAGS.includes(t.toLowerCase()))
     || ONLINE_SLUG_RE.test(post.slug)
 }
+// Продукты school-university.com, для которых школьные лид-блоки уместны.
+// Всё остальное (вуз, колледж, за рубежом, курсы для детей) — не про «подобрать школу».
+const SCHOOL_PRODUCTS = new Set([
+  'online-school', 'externat', 'semeynaya-shkola', 'vechernyaya-shkola',
+  'zaochnaya-shkola', 'attestaciya',
+])
 function isAdultCluster(post: { slug: string; category: string }) {
   return post.category === 'Взрослым' || ADULT_SLUG_RE.test(post.slug)
 }
@@ -110,8 +116,13 @@ export default async function BlogPostPage({ params }: Props) {
   const adBefore = new Set<number>()
   if (sections.length >= 2) adBefore.add(0)
   const mobileMidAd = sections.length >= 4 ? Math.floor(sections.length / 2) : -1
-  const adultCluster = isAdultCluster(post)
-  const onlineCluster = !adultCluster && isOnlineCluster(post)
+  // Кластерные эвристики построены на слагах и ловят слово «дистанционный» в
+  // статьях про ВУЗ и колледж («второе высшее дистанционно»), подсовывая им
+  // лид-форму подбора ШКОЛЫ. Явно проставленный suProduct авторитетнее слага:
+  // школьные лид-блоки включаются только для школьных продуктов.
+  const suSchoolish = !post.suProduct || SCHOOL_PRODUCTS.has(post.suProduct)
+  const adultCluster = isAdultCluster(post) && suSchoolish
+  const onlineCluster = !adultCluster && isOnlineCluster(post) && suSchoolish
   const brandStripAfter = onlineCluster && sections.length >= 2 ? 0 : -1
   // Партнёрский баннер продукта Синергии (school-university.com): одна компактная
   // плашка в теле статьи и развёрнутый оффер после текста. Ставим со второй секции,
