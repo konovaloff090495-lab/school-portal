@@ -21,6 +21,14 @@ export interface BlogPost {
   readTime: number // minutes
   imageAlt: string
   imageUrl?: string // /blog/images/{slug}.jpg
+  /**
+   * Продукт school-university.com, вокруг которого построена статья
+   * (ключ из src/lib/su-products.ts). Включает партнёрский баннер в теле
+   * статьи и блок-оффер в конце с меткой gerasimov_lav.
+   */
+  suProduct?: string
+  /** Глубокая посадочная вместо хаба продукта, напр. /kursy-ege/matematika/ */
+  suPath?: string
 }
 
 // Метаданные без тяжёлого HTML — для индекса, sitemap, «Читайте также», сайдбара.

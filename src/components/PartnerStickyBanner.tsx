@@ -1,12 +1,15 @@
 'use client'
 
+import { suUrl } from '@/lib/su-products'
+
 import { useState, useEffect } from 'react'
 import Countdown, { DEADLINE_LABEL, isDeadlinePassed } from '@/components/Countdown'
 
 const YM_ID = 108789843
 const STORAGE_KEY = 'ps_partner_banner_closed'
 const COOLDOWN_MS = 24 * 60 * 60 * 1000
-const PARTNER_URL = 'https://schooluniversity.ru/online-school?utm_source=gerasimov_lav&utm_medium=lkpartners#telegrampopup'
+// 24.09.2026: растяжка каталога переведена на school-university.com, метка прежняя.
+const PARTNER_URL = suUrl('online-school', 'catalog-sticky')
 
 function recentlyClosed(): boolean {
   try { return Date.now() - Number(localStorage.getItem(STORAGE_KEY) || 0) < COOLDOWN_MS }

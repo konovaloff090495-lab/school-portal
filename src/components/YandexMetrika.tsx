@@ -5,7 +5,7 @@ import Script from 'next/script'
 
 declare global {
   interface Window {
-    ym?: (id: number, action: string, params?: object | string) => void
+    ym?: (id: number, action: string, params?: object | string, extra?: object) => void
     dataLayer?: unknown[]
   }
 }

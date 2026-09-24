@@ -9,6 +9,7 @@ import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS } from '@/lib/ads'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
+import SuPartnerBanner from '@/components/SuPartnerBanner'
 import { onlineBrands } from '@/data/online-brands'
 
 // Кластер «онлайн / домашнее / семейное обучение»: ~60 статей, 13 000 визитов за квартал
@@ -112,6 +113,10 @@ export default async function BlogPostPage({ params }: Props) {
   const adultCluster = isAdultCluster(post)
   const onlineCluster = !adultCluster && isOnlineCluster(post)
   const brandStripAfter = onlineCluster && sections.length >= 2 ? 0 : -1
+  // Партнёрский баннер продукта Синергии (school-university.com): одна компактная
+  // плашка в теле статьи и развёрнутый оффер после текста. Ставим со второй секции,
+  // чтобы не биться с блоком РСЯ, который стоит перед первой.
+  const suBannerBefore = post.suProduct && sections.length >= 3 ? 1 : -1
 
   return (
     <>
@@ -349,6 +354,14 @@ export default async function BlogPostPage({ params }: Props) {
                     </div>
                   )}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
+                  {i === suBannerBefore && (
+                    <SuPartnerBanner
+                      productKey={post.suProduct!}
+                      postSlug={post.slug}
+                      pathOverride={post.suPath}
+                      compact
+                    />
+                  )}
                   {i === brandStripAfter && (
                     <div style={{
                       margin: '20px 0 24px', padding: '14px 16px', borderRadius: 14,
@@ -365,6 +378,18 @@ export default async function BlogPostPage({ params }: Props) {
                 </Fragment>
               ))}
             </article>
+
+            {/* Партнёрский оффер продукта Синергии.
+                В онлайн- и «взрослом» кластерах ниже уже стоит НАША лид-форма
+                (OnlineLeadCta) — два крупных блока подряд гасят оба, поэтому там
+                партнёр остаётся только плашкой в теле статьи. */}
+            {post.suProduct && !onlineCluster && !adultCluster && (
+              <SuPartnerBanner
+                productKey={post.suProduct}
+                postSlug={post.slug}
+                pathOverride={post.suPath}
+              />
+            )}
 
             {/* Tags */}
             <div style={{ marginTop: 28, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -399,7 +424,7 @@ export default async function BlogPostPage({ params }: Props) {
                 />
               </div>
             )}
-            {!onlineCluster && !adultCluster && <div style={{
+            {!onlineCluster && !adultCluster && !post.suProduct && <div style={{
               marginTop: 40, background: 'linear-gradient(135deg, #FFB988 0%, #FF6B3D 100%)',
               borderRadius: 24, padding: '32px 28px', color: 'white',
               fontFamily: 'var(--font-manrope)',

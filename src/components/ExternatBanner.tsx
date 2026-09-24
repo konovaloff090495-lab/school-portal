@@ -1,7 +1,9 @@
 'use client'
 
+import { suUrl } from '@/lib/su-products'
+
 const YM_ID = 108789843
-const EXTERNAT_URL = 'https://schooluniversity.ru/externat?utm_source=gerasimov_lav&utm_medium=lkpartners'
+const EXTERNAT_URL = suUrl('externat', 'catalog-banner')
 
 export default function ExternatBanner() {
   return (
