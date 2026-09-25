@@ -178,6 +178,11 @@ else
   echo "  ✓ next на месте"
 fi
 
+# Seed unchanged files on the server to avoid uploading gigabytes to an empty
+# staging directory. Real copies, never hard links to the live build.
+echo "==> Подготавливаем staging из текущей сборки на сервере..."
+$SSH $VPS "cd $DIR && mkdir -p .next-incoming && rsync -a --ignore-existing --exclude 'cache/' --exclude 'dev/' .next/ .next-incoming/"
+
 echo "==> rsync сборки в отдельную папку (работающий сайт не меняем)..."
 rsync_retry ".next/" "$DIR/.next-incoming/" ".next-incoming"
 
