@@ -14,7 +14,7 @@ trap 'rmdir "$DEPLOY_LOCK"' EXIT
 SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
 # ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
 # на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
-RSYNC_SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
+RSYNC_SSH="ssh -o ControlMaster=no -o ControlPath=none -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
 VPS="root@45.80.70.209"
 DIR="/var/www/school-portal"
 
