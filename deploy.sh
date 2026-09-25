@@ -3,6 +3,14 @@
 # Стратегия: собираем ЛОКАЛЬНО (Turbopack на VPS падает из-за RAM), rsync .next на VPS
 set -e
 
+# One local build/deploy at a time; an interrupted run releases the lock.
+DEPLOY_LOCK="$(dirname "$0")/.deploy-lock"
+if ! mkdir "$DEPLOY_LOCK" 2>/dev/null; then
+  echo "❌ Другой деплой уже работает (.deploy-lock)."
+  exit 1
+fi
+trap 'rmdir "$DEPLOY_LOCK"' EXIT
+
 SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
 # ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
 # на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
@@ -170,8 +178,8 @@ else
   echo "  ✓ next на месте"
 fi
 
-echo "==> rsync .next на VPS..."
-rsync_retry ".next/" "$DIR/.next/" ".next"
+echo "==> rsync сборки в отдельную папку (работающий сайт не меняем)..."
+rsync_retry ".next/" "$DIR/.next-incoming/" ".next-incoming"
 
 echo "==> rsync public/ на VPS (фото школ и статика)..."
 rsync_retry "public/" "$DIR/public/" "public"
@@ -186,7 +194,7 @@ VPS_BUILD_ID=""
 # Ретраим дольше (8 попыток): пустое чтение — это почти всегда флап SSH, а не
 # проблема билда, и раньше редко хватало 5 попыток на «плохом» соединении.
 for attempt in 1 2 3 4 5 6 7 8; do
-  VPS_BUILD_ID=$($SSH $VPS "cat $DIR/.next/BUILD_ID" 2>/dev/null || echo "")
+  VPS_BUILD_ID=$($SSH $VPS "cat $DIR/.next-incoming/BUILD_ID" 2>/dev/null || echo "")
   [[ -n "$VPS_BUILD_ID" ]] && break
   echo "  ⚠️  не смог прочитать BUILD_ID (попытка $attempt/8), повтор через 15 с"
   sleep 15
@@ -205,26 +213,18 @@ if [[ "$VPS_BUILD_ID" != "$LOCAL_BUILD_ID" ]]; then
 fi
 echo "  ✓ BUILD_ID совпал: $VPS_BUILD_ID"
 
-echo "==> Перезапускаем PM2..."
-# Самый обидный момент для обрыва: .next уже долит и сверен, а рестарт не прошёл —
-# прод остаётся на старом билде при полностью готовом новом.
-restart_ok=0
-for attempt in 1 2 3 4 5; do
-  if $SSH $VPS "pm2 restart school-portal --update-env" 2>/dev/null; then restart_ok=1; break; fi
-  if $SSH $VPS "pm2 start $DIR/ecosystem.config.cjs && pm2 save" 2>/dev/null; then restart_ok=1; break; fi
-  echo "  ⚠️  рестарт PM2 не удался (попытка $attempt/5), повтор через 15 с"
-  sleep 15
-done
-if [[ "$restart_ok" != "1" ]]; then
-  echo "❌ PM2 не перезапустился после 5 попыток. .next долит и сверен —"
-  echo "   допинать вручную: ssh root@45.80.70.209 'pm2 restart school-portal'"
-  exit 1
-fi
+echo "==> Проверяем холодный рендер до переключения прода..."
+$SSH $VPS "cd $DIR && python3 scripts/deploy/prepare-release.py .next-incoming $DIR && node scripts/deploy/check-release.mjs"
+
+# Смена каталога занимает секунды. Старый билд сохраняем для отката.
+# rsync больше не заменяет манифесты под работающим процессом Next.
+echo "==> Переключаем проверенную сборку..."
+$SSH $VPS "cd $DIR && bash scripts/deploy/activate-release.sh '$LOCAL_BUILD_ID'"
 
 echo "==> Проверка..."
 until $SSH $VPS 'echo ok' 2>/dev/null; do sleep 5; done
 sleep 5
-CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/")
+CODE=$(curl --compressed -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/")
 echo "  HTTP: $CODE"
 if [[ "$CODE" == "200" ]]; then
   echo "✅ pro-schools.ru работает! (BUILD_ID $VPS_BUILD_ID)"
