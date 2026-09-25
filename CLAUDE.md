@@ -109,7 +109,7 @@ git add -A && git commit -m "..." && git push origin main
 1. SSH → `git pull origin main` на VPS (ключ `/root/.ssh/github_school_portal`, до 5 ретраев)
 2. Локальная сборка: `NODE_OPTIONS=--max-old-space-size=4096 npm run build`
 3. Читает локальный `.next/BUILD_ID`
-4. `rsync -az --delete` сборки в `.next-incoming/` и статики в `public/` на VPS (до 5 ретраев на каждый,
+4. Сборка (без cache/dev) упаковывается в один tar.gz; rsync по отдельному SSH-соединению передаёт архив, SHA256 проверяется до распаковки в `.next-incoming/`. Статика `public/` передаётся отдельно (до 5 ретраев,
    с реальной проверкой кода возврата — обрыв SSH во время rsync ловится)
 5. **Гейт безопасности по BUILD_ID**: читает `.next-incoming/BUILD_ID` на VPS (до 5 ретраев) и
    сверяет с локальным. Не совпал → `.next` долит не полностью → выход БЕЗ рестарта,
