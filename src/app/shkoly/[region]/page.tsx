@@ -1,20 +1,12 @@
 import type { Metadata } from 'next'
-import { notFound, permanentRedirect } from 'next/navigation'
-import { regionSlugs, regionLabels, regionLabelsIn, regionLabelsOf, getSchoolsByRegion, getSchoolBySlug, RegionSlug } from '@/data/schools'
+import { notFound } from 'next/navigation'
+import { regionSlugs, regionLabels, regionLabelsIn, regionLabelsOf, getSchoolsByRegion, RegionSlug } from '@/data/schools'
 import { buildTitle, buildDescription, buildKeywords } from '@/lib/utils'
 import CatalogClient from '../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import DistrictLinks from '@/components/DistrictLinks'
 import { raexRegions } from '@/data/raex'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
-
-// Legacy links used /shkoly/<school-slug>/ instead of /shkola/<school-slug>/.
-// Keep real city pages intact and redirect only exact existing school records.
-function redirectLegacySchool(slug: string) {
-  if (regionSlugs.includes(slug as RegionSlug)) return
-  const school = getSchoolBySlug(slug)
-  if (school) permanentRedirect(`/shkola/${school.slug}/`)
-}
 
 interface Props {
   params: Promise<{ region: string }>
@@ -40,7 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RegionPage({ params }: Props) {
   const { region } = await params
-  redirectLegacySchool(region)
   if (!regionSlugs.includes(region as RegionSlug)) notFound()
   const r = region as RegionSlug
   const regionName = regionLabels[r]
