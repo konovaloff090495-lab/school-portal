@@ -14,6 +14,7 @@ const routes = [
   ['/gdz/9-klass/fizika/peryshkin/nomer-p65-2/', 200],
   ['/gdz/5-klass/angliiskiy-yazyk/afanaseva-uchebnik-chast-1/nomer-9-s29/', 200],
   ['/olimpiady/matematika/', 200],
+  ['/shkoly/gbou-shkola-179-moskva/', 308],
   ['/gdz/7-klass/fizika/peryshkin/nomer-63/', 404],
 ];
 try {
@@ -25,10 +26,15 @@ try {
   }
   assert.ok(ready, 'Preview did not start');
   for (const [path, status] of routes) {
-    const response = await fetch(`http://127.0.0.1:${port}${path}`, { signal: AbortSignal.timeout(60000) });
+    const response = await fetch(`http://127.0.0.1:${port}${path}`, { signal: AbortSignal.timeout(60000), redirect: 'manual' });
     const body = await response.text();
     assert.equal(response.status, status, path);
-    assert.ok(body.includes('<html'), `No HTML: ${path}`);
+    if (status === 308) {
+      const target = response.headers.get('location');
+      assert.ok(target?.endsWith(path.replace('/shkoly/', '/shkola/')), `Wrong redirect: ${target}`);
+    } else {
+      assert.ok(body.includes('<html'), `No HTML: ${path}`);
+    }
     console.log(`${status} ${path}`);
   }
   assert.ok(!/Could not find the module|Server Components render|MODULE_NOT_FOUND/.test(log), log.slice(-3000));
