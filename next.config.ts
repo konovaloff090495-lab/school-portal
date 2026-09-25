@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { readFileSync } from "fs";
 import path from "path";
+import legacySchoolPaths from "./scripts/seo/legacy-school-paths.json";
 
 // Карточки школ, удалённые из каталога как недостоверные (scripts/delete-*.mjs
 // пишет сюда «слаг → куда вести»). 301 на каталог города, чтобы не плодить 404
@@ -81,6 +82,9 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      ...Object.entries(legacySchoolPaths).map(([source, destination]) => ({
+        source, destination, permanent: true,
+      })),
       // Legacy textbook URLs omitted the -klass suffix. Preserve the subject
       // and topic; normalize only valid school class numbers (1 through 11).
       ...Array.from({ length: 11 }, (_, i) => ({
