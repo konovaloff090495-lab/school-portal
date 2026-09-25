@@ -10,7 +10,9 @@ import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import AdCard from '@/components/AdCard'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3, splitForInlineAd } from '@/lib/ads'
-import { BreadcrumbJsonLd, TextbookTopicJsonLd } from '@/lib/schema'
+import { BreadcrumbJsonLd, TextbookTopicJsonLd, FaqJsonLd } from '@/lib/schema'
+import { getTopicFaq } from '@/data/textbook-faq'
+import TopicFaq from '@/components/TopicFaq'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -85,6 +87,7 @@ export default async function TopicPage({ params }: Props) {
 
   const article = getArticle(subjectSlug, klass, topicSlug)
   const [articleHead, articleTail] = splitForInlineAd(article?.content ? sanitizeHtml(article.content) : '')
+  const faq = getTopicFaq(subjectSlug, klass, topicSlug)
   const allTopics = getTopicsForSubjectAndClass(subjectSlug, klass)
   const currentIdx = allTopics.findIndex(t => t.slug === topicSlug)
   const prevTopic = currentIdx > 0 ? allTopics[currentIdx - 1] : null
@@ -109,6 +112,9 @@ export default async function TopicPage({ params }: Props) {
         klass={klass}
         publishedAt={article?.publishedAt}
       />
+      {faq.length > 0 && (
+        <FaqJsonLd faqs={faq.map(f => ({ question: f.q, answer: f.a }))} />
+      )}
       {/* Header */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
@@ -179,6 +185,8 @@ export default async function TopicPage({ params }: Props) {
           {!articleTail && (
             <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
           )}
+
+          <TopicFaq items={faq} />
 
           {/* Навигация prev/next */}
           <div className="flex gap-3">
