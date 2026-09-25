@@ -14,7 +14,10 @@ const routes = [
   ['/gdz/9-klass/fizika/peryshkin/nomer-p65-2/', 200],
   ['/gdz/5-klass/angliiskiy-yazyk/afanaseva-uchebnik-chast-1/nomer-9-s29/', 200],
   ['/olimpiady/matematika/', 200],
-  ['/shkoly/gbou-shkola-179-moskva/', 308],
+  ['/shkoly/gbou-shkola-179-moskva/', 308, '/shkola/gbou-shkola-179-moskva/'],
+  ['/shkoly/gbou-shkola-57-moskva/', 308, '/shkola/gbou-shkola-57-moskva/'],
+  ['/uchebnik/russkiy-yazyk/6/', 308, '/uchebnik/russkiy-yazyk/6-klass/'],
+  ['/uchebnik/geometriya/11/uravnenie-ploskosti/', 308, '/uchebnik/geometriya/11-klass/uravnenie-ploskosti/'],
   ['/gdz/7-klass/fizika/peryshkin/nomer-63/', 404],
 ];
 try {
@@ -25,13 +28,13 @@ try {
     await new Promise(r => setTimeout(r, 500));
   }
   assert.ok(ready, 'Preview did not start');
-  for (const [path, status] of routes) {
+  for (const [path, status, expectedLocation] of routes) {
     const response = await fetch(`http://127.0.0.1:${port}${path}`, { signal: AbortSignal.timeout(60000), redirect: 'manual' });
     const body = await response.text();
     assert.equal(response.status, status, path);
     if (status === 308) {
       const target = response.headers.get('location');
-      assert.ok(target?.endsWith(path.replace('/shkoly/', '/shkola/')), `Wrong redirect: ${target}`);
+      assert.ok(target?.endsWith(expectedLocation), `Wrong redirect: ${target}`);
     } else {
       assert.ok(body.includes('<html'), `No HTML: ${path}`);
     }
