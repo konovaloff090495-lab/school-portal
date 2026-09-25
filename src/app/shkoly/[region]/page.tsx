@@ -26,7 +26,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { region } = await params
-  redirectLegacySchool(region)
   if (!regionSlugs.includes(region as RegionSlug)) return {}
   const r = region as RegionSlug
   const count = getSchoolsByRegion(r).length
