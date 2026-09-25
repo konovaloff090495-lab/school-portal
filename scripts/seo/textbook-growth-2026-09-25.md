@@ -1,6 +1,6 @@
 # Textbook growth: verified handoff, 2026-09-25
 
-## Shipped candidate
+## Production release
 Commit c85d0a14: 3,914 new contextual links in 2,713 articles. Removed 1,445 candidate links to unrelated subjects or distant grades. All 3,964 current internal article links resolve to defined topic routes. Original article text preserved. Fixed the incorrect stressed-syllable count for soroka in FAQ. TypeScript passed.
 
 ## Measurement
@@ -17,7 +17,7 @@ Use the same filters and aggregation in comparisons. Compare landing-page organi
 - Sitemap lastmod is not proof of publication cadence; one competitor article is not a representative content-length sample.
 
 ## Remaining work
-1. Finish production deployment and inspect live links and FAQ.
+1. Deployment complete: BUILD_ID 2P6HiSWyBMMLr-a1K_j4Z, HTTP 200. Four live pages checked for article links and FAQ; source commits c85d0a14 and 4c1e72c9.
 2. Continue factual review of FAQ. Corrected temperature vs kinetic energy, alphabet capacity, spelling rationale and oversimplified biology classification.
 3. Manually validate topic gaps against full article content before adding original lessons.
 4. Improve selected high-impression lessons with worked examples and diagrams; no fixed word-count target.
