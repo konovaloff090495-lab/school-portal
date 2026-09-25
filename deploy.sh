@@ -178,13 +178,20 @@ else
   echo "  ✓ next на месте"
 fi
 
-# Seed unchanged files on the server to avoid uploading gigabytes to an empty
-# staging directory. Real copies, never hard links to the live build.
-echo "==> Подготавливаем staging из текущей сборки на сервере..."
-$SSH $VPS "cd $DIR && mkdir -p .next-incoming && rsync -a --ignore-existing --exclude 'cache/' --exclude 'dev/' .next/ .next-incoming/"
-
-echo "==> rsync сборки в отдельную папку (работающий сайт не меняем)..."
-rsync_retry ".next/" "$DIR/.next-incoming/" ".next-incoming"
+# 137k small files make macOS rsync 2.6.9 spend most time in round trips.
+# Transfer a single compressed archive, verify its checksum, then extract only
+# into staging. The live .next is never an extraction destination.
+RELEASE_ARCHIVE="$PWD/.next-release-$LOCAL_BUILD_ID.tar.gz"
+if [[ ! -f "$RELEASE_ARCHIVE" ]]; then
+  echo "==> Упаковываем сборку в один архив..."
+  COPYFILE_DISABLE=1 tar -czf "$RELEASE_ARCHIVE.tmp" --exclude='./cache' --exclude='./dev' -C .next .
+  mv "$RELEASE_ARCHIVE.tmp" "$RELEASE_ARCHIVE"
+fi
+RELEASE_SHA=$(shasum -a 256 "$RELEASE_ARCHIVE" | cut -d ' ' -f 1)
+echo "==> Передаём архив сборки..."
+rsync_retry "$RELEASE_ARCHIVE" "$DIR/.next-release.tar.gz" "release archive"
+echo "==> Проверяем SHA256 и распаковываем в staging..."
+$SSH $VPS "cd $DIR && echo '$RELEASE_SHA  .next-release.tar.gz' | sha256sum -c - && test ! -L .next-incoming && rm -rf .next-incoming && mkdir .next-incoming && tar -xzf .next-release.tar.gz -C .next-incoming"
 
 echo "==> rsync public/ на VPS (фото школ и статика)..."
 rsync_retry "public/" "$DIR/public/" "public"
