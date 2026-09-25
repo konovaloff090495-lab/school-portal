@@ -11,7 +11,7 @@ if ! mkdir "$DEPLOY_LOCK" 2>/dev/null; then
 fi
 trap 'rmdir "$DEPLOY_LOCK"' EXIT
 
-SSH="ssh -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
+SSH="ssh -o ControlMaster=no -o ControlPath=none -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
 # ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
 # на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
 RSYNC_SSH="ssh -o ControlMaster=no -o ControlPath=none -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
@@ -181,17 +181,17 @@ fi
 # 137k small files make macOS rsync 2.6.9 spend most time in round trips.
 # Transfer a single compressed archive, verify its checksum, then extract only
 # into staging. The live .next is never an extraction destination.
-RELEASE_ARCHIVE="$PWD/.next-release-$LOCAL_BUILD_ID.tar.gz"
+RELEASE_ARCHIVE="$PWD/.next-release-$LOCAL_BUILD_ID.tar.zst"
 if [[ ! -f "$RELEASE_ARCHIVE" ]]; then
   echo "==> Упаковываем сборку в один архив..."
-  COPYFILE_DISABLE=1 tar -czf "$RELEASE_ARCHIVE.tmp" --exclude='./cache' --exclude='./dev' -C .next .
+  (set -o pipefail; COPYFILE_DISABLE=1 tar --no-xattrs -cf - --exclude='./cache' --exclude='./dev' -C .next . | zstd -T2 -8 --long=27 -o "$RELEASE_ARCHIVE.tmp")
   mv "$RELEASE_ARCHIVE.tmp" "$RELEASE_ARCHIVE"
 fi
 RELEASE_SHA=$(shasum -a 256 "$RELEASE_ARCHIVE" | cut -d ' ' -f 1)
 echo "==> Передаём архив сборки..."
-rsync_retry "$RELEASE_ARCHIVE" "$DIR/.next-release.tar.gz" "release archive"
+rsync_retry "$RELEASE_ARCHIVE" "$DIR/.next-release.tar.zst" "release archive"
 echo "==> Проверяем SHA256 и распаковываем в staging..."
-$SSH $VPS "cd $DIR && echo '$RELEASE_SHA  .next-release.tar.gz' | sha256sum -c - && test ! -L .next-incoming && rm -rf .next-incoming && mkdir .next-incoming && tar -xzf .next-release.tar.gz -C .next-incoming"
+$SSH $VPS "cd $DIR && echo '$RELEASE_SHA  .next-release.tar.zst' | sha256sum -c - && test ! -L .next-incoming && rm -rf .next-incoming && mkdir .next-incoming && tar --zstd -xf .next-release.tar.zst -C .next-incoming"
 
 echo "==> rsync public/ на VPS (фото школ и статика)..."
 rsync_retry "public/" "$DIR/public/" "public"
