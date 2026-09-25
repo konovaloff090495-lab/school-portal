@@ -9,12 +9,18 @@ if ! mkdir "$DEPLOY_LOCK" 2>/dev/null; then
   echo "❌ Другой деплой уже работает (.deploy-lock)."
   exit 1
 fi
-trap 'rmdir "$DEPLOY_LOCK"' EXIT
+DEPLOY_SOCKET="$(cd "$DEPLOY_LOCK" && pwd)/ssh.sock"
+cleanup_deploy() {
+  ssh -S "$DEPLOY_SOCKET" -O exit root@45.80.70.209 >/dev/null 2>&1 || true
+  rm -f "$DEPLOY_SOCKET"
+  rmdir "$DEPLOY_LOCK"
+}
+trap cleanup_deploy EXIT
 
-SSH="ssh -o ControlMaster=no -o ControlPath=none -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
+SSH="ssh -o ControlMaster=auto -o ControlPath=$DEPLOY_SOCKET -o ControlPersist=600 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
 # ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
 # на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
-RSYNC_SSH="ssh -o ControlMaster=no -o ControlPath=none -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
+RSYNC_SSH="ssh -o ControlMaster=auto -o ControlPath=$DEPLOY_SOCKET -o ControlPersist=600 -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no -o ServerAliveInterval=15 -o ServerAliveCountMax=8 -o TCPKeepAlive=yes"
 VPS="root@45.80.70.209"
 DIR="/var/www/school-portal"
 
