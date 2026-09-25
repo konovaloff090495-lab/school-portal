@@ -1,57 +1,13 @@
-name: Deploy to Beget
-
+# Production is released only with ./deploy.sh from the maintainer's machine.
+# The former push hook ran npm ci and pkill on the live VPS, racing local
+# deployments and causing intermittent 502 responses for users and crawlers.
+name: Deployment instructions
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
-
-# Только один деплой за раз: новый пуш отменяет предыдущий незавершённый
-# (иначе два blue-green билда конфликтуют на сервере за .next-build).
-concurrency:
-  group: deploy-beget
-  cancel-in-progress: true
-
+permissions:
+  contents: read
 jobs:
-  deploy:
+  instructions:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-    permissions:
-      contents: read
-
     steps:
-      - name: Deploy to Beget via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: 45.80.70.209
-          username: root
-          key: ${{ secrets.BEGET_SSH_KEY }}
-          command_timeout: 110m
-          script: |
-            cd /var/www/school-portal
-            echo "==> git pull..."
-            GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main
-            echo "==> npm ci (с фолбэком на чистую переустановку при повреждённом node_modules)..."
-            npm ci --prefer-offline || { echo "!! npm ci упал — чищу node_modules и ставлю заново"; rm -rf node_modules; npm ci; }
-            echo "==> убиваем orphan-сборки от отменённых деплоев (паттерн [n] не совпадает с этим скриптом)..."
-            pkill -9 -f "next/dist/bin/[n]ext" 2>/dev/null || true
-            sleep 2
-            echo "==> BLUE-GREEN: собираем в .next-build (старый сайт продолжает работать)..."
-            rm -rf .next-build || true
-            # если каталог остался (был залочен orphan-процессом) — уносим в сторону и удаляем
-            if [ -d .next-build ]; then mv .next-build ".next-build-stale-$$" && rm -rf ".next-build-stale-$$" & fi
-            if NEXT_DIST_DIR=.next-build npm run build; then
-              echo "==> build OK, атомарный swap .next..."
-              rm -rf .next-old
-              mv .next .next-old 2>/dev/null || true
-              mv .next-build .next
-              echo "==> reload PM2 (быстро, без долгого даунтайма)..."
-              # memory guard: ограничиваем память, авто-рестарт при OOM (иначе сайт падал в 502 через ~20 мин после деплоя)
-              pm2 reload school-portal --update-env 2>/dev/null || PORT=3001 NODE_OPTIONS="--max-old-space-size=1024" pm2 start npm --name school-portal --max-memory-restart 900M --time -- start
-              pm2 save
-              rm -rf .next-old
-              echo "==> done (zero-downtime)"
-            else
-              echo "!! BUILD FAILED — старый сайт остался работать, .next не тронут"
-              rm -rf .next-build
-              exit 1
-            fi
+      - run: echo 'Use ./deploy.sh locally. It stages, cold-checks and activates the release with rollback. No builds or dependency reinstalls on the live VPS.'
