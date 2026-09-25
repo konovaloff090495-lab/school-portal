@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 import { readFileSync } from "fs";
 import path from "path";
-import legacySchoolPaths from "./src/data/legacy-school-paths.json";
 
 // Карточки школ, удалённые из каталога как недостоверные (scripts/delete-*.mjs
 // пишет сюда «слаг → куда вести»). 301 на каталог города, чтобы не плодить 404
@@ -82,10 +81,12 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // GSC: old school-card URLs used the city catalog prefix. Exact matches
-      // only; unknown/deleted schools and valid city pages are not redirected.
-      ...Object.entries(legacySchoolPaths).map(([source, destination]) => ({
-        source: source.replace(/\/$/, ''), destination, permanent: true,
+      // Legacy textbook URLs omitted the -klass suffix. Preserve the subject
+      // and topic; normalize only valid school class numbers (1 through 11).
+      ...Array.from({ length: 11 }, (_, i) => ({
+        source: `/uchebnik/:subject/${i + 1}/:path*`,
+        destination: `/uchebnik/:subject/${i + 1}-klass/:path*`,
+        permanent: true,
       })),
       ...Object.entries(removedSchools).map(([slug, destination]) => ({
         source: `/shkola/${slug}`,
