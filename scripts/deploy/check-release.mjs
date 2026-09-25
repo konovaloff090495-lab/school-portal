@@ -34,7 +34,7 @@ try {
     assert.equal(response.status, status, path);
     if (status === 308) {
       const target = response.headers.get('location');
-      assert.ok(target?.endsWith(expectedLocation), `Wrong redirect: ${target}`);
+      assert.ok(target && new URL(target, `http://127.0.0.1:${port}`).pathname.replace(/\/$/, '') === expectedLocation.replace(/\/$/, ''), `Wrong redirect: ${target}`);
     } else {
       assert.ok(body.includes('<html'), `No HTML: ${path}`);
     }
