@@ -63,4 +63,4 @@ public/fipi/
 .next-incoming/
 .next-previous/
 
-.next-release*.tar.gz*
+.next-release*.tar.*
