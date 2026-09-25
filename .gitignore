@@ -57,3 +57,8 @@ scripts/olimp/raw/
 public/olimpiady/pdf/
 scripts/ege/raw/
 public/fipi/
+
+# Deployment staging directories
+.deploy-lock/
+.next-incoming/
+.next-previous/
