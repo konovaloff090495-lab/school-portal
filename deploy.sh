@@ -9,10 +9,12 @@ if ! mkdir "$DEPLOY_LOCK" 2>/dev/null; then
   echo "❌ Другой деплой уже работает (.deploy-lock)."
   exit 1
 fi
-DEPLOY_SOCKET="$(cd "$DEPLOY_LOCK" && pwd)/ssh.sock"
+DEPLOY_SOCKET="${DEPLOY_SHARED_SSH_SOCKET:-$(cd "$DEPLOY_LOCK" && pwd)/ssh.sock}"
 cleanup_deploy() {
-  ssh -S "$DEPLOY_SOCKET" -O exit root@45.80.70.209 >/dev/null 2>&1 || true
-  rm -f "$DEPLOY_SOCKET"
+  if [[ -z "${DEPLOY_SHARED_SSH_SOCKET:-}" ]]; then
+    ssh -S "$DEPLOY_SOCKET" -O exit root@45.80.70.209 >/dev/null 2>&1 || true
+    rm -f "$DEPLOY_SOCKET"
+  fi
   rmdir "$DEPLOY_LOCK"
 }
 trap cleanup_deploy EXIT
