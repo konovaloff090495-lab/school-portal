@@ -186,3 +186,5 @@ curl -s -o /dev/null -w "%{http_code}" --max-time 20 "https://pro-schools.ru/"
 - Старые `/shkoly/<school-slug>/` перенаправляются по таблице 206 точных существующих карточек из GSC (scripts/seo/legacy-school-paths.json), через next.config.ts до рендера. Runtime permanentRedirect в ISR-маршруте здесь не использовать: повторный ответ Next 16.2.4 дублировал Location. Валидные города и неизвестные школы не затрагиваются. В учебнике числовые классы 1–11 нормализуются в `N-klass`.
 
 - deploy.sh требует локальный zstd и tar с --no-xattrs (macOS), на VPS GNU tar --zstd. Архив проверяется SHA256; long-window zstd сокращает текущую сборку с 627 до 64 МиБ. SSH использует отдельный multiplex-сокет внутри .deploy-lock только на время этого деплоя (закрывается при выходе). Так между шагами не повторяется нестабильный banner exchange; общий пользовательский сокет не используется.
+
+- Если SSH обрывается на banner exchange: не делать частых проб. Каждая новая попытка продлевает блокировку VPS; выдержать минимум 150 секунд без SSH, затем одна сессия ControlMaster на всю выкладку. См. feedback_vps_ssh_controlmaster.md в общей памяти.

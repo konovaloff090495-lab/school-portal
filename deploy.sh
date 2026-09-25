@@ -53,7 +53,7 @@ rsync_retry() {
 }
 
 echo "==> Подключаемся к VPS..."
-until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждём..."; sleep 15; done
+until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждём 150 с без новых подключений (защита VPS от частых попыток)..."; sleep 150; done
 
 # 25.09.2026: деплой «успешно» выкатил СТАРЫЙ код, потому что локальный push отвалился
 # (non-fast-forward), а git pull на VPS честно подтянул прежний main. Проверяем заранее.
@@ -77,8 +77,8 @@ for attempt in 1 2 3 4 5; do
   if $SSH $VPS "cd $DIR && GIT_SSH_COMMAND='ssh -i /root/.ssh/github_school_portal -o StrictHostKeyChecking=no' git pull origin main"; then
     git_pull_ok=1; break
   fi
-  echo "  ⚠️  git pull не удался (попытка $attempt/5), повтор через 15 с"
-  sleep 15
+  echo "  ⚠️  git pull не удался (попытка $attempt/5), повтор через 150 с"
+  sleep 150
 done
 if [[ "$git_pull_ok" != "1" ]]; then
   echo "❌ git pull на VPS не прошёл после 5 попыток — выходим, прод не тронут."
@@ -124,8 +124,8 @@ echo "==> Проверяем зависимости на VPS..."
 ssh_alive=0
 for attempt in 1 2 3 4 5; do
   if $SSH $VPS 'echo ok' 2>/dev/null | grep -q '^ok$'; then ssh_alive=1; break; fi
-  echo "  ⚠️  SSH не ответил (попытка $attempt/5), повтор через 15 с"
-  sleep 15
+  echo "  ⚠️  SSH не ответил (попытка $attempt/5), повтор через 150 с"
+  sleep 150
 done
 if [[ "$ssh_alive" != "1" ]]; then
   echo "❌ SSH к VPS не отвечает — не можем безопасно проверить зависимости, выходим."
@@ -145,8 +145,8 @@ for attempt in 1 2 3 4 5; do
   $SSH $VPS "test -x $DIR/node_modules/.bin/next" >/dev/null 2>&1 || next_rc=$?
   if [[ "$next_rc" == "0" ]]; then next_state="present"; break; fi
   if [[ "$next_rc" == "1" ]]; then next_state="absent"; break; fi
-  echo "  ⚠️  SSH оборвался при проверке next (код $next_rc, попытка $attempt/5), повтор через 15 с"
-  sleep 15
+  echo "  ⚠️  SSH оборвался при проверке next (код $next_rc, попытка $attempt/5), повтор через 150 с"
+  sleep 150
 done
 if [[ "$next_state" == "unknown" ]]; then
   echo "❌ Не удалось достоверно проверить next на VPS (SSH флапает, код ≠ 0/1) — выходим."
@@ -214,8 +214,8 @@ VPS_BUILD_ID=""
 for attempt in 1 2 3 4 5 6 7 8; do
   VPS_BUILD_ID=$($SSH $VPS "cat $DIR/.next-incoming/BUILD_ID" 2>/dev/null || echo "")
   [[ -n "$VPS_BUILD_ID" ]] && break
-  echo "  ⚠️  не смог прочитать BUILD_ID (попытка $attempt/8), повтор через 15 с"
-  sleep 15
+  echo "  ⚠️  не смог прочитать BUILD_ID (попытка $attempt/8), повтор через 150 с"
+  sleep 150
 done
 # Пустая строка ≠ несовпадение билда: это SSH не дал прочитать файл. Раньше пустое
 # чтение шло в ветку «долит не полностью» и пугало ложной ошибкой билда. Различаем.
