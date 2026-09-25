@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import assert from 'node:assert/strict';
 const port = 3197;
 const child = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-H', '127.0.0.1', '-p', String(port)], {
-  env: { ...process.env, NEXT_DIST_DIR: '.next-incoming', NODE_OPTIONS: '--max-old-space-size=1536' },
+  env: { ...process.env, NEXT_DIST_DIR: process.env.RELEASE_DIST_DIR || '.next-incoming', NODE_OPTIONS: '--max-old-space-size=1536' },
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 let log = '';
@@ -16,6 +16,10 @@ const routes = [
   ['/olimpiady/matematika/', 200],
   ['/shkoly/gbou-shkola-179-moskva/', 308, '/shkola/gbou-shkola-179-moskva/'],
   ['/shkoly/gbou-shkola-57-moskva/', 308, '/shkola/gbou-shkola-57-moskva/'],
+  // Recheck a cached redirect: duplicate Location headers must still fail.
+  ['/shkoly/gbou-shkola-179-moskva/', 308, '/shkola/gbou-shkola-179-moskva/'],
+  ['/shkoly/moskva/', 200],
+  ['/shkoly/nonexistent-school-index-check-2026/', 404],
   ['/uchebnik/russkiy-yazyk/6/', 308, '/uchebnik/russkiy-yazyk/6-klass/'],
   ['/uchebnik/geometriya/11/uravnenie-ploskosti/', 308, '/uchebnik/geometriya/11-klass/uravnenie-ploskosti/'],
   ['/gdz/7-klass/fizika/peryshkin/nomer-63/', 404],
