@@ -41,6 +41,16 @@ rsync_retry() {
 echo "==> Подключаемся к VPS..."
 until $SSH $VPS 'echo ok' 2>/dev/null; do echo "SSH недоступен, ждём..."; sleep 15; done
 
+# 25.09.2026: деплой «успешно» выкатил СТАРЫЙ код, потому что локальный push отвалился
+# (non-fast-forward), а git pull на VPS честно подтянул прежний main. Проверяем заранее.
+git fetch -q origin main 2>/dev/null || true
+if [[ -n "$(git rev-parse HEAD 2>/dev/null)" ]] && \
+   [[ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main 2>/dev/null)" ]]; then
+  echo "❌ Локальный HEAD != origin/main — коммит не запушен, VPS подтянет старый код."
+  echo "   Сначала: git push origin HEAD"
+  exit 1
+fi
+
 echo "==> git pull на VPS..."
 # SSH тут регулярно рвётся на banner exchange. Со `set -e` одна неудачная попытка
 # роняла весь деплой ещё до сборки — поэтому ретраим.
@@ -136,9 +146,25 @@ if [[ "$next_state" == "absent" ]]; then
   # (rmdir на занятых файлах при живом процессе) и оставлял node_modules БЕЗ .bin —
   # после чего следующий деплой снова шёл сюда же. Сносим папку сами: так ci ставит
   # с нуля и не спотыкается. Прод при этом жив — процесс уже загружен в память.
-  $SSH $VPS "cd $DIR && rm -rf node_modules && npm ci --no-audit --no-fund" || {
-    echo "❌ npm ci на VPS не прошёл — выходим, PM2 не трогаем."; exit 1; }
-  $SSH $VPS "test -x $DIR/node_modules/.bin/next" || { echo "❌ next так и не появился — выходим."; exit 1; }
+  # 25.09.2026: `rm -rf node_modules` упал с «Directory not empty» (файлы держал живой
+  # процесс), следом упал npm ci — и скрипт вышел, ОСТАВИВ ПРОД БЕЗ node_modules.
+  # Сайт держался только потому, что работающий next уже был в памяти: любой рестарт
+  # PM2 убил бы его. Поэтому теперь ставим с ретраями и НЕ выходим, не восстановив папку.
+  deps_ok=0
+  for attempt in 1 2 3; do
+    $SSH $VPS "cd $DIR && rm -rf node_modules && npm ci --omit=dev --no-audit --no-fund" \
+      && $SSH $VPS "test -x $DIR/node_modules/.bin/next" && { deps_ok=1; break; }
+    echo "  ⚠️  npm ci не прошёл (попытка $attempt/3), повтор через 10 с"
+    sleep 10
+  done
+  if [[ $deps_ok -ne 1 ]]; then
+    echo "  ⚠️  последняя попытка: npm install --omit=dev поверх того, что есть"
+    $SSH $VPS "cd $DIR && npm install --omit=dev --no-audit --no-fund" >/dev/null 2>&1 || true
+    $SSH $VPS "test -x $DIR/node_modules/.bin/next" || {
+      echo "❌ node_modules на проде ВОССТАНОВИТЬ НЕ УДАЛОСЬ — сайт упадёт при рестарте PM2."
+      echo "   Чинить руками: ssh root@45.80.70.209 'cd $DIR && rm -rf node_modules && npm ci --omit=dev'"
+      exit 1; }
+  fi
   echo "  ✓ зависимости на месте"
 else
   echo "  ✓ next на месте"
