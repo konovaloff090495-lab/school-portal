@@ -142,7 +142,8 @@ export default async function GdzNumberPage({ params }: Props) {
   }
 
   const firstAuthor = book.authors.split(',')[0].trim()
-  const lede = [firstAuthor, chapter ? chapter.title : '', `страница ${problem.page}`]
+  const pageLabel = Number.isFinite(problem.page) && problem.page > 0 ? `страница ${problem.page}` : ''
+  const lede = [firstAuthor, chapter ? chapter.title : '', pageLabel]
     .filter(Boolean).join(' · ')
 
   const bookBase = `/gdz/${klass}/${subject}/${bookSlug}`
@@ -171,11 +172,11 @@ export default async function GdzNumberPage({ params }: Props) {
     ],
   }
 
-  const howToLd = hasSolution ? {
+  const howToLd = hasSolution && problem.steps?.length ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `Решение номера ${numLabel} — ${book.subject} ${klassNum} класс ${firstAuthor.split(' ')[0]}`,
-    description: problem.condition ? stripTags(problem.condition) : `Номер ${numLabel}, страница ${problem.page}.`,
+    description: problem.condition ? stripTags(problem.condition) : `Номер ${numLabel}${pageLabel ? `, ${pageLabel}` : ''}.`,
     step: problem.steps!.map((step, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
@@ -211,7 +212,7 @@ export default async function GdzNumberPage({ params }: Props) {
           </nav>
 
           <div className="gdz-pagehead">
-            <div className="gdz-eyebrow"><span className="dot"></span>Решение без ошибок · проверено преподавателем</div>
+            <div className="gdz-eyebrow"><span className="dot"></span>Разбор задания</div>
             <h1>Номер {numLabel} — {book.subject} {klassNum} класс</h1>
             <p className="lede">{lede}</p>
           </div>
@@ -246,7 +247,7 @@ export default async function GdzNumberPage({ params }: Props) {
               <p dangerouslySetInnerHTML={{ __html: problem.condition }} />
             ) : (
               <p>
-                Номер {numLabel} из {chapter ? chapter.title : book.subject}, страница {problem.page}.{' '}
+                Номер {numLabel} из {chapter ? chapter.title : book.subject}{pageLabel ? `, ${pageLabel}` : ''}.{' '}
                 Учебник: {book.authors.split(',')[0].trim()}, {book.years}, {book.publisher}.
               </p>
             )}
