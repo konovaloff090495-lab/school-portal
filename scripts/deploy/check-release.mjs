@@ -57,6 +57,9 @@ try {
     assert.equal(pdf.headers.get('link'), `<https://pro-schools.ru${canonical}>; rel="canonical"`);
     await pdf.arrayBuffer();
   }
+  const gdz = await (await get('/gdz/7-klass/geografiya/korinskaya/nomer-p17-2/')).text();
+  assert.ok(!gdz.includes('страница undefined'), 'Missing page number leaked into HTML');
+  assert.ok(!gdz.includes('проверено преподавателем'), 'Unsubstantiated review claim');
   const english = await (await get('/oge/angliiskiy-yazyk/demoversiya-2017/')).text();
   assert.ok(english.includes('/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf'), 'English demo missing');
   const spanish = await (await get('/oge/ispanskiy-yazyk/demoversiya-2017/')).text();

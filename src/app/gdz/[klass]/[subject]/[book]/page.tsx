@@ -58,7 +58,7 @@ function getBookIntro(book: ReturnType<typeof getGdzBook>, klassNum: number): st
   const totalProblems = getGdzAllProblems(book).length
   const chapterList = book.chapters.slice(0, 3).map(c => c.title.replace(/^§\s*\d+\.\s*/, '')).join(', ')
   const authorShort = book.authors.split(',')[0].trim()
-  return `Решебник по ${book.subject.toLowerCase()} за ${klassNum} класс, учебник ${authorShort} (${book.publisher}, ${book.years}). Содержит пошаговые решения всех ${totalProblems} номеров по темам: ${chapterList}${book.chapters.length > 3 ? ' и другим' : ''}. Каждое решение проверено преподавателем.`
+  return `Решебник по ${book.subject.toLowerCase()} за ${klassNum} класс, учебник ${authorShort} (${book.publisher}, ${book.years}). Содержит пошаговые решения всех ${totalProblems} номеров по темам: ${chapterList}${book.chapters.length > 3 ? ' и другим' : ''}.`
 }
 
 export default async function GdzBookPage({ params }: Props) {
