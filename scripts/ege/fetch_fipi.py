@@ -117,7 +117,7 @@ def parse(exam, kind, s):
         yt = re.search(r'\b(20\d\d)\b', text or '')
         yr = int(y.group(1)) if y else (int(yt.group(1)) if yt else year)
         sub = subj_from_name(name) or (subject if kind in ('navigator', 'demo', 'variant', 'mr', 'criteria') else None)
-        if kind == 'demo' and text in SUBJECTS: sub = SUBJECTS[text]
+        if kind == 'demo' and subj_from_title(text): sub = subj_from_title(text)
         if kind in ('criteria', 'navigator', 'mr') and subj_from_title(text): sub = subj_from_title(text)
         if re.search(r'04-44|perevod|izmen|plan_izmen|minimaln', name, re.I): sub = None  # общие документы, не предметные
         title = text if text and text.lower() not in ('скачать', 'ссылка', 'скачать архив') else (last_text if kind in ('docs', 'sochinenie', 'sobesedovanie', 'criteria', 'mr', 'navigator') else None)

@@ -44,6 +44,27 @@ try {
     }
     console.log(`${status} ${path}`);
   }
+  const get = path => fetch(`http://127.0.0.1:${port}${path}`, { signal: AbortSignal.timeout(60000) });
+  const robots = await (await get('/robots.txt')).text();
+  assert.ok(!robots.includes('Disallow: /_next/'), 'Rendering assets blocked');
+  assert.ok(robots.includes('Disallow: /api/'), 'Private API restriction lost');
+  for (const [path, canonical] of [
+    ['/fipi/ege/demo/2017/slovnik-orfoepicheskiy.pdf', '/fipi/ege/demo/2016/slovnik-orfoepicheskiy.pdf'],
+    ['/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf', '/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf'],
+  ]) {
+    const pdf = await get(path);
+    assert.equal(pdf.status, 200, path);
+    assert.equal(pdf.headers.get('link'), `<https://pro-schools.ru${canonical}>; rel="canonical"`);
+    await pdf.arrayBuffer();
+  }
+  const english = await (await get('/oge/angliiskiy-yazyk/demoversiya-2017/')).text();
+  assert.ok(english.includes('/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf'), 'English demo missing');
+  const spanish = await (await get('/oge/ispanskiy-yazyk/demoversiya-2017/')).text();
+  assert.ok(!spanish.includes('/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf'), 'English PDF in Spanish demo');
+  const sitemap = await (await get('/sitemap.xml')).text();
+  assert.ok(!sitemap.includes('<loc>https://pro-schools.ru/ege/matematika-bazovaya/metodicheskie-rekomendacii-2025/</loc>'), 'Noncanonical URL in sitemap');
+  assert.ok(sitemap.includes('<loc>https://pro-schools.ru/ege/matematika-profilnaya/metodicheskie-rekomendacii-2025/</loc>'), 'Canonical URL missing from sitemap');
+  console.log('robots, PDF canonicals, language materials and sitemap OK');
   assert.ok(!/Could not find the module|Server Components render|MODULE_NOT_FOUND/.test(log), log.slice(-3000));
 } finally {
   child.kill('SIGTERM');

@@ -13,6 +13,7 @@ nav-topic (навигатор: тема), criteria (материалы для п
 sochinenie (итоговое сочинение), sobesedovanie (итоговое собеседование), izmeneniya (изменения КИМ).
 """
 import json, os, re, shutil, subprocess, sys, hashlib
+from fetch_fipi import subj_from_title
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 RAW = os.path.join(HERE, 'raw')
@@ -201,6 +202,8 @@ def main():
     for it in items:
         if it.get('error') or not it.get('pdfs') and not it.get('file'): continue
         exam, kind, subject, year, level = it['exam'], it['kind'], it['subject'], it['year'], it.get('level')
+        if kind == 'demo':
+            subject = subj_from_title(it.get('title') or '') or subject
         srcs = [os.path.join(RAW, p) for p in it.get('pdfs', []) if os.path.exists(os.path.join(RAW, p)) and not re.search(r'/Доп\.? ?файлы', p)]
         # аудио (английский)
         base = os.path.join(RAW, it['file'])

@@ -33701,6 +33701,28 @@
 "pages": 7
 },
 {
+"id": "oge-codif-angliiskiy-yazyk-2017",
+"exam": "oge",
+"subject": "angliiskiy-yazyk",
+"kind": "codif",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "АЯ-9_КОДИФ 2017",
+"role": "codif",
+"url": "/fipi/oge/codif/2017/aya-9-kodif-2017.pdf",
+"ext": "pdf",
+"size": 229182,
+"pages": 7
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/eng_oge_2017.zip",
+"chars": 24173,
+"pages": 7
+},
+{
 "id": "oge-criteria-angliiskiy-yazyk-2026",
 "exam": "oge",
 "subject": "angliiskiy-yazyk",
@@ -34234,6 +34256,29 @@
 "title": null,
 "files": [
 {
+"label": "ЯА_9_ДЕМО 2017_ПЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf",
+"ext": "pdf",
+"size": 336439,
+"pages": 12
+},
+{
+"label": "ЯА_9_ДЕМО 2017_УЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yaa-9-demo-2017-uch.pdf",
+"ext": "pdf",
+"size": 278509,
+"pages": 4
+},
+{
+"label": "English OGE Speaking Demo",
+"role": "audio",
+"url": "/fipi/oge/demo/2017/english-oge-speaking-demo.mp3",
+"ext": "mp3",
+"size": 5620749
+},
+{
 "label": "АЯ-9",
 "role": "audio",
 "url": "/fipi/oge/demo/2017/aya-9.mp3",
@@ -34241,9 +34286,15 @@
 "size": 22273171
 }
 ],
-"source": null,
-"chars": 0,
-"pages": 0
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/eng_oge_2017.zip",
+"chars": 46141,
+"pages": 16,
+"summary": {
+"tasks": 36,
+"duration": "2 часа",
+"minutes": 120,
+"maxPrimary": 70
+}
 },
 {
 "id": "oge-nav-rec-angliiskiy-yazyk-2026",
@@ -34719,6 +34770,32 @@
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2018/aya_oge_2018.zip",
 "chars": 17923,
+"pages": 5,
+"summary": {
+"tasks": 36,
+"maxPrimary": 70
+}
+},
+{
+"id": "oge-spec-angliiskiy-yazyk-2017",
+"exam": "oge",
+"subject": "angliiskiy-yazyk",
+"kind": "spec",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ИнЯ-9_СПЕЦИФ 2017 ",
+"role": "spec",
+"url": "/fipi/oge/spec/2017/inya-9-specif-2017.pdf",
+"ext": "pdf",
+"size": 217581,
+"pages": 5
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/eng_oge_2017.zip",
+"chars": 18183,
 "pages": 5,
 "summary": {
 "tasks": 36,
@@ -36972,6 +37049,28 @@
 "pages": 7
 },
 {
+"id": "oge-codif-nemetskiy-yazyk-2017",
+"exam": "oge",
+"subject": "nemetskiy-yazyk",
+"kind": "codif",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "НЯ-9_КОДИФ 2017",
+"role": "codif",
+"url": "/fipi/oge/codif/2017/nya-9-kodif-2017.pdf",
+"ext": "pdf",
+"size": 255989,
+"pages": 6
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/de_oge_2017.zip",
+"chars": 22050,
+"pages": 6
+},
+{
 "id": "oge-criteria-nemetskiy-yazyk-2026",
 "exam": "oge",
 "subject": "nemetskiy-yazyk",
@@ -37315,6 +37414,42 @@
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2018/nya_oge_2018.zip",
 "chars": 46001,
+"pages": 15,
+"summary": {
+"tasks": 36,
+"duration": "2 часа",
+"minutes": 120,
+"maxPrimary": 70
+}
+},
+{
+"id": "oge-demo-nemetskiy-yazyk-2017",
+"exam": "oge",
+"subject": "nemetskiy-yazyk",
+"kind": "demo",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ЯН-9_ДЕМО 2017_ПЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yan-9-demo-2017-pch.pdf",
+"ext": "pdf",
+"size": 326602,
+"pages": 11
+},
+{
+"label": "ЯН_9_ДЕМО 2017_УЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yan-9-demo-2017-uch.pdf",
+"ext": "pdf",
+"size": 283446,
+"pages": 4
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/de_oge_2017.zip",
+"chars": 46039,
 "pages": 15,
 "summary": {
 "tasks": 36,
@@ -37778,6 +37913,32 @@
 }
 },
 {
+"id": "oge-spec-nemetskiy-yazyk-2017",
+"exam": "oge",
+"subject": "nemetskiy-yazyk",
+"kind": "spec",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ИнЯ-9_СПЕЦИФ 2017 ",
+"role": "spec",
+"url": "/fipi/oge/spec/2017/inya-9-specif-2017.pdf",
+"ext": "pdf",
+"size": 217581,
+"pages": 5
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/de_oge_2017.zip",
+"chars": 18183,
+"pages": 5,
+"summary": {
+"tasks": 36,
+"maxPrimary": 70
+}
+},
+{
 "id": "oge-codif-frantsuzskiy-yazyk-2027",
 "exam": "oge",
 "subject": "frantsuzskiy-yazyk",
@@ -37973,6 +38134,28 @@
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2018/fya_oge_2018.zip",
 "chars": 24611,
+"pages": 7
+},
+{
+"id": "oge-codif-frantsuzskiy-yazyk-2017",
+"exam": "oge",
+"subject": "frantsuzskiy-yazyk",
+"kind": "codif",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ФЯ-9_КОДИФ 2017",
+"role": "codif",
+"url": "/fipi/oge/codif/2017/fya-9-kodif-2017.pdf",
+"ext": "pdf",
+"size": 228067,
+"pages": 7
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/fr_oge_2017.zip",
+"chars": 24219,
 "pages": 7
 },
 {
@@ -38324,6 +38507,42 @@
 "pages": 15,
 "summary": {
 "tasks": 36,
+"maxPrimary": 70
+}
+},
+{
+"id": "oge-demo-frantsuzskiy-yazyk-2017",
+"exam": "oge",
+"subject": "frantsuzskiy-yazyk",
+"kind": "demo",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ЯФ-9_ДЕМО_2017_ПЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yaf-9-demo-2017-pch.pdf",
+"ext": "pdf",
+"size": 337653,
+"pages": 11
+},
+{
+"label": "ЯФ_9_ДЕМО 2017_УЧ",
+"role": "demo",
+"url": "/fipi/oge/demo/2017/yaf-9-demo-2017-uch.pdf",
+"ext": "pdf",
+"size": 282523,
+"pages": 4
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/fr_oge_2017.zip",
+"chars": 46475,
+"pages": 15,
+"summary": {
+"tasks": 36,
+"duration": "2 часа",
+"minutes": 120,
 "maxPrimary": 70
 }
 },
@@ -38782,6 +39001,32 @@
 }
 },
 {
+"id": "oge-spec-frantsuzskiy-yazyk-2017",
+"exam": "oge",
+"subject": "frantsuzskiy-yazyk",
+"kind": "spec",
+"year": 2017,
+"level": null,
+"title": null,
+"files": [
+{
+"label": "ИнЯ-9_СПЕЦИФ 2017",
+"role": "spec",
+"url": "/fipi/oge/spec/2017/inya-9-specif-2017.pdf",
+"ext": "pdf",
+"size": 217581,
+"pages": 5
+}
+],
+"source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/fr_oge_2017.zip",
+"chars": 18183,
+"pages": 5,
+"summary": {
+"tasks": 36,
+"maxPrimary": 70
+}
+},
+{
 "id": "oge-codif-ispanskiy-yazyk-2027",
 "exam": "oge",
 "subject": "ispanskiy-yazyk",
@@ -38989,41 +39234,17 @@
 "title": null,
 "files": [
 {
-"label": "АЯ-9_КОДИФ 2017",
-"role": "codif",
-"url": "/fipi/oge/codif/2017/aya-9-kodif-2017.pdf",
-"ext": "pdf",
-"size": 229182,
-"pages": 7
-},
-{
 "label": "ИЯ-9_КОДИФ 2017",
 "role": "codif",
 "url": "/fipi/oge/codif/2017/iya-9-kodif-2017.pdf",
 "ext": "pdf",
 "size": 264737,
 "pages": 7
-},
-{
-"label": "НЯ-9_КОДИФ 2017",
-"role": "codif",
-"url": "/fipi/oge/codif/2017/nya-9-kodif-2017.pdf",
-"ext": "pdf",
-"size": 255989,
-"pages": 6
-},
-{
-"label": "ФЯ-9_КОДИФ 2017",
-"role": "codif",
-"url": "/fipi/oge/codif/2017/fya-9-kodif-2017.pdf",
-"ext": "pdf",
-"size": 228067,
-"pages": 7
 }
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/esp_oge_2017.zip",
-"chars": 94631,
-"pages": 27
+"chars": 24189,
+"pages": 7
 },
 {
 "id": "oge-criteria-ispanskiy-yazyk-2026",
@@ -39460,22 +39681,6 @@
 "title": null,
 "files": [
 {
-"label": "ЯА_9_ДЕМО 2017_ПЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yaa-9-demo-2017-pch.pdf",
-"ext": "pdf",
-"size": 336439,
-"pages": 12
-},
-{
-"label": "ЯА_9_ДЕМО 2017_УЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yaa-9-demo-2017-uch.pdf",
-"ext": "pdf",
-"size": 278509,
-"pages": 4
-},
-{
 "label": "ЯИ-9_ДЕМО 2017_ПЧ",
 "role": "demo",
 "url": "/fipi/oge/demo/2017/yai-9-demo-2017-pch.pdf",
@@ -39490,43 +39695,11 @@
 "ext": "pdf",
 "size": 278155,
 "pages": 4
-},
-{
-"label": "ЯН-9_ДЕМО 2017_ПЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yan-9-demo-2017-pch.pdf",
-"ext": "pdf",
-"size": 326602,
-"pages": 11
-},
-{
-"label": "ЯН_9_ДЕМО 2017_УЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yan-9-demo-2017-uch.pdf",
-"ext": "pdf",
-"size": 283446,
-"pages": 4
-},
-{
-"label": "ЯФ-9_ДЕМО_2017_ПЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yaf-9-demo-2017-pch.pdf",
-"ext": "pdf",
-"size": 337653,
-"pages": 11
-},
-{
-"label": "ЯФ_9_ДЕМО 2017_УЧ",
-"role": "demo",
-"url": "/fipi/oge/demo/2017/yaf-9-demo-2017-uch.pdf",
-"ext": "pdf",
-"size": 282523,
-"pages": 4
 }
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/esp_oge_2017.zip",
-"chars": 186065,
-"pages": 61,
+"chars": 47410,
+"pages": 15,
 "summary": {
 "tasks": 36,
 "duration": "2 часа",
@@ -39998,41 +40171,17 @@
 "title": null,
 "files": [
 {
-"label": "ИнЯ-9_СПЕЦИФ 2017",
-"role": "spec",
-"url": "/fipi/oge/spec/2017/inya-9-specif-2017-e95006.pdf",
-"ext": "pdf",
-"size": 217581,
-"pages": 5
-},
-{
 "label": "ИнЯ-9_СПЕЦИФ 2017 ",
 "role": "spec",
 "url": "/fipi/oge/spec/2017/inya-9-specif-2017.pdf",
 "ext": "pdf",
 "size": 217581,
 "pages": 5
-},
-{
-"label": "ИнЯ-9_СПЕЦИФ 2017 ",
-"role": "spec",
-"url": "/fipi/oge/spec/2017/inya-9-specif-2017-9b2b6e.pdf",
-"ext": "pdf",
-"size": 217581,
-"pages": 5
-},
-{
-"label": "ИнЯ-9_СПЕЦИФ 2017 ",
-"role": "spec",
-"url": "/fipi/oge/spec/2017/inya-9-specif-2017-245b6a.pdf",
-"ext": "pdf",
-"size": 217581,
-"pages": 5
 }
 ],
 "source": "https://doc.fipi.ru/oge/demoversii-specifikacii-kodifikatory/2017/esp_oge_2017.zip",
-"chars": 72732,
-"pages": 20,
+"chars": 18183,
+"pages": 5,
 "summary": {
 "tasks": 36,
 "maxPrimary": 70
