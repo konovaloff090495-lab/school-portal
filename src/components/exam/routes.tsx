@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { type Exam, siteSubjects, getSiteSubject, docsFor, docSlug, findDocBySlug } from '@/data/exam'
+import { type Exam, siteSubjects, getSiteSubject, docsFor, docSlug, docPath, findDocBySlug } from '@/data/exam'
 import ExamHubPage, { hubMetadata } from '@/components/exam/ExamHubPage'
 import ExamSubjectPage, { subjectMetadata } from '@/components/exam/ExamSubjectPage'
 import ExamDocPage, { docMetadata } from '@/components/exam/ExamDocPage'
@@ -16,10 +16,15 @@ import ExamSpecialPage, { specialPages, getSpecial, specialMetadata } from '@/co
 export function subjectParams(exam: Exam) {
   return [...siteSubjects(exam).map(s => ({ subject: s.slug })), ...specialPages(exam).map(p => ({ subject: p.slug }))]
 }
-export function docParams(exam: Exam) {
+export function docParams(exam: Exam, canonicalOnly = false) {
   const out: { subject: string; task: string }[] = []
   for (const s of siteSubjects(exam)) {
-    for (const d of docsFor(exam, s)) { const sl = docSlug(d); if (sl) out.push({ subject: s.slug, task: sl }) }
+    for (const d of docsFor(exam, s)) {
+      const sl = docSlug(d)
+      if (sl && (!canonicalOnly || docPath(d) === `/${exam}/${s.slug}/${sl}/`)) {
+        out.push({ subject: s.slug, task: sl })
+      }
+    }
     for (const t of s.tasks?.tasks ?? []) out.push({ subject: s.slug, task: t.slug })
   }
   return [...new Map(out.map(x => [`${x.subject}/${x.task}`, x])).values()]

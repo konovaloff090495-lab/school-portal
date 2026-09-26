@@ -227,7 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...siteSubjects(ex).map(s => ({ url: `${BASE_URL}/${ex}/${s.slug}/`, lastModified: D_EXAM, changeFrequency: 'weekly' as const, priority: 0.85 })),
     ...specialPages(ex).map(p => ({ url: `${BASE_URL}/${ex}/${p.slug}/`, lastModified: D_EXAM, changeFrequency: 'weekly' as const, priority: p.hub ? 0.8 : 0.6 })),
   ])
-  const egeTaskPages: MetadataRoute.Sitemap = (['ege', 'oge'] as const).flatMap(ex => docParams(ex).map(x => {
+  const egeTaskPages: MetadataRoute.Sitemap = (['ege', 'oge'] as const).flatMap(ex => docParams(ex, true).map(x => {
     const isDoc = !x.task.startsWith('zadanie-')
     const fresh = /-(2027|2026)$/.test(x.task)
     return { url: `${BASE_URL}/${ex}/${x.subject}/${x.task}/`, lastModified: D_EXAM, changeFrequency: isDoc ? 'monthly' as const : 'monthly' as const, priority: fresh ? 0.8 : isDoc ? 0.6 : 0.65 }

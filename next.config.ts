@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 import { readFileSync } from "fs";
 import path from "path";
 import legacySchoolPaths from "./scripts/seo/legacy-school-paths.json";
+import pdfCanonicals from "./scripts/seo/pdf-canonicals.json";
 
 // Карточки школ, удалённые из каталога как недостоверные (scripts/delete-*.mjs
 // пишет сюда «слаг → куда вести»). 301 на каталог города, чтобы не плодить 404
@@ -77,6 +78,16 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers: securityHeaders,
       },
+      // PDF files cannot carry an HTML canonical. Keep downloads accessible;
+      // only byte-identical copies share the canonical URL below.
+      {
+        source: '/fipi/:path(.*\\.pdf)',
+        headers: [{ key: 'Link', value: '<https://pro-schools.ru/fipi/:path>; rel="canonical"' }],
+      },
+      ...Object.entries(pdfCanonicals).map(([source, canonical]) => ({
+        source,
+        headers: [{ key: 'Link', value: `<https://pro-schools.ru${canonical}>; rel="canonical"` }],
+      })),
     ];
   },
 
