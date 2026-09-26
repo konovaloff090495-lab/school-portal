@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
+import LeadGiftNotice from '@/components/LeadGiftNotice'
 import Countdown, { isDeadlinePassed } from '@/components/Countdown'
 
 const YM_ID = 108789843
@@ -23,6 +24,7 @@ export default function CatalogOfferPopup() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
@@ -61,8 +63,9 @@ export default function CatalogOfferPopup() {
     const err = validatePhone(form.phone)
     if (err) { setPhoneError(err); return }
     setLoading(true)
+    setSubmitError(null)
     try {
-      await submitLead({
+      const sent = await submitLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
@@ -70,8 +73,17 @@ export default function CatalogOfferPopup() {
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
       })
+      if (!sent) {
+        setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+        setLoading(false)
+        return
+      }
       window.ym?.(YM_ID, 'reachGoal', 'popup_lead')
-    } catch {}
+    } catch {
+      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+      setLoading(false)
+      return
+    }
     try { sessionStorage.setItem(DONE_KEY, '1') } catch {}
     setLoading(false)
     router.push('/spasibo/')
@@ -152,6 +164,8 @@ export default function CatalogOfferPopup() {
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
+            <LeadGiftNotice />
+            {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
             <button
               type="submit"
               disabled={loading || !pdAgreed}
