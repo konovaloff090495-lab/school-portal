@@ -7,6 +7,7 @@ import {
 } from '@/lib/userStorage'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
+import LeadGiftNotice from '@/components/LeadGiftNotice'
 
 // ── Типы ─────────────────────────────────────────────────────────────────────
 
@@ -454,6 +455,7 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
               />
               {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
             </div>
+            <LeadGiftNotice afterTest />
             <button
               type="submit"
               className="w-full py-3.5 rounded-xl bg-[#7C3AED] hover:bg-violet-600 text-white font-bold text-sm transition-all duration-200 shadow-md shadow-violet-200 hover:-translate-y-0.5"
@@ -707,6 +709,11 @@ function ResultScreen({
             )}
           </div>
         </div>
+
+        <Link href="/podarki/" className="mb-6 block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600">
+          <LeadGiftNotice afterTest />
+          <span className="mt-2 block text-center text-sm font-semibold text-[#C2410C]">Выбрать подарок →</span>
+        </Link>
 
         {/* LK + Каталог */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">

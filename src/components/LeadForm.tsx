@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
+import LeadGiftNotice from '@/components/LeadGiftNotice'
 
 interface LeadFormProps {
   schoolName?: string
@@ -19,6 +20,7 @@ interface LeadFormProps {
 export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true }: LeadFormProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
@@ -40,9 +42,10 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
     const err = validatePhone(form.phone)
     if (err) { setPhoneError(err); return }
     setLoading(true)
+    setSubmitError(null)
 
     try {
-      await submitLead({
+      const sent = await submitLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
@@ -54,9 +57,18 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         marketing_agreed: marketingAgreed,
         crm,
       })
+      if (!sent) {
+        setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+        setLoading(false)
+        return
+      }
       window.ym?.(108789843, 'reachGoal', 'lead_submit')
       window.ym?.(108789843, 'reachGoal', 'card_lead')
-    } catch {}
+    } catch {
+      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+      setLoading(false)
+      return
+    }
 
     setLoading(false)
     router.push('/spasibo/')
@@ -113,6 +125,8 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white resize-none"
           />
         )}
+        <LeadGiftNotice />
+        {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
         <button
           type="submit"
           disabled={loading || !pdAgreed}

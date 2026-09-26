@@ -281,6 +281,7 @@ function OfferDrawer({
   const [marketingAgreed, setMarketingAgreed] = useState(true)
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   // Esc закрывает, фон не прокручивается
   useEffect(() => {
@@ -299,8 +300,9 @@ function OfferDrawer({
     const err = validatePhone(form.phone)
     if (err) { setPhoneError(err); return }
     setLoading(true)
+    setSubmitError(null)
     try {
-      await submitLead({
+      const sent = await submitLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
@@ -309,9 +311,18 @@ function OfferDrawer({
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
       })
+      if (!sent) {
+        setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+        setLoading(false)
+        return
+      }
       goal('offerwall_lead', { offer: offer.id, place })
       window.ym?.(COUNTER, 'reachGoal', 'lead_submit')
-    } catch {}
+    } catch {
+      setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
+      setLoading(false)
+      return
+    }
     setLoading(false)
     setDone(true)
     // Дальше человек идёт на посадочную продукта с партнёрской меткой
@@ -426,6 +437,7 @@ function OfferDrawer({
                 onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                 className="w-full px-3.5 py-3 border border-gray-200 bg-[#F8F9FC] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B3D]/40 focus:bg-white"
               />
+              {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
               <button
                 type="submit"
                 disabled={loading || !pdAgreed}
