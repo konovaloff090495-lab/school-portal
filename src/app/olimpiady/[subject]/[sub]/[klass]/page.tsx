@@ -8,6 +8,8 @@ import {
 import { getSubjectBySlug, getTopicsForSubjectAndClass } from '@/data/textbook'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import OlimpPractice from '@/components/OlimpPractice'
+import { parseEnglishSchool2026 } from '@/lib/olimp-practice'
 
 const SITE = 'https://pro-schools.ru'
 interface Props { params: Promise<{ subject: string; sub: string; klass: string }> }
@@ -67,6 +69,8 @@ export default async function OlimpPaperPage({ params }: Props) {
   const solParas = (text?.solutions ?? []).map(t => ({ ...t, paras: t.paras.filter(x => x.length > 1) }))
   const hasTaskText = taskParas.some(t => t.paras.length > 2)
   const hasSolText = solParas.some(t => t.paras.length > 2)
+  const practice = p.id === 'angliyskiy-yazyk--shkolnyj-etap-2026-2027--9-11-klass'
+    ? parseEnglishSchool2026(taskParas[0]?.paras ?? []) : null
 
   const ld = [
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -81,7 +85,18 @@ export default async function OlimpPaperPage({ params }: Props) {
       hasPart: pdfs.map(f => ({ '@type': 'DigitalDocument', name: `${f.group} ${f.label}`.trim(), url: `${SITE}${f.url}`, encodingFormat: 'application/pdf' })) },
   ]
 
-  const label = (f: { group: string; label: string }) => f.label ? `${f.group} — ${f.label}` : f.group
+  const label = (f: { group: string; label: string; url?: string }) =>
+    practice && f.url?.includes('script-engl-9-11-sch-msk-26-27') ? 'Текст аудирования' :
+      f.label ? `${f.group} — ${f.label}` : f.group
+  const pdfViewer = embed && (
+    <div className="ol-pdf">
+      <iframe src={`${embed.url}#view=FitH`} title={`${label(embed)} — ${s.name}, ${p.classLabel}`} loading="lazy" />
+      <div className="bar">
+        <span>Просмотр PDF: {label(embed)}</span>
+        <a href={embed.url} target="_blank" rel="noopener">Открыть в новой вкладке ↗</a>
+      </div>
+    </div>
+  )
 
   return (
     <div className="gdz-shell">
@@ -111,7 +126,7 @@ export default async function OlimpPaperPage({ params }: Props) {
             </a>
           ))}
           {solPdfs.map(f => (
-            <a key={f.url} href={f.url} target="_blank" rel="noopener">✅ {label(f)} <small>PDF{f.size ? ` · ${fmtSize(f.size)}` : ''}</small></a>
+            <a key={f.url} href={f.url} target="_blank" rel="noopener">{practice && f.url.includes('script-engl-9-11-sch-msk-26-27') ? '🎙️' : '✅'} {label(f)} <small>PDF{f.size ? ` · ${fmtSize(f.size)}` : ''}</small></a>
           ))}
           {otherPdfs.map(f => (
             <a key={f.url} href={f.url} target="_blank" rel="noopener">📎 {label(f)} <small>PDF</small></a>
@@ -121,22 +136,24 @@ export default async function OlimpPaperPage({ params }: Props) {
           ))}
         </div>
 
-        {embed && (
-          <div className="ol-pdf">
-            <iframe src={`${embed.url}#view=FitH`} title={`${label(embed)} — ${s.name}, ${p.classLabel}`} loading="lazy" />
-            <div className="bar">
-              <span>Просмотр PDF: {label(embed)}</span>
-              <a href={embed.url} target="_blank" rel="noopener">Открыть в новой вкладке ↗</a>
-            </div>
-          </div>
-        )}
+        {practice && <a className="ol-start" href="#zadaniya">Начать решать задания ↓</a>}
+
+        {!practice && pdfViewer}
 
         <aside className="gdz-ad gdz-ad-inline ol-ad-mobile" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="ol-paper-inline" viewport="mobile" /></div>
         </aside>
 
-        {hasTaskText && (
+        {practice && (
+          <section className="ol-text" id="zadaniya">
+            <p className="note">Задания перенесены из официального PDF. При сомнениях сверяйтесь с документом по ссылке выше.</p>
+            {media.some(f => f.ext === 'mp3') && <div className="ol-audio"><strong>Аудио для заданий 1–15</strong><audio controls preload="none" src={media.find(f => f.ext === 'mp3')!.url}>Ваш браузер не поддерживает воспроизведение аудио.</audio></div>}
+            <OlimpPractice paperId={p.id} blocks={practice} />
+          </section>
+        )}
+
+        {hasTaskText && !practice && (
           <section className="ol-text" id="zadaniya">
             <h2>Задания — текст для прорешивания</h2>
             <p className="note">Текст извлечён из официального PDF автоматически: формулы, таблицы и рисунки могут отображаться неточно — сверяйтесь с документом выше.</p>
@@ -149,12 +166,22 @@ export default async function OlimpPaperPage({ params }: Props) {
           </section>
         )}
 
+        {practice && pdfViewer && <details className="ol-source-pdf"><summary>Посмотреть оригинал заданий в PDF</summary>{pdfViewer}</details>}
+
         <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
           <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_2} suffix="ol-paper-mid" /></div>
         </aside>
 
-        {hasSolText && (
+        {practice && solPdfs[0] && <section className="ol-text" id="otvety">
+          <details>
+            <summary>Ответы и решения — показать</summary>
+            <p className="note">Официальный документ с ответами и критериями оценивания.</p>
+            <a className="ol-sol-link" href={solPdfs[0].url} target="_blank" rel="noopener">Открыть ответы в PDF ↗</a>
+          </details>
+        </section>}
+
+        {hasSolText && !practice && (
           <section className="ol-text" id="otvety">
             <details>
               <summary>Ответы и решения — показать</summary>
