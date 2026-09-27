@@ -100,6 +100,9 @@
 .ol-question { margin: 12px 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
 .ol-question h4 { margin: 0 0 8px; font-size: 14px; color: var(--coral-600); }
 .ol-text .ol-question-prompt { margin: 0 0 14px; color: var(--ink); font-size: 15px; line-height: 1.65; white-space: pre-line; overflow-wrap: break-word; }
+.ol-text .ol-question-source { margin: -2px 0 14px; padding: 10px 12px; border-radius: 9px; background: var(--cream); color: var(--ink-3); font-size: 13px; }
+.ol-question-source a { color: var(--coral-600); font-weight: 700; }
+.ol-no-tasks { padding: 16px 18px; border-radius: 12px; background: var(--cream); color: var(--ink-2); }
 .ol-question fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 7px; }
 .ol-question fieldset label { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; line-height: 1.45; font-size: 14px; }
 .ol-question fieldset label:hover, .ol-question fieldset label.selected { border-color: var(--coral-500); background: var(--peach-50); }
@@ -122,3 +125,7 @@
 .ol-source-pdf { margin: 0 0 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px; }
 .ol-source-pdf summary { cursor: pointer; font-weight: 800; }
 .ol-source-pdf .ol-pdf { margin: 14px 0 0; }
+.ol-answer-line textarea, .ol-notes textarea { width: 100%; min-height: 112px; resize: vertical; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 10px; font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: #fff; }
+.ol-notes textarea { min-height: 220px; }
+.ol-answer-line textarea:focus, .ol-notes textarea:focus { outline: 2px solid var(--coral-500); outline-offset: 1px; }
+.ol-practice-foot a { color: var(--coral-600); font-weight: 800; text-decoration: underline; }
