@@ -3,11 +3,15 @@
 import { useEffect, useState } from 'react'
 
 export interface PracticeItem {
+  id?: string
   number: number
+  title?: string
   prompt: string
   options?: { letter: string; text: string }[]
+  multiple?: boolean
   fields?: number
   fieldHints?: string[]
+  requiresPdf?: boolean
 }
 export interface PracticeBlock {
   title: string
@@ -15,7 +19,7 @@ export interface PracticeBlock {
   items: PracticeItem[]
 }
 
-export default function OlimpPractice({ paperId, blocks }: { paperId: string; blocks: PracticeBlock[] }) {
+export default function OlimpPractice({ paperId, blocks, sourceUrl }: { paperId: string; blocks: PracticeBlock[]; sourceUrl?: string }) {
   const storageKey = `olimp-practice:${paperId}`
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [ready, setReady] = useState(false)
@@ -44,25 +48,31 @@ export default function OlimpPractice({ paperId, blocks }: { paperId: string; bl
     {blocks.map((block, blockIndex) => <section key={block.title} className="ol-practice-block">
       <h3>{block.title}</h3>
       {block.intro && <div className="ol-practice-intro">{block.intro}</div>}
-      {block.items.map(item => <article className="ol-question" key={item.number} id={`task-${item.number}`}>
-        <h4>Задание {item.number}</h4>
+      {block.items.map(item => {
+        const key = item.id ?? String(item.number)
+        const selected = answers[key]?.split(',') ?? []
+        return <article className="ol-question" key={key} id={`task-${key}`}>
+        <h4>{item.title ?? `Задание ${item.number}`}</h4>
         <p className="ol-question-prompt">{item.prompt}</p>
+        {item.requiresPdf && sourceUrl && <p className="ol-question-source"><a href={sourceUrl} target="_blank" rel="noopener">Сверить задание с оригиналом PDF ↗</a></p>}
         {item.options ? <fieldset>
           <legend className="sr-only">Ответ на задание {item.number}</legend>
-          {item.options.map(option => <label key={option.letter} className={answers[String(item.number)] === option.letter ? 'selected' : ''}>
-            <input type="radio" name={`ol-${paperId}-${item.number}`} value={option.letter} checked={answers[String(item.number)] === option.letter} onChange={() => save(String(item.number), option.letter)} />
+          {item.options.map(option => <label key={option.letter} className={selected.includes(option.letter) ? 'selected' : ''}>
+            <input type={item.multiple ? 'checkbox' : 'radio'} name={`ol-${paperId}-${key}`} value={option.letter} checked={selected.includes(option.letter)} onChange={() => save(key, item.multiple ? (selected.includes(option.letter) ? selected.filter(x => x !== option.letter) : [...selected, option.letter]).join(',') : option.letter)} />
             <b>{option.letter}</b><span>{option.text}</span>
           </label>)}
         </fieldset> : item.fields ? <div className="ol-answer-grid">
           {Array.from({ length: item.fields }, (_, i) => <label key={i}>{i + 1}{item.fieldHints?.[i] ? ` · ${item.fieldHints[i]}` : ''}
-            <input type="text" autoComplete="off" value={answers[`${item.number}-${i + 1}`] || ''} onChange={e => save(`${item.number}-${i + 1}`, e.target.value)} aria-label={`Задание ${item.number}, ответ ${i + 1}`} />
+            <input type="text" autoComplete="off" value={answers[`${key}-${i + 1}`] || ''} onChange={e => save(`${key}-${i + 1}`, e.target.value)} aria-label={`Задание ${item.number}, ответ ${i + 1}`} />
           </label>)}
         </div> : <label className="ol-answer-line">Ваш ответ
-          <input type="text" autoComplete="off" value={answers[String(item.number)] || ''} onChange={e => save(String(item.number), e.target.value)} />
+          {item.prompt.length > 500 || /объясните|обоснуйте|докажите|напишите|рассуждени|сочинени|write an essay|explain why/i.test(item.prompt) ?
+            <textarea rows={4} value={answers[key] || ''} onChange={e => save(key, e.target.value)} /> :
+            <input type="text" autoComplete="off" value={answers[key] || ''} onChange={e => save(key, e.target.value)} />}
         </label>}
-      </article>)}
+      </article>})}
       {blockIndex < blocks.length - 1 && <div className="ol-block-end">Продолжайте ниже ↓</div>}
     </section>)}
-    <p className="ol-practice-foot">После выполнения откройте «Ответы и решения» ниже и сверьте свою работу с официальным PDF.</p>
+    <p className="ol-practice-foot">После выполнения откройте «Ответы и решения» ниже и сверьте свою работу с официальным PDF.{sourceUrl && <> Если в задании есть рисунок, таблица или формула, <a href={sourceUrl} target="_blank" rel="noopener">сверяйтесь с оригиналом ↗</a>.</>}</p>
   </div>
 }

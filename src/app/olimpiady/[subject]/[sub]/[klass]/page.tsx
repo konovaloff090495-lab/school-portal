@@ -10,6 +10,8 @@ import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import OlimpPractice from '@/components/OlimpPractice'
 import { parseEnglishSchool2026 } from '@/lib/olimp-practice'
+import { parseGenericPaper } from '@/lib/olimp-generic-practice'
+import OlimpNotes from '@/components/OlimpNotes'
 
 const SITE = 'https://pro-schools.ru'
 interface Props { params: Promise<{ subject: string; sub: string; klass: string }> }
@@ -33,8 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cls = p.classLabel.replace('–', '-')
   // Вордстат: «олимпиада по математике 9 класс задания» + «региональный этап» + год + «ответы»
   return {
-    title: `Олимпиада по ${p.subjectDat} ${cls} — ${p.stageName.toLowerCase()} ВсОШ ${p.yearLabel}: задания и ответы`,
-    description: `Задания ${p.stageGen} Всероссийской олимпиады школьников по ${p.subjectDat} ${p.yearLabel} учебного года, ${p.classLabel}${p.hasSolutions ? ', с официальными ответами и критериями оценивания' : ''}. Скачать PDF${p.tasksPages ? ` (${p.tasksPages} ${pagesWord(p.tasksPages)})` : ''} или прорешать онлайн.`,
+    title: `Олимпиада по ${p.subjectDat} ${cls} — ${p.stageName.toLowerCase()} ВсОШ ${p.yearLabel}: ${p.hasTasks ? 'задания и ответы' : 'материалы'}`,
+    description: `${p.hasTasks ? 'Задания' : 'Материалы'} ${p.stageGen} Всероссийской олимпиады школьников по ${p.subjectDat} ${p.yearLabel} учебного года, ${p.classLabel}${p.hasSolutions ? ', с официальными ответами и критериями оценивания' : ''}.${p.hasTasks ? ` Скачать PDF${p.tasksPages ? ` (${p.tasksPages} ${pagesWord(p.tasksPages)})` : ''} или прорешать онлайн.` : ''}`,
     keywords: `олимпиада по ${p.subjectDat} ${cls} задания, ${p.stageName.toLowerCase()} всош ${p.subjectDat} ${p.year.slice(0, 4)}, олимпиада по ${p.subjectDat} ${p.year.slice(5)} ответы, всош ${p.subjectDat} ${cls}`,
     alternates: { canonical: url },
   }
@@ -54,7 +56,7 @@ export default async function OlimpPaperPage({ params }: Props) {
   const otherPdfs = pdfs.filter(f => f.kind === 'other')
   const media = p.files.filter(f => f.ext !== 'pdf' && f.kind !== 'video')
   const videos = p.files.filter(f => f.kind === 'video')
-  const embed = taskPdfs[0] ?? pdfs[0]
+  const embed = taskPdfs[0]
   const firstClass = p.classes[0]
 
   // соседи: тот же предмет и класс — другие годы/этапы
@@ -67,10 +69,9 @@ export default async function OlimpPaperPage({ params }: Props) {
 
   const taskParas = (text?.tasks ?? []).map(t => ({ ...t, paras: t.paras.filter(x => x.length > 1) }))
   const solParas = (text?.solutions ?? []).map(t => ({ ...t, paras: t.paras.filter(x => x.length > 1) }))
-  const hasTaskText = taskParas.some(t => t.paras.length > 2)
   const hasSolText = solParas.some(t => t.paras.length > 2)
-  const practice = p.id === 'angliyskiy-yazyk--shkolnyj-etap-2026-2027--9-11-klass'
-    ? parseEnglishSchool2026(taskParas[0]?.paras ?? []) : null
+  const practice = (p.id === 'angliyskiy-yazyk--shkolnyj-etap-2026-2027--9-11-klass'
+    ? parseEnglishSchool2026(taskParas[0]?.paras ?? []) : null) ?? parseGenericPaper(taskParas)
 
   const ld = [
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -111,11 +112,11 @@ export default async function OlimpPaperPage({ params }: Props) {
 
         <div className="gdz-pagehead">
           <div className="gdz-eyebrow"><span className="dot"></span>{s.icon} ВсОШ · {st.name} · {p.yearLabel}</div>
-          <h1>Олимпиада по {p.subjectDat} {p.classLabel} — {st.name.toLowerCase()} ВсОШ {p.yearLabel}: задания и ответы</h1>
+          <h1>Олимпиада по {p.subjectDat} {p.classLabel} — {st.name.toLowerCase()} ВсОШ {p.yearLabel}: {p.hasTasks ? 'задания и ответы' : 'материалы'}</h1>
           <p className="lede">
             Официальный комплект {st.gen} Всероссийской олимпиады школьников по {p.subjectDat} для {p.classes.length > 1 ? `${p.classes[0]}–${p.classes[p.classes.length - 1]} классов` : `${p.classes[0]} класса`} ({p.yearLabel} учебный год).
-            {p.hasSolutions ? ' Задания и решения с критериями оценивания — ' : ' Задания — '}
-            скачайте PDF или прорешайте онлайн по тексту ниже.
+            {p.hasTasks ? (p.hasSolutions ? ' Задания и решения с критериями оценивания — ' : ' Задания — ') : ' Материалы комплекта'}
+            {practice ? ' скачайте PDF или прорешайте онлайн по тексту ниже.' : embed ? ' скачайте PDF и решайте задания по оригиналу.' : ' доступны ниже.'}
           </p>
         </div>
 
@@ -149,22 +150,12 @@ export default async function OlimpPaperPage({ params }: Props) {
           <section className="ol-text" id="zadaniya">
             <p className="note">Задания перенесены из официального PDF. При сомнениях сверяйтесь с документом по ссылке выше.</p>
             {media.some(f => f.ext === 'mp3') && <div className="ol-audio"><strong>Аудио для заданий 1–15</strong><audio controls preload="none" src={media.find(f => f.ext === 'mp3')!.url}>Ваш браузер не поддерживает воспроизведение аудио.</audio></div>}
-            <OlimpPractice paperId={p.id} blocks={practice} />
+            <OlimpPractice paperId={p.id} blocks={practice} sourceUrl={embed?.url} />
           </section>
         )}
 
-        {hasTaskText && !practice && (
-          <section className="ol-text" id="zadaniya">
-            <h2>Задания — текст для прорешивания</h2>
-            <p className="note">Текст извлечён из официального PDF автоматически: формулы, таблицы и рисунки могут отображаться неточно — сверяйтесь с документом выше.</p>
-            {taskParas.map((t, i) => (
-              <div key={i}>
-                {taskParas.length > 1 && <h3>{label(t)}</h3>}
-                {t.paras.map((para, j) => <p key={j}>{para}</p>)}
-              </div>
-            ))}
-          </section>
-        )}
+        {!practice && embed && <OlimpNotes paperId={p.id} hasPdf />}
+        {!practice && !embed && <p className="ol-no-tasks">Файл с заданиями для этого комплекта отсутствует в архиве. Доступные материалы перечислены выше.</p>}
 
         {practice && pdfViewer && <details className="ol-source-pdf"><summary>Посмотреть оригинал заданий в PDF</summary>{pdfViewer}</details>}
 
@@ -173,7 +164,7 @@ export default async function OlimpPaperPage({ params }: Props) {
           <div className="gdz-ad-slot"><YandexRTBBanner blockId={AD_SLOT_2} suffix="ol-paper-mid" /></div>
         </aside>
 
-        {practice && solPdfs[0] && <section className="ol-text" id="otvety">
+        {solPdfs[0] && <section className="ol-text" id="otvety">
           <details>
             <summary>Ответы и решения — показать</summary>
             <p className="note">Официальный документ с ответами и критериями оценивания.</p>
@@ -181,7 +172,7 @@ export default async function OlimpPaperPage({ params }: Props) {
           </details>
         </section>}
 
-        {hasSolText && !practice && (
+        {hasSolText && !solPdfs[0] && (
           <section className="ol-text" id="otvety">
             <details>
               <summary>Ответы и решения — показать</summary>
