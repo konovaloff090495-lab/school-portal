@@ -41,6 +41,7 @@ const securityHeaders = [
       "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net",
       // Шрифты Google
       "font-src 'self' fonts.gstatic.com",
+      "media-src 'self' https://vos.olimpiada.ru",
       // API-запросы + запросы рекламы РСЯ
       "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net ip-api.com",
       // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe) + карта OpenStreetMap

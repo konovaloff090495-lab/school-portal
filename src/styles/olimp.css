@@ -88,3 +88,37 @@
 .ol-guide details summary { font-size: 14px; }
 .ol-guide details p { font-size: 13.5px; }
 @media (min-width: 1024px) { .ol-ad-mobile { display: none; } }
+
+/* Прорешивание английской олимпиады */
+.ol-practice-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+.ol-practice-top h2 { margin: 0 0 6px; }
+.ol-practice-top p { margin: 0; color: var(--ink-3); font-size: 14px; }
+.ol-progress { flex: none; border-radius: 999px; padding: 8px 12px; background: var(--peach-50); color: var(--coral-600); font-weight: 800; font-size: 13px; }
+.ol-practice-block { margin-top: 28px; }
+.ol-practice-block h3 { margin: 0 0 12px; font-size: 18px; color: var(--ink); }
+.ol-practice-intro { margin-bottom: 18px; padding: 16px 18px; border-left: 3px solid var(--coral-500); background: var(--cream); border-radius: 0 12px 12px 0; font-size: 14px; line-height: 1.7; color: var(--ink-2); white-space: pre-line; overflow-wrap: break-word; }
+.ol-question { margin: 12px 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.ol-question h4 { margin: 0 0 8px; font-size: 14px; color: var(--coral-600); }
+.ol-text .ol-question-prompt { margin: 0 0 14px; color: var(--ink); font-size: 15px; line-height: 1.65; white-space: pre-line; overflow-wrap: break-word; }
+.ol-question fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 7px; }
+.ol-question fieldset label { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; line-height: 1.45; font-size: 14px; }
+.ol-question fieldset label:hover, .ol-question fieldset label.selected { border-color: var(--coral-500); background: var(--peach-50); }
+.ol-question fieldset input { margin: 3px 0 0; accent-color: var(--coral-500); flex: none; }
+.ol-question fieldset b { color: var(--coral-600); }
+.ol-question fieldset span { min-width: 0; overflow-wrap: break-word; }
+.ol-answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+.ol-answer-grid label, .ol-answer-line { display: flex; flex-direction: column; gap: 5px; font-size: 13px; font-weight: 700; color: var(--ink-3); }
+.ol-answer-grid input, .ol-answer-line input { min-width: 0; width: 100%; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 9px; font: inherit; font-size: 15px; color: var(--ink); background: #fff; }
+.ol-answer-grid input:focus, .ol-answer-line input:focus { outline: 2px solid var(--coral-500); outline-offset: 1px; }
+.ol-block-end { text-align: center; font-size: 12px; color: var(--ink-3); padding: 8px; }
+.ol-text .ol-practice-foot { margin-top: 20px; padding: 14px; border-radius: 10px; background: var(--peach-50); font-size: 14px; }
+@media (max-width: 600px) { .ol-text { padding: 16px 12px; } .ol-question { padding: 14px 12px; } .ol-practice-top { flex-direction: column; } }
+.ol-start, .ol-sol-link { display: inline-flex; align-items: center; padding: 10px 16px; border-radius: 10px; background: var(--coral-500); color: #fff; font-size: 14px; font-weight: 800; }
+.ol-start { margin: 0 0 18px; }
+.ol-start:hover, .ol-sol-link:hover { background: var(--coral-400); color: #fff; }
+.ol-audio { display: grid; gap: 10px; padding: 15px; border-radius: 12px; background: var(--cream); margin: 0 0 20px; }
+.ol-audio strong { font-size: 14px; }
+.ol-audio audio { width: 100%; }
+.ol-source-pdf { margin: 0 0 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px; }
+.ol-source-pdf summary { cursor: pointer; font-weight: 800; }
+.ol-source-pdf .ol-pdf { margin: 14px 0 0; }
