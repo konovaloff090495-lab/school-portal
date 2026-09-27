@@ -7,6 +7,7 @@ export interface PracticeItem {
   prompt: string
   options?: { letter: string; text: string }[]
   fields?: number
+  fieldHints?: string[]
 }
 export interface PracticeBlock {
   title: string
@@ -53,7 +54,7 @@ export default function OlimpPractice({ paperId, blocks }: { paperId: string; bl
             <b>{option.letter}</b><span>{option.text}</span>
           </label>)}
         </fieldset> : item.fields ? <div className="ol-answer-grid">
-          {Array.from({ length: item.fields }, (_, i) => <label key={i}>{i + 1}
+          {Array.from({ length: item.fields }, (_, i) => <label key={i}>{i + 1}{item.fieldHints?.[i] ? ` · ${item.fieldHints[i]}` : ''}
             <input type="text" autoComplete="off" value={answers[`${item.number}-${i + 1}`] || ''} onChange={e => save(`${item.number}-${i + 1}`, e.target.value)} aria-label={`Задание ${item.number}, ответ ${i + 1}`} />
           </label>)}
         </div> : <label className="ol-answer-line">Ваш ответ

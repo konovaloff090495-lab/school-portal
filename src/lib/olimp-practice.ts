@@ -41,10 +41,14 @@ export function parseEnglishSchool2026(paras: string[]): PracticeBlock[] | null 
   const items: PracticeItem[] = raw.map((text, i) => {
     const number = i + 1
     if (number <= 25) return { number, ...parseOptions(text) }
-    if (number === 26) return { number, prompt: text, fields: 8 }
-    if (number === 27) return { number, prompt: text, fields: 6 }
-    if (number === 28) return { number, prompt: text, fields: 5 }
-    const formatted = text.replace(/\s([ABC])\)\s/g, '\n$1) ')
+    if (number === 26) return {
+      number, fields: 8,
+      fieldHints: ['SCIENCE', 'CONSUME', 'EVEN', 'COST', 'EXTEND', 'CREATE', 'SERVE', 'ADORE'],
+      prompt: `Task 1 (8 points). Form a new word from the word shown next to each answer field. Example: APPROXIMATE → APPROXIMATELY.\n\nA chunky digital cat is here to help you stop doomscrolling\n\nCat Gatekeeper plops an adorable, orange tabby on your screen when it's time to go touch grass.\n\nEvery day, the average American spends nearly 2.5 hours scrolling through social media. Cats, on the other hand, waste (0) approximately no time on the internet. Which species generally appears less stressed and anxious?\n\nSure, this may not be the most (1) ___________ analysis about mental health and screen time, but it’s never a bad idea to try limiting the amount of idle time wasted in front of a computer or smartphone. And while there are plenty of apps and devices promising to reduce your social media (2) ___________, their results are often (3) ___________ and many require (4) ___________ fees. Knowing this, a developer in Japan released a completely free Chrome browser (5) ___________ designed to throttle your doomscrolling. Their secret weapon is Cat Gatekeeper.\n\n“You know that cat who always shows up right when you’re trying to work? We’ve (6) ___________ that classic cat-owner experience in your browser,” the creators explain on its description page. “Let’s face it—humans are just (7) ___________ to their cats. We are powerless against their charm… Let their (8) ___________ heal you while you take a proper break.”`,
+    }
+    if (number === 27) return { number, prompt: text.replace(/^Task 2 \(6 points\)/, 'Task 2 (6 points).').replace(/0 POPULAR /, 'Example: POLARUP → POPULAR. ').replace(/\(0\)\s*_{5,}\s*\(POLARUP\)/, 'popular').replace(/\s*\((FAULTED|OWNWID|TAILIGD|MERIT|SALTPROMF|TEACH)\)/g, ''), fields: 6, fieldHints: ['FAULTED', 'OWNWID', 'TAILIGD', 'MERIT', 'SALTPROMF', 'TEACH'] }
+    if (number === 28) return { number, prompt: text.replace(/0 1 2 3 4 5 TRUSTWORTHY /, 'Example: trastworthy → TRUSTWORTHY.\n\n'), fields: 5 }
+    const formatted = text.replace(/\s([ABC])\)\s/g, '\n$1) ').replace(/\s*_{10,}\s*$/, '')
     return { number, prompt: formatted }
   })
   if (items.slice(0, 25).some(item => !item.options)) return null
