@@ -186,6 +186,8 @@ export default async function TopicPage({ params }: Props) {
             <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
           )}
 
+          <AdCard blockId={AD_SLOT_3} suffix="uchebnik-topic-bottom" className="mb-6" />
+
           <TopicFaq items={faq} />
 
           {/* Навигация prev/next */}
@@ -214,7 +216,6 @@ export default async function TopicPage({ params }: Props) {
             )}
           </div>
 
-          <AdCard blockId={AD_SLOT_3} suffix="uchebnik-topic-bottom" className="mt-6" />
         </div>
 
         {/* Сайдбар — реклама + список тем */}
