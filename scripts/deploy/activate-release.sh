@@ -41,3 +41,7 @@ for attempt in {1..20}; do
   sleep 1
 done
 [[ "$healthy" == 1 ]]
+trap - EXIT
+if ! bash scripts/deploy/compact-previous.sh; then
+  echo 'Release is healthy, but rollback compaction failed; old build retained if possible' >&2
+fi
