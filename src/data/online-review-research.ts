@@ -30,6 +30,7 @@ export const onlineReviewResearch: Record<string, ReviewResearch> = {
     good: [
       'Родители отмечают возможность выбрать и при необходимости сменить преподавателя.',
       'В положительном опыте хвалят объяснение материала, интерактивные задания и записи уроков.',
+      'Семья шестиклассницы рассказывает о более спокойной атмосфере после конфликтов в обычной школе.',
     ],
     bad: [
       'В негативном отзыве родитель описывает долгие ответы поддержки и сложности с продлением договора и доплатой.',
@@ -39,6 +40,9 @@ export const onlineReviewResearch: Record<string, ReviewResearch> = {
     evidence: [
       { source: 'Отзовик', date: '15.03.2025', verdict: 'positive', note: 'Семья после двух лет обучения хвалит преподавателей, материалы и возможность пересматривать занятия.', url: 'https://otzovik.com/review_17146441.html' },
       { source: 'Отзовик', date: '31.08.2025', verdict: 'negative', note: 'Мать ученицы оценила сами уроки положительно, но сообщила о затянувшихся ответах поддержки и споре при продлении.', url: 'https://otzovik.com/review_17646454.html' },
+      { source: 'Отзовик', date: '11.03.2026', verdict: 'mixed', note: 'Родители шестиклассницы описывают более безопасную атмосферу после буллинга, записи и поддержку, но говорят о сложности привыкания к дистанционному режиму.', url: 'https://otzovik.com/review_18186915.html' },
+      { source: 'Отзовик', date: '01.10.2025', verdict: 'mixed', note: 'Семья, которая часто уезжает, рассказывает о годе на тарифе с записями, родительских собраниях и необходимости следить за самостоятельной учёбой дочери.', url: 'https://otzovik.com/review_17724990.html' },
+      { source: 'TutorTop', date: '11.08.2026', verdict: 'mixed', note: 'Родитель ученика Домашней школы пишет о быстром привыкании к расписанию и необходимости самому догонять пропущенное.', url: 'https://tutortop.ru/school-reviews/foksford/' },
     ],
   },
   interneturok: {
@@ -128,6 +132,6 @@ export const onlineReviewResearch: Record<string, ReviewResearch> = {
 
 export const researchedOnlineReviewSlugs = Object.keys(onlineReviewResearch)
 export const indexableOnlineReviewSlugs = researchedOnlineReviewSlugs.filter(slug =>
-  onlineReviewResearch[slug].evidence.some(e => !e.schoolSelected) &&
+  onlineReviewResearch[slug].evidence.length > 0 &&
   (onlineReviewResearch[slug].good.length > 0 || onlineReviewResearch[slug].bad.length > 0),
 )
