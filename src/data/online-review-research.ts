@@ -1,14 +1,18 @@
-/** Редакторская выборка: каждая запись = один прочитанный отзыв с прямой ссылкой.
- * Количество ниже считается из массива, а не берётся из счётчика площадки.
+/** Редакторская выборка ссылок на прочитанные отзывы и страницы с отзывами.
+ * Количество ниже считает источники, а не все отзывы на площадке.
  * Не смешивать отзывы о курсах/вузе с отзывами о полноценной онлайн-школе.
  */
 export type ReviewEvidence = {
   url: string
   source: string
-  date: string
+  date?: string
+  /** Отзыв размещён на сайте самой школы и мог пройти её редакционный отбор. */
+  schoolSelected?: boolean
   verdict: 'positive' | 'negative' | 'mixed'
   note: string
 }
+
+import { additionalOnlineReviewResearch } from './online-review-coverage'
 
 export type ReviewResearch = {
   updated: string
@@ -16,9 +20,11 @@ export type ReviewResearch = {
   bad: string[]
   conclusion: string
   evidence: ReviewEvidence[]
+  media?: { title: string; url: string }
 }
 
 export const onlineReviewResearch: Record<string, ReviewResearch> = {
+  ...additionalOnlineReviewResearch,
   foxford: {
     updated: '05.10.2026',
     good: [
@@ -121,3 +127,7 @@ export const onlineReviewResearch: Record<string, ReviewResearch> = {
 }
 
 export const researchedOnlineReviewSlugs = Object.keys(onlineReviewResearch)
+export const indexableOnlineReviewSlugs = researchedOnlineReviewSlugs.filter(slug =>
+  onlineReviewResearch[slug].evidence.some(e => !e.schoolSelected) &&
+  (onlineReviewResearch[slug].good.length > 0 || onlineReviewResearch[slug].bad.length > 0),
+)

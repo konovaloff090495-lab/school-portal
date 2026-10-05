@@ -18,7 +18,7 @@ import { docParams } from '@/components/exam/routes'
 import { olimpSubjects, olimpPapers, classesForSubject, stageYearsForSubject, olimpUrl, getOlimpPrep } from '@/data/olimp'
 import { olimpGuides } from '@/data/olimp-guides'
 import { onlineBrandSlugs } from '@/data/online-brands'
-import { researchedOnlineReviewSlugs } from '@/data/online-review-research'
+import { indexableOnlineReviewSlugs } from '@/data/online-review-research'
 import { isCityTypeIndexable } from '@/lib/index-rules'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
@@ -244,7 +244,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
   const onlineReviewPages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/otzyvy/online-shkoly/`, lastModified: new Date('2026-10-05'), changeFrequency: 'weekly', priority: 0.7 },
-    ...researchedOnlineReviewSlugs.map(b => ({ url: `${BASE_URL}/otzyvy/online-shkoly/${b}/`, lastModified: new Date('2026-10-05'), changeFrequency: 'monthly' as const, priority: 0.7 })),
+    ...indexableOnlineReviewSlugs.map(b => ({ url: `${BASE_URL}/otzyvy/online-shkoly/${b}/`, lastModified: new Date('2026-10-05'), changeFrequency: 'monthly' as const, priority: 0.7 })),
   ]
   const shkolyFeaturePages: MetadataRoute.Sitemap = featureSlugs.map(f => ({
     url: `${BASE_URL}/shkoly/osobennosti/${f}/`, lastModified: D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.7,
