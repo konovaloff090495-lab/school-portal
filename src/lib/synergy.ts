@@ -105,6 +105,7 @@ export async function sendLeadToSynergy(input: SynergyLeadInput): Promise<Synerg
         e.field ? `${e.field}: ${e.message}` : e.message)
       return { ok: false, error: msgs.join('; ') || 'success=false' }
     }
+    if (!payload.lead?.id) return { ok: false, error: 'success=true but lead.id is empty' }
     return { ok: true, id: payload.lead?.id ?? null }
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : String(err) }

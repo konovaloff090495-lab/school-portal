@@ -36,6 +36,7 @@ export async function POST(req: NextRequest) {
 
     // CRM Синергии (GraphQL sendLead). B2B-формы (crm=false) туда не идут.
     let crmLine = ''
+    let crmFailed = false
     if (crm !== false) {
       const commentParts: string[] = []
       if (schoolLabel) commentParts.push(`Школа: ${schoolLabel}${city ? ` (${city})` : ''}`)
@@ -56,9 +57,12 @@ export async function POST(req: NextRequest) {
         extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source },
       })
       if (result.ok) {
+        // Keep a receipt without contact details so accepted leads can be traced in Synergy.
+        console.info('[Synergy] sendLead accepted:', JSON.stringify({ id: result.id, source: source ?? 'unknown' }))
         crmLine = `\n✅ CRM Синергии: лид #${result.id ?? '?'}`
       } else {
         console.error('[Synergy] sendLead failed:', result.error)
+        crmFailed = true
         crmLine = `\n⚠️ CRM Синергии: не отправлено (${result.error})`
       }
     }
@@ -75,6 +79,9 @@ export async function POST(req: NextRequest) {
 
     await sendTelegramMessage(msg)
 
+    if (crmFailed) {
+      return NextResponse.json({ error: 'Заявка не дошла до CRM. Попробуйте ещё раз.' }, { status: 502 })
+    }
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error('leads submit error:', err)
