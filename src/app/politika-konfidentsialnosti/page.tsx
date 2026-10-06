@@ -32,7 +32,7 @@ export default function PolitikaKonfidentsialnosti() {
             <li><strong>Наименование:</strong> ИП Герасимов Евгений Сергеевич</li>
             <li><strong>ИНН:</strong> 890203667705</li>
             <li><strong>ОГРНИП:</strong> 322508100563828</li>
-            <li><strong>Электронная почта:</strong> <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
+            <li><strong>Электронная почта:</strong> <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
             <li><strong>Телефон:</strong> <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
           </ul>
         </section>
@@ -120,7 +120,7 @@ export default function PolitikaKonfidentsialnosti() {
           </ul>
           <p className="mt-3">
             Для реализации прав направьте письменное обращение на:{' '}
-            <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a>
+            <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a>
             {' '}с пометкой «Персональные данные».
           </p>
         </section>
@@ -148,7 +148,7 @@ export default function PolitikaKonfidentsialnosti() {
           <h2 className="text-xl font-semibold text-[#0F172A] mb-3">11. Контакты</h2>
           <p>По всем вопросам, связанным с обработкой персональных данных:</p>
           <ul className="mt-2 list-none pl-0 space-y-1">
-            <li>Email: <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
+            <li>Email: <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
             <li>Телефон: <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
           </ul>
         </section>
