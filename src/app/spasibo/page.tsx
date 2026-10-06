@@ -20,8 +20,8 @@ export default function SpasiboPage() {
       <div className="max-w-4xl mx-auto px-4 pb-16 text-center">
         <p className="text-sm text-gray-400 mb-4">
           Если вопрос срочный — напишите:{' '}
-          <a href="mailto:kvant.bz@yandex.ru" className="text-[#C2410C] hover:underline">
-            kvant.bz@yandex.ru
+          <a href="mailto:hello@pro-schools.ru" className="text-[#C2410C] hover:underline">
+            hello@pro-schools.ru
           </a>
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
