@@ -1,7 +1,7 @@
 import { spawn } from 'node:child_process'
 import path from 'node:path'
 
-type MailerAction = 'enroll' | 'confirm' | 'unsubscribe'
+type MailerAction = 'enroll' | 'confirm' | 'unsubscribe' | 'reserve-welcome'
 
 export async function crmMailer(action: MailerAction, payload: Record<string, unknown>): Promise<{ status: string; token?: string }> {
   const script = path.join(process.cwd(), 'scripts', 'crm-mailer.py')

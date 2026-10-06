@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer'
 import { getSchoolBySlug, schools, type School } from '@/data/schools'
 import { SU_PRODUCTS, SU_UTM_SOURCE } from '@/lib/su-products'
+import { crmMailer } from '@/lib/crm-mailer'
 
 const FROM = 'hello@pro-schools.ru'
 const BASE = 'https://pro-schools.ru'
@@ -95,9 +96,11 @@ export function renderWelcome(lead: WelcomeLead) {
   return { subject: school ? `Ваша заявка: ${school.name}` : 'Мы получили вашу заявку на pro-schools.ru', html, text }
 }
 
-export async function sendWelcome(lead: WelcomeLead): Promise<'sent' | 'not-configured'> {
+export async function sendWelcome(lead: WelcomeLead): Promise<'sent' | 'not-configured' | 'limited'> {
   const password = process.env.PROSCHOOLS_SMTP_PASSWORD
   if (!password) return 'not-configured'
+  const reservation = await crmMailer('reserve-welcome', { email: lead.email })
+  if (reservation.status !== 'allowed') return 'limited'
   const message = renderWelcome(lead)
   const unsubscribeUrl = lead.confirmationToken ? `${BASE}/api/mail/unsubscribe/?token=${lead.confirmationToken}` : ''
   const transport = nodemailer.createTransport({

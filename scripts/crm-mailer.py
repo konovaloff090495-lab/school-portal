@@ -7,6 +7,7 @@ No historical leads are imported. Database and logs stay on the VPS.
 
 import datetime as dt
 import email.utils
+import hashlib
 import html
 import json
 import os
@@ -29,6 +30,8 @@ BASE = 'https://pro-schools.ru'
 PARTNER = 'https://school-university.com'
 MAX_PER_DAY = 20
 MAX_PER_RUN = 10
+MAX_WELCOME_MINUTE = 10
+MAX_WELCOME_DAY = 100
 STAGES = (7, 21, 35, 49)  # days after confirmation
 UTC = dt.timezone.utc
 
@@ -91,6 +94,8 @@ def connect():
       attempts INTEGER NOT NULL DEFAULT 0
     )''')
     db.execute('CREATE INDEX IF NOT EXISTS subscribers_due ON subscribers(status,next_at)')
+    db.execute('CREATE TABLE IF NOT EXISTS welcome_sends (sent_at REAL NOT NULL, recipient_hash TEXT NOT NULL)')
+    db.execute('CREATE INDEX IF NOT EXISTS welcome_sends_time ON welcome_sends(sent_at)')
     db.commit()
     return db
 
@@ -134,6 +139,25 @@ def unsubscribe(db, token):
     db.execute("UPDATE subscribers SET status='unsubscribed',next_at=NULL WHERE token=?", (token,))
     db.commit()
     return {'status': 'unsubscribed'}
+
+
+def reserve_welcome(db, data):
+    address = str(data.get('email', '')).strip().lower()
+    if len(address) > 254 or not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+', address):
+        return {'status': 'invalid'}
+    current = time.time()
+    digest = hashlib.sha256(address.encode()).hexdigest()
+    db.execute('BEGIN IMMEDIATE')
+    db.execute('DELETE FROM welcome_sends WHERE sent_at<?', (current - 86400,))
+    minute = db.execute('SELECT COUNT(*) FROM welcome_sends WHERE sent_at>?', (current - 60,)).fetchone()[0]
+    day = db.execute('SELECT COUNT(*) FROM welcome_sends').fetchone()[0]
+    same = db.execute('SELECT COUNT(*) FROM welcome_sends WHERE recipient_hash=?', (digest,)).fetchone()[0]
+    if minute >= MAX_WELCOME_MINUTE or day >= MAX_WELCOME_DAY or same >= 3:
+        db.commit()
+        return {'status': 'limited'}
+    db.execute('INSERT INTO welcome_sends(sent_at,recipient_hash) VALUES(?,?)', (current, digest))
+    db.commit()
+    return {'status': 'allowed'}
 
 
 def partner_link(path, theme):
@@ -222,13 +246,17 @@ def run(db):
 
 
 def main():
-    if len(sys.argv) != 2 or sys.argv[1] not in ('enroll', 'confirm', 'unsubscribe', 'run', 'status'):
-        raise SystemExit('usage: crm-mailer.py enroll|confirm|unsubscribe|run|status')
+    if len(sys.argv) != 2 or sys.argv[1] not in ('enroll', 'confirm', 'unsubscribe', 'reserve-welcome', 'run', 'status'):
+        raise SystemExit('usage: crm-mailer.py enroll|confirm|unsubscribe|reserve-welcome|run|status')
     with connect() as db:
         action = sys.argv[1]
-        if action in ('enroll', 'confirm', 'unsubscribe'):
+        if action in ('enroll', 'confirm', 'unsubscribe', 'reserve-welcome'):
             data = json.load(sys.stdin)
-            reply({'enroll': enroll, 'confirm': confirm, 'unsubscribe': unsubscribe}[action](db, data if action == 'enroll' else str(data.get('token', ''))))
+            if action == 'enroll': result = enroll(db, data)
+            elif action == 'reserve-welcome': result = reserve_welcome(db, data)
+            elif action == 'confirm': result = confirm(db, str(data.get('token', '')))
+            else: result = unsubscribe(db, str(data.get('token', '')))
+            reply(result)
         elif action == 'run':
             run(db)
         else:
