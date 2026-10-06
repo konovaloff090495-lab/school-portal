@@ -28,7 +28,7 @@ export default function SoglasieMarketing() {
             <li><strong>ИНН:</strong> 890203667705</li>
             <li><strong>ОГРНИП:</strong> 322508100563828</li>
             <li><strong>Сайт:</strong> <Link href="/" className="text-[#0369A1] hover:underline">pro-schools.ru</Link></li>
-            <li><strong>Email:</strong> <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
+            <li><strong>Email:</strong> <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
             <li><strong>Телефон:</strong> <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
           </ul>
         </section>
@@ -96,7 +96,7 @@ export default function SoglasieMarketing() {
             </li>
             <li>
               Направьте письмо на{' '}
-              <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a>
+              <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a>
               {' '}с темой «Отзыв согласия на маркетинговые рассылки»
             </li>
             <li>
@@ -114,7 +114,7 @@ export default function SoglasieMarketing() {
         <section>
           <h2 className="text-xl font-semibold text-[#0F172A] mb-3">8. Контакты</h2>
           <ul className="list-none pl-0 space-y-1">
-            <li>Email: <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a></li>
+            <li>Email: <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
             <li>Телефон: <a href="tel:+79824066631" className="text-[#0369A1] hover:underline">+7 (982) 406-66-31</a></li>
           </ul>
         </section>

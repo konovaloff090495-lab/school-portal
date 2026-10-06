@@ -424,8 +424,8 @@ export default function ReklamaPage() {
                 <a href={TG} target="_blank" rel="noopener" style={btn('dark')}>
                   ✈️ Telegram @Gerasim951
                 </a>
-                <a href="mailto:kvant.bz@yandex.ru" style={{ ...btn('ghost'), border: '1px solid rgba(255,255,255,.3)' }}>
-                  kvant.bz@yandex.ru
+                <a href="mailto:hello@pro-schools.ru" style={{ ...btn('ghost'), border: '1px solid rgba(255,255,255,.3)' }}>
+                  hello@pro-schools.ru
                 </a>
               </div>
             </div>

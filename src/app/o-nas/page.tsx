@@ -47,8 +47,8 @@ export default function AboutPage() {
         <p>
           По вопросам размещения информации, обновления данных или рекламного сотрудничества
           пишите на почту:{' '}
-          <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline font-medium">
-            kvant.bz@yandex.ru
+          <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline font-medium">
+            hello@pro-schools.ru
           </a>
         </p>
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
           Перейти в каталог
         </Link>
         <a
-          href="mailto:kvant.bz@yandex.ru"
+          href="mailto:hello@pro-schools.ru"
           className="border-2 border-gray-200 hover:border-[#0369A1] text-[#0F172A] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
         >
           Написать нам
