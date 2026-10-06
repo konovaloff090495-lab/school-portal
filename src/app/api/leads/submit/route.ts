@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sendTelegramMessage } from '@/lib/telegram'
 import { sendLeadToSynergy } from '@/lib/synergy'
+import { sendWelcome } from '@/lib/welcome-mail'
 
 const FORMSPREE_ID = process.env.FORMSPREE_ID
 
@@ -81,6 +82,16 @@ export async function POST(req: NextRequest) {
 
     if (crmFailed) {
       return NextResponse.json({ error: 'Заявка не дошла до CRM. Попробуйте ещё раз.' }, { status: 502 })
+    }
+    try {
+      const mail = await sendWelcome({
+        name, email, school: schoolLabel ?? undefined, city,
+        pageUrl: page_url, marketingAgreed: crm !== false && marketing_agreed === true,
+      })
+      console.info('[Welcome] result:', mail)
+    } catch (error) {
+      // A mail outage must not duplicate an accepted CRM lead when the visitor retries.
+      console.error('[Welcome] send failed:', error instanceof Error ? error.message : 'unknown')
     }
     return NextResponse.json({ success: true })
   } catch (err) {

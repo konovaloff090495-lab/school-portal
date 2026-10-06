@@ -36,7 +36,7 @@ export default function SoglasieMarketing() {
         <section>
           <h2 className="text-xl font-semibold text-[#0F172A] mb-3">2. Предмет согласия</h2>
           <p>
-            Пользуясь сайтом <strong>pro-schools.ru</strong> и заполняя форму обратной связи с установленным флажком
+            Заполняя форму обратной связи на <strong>pro-schools.ru</strong> с установленным флажком
             «Согласен(а) на получение маркетинговых материалов», я даю свободное, конкретное, информированное и
             сознательное согласие ИП Герасимов Евгений Сергеевич (далее — Оператор) на получение рекламных,
             информационных и маркетинговых сообщений, связанных с услугами и предложениями портала ШколыРоссии.рф.
@@ -96,7 +96,7 @@ export default function SoglasieMarketing() {
             </li>
             <li>
               Направьте письмо на{' '}
-              <a href="mailto:kvant.bz@yandex.ru" className="text-[#0369A1] hover:underline">kvant.bz@yandex.ru</a>
+              <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a>
               {' '}с темой «Отзыв согласия на маркетинговые рассылки»
             </li>
             <li>
