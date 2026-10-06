@@ -278,7 +278,7 @@ function OfferDrawer({
   })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
-  const [marketingAgreed, setMarketingAgreed] = useState(true)
+  const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
@@ -468,9 +468,9 @@ function OfferDrawer({
                     className="mt-0.5 shrink-0 accent-[#FF6B3D]"
                   />
                   <span className="text-xs text-gray-500 leading-relaxed">
-                    Согласен(а) на{' '}
+                    Хочу получать письма о программах «Синергии» —{' '}
                     <Link href="/soglasie-marketing/" className="text-[#C2410C] hover:underline" target="_blank">
-                      получение маркетинговых материалов
+                      условия рассылки
                     </Link>
                   </span>
                 </label>

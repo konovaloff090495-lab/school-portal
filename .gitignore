@@ -64,3 +64,7 @@ public/fipi/
 .next-previous/
 
 .next-release*.tar.*
+
+# Consent-based CRM mailer state stays only on the VPS
+.crm-mailer.sqlite3*
+.crm-mailer-paused

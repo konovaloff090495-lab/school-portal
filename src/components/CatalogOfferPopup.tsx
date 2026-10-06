@@ -28,7 +28,7 @@ export default function CatalogOfferPopup() {
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
-  const [marketingAgreed, setMarketingAgreed] = useState(true)
+  const [marketingAgreed, setMarketingAgreed] = useState(false)
   const openedRef = useRef(false)
 
   const show = useCallback(() => {
@@ -185,8 +185,8 @@ export default function CatalogOfferPopup() {
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={marketingAgreed} onChange={e => setMarketingAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#0369A1]" />
                 <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Согласен(а) на{' '}
-                  <Link href="/soglasie-marketing/" className="text-[#0369A1] hover:underline" target="_blank">получение маркетинговых материалов</Link>
+                  Хочу получать письма о программах «Синергии» —{' '}
+                  <Link href="/soglasie-marketing/" className="text-[#0369A1] hover:underline" target="_blank">условия рассылки</Link>
                 </span>
               </label>
             </div>

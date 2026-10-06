@@ -336,7 +336,7 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
   const [email, setEmail] = useState(user?.email ?? '')
   const [phone, setPhone] = useState(user?.phone ?? '')
   const [pdAgreed, setPdAgreed] = useState(true)
-  const [marketingAgreed, setMarketingAgreed] = useState(true)
+  const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const phoneFilled = phone.replace(/\D/g, '').length > 1
@@ -473,8 +473,8 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={marketingAgreed} onChange={e => setMarketingAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
                 <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Согласен(а) на{' '}
-                  <Link href="/soglasie-marketing/" className="text-[#7C3AED] hover:underline" target="_blank">получение маркетинговых материалов</Link>
+                  Хочу получать письма о программах «Синергии» —{' '}
+                  <Link href="/soglasie-marketing/" className="text-[#7C3AED] hover:underline" target="_blank">условия рассылки</Link>
                 </span>
               </label>
             </div>

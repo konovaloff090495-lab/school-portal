@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { sendTelegramMessage } from '@/lib/telegram'
 import { sendLeadToSynergy } from '@/lib/synergy'
 import { sendWelcome } from '@/lib/welcome-mail'
+import { crmMailer } from '@/lib/crm-mailer'
 
 const FORMSPREE_ID = process.env.FORMSPREE_ID
 
@@ -54,7 +55,7 @@ export async function POST(req: NextRequest) {
         referrer,
         ymClientId: ym_client_id,
         personalDataAgree: pd_agreed !== false,
-        marketingAgree: marketing_agreed !== false,
+        marketingAgree: marketing_agreed === true,
         extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source },
       })
       if (result.ok) {
@@ -83,10 +84,20 @@ export async function POST(req: NextRequest) {
     if (crmFailed) {
       return NextResponse.json({ error: 'Заявка не дошла до CRM. Попробуйте ещё раз.' }, { status: 502 })
     }
+    let confirmationToken: string | undefined
+    if (crm !== false && marketing_agreed === true) {
+      try {
+        const enrolled = await crmMailer('enroll', { email, name, source: source ?? page_url ?? 'site', consent: true })
+        if (enrolled.status === 'pending' || enrolled.status === 'active') confirmationToken = enrolled.token
+      } catch (error) {
+        console.error('[CRM mailer] enroll failed:', error instanceof Error ? error.message : 'unknown')
+      }
+    }
     try {
       const mail = await sendWelcome({
         name, email, school: schoolLabel ?? undefined, city,
-        pageUrl: page_url, marketingAgreed: crm !== false && marketing_agreed === true,
+        pageUrl: page_url, marketingAgreed: !!confirmationToken,
+        confirmationToken,
       })
       console.info('[Welcome] result:', mail)
     } catch (error) {

@@ -77,8 +77,8 @@ landCode `mo_tilda_online_school`, `utm_source=gerasimov_lav`, школа/гор
 в `latestComment`, UTM/страница/реферер/ClientID Метрики в `customAttributes`).
 
 - Каждой форме — свой уникальный `source` (это `formTitle` в CRM и подпись в Telegram).
-- Две предзаполненные галочки согласий: ПДн (обязательная, `/politika-konfidentsialnosti/`)
-  и маркетинг (`/soglasie-marketing/`); значения передаются как `pd_agreed` / `marketing_agreed`.
+- Две отдельные галочки согласий: ПДн (обязательная, `/politika-konfidentsialnosti/`)
+  и маркетинг (`/soglasie-marketing/`, по умолчанию выключена); значения передаются как `pd_agreed` / `marketing_agreed`.
 - Маска/валидация телефона — `formatPhone` / `validatePhone` из `src/lib/phone.ts`.
 - B2B-формы (рекламодатели, «разместить школу») — тоже через `submitLead()`, но с `crm: false`.
 - Прямой `fetch('/api/leads/submit')`, Formspree/Tilda/Bitrix в компонентах — запрещены.

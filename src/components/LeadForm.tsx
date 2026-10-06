@@ -24,7 +24,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(true)
-  const [marketingAgreed, setMarketingAgreed] = useState(true)
+  const [marketingAgreed, setMarketingAgreed] = useState(false)
 
   function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
     const masked = formatPhone(e.target.value)
@@ -149,7 +149,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
               </Link>
             </span>
           </label>
-          <label className="flex items-start gap-2 cursor-pointer">
+          {crm && <label className="flex items-start gap-2 cursor-pointer">
             <input
               type="checkbox"
               checked={marketingAgreed}
@@ -157,12 +157,12 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
               className="mt-0.5 shrink-0 accent-[#0369A1]"
             />
             <span className="text-xs text-gray-500 leading-relaxed">
-              Согласен(а) на{' '}
+              Хочу получать письма о программах «Синергии» —{' '}
               <Link href="/soglasie-marketing/" className="text-[#0369A1] hover:underline" target="_blank">
-                получение маркетинговых материалов
+                условия рассылки
               </Link>
             </span>
-          </label>
+          </label>}
         </div>
       </form>
     </div>
