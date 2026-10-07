@@ -9,8 +9,9 @@ const WIDGET_URL = 'https://ssynergy.logos.unis.studio/widget.js?tenant=ssynergy
 // closed: its large floating preview and notification areas used to cover CTAs.
 const WIDGET_CSS = `
   :host { pointer-events: none !important; }
-  .uc-main { pointer-events: auto !important; left: 20px !important; right: auto !important; }
+  .uc-main { pointer-events: auto !important; left: auto !important; right: 20px !important; }
   .uc-main:not(.open) { bottom: calc(24px + var(--ps-widget-clearance, 0px)) !important; }
+  :host(.mobile) .uc-main.open { left: 0 !important; right: 0 !important; }
   .uc-preview, .uc-actions, .uc-campaign-bubble, .uc-campaign-takeover { display: none !important; }
   .uc-overlay { pointer-events: none !important; }
   .uc-overlay.visible { pointer-events: auto !important; }
@@ -37,5 +38,5 @@ export default function LogosChatWidget() {
     return () => observer.disconnect()
   }, [])
 
-  return <Script src={WIDGET_URL} strategy="afterInteractive" data-position="bottom-left" />
+  return <Script src={WIDGET_URL} strategy="afterInteractive" data-position="bottom-right" />
 }
