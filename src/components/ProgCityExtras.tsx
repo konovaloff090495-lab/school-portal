@@ -44,7 +44,7 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
         <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Как выбрать школу программирования для ребёнка {regionIn}</h2>
         <ol style={{ fontSize: 15, lineHeight: 1.65, color: '#3F3A35', margin: 0, paddingLeft: 22 }}>
           <li>Смотрите на возраст и язык: 6–9 лет — Scratch и визуальные среды, 10–12 — Roblox, Minecraft, первые шаги в Python, 13–17 — Python, веб-разработка, геймдев на Unity или Godot.</li>
-          <li>Просите пробное занятие: почти все школы из списка проводят первый урок бесплатно или за символическую плату — так видно, подходит ли преподаватель и группа.</li>
+          <li>Уточните, есть ли пробное занятие: оно помогает оценить преподавателя, программу и группу до оплаты длительного курса.</li>
           <li>Сравнивайте цену за месяц при одинаковой частоте занятий (обычно 1–2 раза в неделю по 60–90 минут) и уточняйте, входит ли в стоимость доступ к платформе и проверка домашних заданий.</li>
           <li>Проверьте отзывы на Яндекс Картах — у каждой школы в списке выше указана оценка и число отзывов на сентябрь 2026 года.</li>
         </ol>
@@ -53,6 +53,22 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
           <Link href="/shkoly/osobennosti/it-klass/" style={a}>общеобразовательные школы с IT-классами</Link>,{' '}
           <Link href="/shkoly/tipy/online/" style={a}>онлайн-школы с аттестатом</Link>.
         </p>
+      </section>
+
+      <section style={{ margin: '0 0 28px' }}>
+        <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Курсы программирования: выбрать направление и формат</h2>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: '#5F5A55', margin: '0 0 12px' }}>
+          Адрес школы не говорит, какой курс доступен в конкретном филиале. Перед записью сравните программу, возраст набора, формат и полную стоимость.
+        </p>
+        <ul style={{ fontSize: 15, lineHeight: 1.9, color: '#3F3A35', margin: 0, paddingLeft: 20 }}>
+          <li><Link href="/blog/programmirovanie-dlya-detej/" style={a}>Программирование для детей: с чего начать</Link></li>
+          <li><Link href="/blog/programmirovaniye-kursy-dlya-detej/" style={a}>Как выбрать курс программирования для ребёнка</Link></li>
+          <li><Link href="/blog/onlajn-kursy-programmirovaniya-dlya-detej/" style={a}>Живые онлайн-занятия и курсы в записи</Link></li>
+          <li><Link href="/blog/besplatnye-kursy-programmirovaniya-dlya-detej/" style={a}>Бесплатные программы и первый проект</Link></li>
+          <li><Link href="/blog/programmirovanie-dlya-detej-po-vozrastam/" style={a}>Что выбрать в 6–8, 9–12 и 13–17 лет</Link></li>
+          <li><Link href="/blog/scratch-dlya-detej/" style={a}>Scratch</Link> · <Link href="/blog/python-dlya-detej/" style={a}>Python</Link> · <Link href="/blog/sozdanie-igr-dlya-detej-kursy/" style={a}>создание игр</Link></li>
+          <li><Link href="/blog/skolko-stoyat-kursy-programmirovaniya-dlya-detej/" style={a}>Как сравнивать цены</Link> · <Link href="/blog/kruzhki-programmirovaniya-dlya-detej/" style={a}>как найти кружок рядом</Link></li>
+        </ul>
       </section>
 
       {itSchools.length > 0 && region && (
