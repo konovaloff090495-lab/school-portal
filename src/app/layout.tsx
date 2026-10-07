@@ -7,6 +7,7 @@ import YandexMetrika from "@/components/YandexMetrika";
 import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
 import GeoPrompt from "@/components/GeoPrompt";
+import LogosChatWidget from "@/components/LogosChatWidget";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], preload: false });
 const unbounded = Unbounded({
@@ -68,6 +69,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollToTop />
+        <LogosChatWidget />
       </body>
     </html>
   );
