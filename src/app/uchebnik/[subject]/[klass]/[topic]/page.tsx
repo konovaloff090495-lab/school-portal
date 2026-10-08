@@ -16,6 +16,8 @@ import TopicFaq from '@/components/TopicFaq'
 import TextbookPractice from '@/components/TextbookPractice'
 import { getTextbookPractice } from '@/data/textbook-practice'
 import { getRelatedGdz } from '@/lib/textbook-gdz'
+import { getTopicTextbookImage } from '@/lib/textbook-images'
+import TextbookPhoto from '@/components/TextbookPhoto'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -89,6 +91,7 @@ export default async function TopicPage({ params }: Props) {
   if (!subject || !topic || !klass) notFound()
 
   const article = getArticle(subjectSlug, klass, topicSlug)
+  const topicImage = getTopicTextbookImage(subjectSlug, klass, topicSlug, topic.title)
   const [articleHead, articleTail] = splitForInlineAd(article?.content ? sanitizeHtml(article.content) : '')
   const faq = getTopicFaq(subjectSlug, klass, topicSlug)
   const practice = article?.content ? getTextbookPractice(subjectSlug, klass, topicSlug) : []
@@ -144,16 +147,6 @@ export default async function TopicPage({ params }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
         {/* Основной контент */}
         <div className="flex-1 min-w-0">
-          {/* Реклама для телефонов и планшетов: сайдбар ниже скрыт до lg */}
-          <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
-            <div className="flex items-center justify-between mb-2 px-1">
-              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
-              <span className="text-[10px] text-gray-300">16+</span>
-            </div>
-            <div style={{ minHeight: 250 }}>
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
-            </div>
-          </aside>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 mb-6">
             {article?.content ? (
               <>
@@ -162,6 +155,15 @@ export default async function TopicPage({ params }: Props) {
                 <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-6 pl-4 border-l-4 border-blue-500">
                   {topic.excerpt}
                 </p>
+                {topicImage && (
+                  <div className="mb-8">
+                    <TextbookPhoto
+                      image={topicImage.image}
+                      caption={topicImage.topicSpecific ? topicImage.image.alt : `Иллюстрация к предмету «${subject.title}»`}
+                      eager
+                    />
+                  </div>
+                )}
                 <div
                   className="textbook-content"
                   dangerouslySetInnerHTML={{ __html: articleHead }}
@@ -178,14 +180,27 @@ export default async function TopicPage({ params }: Props) {
                 )}
               </>
             ) : (
-              <PlaceholderContent
-                title={topic.title}
-                excerpt={topic.excerpt}
-                subject={subject.title}
-                klass={klass}
-              />
+              <>
+                {topicImage && <div className="mb-6"><TextbookPhoto image={topicImage.image} caption={`Иллюстрация к предмету «${subject.title}»`} eager /></div>}
+                <PlaceholderContent
+                  title={topic.title}
+                  excerpt={topic.excerpt}
+                  subject={subject.title}
+                  klass={klass}
+                />
+              </>
             )}
           </div>
+
+          <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
+            <div className="flex items-center justify-between mb-2 px-1">
+              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+              <span className="text-[10px] text-gray-300">16+</span>
+            </div>
+            <div style={{ minHeight: 250 }}>
+              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
+            </div>
+          </aside>
 
           {practice.length > 0 && (
             <TextbookPractice questions={practice} topicKey={`${subjectSlug}/${klass}/${topicSlug}`} />

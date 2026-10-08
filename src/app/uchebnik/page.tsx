@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { textbookSubjects, textbookTopics } from '@/data/textbook'
+import { getNamedTextbookImage, getSubjectTextbookImage, getTopicTextbookImage } from '@/lib/textbook-images'
+import TextbookImageCredits from '@/components/TextbookImageCredits'
 import AdCard from '@/components/AdCard'
 import { AD_BLOCKS, AD_SLOT_2 } from '@/lib/ads'
 
@@ -13,12 +16,14 @@ export const metadata: Metadata = {
 
 export default function TextbookPage() {
   const totalTopics = textbookTopics.length
+  const hero = getNamedTextbookImage('hero')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#0F172A] to-[#1E3A5F] text-white py-14 px-4">
-        <div className="max-w-5xl mx-auto text-center">
+      <div className="bg-gradient-to-br from-[#0F172A] to-[#1E3A5F] text-white py-10 md:py-14 px-4">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.9fr] items-center gap-8 text-center md:text-left">
+          <div>
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
             <span>📖</span>
             <span className="font-medium">Бесплатно · Все классы · Все предметы</span>
@@ -26,18 +31,29 @@ export default function TextbookPage() {
           <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
             Онлайн учебник<br />для школьников
           </h1>
-          <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-blue-200 text-lg max-w-2xl mx-auto md:mx-0 mb-8">
             {totalTopics}+ тем по всем предметам. Понятные объяснения, примеры с решением,
             подготовка к ОГЭ и ЕГЭ — всё в одном месте.
           </p>
           {/* Быстрый переход по классам */}
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start">
             {[{ k: 1, label: '1 класс' }, { k: 5, label: '5 класс' }, { k: 9, label: '9 класс (ОГЭ)' }, { k: 11, label: '11 класс (ЕГЭ)' }].map(({ k, label }) => (
               <Link key={k} href={`/uchebnik/klass/${k}-klass/`} className="bg-white/10 hover:bg-white/20 transition-colors text-sm px-4 py-2 rounded-full">
                 {label}
               </Link>
             ))}
           </div>
+          </div>
+          {hero && (
+            <figure className="min-w-0">
+              <Image src={hero.url} alt={hero.alt} width={hero.width} height={hero.height} unoptimized priority className="w-full h-56 sm:h-72 md:h-80 rounded-2xl object-cover" />
+              <figcaption className="text-[11px] text-blue-200/80 mt-2">
+                <a href={hero.source} target="_blank" rel="noopener noreferrer" className="underline">{hero.author}</a>
+                {' · Wikimedia Commons · кадрирование · '}
+                {hero.licenseUrl ? <a href={hero.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{hero.license}</a> : hero.license}
+              </figcaption>
+            </figure>
+          )}
         </div>
       </div>
 
@@ -81,9 +97,11 @@ export default function TextbookPage() {
                 className="group bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg shadow-sm p-5 transition-all duration-200"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center text-2xl flex-shrink-0`}>
-                    {subject.icon}
-                  </div>
+                  {getSubjectTextbookImage(subject.slug) ? (
+                    <Image src={getSubjectTextbookImage(subject.slug)!.url} alt="" width={80} height={80} unoptimized className="w-14 h-14 rounded-xl object-cover flex-shrink-0" />
+                  ) : (
+                    <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center text-2xl flex-shrink-0`}>{subject.icon}</div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-[#0F172A] group-hover:text-blue-600 transition-colors mb-1">
                       {subject.title}
@@ -101,7 +119,7 @@ export default function TextbookPage() {
 
         {/* Популярные темы */}
         <div className="mt-14">
-          <h2 className="text-xl font-black text-[#0F172A] mb-6">🔥 Популярные темы</h2>
+          <h2 className="text-xl font-black text-[#0F172A] mb-6">Популярные темы</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { subject: 'algebra', klass: 8, slug: 'kvadratnoe-uravnenie', title: 'Квадратное уравнение', icon: '📐' },
@@ -114,10 +132,12 @@ export default function TextbookPage() {
               <Link
                 key={`${item.subject}-${item.slug}`}
                 href={`/uchebnik/${item.subject}/${item.klass}-klass/${item.slug}/`}
-                className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-md p-4 transition-all group"
+                className="flex items-center gap-3 bg-white rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-md p-3 transition-all group"
               >
-                <span className="text-xl">{item.icon}</span>
-                <div>
+                {getTopicTextbookImage(item.subject, item.klass, item.slug, item.title) ? (
+                  <Image src={getTopicTextbookImage(item.subject, item.klass, item.slug, item.title)!.image.url} alt="" width={112} height={70} unoptimized className="w-20 sm:w-28 h-16 rounded-lg object-cover flex-shrink-0 bg-slate-100" />
+                ) : <span className="text-xl">{item.icon}</span>}
+                <div className="min-w-0">
                   <p className="text-sm font-semibold text-[#0F172A] group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </p>
@@ -167,6 +187,18 @@ export default function TextbookPage() {
         </div>
 
         <AdCard blockId={AD_SLOT_2} suffix="uchebnik-index-bottom" className="mt-10" />
+        <TextbookImageCredits images={[
+          hero,
+          ...textbookSubjects.map(subject => getSubjectTextbookImage(subject.slug)),
+          ...[
+            ['algebra', 8, 'kvadratnoe-uravnenie', 'Квадратное уравнение'],
+            ['russkiy-yazyk', 9, 'spp', 'Сложноподчинённое предложение'],
+            ['fizika', 9, 'postoyanny-tok', 'Закон Ома для участка цепи'],
+            ['khimiya', 8, 'tablitsa-mendeleeva', 'Таблица Менделеева'],
+            ['matematika', 5, 'protsenty', 'Проценты'],
+            ['biologiya', 9, 'genetika', 'Законы Менделя'],
+          ].map(([subject, klass, slug, title]) => getTopicTextbookImage(String(subject), Number(klass), String(slug), String(title))?.image ?? null),
+        ]} />
       </div>
     </div>
   )
