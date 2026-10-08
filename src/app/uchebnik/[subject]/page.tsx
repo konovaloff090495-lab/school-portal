@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import AdCard from '@/components/AdCard'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { getSubjectTextbookImage } from '@/lib/textbook-images'
 import {
-  textbookSubjects, getSubjectBySlug, getTopicsForSubjectAndClass,
+  getSubjectBySlug, getTopicsForSubjectAndClass,
   subjectSlugs, klassLabel,
 } from '@/data/textbook'
 
@@ -31,6 +33,7 @@ export default async function SubjectPage({ params }: Props) {
   const { subject: subjectSlug } = await params
   const subject = getSubjectBySlug(subjectSlug)
   if (!subject) notFound()
+  const subjectImage = getSubjectTextbookImage(subjectSlug)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -46,14 +49,20 @@ export default async function SubjectPage({ params }: Props) {
             <span className="text-gray-700 font-medium">{subject.title}</span>
           </nav>
 
-          <div className="flex items-center gap-4">
-            <div className={`w-14 h-14 rounded-2xl ${subject.color} flex items-center justify-center text-3xl flex-shrink-0`}>
-              {subject.icon}
-            </div>
-            <div>
+          <div className="flex items-center justify-between gap-4">
+            <div className="min-w-0">
               <h1 className="text-2xl md:text-3xl font-black text-[#0F172A]">{subject.title}</h1>
               <p className="text-gray-500 text-sm mt-1">{subject.description}</p>
             </div>
+            {subjectImage && (
+              <figure className="w-28 sm:w-44 flex-shrink-0">
+                <Image src={subjectImage.url} alt={subjectImage.alt} width={subjectImage.width} height={subjectImage.height} unoptimized className="w-full h-24 sm:h-28 rounded-xl object-cover" />
+                <figcaption className="text-[10px] text-slate-500 mt-1 leading-snug">
+                  <a href={subjectImage.source} target="_blank" rel="noopener noreferrer" className="underline">{subjectImage.author}</a>
+                  {' · '}{subjectImage.licenseUrl ? <a href={subjectImage.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{subjectImage.license}</a> : subjectImage.license}
+                </figcaption>
+              </figure>
+            )}
           </div>
         </div>
       </div>

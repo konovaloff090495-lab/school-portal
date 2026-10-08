@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import AdCard from '@/components/AdCard'
-import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { AD_BLOCKS, AD_SLOT_2 } from '@/lib/ads'
+import { getSubjectTextbookImage } from '@/lib/textbook-images'
+import TextbookImageCredits from '@/components/TextbookImageCredits'
 import {
-  textbookSubjects, getTopicsForSubjectAndClass, klassLabel, klassLabelIn, klassLabelOf,
+  textbookSubjects, getTopicsForSubjectAndClass, klassLabel, klassLabelOf,
 } from '@/data/textbook'
 
 interface Props { params: Promise<{ klass: string }> }
@@ -99,9 +102,11 @@ export default async function ClassPage({ params }: Props) {
               className="group bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg shadow-sm p-5 transition-all duration-200"
             >
               <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center text-2xl flex-shrink-0`}>
-                  {subject.icon}
-                </div>
+                {getSubjectTextbookImage(subject.slug) ? (
+                  <Image src={getSubjectTextbookImage(subject.slug)!.url} alt="" width={80} height={80} unoptimized className="w-14 h-14 rounded-xl object-cover flex-shrink-0" />
+                ) : (
+                  <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center text-2xl flex-shrink-0`}>{subject.icon}</div>
+                )}
                 <div className="flex-1 min-w-0">
                   <h3 className="font-bold text-[#0F172A] group-hover:text-blue-600 transition-colors mb-1">
                     {subject.title}
@@ -118,6 +123,7 @@ export default async function ClassPage({ params }: Props) {
         </div>
 
         <AdCard blockId={AD_SLOT_2} suffix="klasshub-bottom" className="mt-8" />
+        <TextbookImageCredits images={subjects.map(({ subject }) => getSubjectTextbookImage(subject.slug))} />
       </div>
     </div>
   )

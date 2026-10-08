@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import {
   getSubjectBySlug, getTopicsForSubjectAndClass,
@@ -8,6 +9,7 @@ import {
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import AdCard from '@/components/AdCard'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
+import { getSubjectTextbookImage } from '@/lib/textbook-images'
 
 interface Props { params: Promise<{ subject: string; klass: string }> }
 
@@ -41,6 +43,7 @@ export default async function KlassPage({ params }: Props) {
   const klass = parseKlass(klassStr)
   const subject = getSubjectBySlug(subjectSlug)
   if (!subject || !klass || !subject.classes.includes(klass)) notFound()
+  const subjectImage = getSubjectTextbookImage(subjectSlug)
 
   const topics = getTopicsForSubjectAndClass(subjectSlug, klass)
   if (!topics.length) notFound()
@@ -64,6 +67,7 @@ export default async function KlassPage({ params }: Props) {
           </nav>
 
           <div className="flex items-center gap-3">
+            {subjectImage && <Image src={subjectImage.url} alt={subjectImage.alt} width={subjectImage.width} height={subjectImage.height} unoptimized className="w-20 h-16 rounded-xl object-cover flex-shrink-0" />}
             <div className={`w-10 h-10 rounded-xl ${subject.color} flex items-center justify-center text-xl flex-shrink-0`}>
               {subject.icon}
             </div>
@@ -74,6 +78,7 @@ export default async function KlassPage({ params }: Props) {
               <p className="text-gray-400 text-sm">{topics.length} тем</p>
             </div>
           </div>
+          {subjectImage && <p className="text-[10px] text-slate-500 mt-2"><a href={subjectImage.source} target="_blank" rel="noopener noreferrer" className="underline">{subjectImage.author}</a>{' · '}{subjectImage.licenseUrl ? <a href={subjectImage.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{subjectImage.license}</a> : subjectImage.license}</p>}
         </div>
       </div>
 

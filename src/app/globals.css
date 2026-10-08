@@ -112,7 +112,10 @@ body:has([data-partner-sticky-banner]) #Logos-widget {
 }
 
 .textbook-content table {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   border-collapse: collapse;
   margin: 1.25em 0;
   font-size: 0.95rem;

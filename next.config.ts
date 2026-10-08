@@ -38,7 +38,7 @@ const securityHeaders = [
       // Inline стили — для CSS-in-JS и контента блога
       "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
       // Картинки: свои + data-URI + креативы и аватары рекламы РСЯ
-      "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net https://ssynergy.logos.unis.studio",
+      "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net https://ssynergy.logos.unis.studio https://thumb.wikimedia.org https://upload.wikimedia.org",
       // Шрифты Google
       "font-src 'self' fonts.gstatic.com",
       "media-src 'self' https://vos.olimpiada.ru",
