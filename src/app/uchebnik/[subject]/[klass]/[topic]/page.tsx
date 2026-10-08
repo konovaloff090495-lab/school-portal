@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { sanitizeHtml } from '@/lib/sanitize'
 import {
   getSubjectBySlug, getTopicBySlug, getTopicsForSubjectAndClass,
-  textbookSubjects, klassLabel, klassLabelIn, klassLabelOf,
+  klassLabel, klassLabelIn, klassLabelOf,
 } from '@/data/textbook'
 import { getArticle } from '@/data/textbook-articles'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
@@ -13,6 +13,9 @@ import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3, splitForInlineAd } from '@/lib/ads'
 import { BreadcrumbJsonLd, TextbookTopicJsonLd, FaqJsonLd } from '@/lib/schema'
 import { getTopicFaq } from '@/data/textbook-faq'
 import TopicFaq from '@/components/TopicFaq'
+import TextbookPractice from '@/components/TextbookPractice'
+import { getTextbookPractice } from '@/data/textbook-practice'
+import { getRelatedGdz } from '@/lib/textbook-gdz'
 
 interface Props { params: Promise<{ subject: string; klass: string; topic: string }> }
 
@@ -88,6 +91,8 @@ export default async function TopicPage({ params }: Props) {
   const article = getArticle(subjectSlug, klass, topicSlug)
   const [articleHead, articleTail] = splitForInlineAd(article?.content ? sanitizeHtml(article.content) : '')
   const faq = getTopicFaq(subjectSlug, klass, topicSlug)
+  const practice = article?.content ? getTextbookPractice(subjectSlug, klass, topicSlug) : []
+  const relatedGdz = practice.length ? getRelatedGdz(subjectSlug, klass, topicSlug, subject.title) : null
   const allTopics = getTopicsForSubjectAndClass(subjectSlug, klass)
   const currentIdx = allTopics.findIndex(t => t.slug === topicSlug)
   const prevTopic = currentIdx > 0 ? allTopics[currentIdx - 1] : null
@@ -181,6 +186,32 @@ export default async function TopicPage({ params }: Props) {
               />
             )}
           </div>
+
+          {practice.length > 0 && (
+            <TextbookPractice questions={practice} topicKey={`${subjectSlug}/${klass}/${topicSlug}`} />
+          )}
+
+          {relatedGdz && (
+            <section className="bg-blue-50 rounded-2xl border border-blue-100 p-5 md:p-7 mb-6" aria-labelledby="related-gdz-title">
+              <p className="text-xs font-bold text-blue-700 uppercase tracking-wide mb-1">Продолжить практику</p>
+              <h2 id="related-gdz-title" className="text-lg font-bold text-[#0F172A]">{relatedGdz.title}</h2>
+              <p className="text-sm text-gray-700 mt-2">{relatedGdz.intro}</p>
+              {relatedGdz.links.length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {relatedGdz.links.map(link => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="block bg-white border border-blue-100 rounded-xl px-4 py-3 text-sm text-blue-800 hover:border-blue-400 hover:text-blue-950 focus-visible:outline-2 focus-visible:outline-blue-600">
+                        {link.label} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <Link href={relatedGdz.href} className="inline-block mt-4 text-sm font-semibold text-blue-700 hover:text-blue-900 hover:underline">
+                {relatedGdz.exact ? 'Все задания этого учебника' : `ГДЗ по предмету за ${klass} класс`} →
+              </Link>
+            </section>
+          )}
 
           {!articleTail && (
             <AdCard blockId={AD_SLOT_2} suffix="uchebnik-topic-mid" className="mb-6" />
