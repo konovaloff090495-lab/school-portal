@@ -3,6 +3,7 @@ import { sendTelegramMessage } from '@/lib/telegram'
 import { sendLeadToSynergy } from '@/lib/synergy'
 import { sendWelcome } from '@/lib/welcome-mail'
 import { crmMailer } from '@/lib/crm-mailer'
+import { recordLeadSubmission } from '@/lib/lead-journal'
 
 const FORMSPREE_ID = process.env.FORMSPREE_ID
 
@@ -39,6 +40,7 @@ export async function POST(req: NextRequest) {
     // CRM Синергии (GraphQL sendLead). B2B-формы (crm=false) туда не идут.
     let crmLine = ''
     let crmFailed = false
+    let crmReceipt: { status: 'accepted' | 'failed' | 'not_requested'; id?: string | null; error?: string } = { status: 'not_requested' }
     if (crm !== false) {
       const commentParts: string[] = []
       if (schoolLabel) commentParts.push(`Школа: ${schoolLabel}${city ? ` (${city})` : ''}`)
@@ -59,13 +61,23 @@ export async function POST(req: NextRequest) {
         extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source },
       })
       if (result.ok) {
+        crmReceipt = { status: 'accepted', id: result.id }
         // Keep a receipt without contact details so accepted leads can be traced in Synergy.
         console.info('[Synergy] sendLead accepted:', JSON.stringify({ id: result.id, source: source ?? 'unknown' }))
         crmLine = `\n✅ CRM Синергии: лид #${result.id ?? '?'}`
       } else {
+        crmReceipt = { status: 'failed', error: result.error }
         console.error('[Synergy] sendLead failed:', result.error)
         crmFailed = true
         crmLine = `\n⚠️ CRM Синергии: не отправлено (${result.error})`
+      }
+    }
+
+    if (crm !== false) {
+      try {
+        await recordLeadSubmission(body, crmReceipt)
+      } catch (error) {
+        console.error('[Lead journal] write failed:', error instanceof Error ? error.message : 'unknown')
       }
     }
 
