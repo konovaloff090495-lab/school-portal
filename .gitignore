@@ -68,3 +68,6 @@ public/fipi/
 # Consent-based CRM mailer state stays only on the VPS
 .crm-mailer.sqlite3*
 .crm-mailer-paused
+
+# Private lead reconciliation journal (contains personal data)
+data-private/
