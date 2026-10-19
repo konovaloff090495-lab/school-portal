@@ -1,6 +1,7 @@
 import familyGeography from './family-geography.json'
 import verifiedFamilySchools from './family-schools-verified.json'
 import familySchoolMatches from './family-school-matches.json'
+import familyLocalityAliases from './family-locality-aliases.json'
 
 export type SchoolType = 'gosudarstvennye' | 'chastnie' | 'online' | 'vechernie' | 'eksternal' | 'semejnye' | 'domashnie' | 'pri-vuzakh' | 'profilnye' | 'gimnazii' | 'korrektsionnye' | 'kadetskie' | 'mezhdunarodnie' | 'programmirovanie' | 'shahmatnye' | 'podgotovka-ege' | 'podgotovka-oge' | 'internaty' | 'valdorfskie' | 'montessori' | 'pravoslavnye' | 'sportivnye' | 'yazykovye' | 'litsei' | 'muzykalnye' | 'hudozhestvennye' | 'iskusstv'
 // RegionSlug kept as string to avoid TS2590 with large union types.
@@ -29,6 +30,7 @@ export interface School {
   address: string
   phone: string
   website?: string
+  remoteOnly?: boolean
   email?: string
   description: string
   fullDescription: string
@@ -288886,8 +288888,13 @@ export const moCityLabels: Record<MoCitySlug, string> = {
   shchyolkovo:       'Щёлково',
 }
 
+export function schoolMatchesMoCity(school: School, city: string): boolean {
+  return school.region === 'moskovskaya-oblast' && (school.city === city ||
+    ((familyLocalityAliases as Record<string, string[]>)[city] ?? []).includes(school.slug))
+}
+
 export function getSchoolsByMoCity(city: string): School[] {
-  return schools.filter(s => s.region === 'moskovskaya-oblast' && s.city === city)
+  return schools.filter(s => schoolMatchesMoCity(s, city))
 }
 
 // Feature-based filtering

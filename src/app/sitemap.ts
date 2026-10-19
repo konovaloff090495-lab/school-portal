@@ -5,9 +5,10 @@ import {
   cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType, thinGuardedFeatures, FEATURE_MIN,
   featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs, MICRO_GEO_SKIP_TYPES,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
-  getSchoolsByFeature,
+  getSchoolsByFeature, schoolMatchesMoCity,
   type LanguageSlug, type RegionSlug,
 } from '@/data/schools'
+import familyGeography from '@/data/family-geography.json'
 import { regionProfileIds } from '@/data/region-profiles'
 import { raexRegions } from '@/data/raex'
 import { gdzKlasses, getAllGdzBooks, getGdzSubjects, getGdzBooks } from '@/data/gdz'
@@ -239,7 +240,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Лендинги школ: типы, особенности, профили, языки, метро ──
   const shkolyTypePages: MetadataRoute.Sitemap = typeSlugs.map(t => ({
-    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: t === 'litsei' || t === 'muzykalnye' || t === 'hudozhestvennye' || t === 'iskusstv' ? D_LITSEI : D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
+    url: `${BASE_URL}/shkoly/tipy/${t}/`, lastModified: t === 'semejnye' ? D_FAMILY : t === 'litsei' || t === 'muzykalnye' || t === 'hudozhestvennye' || t === 'iskusstv' ? D_LITSEI : D_LANDINGS, changeFrequency: 'weekly' as const, priority: 0.75,
   }))
   // Страницы брендов онлайн-школ /shkoly/tipy/online/<brand>/
   const onlineBrandPages: MetadataRoute.Sitemap = onlineBrandSlugs.map(b => ({
@@ -275,10 +276,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
   // Город МО × тип школы (роут /shkoly/moskovskaya-oblast/gorod/[city]/[type]/)
   const moCityTypePages: MetadataRoute.Sitemap = moCitySlugs.flatMap(c =>
-    typeSlugs.filter(t => t !== 'online' && schools.some(s => s.region === 'moskovskaya-oblast' && s.city === moCityLabels[c] && schoolMatchesType(s, t))).map(t => ({
+    typeSlugs.filter(t => t !== 'online' && schools.some(s => schoolMatchesMoCity(s, moCityLabels[c]) && schoolMatchesType(s, t))).map(t => ({
       url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/${t}/`, lastModified: t === 'semejnye' ? D_FAMILY : D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
     }))
   )
+  const moscowFamilyCityPages: MetadataRoute.Sitemap = Object.entries(familyGeography.moscowCities)
+    .filter(([slug, city]) => slug !== 'zelenograd' && schools.some(s => s.region === 'moskva' && s.city === city.label && schoolMatchesType(s, 'semejnye')))
+    .map(([slug]) => ({ url: `${BASE_URL}/shkoly/moskva/gorod/${slug}/semejnye/`, lastModified: D_FAMILY, changeFrequency: 'monthly' as const, priority: 0.65 }))
   // Регион × профиль (роут /shkoly/[region]/profilnye/[profile]/ — единый источник region-profiles.ts)
   const regionProfilePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
     regionProfileIds.map(p => ({
@@ -317,7 +321,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : []),
   ])
   const staticLandingPages: MetadataRoute.Sitemap = STATIC_LANDINGS.map(path => ({
-    url: `${BASE_URL}${path}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,
+    url: `${BASE_URL}${path}/`, lastModified: path.includes('/semejnye') ? D_FAMILY : D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.6,
   }))
 
   // ── Блог ───────────────────────────────────────────
@@ -378,7 +382,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...olimpIndex, ...olimpHubPages, ...olimpClassPages, ...olimpPaperPages,
     ...shkolyTypePages, ...onlineBrandPages, ...onlineReviewPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
-    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
+    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...moscowFamilyCityPages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,
     ...testPages,

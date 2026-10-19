@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { moCitySlugs, moCityLabels, type MoCitySlug, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature, schoolMatchesType } from '@/data/schools'
+import { moCitySlugs, moCityLabels, type MoCitySlug, typeSlugs, typeLabels, schools, SchoolType, getSchoolsByFeature, schoolMatchesType, schoolMatchesMoCity } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForMoCityType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
@@ -67,7 +67,7 @@ export function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (type === 'online') continue
-      if (!schools.some(s => s.region === 'moskovskaya-oblast' && schoolMatchesType(s, type) && s.city === moCityLabels[city as keyof typeof moCityLabels])) continue
+      if (!schools.some(s => schoolMatchesMoCity(s, moCityLabels[city as keyof typeof moCityLabels]) && schoolMatchesType(s, type))) continue
       params.push({ city, type })
     }
   }
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
 
   const count = schools.filter(
-    s => s.region === 'moskovskaya-oblast' && s.city === cityLabel && schoolMatchesType(s, t)
+    s => schoolMatchesMoCity(s, cityLabel) && schoolMatchesType(s, t)
   ).length
 
   const countStr = count > 0 ? ` — ${count} школ` : ''
@@ -112,7 +112,7 @@ export default async function MoCityTypePage({ params }: Props) {
   const count = (feature
     ? getSchoolsByFeature(feature, 'moskovskaya-oblast')
     : schools.filter(s => s.region === 'moskovskaya-oblast' && schoolMatchesType(s, t))
-  ).filter(s => s.city === cityLabel).length
+  ).filter(s => schoolMatchesMoCity(s, cityLabel)).length
 
   const related = count === 0
     ? relatedForMoCityType(city as keyof typeof moCityLabels, t, typeName, feature)
@@ -126,7 +126,7 @@ export default async function MoCityTypePage({ params }: Props) {
         { name: 'Семейные школы', href: 'https://pro-schools.ru/shkoly/tipy/semejnye/' },
         { name: `Семейные школы ${locative}` },
       ]} />
-      <SchoolListJsonLd schools={schools.filter(s => s.region === 'moskovskaya-oblast' && s.city === cityLabel && schoolMatchesType(s, t))} url={`https://pro-schools.ru/shkoly/moskovskaya-oblast/gorod/${city}/${type}/`} name={`Семейные школы ${locative}`} />
+      <SchoolListJsonLd schools={schools.filter(s => schoolMatchesMoCity(s, cityLabel) && schoolMatchesType(s, t))} url={`https://pro-schools.ru/shkoly/moskovskaya-oblast/gorod/${city}/${type}/`} name={`Семейные школы ${locative}`} />
     </>}
     <CatalogClient
       initialRegions={['moskovskaya-oblast']}

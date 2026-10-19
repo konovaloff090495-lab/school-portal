@@ -30,12 +30,12 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
     .join(' ').toLowerCase()
 
-  if (schoolMatchesType(school, 'semejnye')) {
+  if (school.remoteOnly || schoolMatchesType(school, 'semejnye')) {
     return [
-      { q: `Где проходят занятия в ${school.name}?`, a: school.address ? `${school.city}, ${school.address}. Адрес и время посещения согласуйте ${callTo}.` : `Город: ${school.city}. Точный адрес занятий уточняйте ${callTo}${school.website ? ` или на сайте ${school.website}` : ''}.` },
+      { q: `Где проходят занятия в ${school.name}?`, a: school.remoteOnly ? `Занятия проходят дистанционно, через интернет. Расписание, технические требования и порядок подключения уточняйте ${callTo}${school.website ? ` или на официальном сайте ${school.website}` : ''}.` : school.address ? `${school.city}, ${school.address}. Адрес и время посещения согласуйте ${callTo}.` : `Город: ${school.city}. Точный адрес занятий уточняйте ${callTo}${school.website ? ` или на сайте ${school.website}` : ''}.` },
       { q: `Как записаться в ${school.name}?`, a: `Свяжитесь со школой ${callTo}${school.website ? ` или через официальный сайт ${school.website}` : ''}, чтобы уточнить наличие мест и условия поступления.` },
       { q: `С какого класса принимают в ${school.name}?`, a: /\d/.test(school.grades) ? `На странице школы указаны классы: ${school.grades}. Наличие мест в конкретном классе уточняйте при обращении.` : `Классы, возраст детей и наличие мест уточняйте ${callTo}.` },
-      { q: `Сколько стоит обучение в ${school.name}?`, a: school.priceFrom !== undefined ? `Указанная стоимость: ${school.priceFrom === 0 ? 'бесплатно' : `от ${formatPrice(school.priceFrom)}`}. Актуальные условия уточняйте у школы.` : `Стоимость зависит от класса, программы и учебного дня. Условия оплаты уточняйте непосредственно у школы${school.website ? ` на сайте ${school.website}` : ''}.` },
+      { q: `Сколько стоит обучение в ${school.name}?`, a: school.priceFrom !== undefined ? `Указанная стоимость: ${school.priceFrom === 0 ? 'бесплатно' : `от ${formatPrice(school.priceFrom)}`}. Актуальные условия уточняйте у школы.` : `Стоимость зависит от класса, программы и ${school.remoteOnly ? 'формата дистанционных занятий' : 'учебного дня'}. Условия оплаты уточняйте непосредственно у школы${school.website ? ` на сайте ${school.website}` : ''}.` },
     ]
   }
 
@@ -196,8 +196,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const school = getSchoolBySlug(slug)
   if (!school) return {}
   return {
-    title: `${school.name} — ${school.city} | адрес, телефон, описание`,
-    description: `${school.name} (${school.city}) — ${school.description} ${school.address ? `Адрес: ${school.address}.` : ""}${school.phone ? ` Телефон: ${school.phone}.` : ''}`,
+    title: school.remoteOnly
+      ? `${school.name} — онлайн-школа | дистанционное обучение`
+      : `${school.name} — ${school.city} | адрес, телефон, описание`,
+    description: school.remoteOnly
+      ? `${school.name} — дистанционное обучение. ${school.description}${school.phone ? ` Телефон: ${school.phone}.` : ''}`
+      : `${school.name} (${school.city}) — ${school.description} ${school.address ? `Адрес: ${school.address}.` : ""}${school.phone ? ` Телефон: ${school.phone}.` : ''}`,
     alternates: { canonical: `https://pro-schools.ru/shkola/${slug}/` },
   }
 }
@@ -217,6 +221,26 @@ export default async function SchoolPage({ params }: Props) {
 
   const pageUrl = `https://pro-schools.ru/shkola/${school.slug}/`
   const regionName = regionLabels[school.region] ?? school.city
+  const typeCatalogHref = school.remoteOnly
+    ? '/shkoly/tipy/online/'
+    : `/shkoly/${school.region}/${school.type}/`
+  const typeCatalogLabel = school.remoteOnly
+    ? 'Онлайн-школы'
+    : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge'
+      ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}`
+      : school.type === 'programmirovanie'
+        ? `Школы программирования — ${regionLabels[school.region]}`
+        : `${typeNoun(school.type)} — ${regionLabels[school.region]}`
+  const crumbs = school.remoteOnly ? [
+    { label: 'Все школы', href: '/shkoly/' },
+    { label: 'Онлайн-школы', href: typeCatalogHref },
+    { label: school.name },
+  ] : [
+    { label: 'Все школы', href: '/shkoly/' },
+    { label: regionLabels[school.region], href: `/shkoly/${school.region}/` },
+    { label: typeLabels[school.type], href: typeCatalogHref },
+    { label: school.name },
+  ]
 
   // Schema.org: EducationalOrganization
   const orgSchema = {
@@ -232,13 +256,15 @@ export default async function SchoolPage({ params }: Props) {
       ? { image: `https://pro-schools.ru/schools/${school.slug}-1.jpg` }
       : {}),
     telephone: school.phone,
-    address: {
-      '@type': 'PostalAddress',
-      ...(school.address ? { streetAddress: school.address } : {}),
-      addressLocality: school.city,
-      addressRegion: regionName,
-      addressCountry: 'RU',
-    },
+    ...(!school.remoteOnly ? {
+      address: {
+        '@type': 'PostalAddress',
+        ...(school.address ? { streetAddress: school.address } : {}),
+        addressLocality: school.city,
+        addressRegion: regionName,
+        addressCountry: 'RU',
+      },
+    } : {}),
     ...(school.rating && school.reviewCount > 0
       ? {
           aggregateRating: {
@@ -269,12 +295,12 @@ export default async function SchoolPage({ params }: Props) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Все школы', item: 'https://pro-schools.ru/shkoly/' },
-      { '@type': 'ListItem', position: 2, name: regionLabels[school.region], item: `https://pro-schools.ru/shkoly/${school.region}/` },
-      { '@type': 'ListItem', position: 3, name: typeLabels[school.type], item: `https://pro-schools.ru/shkoly/${school.region}/${school.type}/` },
-      { '@type': 'ListItem', position: 4, name: school.name, item: pageUrl },
-    ],
+    itemListElement: crumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.label,
+      item: crumb.href ? `https://pro-schools.ru${crumb.href}` : pageUrl,
+    })),
   }
 
   return (
@@ -283,12 +309,7 @@ export default async function SchoolPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <Breadcrumbs crumbs={[
-        { label: 'Все школы', href: '/shkoly/' },
-        { label: regionLabels[school.region], href: `/shkoly/${school.region}/` },
-        { label: typeLabels[school.type], href: `/shkoly/${school.region}/${school.type}/` },
-        { label: school.name },
-      ]} />
+      <Breadcrumbs crumbs={crumbs} />
 
       {/* Hero галерея */}
       <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={school.photoCount} name={school.name}>
@@ -299,7 +320,7 @@ export default async function SchoolPage({ params }: Props) {
           <h1 className="text-white font-bold text-2xl md:text-3xl drop-shadow-md leading-tight">
             {school.name}
           </h1>
-          <p className="text-white/80 text-sm mt-1">{[school.city, school.address].filter(Boolean).join(', ')}</p>
+          <p className="text-white/80 text-sm mt-1">{school.remoteOnly ? 'Дистанционное обучение по всей России' : [school.city, school.address].filter(Boolean).join(', ')}</p>
         </div>
         {school.rating && school.reviewCount > 0 && (
           <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
@@ -359,7 +380,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : schoolMatchesType(school, 'semejnye') || school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
+                  ) : school.remoteOnly || schoolMatchesType(school, 'semejnye') || school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>
@@ -419,10 +440,11 @@ export default async function SchoolPage({ params }: Props) {
 
           {/* Contacts */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Контакты и адрес</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{school.remoteOnly ? 'Контакты' : 'Контакты и адрес'}</h2>
 
             {/* Карта OpenStreetMap (рендерится без API-ключа). При наличии координат —
                 с меткой; без координат — аккуратный блок с адресом (без пустой карты). */}
+            {!school.remoteOnly && <>
             {school.lat && school.lon ? (
               <div className="mb-5 rounded-xl overflow-hidden border border-gray-100" style={{ height: 280 }}>
                 <iframe
@@ -457,8 +479,12 @@ export default async function SchoolPage({ params }: Props) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
               Открыть в Яндекс Картах
             </a>
+            </>}
 
             <div className="space-y-3">
+              {school.remoteOnly ? (
+                <p className="text-sm text-gray-700">Занятия проходят дистанционно. Условия подключения уточняйте у школы.</p>
+              ) : (
               <div className="flex items-start gap-3">
                 <span className="text-gray-400 mt-0.5 shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
@@ -474,6 +500,7 @@ export default async function SchoolPage({ params }: Props) {
                   )}
                 </div>
               </div>
+              )}
               {school.phone && (
               <div className="flex items-start gap-3">
                 <span className="text-gray-400 mt-0.5 shrink-0">
@@ -534,10 +561,10 @@ export default async function SchoolPage({ params }: Props) {
               </div>
               <div className="mt-4 text-center">
                 <Link
-                  href={`/shkoly/${school.region}/${school.type}/`}
+                  href={typeCatalogHref}
                   className="inline-flex items-center gap-2 text-blue-600 text-sm font-medium hover:underline"
                 >
-                  {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : school.type === 'programmirovanie' ? `Все школы программирования — ${regionLabels[school.region]} →` : `Все ${typeNoun(school.type).toLowerCase()} — ${regionLabels[school.region]} →`}
+                  {school.remoteOnly ? 'Все онлайн-школы →' : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Все курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]} →` : school.type === 'programmirovanie' ? `Все школы программирования — ${regionLabels[school.region]} →` : `Все ${typeNoun(school.type).toLowerCase()} — ${regionLabels[school.region]} →`}
                 </Link>
               </div>
             </div>
@@ -580,14 +607,14 @@ export default async function SchoolPage({ params }: Props) {
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-500">Город</span>
-                <span className="text-gray-800">{school.city}</span>
+                <span className="text-gray-500">{school.remoteOnly ? 'Формат' : 'Город'}</span>
+                <span className="text-gray-800">{school.remoteOnly ? 'Онлайн, вся Россия' : school.city}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-500">Классы</span>
                 <span className="text-gray-800">{school.grades || 'Уточняйте при записи'}</span>
               </div>
-              {school.district && (
+              {!school.remoteOnly && school.district && (
                 <div className="flex justify-between">
                   <span className="text-gray-500">Район</span>
                   <span className="text-gray-800">{school.district}</span>
@@ -607,16 +634,16 @@ export default async function SchoolPage({ params }: Props) {
             <h3 className="font-semibold text-gray-900 mb-3">В каталоге</h3>
             <div className="space-y-2">
               <Link
-                href={`/shkoly/${school.region}/${school.type}/`}
+                href={typeCatalogHref}
                 className="block text-sm text-blue-600 hover:underline"
               >
-                ← {school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' ? `Курсы ЕГЭ и ОГЭ — ${regionLabels[school.region]}` : school.type === 'programmirovanie' ? `Школы программирования — ${regionLabels[school.region]}` : `${typeNoun(school.type)} — ${regionLabels[school.region]}`}
+                ← {typeCatalogLabel}
               </Link>
               <Link
-                href={`/shkoly/${school.region}/`}
+                href={school.remoteOnly ? '/shkoly/' : `/shkoly/${school.region}/`}
                 className="block text-sm text-blue-600 hover:underline"
               >
-                ← Все школы {regionLabels[school.region]}
+                ← Все школы{school.remoteOnly ? '' : ` ${regionLabels[school.region]}`}
               </Link>
             </div>
           </div>

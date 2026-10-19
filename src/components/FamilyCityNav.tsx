@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { getSchoolsByType, moCityLabels, regionLabels } from '@/data/schools'
+import familyGeography from '@/data/family-geography.json'
+import { getSchoolsByType, moCityLabels, regionLabels, schoolMatchesMoCity } from '@/data/schools'
 
 export default function FamilyCityNav() {
   const list = getSchoolsByType('semejnye')
@@ -7,11 +8,13 @@ export default function FamilyCityNav() {
     .filter(([slug]) => slug !== 'moskovskaya-oblast' && list.some(s => s.region === slug))
     .map(([slug, label]) => ({ label, href: `/shkoly/${slug}/semejnye/`, count: list.filter(s => s.region === slug).length }))
   for (const [slug, label] of Object.entries(moCityLabels)) {
-    const count = list.filter(s => s.region === 'moskovskaya-oblast' && s.city === label).length
+    const count = list.filter(s => schoolMatchesMoCity(s, label)).length
     if (count) items.push({ label, href: `/shkoly/moskovskaya-oblast/gorod/${slug}/semejnye/`, count })
   }
-  const zelenograd = list.filter(s => s.region === 'moskva' && s.city === 'Зеленоград').length
-  if (zelenograd) items.push({ label: 'Зеленоград', href: '/shkoly/moskva/gorod/zelenograd/semejnye/', count: zelenograd })
+  for (const [slug, city] of Object.entries(familyGeography.moscowCities)) {
+    const count = list.filter(s => s.region === 'moskva' && s.city === city.label).length
+    if (count) items.push({ label: city.label, href: `/shkoly/moskva/gorod/${slug}/semejnye/`, count })
+  }
   items.sort((a, b) => a.label.localeCompare(b.label, 'ru'))
   return (
     <section className="mb-8" aria-labelledby="family-cities-title">
