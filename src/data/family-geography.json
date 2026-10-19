@@ -29,6 +29,16 @@
       "label": "Ильичёво (Ленинградская область)",
       "locative": "в Ильичёво Ленинградской области",
       "genitive": "Ильичёво Ленинградской области"
+    },
+    "koltushi": {
+      "label": "Колтуши (Ленинградская область)",
+      "locative": "в Колтушах",
+      "genitive": "Колтушей"
+    },
+    "pavlovo-nizhegorodskaya-oblast": {
+      "label": "Павлово (Нижегородская область)",
+      "locative": "в Павлове Нижегородской области",
+      "genitive": "Павлова Нижегородской области"
     }
   },
   "moCities": {
@@ -115,6 +125,14 @@
     "pushkino": {
       "label": "Пушкино",
       "locative": "в Пушкино"
+    },
+    "bykovo-ramensky": {
+      "label": "Быково",
+      "locative": "в Быкове Раменского округа"
+    },
+    "ilinskoe-dmitrovskiy": {
+      "label": "Ильинское",
+      "locative": "в Ильинском"
     }
   },
   "moscowCities": {
