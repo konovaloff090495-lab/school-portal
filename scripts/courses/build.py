@@ -22,6 +22,7 @@ CATS={c['id']:c for c in CATEGORIES}
 PARTNERS=load('partners.json')
 GUIDES={g['categoryId']:g for g in load('blog-guides.json')}
 SCHOOL_GUIDES=load('school-blog-guides.json') if (DATA/'school-blog-guides.json').exists() else []
+EXAM_GUIDES=load('exam-blog-guides.json') if (DATA/'exam-blog-guides.json').exists() else []
 BRANDS={c['brandId']:c['brand'] for c in COURSES}
 SCHOOL_PAGES=school.selections(COURSES)
 SCHOOL_PATHS={cat['id'] for cat in SCHOOL_PAGES}
@@ -43,7 +44,15 @@ def guide_links(ids,school_context=None,course=None):
     elif course and course.get('learningGoal')=='school':
         school_selected=[g for g in SCHOOL_GUIDES if course['id'] in g['courseIds']]
         school_selected.sort(key=lambda g:(g['subjectId'] not in course.get('schoolSubjects',[]),g['grade'],g['subjectId']))
-    links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in school_selected[:4]+selected)
+    exam_selected=[]
+    if course:
+        exam_selected=[g for g in EXAM_GUIDES if course['id'] in g['courseIds']]
+    elif school_context is None:
+        exams=[e for e in ['ege','oge'] if e in ids]
+        subjects={g['subjectId'] for g in EXAM_GUIDES if g['subjectId'] in ids}
+        if exams:exam_selected=[g for g in EXAM_GUIDES if g['exam'] in exams and (not subjects or g['subjectId'] in subjects)]
+        elif subjects:exam_selected=[g for g in EXAM_GUIDES if g['subjectId'] in subjects]
+    links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in exam_selected+school_selected[:4]+selected)
     if school_selected:links+='<li><a href="/blog/luchshie-kursy-po-predmetam-i-klassam/">Обзоры школьных курсов по всем предметам и классам</a></li>'
     return '<section class="seo-section"><h2>Поможем выбрать программу</h2><p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
 def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ageRange') else c.get('grade') or 'Возраст уточняется'
