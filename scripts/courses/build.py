@@ -34,6 +34,7 @@ def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ag
 def fresh(item,days):return item and (TODAY-date.fromisoformat(item['checkedAt'])).days<=days
 def price(c):return c['price'] if fresh(c.get('price'),7) else None
 def offer(c):return c['offer'] if fresh(c.get('offer'),3) else None
+def modified(c):return max(c['checkedAt'],(price(c) or {}).get('checkedAt',''),(offer(c) or {}).get('checkedAt',''),c.get('editorialCheckedAt',''))
 def tint(c):return TINTS[int(hashlib.sha256(c['category'].encode()).hexdigest()[:4],16)%len(TINTS)]
 def indexable(c):
     if re.search(r'\b202[0-6]\b',c['title']) and not re.search(r'2027',c['title']):return False
@@ -87,7 +88,7 @@ METRIKA='''<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a
 def save(path,doc,index=True,lastmod=None):
     dest=OUT/path.removeprefix('/kursy/');dest.mkdir(parents=True,exist_ok=True)
     (dest/'index.html').write_text(doc+METRIKA+'</body></html>')
-    if index:SITEMAP.append((path,lastmod or max(c['checkedAt'] for c in COURSES)))
+    if index:SITEMAP.append((path,lastmod or max(modified(c) for c in COURSES)))
 
 def direction_links():
     return '<div class="direction-grid">'+''.join(f'<a href="{caturl(t["id"])}">{esc(t["label"])}<small>{sum(t["id"] in c["tags"] for c in COURSES)}</small></a>' for t in CATEGORIES if any(t['id'] in c['tags'] for c in COURSES))+'</div>'
@@ -147,7 +148,7 @@ def catalogue(category=None,brand=None):
     doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section><section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
     schema={'@context':'https://schema.org','@type':'ItemList','name':heading,'numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'url':BASE+url(c),'name':c['brand']+': '+c['title']} for i,c in enumerate(selected)]}
     doc+=f'<script id="list-schema" type="application/ld+json">{script_json(schema)}</script>'
-    save(path,doc,index=not category or len(selected)>=2)
+    save(path,doc,index=not category or len(selected)>=2,lastmod=max(modified(c) for c in selected))
 
 def detail(c):
     path=url(c);p=price(c);o=offer(c);cat=CATS[c['category']]
@@ -177,7 +178,7 @@ def detail(c):
     if c.get('ageRange'):schema['typicalAgeRange']=f'{c["ageRange"][0]}-{c["ageRange"][1]}'
     if p and p['unit']=='курс' and not p['from']:schema['offers']={'@type':'Offer','price':p['amount'],'priceCurrency':'RUB','url':dest}
     doc+=f'<script type="application/ld+json">{script_json(schema)}</script>'
-    save(path,doc,indexable(c),c['checkedAt'])
+    save(path,doc,indexable(c),modified(c))
 
 SITEMAP=[]
 if __name__=='__main__':
