@@ -794,5 +794,230 @@
     "color": "#F4E8CF",
     "accent": "#7C965F",
     "illustrationBrief": "Native vector illustration for psihologiya"
+  },
+  "mentalnaya-arifmetika": {
+    "title": "Ментальная арифметика",
+    "shortTitle": "Ментальная арифметика",
+    "cardLines": [
+      "Ментальная",
+      "арифметика"
+    ],
+    "heroTitle": "Найдите занятия:\nментальная арифметика",
+    "heroDescription": "Счёт с абакусом и переход к вычислениям в уме. Сравните подходы AMAKids и Hello World, возраст и объём самостоятельной практики.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for mentalnaya-arifmetika",
+    "hideLabel": true
+  },
+  "kalligrafiya": {
+    "title": "Каллиграфия",
+    "shortTitle": "Каллиграфия",
+    "cardLines": [
+      "Каллиграфия"
+    ],
+    "heroTitle": "Найдите занятия:\nкаллиграфия",
+    "heroDescription": "Красивое письмо, соединения букв и творческие упражнения. В подборке есть живые занятия и записанные детские курсы.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E7ECDF",
+    "accent": "#6F88A6",
+    "illustrationBrief": "Native vector illustration for kalligrafiya",
+    "hideLabel": true
+  },
+  "spidkubing": {
+    "title": "Спидкубинг",
+    "shortTitle": "Спидкубинг",
+    "cardLines": [
+      "Спидкубинг"
+    ],
+    "heroTitle": "Найдите занятия:\nспидкубинг",
+    "heroDescription": "Сборка кубика Рубика по алгоритмам и работа с пространственными задачами. Пока представлена одна программа AMAKids.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4DDD6",
+    "accent": "#CE6D55",
+    "illustrationBrief": "Native vector illustration for spidkubing",
+    "hideLabel": true
+  },
+  "nemeckiy": {
+    "title": "Немецкий язык",
+    "shortTitle": "Немецкий язык",
+    "cardLines": [
+      "Немецкий язык"
+    ],
+    "heroTitle": "Найдите занятия:\nнемецкий язык",
+    "heroDescription": "Детский немецкий с преподавателем и самостоятельные видеопрограммы. Сравните живое общение, возраст и формат доступа.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for nemeckiy",
+    "hideLabel": true
+  },
+  "francuzskiy": {
+    "title": "Французский язык",
+    "shortTitle": "Французский язык",
+    "cardLines": [
+      "Французский язык"
+    ],
+    "heroTitle": "Найдите занятия:\nфранцузский язык",
+    "heroDescription": "Индивидуальный французский для детей онлайн. В текущей подборке — детская программа Enline.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E7ECDF",
+    "accent": "#6F88A6",
+    "illustrationBrief": "Native vector illustration for francuzskiy",
+    "hideLabel": true
+  },
+  "ispanskiy": {
+    "title": "Испанский язык",
+    "shortTitle": "Испанский язык",
+    "cardLines": [
+      "Испанский язык"
+    ],
+    "heroTitle": "Найдите занятия:\nиспанский язык",
+    "heroDescription": "Детские уроки испанского с личным преподавателем. Пока в подборке представлена Enline.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4DDD6",
+    "accent": "#CE6D55",
+    "illustrationBrief": "Native vector illustration for ispanskiy",
+    "hideLabel": true
+  },
+  "koreyskiy": {
+    "title": "Корейский язык",
+    "shortTitle": "Корейский язык",
+    "cardLines": [
+      "Корейский язык"
+    ],
+    "heroTitle": "Найдите занятия:\nкорейский язык",
+    "heroDescription": "Корейский для детей и подростков у Skyeng и YES Online. Сравните стартовый уровень, разговорную практику и объём пакета.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for koreyskiy",
+    "hideLabel": true
+  },
+  "yaponskiy": {
+    "title": "Японский язык",
+    "shortTitle": "Японский язык",
+    "cardLines": [
+      "Японский язык"
+    ],
+    "heroTitle": "Найдите занятия:\nяпонский язык",
+    "heroDescription": "Японский для детей онлайн: письменность, произношение и разговорные ситуации. В выборке — Skyeng и YES Online.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E7ECDF",
+    "accent": "#6F88A6",
+    "illustrationBrief": "Native vector illustration for yaponskiy",
+    "hideLabel": true
+  },
+  "fortepiano": {
+    "title": "Фортепиано",
+    "shortTitle": "Фортепиано",
+    "cardLines": [
+      "Фортепиано"
+    ],
+    "heroTitle": "Найдите занятия:\nфортепиано",
+    "heroDescription": "Детские занятия на фортепиано с возможностью онлайн-обучения. Пока представлен маршрут московских «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4DDD6",
+    "accent": "#CE6D55",
+    "illustrationBrief": "Native vector illustration for fortepiano",
+    "hideLabel": true
+  },
+  "gitara": {
+    "title": "Гитара",
+    "shortTitle": "Гитара",
+    "cardLines": [
+      "Гитара"
+    ],
+    "heroTitle": "Найдите занятия:\nгитара",
+    "heroDescription": "Гитара для детей: инструмент, первые аккорды и занятия с педагогом. Доступна детская программа «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for gitara",
+    "hideLabel": true
+  },
+  "vokal": {
+    "title": "Вокал",
+    "shortTitle": "Вокал",
+    "cardLines": [
+      "Вокал"
+    ],
+    "heroTitle": "Найдите занятия:\nвокал",
+    "heroDescription": "Детское пение с преподавателем: репертуар, слух, ритм и посильная нагрузка. Пока в каталоге одна программа «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E7ECDF",
+    "accent": "#6F88A6",
+    "illustrationBrief": "Native vector illustration for vokal",
+    "hideLabel": true
+  },
+  "udarnye": {
+    "title": "Ударные инструменты",
+    "shortTitle": "Ударные инструменты",
+    "cardLines": [
+      "Ударные инструменты"
+    ],
+    "heroTitle": "Найдите занятия:\nударные инструменты",
+    "heroDescription": "Ритм и координация на детских занятиях ударными. В подборке пока один маршрут «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4DDD6",
+    "accent": "#CE6D55",
+    "illustrationBrief": "Native vector illustration for udarnye",
+    "hideLabel": true
+  },
+  "skripka": {
+    "title": "Скрипка",
+    "shortTitle": "Скрипка",
+    "cardLines": [
+      "Скрипка"
+    ],
+    "heroTitle": "Найдите занятия:\nскрипка",
+    "heroDescription": "Детская скрипка с педагогом: подходящий инструмент, постановка и первые мелодии. Пока доступна программа «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for skripka",
+    "hideLabel": true
+  },
+  "duhovye-instrumenty": {
+    "title": "Духовые инструменты",
+    "shortTitle": "Духовые инструменты",
+    "cardLines": [
+      "Духовые инструменты"
+    ],
+    "heroTitle": "Найдите занятия:\nдуховые инструменты",
+    "heroDescription": "Флейта и саксофон для детей. Сравните инструмент, посадку и условия дистанционных занятий «Виртуозов».",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E7ECDF",
+    "accent": "#6F88A6",
+    "illustrationBrief": "Native vector illustration for duhovye-instrumenty",
+    "hideLabel": true
+  },
+  "solfedzhio": {
+    "title": "Сольфеджио",
+    "shortTitle": "Сольфеджио",
+    "cardLines": [
+      "Сольфеджио"
+    ],
+    "heroTitle": "Найдите занятия:\nсольфеджио",
+    "heroDescription": "Ноты, ритм и музыкальный слух для детей. В каталоге пока один курс «Виртуозов» с онлайн-возможностью.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4DDD6",
+    "accent": "#CE6D55",
+    "illustrationBrief": "Native vector illustration for solfedzhio",
+    "hideLabel": true
+  },
+  "bumazhnoe-tvorchestvo": {
+    "title": "Бумажное творчество",
+    "shortTitle": "Бумажное творчество",
+    "cardLines": [
+      "Бумажное творчество"
+    ],
+    "heroTitle": "Найдите занятия:\nбумажное творчество",
+    "heroDescription": "Объёмные страницы, бумажные механизмы и собственная книга. Пока представлена детская Pop-up программа Kaplan School.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for bumazhnoe-tvorchestvo",
+    "hideLabel": true
   }
 }

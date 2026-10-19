@@ -45,6 +45,11 @@ LABELS = {
 }
 SUBJECTS = ['matematika', 'russkiy', 'angliyskiy', 'fizika', 'himiya', 'biologiya',
             'informatika', 'istoriya', 'obshchestvoznanie', 'literatura', 'geografiya']
+LABELS.update({'nemeckiy':'Немецкий','francuzskiy':'Французский','ispanskiy':'Испанский',
+               'koreyskiy':'Корейский','yaponskiy':'Японский','mentalnaya-arifmetika':'Счёт в уме',
+               'kalligrafiya':'Каллиграфия','spidkubing':'Кубик Рубика','fortepiano':'Фортепиано',
+               'gitara':'Гитара','vokal':'Вокал','udarnye':'Ударные','skripka':'Скрипка',
+               'duhovye-instrumenty':'Духовые','solfedzhio':'Сольфеджио','bumazhnoe-tvorchestvo':'Pop-up'})
 def esc(s):
     return html.escape(str(s), quote=True)
 def rect(x, y, w, h, fill, r=12, stroke=None, sw=3):
@@ -78,6 +83,31 @@ def notebook(a=CORAL, b=BLUE, content='x² + y²'):
             + path('m185 206 15 15 32-38', stroke=b, sw=8))
 def scene(kind, a, b, c, n):
     """Large vector objects, readable at thumbnail size; no decorative microcopy."""
+    languages={'nemeckiy':'DE','francuzskiy':'FR','ispanskiy':'ES','koreyskiy':'KR','yaponskiy':'JP'}
+    if kind in languages:
+        return book(a,b,languages[kind])+rect(179,5,112,76,c,22,DARK)+text('…',235,54,47,DARK,anchor='middle')
+    if kind=='mentalnaya-arifmetika':
+        return rect(12,15,276,235,CREAM,15,DARK)+''.join(path(f'M35 {y}h230',stroke=DARK,sw=5)+''.join(circle(55+j*43,y,17,[a,b,c][i%3],DARK) for j in range(3+i%3)) for i,y in enumerate([55,110,165,220]))
+    if kind=='spidkubing':
+        return ''.join(rect(31+x*77,18+y*77,72,72,[a,b,c,GOLD,CREAM][(x+y+n)%5],7,DARK) for x in range(3) for y in range(3))
+    if kind=='kalligrafiya':
+        return notebook(a,b,'Аа')+path('m204 245 43-164 28 9-43 164-23 20Z',c,DARK,3)
+    if kind=='fortepiano':
+        return rect(5,45,286,166,a,18,DARK)+''.join(rect(16+i*38,57,36,142,CREAM,4,DARK,2) for i in range(7))+''.join(rect(42+i*38,55,21,85,DARK,2) for i in [0,1,3,4,5])
+    if kind=='gitara':
+        return circle(110,183,73,a,DARK)+circle(133,132,50,a,DARK)+rect(127,5,23,133,CREAM,5,DARK)+circle(127,159,21,DARK)+path('M134 8v208m8-208v208',stroke=CREAM,sw=2)+rect(74,205,83,12,DARK,3)
+    if kind=='udarnye':
+        return rect(40,90,224,121,a,20,DARK)+'<ellipse cx="152" cy="91" rx="112" ry="40" fill="'+CREAM+'" stroke="'+DARK+'" stroke-width="4"/>'+path('m65 61 161-49M245 64 91 10',stroke=b,sw=11)+path('M65 212 45 260m192-48 19 48',sw=7)
+    if kind=='vokal':
+        return rect(104,12,88,138,b,43,DARK)+path('M80 85v29q0 66 68 66t68-66V85M148 180v67m-47 4h94',sw=8)+path('M117 48h61m-61 24h61m-61 24h61',stroke=CREAM,sw=4)
+    if kind=='skripka':
+        return path('M115 89q-73-44-64 25l33 39q-73 72-14 104h104q60-33-10-104l33-39q10-69-63-25',a,DARK)+rect(115,5,23,179,b,3,DARK)+path('M240 12 205 259',stroke=c,sw=12)+path('M133 8v226',stroke=CREAM,sw=3)
+    if kind=='duhovye-instrumenty':
+        return path('M93 13v145q0 65 68 65t68-65V95l40-20v93q0 92-109 92T50 158V13Z',GOLD,DARK)+''.join(circle(71,y,9,CREAM,DARK) for y in [49,84,119])
+    if kind=='solfedzhio':
+        return ''.join(path(f'M18 {y}h264',stroke=b,sw=3) for y in [70,100,130,160,190])+path('M99 147V28l110 24v123',stroke=DARK,sw=9)+circle(78,153,23,a,DARK)+circle(187,181,23,c,DARK)
+    if kind=='bumazhnoe-tvorchestvo':
+        return book(a,b,'')+path('M51 174 95 55l54 118 59-118 41 120-96 44Z',c,DARK)+path('m95 55 54 118 59-118',stroke=CREAM,sw=4)
     if kind in ['python', 'programmirovanie', 'kompyuternaya-gramotnost', 'informatika']:
         symbol = 'print( )' if kind == 'python' else ('0 1' if kind == 'informatika' else '</>')
         inside = text(symbol, 142, 147, 62, a, anchor='middle') + path('M36 183h110m20 0h68', stroke=b, sw=10)
