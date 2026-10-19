@@ -50,6 +50,7 @@ LABELS.update({'nemeckiy':'Немецкий','francuzskiy':'Французски
                'kalligrafiya':'Каллиграфия','spidkubing':'Кубик Рубика','fortepiano':'Фортепиано',
                'gitara':'Гитара','vokal':'Вокал','udarnye':'Ударные','skripka':'Скрипка',
                'duhovye-instrumenty':'Духовые','solfedzhio':'Сольфеджио','bumazhnoe-tvorchestvo':'Pop-up'})
+LABELS.update({'lingvistika':'Язык и смысл','olimpiady':'Сложные задачи','russkiy-kak-inostrannyy':'Русский язык','sozdanie-muzyki':'Музыка и звук'})
 def esc(s):
     return html.escape(str(s), quote=True)
 def rect(x, y, w, h, fill, r=12, stroke=None, sw=3):
@@ -83,6 +84,10 @@ def notebook(a=CORAL, b=BLUE, content='x² + y²'):
             + path('m185 206 15 15 32-38', stroke=b, sw=8))
 def scene(kind, a, b, c, n):
     """Large vector objects, readable at thumbnail size; no decorative microcopy."""
+    if kind=='lingvistika':return book(a,b,'[а]')+rect(180,5,110,65,c,22,DARK)+text('?',235,53,44,DARK,anchor='middle')
+    if kind=='russkiy-kak-inostrannyy':return book(a,b,'Аа')+circle(248,38,33,c,DARK)+text('!',248,54,43,DARK,anchor='middle')
+    if kind=='olimpiady':return notebook(a,b,'x + y')+circle(241,51,39,c,DARK)+text('?',241,67,43,DARK,anchor='middle')
+    if kind=='sozdanie-muzyki':return browser(''.join(rect(28+i*42,110-i%3*19,24,65+i%3*19,[a,b,c][i%3],6) for i in range(6)),a)
     languages={'nemeckiy':'DE','francuzskiy':'FR','ispanskiy':'ES','koreyskiy':'KR','yaponskiy':'JP'}
     if kind in languages:
         return book(a,b,languages[kind])+rect(179,5,112,76,c,22,DARK)+text('…',235,54,47,DARK,anchor='middle')

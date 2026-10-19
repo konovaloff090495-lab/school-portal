@@ -1,8 +1,8 @@
 {
   "reviewedAt": "2026-10-19",
-  "scope": "Публичные подтверждённые программы 28 площадок; не исчерпывающий реестр всего рынка",
-  "activeCourses": 800,
-  "schoolCourses": 340,
+  "scope": "Подтверждённые публичные программы40площадок; продолжающийся реестр, без заявления об исчерпывающем охвате рынка",
+  "activeCourses": 899,
+  "schoolCourses": 379,
   "schoolProviders": {
     "Синергия": 4,
     "Тетрика": 11,
@@ -14,20 +14,24 @@
     "TutorOnline": 7,
     "Hello World School": 3,
     "Лицей Ростелеком": 1,
-    "ИнтернетУрок": 2
+    "ИнтернетУрок": 2,
+    "Айтигенио": 8,
+    "Сириус.Курсы": 31
   },
   "directions": [
     {
       "id": "shkolnye-predmety",
       "label": "Школьные предметы",
-      "courses": 288,
+      "courses": 327,
       "providers": [
         "Hello World School",
         "Skysmart",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка",
         "Тетрика",
         "Фоксфорд"
@@ -36,76 +40,84 @@
     {
       "id": "kompyuternaya-gramotnost",
       "label": "Компьютерная грамотность",
-      "courses": 8,
+      "courses": 10,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "Лицей Ростелеком"
       ]
     },
     {
       "id": "mobilnye-prilozheniya",
       "label": "Мобильные приложения",
-      "courses": 9,
+      "courses": 10,
       "providers": [
         "CODDY",
+        "Айтигенио",
         "Синергия"
       ]
     },
     {
       "id": "programmirovanie",
       "label": "Программирование",
-      "courses": 117,
+      "courses": 134,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
         "Skysmart",
+        "Айтигенио",
         "Алгоритмика",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка"
       ]
     },
     {
       "id": "python",
       "label": "Python",
-      "courses": 32,
+      "courses": 36,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Skysmart",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
-        "Синергия"
+        "Синергия",
+        "Сириус.Курсы"
       ]
     },
     {
       "id": "scratch",
       "label": "Scratch",
-      "courses": 10,
+      "courses": 12,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "Пиксель"
       ]
     },
     {
       "id": "roblox",
       "label": "Roblox",
-      "courses": 11,
+      "courses": 12,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
+        "Айтигенио",
         "Пиксель",
         "Реботика"
       ]
@@ -113,23 +125,25 @@
     {
       "id": "minecraft",
       "label": "Minecraft",
-      "courses": 12,
+      "courses": 13,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "Пиксель"
       ]
     },
     {
       "id": "unity",
       "label": "Unity и разработка игр",
-      "courses": 29,
+      "courses": 30,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
@@ -139,11 +153,12 @@
     {
       "id": "web-razrabotka",
       "label": "Создание сайтов",
-      "courses": 17,
+      "courses": 19,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -151,16 +166,18 @@
     {
       "id": "iskusstvennyy-intellekt",
       "label": "Нейросети и ИИ",
-      "courses": 26,
+      "courses": 31,
       "providers": [
         "AMAKids",
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Пиксель",
         "Синергия",
+        "Сириус.Курсы",
         "Умскул"
       ]
     },
@@ -176,9 +193,10 @@
     {
       "id": "kiberbezopasnost",
       "label": "Кибербезопасность",
-      "courses": 5,
+      "courses": 6,
       "providers": [
         "CODDY",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Стоп Угроза"
       ]
@@ -215,7 +233,7 @@
     {
       "id": "angliyskiy",
       "label": "Английский язык",
-      "courses": 101,
+      "courses": 102,
       "providers": [
         "100балльный репетитор",
         "AMAKids",
@@ -226,6 +244,7 @@
         "Skysmart",
         "TutorOnline",
         "Айкьюша",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
@@ -238,7 +257,7 @@
     {
       "id": "matematika",
       "label": "Математика",
-      "courses": 124,
+      "courses": 141,
       "providers": [
         "100балльный репетитор",
         "AMAKids",
@@ -248,9 +267,11 @@
         "Skysmart",
         "TutorOnline",
         "Айкьюша",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка",
         "Тетрика",
         "Умскул",
@@ -260,12 +281,13 @@
     {
       "id": "russkiy",
       "label": "Русский язык",
-      "courses": 94,
+      "courses": 95,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
@@ -278,16 +300,18 @@
     {
       "id": "fizika",
       "label": "Физика",
-      "courses": 58,
+      "courses": 67,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Наукасити",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка",
         "Тетрика",
         "Умскул",
@@ -297,14 +321,16 @@
     {
       "id": "himiya",
       "label": "Химия",
-      "courses": 27,
+      "courses": 35,
       "providers": [
         "100балльный репетитор",
         "Skysmart",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка",
         "Тетрика",
         "Умскул",
@@ -314,13 +340,15 @@
     {
       "id": "biologiya",
       "label": "Биология",
-      "courses": 36,
+      "courses": 42,
       "providers": [
         "100балльный репетитор",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Наукасити",
         "Синергия",
+        "Сириус.Курсы",
         "Сотка",
         "Тетрика",
         "Умскул",
@@ -330,12 +358,13 @@
     {
       "id": "informatika",
       "label": "Информатика",
-      "courses": 34,
+      "courses": 35,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия",
@@ -348,9 +377,10 @@
     {
       "id": "istoriya",
       "label": "История",
-      "courses": 32,
+      "courses": 33,
       "providers": [
         "100балльный репетитор",
+        "Айтигенио",
         "ИнтернетУрок",
         "Синергия",
         "Сотка",
@@ -392,9 +422,10 @@
     {
       "id": "geografiya",
       "label": "География",
-      "courses": 25,
+      "courses": 26,
       "providers": [
         "100балльный репетитор",
+        "Айтигенио",
         "ИнтернетУрок",
         "Синергия",
         "Сотка",
@@ -406,11 +437,12 @@
     {
       "id": "shahmaty",
       "label": "Шахматы",
-      "courses": 5,
+      "courses": 6,
       "providers": [
         "CODDY",
         "ChessFirst",
         "Hello World School",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -418,12 +450,13 @@
     {
       "id": "dizayn",
       "label": "Дизайн",
-      "courses": 35,
+      "courses": 37,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
@@ -434,11 +467,12 @@
     {
       "id": "3d-modelirovanie",
       "label": "3D-моделирование",
-      "courses": 14,
+      "courses": 17,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Пиксель"
       ]
@@ -446,12 +480,13 @@
     {
       "id": "risovanie",
       "label": "Рисование",
-      "courses": 20,
+      "courses": 22,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kaplan School",
+        "Айтигенио",
         "ИнтернетУрок",
         "Синергия",
         "Фоксфорд",
@@ -461,10 +496,11 @@
     {
       "id": "videomontazh",
       "label": "Видео и анимация",
-      "courses": 16,
+      "courses": 17,
       "providers": [
         "AMAKids",
         "CODDY",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -472,9 +508,10 @@
     {
       "id": "muzyka",
       "label": "Музыка и звук",
-      "courses": 16,
+      "courses": 18,
       "providers": [
         "CODDY",
+        "Айтигенио",
         "Виртуозы — Москва",
         "Фоксфорд"
       ]
@@ -482,11 +519,12 @@
     {
       "id": "podgotovka-k-shkole",
       "label": "Подготовка к школе",
-      "courses": 12,
+      "courses": 13,
       "providers": [
         "AMAKids",
         "Hello World School",
         "Айкьюша",
+        "Айтигенио",
         "ИнтернетУрок",
         "Логопотам",
         "Синергия",
@@ -496,7 +534,7 @@
     {
       "id": "logika",
       "label": "Логика и мышление",
-      "courses": 16,
+      "courses": 18,
       "providers": [
         "AMAKids",
         "CODDY",
@@ -504,6 +542,7 @@
         "Kids MBA",
         "LogicLike",
         "Айкьюша",
+        "Айтигенио",
         "ИнтернетУрок",
         "Синергия"
       ]
@@ -511,12 +550,13 @@
     {
       "id": "chtenie",
       "label": "Чтение и скорочтение",
-      "courses": 20,
+      "courses": 21,
       "providers": [
         "AMAKids",
         "Hello World School",
         "IQ007 — Реутов",
         "Айкьюша",
+        "Айтигенио",
         "ИнтернетУрок",
         "Синергия",
         "Сотка",
@@ -526,9 +566,10 @@
     {
       "id": "logoped",
       "label": "Логопед",
-      "courses": 6,
+      "courses": 7,
       "providers": [
         "Hello World School",
+        "Айтигенио",
         "ИнтернетУрок",
         "Логопотам",
         "Тетрика"
@@ -537,12 +578,13 @@
     {
       "id": "soft-skills",
       "label": "Навыки общения и развития",
-      "courses": 26,
+      "courses": 29,
       "providers": [
         "Advance",
         "CODDY",
         "Hello World School",
         "Kids MBA",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Синергия"
@@ -551,11 +593,12 @@
     {
       "id": "finansovaya-gramotnost",
       "label": "Финансовая грамотность",
-      "courses": 6,
+      "courses": 7,
       "providers": [
         "AMAKids",
         "CODDY",
         "Kids MBA",
+        "Айтигенио",
         "Синергия"
       ]
     },
@@ -582,8 +625,9 @@
     {
       "id": "bezopasnost",
       "label": "Безопасность детей",
-      "courses": 4,
+      "courses": 5,
       "providers": [
+        "Айтигенио",
         "Академия ЮИД",
         "Лицей Ростелеком",
         "Стоп Угроза"
@@ -600,29 +644,32 @@
     {
       "id": "kitayskiy",
       "label": "Китайский язык",
-      "courses": 2,
+      "courses": 3,
       "providers": [
         "CODDY",
-        "Kitai School"
+        "Kitai School",
+        "Айтигенио"
       ]
     },
     {
       "id": "oratorskoe-masterstvo",
       "label": "Ораторское мастерство",
-      "courses": 5,
+      "courses": 6,
       "providers": [
         "CODDY",
         "Kids MBA",
+        "Айтигенио",
         "Лицей Ростелеком"
       ]
     },
     {
       "id": "emocionalnyy-intellekt",
       "label": "Эмоциональный интеллект",
-      "courses": 6,
+      "courses": 7,
       "providers": [
         "Hello World School",
         "Kids MBA",
+        "Айтигенио",
         "ИнтернетУрок",
         "Лицей Ростелеком"
       ]
@@ -638,22 +685,24 @@
     {
       "id": "skorochtenie",
       "label": "Скорочтение",
-      "courses": 3,
+      "courses": 4,
       "providers": [
         "AMAKids",
         "Hello World School",
-        "IQ007 — Реутов"
+        "IQ007 — Реутов",
+        "Айтигенио"
       ]
     },
     {
       "id": "pamyat-i-vnimanie",
       "label": "Память и внимание",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "AMAKids",
         "Advance",
         "IQ007 — Реутов",
-        "Айкьюша"
+        "Айкьюша",
+        "Айтигенио"
       ]
     },
     {
@@ -686,10 +735,11 @@
     {
       "id": "animaciya",
       "label": "Анимация и мультфильмы",
-      "courses": 6,
+      "courses": 7,
       "providers": [
         "CODDY",
         "Hello World School",
+        "Айтигенио",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -746,10 +796,11 @@
     {
       "id": "mentalnaya-arifmetika",
       "label": "Ментальная арифметика",
-      "courses": 2,
+      "courses": 3,
       "providers": [
         "AMAKids",
-        "Hello World School"
+        "Hello World School",
+        "Айтигенио"
       ]
     },
     {
@@ -772,35 +823,39 @@
     {
       "id": "nemeckiy",
       "label": "Немецкий язык",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "Deutsch Online",
-        "Enline"
+        "Enline",
+        "Айтигенио"
       ]
     },
     {
       "id": "francuzskiy",
       "label": "Французский язык",
-      "courses": 1,
+      "courses": 2,
       "providers": [
-        "Enline"
+        "Enline",
+        "Айтигенио"
       ]
     },
     {
       "id": "ispanskiy",
       "label": "Испанский язык",
-      "courses": 1,
+      "courses": 2,
       "providers": [
-        "Enline"
+        "Enline",
+        "Айтигенио"
       ]
     },
     {
       "id": "koreyskiy",
       "label": "Корейский язык",
-      "courses": 2,
+      "courses": 3,
       "providers": [
         "Skyeng",
-        "YES Online"
+        "YES Online",
+        "Айтигенио"
       ]
     },
     {
@@ -831,8 +886,9 @@
     {
       "id": "vokal",
       "label": "Вокал",
-      "courses": 1,
+      "courses": 2,
       "providers": [
+        "Айтигенио",
         "Виртуозы — Москва"
       ]
     },
@@ -875,6 +931,39 @@
       "providers": [
         "Kaplan School"
       ]
+    },
+    {
+      "id": "lingvistika",
+      "label": "Лингвистика",
+      "courses": 5,
+      "providers": [
+        "Сириус.Курсы"
+      ]
+    },
+    {
+      "id": "olimpiady",
+      "label": "Олимпиадная подготовка",
+      "courses": 15,
+      "providers": [
+        "Айтигенио",
+        "Сириус.Курсы"
+      ]
+    },
+    {
+      "id": "russkiy-kak-inostrannyy",
+      "label": "Русский как иностранный",
+      "courses": 1,
+      "providers": [
+        "Айтигенио"
+      ]
+    },
+    {
+      "id": "sozdanie-muzyki",
+      "label": "Создание музыки",
+      "courses": 1,
+      "providers": [
+        "Айтигенио"
+      ]
     }
   ],
   "coverageLimits": [
@@ -883,7 +972,9 @@
     "Сбор с недоступных страниц, закрытых наборов и кабинета Т-Партнёры не заменяется выдуманными предложениями.",
     "Добавлены 59 программ восьми новых площадок; часть инструментальных и творческих тем представлена одной школой.",
     "InternetUrok и Лицей добавлены по текущим продуктам; общие школьные абонементы не размножены по каждому классу.",
-    "Старые classbook URL Лицея перенаправлены на одну подписку; взрослые продукты и программы без подтверждённой отдельной страницы исключены."
+    "Старые classbook URL Лицея перенаправлены на одну подписку; взрослые продукты и программы без подтверждённой отдельной страницы исключены.",
+    "Точка знаний: публичный каталог на технических работах19.10.2026.",
+    "Айтигенио добавлено53направления, Сириус46текущих потоков. ВалютаUSDне выдана за рублёвую цену, сроки бесплатного набора сохранены."
   ],
   "sourceReview": "market-review.json"
 }

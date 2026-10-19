@@ -103,7 +103,8 @@
       "skysmart-578faa4e77",
       "hello-world-1af51381a7",
       "interneturok-307a0c25ac",
-      "interneturok-b00d4b138b"
+      "interneturok-b00d4b138b",
+      "itgenio-4e6ee48377"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -139,7 +140,8 @@
       "skysmart-1a95c44cfb",
       "hello-world-1af51381a7",
       "interneturok-307a0c25ac",
-      "interneturok-b00d4b138b"
+      "interneturok-b00d4b138b",
+      "itgenio-4e6ee48377"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -176,7 +178,8 @@
       "skysmart-f468a18dcd",
       "hello-world-a03d8b0e57",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-4e6ee48377"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -213,7 +216,8 @@
       "skysmart-68193a4353",
       "hello-world-a03d8b0e57",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-4e6ee48377"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -249,7 +253,11 @@
       "skysmart-f078209a5e",
       "skysmart-95fbadafa3",
       "hello-world-a03d8b0e57",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-4e6ee48377",
+      "sirius-2994",
+      "sirius-2995",
+      "sirius-3122"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -285,7 +293,11 @@
       "skysmart-126fbcbaf0",
       "skysmart-2a492e9a7c",
       "hello-world-4946b7f9a7",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-4e6ee48377",
+      "sirius-2970",
+      "sirius-3000",
+      "sirius-3002"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -318,7 +330,11 @@
       "skysmart-0b1fbe170a",
       "skysmart-5f2d2ed19e",
       "hello-world-4946b7f9a7",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-4e6ee48377",
+      "sirius-2971",
+      "sirius-3003",
+      "sirius-3121"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -347,7 +363,10 @@
       "tutoronline-986062d947",
       "skysmart-e737a18863",
       "skysmart-523a536017",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-4e6ee48377",
+      "sirius-3001",
+      "sirius-3119"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -374,7 +393,10 @@
       "tutoronline-986062d947",
       "skysmart-4ec04279a6",
       "skysmart-0824dd1e49",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-4e6ee48377",
+      "sirius-3001",
+      "sirius-3119"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -398,7 +420,8 @@
       "foxford-school-17ea1d7901",
       "sotka-school-1ab789088a",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2994"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -422,7 +445,8 @@
       "foxford-school-230e71bb3a",
       "sotka-school-ea5f92dbeb",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2970"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -438,6 +462,10 @@
       {
         "title": "Как сравнивать предложения для 9 класса",
         "text": "Один вариант рассчитан на 60 занятий, второй по программе Петерсон — на 30. В первом описании выделены уравнения, неравенства, степени, функции и прогрессии; для второго нужно отдельно сопоставить оглавление со школьным планом. Большая длительность не гарантирует более глубокую проверку решений. Узнайте, какие задания проверяются автоматически, а какие можно обсудить с человеком."
+      },
+      {
+        "title": "Когда девятикласснику полезны дополнительные главы алгебры",
+        "text": "В новой программе «Сириуса» для девятого класса есть деление многочленов с остатком и теорема Безу. Эти темы помогают увидеть алгебраическую структуру выражения, но такой маршрут нельзя автоматически считать повторением всего школьного года. Перед началом предложите ученику объяснить, почему выбранное преобразование сохраняет равенство, и проверить полученный корень подстановкой. Если трудность возникает уже на раскрытии скобок или действиях с дробями, сначала восстановите эти операции с преподавателем. Углублённые задания полезны, когда базовые действия достаточно уверенные и ребёнок готов искать доказательство. Для самостоятельной работы составьте небольшой журнал решений: исходная идея, проверка, найденная ошибка и исправленный ход рассуждения. Такой разбор показывает развитие алгебраического мышления лучше, чем число просмотренных видео или перечень знакомых формул. Подготовку к конкретному экзамену следует планировать отдельно по его требованиям."
       }
     ],
     "decisionTitle": "С чего начать выбор",
@@ -446,7 +474,8 @@
       "foxford-school-9fabf429c0",
       "foxford-school-34b393fb1b",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2971"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -517,7 +546,8 @@
       "sotka-school-1ab789088a",
       "foxford-school-9fa45a2764",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2995"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -541,7 +571,8 @@
       "sotka-school-ea5f92dbeb",
       "foxford-school-ecd39497d3",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-3000"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -564,7 +595,8 @@
     "courseIds": [
       "foxford-school-a7488144d7",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-3121"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -588,7 +620,9 @@
       "foxford-school-bf0dfc1988",
       "foxford-school-f3a5520283",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-3001",
+      "sirius-3119"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -611,7 +645,9 @@
     "courseIds": [
       "foxford-school-3f073d7126",
       "teatrika-matematika-20ac1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-3001",
+      "sirius-3119"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -759,7 +795,8 @@
       "skysmart-8fdc7af341",
       "skysmart-5f4665c431",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -791,7 +828,8 @@
       "skysmart-f150ab502f",
       "skysmart-84c22d1ed9",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -823,7 +861,8 @@
       "skysmart-3e7472c553",
       "skysmart-d7a32bfaf0",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -855,7 +894,8 @@
       "skysmart-137a843e72",
       "skysmart-5152f2c4f2",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -882,7 +922,8 @@
       "skysmart-ce30e69b22",
       "skysmart-0b81af6793",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -909,7 +950,8 @@
       "skysmart-e2b6cd71e7",
       "skysmart-669b980d59",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -936,7 +978,8 @@
       "skysmart-aeee3b322a",
       "skysmart-da55fd13f4",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a40e94f0b3"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1277,7 +1320,9 @@
       "skysmart-0045598973",
       "skysmart-36ae22e3bf",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-304ba01fd9",
+      "sirius-2973"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1306,7 +1351,9 @@
       "skysmart-df028e5610",
       "skysmart-e904ed874d",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-304ba01fd9",
+      "sirius-2974"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1333,7 +1380,10 @@
       "skysmart-de5d93c6c2",
       "skysmart-43c26dc363",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-304ba01fd9",
+      "sirius-2975",
+      "sirius-3120"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1361,7 +1411,9 @@
       "skysmart-1eedcf114d",
       "skysmart-b25f7c3b4c",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2976",
+      "sirius-3010"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1388,7 +1440,9 @@
       "skysmart-9c4cf4077e",
       "skysmart-5ed60901ee",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "sirius-2977",
+      "sirius-2997"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1416,7 +1470,9 @@
       "teatrika-ae5fa545a8",
       "tutoronline-ad1bb16417",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-9a662ef288",
+      "sirius-3186"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1441,7 +1497,9 @@
       "teatrika-ae5fa545a8",
       "tutoronline-ad1bb16417",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-9a662ef288",
+      "sirius-2978"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1467,7 +1525,12 @@
       "teatrika-ae5fa545a8",
       "tutoronline-ad1bb16417",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-9a662ef288",
+      "sirius-2979",
+      "sirius-2980",
+      "sirius-2998",
+      "sirius-3011"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1492,7 +1555,12 @@
       "teatrika-ae5fa545a8",
       "tutoronline-ad1bb16417",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-9a662ef288",
+      "sirius-2979",
+      "sirius-2980",
+      "sirius-2998",
+      "sirius-3012"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1571,7 +1639,9 @@
       "umschool-biology-817cf",
       "teatrika-6516552696",
       "tutoronline-04b3cdca01",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-ec0121e903",
+      "sirius-3128"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1597,7 +1667,9 @@
       "umschool-biology-b5ce0",
       "teatrika-6516552696",
       "tutoronline-04b3cdca01",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-ec0121e903",
+      "sirius-2999"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1623,7 +1695,10 @@
       "foxford-school-2efadc87c2",
       "teatrika-6516552696",
       "tutoronline-04b3cdca01",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-ec0121e903",
+      "sirius-2914",
+      "sirius-3013"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1650,7 +1725,10 @@
       "foxford-school-70fc0d9f34",
       "teatrika-6516552696",
       "tutoronline-04b3cdca01",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-ec0121e903",
+      "sirius-2981",
+      "sirius-2914"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1673,7 +1751,8 @@
     "courseIds": [
       "foxford-school-2b22bad6e4",
       "teatrika-informatika-f824e",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1696,7 +1775,8 @@
     "courseIds": [
       "foxford-school-447142919b",
       "teatrika-informatika-f824e",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1720,7 +1800,8 @@
       "foxford-school-c97f0e7271",
       "sotka-informatika-8622d",
       "teatrika-informatika-f824e",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1746,7 +1827,8 @@
       "sotka-informatika-4e1ca",
       "teatrika-informatika-f824e",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1770,7 +1852,8 @@
       "foxford-school-397cc95a1a",
       "teatrika-informatika-f824e",
       "rostelecom-lyceum-aea9beb307",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1794,7 +1877,8 @@
       "foxford-school-853c7ecfd0",
       "foxford-school-c3a8a697ef",
       "teatrika-informatika-f824e",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1817,7 +1901,8 @@
     "courseIds": [
       "foxford-school-e9dd7219f0",
       "teatrika-informatika-f824e",
-      "rostelecom-lyceum-aea9beb307"
+      "rostelecom-lyceum-aea9beb307",
+      "itgenio-6f8149edf0"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1841,7 +1926,8 @@
       "foxford-school-d7bb90b46d",
       "sotka-historia-35005",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1866,7 +1952,8 @@
       "foxford-school-e70385ceec",
       "sotka-historia-a52ec",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1892,7 +1979,8 @@
       "umschool-history-e572a",
       "sotka-historia-2e58b",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1918,7 +2006,8 @@
       "umschool-history-da6e4",
       "sotka-historia-e44c8",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1942,7 +2031,8 @@
       "foxford-school-a6d566a2b4",
       "foxford-school-39294f4d4b",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1966,7 +2056,8 @@
       "foxford-school-629fe600c6",
       "foxford-school-73ea1b7ed1",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1989,7 +2080,8 @@
     "courseIds": [
       "foxford-school-a122cc9e96",
       "teatrika-50f44ed9d1",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2299,7 +2391,8 @@
       "foxford-school-1e0eab98f2",
       "foxford-school-2af1645303",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2323,7 +2416,8 @@
       "foxford-school-8ad7716002",
       "foxford-school-e0d300690d",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2347,7 +2441,8 @@
       "foxford-school-85716a7888",
       "foxford-school-94719a75d2",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2371,7 +2466,8 @@
       "foxford-school-3c5da93e90",
       "foxford-school-0fd65dbfea",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2395,7 +2491,8 @@
       "foxford-school-e8a2a4623f",
       "foxford-school-5c36906102",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2419,7 +2516,8 @@
       "foxford-school-9895ea6ca7",
       "foxford-school-6829f179f9",
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2810,7 +2908,8 @@
     "courseIds": [
       "teatrika-6516552696",
       "tutoronline-04b3cdca01",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-ec0121e903"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2863,7 +2962,66 @@
     "decision": "Покажите преподавателю типичную школьную работу и попросите разобрать одну ошибку с опорой на карту. Хорошая следующая задача должна менять условия, сохраняя изученный способ рассуждения. Согласуйте, как проверяются выводы, откуда берутся данные и будет ли обратная связь по проекту. Стоимость пакета сравнивайте с числом личных встреч и объёмом такой проверки.",
     "courseIds": [
       "teatrika-3a9a66c150",
-      "interneturok-307a0c25ac"
+      "interneturok-307a0c25ac",
+      "itgenio-a7d10002ca"
+    ],
+    "reviewedAt": "2026-10-19"
+  },
+  {
+    "subjectId": "himiya",
+    "grade": 7,
+    "slug": "luchshie-kursy-himiya-dlya-7-klassa",
+    "title": "Курсы химии для 7 класса: как выбрать программу ребёнку",
+    "catalogPath": "/kursy/shkolnaya-programma/himiya/7-klass/",
+    "excerpt": "Как подобрать занятия по химии для 7 класса: содержание программы, подходящая нагрузка и вопросы преподавателю. Ссылки на подборку и курс.",
+    "lead": "Раннее знакомство с химией не во всех школах начинается одинаково. В седьмом классе это может быть факультатив или опережающее изучение. У Айтигенио в опубликованном плане есть блок неорганической химии для седьмого–восьмого классов. Ниже рассматриваем именно этот маршрут, не выдавая его за обязательный годовой курс любой школы.",
+    "sections": [
+      {
+        "title": "Зачем изучать химию до основного школьного курса",
+        "text": "Сначала определите цель: ребёнку интересны вещества вокруг него, нужна поддержка факультатива или хочется заранее разобраться с будущим предметом. Эти задачи требуют разного темпа. Для знакомства полезно учиться наблюдать изменение, описывать его словами и отличать догадку от проверяемого объяснения. Если ученик пока не понимает условные обозначения, не стоит спешить к сложным расчётным формулам: сначала договоритесь о понятном словаре и последовательности простых примеров."
+      },
+      {
+        "title": "Что означает диапазон седьмой–восьмой класс",
+        "text": "На странице Айтигенио указан совместный блок неорганической химии для двух классов. Это не отдельная законченная покупка только на седьмой учебный год. Попросите преподавателя выделить стартовую часть: какие понятия нужны сейчас, что останется на продолжение и как будет проверяться понимание. Если ребёнок уже занимается по школьному пособию или факультативной программе, покажите её до оплаты, чтобы избежать ненужного повторения либо слишком резкого скачка сложности."
+      },
+      {
+        "title": "Как организовать безопасную практику",
+        "text": "Дополнительное занятие может включать разбор наблюдений и учебных ситуаций без домашних опытов с незнакомыми веществами. Согласуйте допустимые материалы и участие взрослого заранее. Не превращайте демонстрационный ролик в самостоятельную инструкцию по смешиванию реагентов. Для первого результата достаточно, чтобы ученик аккуратно описал явление, использовал освоенные обозначения и объяснил различие между веществом и его свойством. Переход к более сложным действиям обсуждают отдельно."
+      }
+    ],
+    "decisionTitle": "Что уточнить перед записью",
+    "decision": "Для первого этапа запросите план нескольких встреч и пример задания без опережающих терминов. Если нужен регулярный школьный предмет, уточните, когда химия начинается именно в вашей школе. В текущей выборке одно подтверждённое предложение с подходящим диапазоном, поэтому здесь оцениваем его содержание, а не объявляем победителя рейтинга.",
+    "courseIds": [
+      "itgenio-9a662ef288"
+    ],
+    "reviewedAt": "2026-10-19"
+  },
+  {
+    "subjectId": "istoriya",
+    "grade": 4,
+    "slug": "luchshie-kursy-istoriya-dlya-4-klassa",
+    "title": "Курсы истории для 4 класса: как выбрать программу ребёнку",
+    "catalogPath": "/kursy/shkolnaya-programma/istoriya/4-klass/",
+    "excerpt": "Как подобрать занятия по истории для 4 класса: содержание программы, подходящая нагрузка и вопросы преподавателю. Ссылки на подборку и курс.",
+    "lead": "В четвёртом классе интерес к истории может продолжать темы окружающего мира или стать отдельным дополнительным занятием. В официальном предметном каталоге Айтигенио история указана для четвёртого–одиннадцатого классов. Это широкий маршрут с настройкой содержания: ниже объясняем, как выбрать посильное начало, а не переносим старшую программу на младшего школьника.",
+    "sections": [
+      {
+        "title": "Начинайте с понятной истории, а не списка дат",
+        "text": "Ребёнку полезно увидеть, как прошлое связано с предметами, местами и семейными рассказами, которые ему знакомы. Предложите восстановить последовательность нескольких событий и объяснить, что было раньше и почему это важно. Если занятие превращается только в заучивание имён, попросите другой пример. На начальном этапе ценнее связный рассказ и аккуратное различение факта и предположения, чем длинный набор дат без понимания происходящего."
+      },
+      {
+        "title": "Согласуйте возрастную версию широкого курса",
+        "text": "Всемирная история Айтигенио охватывает большой школьный диапазон. При записи на четвёртый класс нужно отдельно обсудить словарь, длину текста и способы обсуждения. Попросите пример первой темы, которую ребёнок сможет пересказать своими словами. Источники для старших учеников, сложные политические понятия и большой объём письменного анализа не следует автоматически считать подходящими младшему школьнику. Персональный план должен объяснять, как именно будет устроена адаптация."
+      },
+      {
+        "title": "Как проверить учебный интерес и понимание",
+        "text": "После небольшой темы предложите ребёнку выбрать главный вопрос, назвать действующих лиц и связать два события. Полезно сравнить иллюстрацию, короткий текст или карту и обсудить, что они действительно сообщают. Если ученик пересказывает только слова преподавателя, вернитесь к более простому материалу. Договоритесь о посильной самостоятельной задаче между встречами, чтобы интерес к прошлому не требовал постоянной работы родителя вместо ребёнка."
+      }
+    ],
+    "decisionTitle": "Что уточнить перед записью",
+    "decision": "Уточните, нужна ли поддержка тем окружающего мира или самостоятельный исторический кружок. Для первой задачи сверяйте конкретный школьный материал, для второй выбирайте интересную тему и удобную нагрузку. Единственный подтверждённый маршрут этой выборки полезно оценить на вводной встрече; один поставщик не создаёт оснований для общего рыночного рейтинга.",
+    "courseIds": [
+      "itgenio-d091dd4273"
     ],
     "reviewedAt": "2026-10-19"
   }

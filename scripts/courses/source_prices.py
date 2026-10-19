@@ -35,6 +35,11 @@ def parse_library(source,course,checked):
 def fetch_price(course,cache=None):
     cache=cache if cache is not None else {};url=course['pricingSourceUrl'];kind=course.get('pricingSourceType');checked=datetime.now(timezone.utc).date().isoformat()
     try:
+        if kind=='sirius-free':
+            if url!=course['sourceUrl']:return None
+            from sirius_source import harvest_public,price,free_terms
+            if url not in cache:cache[url]=harvest_public(course)
+            return price(cache[url],course,checked,free_terms())
         if kind=='rostelecom-product':
             p=urlparse(url)
             if p.scheme!='https' or p.netloc!='lc.rt.ru' or not re.fullmatch(r'/backend/api/v2/products/\d+',p.path):return None

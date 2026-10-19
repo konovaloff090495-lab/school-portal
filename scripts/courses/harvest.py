@@ -44,6 +44,9 @@ def candidates():
     return out
 
 def harvest(c,use_cache=True):
+    if c.get('brandId')=='sirius':
+        from sirius_source import harvest_public
+        return harvest_public(c)
     url=c['sourceUrl']; key=hashlib.sha256(url.encode()).hexdigest()[:16]
     try:
         cache=WORK/(key+'.html')
