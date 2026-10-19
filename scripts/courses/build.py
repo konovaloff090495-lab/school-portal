@@ -249,4 +249,10 @@ if __name__=='__main__':
     (OUT/'sitemap.xml').write_text(xml)
     manifest={'builtAt':datetime.now().isoformat(),'courses':len(COURSES),'brands':len(BRANDS),'pages':len(GENERATED),'schoolSelections':len(SCHOOL_PAGES),'schoolCourses':sum(c.get('learningGoal')=='school' for c in COURSES),'indexablePages':len(SITEMAP),'indexableCourses':sum(indexable(c) for c in COURSES),'prices':sum(bool(price(c)) for c in COURSES),'offers':sum(bool(offer(c)) for c in COURSES),'sitemap':[BASE+p for p,_ in SITEMAP]}
     (ROOT/'work/courses/build-report.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
+    # Presentation layer preserves the source renderer's inventory, SEO policy and facts.
+    from design.render import apply as apply_design
+    apply_design(OUT, DATA)
+    from design.check import validate as validate_design
+    design_errors = validate_design(OUT)
+    if design_errors:raise ValueError(design_errors[:20])
     print(json.dumps({k:v for k,v in manifest.items() if k!='sitemap'},ensure_ascii=False))
