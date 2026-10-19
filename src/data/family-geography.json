@@ -1,0 +1,74 @@
+{
+  "regions": {
+    "anapa": {
+      "label": "Анапа",
+      "locative": "в Анапе",
+      "genitive": "Анапы"
+    },
+    "petushki": {
+      "label": "Петушки",
+      "locative": "в Петушках",
+      "genitive": "Петушков"
+    },
+    "emelyanovo": {
+      "label": "Емельяново (Красноярский край)",
+      "locative": "в Емельяново Красноярского края",
+      "genitive": "Емельяново Красноярского края"
+    },
+    "gurevsk": {
+      "label": "Гурьевск (Калининградская область)",
+      "locative": "в Гурьевске Калининградской области",
+      "genitive": "Гурьевска Калининградской области"
+    }
+  },
+  "moCities": {
+    "lesnoy-gorodok": {
+      "label": "Лесной Городок",
+      "locative": "в Лесном Городке"
+    },
+    "lobnya": {
+      "label": "Лобня",
+      "locative": "в Лобне"
+    },
+    "egoryevsk": {
+      "label": "Егорьевск",
+      "locative": "в Егорьевске"
+    },
+    "sergiev-posad": {
+      "label": "Сергиев Посад",
+      "locative": "в Сергиевом Посаде"
+    },
+    "andreevka": {
+      "label": "Андреевка",
+      "locative": "в Андреевке"
+    },
+    "rybnoe": {
+      "label": "Рыбное",
+      "locative": "в Рыбном"
+    },
+    "vidnoe": {
+      "label": "Видное",
+      "locative": "в Видном"
+    },
+    "krasnoznamensk": {
+      "label": "Краснознаменск",
+      "locative": "в Краснознаменске"
+    },
+    "zagoryansky": {
+      "label": "Загорянский",
+      "locative": "в Загорянском"
+    },
+    "beloozyorsky": {
+      "label": "Белоозёрский",
+      "locative": "в Белоозёрском"
+    },
+    "dzerzhinsky": {
+      "label": "Дзержинский",
+      "locative": "в Дзержинском"
+    },
+    "zhukovsky": {
+      "label": "Жуковский",
+      "locative": "в Жуковском"
+    }
+  }
+}

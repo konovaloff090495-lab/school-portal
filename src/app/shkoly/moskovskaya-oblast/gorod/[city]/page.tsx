@@ -1,12 +1,14 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { moCitySlugs, moCityLabels, getSchoolsByMoCity } from '@/data/schools'
+import { moCitySlugs, moCityLabels, type MoCitySlug, getSchoolsByMoCity } from '@/data/schools'
 import CatalogClient from '@/app/shkoly/CatalogClient'
+import familyGeography from '@/data/family-geography.json'
 
 type Props = { params: Promise<{ city: string }> }
 
 // Предложный падеж (в каком городе?)
 const cityLocative: Record<string, string> = {
+  ...Object.fromEntries(Object.values(familyGeography.moCities).map(c => [c.label, c.locative])),
   'Балашиха':         'в Балашихе',
   'Дмитров':          'в Дмитрове',
   'Долгопрудный':     'в Долгопрудном',
@@ -39,7 +41,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city } = await params
-  if (!moCitySlugs.includes(city as any)) return {}
+  if (!moCitySlugs.includes(city as MoCitySlug)) return {}
   const label = moCityLabels[city as keyof typeof moCityLabels]
   return {
     title: `Школы ${label} — каталог школ города ${label}`,
@@ -50,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function MoCityPage({ params }: Props) {
   const { city } = await params
-  if (!moCitySlugs.includes(city as any)) notFound()
+  if (!moCitySlugs.includes(city as MoCitySlug)) notFound()
   const label = moCityLabels[city as keyof typeof moCityLabels]
   const count = getSchoolsByMoCity(label).length
 

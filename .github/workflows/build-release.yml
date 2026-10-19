@@ -1,0 +1,44 @@
+name: Build release artifact
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-release-artifact
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint:leads
+      - run: node scripts/family-schools/check-catalog.mjs
+      - run: npm run build
+      - name: Package build and provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir build-release
+          tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
+          (cd build-release && sha256sum next-release.tar.zst > SHA256SUMS)
+          cp .next/BUILD_ID build-release/BUILD_ID
+          git rev-parse HEAD > build-release/SOURCE_COMMIT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: next-release
+          path: build-release/
+          retention-days: 2
+          compression-level: 0

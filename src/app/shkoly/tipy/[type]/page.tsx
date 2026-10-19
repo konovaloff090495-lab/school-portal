@@ -10,6 +10,7 @@ import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 import EgeCityExtras from '@/components/EgeCityExtras'
 import ProgCityExtras from '@/components/ProgCityExtras'
+import FamilyCityNav from '@/components/FamilyCityNav'
 import { onlineBrands } from '@/data/online-brands'
 
 interface Props {
@@ -90,7 +91,7 @@ function centersWord(n: number) { const m10 = n % 10, m100 = n % 100; return m10
 const typeTitleOverrides: Partial<Record<SchoolType, (n: number) => string>> = {
   online:    () => `Онлайн-школы России 2026: рейтинг ${onlineBrands.length} школ, цены, аккредитация`,
   domashnie: () => `Домашняя школа 2026: обучение дома онлайн, цены, как оформить`,
-  semejnye:  () => `Семейное обучение 2026: как перейти, уведомление, аттестация — семейные школы`,
+  semejnye:  n => `Семейные школы России — ${n} школ и классов по городам, адреса и контакты`,
   eksternal: n => `Школа-экстернат — ${n} школ России: 10–11 класс за год, цены`,
   programmirovanie: n => `Школы программирования для детей 2026: ${n} ${n % 10 === 1 && n % 100 !== 11 ? 'школа' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'школы' : 'школ'} в 40 городах — адреса и контакты`,
   'podgotovka-ege': n => `Курсы ЕГЭ 2026: ${n} ${centersWord(n)} подготовки в 30 городах — адреса, отзывы, цены онлайн-курсов`,
@@ -605,6 +606,7 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'semejnye'
     ? <>
         <SemejnyeSubNav />
+        <FamilyCityNav />
         <OnlineLeadCta
           source="Семейные школы: хаб /shkoly/tipy/semejnye/"
           heading="Переходите на семейное обучение? Подберём школу для прикрепления"

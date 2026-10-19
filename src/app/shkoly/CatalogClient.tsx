@@ -22,7 +22,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 
 // Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
 // (центры ЕГЭ/ОГЭ, кружки и допобразование, собранные с Яндекс Карт без проверенных цен).
-const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
+const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['semejnye', 'podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
 
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
 type EducationLevel = 'elementary' | 'middle' | 'high'
@@ -34,9 +34,9 @@ const LEVEL_LABELS: Record<EducationLevel, string> = {
 }
 
 function getSchoolLevels(grades: string): EducationLevel[] {
-  const m = grades.replace('–', '-').match(/(\d+)[–\-](\d+)/)
-  if (!m) return ['elementary', 'middle', 'high']
-  const from = parseInt(m[1]), to = parseInt(m[2])
+  const m = grades.match(/^\s*(\d{1,2})(?:\s*[–—-]\s*(\d{1,2}))?\s*(?:класс(?:ы|ов)?(?:\s|$)|$)/i)
+  if (!m) return []
+  const from = parseInt(m[1]), to = parseInt(m[2] ?? m[1])
   const levels: EducationLevel[] = []
   if (from <= 4) levels.push('elementary')
   if (to >= 5 && from <= 9) levels.push('middle')
@@ -44,7 +44,8 @@ function getSchoolLevels(grades: string): EducationLevel[] {
   return levels
 }
 
-function getPriceCategory(priceFrom?: number): 'free' | 'budget' | 'mid' | 'premium' {
+function getPriceCategory(priceFrom?: number, unknownPrice = false): 'free' | 'budget' | 'mid' | 'premium' | 'unknown' {
+  if (priceFrom === undefined && unknownPrice) return 'unknown'
   if (!priceFrom || priceFrom === 0) return 'free'
   if (priceFrom <= 25000) return 'budget'
   if (priceFrom <= 70000) return 'mid'
@@ -56,6 +57,7 @@ const PRICE_LABELS: Record<string, string> = {
   budget:  'до 25 000 ₽/мес',
   mid:     '25 000–70 000 ₽/мес',
   premium: 'от 70 000 ₽/мес',
+  unknown: 'Стоимость по запросу',
 }
 
 // ── Профили для профильных школ ───────────────────────────────────────────────
@@ -507,10 +509,10 @@ export default function CatalogClient({
     })
     if (skip !== 'price') {
       if (filters.priceCategories.length) {
-        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
+        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom, PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye'))))
       } else {
         // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
-        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || (s.priceFrom === undefined && !PRICE_UNKNOWN_TYPES.has(s.type)))
+        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || (s.priceFrom === undefined && !PRICE_UNKNOWN_TYPES.has(s.type) && !schoolMatchesType(s, 'semejnye')))
         if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
       }
     }
@@ -957,8 +959,8 @@ export default function CatalogClient({
 
       {/* Стоимость */}
       <FilterSection title="Стоимость" defaultOpen={false}>
-        {(['free', 'budget', 'mid', 'premium'] as const).map(cat => {
-          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom) === cat).length
+        {(['free', 'budget', 'mid', 'premium', 'unknown'] as const).map(cat => {
+          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom, PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye')) === cat).length
           if (cnt === 0 && !filters.priceCategories.includes(cat)) return null
           return (
             <Checkbox

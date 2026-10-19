@@ -23,6 +23,11 @@ const routes = [
   ['/uchebnik/russkiy-yazyk/6/', 308, '/uchebnik/russkiy-yazyk/6-klass/'],
   ['/uchebnik/geometriya/11/uravnenie-ploskosti/', 308, '/uchebnik/geometriya/11-klass/uravnenie-ploskosti/'],
   ['/gdz/7-klass/fizika/peryshkin/nomer-63/', 404],
+  ['/shkoly/tipy/semejnye/', 200],
+  ['/shkoly/moskovskaya-oblast/gorod/dmitrov/semejnye/', 200],
+  ['/shkoly/moskva/gorod/zelenograd/semejnye/', 200],
+  ['/shkoly/anapa/semejnye/', 200],
+  ['/shkola/semejnaya-shkola-rostok-moskva/', 308, '/shkoly/moskva/semejnye/'],
 ];
 try {
   let ready = false;
@@ -67,6 +72,17 @@ try {
   const sitemap = await (await get('/sitemap.xml')).text();
   assert.ok(!sitemap.includes('<loc>https://pro-schools.ru/ege/matematika-bazovaya/metodicheskie-rekomendacii-2025/</loc>'), 'Noncanonical URL in sitemap');
   assert.ok(sitemap.includes('<loc>https://pro-schools.ru/ege/matematika-profilnaya/metodicheskie-rekomendacii-2025/</loc>'), 'Canonical URL missing from sitemap');
+  for (const path of ['/shkoly/moskovskaya-oblast/gorod/dmitrov/semejnye/', '/shkoly/moskva/gorod/zelenograd/semejnye/', '/shkoly/anapa/semejnye/', '/shkola/semejnye-klassy-zhurukovyh-dmitrov/']) {
+    assert.ok(sitemap.includes(`<loc>https://pro-schools.ru${path}</loc>`), `Family page missing from sitemap: ${path}`);
+  }
+  assert.ok(!sitemap.includes('/shkola/semejnaya-shkola-rostok-moskva/'), 'Retired generated school remains in sitemap');
+  const dmitrov = await (await get('/shkoly/moskovskaya-oblast/gorod/dmitrov/semejnye/')).text();
+  for (const name of ['Журуковых', 'Буквица', 'Лотос', 'Лучи', 'Clever Study']) assert.ok(dmitrov.includes(name), `School missing from Dmitrov: ${name}`);
+  assert.ok(/"numberOfItems":5/.test(dmitrov), 'Dmitrov list must contain five schools, without Rybnoe');
+  assert.ok(!/name="robots" content="[^"]*noindex/.test(dmitrov), 'Dmitrov still noindex');
+  const newFamilySchool = await (await get('/shkola/semejnye-klassy-zhurukovyh-dmitrov/')).text();
+  assert.ok(!newFamilySchool.includes('школа финансируется из государственного бюджета'), 'Unknown family price reported as free');
+  console.log('family schools, city separation, redirects, pricing and sitemap OK');
   console.log('robots, PDF canonicals, language materials and sitemap OK');
   assert.ok(!/Could not find the module|Server Components render|MODULE_NOT_FOUND/.test(log), log.slice(-3000));
 } finally {

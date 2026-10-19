@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
+  moCityLabels,
   cityDistricts, getCityDistricts, getSchoolsByRegionDistrict, schoolMatchesType, thinGuardedFeatures, FEATURE_MIN,
   featureSlugs, languageSlugs, metroSlugs, profileSlugs, regionFeatureSkipSlugs, MICRO_GEO_SKIP_TYPES,
   getSchoolsByRegion, getSchoolsByRegionAndType, getSchoolsByLanguage,
@@ -36,6 +37,7 @@ const STATIC_LANDINGS = [
   '/shkoly/tipy/sportivnye/edinoborstva', '/shkoly/tipy/sportivnye/futbol', '/shkoly/tipy/sportivnye/gimnastika', '/shkoly/tipy/sportivnye/olimpijskij-rezerv', '/shkoly/tipy/sportivnye/plavanie', '/shkoly/tipy/sportivnye/posle-9-klassa',
   '/shkoly/tipy/vechernie/besplatnye', '/shkoly/tipy/vechernie/online', '/shkoly/tipy/vechernie/posle-9-klassa', '/shkoly/tipy/vechernie/s-attestatom', '/shkoly/tipy/vechernie/smennye', '/shkoly/tipy/vechernie/starshie-klassy',
   '/o-nas',
+  '/shkoly/moskva/gorod/zelenograd/semejnye',
   '/reklama',
 ]
 
@@ -56,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const D_ONLINE_BRANDS = new Date('2026-09-16') // страницы брендов онлайн-школ
   const D_EGE_CENTERS = new Date('2026-09-17') // центры ЕГЭ/ОГЭ по 30 городам (Яндекс Карты)
   const D_LITSEI = new Date('2026-09-17') // типы «лицеи», музыкальные/художественные/школы искусств (Яндекс Карты)
+  const D_FAMILY = new Date('2026-10-19')
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -92,7 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(type => isCityTypeIndexable(region, type))
       .map(type => ({
         url: `${BASE_URL}/shkoly/${region}/${type}/`,
-        lastModified: type === 'podgotovka-ege' || type === 'podgotovka-oge' ? D_EGE_CENTERS : type === 'litsei' || type === 'muzykalnye' || type === 'hudozhestvennye' || type === 'iskusstv' ? D_LITSEI : D_SCHOOLS,
+        lastModified: type === 'semejnye' ? D_FAMILY : type === 'podgotovka-ege' || type === 'podgotovka-oge' ? D_EGE_CENTERS : type === 'litsei' || type === 'muzykalnye' || type === 'hudozhestvennye' || type === 'iskusstv' ? D_LITSEI : D_SCHOOLS,
         changeFrequency: 'weekly',
         priority: 0.8,
       }))
@@ -103,7 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter(school => school.slug)
     .map(school => ({
       url: `${BASE_URL}/shkola/${school.slug}/`,
-      lastModified: D_SCHOOLS,
+      lastModified: schoolMatchesType(school, 'semejnye') ? D_FAMILY : D_SCHOOLS,
       changeFrequency: 'monthly',
       priority: 0.7,
     }))
@@ -272,8 +275,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
   // Город МО × тип школы (роут /shkoly/moskovskaya-oblast/gorod/[city]/[type]/)
   const moCityTypePages: MetadataRoute.Sitemap = moCitySlugs.flatMap(c =>
-    typeSlugs.filter(t => t !== 'online').map(t => ({
-      url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/${t}/`, lastModified: D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
+    typeSlugs.filter(t => t !== 'online' && schools.some(s => s.region === 'moskovskaya-oblast' && s.city === moCityLabels[c] && schoolMatchesType(s, t))).map(t => ({
+      url: `${BASE_URL}/shkoly/moskovskaya-oblast/gorod/${c}/${t}/`, lastModified: t === 'semejnye' ? D_FAMILY : D_LANDINGS, changeFrequency: 'monthly' as const, priority: 0.65,
     }))
   )
   // Регион × профиль (роут /shkoly/[region]/profilnye/[profile]/ — единый источник region-profiles.ts)
