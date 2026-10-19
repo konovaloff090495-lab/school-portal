@@ -17,6 +17,7 @@ def refresh():
     # the date from a stale snapshot or parse an authentication error as a course.
     browser_sources=[c for c in courses if c.get('active') and c.get('verificationMethod')=='public-browser']
     active=[c for c in courses if c.get('active') and c.get('verificationMethod')!='public-browser']
+    price_sources={}
     def pull(c):return harvest({'brandId':c['brandId'],'brand':c['brand'],'sourceUrl':c['sourceUrl'],'navLabel':c['title']},use_cache=False)
     with cf.ThreadPoolExecutor(max_workers=3) as pool:
         for course,new in zip(active,pool.map(pull,active)):
@@ -24,7 +25,11 @@ def refresh():
                 failures.append({'course':course['id'],'error':new.get('error','No valid programme page')})
                 pending[course['id']]={'reason':'Source unavailable','sourceUrl':course['sourceUrl'],'checkedAt':datetime.now(timezone.utc).isoformat()}
                 continue
-            oldprice=course.get('price');newprice=price_fact(new)
+            oldprice=course.get('price')
+            if course.get('pricingSourceUrl'):
+                from source_prices import fetch_price
+                newprice=fetch_price(course,price_sources)
+            else:newprice=price_fact(new)
             changed_title=clean(new['h1'])!=course.get('sourceTitle',clean(new['h1']))
             if changed_title:
                 pending[course['id']]={'reason':'Programme title changed; review before updating facts','sourceUrl':course['sourceUrl'],'oldTitle':course.get('sourceTitle'),'newTitle':clean(new['h1']),'newHeadings':new['headings'][:16],'checkedAt':new['checkedAt']}

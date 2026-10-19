@@ -29,7 +29,9 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-c43ef17670",
-      "hello-world-1af51381a7"
+      "hello-world-1af51381a7",
+      "interneturok-307a0c25ac",
+      "interneturok-b00d4b138b"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -63,7 +65,9 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-bcaccfaac3",
-      "hello-world-1af51381a7"
+      "hello-world-1af51381a7",
+      "interneturok-307a0c25ac",
+      "interneturok-b00d4b138b"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -97,7 +101,9 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-578faa4e77",
-      "hello-world-1af51381a7"
+      "hello-world-1af51381a7",
+      "interneturok-307a0c25ac",
+      "interneturok-b00d4b138b"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -131,7 +137,9 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-1a95c44cfb",
-      "hello-world-1af51381a7"
+      "hello-world-1af51381a7",
+      "interneturok-307a0c25ac",
+      "interneturok-b00d4b138b"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -166,7 +174,9 @@
       "tutoronline-986062d947",
       "skysmart-c5503742a2",
       "skysmart-f468a18dcd",
-      "hello-world-a03d8b0e57"
+      "hello-world-a03d8b0e57",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -201,7 +211,9 @@
       "tutoronline-986062d947",
       "skysmart-9933d514f6",
       "skysmart-68193a4353",
-      "hello-world-a03d8b0e57"
+      "hello-world-a03d8b0e57",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -236,7 +248,8 @@
       "tutoronline-986062d947",
       "skysmart-f078209a5e",
       "skysmart-95fbadafa3",
-      "hello-world-a03d8b0e57"
+      "hello-world-a03d8b0e57",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -271,7 +284,8 @@
       "tutoronline-986062d947",
       "skysmart-126fbcbaf0",
       "skysmart-2a492e9a7c",
-      "hello-world-4946b7f9a7"
+      "hello-world-4946b7f9a7",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -303,7 +317,8 @@
       "tutoronline-986062d947",
       "skysmart-0b1fbe170a",
       "skysmart-5f2d2ed19e",
-      "hello-world-4946b7f9a7"
+      "hello-world-4946b7f9a7",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -331,7 +346,8 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-e737a18863",
-      "skysmart-523a536017"
+      "skysmart-523a536017",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -357,7 +373,8 @@
       "teatrika-matematika-20ac1",
       "tutoronline-986062d947",
       "skysmart-4ec04279a6",
-      "skysmart-0824dd1e49"
+      "skysmart-0824dd1e49",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -380,7 +397,8 @@
     "courseIds": [
       "foxford-school-17ea1d7901",
       "sotka-school-1ab789088a",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -403,7 +421,8 @@
     "courseIds": [
       "foxford-school-230e71bb3a",
       "sotka-school-ea5f92dbeb",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -426,7 +445,8 @@
     "courseIds": [
       "foxford-school-9fabf429c0",
       "foxford-school-34b393fb1b",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -449,7 +469,8 @@
     "courseIds": [
       "foxford-school-f23f5e0fae",
       "foxford-school-8c3e5a0a8b",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -471,7 +492,8 @@
     "decision": "Такой курс разумно сначала проверить как маршрут по текущей школьной программе или повторению знакомого материала. Если трудности начинаются с преобразований предыдущих лет, нужен отдельный план восстановления: дополнительные темы одиннадцатого класса не устранят этот пробел автоматически. Для цели ЕГЭ откройте специализированную подготовку и сравните её отдельно; обычный предметный курс не подтверждает охват экзаменационных заданий.",
     "courseIds": [
       "foxford-school-58596f6bae",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -494,7 +516,8 @@
     "courseIds": [
       "sotka-school-1ab789088a",
       "foxford-school-9fa45a2764",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -517,7 +540,8 @@
     "courseIds": [
       "sotka-school-ea5f92dbeb",
       "foxford-school-ecd39497d3",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -539,7 +563,8 @@
     "decision": "Определите, в чём затруднение: ребёнок не видит нужное свойство, путает обозначения или не умеет оформить уже понятное рассуждение. От ответа зависит план занятий. Для цели ОГЭ потребуется отдельно сверить программу с экзаменационными заданиями: в эту подборку курс включён как школьная геометрия. Не приписывайте ему экзаменационный охват только по номеру класса.",
     "courseIds": [
       "foxford-school-a7488144d7",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -562,7 +587,8 @@
     "courseIds": [
       "foxford-school-bf0dfc1988",
       "foxford-school-f3a5520283",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -584,7 +610,8 @@
     "decision": "Для повторения знакомых разделов составьте с преподавателем порядок тем под текущие школьные работы. Для восстановления пространственного мышления важнее подробный комментарий к ошибочному построению, чем быстрое прохождение всех видео. Если основная цель — экзамен, сравните специализированный курс ЕГЭ отдельно: базовая школьная программа и набор экзаменационных задач имеют разные критерии полноты.",
     "courseIds": [
       "foxford-school-3f073d7126",
-      "teatrika-matematika-20ac1"
+      "teatrika-matematika-20ac1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -610,7 +637,8 @@
       "skysmart-school-6cc5d38bc6",
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
-      "skysmart-9d9dd97543"
+      "skysmart-9d9dd97543",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -639,7 +667,8 @@
       "synergy-russkiy-yazyk-67ad8",
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
-      "skysmart-b4feaa2902"
+      "skysmart-b4feaa2902",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -667,7 +696,8 @@
       "synergy-russkiy-yazyk-67ad8",
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
-      "skysmart-336e0a6d4c"
+      "skysmart-336e0a6d4c",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -696,7 +726,8 @@
       "synergy-russkiy-yazyk-67ad8",
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
-      "skysmart-e6ac8725bc"
+      "skysmart-e6ac8725bc",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -726,7 +757,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-8fdc7af341",
-      "skysmart-5f4665c431"
+      "skysmart-5f4665c431",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -756,7 +789,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-f150ab502f",
-      "skysmart-84c22d1ed9"
+      "skysmart-84c22d1ed9",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -786,7 +821,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-3e7472c553",
-      "skysmart-d7a32bfaf0"
+      "skysmart-d7a32bfaf0",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -816,7 +853,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-137a843e72",
-      "skysmart-5152f2c4f2"
+      "skysmart-5152f2c4f2",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -841,7 +880,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-ce30e69b22",
-      "skysmart-0b81af6793"
+      "skysmart-0b81af6793",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -866,7 +907,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-e2b6cd71e7",
-      "skysmart-669b980d59"
+      "skysmart-669b980d59",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -891,7 +934,9 @@
       "teatrika-russkiy-33925",
       "tutoronline-b293b617c7",
       "skysmart-aeee3b322a",
-      "skysmart-da55fd13f4"
+      "skysmart-da55fd13f4",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -916,7 +961,8 @@
       "synergy-angliyskiy-yazyk-167f6",
       "teatrika-english-7e506",
       "tutoronline-7121850565",
-      "skysmart-4bf58ea7a6"
+      "skysmart-4bf58ea7a6",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -943,7 +989,9 @@
       "synergy-angliyskiy-yazyk-167f6",
       "teatrika-english-7e506",
       "tutoronline-7121850565",
-      "skysmart-4e5c217e81"
+      "skysmart-4e5c217e81",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -970,7 +1018,9 @@
       "synergy-angliyskiy-yazyk-167f6",
       "teatrika-english-7e506",
       "tutoronline-7121850565",
-      "skysmart-a3a19fb7a6"
+      "skysmart-a3a19fb7a6",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -997,7 +1047,9 @@
       "synergy-angliyskiy-yazyk-167f6",
       "teatrika-english-7e506",
       "tutoronline-7121850565",
-      "skysmart-9c7f1580c9"
+      "skysmart-9c7f1580c9",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1025,7 +1077,9 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-0055923ede",
-      "skysmart-4386f2030d"
+      "skysmart-4386f2030d",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1053,7 +1107,9 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-ad273bd9b6",
-      "skysmart-df395a2164"
+      "skysmart-df395a2164",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1081,7 +1137,9 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-fabcc81058",
-      "skysmart-e61d602376"
+      "skysmart-e61d602376",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1108,7 +1166,8 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-b6c3fa1806",
-      "skysmart-2bf3acb096"
+      "skysmart-2bf3acb096",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1133,7 +1192,9 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-d047daeb23",
-      "skysmart-4a71d7994c"
+      "skysmart-4a71d7994c",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1159,7 +1220,9 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-055d442712",
-      "skysmart-74abef8c68"
+      "skysmart-74abef8c68",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1184,7 +1247,8 @@
       "teatrika-english-7e506",
       "tutoronline-7121850565",
       "skysmart-d0691c1212",
-      "skysmart-67e109a941"
+      "skysmart-67e109a941",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1211,7 +1275,9 @@
       "teatrika-fizika-2fb0d",
       "tutoronline-112dd2aeb9",
       "skysmart-0045598973",
-      "skysmart-36ae22e3bf"
+      "skysmart-36ae22e3bf",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1238,7 +1304,9 @@
       "teatrika-fizika-2fb0d",
       "tutoronline-112dd2aeb9",
       "skysmart-df028e5610",
-      "skysmart-e904ed874d"
+      "skysmart-e904ed874d",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1263,7 +1331,9 @@
       "teatrika-fizika-2fb0d",
       "tutoronline-112dd2aeb9",
       "skysmart-de5d93c6c2",
-      "skysmart-43c26dc363"
+      "skysmart-43c26dc363",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1289,7 +1359,9 @@
       "teatrika-fizika-2fb0d",
       "tutoronline-112dd2aeb9",
       "skysmart-1eedcf114d",
-      "skysmart-b25f7c3b4c"
+      "skysmart-b25f7c3b4c",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1314,7 +1386,9 @@
       "teatrika-fizika-2fb0d",
       "tutoronline-112dd2aeb9",
       "skysmart-9c4cf4077e",
-      "skysmart-5ed60901ee"
+      "skysmart-5ed60901ee",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1340,7 +1414,9 @@
       "sotka-himia-3fef7",
       "skysmart-school-cc9baa9237",
       "teatrika-ae5fa545a8",
-      "tutoronline-ad1bb16417"
+      "tutoronline-ad1bb16417",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1363,7 +1439,9 @@
     "courseIds": [
       "foxford-school-b20a50e8fe",
       "teatrika-ae5fa545a8",
-      "tutoronline-ad1bb16417"
+      "tutoronline-ad1bb16417",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1387,7 +1465,9 @@
       "foxford-school-5896489ec1",
       "foxford-school-9621a26e7c",
       "teatrika-ae5fa545a8",
-      "tutoronline-ad1bb16417"
+      "tutoronline-ad1bb16417",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1410,7 +1490,9 @@
     "courseIds": [
       "foxford-school-4c5ad5dbf3",
       "teatrika-ae5fa545a8",
-      "tutoronline-ad1bb16417"
+      "tutoronline-ad1bb16417",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1435,7 +1517,8 @@
       "foxford-school-4ec3f7622d",
       "sotka-biologia-65c0a",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1460,7 +1543,8 @@
       "foxford-school-b91b4e1f93",
       "sotka-biologia-65a18",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1486,7 +1570,8 @@
       "sotka-biologia-6c08f",
       "umschool-biology-817cf",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1511,7 +1596,8 @@
       "sotka-biologia-d8995",
       "umschool-biology-b5ce0",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1536,7 +1622,8 @@
       "foxford-school-c6734375d7",
       "foxford-school-2efadc87c2",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1562,7 +1649,8 @@
       "foxford-school-8bf2be4b59",
       "foxford-school-70fc0d9f34",
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1584,7 +1672,8 @@
     "decision": "Попросите показать небольшую готовую работу и последовательность её создания. Если задача — поддержка школьной информатики, важны совпадение программы и объяснение действий, а не количество изучаемых языков. Если ребёнок хочет делать игры или приложения, сравните дополнительные курсы программирования отдельно: предметная программа пятого класса не обязана решать такую проектную задачу.",
     "courseIds": [
       "foxford-school-2b22bad6e4",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1606,7 +1695,8 @@
     "decision": "На знакомстве полезно разобрать одно школьное задание с самостоятельным выполнением на компьютере. Посмотрите, понимает ли ребёнок смысл действий и может ли повторить их в изменённой ситуации. Если нужна помощь с конкретным навыком, согласуйте ограниченный план. Для интереса к созданию игр или сайтов откройте отдельные направления, где такой результат прямо указан в программе.",
     "courseIds": [
       "foxford-school-447142919b",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1629,7 +1719,8 @@
     "courseIds": [
       "foxford-school-c97f0e7271",
       "sotka-informatika-8622d",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1653,7 +1744,9 @@
       "foxford-school-945d0bd9c1",
       "umschool-computer-science-61304",
       "sotka-informatika-4e1ca",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1675,7 +1768,9 @@
     "decision": "Начните с самостоятельного решения небольшой знакомой задачи и её изменения. Если ребёнок копирует образец, но не может объяснить поведение программы, нужен разбор логики шагов. Если цель экзаменационная, отдельно проверьте формат ОГЭ, задания за компьютером и критерии. Наличие Python в предметной программе не подтверждает охват всех экзаменационных разделов.",
     "courseIds": [
       "foxford-school-397cc95a1a",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1698,7 +1793,8 @@
     "courseIds": [
       "foxford-school-853c7ecfd0",
       "foxford-school-c3a8a697ef",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1720,7 +1816,8 @@
     "decision": "Если нужно повторить школьные разделы, составьте выборочный маршрут и определите, какие работы ученик сделает самостоятельно. Если цель — сложный проект или освоение новой специализации, сравните отдельные дополнительные курсы. Если цель — ЕГЭ, проверьте экзаменационный тренинг отдельно. Номер класса в названии и наличие Python не подтверждают полноту подготовки к формату экзамена.",
     "courseIds": [
       "foxford-school-e9dd7219f0",
-      "teatrika-informatika-f824e"
+      "teatrika-informatika-f824e",
+      "rostelecom-lyceum-aea9beb307"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1743,7 +1840,8 @@
     "courseIds": [
       "foxford-school-d7bb90b46d",
       "sotka-historia-35005",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1767,7 +1865,8 @@
       "foxford-school-8d42363093",
       "foxford-school-e70385ceec",
       "sotka-historia-a52ec",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1792,7 +1891,8 @@
       "foxford-school-cec32141b8",
       "umschool-history-e572a",
       "sotka-historia-2e58b",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1817,7 +1917,8 @@
       "foxford-school-a4f9c52d86",
       "umschool-history-da6e4",
       "sotka-historia-e44c8",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1840,7 +1941,8 @@
     "courseIds": [
       "foxford-school-a6d566a2b4",
       "foxford-school-39294f4d4b",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1863,7 +1965,8 @@
     "courseIds": [
       "foxford-school-629fe600c6",
       "foxford-school-73ea1b7ed1",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1885,7 +1988,8 @@
     "decision": "Для повторения знакомого раздела можно выстроить маршрут под текущие школьные задачи. Для восстановления нескольких исторических периодов сначала нужна диагностика и более широкий план. Если цель связана с ЕГЭ, отдельно сравните специализированные предложения по содержанию, картам, источникам и критериям. Номер класса не подтверждает, что в предметном курсе есть такая экзаменационная практика.",
     "courseIds": [
       "foxford-school-a122cc9e96",
-      "teatrika-50f44ed9d1"
+      "teatrika-50f44ed9d1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1907,7 +2011,8 @@
     "decision": "На пробном занятии предложите объяснить знакомый пример своими словами и подобрать другой. Если ребёнок может только повторить определение, полезна работа с применением и границами понятия. Сначала согласуйте ближайшую учебную задачу, затем объём занятий. Не приписывайте курсу темы, которых нет в предоставленном плане, и уточните его актуальность для вашей школьной программы.",
     "courseIds": [
       "foxford-school-a3ad8c7140",
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1930,7 +2035,8 @@
     "courseIds": [
       "foxford-school-977d8c0c91",
       "skysmart-school-cd510bdf54",
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1953,7 +2059,9 @@
     "courseIds": [
       "foxford-school-668be2f691",
       "skysmart-school-cd510bdf54",
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1975,7 +2083,9 @@
     "decision": "Если цель — текущие школьные работы, начните с нескольких ответов ребёнка и согласуйте приоритеты. Если нужно систематизировать материал предыдущих лет, попросите отдельный план повторения. Для экзаменационной цели сравните предложения ОГЭ по заданиям и критериям отдельно: обычный курс девятого класса не подтверждает такую полноту только своим названием и объёмом занятий.",
     "courseIds": [
       "foxford-school-11e7b9ec1c",
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -1998,7 +2108,9 @@
     "courseIds": [
       "foxford-school-ba9444277a",
       "foxford-school-4c2f5ebe34",
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2021,7 +2133,8 @@
     "courseIds": [
       "foxford-school-7e8b3c0c34",
       "sotka-literatura-6d918",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2044,7 +2157,8 @@
     "courseIds": [
       "foxford-school-70c04d5cd8",
       "sotka-literatura-bea28",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2067,7 +2181,8 @@
     "courseIds": [
       "foxford-school-65d2278938",
       "sotka-literatura-ce402",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2090,7 +2205,8 @@
     "courseIds": [
       "foxford-school-9b155b7902",
       "sotka-literatura-749a2",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2112,7 +2228,8 @@
     "decision": "Для диагностики покажите одну письменную работу и спросите, что следует улучшить первым: понимание текста, точность тезиса или доказательство. Если задача экзаменационная, отдельно сравните курс подготовки к нужному предмету ОГЭ. Номер класса не подтверждает охват экзаменационных требований, а просмотр готовых разборов не заменяет собственной попытки написать ответ.",
     "courseIds": [
       "foxford-school-31e222114f",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2134,7 +2251,8 @@
     "decision": "На пробном разборе полезно взять небольшой эпизод и проследить, как он связан с общим вопросом произведения. Если ребёнок знает сюжет, но не строит вывод, выбирайте работу с аргументацией. Если не успевает читать, согласуйте реалистичную нагрузку, а не добавляйте ещё один поток лекций. Подготовку к экзамену и школьный предмет при необходимости оценивайте раздельно.",
     "courseIds": [
       "foxford-school-c26cdf83e9",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2156,7 +2274,8 @@
     "decision": "Определите основную цель: понимать текущие тексты, яснее строить аргумент или готовиться к определённой проверочной работе. Для каждой нужны разные примеры и критерии. Если цель связана с экзаменом или итоговым сочинением, отдельно уточните соответствующий формат подготовки. Номер класса и слова «письменные работы» сами по себе не подтверждают специального экзаменационного охвата.",
     "courseIds": [
       "foxford-school-2e34975dc4",
-      "teatrika-ea19aa939e"
+      "teatrika-ea19aa939e",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2179,7 +2298,8 @@
     "courseIds": [
       "foxford-school-1e0eab98f2",
       "foxford-school-2af1645303",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2202,7 +2322,8 @@
     "courseIds": [
       "foxford-school-8ad7716002",
       "foxford-school-e0d300690d",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2225,7 +2346,8 @@
     "courseIds": [
       "foxford-school-85716a7888",
       "foxford-school-94719a75d2",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2248,7 +2370,8 @@
     "courseIds": [
       "foxford-school-3c5da93e90",
       "foxford-school-0fd65dbfea",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2271,7 +2394,8 @@
     "courseIds": [
       "foxford-school-e8a2a4623f",
       "foxford-school-5c36906102",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2294,7 +2418,8 @@
     "courseIds": [
       "foxford-school-9895ea6ca7",
       "foxford-school-6829f179f9",
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2316,7 +2441,8 @@
     "decision": "На знакомстве полезно обсудить знакомое наблюдение и попросить ребёнка описать его своими словами. Если он стесняется отвечать, важен спокойный темп; если перечисляет факты без связи, полезен уточняющий вопрос преподавателя. До оплаты обсудите необходимые материалы и организационную помощь родителя. Самостоятельный доступ к видео ещё не означает полностью самостоятельного прохождения первоклассником.",
     "courseIds": [
       "foxford-school-8d69494598",
-      "foxford-school-ba506700d8"
+      "foxford-school-ba506700d8",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2338,7 +2464,8 @@
     "decision": "Если ребёнок знает отдельные названия, но теряется при вопросе «почему», выбирайте работу с рассуждением на доступном примере. Если трудно читать длинные задания, обсудите форму инструкции и помощь взрослого. Не выбирайте программу только по общему объёму: два курса одного класса могут отличаться логикой и ожидаемой самостоятельностью, даже при одинаковом числе занятий.",
     "courseIds": [
       "foxford-school-39cd3625ff",
-      "foxford-school-e31672759f"
+      "foxford-school-e31672759f",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2360,7 +2487,8 @@
     "decision": "Предложите ребёнку объяснить знакомое явление и назвать, на какие наблюдения он опирается. Если вывод верен случайно, полезна работа с доказательством на простом уровне. Если мешает организация задания, нужен понятный пошаговый план. Для регулярной школьной поддержки согласуйте ближайшие темы и посильную нагрузку, чтобы дополнительное обучение не сводилось к ещё одному пересказу параграфа.",
     "courseIds": [
       "foxford-school-a0405310a5",
-      "foxford-school-bbf69f8fd1"
+      "foxford-school-bbf69f8fd1",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2382,7 +2510,8 @@
     "decision": "Если цель — завершить начальную школу без разрозненных пробелов, составьте план по конкретным затруднениям ребёнка. На диагностике полезно сравнить два источника информации и объяснить вывод. Если ответы превращаются в случайный набор фактов, важнее структура рассуждения, чем дополнительное заучивание. Выбирайте формат с понятной самостоятельной работой и проверкой её смысла.",
     "courseIds": [
       "foxford-school-c88bbd4f3e",
-      "foxford-school-92bfe02bb7"
+      "foxford-school-92bfe02bb7",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2393,7 +2522,7 @@
     "title": "Курсы литературного чтения для 1 класса: программа и выбор",
     "catalogPath": "/kursy/shkolnaya-programma/literaturnoe-chtenie/1-klass/",
     "excerpt": "Курсы по литературному чтению для 1 класса. Для первого класса в подборке литературного чтения подтверждён один курс «Сотки».",
-    "lead": "Для первого класса в подборке литературного чтения подтверждён один курс «Сотки». Он относится к школьному предмету: перед покупкой важно отличить обсуждение прочитанного от начального обучения звукам, буквам и складыванию слов.",
+    "lead": "Для литературного чтения первого класса теперь можно сравнить предметный курс «Сотки» и материалы общей библиотеки ИнтернетУрока. Определите исходную задачу: научиться читать слова или обсуждать уже прочитанный текст. Библиотечная подписка и занятия по отдельному школьному предмету имеют разный состав поддержки.",
     "sections": [
       {
         "title": "Как сравнивать предложения для 1 класса",
@@ -2403,7 +2532,8 @@
     "decisionTitle": "С чего начать выбор",
     "decision": "На знакомстве посмотрите, понимает ли ребёнок небольшой доступный текст и может ли ответить на простой вопрос по нему. Не сравнивайте детей только по числу прочитанных слов. Уточните посильную длительность, участие взрослого и способ обратной связи. Для начинающего читателя полезнее согласованная ближайшая задача, чем обещание сразу освоить большой объём произведений.",
     "courseIds": [
-      "sotka-literature-reading-16cce"
+      "sotka-literature-reading-16cce",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2425,7 +2555,8 @@
     "decision": "Если ребёнок читает бегло, но не отвечает по содержанию, не начинайте с увеличения скорости. Если смысл понимает, а техническое чтение даётся тяжело, обсудите отдельный темп и посильный объём. Сравните программу со школьными произведениями и заранее согласуйте участие родителя. Цель курса должна быть понятной и проверяемой на собственном новом тексте.",
     "courseIds": [
       "foxford-school-8d28cb3660",
-      "sotka-literature-reading-25430"
+      "sotka-literature-reading-25430",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2448,7 +2579,8 @@
     "courseIds": [
       "foxford-school-5dc5011a32",
       "foxford-school-021b09ab41",
-      "sotka-literature-reading-b8d22"
+      "sotka-literature-reading-b8d22",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2471,7 +2603,8 @@
     "courseIds": [
       "foxford-school-27d80a41ca",
       "foxford-school-e4e5a6d6df",
-      "sotka-literature-reading-747cf"
+      "sotka-literature-reading-747cf",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2602,7 +2735,8 @@
     "decisionTitle": "С чего начать выбор",
     "decision": "На знакомстве полезно увидеть, как ребёнок объясняет свой замысел и пробует изменить работу после одного понятного совета. Если цель — школьная поддержка, достаточно согласованного предметного маршрута. Если семья ищет развитие определённой техники или подготовку портфолио, сравните специализированные курсы отдельно. Не приписывайте короткому школьному формату результат, который не заявлен в программе.",
     "courseIds": [
-      "foxford-school-3f02463dff"
+      "foxford-school-3f02463dff",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2625,7 +2759,8 @@
     "courseIds": [
       "foxford-school-7463d1a4b7",
       "foxford-school-9aadb6f350",
-      "foxford-school-1d2b2212d2"
+      "foxford-school-1d2b2212d2",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2674,7 +2809,8 @@
     "decision": "Зафиксируйте одну тему на понимание и одну на самостоятельное применение. После первых встреч ученик должен суметь объяснить ход решения новой задачи и заметить ошибку в чужом рассуждении. Согласуйте письменную проверку и объём домашней работы. При выборе пакета уточните, можно ли менять приоритеты, если школьная программа движется быстрее или возникает другой пробел.",
     "courseIds": [
       "teatrika-6516552696",
-      "tutoronline-04b3cdca01"
+      "tutoronline-04b3cdca01",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2699,7 +2835,9 @@
     "decisionTitle": "Что считать полезным результатом первых занятий",
     "decision": "Выберите небольшой текст и попросите ученика сформулировать позицию автора, аргумент и собственный пример. Сравнивайте точность употребления понятий и способность объяснить связь между тезисами. При покупке пакета уточните наличие проверки развёрнутых работ: просмотр правильного ответа после теста не даёт такой же обратной связи. Регулярно сверяйте план с темами, которые действительно проходят в классе.",
     "courseIds": [
-      "teatrika-f9352aa866"
+      "teatrika-f9352aa866",
+      "rostelecom-lyceum-aea9beb307",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   },
@@ -2724,7 +2862,8 @@
     "decisionTitle": "С чего начать пробное занятие",
     "decision": "Покажите преподавателю типичную школьную работу и попросите разобрать одну ошибку с опорой на карту. Хорошая следующая задача должна менять условия, сохраняя изученный способ рассуждения. Согласуйте, как проверяются выводы, откуда берутся данные и будет ли обратная связь по проекту. Стоимость пакета сравнивайте с числом личных встреч и объёмом такой проверки.",
     "courseIds": [
-      "teatrika-3a9a66c150"
+      "teatrika-3a9a66c150",
+      "interneturok-307a0c25ac"
     ],
     "reviewedAt": "2026-10-19"
   }

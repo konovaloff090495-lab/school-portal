@@ -29,6 +29,9 @@ def curriculum(c):
 
 def price_fact(c):
     t=clean(c['text']); b=c['brandId']
+    if b=='interneturok' and '/kursy_i_uslugi/' in c.get('sourceUrl',''):
+        from source_prices import parse_service
+        return parse_service(c)
     if b in {'hello-world','virtuozy-msk','deutsch-online','yes-online'}:
         from expansion_prices import price
         return price(c)

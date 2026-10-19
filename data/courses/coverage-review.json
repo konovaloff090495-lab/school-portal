@@ -1,8 +1,8 @@
 {
   "reviewedAt": "2026-10-19",
   "scope": "Публичные подтверждённые программы 28 площадок; не исчерпывающий реестр всего рынка",
-  "activeCourses": 749,
-  "schoolCourses": 337,
+  "activeCourses": 800,
+  "schoolCourses": 340,
   "schoolProviders": {
     "Синергия": 4,
     "Тетрика": 11,
@@ -12,17 +12,21 @@
     "Фоксфорд": 155,
     "Skysmart": 97,
     "TutorOnline": 7,
-    "Hello World School": 3
+    "Hello World School": 3,
+    "Лицей Ростелеком": 1,
+    "ИнтернетУрок": 2
   },
   "directions": [
     {
       "id": "shkolnye-predmety",
       "label": "Школьные предметы",
-      "courses": 277,
+      "courses": 288,
       "providers": [
         "Hello World School",
         "Skysmart",
         "TutorOnline",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -32,11 +36,12 @@
     {
       "id": "kompyuternaya-gramotnost",
       "label": "Компьютерная грамотность",
-      "courses": 7,
+      "courses": 8,
       "providers": [
         "CODDY",
         "EasyCode",
-        "Hello World School"
+        "Hello World School",
+        "Лицей Ростелеком"
       ]
     },
     {
@@ -51,7 +56,7 @@
     {
       "id": "programmirovanie",
       "label": "Программирование",
-      "courses": 108,
+      "courses": 117,
       "providers": [
         "CODDY",
         "EasyCode",
@@ -59,6 +64,7 @@
         "Kodland",
         "Skysmart",
         "Алгоритмика",
+        "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
         "Синергия",
@@ -68,12 +74,13 @@
     {
       "id": "python",
       "label": "Python",
-      "courses": 28,
+      "courses": 32,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Skysmart",
+        "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
         "Синергия"
@@ -117,12 +124,13 @@
     {
       "id": "unity",
       "label": "Unity и разработка игр",
-      "courses": 27,
+      "courses": 29,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
+        "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
         "Синергия"
@@ -131,23 +139,26 @@
     {
       "id": "web-razrabotka",
       "label": "Создание сайтов",
-      "courses": 14,
+      "courses": 17,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
     {
       "id": "iskusstvennyy-intellekt",
       "label": "Нейросети и ИИ",
-      "courses": 21,
+      "courses": 26,
       "providers": [
         "AMAKids",
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Пиксель",
         "Синергия",
         "Умскул"
@@ -156,26 +167,29 @@
     {
       "id": "robototehnika",
       "label": "Робототехника",
-      "courses": 2,
+      "courses": 3,
       "providers": [
-        "CODDY"
+        "CODDY",
+        "Лицей Ростелеком"
       ]
     },
     {
       "id": "kiberbezopasnost",
       "label": "Кибербезопасность",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "CODDY",
+        "Лицей Ростелеком",
         "Стоп Угроза"
       ]
     },
     {
       "id": "ege",
       "label": "Подготовка к ЕГЭ",
-      "courses": 73,
+      "courses": 75,
       "providers": [
         "100балльный репетитор",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Умскул",
@@ -185,12 +199,13 @@
     {
       "id": "oge",
       "label": "Подготовка к ОГЭ",
-      "courses": 58,
+      "courses": 60,
       "providers": [
         "100балльный репетитор",
         "Advance",
         "CODDY",
         "Skysmart",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Умскул",
@@ -200,7 +215,7 @@
     {
       "id": "angliyskiy",
       "label": "Английский язык",
-      "courses": 94,
+      "courses": 101,
       "providers": [
         "100балльный репетитор",
         "AMAKids",
@@ -211,6 +226,8 @@
         "Skysmart",
         "TutorOnline",
         "Айкьюша",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -221,7 +238,7 @@
     {
       "id": "matematika",
       "label": "Математика",
-      "courses": 114,
+      "courses": 124,
       "providers": [
         "100балльный репетитор",
         "AMAKids",
@@ -231,6 +248,8 @@
         "Skysmart",
         "TutorOnline",
         "Айкьюша",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -241,12 +260,14 @@
     {
       "id": "russkiy",
       "label": "Русский язык",
-      "courses": 87,
+      "courses": 94,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -257,12 +278,14 @@
     {
       "id": "fizika",
       "label": "Физика",
-      "courses": 50,
+      "courses": 58,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Наукасити",
         "Синергия",
         "Сотка",
@@ -274,11 +297,13 @@
     {
       "id": "himiya",
       "label": "Химия",
-      "courses": 21,
+      "courses": 27,
       "providers": [
         "100балльный репетитор",
         "Skysmart",
         "TutorOnline",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -289,10 +314,11 @@
     {
       "id": "biologiya",
       "label": "Биология",
-      "courses": 35,
+      "courses": 36,
       "providers": [
         "100балльный репетитор",
         "TutorOnline",
+        "ИнтернетУрок",
         "Наукасити",
         "Синергия",
         "Сотка",
@@ -304,12 +330,14 @@
     {
       "id": "informatika",
       "label": "Информатика",
-      "courses": 26,
+      "courses": 34,
       "providers": [
         "100балльный репетитор",
         "CODDY",
         "Skysmart",
         "TutorOnline",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -320,9 +348,10 @@
     {
       "id": "istoriya",
       "label": "История",
-      "courses": 30,
+      "courses": 32,
       "providers": [
         "100балльный репетитор",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -333,10 +362,12 @@
     {
       "id": "obshchestvoznanie",
       "label": "Обществознание",
-      "courses": 21,
+      "courses": 27,
       "providers": [
         "100балльный репетитор",
         "Skysmart",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -347,9 +378,10 @@
     {
       "id": "literatura",
       "label": "Литература",
-      "courses": 27,
+      "courses": 28,
       "providers": [
         "100балльный репетитор",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -360,9 +392,10 @@
     {
       "id": "geografiya",
       "label": "География",
-      "courses": 20,
+      "courses": 25,
       "providers": [
         "100балльный репетитор",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Тетрика",
@@ -373,23 +406,25 @@
     {
       "id": "shahmaty",
       "label": "Шахматы",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "CODDY",
         "ChessFirst",
         "Hello World School",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
     {
       "id": "dizayn",
       "label": "Дизайн",
-      "courses": 29,
+      "courses": 35,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
+        "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
         "Синергия",
@@ -399,23 +434,25 @@
     {
       "id": "3d-modelirovanie",
       "label": "3D-моделирование",
-      "courses": 12,
+      "courses": 14,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Лицей Ростелеком",
         "Пиксель"
       ]
     },
     {
       "id": "risovanie",
       "label": "Рисование",
-      "courses": 19,
+      "courses": 20,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kaplan School",
+        "ИнтернетУрок",
         "Синергия",
         "Фоксфорд",
         "Художка Онлайн"
@@ -424,10 +461,11 @@
     {
       "id": "videomontazh",
       "label": "Видео и анимация",
-      "courses": 15,
+      "courses": 16,
       "providers": [
         "AMAKids",
         "CODDY",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
@@ -444,11 +482,12 @@
     {
       "id": "podgotovka-k-shkole",
       "label": "Подготовка к школе",
-      "courses": 6,
+      "courses": 12,
       "providers": [
         "AMAKids",
         "Hello World School",
         "Айкьюша",
+        "ИнтернетУрок",
         "Логопотам",
         "Синергия",
         "Тетрика"
@@ -457,7 +496,7 @@
     {
       "id": "logika",
       "label": "Логика и мышление",
-      "courses": 13,
+      "courses": 16,
       "providers": [
         "AMAKids",
         "CODDY",
@@ -465,18 +504,20 @@
         "Kids MBA",
         "LogicLike",
         "Айкьюша",
+        "ИнтернетУрок",
         "Синергия"
       ]
     },
     {
       "id": "chtenie",
       "label": "Чтение и скорочтение",
-      "courses": 18,
+      "courses": 20,
       "providers": [
         "AMAKids",
         "Hello World School",
         "IQ007 — Реутов",
         "Айкьюша",
+        "ИнтернетУрок",
         "Синергия",
         "Сотка",
         "Фоксфорд"
@@ -485,9 +526,10 @@
     {
       "id": "logoped",
       "label": "Логопед",
-      "courses": 5,
+      "courses": 6,
       "providers": [
         "Hello World School",
+        "ИнтернетУрок",
         "Логопотам",
         "Тетрика"
       ]
@@ -495,12 +537,14 @@
     {
       "id": "soft-skills",
       "label": "Навыки общения и развития",
-      "courses": 21,
+      "courses": 26,
       "providers": [
         "Advance",
         "CODDY",
         "Hello World School",
         "Kids MBA",
+        "ИнтернетУрок",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
@@ -538,9 +582,10 @@
     {
       "id": "bezopasnost",
       "label": "Безопасность детей",
-      "courses": 3,
+      "courses": 4,
       "providers": [
         "Академия ЮИД",
+        "Лицей Ростелеком",
         "Стоп Угроза"
       ]
     },
@@ -564,19 +609,22 @@
     {
       "id": "oratorskoe-masterstvo",
       "label": "Ораторское мастерство",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "CODDY",
-        "Kids MBA"
+        "Kids MBA",
+        "Лицей Ростелеком"
       ]
     },
     {
       "id": "emocionalnyy-intellekt",
       "label": "Эмоциональный интеллект",
-      "courses": 2,
+      "courses": 6,
       "providers": [
         "Hello World School",
-        "Kids MBA"
+        "Kids MBA",
+        "ИнтернетУрок",
+        "Лицей Ростелеком"
       ]
     },
     {
@@ -619,27 +667,30 @@
     {
       "id": "fotografiya",
       "label": "Фотография",
-      "courses": 2,
+      "courses": 3,
       "providers": [
-        "CODDY"
+        "CODDY",
+        "Лицей Ростелеком"
       ]
     },
     {
       "id": "bloging",
       "label": "Блогинг и медиа",
-      "courses": 4,
+      "courses": 6,
       "providers": [
         "CODDY",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
     {
       "id": "animaciya",
       "label": "Анимация и мультфильмы",
-      "courses": 5,
+      "courses": 6,
       "providers": [
         "CODDY",
         "Hello World School",
+        "Лицей Ростелеком",
         "Синергия"
       ]
     },
@@ -831,7 +882,8 @@
     "Онлайн-формат не переносится с общей страницы бренда на все его программы.",
     "Сбор с недоступных страниц, закрытых наборов и кабинета Т-Партнёры не заменяется выдуманными предложениями.",
     "Добавлены 59 программ восьми новых площадок; часть инструментальных и творческих тем представлена одной школой.",
-    "Не закрыты все площадки рынка: повторно недоступна Умназия; Лицей Ростелеком и InternetUrok требуют отдельного сбора; цены сложных составных тарифов не подставлены по чужим рекомендациям."
+    "InternetUrok и Лицей добавлены по текущим продуктам; общие школьные абонементы не размножены по каждому классу.",
+    "Старые classbook URL Лицея перенаправлены на одну подписку; взрослые продукты и программы без подтверждённой отдельной страницы исключены."
   ],
   "sourceReview": "market-review.json"
 }

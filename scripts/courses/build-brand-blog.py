@@ -22,6 +22,10 @@ def main():
  for g in sorted(guides,key=lambda g:brands[g['brandId']]):
   b=g['brandId'];name=brands[b];arr=[c for c in courses if c['brandId']==b];counts=Counter(t for c in arr for t in c['tags']);top=[t for t,_ in counts.most_common(8)];selected=[];seen=set()
   # One example per subject/format first, then the detailed brand catalog.
+  for cid in g.get('featuredCourseIds',[]):
+   c=next(c for c in arr if c['id']==cid)
+   assert len(selected)<8 and c not in selected,'Invalid featured school course'
+   selected.append(c);seen.add((c['category'],c['format']))
   for c in sorted(arr,key=lambda c:(not bool(c.get('editorialDescription')),c['category'],c['id'])):
    key=(c['category'],c['format'])
    if key not in seen and len(selected)<8:selected.append(c);seen.add(key)
