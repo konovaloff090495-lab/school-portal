@@ -220,8 +220,21 @@ rsync_retry "$RELEASE_ARCHIVE" "$DIR/.next-release.tar.zst" "release archive"
 echo "==> Проверяем SHA256 и распаковываем в staging..."
 $SSH $VPS "cd $DIR && echo '$RELEASE_SHA  .next-release.tar.zst' | sha256sum -c - && test ! -L .next-incoming && rm -rf .next-incoming && mkdir .next-incoming && tar --zstd -xf .next-release.tar.zst -C .next-incoming"
 
-echo "==> rsync public/ на VPS (фото школ и статика)..."
-rsync_retry "public/" "$DIR/public/" "public"
+# A code-only release may reuse committed public assets already updated by git pull.
+# This avoids publishing another chat's unfinished local assets from a shared checkout.
+case "${DEPLOY_PUBLIC_MODE:-sync}" in
+  sync)
+    echo "==> rsync public/ на VPS (фото школ и статика)..."
+    rsync_retry "public/" "$DIR/public/" "public"
+    ;;
+  committed)
+    echo "==> Проверяем опубликованную версию public/ из Git..."
+    EXPECTED_PUBLIC_COMMIT=$(git rev-parse HEAD)
+    REMOTE_PUBLIC_COMMIT=$($SSH $VPS "cd $DIR && git diff --quiet HEAD -- public && git rev-parse HEAD")
+    [[ "$REMOTE_PUBLIC_COMMIT" == "$EXPECTED_PUBLIC_COMMIT" ]] || { echo "❌ VPS public commit mismatch"; exit 1; }
+    ;;
+  *) echo "❌ Unknown DEPLOY_PUBLIC_MODE"; exit 1 ;;
+esac
 
 # Гейт безопасности: если .next долит не полностью (обрыв SSH), BUILD_ID на VPS
 # не совпадёт с локальным — прерываемся БЕЗ рестарта, чтобы не поднять неполный билд.
