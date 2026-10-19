@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {
   schools, regionLabels, typeLabels,
   getSchoolBySlug, getAllSchoolSlugs, formatPrice,
+  schoolMatchesType,
 } from '@/data/schools'
 import { getTypeColor, getTypeBorderColor, typeNoun } from '@/lib/utils'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -28,6 +29,15 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     : 'Оставьте заявку через форму на этой странице'
   const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
     .join(' ').toLowerCase()
+
+  if (schoolMatchesType(school, 'semejnye')) {
+    return [
+      { q: `Где проходят занятия в ${school.name}?`, a: school.address ? `${school.city}, ${school.address}. Адрес и время посещения согласуйте ${callTo}.` : `Город: ${school.city}. Точный адрес занятий уточняйте ${callTo}${school.website ? ` или на сайте ${school.website}` : ''}.` },
+      { q: `Как записаться в ${school.name}?`, a: `Свяжитесь со школой ${callTo}${school.website ? ` или через официальный сайт ${school.website}` : ''}, чтобы уточнить наличие мест и условия поступления.` },
+      { q: `С какого класса принимают в ${school.name}?`, a: /\d/.test(school.grades) ? `На странице школы указаны классы: ${school.grades}. Наличие мест в конкретном классе уточняйте при обращении.` : `Классы, возраст детей и наличие мест уточняйте ${callTo}.` },
+      { q: `Сколько стоит обучение в ${school.name}?`, a: school.priceFrom !== undefined ? `Указанная стоимость: ${school.priceFrom === 0 ? 'бесплатно' : `от ${formatPrice(school.priceFrom)}`}. Актуальные условия уточняйте у школы.` : `Стоимость зависит от класса, программы и учебного дня. Условия оплаты уточняйте непосредственно у школы${school.website ? ` на сайте ${school.website}` : ''}.` },
+    ]
+  }
 
   // 1. Адрес и метро
   if (school.metro) {
@@ -55,7 +65,12 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   const isEgeCenter = school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge'
   const isArtSchool = school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv'
   const isProgSchool = school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye'
-  if (isArtSchool && school.priceFrom === undefined) {
+  if (school.type === 'semejnye' && school.priceFrom === undefined) {
+    faq.push({
+      q: `Сколько стоит обучение в ${school.name}?`,
+      a: `Стоимость семейных классов зависит от программы, класса и продолжительности учебного дня. Условия оплаты уточняйте ${callTo}${school.website ? ` или на официальном сайте ${school.website}` : ''}.`,
+    })
+  } else if (isArtSchool && school.priceFrom === undefined) {
     faq.push({
       q: `Сколько стоит обучение в ${school.name}?`,
       a: `Занятия платные; стоимость зависит от отделения, программы и частоты занятий. На этой странице мы не приводим цены, которые не проверили, — уточняйте ${callTo}${school.website ? ` или на сайте школы (${school.website.replace(/^https?:\/\//, '')})` : ''}.`,
@@ -182,7 +197,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!school) return {}
   return {
     title: `${school.name} — ${school.city} | адрес, телефон, описание`,
-    description: `${school.name} (${school.city}) — ${school.description} Адрес: ${school.address}.${school.phone ? ` Телефон: ${school.phone}.` : ''}`,
+    description: `${school.name} (${school.city}) — ${school.description} ${school.address ? `Адрес: ${school.address}.` : ""}${school.phone ? ` Телефон: ${school.phone}.` : ''}`,
     alternates: { canonical: `https://pro-schools.ru/shkola/${slug}/` },
   }
 }
@@ -219,7 +234,7 @@ export default async function SchoolPage({ params }: Props) {
     telephone: school.phone,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: school.address,
+      ...(school.address ? { streetAddress: school.address } : {}),
       addressLocality: school.city,
       addressRegion: regionName,
       addressCountry: 'RU',
@@ -284,7 +299,7 @@ export default async function SchoolPage({ params }: Props) {
           <h1 className="text-white font-bold text-2xl md:text-3xl drop-shadow-md leading-tight">
             {school.name}
           </h1>
-          <p className="text-white/80 text-sm mt-1">{school.city}, {school.address}</p>
+          <p className="text-white/80 text-sm mt-1">{[school.city, school.address].filter(Boolean).join(', ')}</p>
         </div>
         {school.rating && school.reviewCount > 0 && (
           <div className="bg-white/95 rounded-xl px-3 py-2 text-center shrink-0">
@@ -319,7 +334,7 @@ export default async function SchoolPage({ params }: Props) {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <div className="text-xs text-gray-500 mb-1">Классы</div>
-                <div className="font-semibold text-gray-900 text-sm">{school.grades}</div>
+                <div className="font-semibold text-gray-900 text-sm">{school.grades || 'Уточняйте при записи'}</div>
               </div>
               {school.founded && (
                 <div className="bg-gray-50 rounded-lg p-3 text-center">
@@ -344,7 +359,7 @@ export default async function SchoolPage({ params }: Props) {
                     ) : (
                       <span className="text-gray-900">от {formatPrice(school.priceFrom)}</span>
                     )
-                  ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
+                  ) : schoolMatchesType(school, 'semejnye') || school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
                     <span className="text-green-600">Бесплатно</span>
@@ -424,7 +439,7 @@ export default async function SchoolPage({ params }: Props) {
               <div className="mb-5 rounded-xl border border-gray-100 bg-gray-50 p-5 flex items-center gap-3">
                 <svg className="w-8 h-8 text-[#0369A1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">{school.city}, {school.address}</p>
+                  <p className="text-sm font-semibold text-gray-900">{[school.city, school.address].filter(Boolean).join(', ')}</p>
                   {school.metro && <p className="text-xs text-gray-500 mt-0.5">м. {school.metro}</p>}
                 </div>
               </div>
@@ -450,7 +465,7 @@ export default async function SchoolPage({ params }: Props) {
                 </span>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Адрес</p>
-                  <p className="text-sm text-gray-800">{school.city}, {school.address}</p>
+                  <p className="text-sm text-gray-800">{[school.city, school.address].filter(Boolean).join(', ')}</p>
                   {school.metro && (
                     <p className="text-xs text-gray-500 mt-0.5 flex items-center gap-1">
                       <span className="w-3.5 h-3.5 bg-red-500 rounded-full text-white text-[8px] flex items-center justify-center font-bold">М</span>
@@ -570,7 +585,7 @@ export default async function SchoolPage({ params }: Props) {
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-500">Классы</span>
-                <span className="text-gray-800">{school.grades}</span>
+                <span className="text-gray-800">{school.grades || 'Уточняйте при записи'}</span>
               </div>
               {school.district && (
                 <div className="flex justify-between">

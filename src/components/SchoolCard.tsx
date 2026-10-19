@@ -3,7 +3,7 @@ import { useState } from 'react'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { School, typeLabels } from '@/data/schools'
+import { School, typeLabels, schoolMatchesType } from '@/data/schools'
 import { getTypeColor, formatPrice } from '@/lib/utils'
 import SchoolMatchModal from './SchoolMatchModal'
 
@@ -303,7 +303,7 @@ export default function SchoolCard({ school }: { school: School }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
           </svg>
-          <span className="truncate">{school.city}, {school.address}</span>
+          <span className="truncate">{[school.city, school.address].filter(Boolean).join(', ')}</span>
         </div>
 
         {school.features.length > 0 && (
@@ -329,6 +329,8 @@ export default function SchoolCard({ school }: { school: School }) {
                   от <span className="font-semibold text-[#0F172A]">{formatPrice(school.priceFrom)}</span>
                 </span>
               )
+            ) : schoolMatchesType(school, 'semejnye') ? (
+              <span className="text-gray-500">Стоимость по запросу</span>
             ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
               <span className="text-gray-500">Платно, цена по запросу</span>
             ) : (
