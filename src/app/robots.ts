@@ -18,7 +18,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/podarki/', '/lk/', '/admin/'],
       },
     ],
-    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/sitemap-gdz.xml`],
+    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/sitemap-gdz.xml`, `${BASE_URL}/kursy/sitemap.xml`],
     host: BASE_URL,
   }
 }

@@ -29,6 +29,7 @@ export default function Footer() {
                 <Link href="/shkoly/" style={{ fontSize: 13, fontWeight: 700, color: '#FF6B3D', textDecoration: 'none' }}>
                   Все школы России →
                 </Link>
+                <a href="/kursy/" style={{ fontSize: 13, fontWeight: 700, color: '#FF6B3D', textDecoration: 'none' }}>Курсы для детей →</a>
                 <Link href="/blog/" style={{ fontSize: 13, color: '#9B9490', textDecoration: 'none', transition: 'color .15s' }}>
                   Блог и статьи
                 </Link>

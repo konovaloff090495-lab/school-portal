@@ -69,5 +69,9 @@ public/fipi/
 .crm-mailer.sqlite3*
 .crm-mailer-paused
 
+# Courses: raw first-party pages and local QA state are not public source.
+/work/courses/
+/scripts/courses/__pycache__/
+
 # Private lead reconciliation journal (contains personal data)
 data-private/
