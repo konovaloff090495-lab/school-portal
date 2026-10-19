@@ -23,6 +23,9 @@ if len(pages)>=500:
         c=current[record['courseId']]
         assert c['sourceUrl']==record['sourceUrl'] and c['contentHash']==record['sourceHash'],'Expansion evidence mismatch'
         reviewed.add(c['id'])
+    for record in expansion.get('updatedSourcePages',[]):
+        c=current[record['courseId']]
+        assert c['sourceUrl']==record['sourceUrl'] and c['contentHash']==record['sourceHash'],'Updated source evidence mismatch'
     baseline=sorted(c['id'] for c in COURSES if c['id'] not in reviewed)
     assert hashlib.sha256('\n'.join(baseline).encode()).hexdigest()==review['baselineCourseIdsSha256'],'Unreviewed course expansion'
     selections=set(review['reviewedSelectionIds'])|set(expansion.get('reviewedSelectionIds',[]))

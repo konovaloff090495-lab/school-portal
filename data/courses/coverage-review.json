@@ -1,7 +1,7 @@
 {
   "reviewedAt": "2026-10-19",
   "scope": "Подтверждённые публичные программы40площадок; продолжающийся реестр, без заявления об исчерпывающем охвате рынка",
-  "activeCourses": 899,
+  "activeCourses": 926,
   "schoolCourses": 379,
   "schoolProviders": {
     "Синергия": 4,
@@ -40,12 +40,14 @@
     {
       "id": "kompyuternaya-gramotnost",
       "label": "Компьютерная грамотность",
-      "courses": 10,
+      "courses": 12,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком"
       ]
     },
@@ -62,7 +64,7 @@
     {
       "id": "programmirovanie",
       "label": "Программирование",
-      "courses": 134,
+      "courses": 151,
       "providers": [
         "CODDY",
         "EasyCode",
@@ -82,13 +84,15 @@
     {
       "id": "python",
       "label": "Python",
-      "courses": 36,
+      "courses": 41,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Kodland",
         "Skysmart",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
@@ -99,25 +103,28 @@
     {
       "id": "scratch",
       "label": "Scratch",
-      "courses": 12,
-      "providers": [
-        "CODDY",
-        "EasyCode",
-        "Hello World School",
-        "Айтигенио",
-        "Пиксель"
-      ]
-    },
-    {
-      "id": "roblox",
-      "label": "Roblox",
-      "courses": 12,
+      "courses": 14,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
         "Айтигенио",
+        "Алгоритмика",
+        "Пиксель"
+      ]
+    },
+    {
+      "id": "roblox",
+      "label": "Roblox",
+      "courses": 15,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Hello World School",
+        "Kodland",
+        "Айтигенио",
+        "Алгоритмика",
         "Пиксель",
         "Реботика"
       ]
@@ -125,25 +132,28 @@
     {
       "id": "minecraft",
       "label": "Minecraft",
-      "courses": 13,
-      "providers": [
-        "CODDY",
-        "EasyCode",
-        "Hello World School",
-        "Айтигенио",
-        "Пиксель"
-      ]
-    },
-    {
-      "id": "unity",
-      "label": "Unity и разработка игр",
-      "courses": 30,
+      "courses": 17,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
         "Айтигенио",
+        "Алгоритмика",
+        "Пиксель"
+      ]
+    },
+    {
+      "id": "unity",
+      "label": "Unity и разработка игр",
+      "courses": 31,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Hello World School",
+        "Kodland",
+        "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
@@ -153,12 +163,14 @@
     {
       "id": "web-razrabotka",
       "label": "Создание сайтов",
-      "courses": 19,
+      "courses": 24,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -166,13 +178,15 @@
     {
       "id": "iskusstvennyy-intellekt",
       "label": "Нейросети и ИИ",
-      "courses": 31,
+      "courses": 33,
       "providers": [
         "AMAKids",
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "ИнтернетУрок",
         "Лицей Ростелеком",
         "Пиксель",
@@ -450,13 +464,14 @@
     {
       "id": "dizayn",
       "label": "Дизайн",
-      "courses": 37,
+      "courses": 44,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Пиксель",
         "Реботика",
@@ -467,12 +482,14 @@
     {
       "id": "3d-modelirovanie",
       "label": "3D-моделирование",
-      "courses": 17,
+      "courses": 23,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Пиксель"
       ]
@@ -480,13 +497,15 @@
     {
       "id": "risovanie",
       "label": "Рисование",
-      "courses": 22,
+      "courses": 25,
       "providers": [
         "CODDY",
         "EasyCode",
         "Hello World School",
         "Kaplan School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "ИнтернетУрок",
         "Синергия",
         "Фоксфорд",
@@ -735,11 +754,13 @@
     {
       "id": "animaciya",
       "label": "Анимация и мультфильмы",
-      "courses": 7,
+      "courses": 13,
       "providers": [
         "CODDY",
         "Hello World School",
+        "Kodland",
         "Айтигенио",
+        "Алгоритмика",
         "Лицей Ростелеком",
         "Синергия"
       ]
@@ -974,7 +995,8 @@
     "InternetUrok и Лицей добавлены по текущим продуктам; общие школьные абонементы не размножены по каждому классу.",
     "Старые classbook URL Лицея перенаправлены на одну подписку; взрослые продукты и программы без подтверждённой отдельной страницы исключены.",
     "Точка знаний: публичный каталог на технических работах19.10.2026.",
-    "Айтигенио добавлено53направления, Сириус46текущих потоков. ВалютаUSDне выдана за рублёвую цену, сроки бесплатного набора сохранены."
+    "Айтигенио добавлено53направления, Сириус46текущих потоков. ВалютаUSDне выдана за рублёвую цену, сроки бесплатного набора сохранены.",
+    "Алгоритмика14и Kodland17отдельных программ подтверждены собственными русскоязычными страницами; цены индивидуальные. Возраст13+ не превращён автоматически в13–17лет."
   ],
   "sourceReview": "market-review.json"
 }
