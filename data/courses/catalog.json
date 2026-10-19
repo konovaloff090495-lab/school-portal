@@ -37367,5 +37367,2381 @@
     "summary": "",
     "editorialDescription": "На Pop-up в Kaplan School дети от семи лет собирают объёмные бумажные страницы по записанным урокам. Тематика связана с путешествиями; потребуются бумага и инструменты для вырезания и склеивания. Взрослому стоит заранее проверить безопасность рабочего места и сложность деталей. Уточните состав материалов, наличие обратной связи и условия доступа; итоговая книга требует самостоятельной практической работы.",
     "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "rostelecom-lyceum-aea9beb307",
+    "title": "Школьная подписка: предметы 1–11 классов",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety",
+      "matematika",
+      "russkiy",
+      "angliyskiy",
+      "fizika",
+      "himiya",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "ageRange": null,
+    "grade": "1–11 класс",
+    "format": "Видеокурсы, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 399,
+      "unit": "мес",
+      "from": false,
+      "condition": "Общая школьная подписка на 1 месяц, включая другие предметы; это не отдельная оплата одного курса",
+      "evidence": "Публичный каталог: Абонемент на 1 месяц школьной программы; currentPrice=399",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/237"
+    },
+    "offer": null,
+    "modules": [
+      "Видео и конспекты",
+      "Тесты и тренажёры"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/school-subscription",
+    "sourceTitle": "Школьная программа",
+    "checkedAt": "2026-10-19",
+    "contentHash": "58d5d17df43ed7206c01974d92f55e207345294953746658ac9190e27cb5275e",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Школьная подписка Лицея объединяет видеоматериалы, конспекты и автоматические упражнения по нескольким предметам. Английский заявлен с первого класса, математика и русский — с пятого, физика — с седьмого, химия, информатика и обществознание — с восьмого. Это единый абонемент, а не отдельная покупка каждого предмета. Учебные темы и нужный класс выбирают внутри платформы; личные занятия с преподавателем не следует считать частью этой цены.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "schoolSubjects": [
+      "matematika",
+      "russkiy",
+      "angliyskiy",
+      "fizika",
+      "himiya",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "learningGoal": "school",
+    "gradeEvidence": "Диапазоны предметов в собственной навигации и описании подписки: https://lc.rt.ru/l/school-subscription",
+    "schoolEvidence": {
+      "url": "https://lc.rt.ru/l/school-subscription",
+      "basis": "Проверены самостоятельные планы указанных классов; цель — текущая школьная математика",
+      "checkedAt": "2026-10-19"
+    },
+    "schoolSubjectGrades": {
+      "matematika": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "russkiy": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "angliyskiy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fizika": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "himiya": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "informatika": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "obshchestvoznanie": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 237,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/237",
+    "pricingSourceTitle": "Абонемент на 1 месяц школьной программы",
+    "pricingPeriodMonths": 1
+  },
+  {
+    "id": "rostelecom-lyceum-a840905c07",
+    "title": "Расследуем жизнь вместе: детский курс",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "emocionalnyy-intellekt",
+    "tags": [
+      "emocionalnyy-intellekt",
+      "soft-skills"
+    ],
+    "ageRange": [
+      9,
+      13
+    ],
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Расследуем жизнь вместе: курс для детей; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/384"
+    },
+    "offer": null,
+    "modules": [
+      "Эмоции и общение",
+      "Как попросить помощь"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programms/lyubopytnaya-varvara-rassleduem-zhizn-vmeste",
+    "sourceTitle": "Расследуем жизнь вместе",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e4e92c2a824abbdf7e22b6c75ebdde63b103a9c5410d7bd5f98bfc832446b234",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатный курс Лицея для детей 9–13 лет создан по мотивам историй «Любопытной Варвары». Через расследования ребёнок обсуждает отношения со сверстниками, эмоции, обращение за помощью и собственное мнение. Родительская версия — отдельный продукт и в карточку не включена. Это образовательное знакомство с ситуациями общения; вопросы личной поддержки следует обсуждать отдельно.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 384,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/384",
+    "pricingSourceTitle": "Расследуем жизнь вместе: курс для детей",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/384",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-ce70a7a481",
+    "title": "Безопасность в сети: детские возрастные треки",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "bezopasnost",
+    "tags": [
+      "bezopasnost",
+      "kiberbezopasnost"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Дети знают о безопасности в сети: курс для детей 10‒13 лет; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/375"
+    },
+    "offer": null,
+    "modules": [
+      "Письма и ссылки",
+      "Личные данные"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programms/deti-znayut-o-bezopasnosti-v-seti",
+    "sourceTitle": "Дети знают о безопасности в сети",
+    "checkedAt": "2026-10-19",
+    "contentHash": "a81a72d61f5cfb45148370c3cd86fe9ff88bd378d0a74fdd07cb8155cfee930e",
+    "active": true,
+    "facts": [
+      [
+        "Возрастные треки",
+        "7–9, 10–13, 14 лет и старше; вариант выбирается при регистрации"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Лицей предлагает бесплатные треки сетевой безопасности для групп 7–9, 10–13 и 14 лет и старше. Ребёнок разбирает сомнительные сообщения, ссылки и ситуации с личными данными. Три группы собраны на одной странице и не размножены в одинаковые покупки. При регистрации выберите подходящий возрастной вариант и обсудите правила безопасного общения дома.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 375,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/375",
+    "pricingSourceTitle": "Дети знают о безопасности в сети: курс для детей 10‒13 лет",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/375",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-33ecb01505",
+    "title": "Развитие гибких навыков",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "soft-skills",
+    "tags": [
+      "soft-skills",
+      "emocionalnyy-intellekt",
+      "oratorskoe-masterstvo"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 5990,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Развитие гибких навыков для детей; currentPrice=5990",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/285"
+    },
+    "offer": null,
+    "modules": [
+      "Выступление перед аудиторией",
+      "Эмоции и общение"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-razvitie-gibkih-navykov-dlya-detey",
+    "sourceTitle": "Развитие гибких навыков для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "aab5a54b7ec972a46c6a9e0c7b48abdad27fc9545c8cdf93d4e162df3b4b6e6c",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Видеопрограмма Лицея соединяет подготовку публичного выступления, работу с эмоциями и общение. Школьник учится структурировать мысль и обсуждать ситуации взаимодействия. Подойдёт для знакомства с гибкими навыками и тренировки самопрезентации. Уточните, кто даёт обратную связь на упражнения и как организована самостоятельная практика: запись видео не равна живому персональному тренингу.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 285,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/285",
+    "pricingSourceTitle": "Развитие гибких навыков для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-4cb4ce08e9",
+    "title": "Графический дизайн",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "dizayn",
+    "tags": [
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 3780,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Графический дизайн для детей; currentPrice=3780",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/286"
+    },
+    "offer": null,
+    "modules": [
+      "Цвет и композиция",
+      "Шрифты и стиль"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-graficheskiy-dizayn-dlya-detey",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "4a01e842e0e050d43a74f0b7cf38e63d6b546e659ee2ad7bca2b78859847069e",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Программа Лицея знакомит детей с визуальным оформлением: цветом, композицией, шрифтами и работой по задаче. Ученик пробует собирать графический проект и объяснять принятые решения. Перед покупкой уточните редакторы, необходимые устройства и способ проверки работы. Выбирайте этот маршрут по интересу к визуальной коммуникации, а не только к рисованию.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 286,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/286",
+    "pricingSourceTitle": "Графический дизайн для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-9d3c647896",
+    "title": "Шахматы: базовая видеопрограмма",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "shahmaty",
+    "tags": [
+      "shahmaty"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Онлайн-курс по шахматам для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/287"
+    },
+    "offer": null,
+    "modules": [
+      "Правила и тактика",
+      "План партии"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-onlayn-kurs-po-shahmatam-dlya-detey",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "b87d394e3872e1be000d9a6753506b88b42323e37aae37f920da529a44a37296",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Шахматная видеопрограмма Лицея знакомит с правилами, тактическими приёмами и планированием партии. В описании она обозначена как базовая: сложный турнирный разбор не следует предполагать автоматически. Уточните, есть ли практика собственных партий и ответы преподавателя. Для ребёнка, уже умеющего играть, сначала сопоставьте содержание с текущими навыками.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 287,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/287",
+    "pricingSourceTitle": "Онлайн-курс по шахматам для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-4edbe79a93",
+    "title": "Python: бесплатный вводный курс",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "python",
+    "tags": [
+      "python",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Ознакомительный курс по Python для детей; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/288"
+    },
+    "offer": null,
+    "modules": [
+      "Основы кода",
+      "Текстовый квест"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-besplatnyy-po-osnovam-programmirovaniya-na-python",
+    "sourceTitle": "Ознакомительный курс по программированию на Python для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "b1476a02d161aa108ccdaf15f86f1f2bf01c0db954dd674a5726f94ec23a9f5e",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатный вводный маршрут Лицея позволяет попробовать Python на небольшом текстовом квесте. Он нужен для знакомства с кодом и проверки интереса, а не для прохождения всей платной программы. До начала уточните рабочую среду и возможность установить её на компьютере. Завершённый пример полезно изменить самостоятельно и объяснить его поведение.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 288,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/288",
+    "pricingSourceTitle": "Ознакомительный курс по Python для детей",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/288",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-b720cf6bb1",
+    "title": "3D-игры на Python",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "python",
+    "tags": [
+      "python",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание 3D-игр на Python для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/289"
+    },
+    "offer": null,
+    "modules": [
+      "Игровой мир",
+      "Управление объектами"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-3d-igr-na-python-dlya-detey",
+    "sourceTitle": "Создание 3D-игр на Python для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "2ee8a25bd34c4ead37c78989e10bf93b33cf62ef8f2815f2f172fd0c631170ea",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "В Лицее есть отдельная видеопрограмма создания трёхмерных игр на Python. Ребёнок применяет код в игровом проекте, а не ограничивается абстрактными упражнениями. До покупки проверьте входные навыки, используемые библиотеки и требования к устройству. Если Python пока незнаком, обсудите подготовительную ступень и посмотрите бесплатное вводное занятие другого продукта.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 289,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/289",
+    "pricingSourceTitle": "Создание 3D-игр на Python для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-c18e6213fa",
+    "title": "Создание сайтов на Tilda",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "web-razrabotka",
+    "tags": [
+      "web-razrabotka",
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 5940,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание сайтов на Tilda: курс для детей; currentPrice=5940",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/290"
+    },
+    "offer": null,
+    "modules": [
+      "Блоки страницы",
+      "Структура сайта"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-saytov-na-tilda",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "6fcad86cc8a3b3b992db910c22a1d7f076a6e75bc2bd67c69bca911be872462b",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "На курсе Лицея дети собирают веб-страницы в Tilda и знакомятся с визуальной организацией сайта. Такой маршрут отличается от программирования на JavaScript: основная работа идёт в конструкторе. Уточните тариф сервиса, возможность публикации и доступ к проекту после обучения. Попросите пример самостоятельной страницы, которую ребёнок сможет изменить под собственную задачу.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 290,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/290",
+    "pricingSourceTitle": "Создание сайтов на Tilda: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-e905687964",
+    "title": "Blender: трёхмерные модели",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "3d-modelirovanie",
+    "tags": [
+      "3d-modelirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 6540,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: 3D-моделирование в Blender для детей; currentPrice=6540",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/291"
+    },
+    "offer": null,
+    "modules": [
+      "Форма и объём",
+      "Материалы модели"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-3d-modelirovanie-v-blender-dlya-detey",
+    "sourceTitle": "3D-моделирование в Blender для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "2b532fb93d0f6dcfdbeacbb9af5f124865d98de4c1364e5887a9ed3c33611800",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Видеокурс Лицея знакомит с построением трёхмерных объектов в Blender. Ребёнок работает с формой и оформлением модели, постепенно собирая собственный проект. До записи проверьте характеристики компьютера, установку нужной версии и входные навыки. Для выбора полезнее увидеть этапы создания объекта, чем только готовую красивую картинку выпускника.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 291,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/291",
+    "pricingSourceTitle": "3D-моделирование в Blender для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-49266be866",
+    "title": "Основы фотографии: бесплатный курс",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "fotografiya",
+    "tags": [
+      "fotografiya"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Бесплатный курс по основам фотографии для детей; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/292"
+    },
+    "offer": null,
+    "modules": [
+      "Кадр и свет",
+      "Практика съёмки"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-po-osnovam-fotografii-dlya-detey",
+    "sourceTitle": "Бесплатный курс по основам фотографии для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "3029767301579b6a2852f26e292f4287dacebcc1907cc02e15f6e519f7df9215",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатная программа Лицея посвящена первым шагам в фотографии и внимательному выбору кадра. Рассмотрите её как знакомство с визуальным языком и практическими заданиями на съёмку. Заранее уточните, достаточно ли телефона, какое приложение понадобится и как посмотреть результат работы. Наличие бесплатного курса не означает включения всех других творческих программ площадки.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 292,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/292",
+    "pricingSourceTitle": "Бесплатный курс по основам фотографии для детей",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/292",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-372142602d",
+    "title": "Компьютерная грамотность: бесплатный курс",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Бесплатный курс по компьютерной грамотности для детей; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/293"
+    },
+    "offer": null,
+    "modules": [
+      "Работа с устройством",
+      "Цифровые навыки"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-po-kompyuternoy-gramotnosti-dlya-detey",
+    "sourceTitle": "Бесплатный курс по компьютерной грамотности для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "426115ee01ddeeaf5c5a97fd6713f4060648e461c44e15e9948e5aac6ddc7bde",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатный вводный курс Лицея помогает познакомиться с базовыми действиями за компьютером. Он может стать первым шагом перед программированием или цифровым творчеством. Проверьте, совпадают ли используемые программы с устройством ребёнка, и повторяйте действия на собственном компьютере. Перед началом уточните состав уроков и доступную помощь при технических трудностях.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 293,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/293",
+    "pricingSourceTitle": "Бесплатный курс по компьютерной грамотности для детей",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/293",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-8d2880e83b",
+    "title": "Видеоконтент: от идеи к публикации",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "videomontazh",
+    "tags": [
+      "videomontazh",
+      "bloging"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 3780,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание видеоконтента для детей: от идеи до монетизации; currentPrice=3780",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/298"
+    },
+    "offer": null,
+    "modules": [
+      "Сценарий ролика",
+      "Съёмка и монтаж"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-videokontenta-dlya-detey-ot-idei-do-monetizacii",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "04118849fe5412b25c3864d137de7c57216e594f5036d57e0f41042a9b8b47b0",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Лицей предлагает видеопрограмму о создании контента: от идеи и сценария к съёмке, обработке и публикации. Это проектный маршрут для ребёнка, которому интересно делать собственные ролики. Уточните приложения, требования к устройству и правила использования чужой музыки и изображений. Обсуждение монетизации в названии не следует считать обещанием будущего заработка.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 298,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/298",
+    "pricingSourceTitle": "Создание видеоконтента для детей: от идеи до монетизации"
+  },
+  {
+    "id": "rostelecom-lyceum-2e4615d0a4",
+    "title": "Блогинг для детей",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "bloging",
+    "tags": [
+      "bloging"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 5940,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Блогинг: курс для детей; currentPrice=5940",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/299"
+    },
+    "offer": null,
+    "modules": [
+      "Тема и аудитория",
+      "План публикаций"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-bloging-kurs-dlya-detey",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e348c9572582ba4bf70d0550d90c831c4c9b1c17b4f37f5bdfbd533d475cfd7f",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "На программе блогинга Лицея ребёнок разбирает идею канала, подачу материала и организацию публикаций. Курс стоит выбирать по желанию создавать контент, а не ради гарантии подписчиков. Перед покупкой согласуйте платформы, возрастные правила регистрации и участие родителя. Уточните, можно ли выполнять учебный проект без открытой публикации личных данных.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 299,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/299",
+    "pricingSourceTitle": "Блогинг: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-b5ee7742b7",
+    "title": "Unity: создание игр",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "unity",
+    "tags": [
+      "unity",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 9540,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание игр на Unity: курс для детей; currentPrice=9540",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/300"
+    },
+    "offer": null,
+    "modules": [
+      "Игровая сцена",
+      "Работающий прототип"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-igr-na-unity-kurs-dlya-detey",
+    "sourceTitle": "Создание игр на Unity: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "9446f11f7a3c02852363e69f0643889c653d4c5d465097d7a48c70e2c8844cb7",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Начальная программа Unity в Лицее знакомит с созданием игрового проекта и инструментами движка. Для прохождения понадобится компьютер с подходящими характеристиками и возможность установить среду. Уточните требования к коду и отличие этого маршрута от продвинутого. Попросите показать первую самостоятельную задачу и объяснить, как проверяют понимание игровых правил.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 300,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/300",
+    "pricingSourceTitle": "Создание игр на Unity: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-31b0cf9615",
+    "title": "Веб-дизайн для детей",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "dizayn",
+    "tags": [
+      "dizayn",
+      "web-razrabotka"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Веб-дизайн для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/301"
+    },
+    "offer": null,
+    "modules": [
+      "Макет страницы",
+      "Визуальная иерархия"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-veb-dizayn-dlya-detey",
+    "sourceTitle": "Веб-дизайн для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "8659b385f27f0fb486fba308d34a38a97e67d193a97f40697259c47d02012235",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Веб-дизайн Лицея посвящён проектированию понятного интерфейса и оформлению страницы. Этот маршрут полезно отличать от создания сайта в конструкторе и написания кода: результатом может быть именно макет. До оплаты уточните редактор, способы передачи работы и объём обратной связи. Посмотрите, насколько ребёнку интересно объяснять расположение элементов и выбор визуальных решений.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 301,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/301",
+    "pricingSourceTitle": "Веб-дизайн для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-1981bf0cdb",
+    "title": "Основы нейросетей",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Основы нейросетей: курс для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/302"
+    },
+    "offer": null,
+    "modules": [
+      "Постановка запроса",
+      "Проверка результата"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-osnovy-neyrosetey-dlya-detey",
+    "sourceTitle": "Основы нейросетей: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "091ca0ea6cbfcc212aa383419dd8356e9d1408a116e514fa6cee2264b7fd75b4",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Вводная видеопрограмма Лицея знакомит с применением нейросетей в собственных заданиях. При выборе важно понять, какие сервисы доступны ребёнку и кто помогает проверять сгенерированный результат. Уточните возрастные ограничения учётных записей, дополнительные подписки и участие взрослого. Хорошее первое задание предполагает объяснение выбора, а не только получение эффектной картинки.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 302,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/302",
+    "pricingSourceTitle": "Основы нейросетей: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-2aefafeef4",
+    "title": "Нейросети: создание кода",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 5940,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Нейросети для детей: создание кода; currentPrice=5940",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/303"
+    },
+    "offer": null,
+    "modules": [
+      "ИИ-помощник",
+      "Разбор программы"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-neyroseti-dlya-detey-sozdanie-koda",
+    "sourceTitle": "Нейросети для детей: создание кода",
+    "checkedAt": "2026-10-19",
+    "contentHash": "323e0cfe464f917cdf9700c02719b25f2601e24ef60c89ae9abb60d9e9d98cff",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "На этой программе Лицея нейросети применяют к написанию и улучшению кода. В описании предусмотрен собственный программный проект; предварительные навыки следует уточнить до покупки. Попросите показать, как ученик проверяет полученную программу, объясняет её работу и исправляет ошибку. Генерация готового ответа сама по себе не подтверждает понимания алгоритма.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 303,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/303",
+    "pricingSourceTitle": "Нейросети для детей: создание кода"
+  },
+  {
+    "id": "rostelecom-lyceum-dca9592205",
+    "title": "Робототехника в цифровой среде",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "robototehnika",
+    "tags": [
+      "robototehnika",
+      "3d-modelirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Онлайн-курс по робототехнике для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/304"
+    },
+    "offer": null,
+    "modules": [
+      "Электронная схема",
+      "Команды устройству"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-onlayn-kurs-po-robototehnike-dlya-detey",
+    "sourceTitle": "Блогинг: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "d810e44de5a80cc596533ddb27c8c1eaedd0209f83837e9d06c2d62621c891bb",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Маршрут Лицея знакомит с моделированием и управлением электронным проектом. На странице есть работа со схемой в симуляторе; не следует заранее покупать физический набор без согласования. Уточните список программ, используемые компоненты и формат итоговой работы. Курс может подойти ребёнку, которому интересно связывать устройство модели с командами и наблюдать результат.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 304,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/304",
+    "pricingSourceTitle": "Онлайн-курс по робототехнике для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-e866b4fd7f",
+    "title": "Игры с помощью нейросетей",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание игр с помощью нейросетей: курс для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/305"
+    },
+    "offer": null,
+    "modules": [
+      "Идея игры",
+      "Код и графика"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-igr-s-pomoschyu-neyrosetey",
+    "sourceTitle": "Создание игр с помощью нейросетей: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "33130f9bfc4872ee4f6e4df558d88e282ca6f7e489ba60d4fd7b01485322c90d",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "В Лицее есть отдельная программа создания игры с применением нейросетей. Она объединяет работу над правилами, кодом и визуальными материалами. До покупки уточните инструменты, необходимость платных подписок и навыки, которые ученик должен иметь на старте. Попросите объяснить, как преподавание помогает проверять механику игры и самостоятельно менять её поведение.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 305,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/305",
+    "pricingSourceTitle": "Создание игр с помощью нейросетей: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-5ffd400ea7",
+    "title": "Основы дизайна: бесплатный курс",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "dizayn",
+    "tags": [
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Бесплатный курс по основам дизайна для детей; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/306"
+    },
+    "offer": null,
+    "modules": [
+      "Цвет и текст",
+      "Собственный коллаж"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-po-osnovam-dizayna-dlya-detey",
+    "sourceTitle": "Бесплатный курс по основам дизайна для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "fb248c66a8144e57484bbfd585a2dbb12b3ba09b8686aa07603863ab79c057c7",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатное знакомство с дизайном в Лицее предлагает работу с цветом, текстом и композицией. Итоговый коллаж позволяет попробовать визуальную задачу перед более длинным обучением. Уточните используемый редактор и возможность отправить работу на разбор. Такой короткий продукт следует сравнивать с другими вводными курсами, а не с полной многоэтапной профессиональной программой.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 306,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/306",
+    "pricingSourceTitle": "Бесплатный курс по основам дизайна для детей",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/306",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-feb9a0aec3",
+    "title": "Мультипликация: персонаж и ролик",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "animaciya",
+    "tags": [
+      "animaciya",
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Мультипликация: курс для детей; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/307"
+    },
+    "offer": null,
+    "modules": [
+      "Персонаж и фон",
+      "Анимация и монтаж"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-multiplikaciya-dlya-detey",
+    "sourceTitle": "Мультипликация: курс для детей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "8e981be2256966e6963e17d7309d3a2f9628b8a7356ede24a6e6c925cf8a1fc5",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Детская мультипликация Лицея проходит путь от замысла персонажа и окружения к движению и сборке ролика. Программа подойдёт любителю рисованных историй, готовому работать над последовательностью кадров. До оплаты проверьте редакторы, поддержку графического планшета и способ проверки проекта. Уточните, сколько времени требуется для самостоятельной работы между видеоуроками.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 307,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/307",
+    "pricingSourceTitle": "Мультипликация: курс для детей"
+  },
+  {
+    "id": "rostelecom-lyceum-b3b783da01",
+    "title": "Python с нуля",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "python",
+    "tags": [
+      "python",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 9540,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Программирование на Python для детей с нуля; currentPrice=9540",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/308"
+    },
+    "offer": null,
+    "modules": [
+      "Базовые конструкции",
+      "Первое приложение"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-programmirovanie-na-python-dlya-detey-s-nulya",
+    "sourceTitle": "Программирование на Python для детей с нуля",
+    "checkedAt": "2026-10-19",
+    "contentHash": "d216bcfeadb01d0c3932a938bf4def60d488277ae2346c0f96ee34fa7932ba12",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Начальная программа Python Лицея предназначена для знакомства с языком и создания первых приложений. В описании есть применение кода в собственном проекте, включая работу над цифровой копилкой. До начала уточните программу установки и возможность получить помощь по ошибкам. Не переносите условия продвинутого Python на этот маршрут: входная подготовка и объём отличаются.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 308,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/308",
+    "pricingSourceTitle": "Программирование на Python для детей с нуля"
+  },
+  {
+    "id": "rostelecom-lyceum-66530da39f",
+    "title": "Python: продвинутый маршрут",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "python",
+    "tags": [
+      "python",
+      "web-razrabotka",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 8340,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Программирование на Python для детей: продвинутый курс; currentPrice=8340",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/347"
+    },
+    "offer": null,
+    "modules": [
+      "Веб и API",
+      "Базы данных"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-programmirovanie-na-python-dlya-detey-prodvinutyy-kurs",
+    "sourceTitle": "Программирование на Python для детей: продвинутый курс",
+    "checkedAt": "2026-10-19",
+    "contentHash": "9c3425cc6528e01d769deb688f6d225e43c9e2ff63a04a2d8ea86cef70820fcc",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Продвинутый Python Лицея адресован ученикам, уже знакомым с базовыми конструкциями языка. В описании есть веб-приложения, боты, работа с данными и API. До оплаты покажите пример собственного кода и проверьте входные требования с организатором. Количество видео и практических работ на странице обозначено по-разному; согласуйте актуальный состав программы отдельно.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 347,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/347",
+    "pricingSourceTitle": "Программирование на Python для детей: продвинутый курс"
+  },
+  {
+    "id": "rostelecom-lyceum-cd04f2f443",
+    "title": "Цифровая мастерская: первый проект",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt",
+      "programmirovanie",
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 0,
+      "unit": "курс",
+      "from": false,
+      "condition": "Бесплатная программа после регистрации; ознакомительный курс не включает платное продолжение",
+      "evidence": "Публичный каталог: Цифровая мастерская: твой первый проект ; currentPrice=0",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/348"
+    },
+    "offer": null,
+    "modules": [
+      "Проба цифровых направлений",
+      "Учебный проект"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/cifrovaya-masterskaya-tvoy-pervyy-proekt",
+    "sourceTitle": "Цифровая мастерская: твой первый проект",
+    "checkedAt": "2026-10-19",
+    "contentHash": "b6bf45531b2fd5583acabe7ba68b003bf86a0e0da592a9a97a88d6709de48aad",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Бесплатная цифровая мастерская Лицея предлагает попробовать несколько направлений и сделать первые небольшие проекты. Среди примеров — изображение с помощью ИИ, игра, бот и концепция персонажа. Это способ познакомиться с разными задачами перед выбором длинного курса. Уточните необходимые сервисы, ограничения регистрации и допустимую помощь взрослого при выполнении работы.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 348,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/348",
+    "pricingSourceTitle": "Цифровая мастерская: твой первый проект",
+    "freeAccessEvidence": {
+      "url": "https://lc.rt.ru/backend/api/v2/products/348",
+      "basis": "Публичный продукт помечен free, currentPrice=0; самостоятельная бесплатная программа, а не обещание бесплатного платного продолжения",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "rostelecom-lyceum-bd1c3596e3",
+    "title": "Unity: продвинутая разработка игр",
+    "brandId": "rostelecom-lyceum",
+    "brand": "Лицей Ростелеком",
+    "category": "unity",
+    "tags": [
+      "unity",
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 9540,
+      "unit": "курс",
+      "from": false,
+      "condition": "Полная цена отдельной видеопрограммы в каталоге Лицея; состав и срок доступа уточнить до оплаты",
+      "evidence": "Публичный каталог: Создание игр на Unity для детей: продвинутый курс; currentPrice=9540",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://lc.rt.ru/backend/api/v2/products/359"
+    },
+    "offer": null,
+    "modules": [
+      "Мобильная игра",
+      "Совместная игра"
+    ],
+    "sourceUrl": "https://lc.rt.ru/l/programm/video-course-sozdanie-igr-na-unity-dlya-detey-prodvinutyy-kurs",
+    "sourceTitle": "Создание игр на Unity для детей: продвинутый курс",
+    "checkedAt": "2026-10-19",
+    "contentHash": "0c4a2651cef860442da61a31b341d5d9cf7a82b6aa8f0633cdcb860200558ee9",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Продвинутый Unity Лицея развивает навыки создания игры и работы с более сложными механиками, включая мобильные проекты. Этот маршрут не следует выбирать только по интересу к готовым играм: сначала проверьте опыт в движке и коде. Обсудите публикацию, требования к аккаунтам и итоговый проект. Подробный состав видео и практики подтвердите перед оплатой.",
+    "editorialCheckedAt": "2026-10-19",
+    "pricingSourceType": "rostelecom-product",
+    "pricingProductId": 359,
+    "pricingSourceUrl": "https://lc.rt.ru/backend/api/v2/products/359",
+    "pricingSourceTitle": "Создание игр на Unity для детей: продвинутый курс"
+  },
+  {
+    "id": "interneturok-307a0c25ac",
+    "title": "Библиотека видеоуроков: общая подписка 1–11 классов",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety",
+      "matematika",
+      "informatika",
+      "fizika",
+      "biologiya",
+      "geografiya",
+      "himiya",
+      "russkiy",
+      "chtenie",
+      "literatura",
+      "angliyskiy",
+      "obshchestvoznanie",
+      "istoriya",
+      "risovanie"
+    ],
+    "ageRange": null,
+    "grade": "1–11 класс",
+    "format": "Видеоуроки, самостоятельно",
+    "online": true,
+    "price": {
+      "amount": 400,
+      "unit": "мес",
+      "from": false,
+      "condition": "Единый абонемент на 30 дней на библиотеку всех классов и предметов; это не цена одного предмета",
+      "evidence": "Абонемент даёт доступ к видеоурокам, интерактивным тестам и тренажёрам; возможность обсудить непонятный вопрос с учителем 400 / мес. Оплатить",
+      "checkedAt": "2026-10-19",
+      "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/biblioteka_videourokov/"
+    },
+    "offer": null,
+    "modules": [
+      "Видео и конспекты",
+      "Тесты и самостоятельная практика"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/biblioteka_videourokov/",
+    "sourceTitle": "Библиотека видеоуроков",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e622936f45aff5426c2b5719fa38e0635f5d31b1333cb86705ee0393001c2484",
+    "active": true,
+    "facts": [
+      [
+        "Состав",
+        "Несколько школьных предметов по общему абонементу"
+      ],
+      [
+        "Обратная связь",
+        "Вопросы к материалам; не личные уроки по видеосвязи"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Библиотека ИнтернетУрока объединяет предметные видео, конспекты, тесты и тренажёры для самостоятельного повторения. В каталоге подтверждены конкретные классы по предметным спискам: диапазоны различаются, особенно у английского и ИЗО. Абонемент единый на все доступные материалы, а не на один предмет. Бесплатный просмотр части материалов отличается от полного функционала подписки. Личные встречи с репетитором и зачисление в домашнюю школу оплачиваются как другие продукты.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "schoolSubjects": [
+      "matematika",
+      "algebra",
+      "geometriya",
+      "informatika",
+      "fizika",
+      "okruzhayushchiy-mir",
+      "biologiya",
+      "geografiya",
+      "himiya",
+      "russkiy",
+      "literaturnoe-chtenie",
+      "literatura",
+      "angliyskiy",
+      "obshchestvoznanie",
+      "istoriya",
+      "izo"
+    ],
+    "learningGoal": "school",
+    "gradeEvidence": "Проверены предметные списки и ссылки классов: https://interneturok.ru/h/biblioteka/algebra/10-klass, https://interneturok.ru/h/biblioteka/algebra/11-klass, https://interneturok.ru/h/biblioteka/algebra/7-klass, https://interneturok.ru/h/biblioteka/algebra/8-klass, https://interneturok.ru/h/biblioteka/algebra/9-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/10-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/2-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/3-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/4-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/5-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/6-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/7-klass, https://interneturok.ru/h/biblioteka/angliiskii-iazyk/9-klass, https://interneturok.ru/h/biblioteka/biologiia/10-klass, https://interneturok.ru/h/biblioteka/biologiia/11-klass, https://interneturok.ru/h/biblioteka/biologiia/5-klass, https://interneturok.ru/h/biblioteka/biologiia/6-klass, https://interneturok.ru/h/biblioteka/biologiia/7-klass, https://interneturok.ru/h/biblioteka/biologiia/8-klass, https://interneturok.ru/h/biblioteka/biologiia/9-klass, https://interneturok.ru/h/biblioteka/fizika/10-klass, https://interneturok.ru/h/biblioteka/fizika/11-klass, https://interneturok.ru/h/biblioteka/fizika/7-klass, https://interneturok.ru/h/biblioteka/fizika/8-klass, https://interneturok.ru/h/biblioteka/fizika/9-klass, https://interneturok.ru/h/biblioteka/geografiia/10-klass, https://interneturok.ru/h/biblioteka/geografiia/11-klass, https://interneturok.ru/h/biblioteka/geografiia/5-klass, https://interneturok.ru/h/biblioteka/geografiia/6-klass, https://interneturok.ru/h/biblioteka/geografiia/7-klass, https://interneturok.ru/h/biblioteka/geografiia/8-klass, https://interneturok.ru/h/biblioteka/geografiia/9-klass, https://interneturok.ru/h/biblioteka/geometriia/10-klass, https://interneturok.ru/h/biblioteka/geometriia/11-klass, https://interneturok.ru/h/biblioteka/geometriia/7-klass, https://interneturok.ru/h/biblioteka/geometriia/8-klass, https://interneturok.ru/h/biblioteka/geometriia/9-klass, https://interneturok.ru/h/biblioteka/informatika/5-klass, https://interneturok.ru/h/biblioteka/informatika/6-klass, https://interneturok.ru/h/biblioteka/informatika/7-klass, https://interneturok.ru/h/biblioteka/informatika/8-klass, https://interneturok.ru/h/biblioteka/informatika/9-klass, https://interneturok.ru/h/biblioteka/istoriia/10-klass, https://interneturok.ru/h/biblioteka/istoriia/11-klass, https://interneturok.ru/h/biblioteka/istoriia/5-klass, https://interneturok.ru/h/biblioteka/istoriia/6-klass, https://interneturok.ru/h/biblioteka/istoriia/7-klass, https://interneturok.ru/h/biblioteka/istoriia/8-klass, https://interneturok.ru/h/biblioteka/istoriia/9-klass, https://interneturok.ru/h/biblioteka/izo/3-klass, https://interneturok.ru/h/biblioteka/izo/6-klass, https://interneturok.ru/h/biblioteka/khimiia/10-klass, https://interneturok.ru/h/biblioteka/khimiia/11-klass, https://interneturok.ru/h/biblioteka/khimiia/8-klass, https://interneturok.ru/h/biblioteka/khimiia/9-klass, https://interneturok.ru/h/biblioteka/literatura/10-klass, https://interneturok.ru/h/biblioteka/literatura/11-klass, https://interneturok.ru/h/biblioteka/literatura/5-klass, https://interneturok.ru/h/biblioteka/literatura/6-klass, https://interneturok.ru/h/biblioteka/literatura/7-klass, https://interneturok.ru/h/biblioteka/literatura/8-klass, https://interneturok.ru/h/biblioteka/literatura/9-klass, https://interneturok.ru/h/biblioteka/literaturnoe-chtenie/1-klass, https://interneturok.ru/h/biblioteka/literaturnoe-chtenie/2-klass, https://interneturok.ru/h/biblioteka/literaturnoe-chtenie/3-klass, https://interneturok.ru/h/biblioteka/literaturnoe-chtenie/4-klass, https://interneturok.ru/h/biblioteka/matematika/1-klass, https://interneturok.ru/h/biblioteka/matematika/2-klass, https://interneturok.ru/h/biblioteka/matematika/3-klass, https://interneturok.ru/h/biblioteka/matematika/4-klass, https://interneturok.ru/h/biblioteka/matematika/5-klass, https://interneturok.ru/h/biblioteka/matematika/6-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/10-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/11-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/6-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/7-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/8-klass, https://interneturok.ru/h/biblioteka/obshchestvoznanie/9-klass, https://interneturok.ru/h/biblioteka/okruzhaiushchii-mir/1-klass, https://interneturok.ru/h/biblioteka/okruzhaiushchii-mir/2-klass, https://interneturok.ru/h/biblioteka/okruzhaiushchii-mir/3-klass, https://interneturok.ru/h/biblioteka/okruzhaiushchii-mir/4-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/1-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/10-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/11-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/2-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/3-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/4-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/5-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/6-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/7-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/8-klass, https://interneturok.ru/h/biblioteka/russkii-iazyk/9-klass",
+    "schoolEvidence": {
+      "url": "https://interneturok.ru/kursy_i_uslugi/biblioteka_videourokov/",
+      "basis": "Проверены самостоятельные планы указанных классов; цель — текущая школьная математика",
+      "checkedAt": "2026-10-19"
+    },
+    "schoolSubjectGrades": {
+      "matematika": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "algebra": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "geometriya": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "informatika": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "fizika": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "okruzhayushchiy-mir": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "biologiya": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "geografiya": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "himiya": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "russkiy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "literaturnoe-chtenie": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literatura": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "angliyskiy": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "obshchestvoznanie": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "istoriya": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "izo": [
+        3,
+        6
+      ]
+    },
+    "pricingSourceType": "interneturok-library",
+    "pricingSourceUrl": "https://interneturok.ru/kursy_i_uslugi/biblioteka_videourokov/",
+    "pricingSourceTitle": "Библиотека видеоуроков"
+  },
+  {
+    "id": "interneturok-adb5b474d8",
+    "title": "Английский для дошкольников",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "angliyskiy",
+    "tags": [
+      "angliyskiy",
+      "podgotovka-k-shkole"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Слова и простые фразы",
+      "Игровое общение"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/doshkola_angliyskiy_yazyk/",
+    "sourceTitle": "Онлайн-курсы английского для дошкольников",
+    "checkedAt": "2026-10-19",
+    "contentHash": "1ed9cb2d7a04027e7815597215cf613efc477c66d2909d69bffd6192f1ca041c",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Дошкольный английский ИнтернетУрока знакомит ребёнка с языком через игровые ситуации и разговорные задания. Возможны индивидуальные встречи и мини-группы: уточните выбранный формат и исходный уровень. На странице есть абонементы на разное число занятий; цена одного пакета не равна всему маршруту. До записи обсудите длительность урока и участие взрослого.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-0c6c748f1a",
+    "title": "Обучение чтению для дошкольников",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "chtenie",
+    "tags": [
+      "chtenie",
+      "podgotovka-k-shkole"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Буквы и слоги",
+      "Короткие тексты"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/doshkola_chtenie/",
+    "sourceTitle": "Обучение чтению онлайн для дошкольников с нуля",
+    "checkedAt": "2026-10-19",
+    "contentHash": "df8069bc20cdd68ef6998582770b5effc6b8ad1a6544a5456b59703e3759230f",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "ИнтернетУрок предлагает дошкольникам последовательно знакомиться с буквами, объединять их в слоги и переходить к чтению. На занятиях используют игровые и творческие задания; дополнительные материалы предназначены для повторения дома. Перед покупкой определите, что ребёнок уже читает самостоятельно. Уточните нагрузку, возраст поступления и роль родителя; это живые занятия, отдельные от библиотечной подписки.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-9b813ac8d7",
+    "title": "Дошкольная математика и логика",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "matematika",
+    "tags": [
+      "matematika",
+      "logika",
+      "podgotovka-k-shkole"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Числа и счёт",
+      "Логические задачи"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/doshkola_matematika/",
+    "sourceTitle": "Подготовка к школе по математике онлайн",
+    "checkedAt": "2026-10-19",
+    "contentHash": "a0a4514dce8bc17f853a68558152c1ec7de304b6675762388dbcbe1ebb50240f",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Дошкольная математика ИнтернетУрока знакомит с числами, рассуждением и решением понятных ребёнку задач. Игровой формат помогает обсуждать действия и искать закономерности. До начала уточните уровень счёта и возможность работать с учебными материалами дома. Абонемент относится к конкретному числу встреч; индивидуальный план и частоту занятий согласуйте с педагогом отдельно.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-56c63d1728",
+    "title": "Логопед для детей 5–8 лет",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "logoped",
+    "tags": [
+      "logoped"
+    ],
+    "ageRange": [
+      5,
+      8
+    ],
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Речевая диагностика",
+      "Личные упражнения"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/logoped/",
+    "sourceTitle": "Занятия с логопедом онлайн для детей 5–8 лет",
+    "checkedAt": "2026-10-19",
+    "contentHash": "fd4b1e0e7951ed9c848733f33ec35de2087b7864d103b71f3756da39f7dfee5b",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "На собственной странице ИнтернетУрока логопедические занятия адресованы детям 5–8 лет. Встречи проходят дистанционно и подбираются под речевую задачу ребёнка. Возраст в общем меню отличается, поэтому для записи лучше ориентироваться на описание выбранной программы и обсуждение со специалистом. Уточните участие взрослого, домашние упражнения и способ оценки изменений; длительность курса индивидуальна.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-bebfea2578",
+    "title": "Развивающие занятия для детей 4–5 лет",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "logika",
+    "tags": [
+      "logika",
+      "podgotovka-k-shkole"
+    ],
+    "ageRange": [
+      4,
+      5
+    ],
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 17472,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 16 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 16 занятий 1 092 ₽ за один урок 17 472 Оплатить",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Игровые задания",
+      "Внимание и общение"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/doshkola_4_5_let/",
+    "sourceTitle": "Онлайн-занятия для детей 4–5 лет",
+    "checkedAt": "2026-10-19",
+    "contentHash": "576fea502fd678b4d8202bc97af3730da03e4be4e0f410b2dc14338951dd4838",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Дошкольные развивающие занятия ИнтернетУрока рассчитаны на детей 4–5 лет. Ребёнок знакомится с учебными задачами через игру и взаимодействие с педагогом, а взрослый помогает организовать место дома. На странице отдельно указаны ознакомительная встреча и абонемент. Перед оплатой посмотрите пример упражнения, согласуйте продолжительность и убедитесь, что ребёнку подходит видеосвязь.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-5d782ade61",
+    "title": "Эмоциональная подготовка к школе",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "emocionalnyy-intellekt",
+    "tags": [
+      "emocionalnyy-intellekt",
+      "podgotovka-k-shkole",
+      "soft-skills"
+    ],
+    "ageRange": [
+      6,
+      7
+    ],
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Знакомство и общение",
+      "Готовность слышать других"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/emocionalnaya_podgotovka_k_shkole/",
+    "sourceTitle": "Эмоциональная подготовка к школе для детей 6–7 лет",
+    "checkedAt": "2026-10-19",
+    "contentHash": "2583e9f9e1342f6bcd9ae2a095d143b1332c347dd68296795a8af2881ea54b3d",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Программа ИнтернетУрока для детей 6–7 лет посвящена общению, отношению к будущей школе и работе с собственными желаниями. В заданиях ребёнок пробует рассказывать о себе и воспринимать обратную связь. До записи обсудите конкретные ситуации, которые вызывают трудности, и участие родителя. Это образовательная подготовка, а не обещание одинаковой адаптации всех будущих первоклассников.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-9572427bec",
+    "title": "Русский язык для детей-билингвов",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "russkiy",
+    "tags": [
+      "russkiy",
+      "podgotovka-k-shkole"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Речь в двухъязычной среде",
+      "Подготовка к русскоязычной учёбе"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/doshkola_za_rubezhom/",
+    "sourceTitle": "Изучение русского языка для детей за границей",
+    "checkedAt": "2026-10-19",
+    "contentHash": "8375d42bf7556804a16dbfbd741407d43e5c7d9b194967729333e34d7c237124",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "ИнтернетУрок предлагает русскоязычные занятия детям, которые растут в другой языковой среде. В программе важны общение, словарный запас и сохранение интереса к языку; школьную задачу нужно согласовать отдельно. Сообщите педагогу, как ребёнок понимает речь, читает и отвечает по-русски. До оплаты уточните возраст, часовой пояс и объём работы между встречами.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-e7e4599e7f",
+    "title": "Школьные занятия в прямом эфире",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Объяснение учителя",
+      "Вопросы и общие задания"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/shkola_v_efire/",
+    "sourceTitle": "Школа • в эфире",
+    "checkedAt": "2026-10-19",
+    "contentHash": "74a4a4e7978fe89c5e1f955e913c4556745efc297745a600df2115ae21cf0bec",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Школа в эфире» ИнтернетУрока предполагает онлайн-встречи с преподавателем в реальном времени. Ученик слушает объяснение, задаёт вопросы в чате и выполняет задания вместе с другими участниками. Этот формат отличается от самостоятельного просмотра библиотечных записей. Уточните доступные классы, расписание, предметы и возможность посмотреть пропущенную встречу до покупки.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-4ee9b26d4f",
+    "title": "Школа лайт: учебный процесс без зачисления",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Школьные материалы",
+      "Проверка домашних работ"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/shkola_layt/",
+    "sourceTitle": "Школа лайт",
+    "checkedAt": "2026-10-19",
+    "contentHash": "bf29fd1688da8680e9a8ca8bb6c82bac982d76ab8d758158347874a3ee9757ea",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Школа лайт» ИнтернетУрока предлагает школьный учебный процесс без зачисления в домашнюю школу. В описании есть видеоуроки, тесты, домашние задания и обратная связь учителей. Формат отличается от базового библиотечного абонемента объёмом сопровождения. До записи уточните класс, доступные предметы, сроки проверки и состав тарифа. Официальное обучение и аттестации при необходимости согласуются отдельно.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-c5753ef7f3",
+    "title": "Наставник по организации онлайн-учёбы",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "soft-skills",
+    "tags": [
+      "soft-skills"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Учебный план",
+      "Контроль сроков"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/nastavniki/",
+    "sourceTitle": "Наставники",
+    "checkedAt": "2026-10-19",
+    "contentHash": "c349d2422b6e4dcf5d9e5c6019947474dbe8832ec4de76c82398665545c102b0",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Наставник ИнтернетУрока помогает организовать работу в домашней онлайн-школе: следить за заданиями, планировать время и адаптироваться к формату. Это сопровождение учебного процесса, а не репетиторство по каждому предмету. Уточните, для каких учеников услуга доступна, как общаются с семьёй и какие сроки контролируют. Предметные объяснения и личные уроки следует обсуждать отдельно.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-af026da28d",
+    "title": "Индивидуальные занятия с репетитором",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Диагностика темы",
+      "Личный план занятий"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/online_repetitor/",
+    "sourceTitle": "Онлайн-занятия с репетитором для школьников",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e81bac888427bedd054b9ff536bc6f087226d14f2b1392aa76521d2b11f2de0e",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "ИнтернетУрок предлагает личные онлайн-встречи с репетитором для школьных задач. Преподаватель определяет запрос и подбирает способы закрепления материала. На странице доступны разные абонементы; до оплаты выберите предмет, класс и удобное время. Не считайте общий пакет одинаковой программой по всем дисциплинам: цели, учебник и количество встреч согласуются для конкретного ученика.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-eddec608e8",
+    "title": "Помощь с домашними заданиями в начальной школе",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 9600,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 9 600 1 200 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Разбор условия",
+      "Самостоятельное выполнение"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/pomoshch_s_domashnimi_zadaniyami/",
+    "sourceTitle": "Репетитор по ДЗ в начальной школе",
+    "checkedAt": "2026-10-19",
+    "contentHash": "6b398df8f7566edb5c3258c9f5a4c2f32f32c2c2c4d21136b631e40ddb5560ef",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Индивидуальная помощь ИнтернетУрока адресована начальной школе: педагог разбирает домашние задания вместе с учеником и помогает понять ход решения. До записи покажите учебник, расписание и обычный объём работы ребёнка. Уточните частоту встреч и предметы, доступные в выбранном пакете. Цель формата — постепенная самостоятельность, поэтому выполнение работы вместо ученика не предполагается.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-dacd9acbb0",
+    "title": "Подготовка к ВПР и контрольным",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": {
+      "amount": 19760,
+      "unit": "курс",
+      "from": false,
+      "condition": "Абонемент на 8 занятий выбранного направления; не весь годовой маршрут",
+      "evidence": "Абонемент на 8 занятий 19 760 2 470 / 1 занятие",
+      "checkedAt": "2026-10-19"
+    },
+    "offer": null,
+    "modules": [
+      "Типовые задания",
+      "Разбор ошибок"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/repetitor_vpr_i_kontrolnye/",
+    "sourceTitle": "Репетитор по ВПР — курсы по подготовке к проверочным работам",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e58bb3fdca4fcb08ba06cb3fec3d6ba71ec57b86140fd7232b8b58d443cd407b",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Занятия ИнтернетУрока по ВПР и контрольным помогают разобрать проверяемые темы и типовые задачи. На первой встрече преподаватель оценивает знания и обсуждает план. Уточните предмет, класс, дату работы и актуальный формат задания. Подготовка к школьной проверочной не равна экзаменационному курсу ЕГЭ или ОГЭ; число уроков и состав абонемента выбирают отдельно.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-7cf9c0f854",
+    "title": "Углублённый физмат для 8–11 классов",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "matematika",
+    "tags": [
+      "matematika",
+      "fizika",
+      "informatika",
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Сложные задачи",
+      "Предметный маршрут"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/uglublyonnye_online_kursy_8_11_klassy/",
+    "sourceTitle": "Углублённые онлайн-курсы для 8–11 классов",
+    "checkedAt": "2026-10-19",
+    "contentHash": "5f0898631b0608523d5d544c3a2a5247e8764250bd287dc42a66ed9c77d83841",
+    "active": true,
+    "facts": [
+      [
+        "Выбор направления",
+        "Математика, физика или информатика; состав тарифа согласовать отдельно"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Углублённые программы ИнтернетУрока для 8–11 классов включают отдельные направления математики, физики и информатики. Это выбор предметного маршрута, а не обещание всех дисциплин в одном тарифе. Сначала пройдите диагностику и уточните входной уровень. Расписание, число занятий и цену нужно согласовать для выбранного направления; подготовка ориентирована на более глубокое понимание, чем обычное повторение учебника.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-5aa70efb71",
+    "title": "Углублённые предметы для 5–7 классов",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "matematika",
+    "tags": [
+      "matematika",
+      "fizika",
+      "informatika",
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Математическое рассуждение",
+      "Предметные задачи"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/uglublyonnye_online_kursy_5_7_klassy/",
+    "sourceTitle": "Углублённые онлайн-курсы для 5–7 классов",
+    "checkedAt": "2026-10-19",
+    "contentHash": "2af6d2d09c72de3672ec3ce05e75b2a287631f3a40e4afe07a10dac59f6b7953",
+    "active": true,
+    "facts": [
+      [
+        "Выбор направления",
+        "Математика, физика или информатика; состав тарифа согласовать отдельно"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Курсы ИнтернетУрока для 5–7 классов предназначены детям, которым интересны более сложные задачи по математике, физике или информатике. Предмет выбирают отдельно; подготовку к ОГЭ этот маршрут не подменяет. До оплаты уточните программу нужного года, входные знания и нагрузку. Диагностика поможет определить подходящую группу и отличить развивающий интерес от необходимости закрыть базовые пробелы.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-b00d4b138b",
+    "title": "Углублённая математика для 1–4 классов",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "matematika",
+    "tags": [
+      "matematika",
+      "logika",
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "1–4 класс",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Закономерности",
+      "Нестандартные задачи"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/uglublyonnyy_kurs_matematika_1_4_klassy/",
+    "sourceTitle": "Углублённый курс математики для 1—4 классов",
+    "checkedAt": "2026-10-19",
+    "contentHash": "4e4411203108c65038eb507a378a0f3b64e9ffdb4ba1dbec06e6fa2d1ca58fbc",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Углублённая математика ИнтернетУрока для начальной школы рассчитана на интерес к задачам за пределами обычного повторения. На странице выделены ступени 1–2 и 3–4 классов, а также годовой учебный ритм. Попросите пример задания и диагностику перед выбором группы. Полную разовую оплату следует отличать от суммы ежемесячных платежей; текущий тариф подтвердите у школы.",
+    "editorialCheckedAt": "2026-10-19",
+    "learningGoal": "school",
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "schoolSubjects": [
+      "matematika"
+    ],
+    "schoolEvidence": {
+      "url": "https://interneturok.ru/kursy_i_uslugi/uglublyonnyy_kurs_matematika_1_4_klassy/",
+      "basis": "Собственная программа с уровнями 1–2 и 3–4 классов",
+      "checkedAt": "2026-10-19"
+    },
+    "gradeEvidence": "Уровни 1–2 и 3–4 классов в программе курса"
+  },
+  {
+    "id": "interneturok-1b4d88fdd5",
+    "title": "Олимпиадная подготовка по истории",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "istoriya",
+    "tags": [
+      "istoriya"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Исторические источники",
+      "Олимпиадные задания"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/podgotovka_k_olimpiade_po_istorii/",
+    "sourceTitle": "Подготовка к олимпиадам по истории",
+    "checkedAt": "2026-10-19",
+    "contentHash": "04cc0122da1978140151e5e0fd2e37cc826ce041c0e8a15d87c5de2dac250ab0",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Исторический курс ИнтернетУрока посвящён олимпиадному разбору материала и работе с заданиями повышенной сложности. Есть варианты обучения, различающиеся числом выбранных направлений и поддержкой. До покупки уточните олимпиаду, уровень ученика, тематический трек и состав пакета. Такой маршрут стоит выбирать для расширенного интереса к истории; обычную школьную программу и экзаменационную подготовку обсуждают отдельно.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-80f7bba1f0",
+    "title": "Экспресс: самостоятельная школьная программа",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "shkolnye-predmety",
+    "tags": [
+      "shkolnye-predmety"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Школьный маршрут",
+      "Свой темп работы"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/shkola_ekspress/",
+    "sourceTitle": "Экспресс",
+    "checkedAt": "2026-10-19",
+    "contentHash": "d2a92163d11b8d3997c77f88b2331b2b041e9c52850abffe4838fbc7823404f0",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Формат «Экспресс» ИнтернетУрока предлагает материалы школьной программы для самостоятельной работы в собственном темпе. Он может использоваться как дополнение к основной школе или ресурс для семейного обучения. Состав сопровождения отличается от личных уроков и расширенных школьных форматов. Перед оплатой уточните класс, задания, помощь учителей и необходимость отдельно оформлять аттестации.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-85bf643960",
+    "title": "Эмоциональный интеллект и гибкие навыки",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "emocionalnyy-intellekt",
+    "tags": [
+      "emocionalnyy-intellekt",
+      "soft-skills"
+    ],
+    "ageRange": [
+      6,
+      16
+    ],
+    "grade": "",
+    "format": "Онлайн; формат и группу уточнить",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Чувства и самооценка",
+      "Отношения и самопрезентация"
+    ],
+    "sourceUrl": "https://interneturok.ru/kursy_i_uslugi/emocionalnyy_intellekt/",
+    "sourceTitle": "Эмоциональный интеллект и софт-скиллс",
+    "checkedAt": "2026-10-19",
+    "contentHash": "5d454c00255ae5e9aea02f7301893131e3e5bfe0aa5a57d3a1f0a375529b2311",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "В программе ИнтернетУрока дети 6–16 лет обсуждают эмоции, самооценку, отношения и способы представлять себя. Возрастные группы разделены: занятия младшего школьника и подростка не должны быть одинаковыми. Уточните формат встреч, квалификацию преподавателя и характер домашних упражнений. Сначала выберите конкретную образовательную задачу, не ожидая универсального решения всех трудностей общения от одного курса.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-f03e003ef1",
+    "title": "Нейросети для учёбы и жизни",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": null,
+    "grade": "5–9 класс",
+    "format": "Практический онлайн-курс",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Запросы к нейросети",
+      "Учебный проект"
+    ],
+    "sourceUrl": "https://neuronet.interneturok.ru/",
+    "sourceTitle": "Курс по нейросетям для детей | Онлайн-школа ИнтернетУрок",
+    "checkedAt": "2026-10-19",
+    "contentHash": "e1c73543d6458e4f3bc12a363f02853f8bd17df8235953300fc58ebbc34683a0",
+    "active": true,
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "Практический курс ИнтернетУрока предназначен ученикам 5–9 классов и знакомит с применением нейросетей к текстам, изображениям и собственному проекту. В программе есть создание двумерной игры. До записи уточните используемые сервисы, ограничения учётных записей и дополнительные подписки. Бесплатный гайд на странице является отдельным материалом и не означает бесплатного полного обучения.",
+    "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "interneturok-c9fea3918d",
+    "title": "ОГЭ: подготовка в мини-группе",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "oge",
+    "tags": [
+      "oge",
+      "angliyskiy",
+      "himiya",
+      "matematika",
+      "geografiya",
+      "fizika",
+      "russkiy",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "ageRange": null,
+    "grade": "9 класс",
+    "format": "Мини-группа до 12 человек",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Экзаменационный план",
+      "Проверка работ"
+    ],
+    "sourceUrl": "https://kursy.interneturok.ru/mini_gruppy_oge",
+    "sourceTitle": "Подготовка к ОГЭ в мини-группах онлайн — до 12 человек | ИнтернетУрок",
+    "checkedAt": "2026-10-19",
+    "contentHash": "a362ab3d34d1287b96d14dd45c7852e2b0b30392225f736f4966a5239b5bd041",
+    "active": true,
+    "facts": [
+      [
+        "Выбор предмета",
+        "Согласуется при записи; программа не означает все предметы в одном индивидуальном тарифе"
+      ],
+      [
+        "Нагрузка",
+        "Одна встреча в неделю по 1,5 часа"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Мини-группы ИнтернетУрока по подготовке к ОГЭ рассчитаны на живые онлайн-встречи, домашние задания с проверкой и пробные работы. На сайте школы отдельно представлены преподаватели восьми предметных направлений. Перед записью подтвердите нужный предмет и стартовый уровень. Рекламный платёж за месяц может относиться к рассрочке полной программы; запросите итоговую сумму и не сравнивайте его с ценой всей подписки.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      9
+    ],
+    "learningGoal": "exam",
+    "examEvidence": {
+      "url": "https://kursy.interneturok.ru/",
+      "basis": "На основной странице экзамена представлены репетиторы восьми указанных предметов; формат описан отдельно",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "interneturok-62a09d8726",
+    "title": "ОГЭ: индивидуальная подготовка",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "oge",
+    "tags": [
+      "oge",
+      "angliyskiy",
+      "himiya",
+      "matematika",
+      "geografiya",
+      "fizika",
+      "russkiy",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "ageRange": null,
+    "grade": "9 класс",
+    "format": "Индивидуально онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Экзаменационный план",
+      "Проверка работ"
+    ],
+    "sourceUrl": "https://kursy.interneturok.ru/individualnye_zanyatiya_oge",
+    "sourceTitle": "Индивидуальная подготовка к ОГЭ с репетитором онлайн | ИнтернетУрок",
+    "checkedAt": "2026-10-19",
+    "contentHash": "99d537a9295fd2f2ef60c33e1d2d1abd4b371c0941dd2538e8b46de9e2fa5f7b",
+    "active": true,
+    "facts": [
+      [
+        "Выбор предмета",
+        "Согласуется при записи; программа не означает все предметы в одном индивидуальном тарифе"
+      ],
+      [
+        "Нагрузка",
+        "2–3 академических часа в неделю"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Персональная подготовка ИнтернетУрока к ОГЭ строится на индивидуальном плане, занятиях с преподавателем и разборе домашних заданий. На сайте школы отдельно представлены преподаватели восьми предметных направлений. Перед записью подтвердите нужный предмет и стартовый уровень. Рекламный платёж за месяц может относиться к рассрочке полной программы; запросите итоговую сумму и не сравнивайте его с ценой всей подписки.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      9
+    ],
+    "learningGoal": "exam",
+    "examEvidence": {
+      "url": "https://kursy.interneturok.ru/",
+      "basis": "На основной странице экзамена представлены репетиторы восьми указанных предметов; формат описан отдельно",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "interneturok-7c464a20df",
+    "title": "ЕГЭ: подготовка в мини-группе",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "ege",
+    "tags": [
+      "ege",
+      "angliyskiy",
+      "himiya",
+      "matematika",
+      "geografiya",
+      "fizika",
+      "russkiy",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "ageRange": null,
+    "grade": "11 класс",
+    "format": "Мини-группа до 12 человек",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Экзаменационный план",
+      "Проверка работ"
+    ],
+    "sourceUrl": "https://kursy.interneturok.ru/mini_gruppy_ege",
+    "sourceTitle": "Подготовка к ЕГЭ в мини-группах онлайн — до 12 человек | ИнтернетУрок",
+    "checkedAt": "2026-10-19",
+    "contentHash": "f4244b1f9de2da0ce42ac46b2c9f856ccb4f6d3c8fdb20d80132dd1f1f4f487c",
+    "active": true,
+    "facts": [
+      [
+        "Выбор предмета",
+        "Согласуется при записи; программа не означает все предметы в одном индивидуальном тарифе"
+      ],
+      [
+        "Нагрузка",
+        "Одна встреча в неделю по 1,5 часа"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Мини-группы ИнтернетУрока по подготовке к ЕГЭ рассчитаны на живые онлайн-встречи, домашние задания с проверкой и пробные работы. На сайте школы отдельно представлены преподаватели восьми предметных направлений. Перед записью подтвердите нужный предмет и стартовый уровень. Рекламный платёж за месяц может относиться к рассрочке полной программы; запросите итоговую сумму и не сравнивайте его с ценой всей подписки.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      11
+    ],
+    "learningGoal": "exam",
+    "examEvidence": {
+      "url": "https://kursy.interneturok.ru/ege",
+      "basis": "На основной странице экзамена представлены репетиторы восьми указанных предметов; формат описан отдельно",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "interneturok-75da2f9d47",
+    "title": "ЕГЭ: индивидуальная подготовка",
+    "brandId": "interneturok",
+    "brand": "ИнтернетУрок",
+    "category": "ege",
+    "tags": [
+      "ege",
+      "angliyskiy",
+      "himiya",
+      "matematika",
+      "geografiya",
+      "fizika",
+      "russkiy",
+      "informatika",
+      "obshchestvoznanie"
+    ],
+    "ageRange": null,
+    "grade": "11 класс",
+    "format": "Индивидуально онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "modules": [
+      "Экзаменационный план",
+      "Проверка работ"
+    ],
+    "sourceUrl": "https://kursy.interneturok.ru/individualnye_zanyatiya_ege",
+    "sourceTitle": "Индивидуальная подготовка к ЕГЭ с репетитором онлайн | ИнтернетУрок",
+    "checkedAt": "2026-10-19",
+    "contentHash": "90fba97588c0ed27a1a0b25112ac8715aadcb0a03214e87aabe301788b39ab3c",
+    "active": true,
+    "facts": [
+      [
+        "Выбор предмета",
+        "Согласуется при записи; программа не означает все предметы в одном индивидуальном тарифе"
+      ],
+      [
+        "Нагрузка",
+        "2–3 академических часа в неделю"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "Персональная подготовка ИнтернетУрока к ЕГЭ строится на индивидуальном плане, занятиях с преподавателем и разборе домашних заданий. На сайте школы отдельно представлены преподаватели восьми предметных направлений. Перед записью подтвердите нужный предмет и стартовый уровень. Рекламный платёж за месяц может относиться к рассрочке полной программы; запросите итоговую сумму и не сравнивайте его с ценой всей подписки.",
+    "editorialCheckedAt": "2026-10-19",
+    "grades": [
+      11
+    ],
+    "learningGoal": "exam",
+    "examEvidence": {
+      "url": "https://kursy.interneturok.ru/ege",
+      "basis": "На основной странице экзамена представлены репетиторы восьми указанных предметов; формат описан отдельно",
+      "checkedAt": "2026-10-19"
+    }
   }
 ]
