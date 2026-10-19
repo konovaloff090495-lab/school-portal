@@ -1,0 +1,113 @@
+{
+  "route": "/kursy/shkoly/algoritmika/",
+  "viewports": [
+    {
+      "breakpoint": "mobile",
+      "metrics": {
+        "viewport": "360x800",
+        "viewportMetaMissing": false,
+        "horizontalScroll": false,
+        "offenders": 0,
+        "clippedText": 0,
+        "overlaps": 1,
+        "tinyTapTargets": 15,
+        "brokenImages": 0,
+        "distortedImages": 0,
+        "overflowingMedia": 0,
+        "smallText": 15,
+        "wrappedControls": 0,
+        "placeholderText": 0,
+        "fixedOverlays": {
+          "pct": 8,
+          "bars": [
+            {
+              "el": "header#site-header",
+              "pct": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "breakpoint": "tablet",
+      "metrics": {
+        "viewport": "768x1024",
+        "viewportMetaMissing": false,
+        "horizontalScroll": false,
+        "offenders": 0,
+        "clippedText": 0,
+        "overlaps": 0,
+        "tinyTapTargets": 15,
+        "brokenImages": 0,
+        "distortedImages": 0,
+        "overflowingMedia": 0,
+        "smallText": 15,
+        "wrappedControls": 2,
+        "placeholderText": 0,
+        "fixedOverlays": {
+          "pct": 6,
+          "bars": [
+            {
+              "el": "header#site-header",
+              "pct": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "breakpoint": "laptop",
+      "metrics": {
+        "viewport": "1366x768",
+        "viewportMetaMissing": false,
+        "horizontalScroll": false,
+        "offenders": 0,
+        "clippedText": 0,
+        "overlaps": 0,
+        "tinyTapTargets": 15,
+        "brokenImages": 0,
+        "distortedImages": 0,
+        "overflowingMedia": 0,
+        "smallText": 15,
+        "wrappedControls": 2,
+        "placeholderText": 0,
+        "fixedOverlays": {
+          "pct": 8,
+          "bars": [
+            {
+              "el": "header#site-header",
+              "pct": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "breakpoint": "desktop",
+      "metrics": {
+        "viewport": "1920x1080",
+        "viewportMetaMissing": false,
+        "horizontalScroll": false,
+        "offenders": 0,
+        "clippedText": 0,
+        "overlaps": 0,
+        "tinyTapTargets": 15,
+        "brokenImages": 0,
+        "distortedImages": 0,
+        "overflowingMedia": 0,
+        "smallText": 15,
+        "wrappedControls": 2,
+        "placeholderText": 0,
+        "fixedOverlays": {
+          "pct": 6,
+          "bars": [
+            {
+              "el": "header#site-header",
+              "pct": 6
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
