@@ -283,6 +283,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const moscowFamilyCityPages: MetadataRoute.Sitemap = Object.entries(familyGeography.moscowCities)
     .filter(([slug, city]) => slug !== 'zelenograd' && schools.some(s => s.region === 'moskva' && s.city === city.label && schoolMatchesType(s, 'semejnye')))
     .map(([slug]) => ({ url: `${BASE_URL}/shkoly/moskva/gorod/${slug}/semejnye/`, lastModified: D_FAMILY, changeFrequency: 'monthly' as const, priority: 0.65 }))
+  const spbFamilyCityPages: MetadataRoute.Sitemap = Object.entries(familyGeography.spbCities)
+    .filter(([, city]) => schools.some(s => s.region === 'sankt-peterburg' && s.city === city.label && schoolMatchesType(s, 'semejnye')))
+    .map(([slug]) => ({ url: `${BASE_URL}/shkoly/sankt-peterburg/gorod/${slug}/semejnye/`, lastModified: D_FAMILY, changeFrequency: 'monthly' as const, priority: 0.65 }))
   // Регион × профиль (роут /shkoly/[region]/profilnye/[profile]/ — единый источник region-profiles.ts)
   const regionProfilePages: MetadataRoute.Sitemap = regionSlugs.flatMap(r =>
     regionProfileIds.map(p => ({
@@ -382,7 +385,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...egeIndex, ...egeSubjectPages, ...egeTaskPages,
     ...olimpIndex, ...olimpHubPages, ...olimpClassPages, ...olimpPaperPages,
     ...shkolyTypePages, ...onlineBrandPages, ...onlineReviewPages, ...shkolyFeaturePages, ...shkolyLangPages, ...shkolyMetroPages,
-    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...moscowFamilyCityPages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
+    ...metroTypePages, ...districtTypePages, ...moCityTypePages, ...moscowFamilyCityPages, ...spbFamilyCityPages, ...cityDistrictPages, ...cityDistrictTypePages, ...regionAddressPages, ...regionRatingPages,
     ...regionProfilePages, ...langRegionPages, ...tipyProfilnyePages,
     ...regionFeaturePages, ...regionPodgotovkaPages, ...staticLandingPages,
     ...testPages,

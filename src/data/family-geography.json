@@ -107,6 +107,14 @@
     "klimovsk": {
       "label": "Климовск",
       "locative": "в Климовске"
+    },
+    "meshcherino": {
+      "label": "Мещерино",
+      "locative": "в Мещерине"
+    },
+    "pushkino": {
+      "label": "Пушкино",
+      "locative": "в Пушкино"
     }
   },
   "moscowCities": {
@@ -121,6 +129,16 @@
     "troitsk": {
       "label": "Троицк",
       "locative": "в Троицке"
+    }
+  },
+  "spbCities": {
+    "pushkin": {
+      "label": "Пушкин",
+      "locative": "в Пушкине"
+    },
+    "tyarlevo": {
+      "label": "Тярлево",
+      "locative": "в Тярлево"
     }
   }
 }

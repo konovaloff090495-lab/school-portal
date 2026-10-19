@@ -633,10 +633,12 @@ export default function CatalogClient({
 
   function resetFilters() { setFilters(resetableFilters) }
 
+  const mapSchools = useMemo(() => filtered.filter(s => !s.remoteOnly), [filtered])
+
   const mapSchool = useMemo(() => {
     if (!mapSchoolId) return null
-    return filtered.find(s => s.id === mapSchoolId) ?? null
-  }, [mapSchoolId, filtered])
+    return mapSchools.find(s => s.id === mapSchoolId) ?? null
+  }, [mapSchoolId, mapSchools])
 
   // Центры регионов для fallback-карты (без поискового запроса)
   const REGION_CENTERS: Record<string, { lon: number; lat: number; z: number }> = {
@@ -654,7 +656,7 @@ export default function CatalogClient({
 
   const mapIframeSrc = useMemo(() => {
     // Школы с координатами из нашей базы
-    const withCoords = filtered.filter(s => s.lat && s.lon)
+    const withCoords = mapSchools.filter(s => s.lat && s.lon)
 
     if (mapSchool) {
       if (mapSchool.lat && mapSchool.lon) {
@@ -695,7 +697,7 @@ export default function CatalogClient({
     // Последний fallback — поиск по названию города
     const cityName = initialCity ?? (region ? regionLabels[region] : 'Россия')
     return `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(cityName)}&z=12&lang=ru_RU`
-  }, [mapSchool, mapSchoolId, filtered, initialRegions, initialCity])
+  }, [mapSchool, mapSchoolId, mapSchools, initialRegions, initialCity])
 
   const seoText = useMemo(() => {
     const n = filtered.length
@@ -1208,7 +1210,8 @@ export default function CatalogClient({
             )
           })()}
 
-          {filtered.length > 0 && viewMode === 'map' && (
+          {viewMode === 'map' && filtered.some(s => s.remoteOnly) && <p className="my-4 text-sm text-gray-600">Дистанционные проекты показаны в списке школ; на карте — только очные площадки.</p>}
+          {mapSchools.length > 0 && viewMode === 'map' && (
             <div className="flex flex-col md:flex-row gap-4 items-start">
               <div className="w-full md:w-3/5 md:sticky md:top-24">
                 <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm" style={{ height: 520 }}>
@@ -1230,7 +1233,7 @@ export default function CatalogClient({
                 </p>
               </div>
               <div className="w-full md:w-2/5 space-y-2 max-h-[560px] overflow-y-auto pr-1">
-                {filtered.map(school => {
+                {mapSchools.map(school => {
                   const isSelected = mapSchool?.id === school.id
                   return (
                     <div

@@ -31,6 +31,9 @@ const routes = [
   ['/shkoly/moskva/gorod/moskovsky/semejnye/', 200],
   ['/shkoly/moskva/gorod/troitsk/semejnye/', 200],
   ['/shkoly/ilichevo-leningradskaya-oblast/semejnye/', 200],
+  ['/shkoly/sankt-peterburg/gorod/pushkin/semejnye/', 200],
+  ['/shkoly/moskovskaya-oblast/gorod/pushkino/semejnye/', 200],
+  ['/shkola/onlajn-shkola-sotvorchestvo/', 200],
   ['/shkola/semejnaya-shkola-rostok-moskva/', 308, '/shkoly/moskva/semejnye/'],
 ];
 try {
@@ -91,6 +94,11 @@ try {
   assert.ok(/"numberOfItems":1/.test(klimovsk), 'Klimovsk must reuse one Podolsk entity');
   const online = await (await get('/shkoly/tipy/semejnye/online/')).text();
   assert.ok(!online.includes('/shkola/semejnye-klassy-zhurukovyh-dmitrov/'), 'On-site family class misrepresented as online');
+  const remoteBody = await (await get('/shkola/onlajn-shkola-sotvorchestvo/')).text();
+  const remoteSchemas = Array.from(remoteBody.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g), m => JSON.parse(m[1]));
+  const remoteOrg = remoteSchemas.find(s => s['@type'] === 'EducationalOrganization');
+  assert.ok(remoteOrg && !('address' in remoteOrg), 'Online-only school has a geographic address');
+  assert.ok(!remoteBody.includes('/shkoly/russia-online/'), 'Online-only card has a fake regional link');
   console.log('family schools, city separation, redirects, pricing and sitemap OK');
   console.log('robots, PDF canonicals, language materials and sitemap OK');
   assert.ok(!/Could not find the module|Server Components render|MODULE_NOT_FOUND/.test(log), log.slice(-3000));

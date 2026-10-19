@@ -15,6 +15,10 @@ export default function FamilyCityNav() {
     const count = list.filter(s => s.region === 'moskva' && s.city === city.label).length
     if (count) items.push({ label: city.label, href: `/shkoly/moskva/gorod/${slug}/semejnye/`, count })
   }
+  for (const [slug, city] of Object.entries(familyGeography.spbCities)) {
+    const count = list.filter(s => s.region === 'sankt-peterburg' && s.city === city.label).length
+    if (count) items.push({ label: city.label, href: `/shkoly/sankt-peterburg/gorod/${slug}/semejnye/`, count })
+  }
   items.sort((a, b) => a.label.localeCompare(b.label, 'ru'))
   return (
     <section className="mb-8" aria-labelledby="family-cities-title">
