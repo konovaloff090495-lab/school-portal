@@ -17,6 +17,9 @@ TODAY = date.today().isoformat()
 esc = lambda value: html.escape(str(value), quote=True)
 link = lambda path, label: f'<a href="{esc(path)}">{esc(label)}</a>'
 para = lambda text: '<p>' + esc(text) + '</p>'
+# These articles use long Russian titles and comparison tables. Keep the existing
+# blog grid within the phone viewport without rebuilding the large Next bundle.
+RESPONSIVE = '<style data-course-guide>@media(max-width:767px){.post-layout>main{min-width:0}.post-layout h1{overflow-wrap:anywhere}.post-body table{max-width:100%}}</style>'
 
 # Preserve useful project tutorials at their existing URLs when adding comparisons.
 KEEP = {
@@ -50,7 +53,7 @@ def main():
             choice['courseId'] = c['id']
             picks.append((c, choice['comment']))
 
-        body = para(g['lead'])
+        body = RESPONSIVE + para(g['lead'])
         body += '<p><strong>Подборка обновлена 19 октября 2026 года.</strong> Выбирайте программу по задаче ребёнка: порядок ниже не означает места в рейтинге результатов.</p>'
         body += '<p>' + link('/kursy/' + cat + '/', 'Открыть все курсы: ' + categories[cat]['label']) + ' — сравнить программы и условия в каталоге.</p>'
         body += '<h2 id="sravnenie">Какие программы сравнить</h2>'
@@ -125,13 +128,14 @@ def main():
         hub += '</ul>'
     hub += '<h2>Как найти выгодное предложение</h2><p>Сравнивайте полную стоимость, число занятий и формат обратной связи. Бесплатное знакомство помогает проверить преподавателя, но не означает бесплатного основного курса. У скидки могут быть ограничения по пакету и сроку. Актуальные предложения и даты проверки смотрите в ' + link('/kursy/', 'каталоге курсов для детей') + '.</p>'
     hub += '<h2>Что сделать после выбора направления</h2><ol><li>Прочитайте профильную подборку и определите подходящий уровень.</li><li>Откройте внутренние карточки выбранных программ: сравните возраст, темы, формат и условия.</li><li>На карточке перейдите на страницу школы, чтобы уточнить поток и записаться.</li></ol>'
-    hub_post = dict(slug='luchshie-kursy-dlya-detej', title='Лучшие курсы для детей: подборки по 38 направлениям', excerpt='Программирование, английский, школьные предметы, творчество и развитие: все подборки курсов для детей со сравнением программ и ссылками на карточки.', category='Курсы для детей', tags=['курсы для детей','выбор курса','онлайн-курсы'], author='Редакция pro-schools.ru', authorRole='Редакция образовательного каталога', publishedAt=TODAY, readTime=8, imageAlt='Направления обучения и подборки курсов для детей', content=hub)
+    hub_new = not (BLOG / 'luchshie-kursy-dlya-detej.json').exists()
+    hub_post = dict(slug='luchshie-kursy-dlya-detej', title='Лучшие курсы для детей: подборки по 38 направлениям', excerpt='Программирование, английский, школьные предметы, творчество и развитие: все подборки курсов для детей со сравнением программ и ссылками на карточки.', category='Курсы для детей', tags=['курсы для детей','выбор курса','онлайн-курсы'], author='Редакция pro-schools.ru', authorRole='Редакция образовательного каталога', publishedAt=TODAY, readTime=8, imageAlt='Направления обучения и подборки курсов для детей', content=RESPONSIVE + hub)
     (BLOG / 'luchshie-kursy-dlya-detej.json').write_text(json.dumps(hub_post, ensure_ascii=False, indent=2) + '\n')
     (DATA / 'blog-guides.json').write_text(json.dumps(guides, ensure_ascii=False, indent=2) + '\n')
     out = ROOT / 'work/courses/blog-report.json'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    print(json.dumps({'guides': len(report), 'new': sum(p['new'] for p in report) + 1, 'updated': sum(not p['new'] for p in report), 'hub': hub_post['slug'], 'minWords': min(p['words'] for p in report), 'maxWords': max(p['words'] for p in report)}, ensure_ascii=False))
+    print(json.dumps({'guides': len(report), 'new': sum(p['new'] for p in report) + int(hub_new), 'updated': sum(not p['new'] for p in report), 'hub': hub_post['slug'], 'minWords': min(p['words'] for p in report), 'maxWords': max(p['words'] for p in report)}, ensure_ascii=False))
 
 
 if __name__ == '__main__':
