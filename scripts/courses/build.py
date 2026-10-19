@@ -269,6 +269,8 @@ if __name__=='__main__':
         if old_page not in GENERATED:old_page.unlink()
     xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE+path}</loc><lastmod>{date}</lastmod></url>' for path,date in SITEMAP)+'</urlset>'
     (OUT/'sitemap.xml').write_text(xml)
+    from article_sitemap import build as build_article_sitemap
+    build_article_sitemap(ROOT,OUT)
     manifest={'builtAt':datetime.now().isoformat(),'courses':len(COURSES),'brands':len(BRANDS),'pages':len(GENERATED),'schoolSelections':len(SCHOOL_PAGES),'schoolCourses':sum(c.get('learningGoal')=='school' for c in COURSES),'indexablePages':len(SITEMAP),'indexableCourses':sum(indexable(c) for c in COURSES),'prices':sum(bool(price(c)) for c in COURSES),'offers':sum(bool(offer(c)) for c in COURSES),'sitemap':[BASE+p for p,_ in SITEMAP]}
     (ROOT/'work/courses/build-report.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
     # Presentation layer preserves the source renderer's inventory, SEO policy and facts.

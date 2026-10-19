@@ -31,6 +31,14 @@ block='''
 '''
 if '# PROSCHOOLS_COURSES_STATIC' not in text:
     text=text.replace('    location /_next/static/ {',block+'\n    location /_next/static/ {',1)
+if '# PROSCHOOLS_COURSES_ARTICLE_SITEMAP' not in text:
+    text=text.replace('    location = /robots.txt {','''    # PROSCHOOLS_COURSES_ARTICLE_SITEMAP
+    location = /sitemap-course-articles.xml {
+        alias /var/www/school-portal/courses-current/kursy/articles-sitemap.xml;
+        default_type application/xml;
+        add_header Cache-Control "public, max-age=300, must-revalidate" always;
+    }
+    location = /robots.txt {''',1)
 if '# PROSCHOOLS_COURSES_NAV' not in text:
     text=text.replace('    location / {','''    location / {
         # PROSCHOOLS_COURSES_NAV: compatible with the native header when rebuilt.

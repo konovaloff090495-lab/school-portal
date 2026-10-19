@@ -42,6 +42,7 @@ def deploy(socket):
     if 'User-Agent:' not in robots.text:raise ValueError('Invalid current robots.txt')
     robots_text=robots.text
     if 'https://pro-schools.ru/kursy/sitemap.xml' not in robots_text:robots_text+='\nSitemap: https://pro-schools.ru/kursy/sitemap.xml\n'
+    if 'https://pro-schools.ru/sitemap-course-articles.xml' not in robots_text:robots_text+='\nSitemap: https://pro-schools.ru/sitemap-course-articles.xml\n'
     robots_path=ROOT/'work/courses/robots.txt';robots_path.write_text(robots_text)
     run(['rsync','-az','-e',rsync_ssh,str(robots_path),HOST+':'+release+'/robots.txt'])
     remote(f'cd {runtime} && COURSES_CHECK_DIR={release}/kursy .venv/bin/python scripts/courses/check.py')

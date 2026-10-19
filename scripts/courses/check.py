@@ -30,6 +30,9 @@ if len(pages)>=500:
     extra=set(expansion.get('reviewedExtraLandingIds',[]))
     assert len(pages)<=review['baselinePageCount']+len(reviewed)+len(selections)+len(extra)+1,'Unreviewed page expansion'
 sitemap={e.text for e in ET.parse(OUT/'sitemap.xml').iter() if e.tag.endswith('}loc')}
+articles={e.text for e in ET.parse(OUT/'articles-sitemap.xml').iter() if e.tag.endswith('}loc')}
+registered=json.loads((ROOT/'data/courses/article-sitemap.json').read_text())
+assert articles=={BASE+'/blog/'+r['slug']+'/' for r in registered},'Article sitemap differs from reviewed registry'
 titles={};descriptions={};seen_course_ids=set()
 for file in pages:
     relative=file.relative_to(OUT).parent.as_posix()
