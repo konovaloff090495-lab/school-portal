@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .art-code{font-size:32px;white-space:nowrap}.direction-grid a{min-width:0;overflow-wrap:anywhere}.direction-grid small{flex-shrink:0}
 @media(max-width:760px){.direction-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:clamp(30px,8vw,37px)}}
+
+.package-scroll{max-width:100%;overflow-x:auto;margin:20px 0}.package-table{border-collapse:collapse;width:100%;font-size:14px}.package-table th,.package-table td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.package-table th{background:#faf6ef}.seo-section ul{padding-left:22px;line-height:1.8}
+.detail-content>div,.detail-content>aside{min-width:0}.package-scroll{width:100%}

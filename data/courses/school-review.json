@@ -1,0 +1,2237 @@
+{
+  "reviewedAt": "2026-10-19",
+  "scope": "Verified school courses and subject/class selections based on real offers",
+  "newCourses": 169,
+  "verifiedSourcePages": [
+    {
+      "courseId": "foxford-school-ecb57aa228",
+      "sourceUrl": "https://foxford.ru/courses/17406/landing",
+      "sourceHash": "d1f8883e2c0477fbfcde45e25cafea81f7a4a170f8a43cfef47618c1457787b0",
+      "subject": "himiya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-15d5118eb9",
+      "sourceUrl": "https://foxford.ru/courses/18391/landing",
+      "sourceHash": "8c28533f5974102f9b99d3fd4c424f753178c33ee4d785240227b5b34c4fec5b",
+      "subject": "matematika",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-13a2dfc6de",
+      "sourceUrl": "https://foxford.ru/courses/17385/landing",
+      "sourceHash": "d8f359ea42580e9e09707659d1f08b9eb91600ad29af3caafd8f437fdb20a9af",
+      "subject": "russkiy",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-151df1e58f",
+      "sourceUrl": "https://foxford.ru/courses/17384/landing",
+      "sourceHash": "d830b3a82b403a9fa1a267954829edd0ba6305d15aa180b751749fb99768c7a5",
+      "subject": "russkiy",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-d7bb90b46d",
+      "sourceUrl": "https://foxford.ru/courses/17409/landing",
+      "sourceHash": "e88c1f338b5834129c7e11e1de7737b4e9f0d9496d962ba5470e42d58d31f0bc",
+      "subject": "istoriya",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8d42363093",
+      "sourceUrl": "https://foxford.ru/courses/17410/landing",
+      "sourceHash": "09ebeed72c7f7eb94a41101b61047725817b3a56d30e56bc1f6e91388a2f7ceb",
+      "subject": "istoriya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-45c30e27c4",
+      "sourceUrl": "https://foxford.ru/courses/17400/landing",
+      "sourceHash": "9ce29ff69e42c5856c5eee805f562b3190ebf6f0000644e37f0c359efe313eae",
+      "subject": "biologiya",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-5f0e2f2792",
+      "sourceUrl": "https://foxford.ru/courses/17360/landing",
+      "sourceHash": "fc86f29e06b7a6609ef682acebcb9d123fad2fd1cc4b61eb4d3be2e9f5d9e64c",
+      "subject": "matematika",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-526a6c54bc",
+      "sourceUrl": "https://foxford.ru/courses/18392/landing",
+      "sourceHash": "cbc20b3255529b77ddc1a1c2f31df39d2caa929a1562fd9ae718cefb2227de31",
+      "subject": "matematika",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8e00e34446",
+      "sourceUrl": "https://foxford.ru/courses/17403/landing",
+      "sourceHash": "ad25ccbbb366f23f4baa89a538f31006faeb0bc6015efce3312699c5fa284d24",
+      "subject": "biologiya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-5daa480f11",
+      "sourceUrl": "https://foxford.ru/courses/17361/landing",
+      "sourceHash": "741f0cd2b5beb0fba9d9c712e52ade37828127b8ea002e29c8b53a4749f6ba74",
+      "subject": "matematika",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-85716a7888",
+      "sourceUrl": "https://foxford.ru/courses/17375/landing",
+      "sourceHash": "42b60c43977d8eb35d7f01ee765f89b90f8476fa164629046bdff1944835f6e0",
+      "subject": "geografiya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-945d0bd9c1",
+      "sourceUrl": "https://foxford.ru/courses/17371/landing",
+      "sourceHash": "337af4bbf4a5ba1ed100c29375e51f8d4e39e66077b6f20a97cb1cad80cf6860",
+      "subject": "informatika",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-449ec13f1c",
+      "sourceUrl": "https://foxford.ru/courses/18390/landing",
+      "sourceHash": "40807accb70d2106da233d7d114299d3f6ed2c8fe0829e1845f89be452ca4662",
+      "subject": "matematika",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a1f0f600bf",
+      "sourceUrl": "https://foxford.ru/courses/17383/landing",
+      "sourceHash": "dbce0a85bbe3c7153fac062cb40cfa1a3ddbe9b39a4689b19a1cfe8c2b69965a",
+      "subject": "russkiy",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-72c38c3288",
+      "sourceUrl": "https://foxford.ru/courses/17412/landing",
+      "sourceHash": "f866ed70778ace37d2786e050901f23cdc75314428b9ebb732ea091a6c3d90cd",
+      "subject": "istoriya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a0f2cefdd9",
+      "sourceUrl": "https://foxford.ru/courses/18388/landing",
+      "sourceHash": "7d2726d31fb1b630075c9680083cd2c86693f318b9552dbd1c14646c4f21ef19",
+      "subject": "matematika",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-ebb5861ce6",
+      "sourceUrl": "https://foxford.ru/courses/14076/landing",
+      "sourceHash": "8f94c00d21ec38119d1f89e12d7cba9e7b1c8d55a8097cbd345f820ba81a0b62",
+      "subject": "russkiy",
+      "grades": [
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-bd53ee727f",
+      "sourceUrl": "https://foxford.ru/courses/17411/landing",
+      "sourceHash": "d287d331720a55e165c40c4facb25dfc819bcfe3840184b0b6b4b1eb510639c4",
+      "subject": "istoriya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c97f0e7271",
+      "sourceUrl": "https://foxford.ru/courses/17370/landing",
+      "sourceHash": "155d56ec7340e508f7db1ec0a8540bc2e722c51545d5a7b14ba2b2b3d9cb898a",
+      "subject": "informatika",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-37c356adfa",
+      "sourceUrl": "https://foxford.ru/courses/17402/landing",
+      "sourceHash": "678497c78747b6c60d85ffe9cc8cc7562f6d2106bb4bca1a764823d0d27cfbbd",
+      "subject": "biologiya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-6980ac8d98",
+      "sourceUrl": "https://foxford.ru/courses/17401/landing",
+      "sourceHash": "f292ebca1b5ab9307d2c056f8f37a3e5790c931be13046e90c0bf2aaf336570c",
+      "subject": "biologiya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-cc2104ea6a",
+      "sourceUrl": "https://foxford.ru/courses/17380/landing",
+      "sourceHash": "0b1f11470d7635df00e3762b1fa69428a67e0cb8885a078547f544737f87e318",
+      "subject": "fizika",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2af1645303",
+      "sourceUrl": "https://foxford.ru/courses/18779/landing",
+      "sourceHash": "be7741877f4fa4670709750d11eacd240df46ae978221b86bdc895952fe05066",
+      "subject": "geografiya",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-6431cc3380",
+      "sourceUrl": "https://foxford.ru/courses/17382/landing",
+      "sourceHash": "e58808a731fb9585ee491a30e8d50821363a30cf4bb44b6d2e0f6cf40d11f372",
+      "subject": "russkiy",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-3c5da93e90",
+      "sourceUrl": "https://foxford.ru/courses/17376/landing",
+      "sourceHash": "cdfb02065120fda02f60649f9cbdc55bcba1269e7b49dd958555d031f49a4b4b",
+      "subject": "geografiya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-7a6460c7f5",
+      "sourceUrl": "https://foxford.ru/courses/8052/landing",
+      "sourceHash": "ea16e4f66cbeba10e01506c6422999744bec62c08bc28a26eb2cf96adcb5e6ac",
+      "subject": "angliyskiy",
+      "grades": [
+        5,
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e62c0211ea",
+      "sourceUrl": "https://foxford.ru/courses/18389/landing",
+      "sourceHash": "956b200b447125d09669645d27d05a8375a7b19f3518d29fc7c294613120a9a7",
+      "subject": "matematika",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-41bb7873fa",
+      "sourceUrl": "https://foxford.ru/courses/17381/landing",
+      "sourceHash": "b79e01351dda6253f345cd71ddc8cf9d575330fa3b1c5682745dab6a3a9c0cc3",
+      "subject": "russkiy",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8ad7716002",
+      "sourceUrl": "https://foxford.ru/courses/17374/landing",
+      "sourceHash": "bf11657e9b2347c0cbf20981d9499bddee18ac09b2293d614867526ed0cbcce9",
+      "subject": "geografiya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1e0eab98f2",
+      "sourceUrl": "https://foxford.ru/courses/17373/landing",
+      "sourceHash": "55d154369af94425784258bbc72600204ff6359c53744870ad4fc48b5fb2839c",
+      "subject": "geografiya",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-17ea1d7901",
+      "sourceUrl": "https://foxford.ru/courses/18393/landing",
+      "sourceHash": "a8f23c18813c500335e69c5ea0f058dd1f47e51770596c8b32aa5b257fef0d76",
+      "subject": "algebra",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a9e80366a1",
+      "sourceUrl": "https://foxford.ru/courses/17399/landing",
+      "sourceHash": "fafa83681895b2954e6c5bb24ee849ccf991a4c23a967bb1dffb0e8e3e1f0127",
+      "subject": "fizika",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e0d300690d",
+      "sourceUrl": "https://foxford.ru/courses/18780/landing",
+      "sourceHash": "7d5f3fb5f0fa05acc99fce70395a6e9384932325469230c5005c29057b79a81b",
+      "subject": "geografiya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a0405310a5",
+      "sourceUrl": "https://foxford.ru/courses/17348/landing",
+      "sourceHash": "6f259885e6d0e565ed4e2994b69da4344627f12208e9103c73c974becb2264c0",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-b20a50e8fe",
+      "sourceUrl": "https://foxford.ru/courses/17407/landing",
+      "sourceHash": "c56d8cb0d28c2d1701a1d156d60d25377c29c0a85c55337c631011000678304a",
+      "subject": "himiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-7e8b3c0c34",
+      "sourceUrl": "https://foxford.ru/courses/17350/landing",
+      "sourceHash": "8e863c968d1dcd6397f31325e3ba7f60195224da0d227388169e1dd1b6e838b9",
+      "subject": "literatura",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c88bbd4f3e",
+      "sourceUrl": "https://foxford.ru/courses/17349/landing",
+      "sourceHash": "e752e6cb730ee75552eb039f27286bc2cfba737ed4fc8c92df85e84138716924",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-cec32141b8",
+      "sourceUrl": "https://foxford.ru/courses/19320/landing",
+      "sourceHash": "7e9e51347838b07d6823fcea3d98f2ba6d8a6b2c6c56c30177f06507fe0e756b",
+      "subject": "istoriya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-293653afb5",
+      "sourceUrl": "https://foxford.ru/courses/17392/landing",
+      "sourceHash": "dbba172256b2db131eee6b58ce7ea319a25c149a676a31aab5253be1595a7646",
+      "subject": "angliyskiy",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9afa0dfc86",
+      "sourceUrl": "https://foxford.ru/courses/17345/landing",
+      "sourceHash": "bfc02f8e1b9e2d6ae7d5be4b545d88ddb5d85c84366554501c00b822d846d877",
+      "subject": "matematika",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-70c04d5cd8",
+      "sourceUrl": "https://foxford.ru/courses/17351/landing",
+      "sourceHash": "f1cd05354e07f0c7957656c2dc7e8620cef060227bf3480ea0e0ed853adb5e90",
+      "subject": "literatura",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-7aee2b3d9e",
+      "sourceUrl": "https://foxford.ru/courses/19282/landing",
+      "sourceHash": "7ddd2d450434fd786e83a4d214fd440326e76829ade6a41125e0e8d6da13f20e",
+      "subject": "biologiya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a33039996d",
+      "sourceUrl": "https://foxford.ru/courses/18387/landing",
+      "sourceHash": "92230ba3b5ffb763891abb4952b0517c3ae22fae9c6cf6d1a81329edc46d82ff",
+      "subject": "matematika",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-65d2278938",
+      "sourceUrl": "https://foxford.ru/courses/17352/landing",
+      "sourceHash": "29ee6ccd1ed7a23d5b0bf1015b2318396086be9e7bdde2a49791a8e470a37e00",
+      "subject": "literatura",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9621a26e7c",
+      "sourceUrl": "https://foxford.ru/courses/17408/landing",
+      "sourceHash": "dcd0079b5f5b7cb63afdb832d197a27ee4a553ba915db4926e799404cfbbaa3b",
+      "subject": "himiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a7488144d7",
+      "sourceUrl": "https://foxford.ru/courses/17367/landing",
+      "sourceHash": "c9e5a697acab3006d2564075ad6732365dfe89463eafba3b2d98b65abb97fc79",
+      "subject": "geometriya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-447142919b",
+      "sourceUrl": "https://foxford.ru/courses/17369/landing",
+      "sourceHash": "96f631018150d58b94c17d94d9c6c8a1223ef7175797ed32e481c7bcb2c3eedd",
+      "subject": "informatika",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2b22bad6e4",
+      "sourceUrl": "https://foxford.ru/courses/17368/landing",
+      "sourceHash": "b42aabfd794d100f6196058998103b8792e36d33b628a2ed47526b876b3030d0",
+      "subject": "informatika",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-39cd3625ff",
+      "sourceUrl": "https://foxford.ru/courses/17347/landing",
+      "sourceHash": "eaeb9c4119bea5197e17798f6f201d2b8ba8294fe45221e2a2dcca2de20500e2",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-d442412c29",
+      "sourceUrl": "https://foxford.ru/courses/17344/landing",
+      "sourceHash": "3782f2575ec355e541c31dcf72fa43a692dbfcac0030243325086437db5e53b8",
+      "subject": "matematika",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-230e71bb3a",
+      "sourceUrl": "https://foxford.ru/courses/18394/landing",
+      "sourceHash": "e67c315d97978361f922421c9d3448b47c1de64fbad7081e695e8810b92da761",
+      "subject": "algebra",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8d69494598",
+      "sourceUrl": "https://foxford.ru/courses/17346/landing",
+      "sourceHash": "d8db6660a5480d9cba49154745f12d8632c1fec0f7a6d1fea8b6fff1f06b9b36",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-04d516d5b6",
+      "sourceUrl": "https://foxford.ru/courses/14075/landing",
+      "sourceHash": "25c7faf647027a245ba41d6bac6f56c75d3897d7d23d40f202f99a2b2a0b9532",
+      "subject": "russkiy",
+      "grades": [
+        5,
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9b155b7902",
+      "sourceUrl": "https://foxford.ru/courses/17353/landing",
+      "sourceHash": "2a0aa214442551ff0a0c56328daa3361b0b934cb0dd3f8ad64d6ce092543c054",
+      "subject": "literatura",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-4ec3f7622d",
+      "sourceUrl": "https://foxford.ru/courses/19280/landing",
+      "sourceHash": "02c15a953c9afb7bc3e12605ee4c24787690c4f8e4c76f126dd70b96fdea82da",
+      "subject": "biologiya",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-f3a5520283",
+      "sourceUrl": "https://foxford.ru/courses/17396/landing",
+      "sourceHash": "c7ca3c2752190e47cbdc6fd436fac97c2b44608edcdfd9cdc18071af04d93c4d",
+      "subject": "geometriya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8c3e5a0a8b",
+      "sourceUrl": "https://foxford.ru/courses/17395/landing",
+      "sourceHash": "71fe53a47e6eeaee7331c2297c7e01f1c50eeebca79b5f63739e48aae525ffcb",
+      "subject": "algebra",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2e79902b6b",
+      "sourceUrl": "https://foxford.ru/courses/17390/landing",
+      "sourceHash": "9018a16a3976a41255c271c0102abd29bbd4617f430de2ceb8fb9d6a5b643318",
+      "subject": "angliyskiy",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e8a2a4623f",
+      "sourceUrl": "https://foxford.ru/courses/17377/landing",
+      "sourceHash": "ae2716cb91e5d734741be90eb8e715c13dd631e9bbad588aeb40c50e8ffb125f",
+      "subject": "geografiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-b67960f67e",
+      "sourceUrl": "https://foxford.ru/courses/17343/landing",
+      "sourceHash": "f876d88dac537ccebc9cef86b2fa6230824a01d77d6587c21b520b9b5fc43223",
+      "subject": "matematika",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-b91b4e1f93",
+      "sourceUrl": "https://foxford.ru/courses/19281/landing",
+      "sourceHash": "2dee900472e89a0a8b4806cfea8eee7432868e1e06fafb45dcd9c2716ccaa47a",
+      "subject": "biologiya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-94719a75d2",
+      "sourceUrl": "https://foxford.ru/courses/18781/landing",
+      "sourceHash": "68a38094b842e180240e14b3a6f148829423f938a57a9766356204bde0637b67",
+      "subject": "geografiya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-4ebd4d245a",
+      "sourceUrl": "https://foxford.ru/courses/18055/landing",
+      "sourceHash": "ad4e159e701aae6cac84bec07e5bece0d7e891fad11fa9bb8470687382d10aaa",
+      "subject": "obuchenie-gramote",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8d28cb3660",
+      "sourceUrl": "https://foxford.ru/courses/17339/landing",
+      "sourceHash": "7d976cbf6ecc6968a86eeb7f0f98671daf4bceb46542bde3f3c0734d1c450f4f",
+      "subject": "literaturnoe-chtenie",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-5896489ec1",
+      "sourceUrl": "https://foxford.ru/courses/19347/landing",
+      "sourceHash": "1e42d570b753d563874f419be0485c04fb0722350be7f8c8ef79dbe5582467a3",
+      "subject": "himiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a1c95ae8d1",
+      "sourceUrl": "https://foxford.ru/courses/19345/landing",
+      "sourceHash": "0d958378afb95191c6468dbe88ba8ec1d21dd77eeceabb835886dd02d06ce115",
+      "subject": "fizika",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-0fd65dbfea",
+      "sourceUrl": "https://foxford.ru/courses/18782/landing",
+      "sourceHash": "ebc15f3945eb3c82d24cebf544520ceac55f02644fe6044e3e398e92ab7d2a05",
+      "subject": "geografiya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-11e7b9ec1c",
+      "sourceUrl": "https://foxford.ru/courses/17417/landing",
+      "sourceHash": "fb7c3d27a8777ff666e293901ea775bfba21d2b9a65b632dd91d2f431a775b71",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a6d566a2b4",
+      "sourceUrl": "https://foxford.ru/courses/17413/landing",
+      "sourceHash": "34e26205d3eea6bd68362b4f3cf846cc3e4c6aa0701d6fda7c972a0d9187e135",
+      "subject": "istoriya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9586245b72",
+      "sourceUrl": "https://foxford.ru/courses/17388/landing",
+      "sourceHash": "2157d644aa1884b4707d02c62bae155e15b7f927df9ca341b1223a0c5178e38a",
+      "subject": "russkiy",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c2d7cc43e4",
+      "sourceUrl": "https://foxford.ru/courses/16090/landing",
+      "sourceHash": "ec478bdf3162d499f7588b33c1499269920472c0d2724912f8e573cd0efcd4a8",
+      "subject": "russkiy",
+      "grades": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-ecd39497d3",
+      "sourceUrl": "https://foxford.ru/courses/14257/landing",
+      "sourceHash": "587914ae126ba2ec2a7c958c86f250026581756fd4044b33de655f041ae0b3d9",
+      "subject": "geometriya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1ae7805fec",
+      "sourceUrl": "https://foxford.ru/courses/19348/landing",
+      "sourceHash": "a9fbd3d5544f52cb3d1d11747a43edeb6c09d5fa88cbb977b95acfda471d64ad",
+      "subject": "biologiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e70385ceec",
+      "sourceUrl": "https://foxford.ru/courses/19283/landing",
+      "sourceHash": "9dacd1e750bb1e07dfe2f3368a970d9d85a0fa842c1450bea90dae6cf0f9dab7",
+      "subject": "istoriya",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-668be2f691",
+      "sourceUrl": "https://foxford.ru/courses/17416/landing",
+      "sourceHash": "22c087256acc236e9ba8d68ef811878c421d03d1e391e63ed145eec7c9074b3c",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-91fa86fd31",
+      "sourceUrl": "https://foxford.ru/courses/17357/landing",
+      "sourceHash": "3b04b94532e993cd0101083bf17ea9486908989487ae1f8b1f85ef55d0250ee8",
+      "subject": "angliyskiy",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-bea4e3cee5",
+      "sourceUrl": "https://foxford.ru/courses/14255/landing",
+      "sourceHash": "03a608092f90bbacf3714411cb5b00e11005826b5af6be337aa5c01cf0d827b8",
+      "subject": "matematika",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a9512e8249",
+      "sourceUrl": "https://foxford.ru/courses/14254/landing",
+      "sourceHash": "100b9c734ade715ef44f43c31fbe16255cfe5fac9e9bd69ecf2cae901ae288db",
+      "subject": "matematika",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-83e6a33127",
+      "sourceUrl": "https://foxford.ru/courses/18067/landing",
+      "sourceHash": "a87f56a13b8dc92d4e86bb2b79323ef026881ba3b270a2ec4ee95efbe0e3bbb9",
+      "subject": "russkiy",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-397cc95a1a",
+      "sourceUrl": "https://foxford.ru/courses/17372/landing",
+      "sourceHash": "0c102f2eba2e4a0237d641cc4a926540d5fc7ef0af1f57eb0a275dbab8c8e9a0",
+      "subject": "informatika",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9fabf429c0",
+      "sourceUrl": "https://foxford.ru/courses/17364/landing",
+      "sourceHash": "8174d32231aa949edf7aacbb704d04850bf62fe26fcaaa6b1c3bebce4fcf180d",
+      "subject": "algebra",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1ab28aa4c3",
+      "sourceUrl": "https://foxford.ru/courses/17342/landing",
+      "sourceHash": "9079d1fcf5fbe3dd02189820b60686761c5cb71d8e3a8b9c4f4cfd1b65ce5783",
+      "subject": "matematika",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-5dc5011a32",
+      "sourceUrl": "https://foxford.ru/courses/17340/landing",
+      "sourceHash": "6de34fad917b4ff0067c88c0f012e1d52d02b4f457058fd7e9453fe9b7d7ad4a",
+      "subject": "literaturnoe-chtenie",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9fa45a2764",
+      "sourceUrl": "https://foxford.ru/courses/14256/landing",
+      "sourceHash": "272e2c3241c5ce706ef9a51c3fe8b7dcc476b541ee816aa7bf3154a5ebc014ae",
+      "subject": "geometriya",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-6a19d946e5",
+      "sourceUrl": "https://foxford.ru/courses/14253/landing",
+      "sourceHash": "356ef9140b76cdf32457ba0d081cd75462cc19c8b3013b39a8d7364e513b3764",
+      "subject": "russkiy",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a3ad8c7140",
+      "sourceUrl": "https://foxford.ru/courses/19377/landing",
+      "sourceHash": "d3b2698bf305ffdb3f4e230b773b8aa5f260177707bea3d74f4c0649bbc20e98",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-853c7ecfd0",
+      "sourceUrl": "https://foxford.ru/courses/19344/landing",
+      "sourceHash": "22b39cd457d736bcfb30a9be6563cffc4d1d5c38a75efc28dde3960f181b5789",
+      "subject": "informatika",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-4c5ad5dbf3",
+      "sourceUrl": "https://foxford.ru/courses/19290/landing",
+      "sourceHash": "7da1ffc26d81be8435ef149760e1132290e45f0e76b45568f19fd8bf6cc3259e",
+      "subject": "himiya",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8c47a22a2a",
+      "sourceUrl": "https://foxford.ru/courses/17405/landing",
+      "sourceHash": "e2c471400d0ff7e16c67f2998be781ae08b13ea45e8dc5dd6370290fe69b3f9b",
+      "subject": "biologiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1b50ece32c",
+      "sourceUrl": "https://foxford.ru/courses/17391/landing",
+      "sourceHash": "64f36980b39960f6e97ae0412acdc0e79c926ce47f073cd24da853816ec15ed7",
+      "subject": "angliyskiy",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-300411e55e",
+      "sourceUrl": "https://foxford.ru/courses/17358/landing",
+      "sourceHash": "6a4ccc60f3f7b2ecc124e289bb0ab5ab0857c0626204d55713fd140f2498ba22",
+      "subject": "angliyskiy",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-899db6d115",
+      "sourceUrl": "https://foxford.ru/courses/17356/landing",
+      "sourceHash": "ee53306b6bc95818b9e574f41f674c1b77f119465386d8aff828037ff9e6c895",
+      "subject": "angliyskiy",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-19193ec041",
+      "sourceUrl": "https://foxford.ru/courses/17355/landing",
+      "sourceHash": "9ec87fbe0083832df6e9bc886bbfb8bf1e570077006daa9cae4814cd686a35fa",
+      "subject": "angliyskiy",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-bf0dfc1988",
+      "sourceUrl": "https://foxford.ru/courses/19342/landing",
+      "sourceHash": "8193e03fc24525670dd8ed9605ca367714a9fa6d43349ef943f34392fef57967",
+      "subject": "geometriya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a4f9c52d86",
+      "sourceUrl": "https://foxford.ru/courses/19321/landing",
+      "sourceHash": "8bd7c3f9e83b23999210c5f62b423018942a5336af74164fe41a16b5a1e81cfe",
+      "subject": "istoriya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-4c2f5ebe34",
+      "sourceUrl": "https://foxford.ru/courses/17418/landing",
+      "sourceHash": "d38e9da7e03aec85cb1931bb0ab8e4ce95819dc770feef18a4262c3537656c17",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-977d8c0c91",
+      "sourceUrl": "https://foxford.ru/courses/17415/landing",
+      "sourceHash": "1e32eeb9faadafd907eaab7cb7b1a636d73e1747795ce4e1ed44b5ff5d49829c",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-15d86ee173",
+      "sourceUrl": "https://foxford.ru/courses/17389/landing",
+      "sourceHash": "5daf963ae1fbc66991cce2936d48ab897ac810e9947a5c21c6a0671fc3909831",
+      "subject": "russkiy",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-f89302cf2d",
+      "sourceUrl": "https://foxford.ru/courses/14252/landing",
+      "sourceHash": "2c6c0987009507a855ab2c75785910b006016fbe333e177810c2d5c7515ebcc5",
+      "subject": "russkiy",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-30bd68dda1",
+      "sourceUrl": "https://foxford.ru/courses/8835/landing",
+      "sourceHash": "d79c390393579428a46a2b9450f85f06c8bbf65bebd00cb1b92334f662c12c79",
+      "subject": "russkiy",
+      "grades": [
+        5,
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2efadc87c2",
+      "sourceUrl": "https://foxford.ru/courses/19394/landing",
+      "sourceHash": "168013094c161f8b9dbe2c4864b47f56eca3ed15a94c8a0f203b5877509d06da",
+      "subject": "biologiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-f23f5e0fae",
+      "sourceUrl": "https://foxford.ru/courses/19349/landing",
+      "sourceHash": "bd795b2a14ea9ee804fa05d94edee52e95a161eefea12a1862a226baa57c2695",
+      "subject": "algebra",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-b3bceb0ff7",
+      "sourceUrl": "https://foxford.ru/courses/19343/landing",
+      "sourceHash": "9727401c11caf645fd98c56609732b9221ef40876bffff6d989a6532224aa270",
+      "subject": "angliyskiy",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8bf2be4b59",
+      "sourceUrl": "https://foxford.ru/courses/19339/landing",
+      "sourceHash": "f8a8ef1ceb87844f5e3994976b54b62698b5d31cc7d72da7cf9fe78f62f89d8a",
+      "subject": "biologiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-d7627adde2",
+      "sourceUrl": "https://foxford.ru/courses/17404/landing",
+      "sourceHash": "7fb573e5ec31a32e199eec2ab38e370a985e4f7b0518dc862a9ea8ee2c353f07",
+      "subject": "biologiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c3a8a697ef",
+      "sourceUrl": "https://foxford.ru/courses/17397/landing",
+      "sourceHash": "e356fdc92a030bf73dd5879d4fa7be2e0e8eedb30c05d5e250c16be532f406a9",
+      "subject": "informatika",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c26cdf83e9",
+      "sourceUrl": "https://foxford.ru/courses/17394/landing",
+      "sourceHash": "18b0fc8f29d4ba35cb8d18d7e484a1311b47ebc5217acb408a119b7efeb33959",
+      "subject": "literatura",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-ba9444277a",
+      "sourceUrl": "https://foxford.ru/courses/19346/landing",
+      "sourceHash": "a7f659b57ccc46f391e1f57fe0e909e3ce46e7fbcf1fbf7c0a797d238dd226a8",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-68dd274f4e",
+      "sourceUrl": "https://foxford.ru/courses/19293/landing",
+      "sourceHash": "29cf83a49a78391b57e21ef56842998e3867a13bf9e3d7a032ed9678e6981830",
+      "subject": "fizika",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-fb744f67ea",
+      "sourceUrl": "https://foxford.ru/courses/19288/landing",
+      "sourceHash": "ae5d89b502355999b3b712c3af9b81cb8b09d164e8b1ff4746293e3cdf8a0ce2",
+      "subject": "russkiy",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-3f073d7126",
+      "sourceUrl": "https://foxford.ru/courses/19287/landing",
+      "sourceHash": "d918de5519900c8e8a24aacab73a0cc98341e6602146d8eb69e7dd0855c487bf",
+      "subject": "geometriya",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-34b393fb1b",
+      "sourceUrl": "https://foxford.ru/courses/18395/landing",
+      "sourceHash": "82383fafddf2e62c0751ef378bede0cfbbb38b0936de88a8107be09efb6452d3",
+      "subject": "algebra",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-92bfe02bb7",
+      "sourceUrl": "https://foxford.ru/courses/18069/landing",
+      "sourceHash": "72ade6f34e9011bed73ad870e13508a0dae7f13bbdcd2c6e7e10e61a2165731b",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-d4e13caba9",
+      "sourceUrl": "https://foxford.ru/courses/17756/landing",
+      "sourceHash": "0c02a7d1a637f265691e3d964ee61b7fc1dd81e6893921ddad999f2ae29cd1a9",
+      "subject": "russkiy",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a0d0082cda",
+      "sourceUrl": "https://foxford.ru/courses/17617/landing",
+      "sourceHash": "5c790a08aa8c89395ed75fbe1dc43655ff43f3a70125d58c7a8d5da5c7c813e0",
+      "subject": "obuchenie-gramote",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-31e222114f",
+      "sourceUrl": "https://foxford.ru/courses/17354/landing",
+      "sourceHash": "3c82a3002dff58092d4ba5e6878122db5ea01a238439d4b053e2796f41524ec6",
+      "subject": "literatura",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-27d80a41ca",
+      "sourceUrl": "https://foxford.ru/courses/17341/landing",
+      "sourceHash": "40b2d7ea36cf877cef1b8010d3083d338c4a379bb59209de06411e96d3e332e2",
+      "subject": "literaturnoe-chtenie",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e9dd7219f0",
+      "sourceUrl": "https://foxford.ru/courses/19294/landing",
+      "sourceHash": "d553e525b379298938135b79cd87a6d097c204cc24a5db3cb318f4473ec71a55",
+      "subject": "informatika",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-58596f6bae",
+      "sourceUrl": "https://foxford.ru/courses/19292/landing",
+      "sourceHash": "3318bd190ef2823e7e762f8ed3aa4c8530296f821d4e5badf2fcf801cf11065c",
+      "subject": "algebra",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-7786c32c31",
+      "sourceUrl": "https://foxford.ru/courses/19289/landing",
+      "sourceHash": "ba94e4acd8a9d1c1f4104a3b11acb807c9046e5649ca09c169266a3f4895f4cc",
+      "subject": "angliyskiy",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2e34975dc4",
+      "sourceUrl": "https://foxford.ru/courses/19286/landing",
+      "sourceHash": "98847082c06bb101ced7308faf414ed453769034112e980288f76d8e822b16c4",
+      "subject": "literatura",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-73ea1b7ed1",
+      "sourceUrl": "https://foxford.ru/courses/19284/landing",
+      "sourceHash": "e59a6abeaa93b694f19804b86d3d1cfc9d1fae3e9227cf8be9bf61a65459d582",
+      "subject": "istoriya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-f3fcc5f36b",
+      "sourceUrl": "https://foxford.ru/courses/18066/landing",
+      "sourceHash": "5c2b8e34d829be1850316aae0fe7be96b7b51e3591b1d676393fb4f2b7203745",
+      "subject": "matematika",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-3d707e34e6",
+      "sourceUrl": "https://foxford.ru/courses/18058/landing",
+      "sourceHash": "6e6e8ff99d5caf9986ed6a2a32b4b65d918071606d50c54f8c844d34bf06c40d",
+      "subject": "russkiy",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9660c7b801",
+      "sourceUrl": "https://foxford.ru/courses/18057/landing",
+      "sourceHash": "2cb5c1e534c2f69c20e9eee50bdd55fc1a63676839e78f5c90cc036a5a7cf3fc",
+      "subject": "matematika",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-70fc0d9f34",
+      "sourceUrl": "https://foxford.ru/courses/17758/landing",
+      "sourceHash": "6c4984eb5119e52da84a826f0e8b67166cb35188a9d1d6ea42e18e1b8b50c72a",
+      "subject": "biologiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-629fe600c6",
+      "sourceUrl": "https://foxford.ru/courses/17414/landing",
+      "sourceHash": "73e9fcdd6275e0421475ae9260fffd1d8936256d7a04ed4dac496e16914e1848",
+      "subject": "istoriya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9895ea6ca7",
+      "sourceUrl": "https://foxford.ru/courses/17398/landing",
+      "sourceHash": "bdd6119b22fa05ba3769f0a05d7f88f006c03401945fe7f920577638d281a2b2",
+      "subject": "geografiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-be8287694b",
+      "sourceUrl": "https://foxford.ru/courses/17393/landing",
+      "sourceHash": "ba243b9a69c7aa362bff4a810a03861aaf2dd8a9198921e26fd30c7e8545521c",
+      "subject": "angliyskiy",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-f52e1f29bd",
+      "sourceUrl": "https://foxford.ru/courses/16357/landing",
+      "sourceHash": "c95be75baa8b3deae317a9a5830dc034a25ee2d8aeb2dd54030f99d1171af8a3",
+      "subject": "muzyka",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-3f02463dff",
+      "sourceUrl": "https://foxford.ru/courses/16356/landing",
+      "sourceHash": "51c479bc2458722f56116d9d707b59da5b913df9af5ef1dc80fc1fce2bdac116",
+      "subject": "izo",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-39294f4d4b",
+      "sourceUrl": "https://foxford.ru/courses/19323/landing",
+      "sourceHash": "961954217ac613c6aa5566f4752000b74dd475e861dff692a9e7e9fab1bc59d3",
+      "subject": "istoriya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-c6734375d7",
+      "sourceUrl": "https://foxford.ru/courses/19322/landing",
+      "sourceHash": "d5ef1d109e6b2c722f6958c8f38d89304e52c9750cd0eef436749ca60653b047",
+      "subject": "biologiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-6829f179f9",
+      "sourceUrl": "https://foxford.ru/courses/19302/landing",
+      "sourceHash": "591c0309efc3d32b43225ca4ca080049c6a7df96abe7989a27f3a3337d37a21e",
+      "subject": "geografiya",
+      "grades": [
+        10
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-5c36906102",
+      "sourceUrl": "https://foxford.ru/courses/19301/landing",
+      "sourceHash": "6e3b018b10ab54ee04c320283aa7daf061bf731c33f1df3eedd3d81df87b4e91",
+      "subject": "geografiya",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a122cc9e96",
+      "sourceUrl": "https://foxford.ru/courses/19291/landing",
+      "sourceHash": "ce9a886f7f06e5fe2585002bedbe3bc6a4e22c7c4c249c8d4247b02f5de3442d",
+      "subject": "istoriya",
+      "grades": [
+        11
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-8cd4c40735",
+      "sourceUrl": "https://foxford.ru/courses/18799/landing",
+      "sourceHash": "bb5866a04ea7992b30c1d3a71497587347bb752b1c3f9034674df23a4c80feea",
+      "subject": "muzyka",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2e7d233217",
+      "sourceUrl": "https://foxford.ru/courses/18798/landing",
+      "sourceHash": "e3487e102d9058e8996d5b256de97c787dc9ab6fa84d53356146b2888141c418",
+      "subject": "muzyka",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-7463d1a4b7",
+      "sourceUrl": "https://foxford.ru/courses/18795/landing",
+      "sourceHash": "b538f07071891a2e277e7c2803a18062cb59810c0ebe75d489619c55d0cdc461",
+      "subject": "izo",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e4e5a6d6df",
+      "sourceUrl": "https://foxford.ru/courses/18068/landing",
+      "sourceHash": "17c209945a94995a116def151276fc471e39d8687929846d05ac2097f387a6a3",
+      "subject": "literaturnoe-chtenie",
+      "grades": [
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-021b09ab41",
+      "sourceUrl": "https://foxford.ru/courses/18064/landing",
+      "sourceHash": "235754a799c45318fd34c4b75cedee4958e9eef5e4dfeae990347b610de79fc9",
+      "subject": "literaturnoe-chtenie",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-2d4b61b5a0",
+      "sourceUrl": "https://foxford.ru/courses/18062/landing",
+      "sourceHash": "3291f24e4a3fbd6810627f79858fb069c719b4a5927d6549f027515355133694",
+      "subject": "matematika",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e31672759f",
+      "sourceUrl": "https://foxford.ru/courses/18061/landing",
+      "sourceHash": "23a1ea8fda9b9411065611254fb69758a13fcafb303011e11143bea1e469b938",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-ba506700d8",
+      "sourceUrl": "https://foxford.ru/courses/18056/landing",
+      "sourceHash": "14154256ac0723a3c39b3c1b8f04249ecb31f9e1533be87875a2c79381462d24",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-a647e7db53",
+      "sourceUrl": "https://foxford.ru/courses/17757/landing",
+      "sourceHash": "6a95a19090311f18d4120af5a71d322086041fe7250f07b96790610a09da33df",
+      "subject": "russkiy",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-d51c1e32b0",
+      "sourceUrl": "https://foxford.ru/courses/16350/landing",
+      "sourceHash": "b8ebc49fd9723994fb942e522c0ccc2e9c67341f95ad6db1555fc70910182475",
+      "subject": "muzyka",
+      "grades": [
+        1
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-201be7f4b1",
+      "sourceUrl": "https://foxford.ru/courses/18800/landing",
+      "sourceHash": "b590a010f8f39e81f3c68754a3a278739fbc211816393dcc50e6316aa6c83106",
+      "subject": "muzyka",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-9aadb6f350",
+      "sourceUrl": "https://foxford.ru/courses/18797/landing",
+      "sourceHash": "16af156ba1547993c7903fc7175e532e58c0e147597f99dfeedb422d0a99f8cb",
+      "subject": "izo",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1d2b2212d2",
+      "sourceUrl": "https://foxford.ru/courses/18796/landing",
+      "sourceHash": "410fa7414505e4182bd8bcd9b67f74cad7df159db11c5abf24dfbf8a023bb1cd",
+      "subject": "izo",
+      "grades": [
+        6,
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-bbf69f8fd1",
+      "sourceUrl": "https://foxford.ru/courses/18065/landing",
+      "sourceHash": "15bfa5e0b6e2a64d3a894108b6f363772a812bec03aadca3a29cc2c47c8066b9",
+      "subject": "okruzhayushchiy-mir",
+      "grades": [
+        3
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-1abdfd1e99",
+      "sourceUrl": "https://foxford.ru/courses/18060/landing",
+      "sourceHash": "9d29de1ef1462589d2155bab2a93fb88eef0928dd6bc3acbee781f93143a600d",
+      "subject": "matematika",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-bfd53c128b",
+      "sourceUrl": "https://foxford.ru/courses/17755/landing",
+      "sourceHash": "c45281f67156d399e187f11a617adbb1ca0ed17ac3238dfef7c363cba2351ce4",
+      "subject": "russkiy",
+      "grades": [
+        6
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-e78f94ca5f",
+      "sourceUrl": "https://foxford.ru/courses/17754/landing",
+      "sourceHash": "fec20645c5d16f7d4d7b832ec67240b5284dfed912c6c2ed7539e67d89543fe4",
+      "subject": "russkiy",
+      "grades": [
+        5
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "foxford-school-4b42134f95",
+      "sourceUrl": "https://foxford.ru/courses/17359/landing",
+      "sourceHash": "ab007a7865958121133d90ca9092d49d12acf053ed7fc24e3ffe87220578871c",
+      "subject": "angliyskiy",
+      "grades": [
+        9
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — public course page and catalog card"
+    },
+    {
+      "courseId": "skysmart-school-6c6ba79413",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/matematika/mini-course-kids-math-1-4-klass-32-urokov",
+      "sourceHash": "9ac92b23dfea9279a4e2f6bf5b69b8cd66e20a98f4419ce4a958ed3ff3ecec2a",
+      "subject": "matematika",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-1a98e10cef",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/russkij-yazyk/mini-course-kids-russian-1-4-klass-32-urokov",
+      "sourceHash": "3405bff317e2be77a896d6b1bd1e5cd5d85df91ac782df2f0f814aa752d37c96",
+      "subject": "russkiy",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-0265f136bd",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/matematika/math-kids-premium-1-4-klass-32-urokov",
+      "sourceHash": "de86aa5f2996af559bdfb3b4720676532bd02aced2007fdc301db9ae01b9647a",
+      "subject": "matematika",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-6cc5d38bc6",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/russkij-yazyk/russian-kids-premium-1-4-klass-32-urokov",
+      "sourceHash": "6b3fc2a98ae8451fb2a14307c7e45754ed4ed7dc0ac0a1abee4336cbc8448efc",
+      "subject": "russkiy",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-289b664c3b",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/russkij-yazyk/mini-course-kids-russian-5-8-klass-32-urokov",
+      "sourceHash": "e9ec3d75ab53e22048986fd8f6e619d7abf3c3853e1641dfe0c8f950288b754f",
+      "subject": "russkiy",
+      "grades": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-ed4db31f3e",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/matematika/mini-course-kids-math-5-8-klass-32-urokov",
+      "sourceHash": "5f2db8fe09521ece4d41e71fa2a3bf9751997144068f5b04b03497dc7bd15b7a",
+      "subject": "matematika",
+      "grades": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-90456557f5",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/russkij-yazyk/russian-kids-premium-5-8-klass-32-urokov",
+      "sourceHash": "04d87dd632feff3a68f5e4ee21f886ced73fa2733c0d610a33d0aa10a5ca6e71",
+      "subject": "russkiy",
+      "grades": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-6223cf71fb",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/matematika/math-kids-premium-5-8-klass-32-urokov",
+      "sourceHash": "d5f7922db4dee54a86c00f4f282eae83ab3e059732cd9d36490d08d2cb72a5bb",
+      "subject": "matematika",
+      "grades": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-cd510bdf54",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/obshestvoznanie/mini-course-kids-social-science-32-urokov",
+      "sourceHash": "a9a5ff68e2511b1db8db58ddc13a1e3d0612cab4c2316cc0e9c731a66ea39469",
+      "subject": "obshchestvoznanie",
+      "grades": [
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-949363cc88",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/fizika/mini-course-kids-physics-32-urokov",
+      "sourceHash": "9d60c1cf8a677af0640f778ed452c7001ff9f01fdad1f604b5d2d26eed4855bb",
+      "subject": "fizika",
+      "grades": [
+        7,
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "skysmart-school-cc9baa9237",
+      "sourceUrl": "https://skysmart.ru/courses/shkolnaya-programma/himiya/mini-course-kids-chemistry-32-urokov",
+      "sourceHash": "7e8a543437b44ee7f504eefd6e910673863a2f64658dae7022ec7c4fc4d4b493",
+      "subject": "himiya",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "sotka-school-ea5f92dbeb",
+      "sourceUrl": "https://sotkaonline.ru/middleschool/8class/algebra-i-geometria",
+      "sourceHash": "981771b03ad89a8300aa6485b69720637612d9442e6b1ed96f9762208d65cf42",
+      "subject": "algebra",
+      "grades": [
+        8
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "sotka-school-1ab789088a",
+      "sourceUrl": "https://sotkaonline.ru/middleschool/7class/algebra-i-geometria",
+      "sourceHash": "abdbdee806b8afbf606fec7b06af4a7146ae75a100d399899d0b2834c5690a34",
+      "subject": "algebra",
+      "grades": [
+        7
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    },
+    {
+      "courseId": "sotka-school-5924091163",
+      "sourceUrl": "https://sotkaonline.ru/primaryschool/2class/angliskii-yazik",
+      "sourceHash": "580fc15bd4673bb0d613f54fdefaa0d1f4dc82129b8de428ba36eb8058d7a72e",
+      "subject": "angliyskiy",
+      "grades": [
+        2
+      ],
+      "checkedAt": "2026-10-19",
+      "classification": "School programme; not exam preparation",
+      "reviewedBy": "Codex — first-party programme page"
+    }
+  ],
+  "allFoxfordPagesReviewed": 155,
+  "noExamSubstitution": true,
+  "originalEvidenceDirectory": "work/courses/",
+  "reviewedBy": "Codex",
+  "baselineCourseIdsSha256": "64acfa03adff1f0e4f1b75cbf9c4818a1aeb65631c7c8d22521ba9e2b9b3dfb8",
+  "baselineCourseCount": 378,
+  "baselinePageCount": 459,
+  "reviewedSelectionIds": [
+    "shkolnaya-programma",
+    "shkolnaya-programma/1-klass",
+    "shkolnaya-programma/2-klass",
+    "shkolnaya-programma/3-klass",
+    "shkolnaya-programma/4-klass",
+    "shkolnaya-programma/5-klass",
+    "shkolnaya-programma/6-klass",
+    "shkolnaya-programma/7-klass",
+    "shkolnaya-programma/8-klass",
+    "shkolnaya-programma/9-klass",
+    "shkolnaya-programma/10-klass",
+    "shkolnaya-programma/11-klass",
+    "shkolnaya-programma/matematika",
+    "shkolnaya-programma/matematika/1-klass",
+    "shkolnaya-programma/matematika/2-klass",
+    "shkolnaya-programma/matematika/3-klass",
+    "shkolnaya-programma/matematika/4-klass",
+    "shkolnaya-programma/matematika/5-klass",
+    "shkolnaya-programma/matematika/6-klass",
+    "shkolnaya-programma/matematika/7-klass",
+    "shkolnaya-programma/matematika/8-klass",
+    "shkolnaya-programma/matematika/9-klass",
+    "shkolnaya-programma/matematika/10-klass",
+    "shkolnaya-programma/matematika/11-klass",
+    "shkolnaya-programma/algebra",
+    "shkolnaya-programma/algebra/7-klass",
+    "shkolnaya-programma/algebra/8-klass",
+    "shkolnaya-programma/algebra/9-klass",
+    "shkolnaya-programma/algebra/10-klass",
+    "shkolnaya-programma/algebra/11-klass",
+    "shkolnaya-programma/geometriya",
+    "shkolnaya-programma/geometriya/7-klass",
+    "shkolnaya-programma/geometriya/8-klass",
+    "shkolnaya-programma/geometriya/9-klass",
+    "shkolnaya-programma/geometriya/10-klass",
+    "shkolnaya-programma/geometriya/11-klass",
+    "shkolnaya-programma/russkiy",
+    "shkolnaya-programma/russkiy/1-klass",
+    "shkolnaya-programma/russkiy/2-klass",
+    "shkolnaya-programma/russkiy/3-klass",
+    "shkolnaya-programma/russkiy/4-klass",
+    "shkolnaya-programma/russkiy/5-klass",
+    "shkolnaya-programma/russkiy/6-klass",
+    "shkolnaya-programma/russkiy/7-klass",
+    "shkolnaya-programma/russkiy/8-klass",
+    "shkolnaya-programma/russkiy/9-klass",
+    "shkolnaya-programma/russkiy/10-klass",
+    "shkolnaya-programma/russkiy/11-klass",
+    "shkolnaya-programma/angliyskiy",
+    "shkolnaya-programma/angliyskiy/1-klass",
+    "shkolnaya-programma/angliyskiy/2-klass",
+    "shkolnaya-programma/angliyskiy/3-klass",
+    "shkolnaya-programma/angliyskiy/4-klass",
+    "shkolnaya-programma/angliyskiy/5-klass",
+    "shkolnaya-programma/angliyskiy/6-klass",
+    "shkolnaya-programma/angliyskiy/7-klass",
+    "shkolnaya-programma/angliyskiy/8-klass",
+    "shkolnaya-programma/angliyskiy/9-klass",
+    "shkolnaya-programma/angliyskiy/10-klass",
+    "shkolnaya-programma/angliyskiy/11-klass",
+    "shkolnaya-programma/fizika",
+    "shkolnaya-programma/fizika/7-klass",
+    "shkolnaya-programma/fizika/8-klass",
+    "shkolnaya-programma/fizika/9-klass",
+    "shkolnaya-programma/fizika/10-klass",
+    "shkolnaya-programma/fizika/11-klass",
+    "shkolnaya-programma/himiya",
+    "shkolnaya-programma/himiya/8-klass",
+    "shkolnaya-programma/himiya/9-klass",
+    "shkolnaya-programma/himiya/10-klass",
+    "shkolnaya-programma/himiya/11-klass",
+    "shkolnaya-programma/biologiya",
+    "shkolnaya-programma/biologiya/5-klass",
+    "shkolnaya-programma/biologiya/6-klass",
+    "shkolnaya-programma/biologiya/7-klass",
+    "shkolnaya-programma/biologiya/8-klass",
+    "shkolnaya-programma/biologiya/9-klass",
+    "shkolnaya-programma/biologiya/10-klass",
+    "shkolnaya-programma/informatika",
+    "shkolnaya-programma/informatika/5-klass",
+    "shkolnaya-programma/informatika/6-klass",
+    "shkolnaya-programma/informatika/7-klass",
+    "shkolnaya-programma/informatika/8-klass",
+    "shkolnaya-programma/informatika/9-klass",
+    "shkolnaya-programma/informatika/10-klass",
+    "shkolnaya-programma/informatika/11-klass",
+    "shkolnaya-programma/istoriya",
+    "shkolnaya-programma/istoriya/5-klass",
+    "shkolnaya-programma/istoriya/6-klass",
+    "shkolnaya-programma/istoriya/7-klass",
+    "shkolnaya-programma/istoriya/8-klass",
+    "shkolnaya-programma/istoriya/9-klass",
+    "shkolnaya-programma/istoriya/10-klass",
+    "shkolnaya-programma/istoriya/11-klass",
+    "shkolnaya-programma/obshchestvoznanie",
+    "shkolnaya-programma/obshchestvoznanie/6-klass",
+    "shkolnaya-programma/obshchestvoznanie/7-klass",
+    "shkolnaya-programma/obshchestvoznanie/8-klass",
+    "shkolnaya-programma/obshchestvoznanie/9-klass",
+    "shkolnaya-programma/obshchestvoznanie/10-klass",
+    "shkolnaya-programma/literatura",
+    "shkolnaya-programma/literatura/5-klass",
+    "shkolnaya-programma/literatura/6-klass",
+    "shkolnaya-programma/literatura/7-klass",
+    "shkolnaya-programma/literatura/8-klass",
+    "shkolnaya-programma/literatura/9-klass",
+    "shkolnaya-programma/literatura/10-klass",
+    "shkolnaya-programma/literatura/11-klass",
+    "shkolnaya-programma/geografiya",
+    "shkolnaya-programma/geografiya/5-klass",
+    "shkolnaya-programma/geografiya/6-klass",
+    "shkolnaya-programma/geografiya/7-klass",
+    "shkolnaya-programma/geografiya/8-klass",
+    "shkolnaya-programma/geografiya/9-klass",
+    "shkolnaya-programma/geografiya/10-klass",
+    "shkolnaya-programma/okruzhayushchiy-mir",
+    "shkolnaya-programma/okruzhayushchiy-mir/1-klass",
+    "shkolnaya-programma/okruzhayushchiy-mir/2-klass",
+    "shkolnaya-programma/okruzhayushchiy-mir/3-klass",
+    "shkolnaya-programma/okruzhayushchiy-mir/4-klass",
+    "shkolnaya-programma/literaturnoe-chtenie",
+    "shkolnaya-programma/literaturnoe-chtenie/1-klass",
+    "shkolnaya-programma/literaturnoe-chtenie/2-klass",
+    "shkolnaya-programma/literaturnoe-chtenie/3-klass",
+    "shkolnaya-programma/literaturnoe-chtenie/4-klass",
+    "shkolnaya-programma/obuchenie-gramote",
+    "shkolnaya-programma/obuchenie-gramote/1-klass",
+    "shkolnaya-programma/muzyka",
+    "shkolnaya-programma/muzyka/1-klass",
+    "shkolnaya-programma/muzyka/3-klass",
+    "shkolnaya-programma/muzyka/6-klass",
+    "shkolnaya-programma/muzyka/7-klass",
+    "shkolnaya-programma/izo",
+    "shkolnaya-programma/izo/3-klass",
+    "shkolnaya-programma/izo/6-klass",
+    "shkolnaya-programma/izo/7-klass"
+  ],
+  "selectionPolicy": "Only existing offers; explicit first-party classes; exclude exam tags; single-offer class pages are noindex.",
+  "selectionSampleReviewed": [
+    "/kursy/shkolnaya-programma/himiya/10-klass/",
+    "/kursy/shkolnaya-programma/himiya/8-klass/",
+    "/kursy/shkolnaya-programma/algebra/7-klass/",
+    "/kursy/shkolnaya-programma/geometriya/8-klass/",
+    "/kursy/shkolnaya-programma/matematika/2-klass/",
+    "/kursy/shkolnaya-programma/russkiy/6-klass/",
+    "/kursy/shkolnaya-programma/angliyskiy/4-klass/",
+    "/kursy/shkolnaya-programma/biologiya/8-klass/",
+    "/kursy/shkolnaya-programma/informatika/11-klass/",
+    "/kursy/shkolnaya-programma/istoriya/6-klass/",
+    "/kursy/shkolnaya-programma/muzyka/7-klass/",
+    "/kursy/shkolnaya-programma/okruzhayushchiy-mir/3-klass/",
+    "/kursy/shkolnaya-programma/literatura/10-klass/",
+    "/kursy/shkolnaya-programma/obuchenie-gramote/1-klass/"
+  ],
+  "contentReview": "Actual offer sets, class evidence, curricula, formats, metadata and noindex state inspected across subjects and school stages; all 155 Foxford landing pages individually checked in browser."
+}

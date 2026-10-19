@@ -12,7 +12,11 @@ def refresh():
     pending_path=ROOT/'data/courses/review-queue.json'
     pending=json.loads(pending_path.read_text()) if pending_path.exists() else {}
     changes=[];failures=[]
-    active=[c for c in courses if c.get('active')]
+    # Foxford refuses ordinary HTTP. Its prices are verified from the visible
+    # public browser catalogue by the scheduled Codex workflow; never refresh
+    # the date from a stale snapshot or parse an authentication error as a course.
+    browser_sources=[c for c in courses if c.get('active') and c.get('verificationMethod')=='public-browser']
+    active=[c for c in courses if c.get('active') and c.get('verificationMethod')!='public-browser']
     def pull(c):return harvest({'brandId':c['brandId'],'brand':c['brand'],'sourceUrl':c['sourceUrl'],'navLabel':c['title']},use_cache=False)
     with cf.ThreadPoolExecutor(max_workers=3) as pool:
         for course,new in zip(active,pool.map(pull,active)):
@@ -27,6 +31,7 @@ def refresh():
                 # A different programme must never inherit the old price.
                 if oldprice:course['price']=None;changes.append({'course':course['id'],'type':'price_hidden_title_change'})
                 course['offer']=None
+                course['packages']=[]
                 continue
             if oldprice and newprice and newprice['unit']==oldprice['unit'] and .5<=newprice['amount']/oldprice['amount']<=1.5:
                 course['price']=newprice
@@ -43,9 +48,20 @@ def refresh():
                 pending.setdefault(course['id'],{'reason':'Source content changed; check description, curriculum and conditions','sourceUrl':course['sourceUrl'],'newHeadings':new['headings'][:16],'checkedAt':new['checkedAt']})
             course['lastSourceCheck']=new['checkedAt'][:10]
             course['lastSeenHash']=new['contentHash']
+            for package in course.get('packages',[]):
+                observed=harvest({'brandId':course['brandId'],'brand':course['brand'],'sourceUrl':package['sourceUrl'],'navLabel':package['sourceTitle']},use_cache=False)
+                if observed.get('status')!=200:continue
+                candidate=price_fact(observed);previous=package.get('price')
+                if clean(observed.get('h1',''))!=package['sourceTitle']:
+                    package['price']=None;continue
+                if candidate and previous and candidate['unit']==previous['unit'] and .5<=candidate['amount']/previous['amount']<=1.5:package['price']=candidate
+                elif not candidate:package['price']=None
+                else:
+                    pending[course['id']+'-package-'+str(package['lessons'])]={'reason':'Lesson package price needs review','sourceUrl':package['sourceUrl'],'checkedAt':new['checkedAt']}
+                    package['price']=None
     tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(courses,ensure_ascii=False,indent=2)+'\n');os.replace(tmp,path)
     pending_path.write_text(json.dumps(pending,ensure_ascii=False,indent=2)+'\n')
-    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'checked':len(active),'changes':changes,'failures':failures,'pendingReview':len(pending)}
+    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'checked':len(active),'browserVerifiedSources':len(browser_sources),'changes':changes,'failures':failures,'pendingReview':len(pending)}
     (WORK/'refresh-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'checked':len(active),'changes':len(changes),'failures':len(failures),'pendingReview':len(pending)}))
 if __name__=='__main__':refresh()

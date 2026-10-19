@@ -3,6 +3,8 @@
   const form = document.querySelector('#course-filters');
   const initialTitle = document.title;
   const initialDescription = document.querySelector('meta[name="description"]')?.content || '';
+  const initialRobots = document.querySelector('meta[name="robots"]')?.content || 'index,follow';
+  const gradePaths = JSON.parse(document.body.dataset.schoolPaths || '{}');
   const h1 = document.querySelector('h1');
   const initialH1 = h1?.innerHTML;
   const cards = [...document.querySelectorAll('[data-course-card]')];
@@ -21,7 +23,7 @@
     const params = new URLSearchParams(location.search);
     for (const name of ['brand', 'age', 'grade', 'unit']) {
       const el = form.elements.namedItem(name);
-      if (el) el.value = params.get(name) || (name === 'brand' ? document.body.dataset.baseBrand || '' : '');
+      if (el) el.value = params.get(name) || (name === 'brand' ? document.body.dataset.baseBrand || '' : name === 'grade' ? document.body.dataset.baseGrade || '' : '');
     }
     for (const name of ['offer', 'discount', 'online']) {
       const el = form.elements.namedItem(name);
@@ -33,7 +35,7 @@
   }
   function syncURL(replace = false) {
     const p = new URLSearchParams();
-    for (const name of ['brand', 'age', 'grade', 'unit']) if (value(name) && !(name === 'brand' && value(name) === document.body.dataset.baseBrand)) p.set(name, value(name));
+    for (const name of ['brand', 'age', 'grade', 'unit']) if (value(name) && !(name === 'brand' && value(name) === document.body.dataset.baseBrand) && !(name === 'grade' && value(name) === document.body.dataset.baseGrade)) p.set(name, value(name));
     for (const name of ['offer', 'discount', 'online']) if (checked(name)) p.set(name, '1');
     if (search?.value.trim()) p.set('q', search.value.trim());
     if (sort?.value) p.set('sort', sort.value);
@@ -49,7 +51,7 @@
       const d = card.dataset;
       if (brand && d.brand !== brand) return false;
       if (age && (!d.ageMin || age < Number(d.ageMin) || age > Number(d.ageMax))) return false;
-      if (grade && (!d.gradeMin || grade < Number(d.gradeMin) || grade > Number(d.gradeMax))) return false;
+      if (grade && (d.grades ? !d.grades.split(',').includes(String(grade)) : (!d.gradeMin || grade < Number(d.gradeMin) || grade > Number(d.gradeMax)))) return false;
       if (unit && d.unit !== unit) return false;
       if (checked('offer') && d.offer !== '1') return false;
       if (checked('discount') && d.discount !== '1') return false;
@@ -73,7 +75,7 @@
     const fragments = [];
     if (brand && brand !== document.body.dataset.baseBrand) fragments.push(form.elements.namedItem('brand').selectedOptions[0].textContent.trim());
     if (age) fragments.push('возраст ' + age + ' лет');
-    if (grade) fragments.push(grade + ' класс');
+    if (grade && String(grade) !== document.body.dataset.baseGrade) fragments.push(grade + ' класс');
     if (checked('offer')) fragments.push('с бесплатным первым уроком');
     if (checked('discount')) fragments.push('со скидкой');
     if (checked('online')) fragments.push('онлайн');
@@ -89,7 +91,7 @@
     document.title = fragments.length ? headingText + ' — ' + fragments.join(', ') + ' | ProSchools' : initialTitle;
     const description = fragments.length ? headingText + ': ' + matching.length + ' программ. ' + fragments.join(', ') + '. Сравните цены, формат и условия занятий.' : initialDescription;
     setMeta('meta[name="description"]', 'content', description);
-    setMeta('meta[name="robots"]', 'content', active ? 'noindex,follow' : 'index,follow');
+    setMeta('meta[name="robots"]', 'content', active ? 'noindex,follow' : initialRobots);
     setMeta('meta[property="og:title"]', 'content', document.title);
     setMeta('meta[property="og:description"]', 'content', description);
     setMeta('meta[property="og:url"]', 'content', location.origin + location.pathname + location.search);
@@ -107,13 +109,15 @@
       limit = 18; syncURL(); apply();
     });
     form.addEventListener('change', event => {
-      if (['direction','programme'].includes(event.target.name)) { location.assign(event.target.value); return; }
+      if (['direction','programme','goal'].includes(event.target.name)) { location.assign(event.target.value); return; }
+      if (event.target.name === 'grade' && Object.hasOwn(gradePaths, event.target.value)) { location.assign(gradePaths[event.target.value]); return; }
       if (event.target.name === 'brand' && document.body.dataset.baseBrand) { location.assign(event.target.value ? '/kursy/shkoly/' + event.target.value + '/' : '/kursy/'); return; }
       limit = 18; syncURL(); apply();
     });
     document.querySelectorAll('[data-reset]').forEach(button => button.addEventListener('click', () => {
       for (const name of ['brand', 'age', 'grade', 'unit']) form.elements.namedItem(name).value = '';
       form.elements.namedItem('brand').value = document.body.dataset.baseBrand || '';
+      form.elements.namedItem('grade').value = document.body.dataset.baseGrade || '';
       for (const name of ['offer', 'discount', 'online']) form.elements.namedItem(name).checked = false;
       if (search) search.value = '';
       if (sort) sort.value = '';

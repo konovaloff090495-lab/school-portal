@@ -4,6 +4,7 @@ import hashlib, html, json, re, shutil, os
 from pathlib import Path
 from datetime import datetime, date
 from urllib.parse import urlparse, urlsplit, urlunsplit, parse_qsl, urlencode
+import school
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'data/courses'
@@ -21,6 +22,8 @@ CATS={c['id']:c for c in CATEGORIES}
 PARTNERS=load('partners.json')
 GUIDES={g['categoryId']:g for g in load('blog-guides.json')}
 BRANDS={c['brandId']:c['brand'] for c in COURSES}
+SCHOOL_PAGES=school.selections(COURSES)
+SCHOOL_PATHS={cat['id'] for cat in SCHOOL_PAGES}
 SUBJECT_CASES={'matematika':'математике','russkiy':'русскому языку','angliyskiy':'английскому языку','fizika':'физике','himiya':'химии','biologiya':'биологии','informatika':'информатике','istoriya':'истории','obshchestvoznanie':'обществознанию','literatura':'литературе','geografiya':'географии'}
 COMBINATIONS=[]
 for exam in ['ege','oge']:
@@ -37,11 +40,12 @@ def guide_links(ids):
     return '<section class="seo-section"><h2>Поможем выбрать программу</h2><p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
 def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ageRange') else c.get('grade') or 'Возраст уточняется'
 def fresh(item,days):return item and (TODAY-date.fromisoformat(item['checkedAt'])).days<=days
-def price(c):return c['price'] if fresh(c.get('price'),7) else None
+def price(c):return c['price'] if fresh(c.get('price'),7) and (not c.get('accessUntil') or c['accessUntil']>=TODAY.isoformat()) else None
 def offer(c):return c['offer'] if fresh(c.get('offer'),3) else None
 def modified(c):return max(c['checkedAt'],(price(c) or {}).get('checkedAt',''),(offer(c) or {}).get('checkedAt',''),c.get('editorialCheckedAt',''))
 def tint(c):return TINTS[int(hashlib.sha256(c['category'].encode()).hexdigest()[:4],16)%len(TINTS)]
 def indexable(c):
+    if c.get('accessUntil') and c['accessUntil']<TODAY.isoformat():return False
     if re.search(r'\b202[0-6]\b',c['title']) and not re.search(r'2027',c['title']):return False
     # Sparse records stay useful to visitors but do not create thin search pages.
     return bool(len(c.get('editorialDescription','').split())>=35 or (price(c) and (c.get('ageRange') or c.get('grade') or c.get('modules'))) or (c.get('ageRange') and (len(c.get('modules',[]))>=2 or c.get('facts'))))
@@ -68,7 +72,10 @@ def card(c):
     p=price(c);o=offer(c);category=CATS[c['category']]
     ds={'brand':c['brandId'],'title':c['title'],'search':c['title']+' '+c['brand']+' '+' '.join(CATS[t]['label'] for t in c['tags']),'unit':p['unit'] if p else '', 'price':p['amount'] if p else '', 'offer':'1' if o and o.get('kind')=='trial' else '0','discount':'1' if o and o.get('kind')=='discount' else '0','online':'1' if c['online'] else '0'}
     if c.get('ageRange'):ds.update({'age-min':c['ageRange'][0],'age-max':c['ageRange'][1]})
-    if c.get('grade'):
+    if c.get('grades'):
+        ds['grades']=','.join(str(n) for n in c['grades'])
+        ds.update({'grade-min':min(c['grades']),'grade-max':max(c['grades'])})
+    elif c.get('grade') and c.get('learningGoal')!='school':
         grades=re.findall(r'\d+',c['grade'])
         if grades:ds.update({'grade-min':grades[0],'grade-max':grades[-1]})
     attrs=' '.join(f'data-{k}="{esc(v)}"' for k,v in ds.items())
@@ -84,7 +91,7 @@ def breadcrumbs(items):
     return visual+f'<script type="application/ld+json">{script_json(schema)}</script>'
 
 def head(title,desc,path,index=True):
-    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="{'index,follow' if index else 'noindex,follow'}"><link rel="canonical" href="{BASE+path}"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="ProSchools"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/catalog.css?v=1"><script defer src="/kursy/assets/catalog.js?v=1"></script></head>'''
+    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="{'index,follow' if index else 'noindex,follow'}"><link rel="canonical" href="{BASE+path}"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="ProSchools"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/catalog.css?v=2"><script defer src="/kursy/assets/catalog.js?v=2"></script></head>'''
 
 HEADER='''<a href="#content" class="skip">Перейти к содержимому</a><header class="top"><div class="wrap"><a class="logo" href="/" aria-label="ProSchools — главная"><b>P</b><span>pro<em>·</em>school<small>.ru</small></span></a><nav class="nav" aria-label="Главное меню"><a class="desktop" href="/shkoly/">Школы</a><a class="current" href="/kursy/" aria-current="page">Курсы</a><a class="desktop" href="/uchebnik/">Учебник</a><a class="minor" href="/ege/">ЕГЭ</a><a class="minor" href="/blog/">Журнал</a><a class="nav-cta" href="/kursy/#catalog">Подобрать курс ↗</a></nav></div></header>'''
 FOOTER='''<footer class="footer"><div class="wrap"><div><a class="logo" href="/">pro·school.ru</a><p>Курсы для интересов, школьных задач и первых больших проектов.</p><p>На сайте есть партнёрские ссылки.</p></div><div><a href="/kursy/">Все курсы</a> · <a href="/shkoly/">Школы России</a><p><a href="/politika-konfidentsialnosti/">Конфиденциальность</a> · <a href="/reklama/">Рекламодателям</a></p><p>© 2026 ProSchools</p></div></div></footer>'''
@@ -93,6 +100,7 @@ METRIKA='''<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a
 def save(path,doc,index=True,lastmod=None):
     dest=OUT/path.removeprefix('/kursy/');dest.mkdir(parents=True,exist_ok=True)
     (dest/'index.html').write_text(doc+METRIKA+'</body></html>')
+    GENERATED.add(dest/'index.html')
     if index:SITEMAP.append((path,lastmod or max(modified(c) for c in COURSES)))
 
 def direction_links():
@@ -106,24 +114,32 @@ def combination_links(category):
             links.append('<a class="pill" href="'+caturl(item['id'])+'">'+esc(item['label'])+'</a> ')
     return '<div class="hero-points">'+''.join(links)+'</div>'
 
-def filters(path,brand=None):
+def filters(path,brand=None,category=None):
+    context=(category or {}).get('school',{})
+    is_school=bool(category and 'school' in category)
+    subject=context.get('subject') or ((category or {}).get('id') if (category or {}).get('id') in school.SUBJECT_MAP else None)
     basepath='/'.join(path.split('/')[:3])+'/'
     opts='<option value="/kursy/">Все направления</option>'+''.join(f'<option value="{caturl(t["id"])}" {"selected" if basepath==caturl(t["id"]) else ""}>{esc(t["label"])}</option>' for t in CATEGORIES if any(t['id'] in c['tags'] for c in COURSES))
+    if is_school:
+        opts='<option value="'+school.path()+'">Все школьные предметы</option>'+''.join(f'<option value="{school.path(s["id"],context.get("grade"))}" {"selected" if s["id"]==subject else ""}>{esc(s["label"])}</option>' for s in school.SUBJECTS if any(school.matches(c,s['id'],context.get('grade')) for c in COURSES))
     brandopts=''.join(f'<option value="{esc(k)}" {"selected" if k==brand else ""}>{esc(v)}</option>' for k,v in sorted(BRANDS.items(),key=lambda b:b[1]))
     ages=''.join(f'<option value="{n}">{n} {"года" if n==4 else "лет"}</option>' for n in range(4,18))
-    grades=''.join(f'<option value="{n}">{n} класс</option>' for n in range(1,12))
+    grades=''.join(f'<option value="{n}" {"selected" if n==context.get("grade") else ""}>{n} класс</option>' for n in range(1,12) if not is_school or any(school.matches(c,subject,n) for c in COURSES))
+    purposes='<label class="field"><span>Учебная задача</span><select name="goal">'+''.join(f'<option value="{p}" {"selected" if active else ""}>{label}</option>' for p,label,active in [('/kursy/','Все задачи',not is_school and (category or {}).get('id','').split('/')[0] not in ['ege','oge']),(school.path(subject),'Школьная программа',is_school),('/kursy/ege/','Подготовка к ЕГЭ',(category or {}).get('id','').split('/')[0]=='ege'),('/kursy/oge/','Подготовка к ОГЭ',(category or {}).get('id','').split('/')[0]=='oge')])+'</select></label>'
     programmes=[c for c in COMBINATIONS if caturl(c['filters'][0])==basepath]
     programme=''
     if programmes:
         programme='<label class="field"><span>Предмет экзамена</span><select name="programme"><option value="'+basepath+'">Все предметы</option>'+''.join(f'<option value="{caturl(p["id"])}" {"selected" if caturl(p["id"])==path else ""}>{esc(CATS[p["filters"][1]]["label"])}</option>' for p in programmes)+'</select></label>'
-    return f'''<button type="button" class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="course-filters">Фильтры <span aria-hidden="true">☷</span></button><form class="filters" id="course-filters" action="{path}" method="get"><div class="filter-head"><strong>Подобрать курс</strong><button class="reset" type="button" data-reset>Сбросить</button></div><label class="field"><span>Направление</span><select name="direction">{opts}</select></label>{programme}<label class="field"><span>Школа</span><select name="brand"><option value="">Все школы</option>{brandopts}</select></label><label class="field"><span>Возраст ребёнка</span><select name="age"><option value="">Любой возраст</option>{ages}</select></label><label class="field"><span>Класс</span><select name="grade"><option value="">Любой класс</option>{grades}</select></label><label class="field"><span>Единица оплаты</span><select name="unit"><option value="">Все варианты</option><option value="урок">За урок</option><option value="занятие">За занятие</option><option value="месяц">За месяц</option><option value="курс">За курс</option><option value="блок">За блок</option></select></label><label class="check"><input type="checkbox" name="offer" value="1">Бесплатный первый урок</label><label class="check"><input type="checkbox" name="discount" value="1">Курсы со скидкой</label><label class="check"><input type="checkbox" name="online" value="1">Только онлайн</label><button type="submit" class="button apply">Показать курсы</button><p class="filter-note">Выбирайте формат и программу под ребёнка. В карточках — условия занятий и переход к школе.</p></form>'''
+    return f'''<button type="button" class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="course-filters">Фильтры <span aria-hidden="true">☷</span></button><form class="filters" id="course-filters" action="{path}" method="get"><div class="filter-head"><strong>Подобрать курс</strong><button class="reset" type="button" data-reset>Сбросить</button></div>{purposes}<label class="field"><span>{'Предмет' if is_school else 'Направление'}</span><select name="direction">{opts}</select></label>{programme}<label class="field"><span>Школа</span><select name="brand"><option value="">Все школы</option>{brandopts}</select></label><label class="field"><span>Возраст ребёнка</span><select name="age"><option value="">Любой возраст</option>{ages}</select></label><label class="field"><span>Класс</span><select name="grade"><option value="">Любой класс</option>{grades}</select></label><label class="field"><span>Единица оплаты</span><select name="unit"><option value="">Все варианты</option><option value="урок">За урок</option><option value="занятие">За занятие</option><option value="месяц">За месяц</option><option value="курс">За курс</option><option value="блок">За блок</option></select></label><label class="check"><input type="checkbox" name="offer" value="1">Бесплатный первый урок</label><label class="check"><input type="checkbox" name="discount" value="1">Курсы со скидкой</label><label class="check"><input type="checkbox" name="online" value="1">Только онлайн</label><button type="submit" class="button apply">Показать курсы</button><p class="filter-note">Выбирайте формат и программу под ребёнка. В карточках — условия занятий и переход к школе.</p></form>'''
 
 FAQ=[('Как выбрать курс для ребёнка?','Начните с задачи: подтянуть предмет, подготовиться к экзамену или попробовать новое увлечение. Сравните возраст, формат обратной связи и общую стоимость пакета. На первом занятии оцените, понимает ли ребёнок преподавателя и хочет ли продолжать.'),('Почему цены указаны по-разному?','Школы продают уроки, месяцы, учебные блоки и целые программы. Единица оплаты указана рядом с каждой ценой. Пакеты по нескольким предметам отмечены отдельно. Для сравнения можно отфильтровать одинаковую единицу оплаты.'),('Можно ли сначала попробовать бесплатно?','У части школ есть бесплатный первый урок. Такие предложения можно отобрать фильтром. Условия записи, длительность пробного занятия и доступность времени смотрите на сайте школы.'),('Где записаться и оплатить обучение?','Откройте карточку программы и нажмите «Перейти на сайт школы». Запись, договор и оплата проходят непосредственно у выбранной школы.'),('Как часто обновляются цены?','У каждой цены есть дата проверки. Каталог учитывает изменение условий на сайтах школ. Если подтверждённой цены нет, показано «Цена у школы». Итоговую сумму и состав пакета можно проверить перед записью.')]
 def faq_html(items=FAQ):return '<div class="faq">'+''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q,a in items)+'</div>'
 
 def catalogue(category=None,brand=None):
     path=caturl(category['id']) if category else brandurl(brand) if brand else '/kursy/'
-    selected=[c for c in COURSES if (not category or all(t in c['tags'] for t in category.get('filters',[category['id']]))) and (not brand or c['brandId']==brand)]
+    is_school=bool(category and 'school' in category)
+    context=category.get('school',{}) if category else {}
+    selected=[c for c in COURSES if (not category or (school.matches(c,**context) if is_school else all(t in c['tags'] for t in category.get('filters',[category['id']])))) and (not brand or c['brandId']==brand)]
     if not selected:return
     # Stable, varied first screen; no claim of editorial ranking.
     selected.sort(key=lambda c:(not bool(offer(c)),not bool(price(c)),c['brandId'],c['id']))
@@ -142,18 +158,28 @@ def catalogue(category=None,brand=None):
     crumb=[('Главная','/'),('Курсы','/kursy/' if category or brand else '')]
     if category or brand:crumb.append((category['label'] if category else BRANDS[brand],''))
     chips=['programmirovanie','ege','oge','angliyskiy','shahmaty','dizayn','podgotovka-k-shkole','logoped']
-    doc=head(title,desc[:310],path,index=not category or len(selected)>=2)+f'<body data-heading="{esc(heading)}" data-base-brand="{esc(brand or "")}">'+HEADER+'<main id="content"><div class="wrap">'+breadcrumbs(crumb)
+    if is_school:
+        crumb=[('Главная','/'),('Курсы','/kursy/'),('Школьная программа',school.path() if context else '')]
+        if context.get('subject'):crumb.append((school.SUBJECT_MAP[context['subject']]['label'],school.path(context['subject']) if context.get('grade') else ''))
+        if context.get('grade'):crumb.append((str(context['grade'])+' класс',''))
+    allow_index=not category or category.get('allowIndex',len(selected)>=2)
+    grade_paths={str(n):school.path(context.get('subject'),n) for n in range(1,12) if school.path(context.get('subject'),n).removeprefix('/kursy/').rstrip('/') in SCHOOL_PATHS} if is_school else {}
+    if is_school:grade_paths['']=school.path(context.get('subject'))
+    doc=head(title,desc[:310],path,index=allow_index)+f'<body data-heading="{esc(heading)}" data-base-brand="{esc(brand or "")}" data-base-grade="{context.get("grade") or ""}" data-school-paths="{esc(json.dumps(grade_paths))}">'+HEADER+'<main id="content"><div class="wrap">'+breadcrumbs(crumb)
     doc+=f'''<section class="hero"><div><div class="eyebrow">Курсы, которые подходят вашему ребёнку</div><h1>{heroheading}</h1><p class="hero-copy">{esc(intro)}</p><div class="hero-points"><span class="pill">✓ Сравнение школ и программ</span><span class="pill green">↗ Бесплатные первые уроки</span><span class="pill">Без регистрации</span></div></div><div class="art" aria-hidden="true"><span class="art-star">✳</span><div class="art-window"><div class="dots"><i></i><i></i><i></i></div><div class="art-code"><span>&lt;</span> hello! <span>/&gt;</span></div></div><div class="art-ticket"><small>БОЛЬШИЕ ИНТЕРЕСЫ</small><strong>начинаются<br>с малого</strong><small>найдём то самое ↗</small></div><div class="art-chess">♞</div></div></section>
     <div class="stats"><span><strong>{len(COURSES)}</strong> программ в каталоге</span><span><strong>{len(BRANDS)}</strong> образовательных компаний</span><span><strong>{len([t for t in CATEGORIES if any(t['id'] in c['tags'] for c in COURSES)])}</strong> направлений</span><span>Цены с датой проверки</span></div><nav class="category-chips" aria-label="Популярные направления"><a class="chip {'active' if not category and not brand else ''}" href="/kursy/">Все курсы</a>'''
     doc+=''.join(f'<a class="chip {"active" if category and category["id"]==id else ""}" href="{caturl(id)}">{esc(CATS[id]["label"])}</a>' for id in chips)
-    doc+='</nav><section class="catalog-layout" id="catalog">'+filters(path,brand)
+    doc+='<a class="chip" href="/kursy/shkolnaya-programma/">Школьная программа по классам</a>'
+    doc+='</nav><section class="catalog-layout" id="catalog">'+filters(path,brand,category)
     doc+=f'''<div><div class="result-toolbar"><h2>Найдено <span id="result-count">{len(selected)}</span> <span id="programme-word">{programme_word(len(selected))}</span></h2><label><span class="skip">Сортировка</span><select id="sort" aria-label="Сортировка"><option value="">По направлениям</option><option value="title">По названию</option><option value="price-lesson">Дешевле за урок</option><option value="price-month">Дешевле за месяц</option><option value="price-course">Дешевле за курс</option></select></label></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="course-search" type="search" placeholder="Название курса, школа или интерес" aria-label="Поиск по курсам"></label><div class="course-list" id="course-results">'''
     doc+=''.join(card(c) for c in selected)
     doc+='''</div><div class="empty" id="empty" hidden><h3>Попробуем по-другому?</h3><p>Курсов с таким сочетанием пока нет. Уберите один из фильтров.</p><button class="button light" data-reset type="button">Сбросить фильтры</button></div><button class="button load-more" id="load-more" type="button" hidden>Показать ещё программы ↓</button><p class="catalog-aside">Цена «от» зависит от тарифа и пакета. Условия бесплатного занятия и итоговую стоимость смотрите в карточке и на сайте школы.</p></div></section>'''
-    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('filters',[category['id']]) if category else [])+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
+    if is_school:doc+=school.content(COURSES,context)+school.navigation(COURSES,context)
+    else:doc+=school.navigation(COURSES)
+    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('articleCategories',category.get('filters',[category['id']])) if category else [])+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
     schema={'@context':'https://schema.org','@type':'ItemList','name':heading,'numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'url':BASE+url(c),'name':c['brand']+': '+c['title']} for i,c in enumerate(selected)]}
     doc+=f'<script id="list-schema" type="application/ld+json">{script_json(schema)}</script>'
-    save(path,doc,index=not category or len(selected)>=2,lastmod=max(modified(c) for c in selected))
+    save(path,doc,index=allow_index,lastmod=max(modified(c) for c in selected))
 
 def detail(c):
     path=url(c);p=price(c);o=offer(c);cat=CATS[c['category']]
@@ -162,6 +188,7 @@ def detail(c):
     description=f'{c["title"]} — программа школы {c["brand"]}. '+('Стоимость '+('от ' if p['from'] else '')+fmt(p['amount'])+' ₽ за '+p['unit']+'. ' if p else '')+f'{age(c)}. {c["format"]}. Условия, направления и запись на сайте школы.'
     crumbs=[('Главная','/'),('Курсы','/kursy/'),(cat['label'],caturl(c['category'])),(c['brand'],'')]
     details=[('Школа',c['brand']),('Возраст / класс',age(c)),('Формат',c['format']),('Направления',', '.join(topics))]
+    if c.get('learningGoal')=='school':details.append(('Учебная задача','Школьная программа'))
     if p:details.extend([('Стоимость',('от ' if p['from'] else '')+fmt(p['amount'])+' ₽ за '+p['unit']),('Условия цены',p['condition'])])
     details.extend([tuple(f) for f in c.get('facts',[])])
     details.extend([('Проверка страницы',datetime.fromisoformat(c['checkedAt']).strftime('%d.%m.%Y')),('Запись и договор','На сайте школы')])
@@ -176,16 +203,33 @@ def detail(c):
     if p:doc+=f'<p><strong>{("От " if p["from"] else "")+fmt(p["amount"])} ₽ за {esc(p["unit"])}.</strong> {esc(p["condition"])}. Цена проверена {date_label}.</p>'
     else:doc+='<p>Стоимость зависит от выбранной программы и пакета занятий. Посмотрите тарифы на сайте школы перед записью.</p>'
     if o:doc+=f'<p>{esc(o["text"])}. {esc(o.get("condition","Доступное время и условия пробного занятия уточняются при записи"))}.</p>'
+    packages=[v for v in c.get('packages',[]) if fresh(v.get('price'),7)]
+    if packages:
+        doc+='<h3>Пакеты занятий</h3><p>Полная стоимость пакета. Ежемесячный платёж по рассрочке в эту колонку не подставляется.</p><div class="package-scroll"><table class="package-table"><thead><tr><th>Уроков</th><th>За пакет</th><th>За урок</th><th>Условия</th></tr></thead><tbody>'
+        for v in packages:
+            vp=v['price'];destination=partner_url({**c,'sourceUrl':v['sourceUrl']})
+            doc+=f'<tr><td>{v["lessons"]}</td><td>{fmt(vp["amount"])} ₽</td><td>{fmt(round(vp["amount"]/v["lessons"]))} ₽</td><td><a href="{esc(destination)}" target="_blank" rel="sponsored nofollow noopener" data-partner-link data-course="{c["id"]}" data-brand="{c["brandId"]}">Пакет у школы ↗</a></td></tr>'
+        doc+='</tbody></table></div>'
     doc+=f'''<p>Заявка, договор и оплата проходят на сайте {esc(c['brand'])}. Перед оплатой проверьте размер группы, количество занятий в пакете и правила переноса уроков.</p><div style="margin-top:20px">{button}</div></section></div><aside><div class="brand-note"><div class="eyebrow">Школа</div><h3 style="margin-top:12px">{esc(c['brand'])}</h3><p>Другие направления и программы этой школы в каталоге.</p><a href="{brandurl(c['brandId'])}">Все курсы {esc(c['brand'])} ↗</a></div></aside></div><section class="seo-section" id="related"><h2>Сравните с другими программами</h2><p class="comparison-note">Курсы похожего направления. Цена и единица оплаты указаны отдельно для каждой программы.</p><div class="course-list" style="margin-top:22px">'''
-    related=sorted([x for x in COURSES if x['id']!=c['id'] and any(t in x['tags'] for t in c['tags'])],key=lambda x:(x['brandId']==c['brandId'],not bool(price(x)),x['id']))[:4]
-    doc+=''.join(card(x) for x in related)+'</div></section>'+guide_links([c['category']]+c['tags'])+'</div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
+    related=sorted([x for x in COURSES if x['id']!=c['id'] and (any(school.matches(x,s) for s in c.get('schoolSubjects',[])) if c.get('learningGoal')=='school' else any(t in x['tags'] for t in c['tags']))],key=lambda x:(x['brandId']==c['brandId'],not bool(price(x)),x['id']))[:4]
+    doc+=''.join(card(x) for x in related)+'</div></section>'
+    if c.get('learningGoal')=='school':
+        doc+='<section class="seo-section"><h2>Занятия по предмету и классу</h2><div class="hero-points">'
+        for subject in c.get('schoolSubjects',[]):
+            doc+=f'<a class="pill" href="{school.path(subject)}">{esc(school.SUBJECT_MAP[subject]["label"])}</a>'
+            for n in c.get('grades',[]):
+                if school.path(subject,n).removeprefix('/kursy/').rstrip('/') in SCHOOL_PATHS:doc+=f'<a class="pill" href="{school.path(subject,n)}">{esc(school.SUBJECT_MAP[subject]["label"])} · {n} класс</a>'
+        doc+='</div></section>'
+    doc+=guide_links([c['category']]+c['tags'])+'</div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
     schema={'@context':'https://schema.org','@type':'Course','name':c['title'],'description':description,'url':BASE+path,'provider':{'@type':'Organization','name':c['brand'],'url':urlunsplit(('https',urlparse(c['sourceUrl']).netloc,'/','',''))},'inLanguage':'ru','about':[{'@type':'Thing','name':t} for t in topics]}
     if c.get('ageRange'):schema['typicalAgeRange']=f'{c["ageRange"][0]}-{c["ageRange"][1]}'
+    if c.get('learningGoal')=='school' and c.get('grades'):schema['educationalLevel']=c['grade']
     if p and p['unit']=='курс' and not p['from']:schema['offers']={'@type':'Offer','price':p['amount'],'priceCurrency':'RUB','url':dest}
     doc+=f'<script type="application/ld+json">{script_json(schema)}</script>'
     save(path,doc,indexable(c),modified(c))
 
 SITEMAP=[]
+GENERATED=set()
 if __name__=='__main__':
     OUT.mkdir(parents=True,exist_ok=True);(OUT/'assets').mkdir(exist_ok=True)
     for asset in ['catalog.css','catalog.js','navigation.js']:shutil.copy(Path(__file__).with_name(asset),OUT/'assets'/asset)
@@ -194,11 +238,15 @@ if __name__=='__main__':
     css=re.sub(r'^@font-face\{[^}]+\}\n@font-face\{[^}]+\}\n','',css)
     (OUT/'assets/catalog.css').write_text(Path(__file__).with_name('fonts.css').read_text()+'\n'+css)
     catalogue()
-    for category in CATEGORIES+COMBINATIONS:catalogue(category=category)
+    for category in CATEGORIES+COMBINATIONS+SCHOOL_PAGES:catalogue(category=category)
     for brand in BRANDS:catalogue(brand=brand)
     for c in COURSES:detail(c)
+    # Remove only obsolete generated HTML from this standalone section, so a
+    # closed/invalid facet cannot survive a rebuild at its previous public URL.
+    for old_page in OUT.rglob('index.html'):
+        if old_page not in GENERATED:old_page.unlink()
     xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE+path}</loc><lastmod>{date}</lastmod></url>' for path,date in SITEMAP)+'</urlset>'
     (OUT/'sitemap.xml').write_text(xml)
-    manifest={'builtAt':datetime.now().isoformat(),'courses':len(COURSES),'brands':len(BRANDS),'pages':1+len(BRANDS)+len(COMBINATIONS)+sum(any(t['id'] in c['tags'] for c in COURSES) for t in CATEGORIES)+len(COURSES),'indexablePages':len(SITEMAP),'indexableCourses':sum(indexable(c) for c in COURSES),'prices':sum(bool(price(c)) for c in COURSES),'offers':sum(bool(offer(c)) for c in COURSES),'sitemap':[BASE+p for p,_ in SITEMAP]}
+    manifest={'builtAt':datetime.now().isoformat(),'courses':len(COURSES),'brands':len(BRANDS),'pages':len(GENERATED),'schoolSelections':len(SCHOOL_PAGES),'schoolCourses':sum(c.get('learningGoal')=='school' for c in COURSES),'indexablePages':len(SITEMAP),'indexableCourses':sum(indexable(c) for c in COURSES),'prices':sum(bool(price(c)) for c in COURSES),'offers':sum(bool(offer(c)) for c in COURSES),'sitemap':[BASE+p for p,_ in SITEMAP]}
     (ROOT/'work/courses/build-report.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
     print(json.dumps({k:v for k,v in manifest.items() if k!='sitemap'},ensure_ascii=False))

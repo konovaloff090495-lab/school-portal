@@ -3,7 +3,11 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 exec 9>work/courses/refresh.lock
 flock -n 9 || exit 0
-.venv/bin/python scripts/courses/refresh.py
+if [[ "${1:-}" == "--browser-input" ]]; then
+  .venv/bin/python scripts/courses/refresh-browser.py --input "${2:?Browser snapshot required}" --apply
+else
+  .venv/bin/python scripts/courses/refresh.py
+fi
 release="/var/www/school-portal/courses-releases/$(date -u +%Y%m%d-%H%M%S)-refresh"
 mkdir -p "$release/kursy"
 COURSES_OUTPUT_DIR="$release/kursy" .venv/bin/python scripts/courses/build.py
