@@ -19,6 +19,7 @@ COURSES=[c for c in load('catalog.json') if c.get('active')]
 CATEGORIES=load('categories.json')
 CATS={c['id']:c for c in CATEGORIES}
 PARTNERS=load('partners.json')
+GUIDES={g['categoryId']:g for g in load('blog-guides.json')}
 BRANDS={c['brandId']:c['brand'] for c in COURSES}
 SUBJECT_CASES={'matematika':'математике','russkiy':'русскому языку','angliyskiy':'английскому языку','fizika':'физике','himiya':'химии','biologiya':'биологии','informatika':'информатике','istoriya':'истории','obshchestvoznanie':'обществознанию','literatura':'литературе','geografiya':'географии'}
 COMBINATIONS=[]
@@ -30,6 +31,10 @@ TINTS=['#ffe1c2','#e1eadf','#ffe8a5','#e2e9ed','#f4dbd2','#e3dfef']
 def url(c):return '/kursy/kurs/'+c['id']+'/'
 def caturl(id):return '/kursy/'+id+'/'
 def brandurl(id):return '/kursy/shkoly/'+id+'/'
+def guide_links(ids):
+    selected=[GUIDES[id] for id in dict.fromkeys(ids) if id in GUIDES][:3]
+    links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in selected)
+    return '<section class="seo-section"><h2>Поможем выбрать программу</h2><p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
 def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ageRange') else c.get('grade') or 'Возраст уточняется'
 def fresh(item,days):return item and (TODAY-date.fromisoformat(item['checkedAt'])).days<=days
 def price(c):return c['price'] if fresh(c.get('price'),7) else None
@@ -145,7 +150,7 @@ def catalogue(category=None,brand=None):
     doc+=f'''<div><div class="result-toolbar"><h2>Найдено <span id="result-count">{len(selected)}</span> <span id="programme-word">{programme_word(len(selected))}</span></h2><label><span class="skip">Сортировка</span><select id="sort" aria-label="Сортировка"><option value="">По направлениям</option><option value="title">По названию</option><option value="price-lesson">Дешевле за урок</option><option value="price-month">Дешевле за месяц</option><option value="price-course">Дешевле за курс</option></select></label></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="course-search" type="search" placeholder="Название курса, школа или интерес" aria-label="Поиск по курсам"></label><div class="course-list" id="course-results">'''
     doc+=''.join(card(c) for c in selected)
     doc+='''</div><div class="empty" id="empty" hidden><h3>Попробуем по-другому?</h3><p>Курсов с таким сочетанием пока нет. Уберите один из фильтров.</p><button class="button light" data-reset type="button">Сбросить фильтры</button></div><button class="button load-more" id="load-more" type="button" hidden>Показать ещё программы ↓</button><p class="catalog-aside">Цена «от» зависит от тарифа и пакета. Условия бесплатного занятия и итоговую стоимость смотрите в карточке и на сайте школы.</p></div></section>'''
-    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section><section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
+    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('filters',[category['id']]) if category else [])+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
     schema={'@context':'https://schema.org','@type':'ItemList','name':heading,'numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'url':BASE+url(c),'name':c['brand']+': '+c['title']} for i,c in enumerate(selected)]}
     doc+=f'<script id="list-schema" type="application/ld+json">{script_json(schema)}</script>'
     save(path,doc,index=not category or len(selected)>=2,lastmod=max(modified(c) for c in selected))
@@ -173,7 +178,7 @@ def detail(c):
     if o:doc+=f'<p>{esc(o["text"])}. {esc(o.get("condition","Доступное время и условия пробного занятия уточняются при записи"))}.</p>'
     doc+=f'''<p>Заявка, договор и оплата проходят на сайте {esc(c['brand'])}. Перед оплатой проверьте размер группы, количество занятий в пакете и правила переноса уроков.</p><div style="margin-top:20px">{button}</div></section></div><aside><div class="brand-note"><div class="eyebrow">Школа</div><h3 style="margin-top:12px">{esc(c['brand'])}</h3><p>Другие направления и программы этой школы в каталоге.</p><a href="{brandurl(c['brandId'])}">Все курсы {esc(c['brand'])} ↗</a></div></aside></div><section class="seo-section" id="related"><h2>Сравните с другими программами</h2><p class="comparison-note">Курсы похожего направления. Цена и единица оплаты указаны отдельно для каждой программы.</p><div class="course-list" style="margin-top:22px">'''
     related=sorted([x for x in COURSES if x['id']!=c['id'] and any(t in x['tags'] for t in c['tags'])],key=lambda x:(x['brandId']==c['brandId'],not bool(price(x)),x['id']))[:4]
-    doc+=''.join(card(x) for x in related)+'</div></section></div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
+    doc+=''.join(card(x) for x in related)+'</div></section>'+guide_links([c['category']]+c['tags'])+'</div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
     schema={'@context':'https://schema.org','@type':'Course','name':c['title'],'description':description,'url':BASE+path,'provider':{'@type':'Organization','name':c['brand'],'url':urlunsplit(('https',urlparse(c['sourceUrl']).netloc,'/','',''))},'inLanguage':'ru','about':[{'@type':'Thing','name':t} for t in topics]}
     if c.get('ageRange'):schema['typicalAgeRange']=f'{c["ageRange"][0]}-{c["ageRange"][1]}'
     if p and p['unit']=='курс' and not p['from']:schema['offers']={'@type':'Offer','price':p['amount'],'priceCurrency':'RUB','url':dest}
