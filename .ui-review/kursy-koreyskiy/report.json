@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:8787/kursy/koreyskiy/",
+  "date": "2026-10-19",
+  "mode": "standard",
+  "counts": {
+    "broken": 0,
+    "degraded": 0,
+    "polish": 1
+  },
+  "findings": [
+    {
+      "severity": "polish",
+      "breakpoint": "mobile/tablet",
+      "category": "smallText",
+      "selector": ".breadcrumbs, .eyebrow, .school-name, footer a",
+      "source": "scripts/courses/design/assets/catalog.css; scripts/courses/design/chrome",
+      "fix": "Сохранён существующий компактный дизайн; мелкие вторичные подписи и текстовые ссылки требуют отдельной общей проверки доступности."
+    }
+  ]
+}
