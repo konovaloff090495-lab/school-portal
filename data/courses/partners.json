@@ -1,0 +1,12 @@
+{
+  "utmSource": "gerasimov_lav",
+  "utmCampaign": "proschools_courses",
+  "synergyMedium": "lkpartners",
+  "defaultMedium": "catalog",
+  "approvedLinks": {},
+  "tPartners": {
+    "status": "awaiting_authenticated_export",
+    "lastAttempt": "2026-10-19",
+    "reason": "Browser blocked partners.tbank.ru with ERR_CERT_AUTHORITY_INVALID. No offers or tracking links inferred."
+  }
+}

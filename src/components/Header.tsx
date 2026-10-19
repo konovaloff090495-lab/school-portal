@@ -194,6 +194,8 @@ export default function Header() {
               </svg>
             </button>
 
+            <a href="/kursy/" className="ps-courses-nav" style={{ padding: '8px 9px', borderRadius: 10, color: '#bd3c17', textDecoration: 'none', whiteSpace: 'nowrap', fontWeight: 700, fontSize: 14 }}>Курсы</a>
+
             {/* Учебник */}
             <Link href="/uchebnik/" style={{
               padding: '8px 12px', borderRadius: 10, cursor: 'pointer',
@@ -279,6 +281,8 @@ export default function Header() {
             )}
           </nav>
 
+          <a href="/kursy/" className="ps-courses-mobile">Курсы</a>
+
           {/* CTA */}
           <Link
             href="/shkoly/"
@@ -299,13 +303,15 @@ export default function Header() {
         </div>
 
         <style>{`
+          .ps-courses-mobile { display: none; }
           @media (max-width: 768px) {
+            .ps-courses-mobile { display: inline-flex; padding: 8px; color: #bd3c17; font: 700 12px var(--font-manrope, sans-serif); white-space: nowrap; text-decoration: none; }
             .header-inner { padding: 0 16px !important; gap: 10px !important; }
             .header-inner form { display: none !important; }
             .header-inner nav { display: none !important; }
             .header-logo-text { display: none !important; }
           }
-          @media (max-width: 360px) {
+          @media (max-width: 480px) {
             .header-city-label { display: none !important; }
           }
         `}</style>
