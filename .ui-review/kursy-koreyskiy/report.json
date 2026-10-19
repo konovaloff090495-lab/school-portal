@@ -13,7 +13,7 @@
       "breakpoint": "mobile/tablet",
       "category": "smallText",
       "selector": ".breadcrumbs, .eyebrow, .school-name, footer a",
-      "source": "scripts/courses/design/assets/catalog.css; scripts/courses/design/chrome",
+      "source": "scripts/courses/design/assets/compact.css; scripts/courses/design/chrome",
       "fix": "Сохранён существующий компактный дизайн; мелкие вторичные подписи и текстовые ссылки требуют отдельной общей проверки доступности."
     }
   ]
