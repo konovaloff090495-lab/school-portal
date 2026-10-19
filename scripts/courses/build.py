@@ -21,6 +21,7 @@ CATEGORIES=load('categories.json')
 CATS={c['id']:c for c in CATEGORIES}
 PARTNERS=load('partners.json')
 GUIDES={g['categoryId']:g for g in load('blog-guides.json')}
+SCHOOL_GUIDES=load('school-blog-guides.json') if (DATA/'school-blog-guides.json').exists() else []
 BRANDS={c['brandId']:c['brand'] for c in COURSES}
 SCHOOL_PAGES=school.selections(COURSES)
 SCHOOL_PATHS={cat['id'] for cat in SCHOOL_PAGES}
@@ -34,9 +35,16 @@ TINTS=['#ffe1c2','#e1eadf','#ffe8a5','#e2e9ed','#f4dbd2','#e3dfef']
 def url(c):return '/kursy/kurs/'+c['id']+'/'
 def caturl(id):return '/kursy/'+id+'/'
 def brandurl(id):return '/kursy/shkoly/'+id+'/'
-def guide_links(ids):
+def guide_links(ids,school_context=None,course=None):
     selected=[GUIDES[id] for id in dict.fromkeys(ids) if id in GUIDES][:3]
-    links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in selected)
+    school_selected=[]
+    if school_context is not None:
+        school_selected=[g for g in SCHOOL_GUIDES if (not school_context.get('subject') or g['subjectId']==school_context['subject']) and (not school_context.get('grade') or g['grade']==school_context['grade'])]
+    elif course and course.get('learningGoal')=='school':
+        school_selected=[g for g in SCHOOL_GUIDES if course['id'] in g['courseIds']]
+        school_selected.sort(key=lambda g:(g['subjectId'] not in course.get('schoolSubjects',[]),g['grade'],g['subjectId']))
+    links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in school_selected[:4]+selected)
+    if school_selected:links+='<li><a href="/blog/luchshie-kursy-po-predmetam-i-klassam/">Обзоры школьных курсов по всем предметам и классам</a></li>'
     return '<section class="seo-section"><h2>Поможем выбрать программу</h2><p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
 def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ageRange') else c.get('grade') or 'Возраст уточняется'
 def fresh(item,days):return item and (TODAY-date.fromisoformat(item['checkedAt'])).days<=days
@@ -176,7 +184,7 @@ def catalogue(category=None,brand=None):
     doc+='''</div><div class="empty" id="empty" hidden><h3>Попробуем по-другому?</h3><p>Курсов с таким сочетанием пока нет. Уберите один из фильтров.</p><button class="button light" data-reset type="button">Сбросить фильтры</button></div><button class="button load-more" id="load-more" type="button" hidden>Показать ещё программы ↓</button><p class="catalog-aside">Цена «от» зависит от тарифа и пакета. Условия бесплатного занятия и итоговую стоимость смотрите в карточке и на сайте школы.</p></div></section>'''
     if is_school:doc+=school.content(COURSES,context)+school.navigation(COURSES,context)
     else:doc+=school.navigation(COURSES)
-    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('articleCategories',category.get('filters',[category['id']])) if category else [])+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
+    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('articleCategories',category.get('filters',[category['id']])) if category else [],school_context=context if is_school else None)+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
     schema={'@context':'https://schema.org','@type':'ItemList','name':heading,'numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'url':BASE+url(c),'name':c['brand']+': '+c['title']} for i,c in enumerate(selected)]}
     doc+=f'<script id="list-schema" type="application/ld+json">{script_json(schema)}</script>'
     save(path,doc,index=allow_index,lastmod=max(modified(c) for c in selected))
@@ -220,7 +228,7 @@ def detail(c):
             for n in c.get('grades',[]):
                 if school.path(subject,n).removeprefix('/kursy/').rstrip('/') in SCHOOL_PATHS:doc+=f'<a class="pill" href="{school.path(subject,n)}">{esc(school.SUBJECT_MAP[subject]["label"])} · {n} класс</a>'
         doc+='</div></section>'
-    doc+=guide_links([c['category']]+c['tags'])+'</div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
+    doc+=guide_links([c['category']]+c['tags'],course=c)+'</div></main>'+FOOTER+f'<div class="mobile-cta"><div><strong>{("от " if p and p["from"] else "")+fmt(p["amount"])+" ₽" if p else "Цена у школы"}</strong><small>{"за "+esc(p["unit"]) if p else esc(c["brand"])}</small></div>{button}</div>'
     schema={'@context':'https://schema.org','@type':'Course','name':c['title'],'description':description,'url':BASE+path,'provider':{'@type':'Organization','name':c['brand'],'url':urlunsplit(('https',urlparse(c['sourceUrl']).netloc,'/','',''))},'inLanguage':'ru','about':[{'@type':'Thing','name':t} for t in topics]}
     if c.get('ageRange'):schema['typicalAgeRange']=f'{c["ageRange"][0]}-{c["ageRange"][1]}'
     if c.get('learningGoal')=='school' and c.get('grades'):schema['educationalLevel']=c['grade']
