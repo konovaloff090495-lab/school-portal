@@ -1,0 +1,113 @@
+{
+  "route": "/kursy/lingvistika/",
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "viewportMetaMissing": false,
+      "horizontalScroll": false,
+      "offenders": 0,
+      "clippedText": 0,
+      "overlaps": 1,
+      "tinyTapTargets": 15,
+      "brokenImages": 0,
+      "distortedImages": 0,
+      "overflowingMedia": 0,
+      "smallText": 15,
+      "wrappedControls": 0,
+      "placeholderText": 0,
+      "fixedOverlays": {
+        "pct": 8,
+        "bars": [
+          {
+            "el": "header#site-header",
+            "pct": 8
+          }
+        ]
+      },
+      "breakpoint": "mobile"
+    },
+    {
+      "viewport": "768x1024",
+      "viewportMetaMissing": false,
+      "horizontalScroll": false,
+      "offenders": 0,
+      "clippedText": 0,
+      "overlaps": 0,
+      "tinyTapTargets": 15,
+      "brokenImages": 0,
+      "distortedImages": 0,
+      "overflowingMedia": 0,
+      "smallText": 15,
+      "wrappedControls": 2,
+      "placeholderText": 0,
+      "fixedOverlays": {
+        "pct": 6,
+        "bars": [
+          {
+            "el": "header#site-header",
+            "pct": 6
+          }
+        ]
+      },
+      "breakpoint": "tablet"
+    },
+    {
+      "viewport": "1366x768",
+      "viewportMetaMissing": false,
+      "horizontalScroll": false,
+      "offenders": 0,
+      "clippedText": 0,
+      "overlaps": 0,
+      "tinyTapTargets": 15,
+      "brokenImages": 0,
+      "distortedImages": 0,
+      "overflowingMedia": 0,
+      "smallText": 15,
+      "wrappedControls": 2,
+      "placeholderText": 0,
+      "fixedOverlays": {
+        "pct": 8,
+        "bars": [
+          {
+            "el": "header#site-header",
+            "pct": 8
+          }
+        ]
+      },
+      "breakpoint": "laptop"
+    },
+    {
+      "viewport": "1920x1080",
+      "viewportMetaMissing": false,
+      "horizontalScroll": false,
+      "offenders": 0,
+      "clippedText": 0,
+      "overlaps": 0,
+      "tinyTapTargets": 15,
+      "brokenImages": 0,
+      "distortedImages": 0,
+      "overflowingMedia": 0,
+      "smallText": 15,
+      "wrappedControls": 2,
+      "placeholderText": 0,
+      "fixedOverlays": {
+        "pct": 6,
+        "bars": [
+          {
+            "el": "header#site-header",
+            "pct": 6
+          }
+        ]
+      },
+      "breakpoint": "desktop"
+    }
+  ],
+  "errors": 0,
+  "filter": "brand=sirius keeps5visible results, URL updates, canonical base and querynoindex",
+  "additionalRoute": "/kursy/kurs/sirius-2979/",
+  "triage": {
+    "mobileOverlap": "Existing decorative background star, inspected mobile-help screenshot",
+    "smallText": "Existing secondary labels and footer; polish",
+    "wrappedControls": "School subject navigation labels intentionally span lines"
+  }
+}
