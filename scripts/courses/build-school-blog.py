@@ -18,7 +18,7 @@ DATE = '2026-10-19'
 E = lambda v: html.escape(str(v), quote=True)
 P = lambda v: '<p>' + E(v) + '</p>'
 A = lambda url, text: '<a href="' + E(url) + '">' + E(text) + '</a>'
-STYLE = '<style data-school-course-guide>@media(max-width:767px){.post-layout>main{min-width:0}.post-layout h1{overflow-wrap:anywhere}.post-body table{max-width:100%}}</style>'
+STYLE = '<style data-school-course-guide>.post-layout main>div:has(>a[href="/shkoly/"]){display:none}@media(max-width:767px){.post-layout>main{min-width:0}.post-layout h1{overflow-wrap:anywhere}.post-body table{max-width:100%}}</style>'
 
 
 def card(c):
@@ -112,6 +112,7 @@ def main():
             body += course_detail(c, grade, subject)
         body += '<h2>' + E(g['decisionTitle']) + '</h2>' + P(g['decision'])
         body += '<p>Цены и дата проверки — в карточках. Уточните доступность, проверку работ и условия аттестации отдельно.</p>'
+        body += '<section data-course-comparison-cta style="background:#fff2e9;border-radius:20px;padding:24px;margin:28px 0"><h2 style="margin-top:0">Выберите подходящую программу</h2><p>Сравните содержание, формат и условия занятий по ' + E(s['case']) + f' для {grade} класса.</p><a href="' + E(g['catalogPath']) + '" style="display:inline-block;background:#ff6b3d;color:#fff;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700">Смотреть курсы →</a></section>'
         body += '<h2>Другие классы и подборки</h2><ul>'
         neighbors = sorted([x for x in guides if x['subjectId'] == subject and x['grade'] != grade], key=lambda x: abs(x['grade'] - grade))[:3]
         for n in sorted(neighbors, key=lambda x:x['grade']):
