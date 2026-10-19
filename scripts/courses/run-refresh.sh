@@ -19,7 +19,7 @@ current=/var/www/school-portal/courses-current
 previous=$(readlink -f "$current")
 ln -s "$release" "$current.next"
 mv -Tf "$current.next" "$current"
-if ! curl --fail --silent --show-error --resolve pro-schools.ru:443:127.0.0.1 https://pro-schools.ru/kursy/ --compressed --max-time 30 -o work/courses/health.html || ! grep -q 'Найдите лучшие курсы' work/courses/health.html; then
+if ! curl --fail --silent --show-error --resolve pro-schools.ru:443:127.0.0.1 https://pro-schools.ru/kursy/ --compressed --max-time 30 -o work/courses/health.html || ! grep -q 'data-catalog-design="compact-v3"' work/courses/health.html; then
   ln -s "$previous" "$current.rollback"
   mv -Tf "$current.rollback" "$current"
   exit 1

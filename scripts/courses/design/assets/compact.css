@@ -1,0 +1,47 @@
+/* Course cards are compact information panels; artwork is a supporting thumbnail. */
+.course-grid,.detail-related .course-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.course-card{position:relative;display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:1fr auto;gap:0;overflow:hidden;border-radius:16px;background:#fffdf9}
+.course-card[hidden]{display:none}
+.course-card .card-art{grid-column:1;grid-row:1;position:relative;align-self:start;width:86px;height:86px;min-height:0;aspect-ratio:auto;margin:18px 0 0 18px;border-radius:12px;background:#f2ece1;overflow:hidden}
+.course-card .card-art>a{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.course-card .card-art img{width:100%;height:100%;object-fit:contain;aspect-ratio:auto}
+.course-card>.favorite{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:9px;background:#f7f2e8;color:#766d5f;display:grid;place-items:center;font-size:22px;line-height:1;z-index:1}
+.course-card>.favorite:hover{background:#f5e4d7;color:#be5e3d}
+.course-card>.favorite[aria-pressed=true]{background:#f8e5d9;color:#c45c39}
+.course-card .card-body{grid-column:2;grid-row:1;display:flex;flex-direction:column;min-width:0;padding:17px 47px 0 15px}
+.course-card .school-name{font-size:11px;line-height:1.5;margin:0 0 6px;gap:5px;color:#877b6b}
+.course-card .school-mark{width:17px;height:17px;border-radius:5px;font-size:9px}
+.course-card .card-body h3{font-size:16px;font-weight:800;line-height:1.4;letter-spacing:-.35px;min-height:0;margin:0;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
+.course-card .course-desc{display:none}
+.course-card .card-meta{font-size:11px;line-height:1.5;gap:7px;margin:8px 0 0;color:#7f7668}
+.course-card .card-price{border:0;padding:12px 0 13px;margin-top:auto;gap:12px;align-items:center}
+.course-card .card-price strong{font-size:19px;line-height:1.25;letter-spacing:-.5px}
+.course-card .card-price small{font-size:10px;line-height:1.45;margin-top:3px;max-width:190px}
+.course-card .card-arrow{width:30px;height:30px;border-radius:9px;font-size:19px;flex-shrink:0}
+.course-card .compare-control{grid-column:1/-1;grid-row:2;border-top:1px solid #eee8df;padding:8px 17px;min-height:35px;font-size:10px;gap:10px}
+.course-card .compare-control input{width:13px;height:13px}
+.course-card .compare-control>span{font-size:9px;line-height:1.4;max-width:65%;text-align:right}
+.course-card .compare-control .trial-label{font-size:9px!important}
+/* Custom select controls retain the original select as a progressive fallback. */
+.select-control{position:relative;width:100%;min-width:0}
+.select-native{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;pointer-events:none}
+.select-trigger{width:100%;min-height:44px;padding:10px 35px 10px 12px;border:1px solid #e5ddcf;border-radius:11px;background:#fffdf9;text-align:left;position:relative;font-size:13px;line-height:1.45;color:#4f493f;display:flex;align-items:center;gap:8px;transition:background .16s,border-color .16s,box-shadow .16s}
+.select-trigger>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;min-width:0}
+.select-trigger>svg{position:absolute;right:13px;top:50%;width:13px;height:13px;transform:translateY(-50%);color:#8e806e;transition:transform .16s}
+.select-trigger:hover{background:#faf3e8;border-color:#d4bfa8}
+.select-trigger:focus-visible,.select-trigger[aria-expanded=true]{outline:0;border-color:#c47752;box-shadow:0 0 0 3px #eec6ab5c;background:#fff9f0}
+.select-trigger[aria-expanded=true]>svg{transform:translateY(-50%) rotate(180deg);color:#b46e4c}
+.custom-select-menu{position:fixed;z-index:100;padding:6px;border:1px solid #e2d3c0;border-radius:14px;background:#fffbf4;box-shadow:0 14px 35px #49341e24,0 2px 6px #49341e09;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d9c2a7 #fff9f0;font-family:var(--body);font-size:13px;line-height:1.45}
+.custom-select-menu[hidden]{display:none}
+.select-option{position:relative;min-height:38px;padding:9px 31px 9px 11px;border-radius:8px;color:#675b4a;cursor:pointer;display:flex;align-items:center;white-space:normal;overflow-wrap:anywhere}
+.select-option.is-active{background:#f6e9d8;color:#392c20}
+.select-option[aria-selected=true]{color:#a84f2c;background:#f8e4d3;font-weight:700}
+.select-option[aria-selected=true].is-active{background:#f3d5bd}
+.select-option[aria-disabled=true]{opacity:.4;cursor:default}
+.select-option[aria-selected=true]:after{content:'';position:absolute;right:12px;top:50%;width:7px;height:12px;border-right:1.8px solid #b5663f;border-bottom:1.8px solid #b5663f;transform:translateY(-65%) rotate(45deg)}
+.sort .select-control{width:207px}.sort .select-trigger{border-color:transparent;background:transparent;font-size:12px;min-height:36px;padding-top:7px;padding-bottom:7px;color:#817463}
+.sort .select-trigger:hover,.sort .select-trigger[aria-expanded=true]{border-color:#dfcbb3;background:#fbf2e6}
+@media(max-width:1100px){.course-grid,.detail-related .course-grid{gap:12px}.course-card{grid-template-columns:84px minmax(0,1fr)}.course-card .card-art{width:68px;height:68px;margin:16px 0 0 16px;border-radius:10px}.course-card .card-body{padding:15px 41px 0 12px}.course-card .card-body h3{font-size:15px}.course-card .card-price strong{font-size:18px}.course-card .card-meta{font-size:10px;gap:5px}.course-card .card-price{padding-top:10px}.course-card .compare-control{padding:8px 15px}.course-card>.favorite{top:11px;right:10px;width:27px;height:27px;font-size:20px}.course-card .card-price small{font-size:10px}}
+@media(min-width:651px) and (max-width:1000px){.course-grid,.detail-related .course-grid{grid-template-columns:1fr}.course-card{grid-template-columns:100px minmax(0,1fr)}.course-card .card-art{width:82px;height:82px;margin:17px 0 0 17px}.course-card .card-body{padding:16px 47px 0 15px}.course-card .card-body h3{font-size:17px}.course-card .card-meta{font-size:11px}.course-card .card-price{padding:11px 0 13px}.course-card .card-price strong{font-size:20px}.course-card .card-price small{font-size:11px}}
+@media(max-width:650px){.course-grid,.detail-related .course-grid{grid-template-columns:1fr;gap:12px}.course-card{grid-template-columns:88px minmax(0,1fr);border-radius:15px}.course-card .card-art{width:72px;height:72px;margin:16px 0 0 16px;border-radius:10px}.course-card .card-body{padding:15px 39px 0 12px}.course-card .school-name{font-size:11px;margin:0 0 5px}.course-card .school-mark{width:16px;height:16px;font-size:9px}.course-card .card-body h3{font-size:16px;line-height:1.4;min-height:0;letter-spacing:-.35px;-webkit-line-clamp:4}.course-card .card-meta{font-size:11px;margin:8px 0 0;gap:6px}.course-card .card-price{padding:11px 0 13px}.course-card .card-price strong{font-size:20px}.course-card .card-price small{font-size:10px;line-height:1.5}.course-card .card-arrow{width:30px;height:30px;font-size:18px}.course-card>.favorite{width:29px;height:29px;top:11px;right:10px;font-size:22px;background:#f4ede2}.course-card .compare-control{font-size:11px;min-height:38px;padding:9px 15px}.course-card .compare-control input{width:14px;height:14px}.course-card .compare-control>span{font-size:10px}.course-card .compare-control .trial-label{font-size:10px!important}.select-trigger{font-size:14px;min-height:46px;padding:11px 36px 11px 13px}.custom-select-menu{font-size:14px;padding:6px;border-radius:13px}.select-option{min-height:43px;padding:11px 32px 11px 12px}.sort .select-control{width:184px}.sort .select-trigger{font-size:11px;min-height:36px;padding-left:9px}.results-heading{gap:10px}.results-heading>p{white-space:nowrap}}
+@media(max-width:370px){.course-card{grid-template-columns:76px minmax(0,1fr)}.course-card .card-art{width:62px;height:62px;margin:14px 0 0 14px}.course-card .card-body{padding:14px 35px 0 10px}.course-card .card-body h3{font-size:15px}.course-card .card-meta{font-size:10px}.course-card .card-price strong{font-size:18px}.course-card .card-price{gap:8px}.course-card .compare-control{font-size:10px;padding:8px 13px}.course-card .compare-control>span{font-size:9px}.course-card>.favorite{width:26px;height:26px;font-size:20px}.sort .select-control{width:168px}.sort .select-trigger{font-size:10px}.results-heading{font-size:12px}}
