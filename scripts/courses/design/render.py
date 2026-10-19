@@ -109,6 +109,17 @@ def apply(out,source):
   original_save(path,content)
  m.save=save
  art=module('courses_design_illustrations','illustrations.py')
+ # New reviewed directions use native vectors in the existing palette.
+ # The approved illustrated assets remain the first choice.
+ aliases={'marketing':'web-razrabotka','predprinimatelstvo':'finansovaya-gramotnost','bezopasnost':'kiberbezopasnost','pdd':'kiberbezopasnost','kitayskiy':'angliyskiy','oratorskoe-masterstvo':'soft-skills','emocionalnyy-intellekt':'soft-skills','triz':'logika','skorochtenie':'chtenie','pamyat-i-vnimanie':'logika','akterskoe-masterstvo':'soft-skills','fotografiya':'videomontazh','bloging':'videomontazh','animaciya':'dizayn','kibersport':'unity','estestvennye-nauki':'fizika','astronomiya':'fizika','proorientaciya':'soft-skills','zhurnalistika':'literatura','psihologiya':'soft-skills'}
+ (out/'assets/direction-cards').mkdir(exist_ok=True)
+ for cat in categories:
+  slug=cat['slug'];target=out/'assets/direction-cards'/(slug+'.svg')
+  if target.exists():continue
+  brief=m.B[slug];lines=brief['cardLines'];seed=int(hashlib.sha256(slug.encode()).hexdigest()[:8],16)
+  drawing=art.scene(aliases.get(slug,slug),art.CORAL,art.BLUE,art.MINT,seed)
+  label=''.join(f'<text x="54" y="{630+i*80}" font-family="Arial,sans-serif" font-size="64" font-weight="700" fill="#24231f">{html.escape(line)}</text>' for i,line in enumerate(lines))
+  target.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820"><rect width="1000" height="820" rx="54" fill="{brief["color"]}"/><g transform="translate(260 80) scale(1.65)">{drawing}</g>{label}</svg>')
  for folder in ['course-covers','course-thumbnails']:(out/'assets'/folder).mkdir(exist_ok=True)
  for c in courses:
   cover,_=art.create(c);(out/'assets/course-covers'/ (c['id']+'.svg')).write_text(cover)

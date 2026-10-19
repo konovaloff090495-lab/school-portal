@@ -1,0 +1,664 @@
+{
+  "reviewedAt": "2026-10-19",
+  "scope": "Публичные подтверждённые программы 28 площадок; не исчерпывающий реестр всего рынка",
+  "activeCourses": 690,
+  "schoolCourses": 334,
+  "schoolProviders": {
+    "Синергия": 4,
+    "Тетрика": 11,
+    "Novakid": 4,
+    "Умскул": 14,
+    "Сотка": 42,
+    "Фоксфорд": 155,
+    "Skysmart": 97,
+    "TutorOnline": 7
+  },
+  "directions": [
+    {
+      "id": "shkolnye-predmety",
+      "label": "Школьные предметы",
+      "courses": 274,
+      "providers": [
+        "Skysmart",
+        "TutorOnline",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "kompyuternaya-gramotnost",
+      "label": "Компьютерная грамотность",
+      "courses": 6,
+      "providers": [
+        "CODDY",
+        "EasyCode"
+      ]
+    },
+    {
+      "id": "mobilnye-prilozheniya",
+      "label": "Мобильные приложения",
+      "courses": 9,
+      "providers": [
+        "CODDY",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "programmirovanie",
+      "label": "Программирование",
+      "courses": 102,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Kodland",
+        "Skysmart",
+        "Алгоритмика",
+        "Пиксель",
+        "Реботика",
+        "Синергия",
+        "Сотка"
+      ]
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "courses": 26,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Skysmart",
+        "Пиксель",
+        "Реботика",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "scratch",
+      "label": "Scratch",
+      "courses": 9,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Пиксель"
+      ]
+    },
+    {
+      "id": "roblox",
+      "label": "Roblox",
+      "courses": 10,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Kodland",
+        "Пиксель",
+        "Реботика"
+      ]
+    },
+    {
+      "id": "minecraft",
+      "label": "Minecraft",
+      "courses": 11,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Пиксель"
+      ]
+    },
+    {
+      "id": "unity",
+      "label": "Unity и разработка игр",
+      "courses": 26,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Kodland",
+        "Пиксель",
+        "Реботика",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "web-razrabotka",
+      "label": "Создание сайтов",
+      "courses": 13,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "iskusstvennyy-intellekt",
+      "label": "Нейросети и ИИ",
+      "courses": 19,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Пиксель",
+        "Синергия",
+        "Умскул"
+      ]
+    },
+    {
+      "id": "robototehnika",
+      "label": "Робототехника",
+      "courses": 2,
+      "providers": [
+        "CODDY"
+      ]
+    },
+    {
+      "id": "kiberbezopasnost",
+      "label": "Кибербезопасность",
+      "courses": 4,
+      "providers": [
+        "CODDY",
+        "Стоп Угроза"
+      ]
+    },
+    {
+      "id": "ege",
+      "label": "Подготовка к ЕГЭ",
+      "courses": 73,
+      "providers": [
+        "100балльный репетитор",
+        "Синергия",
+        "Сотка",
+        "Умскул",
+        "Учи.Дома"
+      ]
+    },
+    {
+      "id": "oge",
+      "label": "Подготовка к ОГЭ",
+      "courses": 58,
+      "providers": [
+        "100балльный репетитор",
+        "Advance",
+        "CODDY",
+        "Skysmart",
+        "Синергия",
+        "Сотка",
+        "Умскул",
+        "Учи.Дома"
+      ]
+    },
+    {
+      "id": "angliyskiy",
+      "label": "Английский язык",
+      "courses": 88,
+      "providers": [
+        "100балльный репетитор",
+        "CODDY",
+        "Novakid",
+        "Skysmart",
+        "TutorOnline",
+        "Айкьюша",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "matematika",
+      "label": "Математика",
+      "courses": 107,
+      "providers": [
+        "100балльный репетитор",
+        "Advance",
+        "CODDY",
+        "Skysmart",
+        "TutorOnline",
+        "Айкьюша",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "russkiy",
+      "label": "Русский язык",
+      "courses": 87,
+      "providers": [
+        "100балльный репетитор",
+        "CODDY",
+        "Skysmart",
+        "TutorOnline",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "fizika",
+      "label": "Физика",
+      "courses": 50,
+      "providers": [
+        "100балльный репетитор",
+        "CODDY",
+        "Skysmart",
+        "TutorOnline",
+        "Наукасити",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "himiya",
+      "label": "Химия",
+      "courses": 21,
+      "providers": [
+        "100балльный репетитор",
+        "Skysmart",
+        "TutorOnline",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "biologiya",
+      "label": "Биология",
+      "courses": 35,
+      "providers": [
+        "100балльный репетитор",
+        "TutorOnline",
+        "Наукасити",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "informatika",
+      "label": "Информатика",
+      "courses": 26,
+      "providers": [
+        "100балльный репетитор",
+        "CODDY",
+        "Skysmart",
+        "TutorOnline",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "istoriya",
+      "label": "История",
+      "courses": 30,
+      "providers": [
+        "100балльный репетитор",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "obshchestvoznanie",
+      "label": "Обществознание",
+      "courses": 21,
+      "providers": [
+        "100балльный репетитор",
+        "Skysmart",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "literatura",
+      "label": "Литература",
+      "courses": 27,
+      "providers": [
+        "100балльный репетитор",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "geografiya",
+      "label": "География",
+      "courses": 20,
+      "providers": [
+        "100балльный репетитор",
+        "Синергия",
+        "Сотка",
+        "Тетрика",
+        "Умскул",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "shahmaty",
+      "label": "Шахматы",
+      "courses": 3,
+      "providers": [
+        "CODDY",
+        "ChessFirst",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "dizayn",
+      "label": "Дизайн",
+      "courses": 28,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Kodland",
+        "Пиксель",
+        "Реботика",
+        "Синергия",
+        "Сотка"
+      ]
+    },
+    {
+      "id": "3d-modelirovanie",
+      "label": "3D-моделирование",
+      "courses": 11,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Пиксель"
+      ]
+    },
+    {
+      "id": "risovanie",
+      "label": "Рисование",
+      "courses": 16,
+      "providers": [
+        "CODDY",
+        "EasyCode",
+        "Синергия",
+        "Фоксфорд",
+        "Художка Онлайн"
+      ]
+    },
+    {
+      "id": "videomontazh",
+      "label": "Видео и анимация",
+      "courses": 14,
+      "providers": [
+        "CODDY",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "muzyka",
+      "label": "Музыка и звук",
+      "courses": 7,
+      "providers": [
+        "CODDY",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "podgotovka-k-shkole",
+      "label": "Подготовка к школе",
+      "courses": 4,
+      "providers": [
+        "Айкьюша",
+        "Логопотам",
+        "Синергия",
+        "Тетрика"
+      ]
+    },
+    {
+      "id": "logika",
+      "label": "Логика и мышление",
+      "courses": 8,
+      "providers": [
+        "CODDY",
+        "Kids MBA",
+        "LogicLike",
+        "Айкьюша",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "chtenie",
+      "label": "Чтение и скорочтение",
+      "courses": 14,
+      "providers": [
+        "IQ007 — Реутов",
+        "Айкьюша",
+        "Синергия",
+        "Сотка",
+        "Фоксфорд"
+      ]
+    },
+    {
+      "id": "logoped",
+      "label": "Логопед",
+      "courses": 4,
+      "providers": [
+        "Логопотам",
+        "Тетрика"
+      ]
+    },
+    {
+      "id": "soft-skills",
+      "label": "Навыки общения и развития",
+      "courses": 20,
+      "providers": [
+        "Advance",
+        "CODDY",
+        "Kids MBA",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "finansovaya-gramotnost",
+      "label": "Финансовая грамотность",
+      "courses": 5,
+      "providers": [
+        "CODDY",
+        "Kids MBA",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "Маркетинг",
+      "courses": 3,
+      "providers": [
+        "CODDY",
+        "Kids MBA",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "predprinimatelstvo",
+      "label": "Предпринимательство",
+      "courses": 3,
+      "providers": [
+        "CODDY",
+        "Kids MBA",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "bezopasnost",
+      "label": "Безопасность детей",
+      "courses": 3,
+      "providers": [
+        "Академия ЮИД",
+        "Стоп Угроза"
+      ]
+    },
+    {
+      "id": "pdd",
+      "label": "ПДД для детей",
+      "courses": 1,
+      "providers": [
+        "Академия ЮИД"
+      ]
+    },
+    {
+      "id": "kitayskiy",
+      "label": "Китайский язык",
+      "courses": 2,
+      "providers": [
+        "CODDY",
+        "Kitai School"
+      ]
+    },
+    {
+      "id": "oratorskoe-masterstvo",
+      "label": "Ораторское мастерство",
+      "courses": 4,
+      "providers": [
+        "CODDY",
+        "Kids MBA"
+      ]
+    },
+    {
+      "id": "emocionalnyy-intellekt",
+      "label": "Эмоциональный интеллект",
+      "courses": 1,
+      "providers": [
+        "Kids MBA"
+      ]
+    },
+    {
+      "id": "triz",
+      "label": "ТРИЗ и креативность",
+      "courses": 1,
+      "providers": [
+        "Kids MBA"
+      ]
+    },
+    {
+      "id": "skorochtenie",
+      "label": "Скорочтение",
+      "courses": 1,
+      "providers": [
+        "IQ007 — Реутов"
+      ]
+    },
+    {
+      "id": "pamyat-i-vnimanie",
+      "label": "Память и внимание",
+      "courses": 3,
+      "providers": [
+        "Advance",
+        "IQ007 — Реутов",
+        "Айкьюша"
+      ]
+    },
+    {
+      "id": "akterskoe-masterstvo",
+      "label": "Актёрское мастерство",
+      "courses": 1,
+      "providers": [
+        "CODDY"
+      ]
+    },
+    {
+      "id": "fotografiya",
+      "label": "Фотография",
+      "courses": 2,
+      "providers": [
+        "CODDY"
+      ]
+    },
+    {
+      "id": "bloging",
+      "label": "Блогинг и медиа",
+      "courses": 4,
+      "providers": [
+        "CODDY",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "animaciya",
+      "label": "Анимация и мультфильмы",
+      "courses": 4,
+      "providers": [
+        "CODDY",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "kibersport",
+      "label": "Киберспорт",
+      "courses": 1,
+      "providers": [
+        "CODDY"
+      ]
+    },
+    {
+      "id": "estestvennye-nauki",
+      "label": "Наука и эксперименты",
+      "courses": 1,
+      "providers": [
+        "Наукасити"
+      ]
+    },
+    {
+      "id": "astronomiya",
+      "label": "Астрономия",
+      "courses": 1,
+      "providers": [
+        "Наукасити"
+      ]
+    },
+    {
+      "id": "proorientaciya",
+      "label": "Профориентация",
+      "courses": 1,
+      "providers": [
+        "CODDY"
+      ]
+    },
+    {
+      "id": "zhurnalistika",
+      "label": "Журналистика",
+      "courses": 2,
+      "providers": [
+        "CODDY",
+        "Синергия"
+      ]
+    },
+    {
+      "id": "psihologiya",
+      "label": "Психология для подростков",
+      "courses": 1,
+      "providers": [
+        "Синергия"
+      ]
+    }
+  ],
+  "coverageLimits": [
+    "Для части направлений подтверждена одна программа: эти подборки не выдаются за сравнение нескольких школ.",
+    "Онлайн-формат не переносится с общей страницы бренда на все его программы.",
+    "Сбор с недоступных страниц, закрытых наборов и кабинета Т-Партнёры не заменяется выдуманными предложениями."
+  ],
+  "sourceReview": "market-review.json"
+}

@@ -33,7 +33,7 @@ def refresh():
                 course['offer']=None
                 course['packages']=[]
                 continue
-            if oldprice and newprice and newprice['unit']==oldprice['unit'] and .5<=newprice['amount']/oldprice['amount']<=1.5:
+            if oldprice and newprice and newprice['unit']==oldprice['unit'] and ((oldprice['amount']==newprice['amount']==0) or (oldprice['amount']>0 and .5<=newprice['amount']/oldprice['amount']<=1.5)):
                 course['price']=newprice
                 if oldprice['amount']!=newprice['amount']:changes.append({'course':course['id'],'type':'price','old':oldprice['amount'],'new':newprice['amount'],'unit':newprice['unit']})
             elif oldprice and not newprice:

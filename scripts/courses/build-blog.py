@@ -114,7 +114,7 @@ def main():
         target.write_text(json.dumps(post, ensure_ascii=False, indent=2) + '\n')
         report.append({'category': cat, 'slug': g['slug'], 'new': not bool(old), 'words': len(text.split()), 'courses': [c['id'] for c, _ in picks]})
 
-    hub = '<p>Найдите курсы под интерес и возраст ребёнка: от первых занятий чтением и логикой до программирования, творческих проектов и экзаменов. Здесь собраны отдельные подборки по всем 38 направлениям каталога. В каждой — конкретные программы, различия форматов и ссылки на внутренние карточки с ценами и условиями.</p>'
+    hub = f'<p>Найдите курсы под интерес и возраст ребёнка: от первых занятий чтением и логикой до программирования, творческих проектов и экзаменов. Здесь собраны отдельные подборки по всем {len(guides)} направлениям каталога. В каждой — конкретные программы, различия форматов и ссылки на внутренние карточки с ценами и условиями.</p>'
     hub += '<p>Начните с задачи, которую хотите решить. Для нового увлечения сравните небольшие первые проекты, для школьного предмета — диагностику пробелов, для экзамена — программу и проверку работ. После знакомства с подборкой откройте карточки двух подходящих курсов и сопоставьте условия. </p>'
     # Explicit grouping avoids depending on taxonomy file order.
     groups = [
@@ -123,6 +123,8 @@ def main():
         ('Творчество и цифровые проекты', ['dizayn','3d-modelirovanie','risovanie','videomontazh','muzyka']),
         ('Развитие и подготовка к школе', ['shahmaty','podgotovka-k-shkole','logika','chtenie','logoped','soft-skills','finansovaya-gramotnost']),
     ]
+    grouped={cat for _,ids in groups for cat in ids}
+    groups.append(('Новые направления: безопасность, языки и навыки', [cat for cat in by_cat if cat not in grouped]))
     for heading, ids in groups:
         hub += '<h2>' + heading + '</h2><ul>'
         for cat in ids:
@@ -133,7 +135,7 @@ def main():
     hub += '<p>Для текущей учёбы откройте '+link(school.path(),'курсы по школьной программе с выбором предмета и класса')+'. Алгебра, геометрия, химия и другие предметы собраны отдельно от подготовки к ЕГЭ и ОГЭ.</p>'
     hub += '<h2>Что сделать после выбора направления</h2><ol><li>Прочитайте профильную подборку и определите подходящий уровень.</li><li>Откройте внутренние карточки выбранных программ: сравните возраст, темы, формат и условия.</li><li>На карточке перейдите на страницу школы, чтобы уточнить поток и записаться.</li></ol>'
     hub_new = not (BLOG / 'luchshie-kursy-dlya-detej.json').exists()
-    hub_post = dict(slug='luchshie-kursy-dlya-detej', title='Лучшие курсы для детей: подборки по 38 направлениям', excerpt='Программирование, английский, школьные предметы, творчество и развитие: все подборки курсов для детей со сравнением программ и ссылками на карточки.', category='Курсы для детей', tags=['курсы для детей','выбор курса','онлайн-курсы'], author='Редакция pro-schools.ru', authorRole='Редакция образовательного каталога', publishedAt=TODAY, readTime=8, imageAlt='Направления обучения и подборки курсов для детей', content=RESPONSIVE + hub)
+    hub_post = dict(slug='luchshie-kursy-dlya-detej', title=f'Лучшие курсы для детей: подборки по {len(guides)} направлениям', excerpt='Программирование, английский, школьные предметы, творчество и развитие: все подборки курсов для детей со сравнением программ и ссылками на карточки.', category='Курсы для детей', tags=['курсы для детей','выбор курса','онлайн-курсы'], author='Редакция pro-schools.ru', authorRole='Редакция образовательного каталога', publishedAt=TODAY, readTime=8, imageAlt='Направления обучения и подборки курсов для детей', content=RESPONSIVE + hub)
     (BLOG / 'luchshie-kursy-dlya-detej.json').write_text(json.dumps(hub_post, ensure_ascii=False, indent=2) + '\n')
     (DATA / 'blog-guides.json').write_text(json.dumps(guides, ensure_ascii=False, indent=2) + '\n')
     out = ROOT / 'work/courses/blog-report.json'

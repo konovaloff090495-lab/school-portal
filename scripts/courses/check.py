@@ -16,10 +16,19 @@ if len(pages)>=500:
     # Expansion requires reviewed sources and an explicit inventory of facets.
     review=json.loads((ROOT/'data/courses/school-review.json').read_text())
     reviewed={r['courseId'] for r in review['verifiedSourcePages']}
+    expansion_path=ROOT/'data/courses/market-review.json'
+    expansion=json.loads(expansion_path.read_text()) if expansion_path.exists() else {}
+    current={c['id']:c for c in COURSES}
+    for record in expansion.get('verifiedSourcePages',[]):
+        c=current[record['courseId']]
+        assert c['sourceUrl']==record['sourceUrl'] and c['contentHash']==record['sourceHash'],'Expansion evidence mismatch'
+        reviewed.add(c['id'])
     baseline=sorted(c['id'] for c in COURSES if c['id'] not in reviewed)
     assert hashlib.sha256('\n'.join(baseline).encode()).hexdigest()==review['baselineCourseIdsSha256'],'Unreviewed course expansion'
-    assert {p['id'] for p in SCHOOL_PAGES}.issubset(review['reviewedSelectionIds']),'Unreviewed school selection'
-    assert len(pages)<=review['baselinePageCount']+len(reviewed)+len(review['reviewedSelectionIds'])+1,'Unreviewed page expansion'
+    selections=set(review['reviewedSelectionIds'])|set(expansion.get('reviewedSelectionIds',[]))
+    assert {p['id'] for p in SCHOOL_PAGES}.issubset(selections),'Unreviewed school selection'
+    extra=set(expansion.get('reviewedExtraLandingIds',[]))
+    assert len(pages)<=review['baselinePageCount']+len(reviewed)+len(selections)+len(extra)+1,'Unreviewed page expansion'
 sitemap={e.text for e in ET.parse(OUT/'sitemap.xml').iter() if e.tag.endswith('}loc')}
 titles={};descriptions={};seen_course_ids=set()
 for file in pages:
@@ -61,12 +70,14 @@ for c in COURSES:
     if not re.fullmatch('[a-z0-9-]+',c['id']):errors.append((c['id'],'Invalid slug'))
     if len('/kursy/kurs/'+c['id']+'/')>=100:errors.append((c['id'],'Long URL'))
     if c.get('ageRange') and not 2<=c['ageRange'][0]<=c['ageRange'][1]<=18:errors.append((c['id'],'Invalid age'))
-    if c.get('price') and c['price']['amount']<=0:errors.append((c['id'],'Invalid price'))
+    if c.get('price') and (c['price']['amount']<0 or (c['price']['amount']==0 and not c.get('freeAccessEvidence'))):errors.append((c['id'],'Invalid or unverified free price'))
     if c.get('learningGoal')=='school':
         if set(c['tags'])&{'ege','oge'}:errors.append((c['id'],'Exam substituted for school programme'))
         if not c.get('schoolEvidence'):errors.append((c['id'],'Missing school classification evidence'))
         if any(not 1<=n<=11 for n in c.get('grades',[])):errors.append((c['id'],'Invalid explicit school grade'))
         if not set(c.get('schoolSubjects',[])).issubset(school.SUBJECT_MAP):errors.append((c['id'],'Unknown school subject'))
+        for subject,grades in c.get('schoolSubjectGrades',{}).items():
+            if subject not in c.get('schoolSubjects',[]) or not set(grades).issubset(c.get('grades',[])):errors.append((c['id'],'Invalid subject-specific grade evidence'))
     for package in c.get('packages',[]):
         if package['lessons']<=0 or (package.get('price') and package['price']['unit']!='курс'):errors.append((c['id'],'Invalid lesson package'))
         partner_url({**c,'sourceUrl':package['sourceUrl']})
