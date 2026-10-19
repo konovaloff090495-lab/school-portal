@@ -25,8 +25,8 @@ def card(c):
     return '/kursy/kurs/' + c['id'] + '/'
 
 
-def scope(c, grade):
-    grades = c['grades']
+def scope(c, grade, subject=None):
+    grades = c.get('schoolSubjectGrades', {}).get(subject, c['grades'])
     if grades == [grade]:
         return f'Отдельная программа {grade} класса'
     return 'Для ' + ', '.join(map(str, grades)) + f' классов; {grade}-й входит в диапазон'
@@ -103,7 +103,7 @@ def main():
         body += '<h2>Какие программы рассмотреть</h2><table><thead><tr><th>Курс</th><th>Класс и объём</th><th>Формат</th></tr></thead><tbody>'
         for c in picks:
             facts = dict(c.get('facts', []))
-            body += '<tr><td>' + A(card(c), c['brand'] + ' — ' + c['title']) + '</td><td>' + E(scope(c, grade) + ('; ' + facts['Объём программы'] if facts.get('Объём программы') else '')) + '</td><td>' + E(c['format']) + '</td></tr>'
+            body += '<tr><td>' + A(card(c), c['brand'] + ' — ' + c['title']) + '</td><td>' + E(scope(c, grade, subject) + ('; ' + facts['Объём программы'] if facts.get('Объём программы') else '')) + '</td><td>' + E(c['format']) + '</td></tr>'
         body += '</tbody></table>'
         if len(picks) < len(found):
             body += '<p>В статье разобраны разные типы предложений. Остальные варианты — в ' + A(g['catalogPath'], 'полной подборке для этого предмета и класса') + '.</p>'
