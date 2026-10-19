@@ -1,8 +1,8 @@
 {
   "reviewedAt": "2026-10-19",
   "scope": "Публичные подтверждённые программы 28 площадок; не исчерпывающий реестр всего рынка",
-  "activeCourses": 690,
-  "schoolCourses": 334,
+  "activeCourses": 749,
+  "schoolCourses": 337,
   "schoolProviders": {
     "Синергия": 4,
     "Тетрика": 11,
@@ -11,14 +11,16 @@
     "Сотка": 42,
     "Фоксфорд": 155,
     "Skysmart": 97,
-    "TutorOnline": 7
+    "TutorOnline": 7,
+    "Hello World School": 3
   },
   "directions": [
     {
       "id": "shkolnye-predmety",
       "label": "Школьные предметы",
-      "courses": 274,
+      "courses": 277,
       "providers": [
+        "Hello World School",
         "Skysmart",
         "TutorOnline",
         "Синергия",
@@ -30,10 +32,11 @@
     {
       "id": "kompyuternaya-gramotnost",
       "label": "Компьютерная грамотность",
-      "courses": 6,
+      "courses": 7,
       "providers": [
         "CODDY",
-        "EasyCode"
+        "EasyCode",
+        "Hello World School"
       ]
     },
     {
@@ -48,10 +51,11 @@
     {
       "id": "programmirovanie",
       "label": "Программирование",
-      "courses": 102,
+      "courses": 108,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Kodland",
         "Skysmart",
         "Алгоритмика",
@@ -64,10 +68,11 @@
     {
       "id": "python",
       "label": "Python",
-      "courses": 26,
+      "courses": 28,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Skysmart",
         "Пиксель",
         "Реботика",
@@ -77,20 +82,22 @@
     {
       "id": "scratch",
       "label": "Scratch",
-      "courses": 9,
+      "courses": 10,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Пиксель"
       ]
     },
     {
       "id": "roblox",
       "label": "Roblox",
-      "courses": 10,
+      "courses": 11,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Kodland",
         "Пиксель",
         "Реботика"
@@ -99,20 +106,22 @@
     {
       "id": "minecraft",
       "label": "Minecraft",
-      "courses": 11,
+      "courses": 12,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Пиксель"
       ]
     },
     {
       "id": "unity",
       "label": "Unity и разработка игр",
-      "courses": 26,
+      "courses": 27,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Kodland",
         "Пиксель",
         "Реботика",
@@ -122,20 +131,23 @@
     {
       "id": "web-razrabotka",
       "label": "Создание сайтов",
-      "courses": 13,
+      "courses": 14,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Синергия"
       ]
     },
     {
       "id": "iskusstvennyy-intellekt",
       "label": "Нейросети и ИИ",
-      "courses": 19,
+      "courses": 21,
       "providers": [
+        "AMAKids",
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Пиксель",
         "Синергия",
         "Умскул"
@@ -188,10 +200,13 @@
     {
       "id": "angliyskiy",
       "label": "Английский язык",
-      "courses": 88,
+      "courses": 94,
       "providers": [
         "100балльный репетитор",
+        "AMAKids",
         "CODDY",
+        "Enline",
+        "Hello World School",
         "Novakid",
         "Skysmart",
         "TutorOnline",
@@ -206,11 +221,13 @@
     {
       "id": "matematika",
       "label": "Математика",
-      "courses": 107,
+      "courses": 114,
       "providers": [
         "100балльный репетитор",
+        "AMAKids",
         "Advance",
         "CODDY",
+        "Hello World School",
         "Skysmart",
         "TutorOnline",
         "Айкьюша",
@@ -356,20 +373,22 @@
     {
       "id": "shahmaty",
       "label": "Шахматы",
-      "courses": 3,
+      "courses": 4,
       "providers": [
         "CODDY",
         "ChessFirst",
+        "Hello World School",
         "Синергия"
       ]
     },
     {
       "id": "dizayn",
       "label": "Дизайн",
-      "courses": 28,
+      "courses": 29,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Kodland",
         "Пиксель",
         "Реботика",
@@ -380,20 +399,23 @@
     {
       "id": "3d-modelirovanie",
       "label": "3D-моделирование",
-      "courses": 11,
+      "courses": 12,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
         "Пиксель"
       ]
     },
     {
       "id": "risovanie",
       "label": "Рисование",
-      "courses": 16,
+      "courses": 19,
       "providers": [
         "CODDY",
         "EasyCode",
+        "Hello World School",
+        "Kaplan School",
         "Синергия",
         "Фоксфорд",
         "Художка Онлайн"
@@ -402,8 +424,9 @@
     {
       "id": "videomontazh",
       "label": "Видео и анимация",
-      "courses": 14,
+      "courses": 15,
       "providers": [
+        "AMAKids",
         "CODDY",
         "Синергия"
       ]
@@ -411,17 +434,20 @@
     {
       "id": "muzyka",
       "label": "Музыка и звук",
-      "courses": 7,
+      "courses": 16,
       "providers": [
         "CODDY",
+        "Виртуозы — Москва",
         "Фоксфорд"
       ]
     },
     {
       "id": "podgotovka-k-shkole",
       "label": "Подготовка к школе",
-      "courses": 4,
+      "courses": 6,
       "providers": [
+        "AMAKids",
+        "Hello World School",
         "Айкьюша",
         "Логопотам",
         "Синергия",
@@ -431,9 +457,11 @@
     {
       "id": "logika",
       "label": "Логика и мышление",
-      "courses": 8,
+      "courses": 13,
       "providers": [
+        "AMAKids",
         "CODDY",
+        "Hello World School",
         "Kids MBA",
         "LogicLike",
         "Айкьюша",
@@ -443,8 +471,10 @@
     {
       "id": "chtenie",
       "label": "Чтение и скорочтение",
-      "courses": 14,
+      "courses": 18,
       "providers": [
+        "AMAKids",
+        "Hello World School",
         "IQ007 — Реутов",
         "Айкьюша",
         "Синергия",
@@ -455,8 +485,9 @@
     {
       "id": "logoped",
       "label": "Логопед",
-      "courses": 4,
+      "courses": 5,
       "providers": [
+        "Hello World School",
         "Логопотам",
         "Тетрика"
       ]
@@ -464,10 +495,11 @@
     {
       "id": "soft-skills",
       "label": "Навыки общения и развития",
-      "courses": 20,
+      "courses": 21,
       "providers": [
         "Advance",
         "CODDY",
+        "Hello World School",
         "Kids MBA",
         "Синергия"
       ]
@@ -475,8 +507,9 @@
     {
       "id": "finansovaya-gramotnost",
       "label": "Финансовая грамотность",
-      "courses": 5,
+      "courses": 6,
       "providers": [
+        "AMAKids",
         "CODDY",
         "Kids MBA",
         "Синергия"
@@ -540,8 +573,9 @@
     {
       "id": "emocionalnyy-intellekt",
       "label": "Эмоциональный интеллект",
-      "courses": 1,
+      "courses": 2,
       "providers": [
+        "Hello World School",
         "Kids MBA"
       ]
     },
@@ -556,16 +590,19 @@
     {
       "id": "skorochtenie",
       "label": "Скорочтение",
-      "courses": 1,
+      "courses": 3,
       "providers": [
+        "AMAKids",
+        "Hello World School",
         "IQ007 — Реутов"
       ]
     },
     {
       "id": "pamyat-i-vnimanie",
       "label": "Память и внимание",
-      "courses": 3,
+      "courses": 4,
       "providers": [
+        "AMAKids",
         "Advance",
         "IQ007 — Реутов",
         "Айкьюша"
@@ -599,9 +636,10 @@
     {
       "id": "animaciya",
       "label": "Анимация и мультфильмы",
-      "courses": 4,
+      "courses": 5,
       "providers": [
         "CODDY",
+        "Hello World School",
         "Синергия"
       ]
     },
@@ -653,12 +691,147 @@
       "providers": [
         "Синергия"
       ]
+    },
+    {
+      "id": "mentalnaya-arifmetika",
+      "label": "Ментальная арифметика",
+      "courses": 2,
+      "providers": [
+        "AMAKids",
+        "Hello World School"
+      ]
+    },
+    {
+      "id": "kalligrafiya",
+      "label": "Каллиграфия",
+      "courses": 5,
+      "providers": [
+        "Hello World School",
+        "Kaplan School"
+      ]
+    },
+    {
+      "id": "spidkubing",
+      "label": "Спидкубинг",
+      "courses": 1,
+      "providers": [
+        "AMAKids"
+      ]
+    },
+    {
+      "id": "nemeckiy",
+      "label": "Немецкий язык",
+      "courses": 4,
+      "providers": [
+        "Deutsch Online",
+        "Enline"
+      ]
+    },
+    {
+      "id": "francuzskiy",
+      "label": "Французский язык",
+      "courses": 1,
+      "providers": [
+        "Enline"
+      ]
+    },
+    {
+      "id": "ispanskiy",
+      "label": "Испанский язык",
+      "courses": 1,
+      "providers": [
+        "Enline"
+      ]
+    },
+    {
+      "id": "koreyskiy",
+      "label": "Корейский язык",
+      "courses": 2,
+      "providers": [
+        "Skyeng",
+        "YES Online"
+      ]
+    },
+    {
+      "id": "yaponskiy",
+      "label": "Японский язык",
+      "courses": 2,
+      "providers": [
+        "Skyeng",
+        "YES Online"
+      ]
+    },
+    {
+      "id": "fortepiano",
+      "label": "Фортепиано",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "gitara",
+      "label": "Гитара",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "vokal",
+      "label": "Вокал",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "udarnye",
+      "label": "Ударные инструменты",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "skripka",
+      "label": "Скрипка",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "duhovye-instrumenty",
+      "label": "Духовые инструменты",
+      "courses": 2,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "solfedzhio",
+      "label": "Сольфеджио",
+      "courses": 1,
+      "providers": [
+        "Виртуозы — Москва"
+      ]
+    },
+    {
+      "id": "bumazhnoe-tvorchestvo",
+      "label": "Бумажное творчество",
+      "courses": 1,
+      "providers": [
+        "Kaplan School"
+      ]
     }
   ],
   "coverageLimits": [
     "Для части направлений подтверждена одна программа: эти подборки не выдаются за сравнение нескольких школ.",
     "Онлайн-формат не переносится с общей страницы бренда на все его программы.",
-    "Сбор с недоступных страниц, закрытых наборов и кабинета Т-Партнёры не заменяется выдуманными предложениями."
+    "Сбор с недоступных страниц, закрытых наборов и кабинета Т-Партнёры не заменяется выдуманными предложениями.",
+    "Добавлены 59 программ восьми новых площадок; часть инструментальных и творческих тем представлена одной школой.",
+    "Не закрыты все площадки рынка: повторно недоступна Умназия; Лицей Ростелеком и InternetUrok требуют отдельного сбора; цены сложных составных тарифов не подставлены по чужим рекомендациям."
   ],
   "sourceReview": "market-review.json"
 }

@@ -29,6 +29,9 @@ def curriculum(c):
 
 def price_fact(c):
     t=clean(c['text']); b=c['brandId']
+    if b in {'hello-world','virtuozy-msk','deutsch-online','yes-online'}:
+        from expansion_prices import price
+        return price(c)
     if b=='naukacity' and 'Бесплатно — подписка на десять онлайн-курсов без ограничения по времени.' in t:
         return {'amount':0,'unit':'курс','from':False,'condition':'Бесплатная общая подписка после регистрации; условия доступа у организатора','evidence':'Бесплатно — подписка на десять онлайн-курсов без ограничения по времени.','checkedAt':c['checkedAt'][:10]}
     if b=='skysmart' and 'selfstudy' in c.get('sourceUrl',''):
