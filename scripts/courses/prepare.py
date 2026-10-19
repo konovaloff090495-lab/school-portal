@@ -31,6 +31,7 @@ def price_fact(c):
     t=c['text']; b=c['brandId']; patterns={
       'synergy':(r'от\s+([\d\s\u202f]+)\s*₽\s*за урок','урок','При оплате курса на тарифе «Стандарт»'),
       'skysmart':(r'всего\s+([\d\s\u202f]+)\s*₽\s*за курс','курс','За пакет занятий, указанный в названии курса; рассрочка считается отдельно'),
+      'foxford':(r'([\d\s\u202f]+)\s*₽\s*за\s*курс','курс','Полная стоимость выбранного предметного курса; рассрочка считается отдельно'),
       '100points':(r'от\s+([\d\s\u202f]+)\s*₽\s*/\s*блок','блок','За учебный блок. Итог зависит от тарифа и количества блоков'),
       'umschool':(r'от\s+([\d\s\u202f]+)\s*₽\s*/\s*мес','месяц','Стартовая цена программы; длительность и тариф указаны у школы'),
       'sotka':(r'от\s*([\d\s\u202f]+)\s*₽\s*в месяц за 4 предмета','месяц','Пакет подготовки по четырём предметам, а не цена одного предмета'),
@@ -43,7 +44,7 @@ def price_fact(c):
     if not m:return None
     amount=number(m[1])
     if amount<200 or amount>500000:return None
-    return {'amount':amount,'unit':unit,'from':b!='skysmart','condition':condition,'evidence':clean(m[0]),'checkedAt':c['checkedAt'][:10]}
+    return {'amount':amount,'unit':unit,'from':b not in ['skysmart','foxford'],'condition':condition,'evidence':clean(m[0]),'checkedAt':c['checkedAt'][:10]}
 
 def title_for(c):
     title=clean(c['h1'])

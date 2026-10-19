@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
 """Check generated SEO, links, prices and outbound attribution before release."""
-import json, os, re
+import hashlib, json, os, re
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-from build import ROOT, BASE, COURSES, indexable, partner_url
+from build import ROOT, BASE, COURSES, SCHOOL_PAGES, indexable, partner_url
+import school
 
 OUT=Path(os.environ.get('COURSES_CHECK_DIR',str(ROOT/'public/kursy')))
 errors=[]
 pages=list(OUT.rglob('index.html'))
-assert len(pages)<500,'Content audit required before 500+ pages'
+if len(pages)>=500:
+    # The previous 459-page batch remains bounded by its course-id fingerprint.
+    # Expansion requires reviewed sources and an explicit inventory of facets.
+    review=json.loads((ROOT/'data/courses/school-review.json').read_text())
+    reviewed={r['courseId'] for r in review['verifiedSourcePages']}
+    baseline=sorted(c['id'] for c in COURSES if c['id'] not in reviewed)
+    assert hashlib.sha256('\n'.join(baseline).encode()).hexdigest()==review['baselineCourseIdsSha256'],'Unreviewed course expansion'
+    assert {p['id'] for p in SCHOOL_PAGES}.issubset(review['reviewedSelectionIds']),'Unreviewed school selection'
+    assert len(pages)<=review['baselinePageCount']+len(reviewed)+len(review['reviewedSelectionIds'])+1,'Unreviewed page expansion'
 sitemap={e.text for e in ET.parse(OUT/'sitemap.xml').iter() if e.tag.endswith('}loc')}
 titles={};descriptions={};seen_course_ids=set()
 for file in pages:
@@ -53,6 +62,14 @@ for c in COURSES:
     if len('/kursy/kurs/'+c['id']+'/')>=100:errors.append((c['id'],'Long URL'))
     if c.get('ageRange') and not 2<=c['ageRange'][0]<=c['ageRange'][1]<=18:errors.append((c['id'],'Invalid age'))
     if c.get('price') and c['price']['amount']<=0:errors.append((c['id'],'Invalid price'))
+    if c.get('learningGoal')=='school':
+        if set(c['tags'])&{'ege','oge'}:errors.append((c['id'],'Exam substituted for school programme'))
+        if not c.get('schoolEvidence'):errors.append((c['id'],'Missing school classification evidence'))
+        if any(not 1<=n<=11 for n in c.get('grades',[])):errors.append((c['id'],'Invalid explicit school grade'))
+        if not set(c.get('schoolSubjects',[])).issubset(school.SUBJECT_MAP):errors.append((c['id'],'Unknown school subject'))
+    for package in c.get('packages',[]):
+        if package['lessons']<=0 or (package.get('price') and package['price']['unit']!='курс'):errors.append((c['id'],'Invalid lesson package'))
+        partner_url({**c,'sourceUrl':package['sourceUrl']})
     if c['brandId']=='sotka' and c.get('price') and 'четыр' not in c['price']['condition']:errors.append((c['id'],'Missing bundle condition'))
     partner_url(c)
 report={'pages':len(pages),'courses':len(COURSES),'indexablePages':len(sitemap),'indexableCourses':sum(indexable(c) for c in COURSES),'errors':errors}
