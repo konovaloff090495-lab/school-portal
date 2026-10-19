@@ -69,8 +69,6 @@ def main():
             topics = [re.sub(r'[.;,]+$', '', x.strip()) for x in c.get('modules', []) if 5 <= len(x.strip()) <= 130][:3]
             if topics:
                 body += para('В описании программы выделены темы: ' + '; '.join(topics) + '.')
-            if c.get('editorialDescription'):
-                body += para(c['editorialDescription'])
             body += '<p>' + link('/kursy/kurs/' + c['id'] + '/', 'Посмотреть программу, цену и условия ' + c['brand']) + '.</p>'
 
         for heading in KEEP.get(cat, []):
