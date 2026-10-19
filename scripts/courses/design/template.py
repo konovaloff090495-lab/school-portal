@@ -25,7 +25,9 @@ def make_direction_image(slug):
 def landing_visual(l):
  if not l['slug']:return '/kursy/assets/hero.png'
  path='assets/landing-heroes/'+l['slug'].replace('/','--')+'.svg'
- if l['kind']=='category':slug=l['slug']; return '/kursy/'+ill(slug) if ill(slug) else '/kursy/assets/hero.png'
+ if l['kind']=='category':
+  slug=l['slug']
+  return '/kursy/'+ill(slug) if ill(slug) else '/kursy/assets/direction-cards/'+slug+'.svg'
  if l['kind'] in ['school','school-programme']:
   groups={}
   for id in l['courseIds']:

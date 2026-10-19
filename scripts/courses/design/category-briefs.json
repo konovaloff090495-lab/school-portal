@@ -2,381 +2,797 @@
   "shkolnye-predmety": {
     "title": "Школьные предметы",
     "shortTitle": "Школьные предметы",
-    "cardLines": ["Школьные", "предметы"],
+    "cardLines": [
+      "Школьные",
+      "предметы"
+    ],
     "heroTitle": "Разобраться в том,\nчто проходят в школе",
     "heroDescription": "Курсы по школьной программе: вернуться к сложной теме, потренироваться на заданиях и связать новые знания с уже знакомыми.",
     "kicker": "Помощь со школьной программой",
     "illustrationBrief": "An open school notebook with neat blank pages, a coral pencil, a small globe and stacked pastel textbooks. Premium tactile clay 3D still life, warm peach and cream palette with bright coral accents, soft studio light, rounded shapes, no text, no letters, no numbers.",
-    "color": "#F7E3D9", "accent": "#DE6955"
+    "color": "#F7E3D9",
+    "accent": "#DE6955"
   },
   "kompyuternaya-gramotnost": {
     "title": "Компьютерная грамотность",
     "shortTitle": "Компьютерная грамотность",
-    "cardLines": ["Компьютерная", "грамотность"],
+    "cardLines": [
+      "Компьютерная",
+      "грамотность"
+    ],
     "heroTitle": "Освоиться\nза компьютером",
     "heroDescription": "Работа с файлами, документами и интернетом. Найдите курс, с которым ребёнок сможет увереннее пользоваться компьютером для учёбы и своих проектов.",
     "kicker": "Первые цифровые навыки",
     "illustrationBrief": "A friendly desktop computer with a plain peach screen, a large rounded cursor arrow, a cream file folder and a coral computer mouse. Premium tactile clay 3D still life, warm peach and cream palette with vivid blue accents, soft studio light, no text or logos.",
-    "color": "#E4EDF1", "accent": "#4475A1"
+    "color": "#E4EDF1",
+    "accent": "#4475A1"
   },
   "mobilnye-prilozheniya": {
     "title": "Мобильные приложения",
     "shortTitle": "Мобильные приложения",
-    "cardLines": ["Мобильные", "приложения"],
+    "cardLines": [
+      "Мобильные",
+      "приложения"
+    ],
     "heroTitle": "Придумать приложение.\nУвидеть его на экране",
     "heroDescription": "Как устроены мобильные приложения, их экраны и действия. Подберите курс, на котором ребёнок сможет попробовать разработку для смартфона.",
     "kicker": "Идеи для маленького экрана",
     "illustrationBrief": "An upright peach smartphone displaying simple colorful app tiles, three oversized rounded app icons floating beside it, a coral finger-tap ripple and a small cream charging dock. Premium tactile clay 3D, peach and cream palette with vivid teal accents, no text, no brand logos.",
-    "color": "#DFEFEB", "accent": "#2B8277"
+    "color": "#DFEFEB",
+    "accent": "#2B8277"
   },
   "programmirovanie": {
     "title": "Программирование",
     "shortTitle": "Программирование",
-    "cardLines": ["Программирование", "для детей"],
+    "cardLines": [
+      "Программирование",
+      "для детей"
+    ],
     "heroTitle": "От первой команды\nдо своего проекта",
     "heroDescription": "Игры, сайты и программы — разные способы попробовать код. Сравните направления и найдите подходящий старт по возрасту и опыту ребёнка.",
     "kicker": "Создавать с помощью кода",
     "illustrationBrief": "A cream laptop with colorful abstract code blocks on its screen, oversized coral curly braces, a small peach rocket and a mint building block. Premium tactile clay 3D, peach and cream palette with vivid coral accents, no readable text, no logos.",
-    "color": "#E8ECD9", "accent": "#698344"
+    "color": "#E8ECD9",
+    "accent": "#698344"
   },
   "python": {
     "title": "Python",
     "shortTitle": "Python",
-    "cardLines": ["Python", "для детей"],
+    "cardLines": [
+      "Python",
+      "для детей"
+    ],
     "heroTitle": "Python: код,\nкоторый оживляет идеи",
     "heroDescription": "Познакомиться с языком Python или перейти к более сложным задачам. В каталоге можно выбрать курс по программам, играм и работе с данными.",
     "kicker": "Язык программирования Python",
     "illustrationBrief": "Two friendly interlocking rounded toy pythons, one golden yellow and one muted blue, beside a cream laptop, a coral play button and a small stack of blank data tiles. Premium tactile clay 3D, warm peach and cream base, blue and yellow accents, no text or logos.",
-    "color": "#F8EACB", "accent": "#B27E24"
+    "color": "#F8EACB",
+    "accent": "#B27E24"
   },
   "scratch": {
     "title": "Scratch",
     "shortTitle": "Scratch",
-    "cardLines": ["Scratch", "первые игры"],
+    "cardLines": [
+      "Scratch",
+      "первые игры"
+    ],
     "heroTitle": "Scratch: собрать код\nкак конструктор",
     "heroDescription": "В Scratch команды соединяются в цветные блоки. Это способ познакомиться с программированием через собственные игры, истории и анимацию.",
     "kicker": "Первое знакомство с кодом",
     "illustrationBrief": "A cheerful orange toy cat beside a vertical stack of colorful interlocking visual programming blocks, a cream game stage and a coral flag. Premium tactile clay 3D, warm peach and cream palette with orange and violet accents, no words, no text, no logos.",
-    "color": "#F9E5CD", "accent": "#D48139"
+    "color": "#F9E5CD",
+    "accent": "#D48139"
   },
   "roblox": {
     "title": "Roblox",
     "shortTitle": "Roblox",
-    "cardLines": ["Roblox", "свои игровые миры"],
+    "cardLines": [
+      "Roblox",
+      "свои игровые миры"
+    ],
     "heroTitle": "Roblox: придумать мир\nи правила игры",
     "heroDescription": "Перейти от игры к созданию своих уровней. Курсы по Roblox знакомят с редактором миров, игровыми механиками и основами программирования.",
     "kicker": "Создание игр в Roblox",
     "illustrationBrief": "A blocky friendly game avatar standing on a peach floating obstacle-course platform, a coral tilted square with a square opening and a small cream finish arch. Premium tactile clay 3D, warm peach and cream palette with vivid cobalt accents, no text or logos.",
-    "color": "#DFE8F7", "accent": "#486BA8"
+    "color": "#DFE8F7",
+    "accent": "#486BA8"
   },
   "minecraft": {
     "title": "Minecraft",
     "shortTitle": "Minecraft",
-    "cardLines": ["Minecraft", "строим и кодим"],
+    "cardLines": [
+      "Minecraft",
+      "строим и кодим"
+    ],
     "heroTitle": "Minecraft: строить,\nисследовать, программировать",
     "heroDescription": "Знакомый игровой мир может стать средой для учёбы. Выберите курс, где ребёнок пробует программирование и решает задачи внутри Minecraft.",
     "kicker": "Обучение в мире Minecraft",
     "illustrationBrief": "A tiny voxel-style floating grassy island with a cubic tree, a coral block-built pickaxe and a cream staircase leading to a small cube house. Premium tactile clay 3D, warm peach and cream palette with fresh grass-green accents, soft rounded cube edges, no text.",
-    "color": "#E3EBD7", "accent": "#6D8A46"
+    "color": "#E3EBD7",
+    "accent": "#6D8A46"
   },
   "unity": {
     "title": "Unity и разработка игр",
     "shortTitle": "Unity и игры",
-    "cardLines": ["Unity", "разработка игр"],
+    "cardLines": [
+      "Unity",
+      "разработка игр"
+    ],
     "heroTitle": "Играть интересно.\nСоздавать игру — тоже",
     "heroDescription": "Персонажи, уровни, движение и игровые правила. Подберите курс по Unity и разработке игр под интересы и подготовку ребёнка.",
     "kicker": "Unity и разработка игр",
     "illustrationBrief": "A miniature isometric game level with a cream platform and peach archway, a coral game controller, a tiny rounded astronaut character and a golden collectible star. Premium tactile clay 3D, warm peach and cream palette with violet accents, no text or logos.",
-    "color": "#EAE2F2", "accent": "#8C66A5"
+    "color": "#EAE2F2",
+    "accent": "#8C66A5"
   },
   "web-razrabotka": {
     "title": "Создание сайтов",
     "shortTitle": "Создание сайтов",
-    "cardLines": ["Создание", "сайтов"],
+    "cardLines": [
+      "Создание",
+      "сайтов"
+    ],
     "heroTitle": "Свой сайт:\nот идеи до первой страницы",
     "heroDescription": "Как страница получает структуру, оформление и интерактивные элементы. Курсы помогают познакомиться с веб-разработкой на собственном проекте.",
     "kicker": "Первые шаги в веб-разработке",
     "illustrationBrief": "Three overlapping cream browser windows containing only colorful geometric layout blocks, a coral cursor arrow, a peach image placeholder frame and a mint toggle switch. Premium tactile clay 3D, warm peach and cream palette with turquoise accents, no text or letters.",
-    "color": "#DFF0EC", "accent": "#328D81"
+    "color": "#DFF0EC",
+    "accent": "#328D81"
   },
   "iskusstvennyy-intellekt": {
     "title": "Нейросети и ИИ",
     "shortTitle": "Нейросети и ИИ",
-    "cardLines": ["Нейросети", "и ИИ"],
+    "cardLines": [
+      "Нейросети",
+      "и ИИ"
+    ],
     "heroTitle": "Разобраться в ИИ.\nПопробовать свои идеи",
     "heroDescription": "Как общаться с нейросетями, оценивать их ответы и применять новые инструменты в творческих и учебных задачах. Сравните курсы для детей.",
     "kicker": "Знакомство с искусственным интеллектом",
     "illustrationBrief": "A friendly cream robot head with coral rounded ears, a connected cluster of peach neural nodes, a violet sparkle and a small rounded image frame with an abstract mountain. Premium tactile clay 3D, peach and cream palette, vibrant violet accents, no text.",
-    "color": "#EEE3F5", "accent": "#9967BA"
+    "color": "#EEE3F5",
+    "accent": "#9967BA"
   },
   "robototehnika": {
     "title": "Робототехника",
     "shortTitle": "Робототехника",
-    "cardLines": ["Робототехника", "собрать и оживить"],
+    "cardLines": [
+      "Робототехника",
+      "собрать и оживить"
+    ],
     "heroTitle": "Собрать робота.\nНаучить его действовать",
     "heroDescription": "Механизмы, датчики и команды встречаются в одном проекте. Найдите курс, где ребёнок сможет познакомиться с устройством и программированием роботов.",
     "kicker": "Техника, которую можно собрать",
     "illustrationBrief": "A small cream wheeled robot with a coral articulated arm, a peach gear, a turquoise sensor module and a short rounded screwdriver. Premium tactile clay 3D, warm peach and cream palette with turquoise accents, playful realistic assembly, no text.",
-    "color": "#E1ECE9", "accent": "#3E8D80"
+    "color": "#E1ECE9",
+    "accent": "#3E8D80"
   },
   "kiberbezopasnost": {
     "title": "Кибербезопасность",
     "shortTitle": "Кибербезопасность",
-    "cardLines": ["Кибер-", "безопасность"],
+    "cardLines": [
+      "Кибер-",
+      "безопасность"
+    ],
     "heroTitle": "Понимать интернет.\nЗащищать свои данные",
     "heroDescription": "Пароли, личная информация и подозрительные сообщения. Курсы знакомят с цифровой безопасностью и помогают замечать риски в интернете.",
     "kicker": "Безопасность в цифровом мире",
     "illustrationBrief": "A large cream protective shield with a coral padlock, a peach laptop, a rounded blue key and a small closed envelope. Premium tactile clay 3D, warm peach and cream palette with strong cobalt accents, soft studio light, no text or code.",
-    "color": "#E0E9F2", "accent": "#456D9A"
+    "color": "#E0E9F2",
+    "accent": "#456D9A"
   },
   "ege": {
     "title": "Подготовка к ЕГЭ",
     "shortTitle": "ЕГЭ",
-    "cardLines": ["Подготовка", "к ЕГЭ"],
+    "cardLines": [
+      "Подготовка",
+      "к ЕГЭ"
+    ],
     "heroTitle": "Подготовка к ЕГЭ:\nпо темам и заданиям",
     "heroDescription": "Разобрать формат экзамена, повторить нужные темы и потренироваться на заданиях. Сравните курсы по предмету, программе и формату занятий.",
     "kicker": "Экзамены в 11 классе",
     "illustrationBrief": "A cream exam clipboard with large blank answer circles, a coral graduation cap, a peach study calendar with simple colored squares and a rounded pencil. Premium tactile clay 3D, warm peach and cream palette with deep terracotta accents, no text, no letters, no numbers.",
-    "color": "#F5DED5", "accent": "#C35F4C"
+    "color": "#F5DED5",
+    "accent": "#C35F4C"
   },
   "oge": {
     "title": "Подготовка к ОГЭ",
     "shortTitle": "ОГЭ",
-    "cardLines": ["Подготовка", "к ОГЭ"],
+    "cardLines": [
+      "Подготовка",
+      "к ОГЭ"
+    ],
     "heroTitle": "ОГЭ: познакомиться\nс форматом и подготовиться",
     "heroDescription": "Курсы для подготовки к экзаменам в 9 классе: повторение школьных тем, разбор типов заданий и практика по выбранному предмету.",
     "kicker": "Экзамены в 9 классе",
     "illustrationBrief": "A cream open workbook with simple blank question boxes, a peach hourglass, a coral pencil case and a mint checkmark tile. Premium tactile clay 3D, warm peach and cream palette with sage-green accents, no text, no letters, no numbers.",
-    "color": "#E6ECD9", "accent": "#778B4E"
+    "color": "#E6ECD9",
+    "accent": "#778B4E"
   },
   "angliyskiy": {
     "title": "Английский язык",
     "shortTitle": "Английский",
-    "cardLines": ["Английский", "язык"],
+    "cardLines": [
+      "Английский",
+      "язык"
+    ],
     "heroTitle": "Английский для учёбы,\nобщения и интереса",
     "heroDescription": "Слова, грамматика, понимание на слух и разговорная практика. Выберите курс с учётом возраста, уровня и задач ребёнка.",
     "kicker": "Изучение английского языка",
     "illustrationBrief": "Two rounded speech bubbles, one coral and one cream, floating above a peach open phrasebook, a pair of mint headphones and a small toy airplane. Premium tactile clay 3D, warm peach and cream palette with turquoise accents, no flags, no text or letters.",
-    "color": "#F9E6CA", "accent": "#B58836"
+    "color": "#F9E6CA",
+    "accent": "#B58836"
   },
   "matematika": {
     "title": "Математика",
     "shortTitle": "Математика",
-    "cardLines": ["Математика", "понять и решить"],
+    "cardLines": [
+      "Математика",
+      "понять и решить"
+    ],
     "heroTitle": "Математика,\nв которой хочется разобраться",
     "heroDescription": "От школьных тем до задач на рассуждение. Подберите занятия, чтобы разбирать решения, тренироваться и замечать связи между правилами.",
     "kicker": "Числа, задачи и рассуждения",
     "illustrationBrief": "A peach abacus with coral counting beads, a cream geometric cone, a sage triangular ruler and a small stack of rounded counting cubes. Premium tactile clay 3D, warm peach and cream palette with coral accents, no text or numbers.",
-    "color": "#E1EDF1", "accent": "#55869D"
+    "color": "#E1EDF1",
+    "accent": "#55869D"
   },
   "russkiy": {
     "title": "Русский язык",
     "shortTitle": "Русский язык",
-    "cardLines": ["Русский", "язык"],
+    "cardLines": [
+      "Русский",
+      "язык"
+    ],
     "heroTitle": "Русский язык:\nписать и выражать мысли",
     "heroDescription": "Орфография, пунктуация и работа с текстом. Сравните курсы для разбора школьных тем, практики письма и подготовки к экзаменам.",
     "kicker": "Правила, речь и работа с текстом",
     "illustrationBrief": "An elegant coral fountain pen resting on a cream open notebook, a peach punctuation-shaped speech bubble and a sage dictionary with a blank spine. Premium tactile clay 3D, warm peach and cream palette, coral accent, no readable text or letters.",
-    "color": "#F5E0DC", "accent": "#BE6C60"
+    "color": "#F5E0DC",
+    "accent": "#BE6C60"
   },
   "fizika": {
     "title": "Физика",
     "shortTitle": "Физика",
-    "cardLines": ["Физика", "как устроен мир"],
+    "cardLines": [
+      "Физика",
+      "как устроен мир"
+    ],
     "heroTitle": "Физика: найти объяснение\nпривычным вещам",
     "heroDescription": "Движение, свет, электричество и задачи по школьной программе. Выберите курс, чтобы связывать формулы с явлениями и разбирать решения по шагам.",
     "kicker": "Явления, законы и эксперименты",
     "illustrationBrief": "A peach Newton's cradle with cream suspended balls, a coral horseshoe magnet, a small lit cream lightbulb and a transparent rounded prism splitting a tiny pastel beam. Premium tactile clay 3D, peach and cream palette with bright amber accents, no text.",
-    "color": "#F6E9CE", "accent": "#B9963C"
+    "color": "#F6E9CE",
+    "accent": "#B9963C"
   },
   "himiya": {
     "title": "Химия",
     "shortTitle": "Химия",
-    "cardLines": ["Химия", "вещества и реакции"],
+    "cardLines": [
+      "Химия",
+      "вещества и реакции"
+    ],
     "heroTitle": "Химия: понять,\nчто с чем происходит",
     "heroDescription": "Строение веществ, реакции и расчётные задачи. Подберите курс для знакомства с предметом, повторения школьных тем или подготовки к экзамену.",
     "kicker": "Вещества, связи и реакции",
     "illustrationBrief": "A cream conical laboratory flask containing coral liquid, a peach molecular ball-and-stick model, a violet test tube in a rounded stand and three small cream bubbles. Premium tactile clay 3D, warm peach and cream palette, lavender accent, no text.",
-    "color": "#ECE2F1", "accent": "#9671AD"
+    "color": "#ECE2F1",
+    "accent": "#9671AD"
   },
   "biologiya": {
     "title": "Биология",
     "shortTitle": "Биология",
-    "cardLines": ["Биология", "мир живого"],
+    "cardLines": [
+      "Биология",
+      "мир живого"
+    ],
     "heroTitle": "Биология:\nисследовать мир живого",
     "heroDescription": "От клетки до организма и экосистемы. Найдите курс для изучения биологии, разбора школьной программы или подготовки к экзамену.",
     "kicker": "Жизнь во всех её формах",
     "illustrationBrief": "A cream microscope with coral adjustment knobs, a peach cutaway plant cell, a small sage sprout and a rounded DNA double helix. Premium tactile clay 3D, warm peach and cream palette with fresh green accents, no text.",
-    "color": "#E1ECD9", "accent": "#6D8C50"
+    "color": "#E1ECD9",
+    "accent": "#6D8C50"
   },
   "informatika": {
     "title": "Информатика",
     "shortTitle": "Информатика",
-    "cardLines": ["Информатика", "данные и алгоритмы"],
+    "cardLines": [
+      "Информатика",
+      "данные и алгоритмы"
+    ],
     "heroTitle": "Информатика:\nмыслить по шагам",
     "heroDescription": "Алгоритмы, логика, данные и школьные задачи. Сравните курсы по информатике для освоения программы и подготовки к экзаменам.",
     "kicker": "Алгоритмы и работа с информацией",
     "illustrationBrief": "A cream computer monitor showing a simple flowchart made of coral geometric shapes without labels, a peach processor chip, three sage data cubes and a large rounded branching arrow. Premium tactile clay 3D, warm peach and cream palette, teal accents, no text or digits.",
-    "color": "#E1EBED", "accent": "#5C858C"
+    "color": "#E1EBED",
+    "accent": "#5C858C"
   },
   "istoriya": {
     "title": "История",
     "shortTitle": "История",
-    "cardLines": ["История", "понять прошлое"],
+    "cardLines": [
+      "История",
+      "понять прошлое"
+    ],
     "heroTitle": "История:\nвидеть связи между событиями",
     "heroDescription": "Не только даты, но и причины, события и их последствия. Выберите курс для изучения истории, работы с источниками и подготовки к экзамену.",
     "kicker": "Люди, события и эпохи",
     "illustrationBrief": "A peach ancient column fragment, an unfurled cream parchment scroll, a coral castle tower and a small rounded bronze compass. Premium tactile clay 3D, warm peach and cream palette with terracotta accents, no writing, no text.",
-    "color": "#F0E2D3", "accent": "#A97949"
+    "color": "#F0E2D3",
+    "accent": "#A97949"
   },
   "obshchestvoznanie": {
     "title": "Обществознание",
     "shortTitle": "Обществознание",
-    "cardLines": ["Общество-", "знание"],
+    "cardLines": [
+      "Общество-",
+      "знание"
+    ],
     "heroTitle": "Обществознание:\nкак устроена жизнь вместе",
     "heroDescription": "Человек, общество, право и экономика. Курсы помогают разобраться в понятиях, рассматривать примеры и практиковаться на школьных и экзаменационных заданиях.",
     "kicker": "Человек и общество",
     "illustrationBrief": "A cream balanced justice scale with coral pans, three rounded peach human figures, a small sage civic building and a golden coin. Premium tactile clay 3D, warm peach and cream palette with sage accents, no text or symbols on coin.",
-    "color": "#E6E8DB", "accent": "#80865A"
+    "color": "#E6E8DB",
+    "accent": "#80865A"
   },
   "literatura": {
     "title": "Литература",
     "shortTitle": "Литература",
-    "cardLines": ["Литература", "читать и понимать"],
+    "cardLines": [
+      "Литература",
+      "читать и понимать"
+    ],
     "heroTitle": "Литература:\nбольше, чем прочитать сюжет",
     "heroDescription": "Образы, герои, авторская мысль и собственные аргументы. Найдите курс по анализу произведений, письменным работам или подготовке к экзамену.",
     "kicker": "Книги, смыслы и собственный взгляд",
     "illustrationBrief": "A cream open storybook with a tiny coral theater curtain rising from its pages, a peach feather quill, a violet bookmark ribbon and a small rounded reading lamp. Premium tactile clay 3D, warm peach and cream palette with berry accents, blank pages, no text.",
-    "color": "#EDE1E9", "accent": "#A57091"
+    "color": "#EDE1E9",
+    "accent": "#A57091"
   },
   "geografiya": {
     "title": "География",
     "shortTitle": "География",
-    "cardLines": ["География", "открывать планету"],
+    "cardLines": [
+      "География",
+      "открывать планету"
+    ],
     "heroTitle": "География:\nпочему мир устроен так",
     "heroDescription": "Карты, природа, страны и люди. Подберите курс для изучения географии, работы с картографическими заданиями и подготовки к экзамену.",
     "kicker": "Планета, природа и страны",
     "illustrationBrief": "A cream globe with peach continents and sage oceans, a coral location pin, a tiny rounded mountain range and a folded blank map. Premium tactile clay 3D, warm peach and cream palette with ocean-blue accents, no text or country labels.",
-    "color": "#DEEAF0", "accent": "#5A879E"
+    "color": "#DEEAF0",
+    "accent": "#5A879E"
   },
   "shahmaty": {
     "title": "Шахматы",
     "shortTitle": "Шахматы",
-    "cardLines": ["Шахматы", "думать на ход вперёд"],
+    "cardLines": [
+      "Шахматы",
+      "думать на ход вперёд"
+    ],
     "heroTitle": "Шахматы:\nучиться видеть следующий ход",
     "heroDescription": "Правила, тактика и разбор партий. Выберите курс для первого знакомства с шахматами или продолжения занятий с учётом опыта ребёнка.",
     "kicker": "Стратегия за шахматной доской",
     "illustrationBrief": "An oversized coral chess knight, a cream rook, a peach pawn and a small rounded checkerboard platform in cream and sage. Premium tactile clay 3D, warm peach and cream palette with coral accents, soft studio light, no text.",
-    "color": "#E7E9D9", "accent": "#838B55"
+    "color": "#E7E9D9",
+    "accent": "#838B55"
   },
   "dizayn": {
     "title": "Дизайн",
     "shortTitle": "Дизайн",
-    "cardLines": ["Дизайн", "идеи в цвете и форме"],
+    "cardLines": [
+      "Дизайн",
+      "идеи в цвете и форме"
+    ],
     "heroTitle": "Дизайн:\nпридумывать и оформлять идеи",
     "heroDescription": "Цвет, композиция, графика и цифровые инструменты. Подберите курс, на котором ребёнок попробует превращать задумку в визуальный проект.",
     "kicker": "Визуальные идеи и первые проекты",
     "illustrationBrief": "A cream drawing tablet with a coral stylus, a peach fan of color swatches, a vivid violet sculptural squiggle and a small mint geometric layout board. Premium tactile clay 3D, warm peach and cream palette with violet accents, no text or logos.",
-    "color": "#ECE1F0", "accent": "#9C70AD"
+    "color": "#ECE1F0",
+    "accent": "#9C70AD"
   },
   "3d-modelirovanie": {
     "title": "3D-моделирование",
     "shortTitle": "3D-моделирование",
-    "cardLines": ["3D-", "моделирование"],
+    "cardLines": [
+      "3D-",
+      "моделирование"
+    ],
     "heroTitle": "Придумать предмет.\nСоздать его в 3D",
     "heroDescription": "Объём, форма, материалы и цифровые сцены. Сравните курсы, чтобы выбрать знакомство с 3D-моделированием или развить уже имеющиеся навыки.",
     "kicker": "От плоской идеи к объёму",
     "illustrationBrief": "A peach 3D modeling pedestal displaying a cream sculpted toy creature, a coral wireframe-style cube, a lavender sphere and a rounded three-axis transform gizmo without labels. Premium tactile clay 3D, warm peach and cream palette with violet accents, no text.",
-    "color": "#E8E0F1", "accent": "#8C70AA"
+    "color": "#E8E0F1",
+    "accent": "#8C70AA"
   },
   "risovanie": {
     "title": "Рисование",
     "shortTitle": "Рисование",
-    "cardLines": ["Рисование", "свои идеи на бумаге"],
+    "cardLines": [
+      "Рисование",
+      "свои идеи на бумаге"
+    ],
     "heroTitle": "Рисовать то,\nчто хочется придумать",
     "heroDescription": "Линия, цвет, композиция и разные техники. Найдите занятия, где ребёнок сможет пробовать материалы, наблюдать и воплощать собственные образы.",
     "kicker": "Цвет, воображение и творчество",
     "illustrationBrief": "A cream painter's palette with thick coral and sage paint blobs, a peach paintbrush with a large soft tip, a small easel holding an abstract sun painting and a rounded paint tube. Premium tactile clay 3D, peach and cream palette with vivid coral accents, no text.",
-    "color": "#F8DFD5", "accent": "#D17860"
+    "color": "#F8DFD5",
+    "accent": "#D17860"
   },
   "videomontazh": {
     "title": "Видео и анимация",
     "shortTitle": "Видео и анимация",
-    "cardLines": ["Видео", "и анимация"],
+    "cardLines": [
+      "Видео",
+      "и анимация"
+    ],
     "heroTitle": "История,\nкоторая оживает на экране",
     "heroDescription": "Съёмка, монтаж, движение и работа со звуком. Подберите курс, чтобы ребёнок попробовал собирать видеоролики или создавать анимацию.",
     "kicker": "От идеи до собственного ролика",
     "illustrationBrief": "A cream movie camera with two peach reels, a coral play-button tile, a curved strip of blank pastel film frames and a tiny sage clapperboard with no markings. Premium tactile clay 3D, warm peach and cream palette, bright coral accent, no text.",
-    "color": "#F2E0DC", "accent": "#BE6F60"
+    "color": "#F2E0DC",
+    "accent": "#BE6F60"
   },
   "muzyka": {
     "title": "Музыка и звук",
     "shortTitle": "Музыка и звук",
-    "cardLines": ["Музыка", "и звук"],
+    "cardLines": [
+      "Музыка",
+      "и звук"
+    ],
     "heroTitle": "Слышать музыку.\nПробовать создавать свою",
     "heroDescription": "Ритм, мелодия и инструменты для работы со звуком. Найдите курс, который подойдёт музыкальным интересам и опыту ребёнка.",
     "kicker": "Ритм, мелодия и звук",
     "illustrationBrief": "A compact cream keyboard with coral keys, peach over-ear headphones, a sage sound-wave sculpture and a small rounded microphone. Premium tactile clay 3D, warm peach and cream palette with mint accents, no text or logos.",
-    "color": "#E0EBE8", "accent": "#598C7E"
+    "color": "#E0EBE8",
+    "accent": "#598C7E"
   },
   "podgotovka-k-shkole": {
     "title": "Подготовка к школе",
     "shortTitle": "Подготовка к школе",
-    "cardLines": ["Подготовка", "к школе"],
+    "cardLines": [
+      "Подготовка",
+      "к школе"
+    ],
     "heroTitle": "Знакомиться с учёбой\nещё до первого класса",
     "heroDescription": "Первые задания на чтение, счёт, внимание и речь. Сравните программы подготовки к школе с учётом возраста и того, что уже умеет ребёнок.",
     "kicker": "Первые шаги к школьной жизни",
     "illustrationBrief": "A small peach school backpack with a coral clasp, cream stacking counting blocks, an open blank picture book and two oversized colored pencils. Premium tactile clay 3D, warm peach and cream palette with sunny yellow accents, playful rounded forms, no text or numbers.",
-    "color": "#F9EBCD", "accent": "#BE943D"
+    "color": "#F9EBCD",
+    "accent": "#BE943D"
   },
   "logika": {
     "title": "Логика и мышление",
     "shortTitle": "Логика и мышление",
-    "cardLines": ["Логика", "и мышление"],
+    "cardLines": [
+      "Логика",
+      "и мышление"
+    ],
     "heroTitle": "Замечать закономерности.\nИскать своё решение",
     "heroDescription": "Головоломки, последовательности и задачи на рассуждение. Подберите занятия, где ребёнок сможет тренироваться объяснять ход мысли и проверять свои идеи.",
     "kicker": "Задачи, которые интересно распутывать",
     "illustrationBrief": "Three oversized peach and coral interlocking puzzle pieces, a cream maze slab with a sage ball, a small golden lightbulb and a rounded geometric sorting cone. Premium tactile clay 3D, warm peach and cream palette with sage accents, no text.",
-    "color": "#E7EAD7", "accent": "#85934F"
+    "color": "#E7EAD7",
+    "accent": "#85934F"
   },
   "chtenie": {
     "title": "Чтение и скорочтение",
     "shortTitle": "Чтение",
-    "cardLines": ["Чтение", "и скорочтение"],
+    "cardLines": [
+      "Чтение",
+      "и скорочтение"
+    ],
     "heroTitle": "Читать\nи понимать прочитанное",
     "heroDescription": "От первых слов до работы с длинным текстом. Выберите курс по чтению или скорочтению с учётом возраста, навыков и темпа ребёнка.",
     "kicker": "Книги становятся ближе",
     "illustrationBrief": "A cream open book with gently turning blank pages, a coral magnifying glass resting above it, a peach bookmark and a small sage reading lamp. Premium tactile clay 3D, warm peach and cream palette with coral accents, no letters or readable text.",
-    "color": "#F4E2D6", "accent": "#BB805B"
+    "color": "#F4E2D6",
+    "accent": "#BB805B"
   },
   "logoped": {
     "title": "Логопед",
     "shortTitle": "Логопед",
-    "cardLines": ["Занятия", "с логопедом"],
+    "cardLines": [
+      "Занятия",
+      "с логопедом"
+    ],
     "heroTitle": "Занятия с логопедом:\nвнимание к речи ребёнка",
     "heroDescription": "Занятия по развитию речи и работе над звукопроизношением. Сравните программы и уточните у специалиста, какой формат подходит ребёнку.",
     "kicker": "Развитие речи и звукопроизношения",
     "illustrationBrief": "A peach hand mirror on a cream stand, two rounded coral speech bubbles, a playful cream toy pinwheel and a small sage sound-wave sculpture. Premium tactile clay 3D, warm peach and cream palette with mint accents, gentle friendly mood, no text or letters.",
-    "color": "#F4E0DF", "accent": "#BC7A79"
+    "color": "#F4E0DF",
+    "accent": "#BC7A79"
   },
   "soft-skills": {
     "title": "Навыки общения и развития",
     "shortTitle": "Навыки общения",
-    "cardLines": ["Общение", "и развитие"],
+    "cardLines": [
+      "Общение",
+      "и развитие"
+    ],
     "heroTitle": "Общаться, договариваться\nи понимать себя",
     "heroDescription": "Работа в команде, выражение мыслей, эмоции и самостоятельность. Найдите занятия, где ребёнок сможет пробовать эти навыки через общение и практику.",
     "kicker": "Навыки для общения и жизни",
     "illustrationBrief": "Three friendly rounded cream and peach human figures gathered in a small circle, a coral speech bubble, a sage connecting bridge and a small golden heart. Premium tactile clay 3D, warm peach and cream palette with sage accents, no text.",
-    "color": "#E3EBDE", "accent": "#7C965F"
+    "color": "#E3EBDE",
+    "accent": "#7C965F"
   },
   "finansovaya-gramotnost": {
     "title": "Финансовая грамотность",
     "shortTitle": "Финансовая грамотность",
-    "cardLines": ["Финансовая", "грамотность"],
+    "cardLines": [
+      "Финансовая",
+      "грамотность"
+    ],
     "heroTitle": "Деньги: понимать,\nпланировать и выбирать",
     "heroDescription": "Карманные деньги, покупки, накопления и личный бюджет. Подберите курс, который знакомит ребёнка с финансовыми понятиями на понятных примерах.",
     "kicker": "Первые решения о деньгах",
     "illustrationBrief": "A coral piggy bank, three cream and peach coins without symbols, a small sage wallet and a clear rounded savings jar holding one golden coin. Premium tactile clay 3D, warm peach and cream palette with sage and gold accents, no text or currency signs.",
-    "color": "#F4E8CF", "accent": "#AD8D3D"
+    "color": "#F4E8CF",
+    "accent": "#AD8D3D"
+  },
+  "marketing": {
+    "title": "Маркетинг",
+    "shortTitle": "Маркетинг",
+    "cardLines": [
+      "Маркетинг"
+    ],
+    "heroTitle": "Курсы маркетинга для детей и подростков",
+    "heroDescription": "Продвижение проектов, изучение аудитории и основы интернет-маркетинга. Здесь есть самостоятельные программы и курсы, где маркетинг входит в предпринимательский маршрут.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for marketing"
+  },
+  "predprinimatelstvo": {
+    "title": "Предпринимательство",
+    "shortTitle": "Предпринимательство",
+    "cardLines": [
+      "Предпринимательство"
+    ],
+    "heroTitle": "Курсы предпринимательства для детей",
+    "heroDescription": "От идеи проекта до бюджета, продукта и презентации. Сравните возрастные группы, игровые бизнес-задачи и практику командной работы.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for predprinimatelstvo"
+  },
+  "bezopasnost": {
+    "title": "Безопасность детей",
+    "shortTitle": "Безопасность детей",
+    "cardLines": [
+      "Безопасность детей"
+    ],
+    "heroTitle": "Курсы безопасности для детей",
+    "heroDescription": "Поведение дома, на улице и в сложных ситуациях, личные границы и безопасное общение. Дистанционные квесты и тренинги отмечены по формату отдельно.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for bezopasnost"
+  },
+  "pdd": {
+    "title": "ПДД для детей",
+    "shortTitle": "ПДД для детей",
+    "cardLines": [
+      "ПДД для детей"
+    ],
+    "heroTitle": "Курсы ПДД для детей и подростков",
+    "heroDescription": "Обучающие программы для юных пешеходов, пассажиров и велосипедистов. Возрастные треки отличаются; курс для ребёнка не равен подготовке взрослого водителя.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for pdd"
+  },
+  "kitayskiy": {
+    "title": "Китайский язык",
+    "shortTitle": "Китайский язык",
+    "cardLines": [
+      "Китайский язык"
+    ],
+    "heroTitle": "Курсы китайского языка для детей",
+    "heroDescription": "Детские программы китайского: звучание, иероглифы, диалоги и знакомство с культурой. Сравните возраст, работу в группе и индивидуальные уроки.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for kitayskiy"
+  },
+  "oratorskoe-masterstvo": {
+    "title": "Ораторское мастерство",
+    "shortTitle": "Ораторское мастерство",
+    "cardLines": [
+      "Ораторское",
+      "мастерство"
+    ],
+    "heroTitle": "Курсы ораторского мастерства для детей",
+    "heroDescription": "Публичные выступления, структура речи, аргументация и презентация идей. Выберите программу под школьные ответы, сцену или командные проекты.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for oratorskoe-masterstvo"
+  },
+  "emocionalnyy-intellekt": {
+    "title": "Эмоциональный интеллект",
+    "shortTitle": "Эмоциональный интеллект",
+    "cardLines": [
+      "Эмоциональный",
+      "интеллект"
+    ],
+    "heroTitle": "Курсы эмоционального интеллекта для детей",
+    "heroDescription": "Понимание эмоций, общение, работа с конфликтами и лидерские навыки. Это образовательные занятия; их содержание и возрастные группы нужно уточнить перед записью.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for emocionalnyy-intellekt"
+  },
+  "triz": {
+    "title": "ТРИЗ и креативность",
+    "shortTitle": "ТРИЗ и креативность",
+    "cardLines": [
+      "ТРИЗ и креативность"
+    ],
+    "heroTitle": "Курсы ТРИЗ для детей",
+    "heroDescription": "Задачи на изобретательность, поиск нескольких решений и развитие творческого мышления. Программы отличаются возрастом и сложностью самостоятельной работы.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for triz"
+  },
+  "skorochtenie": {
+    "title": "Скорочтение",
+    "shortTitle": "Скорочтение",
+    "cardLines": [
+      "Скорочтение"
+    ],
+    "heroTitle": "Курсы скорочтения для детей",
+    "heroDescription": "Чтение и понимание текста, внимание и работа с информацией. Выбирайте по исходному навыку: обучение чтению и развитие скорости решают разные задачи.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for skorochtenie"
+  },
+  "pamyat-i-vnimanie": {
+    "title": "Память и внимание",
+    "shortTitle": "Память и внимание",
+    "cardLines": [
+      "Память и внимание"
+    ],
+    "heroTitle": "Курсы развития памяти и внимания для детей",
+    "heroDescription": "Упражнения на запоминание, концентрацию и организацию учёбы. Есть самостоятельные тренажёры и занятия с преподавателем.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for pamyat-i-vnimanie"
+  },
+  "akterskoe-masterstvo": {
+    "title": "Актёрское мастерство",
+    "shortTitle": "Актёрское мастерство",
+    "cardLines": [
+      "Актёрское мастерство"
+    ],
+    "heroTitle": "Курсы актёрского мастерства для детей",
+    "heroDescription": "Сценическая речь, импровизация, работа с ролью и выразительность. Формат конкретной программы указан в карточке.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for akterskoe-masterstvo"
+  },
+  "fotografiya": {
+    "title": "Фотография",
+    "shortTitle": "Фотография",
+    "cardLines": [
+      "Фотография"
+    ],
+    "heroTitle": "Курсы фотографии для детей",
+    "heroDescription": "Съёмка, композиция, обработка фотографий и визуальные истории. Курсы с редакторами могут требовать отдельного программного обеспечения.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for fotografiya"
+  },
+  "bloging": {
+    "title": "Блогинг и медиа",
+    "shortTitle": "Блогинг и медиа",
+    "cardLines": [
+      "Блогинг и медиа"
+    ],
+    "heroTitle": "Курсы блогинга для детей и подростков",
+    "heroDescription": "Сценарии публикаций, создание видео и знакомство с медиа. Сравните программы по практике, возрасту и правилам публикации детского контента.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for bloging"
+  },
+  "animaciya": {
+    "title": "Анимация и мультфильмы",
+    "shortTitle": "Анимация и мультфильмы",
+    "cardLines": [
+      "Анимация",
+      "и мультфильмы"
+    ],
+    "heroTitle": "Курсы анимации для детей",
+    "heroDescription": "Создание персонажей, движения и коротких мультфильмов в цифровых редакторах. Для первого курса сравните инструменты и требования к компьютеру.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for animaciya"
+  },
+  "kibersport": {
+    "title": "Киберспорт",
+    "shortTitle": "Киберспорт",
+    "cardLines": [
+      "Киберспорт"
+    ],
+    "heroTitle": "Курсы киберспорта для подростков",
+    "heroDescription": "Занятия по конкретной игровой дисциплине, разбор решений и командное взаимодействие. Возраст, режим и требования к игре указаны отдельно.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for kibersport"
+  },
+  "estestvennye-nauki": {
+    "title": "Наука и эксперименты",
+    "shortTitle": "Наука и эксперименты",
+    "cardLines": [
+      "Наука и эксперименты"
+    ],
+    "heroTitle": "Научные онлайн-курсы для детей",
+    "heroDescription": "Естествознание, генетика, геология и физические явления за пределами обычной предметной подготовки. Курсы для интереса к науке отделены от экзаменационных.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for estestvennye-nauki"
+  },
+  "astronomiya": {
+    "title": "Астрономия",
+    "shortTitle": "Астрономия",
+    "cardLines": [
+      "Астрономия"
+    ],
+    "heroTitle": "Курсы астрономии для детей",
+    "heroDescription": "Знакомство с космосом, небесными телами и работой астрономов. Астрономический раздел может входить в подписку на несколько научных курсов.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for astronomiya"
+  },
+  "proorientaciya": {
+    "title": "Профориентация",
+    "shortTitle": "Профориентация",
+    "cardLines": [
+      "Профориентация"
+    ],
+    "heroTitle": "Курсы профориентации для подростков",
+    "heroDescription": "Знакомство с профессиями, интересами и собственными сильными сторонами. Есть специальные программы и маршруты с проектной практикой.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#E3EBDE",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for proorientaciya"
+  },
+  "zhurnalistika": {
+    "title": "Журналистика",
+    "shortTitle": "Журналистика",
+    "cardLines": [
+      "Журналистика"
+    ],
+    "heroTitle": "Курсы журналистики для детей",
+    "heroDescription": "Подготовка текстов, работа с информацией и новые медиа. Уточните формат редакционной практики и возраст учеников.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F7DECD",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for zhurnalistika"
+  },
+  "psihologiya": {
+    "title": "Психология для подростков",
+    "shortTitle": "Психология для подростков",
+    "cardLines": [
+      "Психология",
+      "для подростков"
+    ],
+    "heroTitle": "Курсы психологии для подростков",
+    "heroDescription": "Образовательное знакомство с психологией, поведением и общением. Витрина описывает содержание курсов и условия записи.",
+    "kicker": "Курсы под интерес ребёнка",
+    "color": "#F4E8CF",
+    "accent": "#7C965F",
+    "illustrationBrief": "Native vector illustration for psihologiya"
   }
 }

@@ -94,10 +94,9 @@ def main():
         found = [c for c in courses.values() if school.matches(c, subject, grade)]
         body = STYLE + P(g['lead'])
         body += '<p>' + A(g['catalogPath'], f'Курсы по {s["case"]} для {grade} класса в каталоге') + ' — все подтверждённые предложения этой выборки.</p>'
+        brands = list(dict.fromkeys(c['brand'] for c in found))
         if len(found) == 1:
             body += P('Сейчас подтверждено одно предложение. Ниже — разбор его назначения и ограничений; сопоставления нескольких школ для этой пары пока нет.')
-        else:
-            brands = list(dict.fromkeys(c['brand'] for c in found))
         body += P(f'В выборке {len(found)} ' + school.offer_word(len(found)) + ('. Все — у школы «' + brands[0] + '»: ниже сравниваем содержание и форматы её программ.' if len(brands) == 1 else '. Представлены школы: ' + ', '.join(brands) + '. Порядок в статье не означает места в рейтинге.'))
         for section in g['sections']:
             body += '<h2>' + E(section['title']) + '</h2>' + P(section['text'])

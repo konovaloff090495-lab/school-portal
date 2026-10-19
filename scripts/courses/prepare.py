@@ -28,7 +28,24 @@ def curriculum(c):
     return list(dict.fromkeys(labels))[:4]
 
 def price_fact(c):
-    t=c['text']; b=c['brandId']; patterns={
+    t=clean(c['text']); b=c['brandId']
+    if b=='naukacity' and 'Бесплатно — подписка на десять онлайн-курсов без ограничения по времени.' in t:
+        return {'amount':0,'unit':'курс','from':False,'condition':'Бесплатная общая подписка после регистрации; условия доступа у организатора','evidence':'Бесплатно — подписка на десять онлайн-курсов без ограничения по времени.','checkedAt':c['checkedAt'][:10]}
+    if b=='skysmart' and 'selfstudy' in c.get('sourceUrl',''):
+        # Read the programme's own tariff, before recommendations or FAQs.
+        start=t.find(clean(c.get('h1','')))
+        if start<0 or 'Что входит в тариф' not in t[start:]:return None
+        scope=t[max(0,start):].split('Что входит в тариф')[0]
+        paid=re.search(r'([\d\s\u202f]+)\s*₽\s*при оплате сразу',scope,re.I)
+        if paid:
+            amount=number(paid[1]);evidence=clean(paid[0]);condition='Полная стоимость при разовой оплате; общая сумма рассрочки может отличаться'
+        else:
+            paid=re.search(r'Видеокурс\s+(?:Предпродажа\s+)?([\d\s\u202f]+)\s*₽',scope,re.I)
+            if not paid:return None
+            amount=number(paid[1]);evidence=clean(paid[0]);condition='Полная стоимость видеокурса или общего комбо; начало доступа и предпродажу уточнить у школы'
+        if 200<=amount<=500000:return {'amount':amount,'unit':'курс','from':False,'condition':condition,'evidence':evidence,'checkedAt':c['checkedAt'][:10]}
+        return None
+    patterns={
       'synergy':(r'от\s+([\d\s\u202f]+)\s*₽\s*за урок','урок','При оплате курса на тарифе «Стандарт»'),
       'skysmart':(r'всего\s+([\d\s\u202f]+)\s*₽\s*за курс','курс','За пакет занятий, указанный в названии курса; рассрочка считается отдельно'),
       'foxford':(r'([\d\s\u202f]+)\s*₽\s*за\s*курс','курс','Полная стоимость выбранного предметного курса; рассрочка считается отдельно'),

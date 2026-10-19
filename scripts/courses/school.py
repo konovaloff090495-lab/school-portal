@@ -17,7 +17,8 @@ def matches(course,subject=None,grade=None):
     if subject=='matematika':
         if not set(offered)&{'matematika','algebra','geometriya'}:return False
     elif subject and subject not in offered:return False
-    return not grade or grade in course.get('grades',[])
+    supported=course.get('schoolSubjectGrades',{}).get(subject,course.get('grades',[]))
+    return not grade or grade in supported
 
 def selections(courses):
     result=[]

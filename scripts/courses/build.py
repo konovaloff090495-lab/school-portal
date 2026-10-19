@@ -23,6 +23,7 @@ PARTNERS=load('partners.json')
 GUIDES={g['categoryId']:g for g in load('blog-guides.json')}
 SCHOOL_GUIDES=load('school-blog-guides.json') if (DATA/'school-blog-guides.json').exists() else []
 EXAM_GUIDES=load('exam-blog-guides.json') if (DATA/'exam-blog-guides.json').exists() else []
+BRAND_GUIDES={g['brandId']:g for g in load('brand-blog-guides.json')} if (DATA/'brand-blog-guides.json').exists() else {}
 BRANDS={c['brandId']:c['brand'] for c in COURSES}
 SCHOOL_PAGES=school.selections(COURSES)
 SCHOOL_PATHS={cat['id'] for cat in SCHOOL_PAGES}
@@ -36,7 +37,7 @@ TINTS=['#ffe1c2','#e1eadf','#ffe8a5','#e2e9ed','#f4dbd2','#e3dfef']
 def url(c):return '/kursy/kurs/'+c['id']+'/'
 def caturl(id):return '/kursy/'+id+'/'
 def brandurl(id):return '/kursy/shkoly/'+id+'/'
-def guide_links(ids,school_context=None,course=None):
+def guide_links(ids,school_context=None,course=None,brand=None):
     selected=[GUIDES[id] for id in dict.fromkeys(ids) if id in GUIDES][:3]
     school_selected=[]
     if school_context is not None:
@@ -53,8 +54,12 @@ def guide_links(ids,school_context=None,course=None):
         if exams:exam_selected=[g for g in EXAM_GUIDES if g['exam'] in exams and (not subjects or g['subjectId'] in subjects)]
         elif subjects:exam_selected=[g for g in EXAM_GUIDES if g['subjectId'] in subjects]
     links=''.join(f'<li><a href="/blog/{esc(g["slug"])}/">{esc(g["title"])}</a></li>' for g in exam_selected+school_selected[:4]+selected)
+    brand_guide=BRAND_GUIDES.get(brand or (course or {}).get('brandId'))
+    if brand_guide:links=f'<li><a href="/blog/{esc(brand_guide["slug"])}/">{esc(brand_guide["title"])}</a></li>'+links
+    if BRAND_GUIDES:links+='<li><a href="/blog/obzory-onlayn-shkol-dlya-detej/">Обзоры школ: программы, аудитория и условия</a></li>'
     if school_selected:links+='<li><a href="/blog/luchshie-kursy-po-predmetam-i-klassam/">Обзоры школьных курсов по всем предметам и классам</a></li>'
-    return '<section class="seo-section"><h2>Поможем выбрать программу</h2><p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
+    profile=('<h3>Программы и условия '+esc(BRANDS[brand])+'</h3><p>'+esc(brand_guide['lead'])+'</p><p>'+esc(brand_guide['terms'])+'</p>') if brand and brand_guide else ''
+    return '<section class="seo-section"><h2>Поможем выбрать программу</h2>'+profile+'<p>Сравните направления, возраст и форматы в наших подборках.</p><ul>'+links+'<li><a href="/blog/luchshie-kursy-dlya-detej/">Все подборки курсов для детей</a></li></ul></section>'
 def age(c):return f'{c["ageRange"][0]}–{c["ageRange"][1]} лет' if c.get('ageRange') else c.get('grade') or 'Возраст уточняется'
 def fresh(item,days):return item and (TODAY-date.fromisoformat(item['checkedAt'])).days<=days
 def price(c):return c['price'] if fresh(c.get('price'),7) and (not c.get('accessUntil') or c['accessUntil']>=TODAY.isoformat()) else None
@@ -169,7 +174,7 @@ def catalogue(category=None,brand=None):
     heading=category['title'] if category else f'Курсы {BRANDS[brand]} для детей' if brand else 'Курсы для детей'
     intro=category['intro'] if category else f'Программы {BRANDS[brand]}: сравните направления, возраст, формат и стоимость. Откройте карточку, чтобы посмотреть условия и перейти к записи.' if brand else 'Программирование, языки, экзамены и любимые увлечения. Сравните программы и цены разных школ — от первого интереса до уверенного результата.'
     title=heading+' — цены и программы | ProSchools'
-    desc=f'{heading}: {len(selected)} программ. '+intro
+    desc=f'{heading}: {len(selected)} {programme_word(len(selected))}. '+intro
     heroheading=esc(heading) if category or brand else 'Найдите лучшие курсы<br>для своего ребёнка<br><span>по выгодной цене</span>'
     guide=category['guide'] if category else 'Смотрите на задачу ребёнка, а затем — на программу и формат занятий. Для нового увлечения удобно начать с пробного урока. Для экзамена важны план подготовки и проверка работ. Сопоставляйте одинаковую единицу оплаты: цена одного урока и цена целого курса решают разные задачи.'
     crumb=[('Главная','/'),('Курсы','/kursy/' if category or brand else '')]
@@ -193,7 +198,7 @@ def catalogue(category=None,brand=None):
     doc+='''</div><div class="empty" id="empty" hidden><h3>Попробуем по-другому?</h3><p>Курсов с таким сочетанием пока нет. Уберите один из фильтров.</p><button class="button light" data-reset type="button">Сбросить фильтры</button></div><button class="button load-more" id="load-more" type="button" hidden>Показать ещё программы ↓</button><p class="catalog-aside">Цена «от» зависит от тарифа и пакета. Условия бесплатного занятия и итоговую стоимость смотрите в карточке и на сайте школы.</p></div></section>'''
     if is_school:doc+=school.content(COURSES,context)+school.navigation(COURSES,context)
     else:doc+=school.navigation(COURSES)
-    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('articleCategories',category.get('filters',[category['id']])) if category else [],school_context=context if is_school else None)+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
+    doc+=f'<section class="seo-section"><div class="eyebrow">Найти своё направление</div><h2 style="margin-top:13px">Что интересно вашему ребёнку?</h2>{direction_links()}{combination_links(category)}<h2>На что обратить внимание при выборе</h2><p>{esc(guide)}</p></section>'+guide_links(category.get('articleCategories',category.get('filters',[category['id']])) if category else [],school_context=context if is_school else None,brand=brand)+f'<section class="seo-section"><h2>Вопросы о курсах</h2>{faq_html()}</section></div></main>'+FOOTER
     schema={'@context':'https://schema.org','@type':'ItemList','name':heading,'numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'url':BASE+url(c),'name':c['brand']+': '+c['title']} for i,c in enumerate(selected)]}
     doc+=f'<script id="list-schema" type="application/ld+json">{script_json(schema)}</script>'
     save(path,doc,index=allow_index,lastmod=max(modified(c) for c in selected))

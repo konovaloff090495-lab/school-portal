@@ -12,7 +12,8 @@ class SchoolTests(unittest.TestCase):
   c.update(learningGoal='school',schoolSubjects=['himiya'],grades=[10])
   self.assertFalse(school.matches(c,'himiya',10))
  def test_no_grade_inference_from_age_or_generic_tutor(self):
-  c=next(c for c in CS if c['brandId']=='teatrika' and c.get('learningGoal')=='school' and not c.get('grades'))
+  c=copy.deepcopy(next(c for c in CS if c['brandId']=='teatrika' and c.get('learningGoal')=='school'))
+  c['grades']=[];c.pop('schoolSubjectGrades',None)
   self.assertTrue(school.matches(c,c['schoolSubjects'][0]))
   self.assertFalse(school.matches(c,c['schoolSubjects'][0],10))
  def test_noncontinuous_classes_are_not_expanded(self):
@@ -20,9 +21,13 @@ class SchoolTests(unittest.TestCase):
   self.assertFalse(school.matches(c,grade=6))
  def test_chemistry_ten_uses_actual_school_courses(self):
   actual=[c for c in CS if school.matches(c,'himiya',10)]
-  self.assertEqual(len(actual),2)
-  self.assertEqual({c['brandId'] for c in actual},{'foxford'})
-  self.assertTrue(all(c['schoolEvidence'] and c['grades']==[10] for c in actual))
+  self.assertTrue({'foxford','teatrika','tutoronline'}.issubset({c['brandId'] for c in actual}))
+  self.assertTrue(all(c['schoolEvidence'] and 10 in c['grades'] for c in actual))
+ def test_subject_scope_does_not_put_algebra_in_primary_school(self):
+  c=next(c for c in CS if c['brandId']=='teatrika' and 'algebra' in c.get('schoolSubjects',[]))
+  self.assertTrue(school.matches(c,'matematika',1))
+  self.assertFalse(school.matches(c,'algebra',1))
+  self.assertTrue(school.matches(c,'algebra',10))
  def test_combined_sotka_course_matches_both_subjects(self):
   c=next(c for c in CS if c['brandId']=='sotka' and '/7class/algebra-i-geometria' in c['sourceUrl'])
   for sub in ['matematika','algebra','geometriya']:self.assertTrue(school.matches(c,sub,7))
@@ -31,7 +36,8 @@ class SchoolTests(unittest.TestCase):
   c=next(c for c in CS if c['brandId']=='sotka' and 'Биология 8' in c['title'])
   self.assertTrue(school.matches(c,'biologiya',8))
  def test_single_offer_class_is_accessible_but_noindex(self):
-  p=next(p for p in school.selections(CS) if p['id']=='shkolnaya-programma/fizika/11-klass')
+  single=[next(c for c in CS if school.matches(c,'fizika',11))]
+  p=next(p for p in school.selections(single) if p['id']=='shkolnaya-programma/fizika/11-klass')
   self.assertFalse(p['allowIndex'])
  def test_public_browser_price_snapshot_is_conservative(self):
   spec=importlib.util.spec_from_file_location('browser_price',Path(__file__).with_name('refresh-browser.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
