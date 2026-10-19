@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { schools } from '@/data/schools'
+import { getSchoolsByType } from '@/data/schools'
+import { getSchoolLevels } from '@/lib/school-levels'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function SemejnyeNachalnyePage() {
-  const count = schools.filter(s => s.type === 'semejnye').length
+  const count = getSchoolsByType('semejnye').filter(s => getSchoolLevels(s.grades).includes('elementary')).length
   return (
     <CatalogClient
       initialTypes={['semejnye']}
@@ -35,7 +36,7 @@ export default function SemejnyeNachalnyePage() {
           type="semejnye"
           count={count}
           customTitle="Семейная школа для начальных классов: 1–4 класс дома"
-          customText="Начальная школа в семейном формате — один из самых популярных вариантов домашнего обучения. В 1–4 классе ребёнок учится читать, писать и считать в комфортной обстановке без стресса и давления. Семейные школы для начальных классов предлагают малые группы (4–8 детей), игровые методики, развитие через творчество и проекты. Аттестацию за каждый класс ученик сдаёт в прикреплённой государственной школе. Перейти на семейное обучение можно в любой момент — даже с 1 класса."
+          customText="В подборке — семейные школы и классы, у которых указан набор хотя бы в один из 1–4 классов. При выборе обсудите с педагогом программу чтения, письма и математики, наполняемость группы, расписание, питание и организацию аттестаций. Список классов не означает наличие свободных мест — текущий набор уточняйте у школы."
         />
       }
     />

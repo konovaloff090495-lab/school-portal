@@ -19,6 +19,16 @@
       "label": "Гурьевск (Калининградская область)",
       "locative": "в Гурьевске Калининградской области",
       "genitive": "Гурьевска Калининградской области"
+    },
+    "kozelsk": {
+      "label": "Козельск",
+      "locative": "в Козельске",
+      "genitive": "Козельска"
+    },
+    "ilichevo-leningradskaya-oblast": {
+      "label": "Ильичёво (Ленинградская область)",
+      "locative": "в Ильичёво Ленинградской области",
+      "genitive": "Ильичёво Ленинградской области"
     }
   },
   "moCities": {
@@ -69,6 +79,48 @@
     "zhukovsky": {
       "label": "Жуковский",
       "locative": "в Жуковском"
+    },
+    "oktyabrsky-mo": {
+      "label": "Октябрьский",
+      "locative": "в посёлке Октябрьский"
+    },
+    "rychkovo": {
+      "label": "Рычково",
+      "locative": "в Рычково"
+    },
+    "naro-fominsk": {
+      "label": "Наро-Фоминск",
+      "locative": "в Наро-Фоминске"
+    },
+    "golitsyno": {
+      "label": "Голицыно",
+      "locative": "в Голицыно"
+    },
+    "zvenigorod": {
+      "label": "Звенигород",
+      "locative": "в Звенигороде"
+    },
+    "uspenskoe": {
+      "label": "Успенское",
+      "locative": "в Успенском"
+    },
+    "klimovsk": {
+      "label": "Климовск",
+      "locative": "в Климовске"
+    }
+  },
+  "moscowCities": {
+    "zelenograd": {
+      "label": "Зеленоград",
+      "locative": "в Зеленограде"
+    },
+    "moskovsky": {
+      "label": "Московский",
+      "locative": "в Московском"
+    },
+    "troitsk": {
+      "label": "Троицк",
+      "locative": "в Троицке"
     }
   }
 }

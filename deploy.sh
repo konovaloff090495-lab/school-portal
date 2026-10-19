@@ -100,8 +100,15 @@ fi
 
 # --no-build: билд уже собран (например, предыдущий деплой упал на rsync) — доливаем
 # готовый .next, не тратя ~30 минут на повторную генерацию 10 800 страниц.
+# A verified cloud artifact needs only its BUILD_ID and the prepared archive locally.
+# The full tree is extracted and cold-checked on the VPS, preserving Mac disk space.
+BUILD_ID_FILE="${DEPLOY_BUILD_ID_FILE:-.next/BUILD_ID}"
+if [[ -n "${DEPLOY_BUILD_ID_FILE:-}" && " $* " != *" --no-build "* ]]; then
+  echo "❌ DEPLOY_BUILD_ID_FILE requires --no-build with a verified release archive."
+  exit 1
+fi
 if [[ " $* " == *" --no-build "* ]]; then
-  if [[ ! -f .next/BUILD_ID ]]; then
+  if [[ ! -f "$BUILD_ID_FILE" ]]; then
     echo "❌ --no-build, но .next/BUILD_ID нет — собирать нечего. Запусти без флага."
     exit 1
   fi
@@ -113,7 +120,8 @@ else
   NODE_OPTIONS=--max-old-space-size=4096 npm run build
 fi
 
-LOCAL_BUILD_ID=$(cat .next/BUILD_ID)
+LOCAL_BUILD_ID=$(cat "$BUILD_ID_FILE")
+[[ "$LOCAL_BUILD_ID" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo "❌ Invalid BUILD_ID"; exit 1; }
 echo "==> Локальный BUILD_ID: $LOCAL_BUILD_ID"
 
 echo "==> Проверяем зависимости на VPS..."

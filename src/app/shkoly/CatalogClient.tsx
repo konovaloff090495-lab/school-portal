@@ -11,7 +11,7 @@ import {
   languageMetas, LanguageSlug,
   RegionSlug, SchoolType,
   metroNameToSlug,
-  MICRO_GEO_SKIP_TYPES, schoolMatchesType,
+  MICRO_GEO_SKIP_TYPES, schoolMatchesType, schoolMatchesMoCity,
 } from '@/data/schools'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
@@ -19,29 +19,18 @@ import SchoolCard from '@/components/SchoolCard'
 import AdBanner from '@/components/AdBanner'
 import ExternatBanner from '@/components/ExternatBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 
 // Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
 // (центры ЕГЭ/ОГЭ, кружки и допобразование, собранные с Яндекс Карт без проверенных цен).
 const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['semejnye', 'podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
 
 type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
-type EducationLevel = 'elementary' | 'middle' | 'high'
 
 const LEVEL_LABELS: Record<EducationLevel, string> = {
   elementary: 'Начальная (1–4 кл.)',
   middle:     'Основная (5–9 кл.)',
   high:       'Старшая (10–11 кл.)',
-}
-
-function getSchoolLevels(grades: string): EducationLevel[] {
-  const m = grades.match(/^\s*(\d{1,2})(?:\s*[–—-]\s*(\d{1,2}))?\s*(?:класс(?:ы|ов)?(?:\s|$)|$)/i)
-  if (!m) return []
-  const from = parseInt(m[1]), to = parseInt(m[2] ?? m[1])
-  const levels: EducationLevel[] = []
-  if (from <= 4) levels.push('elementary')
-  if (to >= 5 && from <= 9) levels.push('middle')
-  if (to >= 10) levels.push('high')
-  return levels
 }
 
 function getPriceCategory(priceFrom?: number, unknownPrice = false): 'free' | 'budget' | 'mid' | 'premium' | 'unknown' {
@@ -495,7 +484,7 @@ export default function CatalogClient({
     if (skip !== 'regions' && activeRegions.length) list = list.filter(s => activeRegions.includes(s.region))
     if (skip !== 'districts' && filters.districts.length) list = list.filter(s => s.district && filters.districts.includes(s.district))
     if (skip !== 'neighborhoods' && filters.neighborhoods.length) list = list.filter(s => s.neighborhood && filters.neighborhoods.includes(s.neighborhood))
-    if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => s.city && filters.moCities.includes(s.city))
+    if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => filters.moCities.some(city => s.city === city || schoolMatchesMoCity(s, city)))
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
     if (skip !== 'types' && activeTypes.length) list = list.filter(s => {
@@ -575,9 +564,10 @@ export default function CatalogClient({
 
   const moCityList = useMemo(() => {
     if (!isMoContext) return []
-    return Array.from(new Set(
-      baseForMoCity.filter(s => s.city).map(s => s.city!)
-    )).sort((a, b) => a.localeCompare(b, 'ru'))
+    return Array.from(new Set([
+      ...baseForMoCity.filter(s => s.city).map(s => s.city!),
+      ...Object.values(moCityLabels).filter(city => baseForMoCity.some(s => schoolMatchesMoCity(s, city))),
+    ])).sort((a, b) => a.localeCompare(b, 'ru'))
   }, [isMoContext, baseForMoCity])
 
   const filtered = useMemo(() => {
@@ -883,7 +873,7 @@ export default function CatalogClient({
       {moCityList.length > 0 && (
         <FilterSection title="Город" scrollable>
           {moCityList.map(city => {
-            const cnt = baseForMoCity.filter(s => s.city === city).length
+            const cnt = baseForMoCity.filter(s => schoolMatchesMoCity(s, city)).length
             if (cnt === 0 && !filters.moCities.includes(city)) return null
             return (
               <Checkbox

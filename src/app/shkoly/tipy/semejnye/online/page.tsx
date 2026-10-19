@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
-import { schools } from '@/data/schools'
-import CatalogClient from '@/app/shkoly/CatalogClient'
-import SeoBlock from '@/components/SeoBlock'
+import Link from 'next/link'
+import { getSchoolsByType } from '@/data/schools'
+import SchoolCard from '@/components/SchoolCard'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import OnlineBrandsTable from '@/components/OnlineBrandsTable'
+import OnlineLeadCta from '@/components/OnlineLeadCta'
 
 const TITLE = 'Семейная школа онлайн'
 const DESC  = 'Онлайн семейные школы России — дистанционное семейное обучение с поддержкой педагогов. Аттестация, гибкий график, обучение из любого города.'
@@ -16,26 +19,24 @@ export const metadata: Metadata = {
 }
 
 export default function SemejnyeOnlinePage() {
-  const count = schools.filter(s => s.type === 'semejnye' || s.type === 'online').length
-  return (
-    <CatalogClient
-      initialTypes={['semejnye', 'online']}
-      lockType
-      title={TITLE}
-      subtitle={`${count} школ — семейное обучение онлайн`}
-      breadcrumbs={[
-        { label: 'Все школы',       href: '/shkoly/' },
-        { label: 'Семейные школы',  href: '/shkoly/tipy/semejnye/' },
-        { label: 'Онлайн' },
-      ]}
-      seoContent={
-        <SeoBlock
-          type="semejnye"
-          count={count}
-          customTitle="Онлайн семейная школа: как учиться дома с поддержкой педагогов"
-          customText="Онлайн семейная школа сочетает свободу домашнего образования с профессиональным сопровождением учителей. Ребёнок учится дистанционно в удобном темпе: видеоуроки, индивидуальные занятия, чаты с педагогами. Аттестации проходят онлайн или очно в прикреплённой школе. Такой формат особенно подходит семьям, которые путешествуют, живут в других странах или хотят выстроить собственный образовательный маршрут. Для зачисления достаточно подать заявление и перейти на семейное обучение через Госуслуги."
-        />
-      }
-    />
-  )
+  const remoteSchools = getSchoolsByType('semejnye').filter(s => s.remoteOnly)
+  return <main className="max-w-6xl mx-auto px-4 py-8">
+    <Breadcrumbs crumbs={[
+      { label: 'Все школы', href: '/shkoly/' },
+      { label: 'Семейные школы', href: '/shkoly/tipy/semejnye/' },
+      { label: 'Онлайн' },
+    ]} />
+    <h1 className="text-3xl font-bold my-6">{TITLE}</h1>
+    <p className="mb-6 text-gray-700">Для дистанционного обучения сравните формат уроков, поддержку педагогов, стоимость и организацию аттестаций. В таблице — онлайн-программы; очные семейные классы можно найти в <Link className="text-sky-700 hover:underline" href="/shkoly/tipy/semejnye/">каталоге по городам</Link>.</p>
+    <OnlineBrandsTable title="Онлайн-школы для семейного обучения" />
+    {remoteSchools.length > 0 && <section className="my-8">
+      <h2 className="text-xl font-bold mb-4">Ещё дистанционные проекты семейного обучения</h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">{remoteSchools.map(school => <SchoolCard key={school.id} school={school} />)}</div>
+    </section>}
+    <OnlineLeadCta source="Семейные школы: онлайн" />
+    <section className="mt-8">
+      <h2 className="text-xl font-bold mb-3">Что уточнить перед поступлением</h2>
+      <p>Узнайте, есть ли живые уроки, как проверяют задания, кто помогает ребёнку с расписанием, какие услуги входят в тариф и какая школа организует аттестации. Условия зачисления и доступность выбранного класса уточняйте на странице конкретной программы.</p>
+    </section>
+  </main>
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { schools } from '@/data/schools'
+import { getSchoolsByType } from '@/data/schools'
+import { getSchoolLevels } from '@/lib/school-levels'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function SemejnyeSredniePage() {
-  const count = schools.filter(s => s.type === 'semejnye').length
+  const count = getSchoolsByType('semejnye').filter(s => getSchoolLevels(s.grades).includes('middle')).length
   return (
     <CatalogClient
       initialTypes={['semejnye']}
@@ -35,7 +36,7 @@ export default function SemejnyeSredniePage() {
           type="semejnye"
           count={count}
           customTitle="Семейная школа для средних классов: 5–9 класс"
-          customText="В средней школе семейное обучение позволяет выстроить индивидуальный учебный план: углубиться в любимые предметы, не тратить время на ненужные, совмещать учёбу со спортом или творчеством. Семейные школы для 5–9 классов предлагают предметных педагогов, помощь в подготовке к ОГЭ и профориентацию. По итогам 9 класса ученик сдаёт ОГЭ в государственной школе и получает аттестат об основном общем образовании. После этого можно продолжить обучение в 10–11 классе или поступить в колледж."
+          customText="В подборке — семейные школы и классы с указанной программой хотя бы одного из 5–9 классов. Для подростка полезно заранее обсудить предметных педагогов, объём самостоятельной работы, подготовку к ОГЭ и порядок аттестаций. Текущий набор в конкретный класс и условия поступления уточняйте непосредственно у школы."
         />
       }
     />
