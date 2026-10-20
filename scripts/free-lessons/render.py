@@ -144,7 +144,7 @@ def build(catalog,destination,baseline,now,last_fetch=None):
   save(doc,e['url'],title+' — бесплатно | ProSchools',desc,e['cover'],index=e['status']=='active',schema=[crumbs([('Главная','/'),('Бесплатные уроки',HUB),(topics[topic],HUB+topic+'/'),(title,e['url'])]),{'@context':'https://schema.org','@type':'WebPage','name':title,'url':BASE+e['url'],'description':desc,'image':BASE+e['cover']}])
  # Keep old topic URLs usable, but empty sections are noindex and out of sitemap/search.
  old_topics={p.parent.name for p in (baseline/'besplatnye-uroki').glob('*/index.html') if p.parent.name in topics}
- for t in set(t for e in active for t in e['topics'])|old_topics:
+ for t in set(t for e in catalog for t in e['topics'])|old_topics:
   group=[e for e in active if t in e['topics']];old=baseline/(HUB+t+'/').lstrip('/')/'index.html';doc=parse(old.read_text() if old.exists() else templates['subject']);heading=doc.h1.get_text(' ',strip=True) if old.exists() else 'Бесплатные уроки: '+topics[t];doc.h1.string=heading;intro=doc.h1.find_next_sibling('p');
   if intro:intro.string='Выберите занятие по интересу и удобному времени. Сейчас в подборке: '+str(len(group))+'. Условия бесплатного участия указаны в карточках.'
   container=doc.select_one('.subject-results');container.clear();container.append(parse('<div class="cards">'+''.join(card(e,topics) for e in group)+'</div>' if group else f'<p>Сейчас новых занятий по этому направлению нет. <a href="{HUB}">Посмотрите всю афишу</a>.</p>'))
