@@ -5,7 +5,7 @@ const dev=process.env.SCHOOL_SUBMISSIONS_SMOKE_DEV==='1';
 const site=dev?base:'https://pro-schools.ru';
 const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
 const killServer=(signal='SIGTERM')=>{try{process.kill(-child.pid,signal)}catch{child.kill(signal)}};
-let browserRef;
+let browserRef,pageRef;
 const globalTimeout=setTimeout(()=>{console.error('Integration timeout',output.slice(-3000));killServer('SIGKILL');void browserRef?.close();process.exit(1)},240000);
 const origin={Origin:site};
 async function request(action,body,auth='',cookie=''){const response=await fetch(base+'/api/school-submissions/'+action+'/',{signal:AbortSignal.timeout(45000),method:body===undefined?'GET':'POST',headers:{...origin,...(body instanceof FormData?{}:{'Content-Type':'application/json'}),...(auth?{Authorization:'Bearer '+auth}:{}),...(cookie?{Cookie:cookie}:{})},...(body===undefined?{}:{body:body instanceof FormData?body:JSON.stringify(body)})});let data;try{data=await response.clone().json()}catch{data=await response.text()}return {response,data}}
@@ -45,10 +45,10 @@ try{
  if(process.env.RUN_BROWSER_TESTS==='1'){
   const {chromium}=await import('playwright');const browser=await chromium.launch({headless:true});browserRef=browser;const context=await browser.newContext({viewport:{width:1440,height:1000}});
   if(!dev)await context.route('https://pro-schools.ru/**',async route=>{const url=new URL(route.request().url());const response=await route.fetch({url:base+url.pathname+url.search});await route.fulfill({response})});
-  const page=await context.newPage(),errors=[];page.on('pageerror',e=>{errors.push(e.message);console.error('Browser error:',e.message)});
+  const page=await context.newPage(),errors=[];pageRef=page;page.on('pageerror',e=>{errors.push(e.message);console.error('Browser error:',e.message)});
   await page.goto(site+'/dobavit-shkolu/');await page.locator('.select-trigger[aria-label="Тип школы *"]').waitFor();
   await page.locator('[name="school"]').fill('Школа браузерной проверки');await page.locator('[name="city"]').fill('Москва');await page.locator('#submission-city-options').getByRole('option',{name:'Москва',exact:true}).click();
-  await page.locator('[name="address"]').fill('Тестовая улица, 10');await page.locator('[name="description"]').fill(fields.description);await page.locator('[data-grade="1"]').click();
+  await page.locator('[name="address"]').fill('Тестовая улица, 10');await page.locator('textarea[name="description"]').fill(fields.description);await page.locator('[data-grade="1"]').click();
   await page.getByRole('combobox',{name:'Формат обучения *',exact:true}).click();await page.getByRole('option',{name:'Очно',exact:true}).click();
   await page.locator('#next').click();await page.locator('#files').setInputFiles([0,1,2].map(i=>({name:'photo'+i+'.jpg',mimeType:'image/jpeg',buffer:jpeg})));
   await page.waitForFunction(()=>document.querySelector('#photo-count').textContent.startsWith('3'));
@@ -64,4 +64,4 @@ try{
   assert.deepEqual(errors,[]);await browser.close();console.log('Browser flow passed: four steps, custom dropdowns, 3 photos/crop/cover, submission, email confirmation gate, feedback and mobile layout.');
  }
  console.log('HTTP integration passed: 3 photos, owner/admin access, separate email proof, moderation, revisions, published gallery/catalogue, feedback, opt-in and unsubscribe.');
-}catch(error){console.error(error);console.error(output.slice(-3000));process.exitCode=1}finally{clearTimeout(globalTimeout);await browserRef?.close().catch(()=>{});killServer('SIGTERM');if(child.exitCode===null)await Promise.race([new Promise(r=>child.once('exit',r)),new Promise(r=>setTimeout(()=>{killServer('SIGKILL');r()},5000))]);await rm(dir,{recursive:true,force:true})}
+}catch(error){console.error(error);if(pageRef){await mkdir('work/school-submission-qa',{recursive:true});await pageRef.screenshot({path:'work/school-submission-qa/failure.png',fullPage:true}).catch(()=>{});console.error('Form state:',await pageRef.locator('body').innerText().catch(()=>''))}console.error(output.slice(-3000));process.exitCode=1}finally{clearTimeout(globalTimeout);await browserRef?.close().catch(()=>{});killServer('SIGTERM');if(child.exitCode===null)await Promise.race([new Promise(r=>child.once('exit',r)),new Promise(r=>setTimeout(()=>{killServer('SIGKILL');r()},5000))]);await rm(dir,{recursive:true,force:true})}
