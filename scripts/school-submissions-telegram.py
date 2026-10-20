@@ -45,7 +45,12 @@ def body(row):
     for title,key in [('Программы','features'),('Поступление','admission')]:
         if d.get(key):lines.append('<b>'+title+':</b> '+e(d[key][:180]))
     lines.extend(['','<b>Представитель:</b> '+e(d.get('name'))+' · '+e(d.get('role')),e(d.get('email')),'Фото: '+str(len(json.loads(row['photos']))),'', 'Выберите решение кнопкой ниже. Чтобы вернуть на доработку или уточнить причину отказа — ответьте на это сообщение текстом.','#school_'+row['id']])
-    return '\n'.join(lines)
+    result='\n'.join(lines)
+    plain=html.unescape(re.sub(r'</?b>','',result))
+    if len(plain.encode('utf-16-le'))>5600:
+        plain=plain.encode('utf-16-le')[:5100].decode('utf-16-le',errors='ignore')+'\n\nПолные сведения — в приложенном файле.\n#school_'+row['id']
+        result=html.escape(plain)
+    return result
 
 def full_details(row):
     d=json.loads(row['data']);labels={'school':'Школа','type':'Тип','format':'Формат','city':'Город','address':'Адрес','grades':'Классы','age':'Возраст','price':'Стоимость','license':'Лицензия','website':'Сайт','schoolPhone':'Телефон школы','schoolEmail':'Почта школы','description':'О школе','features':'Программы','admission':'Как поступить','name':'Представитель','role':'Должность','email':'Почта представителя'}
