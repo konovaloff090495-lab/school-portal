@@ -1,0 +1,13 @@
+{
+  "version": "2026-10-20",
+  "max_top_sections": 7,
+  "sections": [
+    {"id":"schools","label":"Школы","footer_paths":["/shkoly/"]},
+    {"id":"courses","label":"Курсы для детей","footer_paths":["/kursy/"]},
+    {"id":"textbook","label":"Онлайн-учебник","footer_paths":["/uchebnik/"]},
+    {"id":"gdz","label":"ГДЗ","footer_paths":["/gdz/"]},
+    {"id":"exams","label":"Подготовка к ЕГЭ и ОГЭ","footer_paths":["/ege/","/oge/"]},
+    {"id":"olympiad","label":"Олимпиады","footer_paths":["/olimpiady/"]},
+    {"id":"blog","label":"Блог","footer_paths":["/blog/"]}
+  ]
+}

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Prevent standalone pages from silently restoring a different site navigation."""
 from pathlib import Path
+import runpy
 import json
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1]
+runpy.run_path(str(ROOT/'scripts/check-navigation-policy.py'),run_name='__main__')
 chrome=json.loads((ROOT/'src/site-navigation/chrome.json').read_text())
 assert "<Header />" in (ROOT/'src/app/layout.tsx').read_text()
 assert "<Footer />" in (ROOT/'src/app/layout.tsx').read_text()
