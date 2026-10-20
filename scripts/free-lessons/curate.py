@@ -55,9 +55,18 @@ def verify(candidate,text,taxonomy,now):
   if not re.search(r'Старт\s+В любое время',hero,re.I) or not re.search(r'Длительность\s+В сво[её]м темпе',hero,re.I):raise NeedsReview('Self-paced access not confirmed; no dates guessed')
   m=re.search(r'Количество занятий\s+(\d{1,3})\b',hero)
   if not m or not 1<=int(m[1])<=100:raise NeedsReview('No explicit lesson count')
-  count=int(m[1]);detail=title.split(':',1)[1].strip() if ':' in title else title
-  detail=re.sub(r'^Бесплатный курс\s*','',detail,flags=re.I);label=taxonomy[topic];grade_label=str(grades[0]) if len(grades)==1 else str(grades[0])+'–'+str(grades[-1]);short=label+': '+detail[0].upper()+detail[1:]+', '+grade_label+' класс'
-  if ':' not in title or len(short)>145:short=re.sub(r'^Бесплатный курс\s*','',title,flags=re.I)
+  count=int(m[1]);label=taxonomy[topic];grade_label=str(grades[0]) if len(grades)==1 else str(grades[0])+'–'+str(grades[-1])
+  detail=title.split(':',1)[1].strip() if ':' in title else ''
+  if not detail:
+   # A generic H1 may omit the programme. Only use catalogue specifics if the
+   # main detail-page introduction independently confirms every meaningful stem.
+   proposed=candidate.get('title','').split(':',1)[-1].strip() if ':' in candidate.get('title','') else ''
+   stems=[w[:-2] for w in re.findall(r'[а-яё]{5,}',proposed.lower())]
+   if stems and all(w in hero.lower() for w in stems):detail=proposed
+   else:detail='подготовка к ОГЭ' if 'ОГЭ' in title else 'подготовка к ЕГЭ' if 'ЕГЭ' in title else 'открытый курс'
+  detail=re.sub(r'^Бесплатный курс\s*','',detail,flags=re.I)
+  short=label+': '+detail[0].upper()+detail[1:]+', '+grade_label+' класс'
+  if len(short)>145:short=label+': открытый курс, '+grade_label+' класс'
   e=base(candidate,short,topic,grades,now);e.update(kind='recording',eventType='minicourse',lessonCount=count,freeScope=f'Бесплатный курс: {count} '+('занятие' if count%10==1 and count%100!=11 else 'занятия' if count%10 in [2,3,4] and count%100 not in [12,13,14] else 'занятий'))
   e['description']=f'Бесплатные занятия от «{candidate["organizer"]}» для {grade_label} класса. Тема: {detail.rstrip(".")}. В курс входит {count} '+('занятие' if count==1 else 'занятия' if count in [2,3,4] else 'занятий')+'. Начать можно в любое время и заниматься в своём темпе. Доступ и регистрация — на сайте организатора.'
   e['verification'].update(catalogueTitle=candidate.get('title',''),startAnytime=True,selfPaced=True,heading=title,priceEvidence='0 ₽/курс',lessonCount=count,gradeEvidence=grades)
