@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
-      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && s.district === moscowDistrictLabels[district as MoscowDistrictSlug])) continue
+      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && (type !== 'programmirovanie' || !s.remoteOnly) && s.district === moscowDistrictLabels[district as MoscowDistrictSlug])) continue
       params.push({ district, type })
     }
   }
@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const prep          = districtPrepMap[d]
 
   const count = schools.filter(
-    s => s.region === 'moskva' && schoolMatchesType(s, t) && s.district === districtLabel
+    s => s.region === 'moskva' && schoolMatchesType(s, t) && (t !== 'programmirovanie' || !s.remoteOnly) && s.district === districtLabel
   ).length
 
   const countStr = count > 0 ? ` — ${count} школ` : ''
@@ -79,6 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${typeName} ${prep} Москвы${countStr} | pro-schools.ru`,
     description: `${typeName} ${prep} (${districtFull} административный округ Москвы): адреса, телефоны, рейтинги. Выберите лучшую школу для вашего ребёнка.`,
     alternates: { canonical: `https://pro-schools.ru/shkoly/moskva/rayon/${district}/${type}/` },
+    ...(t === 'programmirovanie' && count === 0 ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
@@ -98,7 +99,7 @@ export default async function DistrictTypePage({ params }: Props) {
   const feature = TYPE_TO_FEATURE[t]
   const count = (feature
     ? getSchoolsByFeature(feature, 'moskva')
-    : schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t))
+    : schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t) && (t !== 'programmirovanie' || !s.remoteOnly))
   ).filter(s => s.district === districtLabel).length
 
   const related = count === 0 ? relatedForDistrictType(d, t, typeName, feature) : null

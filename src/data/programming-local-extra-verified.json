@@ -1,0 +1,232 @@
+[
+  {
+    "id": "itcube-kaspiysk-lenina-33g",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Каспийск",
+    "region": "kaspiysk",
+    "city": "Каспийск",
+    "address": "ул. Ленина, 33Г",
+    "website": "https://itcub.ru/",
+    "phone": "+7 (967) 933-11-67",
+    "directions": [
+      "Python",
+      "Scratch",
+      "Java",
+      "Создание сайтов",
+      "Программирование роботов",
+      "VR/AR"
+    ],
+    "sourceUrl": "https://itcub.ru/",
+    "sourceEvidence": "Официальный сайт центра: раздел направлений — Python, Scratch, мобильная разработка Java, WEB HTML/CSS, программирование роботов и VR/AR; в контактах указаны Каспийск, Ленина 33Г и телефон.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "kvantorium-achinsk-sverdlova-17",
+    "brand": "Кванториум",
+    "name": "Детский технопарк «Кванториум» — Ачинск",
+    "region": "achinsk",
+    "city": "Ачинск",
+    "address": "ул. Свердлова, строение 17, помещение 2",
+    "website": "https://kvantorium-achinsk.ru/",
+    "phone": "+7 (39151) 6-02-22",
+    "directions": [
+      "Scratch",
+      "Python",
+      "C++",
+      "Создание сайтов",
+      "Создание игр"
+    ],
+    "sourceUrl": "https://kvantorium-achinsk.ru/project/it-квантум/",
+    "sourceEvidence": "Официальная программа IT-квантума: Scratch, C++, Python, HTTP/HTML/CSS/JS, создание игр. Адрес и телефон подтверждены на https://kvantorium-achinsk.ru/контакты/. Документы содержат ДООП на 2025–2026 год.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "itcube-norilsk-50letoktyabrya-10",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Норильск",
+    "region": "norilsk",
+    "city": "Норильск",
+    "address": "ул. 50 лет Октября, 10, правое крыло техникума, 3–4 этажи",
+    "website": "https://kvantorium-norilsk.ru/",
+    "phone": "+7 (913) 504-33-77",
+    "directions": [
+      "Scratch",
+      "Python",
+      "C++",
+      "Unity",
+      "Создание сайтов",
+      "Мобильная разработка",
+      "Программирование роботов",
+      "VR/AR"
+    ],
+    "sourceUrl": "https://kvantorium-norilsk.ru/?page_id=299",
+    "sourceEvidence": "Официальные направления центра: Scratch 7–12 лет, Python 10–13, C++ 14–17, Unity 12–14, VR/AR 14–17, программирование роботов 8–10. Адрес и телефон: https://kvantorium-norilsk.ru/?page_id=116.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch",
+    "ageRange": "7–17 лет"
+  },
+  {
+    "id": "kvantorium-ukhta-oktyabrskaya-13",
+    "brand": "Кванториум",
+    "name": "Детский технопарк «Кванториум» — Ухта",
+    "region": "ukhta",
+    "city": "Ухта",
+    "address": "ул. Октябрьская, 13, 1-й этаж",
+    "website": "https://kvantorium11.ru/uhta",
+    "phone": "78-80-00 (доб. 1)",
+    "ageRange": "11–17 лет",
+    "directions": [
+      "Python",
+      "C++",
+      "C#",
+      "Scratch",
+      "Java",
+      "Создание сайтов",
+      "Программирование роботов",
+      "VR/AR"
+    ],
+    "sourceUrl": "https://kvantorium11.ru/uhta",
+    "sourceEvidence": "Официальная страница подразделения в Ухте: контактный адрес Октябрьская 13 и телефон; программы C++, Python, web HTML/CSS/JavaScript, C#, Python с Яндексом, Java/Samsung. Для программ IT указан возраст 11–17 лет; отдельные курсы имеют более узкие границы.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "itcube-magadan-kolymskaya-9",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Магадан, школа №15",
+    "region": "magadan",
+    "city": "Магадан",
+    "address": "ул. Колымская, 9",
+    "website": "https://15.49.3535.ru/19412/",
+    "phone": "+7 (4132) 64-11-88",
+    "directions": [
+      "Python"
+    ],
+    "sourceUrl": "https://15.49.3535.ru/19412/19444/",
+    "sourceEvidence": "Официальный сайт МАОУ СОШ с УИМ №15: раздел структуры https://15.49.3535.ru/school/structure/ подтверждает отдельный Центр IT-куб и адрес Колымская 9, телефон 64-11-88. В направлениях центра опубликована программа Python с практическими задачами.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "itcube-kyzyl-kalinina-1v",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Кызыл, ТТИТ",
+    "region": "kyzyl",
+    "city": "Кызыл",
+    "address": "ул. Калинина, 1В",
+    "website": "https://minobr.rtyva.ru/about/news/-38636573_59407",
+    "phone": "+7 (923) 413-38-56",
+    "directions": [
+      "Python",
+      "Java",
+      "Мобильная разработка",
+      "Основы алгоритмики и логики",
+      "Программирование роботов"
+    ],
+    "sourceUrl": "https://minobr.rtyva.ru/about/news/-38636573_59407",
+    "sourceEvidence": "Официальное Министерство образования Республики Тыва, объявление о наборе от 03.09.2026: бесплатные занятия школьникам 1–11 классов на базе Тувинского техникума информационных технологий; Python, Java, мобильная разработка, алгоритмы и программирование роботов; точный адрес и телефон записи. Возраст в годах не указан.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "ddut-oktyabrsky-gerzena-3",
+    "brand": "ДДиЮТ Октябрьский",
+    "name": "Детский технопарк ДДиЮТ — Октябрьский",
+    "region": "oktyabrsky",
+    "city": "Октябрьский",
+    "address": "ул. Герцена, 3",
+    "website": "https://ddut-okt.ru/item/1080654",
+    "phone": "+7 (34767) 7-05-28",
+    "directions": [
+      "Python",
+      "Программирование",
+      "Программирование роботов",
+      "VR/AR"
+    ],
+    "sourceUrl": "https://ddut-okt.ru/item/1080654",
+    "sourceEvidence": "Официальный сайт ДДиЮТ города Октябрьского Республики Башкортостан: отдел «Детский технопарк», программирование, робототехника и VR/AR; площадка Яндекс.Лицея с двухлетним Python. Адрес Герцена 3 и телефон опубликованы на странице. Учреждение имеет несколько зданий; место группы следует уточнять при записи.",
+    "directionsScope": "city",
+    "checkedAt": "2026-10-19"
+  },
+  {
+    "id": "itcube-elets-aleksandrovskiy-15",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Елец",
+    "region": "elets",
+    "city": "Елец",
+    "address": "мкр. Александровский, 15, территория СШ №12",
+    "website": "https://eletsdooc.ru/?p=7951",
+    "phone": "",
+    "directions": [
+      "Python",
+      "Java",
+      "Scratch",
+      "Программирование роботов"
+    ],
+    "sourceUrl": "https://eletsdooc.ru/?p=7951",
+    "sourceEvidence": "Официальные новости ДЮЦ им. Б. Г. Лесюка подтверждают IT-куб на территории школы №12, программу Python, Java, Scratch и робототехнику. Адрес Александровский 15 указан в объявлении хакатона на этой же странице и в положении https://it-cube48.ru/wp-content/uploads/2023/10/Polozhenie.pdf. Неподтверждённый телефон не добавлен.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "kvantorium-nefteyugansk-lenina-18",
+    "brand": "Кванториум",
+    "name": "Детский технопарк «Кванториум» — Нефтеюганск",
+    "region": "nefteyugansk",
+    "city": "Нефтеюганск",
+    "address": "ул. Ленина, 18, здание нового аэропорта",
+    "website": "https://учусьвюгре.рф/about/education/nefteyugansk",
+    "phone": "+7 (3463) 516-202",
+    "directions": [
+      "Программирование",
+      "Scratch",
+      "C++",
+      "Программирование роботов",
+      "VR/AR"
+    ],
+    "sourceUrl": "https://учусьвюгре.рф/about/education/nefteyugansk",
+    "sourceEvidence": "Официальный региональный центр Югры: страница образования Нефтеюганска и образовательные программы IT-квантума. Адрес Ленина 18 и телефон 516-202 подтверждены https://учусьвюгре.рф/contacts. Направления городского кванториума представлены на https://учусьвюгре.рф/education/kvantorium/directions?city=2.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "itcube-novy-urengoy-vostochny-7",
+    "brand": "IT-куб",
+    "name": "Центр цифрового образования детей «IT-куб» — Новый Уренгой",
+    "region": "novy-urengoy",
+    "city": "Новый Уренгой",
+    "address": "мкр. Восточный, 7, на базе СШ №17",
+    "website": "https://itcube89-nur.ru/page25167435.html",
+    "phone": "+7 (3494) 22-37-91",
+    "directions": [
+      "Python",
+      "Java",
+      "Мобильная разработка",
+      "Программирование роботов"
+    ],
+    "sourceUrl": "https://itcube89-nur.ru/page25167435.html",
+    "sourceEvidence": "Официальная страница IT-куба сообщает о работе на базе СШ №17 и направлениях Python/Java, мобильная разработка, программирование роботов. Точный адрес школы Восточный 7 подтверждён официальным организатором олимпиады https://www.keldysh.siriusolymp.ru/regional и городской картой образовательных возможностей https://view.genially.com/66dad0be9373e996b999e5e3 (также телефон центра).",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  },
+  {
+    "id": "kvantorium-nevinnomyssk-belovo-4b",
+    "brand": "Кванториум",
+    "name": "Детский технопарк «Кванториум» — Невинномысск",
+    "region": "nevinnomyssk",
+    "city": "Невинномысск",
+    "address": "ул. Белово, 4Б",
+    "website": "http://kvantorium.nevinsk.ru/",
+    "phone": "+7 (86554) 9-54-87",
+    "directions": [
+      "IT-квантум",
+      "Программирование роботов"
+    ],
+    "sourceUrl": "https://gorononevinsk.ru/учреждения-дополнительного-образова/",
+    "sourceEvidence": "Официальный перечень Управления образования администрации Невинномысска подтверждает АНО ДО Кванториум, адрес Белово 4Б, телефон и ссылку сайта. IT-квантум и занятия робототехникой подтверждены первичным справочником https://kruzhok.org/storage/app/media/spravochnik-luchshie-tekhnologicheskie-kruzhki-rossii-2021.pdf. Набор на IT-квантум в августе 2026 дополнительно подтверждён https://revizornews.ru/post/36091. Отдельные языки и возраст не заявлены.",
+    "checkedAt": "2026-10-19",
+    "directionsScope": "branch"
+  }
+]

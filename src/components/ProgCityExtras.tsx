@@ -2,23 +2,14 @@ import Link from 'next/link'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { regionLabels, regionLabelsIn, regionSlugs, getSchoolsByRegionAndType, getSchoolsByFeature, type RegionSlug } from '@/data/schools'
 
-/**
- * Дополнение к страницам школ программирования для детей: хаб /shkoly/tipy/programmirovanie/
- * и город /shkoly/<город>/programmirovanie/. Карточки собраны по Яндекс Картам (запрос
- * «школа программирования для детей <город>», 09.2026) в 40 крупных городах — без цен,
- * которые мы не проверяли. Конверсионная часть — онлайн-школа EasyCode (проект «Синергии»,
- * факты из базы знаний продукта: дети 7–17 лет, занятие с преподавателем раз в неделю в группе
- * до 15 или индивидуально, вебинары и куратор, направления Scratch/Python+ИИ/Godot/дизайн,
- * от 5 500 ₽/мес, рассрочка, пробный урок). Заявка — через submitLead() с уникальным source.
- */
 export default function ProgCityExtras({ region, count }: { region?: RegionSlug; count: number }) {
   const regionName = region ? regionLabels[region] : undefined
   const regionIn = region ? regionLabelsIn[region] : 'в вашем городе'
   const source = region ? `Программирование: город ${regionName}` : 'Программирование: хаб /shkoly/tipy/programmirovanie/'
 
   const cities = regionSlugs
-    .map(r => ({ r, n: getSchoolsByRegionAndType(r, 'programmirovanie').length }))
-    .filter(x => x.n >= 2 && x.r !== region)
+    .map(r => ({ r, n: getSchoolsByRegionAndType(r, 'programmirovanie').filter(s => !s.remoteOnly).length }))
+    .filter(x => x.n > 0 && x.r !== region)
     .sort((a, b) => b.n - a.n)
 
   // общеобразовательные школы города с IT-классами — второй уровень ответа на запрос
@@ -46,7 +37,7 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
           <li>Смотрите на возраст и язык: 6–9 лет — Scratch и визуальные среды, 10–12 — Roblox, Minecraft, первые шаги в Python, 13–17 — Python, веб-разработка, геймдев на Unity или Godot.</li>
           <li>Уточните, есть ли пробное занятие: оно помогает оценить преподавателя, программу и группу до оплаты длительного курса.</li>
           <li>Сравнивайте цену за месяц при одинаковой частоте занятий (обычно 1–2 раза в неделю по 60–90 минут) и уточняйте, входит ли в стоимость доступ к платформе и проверка домашних заданий.</li>
-          <li>Проверьте отзывы на Яндекс Картах — у каждой школы в списке выше указана оценка и число отзывов на сентябрь 2026 года.</li>
+          <li>Прочитайте отзывы о конкретном филиале и обратите внимание на дату публикации. Оценки Яндекс Карт, если они доступны, подписаны отдельно от отзывов на ProSchools.</li>
         </ol>
         <p style={{ fontSize: 14, lineHeight: 1.6, color: '#5F5A55', margin: '12px 0 0' }}>
           По теме: <Link href="/shkoly/tipy/programmirovanie/" style={a}>все школы программирования России</Link>,{' '}
@@ -61,6 +52,8 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
           Адрес школы не говорит, какой курс доступен в конкретном филиале. Перед записью сравните программу, возраст набора, формат и полную стоимость.
         </p>
         <ul style={{ fontSize: 15, lineHeight: 1.9, color: '#3F3A35', margin: 0, paddingLeft: 20 }}>
+          <li><Link href="/kursy/programmirovanie/" style={a}>Каталог курсов программирования: программы, возраст и цены</Link></li>
+          <li><Link href="/shkoly/tipy/programmirovanie/online/" style={a}>Онлайн-школы программирования для детей и подростков</Link></li>
           <li><Link href="/blog/programmirovanie-dlya-detej/" style={a}>Программирование для детей: с чего начать</Link></li>
           <li><Link href="/blog/programmirovaniye-kursy-dlya-detej/" style={a}>Как выбрать курс программирования для ребёнка</Link></li>
           <li><Link href="/blog/onlajn-kursy-programmirovaniya-dlya-detej/" style={a}>Живые онлайн-занятия и курсы в записи</Link></li>
@@ -89,7 +82,7 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
         <section style={{ margin: '0 0 28px' }}>
           <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Школы программирования в других городах</h2>
           <p style={{ fontSize: 14, lineHeight: 1.6, color: '#5F5A55', margin: '0 0 10px' }}>
-            Очные школы и клубы собраны по Яндекс Картам в {cities.length + (region ? 1 : 0)} городах; цифра — сколько адресов в каталоге.
+            Выберите город или регион; рядом указано число очных школ и клубов в каталоге.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {cities.map(({ r, n }) => (

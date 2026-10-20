@@ -9,7 +9,7 @@ import {
   moCitySlugs, moCityLabels,
   featureMetas, FeatureSlug,
   languageMetas, LanguageSlug,
-  RegionSlug, SchoolType,
+  RegionSlug, SchoolType, type School,
   metroNameToSlug,
   MICRO_GEO_SKIP_TYPES, schoolMatchesType, schoolMatchesMoCity,
 } from '@/data/schools'
@@ -25,7 +25,11 @@ import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 // (центры ЕГЭ/ОГЭ, кружки и допобразование, собранные с Яндекс Карт без проверенных цен).
 const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['semejnye', 'podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
 
-type SortKey = 'rating' | 'reviews' | 'price_asc' | 'price_desc'
+type SortKey = 'rating' | 'reviews' | 'yandex_reviews' | 'price_asc' | 'price_desc'
+
+function catalogRating(school: School) {
+  return school.type === 'programmirovanie' ? school.yandexRating ?? school.rating : school.rating
+}
 
 const LEVEL_LABELS: Record<EducationLevel, string> = {
   elementary: 'Начальная (1–4 кл.)',
@@ -487,6 +491,8 @@ export default function CatalogClient({
     if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => filters.moCities.some(city => s.city === city || schoolMatchesMoCity(s, city)))
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
     const activeTypes = lockType ? initialTypes : filters.types
+    // Городская выборка программирования включает местные площадки; онлайн — отдельная подборка.
+    if (activeRegions.length > 0 && activeTypes.length === 1 && activeTypes[0] === 'programmirovanie') list = list.filter(s => !s.remoteOnly)
     if (skip !== 'types' && activeTypes.length) list = list.filter(s => {
       if (activeTypes.some(t => schoolMatchesType(s, t))) return true
       // yazykovye has no dedicated type in data — match by language keywords
@@ -507,7 +513,7 @@ export default function CatalogClient({
     }
     if (skip !== 'levels' && filters.levels.length)
       list = list.filter(s => getSchoolLevels(s.grades).some(l => filters.levels.includes(l)))
-    if (filters.minRating > 0) list = list.filter(s => (s.rating ?? 0) >= filters.minRating)
+    if (filters.minRating > 0) list = list.filter(s => (catalogRating(s) ?? 0) >= filters.minRating)
     if (skip !== 'profiles' && filters.profiles.length)
       list = list.filter(s => { const p = detectProfile(s); return p && filters.profiles.includes(p) })
     if (skip !== 'features' && filters.featureFilters.length) {
@@ -594,8 +600,9 @@ export default function CatalogClient({
       }
     }
     switch (filters.sort) {
-      case 'rating': list.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0)); break
+      case 'rating': list.sort((a, b) => (catalogRating(b) ?? 0) - (catalogRating(a) ?? 0)); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
+      case 'yandex_reviews': list.sort((a, b) => (b.yandexReviewCount ?? 0) - (a.yandexReviewCount ?? 0)); break
       case 'price_asc': list.sort((a, b) => (a.priceFrom ?? 0) - (b.priceFrom ?? 0)); break
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? 0) - (a.priceFrom ?? 0)); break
     }
@@ -967,6 +974,9 @@ export default function CatalogClient({
       </FilterSection>
 
       <FilterSection title="Рейтинг">
+        {(lockType ? initialTypes : filters.types).includes('programmirovanie') && (
+          <p className="text-xs text-gray-500 mb-2">Оценки Яндекс Карт; источник подписан в карточках.</p>
+        )}
         {[{ val: 0, label: 'Любой' }, { val: 4, label: 'от 4.0 ★' }, { val: 4.5, label: 'от 4.5 ★' }, { val: 4.8, label: 'от 4.8 ★' }].map(({ val, label }) => (
           <label key={val} className="flex items-center gap-2.5 cursor-pointer group">
             <input
@@ -1126,7 +1136,8 @@ export default function CatalogClient({
                     className="text-sm font-medium text-[#0F172A] bg-transparent border-none outline-none cursor-pointer"
                   >
                     <option value="rating">По рейтингу</option>
-                    <option value="reviews">По отзывам</option>
+                    <option value="reviews">По отзывам ProSchools</option>
+                    <option value="yandex_reviews">По отзывам Яндекс Карт</option>
                     <option value="price_asc">Цена: дешевле</option>
                     <option value="price_desc">Цена: дороже</option>
                   </select>
@@ -1254,8 +1265,8 @@ export default function CatalogClient({
                               {school.metro}
                             </span>
                           )}
-                          {school.rating && (
-                            <span className="text-xs text-amber-500 font-medium">★ {school.rating}</span>
+                          {catalogRating(school) && (
+                            <span className="text-xs text-amber-500 font-medium">★ {catalogRating(school)}{school.type === 'programmirovanie' && school.yandexRating ? ' · Яндекс Карты' : ''}</span>
                           )}
                         </div>
                       </button>
