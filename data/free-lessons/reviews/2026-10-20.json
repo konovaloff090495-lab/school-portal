@@ -1,0 +1,80 @@
+[
+  {
+    "id": "um-free-course-mathematics-7-class-2",
+    "title": "Рациональные дроби: действия, 8 класс",
+    "shortTitle": "Рациональные дроби: действия, 8 класс",
+    "organizer": "Умскул",
+    "publicOrganizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-7-class-2/",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-7-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-7-class-2",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-8-ratsionalnye-drobi/",
+    "slug": "umskul-matematika-8-ratsionalnye-drobi",
+    "topics": [
+      "matematika"
+    ],
+    "grades": [
+      8
+    ],
+    "kind": "recording",
+    "price": 0,
+    "currency": "RUB",
+    "description": "Один бесплатный урок об операциях с рациональными дробями. Разбор сложения, вычитания, умножения и деления с практическими заданиями. Начать можно в любое время и проходить материал в своём темпе.",
+    "freeScope": "Бесплатный курс: 1 занятие",
+    "duration": null,
+    "start": null,
+    "ages": null,
+    "eventType": "minicourse",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-7-class-2.webp",
+    "teacher": "Валентина Туровская",
+    "lessonCount": 1,
+    "verification": {
+      "freeConfirmed": true,
+      "childAudienceConfirmed": true,
+      "detailPage": "https://umschool.net/course/free-course-mathematics-7-class-2/",
+      "verifiedAt": "2026-10-20",
+      "startAnytime": true,
+      "selfPaced": true,
+      "notes": "Detail page takes priority over catalogue grade; maths catalogue says7 but detail explicitly8."
+    }
+  },
+  {
+    "id": "um-free-course-computer-science-10-class-1",
+    "title": "Основы Python для ЕГЭ, 10 класс",
+    "shortTitle": "Основы Python для ЕГЭ, 10 класс",
+    "organizer": "Умскул",
+    "publicOrganizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-computer-science-10-class-1/",
+    "outboundUrl": "https://umschool.net/course/free-course-computer-science-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-computer-science-10-class-1",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-informatika-10-osnovy-python/",
+    "slug": "umskul-informatika-10-osnovy-python",
+    "topics": [
+      "informatika",
+      "programmirovanie",
+      "python"
+    ],
+    "grades": [
+      10
+    ],
+    "kind": "recording",
+    "price": 0,
+    "currency": "RUB",
+    "description": "Шесть бесплатных занятий для знакомства с конструкциями Python, нужными при решении задач ЕГЭ по информатике. В программу входит практика задания №12. Начать можно в любое время, темп обучения выбирает ученик.",
+    "freeScope": "Бесплатный курс: 6 занятий",
+    "duration": null,
+    "start": null,
+    "ages": null,
+    "eventType": "minicourse",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-computer-science-10-class-1.webp",
+    "teacher": "Софья Вайб",
+    "lessonCount": 6,
+    "verification": {
+      "freeConfirmed": true,
+      "childAudienceConfirmed": true,
+      "detailPage": "https://umschool.net/course/free-course-computer-science-10-class-1/",
+      "verifiedAt": "2026-10-20",
+      "startAnytime": true,
+      "selfPaced": true,
+      "notes": "Detail page takes priority over catalogue grade; maths catalogue says7 but detail explicitly8."
+    }
+  }
+]

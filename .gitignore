@@ -75,3 +75,8 @@ public/fipi/
 
 # Private lead reconciliation journal (contains personal data)
 data-private/
+
+# Free lesson updater generated state and cloud artifacts
+/scripts/free-lessons/__pycache__/
+/work/free-lessons/
+/work/free-lessons-cloud/
