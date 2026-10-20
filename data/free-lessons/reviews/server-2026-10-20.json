@@ -98,8 +98,8 @@
   {
     "id": "um-free-course-computer-science-artem-9-class-2",
     "slug": "um-free-course-computer-science-artem-9-class-2",
-    "title": "по ОГЭ для подготовки к экзамену по информатике, 9 класс",
-    "shortTitle": "по ОГЭ для подготовки к экзамену по информатике, 9 класс",
+    "title": "Информатика: Измерение информации, множества, алгоритмизация, 9 класс",
+    "shortTitle": "Информатика: Измерение информации, множества, алгоритмизация, 9 класс",
     "url": "/besplatnye-uroki/zanyatiya/um-free-course-computer-science-artem-9-class-2/",
     "organizer": "Умскул",
     "publicOrganizer": "Умскул",
@@ -122,7 +122,7 @@
       "freeConfirmed": true,
       "childAudienceConfirmed": true,
       "detailPage": "https://umschool.net/course/free-course-computer-science-artem-9-class-2/",
-      "verifiedAt": "2026-10-20T16:06:17.818178+03:00",
+      "verifiedAt": "2026-10-20T16:11:53.842445+03:00",
       "method": "strict-server-adapter-v1",
       "catalogueTitle": "Бесплатный курс ОГЭ по информатике для подготовки к экзамену (9 класс): измерение информации, множества, алгоритмизация",
       "startAnytime": true,
@@ -138,7 +138,7 @@
     "kind": "recording",
     "lessonCount": 3,
     "freeScope": "Бесплатный курс: 3 занятия",
-    "description": "Бесплатные занятия от «Умскул» для 9 класса. Тема: по ОГЭ для подготовки к экзамену по информатике, 9 класс. В курс входит 3 занятия. Начать можно в любое время и заниматься в своём темпе. Доступ и регистрация — на сайте организатора.",
+    "description": "Бесплатные занятия от «Умскул» для 9 класса. Тема: измерение информации, множества, алгоритмизация. В курс входит 3 занятия. Начать можно в любое время и заниматься в своём темпе. Доступ и регистрация — на сайте организатора.",
     "cover": "/besplatnye-uroki/assets/covers/um-free-course-computer-science-artem-9-class-2-art-v1.webp",
     "checkedAt": "2026-10-20",
     "status": "active"
