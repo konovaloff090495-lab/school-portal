@@ -48,7 +48,8 @@ export async function POST(req:NextRequest,{params}:Context) {
    if(Number(req.headers.get('content-length')||0)>45*1024*1024)throw new SubmissionError('Файлы слишком большие',413)
    const form=await req.formData()
    const rawText=form.get('payload');if(typeof rawText!=='string'||rawText.length>24000)throw new SubmissionError('Некорректная заявка')
-   const payload=JSON.parse(rawText)
+   let payload;try{payload=JSON.parse(rawText)}catch{throw new SubmissionError('Некорректная заявка')}
+   if(!payload||typeof payload!=='object'||!payload.data||typeof payload.data!=='object')throw new SubmissionError('Некорректная заявка')
    if(payload.website_check)throw new SubmissionError('Не удалось отправить форму')
    const data=validateSubmission(payload.data)
    let auth: {id:string;token:string}|undefined, previous:SchoolApplication|undefined
