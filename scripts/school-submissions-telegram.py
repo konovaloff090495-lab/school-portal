@@ -4,7 +4,7 @@ import contextlib,fcntl,hashlib,html,json,os,re,secrets,urllib.request
 def revision(row):return hashlib.sha256((row['last_request'] or row['request_id']).encode()).hexdigest()[:16]
 
 def tables(c):
-    c.executescript('''CREATE TABLE IF NOT EXISTS telegram_cards(application TEXT,revision TEXT,message_id INTEGER,photos_sent INTEGER DEFAULT 0,attempts INTEGER DEFAULT 0,next_at INTEGER DEFAULT 0,error TEXT,body TEXT,details_sent INTEGER DEFAULT 0,PRIMARY KEY(application,revision));''')
+    c.executescript('''CREATE TABLE IF NOT EXISTS telegram_cards(application TEXT,revision TEXT,message_id INTEGER,photos_sent INTEGER DEFAULT 0,attempts INTEGER DEFAULT 0,next_at INTEGER DEFAULT 0,error TEXT,body TEXT,details_sent INTEGER DEFAULT 0,PRIMARY KEY(application,revision)); CREATE TABLE IF NOT EXISTS telegram_feedback(application TEXT PRIMARY KEY,sent_digest TEXT,pending_digest TEXT,attempts INTEGER DEFAULT 0,due INTEGER DEFAULT 0);''')
 
 def api(method,payload,files=None):
     token=os.environ.get('TELEGRAM_BOT_TOKEN','')
@@ -56,6 +56,25 @@ def full_details(row):
     d=json.loads(row['data']);labels={'school':'Школа','type':'Тип','format':'Формат','city':'Город','address':'Адрес','grades':'Классы','age':'Возраст','price':'Стоимость','license':'Лицензия','website':'Сайт','schoolPhone':'Телефон школы','schoolEmail':'Почта школы','description':'О школе','features':'Программы','admission':'Как поступить','name':'Представитель','role':'Должность','email':'Почта представителя'}
     return '\n\n'.join(label+':\n'+(', '.join(map(str,d.get(key,[]))) if key=='grades' else str(d.get(key,''))) for key,label in labels.items())
 
+def feedback(m,c,chat):
+    sent=0
+    for row in c.execute('SELECT * FROM applications WHERE confirmed IS NOT NULL AND score IS NOT NULL ORDER BY updated DESC LIMIT 300').fetchall():
+        digest=hashlib.sha256((str(row['score'])+':'+(row['feedback'] or '')).encode()).hexdigest()
+        c.execute('INSERT OR IGNORE INTO telegram_feedback(application) VALUES(?)',(row['id'],));c.commit()
+        job=dict(c.execute('SELECT * FROM telegram_feedback WHERE application=?',(row['id'],)).fetchone())
+        if job['sent_digest']==digest:continue
+        if job['pending_digest']!=digest:
+            c.execute('UPDATE telegram_feedback SET pending_digest=?,attempts=0,due=0 WHERE application=?',(digest,row['id']));c.commit();job.update(attempts=0,due=0)
+        if job['due']>m.now() or job['attempts']>=8:continue
+        school=json.loads(row['data'])['school'];note=(row['feedback'] or '').encode('utf-16-le')[:5500].decode('utf-16-le',errors='ignore')
+        try:
+            api('sendMessage',{'chat_id':chat,'text':'⭐ Удобство добавления школы: '+str(row['score'])+'/5\n'+school+'\n\n'+note+'\n\n#school_'+row['id'],'link_preview_options':{'is_disabled':True}})
+            c.execute('UPDATE telegram_feedback SET sent_digest=?,attempts=0,due=0 WHERE application=?',(digest,row['id']));c.commit();sent+=1
+        except RuntimeError:
+            c.execute('UPDATE telegram_feedback SET attempts=attempts+1,due=? WHERE application=?',(m.now()+min(3600,60*2**(job['attempts']+1)),row['id']));c.commit()
+        if sent>=5:break
+    return sent
+
 def run(m):
     if not os.environ.get('TELEGRAM_BOT_TOKEN') or not os.environ.get('TELEGRAM_CHAT_ID'):return {'configured':False}
     chat,_=admin();m.STORE.mkdir(parents=True,exist_ok=True,mode=0o700)
@@ -95,7 +114,7 @@ def run(m):
                     c.execute('UPDATE telegram_cards SET message_id=?,body=?,error=NULL WHERE application=? AND revision=?',(result['message_id'],text,row['id'],rev));c.commit();sent+=1
                 except Exception as error:
                     c.execute('UPDATE telegram_cards SET attempts=attempts+1,next_at=?,error=? WHERE application=? AND revision=?',(m.now()+min(3600,60*2**(job['attempts']+1)),type(error).__name__,row['id'],rev));c.commit();failed+=1
-            return {'sent':sent,'failed':failed}
+            return {'sent':sent,'failed':failed,'feedback_sent':feedback(m,c,chat)}
         finally:c.close()
 
 def handle(m,update):

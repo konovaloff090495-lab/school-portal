@@ -88,6 +88,10 @@ class ApplicationTests(unittest.TestCase):
   with patch.dict(os.environ,{'TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':123}):t.handle(m,note);t.handle(m,note)
   self.assertEqual(m.operate('get',self.auth)['status'],'changes')
   c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind="changes"').fetchone()[0],1);c.close()
+ def test_telegram_feedback_is_delivered_once_per_change(self):
+  t=self.telegram();self.telegram_card(t);m.operate('feedback',{**self.auth,'score':4,'text':'Удобно'})
+  with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':124}) as calls:
+   self.assertEqual(t.run(m)['feedback_sent'],1);self.assertEqual(t.run(m)['feedback_sent'],0);self.assertIn('4/5',calls.call_args.args[1]['text'])
  def test_telegram_outage_retries_notification(self):
   t=self.telegram();self.confirm()
   with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',side_effect=RuntimeError('offline')):
