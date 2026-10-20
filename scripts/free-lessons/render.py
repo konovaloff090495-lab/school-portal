@@ -130,7 +130,7 @@ def build(catalog,destination,baseline,now,last_fetch=None):
    if a.name=='button':a['data-lektoriy']=e['id']
    elif a.get('href','').startswith('https://') and 'pro-schools.ru' not in a['href']:a['href']=e['outboundUrl']
   if e['status']!='active':
-   text={'expired':'Это мероприятие уже завершилось. Выберите другое бесплатное занятие в афише.','unverified':'Уточняем актуальное расписание. Пока можно выбрать другие занятия в афише.','withdrawn':'Организатор снял это предложение. Выберите другое бесплатное занятие.'}[e['status']]
+   text={'expired':('Это мероприятие уже завершилось. ' if e.get('end') or e.get('duration') else 'Время начала этого мероприятия уже прошло. ')+'Выберите другое бесплатное занятие в афише.','unverified':'Уточняем актуальное расписание. Пока можно выбрать другие занятия в афише.','withdrawn':'Организатор снял это предложение. Выберите другое бесплатное занятие.'}[e['status']]
    main.h1.insert_before(parse('<p class="lesson-status" role="status">'+text+f' <a href="{HUB}">Смотреть афишу →</a></p>'))
    for action in main.select('[data-lektoriy],.detail-grid aside a[href]'):action.decompose()
   # Related links contain active offers only.
@@ -140,7 +140,7 @@ def build(catalog,destination,baseline,now,last_fetch=None):
    if ul:
     ul.clear();related_rows=[r for r in active if r['id']!=e['id'] and topic in r['topics']][:5]
     if related_rows:ul.append(parse(''.join(f'<li><a href="{r["url"]}">{ESC(r.get("shortTitle",r["title"]))}</a></li>' for r in related_rows)))
-  desc=f'{title}. {e.get("publicOrganizer",e["organizer"])}: {age(e)}. '+('Мероприятие завершилось. Другие бесплатные уроки в афише.' if e['status']=='expired' else 'Программа, условия бесплатного участия, актуальное расписание и запись.')
+  desc=f'{title}. {e.get("publicOrganizer",e["organizer"])}: {age(e)}. '+('Время начала мероприятия уже прошло. Другие бесплатные уроки в афише.' if e['status']=='expired' else 'Программа, условия бесплатного участия, актуальное расписание и запись.')
   save(doc,e['url'],title+' — бесплатно | ProSchools',desc,e['cover'],index=e['status']=='active',schema=[crumbs([('Главная','/'),('Бесплатные уроки',HUB),(topics[topic],HUB+topic+'/'),(title,e['url'])]),{'@context':'https://schema.org','@type':'WebPage','name':title,'url':BASE+e['url'],'description':desc,'image':BASE+e['cover']}])
  # Keep old topic URLs usable, but empty sections are noindex and out of sitemap/search.
  old_topics={p.parent.name for p in (baseline/'besplatnye-uroki').glob('*/index.html') if p.parent.name in topics}
