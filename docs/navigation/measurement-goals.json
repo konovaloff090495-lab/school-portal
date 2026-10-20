@@ -1,5 +1,20 @@
 [
   {
+    "event": "navigation_footer_click",
+    "id": 672675100,
+    "name": "Навигация · Переход из подвала"
+  },
+  {
+    "event": "navigation_footer_exposure",
+    "id": 672674800,
+    "name": "Навигация · Показ подвала"
+  },
+  {
+    "event": "site_search_no_results",
+    "id": 672674801,
+    "name": "Навигация · Пустая выдача поиска"
+  },
+  {
     "event": "navigation_menu_open",
     "id": 672672621,
     "name": "Навигация · Открытие меню"

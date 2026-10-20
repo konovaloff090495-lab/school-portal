@@ -64,10 +64,10 @@ function titleWithMark(text,query){const span=document.createElement('strong');c
 const typeLabels={school:'Школы',catalog:'Каталоги школ',course:'Курсы для детей',textbook:'Онлайн-учебник',gdz:'ГДЗ',blog:'Статьи',page:'Разделы сайта'};
 const order=['catalog','school','course','textbook','gdz','blog','page'];
 async function renderSearch(){
- const q=norm($('#global-query').value);$('#clear-query').hidden=!q;$('#search-suggestions').hidden=!!q;$('#global-results').replaceChildren();$('#search-status').textContent='';if(!q)return;
+ const q=norm($('#global-query').value);$('#clear-query').hidden=!q;$('#search-suggestions').hidden=!!q;$('#global-results').replaceChildren();$('#search-status').textContent='';if(!q)return;if(q.length>=2&&!searchTracked){searchTracked=true;track('site_search_used')}
  $('#search-status').textContent='Ищем…';let data;try{data=await loadIndex()}catch{$('#search-status').textContent='Не удалось загрузить поиск. Попробуйте ещё раз.';return}if(norm($('#global-query').value)!==q||!searchDialog.open)return;
  const terms=q.split(/\s+/).filter(Boolean);const grade=/(?:математик|алгебр|геометр|русский|физик|хими|биологи|класс)/.test(q)&&!q.includes('школ')?q.match(/(?:^|\s)([1-9]|10|11)(?:\s|$)/)?.[1]:null;const matches=data.filter(it=>terms.every(t=>it._n.includes(t))&&(!grade||!['textbook','gdz'].includes(it.y)||it.u.includes('/'+grade+'-klass/'))).map(it=>({it,score:(it._t.startsWith(q)?100:0)+(it._t.includes(q)?60:0)+terms.reduce((n,t)=>n+(it._t.includes(t)?24:0),0)+(chosen!=='all'&&it.region===chosen?45:0)+(it.y==='catalog'?20:0)-Math.min(it.t.length,100)*.04})).sort((a,b)=>b.score-a.score);
- if(!matches.length){track('site_search_results_shown',{result_count:0});$('#search-status').textContent='Совпадений нет. Попробуйте название школы, предмет или курс.';return}
+ if(!matches.length){track('site_search_results_shown',{result_count:0});if(q.length>=2)track('site_search_no_results');$('#search-status').textContent='Совпадений нет. Попробуйте название школы, предмет или курс.';return}
  track('site_search_results_shown',{result_count:matches.length});$('#search-status').textContent='Найдено: '+matches.length+'. Показываем '+Math.min(12,matches.length)+' наиболее подходящих.';
  const top=[],typeCount={};for(const {it} of matches){if(top.length===12)break;if((typeCount[it.y]||0)>=3)continue;top.push(it);typeCount[it.y]=(typeCount[it.y]||0)+1}for(const {it} of matches){if(top.length===12)break;if(!top.includes(it))top.push(it)}const grouped=order.map(type=>({type,items:top.filter(v=>v.y===type)})).filter(g=>g.items.length);
  grouped.forEach(g=>{const group=document.createElement('section');group.className='search-group';const h=document.createElement('h3');h.textContent=typeLabels[g.type];group.append(h);g.items.forEach(it=>{const a=document.createElement('a');a.href=it.u;a.className='search-result';a.append(titleWithMark(it.t,q));const meta=document.createElement('span');meta.textContent=it.s;a.append(meta);group.append(a)});$('#global-results').append(group)});
@@ -81,12 +81,13 @@ function dismissFirstCity(){document.querySelector('#first-city-prompt').hidden=
 document.querySelector('#dismiss-first-city').onclick=dismissFirstCity;
 document.querySelector('#first-city-later').onclick=dismissFirstCity;
 document.querySelector('[data-first-city-open]').onclick=()=>{dismissFirstCity();openCity()};
-document.querySelector('#first-city-all').onclick=()=>{chosen='all';try{localStorage.setItem('selected_region','all')}catch{}dismissFirstCity();syncCity()};
+document.querySelector('#first-city-all').onclick=()=>{chosen='all';try{localStorage.setItem('selected_region','all')}catch{}dismissFirstCity();syncCity();track('city_selected',{city:'all',source:'first_prompt'})};
 
 
 function section(path){return path.split('/').filter(Boolean)[0]||'home'}
 function track(event,params={}){window.dispatchEvent(new CustomEvent('ps:navigation-event',{detail:{event,...params}}));window.ym?.(108789843,'reachGoal',event,{version:'2026-10-20.1',section:section(location.pathname),...params});window.ym?.(108789843,'params',{navigation:{event,version:'2026-10-20.1',section:section(location.pathname),...params}})}
-let lastExposure='',pendingEngagement=null;
+let lastExposure='',pendingEngagement=null,footerExposurePath='';
+const footerObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting&&e.intersectionRatio>=0.1)&&footerExposurePath!==location.pathname){footerExposurePath=location.pathname;track('navigation_footer_exposure')}},{threshold:0.1}):null;
 function engage(){if(!pendingEngagement||Date.now()-pendingEngagement.loaded<10000)return;track('navigation_target_engaged',{surface:pendingEngagement.surface});pendingEngagement=null;try{sessionStorage.removeItem('ps-navigation-pending')}catch{}}
 document.addEventListener('click',e=>{if(e.target.closest('main'))engage()});window.addEventListener('scroll',()=>{if(scrollY>160)engage()},{passive:true});
 function update(){
@@ -96,15 +97,15 @@ function update(){
  if(currentView==='schools'&&cityMap[slug])chosen=slug;
  syncCity();closePanels();if(mobile.open)mobile.close();if(city.open)city.close();if(searchDialog.open)searchDialog.close();
  $$('.nav-list a').forEach(a=>{if(section(new URL(a.href).pathname)===section(location.pathname))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
- if(lastExposure!==location.pathname){lastExposure=location.pathname;track('navigation_exposure')} 
+ if(lastExposure!==location.pathname){lastExposure=location.pathname;track('navigation_exposure');if(footerObserver){footerObserver.disconnect();footerObserver.observe($('#footer'))}} 
 }
 function positionCityPrompt(){const p=$('#first-city-prompt');p.style.top=innerWidth<600?'auto':($('#header').getBoundingClientRect().height+12)+'px';p.style.zIndex='95'}
 positionCityPrompt();window.addEventListener('resize',positionCityPrompt,{passive:true});
 window.PSNavigation={update};window.addEventListener('ps:navigation-route',update);window.addEventListener('popstate',update);
-document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});if(target.pathname!==location.pathname){try{sessionStorage.setItem('ps-navigation-pending',JSON.stringify({path:target.pathname,surface,at:Date.now()}))}catch{}}});
+document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';if(surface==='search'&&!searchTracked){searchTracked=true;track('site_search_used')}if(surface==='footer'&&target.pathname!==location.pathname)track('navigation_footer_click',{target_section:section(target.pathname)});track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});if(target.pathname!==location.pathname){try{sessionStorage.setItem('ps-navigation-pending',JSON.stringify({path:target.pathname,surface,at:Date.now()}))}catch{}}});
 $('.mobile-toggle').addEventListener('click',()=>track('navigation_menu_open',{menu:'mobile'}));
 $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>track('site_search_open')));
-let searchTracked=false;$('#global-query').addEventListener('input',()=>{if($('#global-query').value.trim().length>=2&&!searchTracked){searchTracked=true;track('site_search_used')}});searchDialog.addEventListener('close',()=>searchTracked=false);
+let searchTracked=false;searchDialog.addEventListener('close',()=>searchTracked=false);
 $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_selector_open')));$('#city-apply').addEventListener('click',()=>track('city_selected',{city:chosen}));
 update();
 try{if(!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
