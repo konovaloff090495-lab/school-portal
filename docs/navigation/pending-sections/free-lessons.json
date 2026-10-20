@@ -1,0 +1,30 @@
+{
+  "id": "free-lessons",
+  "label": "Бесплатные уроки",
+  "status": "pending_section_publication",
+  "parent_section": "courses",
+  "upper_level_new_item": false,
+  "href": "/besplatnye-uroki/",
+  "placements": [
+    "desktop_courses_menu",
+    "mobile_courses_menu",
+    "footer_courses_group"
+  ],
+  "canonical_navigation_version": "2026-10-20.1",
+  "base_sha256": "9467cfb786e798e9b0f3e6c854919842f6d6cf8c6b49e5e402f1e764f3f040f2",
+  "prototype_path": "/Users/dmitriikonovalov/Documents/Codex/2026-10-20/new-chat-5/outputs/proschools-free-lessons",
+  "source_thread": "01a15878-a0bd-7122-a431-cd5a095de7e0",
+  "live_http_status_checked_2026_10_20": 404,
+  "metadata_url_count": 139,
+  "search_records": 131,
+  "pagination_search_records": 0,
+  "publication_gate": [
+    "Publish a usable destination and verify indexability intentionally",
+    "Adapt the 3-link patch to the current canonical navigation",
+    "Publish SSR fragments consistently in Next/courses/programming/new renderer",
+    "Register 131 canonical non-pagination pages in the shared search; exclude drafts/noindex as applicable",
+    "Keep top-level section count/order unchanged and run all navigation guards",
+    "Preserve existing navigation metrics and add renderer to checks"
+  ],
+  "notes": "No live navigation links or global search items enabled while the section remains a local noindex prototype."
+}
