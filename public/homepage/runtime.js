@@ -15,4 +15,15 @@ const rail=document.querySelector('.blog-rail'),prev=document.querySelector('[da
 
 (()=>{'use strict';const rail=document.querySelector('.free-subject-grid');if(!rail)return;const prev=document.querySelector('[data-free-step="-1"]'),next=document.querySelector('[data-free-step="1"]');function state(){prev.disabled=rail.scrollLeft<4;next.disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-4}document.querySelectorAll('[data-free-step]').forEach(b=>b.onclick=()=>{const card=rail.querySelector('.free-subject-card');rail.scrollBy({left:Number(b.dataset.freeStep)*(card.getBoundingClientRect().width+parseFloat(getComputedStyle(rail).gap)),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})});listen(rail,'scroll',state,{passive:true});listen(window,'resize',state);listen(rail,'keydown',e=>{if(e.target!==rail)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();(e.key==='ArrowLeft'?prev:next).click()}});state()})();
 
+// The catalogue refreshes independently of the homepage release.
+fetch('/besplatnye-uroki/assets/events.json',{cache:'no-store',signal:controller.signal}).then(r=>{if(!r.ok)throw new Error('Catalogue unavailable');return r.json()}).then(events=>{
+ if(!Array.isArray(events))return;
+ document.querySelectorAll('.free-subject-card').forEach(card=>{
+  const topic=new URL(card.href).pathname.split('/').filter(Boolean).pop();
+  const count=events.filter(e=>e.status==='active'&&Array.isArray(e.topics)&&e.topics.includes(topic)).length;
+  const line=card.querySelector('.free-subject-caption p');if(!line)return;
+  const n=count%100,m=count%10;const word=n>=11&&n<=14?'занятий':m===1?'занятие':m>=2&&m<=4?'занятия':'занятий';
+  line.textContent=count?`${count} ${word}`:'Все занятия по предмету';
+ });
+}).catch(()=>{});
 return ()=>{controller.abort();observers.forEach(o=>o.disconnect())};};
