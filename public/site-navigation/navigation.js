@@ -85,7 +85,7 @@ document.querySelector('#first-city-all').onclick=()=>{chosen='all';try{localSto
 
 
 function section(path){return path.split('/').filter(Boolean)[0]||'home'}
-function track(event,params={}){window.dispatchEvent(new CustomEvent('ps:navigation-event',{detail:{event,...params}}));window.ym?.(108789843,'params',{navigation:{event,version:'2026-10-20.1',section:section(location.pathname),...params}})}
+function track(event,params={}){window.dispatchEvent(new CustomEvent('ps:navigation-event',{detail:{event,...params}}));window.ym?.(108789843,'reachGoal',event,{version:'2026-10-20.1',section:section(location.pathname),...params});window.ym?.(108789843,'params',{navigation:{event,version:'2026-10-20.1',section:section(location.pathname),...params}})}
 let lastExposure='',pendingEngagement=null;
 function engage(){if(!pendingEngagement||Date.now()-pendingEngagement.loaded<10000)return;track('navigation_target_engaged',{surface:pendingEngagement.surface});pendingEngagement=null;try{sessionStorage.removeItem('ps-navigation-pending')}catch{}}
 document.addEventListener('click',e=>{if(e.target.closest('main'))engage()});window.addEventListener('scroll',()=>{if(scrollY>160)engage()},{passive:true});
