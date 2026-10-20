@@ -131,5 +131,7 @@ def handle(m,update):
         elif row['status'] in ('rejected','changes'):m.operate('moderation-note',{'id':id,'comment':text,'expected_revision':rev,'update_id':str(update['update_id'])})
         else:
             safe_api('sendMessage',{'chat_id':chat,'text':'Школа уже опубликована. Для нового решения нужна новая версия заявки.'});return {'ignored':True}
+        label='🚫 ОТКЛОНЕНО' if row['status']=='rejected' else '✏️ НА ДОРАБОТКЕ'
+        safe_api('editMessageText',{'chat_id':chat,'message_id':card['message_id'],'text':card['body']+'\n\n<b>'+label+'</b>\n'+html.escape(text[:600]),'parse_mode':'HTML','reply_markup':{'inline_keyboard':[]},'link_preview_options':{'is_disabled':True}})
         safe_api('sendMessage',{'chat_id':chat,'text':'Комментарий сохранён и поставлен в очередь письма представителю школы.'})
     return {'id':id,'ok':True}
