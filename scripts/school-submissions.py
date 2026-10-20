@@ -238,6 +238,7 @@ if __name__=='__main__':
     try:
         action=sys.argv[1]
         if action=='mail-run':result=run_mail()
+        elif action=='telegram-run':result=operate(action,{})
         else:result=operate(action,json.load(sys.stdin))
         print(json.dumps(result,ensure_ascii=False))
     except (ValueError,PermissionError) as error:
