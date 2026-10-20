@@ -65,6 +65,10 @@ class ApplicationTests(unittest.TestCase):
    self.assertEqual(t.run(m)['sent'],1);self.assertEqual(t.run(m)['sent'],0)
   c=m.db();row=m.application(c,self.id);c.close();return calls,t.revision(row)
  def telegram_update(self,rev,action='p',owner=111,msgid=123):return {'update_id':100,'callback_query':{'id':'callback','from':{'id':owner},'data':'ps:'+action+':'+self.id+':'+rev,'message':{'message_id':msgid,'chat':{'id':111}}}}
+ def test_existing_database_adds_server_revision_without_losing_application(self):
+  c=m.db();c.execute('ALTER TABLE applications DROP COLUMN revision');c.commit();c.close()
+  self.assertEqual(m.operate('get',self.auth)['data']['school'],self.data['school'])
+  c=m.db();self.assertEqual(m.application(c,self.id)['revision'],0);c.close()
  def test_telegram_notification_photos_and_owner_only_buttons(self):
   t=self.telegram();calls,rev=self.telegram_card(t)
   self.assertEqual(calls[0][0],'sendPhoto');self.assertTrue(calls[0][2]);self.assertNotIn('https://pro-schools.ru/api/school-submissions/images/',str(calls))
@@ -81,7 +85,9 @@ class ApplicationTests(unittest.TestCase):
    t.handle(m,note);t.handle(m,note)
    self.assertEqual(m.operate('get',self.auth)['comment'],'Уточните лицензию')
    m.operate('resubmit',{**self.payload,**self.auth,'request_id':'new-revision'})
+   m.operate('resubmit',{**self.payload,**self.auth,'request_id':self.payload['request_id']})
    self.assertTrue(t.handle(m,self.telegram_update(rev))['stale']);self.assertEqual(m.operate('get',self.auth)['status'],'pending')
+   with self.assertRaises(ValueError):m.operate('moderate',{'id':self.id,'status':'published','expected_revision':rev})
  def test_telegram_reply_returns_pending_school_for_revision(self):
   t=self.telegram();_,rev=self.telegram_card(t)
   note={'update_id':102,'message':{'from':{'id':111},'chat':{'id':111},'text':'Добавьте стоимость','reply_to_message':{'message_id':123}}}

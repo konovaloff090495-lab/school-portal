@@ -87,3 +87,7 @@ An existing confirmed pending application is picked up automatically after deplo
 The web admin remains a fallback; Telegram is the normal moderation path.
 
 Usability scores/comments also go to the owner in Telegram, once per changed answer.
+
+Telegram revision guards use a monotonic server-side application revision, not a
+client request ID. Reusing an old request ID cannot revive an old approval button.
+The existing database gains this counter through an additive migration.
