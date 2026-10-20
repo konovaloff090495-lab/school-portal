@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "lint:leads": "bash scripts/check-lead-forms.sh",
-    "fetch-images": "node scripts/yandex-school-images.mjs --only-missing"
+    "fetch-images": "node scripts/yandex-school-images.mjs --only-missing",
+    "lint:navigation": "python3 scripts/check-navigation.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",

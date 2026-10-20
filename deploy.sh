@@ -116,6 +116,7 @@ if [[ " $* " == *" --no-build "* ]]; then
 else
   echo "==> Проверка лид-форм (все обязаны идти через submitLead → CRM Синергии)..."
   ./scripts/check-lead-forms.sh || { echo "❌ Лид-форма в обход CRM — деплой остановлен."; exit 1; }
+  python3 scripts/check-navigation.py
   echo "==> Локальная сборка..."
   NODE_OPTIONS=--max-old-space-size=4096 npm run build
 fi

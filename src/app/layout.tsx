@@ -6,7 +6,8 @@ import Footer from "@/components/Footer";
 import YandexMetrika from "@/components/YandexMetrika";
 import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
-import GeoPrompt from "@/components/GeoPrompt";
+import NavigationRuntime from "@/components/NavigationRuntime";
+import "../../public/site-navigation/navigation.css";
 import LogosChatWidget from "@/components/LogosChatWidget";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], preload: false });
@@ -65,8 +66,8 @@ export default function RootLayout({
         <YandexMetrika />
         <YandexRTB />
         <Header />
-        <GeoPrompt />
-        <main>{children}</main>
+        <NavigationRuntime />
+        <main id="main">{children}</main>
         <Footer />
         <ScrollToTop />
         <LogosChatWidget />

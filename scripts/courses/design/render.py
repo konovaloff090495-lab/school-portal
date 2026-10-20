@@ -50,7 +50,8 @@ def apply(out,source):
  shutil.copytree(HERE/'assets',out/'assets',dirs_exist_ok=True)
  m=module('courses_design_template','template.py');m.OUT=out;m.D=data;m.B=json.loads((HERE/'category-briefs.json').read_text());m.COURSES={c['id']:c for c in courses};m.CATS={c['slug']:c for c in categories};m.LANDINGS={l['slug']:l for l in landings};m.ORIGIN=BASE
  prototype=(HERE/'overlays.html').read_text()
- m.HEADER=(HERE/'chrome/header.html').read_text();m.FOOTER=(HERE/'chrome/footer.html').read_text()+prototype
+ shared=json.loads((HERE.parents[2]/'src/site-navigation/chrome.json').read_text())
+ m.HEADER='<div class="ps-chrome ps-chrome-header" data-navigation-version="'+shared['version']+'">'+shared['header']+'</div>';m.FOOTER='<div class="ps-chrome ps-chrome-footer" data-navigation-version="'+shared['version']+'">'+shared['footer']+'</div>'+prototype
  original_save=m.save
  def save(path,content):
   if path.startswith('/kursy/'):path=path.removeprefix('/kursy/')
@@ -61,9 +62,10 @@ def apply(out,source):
    page.select_one('meta[name=robots]')['content']=meta['robots'];page.body['data-catalog-design']='compact-v3'
    for s in page.select('script[type="application/ld+json"]'):s.decompose()
    page.head.append(BeautifulSoup(''.join(meta['schemas']),'html.parser'))
-   for filename in ['site-chrome.css','production.css']:
+   for filename in ['production.css']:
     link=page.new_tag('link',rel='stylesheet',href='/kursy/assets/'+filename+'?v=design4');page.head.append(link)
-   script=page.new_tag('script',src='/kursy/assets/site-chrome.js?v=design4',defer=True);page.head.append(script)
+   link=page.new_tag('link',rel='stylesheet',href='/site-navigation/navigation.css?v=20261020');page.head.append(link)
+   script=page.new_tag('script',src='/site-navigation/navigation.js?v=20261020',defer=True);page.head.append(script)
    icon=page.new_tag('link',rel='icon',href='/favicon.ico');page.head.append(icon)
    for a in page.select('a[href]'):
     if str(a['href']).startswith('https://pro-schools.ru/'):a['href']=a['href'].removeprefix(BASE)

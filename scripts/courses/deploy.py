@@ -35,6 +35,8 @@ def deploy(socket):
     remote(f'mkdir -p {release}/kursy')
     rsync_ssh=shlex.join(ssh)
     run(['rsync','-az','--checksum','-e',rsync_ssh,str(ROOT/'public/kursy')+'/',HOST+':'+release+'/kursy/'])
+    remote(f'mkdir -p {runtime}/src/site-navigation')
+    run(['rsync','-az','-e',rsync_ssh,str(ROOT/'src/site-navigation')+'/',HOST+':'+runtime+'/src/site-navigation/'])
     run(['rsync','-az','--exclude=__pycache__/','-e',rsync_ssh,str(ROOT/'scripts/courses')+'/',HOST+':'+runtime+'/scripts/courses/'])
     run(['rsync','-az','--exclude=review-queue.json','-e',rsync_ssh,str(ROOT/'data/courses')+'/',HOST+':'+runtime+'/data/courses/'])
     robots=requests.get('https://pro-schools.ru/robots.txt',timeout=30)
