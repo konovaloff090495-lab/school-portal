@@ -10,7 +10,13 @@ from render import build
 
 def digest(events,version):
  data=[{k:v for k,v in e.items() if k not in ['scheduleVerifiedAt','lastSeen','sourceMissingCount']} for e in events]
- return hashlib.sha256(json.dumps([data,version],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+ code=hashlib.sha256()
+ for p in sorted((ROOT/'scripts/free-lessons').glob('*.py')):code.update(p.read_bytes())
+ for p in sorted((ROOT/'scripts/free-lessons/templates').glob('*.html')):code.update(p.read_bytes())
+ for name in ['app.js','lead-form.js']:
+  p=ROOT/'public/besplatnye-uroki/assets'/name
+  if p.exists():code.update(p.read_bytes())
+ return hashlib.sha256(json.dumps([data,version,code.hexdigest()],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
 def validate(dest):
  metadata=read(dest/'metadata.json',{});pages=list((dest/'besplatnye-uroki').rglob('index.html'));assert len(pages)==len(metadata)
  titles=set();descriptions=set()
