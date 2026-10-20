@@ -66,3 +66,22 @@ archive is uploaded only after the test passes; synthetic responses are excluded
 
 The shared navigation first-visit city nudge is suppressed on representative
 submission/status/moderation pages; the manual city selector remains available.
+
+## Telegram moderation (primary workflow, 20 October 2026 correction)
+The owner receives private photo uploads, a full application TXT attachment and
+an inline card in @pro_schools_bot, with Publish / Reject buttons. No cabinet or
+admin key is required. Reply to a pending card to return it for changes; reply to
+a rejected card to specify the reason. Each decision queues the owner's status mail.
+Only the configured positive private TELEGRAM_CHAT_ID/TELEGRAM_ADMIN_ID can act.
+Callbacks bind to the actual sent message, application and revision; stale cards
+cannot approve new changes. Decisions and reply updates are idempotent.
+Webhook: POST /api/school-submissions/telegram/ requires the Telegram secret header,
+HMAC derived from the existing private store secret. Register with setWebhook using
+allowed_updates callback_query/message, without dropping pending updates. Never
+replace an unrelated webhook or expose the secret in a URL or logs.
+The immediate detached notifier has a durable cron fallback: run school-submissions.py
+telegram-run every minute, NODE_ENV=production and the same private store. Private
+photos are sent as multipart bytes; no unauthenticated preview links are created.
+Cards/attempts/progress live in telegram_cards; delivery retries with backoff and flock.
+An existing confirmed pending application is picked up automatically after deployment.
+The web admin remains a fallback; Telegram is the normal moderation path.

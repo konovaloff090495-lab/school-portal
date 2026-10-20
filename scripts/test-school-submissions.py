@@ -56,6 +56,43 @@ class ApplicationTests(unittest.TestCase):
   c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind="subscribe" AND state="queued"').fetchone()[0],1);c.close()
   m.operate('subscribe',{**self.auth,'subscription':m.token(self.id,'subscribe')})
   c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind IN ("tips","refresh") AND state="queued"').fetchone()[0],2);c.close()
+ def telegram(self):
+  spec=importlib.util.spec_from_file_location('telegram',Path(__file__).with_name('school-submissions-telegram.py'));t=importlib.util.module_from_spec(spec);spec.loader.exec_module(t);return t
+ def telegram_card(self,t):
+  self.confirm();calls=[]
+  def fake(method,payload,files=None):calls.append((method,payload,files));return {'message_id':123}
+  with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',side_effect=fake):
+   self.assertEqual(t.run(m)['sent'],1);self.assertEqual(t.run(m)['sent'],0)
+  c=m.db();row=m.application(c,self.id);c.close();return calls,t.revision(row)
+ def telegram_update(self,rev,action='p',owner=111,msgid=123):return {'update_id':100,'callback_query':{'id':'callback','from':{'id':owner},'data':'ps:'+action+':'+self.id+':'+rev,'message':{'message_id':msgid,'chat':{'id':111}}}}
+ def test_telegram_notification_photos_and_owner_only_buttons(self):
+  t=self.telegram();calls,rev=self.telegram_card(t)
+  self.assertEqual(calls[0][0],'sendPhoto');self.assertTrue(calls[0][2]);self.assertNotIn('https://pro-schools.ru/api/school-submissions/images/',str(calls))
+  buttons=calls[-1][1]['reply_markup']['inline_keyboard'][0];self.assertEqual([b['text'] for b in buttons],['✅ Опубликовать','🚫 Отклонить']);self.assertTrue(all(len(b['callback_data'].encode())<=64 for b in buttons))
+  with patch.dict(os.environ,{'TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':123}):
+   self.assertTrue(t.handle(m,self.telegram_update(rev,owner=222))['ignored']);self.assertTrue(t.handle(m,self.telegram_update(rev,msgid=999))['ignored'])
+   t.handle(m,self.telegram_update(rev));t.handle(m,self.telegram_update(rev))
+  c=m.db();self.assertEqual(m.application(c,self.id)['status'],'published');self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind="published"').fetchone()[0],1);c.close()
+ def test_telegram_stale_revision_and_rejection_reply(self):
+  t=self.telegram();_,rev=self.telegram_card(t)
+  with patch.dict(os.environ,{'TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':123}):
+   t.handle(m,self.telegram_update(rev,action='r'))
+   note={'update_id':101,'message':{'from':{'id':111},'chat':{'id':111},'text':'Уточните лицензию','reply_to_message':{'message_id':123}}}
+   t.handle(m,note);t.handle(m,note)
+   self.assertEqual(m.operate('get',self.auth)['comment'],'Уточните лицензию')
+   m.operate('resubmit',{**self.payload,**self.auth,'request_id':'new-revision'})
+   self.assertTrue(t.handle(m,self.telegram_update(rev))['stale']);self.assertEqual(m.operate('get',self.auth)['status'],'pending')
+ def test_telegram_reply_returns_pending_school_for_revision(self):
+  t=self.telegram();_,rev=self.telegram_card(t)
+  note={'update_id':102,'message':{'from':{'id':111},'chat':{'id':111},'text':'Добавьте стоимость','reply_to_message':{'message_id':123}}}
+  with patch.dict(os.environ,{'TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':123}):t.handle(m,note);t.handle(m,note)
+  self.assertEqual(m.operate('get',self.auth)['status'],'changes')
+  c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind="changes"').fetchone()[0],1);c.close()
+ def test_telegram_outage_retries_notification(self):
+  t=self.telegram();self.confirm()
+  with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',side_effect=RuntimeError('offline')):
+   self.assertEqual(t.run(m)['failed'],1);self.assertEqual(t.run(m)['failed'],0)
+  c=m.db();self.assertEqual(c.execute('SELECT attempts FROM telegram_cards').fetchone()[0],1);c.close()
  def test_transport_queue_and_html_escaping(self):
   captured=[]
   class SMTP:
