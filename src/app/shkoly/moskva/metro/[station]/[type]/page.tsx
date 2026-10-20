@@ -35,7 +35,7 @@ export async function generateStaticParams() {
     for (const type of typeSlugs) {
       // Склеено 301-редиректом (next.config.ts) — страницы не генерим
       if (MICRO_GEO_SKIP_TYPES.includes(type as SchoolType)) continue
-      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && s.metro === metroSlugToName[station])) continue
+      if (!schools.some(s => s.region === 'moskva' && schoolMatchesType(s, type) && (type !== 'programmirovanie' || !s.remoteOnly) && s.metro === metroSlugToName[station])) continue
       params.push({ station, type })
     }
   }
@@ -50,6 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const t = type as SchoolType
   const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
+  const count = schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t) && (t !== 'programmirovanie' || !s.remoteOnly) && s.metro === metroName).length
   const title = `${typeName} у метро ${metroName} в Москве`
   const description = `${typeName} рядом со станцией метро «${metroName}» в Москве. Адреса, телефоны, рейтинги родителей.`
 
@@ -57,6 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `https://pro-schools.ru/shkoly/moskva/metro/${station}/${type}/` },
+    ...(t === 'programmirovanie' && count === 0 ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
@@ -69,15 +71,14 @@ export default async function MetroTypePage({ params }: Props) {
   const t = type as SchoolType
   const typeName = typeNameMap[t] ?? TYPE_FULL_NAME[t] ?? typeLabels[t]
 
-  // Для типов, которых в базе нет ни одной школы (programmirovanie, podgotovka-ege,
-  // podgotovka-oge), фильтруем не по типу, а по одноимённой особенности — там данные есть.
+  // Явные алиасы особенностей задаются в TYPE_TO_FEATURE; программирование — свой тип.
   const feature = TYPE_TO_FEATURE[t]
   // сверка точным совпадением — так же, как фильтрует сам каталог (CatalogClient),
   // иначе подпись «N школ» разойдётся с тем, что реально видно в списке
   const nearHere = (list: typeof schools) => list.filter(s => s.metro === metroName)
   const count = feature
     ? nearHere(getSchoolsByFeature(feature, 'moskva')).length
-    : nearHere(schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t))).length
+    : nearHere(schools.filter(s => s.region === 'moskva' && schoolMatchesType(s, t) && (t !== 'programmirovanie' || !s.remoteOnly))).length
 
   const related = count === 0 ? relatedForMetroType(station, t, typeName, feature) : null
 

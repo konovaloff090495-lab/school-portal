@@ -3,7 +3,7 @@
   "reviewer": "Codex — проверка публичных страниц программ и предметных маршрутов",
   "scope": "Расширение коллекции школ и направлений; не заявление об исчерпывающем охвате рынка",
   "baselineCourses": 547,
-  "newCourses": 379,
+  "newCourses": 430,
   "verifiedSourcePages": [
     {
       "courseId": "skysmart-0055923ede",
@@ -5417,6 +5417,414 @@
       ],
       "grades": [],
       "basis": "Графический дизайн Kodland для подростков от тринадцати лет включает сорок уроков и обозначен как продвинутый. Ученики работают в Figma и Photopea, изучают композицию, цвет, шрифты и фирменный стиль, создают оформление и лендинг. Перед записью уточните входную подготовку и критерии портфолио: важно обосновывать визуальное решение и дорабатывать его после обратной связи."
+    },
+    {
+      "courseId": "skillbox-kids-45d2637dfb",
+      "sourceUrl": "https://kids.skillbox.ru/courses/it-start",
+      "sourceHash": "1e997703bb28b9449da0e332250c639ce8101478a4045584533ee074c60c9e4c",
+      "checkedAt": "2026-10-19",
+      "evidence": "ервые проекты. ✓ Начинаем с первого клика мышкой ✓ Готовые проекты уже с первых занятий ✓ Онлайн с преподавателем В составе курса: Scratch и Minecraft Оставить заявку Hello world! ✦ Стар",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/it-start"
+    },
+    {
+      "courseId": "skillbox-kids-9541de5a8c",
+      "sourceUrl": "https://kids.skillbox.ru/courses/python-programmer-pro",
+      "sourceHash": "d283cab5658eee85b2843fe0517053f69aaab0be2af7142e2d18954590805e97",
+      "checkedAt": "2026-10-19",
+      "evidence": "рофессия: специалист по кибербезопасности Модуль 2. Продвинутая кибербезопасность Создаём виртуальные машины Изучаем работу сети для отражения кибератак Разрабатываем программу для защиты к",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-programmer-pro"
+    },
+    {
+      "courseId": "skillbox-kids-ee104379c2",
+      "sourceUrl": "https://kids.skillbox.ru/courses/python-junior",
+      "sourceHash": "1e8f8d90a8a8d21deaa61f7ffcaebe4141b795a8034e7cec7321090bf33151cb",
+      "checkedAt": "2026-10-19",
+      "evidence": "Python-программирования для детей 11-13 лет — онлайн, с нуля до первых проектов| Skillbox Kids Каталог курсов Программа Проекты учеников Препо",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-junior"
+    },
+    {
+      "courseId": "skillbox-kids-53781d29ef",
+      "sourceUrl": "https://kids.skillbox.ru/courses/python",
+      "sourceHash": "74fb0bf5a0cbd1bf7af650fc9920837057d413f28b161b70a69047277c485b97",
+      "checkedAt": "2026-10-19",
+      "evidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python"
+    },
+    {
+      "courseId": "skillbox-kids-76621a018e",
+      "sourceUrl": "https://kids.skillbox.ru/courses/website-developer",
+      "sourceHash": "af98553bd5b3fb0af565bf8cde1cee31ad85d99afd3d22fda43efb7c78fa0457",
+      "checkedAt": "2026-10-19",
+      "evidence": "026 году Вот что будет на каждом этапе: Ступень 1 Создание сайтов 5 модулей · 18 уроков — онлайн-вебинары · 14 уроков в видео-формате · 6 проектов Программируем на HTML, CSS и JavaScript",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/website-developer"
+    },
+    {
+      "courseId": "skillbox-kids-ad9499e225",
+      "sourceUrl": "https://kids.skillbox.ru/courses/python-security",
+      "sourceHash": "9fe538884171cd5ffde0e9142363d1f6802ca2046130c49edfbd6475e7037041",
+      "checkedAt": "2026-10-19",
+      "evidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-security"
+    },
+    {
+      "courseId": "skillbox-kids-3326dd276d",
+      "sourceUrl": "https://kids.skillbox.ru/courses/website-development",
+      "sourceHash": "1425ca79a8a14c65c3fd54301217efac7d3e49a7a45835592a62102882c1872f",
+      "checkedAt": "2026-10-19",
+      "evidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/website-development"
+    },
+    {
+      "courseId": "skillbox-kids-8443158420",
+      "sourceUrl": "https://kids.skillbox.ru/courses/minecraft-python",
+      "sourceHash": "ff32ca9eff547e932da866cfd0b39f280d3877ecd7f2e7644f6fcfe9951b970a",
+      "checkedAt": "2026-10-19",
+      "evidence": "Python в Minecraft для детей, онлайн-обучение программированию | Skillbox Kids Каталог курсов Программа Проекты учеников Препо",
+      "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/minecraft-python"
+    },
+    {
+      "courseId": "codim-online-e7b735a928",
+      "sourceUrl": "https://codim.online/scratchjr",
+      "sourceHash": "bc8d1831793b43bcb408754f190b01c38ddd0170a4291c543c17e60c4c34a3c6",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по Scratch Junior для дошкольников от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/scratchjr"
+    },
+    {
+      "courseId": "codim-online-3155d84e87",
+      "sourceUrl": "https://codim.online/minecraftjr",
+      "sourceHash": "5d461eaed8757a86519a9d241d609ec5ca7a30e5c24e475f2f53249a9313c390",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс Логические задачи в Minecraft для детей 5-6 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/minecraftjr"
+    },
+    {
+      "courseId": "codim-online-4523cbfbbf",
+      "sourceUrl": "https://codim.online/scratch_1",
+      "sourceHash": "a828300940f0a0621a1678acd3084e1c43ff89a0139769809bb78605dfb39e56",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по Scratchдля детей 7-8лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/scratch_1"
+    },
+    {
+      "courseId": "codim-online-cf3418e968",
+      "sourceUrl": "https://codim.online/scratch_2",
+      "sourceHash": "ab18224e70a6d6cbfd1c8642ca7f8c33243e20101c23b18907dc4eee8df197ee",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по Scratchдля детей 9-1 1 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/scratch_2"
+    },
+    {
+      "courseId": "codim-online-bdbffae3ee",
+      "sourceUrl": "https://codim.online/scratch_3",
+      "sourceHash": "938a909b52c1625ab8206f4c45b00cac1daf961cc04f49442d2e26c91231df76",
+      "checkedAt": "2026-10-19",
+      "evidence": "вие» — программирование для детей 9–13 лет с нуля. Видео-уроки, проекты, поддержка. Codim.online. Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17",
+      "sourceDiscoveryUrl": "https://codim.online/scratch_3"
+    },
+    {
+      "courseId": "codim-online-1e38349686",
+      "sourceUrl": "https://codim.online/scratchHM",
+      "sourceHash": "6c313893d7978c71e91cdc390cc8e26ab70faa4c39acda52faf862750e81b22f",
+      "checkedAt": "2026-10-19",
+      "evidence": "щие Видео-уроки работе в Scratch, для всех желающих в возрасте от 10 лет , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/scratchHM"
+    },
+    {
+      "courseId": "codim-online-6fefeb57bc",
+      "sourceUrl": "https://codim.online/minecraft",
+      "sourceHash": "2498bf45b7b61352c8ad50067c0029ffde7a19c713c752ef0782a9019737a118",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по программированию в Minecraft для детей 7-1 3 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/minecraft"
+    },
+    {
+      "courseId": "codim-online-55612a5666",
+      "sourceUrl": "https://codim.online/appinventor",
+      "sourceHash": "ed42a3d3f14ad69d48e0deaaa49733ffddedb79cfefeb8512df26908f645e3ae",
+      "checkedAt": "2026-10-19",
+      "evidence": "Онлайн-курс App Inventor для детей: создаём свои мобильные приложения с нуля. Пошаговые видеоуро",
+      "sourceDiscoveryUrl": "https://codim.online/appinventor"
+    },
+    {
+      "courseId": "codim-online-481939fefb",
+      "sourceUrl": "https://codim.online/cospaces",
+      "sourceHash": "aa36bcb3a4f126af492c2c07f92a5cc11ab5b9de84d178806dcad4a54a6b673c",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по созданию игр для виртуальной реальности в CoSpaces от школы Codim.online, для детей в возрасте 9+ Главная страница П",
+      "sourceDiscoveryUrl": "https://codim.online/cospaces"
+    },
+    {
+      "courseId": "codim-online-136bb29946",
+      "sourceUrl": "https://codim.online/pythonvm",
+      "sourceHash": "c5324b222f5892af677afbdcaeed316a4b6dcde1d4ebc64c87d3cf7011ef86e8",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по программированию на Python в Minecraft от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+      "sourceDiscoveryUrl": "https://codim.online/pythonvm"
+    },
+    {
+      "courseId": "codim-online-eeacd8cb8e",
+      "sourceUrl": "https://codim.online/python",
+      "sourceHash": "30e4ffa921f83f91459165302a326091fba03e9eda9d2487f7f4a91b7564b38d",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+      "sourceDiscoveryUrl": "https://codim.online/python"
+    },
+    {
+      "courseId": "codim-online-ee4546251c",
+      "sourceUrl": "https://codim.online/python2",
+      "sourceHash": "fa488bb6d02903872a422ff6d63d312177270f68dd9a6502a0c0f415463b5399",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+      "sourceDiscoveryUrl": "https://codim.online/python2"
+    },
+    {
+      "courseId": "codim-online-24d575244f",
+      "sourceUrl": "https://codim.online/pygame",
+      "sourceHash": "e3ec6ebf4aa4bf652e76e1b88c124ea13abd2ab40a33b878ab1ae5db8d509dd2",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по созданию игр на языке Python в Pygame, для детей 11+ , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/pygame"
+    },
+    {
+      "courseId": "codim-online-4b992b01f5",
+      "sourceUrl": "https://codim.online/Unity_1",
+      "sourceHash": "b6af3ece57e4e6dae08c7da333e3ca5cf9d81997ad8655f8d1915a3084dc6307",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс Unity с нуля. для детей в возрасте 10+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/Unity_1"
+    },
+    {
+      "courseId": "codim-online-6c967938ee",
+      "sourceUrl": "https://codim.online/Unity_2",
+      "sourceHash": "64e2d8dfd8220a09f5b6348d968372c24bead115919b5a5b8912dda04ba2496f",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс Unity с нуля. для детей в возрасте 12+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/Unity_2"
+    },
+    {
+      "courseId": "codim-online-6f2019d14e",
+      "sourceUrl": "https://codim.online/java",
+      "sourceHash": "bb240aed5427c6603f95a3dc23e11eb02180807bd2c4ecc2ce371632ab37ff3a",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по Java с нуля. для детей и взрослых 12+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/java"
+    },
+    {
+      "courseId": "codim-online-400268066b",
+      "sourceUrl": "https://codim.online/colobot",
+      "sourceHash": "3d357cf789419b46d9f607b6223b335411f46da444db10b8b84d8e26a2a3229b",
+      "checkedAt": "2026-10-19",
+      "evidence": "раммированию на языке C++ и Java в игровой среде Colobot, для детей 12+ , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/colobot"
+    },
+    {
+      "courseId": "codim-online-608decdb85",
+      "sourceUrl": "https://codim.online/tg_bot",
+      "sourceHash": "e3f12a75f262596605bbc0955c0771f42e3155d1bdd3b625fea0f33c34f929fb",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+      "sourceDiscoveryUrl": "https://codim.online/tg_bot"
+    },
+    {
+      "courseId": "codim-online-c3fb8d06ba",
+      "sourceUrl": "https://codim.online/web",
+      "sourceHash": "dabdbd3a7fcb8bb3150e9168051fee6d0775db4ea1349614d386b96a230b2def",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по Web разработке. для детей и взрослых, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+      "sourceDiscoveryUrl": "https://codim.online/web"
+    },
+    {
+      "courseId": "codim-online-a723c93d4e",
+      "sourceUrl": "https://codim.online/arduino",
+      "sourceHash": "fb212c2cb85063c673bfb613d5690e2dd361e9091d421ecf775e298c312c1a6e",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс по программированию на Arduino от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+      "sourceDiscoveryUrl": "https://codim.online/arduino"
+    },
+    {
+      "courseId": "codim-online-0a5f1896c7",
+      "sourceUrl": "https://codim.online/ai",
+      "sourceHash": "0808eadb943d03e2c8ec959824b77d0fbcdf16bc274213079925530d47b4366a",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+      "sourceDiscoveryUrl": "https://codim.online/ai"
+    },
+    {
+      "courseId": "codim-online-d3e12bc483",
+      "sourceUrl": "https://lesson.codim.online/komp_gramotnost",
+      "sourceHash": "ebb819cac3766d82e25e9f1f03c137590f991c6f1c93bbd968bd88410ee2e8ab",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курс Компьютерная грамотность для 7+ лет Онлайн-школа программирования для 5-17 лет Главная страница Курсы Личный кабинет Программа курса",
+      "sourceDiscoveryUrl": "https://lesson.codim.online/komp_gramotnost"
+    },
+    {
+      "courseId": "rocket-tech-school-5a9728b686",
+      "sourceUrl": "https://www.rts.school/ru/junior",
+      "sourceHash": "4ef6a40d965cfde992429f1ae039484e185e7d44568520e2a37b082248900b9c",
+      "checkedAt": "2026-10-19",
+      "evidence": "Программирование для детей 5-7 лет онлайн — курс Junior | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагог",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/junior"
+    },
+    {
+      "courseId": "rocket-tech-school-a73bfb8bec",
+      "sourceUrl": "https://www.rts.school/ru/scratch",
+      "sourceHash": "5e83eaef47540247788eb65f1a54529024f0f2991cb72b1357d5218caec31b45",
+      "checkedAt": "2026-10-19",
+      "evidence": "Scratch для детей: онлайн-курс программирования с нуля rocket tech school Проекты учеников Eng Отзывы Педагоги О шк",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/scratch"
+    },
+    {
+      "courseId": "rocket-tech-school-e573be00e9",
+      "sourceUrl": "https://www.rts.school/ru/roblox",
+      "sourceHash": "5be3ddd6dc392c9671253195e431c8a1c9ac05b9ce8f1f86237d3fc7581c5653",
+      "checkedAt": "2026-10-19",
+      "evidence": "Школа программирования Roblox для детей: обучение онлайн rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Пробный урок Курсы Блог r",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/roblox"
+    },
+    {
+      "courseId": "rocket-tech-school-5551b1b41f",
+      "sourceUrl": "https://www.rts.school/ru/minecraft",
+      "sourceHash": "f005f2de304c524bdf14ff34a206227376d40c2d884f732fad3886796df08e89",
+      "checkedAt": "2026-10-19",
+      "evidence": "Программирование Minecraft для детей — онлайн-курс в Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/minecraft"
+    },
+    {
+      "courseId": "rocket-tech-school-de4a7a63c9",
+      "sourceUrl": "https://www.rts.school/ru/python",
+      "sourceHash": "9e41201ac1fcf8b1287411b54f8a2335c2f071aa6bb239e9988ed8211238017e",
+      "checkedAt": "2026-10-19",
+      "evidence": "Программирование на Python для школьников: онлайн-курс rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Пробный урок Курсы Б",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/python"
+    },
+    {
+      "courseId": "rocket-tech-school-acd644aeb0",
+      "sourceUrl": "https://www.rts.school/ru/unity",
+      "sourceHash": "5b9d2823e565931310dcc6fd964e7bf56f272380b17e7d12e7233fcb68ec0df5",
+      "checkedAt": "2026-10-19",
+      "evidence": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School rocket tech school Проекты ученико",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/unity"
+    },
+    {
+      "courseId": "rocket-tech-school-f0df7d68e5",
+      "sourceUrl": "https://www.rts.school/ru/sozdaniye-saytov-dlya-detey",
+      "sourceHash": "5f66be635bce7e9718a07ec4aa640b462000bbdcb91e8547265457534adfece2",
+      "checkedAt": "2026-10-19",
+      "evidence": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School rocket tech school Проекты ученико",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/sozdaniye-saytov-dlya-detey"
+    },
+    {
+      "courseId": "rocket-tech-school-b88db0463c",
+      "sourceUrl": "https://www.rts.school/ru/neyroseti-dlya-detey",
+      "sourceHash": "0e188c0ae4d6c58efc107a0a73b0ec6dd90f7884e2ad1ef2b6b26454ec98d6f1",
+      "checkedAt": "2026-10-19",
+      "evidence": "ий дизайн Minecraft Roblox Цифровое творчество AI Start Scratch Junior rocket tech school online school Проекты учеников Отзывы Педагоги О школе Пробный урок Курсы rocket tech school Про",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/neyroseti-dlya-detey"
+    },
+    {
+      "courseId": "rocket-tech-school-c107ac66d9",
+      "sourceUrl": "https://www.rts.school/ru/graficheskiy-dizayn",
+      "sourceHash": "1dcd0f36f61c0ddf9fed6550551a01c36b137b7a84f52cf43c265befa2c0e683",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы графического дизайна для детей онлайн | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Проб",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/graficheskiy-dizayn"
+    },
+    {
+      "courseId": "rocket-tech-school-471756f391",
+      "sourceUrl": "https://www.rts.school/ru/tsifrovoye-tvorchestvo",
+      "sourceHash": "63995cb98834e258ae3c217eaca24a5753f22985d47592fa6e02564f5bb5b089",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы цифрового творчества для детей онлайн | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Проб",
+      "sourceDiscoveryUrl": "https://www.rts.school/ru/tsifrovoye-tvorchestvo"
+    },
+    {
+      "courseId": "foxford-75b80895f5",
+      "sourceUrl": "https://foxford.ru/courses/15376/landing",
+      "sourceHash": "bf9cd6ab09a2c9517cb4a8cc70ea3cfbaecbfe29e6f6d08cb55f25a8800bacdf",
+      "checkedAt": "2026-10-19",
+      "evidence": "и драконов, развивая цифровую грамотность. ## Что важно знать о курсе? * ### Доступен в записи Смотрите готовые видеоуроки в удобное время. * ### 24 занятия Занятие длится 1 акаде",
+      "sourceDiscoveryUrl": "https://foxford.ru/courses/15376/landing"
+    },
+    {
+      "courseId": "foxford-6e4b012ba0",
+      "sourceUrl": "https://foxford.ru/courses/14771/landing",
+      "sourceHash": "b603cb8e4f0610912f13667d66994da53a704744dbd3e4ecfa35e8b0af09cf8a",
+      "checkedAt": "2026-10-19",
+      "evidence": "м, создадим несколько собственных проектов. ## Что важно знать о курсе? * ### Доступен в записи Смотрите готовые видеоуроки в удобное время. * ### 24 занятия Урок состоит из вебина",
+      "sourceDiscoveryUrl": "https://foxford.ru/courses/14771/landing"
+    },
+    {
+      "courseId": "foxford-444f7a2cc5",
+      "sourceUrl": "https://foxford.ru/mini_groups/16966/landing",
+      "sourceHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+      "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code"
+    },
+    {
+      "courseId": "foxford-ea003b4bbb",
+      "sourceUrl": "https://foxford.ru/mini_groups/17277/landing",
+      "sourceHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+      "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code"
+    },
+    {
+      "courseId": "foxford-d120ac6dfd",
+      "sourceUrl": "https://foxford.ru/mini_groups/17278/landing",
+      "sourceHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+      "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code"
+    },
+    {
+      "courseId": "foxford-016ea260a1",
+      "sourceUrl": "https://foxford.ru/mini_groups/17276/landing",
+      "sourceHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+      "checkedAt": "2026-10-19",
+      "evidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+      "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code"
+    },
+    {
+      "courseId": "foxford-ab9907ee57",
+      "sourceUrl": "https://foxford.ru/mini_groups/17280/landing",
+      "sourceHash": "43ac7a8f469c5e65fcb3d1d62b1fb2194d30cb616024a90fe6f5703011ccd5d2",
+      "checkedAt": "2026-10-19",
+      "evidence": "а домашнее задание проверяется автоматически. ### Что если я не могу присутствовать на онлайн-занятии? Всё пропало? Ничего страшного! Если не успеваете к занятию, вы можете посмотрет",
+      "sourceDiscoveryUrl": "https://foxford.ru/mini_groups/17280/landing"
+    },
+    {
+      "courseId": "kvantastica-767e2de361",
+      "sourceUrl": "https://kvantastica.ru/#rec855344604",
+      "sourceHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+      "checkedAt": "2026-10-19",
+      "evidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+      "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344604"
+    },
+    {
+      "courseId": "kvantastica-e84e97a16a",
+      "sourceUrl": "https://kvantastica.ru/#rec855344612",
+      "sourceHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+      "checkedAt": "2026-10-19",
+      "evidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+      "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344612"
+    },
+    {
+      "courseId": "kvantastica-fdc91fbbae",
+      "sourceUrl": "https://kvantastica.ru/#rec855344614",
+      "sourceHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+      "checkedAt": "2026-10-19",
+      "evidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+      "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344614"
+    },
+    {
+      "courseId": "mshp-76250f93f3",
+      "sourceUrl": "https://vc.informatics.ru/",
+      "sourceHash": "859a4f89524af5e5cef9ac1ce1cf3d1922c9c55817117825c0a1176d72ddaaa6",
+      "checkedAt": "2026-10-19",
+      "evidence": "Онлайн курсы программирования для детей: обучение в виртуальном классе с нуля в МШП О школе Прог",
+      "sourceDiscoveryUrl": "https://vc.informatics.ru/"
     }
   ],
   "updatedCourseIds": [
@@ -5627,6 +6035,7 @@
     "russkiy-kak-inostrannyy",
     "shkoly/academy-yuid",
     "shkoly/amakids",
+    "shkoly/codim-online",
     "shkoly/deutsch-online",
     "shkoly/enline",
     "shkoly/hello-world",
@@ -5636,9 +6045,13 @@
     "shkoly/kaplan-school",
     "shkoly/kids-mba",
     "shkoly/kitai-school",
+    "shkoly/kvantastica",
+    "shkoly/mshp",
     "shkoly/naukacity",
+    "shkoly/rocket-tech-school",
     "shkoly/rostelecom-lyceum",
     "shkoly/sirius",
+    "shkoly/skillbox-kids",
     "shkoly/skyeng",
     "shkoly/stop-ugroza",
     "shkoly/tutoronline",

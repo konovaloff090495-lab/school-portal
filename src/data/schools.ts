@@ -1,3 +1,6 @@
+import programmingGeography from './programming-geography.json'
+import verifiedProgrammingSchools from './programming-imported-schools.json'
+import programmingSchoolUpdates from './programming-school-updates.json'
 import familyGeography from './family-geography.json'
 import verifiedFamilySchools from './family-schools-verified.json'
 import familySchoolMatches from './family-school-matches.json'
@@ -43,6 +46,15 @@ export interface School {
   district?: string
   neighborhood?: string
   rating: number | null
+  yandexRating?: number
+  yandexReviewCount?: number
+  yandexMapsUrl?: string
+  sourceUrl?: string
+  checkedAt?: string
+  ageRange?: number[]
+  programmingTopics?: string[]
+  programmingBrandId?: string
+  programmingFormat?: string
   reviewCount: number
   priceFrom?: number
   priceTo?: number
@@ -287851,7 +287863,8 @@ export const schools = ([
     photoCount: 0,
   },
   ...verifiedFamilySchools,
-] as any[] as School[])
+  ...verifiedProgrammingSchools,
+] as any[] as School[]).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}) }))
 export const typeLabels: Record<SchoolType, string> = {
   gosudarstvennye: 'Государственные',
   chastnie: 'Частные',
@@ -288386,6 +288399,7 @@ export function getSchoolsByRegion(region: RegionSlug): School[] {
 // в Яндекс Картах, 09.2026). Карточка хранится с type 'podgotovka-ege', а страницы
 // типа 'podgotovka-oge' показывают те из них, у кого в features есть «Подготовка к ОГЭ».
 export function schoolMatchesType(s: School, type: SchoolType): boolean {
+  if (type === 'programmirovanie' && s.programmingBrandId) return true
   if (type === 'semejnye' && (familySchoolMatches as string[]).includes(s.slug)) return true
   if (s.type === type) return true
   if (type === 'podgotovka-oge' && s.type === 'podgotovka-ege') return (s.features ?? []).includes('Подготовка к ОГЭ')
@@ -288659,11 +288673,12 @@ export function getSchoolsByRegionDistrict(region: RegionSlug, label: string): S
   return schools.filter(s => s.region === region && s.district === label)
 }
 
-export type MoCitySlug = 'balashikha' | 'dmitrov' | 'dolgoprudny' | 'domodedovo' | 'zheleznodorozhny' | 'klin' | 'kolomna' | 'korolev' | 'krasnogorsk' | 'lyubertsy' | 'mytishchi' | 'noginsk' | 'odintsovo' | 'podolsk' | 'ramenskoye' | 'reutov' | 'ruza' | 'serpukhov' | 'khimki' | 'shchyolkovo' | keyof typeof familyGeography.moCities
+export type MoCitySlug = 'balashikha' | 'dmitrov' | 'dolgoprudny' | 'domodedovo' | 'zheleznodorozhny' | 'klin' | 'kolomna' | 'korolev' | 'krasnogorsk' | 'lyubertsy' | 'mytishchi' | 'noginsk' | 'odintsovo' | 'podolsk' | 'ramenskoye' | 'reutov' | 'ruza' | 'serpukhov' | 'khimki' | 'shchyolkovo' | keyof typeof familyGeography.moCities | keyof typeof programmingGeography.moCities
 
-export const moCitySlugs: MoCitySlug[] = [...(Object.keys(familyGeography.moCities) as MoCitySlug[]), 'balashikha', 'dmitrov', 'dolgoprudny', 'domodedovo', 'zheleznodorozhny', 'klin', 'kolomna', 'korolev', 'krasnogorsk', 'lyubertsy', 'mytishchi', 'noginsk', 'odintsovo', 'podolsk', 'ramenskoye', 'reutov', 'ruza', 'serpukhov', 'khimki', 'shchyolkovo']
+export const moCitySlugs: MoCitySlug[] = [...(Object.keys(programmingGeography.moCities) as MoCitySlug[]), ...(Object.keys(familyGeography.moCities) as MoCitySlug[]), 'balashikha', 'dmitrov', 'dolgoprudny', 'domodedovo', 'zheleznodorozhny', 'klin', 'kolomna', 'korolev', 'krasnogorsk', 'lyubertsy', 'mytishchi', 'noginsk', 'odintsovo', 'podolsk', 'ramenskoye', 'reutov', 'ruza', 'serpukhov', 'khimki', 'shchyolkovo']
 
 export const moCityLabels: Record<MoCitySlug, string> = {
+  ...programmingGeography.moCities,
   ...Object.fromEntries(Object.entries(familyGeography.moCities).map(([slug, city]) => [slug, city.label])) as Record<keyof typeof familyGeography.moCities, string>,
   balashikha:        'Балашиха',
   dmitrov:           'Дмитров',

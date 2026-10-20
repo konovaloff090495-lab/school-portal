@@ -72,6 +72,8 @@ else
 fi
 
 # ── проверка ─────────────────────────────────────────────────────────────────
+# Keep the programming release's merged sitemap current after native blog ISR.
+ssh_retry "if test -f $DIR/programming-current/_programming/manifest.json; then python3 $DIR/programming-runtime/scripts/programming/refresh-sitemap.py; fi" || echo "Programming sitemap refresh failed; existing map retained"
 if [ "${#SLUGS[@]}" -gt 0 ] && [ -n "${SLUGS[0]}" ]; then
   code=$(curl -s --max-time 20 -o /dev/null -w "%{http_code}" "$BASE/blog/${SLUGS[0]}/")
   echo "Проверка: $BASE/blog/${SLUGS[0]}/ → HTTP $code"

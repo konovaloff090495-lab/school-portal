@@ -291,7 +291,13 @@ export default function SchoolCard({ school }: { school: School }) {
               {school.name}
             </h2>
           </Link>
-          <p className="text-xs text-gray-400 mt-0.5">{school.reviewCount} отзывов</p>
+          {(school.reviewCount > 0 || !school.yandexRating) && <p className="text-xs text-gray-400 mt-0.5">{school.reviewCount} отзывов на ProSchools</p>}
+          {school.yandexRating && (
+            <p className="text-xs text-amber-600 mt-1">
+              ★ {school.yandexRating} · {school.yandexMapsUrl ? <a href={school.yandexMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">Яндекс Карты</a> : 'Яндекс Карты'}
+              {school.yandexReviewCount !== undefined ? ` · ${school.yandexReviewCount} отзывов` : ''}
+            </p>
+          )}
         </div>
 
         <p className="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2">

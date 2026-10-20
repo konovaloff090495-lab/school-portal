@@ -46851,5 +46851,2180 @@
     "summary": "",
     "editorialDescription": "Графический дизайн Kodland для подростков от тринадцати лет включает сорок уроков и обозначен как продвинутый. Ученики работают в Figma и Photopea, изучают композицию, цвет, шрифты и фирменный стиль, создают оформление и лендинг. Перед записью уточните входную подготовку и критерии портфолио: важно обосновывать визуальное решение и дорабатывать его после обратной связи.",
     "editorialCheckedAt": "2026-10-19"
+  },
+  {
+    "id": "skillbox-kids-45d2637dfb",
+    "title": "IT-Старт: цифровая грамотность",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost",
+      "scratch",
+      "minecraft"
+    ],
+    "ageRange": [
+      7,
+      10
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/it-start",
+    "sourceTitle": "IT-Старт: Цифровая грамотность",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/it-start",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Работа с компьютером",
+      "Проекты в Scratch",
+      "Создание мира Minecraft"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "7–10 лет"
+      ],
+      [
+        "Объём программы",
+        "27 уроков, три модуля"
+      ],
+      [
+        "Продолжительность",
+        "7 месяцев"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«IT-Старт: цифровая грамотность» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 7–10 лет. В опубликованном плане: Работа с компьютером, Проекты в Scratch, Создание мира Minecraft. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "ервые проекты. ✓ Начинаем с первого клика мышкой ✓ Готовые проекты уже с первых занятий ✓ Онлайн с преподавателем В составе курса: Scratch и Minecraft Оставить заявку Hello world! ✦ Стар",
+    "ageEvidence": "7–10 лет",
+    "contentHash": "1e997703bb28b9449da0e332250c639ce8101478a4045584533ee074c60c9e4c",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:54+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-9541de5a8c",
+    "title": "Программирование на Python PRO и нейросети",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python",
+      "iskusstvennyy-intellekt",
+      "kiberbezopasnost"
+    ],
+    "ageRange": [
+      11,
+      15
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/python-programmer-pro",
+    "sourceTitle": "Программирование для детей от 5 лет, курс Python с нуля | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-programmer-pro",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Базовые конструкции языка Python",
+      "2D-игры на Python",
+      "Веб-разработка",
+      "Чат-боты",
+      "Групповая разработка",
+      "Защита данных в интернете",
+      "Продвинутая кибербезопасность",
+      "Создание десктопных приложений"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "11−15 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Программирование на Python PRO и нейросети» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 11–15 лет. В опубликованном плане: Базовые конструкции языка Python, 2D-игры на Python, Веб-разработка, Чат-боты, Групповая разработка, Защита данных в интернете, Продвинутая кибербезопасность, Создание десктопных приложений. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "рофессия: специалист по кибербезопасности Модуль 2. Продвинутая кибербезопасность Создаём виртуальные машины Изучаем работу сети для отражения кибератак Разрабатываем программу для защиты к",
+    "ageEvidence": "11−15 лет",
+    "contentHash": "d283cab5658eee85b2843fe0517053f69aaab0be2af7142e2d18954590805e97",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:58+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-ee104379c2",
+    "title": "Python с нуля до первых проектов и нейросети",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python",
+      "minecraft",
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": [
+      11,
+      13
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/python-junior",
+    "sourceTitle": "Python-программирования для детей 11-13 лет — онлайн, с нуля до первых проектов| Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-junior",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Введение в программирование на Python",
+      "Циклы в Python",
+      "Функции в Python",
+      "Основы ООП в Python",
+      "Секретные возможности Python",
+      "Базовые конструкции языка Python",
+      "2D-игры на Python",
+      "Веб-разработка"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "11-13 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Python с нуля до первых проектов и нейросети» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 11–13 лет. В опубликованном плане: Введение в программирование на Python, Циклы в Python, Функции в Python, Основы ООП в Python, Секретные возможности Python, Базовые конструкции языка Python, 2D-игры на Python, Веб-разработка. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Python-программирования для детей 11-13 лет — онлайн, с нуля до первых проектов| Skillbox Kids Каталог курсов Программа Проекты учеников Препо",
+    "ageEvidence": "11-13 лет",
+    "contentHash": "1e8f8d90a8a8d21deaa61f7ffcaebe4141b795a8034e7cec7321090bf33151cb",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:57+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-53781d29ef",
+    "title": "Программирование на Python",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python",
+      "web-razrabotka"
+    ],
+    "ageRange": [
+      11,
+      14
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/python",
+    "sourceTitle": "Курс программирования на Python для детей, обучение питону с нуля для школьников | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Базовые конструкции языка Python",
+      "2D-игры на Python",
+      "Веб-разработка",
+      "Телеграм-боты",
+      "Групповая разработка."
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "11−14 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Программирование на Python» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 11–14 лет. В опубликованном плане: Базовые конструкции языка Python, 2D-игры на Python, Веб-разработка, Телеграм-боты, Групповая разработка.. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+    "ageEvidence": "11−14 лет",
+    "contentHash": "74fb0bf5a0cbd1bf7af650fc9920837057d413f28b161b70a69047277c485b97",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:57+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-76621a018e",
+    "title": "Разработка сайтов",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "web-razrabotka",
+    "tags": [
+      "programmirovanie",
+      "web-razrabotka",
+      "python"
+    ],
+    "ageRange": [
+      11,
+      15
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/website-developer",
+    "sourceTitle": "Курс по созданию сайтов для детей — HTML, CSS, адаптив | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/website-developer",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Особенности языков HTML и CSS",
+      "Flexbox: гибкая модель создания сайта",
+      "Библиотеки: Bootstrap 5, Swiper, Animate. css",
+      "Основы языка JavaScript",
+      "Командная разработка. Финальный проект",
+      "Базовые конструкции языка Python",
+      "2D-игры на Python",
+      "Веб-разработка"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "11−15 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Разработка сайтов» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 11–15 лет. В опубликованном плане: Особенности языков HTML и CSS, Flexbox: гибкая модель создания сайта, Библиотеки: Bootstrap 5, Swiper, Animate. css, Основы языка JavaScript, Командная разработка. Финальный проект, Базовые конструкции языка Python, 2D-игры на Python, Веб-разработка. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "026 году Вот что будет на каждом этапе: Ступень 1 Создание сайтов 5 модулей · 18 уроков — онлайн-вебинары · 14 уроков в видео-формате · 6 проектов Программируем на HTML, CSS и JavaScript",
+    "ageEvidence": "11−15 лет",
+    "contentHash": "af98553bd5b3fb0af565bf8cde1cee31ad85d99afd3d22fda43efb7c78fa0457",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:00+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-ad9499e225",
+    "title": "Кибербезопасность и приложения на Python",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "kiberbezopasnost",
+    "tags": [
+      "programmirovanie",
+      "kiberbezopasnost",
+      "python"
+    ],
+    "ageRange": [
+      10,
+      15
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/python-security",
+    "sourceTitle": "Курс по кибербезопасности для детей и подростков | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/python-security",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Защита данных в интернете",
+      "Продвинутая кибербезопасность",
+      "Создание десктопных приложений",
+      "Аналитика данных",
+      "Программный интерфейс приложений. Финальный проект"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "10-15 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Кибербезопасность и приложения на Python» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 10–15 лет. В опубликованном плане: Защита данных в интернете, Продвинутая кибербезопасность, Создание десктопных приложений, Аналитика данных, Программный интерфейс приложений. Финальный проект. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+    "ageEvidence": "10-15 лет",
+    "contentHash": "9fe538884171cd5ffde0e9142363d1f6802ca2046130c49edfbd6475e7037041",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:59+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-3326dd276d",
+    "title": "Создание сайтов",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "web-razrabotka",
+    "tags": [
+      "programmirovanie",
+      "web-razrabotka"
+    ],
+    "ageRange": [
+      10,
+      15
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/website-development",
+    "sourceTitle": "Курс веб-разработки и создание сайтов для детей и школьников | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/website-development",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Особенности языков HTML и CSS",
+      "Flexbox: гибкая модель создания сайта",
+      "Библиотеки: Bootstrap 5, Swiper, Animate. css",
+      "Основы языка JavaScript",
+      "Командная разработка."
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "10-15 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Создание сайтов» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 10–15 лет. В опубликованном плане: Особенности языков HTML и CSS, Flexbox: гибкая модель создания сайта, Библиотеки: Bootstrap 5, Swiper, Animate. css, Основы языка JavaScript, Командная разработка.. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "ю, какое направление подойдёт именно для него Урок длится в среднем 60-90 минут, проходит онлайн, бесплатно и в присутствии родителя * для участия на уроке необходимо подключиться с комп",
+    "ageEvidence": "10-15 лет",
+    "contentHash": "1425ca79a8a14c65c3fd54301217efac7d3e49a7a45835592a62102882c1872f",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:00+00:00"
+    }
+  },
+  {
+    "id": "skillbox-kids-8443158420",
+    "title": "Minecraft: программирование на Python",
+    "brandId": "skillbox-kids",
+    "brand": "Skillbox Kids",
+    "category": "minecraft",
+    "tags": [
+      "programmirovanie",
+      "minecraft",
+      "python"
+    ],
+    "ageRange": [
+      10,
+      12
+    ],
+    "grade": "",
+    "format": "Онлайн-занятия с преподавателем и видеоматериалы",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kids.skillbox.ru/courses/minecraft-python",
+    "sourceTitle": "Python в Minecraft для детей, онлайн-обучение программированию | Skillbox Kids",
+    "sourceDiscoveryUrl": "https://kids.skillbox.ru/courses/minecraft-python",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Введение в программирование на Python",
+      "Циклы в Python",
+      "Функции в Python",
+      "Основы ООП в Python",
+      "Секретные возможности Python."
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "10-12 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Minecraft: программирование на Python» — программа школы Skillbox Kids. Формат: онлайн-занятия с преподавателем и видеоматериалы. На собственной странице указан возраст 10–12 лет. В опубликованном плане: Введение в программирование на Python, Циклы в Python, Функции в Python, Основы ООП в Python, Секретные возможности Python.. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Python в Minecraft для детей, онлайн-обучение программированию | Skillbox Kids Каталог курсов Программа Проекты учеников Препо",
+    "ageEvidence": "10-12 лет",
+    "contentHash": "ff32ca9eff547e932da866cfd0b39f280d3877ecd7f2e7644f6fcfe9951b970a",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:55+00:00"
+    }
+  },
+  {
+    "id": "codim-online-e7b735a928",
+    "title": "Scratch Junior",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": [
+      5,
+      7
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/scratchjr",
+    "sourceTitle": "Курс по Scratch Junior для дошкольников от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/scratchjr",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "создавать мультфильмы и игры",
+      "рисовать в графическом редакторе",
+      "придумывать свои цифровые",
+      "истории",
+      "познакомится с алгоритмами, циклами и событиями",
+      "математические понятия: сложение,",
+      "вычитание, умножение"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "5–7 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Scratch Junior» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 5–7 лет. В опубликованном плане: создавать мультфильмы и игры, рисовать в графическом редакторе, придумывать свои цифровые, истории, познакомится с алгоритмами, циклами и событиями, математические понятия: сложение,, вычитание, умножение. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по Scratch Junior для дошкольников от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "5-7 лет — основной блок программы",
+    "contentHash": "bc8d1831793b43bcb408754f190b01c38ddd0170a4291c543c17e60c4c34a3c6",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:50+00:00"
+    }
+  },
+  {
+    "id": "codim-online-3155d84e87",
+    "title": "Minecraft Junior",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "minecraft",
+    "tags": [
+      "programmirovanie",
+      "minecraft"
+    ],
+    "ageRange": [
+      5,
+      7
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/minecraftjr",
+    "sourceTitle": "Курс Логические задачи в Minecraft для детей 5-6 лет от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/minecraftjr",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "создавать простые игры и цифровые истории, рисовать в графическом редакторе, познакомится",
+      "с алгоритмами, циклами, условиями, отрицательными числами, процентами, градусами.",
+      "На этом курсе не используем координатную плоскость и десятичные дроби."
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "5–7 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Minecraft Junior» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 5–7 лет. В опубликованном плане: создавать простые игры и цифровые истории, рисовать в графическом редакторе, познакомится, с алгоритмами, циклами, условиями, отрицательными числами, процентами, градусами., На этом курсе не используем координатную плоскость и десятичные дроби.. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс Логические задачи в Minecraft для детей 5-6 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "5-7 лет — основной блок программы",
+    "contentHash": "5d461eaed8757a86519a9d241d609ec5ca7a30e5c24e475f2f53249a9313c390",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:36+00:00"
+    }
+  },
+  {
+    "id": "codim-online-4523cbfbbf",
+    "title": "Scratch: первый уровень",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": [
+      7,
+      8
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/scratch_1",
+    "sourceTitle": "Курс по Scratchдля детей 7-8лет от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/scratch_1",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "создавать простые игры и цифровые истории, рисовать в графическом редакторе, познакомится",
+      "с алгоритмами, циклами, условиями, отрицательными числами, процентами, градусами.",
+      "На этом курсе не используем координатную плоскость и десятичные дроби."
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "7–8 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Scratch: первый уровень» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 7–8 лет. В опубликованном плане: создавать простые игры и цифровые истории, рисовать в графическом редакторе, познакомится, с алгоритмами, циклами, условиями, отрицательными числами, процентами, градусами., На этом курсе не используем координатную плоскость и десятичные дроби.. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по Scratchдля детей 7-8лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "7-8 лет — основной блок программы",
+    "contentHash": "a828300940f0a0621a1678acd3084e1c43ff89a0139769809bb78605dfb39e56",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:46+00:00"
+    }
+  },
+  {
+    "id": "codim-online-cf3418e968",
+    "title": "Scratch: второй уровень",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": [
+      9,
+      11
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/scratch_2",
+    "sourceTitle": "Курс по Scratchдля детей 9-1 1 лет от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/scratch_2",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Возраст",
+        "9–11 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Scratch: второй уровень» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 9–11 лет. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по Scratchдля детей 9-1 1 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "9-11 лет — основной блок программы",
+    "contentHash": "ab18224e70a6d6cbfd1c8642ca7f8c33243e20101c23b18907dc4eee8df197ee",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:48+00:00"
+    }
+  },
+  {
+    "id": "codim-online-bdbffae3ee",
+    "title": "Scratch: Большое путешествие",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/scratch_3",
+    "sourceTitle": "Увлекательный курс «Scratch: Большое путешествие» — программирование для детей 9–13 лет с нуля. Видео-уроки, проекты, поддержка. Codim.online.",
+    "sourceDiscoveryUrl": "https://codim.online/scratch_3",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Scratch: Большое путешествие» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "вие» — программирование для детей 9–13 лет с нуля. Видео-уроки, проекты, поддержка. Codim.online. Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17",
+    "ageEvidence": "",
+    "contentHash": "938a909b52c1625ab8206f4c45b00cac1daf961cc04f49442d2e26c91231df76",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:49+00:00"
+    }
+  },
+  {
+    "id": "codim-online-1e38349686",
+    "title": "Scratch: Наглядная математика",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": [
+      7,
+      11
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/scratchHM",
+    "sourceTitle": "Обучающие Видео-уроки работе в Scratch, для всех желающих в возрасте от 10 лет , от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/scratchHM",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Возраст",
+        "7–11 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Scratch: Наглядная математика» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 7–11 лет. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "щие Видео-уроки работе в Scratch, для всех желающих в возрасте от 10 лет , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "7-11 лет — основной блок программы",
+    "contentHash": "6c313893d7978c71e91cdc390cc8e26ab70faa4c39acda52faf862750e81b22f",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:46+00:00"
+    }
+  },
+  {
+    "id": "codim-online-6fefeb57bc",
+    "title": "Minecraft: блочное программирование",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "minecraft",
+    "tags": [
+      "programmirovanie",
+      "minecraft"
+    ],
+    "ageRange": [
+      7,
+      13
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/minecraft",
+    "sourceTitle": "Курс по программированию в Minecraft для детей 7-1 3 лет от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/minecraft",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "строить эпичные постройки",
+      "копать подземные ходы",
+      "сражаться со слизнями",
+      "строить армию големов и снеговиков",
+      "строить автоматические устройства из редстоуна"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "7–13 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Minecraft: блочное программирование» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 7–13 лет. В опубликованном плане: строить эпичные постройки, копать подземные ходы, сражаться со слизнями, строить армию големов и снеговиков, строить автоматические устройства из редстоуна. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по программированию в Minecraft для детей 7-1 3 лет от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "7-13 лет — основной блок программы",
+    "contentHash": "2498bf45b7b61352c8ad50067c0029ffde7a19c713c752ef0782a9019737a118",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:36+00:00"
+    }
+  },
+  {
+    "id": "codim-online-55612a5666",
+    "title": "App Inventor: мобильные приложения",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "mobilnye-prilozheniya",
+    "tags": [
+      "programmirovanie",
+      "mobilnye-prilozheniya"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/appinventor",
+    "sourceTitle": "Онлайн-курс App Inventor для детей: создаём свои мобильные приложения с нуля. Пошаговые видеоуроки от Codim.online.",
+    "sourceDiscoveryUrl": "https://codim.online/appinventor",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "работа с камерой смартфона",
+      "работа с фото, видео и звуком",
+      "распознавание речи",
+      "использование компаса",
+      "использование базы данных и телефонной книги"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«App Inventor: мобильные приложения» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: работа с камерой смартфона, работа с фото, видео и звуком, распознавание речи, использование компаса, использование базы данных и телефонной книги. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Онлайн-курс App Inventor для детей: создаём свои мобильные приложения с нуля. Пошаговые видеоуро",
+    "ageEvidence": "",
+    "contentHash": "ed42a3d3f14ad69d48e0deaaa49733ffddedb79cfefeb8512df26908f645e3ae",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:28+00:00"
+    }
+  },
+  {
+    "id": "codim-online-481939fefb",
+    "title": "CoSpaces: виртуальные миры",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie",
+      "3d-modelirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/cospaces",
+    "sourceTitle": "Курс по созданию игр для виртуальной реальности в CoSpaces от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/cospaces",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "создавать трехмерные миры",
+      "работать с блоками и материалами",
+      "программировать поведение персонажей",
+      "использовать переменные, циклы, условия и функции"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«CoSpaces: виртуальные миры» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: создавать трехмерные миры, работать с блоками и материалами, программировать поведение персонажей, использовать переменные, циклы, условия и функции. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по созданию игр для виртуальной реальности в CoSpaces от школы Codim.online, для детей в возрасте 9+ Главная страница П",
+    "ageEvidence": "",
+    "contentHash": "aa36bcb3a4f126af492c2c07f92a5cc11ab5b9de84d178806dcad4a54a6b673c",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:32+00:00"
+    }
+  },
+  {
+    "id": "codim-online-136bb29946",
+    "title": "Python в Minecraft",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "minecraft",
+    "tags": [
+      "programmirovanie",
+      "minecraft",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/pythonvm",
+    "sourceTitle": "Курс по программированию на Python в Minecraft  от школы Codim.online, для детей в возрасте 10+",
+    "sourceDiscoveryUrl": "https://codim.online/pythonvm",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "типы данных",
+      "операторы",
+      "методы",
+      "объекты",
+      "циклы",
+      "условия",
+      "кортежи",
+      "словари"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Python в Minecraft» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: типы данных, операторы, методы, объекты, циклы, условия, кортежи, словари. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по программированию на Python в Minecraft от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+    "ageEvidence": "",
+    "contentHash": "c5324b222f5892af677afbdcaeed316a4b6dcde1d4ebc64c87d3cf7011ef86e8",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:43+00:00"
+    }
+  },
+  {
+    "id": "codim-online-eeacd8cb8e",
+    "title": "Python: первый уровень",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/python",
+    "sourceTitle": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 9+",
+    "sourceDiscoveryUrl": "https://codim.online/python",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "типы данных",
+      "операторы",
+      "методы",
+      "модуль Turtle",
+      "работа с текстом",
+      "объекты",
+      "циклы",
+      "условия"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Python: первый уровень» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: типы данных, операторы, методы, модуль Turtle, работа с текстом, объекты, циклы, условия. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 9+ Главная страница Программа курса Тарифы Контакты Онлайн-школа пр",
+    "ageEvidence": "",
+    "contentHash": "30e4ffa921f83f91459165302a326091fba03e9eda9d2487f7f4a91b7564b38d",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:40+00:00"
+    }
+  },
+  {
+    "id": "codim-online-ee4546251c",
+    "title": "Python: второй уровень",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/python2",
+    "sourceTitle": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 10+",
+    "sourceDiscoveryUrl": "https://codim.online/python2",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Python: второй уровень» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по программированию на Python от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+    "ageEvidence": "",
+    "contentHash": "fa488bb6d02903872a422ff6d63d312177270f68dd9a6502a0c0f415463b5399",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:40+00:00"
+    }
+  },
+  {
+    "id": "codim-online-24d575244f",
+    "title": "Pygame: создание игр",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/pygame",
+    "sourceTitle": "Курс по созданию игр на языке Python в Pygame, для  детей 11+ , от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/pygame",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "типы данных",
+      "операторы",
+      "методы",
+      "объекты",
+      "игровой цикл",
+      "условия",
+      "кортежи",
+      "словари"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Pygame: создание игр» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: типы данных, операторы, методы, объекты, игровой цикл, условия, кортежи, словари. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по созданию игр на языке Python в Pygame, для детей 11+ , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "",
+    "contentHash": "e3ec6ebf4aa4bf652e76e1b88c124ea13abd2ab40a33b878ab1ae5db8d509dd2",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:40+00:00"
+    }
+  },
+  {
+    "id": "codim-online-4b992b01f5",
+    "title": "Unity: блочное программирование",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "unity",
+    "tags": [
+      "programmirovanie",
+      "unity"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/Unity_1",
+    "sourceTitle": "Курс Unity с нуля. для детей в возрасте 10+, от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/Unity_1",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Создавать простые игры",
+      "TileMap",
+      "анимация",
+      "настройка камеры",
+      "префабы",
+      "звуки",
+      "видеоэффекты",
+      "SkyBox"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Unity: блочное программирование» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: Создавать простые игры, TileMap, анимация, настройка камеры, префабы, звуки, видеоэффекты, SkyBox. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс Unity с нуля. для детей в возрасте 10+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "",
+    "contentHash": "b6af3ece57e4e6dae08c7da333e3ca5cf9d81997ad8655f8d1915a3084dc6307",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:24+00:00"
+    }
+  },
+  {
+    "id": "codim-online-6c967938ee",
+    "title": "Unity: программирование на C#",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "unity",
+    "tags": [
+      "programmirovanie",
+      "unity"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/Unity_2",
+    "sourceTitle": "Курс Unity с нуля. для детей в возрасте 12+, от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/Unity_2",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Создавать простые игры",
+      "TileMap",
+      "анимация",
+      "настройка камеры",
+      "префабы",
+      "звуки",
+      "видеоэффекты",
+      "SkyBox"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Unity: программирование на C#» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: Создавать простые игры, TileMap, анимация, настройка камеры, префабы, звуки, видеоэффекты, SkyBox. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс Unity с нуля. для детей в возрасте 12+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "",
+    "contentHash": "64e2d8dfd8220a09f5b6348d968372c24bead115919b5a5b8912dda04ba2496f",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:24+00:00"
+    }
+  },
+  {
+    "id": "codim-online-6f2019d14e",
+    "title": "Java для детей",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie"
+    ],
+    "ageRange": [
+      5,
+      17
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/java",
+    "sourceTitle": "Курс по Java с нуля. для детей и взрослых 12+, от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/java",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Возраст",
+        "5–17 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Java для детей» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 5–17 лет. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по Java с нуля. для детей и взрослых 12+, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "5-17 лет — основной блок программы",
+    "contentHash": "bb240aed5427c6603f95a3dc23e11eb02180807bd2c4ecc2ce371632ab37ff3a",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:33+00:00"
+    }
+  },
+  {
+    "id": "codim-online-400268066b",
+    "title": "Colobot: программирование роботов",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/colobot",
+    "sourceTitle": "Курс по программированию на языке C++ и Java в игровой среде Colobot, для  детей 12+ , от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/colobot",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "типы данных",
+      "операторы",
+      "методы",
+      "объекты",
+      "циклы",
+      "условия",
+      "вложенные циклы",
+      "события"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Colobot: программирование роботов» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: типы данных, операторы, методы, объекты, циклы, условия, вложенные циклы, события. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "раммированию на языке C++ и Java в игровой среде Colobot, для детей 12+ , от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "",
+    "contentHash": "3d357cf789419b46d9f607b6223b335411f46da444db10b8b84d8e26a2a3229b",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:30+00:00"
+    }
+  },
+  {
+    "id": "codim-online-608decdb85",
+    "title": "Telegram-боты на Python",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/tg_bot",
+    "sourceTitle": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+",
+    "sourceDiscoveryUrl": "https://codim.online/tg_bot",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Telegram-боты на Python» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+    "ageEvidence": "",
+    "contentHash": "e3f12a75f262596605bbc0955c0771f42e3155d1bdd3b625fea0f33c34f929fb",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:51+00:00"
+    }
+  },
+  {
+    "id": "codim-online-c3fb8d06ba",
+    "title": "Веб-разработка: HTML, CSS и JavaScript",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "web-razrabotka",
+    "tags": [
+      "programmirovanie",
+      "web-razrabotka"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/web",
+    "sourceTitle": "Курс по Web разработке. для детей и взрослых, от школы Codim.online",
+    "sourceDiscoveryUrl": "https://codim.online/web",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "создавать сайты с нуля",
+      "работать с HTML-тегами и семантикой",
+      "создавать многостраничные сайты",
+      "оформлять страницы с помощью CSS",
+      "позиционировать элементы",
+      "создавать CSS-анимации",
+      "работать с формами",
+      "программировать на JavaScript"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Веб-разработка: HTML, CSS и JavaScript» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: создавать сайты с нуля, работать с HTML-тегами и семантикой, создавать многостраничные сайты, оформлять страницы с помощью CSS, позиционировать элементы, создавать CSS-анимации, работать с формами, программировать на JavaScript. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по Web разработке. для детей и взрослых, от школы Codim.online Главная страница Программа курса Тарифы Контакты Онлайн-школа программирования для 5-17 л",
+    "ageEvidence": "",
+    "contentHash": "dabdbd3a7fcb8bb3150e9168051fee6d0775db4ea1349614d386b96a230b2def",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:53+00:00"
+    }
+  },
+  {
+    "id": "codim-online-a723c93d4e",
+    "title": "Arduino: робототехника",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "robototehnika",
+    "tags": [
+      "programmirovanie",
+      "robototehnika"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/arduino",
+    "sourceTitle": "Курс по программированию на Arduino от школы Codim.online, для детей в возрасте 10+",
+    "sourceDiscoveryUrl": "https://codim.online/arduino",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "программирование на языке С++",
+      "используем датчики: освещенности, температуры, расстояния, звука",
+      "используем светодиоды, сервоприводы, моторы, ИК-приемник и пульт"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Arduino: робототехника» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. В опубликованном плане: программирование на языке С++, используем датчики: освещенности, температуры, расстояния, звука, используем светодиоды, сервоприводы, моторы, ИК-приемник и пульт. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс по программированию на Arduino от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+    "ageEvidence": "",
+    "contentHash": "fb212c2cb85063c673bfb613d5690e2dd361e9091d421ecf775e298c312c1a6e",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:29+00:00"
+    }
+  },
+  {
+    "id": "codim-online-0a5f1896c7",
+    "title": "Искусственный интеллект просто",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://codim.online/ai",
+    "sourceTitle": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+",
+    "sourceDiscoveryUrl": "https://codim.online/ai",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Искусственный интеллект просто» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс для детей \"Искусственный интеллект просто\" от школы Codim.online, для детей в возрасте 10+ Главная страница Программа курса Тарифы Контакты Онлайн-школа п",
+    "ageEvidence": "",
+    "contentHash": "0808eadb943d03e2c8ec959824b77d0fbcdf16bc274213079925530d47b4366a",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:45:28+00:00"
+    }
+  },
+  {
+    "id": "codim-online-d3e12bc483",
+    "title": "Компьютерная грамотность",
+    "brandId": "codim-online",
+    "brand": "CODIM.ONLINE",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost"
+    ],
+    "ageRange": [
+      5,
+      15
+    ],
+    "grade": "",
+    "format": "Видеокурс онлайн с поддержкой",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://lesson.codim.online/komp_gramotnost",
+    "sourceTitle": "Курс Компьютерная грамотность для 7+ лет",
+    "sourceDiscoveryUrl": "https://lesson.codim.online/komp_gramotnost",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "7+ лет"
+    ],
+    "facts": [
+      [
+        "Возраст",
+        "5–15 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Компьютерная грамотность» — программа школы CODIM.ONLINE. Формат: видеокурс онлайн с поддержкой. На собственной странице указан возраст 5–15 лет. В опубликованном плане: 7+ лет. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курс Компьютерная грамотность для 7+ лет Онлайн-школа программирования для 5-17 лет Главная страница Курсы Личный кабинет Программа курса",
+    "ageEvidence": "5-15 лет — основной блок программы",
+    "contentHash": "ebb819cac3766d82e25e9f1f03c137590f991c6f1c93bbd968bd88410ee2e8ab",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:03+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-5a9728b686",
+    "title": "Junior: первое знакомство с компьютером и кодом",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost",
+      "programmirovanie"
+    ],
+    "ageRange": [
+      5,
+      7
+    ],
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/junior",
+    "sourceTitle": "Программирование для детей 5-7 лет онлайн — курс Junior | Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/junior",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Возраст",
+        "5–7 лет"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Junior: первое знакомство с компьютером и кодом» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. На собственной странице указан возраст 5–7 лет. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Программирование для детей 5-7 лет онлайн — курс Junior | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагог",
+    "ageEvidence": "5-7 лет — собственный заголовок программы",
+    "contentHash": "4ef6a40d965cfde992429f1ae039484e185e7d44568520e2a37b082248900b9c",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:05+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-a73bfb8bec",
+    "title": "Scratch: создание игр и анимаций",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/scratch",
+    "sourceTitle": "Scratch для детей: онлайн-курс программирования с нуля",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/scratch",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Scratch: создание игр и анимаций» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Scratch для детей: онлайн-курс программирования с нуля rocket tech school Проекты учеников Eng Отзывы Педагоги О шк",
+    "ageEvidence": "",
+    "contentHash": "5e83eaef47540247788eb65f1a54529024f0f2991cb72b1357d5218caec31b45",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:12+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-e573be00e9",
+    "title": "Roblox: разработка игровых миров",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "roblox",
+    "tags": [
+      "programmirovanie",
+      "roblox"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/roblox",
+    "sourceTitle": "Школа программирования Roblox для детей: обучение онлайн",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/roblox",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Roblox: разработка игровых миров» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Школа программирования Roblox для детей: обучение онлайн rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Пробный урок Курсы Блог r",
+    "ageEvidence": "",
+    "contentHash": "5be3ddd6dc392c9671253195e431c8a1c9ac05b9ce8f1f86237d3fc7581c5653",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:10+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-5551b1b41f",
+    "title": "Minecraft: программирование",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "minecraft",
+    "tags": [
+      "programmirovanie",
+      "minecraft"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/minecraft",
+    "sourceTitle": "Программирование Minecraft для детей — онлайн-курс в Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/minecraft",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Minecraft: программирование» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Программирование Minecraft для детей — онлайн-курс в Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе",
+    "ageEvidence": "",
+    "contentHash": "f005f2de304c524bdf14ff34a206227376d40c2d884f732fad3886796df08e89",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:06+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-de4a7a63c9",
+    "title": "Python для школьников",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/python",
+    "sourceTitle": "Программирование на Python для школьников: онлайн-курс",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/python",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Python для школьников» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Программирование на Python для школьников: онлайн-курс rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Пробный урок Курсы Б",
+    "ageEvidence": "",
+    "contentHash": "9e41201ac1fcf8b1287411b54f8a2335c2f071aa6bb239e9988ed8211238017e",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:09+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-acd644aeb0",
+    "title": "Unity: создание игр",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "unity",
+    "tags": [
+      "programmirovanie",
+      "unity"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/unity",
+    "sourceTitle": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/unity",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Unity: создание игр» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School rocket tech school Проекты ученико",
+    "ageEvidence": "",
+    "contentHash": "5b9d2823e565931310dcc6fd964e7bf56f272380b17e7d12e7233fcb68ec0df5",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:13+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-f0df7d68e5",
+    "title": "Веб-разработка: создание сайтов",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "web-razrabotka",
+    "tags": [
+      "programmirovanie",
+      "web-razrabotka"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/sozdaniye-saytov-dlya-detey",
+    "sourceTitle": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/sozdaniye-saytov-dlya-detey",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Веб-разработка: создание сайтов» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Unity курсы для детей онлайн — создание игр и программирование | Rocket Tech School rocket tech school Проекты ученико",
+    "ageEvidence": "",
+    "contentHash": "5f66be635bce7e9718a07ec4aa640b462000bbdcb91e8547265457534adfece2",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:12+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-b88db0463c",
+    "title": "AI Start: нейросети для детей",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "iskusstvennyy-intellekt",
+    "tags": [
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/neyroseti-dlya-detey",
+    "sourceTitle": "Курс по нейросетям для детей – изучение искусственного интеллекта школьникам и детям с нуля",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/neyroseti-dlya-detey",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«AI Start: нейросети для детей» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "ий дизайн Minecraft Roblox Цифровое творчество AI Start Scratch Junior rocket tech school online school Проекты учеников Отзывы Педагоги О школе Пробный урок Курсы rocket tech school Про",
+    "ageEvidence": "",
+    "contentHash": "0e188c0ae4d6c58efc107a0a73b0ec6dd90f7884e2ad1ef2b6b26454ec98d6f1",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:08+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-c107ac66d9",
+    "title": "Графический дизайн",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "dizayn",
+    "tags": [
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/graficheskiy-dizayn",
+    "sourceTitle": "Курсы графического дизайна для детей онлайн | Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/graficheskiy-dizayn",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Графический дизайн» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы графического дизайна для детей онлайн | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Проб",
+    "ageEvidence": "",
+    "contentHash": "1dcd0f36f61c0ddf9fed6550551a01c36b137b7a84f52cf43c265befa2c0e683",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:04+00:00"
+    }
+  },
+  {
+    "id": "rocket-tech-school-471756f391",
+    "title": "Цифровое творчество",
+    "brandId": "rocket-tech-school",
+    "brand": "Rocket Tech School / ProgKids",
+    "category": "dizayn",
+    "tags": [
+      "dizayn"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Индивидуальные или параллельные занятия онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://www.rts.school/ru/tsifrovoye-tvorchestvo",
+    "sourceTitle": "Курсы цифрового творчества для детей онлайн | Rocket Tech School",
+    "sourceDiscoveryUrl": "https://www.rts.school/ru/tsifrovoye-tvorchestvo",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Цифровое творчество» — программа школы Rocket Tech School / ProgKids. Формат: индивидуальные или параллельные занятия онлайн. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы цифрового творчества для детей онлайн | Rocket Tech School rocket tech school Проекты учеников Eng Отзывы Педагоги О школе Проб",
+    "ageEvidence": "",
+    "contentHash": "63995cb98834e258ae3c217eaca24a5753f22985d47592fa6e02564f5bb5b089",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:46:13+00:00"
+    }
+  },
+  {
+    "id": "foxford-75b80895f5",
+    "title": "Компьютерная грамотность и кибербезопасность",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost",
+      "kiberbezopasnost"
+    ],
+    "ageRange": null,
+    "grade": "3–6 класс",
+    "format": "Видеокурс онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/courses/15376/landing",
+    "sourceTitle": "Программирование. Курс компьютерной грамотности. 3–6 классы. • Курсы Фоксфорда (https://foxford.ru/courses/15376)",
+    "sourceDiscoveryUrl": "https://foxford.ru/courses/15376/landing",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "3–6 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Компьютерная грамотность и кибербезопасность» — программа школы Фоксфорд. Формат: видеокурс онлайн. Аудитория: 3–6 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "и драконов, развивая цифровую грамотность. ## Что важно знать о курсе? * ### Доступен в записи Смотрите готовые видеоуроки в удобное время. * ### 24 занятия Занятие длится 1 акаде",
+    "ageEvidence": "",
+    "contentHash": "bf9cd6ab09a2c9517cb4a8cc70ea3cfbaecbfe29e6f6d08cb55f25a8800bacdf",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-6e4b012ba0",
+    "title": "Основы компьютерной грамотности",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "kompyuternaya-gramotnost",
+    "tags": [
+      "kompyuternaya-gramotnost"
+    ],
+    "ageRange": null,
+    "grade": "Дошкольники, 1–2 класс",
+    "format": "Видеокурс онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/courses/14771/landing",
+    "sourceTitle": "Основы компьютерной грамотности. Основы компьютерной грамотности. Дошкольник, 1–2 классы. • Курсы Фоксфорда (https://foxford.ru/courses/14771)",
+    "sourceDiscoveryUrl": "https://foxford.ru/courses/14771/landing",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "Дошкольники, 1–2 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Основы компьютерной грамотности» — программа школы Фоксфорд. Формат: видеокурс онлайн. Аудитория: Дошкольники, 1–2 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "м, создадим несколько собственных проектов. ## Что важно знать о курсе? * ### Доступен в записи Смотрите готовые видеоуроки в удобное время. * ### 24 занятия Урок состоит из вебина",
+    "ageEvidence": "",
+    "contentHash": "b603cb8e4f0610912f13667d66994da53a704744dbd3e4ecfa35e8b0af09cf8a",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-444f7a2cc5",
+    "title": "Питон: начальный курс",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "3–5 класс",
+    "format": "Онлайн в мини-группе",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/mini_groups/16966/landing",
+    "sourceTitle": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд",
+    "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "3–5 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Питон: начальный курс» — программа школы Фоксфорд. Формат: онлайн в мини-группе. Аудитория: 3–5 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+    "ageEvidence": "",
+    "contentHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-ea003b4bbb",
+    "title": "Питон: базовый курс, 1 ступень",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "6–10 класс",
+    "format": "Онлайн в мини-группе",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/mini_groups/17277/landing",
+    "sourceTitle": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд",
+    "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "6–10 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Питон: базовый курс, 1 ступень» — программа школы Фоксфорд. Формат: онлайн в мини-группе. Аудитория: 6–10 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+    "ageEvidence": "",
+    "contentHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-d120ac6dfd",
+    "title": "Питон: базовый курс, 2 ступень",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "6–10 класс",
+    "format": "Онлайн в мини-группе",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/mini_groups/17278/landing",
+    "sourceTitle": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд",
+    "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "6–10 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Питон: базовый курс, 2 ступень» — программа школы Фоксфорд. Формат: онлайн в мини-группе. Аудитория: 6–10 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+    "ageEvidence": "",
+    "contentHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-016ea260a1",
+    "title": "Скретч: визуальное программирование",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "scratch",
+    "tags": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "ageRange": null,
+    "grade": "2–4 класс",
+    "format": "Онлайн в мини-группе",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/mini_groups/17276/landing",
+    "sourceTitle": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд",
+    "sourceDiscoveryUrl": "https://foxford.ru/catalog/courses/learn-to-code",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "2–4 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Скретч: визуальное программирование» — программа школы Фоксфорд. Формат: онлайн в мини-группе. Аудитория: 2–4 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Курсы, чтобы научиться программировать • Онлайн-школа Фоксфорд 🦊 (https://foxford.ru/catalog/courses/learn-to-code) [wordlim: 200] Crawl",
+    "ageEvidence": "",
+    "contentHash": "853572f0ef9e9d03211c7d837dd89fee4f216e4ab4f01f38589b58ee49dbf3d9",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "foxford-ab9907ee57",
+    "title": "Питон: продвинутый курс, 1 ступень",
+    "brandId": "foxford",
+    "brand": "Фоксфорд",
+    "category": "python",
+    "tags": [
+      "programmirovanie",
+      "python"
+    ],
+    "ageRange": null,
+    "grade": "8–11 класс",
+    "format": "Онлайн в мини-группе",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://foxford.ru/mini_groups/17280/landing",
+    "sourceTitle": "Питон: продвинутый курс, 1 ступень. 8–11 классы. • Мини-группы Фоксфорда (https://foxford.ru/mini_groups/17280/landing)",
+    "sourceDiscoveryUrl": "https://foxford.ru/mini_groups/17280/landing",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [],
+    "facts": [
+      [
+        "Классы",
+        "8–11 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Питон: продвинутый курс, 1 ступень» — программа школы Фоксфорд. Формат: онлайн в мини-группе. Аудитория: 8–11 класс. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "а домашнее задание проверяется автоматически. ### Что если я не могу присутствовать на онлайн-занятии? Всё пропало? Ничего страшного! Если не успеваете к занятию, вы можете посмотрет",
+    "ageEvidence": "",
+    "contentHash": "43ac7a8f469c5e65fcb3d1d62b1fb2194d30cb616024a90fe6f5703011ccd5d2",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "web",
+      "capturedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "kvantastica-767e2de361",
+    "title": "Программирование: Junior",
+    "brandId": "kvantastica",
+    "brand": "Квантастика",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie",
+      "scratch",
+      "minecraft",
+      "roblox"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Занятия с преподавателем онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kvantastica.ru/#rec855344604",
+    "sourceTitle": "Онлайн-школа Квантастика",
+    "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344604",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "ScratchJr",
+      "Scratch",
+      "Minecraft",
+      "Tinkercad",
+      "Kodu Game Lab",
+      "Stencyl",
+      "App Inventor",
+      "Roblox Studio"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Программирование: Junior» — программа школы Квантастика. Формат: занятия с преподавателем онлайн. В опубликованном плане: ScratchJr, Scratch, Minecraft, Tinkercad, Kodu Game Lab, Stencyl, App Inventor, Roblox Studio. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+    "ageEvidence": "",
+    "contentHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:43:47+00:00"
+    }
+  },
+  {
+    "id": "kvantastica-e84e97a16a",
+    "title": "Программирование: Middle",
+    "brandId": "kvantastica",
+    "brand": "Квантастика",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie",
+      "scratch",
+      "python",
+      "unity",
+      "web-razrabotka"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Занятия с преподавателем онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kvantastica.ru/#rec855344612",
+    "sourceTitle": "Онлайн-школа Квантастика",
+    "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344612",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Scratch",
+      "Minecraft",
+      "Stencyl",
+      "App Inventor",
+      "Roblox Studio",
+      "JavaScript",
+      "Blender",
+      "Unity 3D",
+      "HTML/CSS/JS",
+      "Python"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Программирование: Middle» — программа школы Квантастика. Формат: занятия с преподавателем онлайн. В опубликованном плане: Scratch, Minecraft, Stencyl, App Inventor, Roblox Studio, JavaScript, Blender, Unity 3D, HTML/CSS/JS, Python. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+    "ageEvidence": "",
+    "contentHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:43:47+00:00"
+    }
+  },
+  {
+    "id": "kvantastica-fdc91fbbae",
+    "title": "Программирование: High",
+    "brandId": "kvantastica",
+    "brand": "Квантастика",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie",
+      "python",
+      "unity",
+      "web-razrabotka",
+      "mobilnye-prilozheniya"
+    ],
+    "ageRange": null,
+    "grade": "",
+    "format": "Занятия с преподавателем онлайн",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://kvantastica.ru/#rec855344614",
+    "sourceTitle": "Онлайн-школа Квантастика",
+    "sourceDiscoveryUrl": "https://kvantastica.ru/#rec855344614",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Scratch",
+      "App Inventor",
+      "Stencyl",
+      "Roblox Studio",
+      "JavaScript",
+      "Unity 3D",
+      "Blender",
+      "Unreal Engine",
+      "HTML/CSS/JS",
+      "Python",
+      "Java-Android"
+    ],
+    "facts": [],
+    "summary": "",
+    "editorialDescription": "«Программирование: High» — программа школы Квантастика. Формат: занятия с преподавателем онлайн. В опубликованном плане: Scratch, App Inventor, Stencyl, Roblox Studio, JavaScript, Unity 3D, Blender, Unreal Engine, HTML/CSS/JS, Python, Java-Android. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Онлайн-школа Квантастика Войти +7 (981) 962-15-85 Отзывы +7 (495) 148-58-11 Преподаватели Курсы",
+    "ageEvidence": "",
+    "contentHash": "c148d35be56a226ae175291c70054a3bcd32a824b933948dd887151f5dcca9cb",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:43:47+00:00"
+    }
+  },
+  {
+    "id": "mshp-76250f93f3",
+    "title": "Виртуальный класс: фундаментальная программа МШП",
+    "brandId": "mshp",
+    "brand": "Московская школа программистов",
+    "category": "programmirovanie",
+    "tags": [
+      "programmirovanie",
+      "python",
+      "web-razrabotka",
+      "iskusstvennyy-intellekt"
+    ],
+    "ageRange": null,
+    "grade": "Набор в 3–10 класс",
+    "format": "Онлайн в виртуальном классе с преподавателем",
+    "online": true,
+    "price": null,
+    "offer": null,
+    "sourceUrl": "https://vc.informatics.ru/",
+    "sourceTitle": "Онлайн курсы программирования для детей: обучение в виртуальном классе с нуля в МШП",
+    "sourceDiscoveryUrl": "https://vc.informatics.ru/",
+    "checkedAt": "2026-10-19",
+    "editorialCheckedAt": "2026-10-20",
+    "active": true,
+    "modules": [
+      "Основы программирования",
+      "Прикладные технологии",
+      "Проектирование систем и сетей",
+      "Промышленное программирование"
+    ],
+    "facts": [
+      [
+        "Классы",
+        "Набор в 3–10 класс"
+      ]
+    ],
+    "summary": "",
+    "editorialDescription": "«Виртуальный класс: фундаментальная программа МШП» — программа школы Московская школа программистов. Формат: онлайн в виртуальном классе с преподавателем. Аудитория: Набор в 3–10 класс. В опубликованном плане: Основы программирования, Прикладные технологии, Проектирование систем и сетей, Промышленное программирование. Полная стоимость и текущая группа уточняются у организатора.",
+    "onlineEvidence": "Онлайн курсы программирования для детей: обучение в виртуальном классе с нуля в МШП О школе Прог",
+    "ageEvidence": "",
+    "contentHash": "859a4f89524af5e5cef9ac1ce1cf3d1922c9c55817117825c0a1176d72ddaaa6",
+    "verification": {
+      "kind": "official-public-source",
+      "transport": "http",
+      "capturedAt": "2026-10-19T14:43:59+00:00"
+    }
   }
 ]

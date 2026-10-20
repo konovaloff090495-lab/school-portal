@@ -288,6 +288,7 @@ if [[ "$CODE" == "200" ]]; then
     curl -s --max-time 15 -X POST "https://pro-schools.ru/api/revalidate" -H "Authorization: $BLOG_SECRET" -H 'Content-Type: application/json' -d '{}' -o /dev/null || true
   fi
   # Переотправка sitemap в Google Search Console (переобход при релизе). Best-effort.
+  $SSH $VPS "if test -f $DIR/programming-current/_programming/manifest.json; then python3 $DIR/programming-runtime/scripts/programming/refresh-sitemap.py; fi" || true
   python3 "$HOME/claude/seo-tools/ping_sitemap.py" pro-schools.ru || true
   # IndexNow + переобход Яндекс.Вебмастера по изменённым за 2 дня страницам. Best-effort.
   python3 "$HOME/claude/seo-tools/indexnow.py" pro-schools.ru || true

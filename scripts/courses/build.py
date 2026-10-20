@@ -280,3 +280,9 @@ if __name__=='__main__':
     design_errors = validate_design(OUT)
     if design_errors:raise ValueError(design_errors[:20])
     print(json.dumps({k:v for k,v in manifest.items() if k!='sitemap'},ensure_ascii=False))
+
+# Keep the programming address/online directories connected after every course refresh.
+_programming_links = ROOT / 'scripts/programming/link-courses.py'
+if _programming_links.exists() and __name__ == '__main__':
+    import subprocess, sys
+    subprocess.run([sys.executable, str(_programming_links), '--out', str(OUT)], check=True)
