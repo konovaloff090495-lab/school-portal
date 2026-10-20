@@ -30,6 +30,9 @@ cleanup_deploy() {
 }
 trap cleanup_deploy EXIT
 
+# The IA contract is checked even when deploying a verified cloud artifact.
+python3 scripts/check-navigation-policy.py
+
 SSH="ssh -o ControlMaster=auto -o ControlPath=$DEPLOY_SOCKET -o ControlPersist=600 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -i ~/.ssh/id_ed25519 -o ConnectTimeout=15 -o StrictHostKeyChecking=no"
 # ServerAliveInterval держит длинную передачу: rsync .next идёт минутами и рвался
 # на «Broken pipe» ровно посередине (27.08.2026 — 5 попыток подряд, деплой встал).
