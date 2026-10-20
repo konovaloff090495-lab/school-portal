@@ -63,3 +63,6 @@ Cloud workflow build-release выполняет обе проверки. Лок�
 Release packaging snapshots .next before the isolated production HTTP test starts:
 that test generates a synthetic approved school response in the ISR cache. The
 archive is uploaded only after the test passes; synthetic responses are excluded.
+
+The shared navigation first-visit city nudge is suppressed on representative
+submission/status/moderation pages; the manual city selector remains available.

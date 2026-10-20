@@ -90,7 +90,9 @@ let lastExposure='',pendingEngagement=null,footerExposurePath='';
 const footerObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting&&e.intersectionRatio>=0.1)&&footerExposurePath!==location.pathname){footerExposurePath=location.pathname;track('navigation_footer_exposure')}},{threshold:0.1}):null;
 function engage(){if(!pendingEngagement||Date.now()-pendingEngagement.loaded<10000)return;track('navigation_target_engaged',{surface:pendingEngagement.surface});pendingEngagement=null;try{sessionStorage.removeItem('ps-navigation-pending')}catch{}}
 document.addEventListener('click',e=>{if(e.target.closest('main'))engage()});window.addEventListener('scroll',()=>{if(scrollY>160)engage()},{passive:true});
+function representativePage(){return /^\/(?:dobavit-shkolu(?:\/|$)|admin\/shkoly(?:\/|$))/.test(location.pathname)}
 function update(){
+ if(representativePage())$('#first-city-prompt').hidden=true;
  try{const p=JSON.parse(sessionStorage.getItem('ps-navigation-pending')||'null');if(p&&p.path===location.pathname&&Date.now()-p.at<120000)pendingEngagement={surface:p.surface,loaded:Date.now()}}catch{}
  currentView=location.pathname.startsWith('/shkoly/')?'schools':'content';
  const slug=location.pathname.split('/')[2];
@@ -108,5 +110,5 @@ $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>track('site_s
 let searchTracked=false;searchDialog.addEventListener('close',()=>searchTracked=false);
 $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_selector_open')));$('#city-apply').addEventListener('click',()=>track('city_selected',{city:chosen}));
 update();
-try{if(!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
+try{if(!representativePage()&&!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
 })();
