@@ -21,4 +21,4 @@ for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/pro
  assert len(doc.select('header'))==1 and len(doc.select('footer'))==1,str(file)
  assert doc.select_one('script[src^="/site-navigation/navigation.js"]'),str(file)
  count+=1
-print(f'Navigation contract OK: root layout + {count} course pages, {chrome["version"]}')
+print(f'Navigation contract OK: root layout + {count} static pages, {chrome["version"]}')
