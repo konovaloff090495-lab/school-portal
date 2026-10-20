@@ -8,6 +8,8 @@ block='    # PROSCHOOLS_FREE_LESSONS: atomic static release, existing API handle
 if marker not in old:
  assert '    location /_next/static/ {' in old
  new=old.replace('    location /_next/static/ {',block+'\n    location /_next/static/ {',1)
+if 'location = /besplatnye-uroki/index.html' not in new:
+ new=new.replace('    # PROSCHOOLS_FREE_LESSONS', '    location = /besplatnye-uroki/index.html { return 301 /besplatnye-uroki/$is_args$args; }\n    # PROSCHOOLS_FREE_LESSONS',1)
 backup=p.with_name('school-portal.before-free-lessons-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'));backup.write_text(old)
 p.write_text(new)
 r=subprocess.run(['nginx','-t'],capture_output=True,text=True)
