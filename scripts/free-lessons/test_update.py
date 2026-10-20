@@ -46,6 +46,6 @@ class UpdaterTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as d:
    out=Path(d);result=build(events,out,ROOT/'public',now);validate(out)
    e=next(e for e in events if e['id']=='fox-5052');doc=BeautifulSoup((out/e['url'].lstrip('/')/'index.html').read_text(),'html.parser')
-   self.assertEqual(doc.select_one('meta[name=robots]')['content'],'noindex,follow');self.assertIn('завершилось',doc.select_one('.lesson-status').text);self.assertFalse(doc.select('[data-lektoriy]'));self.assertNotIn(e['url'],(out/'besplatnye-uroki/search-index.json').read_text())
+   self.assertEqual(doc.select_one('meta[name=robots]')['content'],'noindex,follow');self.assertIn('начал',doc.select_one('.lesson-status').text);self.assertFalse(doc.select('[data-lektoriy]'));self.assertNotIn(e['url'],(out/'besplatnye-uroki/search-index.json').read_text())
    su=next(e for e in events if e['id'].startswith('su-'));doc=BeautifulSoup((out/su['url'].lstrip('/')/'index.html').read_text(),'html.parser');self.assertFalse(doc.select('[data-lektoriy]'));self.assertEqual(result['active'],sum(e['kind'] in ['recording','appointment'] for e in events))
 if __name__=='__main__':unittest.main()
