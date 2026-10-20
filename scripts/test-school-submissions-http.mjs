@@ -11,7 +11,7 @@ const origin={Origin:site};
 async function request(action,body,auth='',cookie=''){const response=await fetch(base+'/api/school-submissions/'+action+'/',{signal:AbortSignal.timeout(45000),method:body===undefined?'GET':'POST',headers:{...origin,...(body instanceof FormData?{}:{'Content-Type':'application/json'}),...(auth?{Authorization:'Bearer '+auth}:{}),...(cookie?{Cookie:cookie}:{})},...(body===undefined?{}:{body:body instanceof FormData?body:JSON.stringify(body)})});let data;try{data=await response.clone().json()}catch{data=await response.text()}return {response,data}}
 try{
  for(let i=0;i<120;i++){try{const r=await fetch(base+'/dobavit-shkolu/');if(r.ok)break}catch{}if(i===119)throw Error('Server unavailable: '+output.slice(-2000));await new Promise(r=>setTimeout(r,500))}
- const fields={school:'Тестовая школа CI',type:'Частная школа',format:'Очно',city:'Москва',address:'Тестовый адрес, 1',description:'Описание школы для автоматической проверки. '.repeat(5),grades:[1,2,3,4],age:'',price:'от 10 000 ₽ в месяц',license:'',features:'Проекты · языки',admission:'Собеседование',website:'https://school.example',schoolPhone:'',schoolEmail:'school@example.test',name:'Тест',role:'Представитель',email:'private-owner@example.test',pd_agreed:true,marketing_agreed:true,rights:true};
+ const fields={school:'Тестовая школа CI </script><script>globalThis.__schoolInjected=true</script>',type:'Частная школа',format:'Очно',city:'Москва',address:'Тестовый адрес, 1',description:'Описание школы для автоматической проверки. '.repeat(5),grades:[1,2,3,4],age:'',price:'от 10 000 ₽ в месяц',license:'',features:'Проекты · языки',admission:'Собеседование',website:'https://school.example',schoolPhone:'',schoolEmail:'school@example.test',name:'Тест',role:'Представитель',email:'private-owner@example.test',pd_agreed:true,marketing_agreed:true,rights:true};
  const jpeg=await sharp({create:{width:400,height:250,channels:3,background:'#fa754b'}}).jpeg().toBuffer();
  const requestId=randomUUID();function form(data=fields,metadata={},withPhotos=true){const body=new FormData();body.append('payload',JSON.stringify({request_id:requestId,data,photos:withPhotos?[0,1,2].map(i=>({caption:'Фото '+(i+1)})):[],...metadata}));if(withPhotos)for(let i=0;i<3;i++)body.append('photo_'+i,new Blob([jpeg],{type:'image/jpeg'}),'photo.jpg');return body}
  console.log('Testing real API routes');
@@ -34,7 +34,7 @@ try{
  assert.equal((await request('moderate',{id,status:'published',comment:''},'',cookie)).response.status,200);
  assert.equal((await fetch(image)).status,200);
  const catalog=(await request('catalog')).data;assert.ok(catalog.some(s=>s.slug==='s-'+id));assert.ok(!JSON.stringify(catalog).includes('private-owner'));
- const page=await fetch(base+'/shkola/s-'+id+'/');assert.equal(page.status,200);assert.ok((await page.text()).includes('Тестовая школа CI'));
+ const page=await fetch(base+'/shkola/s-'+id+'/');assert.equal(page.status,200);const publicHtml=await page.text();assert.ok(publicHtml.includes('Тестовая школа CI'));assert.ok(!publicHtml.includes('<script>globalThis.__schoolInjected=true</script>')); 
  const after=(await request('get',undefined,auth)).data;assert.equal(after.score,5);
  assert.equal((await request('subscribe',{},auth)).response.status,403);assert.equal((await request('subscribe',{subscription:proof('subscribe')},auth)).response.status,200);
  const unsub=await fetch(base+'/api/school-submissions/unsubscribe/?id='+id+'&token='+proof('unsubscribe'),{method:'POST',body:'List-Unsubscribe=One-Click'});assert.equal(unsub.status,200);

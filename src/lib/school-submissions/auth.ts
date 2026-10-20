@@ -6,7 +6,7 @@ export const validId = (id: string) => /^[a-f0-9]{32}$/.test(id)
 export const sameSecret = (left: string, right: string) => { const a=Buffer.from(left), b=Buffer.from(right); return a.length===b.length && timingSafeEqual(a,b) }
 export function checkOrigin(req: NextRequest) {
   const origin = req.headers.get('origin')
-  const expected = process.env.NODE_ENV === 'production' ? 'https://pro-schools.ru' : new URL(req.url).origin
+  const expected = process.env.NODE_ENV === 'production' ? 'https://pro-schools.ru' : new URL(req.url).protocol+'//'+(req.headers.get('host') || new URL(req.url).host)
   if (origin !== expected && !(process.env.NODE_ENV === 'production' && origin === 'https://www.pro-schools.ru')) throw new SubmissionError('Запрос с другого сайта отклонён',403)
 }
 const sign = (text: string) => createHmac('sha256',process.env.ADMIN_SECRET || 'unconfigured').update('school-admin:'+text).digest('hex')
