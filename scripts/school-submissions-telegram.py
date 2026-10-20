@@ -57,7 +57,7 @@ def full_details(row):
     return '\n\n'.join(label+':\n'+(', '.join(map(str,d.get(key,[]))) if key=='grades' else str(d.get(key,''))) for key,label in labels.items())
 
 def feedback(m,c,chat):
-    sent=0
+    sent=0;tried=0
     for row in c.execute('SELECT * FROM applications WHERE confirmed IS NOT NULL AND score IS NOT NULL ORDER BY updated DESC LIMIT 300').fetchall():
         digest=hashlib.sha256((str(row['score'])+':'+(row['feedback'] or '')).encode()).hexdigest()
         c.execute('INSERT OR IGNORE INTO telegram_feedback(application) VALUES(?)',(row['id'],));c.commit()
@@ -67,12 +67,13 @@ def feedback(m,c,chat):
             c.execute('UPDATE telegram_feedback SET pending_digest=?,attempts=0,due=0 WHERE application=?',(digest,row['id']));c.commit();job.update(attempts=0,due=0)
         if job['due']>m.now() or job['attempts']>=8:continue
         school=json.loads(row['data'])['school'];note=(row['feedback'] or '').encode('utf-16-le')[:5500].decode('utf-16-le',errors='ignore')
+        tried+=1
         try:
             api('sendMessage',{'chat_id':chat,'text':'⭐ Удобство добавления школы: '+str(row['score'])+'/5\n'+school+'\n\n'+note+'\n\n#school_'+row['id'],'link_preview_options':{'is_disabled':True}})
             c.execute('UPDATE telegram_feedback SET sent_digest=?,attempts=0,due=0 WHERE application=?',(digest,row['id']));c.commit();sent+=1
         except RuntimeError:
             c.execute('UPDATE telegram_feedback SET attempts=attempts+1,due=? WHERE application=?',(m.now()+min(3600,60*2**(job['attempts']+1)),row['id']));c.commit()
-        if sent>=5:break
+        if tried>=5:break
     return sent
 
 def run(m):
