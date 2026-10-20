@@ -28,11 +28,15 @@ jobs:
       - run: npm run lint:leads
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
-      - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: node scripts/test-school-submissions-http.mjs
+        timeout-minutes: 5
         env:
           RUN_BROWSER_TESTS: '1'
+          SCHOOL_SUBMISSIONS_SMOKE_DEV: '1'
+      - run: npm run build
+      - run: node scripts/test-school-submissions-http.mjs
+        timeout-minutes: 3
       - name: Package build and provenance
         shell: bash
         run: |

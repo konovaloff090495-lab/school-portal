@@ -513,7 +513,7 @@ export default function CatalogClient({
     })
     if (skip !== 'price') {
       if (filters.priceCategories.length) {
-        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom, PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye'))))
+        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom, s.representativeSubmitted === true || PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye'))))
       } else {
         // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
         if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || (s.priceFrom === undefined && !PRICE_UNKNOWN_TYPES.has(s.type) && !schoolMatchesType(s, 'semejnye')))
@@ -968,7 +968,7 @@ export default function CatalogClient({
       {/* Стоимость */}
       <FilterSection title="Стоимость" defaultOpen={false}>
         {(['free', 'budget', 'mid', 'premium', 'unknown'] as const).map(cat => {
-          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom, PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye')) === cat).length
+          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom, s.representativeSubmitted === true || PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye')) === cat).length
           if (cnt === 0 && !filters.priceCategories.includes(cat)) return null
           return (
             <Checkbox
