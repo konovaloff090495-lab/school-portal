@@ -9,16 +9,16 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/podarki/', '/lk/', '/admin/'],
+        allow: ['/', '/api/school-submissions/images/'],
+        disallow: ['/api/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/podarki/', '/lk/', '/admin/', '/dobavit-shkolu/zayavka/'],
       },
       {
         userAgent: 'Yandex',
-        allow: '/',
-        disallow: ['/api/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/podarki/', '/lk/', '/admin/'],
+        allow: ['/', '/api/school-submissions/images/'],
+        disallow: ['/api/', '/poisk/', '/preload/', '*/preload/', '/spasibo/', '/podarki/', '/lk/', '/admin/', '/dobavit-shkolu/zayavka/'],
       },
     ],
-    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/sitemap-gdz.xml`, `${BASE_URL}/kursy/sitemap.xml`],
+    sitemap: [`${BASE_URL}/sitemap.xml`, `${BASE_URL}/sitemap-gdz.xml`, `${BASE_URL}/kursy/sitemap.xml`, `${BASE_URL}/sitemap-school-submissions.xml`],
     host: BASE_URL,
   }
 }
