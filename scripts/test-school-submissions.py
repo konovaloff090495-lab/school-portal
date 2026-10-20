@@ -98,6 +98,10 @@ class ApplicationTests(unittest.TestCase):
   t=self.telegram();self.telegram_card(t);m.operate('feedback',{**self.auth,'score':4,'text':'Удобно'})
   with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':124}) as calls:
    self.assertEqual(t.run(m)['feedback_sent'],1);self.assertEqual(t.run(m)['feedback_sent'],0);self.assertIn('4/5',calls.call_args.args[1]['text'])
+ def test_telegram_cron_command_runs_without_stdin(self):
+  import subprocess,sys
+  result=subprocess.run([sys.executable,str(Path(__file__).with_name('school-submissions.py')),'telegram-run'],stdin=subprocess.DEVNULL,capture_output=True,text=True,env={**os.environ,'SCHOOL_SUBMISSIONS_DIR':str(m.STORE),'TELEGRAM_BOT_TOKEN':'','TELEGRAM_CHAT_ID':''},check=True)
+  self.assertEqual(json.loads(result.stdout),{'configured':False})
  def test_telegram_outage_retries_notification(self):
   t=self.telegram();self.confirm()
   with patch.dict(os.environ,{'TELEGRAM_BOT_TOKEN':'test','TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',side_effect=RuntimeError('offline')):
