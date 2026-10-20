@@ -1,7 +1,7 @@
 {
   "id": "free-lessons",
   "label": "Бесплатные уроки",
-  "status": "publishing",
+  "status": "published",
   "parent_section": "courses",
   "upper_level_new_item": false,
   "href": "/besplatnye-uroki/",
@@ -26,5 +26,9 @@
     "Keep top-level section count/order unchanged and run all navigation guards",
     "Preserve existing navigation metrics and add renderer to checks"
   ],
-  "notes": "No live navigation links or global search items enabled while the section remains a local noindex prototype."
+  "notes": "Published139routes and131searchrecords.3sharednavigationlinks active. Mobile form accepted by CRM233506; test marked do not process.",
+  "published_at": "2026-10-20",
+  "live_http_status": 200,
+  "crm_test_receipt": "233506",
+  "cloud_run": 39409975472
 }
