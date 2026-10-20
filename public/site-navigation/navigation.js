@@ -86,8 +86,11 @@ document.querySelector('#first-city-all').onclick=()=>{chosen='all';try{localSto
 
 function section(path){return path.split('/').filter(Boolean)[0]||'home'}
 function track(event,params={}){window.dispatchEvent(new CustomEvent('ps:navigation-event',{detail:{event,...params}}));window.ym?.(108789843,'params',{navigation:{event,version:'2026-10-20.1',section:section(location.pathname),...params}})}
-let lastExposure='';
+let lastExposure='',pendingEngagement=null;
+function engage(){if(!pendingEngagement||Date.now()-pendingEngagement.loaded<10000)return;track('navigation_target_engaged',{surface:pendingEngagement.surface});pendingEngagement=null;try{sessionStorage.removeItem('ps-navigation-pending')}catch{}}
+document.addEventListener('click',e=>{if(e.target.closest('main'))engage()});window.addEventListener('scroll',()=>{if(scrollY>160)engage()},{passive:true});
 function update(){
+ try{const p=JSON.parse(sessionStorage.getItem('ps-navigation-pending')||'null');if(p&&p.path===location.pathname&&Date.now()-p.at<120000)pendingEngagement={surface:p.surface,loaded:Date.now()}}catch{}
  currentView=location.pathname.startsWith('/shkoly/')?'schools':'content';
  const slug=location.pathname.split('/')[2];
  if(currentView==='schools'&&cityMap[slug])chosen=slug;
@@ -96,10 +99,10 @@ function update(){
  if(lastExposure!==location.pathname){lastExposure=location.pathname;track('navigation_exposure')} 
 }
 window.PSNavigation={update};window.addEventListener('ps:navigation-route',update);window.addEventListener('popstate',update);
-document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});});
+document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});if(target.pathname!==location.pathname){try{sessionStorage.setItem('ps-navigation-pending',JSON.stringify({path:target.pathname,surface,at:Date.now()}))}catch{}}});
 $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>track('site_search_open')));
 let searchTracked=false;$('#global-query').addEventListener('input',()=>{if($('#global-query').value.trim().length>=2&&!searchTracked){searchTracked=true;track('site_search_used')}});searchDialog.addEventListener('close',()=>searchTracked=false);
 $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_selector_open')));$('#city-apply').addEventListener('click',()=>track('city_selected',{city:chosen}));
 update();
-try{if(!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&currentView!=='schools'){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
+try{if(!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
 })();
