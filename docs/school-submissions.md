@@ -59,3 +59,7 @@ Cloud workflow build-release выполняет обе проверки. Лок�
 меняются только два wrapper, прочее содержимое остаётся побайтно прежним.
 Живые releases курсов/программирования/афиши обновлять через отдельные копии и
 атомарное переключение симлинков; не заменять liveконтент старым локальным каталогом.
+
+Release packaging snapshots .next before the isolated production HTTP test starts:
+that test generates a synthetic approved school response in the ISR cache. The
+archive is uploaded only after the test passes; synthetic responses are excluded.

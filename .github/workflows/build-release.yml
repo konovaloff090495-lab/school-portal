@@ -41,8 +41,6 @@ jobs:
           path: work/school-submission-qa/
           retention-days: 2
       - run: npm run build
-      - run: node scripts/test-school-submissions-http.mjs
-        timeout-minutes: 3
       - name: Package build and provenance
         shell: bash
         run: |
@@ -53,6 +51,8 @@ jobs:
           cp -r work/school-submission-qa build-release/qa
           cp .next/BUILD_ID build-release/BUILD_ID
           git rev-parse HEAD > build-release/SOURCE_COMMIT
+      - run: node scripts/test-school-submissions-http.mjs
+        timeout-minutes: 3
       - uses: actions/upload-artifact@v4
         with:
           name: next-release
