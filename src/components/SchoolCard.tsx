@@ -183,7 +183,8 @@ function SchoolGallery({ school }: { school: School }) {
         >
           {!errors[slot] ? (
             <Image
-              src={`/schools/${school.slug}-${slot}.jpg`}
+              src={school.photoUrls?.[slot-1] || `/schools/${school.slug}-${slot}.jpg`}
+              unoptimized={!!school.photoUrls}
               alt={`${school.imageAlt} — фото ${slot}`}
               fill
               className="object-cover"
@@ -327,7 +328,7 @@ export default function SchoolCard({ school }: { school: School }) {
 
         <div className="flex items-center justify-between pt-3 border-t border-gray-100">
           <div className="text-sm">
-            {school.priceFrom !== undefined ? (
+            {school.representativeSubmitted ? <span className="text-sm font-semibold">{school.priceDescription || 'Стоимость по запросу'}</span> : school.priceFrom !== undefined ? (
               school.priceFrom === 0 ? (
                 <span className="text-emerald-600 font-semibold">Бесплатно</span>
               ) : (

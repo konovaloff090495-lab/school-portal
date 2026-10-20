@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import {publishedSchools} from '@/lib/school-submissions/catalog'
 import {
   schools, regionSlugs, typeSlugs, moscowDistrictSlugs, moCitySlugs,
   moCityLabels, moscowDistrictLabels, metroSlugToName,
@@ -39,7 +40,7 @@ const STATIC_LANDINGS = [
   '/shkoly/tipy/vechernie/besplatnye', '/shkoly/tipy/vechernie/online', '/shkoly/tipy/vechernie/posle-9-klassa', '/shkoly/tipy/vechernie/s-attestatom', '/shkoly/tipy/vechernie/smennye', '/shkoly/tipy/vechernie/starshie-klassy',
   '/o-nas',
   '/shkoly/moskva/gorod/zelenograd/semejnye',
-  '/reklama',
+  '/reklama', '/dobavit-shkolu',
 ]
 
 const BASE_URL = 'https://pro-schools.ru'
@@ -48,7 +49,8 @@ const BASE_URL = 'https://pro-schools.ru'
 // публикации новой статьи (через /api/revalidate) без полной пересборки.
 export const revalidate = 3600
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const submittedPages: MetadataRoute.Sitemap = (await publishedSchools()).map(s=>({url:`${BASE_URL}/shkola/${s.slug}/`,lastModified:s.checkedAt,priority:0.6}))
   // Stable dates by content type — prevents Yandex/Google from treating every
   // build as a full-site update and wasting crawl budget re-crawling unchanged pages.
   const D_SCHOOLS   = new Date('2026-06-15') // school catalog data last major update
@@ -404,7 +406,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // неэкранированной (невалидный sitemap). Отбрасываем такие записи здесь, чтобы
   // битые slug'и в данных больше никогда не попадали в sitemap автоматически.
   const seen = new Set<string>()
-  return all.filter(entry => {
+  return [...all,...submittedPages].filter(entry => {
     // eslint-disable-next-line no-control-regex
     if (/[^\x20-\x7E]/.test(entry.url)) return false
     if (seen.has(entry.url)) return false

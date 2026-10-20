@@ -35,3 +35,6 @@
 .ps-chrome dialog{font:15px/1.55 var(--body);color:var(--ink)}
 /* Explicit sizing prevents section-level .wrap rules changing shared chrome. */
 .ps-chrome .wrap{width:100%;max-width:1328px}
+
+/* The representatives' action stays secondary to the parents' catalogue. */
+:where(.ps-chrome) .footer-invite{flex-wrap:wrap}:where(.ps-chrome) .footer-school-submit{flex-basis:100%;display:flex;gap:16px;align-items:center;justify-content:flex-end;padding-top:15px;margin-top:6px;border-top:1px solid #ffffff20}:where(.ps-chrome) .footer-school-submit>span{font-size:11px;color:#c0b9ad}:where(.ps-chrome) .footer-submit-button{background:transparent!important;border:1px solid #74695a!important;color:#fff8f0!important;min-height:44px}:where(.ps-chrome) .footer-submit-button:hover{border-color:#fa754b!important;color:#fa754b!important}@media(max-width:599px){:where(.ps-chrome) .footer-school-submit{justify-content:flex-start;align-items:flex-start;gap:10px;flex-direction:column;width:100%;margin-top:12px}:where(.ps-chrome) .footer-submit-button{width:100%}}

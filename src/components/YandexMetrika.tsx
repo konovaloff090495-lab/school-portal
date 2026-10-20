@@ -14,10 +14,13 @@ const YM_ID = 108789843
 
 export default function YandexMetrika() {
   const pathname = usePathname()
+  const privateArea = pathname.startsWith('/dobavit-shkolu') || pathname.startsWith('/admin/shkoly')
 
   useEffect(() => {
-    window.ym?.(YM_ID, 'hit', window.location.href)
-  }, [pathname])
+    if (!privateArea) window.ym?.(YM_ID, 'hit', window.location.href)
+  }, [pathname, privateArea])
+
+  if (privateArea) return null
 
   return (
     <>

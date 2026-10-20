@@ -1,3 +1,5 @@
+'use client'
+import {usePathname} from 'next/navigation'
 import Script from 'next/script'
 
 /**
@@ -12,6 +14,8 @@ import Script from 'next/script'
  * inline-скрипт в SSR HTML.
  */
 export default function YandexRTB() {
+  const pathname=usePathname()
+  if(pathname.startsWith('/dobavit-shkolu')||pathname.startsWith('/admin/shkoly'))return null
   return (
     <Script id="ya-rtb-loader" strategy="afterInteractive">
       {`

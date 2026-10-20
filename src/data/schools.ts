@@ -60,6 +60,11 @@ export interface School {
   priceTo?: number
   imageAlt: string
   photoCount: number
+  photoUrls?: string[]
+  photoCaptions?: string[]
+  representativeSubmitted?: boolean
+  admission?: string
+  priceDescription?: string
   lat?: number
   lon?: number
   languages?: string[]   // языки обучения, напр. ['english', 'german']
