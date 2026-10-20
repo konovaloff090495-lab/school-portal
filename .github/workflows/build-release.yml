@@ -34,6 +34,12 @@ jobs:
         env:
           RUN_BROWSER_TESTS: '1'
           SCHOOL_SUBMISSIONS_SMOKE_DEV: '1'
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: school-form-debug
+          path: work/school-submission-qa/
+          retention-days: 2
       - run: npm run build
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 3
