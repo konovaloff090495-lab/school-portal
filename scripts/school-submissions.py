@@ -119,7 +119,11 @@ def operate(action,p):
             limited(c,'edit:'+id,10,3600)
             if p['data']['email'].lower()!=json.loads(row['data'])['email'].lower(): raise ValueError('Для смены почты обратитесь в редакцию')
             c.execute('UPDATE applications SET data=?,photos=?,status="pending",updated=?,comment="",marketing=?,last_request=? WHERE id=?',(json.dumps(p['data'],ensure_ascii=False),json.dumps(p['photos'],ensure_ascii=False),now(),int(p['data']['marketing_agreed']),p['request_id'],id));audit(c,id,'resubmitted');enqueue(c,id,'pending','pending:'+id+':'+p['request_id'])
-            if p['data']['marketing_agreed'] and not row['subscribed']:enqueue(c,id,'subscribe','subscribe:'+id)
+            if p['data']['marketing_agreed']:
+                if not row['marketing'] or row['unsubscribed']:
+                    c.execute('UPDATE applications SET subscribed=NULL,unsubscribed=NULL WHERE id=?',(id,))
+                    enqueue(c,id,'subscribe','subscribe:'+id+':'+p['request_id'])
+                elif not row['subscribed']:enqueue(c,id,'subscribe','subscribe:'+id)
             if not p['data']['marketing_agreed']:
                 c.execute('UPDATE applications SET unsubscribed=? WHERE id=?',(now(),id));c.execute('UPDATE mail SET state="cancelled" WHERE application=? AND kind IN ("tips","refresh","subscribe") AND state="queued"',(id,))
             return {'id':id,'token':p['token']}
@@ -141,7 +145,7 @@ def operate(action,p):
             if not authorized(id,p.get('subscription'),'subscribe'):raise PermissionError('Подтвердите подписку по отдельной ссылке из письма')
             if not row['confirmed'] or not row['marketing']:raise ValueError('Сначала подтвердите заявку и согласие на рассылку')
             if not row['subscribed']:
-                c.execute('UPDATE applications SET subscribed=?,unsubscribed=NULL WHERE id=?',(now(),id));audit(c,id,'subscribed');enqueue(c,id,'tips','tips:'+id);enqueue(c,id,'refresh','refresh:'+id,now()+14*86400)
+                c.execute('UPDATE applications SET subscribed=?,unsubscribed=NULL WHERE id=?',(now(),id));audit(c,id,'subscribed');enqueue(c,id,'tips','tips:'+id+':'+(row['last_request'] or 'first'));enqueue(c,id,'refresh','refresh:'+id+':'+(row['last_request'] or 'first'),now()+14*86400)
             return {'ok':True}
         if action=='unsubscribe':
             c.execute('UPDATE applications SET unsubscribed=?,marketing=0 WHERE id=?',(now(),id));c.execute('UPDATE mail SET state="cancelled" WHERE application=? AND kind IN ("tips","refresh","subscribe") AND state="queued"',(id,));audit(c,id,'unsubscribed');return {'ok':True}

@@ -48,6 +48,14 @@ class ApplicationTests(unittest.TestCase):
   c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind IN ("tips","refresh")').fetchone()[0],2);c.close()
   m.operate('unsubscribe',{'id':self.id,'token':m.token(self.id,'unsubscribe')})
   c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind IN ("tips","refresh") AND state="queued"').fetchone()[0],0);c.close()
+ def test_marketing_reoptin_requires_fresh_confirmation(self):
+  self.confirm();m.operate('subscribe',{**self.auth,'subscription':m.token(self.id,'subscribe')})
+  m.operate('unsubscribe',{'id':self.id,'token':m.token(self.id,'unsubscribe')})
+  m.operate('resubmit',{**self.payload,**self.auth,'request_id':'reoptin'})
+  row=m.operate('get',self.auth);self.assertEqual(row['marketing'],1);self.assertIsNone(row['subscribed']);self.assertIsNone(row['unsubscribed'])
+  c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind="subscribe" AND state="queued"').fetchone()[0],1);c.close()
+  m.operate('subscribe',{**self.auth,'subscription':m.token(self.id,'subscribe')})
+  c=m.db();self.assertEqual(c.execute('SELECT COUNT(*) FROM mail WHERE kind IN ("tips","refresh") AND state="queued"').fetchone()[0],2);c.close()
  def test_transport_queue_and_html_escaping(self):
   captured=[]
   class SMTP:
