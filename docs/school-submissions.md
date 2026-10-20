@@ -85,3 +85,5 @@ photos are sent as multipart bytes; no unauthenticated preview links are created
 Cards/attempts/progress live in telegram_cards; delivery retries with backoff and flock.
 An existing confirmed pending application is picked up automatically after deployment.
 The web admin remains a fallback; Telegram is the normal moderation path.
+
+Usability scores/comments also go to the owner in Telegram, once per changed answer.
