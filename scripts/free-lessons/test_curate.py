@@ -13,6 +13,11 @@ def page(price='0',grade='11',start='В любое время',duration='В св
 class CurationTests(unittest.TestCase):
  def test_detail_grade_wins_and_partner_routing(self):
   e=verify(C,page(),TAX,NOW);self.assertEqual(e['grades'],[11]);self.assertEqual(e['kind'],'recording');self.assertIsNone(e['start']);self.assertEqual(e['lessonCount'],2);self.assertIn('utm_source=gerasimov_lav',e['outboundUrl']);self.assertEqual(e['organizer'],'Умскул');self.assertTrue(e['verification']['freeConfirmed']);self.assertEqual(len(e['verification']['sourceSha256']),64)
+ def test_generic_heading_uses_catalogue_topic_only_when_detail_confirms_it(self):
+  c=dict(C,id='um-info-test',title='Бесплатный курс по информатике: измерение информации, множества, алгоритмизация')
+  doc=page(grade='9').replace('Бесплатный курс по физике (9 класс): статика и волны','Бесплатный курс по ОГЭ для подготовки к экзамену по информатике, 9 класс').replace('Описание','Темы на измерение информации, множества и алгоритмизацию')
+  e=verify(c,doc,TAX,NOW);self.assertEqual(e['title'],'Информатика: Измерение информации, множества, алгоритмизация, 9 класс')
+  e=verify(c,doc.replace('Темы на измерение информации, множества и алгоритмизацию','Описание'),TAX,NOW);self.assertEqual(e['title'],'Информатика: Подготовка к ОГЭ, 9 класс')
  def test_paid_or_ambiguous_main_offer_cannot_borrow_footer_free_claim(self):
   for text in [page('1000'),page('100'),page(free=False),page(grade='взрослый'),page(start='1 ноября'),page(duration='6 месяцев'),page().replace('Количество занятий 2','Количество занятий неизвестно'),page().replace('0 ₽/курс','Бесплатная консультация')]:
    with self.subTest(text=text):
