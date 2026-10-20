@@ -13,11 +13,9 @@ ROOT=Path(__file__).resolve().parents[2]
 WORK=ROOT/'work/programming';OUT=WORK/'release';BASE='https://pro-schools.ru'
 D=json.loads((WORK/'runtime.json').read_text());HUB='/shkoly/tipy/programmirovanie/'
 CHROME=ROOT/'scripts/courses/design'
-def committed_chrome(name):
- r=subprocess.run(['git','show','HEAD:scripts/courses/design/chrome/'+name+'.html'],cwd=ROOT,capture_output=True,text=True)
- return r.stdout if r.returncode==0 else (CHROME/('chrome/'+name+'.html')).read_text()
-HEADER=committed_chrome('header')
-FOOTER=committed_chrome('footer')
+shared=json.loads((ROOT/'src/site-navigation/chrome.json').read_text())
+HEADER='<div class="ps-chrome ps-chrome-header" data-navigation-version="'+shared['version']+'">'+shared['header']+'</div>'
+FOOTER='<div class="ps-chrome ps-chrome-footer" data-navigation-version="'+shared['version']+'">'+shared['footer']+'</div>'
 METRIKA=(CHROME/'metrika.html').read_text()
 E=lambda x:html.escape(str(x or ''),quote=True)
 CATALOG=[c for c in D['courses'] if c.get('active')]
@@ -33,8 +31,8 @@ def doc(path,title,description,body,index=True,schema=None):
  title=title+' | ProSchools';ALL.append(path)
  if index:INDEX.append(path)
  payload=json.dumps(schema or {'@context':'https://schema.org','@type':'CollectionPage','name':title,'url':BASE+path},ensure_ascii=False).replace('<','\\u003c')
- h=f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title><meta name="description" content="{E(description)}"><meta name="robots" content="{'index' if index else 'noindex'},follow"><link rel="canonical" href="{BASE+path}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}"><meta property="og:url" content="{BASE+path}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/fonts.css"><link rel="stylesheet" href="/kursy/assets/style.css"><link rel="stylesheet" href="/kursy/assets/site-chrome.css?v=design4"><link rel="stylesheet" href="/_programming/style.css?v=20261019"><script type="application/ld+json">{payload}</script><script defer src="/_programming/catalog.js?v=20261019"></script></head><body><a class="ps-skip" href="#main">К содержимому</a>{HEADER}<main id="main" class="ps-main">{body}</main>{FOOTER}{METRIKA}</body></html>'''
- h=h.replace('</head>','<script defer src="/kursy/assets/site-chrome.js?v=design4"></script></head>')
+ h=f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title><meta name="description" content="{E(description)}"><meta name="robots" content="{'index' if index else 'noindex'},follow"><link rel="canonical" href="{BASE+path}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}"><meta property="og:url" content="{BASE+path}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/fonts.css"><link rel="stylesheet" href="/kursy/assets/style.css"><link rel="stylesheet" href="/site-navigation/navigation.css?v=20261020"><link rel="stylesheet" href="/_programming/style.css?v=20261019"><script type="application/ld+json">{payload}</script><script defer src="/_programming/catalog.js?v=20261019"></script></head><body>{HEADER}<main id="main" class="ps-main">{body}</main>{FOOTER}{METRIKA}</body></html>'''
+ h=h.replace('</head>','<script defer src="/site-navigation/navigation.js?v=20261020"></script></head>')
  start=h.find('<nav class="ps-tabs"');end=h.find('</nav>',start)
  if start>=0:
   tab=h[start:end];tab=tab.replace('href="'+path+'"','href="'+path+'" aria-current="page"');h=h[:start]+tab+h[end:]
