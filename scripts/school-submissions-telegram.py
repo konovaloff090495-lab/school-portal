@@ -1,7 +1,7 @@
 """Owner-only Telegram moderation, durable cards and private photo uploads."""
 import contextlib,fcntl,hashlib,html,json,os,re,secrets,urllib.request
 
-def revision(row):return hashlib.sha256((row['last_request'] or row['request_id']).encode()).hexdigest()[:16]
+def revision(row):return hashlib.sha256((row['id']+':'+str(row['revision'])).encode()).hexdigest()[:16]
 
 def tables(c):
     c.executescript('''CREATE TABLE IF NOT EXISTS telegram_cards(application TEXT,revision TEXT,message_id INTEGER,photos_sent INTEGER DEFAULT 0,attempts INTEGER DEFAULT 0,next_at INTEGER DEFAULT 0,error TEXT,body TEXT,details_sent INTEGER DEFAULT 0,PRIMARY KEY(application,revision)); CREATE TABLE IF NOT EXISTS telegram_feedback(application TEXT PRIMARY KEY,sent_digest TEXT,pending_digest TEXT,attempts INTEGER DEFAULT 0,due INTEGER DEFAULT 0);''')
@@ -37,7 +37,7 @@ def admin():
 
 def body(row):
     d=json.loads(row['data']);e=lambda v:html.escape(str(v or ''))
-    lines=['🏫 <b>Новая школа на модерации</b>','<b>'+e(d['school'])+'</b>',e(d.get('city'))+' · '+e(d.get('address')),e(d.get('type'))+' · '+e(d.get('format'))]
+    lines=['🏫 <b>'+('Правки школы на модерации' if row['revision'] else 'Новая школа на модерации')+'</b>','<b>'+e(d['school'])+'</b>',e(d.get('city'))+' · '+e(d.get('address')),e(d.get('type'))+' · '+e(d.get('format'))]
     for title,key,limit in [('Классы / возраст','age',100),('Стоимость','price',180),('Сайт','website',250),('Лицензия','license',180)]:
         value=', '.join(map(str,d.get('grades',[]))) if key=='age' and d.get('grades') else d.get(key)
         if value:lines.append('<b>'+title+':</b> '+e(value[:limit]))

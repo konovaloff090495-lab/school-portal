@@ -44,12 +44,16 @@ def db():
     os.chmod(STORE/'applications.sqlite3', 0o600)
     con.row_factory = sqlite3.Row
     con.executescript('''PRAGMA journal_mode=WAL;
-    CREATE TABLE IF NOT EXISTS applications(id TEXT PRIMARY KEY,request_id TEXT UNIQUE NOT NULL,data TEXT NOT NULL,photos TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'unconfirmed',confirmed INTEGER,created INTEGER NOT NULL,updated INTEGER NOT NULL,comment TEXT NOT NULL DEFAULT '',live_data TEXT,live_photos TEXT,published INTEGER,marketing INTEGER NOT NULL DEFAULT 0,subscribed INTEGER,unsubscribed INTEGER,score INTEGER,feedback TEXT,ip TEXT,last_request TEXT);
+    CREATE TABLE IF NOT EXISTS applications(id TEXT PRIMARY KEY,request_id TEXT UNIQUE NOT NULL,data TEXT NOT NULL,photos TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'unconfirmed',confirmed INTEGER,created INTEGER NOT NULL,updated INTEGER NOT NULL,comment TEXT NOT NULL DEFAULT '',live_data TEXT,live_photos TEXT,published INTEGER,marketing INTEGER NOT NULL DEFAULT 0,subscribed INTEGER,unsubscribed INTEGER,score INTEGER,feedback TEXT,ip TEXT,last_request TEXT,revision INTEGER NOT NULL DEFAULT 0);
     CREATE TABLE IF NOT EXISTS audit(seq INTEGER PRIMARY KEY,id TEXT,event TEXT,at INTEGER,detail TEXT);
     CREATE TABLE IF NOT EXISTS mail(id INTEGER PRIMARY KEY,application TEXT NOT NULL,kind TEXT NOT NULL,dedupe TEXT UNIQUE NOT NULL,due INTEGER NOT NULL,state TEXT DEFAULT 'queued',attempts INTEGER DEFAULT 0,lease INTEGER,error TEXT,sent INTEGER);
     CREATE TABLE IF NOT EXISTS limits(key TEXT PRIMARY KEY,count INTEGER,until INTEGER);
     CREATE TABLE IF NOT EXISTS telegram_decisions(update_id TEXT PRIMARY KEY,application TEXT NOT NULL);
     ''')
+    if 'revision' not in [r[1] for r in con.execute('PRAGMA table_info(applications)')]:
+        try:con.execute('ALTER TABLE applications ADD COLUMN revision INTEGER NOT NULL DEFAULT 0')
+        except sqlite3.OperationalError:
+            if 'revision' not in [r[1] for r in con.execute('PRAGMA table_info(applications)')]:raise
     return con
 
 def audit(c,id,event,detail=''): c.execute('INSERT INTO audit(id,event,at,detail) VALUES(?,?,?,?)',(id,event,now(),detail[:2000]))
@@ -124,7 +128,7 @@ def operate(action,p):
             if row['status']=='unconfirmed': raise ValueError('Сначала подтвердите почту')
             limited(c,'edit:'+id,10,3600)
             if p['data']['email'].lower()!=json.loads(row['data'])['email'].lower(): raise ValueError('Для смены почты обратитесь в редакцию')
-            c.execute('UPDATE applications SET data=?,photos=?,status="pending",updated=?,comment="",marketing=?,last_request=? WHERE id=?',(json.dumps(p['data'],ensure_ascii=False),json.dumps(p['photos'],ensure_ascii=False),now(),int(p['data']['marketing_agreed']),p['request_id'],id));audit(c,id,'resubmitted');enqueue(c,id,'pending','pending:'+id+':'+p['request_id'])
+            c.execute('UPDATE applications SET data=?,photos=?,status="pending",updated=?,comment="",marketing=?,last_request=?,revision=revision+1 WHERE id=?',(json.dumps(p['data'],ensure_ascii=False),json.dumps(p['photos'],ensure_ascii=False),now(),int(p['data']['marketing_agreed']),p['request_id'],id));audit(c,id,'resubmitted');enqueue(c,id,'pending','pending:'+id+':'+p['request_id'])
             if p['data']['marketing_agreed']:
                 if not row['marketing'] or row['unsubscribed']:
                     c.execute('UPDATE applications SET subscribed=NULL,unsubscribed=NULL WHERE id=?',(id,))
@@ -139,7 +143,7 @@ def operate(action,p):
             c.execute('UPDATE applications SET score=?,feedback=? WHERE id=?',(score,text,id));audit(c,id,'feedback',str(score));return {'ok':True}
         if action in ('moderate','moderation-note') and p.get('update_id') and c.execute('SELECT 1 FROM telegram_decisions WHERE update_id=?',(str(p['update_id']),)).fetchone():return {'ok':True}
         if action in ('moderate','moderation-note') and p.get('expected_revision'):
-            expected=hashlib.sha256((row['last_request'] or row['request_id']).encode()).hexdigest()[:16]
+            expected=hashlib.sha256((row['id']+':'+str(row['revision'])).encode()).hexdigest()[:16]
             if not hmac.compare_digest(expected,p['expected_revision']):raise ValueError('Заявка обновилась. Используйте новую карточку.')
         if action=='moderation-note':
             comment=p.get('comment','').strip()
