@@ -98,6 +98,8 @@ function update(){
  $$('.nav-list a').forEach(a=>{if(section(new URL(a.href).pathname)===section(location.pathname))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  if(lastExposure!==location.pathname){lastExposure=location.pathname;track('navigation_exposure')} 
 }
+function positionCityPrompt(){const p=$('#first-city-prompt');p.style.top=innerWidth<600?'auto':($('#header').getBoundingClientRect().height+12)+'px';p.style.zIndex='95'}
+positionCityPrompt();window.addEventListener('resize',positionCityPrompt,{passive:true});
 window.PSNavigation={update};window.addEventListener('ps:navigation-route',update);window.addEventListener('popstate',update);
 document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});if(target.pathname!==location.pathname){try{sessionStorage.setItem('ps-navigation-pending',JSON.stringify({path:target.pathname,surface,at:Date.now()}))}catch{}}});
 $('.mobile-toggle').addEventListener('click',()=>track('navigation_menu_open',{menu:'mobile'}));
