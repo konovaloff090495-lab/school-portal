@@ -5,16 +5,14 @@ import { mkdir, writeFile, unlink } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
 import { revalidatePath } from 'next/cache'
-import { submissions, SubmissionError, storeDirectory } from '@/lib/school-submissions/store'
+import { submissions, SubmissionError, storeDirectory, wakeSchoolModerator } from '@/lib/school-submissions/store'
 import { checkOrigin, owner, requireAdmin, sameSecret, adminSession, ipHash, validId } from '@/lib/school-submissions/auth'
 import { validateSubmission } from '@/lib/school-submissions/validate'
 import type { SchoolApplication, SubmissionPhoto, SubmissionReceipt } from '@/lib/school-submissions/types'
-import { sendTelegramMessage } from '@/lib/telegram'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 type Context = { params: Promise<{action:string}> }
 const json = (body:unknown,status=200) => NextResponse.json(body,{status,headers:{'Cache-Control':'no-store','Referrer-Policy':'no-referrer'}})
-const escapeHtml = (text:string) => text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!))
 function failure(error:unknown) { if(error instanceof SubmissionError)return json({error:error.message},error.status);console.error('[School applications] request failed',error instanceof Error?error.name:'unknown');return json({error:'Не удалось обработать запрос. Попробуйте позже.'},500) }
 function setOwner(response:NextResponse,receipt:SubmissionReceipt) { response.cookies.set('ps_school_owner',receipt.id+'.'+receipt.token,{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',path:'/api/school-submissions/',maxAge:30*86400});return response }
 export async function GET(req:NextRequest,{params}:Context) {
@@ -79,6 +77,7 @@ export async function POST(req:NextRequest,{params}:Context) {
    if(typeof payload.request_id!=='string'||!/^[a-f0-9-]{20,60}$/i.test(payload.request_id))throw new SubmissionError('Обновите страницу и повторите отправку')
    const receipt=await submissions<SubmissionReceipt>(auth?'resubmit':'create',{id,...auth,request_id:payload.request_id,data,photos,ip:ipHash(req)})
    if(receipt.id!==id)await Promise.all(newFiles.map(f=>unlink(f).catch(()=>{})))
+   if(auth)wakeSchoolModerator()
    return setOwner(json(receipt),receipt)
   }
   if(Number(req.headers.get('content-length')||0)>10000)throw new SubmissionError('Запрос слишком большой',413)
@@ -103,7 +102,7 @@ export async function POST(req:NextRequest,{params}:Context) {
   if(!['confirm','resend','feedback','subscribe'].includes(action))throw new SubmissionError('Неизвестное действие')
   const before=action==='confirm'?await submissions<SchoolApplication>('get',auth):undefined
   const result=await submissions(action,{...body,...auth})
-  if(action==='confirm'&&before?.status==='unconfirmed')await sendTelegramMessage('🏫 <b>Школа на модерации</b>\n'+escapeHtml(before.data.school)+' · '+escapeHtml(before.data.city)+'\n<a href="https://pro-schools.ru/admin/shkoly/">Открыть модерацию</a>')
+  if(action==='confirm'&&before?.status==='unconfirmed')wakeSchoolModerator()
   return json(result)
  }catch(error){await Promise.all(newFiles.map(f=>unlink(f).catch(()=>{})));return failure(error)}
 }

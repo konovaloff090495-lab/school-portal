@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Private school applications, moderation, audit, durable transactional mail queue."""
+import importlib.util, types
 import contextlib, datetime as dt, email.utils, fcntl, hashlib, hmac, html, json, os, re, secrets, smtplib, sqlite3, ssl, sys, time
 from email.message import EmailMessage
 from pathlib import Path
@@ -47,6 +48,7 @@ def db():
     CREATE TABLE IF NOT EXISTS audit(seq INTEGER PRIMARY KEY,id TEXT,event TEXT,at INTEGER,detail TEXT);
     CREATE TABLE IF NOT EXISTS mail(id INTEGER PRIMARY KEY,application TEXT NOT NULL,kind TEXT NOT NULL,dedupe TEXT UNIQUE NOT NULL,due INTEGER NOT NULL,state TEXT DEFAULT 'queued',attempts INTEGER DEFAULT 0,lease INTEGER,error TEXT,sent INTEGER);
     CREATE TABLE IF NOT EXISTS limits(key TEXT PRIMARY KEY,count INTEGER,until INTEGER);
+    CREATE TABLE IF NOT EXISTS telegram_decisions(update_id TEXT PRIMARY KEY,application TEXT NOT NULL);
     ''')
     return con
 
@@ -71,6 +73,10 @@ def private(c,row,owner=True):
     return result
 
 def operate(action,p):
+    if action=='telegram-secret':return {'secret':token('telegram-webhook','webhook')}
+    if action in ('telegram-run','telegram-update'):
+        load_env();spec=importlib.util.spec_from_file_location('school_telegram',ROOT/'scripts/school-submissions-telegram.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        return module.run(types.SimpleNamespace(**globals())) if action=='telegram-run' else module.handle(types.SimpleNamespace(**globals()),p['update'])
     # Public catalogue reads during builds need no database or secret.
     if action=='public' and not (STORE/'applications.sqlite3').exists(): return []
     c=db()
@@ -95,7 +101,7 @@ def operate(action,p):
         if action=='rate':
             limited(c,p['key'],int(p['cap']),int(p['window']));return {'ok':True}
         row=application(c,id)
-        if action not in ('moderate','image') and not authorized(id,p.get('token'),'unsubscribe' if action=='unsubscribe' else 'owner'): raise PermissionError('Недействительная ссылка заявки')
+        if action not in ('moderate','moderation-note','image') and not authorized(id,p.get('token'),'unsubscribe' if action=='unsubscribe' else 'owner'): raise PermissionError('Недействительная ссылка заявки')
         if action=='get': return private(c,row)
         if action=='image':
             allowed=json.loads(row['live_photos'] or '[]')
@@ -131,6 +137,16 @@ def operate(action,p):
             score=p.get('score');text=p.get('text','')
             if type(score)!=int or score not in range(1,6) or not isinstance(text,str) or len(text)>2000:raise ValueError('Выберите оценку от 1 до 5')
             c.execute('UPDATE applications SET score=?,feedback=? WHERE id=?',(score,text,id));audit(c,id,'feedback',str(score));return {'ok':True}
+        if action in ('moderate','moderation-note') and p.get('update_id') and c.execute('SELECT 1 FROM telegram_decisions WHERE update_id=?',(str(p['update_id']),)).fetchone():return {'ok':True}
+        if action in ('moderate','moderation-note') and p.get('expected_revision'):
+            expected=hashlib.sha256((row['last_request'] or row['request_id']).encode()).hexdigest()[:16]
+            if not hmac.compare_digest(expected,p['expected_revision']):raise ValueError('Заявка обновилась. Используйте новую карточку.')
+        if action=='moderation-note':
+            comment=p.get('comment','').strip()
+            if row['status'] not in ('changes','rejected') or not comment or len(comment)>3000:raise ValueError('Комментарий недоступен')
+            key='telegram-note:'+str(p['update_id'])
+            if c.execute('SELECT 1 FROM mail WHERE dedupe=?',(key,)).fetchone():return {'ok':True}
+            c.execute('UPDATE applications SET comment=?,updated=? WHERE id=?',(comment,now(),id));audit(c,id,'moderation_note',comment);enqueue(c,id,row['status'],key);c.execute('INSERT OR IGNORE INTO telegram_decisions VALUES(?,?)',(str(p['update_id']),id));return {'ok':True}
         if action=='moderate':
             status=p.get('status');comment=p.get('comment','').strip()
             if not row['confirmed'] or row['status']=='unconfirmed': raise ValueError('Почта представителя ещё не подтверждена')
@@ -140,7 +156,9 @@ def operate(action,p):
             if len(comment)>3000:raise ValueError('Комментарий слишком длинный')
             c.execute('UPDATE applications SET status=?,comment=?,updated=? WHERE id=?',(status,comment,now(),id))
             if status=='published':c.execute('UPDATE applications SET live_data=data,live_photos=photos,published=? WHERE id=?',(now(),id))
-            audit(c,id,status,comment);enqueue(c,id,status,status+':'+id+':'+str(now()));return {'ok':True,'url':BASE+'/shkola/s-'+id+'/'}
+            audit(c,id,status,comment);enqueue(c,id,status,status+':'+id+':'+str(now()))
+            if p.get('update_id'):c.execute('INSERT OR IGNORE INTO telegram_decisions VALUES(?,?)',(str(p['update_id']),id))
+            return {'ok':True,'url':BASE+'/shkola/s-'+id+'/'}
         if action=='subscribe':
             if not authorized(id,p.get('subscription'),'subscribe'):raise PermissionError('Подтвердите подписку по отдельной ссылке из письма')
             if not row['confirmed'] or not row['marketing']:raise ValueError('Сначала подтвердите заявку и согласие на рассылку')

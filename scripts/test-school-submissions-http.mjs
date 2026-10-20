@@ -3,7 +3,7 @@ import {spawn} from 'node:child_process';import {mkdtemp,readFile,rm,mkdir} from
 const dir=await mkdtemp(path.join(os.tmpdir(),'school-submission-test-')),port=3198,base='http://localhost:'+port;
 const dev=process.env.SCHOOL_SUBMISSIONS_SMOKE_DEV==='1';
 const site=dev?base:'https://pro-schools.ru';
-const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
+const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'111',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
 const killServer=(signal='SIGTERM')=>{try{process.kill(-child.pid,signal)}catch{child.kill(signal)}};
 let browserRef,pageRef;
 const globalTimeout=setTimeout(()=>{console.error('Integration timeout',output.slice(-3000));killServer('SIGKILL');void browserRef?.close();process.exit(1)},240000);
@@ -23,6 +23,13 @@ try{
  const app=(await request('get',undefined,auth)).data;assert.equal(app.photos.length,3);assert.equal(app.status,'unconfirmed');
  assert.equal((await request('confirm',{},auth)).response.status,403);
  const key=(await readFile(path.join(dir,'secret'),'utf8')).trim();const proof=purpose=>createHmac('sha256',key).update(purpose+':'+id).digest('hex');
+ const hook=base+'/api/school-submissions/telegram/';
+ const hookRequest=(secret,body)=>fetch(hook,{method:'POST',headers:{'Content-Type':'application/json',...(secret?{'X-Telegram-Bot-Api-Secret-Token':secret}:{})},body:JSON.stringify(body)});
+ const hookUpdate={update_id:900,callback_query:{id:'fake',from:{id:222},data:'ps:p:'+id+':0000000000000000',message:{message_id:123,chat:{id:111}}}};
+ assert.equal((await hookRequest('',hookUpdate)).status,403);assert.equal((await hookRequest('0'.repeat(64),hookUpdate)).status,403);
+ const hookSecret=createHmac('sha256',key).update('webhook:telegram-webhook').digest('hex');
+ assert.equal((await hookRequest(hookSecret,hookUpdate)).status,200);assert.equal((await request('get',undefined,auth)).data.status,'unconfirmed');
+ assert.equal((await hookRequest(hookSecret,{update_id:901,text:'x'.repeat(100001)})).status,413);
  const image=base+'/api/school-submissions/images/'+id+'/'+app.photos[0].file+'/';assert.equal((await fetch(image)).status,404);
  assert.equal((await fetch(image,{headers:{Authorization:'Bearer '+auth}})).status,200);
  const login=await request('admin-login',{secret:'school-qa-admin'});assert.equal(login.response.status,200);const cookie=login.response.headers.get('set-cookie').split(';')[0];

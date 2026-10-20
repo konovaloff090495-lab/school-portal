@@ -28,3 +28,11 @@ export function submissions<T = Record<string, unknown>>(action: string, payload
     child.stdin.end(JSON.stringify(payload))
   })
 }
+
+// The durable scanner is also run by cron, so an interrupted request cannot lose a card.
+export function wakeSchoolModerator() {
+  if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) return
+  const child=spawn('python3',[path.join(process.cwd(),'scripts/school-submissions.py'),'telegram-run'],{detached:true,stdio:'ignore',env:{...process.env,SCHOOL_SUBMISSIONS_DIR:storeDirectory}})
+  child.on('error',()=>console.error('[School moderation] notification worker unavailable'))
+  child.unref()
+}
