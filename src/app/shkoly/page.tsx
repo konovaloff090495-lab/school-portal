@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import {publishedSchools} from '@/lib/school-submissions/catalog'
 import { schools } from '@/data/schools'
 import CatalogClient from './CatalogClient'
 import { WebSiteJsonLd } from '@/lib/schema'
@@ -44,11 +45,12 @@ function MainSeoBlock({ count }: { count: number }) {
   )
 }
 
-export default function AllSchoolsPage() {
+export default async function AllSchoolsPage() {
+  const submitted = await publishedSchools()
   return (
     <>
       <WebSiteJsonLd />
-      <CatalogClient seoContent={<MainSeoBlock count={schools.length} />} />
+      <CatalogClient publishedInitial={submitted} seoContent={<MainSeoBlock count={schools.length} />} />
     </>
   )
 }

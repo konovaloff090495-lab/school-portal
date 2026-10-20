@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { submittedSchool } from '@/lib/school-submissions/catalog'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -21,6 +22,11 @@ interface Props {
 
 // ── Автогенерация FAQ по данным школы ────────────────────────────────────────
 function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
+  if (school.representativeSubmitted) return [
+    {q:`Где проходят занятия в ${school.name}?`,a:school.remoteOnly?'Обучение проходит онлайн.':`${school.city}, ${school.address}.`},
+    {q:'Как поступить?',a:school.admission || 'Уточните порядок поступления по официальным контактам школы.'},
+    {q:'Сколько стоит обучение?',a:school.priceDescription || 'Стоимость уточняйте в школе.'},
+  ]
   const faq: { q: string; a: string }[] = []
   // Телефон есть не у всех школ — без фолбэка в тексте появлялось «по телефону undefined»
   const callTo = school.phone ? `по телефону ${school.phone}` : 'через форму заявки на этой странице'
@@ -193,7 +199,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const school = getSchoolBySlug(slug)
+  const school = getSchoolBySlug(slug) || await submittedSchool(slug)
   if (!school) return {}
   return {
     title: school.remoteOnly
@@ -208,7 +214,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function SchoolPage({ params }: Props) {
   const { slug } = await params
-  const school = getSchoolBySlug(slug)
+  const school = getSchoolBySlug(slug) || await submittedSchool(slug)
   if (!school) notFound()
 
   const similar = schools
@@ -312,7 +318,7 @@ export default async function SchoolPage({ params }: Props) {
       <Breadcrumbs crumbs={crumbs} />
 
       {/* Hero галерея */}
-      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={school.photoCount} name={school.name}>
+      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={school.photoCount} photoUrls={school.photoUrls} photoCaptions={school.photoCaptions} name={school.name}>
         <div>
           <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
             {typeLabels[school.type]}
@@ -349,7 +355,8 @@ export default async function SchoolPage({ params }: Props) {
               )}
             </div>
 
-            <p className="text-gray-700 leading-relaxed mb-4">{school.fullDescription}</p>
+            <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">{school.fullDescription}</p>
+            {school.representativeSubmitted && <><p className="text-xs text-gray-500 mb-4">Информация и фотографии предоставлены представителем школы и прошли модерацию редакции.</p>{school.priceDescription&&<p className="text-sm mb-3"><strong>Стоимость:</strong> {school.priceDescription}</p>}{school.admission&&<p className="text-sm mb-4 whitespace-pre-line"><strong>Как поступить:</strong> {school.admission}</p>}</>}
 
             {/* Key facts */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -374,7 +381,7 @@ export default async function SchoolPage({ params }: Props) {
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <div className="text-xs text-gray-500 mb-1">Стоимость</div>
                 <div className="font-semibold text-sm">
-                  {school.priceFrom !== undefined ? (
+                  {school.representativeSubmitted ? <span className="text-gray-900">{school.priceDescription || 'Стоимость по запросу'}</span> : school.priceFrom !== undefined ? (
                     school.priceFrom === 0 ? (
                       <span className="text-green-600">Бесплатно</span>
                     ) : (

@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
-  schools, regionSlugs, regionLabels, typeSlugs, typeLabels,
+  schools as catalogSchools, regionSlugs, regionLabels, typeSlugs, typeLabels,
   moscowDistrictSlugs, moscowDistrictLabels, moscowDistrictFullNames,
   moCitySlugs, moCityLabels,
   featureMetas, FeatureSlug,
@@ -81,6 +81,7 @@ interface Filters {
 }
 
 export interface CatalogClientProps {
+  publishedInitial?: School[]
   initialRegions?: RegionSlug[]
   initialTypes?: SchoolType[]
   initialDistrict?: string
@@ -246,6 +247,7 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
 const PAGE_SIZE = 24
 
 export default function CatalogClient({
+  publishedInitial = [],
   initialRegions = [],
   initialTypes = [],
   initialDistrict,
@@ -270,6 +272,13 @@ export default function CatalogClient({
   seoContent,
   emptyFallback,
 }: CatalogClientProps) {
+  const [submitted, setSubmitted] = useState<School[]>(publishedInitial)
+  const schools = useMemo(() => [...submitted, ...catalogSchools], [submitted])
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch('/api/school-submissions/catalog/', {signal:controller.signal}).then(r=>r.ok?r.json():[]).then(data=>{if(Array.isArray(data))setSubmitted(data)}).catch(()=>{})
+    return () => controller.abort()
+  }, [])
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const [filters, setFilters] = useState<Filters>({
     regions: initialRegions,

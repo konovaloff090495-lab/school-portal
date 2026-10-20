@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import {usePathname} from 'next/navigation'
 import Script from 'next/script'
 
 const WIDGET_URL = 'https://ssynergy.logos.unis.studio/widget.js?tenant=ssynergy'
@@ -18,7 +19,10 @@ const WIDGET_CSS = `
 `
 
 export default function LogosChatWidget() {
+  const pathname=usePathname()
+  const privateArea=pathname.startsWith('/dobavit-shkolu')||pathname.startsWith('/admin/shkoly')
   useEffect(() => {
+    if(privateArea)return
     function protectWidget() {
       const host = document.getElementById('Logos-widget')
       if (!host?.shadowRoot || host.shadowRoot.getElementById('ps-widget-click-area')) return false
@@ -36,7 +40,8 @@ export default function LogosChatWidget() {
     })
     observer.observe(document.body, { childList: true })
     return () => observer.disconnect()
-  }, [])
+  }, [privateArea])
 
+  if(privateArea)return null
   return <Script src={WIDGET_URL} strategy="afterInteractive" data-position="bottom-right" />
 }

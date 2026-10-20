@@ -8,17 +8,19 @@ const PHOTOS_MAX = 3
 interface Props {
   slug: string
   imageAlt: string
+  photoUrls?: string[]
+  photoCaptions?: string[]
   photoCount?: number         // фактическое число фото из данных (0..3)
   name?: string               // для alt плейсхолдера
   children: React.ReactNode  // overlay (title, badge, rating)
 }
 
-export default function SchoolPageGallery({ slug, imageAlt, photoCount, name, children }: Props) {
+export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrls, photoCaptions, name, children }: Props) {
   const [current, setCurrent]   = useState(0)
   const [errors, setErrors]     = useState<Record<number, boolean>>({})
 
   // Реальное число фото (отсутствие поля трактуем как PHOTOS_MAX для совместимости)
-  const count     = Math.min(photoCount ?? PHOTOS_MAX, PHOTOS_MAX)
+  const count     = photoUrls ? Math.min(photoUrls.length, 8) : Math.min(photoCount ?? PHOTOS_MAX, PHOTOS_MAX)
   const available = Array.from({ length: count }, (_, i) => i).filter(i => !errors[i])
   const validIdx  = available.includes(current) ? current : (available[0] ?? 0)
 
@@ -31,7 +33,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, name, ch
     setCurrent(available[(pos + 1) % available.length])
   }
 
-  const src = (i: number) => `/schools/${slug}-${i + 1}.jpg`
+  const src = (i: number) => photoUrls?.[i] || `/schools/${slug}-${i + 1}.jpg`
 
   return (
     <div className="mt-6 relative h-64 md:h-80 rounded-2xl overflow-hidden bg-gray-200 group">
@@ -49,7 +51,8 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, name, ch
         <Image
           key={i}
           src={src(i)}
-          alt={`${imageAlt} — фото ${i + 1}`}
+          alt={photoCaptions?.[i] || `${imageAlt} — фото ${i + 1}`}
+          unoptimized={!!photoUrls}
           fill
           priority={i === 0}
           sizes="(max-width: 1280px) 100vw, 1200px"
@@ -102,17 +105,18 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, name, ch
 
       {/* Миниатюры — сверху справа, не перекрывают рейтинг */}
       {available.length > 1 && (
-        <div className="absolute top-3 right-4 flex gap-1.5">
+        <div className="absolute top-3 right-4 flex gap-1.5 max-w-[65%] overflow-x-auto">
           {available.map(i => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`relative w-14 h-10 rounded-lg overflow-hidden border-2 cursor-pointer transition-all ${i === validIdx ? 'border-white' : 'border-white/40 hover:border-white/80'}`}
+              className={`relative w-14 h-10 shrink-0 rounded-lg overflow-hidden border-2 cursor-pointer transition-all ${i === validIdx ? 'border-white' : 'border-white/40 hover:border-white/80'}`}
               aria-label={`Фото ${i + 1}`}
             >
               <Image
                 src={src(i)}
-                alt={`${imageAlt} миниатюра ${i + 1}`}
+                alt={photoCaptions?.[i] || `${imageAlt} миниатюра ${i + 1}`}
+                unoptimized={!!photoUrls}
                 fill
                 sizes="56px"
                 className="object-cover"

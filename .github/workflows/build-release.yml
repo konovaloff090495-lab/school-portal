@@ -24,10 +24,15 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - run: python3 scripts/test-school-submissions.py
       - run: npm run lint:leads
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/test-school-submissions-http.mjs
+        env:
+          RUN_BROWSER_TESTS: '1'
       - name: Package build and provenance
         shell: bash
         run: |
@@ -35,6 +40,7 @@ jobs:
           mkdir build-release
           tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
           (cd build-release && sha256sum next-release.tar.zst > SHA256SUMS)
+          cp -r work/school-submission-qa build-release/qa
           cp .next/BUILD_ID build-release/BUILD_ID
           git rev-parse HEAD > build-release/SOURCE_COMMIT
       - uses: actions/upload-artifact@v4

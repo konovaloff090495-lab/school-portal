@@ -75,3 +75,5 @@ public/fipi/
 
 # Private lead reconciliation journal (contains personal data)
 data-private/
+
+/scripts/__pycache__/
