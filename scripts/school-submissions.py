@@ -26,10 +26,13 @@ def load_env():
 def secret():
     STORE.mkdir(parents=True, exist_ok=True, mode=0o700)
     p = STORE / 'secret'
+    temporary = STORE / ('.secret-'+secrets.token_hex(12))
+    fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     try:
-        fd = os.open(p, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         with os.fdopen(fd, 'w') as f: f.write(secrets.token_hex(32))
-    except FileExistsError: pass
+        try: os.link(temporary,p)
+        except FileExistsError: pass
+    finally: temporary.unlink(missing_ok=True)
     return p.read_text().strip().encode()
 
 def token(id, purpose='owner'): return hmac.new(secret(), (purpose+':'+id).encode(), hashlib.sha256).hexdigest()

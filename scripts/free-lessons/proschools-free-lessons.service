@@ -1,0 +1,19 @@
+[Unit]
+Description=Refresh ProSchools free lesson schedule and catalogue
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=oneshot
+User=root
+ExecStart=/var/www/school-portal/free-lessons-runtime/scripts/free-lessons/run.sh
+TimeoutStartSec=15min
+Nice=10
+MemoryMax=256M
+CPUQuota=50%
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/proschools-free-lessons /var/www/school-portal/free-lessons-releases /var/www/school-portal
+[Install]
+WantedBy=multi-user.target

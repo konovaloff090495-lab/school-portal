@@ -77,3 +77,7 @@ public/fipi/
 data-private/
 
 /scripts/__pycache__/
+# Free lesson updater generated state and cloud artifacts
+/scripts/free-lessons/__pycache__/
+/work/free-lessons/
+/work/free-lessons-cloud/

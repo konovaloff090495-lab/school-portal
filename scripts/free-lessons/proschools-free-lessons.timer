@@ -1,0 +1,9 @@
+[Unit]
+Description=Keep ProSchools events current every half hour
+[Timer]
+OnCalendar=*-*-* *:00,30:00
+RandomizedDelaySec=30
+Persistent=true
+Unit=proschools-free-lessons.service
+[Install]
+WantedBy=timers.target
