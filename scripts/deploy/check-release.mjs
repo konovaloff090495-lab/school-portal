@@ -57,6 +57,22 @@ try {
     console.log(`${status} ${path}`);
   }
   const get = path => fetch(`http://127.0.0.1:${port}${path}`, { signal: AbortSignal.timeout(60000) });
+  const homepage = await get('/');
+  assert.equal(homepage.status, 200, 'Homepage');
+  const homeHTML = await homepage.text();
+  for (const marker of ['class="home"', 'class="home-carousel"', 'free-subject-grid', 'school-formats']) {
+    assert.ok(homeHTML.includes(marker), `Homepage block missing: ${marker}`);
+  }
+  assert.equal((homeHTML.match(/<main\b/g) || []).length, 1, 'Homepage must keep one main landmark');
+  assert.ok(!homeHTML.includes('127.0.0.1:8782'), 'Preview URL leaked into homepage');
+  const homeAssets = [...new Set(Array.from(homeHTML.matchAll(/src="(\/homepage\/assets\/[^"<>]+)"/g), m => m[1]))];
+  assert.ok(homeAssets.length >= 20, 'Homepage media missing');
+  for (const path of [...homeAssets, '/homepage/runtime.js']) {
+    const asset = await get(path);
+    assert.equal(asset.status, 200, `Homepage asset: ${path}`);
+    await asset.arrayBuffer();
+  }
+  console.log(`homepage blocks and ${homeAssets.length} visual assets OK`);
   const robots = await (await get('/robots.txt')).text();
   assert.ok(!robots.includes('Disallow: /_next/'), 'Rendering assets blocked');
   assert.ok(robots.includes('Disallow: /api/'), 'Private API restriction lost');
