@@ -112,7 +112,14 @@ def build(catalog,destination,baseline,now,last_fetch=None):
    if e.get('slots'):section.insert(0,parse('<h2>Расписание занятий</h2><ul></ul><p class="small">Даты рассчитаны по опубликованному еженедельному расписанию. Переносы уточняйте у организатора.</p>'))
    aside=main.select_one('.detail-grid aside')
    if aside:
-    own=e['id'].startswith('su-');aside.clear();aside.append(parse('<p class="price">0 ₽</p><p>'+ESC(e['freeScope'])+'</p><p>'+ESC(age(e))+'</p><p>Онлайн</p>'+('<button class="primary" data-lektoriy="'+ESC(e['id'])+'">Записаться бесплатно ↗</button>' if own else '<a class="primary" href="'+ESC(e['outboundUrl'])+'" target="_blank" rel="noopener noreferrer">На сайт организатора ↗</a>')))
+    own=e['id'].startswith('su-');aside.clear();aside.append(parse('<strong>0 ₽</strong><p>'+ESC(e['freeScope'])+'</p><p>'+ESC(age(e))+'</p><p>Онлайн</p>'+('<button class="primary" data-lektoriy="'+ESC(e['id'])+'">Записаться бесплатно ↗</button>' if own else '<a class="primary" href="'+ESC(e['outboundUrl'])+'" target="_blank" rel="noopener noreferrer">На сайт организатора ↗</a>')))
+  pills=main.select('.detail-grid .pill')
+  if pills:pills[0].string=age(e)
+  if len(pills)>1:pills[1].string={'scheduled':'По расписанию','recording':'Видеозапись','appointment':'По записи'}[e['kind']]
+  if e['id'].startswith('su-'):
+   facts=main.select('.detail-grid aside > p')
+   if len(facts)>1:
+    facts[1].clear();facts[1].append(parse((str(e['duration'])+' минут' if e.get('duration') else 'Длительность зависит от класса')+'<br>'+ESC(age(e))+'<br>Онлайн'))
   # Refresh the actual weekly slot list while preserving the reviewed programme.
   schedule=next((h for h in main.select('h2') if h.get_text(' ',strip=True)=='Расписание занятий'),None)
   if schedule and e.get('slots'):
@@ -138,7 +145,9 @@ def build(catalog,destination,baseline,now,last_fetch=None):
  # Keep old topic URLs usable, but empty sections are noindex and out of sitemap/search.
  old_topics={p.parent.name for p in (baseline/'besplatnye-uroki').glob('*/index.html') if p.parent.name in topics}
  for t in set(t for e in active for t in e['topics'])|old_topics:
-  group=[e for e in active if t in e['topics']];old=baseline/(HUB+t+'/').lstrip('/')/'index.html';doc=parse(old.read_text() if old.exists() else templates['subject']);heading=doc.h1.get_text(' ',strip=True) if old.exists() else 'Бесплатные уроки: '+topics[t];doc.h1.string=heading;container=doc.select_one('.subject-results');container.clear();container.append(parse('<div class="cards">'+''.join(card(e,topics) for e in group)+'</div>' if group else f'<p>Сейчас новых занятий по этому направлению нет. <a href="{HUB}">Посмотрите всю афишу</a>.</p>'))
+  group=[e for e in active if t in e['topics']];old=baseline/(HUB+t+'/').lstrip('/')/'index.html';doc=parse(old.read_text() if old.exists() else templates['subject']);heading=doc.h1.get_text(' ',strip=True) if old.exists() else 'Бесплатные уроки: '+topics[t];doc.h1.string=heading;intro=doc.h1.find_next_sibling('p');
+  if intro:intro.string='Выберите занятие по интересу и удобному времени. Сейчас в подборке: '+str(len(group))+'. Условия бесплатного участия указаны в карточках.'
+  container=doc.select_one('.subject-results');container.clear();container.append(parse('<div class="cards">'+''.join(card(e,topics) for e in group)+'</div>' if group else f'<p>Сейчас новых занятий по этому направлению нет. <a href="{HUB}">Посмотрите всю афишу</a>.</p>'))
   save(doc,HUB+t+'/',heading+' для детей онлайн | ProSchools',heading+f' для детей онлайн: {len(group)} предложений. Выберите класс, время и формат. Открытые уроки, пробные занятия и записи.',(group or active)[0]['cover'],index=bool(group),schema=[crumbs([('Главная','/'),('Бесплатные уроки',HUB),(heading,HUB+t+'/')]),schema_list(heading,HUB+t+'/',group)])
  write(assets/'events.json',catalog)
  (assets/'data.js').write_text('window.CATALOG='+json.dumps(active,ensure_ascii=False).replace('<','\\u003c')+';window.TOPICS='+json.dumps(topics,ensure_ascii=False)+';window.CATALOG_UPDATED_LABEL='+json.dumps(label)+';')
