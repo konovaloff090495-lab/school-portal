@@ -264,16 +264,22 @@ const cameFromEmail=/^[a-f0-9]{32}\.[a-f0-9]{64}$/.test(initialToken);
 const cityInput=form.elements.namedItem('city'),cities=JSON.parse(root.dataset.regions||'[]');
 const cityMenu=document.createElement('div');cityMenu.className='select-menu';cityMenu.id='submission-city-options';cityMenu.setAttribute('role','listbox');cityMenu.hidden=true;root.append(cityMenu);
 function closeCity(){cityMenu.hidden=true;cityInput.setAttribute('aria-expanded','false');}
+function positionCityMenu(){
+ const r=cityInput.getBoundingClientRect(),viewport=window.visualViewport,edge=viewport?.offsetTop||0,bottom=edge+(viewport?.height||innerHeight),below=bottom-r.bottom-10,above=r.top-edge-10,up=below<160&&above>below;
+ cityMenu.style.width=Math.min(r.width,innerWidth-24)+'px';cityMenu.style.left=Math.max(12,Math.min(r.left,innerWidth-r.width-12))+'px';cityMenu.style.maxHeight=Math.max(44,Math.min(290,up?above:below))+'px';
+ cityMenu.style.top=(up?Math.max(edge+8,r.top-7-cityMenu.offsetHeight):r.bottom+7)+'px';
+}
 function renderCities(){
  const q=cityInput.value.toLocaleLowerCase('ru').replaceAll('ё','е').trim();
  const list=cities.filter(c=>c.label.toLocaleLowerCase('ru').replaceAll('ё','е').includes(q)).slice(0,12);
  cityMenu.innerHTML=list.length?list.map(c=>'<button type="button" class="select-option" role="option">'+escape(c.label)+'</button>').join(''):'<div class="hint" style="padding:8px">Город не найден. Для онлайн-школы можно указать город команды.</div>';
- const r=cityInput.getBoundingClientRect();cityMenu.style.width=r.width+'px';cityMenu.style.left=r.left+'px';cityMenu.style.top=(r.bottom+7)+'px';cityMenu.style.maxHeight=Math.max(100,Math.min(290,innerHeight-r.bottom-20))+'px';cityMenu.hidden=false;cityInput.setAttribute('aria-expanded','true');
+ cityMenu.hidden=false;positionCityMenu();cityInput.setAttribute('aria-expanded','true');
  [...cityMenu.querySelectorAll('button')].forEach(button=>button.onclick=()=>{cityInput.value=button.textContent;closeCity();updateAside();cityInput.focus();});
 }
 cityInput.addEventListener('input',renderCities);cityInput.addEventListener('focus',renderCities);
 cityInput.addEventListener('keydown',event=>{if(event.key==='ArrowDown'){event.preventDefault();if(cityMenu.hidden)renderCities();cityMenu.querySelector('button')?.focus();}if(event.key==='Escape')closeCity();});
 cityMenu.addEventListener('keydown',event=>{const list=[...cityMenu.querySelectorAll('button')],i=list.indexOf(document.activeElement);if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();list[(i+(event.key==='ArrowDown'?1:-1)+list.length)%list.length]?.focus();}if(event.key==='Escape'){closeCity();cityInput.focus();}});
+listen(window,'resize',()=>{if(!cityMenu.hidden)positionCityMenu();});if(window.visualViewport)listen(window.visualViewport,'resize',()=>{if(!cityMenu.hidden)positionCityMenu();});
 listen(document,'pointerdown',event=>{if(!cityMenu.contains(event.target)&&event.target!==cityInput)closeCity();});listen(window,'scroll',event=>{if(!cityMenu.contains(event.target))closeCity();},true);
 const schoolPhone=form.elements.namedItem('schoolPhone');
 schoolPhone.addEventListener('input',()=>{schoolPhone.value=options.formatPhone(schoolPhone.value);schoolPhone.setCustomValidity('');});schoolPhone.addEventListener('blur',()=>schoolPhone.setCustomValidity(schoolPhone.value?options.validatePhone(schoolPhone.value)||'':''));

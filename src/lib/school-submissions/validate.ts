@@ -1,8 +1,8 @@
-import { regionLabels, regionSlugs } from '@/data/schools'
+import { regionLabels, regionSlugs, typeLabels } from '@/data/schools'
 import { validatePhone } from '@/lib/phone'
 import { SubmissionError } from './store'
 import type { SubmissionData } from './types'
-export const submissionTypes: Record<string,string> = { 'Частная школа':'chastnie','Государственная школа':'gosudarstvennye','Онлайн-школа':'online','Семейная школа':'semejnye','Школа программирования':'programmirovanie','Языковая школа':'yazykovye','Другое':'profilnye' }
+export const submissionTypes: Record<string,string> = { ...Object.fromEntries(Object.entries(typeLabels).map(([key,label])=>[label,key])), 'Частная школа':'chastnie','Государственная школа':'gosudarstvennye','Онлайн-школа':'online','Семейная школа':'semejnye','Школа программирования':'programmirovanie','Языковая школа':'yazykovye' }
 export function validateSubmission(raw: Record<string, unknown>): SubmissionData {
   const text = (key:string,max:number,required=false) => { const v=raw[key]; if (v!==undefined && typeof v!=='string') throw new SubmissionError('Проверьте поле '+key); const s=(v as string || '').trim(); if (!['description','features','admission'].includes(key) && /[\r\n\x00-\x1f]/.test(s)) throw new SubmissionError('Уберите переносы строк из поля '+key); if ((required&&!s)||s.length>max) throw new SubmissionError('Заполните поле «'+({school:'Название школы',city:'Город',address:'Адрес',description:'О школе',name:'Ваше имя',role:'Ваша роль',email:'Почта для заявки'}[key]||key)+'» корректно'); return s }
   const data = Object.fromEntries(Object.entries({school:160,type:80,format:30,city:120,address:250,description:4000,age:80,price:180,license:300,features:2500,admission:2500,website:500,schoolPhone:30,schoolEmail:200,name:100,role:120,email:200}).map(([key,max])=>[key,text(key,max,['school','type','format','city','description','name','role','email'].includes(key))])) as unknown as SubmissionData
