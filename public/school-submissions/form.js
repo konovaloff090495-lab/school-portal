@@ -1,7 +1,7 @@
 window.PSSubmissionMount = function(root, options) {
 const controller = new AbortController();
 const listen=(target,event,handler,capture=false)=>target.addEventListener(event,handler,{capture,signal:controller.signal});
-/* Review-only prototype. No requests, mail or production mutations. */
+/* School submission form: draft, photos, authenticated status and feedback. */
 const $ = (s, p = root) => p.querySelector(s);
 const $$ = (s, p = root) => [...p.querySelectorAll(s)];
 const styledSelects = [];

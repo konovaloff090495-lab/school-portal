@@ -1,6 +1,6 @@
 /** Real Next routes + SQLite + image pipeline, isolated temporary state. No external mail. */
 import {spawn} from 'node:child_process';import {mkdtemp,readFile,rm,mkdir} from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import {createHmac,randomUUID} from 'node:crypto';import sharp from 'sharp';import assert from 'node:assert/strict';
-const dir=await mkdtemp(path.join(os.tmpdir(),'school-submission-test-')),port=3198,base='http://127.0.0.1:'+port;
+const dir=await mkdtemp(path.join(os.tmpdir(),'school-submission-test-')),port=3198,base='http://localhost:'+port;
 const dev=process.env.SCHOOL_SUBMISSIONS_SMOKE_DEV==='1';
 const site=dev?base:'https://pro-schools.ru';
 const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
@@ -45,7 +45,7 @@ try{
  if(process.env.RUN_BROWSER_TESTS==='1'){
   const {chromium}=await import('playwright');const browser=await chromium.launch({headless:true});browserRef=browser;const context=await browser.newContext({viewport:{width:1440,height:1000}});
   if(!dev)await context.route('https://pro-schools.ru/**',async route=>{const url=new URL(route.request().url());const response=await route.fetch({url:base+url.pathname+url.search});await route.fulfill({response})});
-  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  const page=await context.newPage(),errors=[];page.on('pageerror',e=>{errors.push(e.message);console.error('Browser error:',e.message)});
   await page.goto(site+'/dobavit-shkolu/');await page.locator('.select-trigger[aria-label="Тип школы *"]').waitFor();
   await page.locator('[name="school"]').fill('Школа браузерной проверки');await page.locator('[name="city"]').fill('Москва');await page.locator('#submission-city-options').getByRole('option',{name:'Москва',exact:true}).click();
   await page.locator('[name="address"]').fill('Тестовая улица, 10');await page.locator('[name="description"]').fill(fields.description);await page.locator('[data-grade="1"]').click();
