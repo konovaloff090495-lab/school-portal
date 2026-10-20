@@ -1,0 +1,4534 @@
+[
+  {
+    "id": "su-literaturnyy-klub",
+    "title": "Литературный клуб",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/literaturnyy-klub/",
+    "topics": [
+      "literatura",
+      "chtenie"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      7,
+      8,
+      9
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Клуб для тех, кто читает больше школьного списка: современная проза, фэнтези, нон-фикшн, книги по выбору участников. Обсуждаем, спорим, пишем отзывы и свои тексты.",
+    "start": "2026-10-20T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-20T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-27T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "staffSlug": "litovka-kristina"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "книга месяца: выбираем голосованием, читаем частями к каждой встрече",
+      "обсуждение: без «правильных ответов», с аргументами из текста",
+      "письмо: короткий отзыв, эссе или фрагмент своего рассказа — по желанию",
+      "раз в месяц — школьное произведение 7–9 класса под другим углом"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/literaturnyy-klub/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-literaturnyy-klub",
+    "eventType": "lesson",
+    "sourceTitle": "Литературный клуб",
+    "shortTitle": "Литературный клуб",
+    "slug": "literaturnyy-klub",
+    "url": "/besplatnye-uroki/zanyatiya/literaturnyy-klub/",
+    "cover": "/besplatnye-uroki/assets/covers/su-literaturnyy-klub.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-olimpiadnaya-matematika",
+    "title": "Олимпиадные задания по математике",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/olimpiadnaya-matematika/",
+    "topics": [
+      "matematika",
+      "logika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Логика, комбинаторика, задачи на смекалку и разбор олимпиад прошлых лет — Всероссийской, «Кенгуру», Математического праздника. Учимся думать над задачей дольше пяти минут.",
+    "start": "2026-10-20T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-20T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-27T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "staffSlug": "drozdova-dariya"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "разминка: две-три короткие задачи на смекалку",
+      "тема занятия: один олимпиадный приём — чётность, инварианты, графы, логика",
+      "«думаем сами» 5–7 минут, потом обсуждаем идеи всей группой",
+      "разбор задачи реальной олимпиады прошлых лет по теме"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/olimpiadnaya-matematika/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-olimpiadnaya-matematika",
+    "eventType": "lesson",
+    "sourceTitle": "Олимпиадные задания по математике",
+    "shortTitle": "Олимпиадные задания по математике",
+    "slug": "olimpiadnaya-matematika",
+    "url": "/besplatnye-uroki/zanyatiya/olimpiadnaya-matematika/",
+    "cover": "/besplatnye-uroki/assets/covers/su-olimpiadnaya-matematika.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-razgovornyy-angliyskiy",
+    "title": "Разговорная практика: английский",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/razgovornyy-angliyskiy/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Час в неделю, когда на английском только говорят: обсуждают фильмы и новости, спорят, готовят короткие выступления. Без учебника, без оценок.",
+    "start": "2026-10-20T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:00:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Елена Комова",
+        "end": "2026-10-20T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:00:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Елена Комова",
+        "end": "2026-10-27T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Елена Комова"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема встречи объявляется заранее — можно подготовить пару мыслей",
+      "круг: каждый высказывается, учитель помогает словами, а не поправками",
+      "мини-дебаты или ролевая ситуация: заказ в кафе, собеседование, спор о фильме",
+      "разбор типичных ошибок в конце — без имён, по сути"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/razgovornyy-angliyskiy/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-razgovornyy-angliyskiy",
+    "eventType": "lesson",
+    "sourceTitle": "Разговорная практика: английский",
+    "shortTitle": "Разговорная практика: английский",
+    "slug": "razgovornyy-angliyskiy",
+    "url": "/besplatnye-uroki/zanyatiya/razgovornyy-angliyskiy/",
+    "cover": "/besplatnye-uroki/assets/covers/su-razgovornyy-angliyskiy.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-soft-skills",
+    "title": "Soft Skills",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/soft-skills/",
+    "topics": [
+      "soft-skills"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Навыки, которые не проверяют на экзаменах, но спрашивают везде: как договариваться, выступать, работать в команде, планировать время и справляться с волнением.",
+    "start": "2026-10-20T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:50:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-20T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-23T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-23T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-26T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-26T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:50:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-27T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-30T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-30T16:30:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-11-02T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 4,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Вера Липеева"
+      },
+      {
+        "day": 1,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева"
+      },
+      {
+        "day": 0,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Вера Липеева"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "разминка-знакомство: короткое упражнение, чтобы включиться",
+      "навык недели: объясняем на примере из жизни — 5 минут теории",
+      "практика: ролевая игра, мини-выступление или командная задача",
+      "обратная связь по кругу: что получилось и что попробовать в следующий раз"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/soft-skills/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-soft-skills",
+    "eventType": "lesson",
+    "sourceTitle": "Soft Skills",
+    "shortTitle": "Soft Skills",
+    "slug": "soft-skills",
+    "url": "/besplatnye-uroki/zanyatiya/soft-skills/",
+    "cover": "/besplatnye-uroki/assets/covers/su-soft-skills.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-zhivoy-mehanizm",
+    "title": "Живой механизм: физиология и анатомия",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/zhivoy-mehanizm/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Как работают сердце, мозг, мышцы и иммунитет, что происходит во сне и при стрессе. В 7–9 классах — с моделями и наглядными опытами, в 10–11 — на уровне ЕГЭ по биологии и медвузов.",
+    "start": "2026-10-20T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "end": "2026-10-20T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-22T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "end": "2026-10-22T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "end": "2026-10-27T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "end": "2026-10-29T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "staffSlug": "vorobeva-anastasiya"
+      },
+      {
+        "day": 1,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Валентиновна Воробьева",
+        "staffSlug": "vorobeva-anastasiya"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "система недели: сердце, дыхание, нервная система, иммунитет — по одной за встречу",
+      "опыт на себе: измеряем пульс до и после приседаний, проверяем рефлексы, считаем дыхание",
+      "модель или схема: как это устроено и почему именно так",
+      "в 10–11 классах — задача формата ЕГЭ по теме и разбор критериев"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/zhivoy-mehanizm/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-zhivoy-mehanizm",
+    "eventType": "lesson",
+    "sourceTitle": "Живой механизм: физиология и анатомия",
+    "shortTitle": "Живой механизм: физиология и анатомия",
+    "slug": "zhivoy-mehanizm",
+    "url": "/besplatnye-uroki/zanyatiya/zhivoy-mehanizm/",
+    "cover": "/besplatnye-uroki/assets/covers/su-zhivoy-mehanizm.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-eksperimentalnaya-biologiya-himiya",
+    "title": "Экспериментальная биология и химия",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/eksperimentalnaya-biologiya-himiya/",
+    "topics": [
+      "biologiya",
+      "himiya"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Естествознание руками: кристаллы, плесень и дрожжи, кислотность продуктов, клетка под домашним микроскопом. Всё из подручных материалов, по инструкции учителя и с обсуждением результата.",
+    "start": "2026-10-20T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Олеговна Русакова",
+        "end": "2026-10-20T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-27T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Олеговна Русакова",
+        "end": "2026-10-27T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Олеговна Русакова",
+        "staffSlug": "rusakova-anna"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "вопрос недели: «почему тесто поднимается?», «откуда в яблоке ржавчина?»",
+      "опыт вместе с учителем — пошагово, с объяснением, что происходит",
+      "наблюдение и запись результата: учимся вести дневник исследователя",
+      "обсуждение: чей кристалл вырос больше и почему"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/eksperimentalnaya-biologiya-himiya/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-eksperimentalnaya-biologiya-himiya",
+    "eventType": "lesson",
+    "sourceTitle": "Экспериментальная биология и химия",
+    "shortTitle": "Экспериментальная биология и химия",
+    "slug": "eksperimentalnaya-biologiya-himiya",
+    "url": "/besplatnye-uroki/zanyatiya/eksperimentalnaya-biologiya-himiya/",
+    "cover": "/besplatnye-uroki/assets/covers/su-eksperimentalnaya-biologiya-himiya.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-angliyskiy",
+    "title": "Английский язык",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/angliyskiy/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6,
+      9,
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Дополнительный час английского в неделю с учителем онлайн-школы «Синергия»: говорим, слушаем, разбираем грамматику — в мини-группе, а не на лекции.",
+    "start": "2026-10-20T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-10-20T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-22T15:00:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-10-22T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-26T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-10-26T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-27T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-10-27T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:00:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-10-29T15:40:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "end": "2026-11-02T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 0,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "staffSlug": "shandorina-anna"
+      },
+      {
+        "day": 1,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          9
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "staffSlug": "shandorina-anna"
+      },
+      {
+        "day": 3,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          10
+        ],
+        "teacher": "Анна Алексеевна Шандорина",
+        "staffSlug": "shandorina-anna"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "разминка-разговор на английском: 5 минут о том, что случилось за неделю",
+      "тема занятия: грамматическая конструкция или лексика — сразу в диалогах, а не в правилах",
+      "аудирование или чтение короткого текста с обсуждением",
+      "мини-задание на говорение: каждый успевает сказать несколько фраз"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/angliyskiy/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-angliyskiy",
+    "eventType": "lesson",
+    "sourceTitle": "Английский язык",
+    "shortTitle": "Английский язык",
+    "slug": "angliyskiy",
+    "url": "/besplatnye-uroki/zanyatiya/angliyskiy/",
+    "cover": "/besplatnye-uroki/assets/covers/su-angliyskiy.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-geometriya",
+    "title": "Геометрия",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/geometriya/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      9,
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Доказательства, построения и задачи, которых нет в базовом курсе. Девятиклассникам — планиметрия, десятиклассникам — стереометрия, на которой держится вторая часть ЕГЭ.",
+    "start": "2026-10-20T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-20T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-20T17:30:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-20T18:10:00+03:00"
+      },
+      {
+        "start": "2026-10-27T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-27T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-27T17:30:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-27T18:10:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "staffSlug": "andrianova-ekaterina"
+      },
+      {
+        "day": 1,
+        "from": "17:30",
+        "to": "18:10",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "staffSlug": "andrianova-ekaterina"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "теорема недели: не заучиваем, а доказываем сами с подсказками учителя",
+      "две задачи повышенной сложности с обсуждением разных путей решения",
+      "построения и чертежи: учимся видеть на рисунке то, чего нет в условии",
+      "в 10 классе — сечения и пространственные задачи с моделями"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/geometriya/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-geometriya",
+    "eventType": "lesson",
+    "sourceTitle": "Геометрия",
+    "shortTitle": "Геометрия",
+    "slug": "geometriya",
+    "url": "/besplatnye-uroki/zanyatiya/geometriya/",
+    "cover": "/besplatnye-uroki/assets/covers/su-geometriya.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-nachertatelnaya-geometriya",
+    "title": "Начертательная геометрия",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/nachertatelnaya-geometriya/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Предмет, которого нет в школе, но который встречает первокурсников любого технического и архитектурного вуза: проекции, сечения, развёртки, чтение чертежа.",
+    "start": "2026-10-20T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-20T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-20T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-27T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-27T17:20:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 1,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "staffSlug": "drozdova-dariya"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема в картинках: что такое проекция, сечение, развёртка — на реальных предметах",
+      "построение вместе с учителем — на бумаге, шаг за шагом",
+      "то же в графической программе: как чертёж живёт в цифре",
+      "задача на пространственное воображение — «что получится, если…»"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/nachertatelnaya-geometriya/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-nachertatelnaya-geometriya",
+    "eventType": "lesson",
+    "sourceTitle": "Начертательная геометрия",
+    "shortTitle": "Начертательная геометрия",
+    "slug": "nachertatelnaya-geometriya",
+    "url": "/besplatnye-uroki/zanyatiya/nachertatelnaya-geometriya/",
+    "cover": "/besplatnye-uroki/assets/covers/su-nachertatelnaya-geometriya.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-psihologicheskaya-razgruzka",
+    "title": "Психологическая разгрузка",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/psihologicheskaya-razgruzka/",
+    "topics": [
+      "psihologiya"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Час в неделю, где не учат, а восстанавливают: техники дыхания и расслабления, разговор о том, что накопилось, работа с тревогой перед контрольными и экзаменами.",
+    "start": "2026-10-21T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T15:00:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "end": "2026-10-21T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-21T15:50:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-21T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:00:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "end": "2026-10-28T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:50:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева",
+        "end": "2026-10-28T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 2,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Вера Липеева"
+      },
+      {
+        "day": 2,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "staffSlug": "kamaletdinova-galiya",
+        "variant": "через тело"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "«как неделя?» — короткий круг, можно молчать",
+      "техника недели: дыхание, заземление, расслабление мышц — пробуем вместе",
+      "разбор ситуации: контрольная, ссора, страх выступления — что помогает",
+      "в группе 10–11 — движение и растяжка под спокойный темп"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/psihologicheskaya-razgruzka/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-psihologicheskaya-razgruzka",
+    "eventType": "lesson",
+    "sourceTitle": "Психологическая разгрузка",
+    "shortTitle": "Психологическая разгрузка",
+    "slug": "psihologicheskaya-razgruzka",
+    "url": "/besplatnye-uroki/zanyatiya/psihologicheskaya-razgruzka/",
+    "cover": "/besplatnye-uroki/assets/covers/su-psihologicheskaya-razgruzka.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-ispanskiy",
+    "title": "Разговорная практика: испанский",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/ispanskiy/",
+    "topics": [
+      "ispanskiy"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Второй иностранный, которого нет в школьной программе: испанский с первого занятия в разговорном формате, в трёх возрастных группах — 5–6, 7–9 и 10–11 классы.",
+    "start": "2026-10-21T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-21T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-21T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-21T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-21T16:40:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-21T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-28T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-28T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-28T16:40:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Маргарита Владимировна Корнеева",
+        "end": "2026-10-28T17:20:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 2,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Маргарита Владимировна Корнеева"
+      },
+      {
+        "day": 2,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Маргарита Владимировна Корнеева"
+      },
+      {
+        "day": 2,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Маргарита Владимировна Корнеева"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "приветствие и короткий разговор по-испански — с первого занятия",
+      "новая лексика темы через картинки, песни и мини-диалоги",
+      "практика в парах и по кругу: каждый говорит, учитель поправляет произношение",
+      "культурная минутка: страна, праздник, блюдо, песня"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/ispanskiy/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-ispanskiy",
+    "eventType": "lesson",
+    "sourceTitle": "Разговорная практика: испанский",
+    "shortTitle": "Разговорная практика: испанский",
+    "slug": "ispanskiy",
+    "url": "/besplatnye-uroki/zanyatiya/ispanskiy/",
+    "cover": "/besplatnye-uroki/assets/covers/su-ispanskiy.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-finansovaya-gramotnost",
+    "title": "Финансовая грамотность",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/finansovaya-gramotnost/",
+    "topics": [
+      "finansovaya-gramotnost"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Откуда берутся деньги, как планировать карманные, что такое вклад, кредит и инфляция, как распознать мошенника. Через игры и кейсы: ребёнок ведёт свой бюджет и считает проценты.",
+    "start": "2026-10-21T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Ирина Шупик",
+        "end": "2026-10-21T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Ирина Шупик",
+        "end": "2026-10-28T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 2,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Ирина Шупик"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "кейс недели: ситуация из жизни — накопить на кроссовки, разделить счёт, выбрать тариф",
+      "игра или симуляция: магазин, банк, семейный бюджет на месяц",
+      "считаем: проценты, скидки, сравнение цен — математика с реальным смыслом",
+      "правило безопасности: как распознать обман и что делать"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/finansovaya-gramotnost/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-finansovaya-gramotnost",
+    "eventType": "lesson",
+    "sourceTitle": "Финансовая грамотность",
+    "shortTitle": "Финансовая грамотность",
+    "slug": "finansovaya-gramotnost",
+    "url": "/besplatnye-uroki/zanyatiya/finansovaya-gramotnost/",
+    "cover": "/besplatnye-uroki/assets/covers/su-finansovaya-gramotnost.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-proforientaciya",
+    "title": "Профориентация",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/proforientaciya/",
+    "topics": [
+      "proforientatsiya"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Цикл занятий, после которого понятно, какие предметы сдавать и куда подавать документы: тесты с разбором, карта профессий и рынка труда, разговоры о конкретных специальностях, план поступления.",
+    "start": "2026-10-21T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Берилова",
+        "end": "2026-10-21T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-28T15:50:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Берилова",
+        "end": "2026-10-28T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 2,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анастасия Берилова"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "диагностика: тест между встречами, на занятии — разбор, что значат результаты",
+      "карта профессий: какие бывают, где востребованы, сколько платят, что изучать",
+      "профессия крупным планом: один день из жизни специалиста, плюсы и минусы",
+      "план: предметы ЕГЭ, вузы и колледжи, запасные варианты — фиксируем письменно"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/proforientaciya/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-proforientaciya",
+    "eventType": "lesson",
+    "sourceTitle": "Профориентация",
+    "shortTitle": "Профориентация",
+    "slug": "proforientaciya",
+    "url": "/besplatnye-uroki/zanyatiya/proforientaciya/",
+    "cover": "/besplatnye-uroki/assets/covers/su-proforientaciya.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-informatika",
+    "title": "Информатика",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/informatika/",
+    "topics": [
+      "informatika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      9,
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Дополнительный час информатики: логика, алгоритмы и программирование на Python. В 9 классе — уровень ОГЭ и первые проекты, в 10 — курс на профильный ЕГЭ и осознанный выбор IT.",
+    "start": "2026-10-21T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-21T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-21T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-21T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-28T16:40:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-28T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-28T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "end": "2026-10-28T17:20:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 2,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          9
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "staffSlug": "drozdova-dariya"
+      },
+      {
+        "day": 2,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          10
+        ],
+        "teacher": "Дарья Ивановна Дроздова",
+        "staffSlug": "drozdova-dariya"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема через задачу: сначала «как это решить», потом теория, которая помогает",
+      "живой код на Python: пишем и запускаем вместе с учителем",
+      "разбор задания формата ОГЭ или ЕГЭ по теме — по одному за занятие",
+      "мини-проект раз в месяц: игра, бот, генератор — на выбор группы"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/informatika/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-informatika",
+    "eventType": "lesson",
+    "sourceTitle": "Информатика",
+    "shortTitle": "Информатика",
+    "slug": "informatika",
+    "url": "/besplatnye-uroki/zanyatiya/informatika/",
+    "cover": "/besplatnye-uroki/assets/covers/su-informatika.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-iskusstvo-i-tvorchestvo",
+    "title": "Искусство и творчество",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/iskusstvo-i-tvorchestvo/",
+    "topics": [
+      "tvorchestvo",
+      "izo"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Рисунок и живопись, коллаж, графика, основы композиции и цвета, знакомство с направлениями искусства. Работы собираются в портфолио — оно пригодится тем, кто пойдёт в дизайн или художественный вуз.",
+    "start": "2026-10-21T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-21T16:40:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-21T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-21T17:30:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-21T18:10:00+03:00"
+      },
+      {
+        "start": "2026-10-22T16:40:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-22T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-28T16:40:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-28T17:20:00+03:00"
+      },
+      {
+        "start": "2026-10-28T17:30:00+03:00",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-28T18:10:00+03:00"
+      },
+      {
+        "start": "2026-10-29T16:40:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Александровна Котова",
+        "end": "2026-10-29T17:20:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Анна Александровна Котова",
+        "staffSlug": "kotova-anna"
+      },
+      {
+        "day": 2,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Анна Александровна Котова",
+        "staffSlug": "kotova-anna"
+      },
+      {
+        "day": 2,
+        "from": "17:30",
+        "to": "18:10",
+        "grades": [
+          10,
+          11
+        ],
+        "teacher": "Анна Александровна Котова",
+        "staffSlug": "kotova-anna"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема и художник недели: смотрим работы, обсуждаем, как это сделано",
+      "техника: учитель показывает приём, группа повторяет со своими материалами",
+      "работа над своим листом — учитель видит камеры и подсказывает",
+      "мини-выставка: показываем результаты и говорим о них без оценок"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/iskusstvo-i-tvorchestvo/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-iskusstvo-i-tvorchestvo",
+    "eventType": "lesson",
+    "sourceTitle": "Искусство и творчество",
+    "shortTitle": "Искусство и творчество",
+    "slug": "iskusstvo-i-tvorchestvo",
+    "url": "/besplatnye-uroki/zanyatiya/iskusstvo-i-tvorchestvo/",
+    "cover": "/besplatnye-uroki/assets/covers/su-iskusstvo-i-tvorchestvo.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "fox-5052",
+    "title": "Всё про треугольники в ОГЭ по математике",
+    "organizer": "Фоксфорд",
+    "sourceUrl": "https://foxford.ru/events/5052",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      8,
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатное открытое онлайн-занятие. Программа и регистрация на странице Фоксфорда.",
+    "start": "2026-10-21T17:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатное открытое занятие",
+    "scheduleBasis": "individual_page_explicit_msk",
+    "publicationStatus": "verify_availability_before_launch",
+    "outboundUrl": "https://foxford.ru/events/5052?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=fox-5052",
+    "eventType": "webinar",
+    "sourceTitle": "Всё про треугольники в ОГЭ по математике",
+    "shortTitle": "Всё про треугольники в ОГЭ по математике",
+    "slug": "foxford-treugolniki-oge",
+    "url": "/besplatnye-uroki/zanyatiya/foxford-treugolniki-oge/",
+    "cover": "/besplatnye-uroki/assets/covers/fox-5052.webp",
+    "publicOrganizer": "Фоксфорд"
+  },
+  {
+    "id": "fox-5041",
+    "title": "Климатограммы: задание 18 ОГЭ по географии",
+    "organizer": "Фоксфорд",
+    "sourceUrl": "https://foxford.ru/events/5041",
+    "topics": [
+      "geografiya"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      8,
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатное открытое онлайн-занятие. Программа и регистрация на странице Фоксфорда.",
+    "start": "2026-10-21T18:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатное открытое занятие",
+    "scheduleBasis": "individual_page_explicit_msk",
+    "publicationStatus": "verify_availability_before_launch",
+    "outboundUrl": "https://foxford.ru/events/5041?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=fox-5041",
+    "eventType": "webinar",
+    "sourceTitle": "Климатограммы: задание 18 ОГЭ по географии",
+    "shortTitle": "Климатограммы: задание 18 ОГЭ по географии",
+    "slug": "foxford-klimatogrammy-oge",
+    "url": "/besplatnye-uroki/zanyatiya/foxford-klimatogrammy-oge/",
+    "cover": "/besplatnye-uroki/assets/covers/fox-5041.webp",
+    "publicOrganizer": "Фоксфорд"
+  },
+  {
+    "id": "su-olimpiadnyy-russkiy",
+    "title": "Олимпиадные задания по русскому языку",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/olimpiadnyy-russkiy/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Происхождение слов, история языка, лингвистические загадки и разбор заданий Всероссийской олимпиады и «Русского медвежонка». Правила запоминаются через понимание, а не зубрёжку.",
+    "start": "2026-10-22T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-22T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Елена Комова",
+        "end": "2026-10-22T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:00:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Елена Комова",
+        "end": "2026-10-29T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Елена Комова"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "загадка-разминка: слово, происхождение которого нужно угадать",
+      "тема занятия: явление языка — от истории алфавита до фразеологизмов",
+      "лингвистическая задача из олимпиады прошлых лет — решаем вместе",
+      "минутка грамотности: правило, которое становится понятным через историю"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/olimpiadnyy-russkiy/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-olimpiadnyy-russkiy",
+    "eventType": "lesson",
+    "sourceTitle": "Олимпиадные задания по русскому языку",
+    "shortTitle": "Олимпиадные задания по русскому языку",
+    "slug": "olimpiadnyy-russkiy",
+    "url": "/besplatnye-uroki/zanyatiya/olimpiadnyy-russkiy/",
+    "cover": "/besplatnye-uroki/assets/covers/su-olimpiadnyy-russkiy.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-itogovoe-sochinenie",
+    "title": "Подготовка к итоговому сочинению",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/itogovoe-sochinenie/",
+    "topics": [
+      "russkiy-yazyk",
+      "literatura"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Итоговое сочинение в декабре — допуск к ЕГЭ, а сочинение № 27 — самое «дорогое» задание ЕГЭ по русскому. Разбираем структуру, аргументы из литературы и критерии; пишем и переписываем с обратной связью.",
+    "start": "2026-10-22T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-22T15:00:00+03:00",
+        "grades": [
+          11
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-22T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:00:00+03:00",
+        "grades": [
+          11
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-29T15:40:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          11
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "staffSlug": "litovka-kristina",
+        "variant": "задание 27"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема недели: разбираем формулировку — о чём на самом деле спрашивают",
+      "аргументы: два-три произведения, которые работают на несколько тем сразу",
+      "пишем фрагмент — вступление, аргумент или вывод — прямо на занятии",
+      "разбор написанного по критериям, без имён: типичные ошибки и удачные ходы"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/itogovoe-sochinenie/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-itogovoe-sochinenie",
+    "eventType": "lesson",
+    "sourceTitle": "Подготовка к итоговому сочинению",
+    "shortTitle": "Подготовка к итоговому сочинению",
+    "slug": "itogovoe-sochinenie",
+    "url": "/besplatnye-uroki/zanyatiya/itogovoe-sochinenie/",
+    "cover": "/besplatnye-uroki/assets/covers/su-itogovoe-sochinenie.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-itogovoe-sobesedovanie",
+    "title": "Подготовка к итоговому собеседованию",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/itogovoe-sobesedovanie/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Чтение вслух, пересказ, монолог и диалог — четыре задания допуска к ОГЭ, отработанные на реальных вариантах. И параллельно изложение и сочинение из самого ОГЭ.",
+    "start": "2026-10-22T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-22T15:50:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-22T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:50:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "end": "2026-10-29T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          9
+        ],
+        "teacher": "Кристина Максимовна Литовка",
+        "staffSlug": "litovka-kristina",
+        "variant": "изложение и сочинение"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "задание собеседования на каждом занятии: чтение, пересказ, монолог или диалог по очереди",
+      "разбор критериев: за что снимают баллы и как этого избежать",
+      "запись себя и прослушивание — самый быстрый способ услышать свои ошибки",
+      "раз в две недели — изложение или сочинение ОГЭ с разбором структуры"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/itogovoe-sobesedovanie/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-itogovoe-sobesedovanie",
+    "eventType": "lesson",
+    "sourceTitle": "Подготовка к итоговому собеседованию",
+    "shortTitle": "Подготовка к итоговому собеседованию",
+    "slug": "itogovoe-sobesedovanie",
+    "url": "/besplatnye-uroki/zanyatiya/itogovoe-sobesedovanie/",
+    "cover": "/besplatnye-uroki/assets/covers/su-itogovoe-sobesedovanie.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-fitnes-i-gimnastika",
+    "title": "Фитнес и гимнастика",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/fitnes-i-gimnastika/",
+    "topics": [
+      "fizkultura"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Сорок минут движения с учителем физкультуры: разминка, растяжка, упражнения на осанку и координацию, простые комплексы, которые можно повторять самим.",
+    "start": "2026-10-22T15:50:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-22T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "end": "2026-10-22T16:30:00+03:00"
+      },
+      {
+        "start": "2026-10-29T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "end": "2026-10-29T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 3,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Галия Зявдатовна Камалетдинова",
+        "staffSlug": "kamaletdinova-galiya"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "разминка: суставная гимнастика от шеи до стоп",
+      "основной блок: комплекс на осанку, координацию или гибкость — тема недели",
+      "игровое упражнение или мини-челлендж",
+      "заминка и растяжка под спокойный темп"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/fitnes-i-gimnastika/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-fitnes-i-gimnastika",
+    "eventType": "lesson",
+    "sourceTitle": "Фитнес и гимнастика",
+    "shortTitle": "Фитнес и гимнастика",
+    "slug": "fitnes-i-gimnastika",
+    "url": "/besplatnye-uroki/zanyatiya/fitnes-i-gimnastika/",
+    "cover": "/besplatnye-uroki/assets/covers/su-fitnes-i-gimnastika.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-algebra",
+    "title": "Алгебра и начала математического анализа",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/algebra/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      9,
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Задачи выше базового учебника: функции, параметры, начала анализа. В 9 классе — мост к профильной математике, в 10 — темы, на которых строится ЕГЭ профильного уровня.",
+    "start": "2026-10-26T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-26T15:00:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-26T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-26T15:50:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-10-26T16:30:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:00:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-11-02T15:40:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:50:00+03:00",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "end": "2026-11-02T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 0,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          9
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "staffSlug": "andrianova-ekaterina"
+      },
+      {
+        "day": 0,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          10
+        ],
+        "teacher": "Екатерина Сергеевна Андрианова",
+        "staffSlug": "andrianova-ekaterina"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "короткое повторение: что нужно помнить из школьной темы",
+      "две-три задачи повышенного уровня — решаем вместе, у доски по очереди",
+      "разбор типичных ловушек: где теряют баллы на ЕГЭ и олимпиадах",
+      "задача «на подумать» до следующего раза — по желанию, без проверки"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/algebra/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-algebra",
+    "eventType": "lesson",
+    "sourceTitle": "Алгебра и начала математического анализа",
+    "shortTitle": "Алгебра и начала математического анализа",
+    "slug": "algebra",
+    "url": "/besplatnye-uroki/zanyatiya/algebra/",
+    "cover": "/besplatnye-uroki/assets/covers/su-algebra.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-etika",
+    "title": "Основы этики и морали",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/etika/",
+    "topics": [
+      "etika"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Разговор о вопросах, на которые нет ответа в учебнике: что такое справедливость, как поступать в сложной ситуации, почему люди спорят о добре и зле.",
+    "start": "2026-10-26T15:00:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-26T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "end": "2026-10-26T15:40:00+03:00"
+      },
+      {
+        "start": "2026-10-26T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "end": "2026-10-26T16:30:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:00:00+03:00",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "end": "2026-11-02T15:40:00+03:00"
+      },
+      {
+        "start": "2026-11-02T15:50:00+03:00",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "end": "2026-11-02T16:30:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 0,
+        "from": "15:50",
+        "to": "16:30",
+        "grades": [
+          5,
+          6
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "staffSlug": "kravchenko-svetlana"
+      },
+      {
+        "day": 0,
+        "from": "15:00",
+        "to": "15:40",
+        "grades": [
+          7,
+          8,
+          9
+        ],
+        "teacher": "Светлана Валериевна Кравченко",
+        "staffSlug": "kravchenko-svetlana"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "история или фрагмент фильма как повод для разговора",
+      "вопрос без правильного ответа: «а как бы поступили вы?»",
+      "дискуссия по правилам: аргумент, а не крик; слушаем, а не перебиваем",
+      "итог: что изменилось в моей позиции после разговора"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/etika/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-etika",
+    "eventType": "lesson",
+    "sourceTitle": "Основы этики и морали",
+    "shortTitle": "Основы этики и морали",
+    "slug": "etika",
+    "url": "/besplatnye-uroki/zanyatiya/etika/",
+    "cover": "/besplatnye-uroki/assets/covers/su-etika.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-literatura",
+    "title": "Литература",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/literatura/",
+    "topics": [
+      "literatura"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Разбор произведений так, как их читают филологи: контекст, авторская позиция, сопоставление текстов. И главное — как превратить прочитанное в сочинение с позицией и доказательствами.",
+    "start": "2026-10-26T16:40:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-26T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Вероника Дмитриевна Попова",
+        "end": "2026-10-26T17:20:00+03:00"
+      },
+      {
+        "start": "2026-11-02T16:40:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Вероника Дмитриевна Попова",
+        "end": "2026-11-02T17:20:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 0,
+        "from": "16:40",
+        "to": "17:20",
+        "grades": [
+          10
+        ],
+        "teacher": "Вероника Дмитриевна Попова"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "эпизод недели: читаем фрагмент вместе и разбираем, как он устроен",
+      "контекст: что происходило в стране и в литературе, когда это писалось",
+      "спор о позиции автора и героев — с аргументами из текста",
+      "письмо: абзац сочинения по теме занятия с разбором на следующей встрече"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/literatura/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-literatura",
+    "eventType": "lesson",
+    "sourceTitle": "Литература",
+    "shortTitle": "Литература",
+    "slug": "literatura",
+    "url": "/besplatnye-uroki/zanyatiya/literatura/",
+    "cover": "/besplatnye-uroki/assets/covers/su-literatura.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "su-obshchestvoznanie",
+    "title": "Обществознание",
+    "organizer": "Лекторий Синергии",
+    "sourceUrl": "https://school-university.com/lektoriy/obshchestvoznanie/",
+    "topics": [
+      "obshchestvoznanie"
+    ],
+    "kind": "scheduled",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": 40,
+    "description": "Экономика, право и политика подробнее, чем в базовом учебнике: работа с источниками, задания второй части ЕГЭ и реальные кейсы — от семейного бюджета до трудового договора.",
+    "start": "2026-10-26T17:30:00+03:00",
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "existing_synergy_partner_code",
+    "occurrences": [
+      {
+        "start": "2026-10-26T17:30:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Нелли Романовна Зеленова",
+        "end": "2026-10-26T18:10:00+03:00"
+      },
+      {
+        "start": "2026-11-02T17:30:00+03:00",
+        "grades": [
+          10
+        ],
+        "teacher": "Нелли Романовна Зеленова",
+        "end": "2026-11-02T18:10:00+03:00"
+      }
+    ],
+    "slots": [
+      {
+        "day": 0,
+        "from": "17:30",
+        "to": "18:10",
+        "grades": [
+          10
+        ],
+        "teacher": "Нелли Романовна Зеленова",
+        "staffSlug": "zelenova-nelli"
+      }
+    ],
+    "scheduleBasis": "weekly_published_schedule",
+    "scheduleNote": "Даты рассчитаны по опубликованному еженедельному расписанию. Переносы и каникулы уточняйте у организатора.",
+    "freeScope": "Все занятия этого лектория бесплатны",
+    "benefits": [
+      "тема через кейс: ситуация из жизни, к которой нужен закон или экономическая модель",
+      "источник: читаем статью конституции, кодекса или график и учимся его толковать",
+      "задание второй части ЕГЭ по теме — разбираем критерии",
+      "дискуссия: аргументы «за» и «против» с опорой на термины"
+    ],
+    "audience": "children",
+    "outboundUrl": "https://school-university.com/lektoriy/obshchestvoznanie/?utm_source=gerasimov_lav&utm_medium=lkpartners&utm_campaign=proschools_free_lessons&utm_content=su-obshchestvoznanie",
+    "eventType": "lesson",
+    "sourceTitle": "Обществознание",
+    "shortTitle": "Обществознание",
+    "slug": "obshchestvoznanie",
+    "url": "/besplatnye-uroki/zanyatiya/obshchestvoznanie/",
+    "cover": "/besplatnye-uroki/assets/covers/su-obshchestvoznanie.webp",
+    "publicOrganizer": "Бесплатные уроки"
+  },
+  {
+    "id": "um-free-course-english-language-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (10 класс): погружение в экзамен",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-english-language-10-class-2/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-english-language-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-english-language-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (10 класс): погружение в экзамен",
+    "shortTitle": "Погружение в экзамен — английский язык, 10 класс",
+    "slug": "umskul-angliyskiy-yazyk-10-pogruzhenie-v-ekzamen",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-10-pogruzhenie-v-ekzamen/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-english-language-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-english-language-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (11 класс): вся база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-english-language-11-class-2/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-english-language-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-english-language-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (11 класс): вся база для экзамена",
+    "shortTitle": "Вся база для экзамена — английский язык, 11 класс",
+    "slug": "umskul-angliyskiy-yazyk-11-vsya-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-vsya-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-english-language-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-english-11-class-1",
+    "title": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (11 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-english-11-class-1/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-english-11-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-english-11-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по английскому языку для подготовки к экзамену (11 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — английский язык, 11 класс",
+    "slug": "umskul-angliyskiy-yazyk-11-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-english-11-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-10-class-1",
+    "title": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (10 класс): основа общей биологии (жизненный цикл клетки)",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-10-class-1/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-10-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (10 класс): основа общей биологии (жизненный цикл клетки)",
+    "shortTitle": "Основа общей биологии (жизненный цикл клетки) — биология, 10 класс",
+    "slug": "umskul-biologiya-10-osnova-obschey-biologii-zhiznennyy-tsikl",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnova-obschey-biologii-zhiznennyy-tsikl/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-10-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (10 класс): основы биологии",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-10-class-2/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (10 класс): основы биологии",
+    "shortTitle": "Основы биологии — биология, 10 класс",
+    "slug": "umskul-biologiya-10-osnovy-biologii",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnovy-biologii/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (11 класс): биосинтез белка и эксперимент в №22 задании",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-11-class-2/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (11 класс): биосинтез белка и эксперимент в №22 задании",
+    "shortTitle": "Биосинтез белка и эксперимент в №22 задании — биология, 11 класс",
+    "slug": "umskul-biologiya-11-biosintez-belka-i-eksperiment-v-22-zadanii",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-11-biosintez-belka-i-eksperiment-v-22-zadanii/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-11-class-1",
+    "title": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (11 класс): генетика с нуля",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-11-class-1/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-11-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-11-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по биологии для подготовки к экзамену (11 класс): генетика с нуля",
+    "shortTitle": "Генетика с нуля — биология, 11 класс",
+    "slug": "umskul-biologiya-11-genetika-s-nulya",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-11-genetika-s-nulya/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-11-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-computer-science-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по информатике для подготовки к экзамену (10 класс): задания №3, №11, №12",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-computer-science-10-class-2/",
+    "topics": [
+      "informatika"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-computer-science-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-computer-science-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по информатике для подготовки к экзамену (10 класс): задания №3, №11, №12",
+    "shortTitle": "Задания №3, №11, №12 — информатика, 10 класс",
+    "slug": "umskul-informatika-10-zadaniya-3-11-12",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-informatika-10-zadaniya-3-11-12/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-computer-science-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (10 класс): внутренняя политика Ивана Грозного",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-10-class-2/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (10 класс): внутренняя политика Ивана Грозного",
+    "shortTitle": "Внутренняя политика Ивана Грозного — история, 10 класс",
+    "slug": "umskul-istoriya-10-vnutrennyaya-politika-ivana-groznogo",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-10-vnutrennyaya-politika-ivana-groznogo/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-10-class-1",
+    "title": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (10 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-10-class-1/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-10-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (10 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — история, 10 класс",
+    "slug": "umskul-istoriya-10-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-10-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-10-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-11-class-1",
+    "title": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (11 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-11-class-1/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-11-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-11-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по истории для подготовки к экзамену (11 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — история, 11 класс",
+    "slug": "umskul-istoriya-11-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-11-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-11-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-social-science-ravil-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по обществознанию для подготовки к экзамену (10 класс): база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-social-science-ravil-10-class-2/",
+    "topics": [
+      "obshchestvoznanie"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-social-science-ravil-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-social-science-ravil-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по обществознанию для подготовки к экзамену (10 класс): база для экзамена",
+    "shortTitle": "База для экзамена — обществознание, 10 класс",
+    "slug": "umskul-obshchestvoznanie-10-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-10-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-social-science-ravil-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-social-science-11-class-1",
+    "title": "Бесплатный курс ЕГЭ по обществознанию для подготовки к экзамену (11 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-social-science-11-class-1/",
+    "topics": [
+      "obshchestvoznanie"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-social-science-11-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-social-science-11-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по обществознанию для подготовки к экзамену (11 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — обществознание, 11 класс",
+    "slug": "umskul-obshchestvoznanie-11-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-11-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-social-science-11-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-profile-mathematics-arthur-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по профильной математике для подготовки к экзамену (11 класс): логарифмы",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-profile-mathematics-arthur-11-class-2/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-profile-mathematics-arthur-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-profile-mathematics-arthur-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по профильной математике для подготовки к экзамену (11 класс): логарифмы",
+    "shortTitle": "Логарифмы — математика, 11 класс",
+    "slug": "umskul-matematika-11-logarifmy",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-11-logarifmy/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-profile-mathematics-arthur-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-10-class-1",
+    "title": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (10 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-10-class-1/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-10-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (10 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — русский язык, 10 класс",
+    "slug": "umskul-russkiy-yazyk-10-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-10-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (10 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-10-class-2/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (10 класс): основы экзамена",
+    "shortTitle": "Основы ЕГЭ по русскому языку с Марией Вельф, 10 класс",
+    "verifiedDescription": "Два бесплатных занятия по основам ЕГЭ по русскому языку с Марией Вельф для 10 класса. Уроки доступны в записи, заниматься можно в своём темпе.",
+    "slug": "umskul-russkiy-yazyk-10-osnovy-ekzamena-ac011",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena-ac011/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (11 класс): темы, без которых не сдать экзамен",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-11-class-2/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по русскому языку для подготовки к экзамену (11 класс): темы, без которых не сдать экзамен",
+    "shortTitle": "Темы, без которых не сдать экзамен — русский язык, 11 класс",
+    "slug": "umskul-russkiy-yazyk-11-temy-bez-kotoryh-ne-sdat-ekzamen",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-11-temy-bez-kotoryh-ne-sdat-ekzamen/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-10-class-1",
+    "title": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (10 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-10-class-1/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-10-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (10 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — физика, 10 класс",
+    "slug": "umskul-fizika-10-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-10-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-10-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-10-class-2",
+    "title": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (10 класс): практика кинематики",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-10-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-10-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-10-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (10 класс): практика кинематики",
+    "shortTitle": "Практика кинематики — физика, 10 класс",
+    "slug": "umskul-fizika-10-praktika-kinematiki",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-10-praktika-kinematiki/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-10-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (11 класс): стартерпак для подготовки к экзамену",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-11-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по физике для подготовки к экзамену (11 класс): стартерпак для подготовки к экзамену",
+    "shortTitle": "Стартерпак для подготовки к экзамену — физика, 11 класс",
+    "slug": "umskul-fizika-11-starterpak-dlya-podgotovki-k-ekzamenu",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-11-starterpak-dlya-podgotovki-k-ekzamenu/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-10-class-1",
+    "title": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (10 класс): базовый курс",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-10-class-1/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      10
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-10-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-10-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (10 класс): базовый курс",
+    "shortTitle": "Базовый курс — химия, 10 класс",
+    "slug": "umskul-himiya-10-bazovyy-kurs",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-10-bazovyy-kurs/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-10-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-bogdan-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): ОВР с органическими веществами",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-bogdan-11-class-2/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-bogdan-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-bogdan-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): ОВР с органическими веществами",
+    "shortTitle": "ОВР с органическими веществами — химия, 11 класс",
+    "slug": "umskul-himiya-11-ovr-s-organicheskimi-veschestvami",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-11-ovr-s-organicheskimi-veschestvami/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-bogdan-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-11-class-1",
+    "title": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): классификация неорганических веществ",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-11-class-1/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-11-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-11-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): классификация неорганических веществ",
+    "shortTitle": "Классификация неорганических веществ — химия, 11 класс",
+    "slug": "umskul-himiya-11-klassifikatsiya-neorganicheskih-veschestv",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-11-klassifikatsiya-neorganicheskih-veschestv/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-11-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-tatyana-11-class-2",
+    "title": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): расчетные задачи №26",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-tatyana-11-class-2/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-tatyana-11-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-tatyana-11-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ЕГЭ по химии для подготовки к экзамену (11 класс): расчетные задачи №26",
+    "shortTitle": "Расчетные задачи №26 — химия, 11 класс",
+    "slug": "umskul-himiya-11-raschetnye-zadachi-26",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-11-raschetnye-zadachi-26/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-tatyana-11-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-english-9-class-1",
+    "title": "Бесплатный курс ОГЭ по английскому языку для подготовки к экзамену (9 класс): прокачиваем навыки для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-english-9-class-1/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-english-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-english-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по английскому языку для подготовки к экзамену (9 класс): прокачиваем навыки для экзамена",
+    "shortTitle": "Прокачиваем навыки для экзамена — английский язык, 9 класс",
+    "slug": "umskul-angliyskiy-yazyk-9-prokachivaem-navyki-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-prokachivaem-navyki-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-english-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-english-language-9-class-2",
+    "title": "Бесплатный курс ОГЭ по английскому языку для подготовки к экзамену (9 класс): учим грамматику и зарабатываем первые баллы",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-english-language-9-class-2/",
+    "topics": [
+      "angliyskiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-english-language-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-english-language-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по английскому языку для подготовки к экзамену (9 класс): учим грамматику и зарабатываем первые баллы",
+    "shortTitle": "Учим грамматику и зарабатываем первые баллы — английский язык, 9 класс",
+    "slug": "umskul-angliyskiy-yazyk-9-uchim-grammatiku-i-zarabatyvaem-pervye",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-uchim-grammatiku-i-zarabatyvaem-pervye/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-english-language-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-9-class-1",
+    "title": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-9-class-1/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): база для экзамена",
+    "shortTitle": "База для экзамена — биология, 9 класс",
+    "slug": "umskul-biologiya-9-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-elena-9-class-2",
+    "title": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): задания №19-21",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-elena-9-class-2/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-elena-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-elena-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): задания №19-21",
+    "shortTitle": "Задания №19-21 — биология, 9 класс",
+    "slug": "umskul-biologiya-9-zadaniya-19-21",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-zadaniya-19-21/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-elena-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-nikita-9-class-2",
+    "title": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): практика по варианту",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-nikita-9-class-2/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-nikita-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-nikita-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по биологии для подготовки к экзамену (9 класс): практика по варианту",
+    "shortTitle": "Практика по варианту — биология, 9 класс",
+    "slug": "umskul-biologiya-9-praktika-po-variantu",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-praktika-po-variantu/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-nikita-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-geography-9-class-2",
+    "title": "Бесплатный курс ОГЭ по географии для подготовки к экзамену (9 класс): задания №7, №17",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-geography-9-class-2/",
+    "topics": [
+      "geografiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-geography-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-geography-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по географии для подготовки к экзамену (9 класс): задания №7, №17",
+    "shortTitle": "Задания №7, №17 — география, 9 класс",
+    "slug": "umskul-geografiya-9-zadaniya-7-17",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-geografiya-9-zadaniya-7-17/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-geography-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-geography-9-class-1",
+    "title": "Бесплатный курс ОГЭ по географии для подготовки к экзамену (9 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-geography-9-class-1/",
+    "topics": [
+      "geografiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-geography-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-geography-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по географии для подготовки к экзамену (9 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — география, 9 класс",
+    "slug": "umskul-geografiya-9-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-geografiya-9-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-geography-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-computer-science-9-class-1",
+    "title": "Бесплатный курс ОГЭ по информатике для подготовки к экзамену (9 класс): база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-computer-science-9-class-1/",
+    "topics": [
+      "informatika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-computer-science-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-computer-science-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по информатике для подготовки к экзамену (9 класс): база для экзамена",
+    "shortTitle": "База для экзамена — информатика, 9 класс",
+    "slug": "umskul-informatika-9-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-informatika-9-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-computer-science-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-computer-science-dima-9-class-2",
+    "title": "Бесплатный курс ОГЭ по информатике для подготовки к экзамену (9 класс): графы, схемы, алгоритмы",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-computer-science-dima-9-class-2/",
+    "topics": [
+      "informatika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-computer-science-dima-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-computer-science-dima-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по информатике для подготовки к экзамену (9 класс): графы, схемы, алгоритмы",
+    "shortTitle": "Графы, схемы, алгоритмы — информатика, 9 класс",
+    "slug": "umskul-informatika-9-grafy-shemy-algoritmy",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-informatika-9-grafy-shemy-algoritmy/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-computer-science-dima-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-9-class-1",
+    "title": "Бесплатный курс ОГЭ по истории для подготовки к экзамену (9 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-9-class-1/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по истории для подготовки к экзамену (9 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — история, 9 класс",
+    "slug": "umskul-istoriya-9-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-9-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-9-class-2",
+    "title": "Бесплатный курс ОГЭ по истории для подготовки к экзамену (9 класс): самые популярные реформы",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-9-class-2/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по истории для подготовки к экзамену (9 класс): самые популярные реформы",
+    "shortTitle": "Самые популярные реформы — история, 9 класс",
+    "slug": "umskul-istoriya-9-samye-populyarnye-reformy",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-9-samye-populyarnye-reformy/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-literature-9-class-1",
+    "title": "Бесплатный курс ОГЭ по литературе для подготовки к экзамену (9 класс): база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-literature-9-class-1/",
+    "topics": [
+      "literatura"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-literature-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-literature-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по литературе для подготовки к экзамену (9 класс): база для экзамена",
+    "shortTitle": "База для экзамена — литература, 9 класс",
+    "slug": "umskul-literatura-9-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-literatura-9-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-literature-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-literature-9-class-2",
+    "title": "Бесплатный курс ОГЭ по литературе для подготовки к экзамену (9 класс): задания №3, №4",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-literature-9-class-2/",
+    "topics": [
+      "literatura"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-literature-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-literature-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по литературе для подготовки к экзамену (9 класс): задания №3, №4",
+    "shortTitle": "Задания №3, №4 — литература, 9 класс",
+    "slug": "umskul-literatura-9-zadaniya-3-4",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-literatura-9-zadaniya-3-4/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-literature-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-mathematics-danir-9-class-2",
+    "title": "Бесплатный курс ОГЭ по математике для подготовки к экзамену (9 класс): cтепени, корни, арифметика",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-danir-9-class-2/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-danir-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-danir-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по математике для подготовки к экзамену (9 класс): cтепени, корни, арифметика",
+    "shortTitle": "Степени, корни, арифметика — математика, 9 класс",
+    "slug": "umskul-matematika-9-ctepeni-korni-arifmetika",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-9-ctepeni-korni-arifmetika/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-danir-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-mathematics-9-class-1",
+    "title": "Бесплатный курс ОГЭ по математике для подготовки к экзамену (9 класс): основы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-9-class-1/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по математике для подготовки к экзамену (9 класс): основы экзамена",
+    "shortTitle": "Основы экзамена — математика, 9 класс",
+    "slug": "umskul-matematika-9-osnovy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-9-osnovy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-social-science-9-class-2",
+    "title": "Бесплатный курс ОГЭ по обществознанию для подготовки к экзамену (9 класс): база для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-social-science-9-class-2/",
+    "topics": [
+      "obshchestvoznanie"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-social-science-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-social-science-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по обществознанию для подготовки к экзамену (9 класс): база для экзамена",
+    "shortTitle": "База для экзамена — обществознание, 9 класс",
+    "slug": "umskul-obshchestvoznanie-9-baza-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-baza-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-social-science-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-social-science-9-class-1",
+    "title": "Бесплатный курс ОГЭ по обществознанию для подготовки к экзамену (9 класс): самое необходимое для экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-social-science-9-class-1/",
+    "topics": [
+      "obshchestvoznanie"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-social-science-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-social-science-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по обществознанию для подготовки к экзамену (9 класс): самое необходимое для экзамена",
+    "shortTitle": "Самое необходимое для экзамена — обществознание, 9 класс",
+    "slug": "umskul-obshchestvoznanie-9-samoe-neobhodimoe-dlya-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-samoe-neobhodimoe-dlya-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-social-science-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-9-class-1",
+    "title": "Бесплатный курс ОГЭ по русскому языку для подготовки к экзамену (9 класс): минимум для сдачи экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-9-class-1/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по русскому языку для подготовки к экзамену (9 класс): минимум для сдачи экзамена",
+    "shortTitle": "Минимум для сдачи экзамена — русский язык, 9 класс",
+    "slug": "umskul-russkiy-yazyk-9-minimum-dlya-sdachi-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-9-minimum-dlya-sdachi-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-tim-9-class-2",
+    "title": "Бесплатный курс ОГЭ по физике для подготовки к экзамену (9 класс): самые важные темы экзамена",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-tim-9-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-tim-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-tim-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по физике для подготовки к экзамену (9 класс): самые важные темы экзамена",
+    "shortTitle": "Самые важные темы экзамена — физика, 9 класс",
+    "slug": "umskul-fizika-9-samye-vazhnye-temy-ekzamena",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-9-samye-vazhnye-temy-ekzamena/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-tim-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-maksim-9-class-2",
+    "title": "Бесплатный курс ОГЭ по физике для подготовки к экзамену (9 класс): статика, условия равновесия",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-maksim-9-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-maksim-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-maksim-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по физике для подготовки к экзамену (9 класс): статика, условия равновесия",
+    "shortTitle": "Статика, условия равновесия — физика, 9 класс",
+    "slug": "umskul-fizika-9-statika-usloviya-ravnovesiya",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-9-statika-usloviya-ravnovesiya/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-maksim-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-9-class-1",
+    "title": "Бесплатный курс ОГЭ по химии для подготовки к экзамену (9 класс): базовый курс",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-9-class-1/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-9-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-9-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по химии для подготовки к экзамену (9 класс): базовый курс",
+    "shortTitle": "Базовый курс — химия, 9 класс",
+    "slug": "umskul-himiya-9-bazovyy-kurs",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-9-bazovyy-kurs/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-9-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-denis-9-class-2",
+    "title": "Бесплатный курс ОГЭ по химии для подготовки к экзамену (9 класс): степень окисления и ОВР",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-denis-9-class-2/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-denis-9-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-denis-9-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс ОГЭ по химии для подготовки к экзамену (9 класс): степень окисления и ОВР",
+    "shortTitle": "Степень окисления и ОВР — химия, 9 класс",
+    "slug": "umskul-himiya-9-stepen-okisleniya-i-ovr",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-9-stepen-okisleniya-i-ovr/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-denis-9-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-baza-11-class",
+    "title": "Бесплатный курс по базовой математике ЕГЭ: топ-3 самых важных тем",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-baza-11-class/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-baza-11-class/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-baza-11-class",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по базовой математике ЕГЭ: топ-3 самых важных тем",
+    "shortTitle": "Топ-3 самых важных тем — математика",
+    "slug": "umskul-matematika-deti-top-3-samyh-vazhnyh-tem",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-deti-top-3-samyh-vazhnyh-tem/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-baza-11-class.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-biology-8-class-1",
+    "title": "Бесплатный курс по биологии (8 класс): системы растений и животных",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-biology-8-class-1/",
+    "topics": [
+      "biologiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-biology-8-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-biology-8-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по биологии (8 класс): системы растений и животных",
+    "shortTitle": "Системы растений и животных — биология, 8 класс",
+    "slug": "umskul-biologiya-8-sistemy-rasteniy-i-zhivotnyh",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-biologiya-8-sistemy-rasteniy-i-zhivotnyh/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-biology-8-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-7-class-2",
+    "title": "Бесплатный курс по истории (7 класс): Иван Грозный, реформы Избранной Рады",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-7-class-2/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-7-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-7-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по истории (7 класс): Иван Грозный, реформы Избранной Рады",
+    "shortTitle": "Иван Грозный, реформы Избранной Рады — история, 7 класс",
+    "slug": "umskul-istoriya-7-ivan-groznyy-reformy-izbrannoy-rady",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-7-ivan-groznyy-reformy-izbrannoy-rady/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-7-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-7-class-1",
+    "title": "Бесплатный курс по истории (7 класс): как перестать терять баллы на контрольных",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-7-class-1/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-7-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-7-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по истории (7 класс): как перестать терять баллы на контрольных",
+    "shortTitle": "Как перестать терять баллы на контрольных — история, 7 класс",
+    "slug": "umskul-istoriya-7-kak-perestat-teryat-bally-na-kontrolnyh",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-7-kak-perestat-teryat-bally-na-kontrolnyh/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-7-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-history-8-class-1",
+    "title": "Бесплатный курс по истории (8 класс): самая сложная тема 8 класса",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-history-8-class-1/",
+    "topics": [
+      "istoriya"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-history-8-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-history-8-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по истории (8 класс): самая сложная тема 8 класса",
+    "shortTitle": "Самая сложная тема 8 класса — история, 8 класс",
+    "slug": "umskul-istoriya-8-samaya-slozhnaya-tema-8-klassa",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-istoriya-8-samaya-slozhnaya-tema-8-klassa/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-history-8-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-mathematics-7-class-1",
+    "title": "Бесплатный курс по математике (7 класс): как перестать терять баллы на контрольных",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-7-class-1/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-7-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-7-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по математике (7 класс): как перестать терять баллы на контрольных",
+    "shortTitle": "Как перестать терять баллы на контрольных — математика, 7 класс",
+    "slug": "umskul-matematika-7-kak-perestat-teryat-bally-na-kontrolnyh",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-7-kak-perestat-teryat-bally-na-kontrolnyh/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-7-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-mathematics-8-class-2",
+    "title": "Бесплатный курс по математике (8 класс): действия с рациональными дробями",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-8-class-2/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-8-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-8-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по математике (8 класс): действия с рациональными дробями",
+    "shortTitle": "Действия с рациональными дробями — математика, 8 класс",
+    "slug": "umskul-matematika-8-deystviya-s-ratsionalnymi-drobyami",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-8-deystviya-s-ratsionalnymi-drobyami/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-8-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-mathematics-8-class-1",
+    "title": "Бесплатный курс по математике (8 класс): основы для ОГЭ",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-mathematics-8-class-1/",
+    "topics": [
+      "matematika"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-mathematics-8-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-mathematics-8-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по математике (8 класс): основы для ОГЭ",
+    "shortTitle": "Основы для ОГЭ — математика, 8 класс",
+    "slug": "umskul-matematika-8-osnovy-dlya-oge",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-matematika-8-osnovy-dlya-oge/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-mathematics-8-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-7-class-1",
+    "title": "Бесплатный курс по русскому языку (7 класс): база 7 класса для уверенных контрольных",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-7-class-1/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-7-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-7-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по русскому языку (7 класс): база 7 класса для уверенных контрольных",
+    "shortTitle": "База 7 класса для уверенных контрольных — русский язык, 7 класс",
+    "slug": "umskul-russkiy-yazyk-7-baza-7-klassa-dlya-uverennyh-kontrolnyh",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-7-baza-7-klassa-dlya-uverennyh-kontrolnyh/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-7-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-8-class-1",
+    "title": "Бесплатный курс по русскому языку (8 класс): основы ля ОГЭ",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-8-class-1/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-8-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-8-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по русскому языку (8 класс): основы ля ОГЭ",
+    "shortTitle": "Основы для ОГЭ — русский язык, 8 класс",
+    "slug": "umskul-russkiy-yazyk-8-osnovy-lya-oge",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-osnovy-lya-oge/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-8-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-russian-language-8-class-2",
+    "title": "Бесплатный курс по русскому языку (8 класс): словосочетание в задании № 9 КИМ ОГЭ",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-russian-language-8-class-2/",
+    "topics": [
+      "russkiy-yazyk"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-russian-language-8-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-russian-language-8-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по русскому языку (8 класс): словосочетание в задании № 9 КИМ ОГЭ",
+    "shortTitle": "Словосочетание в задании № 9 КИМ ОГЭ — русский язык, 8 класс",
+    "slug": "umskul-russkiy-yazyk-8-slovosochetanie-v-zadanii-9-kim-oge",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-slovosochetanie-v-zadanii-9-kim-oge/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-8-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-7-class-1",
+    "title": "Бесплатный курс по физике (7 класс): все ключевые темы 7 класса за 3 урока",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-7-class-1/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-7-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-7-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по физике (7 класс): все ключевые темы 7 класса за 3 урока",
+    "shortTitle": "Все ключевые темы 7 класса за 3 урока — физика, 7 класс",
+    "slug": "umskul-fizika-7-vse-klyuchevye-temy-7-klassa-za-3-uroka",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-7-vse-klyuchevye-temy-7-klassa-za-3-uroka/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-7-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-7-class-2",
+    "title": "Бесплатный курс по физике (7 класс): силы в механике",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-7-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      7
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-7-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-7-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по физике (7 класс): силы в механике",
+    "shortTitle": "Силы в механике — физика, 7 класс",
+    "slug": "umskul-fizika-7-sily-v-mehanike",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-7-sily-v-mehanike/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-7-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-physics-8-class-2",
+    "title": "Бесплатный курс по физике (8 класс): тепловые явления за 1 урок",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-physics-8-class-2/",
+    "topics": [
+      "fizika"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-physics-8-class-2/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-physics-8-class-2",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по физике (8 класс): тепловые явления за 1 урок",
+    "shortTitle": "Тепловые явления за 1 урок — физика, 8 класс",
+    "slug": "umskul-fizika-8-teplovye-yavleniya-za-1-urok",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-fizika-8-teplovye-yavleniya-za-1-urok/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-physics-8-class-2.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "um-free-course-chemistry-8-class-1",
+    "title": "Бесплатный курс по химии (8 класс): типы химической связи",
+    "organizer": "Умскул",
+    "sourceUrl": "https://umschool.net/course/free-course-chemistry-8-class-1/",
+    "topics": [
+      "himiya"
+    ],
+    "kind": "recording",
+    "grades": [
+      8
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Бесплатный тематический мини-курс в записи. Для доступа нужна регистрация на платформе организатора. Длительность уточняется на странице курса.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс в записи",
+    "outboundUrl": "https://umschool.net/course/free-course-chemistry-8-class-1/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=um-free-course-chemistry-8-class-1",
+    "eventType": "minicourse",
+    "sourceTitle": "Бесплатный курс по химии (8 класс): типы химической связи",
+    "shortTitle": "Типы химической связи — химия, 8 класс",
+    "slug": "umskul-himiya-8-tipy-himicheskoy-svyazi",
+    "url": "/besplatnye-uroki/zanyatiya/umskul-himiya-8-tipy-himicheskoy-svyazi/",
+    "cover": "/besplatnye-uroki/assets/covers/um-free-course-chemistry-8-class-1.webp",
+    "publicOrganizer": "Умскул"
+  },
+  {
+    "id": "tetrika-scratch",
+    "title": "Виртуальный питомец в Scratch",
+    "organizer": "Тетрика",
+    "sourceUrl": "https://tetrika-school.ru/masterclass_it",
+    "topics": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "kind": "appointment",
+    "grades": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Первый проект с командами и событиями в Scratch. Время занятия согласуется после заявки.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мастер-класс",
+    "outboundUrl": "https://tetrika-school.ru/masterclass_it?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=tetrika-scratch",
+    "eventType": "masterclass",
+    "sourceTitle": "Виртуальный питомец в Scratch",
+    "shortTitle": "Виртуальный питомец в Scratch",
+    "slug": "tetrika-scratch",
+    "url": "/besplatnye-uroki/zanyatiya/tetrika-scratch/",
+    "cover": "/besplatnye-uroki/assets/covers/tetrika-scratch.webp",
+    "publicOrganizer": "Тетрика"
+  },
+  {
+    "id": "tetrika-python",
+    "title": "Движение мяча на Python",
+    "organizer": "Тетрика",
+    "sourceUrl": "https://tetrika-school.ru/masterclass_it",
+    "topics": [
+      "programmirovanie",
+      "python"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": null,
+    "duration": null,
+    "description": "Знакомство с Python через движение мяча. Возраст и длительность уточняются у организатора.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мастер-класс",
+    "outboundUrl": "https://tetrika-school.ru/masterclass_it?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=tetrika-python",
+    "eventType": "masterclass",
+    "sourceTitle": "Движение мяча на Python",
+    "shortTitle": "Движение мяча на Python",
+    "slug": "tetrika-python",
+    "url": "/besplatnye-uroki/zanyatiya/tetrika-python/",
+    "cover": "/besplatnye-uroki/assets/covers/tetrika-python.webp",
+    "publicOrganizer": "Тетрика"
+  },
+  {
+    "id": "kodland-blender",
+    "title": "Знакомство с 3D-моделированием в Blender",
+    "organizer": "Kodland",
+    "sourceUrl": "https://www.kodland.org/ru/courses/design/3d-modeling",
+    "topics": [
+      "dizayn",
+      "3d"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      13,
+      17
+    ],
+    "duration": null,
+    "description": "Бесплатный вводный урок по направлению 3D. Условия и длительность уточняются при записи.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Только вводное занятие бесплатно",
+    "outboundUrl": "https://www.kodland.org/ru/courses/design/3d-modeling?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=kodland-blender",
+    "eventType": "trial",
+    "sourceTitle": "Знакомство с 3D-моделированием в Blender",
+    "shortTitle": "Знакомство с 3D-моделированием в Blender",
+    "slug": "kodland-blender",
+    "url": "/besplatnye-uroki/zanyatiya/kodland-blender/",
+    "cover": "/besplatnye-uroki/assets/covers/kodland-blender.webp",
+    "publicOrganizer": "Kodland"
+  },
+  {
+    "id": "uchi-it",
+    "title": "Знакомство с программированием",
+    "organizer": "Учи.ру",
+    "sourceUrl": "https://uchi.ru/products/l/it-school",
+    "topics": [
+      "programmirovanie"
+    ],
+    "kind": "appointment",
+    "grades": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Вводный урок с репетитором для знакомства с программированием.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Только вводное занятие бесплатно",
+    "outboundUrl": "https://uchi.ru/products/l/it-school?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=uchi-it",
+    "eventType": "trial",
+    "sourceTitle": "Знакомство с программированием",
+    "shortTitle": "Знакомство с программированием",
+    "slug": "uchi-it",
+    "url": "/besplatnye-uroki/zanyatiya/uchi-it/",
+    "cover": "/besplatnye-uroki/assets/covers/uchi-it.webp",
+    "publicOrganizer": "Учи.ру"
+  },
+  {
+    "id": "algoritmika-ai",
+    "title": "Комикс с нейросетями: 3 бесплатных урока",
+    "organizer": "Алгоритмика",
+    "sourceUrl": "https://online.algoritmika.org/comics_ai",
+    "topics": [
+      "neyroseti",
+      "tvorchestvo"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      8,
+      17
+    ],
+    "duration": 90,
+    "description": "Три онлайн-занятия с преподавателем: промптинг, создание изображений и сборка комикса. Дата старта по записи.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатный мини-курс: 3 занятия",
+    "outboundUrl": "https://online.algoritmika.org/comics_ai?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=algoritmika-ai",
+    "eventType": "minicourse",
+    "sourceTitle": "Комикс с нейросетями: 3 бесплатных урока",
+    "shortTitle": "Комикс с нейросетями: 3 бесплатных урока",
+    "slug": "algoritmika-ai",
+    "url": "/besplatnye-uroki/zanyatiya/algoritmika-ai/",
+    "cover": "/besplatnye-uroki/assets/covers/algoritmika-ai.webp",
+    "publicOrganizer": "Алгоритмика"
+  },
+  {
+    "id": "uono-ai",
+    "title": "Первый проект с ИИ",
+    "organizer": "UONO",
+    "sourceUrl": "https://uono.ru/",
+    "topics": [
+      "neyroseti"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      7,
+      16
+    ],
+    "duration": 65,
+    "description": "50 минут работы ребёнка над проектом и примерно 15 минут разговора с родителем.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первый урок бесплатно",
+    "outboundUrl": "https://uono.ru/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=uono-ai",
+    "eventType": "trial",
+    "sourceTitle": "Первый проект с ИИ",
+    "shortTitle": "Первый проект с ИИ",
+    "slug": "uono-ai",
+    "url": "/besplatnye-uroki/zanyatiya/uono-ai/",
+    "cover": "/besplatnye-uroki/assets/covers/uono-ai.webp",
+    "publicOrganizer": "UONO"
+  },
+  {
+    "id": "kodland-funtech",
+    "title": "Первый урок FunTech",
+    "organizer": "Kodland",
+    "sourceUrl": "https://www.kodland.org/ru/",
+    "topics": [
+      "programmirovanie",
+      "logika"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      5,
+      7
+    ],
+    "duration": 45,
+    "description": "Знакомство младших детей с цифровыми технологиями и программированием.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://www.kodland.org/ru/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=kodland-funtech",
+    "eventType": "trial",
+    "sourceTitle": "Первый урок FunTech",
+    "shortTitle": "Первый урок FunTech",
+    "slug": "kodland-funtech",
+    "url": "/besplatnye-uroki/zanyatiya/kodland-funtech/",
+    "cover": "/besplatnye-uroki/assets/covers/kodland-funtech.webp",
+    "publicOrganizer": "Kodland"
+  },
+  {
+    "id": "itgen-scratch",
+    "title": "Пробное занятие по Scratch",
+    "organizer": "Айтигенио",
+    "sourceUrl": "https://itgen.io/kurs-scratch-dlya-detey",
+    "topics": [
+      "programmirovanie",
+      "scratch"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": null,
+    "duration": null,
+    "description": "Знакомство с визуальным программированием вместе с IT-тренером.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://itgen.io/kurs-scratch-dlya-detey?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=itgen-scratch",
+    "eventType": "trial",
+    "sourceTitle": "Пробное занятие по Scratch",
+    "shortTitle": "Пробное занятие по Scratch",
+    "slug": "itgen-scratch",
+    "url": "/besplatnye-uroki/zanyatiya/itgen-scratch/",
+    "cover": "/besplatnye-uroki/assets/covers/itgen-scratch.webp",
+    "publicOrganizer": "Айтигенио"
+  },
+  {
+    "id": "itgen-roblox",
+    "title": "Пробный урок Roblox с IT-тренером",
+    "organizer": "Айтигенио",
+    "sourceUrl": "https://itgen.io/programmirovanie/roblox",
+    "topics": [
+      "programmirovanie",
+      "roblox"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      7,
+      null
+    ],
+    "duration": null,
+    "description": "Первое знакомство с созданием 3D-миров и механиками игры. Заявки принимает родитель.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://itgen.io/programmirovanie/roblox?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=itgen-roblox",
+    "eventType": "trial",
+    "sourceTitle": "Пробный урок Roblox с IT-тренером",
+    "shortTitle": "Пробный урок Roblox с IT-тренером",
+    "slug": "itgen-roblox",
+    "url": "/besplatnye-uroki/zanyatiya/itgen-roblox/",
+    "cover": "/besplatnye-uroki/assets/covers/itgen-roblox.webp",
+    "publicOrganizer": "Айтигенио"
+  },
+  {
+    "id": "skillbox-ai",
+    "title": "Пробный урок по искусственному интеллекту",
+    "organizer": "Skillbox Kids",
+    "sourceUrl": "https://kids.skillbox.ru/catalog/artificial-intelligence",
+    "topics": [
+      "neyroseti",
+      "programmirovanie"
+    ],
+    "kind": "appointment",
+    "grades": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ages": null,
+    "duration": null,
+    "description": "Индивидуальное знакомство с IT-направлением. 60–90 минут указаны для обучения; длительность вводного урока уточняйте отдельно.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://kids.skillbox.ru/catalog/artificial-intelligence?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=skillbox-ai",
+    "eventType": "trial",
+    "sourceTitle": "Пробный урок по искусственному интеллекту",
+    "shortTitle": "Пробный урок по искусственному интеллекту",
+    "slug": "skillbox-ai",
+    "url": "/besplatnye-uroki/zanyatiya/skillbox-ai/",
+    "cover": "/besplatnye-uroki/assets/covers/skillbox-ai.webp",
+    "publicOrganizer": "Skillbox Kids"
+  },
+  {
+    "id": "kodland-unity",
+    "title": "Пробный урок: игры в Unity",
+    "organizer": "Kodland",
+    "sourceUrl": "https://www.kodland.org/ru/",
+    "topics": [
+      "programmirovanie"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      13,
+      17
+    ],
+    "duration": 45,
+    "description": "Пробное занятие один на один с преподавателем по разработке игр.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://www.kodland.org/ru/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=kodland-unity",
+    "eventType": "trial",
+    "sourceTitle": "Пробный урок: игры в Unity",
+    "shortTitle": "Пробный урок: игры в Unity",
+    "slug": "kodland-unity",
+    "url": "/besplatnye-uroki/zanyatiya/kodland-unity/",
+    "cover": "/besplatnye-uroki/assets/covers/kodland-unity.webp",
+    "publicOrganizer": "Kodland"
+  },
+  {
+    "id": "kodland-roblox",
+    "title": "Пробный урок: создание игр в Roblox",
+    "organizer": "Kodland",
+    "sourceUrl": "https://www.kodland.org/ru/",
+    "topics": [
+      "programmirovanie",
+      "roblox"
+    ],
+    "kind": "appointment",
+    "grades": [],
+    "ages": [
+      8,
+      12
+    ],
+    "duration": 45,
+    "description": "Индивидуальное знакомство с направлением Roblox. Полная программа курса оплачивается отдельно.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Первое пробное занятие бесплатно",
+    "outboundUrl": "https://www.kodland.org/ru/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=kodland-roblox",
+    "eventType": "trial",
+    "sourceTitle": "Пробный урок: создание игр в Roblox",
+    "shortTitle": "Пробный урок: создание игр в Roblox",
+    "slug": "kodland-roblox",
+    "url": "/besplatnye-uroki/zanyatiya/kodland-roblox/",
+    "cover": "/besplatnye-uroki/assets/covers/kodland-roblox.webp",
+    "publicOrganizer": "Kodland"
+  },
+  {
+    "id": "teenai-start",
+    "title": "Пять первых видеоуроков по нейросетям",
+    "organizer": "TEEN.AI",
+    "sourceUrl": "https://teen-ai.ru/",
+    "topics": [
+      "neyroseti",
+      "tvorchestvo"
+    ],
+    "kind": "recording",
+    "grades": [],
+    "ages": [
+      6,
+      14
+    ],
+    "duration": null,
+    "description": "Бесплатный старт из пяти видеоуроков и доступ к детской песочнице; объём бесплатных генераций ограничен.",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатны 5 уроков и стартовый лимит",
+    "outboundUrl": "https://teen-ai.ru/?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=teenai-start",
+    "eventType": "minicourse",
+    "sourceTitle": "Пять первых видеоуроков по нейросетям",
+    "shortTitle": "Пять первых видеоуроков по нейросетям",
+    "slug": "teenai-start",
+    "url": "/besplatnye-uroki/zanyatiya/teenai-start/",
+    "cover": "/besplatnye-uroki/assets/covers/teenai-start.webp",
+    "publicOrganizer": "TEEN.AI"
+  },
+  {
+    "id": "sky-chess",
+    "title": "Шахматы для начинающих: открытый урок",
+    "organizer": "Skysmart",
+    "sourceUrl": "https://webinars.skysmart.ru/list",
+    "topics": [
+      "shahmaty"
+    ],
+    "kind": "recording",
+    "grades": [],
+    "ages": null,
+    "duration": null,
+    "description": "Запись открытого урока о правилах шахмат. На странице организатора выберите рубрику «Шахматы».",
+    "start": null,
+    "format": "online",
+    "checkedAt": "2026-10-20",
+    "price": 0,
+    "currency": "RUB",
+    "trackingStatus": "editorial_utm_only",
+    "freeScope": "Бесплатная запись; условия доступа у организатора",
+    "outboundUrl": "https://webinars.skysmart.ru/list?utm_source=gerasimov_lav&utm_medium=referral&utm_campaign=proschools_free_lessons&utm_content=sky-chess",
+    "eventType": "lesson",
+    "sourceTitle": "Шахматы для начинающих: открытый урок",
+    "shortTitle": "Шахматы для начинающих: открытый урок",
+    "slug": "sky-chess",
+    "url": "/besplatnye-uroki/zanyatiya/sky-chess/",
+    "cover": "/besplatnye-uroki/assets/covers/sky-chess.webp",
+    "publicOrganizer": "Skysmart"
+  }
+]

@@ -1,0 +1,975 @@
+{
+  "/besplatnye-uroki/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий | ProSchools",
+    "description": "Бесплатные уроки для детей: школьные предметы, языки, программирование и шахматы. Расписание, классы, возраст и условия участия. Выберите занятие и запишитесь.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/2/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 2 | ProSchools",
+    "description": "Страница 2 афиши бесплатных уроков. Темы: Профориентация, Информатика, Творчество, ИЗО, Математика, География, Русский язык, Литература, Физкультура, Этика. Классы, формат и запись на…",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/2/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/3/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 3 | ProSchools",
+    "description": "Страница 3 афиши бесплатных уроков. Темы: Обществознание, Английский язык, Биология, Информатика, История. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/3/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/4/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 4 | ProSchools",
+    "description": "Страница 4 афиши бесплатных уроков. Темы: Обществознание, Математика, Русский язык, Физика, Химия. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/4/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/5/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 5 | ProSchools",
+    "description": "Страница 5 афиши бесплатных уроков. Темы: Химия, Английский язык, Биология, География, Информатика, История. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/5/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/6/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 6 | ProSchools",
+    "description": "Страница 6 афиши бесплатных уроков. Темы: Литература, Математика, Обществознание, Русский язык, Физика, Химия. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/6/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/7/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 7 | ProSchools",
+    "description": "Страница 7 афиши бесплатных уроков. Темы: Биология, История, Математика, Русский язык, Физика. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/7/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/8/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 8 | ProSchools",
+    "description": "Страница 8 афиши бесплатных уроков. Темы: Физика, Химия, Программирование, Scratch, Python, Дизайн, 3D-моделирование, Нейросети и ИИ, Творчество, Логика, Roblox. Классы, формат и запись на…",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/8/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/page/9/": {
+    "title": "Бесплатные уроки для детей — афиша онлайн-занятий, страница 9 | ProSchools",
+    "description": "Страница 9 афиши бесплатных уроков. Темы: Программирование, Roblox, Нейросети и ИИ, Творчество, Шахматы. Классы, формат и запись на занятия.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/page/9/",
+    "type": "catalog",
+    "eventId": null
+  },
+  "/besplatnye-uroki/zanyatiya/literaturnyy-klub/": {
+    "title": "Литературный клуб — бесплатно | ProSchools",
+    "description": "Литературный клуб. Бесплатные уроки: 7, 8, 9 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/literaturnyy-klub/",
+    "type": "lesson",
+    "eventId": "su-literaturnyy-klub"
+  },
+  "/besplatnye-uroki/zanyatiya/olimpiadnaya-matematika/": {
+    "title": "Олимпиадные задания по математике — бесплатно | ProSchools",
+    "description": "Олимпиадные задания по математике. Бесплатные уроки: 5, 6 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/olimpiadnaya-matematika/",
+    "type": "lesson",
+    "eventId": "su-olimpiadnaya-matematika"
+  },
+  "/besplatnye-uroki/zanyatiya/razgovornyy-angliyskiy/": {
+    "title": "Разговорная практика: английский — бесплатно | ProSchools",
+    "description": "Разговорная практика: английский. Бесплатные уроки: 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/razgovornyy-angliyskiy/",
+    "type": "lesson",
+    "eventId": "su-razgovornyy-angliyskiy"
+  },
+  "/besplatnye-uroki/zanyatiya/soft-skills/": {
+    "title": "Soft Skills — бесплатно | ProSchools",
+    "description": "Soft Skills. Бесплатные уроки: 5, 6, 7, 8, 9, 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/soft-skills/",
+    "type": "lesson",
+    "eventId": "su-soft-skills"
+  },
+  "/besplatnye-uroki/zanyatiya/zhivoy-mehanizm/": {
+    "title": "Живой механизм: физиология и анатомия — бесплатно | ProSchools",
+    "description": "Живой механизм: физиология и анатомия. Бесплатные уроки: 7, 8, 9, 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/zhivoy-mehanizm/",
+    "type": "lesson",
+    "eventId": "su-zhivoy-mehanizm"
+  },
+  "/besplatnye-uroki/zanyatiya/eksperimentalnaya-biologiya-himiya/": {
+    "title": "Экспериментальная биология и химия — бесплатно | ProSchools",
+    "description": "Экспериментальная биология и химия. Бесплатные уроки: 5, 6 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/eksperimentalnaya-biologiya-himiya/",
+    "type": "lesson",
+    "eventId": "su-eksperimentalnaya-biologiya-himiya"
+  },
+  "/besplatnye-uroki/zanyatiya/angliyskiy/": {
+    "title": "Английский язык — бесплатно | ProSchools",
+    "description": "Английский язык. Бесплатные уроки: 5, 6, 9, 10 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/angliyskiy/",
+    "type": "lesson",
+    "eventId": "su-angliyskiy"
+  },
+  "/besplatnye-uroki/zanyatiya/geometriya/": {
+    "title": "Геометрия — бесплатно | ProSchools",
+    "description": "Геометрия. Бесплатные уроки: 9, 10 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/geometriya/",
+    "type": "lesson",
+    "eventId": "su-geometriya"
+  },
+  "/besplatnye-uroki/zanyatiya/nachertatelnaya-geometriya/": {
+    "title": "Начертательная геометрия — бесплатно | ProSchools",
+    "description": "Начертательная геометрия. Бесплатные уроки: 10 класс, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/nachertatelnaya-geometriya/",
+    "type": "lesson",
+    "eventId": "su-nachertatelnaya-geometriya"
+  },
+  "/besplatnye-uroki/zanyatiya/psihologicheskaya-razgruzka/": {
+    "title": "Психологическая разгрузка — бесплатно | ProSchools",
+    "description": "Психологическая разгрузка. Бесплатные уроки: 7, 8, 9, 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/psihologicheskaya-razgruzka/",
+    "type": "lesson",
+    "eventId": "su-psihologicheskaya-razgruzka"
+  },
+  "/besplatnye-uroki/zanyatiya/ispanskiy/": {
+    "title": "Разговорная практика: испанский — бесплатно | ProSchools",
+    "description": "Разговорная практика: испанский. Бесплатные уроки: 5, 6, 7, 8, 9, 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/ispanskiy/",
+    "type": "lesson",
+    "eventId": "su-ispanskiy"
+  },
+  "/besplatnye-uroki/zanyatiya/finansovaya-gramotnost/": {
+    "title": "Финансовая грамотность — бесплатно | ProSchools",
+    "description": "Финансовая грамотность. Бесплатные уроки: 5, 6 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/finansovaya-gramotnost/",
+    "type": "lesson",
+    "eventId": "su-finansovaya-gramotnost"
+  },
+  "/besplatnye-uroki/zanyatiya/proforientaciya/": {
+    "title": "Профориентация — бесплатно | ProSchools",
+    "description": "Профориентация. Бесплатные уроки: 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/proforientaciya/",
+    "type": "lesson",
+    "eventId": "su-proforientaciya"
+  },
+  "/besplatnye-uroki/zanyatiya/informatika/": {
+    "title": "Информатика — бесплатно | ProSchools",
+    "description": "Информатика. Бесплатные уроки: 9, 10 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/informatika/",
+    "type": "lesson",
+    "eventId": "su-informatika"
+  },
+  "/besplatnye-uroki/zanyatiya/iskusstvo-i-tvorchestvo/": {
+    "title": "Искусство и творчество — бесплатно | ProSchools",
+    "description": "Искусство и творчество. Бесплатные уроки: 5, 6, 7, 8, 9, 10, 11 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/iskusstvo-i-tvorchestvo/",
+    "type": "lesson",
+    "eventId": "su-iskusstvo-i-tvorchestvo"
+  },
+  "/besplatnye-uroki/zanyatiya/foxford-treugolniki-oge/": {
+    "title": "Всё про треугольники в ОГЭ по математике — бесплатно | ProSchools",
+    "description": "Всё про треугольники в ОГЭ по математике. Фоксфорд: 8, 9 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/foxford-treugolniki-oge/",
+    "type": "lesson",
+    "eventId": "fox-5052"
+  },
+  "/besplatnye-uroki/zanyatiya/foxford-klimatogrammy-oge/": {
+    "title": "Климатограммы: задание 18 ОГЭ по географии — бесплатно | ProSchools",
+    "description": "Климатограммы: задание 18 ОГЭ по географии. Фоксфорд: 8, 9 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/foxford-klimatogrammy-oge/",
+    "type": "lesson",
+    "eventId": "fox-5041"
+  },
+  "/besplatnye-uroki/zanyatiya/olimpiadnyy-russkiy/": {
+    "title": "Олимпиадные задания по русскому языку — бесплатно | ProSchools",
+    "description": "Олимпиадные задания по русскому языку. Бесплатные уроки: 5, 6 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/olimpiadnyy-russkiy/",
+    "type": "lesson",
+    "eventId": "su-olimpiadnyy-russkiy"
+  },
+  "/besplatnye-uroki/zanyatiya/itogovoe-sochinenie/": {
+    "title": "Подготовка к итоговому сочинению — бесплатно | ProSchools",
+    "description": "Подготовка к итоговому сочинению. Бесплатные уроки: 11 класс, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/itogovoe-sochinenie/",
+    "type": "lesson",
+    "eventId": "su-itogovoe-sochinenie"
+  },
+  "/besplatnye-uroki/zanyatiya/itogovoe-sobesedovanie/": {
+    "title": "Подготовка к итоговому собеседованию — бесплатно | ProSchools",
+    "description": "Подготовка к итоговому собеседованию. Бесплатные уроки: 9 класс, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/itogovoe-sobesedovanie/",
+    "type": "lesson",
+    "eventId": "su-itogovoe-sobesedovanie"
+  },
+  "/besplatnye-uroki/zanyatiya/fitnes-i-gimnastika/": {
+    "title": "Фитнес и гимнастика — бесплатно | ProSchools",
+    "description": "Фитнес и гимнастика. Бесплатные уроки: 5, 6 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/fitnes-i-gimnastika/",
+    "type": "lesson",
+    "eventId": "su-fitnes-i-gimnastika"
+  },
+  "/besplatnye-uroki/zanyatiya/algebra/": {
+    "title": "Алгебра и начала математического анализа — бесплатно | ProSchools",
+    "description": "Алгебра и начала математического анализа. Бесплатные уроки: 9, 10 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/algebra/",
+    "type": "lesson",
+    "eventId": "su-algebra"
+  },
+  "/besplatnye-uroki/zanyatiya/etika/": {
+    "title": "Основы этики и морали — бесплатно | ProSchools",
+    "description": "Основы этики и морали. Бесплатные уроки: 5, 6, 7, 8, 9 классы, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/etika/",
+    "type": "lesson",
+    "eventId": "su-etika"
+  },
+  "/besplatnye-uroki/zanyatiya/literatura/": {
+    "title": "Литература — бесплатно | ProSchools",
+    "description": "Литература. Бесплатные уроки: 10 класс, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/literatura/",
+    "type": "lesson",
+    "eventId": "su-literatura"
+  },
+  "/besplatnye-uroki/zanyatiya/obshchestvoznanie/": {
+    "title": "Обществознание — бесплатно | ProSchools",
+    "description": "Обществознание. Бесплатные уроки: 10 класс, занятие по расписанию. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/obshchestvoznanie/",
+    "type": "lesson",
+    "eventId": "su-obshchestvoznanie"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-10-pogruzhenie-v-ekzamen/": {
+    "title": "Погружение в экзамен — английский язык, 10 класс — бесплатно | ProSchools",
+    "description": "Погружение в экзамен — английский язык, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-10-pogruzhenie-v-ekzamen/",
+    "type": "lesson",
+    "eventId": "um-free-course-english-language-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-vsya-baza-dlya-ekzamena/": {
+    "title": "Вся база для экзамена — английский язык, 11 класс — бесплатно | ProSchools",
+    "description": "Вся база для экзамена — английский язык, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-vsya-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-english-language-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-osnovy-ekzamena/": {
+    "title": "Основы экзамена — английский язык, 11 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — английский язык, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-11-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-english-11-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnova-obschey-biologii-zhiznennyy-tsikl/": {
+    "title": "Основа общей биологии (жизненный цикл клетки) — биология, 10… | ProSchools",
+    "description": "Основа общей биологии (жизненный цикл клетки) — биология, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnova-obschey-biologii-zhiznennyy-tsikl/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-10-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnovy-biologii/": {
+    "title": "Основы биологии — биология, 10 класс — бесплатно | ProSchools",
+    "description": "Основы биологии — биология, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-10-osnovy-biologii/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-11-biosintez-belka-i-eksperiment-v-22-zadanii/": {
+    "title": "Биосинтез белка и эксперимент в №22 задании — биология, 11… | ProSchools",
+    "description": "Биосинтез белка и эксперимент в №22 задании — биология, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-11-biosintez-belka-i-eksperiment-v-22-zadanii/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-11-genetika-s-nulya/": {
+    "title": "Генетика с нуля — биология, 11 класс — бесплатно | ProSchools",
+    "description": "Генетика с нуля — биология, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-11-genetika-s-nulya/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-11-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-informatika-10-zadaniya-3-11-12/": {
+    "title": "Задания №3, №11, №12 — информатика, 10 класс — бесплатно | ProSchools",
+    "description": "Задания №3, №11, №12 — информатика, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-informatika-10-zadaniya-3-11-12/",
+    "type": "lesson",
+    "eventId": "um-free-course-computer-science-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-10-vnutrennyaya-politika-ivana-groznogo/": {
+    "title": "Внутренняя политика Ивана Грозного — история, 10 класс… | ProSchools",
+    "description": "Внутренняя политика Ивана Грозного — история, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-10-vnutrennyaya-politika-ivana-groznogo/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-10-osnovy-ekzamena/": {
+    "title": "Основы экзамена — история, 10 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — история, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-10-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-10-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-11-osnovy-ekzamena/": {
+    "title": "Основы экзамена — история, 11 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — история, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-11-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-11-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-10-baza-dlya-ekzamena/": {
+    "title": "База для экзамена — обществознание, 10 класс — бесплатно | ProSchools",
+    "description": "База для экзамена — обществознание, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-10-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-social-science-ravil-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-11-osnovy-ekzamena/": {
+    "title": "Основы экзамена — обществознание, 11 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — обществознание, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-11-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-social-science-11-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-11-logarifmy/": {
+    "title": "Логарифмы — математика, 11 класс — бесплатно | ProSchools",
+    "description": "Логарифмы — математика, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-11-logarifmy/",
+    "type": "lesson",
+    "eventId": "um-free-course-profile-mathematics-arthur-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena/": {
+    "title": "Основы экзамена — русский язык, 10 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — русский язык, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-10-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena-ac011/": {
+    "title": "Основы ЕГЭ по русскому языку с Марией Вельф, 10 класс — бесплатно | ProSchools",
+    "description": "Два бесплатных занятия по основам ЕГЭ по русскому языку с Марией Вельф для 10 класса. Уроки доступны в записи, заниматься можно в своём темпе.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-10-osnovy-ekzamena-ac011/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-11-temy-bez-kotoryh-ne-sdat-ekzamen/": {
+    "title": "Темы, без которых не сдать экзамен — русский язык, 11 класс… | ProSchools",
+    "description": "Темы, без которых не сдать экзамен — русский язык, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-11-temy-bez-kotoryh-ne-sdat-ekzamen/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-10-osnovy-ekzamena/": {
+    "title": "Основы экзамена — физика, 10 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — физика, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-10-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-10-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-10-praktika-kinematiki/": {
+    "title": "Практика кинематики — физика, 10 класс — бесплатно | ProSchools",
+    "description": "Практика кинематики — физика, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-10-praktika-kinematiki/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-10-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-11-starterpak-dlya-podgotovki-k-ekzamenu/": {
+    "title": "Стартерпак для подготовки к экзамену — физика, 11 класс… | ProSchools",
+    "description": "Стартерпак для подготовки к экзамену — физика, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-11-starterpak-dlya-podgotovki-k-ekzamenu/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-10-bazovyy-kurs/": {
+    "title": "Базовый курс — химия, 10 класс — бесплатно | ProSchools",
+    "description": "Базовый курс — химия, 10 класс. Умскул: 10 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-10-bazovyy-kurs/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-10-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-11-ovr-s-organicheskimi-veschestvami/": {
+    "title": "ОВР с органическими веществами — химия, 11 класс — бесплатно | ProSchools",
+    "description": "ОВР с органическими веществами — химия, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-11-ovr-s-organicheskimi-veschestvami/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-bogdan-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-11-klassifikatsiya-neorganicheskih-veschestv/": {
+    "title": "Классификация неорганических веществ — химия, 11 класс… | ProSchools",
+    "description": "Классификация неорганических веществ — химия, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-11-klassifikatsiya-neorganicheskih-veschestv/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-11-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-11-raschetnye-zadachi-26/": {
+    "title": "Расчетные задачи №26 — химия, 11 класс — бесплатно | ProSchools",
+    "description": "Расчетные задачи №26 — химия, 11 класс. Умскул: 11 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-11-raschetnye-zadachi-26/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-tatyana-11-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-prokachivaem-navyki-dlya-ekzamena/": {
+    "title": "Прокачиваем навыки для экзамена — английский язык, 9 класс… | ProSchools",
+    "description": "Прокачиваем навыки для экзамена — английский язык, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-prokachivaem-navyki-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-english-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-uchim-grammatiku-i-zarabatyvaem-pervye/": {
+    "title": "Учим грамматику и зарабатываем первые баллы — английский… | ProSchools",
+    "description": "Учим грамматику и зарабатываем первые баллы — английский язык, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-angliyskiy-yazyk-9-uchim-grammatiku-i-zarabatyvaem-pervye/",
+    "type": "lesson",
+    "eventId": "um-free-course-english-language-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-baza-dlya-ekzamena/": {
+    "title": "База для экзамена — биология, 9 класс — бесплатно | ProSchools",
+    "description": "База для экзамена — биология, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-9-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-zadaniya-19-21/": {
+    "title": "Задания №19-21 — биология, 9 класс — бесплатно | ProSchools",
+    "description": "Задания №19-21 — биология, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-9-zadaniya-19-21/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-elena-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-9-praktika-po-variantu/": {
+    "title": "Практика по варианту — биология, 9 класс — бесплатно | ProSchools",
+    "description": "Практика по варианту — биология, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-9-praktika-po-variantu/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-nikita-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-geografiya-9-zadaniya-7-17/": {
+    "title": "Задания №7, №17 — география, 9 класс — бесплатно | ProSchools",
+    "description": "Задания №7, №17 — география, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-geografiya-9-zadaniya-7-17/",
+    "type": "lesson",
+    "eventId": "um-free-course-geography-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-geografiya-9-osnovy-ekzamena/": {
+    "title": "Основы экзамена — география, 9 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — география, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-geografiya-9-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-geography-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-informatika-9-baza-dlya-ekzamena/": {
+    "title": "База для экзамена — информатика, 9 класс — бесплатно | ProSchools",
+    "description": "База для экзамена — информатика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-informatika-9-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-computer-science-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-informatika-9-grafy-shemy-algoritmy/": {
+    "title": "Графы, схемы, алгоритмы — информатика, 9 класс — бесплатно | ProSchools",
+    "description": "Графы, схемы, алгоритмы — информатика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-informatika-9-grafy-shemy-algoritmy/",
+    "type": "lesson",
+    "eventId": "um-free-course-computer-science-dima-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-9-osnovy-ekzamena/": {
+    "title": "Основы экзамена — история, 9 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — история, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-9-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-9-samye-populyarnye-reformy/": {
+    "title": "Самые популярные реформы — история, 9 класс — бесплатно | ProSchools",
+    "description": "Самые популярные реформы — история, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-9-samye-populyarnye-reformy/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-literatura-9-baza-dlya-ekzamena/": {
+    "title": "База для экзамена — литература, 9 класс — бесплатно | ProSchools",
+    "description": "База для экзамена — литература, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-literatura-9-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-literature-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-literatura-9-zadaniya-3-4/": {
+    "title": "Задания №3, №4 — литература, 9 класс — бесплатно | ProSchools",
+    "description": "Задания №3, №4 — литература, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-literatura-9-zadaniya-3-4/",
+    "type": "lesson",
+    "eventId": "um-free-course-literature-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-9-ctepeni-korni-arifmetika/": {
+    "title": "Степени, корни, арифметика — математика, 9 класс — бесплатно | ProSchools",
+    "description": "Степени, корни, арифметика — математика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-9-ctepeni-korni-arifmetika/",
+    "type": "lesson",
+    "eventId": "um-free-course-mathematics-danir-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-9-osnovy-ekzamena/": {
+    "title": "Основы экзамена — математика, 9 класс — бесплатно | ProSchools",
+    "description": "Основы экзамена — математика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-9-osnovy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-mathematics-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-baza-dlya-ekzamena/": {
+    "title": "База для экзамена — обществознание, 9 класс — бесплатно | ProSchools",
+    "description": "База для экзамена — обществознание, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-baza-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-social-science-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-samoe-neobhodimoe-dlya-ekzamena/": {
+    "title": "Самое необходимое для экзамена — обществознание, 9 класс… | ProSchools",
+    "description": "Самое необходимое для экзамена — обществознание, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-obshchestvoznanie-9-samoe-neobhodimoe-dlya-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-social-science-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-9-minimum-dlya-sdachi-ekzamena/": {
+    "title": "Минимум для сдачи экзамена — русский язык, 9 класс — бесплатно | ProSchools",
+    "description": "Минимум для сдачи экзамена — русский язык, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-9-minimum-dlya-sdachi-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-9-samye-vazhnye-temy-ekzamena/": {
+    "title": "Самые важные темы экзамена — физика, 9 класс — бесплатно | ProSchools",
+    "description": "Самые важные темы экзамена — физика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-9-samye-vazhnye-temy-ekzamena/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-tim-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-9-statika-usloviya-ravnovesiya/": {
+    "title": "Статика, условия равновесия — физика, 9 класс — бесплатно | ProSchools",
+    "description": "Статика, условия равновесия — физика, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-9-statika-usloviya-ravnovesiya/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-maksim-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-9-bazovyy-kurs/": {
+    "title": "Базовый курс — химия, 9 класс — бесплатно | ProSchools",
+    "description": "Базовый курс — химия, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-9-bazovyy-kurs/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-9-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-9-stepen-okisleniya-i-ovr/": {
+    "title": "Степень окисления и ОВР — химия, 9 класс — бесплатно | ProSchools",
+    "description": "Степень окисления и ОВР — химия, 9 класс. Умскул: 9 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-9-stepen-okisleniya-i-ovr/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-denis-9-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-deti-top-3-samyh-vazhnyh-tem/": {
+    "title": "Топ-3 самых важных тем — математика — бесплатно | ProSchools",
+    "description": "Топ-3 самых важных тем — математика. Умскул: Возраст уточняется, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-deti-top-3-samyh-vazhnyh-tem/",
+    "type": "lesson",
+    "eventId": "um-free-baza-11-class"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-biologiya-8-sistemy-rasteniy-i-zhivotnyh/": {
+    "title": "Системы растений и животных — биология, 8 класс — бесплатно | ProSchools",
+    "description": "Системы растений и животных — биология, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-biologiya-8-sistemy-rasteniy-i-zhivotnyh/",
+    "type": "lesson",
+    "eventId": "um-free-course-biology-8-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-7-ivan-groznyy-reformy-izbrannoy-rady/": {
+    "title": "Иван Грозный, реформы Избранной Рады — история, 7 класс… | ProSchools",
+    "description": "Иван Грозный, реформы Избранной Рады — история, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-7-ivan-groznyy-reformy-izbrannoy-rady/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-7-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-7-kak-perestat-teryat-bally-na-kontrolnyh/": {
+    "title": "Как перестать терять баллы на контрольных — история, 7 класс… | ProSchools",
+    "description": "Как перестать терять баллы на контрольных — история, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-7-kak-perestat-teryat-bally-na-kontrolnyh/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-7-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-istoriya-8-samaya-slozhnaya-tema-8-klassa/": {
+    "title": "Самая сложная тема 8 класса — история, 8 класс — бесплатно | ProSchools",
+    "description": "Самая сложная тема 8 класса — история, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-istoriya-8-samaya-slozhnaya-tema-8-klassa/",
+    "type": "lesson",
+    "eventId": "um-free-course-history-8-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-7-kak-perestat-teryat-bally-na-kontrolnyh/": {
+    "title": "Как перестать терять баллы на контрольных — математика, 7… | ProSchools",
+    "description": "Как перестать терять баллы на контрольных — математика, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-7-kak-perestat-teryat-bally-na-kontrolnyh/",
+    "type": "lesson",
+    "eventId": "um-free-course-mathematics-7-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-8-deystviya-s-ratsionalnymi-drobyami/": {
+    "title": "Действия с рациональными дробями — математика, 8 класс… | ProSchools",
+    "description": "Действия с рациональными дробями — математика, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-8-deystviya-s-ratsionalnymi-drobyami/",
+    "type": "lesson",
+    "eventId": "um-free-course-mathematics-8-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-matematika-8-osnovy-dlya-oge/": {
+    "title": "Основы для ОГЭ — математика, 8 класс — бесплатно | ProSchools",
+    "description": "Основы для ОГЭ — математика, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-matematika-8-osnovy-dlya-oge/",
+    "type": "lesson",
+    "eventId": "um-free-course-mathematics-8-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-7-baza-7-klassa-dlya-uverennyh-kontrolnyh/": {
+    "title": "База 7 класса для уверенных контрольных — русский язык, 7… | ProSchools",
+    "description": "База 7 класса для уверенных контрольных — русский язык, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-7-baza-7-klassa-dlya-uverennyh-kontrolnyh/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-7-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-osnovy-lya-oge/": {
+    "title": "Основы для ОГЭ — русский язык, 8 класс — бесплатно | ProSchools",
+    "description": "Основы для ОГЭ — русский язык, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-osnovy-lya-oge/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-8-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-slovosochetanie-v-zadanii-9-kim-oge/": {
+    "title": "Словосочетание в задании № 9 КИМ ОГЭ — русский язык, 8 класс… | ProSchools",
+    "description": "Словосочетание в задании № 9 КИМ ОГЭ — русский язык, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-russkiy-yazyk-8-slovosochetanie-v-zadanii-9-kim-oge/",
+    "type": "lesson",
+    "eventId": "um-free-course-russian-language-8-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-7-vse-klyuchevye-temy-7-klassa-za-3-uroka/": {
+    "title": "Все ключевые темы 7 класса за 3 урока — физика, 7 класс… | ProSchools",
+    "description": "Все ключевые темы 7 класса за 3 урока — физика, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-7-vse-klyuchevye-temy-7-klassa-za-3-uroka/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-7-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-7-sily-v-mehanike/": {
+    "title": "Силы в механике — физика, 7 класс — бесплатно | ProSchools",
+    "description": "Силы в механике — физика, 7 класс. Умскул: 7 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-7-sily-v-mehanike/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-7-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-fizika-8-teplovye-yavleniya-za-1-urok/": {
+    "title": "Тепловые явления за 1 урок — физика, 8 класс — бесплатно | ProSchools",
+    "description": "Тепловые явления за 1 урок — физика, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-fizika-8-teplovye-yavleniya-za-1-urok/",
+    "type": "lesson",
+    "eventId": "um-free-course-physics-8-class-2"
+  },
+  "/besplatnye-uroki/zanyatiya/umskul-himiya-8-tipy-himicheskoy-svyazi/": {
+    "title": "Типы химической связи — химия, 8 класс — бесплатно | ProSchools",
+    "description": "Типы химической связи — химия, 8 класс. Умскул: 8 класс, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/umskul-himiya-8-tipy-himicheskoy-svyazi/",
+    "type": "lesson",
+    "eventId": "um-free-course-chemistry-8-class-1"
+  },
+  "/besplatnye-uroki/zanyatiya/tetrika-scratch/": {
+    "title": "Виртуальный питомец в Scratch — бесплатно | ProSchools",
+    "description": "Виртуальный питомец в Scratch. Тетрика: 1, 2, 3, 4 классы, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/tetrika-scratch/",
+    "type": "lesson",
+    "eventId": "tetrika-scratch"
+  },
+  "/besplatnye-uroki/zanyatiya/tetrika-python/": {
+    "title": "Движение мяча на Python — бесплатно | ProSchools",
+    "description": "Движение мяча на Python. Тетрика: Возраст уточняется, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/tetrika-python/",
+    "type": "lesson",
+    "eventId": "tetrika-python"
+  },
+  "/besplatnye-uroki/zanyatiya/kodland-blender/": {
+    "title": "Знакомство с 3D-моделированием в Blender — бесплатно | ProSchools",
+    "description": "Знакомство с 3D-моделированием в Blender. Kodland: 13–17 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/kodland-blender/",
+    "type": "lesson",
+    "eventId": "kodland-blender"
+  },
+  "/besplatnye-uroki/zanyatiya/uchi-it/": {
+    "title": "Знакомство с программированием — бесплатно | ProSchools",
+    "description": "Знакомство с программированием. Учи.ру: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 классы, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/uchi-it/",
+    "type": "lesson",
+    "eventId": "uchi-it"
+  },
+  "/besplatnye-uroki/zanyatiya/algoritmika-ai/": {
+    "title": "Комикс с нейросетями: 3 бесплатных урока — бесплатно | ProSchools",
+    "description": "Комикс с нейросетями: 3 бесплатных урока. Алгоритмика: 8–17 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/algoritmika-ai/",
+    "type": "lesson",
+    "eventId": "algoritmika-ai"
+  },
+  "/besplatnye-uroki/zanyatiya/uono-ai/": {
+    "title": "Первый проект с ИИ — бесплатно | ProSchools",
+    "description": "Первый проект с ИИ. UONO: 7–16 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/uono-ai/",
+    "type": "lesson",
+    "eventId": "uono-ai"
+  },
+  "/besplatnye-uroki/zanyatiya/kodland-funtech/": {
+    "title": "Первый урок FunTech — бесплатно | ProSchools",
+    "description": "Первый урок FunTech. Kodland: 5–7 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/kodland-funtech/",
+    "type": "lesson",
+    "eventId": "kodland-funtech"
+  },
+  "/besplatnye-uroki/zanyatiya/itgen-scratch/": {
+    "title": "Пробное занятие по Scratch — бесплатно | ProSchools",
+    "description": "Пробное занятие по Scratch. Айтигенио: Возраст уточняется, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/itgen-scratch/",
+    "type": "lesson",
+    "eventId": "itgen-scratch"
+  },
+  "/besplatnye-uroki/zanyatiya/itgen-roblox/": {
+    "title": "Пробный урок Roblox с IT-тренером — бесплатно | ProSchools",
+    "description": "Пробный урок Roblox с IT-тренером. Айтигенио: 7+ лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/itgen-roblox/",
+    "type": "lesson",
+    "eventId": "itgen-roblox"
+  },
+  "/besplatnye-uroki/zanyatiya/skillbox-ai/": {
+    "title": "Пробный урок по искусственному интеллекту — бесплатно | ProSchools",
+    "description": "Пробный урок по искусственному интеллекту. Skillbox Kids: 2, 3, 4, 5, 6, 7, 8, 9 классы, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/skillbox-ai/",
+    "type": "lesson",
+    "eventId": "skillbox-ai"
+  },
+  "/besplatnye-uroki/zanyatiya/kodland-unity/": {
+    "title": "Пробный урок: игры в Unity — бесплатно | ProSchools",
+    "description": "Пробный урок: игры в Unity. Kodland: 13–17 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/kodland-unity/",
+    "type": "lesson",
+    "eventId": "kodland-unity"
+  },
+  "/besplatnye-uroki/zanyatiya/kodland-roblox/": {
+    "title": "Пробный урок: создание игр в Roblox — бесплатно | ProSchools",
+    "description": "Пробный урок: создание игр в Roblox. Kodland: 8–12 лет, пробное занятие по записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/kodland-roblox/",
+    "type": "lesson",
+    "eventId": "kodland-roblox"
+  },
+  "/besplatnye-uroki/zanyatiya/teenai-start/": {
+    "title": "Пять первых видеоуроков по нейросетям — бесплатно | ProSchools",
+    "description": "Пять первых видеоуроков по нейросетям. TEEN.AI: 6–14 лет, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/teenai-start/",
+    "type": "lesson",
+    "eventId": "teenai-start"
+  },
+  "/besplatnye-uroki/zanyatiya/sky-chess/": {
+    "title": "Шахматы для начинающих: открытый урок — бесплатно | ProSchools",
+    "description": "Шахматы для начинающих: открытый урок. Skysmart: Возраст уточняется, уроки в записи. Условия бесплатного участия и запись.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/zanyatiya/sky-chess/",
+    "type": "lesson",
+    "eventId": "sky-chess"
+  },
+  "/besplatnye-uroki/matematika/": {
+    "title": "Бесплатные уроки по математике для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по математике для детей онлайн: 12 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/matematika/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/russkiy-yazyk/": {
+    "title": "Бесплатные уроки по русскому языку для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по русскому языку для детей онлайн: 10 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/russkiy-yazyk/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/angliyskiy-yazyk/": {
+    "title": "Бесплатные уроки по английскому языку для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по английскому языку для детей онлайн: 7 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/angliyskiy-yazyk/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/fizika/": {
+    "title": "Бесплатные уроки по физике для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по физике для детей онлайн: 8 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/fizika/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/himiya/": {
+    "title": "Бесплатные уроки по химии для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по химии для детей онлайн: 8 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/himiya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/biologiya/": {
+    "title": "Бесплатные уроки по биологии для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по биологии для детей онлайн: 10 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/biologiya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/informatika/": {
+    "title": "Бесплатные уроки по информатике для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по информатике для детей онлайн: 4 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/informatika/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/istoriya/": {
+    "title": "Бесплатные уроки по истории для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по истории для детей онлайн: 8 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/istoriya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/obshchestvoznanie/": {
+    "title": "Бесплатные уроки по обществознанию для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по обществознанию для детей онлайн: 5 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/obshchestvoznanie/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/geografiya/": {
+    "title": "Бесплатные уроки по географии для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по географии для детей онлайн: 3 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/geografiya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/literatura/": {
+    "title": "Бесплатные уроки по литературе для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по литературе для детей онлайн: 5 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/literatura/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/chtenie/": {
+    "title": "Бесплатные уроки чтения для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки чтения для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/chtenie/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/ispanskiy/": {
+    "title": "Бесплатные уроки по испанскому языку для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по испанскому языку для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/ispanskiy/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/fizkultura/": {
+    "title": "Бесплатные уроки по физкультуре для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по физкультуре для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/fizkultura/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/izo/": {
+    "title": "Бесплатные уроки рисования для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки рисования для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/izo/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/shahmaty/": {
+    "title": "Бесплатные уроки шахмат для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки шахмат для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/shahmaty/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/programmirovanie/": {
+    "title": "Бесплатные уроки по программированию для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по программированию для детей онлайн: 9 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/programmirovanie/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/scratch/": {
+    "title": "Бесплатные уроки по Scratch для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по Scratch для детей онлайн: 2 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/scratch/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/python/": {
+    "title": "Бесплатные уроки по Python для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по Python для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/python/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/roblox/": {
+    "title": "Бесплатные уроки по Roblox для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по Roblox для детей онлайн: 2 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/roblox/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/neyroseti/": {
+    "title": "Бесплатные уроки по нейросетям для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по нейросетям для детей онлайн: 4 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/neyroseti/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/dizayn/": {
+    "title": "Бесплатные уроки по дизайну для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по дизайну для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/dizayn/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/3d/": {
+    "title": "Бесплатные уроки по 3D-моделированию для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по 3D-моделированию для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/3d/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/finansovaya-gramotnost/": {
+    "title": "Бесплатные уроки по финансовой грамотности для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по финансовой грамотности для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/finansovaya-gramotnost/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/soft-skills/": {
+    "title": "Бесплатные уроки по soft skills для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по soft skills для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/soft-skills/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/proforientatsiya/": {
+    "title": "Бесплатные уроки по профориентации для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по профориентации для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/proforientatsiya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/tvorchestvo/": {
+    "title": "Бесплатные уроки по творчеству для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по творчеству для детей онлайн: 3 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/tvorchestvo/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/etika/": {
+    "title": "Бесплатные уроки по этике для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по этике для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/etika/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/psihologiya/": {
+    "title": "Бесплатные уроки по психологии для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по психологии для детей онлайн: 1 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/psihologiya/",
+    "type": "subject",
+    "eventId": null
+  },
+  "/besplatnye-uroki/logika/": {
+    "title": "Бесплатные уроки по логике для детей онлайн | ProSchools",
+    "description": "Бесплатные уроки по логике для детей онлайн: 2 предложений. Сравните классы, расписание и условия бесплатного участия. Открытые уроки, пробные занятия и записи.",
+    "canonical": "https://pro-schools.ru/besplatnye-uroki/logika/",
+    "type": "subject",
+    "eventId": null
+  }
+}
