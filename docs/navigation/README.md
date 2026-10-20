@@ -36,9 +36,9 @@
 
 ## Измерение
 
-Версия навигации: `2026-10-20.1`. Созданы 10 JS-целей в Метрике (идентификаторы в `measurement-goals.json`).
+Версия навигации: `2026-10-20.1`. Созданы 11 JS-целей в Метрике (идентификаторы в `measurement-goals.json`).
 События передаются через `reachGoal` и в параметры визита Метрики
-`navigation`: exposure, click с surface/target_section, поиск open/used/results_shown/
+`navigation`: exposure, menu_open, click с surface/target_section, поиск open/used/results_shown/
 result_click, target_engaged (действие в содержимом или прокрутка после 10 секунд на странице назначения), город prompt_shown/selector_open/selected. Поисковый текст не передаётся.
 Это новые данные; исторического CTR шапки нет. Старые автоцели не равны новым событиям.
 База 22.09–19.10 сохранена в отдельном отчёте, сравнение до/после не доказывает причинность.
