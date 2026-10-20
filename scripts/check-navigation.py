@@ -13,7 +13,7 @@ assert 'chrome.header' in (ROOT/'src/components/Header.tsx').read_text()
 assert 'chrome.footer' in (ROOT/'src/components/Footer.tsx').read_text()
 expected={part:BeautifulSoup(chrome[part],'html.parser').get_text(' ',strip=True) for part in ['header','footer']}
 count=0
-for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/programming/release').rglob('index.html')):
+for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/programming/release').rglob('index.html'))+list((ROOT/'public/besplatnye-uroki').rglob('index.html')):
  doc=BeautifulSoup(file.read_text(),'html.parser')
  for part in ['header','footer']:
   wrapper=doc.select_one('.ps-chrome-'+part)

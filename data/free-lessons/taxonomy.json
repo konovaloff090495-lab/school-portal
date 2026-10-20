@@ -1,0 +1,284 @@
+[
+  {
+    "slug": "matematika",
+    "name": "Математика",
+    "offers": 12,
+    "publish": true
+  },
+  {
+    "slug": "russkiy-yazyk",
+    "name": "Русский язык",
+    "offers": 10,
+    "publish": true
+  },
+  {
+    "slug": "angliyskiy-yazyk",
+    "name": "Английский язык",
+    "offers": 7,
+    "publish": true
+  },
+  {
+    "slug": "fizika",
+    "name": "Физика",
+    "offers": 8,
+    "publish": true
+  },
+  {
+    "slug": "himiya",
+    "name": "Химия",
+    "offers": 8,
+    "publish": true
+  },
+  {
+    "slug": "biologiya",
+    "name": "Биология",
+    "offers": 10,
+    "publish": true
+  },
+  {
+    "slug": "informatika",
+    "name": "Информатика",
+    "offers": 4,
+    "publish": true
+  },
+  {
+    "slug": "istoriya",
+    "name": "История",
+    "offers": 8,
+    "publish": true
+  },
+  {
+    "slug": "obshchestvoznanie",
+    "name": "Обществознание",
+    "offers": 5,
+    "publish": true
+  },
+  {
+    "slug": "geografiya",
+    "name": "География",
+    "offers": 3,
+    "publish": true
+  },
+  {
+    "slug": "literatura",
+    "name": "Литература",
+    "offers": 5,
+    "publish": true
+  },
+  {
+    "slug": "okruzhayushchiy-mir",
+    "name": "Окружающий мир",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "chtenie",
+    "name": "Чтение",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "nemetskiy",
+    "name": "Немецкий язык",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "frantsuzskiy",
+    "name": "Французский язык",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "ispanskiy",
+    "name": "Испанский язык",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "kitayskiy",
+    "name": "Китайский язык",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "tehnologiya",
+    "name": "Технология",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "obzr",
+    "name": "ОБЗР",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "fizkultura",
+    "name": "Физкультура",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "muzyka",
+    "name": "Музыка",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "izo",
+    "name": "ИЗО",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "astronomiya",
+    "name": "Астрономия",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "shahmaty",
+    "name": "Шахматы",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "programmirovanie",
+    "name": "Программирование",
+    "offers": 9,
+    "publish": true
+  },
+  {
+    "slug": "scratch",
+    "name": "Scratch",
+    "offers": 2,
+    "publish": true
+  },
+  {
+    "slug": "python",
+    "name": "Python",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "roblox",
+    "name": "Roblox",
+    "offers": 2,
+    "publish": true
+  },
+  {
+    "slug": "minecraft",
+    "name": "Minecraft",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "robototehnika",
+    "name": "Робототехника",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "neyroseti",
+    "name": "Нейросети и ИИ",
+    "offers": 4,
+    "publish": true
+  },
+  {
+    "slug": "dizayn",
+    "name": "Дизайн",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "3d",
+    "name": "3D-моделирование",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "animatsiya",
+    "name": "Анимация",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "finansovaya-gramotnost",
+    "name": "Финансовая грамотность",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "soft-skills",
+    "name": "Soft skills",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "proforientatsiya",
+    "name": "Профориентация",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "tvorchestvo",
+    "name": "Творчество",
+    "offers": 3,
+    "publish": true
+  },
+  {
+    "slug": "etika",
+    "name": "Этика",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "psihologiya",
+    "name": "Психология",
+    "offers": 1,
+    "publish": true
+  },
+  {
+    "slug": "podgotovka-k-shkole",
+    "name": "Подготовка к школе",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "logika",
+    "name": "Логика",
+    "offers": 2,
+    "publish": true
+  },
+  {
+    "slug": "skorochtenie",
+    "name": "Скорочтение",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "pamyat",
+    "name": "Память и внимание",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "oratorskoe-iskusstvo",
+    "name": "Ораторское искусство",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "predprinimatelstvo",
+    "name": "Предпринимательство",
+    "offers": 0,
+    "publish": false
+  },
+  {
+    "slug": "mediagramotnost",
+    "name": "Медиаграмотность",
+    "offers": 0,
+    "publish": false
+  }
+]

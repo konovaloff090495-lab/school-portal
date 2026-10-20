@@ -1,7 +1,7 @@
 {
   "id": "free-lessons",
   "label": "Бесплатные уроки",
-  "status": "pending_section_publication",
+  "status": "publishing",
   "parent_section": "courses",
   "upper_level_new_item": false,
   "href": "/besplatnye-uroki/",
@@ -10,7 +10,7 @@
     "mobile_courses_menu",
     "footer_courses_group"
   ],
-  "canonical_navigation_version": "2026-10-20.1",
+  "canonical_navigation_version": "2026-10-20.2",
   "base_sha256": "9467cfb786e798e9b0f3e6c854919842f6d6cf8c6b49e5e402f1e764f3f040f2",
   "prototype_path": "/Users/dmitriikonovalov/Documents/Codex/2026-10-20/new-chat-5/outputs/proschools-free-lessons",
   "source_thread": "01a15878-a0bd-7122-a431-cd5a095de7e0",
