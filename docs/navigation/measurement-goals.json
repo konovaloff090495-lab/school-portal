@@ -1,5 +1,10 @@
 [
   {
+    "event": "navigation_menu_open",
+    "id": 672672621,
+    "name": "Навигация · Открытие меню"
+  },
+  {
     "event": "navigation_exposure",
     "id": 672672403,
     "name": "Навигация · Показ навигации"

@@ -10,7 +10,7 @@ let currentView=location.pathname.startsWith('/shkoly/')?'schools':'content',cho
 const norm=s=>String(s||'').toLocaleLowerCase('ru').replaceAll('ё','е').replaceAll('№',' ').trim();
 try{const saved=localStorage.getItem('selected_region');if(cityMap[saved])chosen=saved}catch{}
 function closePanels(restore=false){$$('.mega').forEach(p=>p.hidden=true);$$('[data-panel]').forEach(b=>b.setAttribute('aria-expanded','false'));$('#scrim').hidden=true;if(restore&&lastPanel)lastPanel.focus()}
-function showPanel(key){const b=$(`[data-panel="${key}"]`),p=$(`#panel-${key}`);if(!b||!p)return;const was=!p.hidden;closePanels();if(!was){p.hidden=false;b.setAttribute('aria-expanded','true');$('#scrim').hidden=false;lastPanel=b}}
+function showPanel(key){const b=$(`[data-panel="${key}"]`),p=$(`#panel-${key}`);if(!b||!p)return;const was=!p.hidden;closePanels();if(!was){track('navigation_menu_open',{menu:key});p.hidden=false;b.setAttribute('aria-expanded','true');$('#scrim').hidden=false;lastPanel=b}}
 $$('[data-panel]').forEach(b=>b.onclick=()=>showPanel(b.dataset.panel));$$('.close-panel').forEach(b=>b.onclick=()=>closePanels(true));$('#scrim').onclick=()=>closePanels(true);
 document.addEventListener('focusin',e=>{if(!$('#header').contains(e.target))closePanels()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanels(true);if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openSearch()}});
@@ -100,6 +100,7 @@ function update(){
 }
 window.PSNavigation={update};window.addEventListener('ps:navigation-route',update);window.addEventListener('popstate',update);
 document.addEventListener('click',e=>{const a=e.target.closest('.ps-chrome a[href]');if(!a)return;const target=new URL(a.href,location.href);if(target.origin!==location.origin)return;const surface=a.closest('footer')?'footer':a.closest('#mobile-nav')?'mobile_menu':a.closest('#search-dialog')?'search':'header';track(surface==='search'?'site_search_result_click':'navigation_click',{surface,target_section:section(target.pathname)});if(target.pathname!==location.pathname){try{sessionStorage.setItem('ps-navigation-pending',JSON.stringify({path:target.pathname,surface,at:Date.now()}))}catch{}}});
+$('.mobile-toggle').addEventListener('click',()=>track('navigation_menu_open',{menu:'mobile'}));
 $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>track('site_search_open')));
 let searchTracked=false;$('#global-query').addEventListener('input',()=>{if($('#global-query').value.trim().length>=2&&!searchTracked){searchTracked=true;track('site_search_used')}});searchDialog.addEventListener('close',()=>searchTracked=false);
 $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_selector_open')));$('#city-apply').addEventListener('click',()=>track('city_selected',{city:chosen}));
