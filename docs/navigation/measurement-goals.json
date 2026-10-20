@@ -1,0 +1,52 @@
+[
+  {
+    "event": "navigation_exposure",
+    "id": 672672403,
+    "name": "Навигация · Показ навигации"
+  },
+  {
+    "event": "navigation_click",
+    "id": 672672404,
+    "name": "Навигация · Переход через навигацию"
+  },
+  {
+    "event": "navigation_target_engaged",
+    "id": 672672405,
+    "name": "Навигация · Полезное продолжение после навигации"
+  },
+  {
+    "event": "site_search_open",
+    "id": 672672406,
+    "name": "Навигация · Открытие поиска"
+  },
+  {
+    "event": "site_search_used",
+    "id": 672672407,
+    "name": "Навигация · Использование поиска"
+  },
+  {
+    "event": "site_search_results_shown",
+    "id": 672672408,
+    "name": "Навигация · Результаты поиска"
+  },
+  {
+    "event": "site_search_result_click",
+    "id": 672672409,
+    "name": "Навигация · Переход из поиска"
+  },
+  {
+    "event": "city_prompt_shown",
+    "id": 672672410,
+    "name": "Навигация · Первое предложение города"
+  },
+  {
+    "event": "city_selector_open",
+    "id": 672672411,
+    "name": "Навигация · Открытие выбора города"
+  },
+  {
+    "event": "city_selected",
+    "id": 672672412,
+    "name": "Навигация · Сохранение города"
+  }
+]
