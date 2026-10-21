@@ -13,7 +13,11 @@ mkdir -p "$release/kursy"
 COURSES_OUTPUT_DIR="$release/kursy" .venv/bin/python scripts/courses/build.py
 COURSES_CHECK_DIR="$release/kursy" .venv/bin/python scripts/courses/check.py
 # Preserve the current site's robots rules; only add our sitemap declaration.
-curl --fail --silent --show-error --max-time 30 --compressed http://127.0.0.1:3001/robots.txt > "$release/robots.txt"
+if [[ -f /var/www/school-portal/courses-current/robots.txt ]]; then
+  cp -L /var/www/school-portal/courses-current/robots.txt "$release/robots.txt"
+else
+  curl --fail --silent --show-error --max-time 30 --compressed http://127.0.0.1:3001/robots.txt > "$release/robots.txt"
+fi
 grep -q 'https://pro-schools.ru/kursy/sitemap.xml' "$release/robots.txt" || printf '\nSitemap: https://pro-schools.ru/kursy/sitemap.xml\n' >> "$release/robots.txt"
 current=/var/www/school-portal/courses-current
 previous=$(readlink -f "$current")

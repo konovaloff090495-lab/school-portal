@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-from build import ROOT, BASE, COURSES, SCHOOL_PAGES, indexable, partner_url
+from build import ROOT, BASE, COURSES, CATS, SCHOOL_PAGES, indexable, partner_url
 import school
 
 OUT=Path(os.environ.get('COURSES_CHECK_DIR',str(ROOT/'public/kursy')))
@@ -42,6 +42,7 @@ for file in pages:
     path='/kursy/'+('' if relative=='.' else relative+'/')
     page=BeautifulSoup(file.read_text(),'html.parser')
     if len(page.select('h1'))!=1:errors.append((path,'Expected one H1'))
+    if relative in CATS and (not page.h1 or page.h1.get_text(' ',strip=True)!=CATS[relative]['title']):errors.append((path,'Category H1 must match its descriptive course title'))
     title=page.title.get_text() if page.title else ''
     if title in titles:errors.append((path,'Duplicate title: '+titles[title]))
     titles[title]=path
