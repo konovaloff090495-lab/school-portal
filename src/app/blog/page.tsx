@@ -168,7 +168,7 @@ export default function BlogPage() {
         </Link>
 
         {/* Posts grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: 20 }}>
           {rest.map(post => (
             <Link key={post.slug} href={`/blog/${post.slug}/`} style={{ textDecoration: 'none' }}>
               <article className="blog-card-hover" style={{

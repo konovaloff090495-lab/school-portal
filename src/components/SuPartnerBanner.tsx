@@ -66,7 +66,7 @@ export default function SuPartnerBanner({
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
         <span style={{
           background: 'white', color: p.accent[0], fontWeight: 700, fontSize: 15,
-          borderRadius: 999, padding: '11px 22px', whiteSpace: 'nowrap',
+          borderRadius: 999, padding: '11px 22px', whiteSpace: 'normal', maxWidth: '100%', textAlign: 'center',
         }}>
           {p.cta} →
         </span>
