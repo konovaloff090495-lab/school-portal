@@ -186,7 +186,7 @@ export default function BlogPage() {
                       alt={post.imageAlt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'cover', objectPosition: post.imageUrl.startsWith('/blog/images/editorial-') ? 'center top' : 'center' }}
                     />
                   </div>
                 ) : (
