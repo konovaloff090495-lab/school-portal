@@ -143,14 +143,15 @@ export default async function BlogPostPage({ params }: Props) {
 
       <style>{`
         .post-wrap { max-width: 1280px; margin: 0 auto; padding: 40px 20px 80px; }
-        .post-layout { display: grid; grid-template-columns: 1fr; gap: 32px; }
+        .post-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+        .post-layout > main { min-width: 0; }
         .post-sidebar { display: none; }
         @media (min-width: 768px) {
           .post-wrap { padding: 48px 40px 96px; }
         }
         @media (min-width: 1024px) {
           .post-wrap { padding: 56px 56px 96px; }
-          .post-layout { grid-template-columns: 1fr 280px; gap: 48px; }
+          .post-layout { grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; }
           .post-sidebar { display: block; }
           .post-mobile-ad { display: none; }
         }
