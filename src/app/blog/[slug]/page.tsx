@@ -300,6 +300,7 @@ export default async function BlogPostPage({ params }: Props) {
                     src={post.imageUrl}
                     alt={post.imageAlt}
                     fill
+                    sizes="(max-width: 900px) 100vw, 850px"
                     style={{ objectFit: 'cover' }}
                     priority
                   />

@@ -84,9 +84,11 @@ export default function BlogPage() {
                   src={featured.imageUrl}
                   alt={featured.imageAlt}
                   fill
-                  style={{ objectFit: 'cover', opacity: 0.25 }}
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
                   priority
                 />
+                <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(17,32,27,0.88) 0%, rgba(17,32,27,0.72) 48%, rgba(17,32,27,0.12) 100%)' }} />
               </div>
             )}
 
@@ -115,7 +117,7 @@ export default function BlogPage() {
                 fontFamily: 'var(--font-unbounded, sans-serif)',
                 fontWeight: 700, fontSize: 'clamp(20px, 3vw, 30px)',
                 lineHeight: 1.15, margin: '0 0 14px', letterSpacing: '-0.01em',
-                color: 'white',
+                color: 'white', maxWidth: 740,
               }}>
                 {featured.title}
               </h2>
@@ -183,6 +185,7 @@ export default function BlogPage() {
                       src={post.imageUrl}
                       alt={post.imageAlt}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                       style={{ objectFit: 'cover' }}
                     />
                   </div>
