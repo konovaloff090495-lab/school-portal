@@ -16,6 +16,7 @@ import SchoolMatchModal from '@/components/SchoolMatchModal'
 import ReviewsBlock from '@/components/ReviewsBlock'
 import { schoolPhotoCount } from '@/lib/school-media'
 import programmingCourses from '@/data/programming-school-courses.json'
+import EveningVerifiedAdmissions from '@/components/EveningVerifiedAdmissions'
 import EveningPathChooser from '@/components/EveningPathChooser'
 
 
@@ -435,6 +436,7 @@ export default async function SchoolPage({ params }: Props) {
           </div>
 
           {school.type === 'vechernie' && <EveningPathChooser city={school.city} localHref="#kontakty" />}
+          {['vechernyaya-shkola-185-ekaterinburg-1', 'centr-obrazovaniya-195-sankt-peterburg'].includes(school.slug) && <EveningVerifiedAdmissions region={school.region} />}
 
           {/* FAQ */}
           {faq.length > 0 && (

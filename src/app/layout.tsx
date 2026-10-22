@@ -3,6 +3,7 @@ import { Inter, Unbounded, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GrowthFunnelTracking from '@/components/GrowthFunnelTracking';
 import YandexMetrika from "@/components/YandexMetrika";
 import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -63,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${inter.className} ${unbounded.variable} ${manrope.variable} bg-[#F8FAFC] min-h-screen`}>
-        <YandexMetrika />
+        <YandexMetrika /><GrowthFunnelTracking />
         <YandexRTB />
         <Header />
         <NavigationRuntime />

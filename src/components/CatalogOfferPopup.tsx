@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
+import CallbackTimeField from '@/components/CallbackTimeField'
 import LeadGiftNotice from '@/components/LeadGiftNotice'
 import Countdown, { isDeadlinePassed } from '@/components/Countdown'
 
@@ -31,6 +32,7 @@ export default function CatalogOfferPopup() {
   const [pdAgreed, setPdAgreed] = useState(true)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const openedRef = useRef(false)
+  const [callbackTime, setCallbackTime] = useState('')
 
   const show = useCallback(() => {
     if (openedRef.current || convertedThisSession()) return
@@ -72,6 +74,7 @@ export default function CatalogOfferPopup() {
         email: form.email,
         source: adult ? 'Поп-ап: аттестат взрослому онлайн (вечерние/экстернат)' : SOURCE,
         ...(adult ? { product: 'attestat-online' } : {}),
+        qualification: { callback_time: callbackTime },
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
       })
@@ -140,7 +143,7 @@ export default function CatalogOfferPopup() {
             {adult ? 'Занятия и промежуточные аттестации онлайн; ОГЭ/ЕГЭ по программе — очно в Москве. Консультант Синергии уточнит документы, сроки и полную стоимость. Это не заявка в местную вечернюю школу.' : 'Платное онлайн-обучение Синергии для 5–11 классов; начальная школа — отдельная программа. Консультант уточнит условия перевода и пробного доступа.'}
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form data-growth-form="catalog-popup" onSubmit={handleSubmit} className="space-y-3">
             <input
               type="text" placeholder="Ваше имя" required
               value={form.name}
@@ -166,6 +169,7 @@ export default function CatalogOfferPopup() {
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
+            <CallbackTimeField id="catalog-callback-time" value={callbackTime} onChange={setCallbackTime} />
             <LeadGiftNotice />
             {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
             <button

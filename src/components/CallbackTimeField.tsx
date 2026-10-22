@@ -1,0 +1,3 @@
+export default function CallbackTimeField({ id, value, onChange }: { id: string; value: string; onChange: (value: string) => void }) {
+  return <div><label htmlFor={id} className="block text-sm mb-1">Когда удобно позвонить? <span className="text-gray-500">(необязательно, время московское)</span></label><select id={id} value={value} onChange={e => onChange(e.target.value)} className="w-full min-w-0 bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm"><option value="">Согласуем время</option><option>09:00–12:00 МСК</option><option>12:00–16:00 МСК</option><option>16:00–20:00 МСК</option></select><p className="text-xs text-gray-500 mt-1">Желаемый интервал передадим консультанту Синергии.</p></div>
+}

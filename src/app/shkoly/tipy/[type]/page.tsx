@@ -1,6 +1,8 @@
 import formatMetadata from '@/data/school-format-metadata.json'
 import EveningPathChooser from '@/components/EveningPathChooser'
 import SchoolFormatAdvice from '@/components/SchoolFormatAdvice'
+import EveningVerifiedAdmissions from '@/components/EveningVerifiedAdmissions'
+import OnlinePathChooser from '@/components/OnlinePathChooser'
 import OnlineGradeNav from '@/components/OnlineGradeNav'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -585,7 +587,7 @@ export default async function GlobalTypePage({ params }: Props) {
         <OnlineLeadCta
           attestat
           source="Экстернат: хаб /shkoly/tipy/eksternal/"
-          heading="Экстернат онлайн: 10–11 класс за один год"
+          heading="Экстернат онлайн: согласуйте темп 10–11 классов"
           text="Платная онлайн-программа Синергии: материалы в записи и промежуточные аттестации онлайн. Темп и сроки согласуются по документам; ОГЭ/ЕГЭ по программе проходят очно в Москве. Уточните условия до оплаты."
           bullets={['документы сканами, зачисление круглый год', 'для подростков и взрослых с перерывом в учёбе', 'рассрочка, маткапитал, налоговый вычет']}
         />
@@ -603,7 +605,7 @@ export default async function GlobalTypePage({ params }: Props) {
         <OnlineLeadCta
           source="Домашние школы: хаб /shkoly/tipy/domashnie/"
           heading="Подобрать домашнюю школу онлайн"
-          text="Скажите класс, город и причину перехода — за 30 минут перезвоним и объясним, какая форма подойдёт (надомная, семейная или онлайн-школа), сколько это стоит в 2026/27 году и кто выдаст аттестат."
+          text="Консультант Синергии расскажет о её платной онлайн-программе. Укажите класс и причину перехода; зачисление, аттестации и стоимость согласуйте до оплаты. Медицинское обучение на дому обсуждается непосредственно с вашей школой."
         />
         <OnlineBrandsTable
           title="Домашние школы онлайн: сравнение цен и аттестации"
@@ -618,9 +620,9 @@ export default async function GlobalTypePage({ params }: Props) {
         <FamilyCityNav />
         <OnlineLeadCta
           source="Семейные школы: хаб /shkoly/tipy/semejnye/"
-          heading="Переходите на семейное обучение? Подберём школу для прикрепления"
-          text="Скажите класс, город и причину перехода — за 30 минут перезвоним и объясним, как подать уведомление, где пройти аттестацию бесплатно и какая онлайн-школа возьмёт уроки и аттестации на себя."
-          bullets={['уведомление и документы — по шагам', 'прикрепление к аккредитованной школе, аттестации онлайн', 'ОГЭ и ЕГЭ — в вашем городе, аттестат государственного образца']}
+          heading="Рассматриваете платную семейную программу Синергии?"
+          text="Уточните у консультанта Синергии программу, оформление и полную стоимость. Эта форма не является обращением в муниципальную школу. Место промежуточных аттестаций и государственных экзаменов согласуйте отдельно."
+          bullets={['уведомление и документы — по шагам', 'прикрепление к аккредитованной школе, аттестации онлайн', 'место ОГЭ/ЕГЭ и выдачи аттестата — по условиям программы']}
         />
         <OnlineBrandsTable
           title="Онлайн-школы для семейного обучения — 2026/27"
@@ -655,7 +657,7 @@ export default async function GlobalTypePage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
       ]}
-      introContent={<>{t === 'vechernie' && <EveningPathChooser />}<SchoolFormatAdvice type={t} />{t === 'online' && <><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
+      introContent={<>{t === 'vechernie' && <><EveningPathChooser /><EveningVerifiedAdmissions /></>}<SchoolFormatAdvice type={t} />{t === 'online' && <><OnlinePathChooser /><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
       seoContent={seoContent}
     />
   )

@@ -40,6 +40,15 @@ window.location.search = ''
 rememberUtm()
 window.location.search = '?utm_source=internal'
 assert.deepEqual(getLeadContext().utm, {}, 'An organic entry must not become an internal tagged campaign')
+
+const { rememberGrowthRoute, selectedGrowthRoute } = await jiti.import('../../src/lib/growth-tracking.ts')
+rememberGrowthRoute('attestat-9')
+assert.equal(selectedGrowthRoute(), 'attestat-9')
+rememberGrowthRoute('email@example.invalid')
+assert.equal(selectedGrowthRoute(), 'attestat-9', 'Reject values outside the route enum')
+assert.equal(getLeadContext().selected_route, 'attestat-9')
+assert.equal(getLeadContext().growth_release, 'leads-growth-20261022-r2')
+
 delete globalThis.window
 delete globalThis.document
 delete globalThis.sessionStorage
