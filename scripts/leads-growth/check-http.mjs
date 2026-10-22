@@ -28,6 +28,8 @@ try {
   await context.addInitScript(() => {
     // Init scripts also run in sandboxed map/ad frames, where storage is unavailable.
     if (window.top !== window) return
+    window.__growthEvents = []
+    window.ym = (...args) => window.__growthEvents.push(args)
     try {
       sessionStorage.setItem('ps_catalog_popup_done', '1')
       sessionStorage.setItem('ps_partner_popup_done', '1')
@@ -46,7 +48,7 @@ try {
   })
   const page = await context.newPage()
   page.on('pageerror', error => errors.push(error.message))
-  const paths = ['/attestat-vzroslomu/', '/shkoly/tipy/vechernie/9-klass/', '/shkoly/tipy/vechernie/posle-9-klassa/', '/shkoly/tipy/vechernie/starshie-klassy/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/moskva/vechernie/', '/shkoly/tyumen/vechernie/', '/shkoly/omsk/vechernie/', '/blog/attestat-vzroslomu-9-klass/', '/shkola/vechernyaya-shkola-kalininskogo-rayona-chelyabinsk/']
+  const paths = ['/attestat-vzroslomu/', '/shkoly/tipy/online/', '/shkoly/sankt-peterburg/vechernie/', '/shkoly/tipy/vechernie/besplatnye/', '/blog/eksternat-ili-vechernyaya-shkola/', '/blog/attestat-vzroslomu-11-klass/', '/blog/kak-poluchit-attestat-esli-ne-zakonchil-shkolu/', '/shkola/vechernyaya-shkola-185-ekaterinburg-1/', '/shkola/centr-obrazovaniya-195-sankt-peterburg/', '/shkoly/tipy/vechernie/9-klass/', '/shkoly/tipy/vechernie/posle-9-klassa/', '/shkoly/tipy/vechernie/starshie-klassy/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/moskva/vechernie/', '/shkoly/tyumen/vechernie/', '/shkoly/omsk/vechernie/', '/blog/attestat-vzroslomu-9-klass/', '/shkola/vechernyaya-shkola-kalininskogo-rayona-chelyabinsk/']
   for (const path of paths) {
     const response = await page.goto(base + path)
     assert.equal(response.status(), 200, path)
@@ -63,12 +65,17 @@ try {
         assert.ok(choiceBox && cardBox && choiceBox.y < cardBox.y, 'Route must precede cards')
       }
     }
+    if (['/shkoly/ekaterinburg/vechernie/', '/shkoly/sankt-peterburg/vechernie/'].includes(path)) {
+      assert.equal(await page.locator('#proverennyj-priem[data-verified-admissions]').count(), 1)
+      assert.equal(await page.locator('[data-growth-choice=local-school]').getAttribute('href'), '#proverennyj-priem')
+    }
+    if (path === '/shkoly/tipy/online/') assert.equal(await page.locator('[data-growth-block=online-intent]').count(), 1)
     if (path.includes('/shkola/')) assert.equal(await page.locator('#kontakty').count(), 1)
     results.push({ path, status: 200, canonical: 'valid' })
   }
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width <= 390 ? 844 : 1000 })
-    for (const path of ['/attestat-vzroslomu/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/tipy/vechernie/9-klass/']) {
+    for (const path of ['/attestat-vzroslomu/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/tipy/vechernie/9-klass/', '/shkoly/tipy/online/', '/shkoly/sankt-peterburg/vechernie/', '/blog/eksternat-ili-vechernyaya-shkola/']) {
       await page.goto(base + path)
       await page.evaluate(() => document.fonts.ready)
       await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1, null, { timeout: 5000 })
@@ -77,7 +84,7 @@ try {
         assert.ok(cta && cta.y + cta.height <= 844, 'Adult programme choice must fit the first mobile screen')
       }
       results.push({ path, width, overflow: false })
-      if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${output}/${path.includes('attestat') ? 'adult' : path.includes('9-klass') ? 'grade9' : 'city'}-${width}.png` })
+      if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${output}/${path.includes('attestat') ? 'adult' : path.includes('9-klass') ? 'grade9' : path.includes('/online/') ? 'online' : path.includes('/blog/') ? 'comparison' : path.includes('sankt-peterburg') ? 'spb' : 'city'}-${width}.png` })
     }
   }
   // This is a real internal navigation: retain the first entry, submit on a different URL.
@@ -86,6 +93,10 @@ try {
   await page.locator('[data-evening-route] a[href="/attestat-vzroslomu/#programma-9"]').click()
   await page.waitForURL('**/attestat-vzroslomu/#programma-9')
   const form = page.locator('#konsultaciya form')
+  await page.waitForFunction(() => document.querySelector('#konsultaciya select')?.value === 'Аттестат за 9 класс', null, { timeout: 5000 })
+  assert.equal(await form.getByLabel('Что хотите закончить?').inputValue(), 'Аттестат за 9 класс', 'Route preselects the programme without requiring another answer')
+  await form.getByRole('button', { name: 'Узнать условия онлайн-обучения' }).click()
+  assert.equal(payload, undefined, 'Invalid form cannot submit')
   await form.getByPlaceholder('Ваше имя').fill('Browser test')
   await form.locator('input[type=tel]').fill('+79001234568')
   await form.locator('input[type=email]').fill('browser-test@example.invalid')
@@ -93,6 +104,9 @@ try {
   await form.getByLabel('Для кого обучение?').selectOption('Для себя, 18 лет и старше')
   await form.getByLabel('Когда удобно позвонить?', { exact: false }).selectOption('16:00–20:00 МСК')
   await form.getByRole('button', { name: 'Узнать условия онлайн-обучения' }).click()
+  const growthEvents = await page.evaluate(() => window.__growthEvents.filter(e => String(e[2]).startsWith('growth_')))
+  for (const name of ['growth_route_view', 'growth_route_click', 'growth_form_start', 'growth_form_error']) assert.ok(growthEvents.some(e => e[2] === name), name)
+  assert.ok(!JSON.stringify(growthEvents).includes('browser-test@example.invalid'), 'No contacts in analytics')
   await page.waitForURL('**/spasibo/')
   assert.ok(payload)
   assert.equal(new URL(payload.landing_url).pathname, '/shkoly/ekaterinburg/vechernie/')
@@ -103,7 +117,22 @@ try {
   assert.equal(payload.qualification.callback_time, '16:00–20:00 МСК')
   assert.equal(payload.marketing_agreed, false)
   assert.equal(payload.product, 'attestat-online')
+  assert.equal(payload.selected_route, 'attestat-9')
+  assert.equal(payload.growth_release, 'leads-growth-20261022-r2')
   assert.ok(payload.form_id)
+  // An existing school form also forwards callback preference; no extra required field.
+  payload = undefined
+  await page.goto(base + '/shkola/gbou-shkola-179-moskva/')
+  const schoolForm = page.locator('form[data-growth-form]').first()
+  await schoolForm.getByPlaceholder('Ваше имя').fill('Browser test')
+  await schoolForm.locator('input[type=tel]').fill('+79001234568')
+  await schoolForm.locator('input[type=email]').fill('browser-test@example.invalid')
+  await schoolForm.getByLabel('Когда удобно позвонить?', { exact: false }).selectOption('12:00–16:00 МСК')
+  await schoolForm.getByRole('button', { name: 'Отправить заявку', exact: true }).click()
+  await page.waitForURL('**/spasibo/')
+  assert.equal(payload.qualification.callback_time, '12:00–16:00 МСК')
+  assert.equal(payload.marketing_agreed, false)
+  results.push({ flow: 'existing form callback preference', passed: true, realLeadsSent: 0 })
   assert.deepEqual(errors, [], 'No browser exceptions')
   results.push({ flow: 'two-page attribution and mock submission', passed: true, realLeadsSent: 0 })
   await writeFile(`${output}/results.json`, JSON.stringify({ passed: true, results }, null, 2))

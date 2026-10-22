@@ -1,9 +1,11 @@
 'use client'
-import { useId, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect, useId, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { selectedGrowthRoute } from '@/lib/growth-tracking'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
+import CallbackTimeField from '@/components/CallbackTimeField'
 import LeadGiftNotice from '@/components/LeadGiftNotice'
 
 interface LeadFormProps {
@@ -21,6 +23,7 @@ interface LeadFormProps {
 
 export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '' }: LeadFormProps) {
   const router = useRouter()
+  const pathname = usePathname()
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
@@ -29,6 +32,18 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const fieldId = useId()
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
+
+  useEffect(() => {
+    if (!attestat) return
+    const selectRoute = () => {
+      const hashRoute = window.location.hash === '#programma-9' ? 'attestat-9' : window.location.hash === '#programma-11' ? 'attestat-11' : undefined
+      const selected = hashRoute || selectedGrowthRoute()
+      const goal = selected === 'attestat-9' ? 'Аттестат за 9 класс' : selected === 'attestat-11' ? 'Аттестат за 11 класс' : ''
+      if (goal) setQualification(q => ({ ...q, goal: hashRoute ? goal : q.goal || goal }))
+    }
+    selectRoute(); window.addEventListener('hashchange', selectRoute)
+    return () => window.removeEventListener('hashchange', selectRoute)
+  }, [attestat, pathname])
 
   function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
     const masked = formatPhone(e.target.value)
@@ -60,7 +75,8 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
         crm,
-        ...(attestat ? { product: 'attestat-online', qualification } : {}),
+        ...(crm ? { qualification } : {}),
+        ...(attestat ? { product: 'attestat-online' } : {}),
       })
       if (!sent) {
         setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
@@ -85,7 +101,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         {title ?? (attestat ? 'Узнать условия платного онлайн-обучения' : schoolName ? `Консультация по обучению: «${schoolName}»` : 'Узнать подробнее о школе')}
       </h3>
       <p className="text-sm text-gray-600 mb-4">{crm ? attestat ? 'Заявку получит консультант Синергии по платному онлайн-обучению. Он уточнит ваш документ об образовании, стоимость и сроки. ОГЭ/ЕГЭ по этой программе проходят очно в Москве.' : 'Заявку получит консультант онлайн-школы Синергия. Для обращения непосредственно в выбранную школу используйте её официальный сайт или телефон.' : 'Свяжемся после обработки заявки.'}</p>
-      <form onSubmit={handleSubmit} className="space-y-3">
+      <form data-growth-form={crm ? source || 'school-card' : undefined} onSubmit={handleSubmit} className="space-y-3">
         {attestat && <fieldset className="space-y-3 border-0 p-0 m-0">
           <legend className="text-sm font-medium mb-2">Чтобы предложить подходящую программу <span className="font-normal text-gray-500">(необязательно)</span></legend>
           <label htmlFor={`${fieldId}-goal`} className="block text-sm">Что хотите закончить?</label>
@@ -99,6 +115,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         </fieldset>}
         <input
           type="text"
+          autoComplete="name"
           placeholder="Ваше имя"
           required
           value={form.name}
@@ -108,6 +125,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         <div>
           <input
             type="tel"
+            autoComplete="tel"
             placeholder="+7 (___) ___-__-__"
             required
             value={form.phone}
@@ -126,6 +144,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         </div>
         <input
           type="email"
+          autoComplete="email"
           placeholder="Электронная почта"
           required
           value={form.email}
@@ -141,7 +160,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white resize-none"
           />
         )}
-        {attestat && <><label htmlFor={`${fieldId}-callback`} className="block text-sm">Когда удобно позвонить? <span className="text-gray-500">(необязательно)</span></label><select id={`${fieldId}-callback`} value={qualification.callback_time} onChange={e => setQualification(q => ({ ...q, callback_time: e.target.value }))} className="w-full min-w-0 bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm"><option value="">Согласуем время</option><option>09:00–12:00 МСК</option><option>12:00–16:00 МСК</option><option>16:00–20:00 МСК</option></select></>}
+        {crm && <CallbackTimeField id={`${fieldId}-callback`} value={qualification.callback_time} onChange={value => setQualification(q => ({ ...q, callback_time: value }))} />}
         <LeadGiftNotice />
         {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
         <button

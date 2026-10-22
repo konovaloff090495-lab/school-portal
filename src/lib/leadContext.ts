@@ -1,8 +1,11 @@
 // Контекст визита для лид-форм (только клиент): UTM первого захода, текущая страница, реферер, ClientID Метрики.
 // UTM запоминаем в sessionStorage — пользователь часто оставляет заявку не на странице входа.
 
+import { GROWTH_RELEASE, selectedGrowthRoute } from './growth-tracking'
+
 const UTM_KEY = 'ps_utm'
 const ENTRY_KEY = 'ps_visit_entry_v1'
+
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'yclid', 'gclid']
 
 export interface LeadContext {
@@ -11,6 +14,8 @@ export interface LeadContext {
   referrer: string
   landing_url?: string
   first_referrer?: string
+  growth_release?: string
+  selected_route?: string
   ym_client_id?: string
 }
 
@@ -40,5 +45,5 @@ export function getLeadContext(): LeadContext {
     const m = document.cookie.match(/(?:^|; )_ym_uid=([^;]+)/)
     if (m) ym_client_id = decodeURIComponent(m[1])
   } catch {}
-  return { utm, page_url: window.location.href, referrer: document.referrer, ym_client_id, ...entry }
+  return { utm, page_url: window.location.href, referrer: document.referrer, ym_client_id, ...entry, growth_release: GROWTH_RELEASE, selected_route: selectedGrowthRoute() }
 }
