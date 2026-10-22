@@ -8,7 +8,7 @@ export function getSchoolLevels(grades: string): EducationLevel[] {
   const classes = value.split(/[,;]/).flatMap(part => {
     const [from, end] = part.trim().split(/[–—-]/).map(Number)
     const to = end ?? from
-    return from <= to && to <= 11 ? Array.from({ length: to - from + 1 }, (_, i) => from + i) : []
+    return from >= 1 && from <= to && to <= 12 ? Array.from({ length: to - from + 1 }, (_, i) => from + i) : []
   })
   const levels: EducationLevel[] = []
   if (classes.some(n => n >= 1 && n <= 4)) levels.push('elementary')

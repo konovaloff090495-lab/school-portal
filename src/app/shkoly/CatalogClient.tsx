@@ -1139,7 +1139,7 @@ export default function CatalogClient({
           </div>
         </aside>
 
-        <div className="flex-1 min-w-0">
+        <div id="spisok-shkol" className="flex-1 min-w-0 scroll-mt-28">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-5 bg-white rounded-xl border border-gray-200 px-4 py-3">
             <span className="text-sm text-gray-500 hidden sm:block">
               Показано: <span className="font-semibold text-[#0F172A]">{filtered.length}</span> школ

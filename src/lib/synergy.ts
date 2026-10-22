@@ -37,6 +37,10 @@ export interface SynergyLeadInput {
   /** UTM-метки визита (utm_source будет заменён на gerasimov_lav, оригинал уйдёт в customAttributes) */
   utm?: Record<string, string>
   pageUrl?: string
+  landingUrl?: string
+  firstReferrer?: string
+  formId?: string
+  product?: string
   referrer?: string
   ymClientId?: string
   personalDataAgree: boolean
@@ -59,11 +63,15 @@ export function normalizePhone(raw: string): string {
 
 export async function sendLeadToSynergy(input: SynergyLeadInput): Promise<SynergyLeadResult> {
   const visitorUtm = input.utm ?? {}
+  let pagePath = ''
+  try { pagePath = new URL(input.pageUrl || '').pathname } catch {}
   const utmData: Record<string, string> = {
     ...visitorUtm,
     utm_source: SYNERGY_UTM_SOURCE,
     utm_medium: visitorUtm.utm_medium || SYNERGY_UTM_MEDIUM,
     utm_campaign: visitorUtm.utm_campaign || 'pro-schools.ru',
+    // The standard export includes utm_content even when it omits customAttributes.
+    ...(pagePath && !visitorUtm.utm_content ? { utm_content: pagePath } : {}),
   }
 
   const variables = {
@@ -80,6 +88,10 @@ export async function sendLeadToSynergy(input: SynergyLeadInput): Promise<Synerg
     customAttributes: {
       site: 'pro-schools.ru',
       page_url: input.pageUrl,
+      landing_url: input.landingUrl,
+      first_referrer: input.firstReferrer,
+      form_id: input.formId || input.formTitle,
+      product: input.product,
       referrer: input.referrer,
       ym_client_id: input.ymClientId,
       original_utm: Object.keys(visitorUtm).length ? visitorUtm : undefined,
