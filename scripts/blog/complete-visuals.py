@@ -146,6 +146,7 @@ def main():
         for group in asset['groups']:
             groups[group].append(asset)
     assignments = []
+    recent_covers = []
     for meta in manifest:
         path = BLOG / f"{meta['slug']}.json"
         post = read(path)
@@ -160,10 +161,22 @@ def main():
                 post['imageUrl'] = real[1]
                 post['imageAlt'] = html.unescape(alt[1]) if alt else post['title']
             else:
-                cover = pick(groups[group], post['slug'], set())
+                inline_refs = set(re.findall(r'<img\b[^>]*\bsrc=[\"\']([^\"\']+)', post['content'], re.I))
+                choices = [a for a in groups[group] if a['imageUrl'] not in inline_refs]
+                if not choices:
+                    choices = groups[group]
+                # Keep consecutive cards visually distinct when this topic has
+                # more than one reviewed scene. Existing covers stay untouched.
+                for distance in (3, 2, 1):
+                    fresh = [a for a in choices if a['imageUrl'] not in recent_covers[-distance:]]
+                    if fresh:
+                        choices = fresh
+                        break
+                cover = pick(choices, post['slug'], set())
                 post['imageUrl'] = cover['imageUrl']
                 post['imageAlt'] = cover['imageAlt']
             cover_added = True
+        recent_covers.append(post['imageUrl'])
         inline_added = False
         inline_url = None
         if not re.search(r'<img\b', post['content'], re.I):
