@@ -12,7 +12,7 @@ export default function ExternatBanner() {
         href={EXTERNAT_URL}
         target="_blank"
         rel="noopener sponsored"
-        onClick={() => window.ym?.(YM_ID, 'reachGoal', 'externat_banner_click')}
+        onClick={() => window.ym?.(YM_ID, 'reachGoal', 'externat_banner_click', { placement: 'catalog-banner', page_path: window.location.pathname, offer: 'externat-v2' })}
         className="group w-full max-w-3xl flex flex-wrap items-center gap-x-5 gap-y-3 bg-gradient-to-r from-[#0F3A5F] to-[#0369A1] rounded-2xl p-5 sm:p-6 border border-white/10 hover:border-white/30 hover:shadow-lg transition-all cursor-pointer"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -26,14 +26,14 @@ export default function ExternatBanner() {
             <span className="text-[10px] uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded">Реклама</span>
           </div>
           <p className="font-bold text-lg sm:text-xl leading-snug">
-            Получи аттестат экстерном без посещения школы
+            Учитесь онлайн и готовьтесь к аттестату
           </p>
           <p className="text-white/85 text-sm sm:text-base mt-1">
-            Онлайн-обучение · до 5 классов за 1 год · государственный аттестат
+            Платная программа Синергии · аттестации онлайн · ОГЭ/ЕГЭ очно в Москве
           </p>
         </div>
         <span className="shrink-0 bg-white text-[#0369A1] font-semibold text-sm sm:text-base px-5 py-2.5 rounded-lg group-hover:bg-blue-50 transition-colors whitespace-nowrap ml-auto">
-          Узнать больше
+          Условия экстерната
         </span>
       </a>
     </div>
