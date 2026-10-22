@@ -29,7 +29,8 @@ try {
   const page = await context.newPage()
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 })
-    const response = await page.goto(base + '/shkoly/tipy/online/')
+    // Layout checks wait for DOM/fonts, independently of off-screen gallery requests.
+    const response = await page.goto(base + '/shkoly/tipy/online/', { waitUntil: 'domcontentloaded' })
     assert.equal(response.status(), 200)
     const choice = page.locator('nav[aria-label="Онлайн-школы по классам"]')
     assert.equal(await choice.count(), 1, 'Class navigation must not be duplicated in filters')
@@ -57,7 +58,7 @@ try {
     checks.push({ page: 'online hub', ...dimensions, primaryChoiceOutsideFilters: true, beforeCards: true })
   }
   await page.setViewportSize({ width: 390, height: 1000 })
-  const response = await page.goto(base + '/shkoly/tipy/online/1-klass/')
+  const response = await page.goto(base + '/shkoly/tipy/online/1-klass/', { waitUntil: 'domcontentloaded' })
   assert.equal(response.status(), 200)
   assert.match(await page.locator('h1').innerText(), /1 класса/)
   await page.screenshot({ path: `${output}/class-1-390.png` })
