@@ -589,12 +589,7 @@ export default async function GlobalTypePage({ params }: Props) {
       </>
     : t === 'online'
     ? <>
-        <OnlineGradeNav />
         <p style={{ margin: '0 0 16px', fontSize: 16 }}><Link href="/otzyvy/online-shkoly/" style={{ color: '#0369A1', fontWeight: 700 }}>Отзывы об онлайн-школах: что хвалят и на что жалуются →</Link></p>
-        <OnlineBrandsTable
-          intro="Все школы федеральные — учиться можно из любого города. Сначала идут школы с собственной государственной аккредитацией (аттестат выдают сами), дальше — по цене формата с зачислением; для школ без открытых цен указано «по запросу». Нажмите на название, чтобы открыть тарифы, схему аттестации и отзывы."
-          all
-        />
         <OnlineLeadCta source="Онлайн-школы: хаб /shkoly/tipy/online/" />
         <TypeGuide type={t} />
       </>
@@ -656,7 +651,8 @@ export default async function GlobalTypePage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
       ]}
-      seoContent={<><SchoolFormatAdvice type={t} />{seoContent}</>}
+      introContent={<><SchoolFormatAdvice type={t} />{t === 'online' && <><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
+      seoContent={seoContent}
     />
   )
 }
