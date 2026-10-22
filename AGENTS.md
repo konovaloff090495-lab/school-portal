@@ -4,6 +4,20 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+## Изображения блога — обязательная проверка перед публикацией
+
+Новая или обновлённая статья в `content/blog/` должна иметь обложку в статье
+и `index.json`, непустой alt и хотя бы одно тематическое изображение в тексте.
+Перед публикацией запускать `python3 scripts/blog/complete-visuals.py`, затем
+`python3 scripts/blog/check-visuals.py`. Не публиковать статьи с пустыми превью
+и эмодзи. Правила и библиотека: `docs/blog-images.md` и
+`data/blog-visuals/editorial-library.json`. Настоящие фото сохранять; общая
+библиотека допустима для близких тем, генерации не выдавать за фото учреждения.
+При добавлении нового каталога public проверять не только прямой URL файла,
+но и `/_next/image/`: работающий Next может не видеть новые файлы до обновления
+процесса. Безопасную перезагрузку делать только после проверки целостности
+существующей сборки; передавать `.next` для одних правок контента не требуется.
+
 ## Сквозная навигация — обязательное правило (20.10.2026)
 
 Единые шапка и подвал утверждены Дмитрием для ВСЕХ страниц и будущих макетов.
