@@ -35,6 +35,11 @@ assert.equal(context.page_url, window.location.href)
 assert.equal(context.first_referrer, 'https://yandex.ru/')
 assert.equal(context.utm.utm_source, 'yandex')
 assert.equal(context.ym_client_id, '1783964360209898384')
+storage.clear()
+window.location.search = ''
+rememberUtm()
+window.location.search = '?utm_source=internal'
+assert.deepEqual(getLeadContext().utm, {}, 'An organic entry must not become an internal tagged campaign')
 delete globalThis.window
 delete globalThis.document
 delete globalThis.sessionStorage
