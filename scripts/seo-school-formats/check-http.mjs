@@ -41,7 +41,7 @@ try {
     await page.evaluate(() => document.fonts.ready)
     // Resizing and navigation can precede hydration/font layout. Require the
     // final document to fit; retain diagnostics for every width if it does not.
-    await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1, { timeout: 5000 }).catch(() => {})
+    await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1, null, { timeout: 5000 }).catch(() => {})
     const dimensions = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }))
     if (dimensions.scrollWidth > width + 1) {
       const offenders = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(node => {
