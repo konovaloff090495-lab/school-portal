@@ -38,6 +38,8 @@ jobs:
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
       - run: node scripts/seo-school-formats/check.mjs
+      - run: node scripts/leads-growth/check.mjs
+      - run: npx tsc --noEmit --incremental false
       - run: npx playwright install --with-deps chromium
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 5
@@ -54,6 +56,14 @@ jobs:
       - run: npm run build
       - run: node scripts/seo-school-formats/check-http.mjs
         timeout-minutes: 3
+      - run: node scripts/leads-growth/check-http.mjs
+        timeout-minutes: 3
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: leads-growth-debug
+          path: work/leads-growth-qa/
+          retention-days: 2
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -69,6 +79,7 @@ jobs:
           (cd build-release && if command -v sha256sum >/dev/null 2>&1; then sha256sum next-release.tar.zst; else shasum -a 256 next-release.tar.zst; fi > SHA256SUMS)
           cp -r work/school-submission-qa build-release/qa
           cp -r work/seo-school-formats-qa build-release/qa-school-formats
+          cp -r work/leads-growth-qa build-release/qa-leads-growth
           cp .next/BUILD_ID build-release/BUILD_ID
           git rev-parse HEAD > build-release/SOURCE_COMMIT
       - run: node scripts/test-school-submissions-http.mjs

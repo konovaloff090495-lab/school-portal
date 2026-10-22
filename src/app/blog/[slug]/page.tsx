@@ -9,6 +9,7 @@ import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
 import { AD_BLOCKS } from '@/lib/ads'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
+import AdultAttestatLinks from '@/components/AdultAttestatLinks'
 import SuPartnerBanner from '@/components/SuPartnerBanner'
 import { onlineBrands } from '@/data/online-brands'
 
@@ -368,7 +369,8 @@ export default async function BlogPostPage({ params }: Props) {
                     </div>
                   )}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
-                  {i === suBannerBefore && (
+                  {adultCluster && i === Math.min(1, sections.length - 1) && <AdultAttestatLinks />}
+                  {i === suBannerBefore && !adultCluster && (
                     <SuPartnerBanner
                       productKey={post.suProduct!}
                       postSlug={post.slug}
@@ -432,9 +434,10 @@ export default async function BlogPostPage({ params }: Props) {
               <div style={{ marginTop: 32 }}>
                 <OnlineLeadCta
                   source={`Блог (взрослым): ${post.slug}`}
-                  heading="Получить аттестат дистанционно — без вечерней школы"
-                  text="Онлайн-школа с государственной лицензией и аккредитацией зачисляет взрослых на заочную форму: занятия в записи и по вечерам, аттестации онлайн, ОГЭ/ЕГЭ — в вашем городе, аттестат государственного образца. Оставьте контакты — перезвоним за 30 минут и расскажем условия для вашего класса."
-                  bullets={['9 и 11 класс за один год, совместимо с работой', 'документы сканами, зачисление круглый год', 'рассрочка и налоговый вычет']}
+                  attestat
+                  heading="Аттестат взрослому: уточнить программу онлайн-обучения"
+                  text="Рассмотрите платное онлайн-обучение Синергии. Уроки в записи и промежуточные аттестации доступны онлайн; ОГЭ/ЕГЭ по программе проходят очно в Москве. Консультант уточнит ваши документы, сроки и полную стоимость."
+                  bullets={['отдельные маршруты к аттестату за 9 и 11 класс', 'темп обучения и документы согласуются со школой', 'поездку на государственные экзамены планируют заранее']}
                 />
               </div>
             )}

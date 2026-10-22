@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Script from 'next/script'
+import { rememberUtm } from '@/lib/leadContext'
 
 declare global {
   interface Window {
@@ -17,6 +18,7 @@ export default function YandexMetrika() {
   const privateArea = pathname.startsWith('/dobavit-shkolu') || pathname.startsWith('/admin/shkoly')
 
   useEffect(() => {
+    if (!privateArea) rememberUtm()
     if (!privateArea) window.ym?.(YM_ID, 'hit', window.location.href)
   }, [pathname, privateArea])
 

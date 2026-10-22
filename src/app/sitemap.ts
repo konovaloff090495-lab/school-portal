@@ -28,6 +28,7 @@ import { isCityTypeIndexable } from '@/lib/index-rules'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
 const STATIC_LANDINGS = [
+  '/attestat-vzroslomu', '/shkoly/tipy/vechernie/9-klass',
   '/shkoly/tipy/zaochnye', ...onlineGradePages.map(p => `/shkoly/tipy/online/${p.slug}`),
   '/shkoly/tipy/nachalnaya-shkola', '/shkoly/tipy/osnovnaya-shkola', '/shkoly/tipy/starshaya-shkola',
   '/shkoly/tipy/domashnie/anglijskij', '/shkoly/tipy/domashnie/chastnie', '/shkoly/tipy/domashnie/luchshie', '/shkoly/tipy/domashnie/online', '/shkoly/tipy/domashnie/srednie-klassy',

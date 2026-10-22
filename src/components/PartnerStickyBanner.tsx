@@ -3,6 +3,7 @@
 import { suUrl } from '@/lib/su-products'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Countdown, { DEADLINE_LABEL, isDeadlinePassed } from '@/components/Countdown'
 
 const YM_ID = 108789843
@@ -17,6 +18,8 @@ function recentlyClosed(): boolean {
 }
 
 export default function PartnerStickyBanner() {
+  const pathname = usePathname()
+  const adult = /vechern|eksternal|attestat-vzroslomu/.test(pathname)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -40,20 +43,20 @@ export default function PartnerStickyBanner() {
       <div className="max-w-6xl mx-auto px-4 py-2 flex items-center gap-3 sm:gap-4">
         <span className="hidden sm:inline text-2xl shrink-0">🎓</span>
         <p className="flex-1 min-w-0 text-sm sm:text-base font-medium leading-tight">
-          Поступите в онлайн-школу на льготных условиях
+          {adult ? 'Аттестат взрослому: платные онлайн-программы 9 и 11 класса' : 'Платное онлайн-обучение Синергии: сравните условия'}
         </p>
         <div className="hidden md:flex items-center gap-2 shrink-0">
           {!isDeadlinePassed() && <span className="text-[11px] text-white/70 whitespace-nowrap">{DEADLINE_LABEL}</span>}
           <Countdown variant="dark" compact />
         </div>
         <a
-          href={PARTNER_URL}
-          target="_blank"
-          rel="noopener sponsored"
-          onClick={() => window.ym?.(YM_ID, 'reachGoal', 'partner_banner_click')}
+          href={adult ? '/attestat-vzroslomu/' : PARTNER_URL}
+          target={adult ? undefined : '_blank'}
+          rel={adult ? undefined : 'noopener sponsored'}
+          onClick={() => window.ym?.(YM_ID, 'reachGoal', 'partner_banner_click', { page_path: pathname, offer: adult ? 'adult-route-v1' : 'online-school' })}
           className="shrink-0 bg-white text-[#0369A1] text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer whitespace-nowrap"
         >
-          Узнать детали
+          {adult ? 'Выбрать маршрут' : 'Узнать детали'}
         </a>
         <button
           onClick={close}

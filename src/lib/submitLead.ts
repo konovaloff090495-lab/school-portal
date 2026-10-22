@@ -17,6 +17,9 @@ export interface LeadPayload {
   city?: string
   /** Откуда заявка — подпись в Telegram и formTitle в CRM. Обязательно, уникально на форму. */
   source: string
+  form_id?: string
+  product?: string
+  qualification?: { goal?: string; audience?: string; callback_time?: string }
   pd_agreed: boolean
   marketing_agreed: boolean
   /** false — только Telegram, без CRM (B2B-формы вроде «Разместить школу») */
@@ -43,6 +46,7 @@ export async function submitLead(payload: LeadPayload | SchoolSubmissionPayload)
         ...lead,
         school: lead.school ?? 'Не указана',
         crm: lead.crm ?? true,
+        form_id: lead.form_id || lead.source,
         ...getLeadContext(),
       }),
     })

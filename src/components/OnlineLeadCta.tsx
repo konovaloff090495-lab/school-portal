@@ -10,6 +10,7 @@ export default function OnlineLeadCta({
   text = 'Скажите класс, город и бюджет — за 30 минут перезвоним и подскажем, какая онлайн-школа с государственным аттестатом подойдёт ребёнку, где есть пробный период и как оформить перевод без потери года.',
   city,
   schoolName,
+  attestat = false,
   bullets = [
     'сравним тарифы и форматы: записи, вебинары, мини-классы',
     'объясним, как проходит аттестация и кто выдаёт аттестат',
@@ -22,13 +23,14 @@ export default function OnlineLeadCta({
   city?: string
   schoolName?: string
   bullets?: string[]
+  attestat?: boolean
 }) {
   return (
     <section
       id="podbor"
       style={{
         maxWidth: 960, margin: '0 auto 36px', display: 'grid', gap: 20,
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
         background: '#FFF7F1', border: '1px solid #FFD9C2', borderRadius: 20, padding: 'clamp(18px, 3vw, 28px)',
         fontFamily: 'var(--font-manrope, system-ui)',
       }}
@@ -42,6 +44,7 @@ export default function OnlineLeadCta({
       </div>
       <LeadForm
         compact
+        attestat={attestat}
         title="Оставьте контакты — перезвоним"
         source={source}
         schoolCity={city}
