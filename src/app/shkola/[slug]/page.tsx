@@ -340,6 +340,9 @@ export default async function SchoolPage({ params }: Props) {
           </div>
         )}
       </SchoolPageGallery>
+      {school.yandexRating && <p className="mt-3 text-sm text-amber-700">
+        ★ {school.yandexRating} · <a href={school.yandexMapsUrl || `https://yandex.ru/maps/?text=${encodeURIComponent([school.name, school.city, school.address].join(' '))}`} target="_blank" rel="noopener noreferrer" className="hover:underline">Яндекс Карты</a>{school.yandexReviewCount !== undefined ? ` · ${school.yandexReviewCount} отзывов` : ''}
+      </p>}
 
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main content */}
