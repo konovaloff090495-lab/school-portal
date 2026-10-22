@@ -26,10 +26,14 @@ try {
   browser = await chromium.launch({ headless: true, ...(process.env.QA_CHROME_PATH ? { executablePath: process.env.QA_CHROME_PATH } : {}) })
   const context = await browser.newContext()
   await context.addInitScript(() => {
-    sessionStorage.setItem('ps_catalog_popup_done', '1')
-    sessionStorage.setItem('ps_partner_popup_done', '1')
-    localStorage.setItem('proschools-first-city-dismissed', '1')
-    localStorage.setItem('ps_partner_banner_closed', String(Date.now()))
+    // Init scripts also run in sandboxed map/ad frames, where storage is unavailable.
+    if (window.top !== window) return
+    try {
+      sessionStorage.setItem('ps_catalog_popup_done', '1')
+      sessionStorage.setItem('ps_partner_popup_done', '1')
+      localStorage.setItem('proschools-first-city-dismissed', '1')
+      localStorage.setItem('ps_partner_banner_closed', String(Date.now()))
+    } catch { /* Opaque pre-navigation documents are not the application under test. */ }
   })
   let payload
   await context.route('**/*', route => {
