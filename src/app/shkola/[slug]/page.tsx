@@ -64,7 +64,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `Как ${enrollVerb} в ${school.name}?`,
     a: school.website
       ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')})${school.phone ? ` или позвоните ${callTo}` : ''}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
-      : `${school.phone ? `${callImperative} или оставьте заявку через форму на нашем сайте` : 'Оставьте заявку через форму на этой странице'}. Администрация школы свяжется с вами и расскажет о порядке поступления.`,
+      : `${school.phone ? `${callImperative} или оставьте заявку через форму на нашем сайте` : 'Оставьте заявку через форму на этой странице'}. Для связи с этой организацией используйте её официальные контакты. Форма на портале передаёт запрос консультанту онлайн-школы Синергия.`,
   })
 
   // 3. Стоимость обучения
@@ -92,10 +92,12 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
       q: `Сколько стоят курсы в ${school.name}?`,
       a: `Курсы подготовки к ЕГЭ и ОГЭ платные; стоимость зависит от предмета, формата (группа или индивидуально) и числа занятий. На этой странице мы не приводим цены, которые не проверили, — уточняйте ${callTo}${school.website ? ` или на сайте центра (${school.website.replace(/^https?:\/\//, '')})` : ''}.`,
     })
-  } else if (school.priceFrom === undefined || school.priceFrom === 0) {
+  } else if (school.priceFrom === undefined) {
+    faq.push({ q: `Сколько стоит обучение в ${school.name}?`, a: `Подтверждённой цены в каталоге нет. Бюджетные места, платные услуги и условия приёма уточняйте непосредственно у школы.` })
+  } else if (school.priceFrom === 0) {
     faq.push({
       q: `Платное или бесплатное обучение в ${school.name}?`,
-      a: `Обучение в ${school.name} бесплатное — школа финансируется из государственного бюджета и работает по стандартам ФГОС.`,
+      a: `В каталоге указана нулевая стоимость основной программы. Наличие бюджетных мест и оплату дополнительных услуг уточняйте у школы перед поступлением.`,
     })
   } else {
     const priceStr = school.priceTo
@@ -390,7 +392,7 @@ export default async function SchoolPage({ params }: Props) {
                   ) : school.remoteOnly || schoolMatchesType(school, 'semejnye') || school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
                     <span className="text-gray-700">по запросу</span>
                   ) : (
-                    <span className="text-green-600">Бесплатно</span>
+                    <span className="text-gray-700">Стоимость уточняется</span>
                   )}
                 </div>
               </div>

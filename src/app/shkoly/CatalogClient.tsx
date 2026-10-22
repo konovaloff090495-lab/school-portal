@@ -13,6 +13,7 @@ import {
   metroNameToSlug,
   MICRO_GEO_SKIP_TYPES, schoolMatchesType, schoolMatchesMoCity,
 } from '@/data/schools'
+import { hasConfirmedFreePrice } from '@/lib/school-price'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
@@ -23,7 +24,6 @@ import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 
 // Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
 // (центры ЕГЭ/ОГЭ, кружки и допобразование, собранные с Яндекс Карт без проверенных цен).
-const PRICE_UNKNOWN_TYPES = new Set<SchoolType>(['semejnye', 'podgotovka-ege', 'podgotovka-oge', 'programmirovanie', 'shahmatnye', 'sportivnye', 'litsei', 'muzykalnye', 'hudozhestvennye', 'iskusstv'])
 
 type SortKey = 'rating' | 'reviews' | 'yandex_reviews' | 'price_asc' | 'price_desc'
 
@@ -37,8 +37,8 @@ const LEVEL_LABELS: Record<EducationLevel, string> = {
   high:       'Старшая (10–11 кл.)',
 }
 
-function getPriceCategory(priceFrom?: number, unknownPrice = false): 'free' | 'budget' | 'mid' | 'premium' | 'unknown' {
-  if (priceFrom === undefined && unknownPrice) return 'unknown'
+function getPriceCategory(priceFrom?: number): 'free' | 'budget' | 'mid' | 'premium' | 'unknown' {
+  if (priceFrom === undefined) return 'unknown'
   if (!priceFrom || priceFrom === 0) return 'free'
   if (priceFrom <= 25000) return 'budget'
   if (priceFrom <= 70000) return 'mid'
@@ -83,6 +83,7 @@ interface Filters {
 export interface CatalogClientProps {
   publishedInitial?: School[]
   initialRegions?: RegionSlug[]
+  allowedSchoolSlugs?: string[]
   initialTypes?: SchoolType[]
   initialDistrict?: string
   initialNeighborhood?: string
@@ -247,6 +248,7 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
 const PAGE_SIZE = 24
 
 export default function CatalogClient({
+  allowedSchoolSlugs,
   publishedInitial = [],
   initialRegions = [],
   initialTypes = [],
@@ -273,7 +275,10 @@ export default function CatalogClient({
   emptyFallback,
 }: CatalogClientProps) {
   const [submitted, setSubmitted] = useState<School[]>(publishedInitial)
-  const schools = useMemo(() => [...submitted, ...catalogSchools], [submitted])
+  const schools = useMemo(() => {
+    const allowed = allowedSchoolSlugs ? new Set(allowedSchoolSlugs) : null
+    return [...submitted, ...catalogSchools].filter(s => !allowed || allowed.has(s.slug))
+  }, [submitted, allowedSchoolSlugs])
   useEffect(() => {
     const controller = new AbortController()
     fetch('/api/school-submissions/catalog/', {signal:controller.signal}).then(r=>r.ok?r.json():[]).then(data=>{if(Array.isArray(data))setSubmitted(data)}).catch(()=>{})
@@ -513,10 +518,10 @@ export default function CatalogClient({
     })
     if (skip !== 'price') {
       if (filters.priceCategories.length) {
-        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom, s.representativeSubmitted === true || PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye'))))
+        list = list.filter(s => filters.priceCategories.includes(getPriceCategory(s.priceFrom)))
       } else {
         // центры ЕГЭ/ОГЭ без указанной цены — платные, в «бесплатно» не попадают
-        if (filters.priceMode === 'free') list = list.filter(s => s.priceFrom === 0 || (s.priceFrom === undefined && !PRICE_UNKNOWN_TYPES.has(s.type) && !schoolMatchesType(s, 'semejnye')))
+        if (filters.priceMode === 'free') list = list.filter(hasConfirmedFreePrice)
         if (filters.priceMode === 'paid') list = list.filter(s => s.priceFrom !== undefined && s.priceFrom > 0)
       }
     }
@@ -968,7 +973,7 @@ export default function CatalogClient({
       {/* Стоимость */}
       <FilterSection title="Стоимость" defaultOpen={false}>
         {(['free', 'budget', 'mid', 'premium', 'unknown'] as const).map(cat => {
-          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom, s.representativeSubmitted === true || PRICE_UNKNOWN_TYPES.has(s.type) || schoolMatchesType(s, 'semejnye')) === cat).length
+          const cnt = applyBaseFilters('price').filter(s => getPriceCategory(s.priceFrom) === cat).length
           if (cnt === 0 && !filters.priceCategories.includes(cat)) return null
           return (
             <Checkbox

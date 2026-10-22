@@ -62,6 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: 'article',
       publishedTime: safePublishedAt(post),
+      ...(post.updatedAt ? { modifiedTime: post.updatedAt } : {}),
       authors: [post.author],
     },
   }
@@ -274,7 +275,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.readTime} минут чтения
                 </span>
                 <span style={{ fontSize: 13, color: 'var(--ink-3)', fontFamily: 'var(--font-manrope)' }}>
-                  {formatDate(safePublishedAt(post))}
+                  {formatDate(safePublishedAt(post))}{post.updatedAt && ` · Обновлено ${formatDate(post.updatedAt)}`}
                 </span>
               </div>
 

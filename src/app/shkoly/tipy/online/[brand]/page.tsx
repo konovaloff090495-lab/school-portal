@@ -1,3 +1,7 @@
+import verification from '@/data/online-brand-verification.json'
+import formatMetadata from '@/data/school-format-metadata.json'
+import OnlineGradePage, { getOnlineGradePage } from '@/components/OnlineGradePage'
+import gradePages from '@/data/online-grade-pages.json'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -24,20 +28,28 @@ interface Props { params: Promise<{ brand: string }> }
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return onlineBrandSlugs.map(brand => ({ brand }))
+  return [...onlineBrandSlugs, ...gradePages.map(p => p.slug)].map(brand => ({ brand }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { brand } = await params
+  const grade = getOnlineGradePage(brand)
+  if (grade) {
+    const url = `https://pro-schools.ru/shkoly/tipy/online/${brand}/`
+    return { title: grade.title, description: grade.description, alternates: { canonical: url }, openGraph: { title: grade.title, description: grade.description, url } }
+  }
   const b = getOnlineBrand(brand)
   if (!b) return {}
   const price = b.priceFrom ? `от ${b.priceFrom.toLocaleString('ru-RU')} ₽/мес` : 'цены по запросу'
-  const title = `${b.fullName}: цены 2026/27, аттестат, отзывы — ${price}`
-  const description =
+  const oldTitle = `${b.fullName}: цены 2026/27, аттестат, отзывы — ${price}`
+  const oldDescription =
     `${b.name} — онлайн-школа ${b.grades} классов. Тарифы ${b.tariffs.map(t => `«${t.name}»`).join(', ')}, ` +
     `${b.attestation === 'own' ? 'собственная аккредитация и аттестат от самой школы' : b.attestation === 'partner' ? 'аттестат через школу-партнёра' : 'схему аттестации уточняйте'}, ` +
     `${b.trial}. Плюсы, минусы, сравнение с другими онлайн-школами и отзывы родителей.`
   const url = `https://pro-schools.ru/shkoly/tipy/online/${b.slug}/`
+  const custom = (formatMetadata as Record<string, { title: string; description: string }>)[`/shkoly/tipy/online/${b.slug}/`]
+  const title = custom?.title ?? oldTitle
+  const description = custom?.description ?? oldDescription
   return {
     title,
     description,
@@ -49,9 +61,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function OnlineBrandPage({ params }: Props) {
   const { brand } = await params
+  if (getOnlineGradePage(brand)) return <OnlineGradePage slug={brand} />
   const b = getOnlineBrand(brand)
   if (!b) notFound()
 
+  const verified = (verification as Record<string, { checkedAt: string; note: string; sources: string[] }>)[brand]
   const others = onlineBrands.filter(x => x.slug !== b.slug)
   const cheaper = others.filter(x => x.priceFrom && b.priceFrom && x.priceFrom < b.priceFrom)
   const ownAccredited = others.filter(x => x.attestation === 'own')
@@ -80,12 +94,12 @@ export default async function OnlineBrandPage({ params }: Props) {
           {b.fullName}: цены, аттестат, отзывы — обзор {b.verified.slice(-4)}
         </h1>
         <p style={{ fontSize: 17, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 20px' }}>
-          {b.name} — {b.attestation === 'own' ? 'онлайн-школа с собственной государственной аккредитацией' : b.attestation === 'partner' ? 'лицензированная онлайн-школа, которая оформляет аттестат через школу-партнёра' : 'онлайн-школа, которая обещает аттестат государственного образца (кто его выдаёт — уточняйте)'},
+          {b.name} — {b.attestation === 'own' ? 'онлайн-школа с собственной государственной аккредитацией' : b.attestation === 'partner' ? 'лицензированная онлайн-школа, которая оформляет аттестат через школу-партнёра' : 'проект с несколькими схемами школьного оформления: проверяйте класс и договор'},
           {' '}{b.grades} классы. {b.priceFrom
             ? `Полноценный формат с зачислением стоит от ${b.priceFrom.toLocaleString('ru-RU')} ₽ в месяц (${b.priceFromNote}).`
             : `Цены считаются по классу и озвучиваются на консультации (${b.priceFromNote}).`}
           {' '}Ниже — тарифы 2026/27 как на сайте школы, схема аттестации, честные плюсы и минусы и сравнение с другими онлайн-школами.
-          Данные проверены {b.verified}.
+          Тарифный срез: {b.verified}; актуальную сумму и состав подтвердите перед оплатой.
         </p>
 
         {/* Ключевые факты */}
@@ -98,6 +112,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           {b.students && <Fact k="Ученики" v={b.students} />}
         </div>
 
+        {verified && <section className="border border-slate-200 rounded-xl p-5 mb-8 bg-slate-50"><h2 className="text-xl font-bold mb-3">Школьные документы и состав продукта: проверка {verified.checkedAt}</h2><p className="leading-7 mb-3">{verified.note}</p><p className="text-sm text-slate-600 mb-3">Проверены опубликованные сведения провайдера. Для своего договора дополнительно сверяйте юридическое лицо и уровень программы в реестрах; это не независимая оценка качества школы.</p><ul className="list-disc pl-5 space-y-2">{verified.sources.map((url, i) => <li key={url}><a href={url} className="text-blue-800 underline break-all">Официальный источник {i + 1}</a></li>)}</ul></section>}
         {/* Тарифы */}
         <h2 style={h2}>Тарифы {b.name} на 2026/27 учебный год</h2>
         <div style={{ overflowX: 'auto', border: '1px solid #E8E0D6', borderRadius: 14, background: '#fff', marginBottom: 12 }}>
@@ -122,7 +137,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           </table>
         </div>
         <p style={{ fontSize: 13, color: '#8A837D', margin: '0 0 28px', lineHeight: 1.5 }}>
-          Цены сняты с официального сайта {b.name} {b.verified}. Школа может менять тарифы и акции в течение года —
+          Исторический тарифный срез официального сайта {b.name} {b.verified}. Школа может менять тарифы и акции в течение года —
           итоговую сумму подтверждайте перед оплатой. {cheaper.length > 0 && (
             <>Дешевле среди сравниваемых школ: {cheaper.map((x, i) => (
               <span key={x.slug}>{i > 0 && ', '}<Link href={`/shkoly/tipy/online/${x.slug}/`} style={{ color: '#0369A1' }}>{x.name}</Link> (от {x.priceFrom.toLocaleString('ru-RU')} ₽)</span>

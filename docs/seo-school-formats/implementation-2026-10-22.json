@@ -1,0 +1,629 @@
+{
+  "date": "2026-10-22",
+  "tasks": [
+    {
+      "id": "P001",
+      "action": "new",
+      "path": "/shkoly/tipy/zaochnye/",
+      "scope": "Заочные общеобразовательные школы: сравнение программ и условий",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P002",
+      "action": "new",
+      "path": "/blog/materinskij-kapital-na-onlajn-shkolu/",
+      "scope": "Материнский капитал на онлайн-школу: проверка условий и оплата",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P003",
+      "action": "new",
+      "path": "/blog/besplatnaya-onlajn-shkola/",
+      "scope": "Бесплатная онлайн-школа: полное обучение, уроки и пробный доступ",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P004",
+      "action": "new",
+      "path": "/shkoly/tipy/online/nachalnaya-shkola/",
+      "scope": "Онлайн-школы 1–4 классов: программы, помощь родителя и зачисление",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P005",
+      "action": "new",
+      "path": "/shkoly/tipy/online/5-klass/",
+      "scope": "Онлайн-школы: 5 класс: переход к предметному обучению",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P006",
+      "action": "new",
+      "path": "/shkoly/tipy/online/9-klass/",
+      "scope": "Онлайн-школы: 9 класс: полный учебный год и обязательная ГИА",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P007",
+      "action": "new",
+      "path": "/shkoly/tipy/online/10-11-klass/",
+      "scope": "Онлайн-школы 10–11 классов: обучение, ЕГЭ и аттестат",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P008",
+      "action": "new",
+      "path": "/blog/foxford-ili-onlajn-shkola-1/",
+      "scope": "Фоксфорд или Онлайн-школа №1: сравнение одинаковых программ",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P009",
+      "action": "new",
+      "path": "/blog/vozvrat-deneg-onlajn-shkola/",
+      "scope": "Возврат денег за онлайн-школу: договор, расчёт и обращение",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P010",
+      "action": "new",
+      "path": "/blog/vechernyaya-shkola-posle-korrekcionnoj/",
+      "scope": "Вечерняя школа после коррекционной: что зависит от документа",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P011",
+      "action": "update",
+      "path": "/shkoly/tipy/online/",
+      "scope": "Хаб онлайн-школ: проверенное сравнение и выбор",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P012",
+      "action": "update",
+      "path": "/shkoly/tipy/semejnye/",
+      "scope": "Семейные школы и классы: проверка формата и сравнение",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P013",
+      "action": "update",
+      "path": "/shkoly/tipy/domashnie/",
+      "scope": "Домашние школы: сразу различать медицинское, семейное и онлайн",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P014",
+      "action": "update",
+      "path": "/shkoly/tipy/eksternal/",
+      "scope": "Каталог экстернатов: достоверные программы вместо совпадений названия",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P015",
+      "action": "update",
+      "path": "/shkoly/tipy/eksternal/9-klass/",
+      "scope": "Экстернат 9 класса: очистить школы и подтвердить программу",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P016",
+      "action": "update",
+      "path": "/shkoly/tipy/eksternal/10-11-klass/",
+      "scope": "Экстернат 10–11: сравнить реальные ускоренные программы",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P017",
+      "action": "update",
+      "path": "/shkoly/tipy/eksternal/online/",
+      "scope": "Онлайн-экстернат: что дистанционно, что очно",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P018",
+      "action": "check",
+      "path": "/shkoly/tipy/eksternal/besplatnye/",
+      "scope": "Бесплатный экстернат: проверить обещание и цену",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P019",
+      "action": "update",
+      "path": "/shkoly/tipy/vechernie/",
+      "scope": "Вечерние школы: каталог для взрослых и подростков",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P020",
+      "action": "update",
+      "path": "/shkoly/tipy/vechernie/online/",
+      "scope": "Дистанционные программы вместо вечерней школы: условия для 18+",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P021",
+      "action": "check",
+      "path": "/shkoly/tipy/vechernie/besplatnye/",
+      "scope": "Бесплатные вечерние школы: фактический бюджетный приём",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P022",
+      "action": "update",
+      "path": "/shkoly/tipy/semejnye/attestatsiya/",
+      "scope": "Площадки аттестации семейников: сравнение условий",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P023",
+      "action": "update",
+      "path": "/blog/semejnoe-obuchenie-kak-perejti/",
+      "scope": "Переход на семейное обучение: документы и последовательность",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P024",
+      "action": "update",
+      "path": "/blog/zayavlenie-na-semejnoe-obuchenie/",
+      "scope": "Заявление на семейное обучение: образцы по назначению",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P025",
+      "action": "update",
+      "path": "/blog/uvedomlenie-o-semejnom-obuchenii/",
+      "scope": "Уведомление о семейном образовании: куда, когда, как подтвердить",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P026",
+      "action": "update",
+      "path": "/blog/itogovaya-attestaciya-semejnoe-obuchenie/",
+      "scope": "Аттестация семейников: промежуточная и итоговая без путаницы",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P027",
+      "action": "update",
+      "path": "/blog/prikreplenie-k-shkole-dlya-attestacii/",
+      "scope": "Прикрепление для аттестации: инструкция и выбор школы",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P028",
+      "action": "update",
+      "path": "/blog/skolko-stoit-domashnee-obuchenie/",
+      "scope": "Стоимость домашнего обучения: одинаковый состав услуг",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P029",
+      "action": "update",
+      "path": "/blog/semejnoe-obuchenie-vyplaty-gosuslugi/",
+      "scope": "Выплаты на семейном обучении: проверенные региональные условия",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P030",
+      "action": "update",
+      "path": "/blog/nadomnoe-obuchenie-po-zdorovyu/",
+      "scope": "Надомное обучение по здоровью: оформление и права",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P031",
+      "action": "update",
+      "path": "/blog/nadomnoe-obuchenie-chasy-po-klassam/",
+      "scope": "Часы надомного обучения по классам: что проверять в плане",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P032",
+      "action": "update",
+      "path": "/blog/chem-otlichaetsya-nadomnoe-ot-semejnogo/",
+      "scope": "Надомное, домашнее и семейное обучение: таблица отличий",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P033",
+      "action": "update",
+      "path": "/blog/perehod-na-domashnee-obuchenie-s-chego-nachat/",
+      "scope": "Перевод на домашнее обучение: выбрать подходящий сценарий",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P034",
+      "action": "update",
+      "path": "/blog/zaochnoe-obuchenie-v-shkole/",
+      "scope": "Заочная форма в школе: условия и перевод",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P035",
+      "action": "update",
+      "path": "/blog/ochno-zaochnaya-forma-obucheniya/",
+      "scope": "Очно-заочная школа: расписание, статус и оформление",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P036",
+      "action": "update",
+      "path": "/blog/vechernyaya-shkola-dlya-vzroslyh/",
+      "scope": "Вечерняя школа для взрослых: документы, приём и сроки",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P037",
+      "action": "update",
+      "path": "/blog/vechernyaya-shkola-kak-postupit/",
+      "scope": "Как поступить в вечернюю школу: возраст, документы и приём",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P038",
+      "action": "update",
+      "path": "/blog/vechernyaya-shkola-posle-9-11-klassa/",
+      "scope": "Вечерняя школа после 9 класса: сроки и возможности",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P039",
+      "action": "update",
+      "path": "/blog/zakonchit-shkolu-eksternom/",
+      "scope": "Закончить школу экстерном: сроки и оформление",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P040",
+      "action": "update",
+      "path": "/blog/shkola-eksternat-dlya-vzroslyh/",
+      "scope": "Экстернат для взрослых: усилить страницу на позиции 6",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P041",
+      "action": "update",
+      "path": "/blog/attestat-vzroslomu-11-klass/",
+      "scope": "Аттестат за 11 класс взрослому: усилить страницу на позиции 3",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P042",
+      "action": "update",
+      "path": "/blog/attestat-vzroslomu-9-klass/",
+      "scope": "Аттестат за 9 класс после 18 лет: подтвердить уровень и поступить",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P043",
+      "action": "update",
+      "path": "/blog/attestat-11-klass-distantsionno/",
+      "scope": "Аттестат за 11 класс дистанционно: границы онлайн-формата",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P044",
+      "action": "update",
+      "path": "/blog/attestat-za-9-klass-onlajn/",
+      "scope": "Аттестат за 9 класс онлайн: школа, ОГЭ и прикрепление",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P045",
+      "action": "update",
+      "path": "/blog/kak-sdat-oge-na-domashnem-obuchenii/",
+      "scope": "ОГЭ на семейном обучении: допуск, регистрация и пересдачи",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P046",
+      "action": "update",
+      "path": "/blog/kak-sdat-ege-na-domashnem-obuchenii/",
+      "scope": "ЕГЭ на семейном обучении: маршрут регистрации и допуска",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P047",
+      "action": "update",
+      "path": "/blog/nalogovyj-vychet-obuchenie-detej-2026/",
+      "scope": "Налоговый вычет за онлайн-школу: документы и условия",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P048",
+      "action": "update",
+      "path": "/blog/luchshie-onlayn-shkoly-rossii-2026/",
+      "scope": "Рейтинг онлайн-школ: методика и сопоставимые условия",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P049",
+      "action": "update",
+      "path": "/blog/kak-vybrat-onlajn-shkolu-kriterii/",
+      "scope": "Выбор онлайн-школы: проверяемые форматы уроков",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P050",
+      "action": "update",
+      "path": "/blog/kak-prohodit-distancionnoe-obuchenie/",
+      "scope": "Как устроено дистанционное обучение: расписание, каникулы и контроль",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P051",
+      "action": "update",
+      "path": "/blog/obuchenie-rebyonka-v-emigracii/",
+      "scope": "Российская онлайн-школа за рубежом: документы и часовые пояса",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P052",
+      "action": "update",
+      "path": "/blog/perevod-v-onlajn-iz-za-sporta/",
+      "scope": "Онлайн-школа для спортсмена: совместить график и аттестацию",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P053",
+      "action": "update",
+      "path": "/blog/onlajn-obuchenie-rebyonka-s-autizmom/",
+      "scope": "Онлайн-обучение ребёнка с РАС: условия поддержки",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P054",
+      "action": "update",
+      "path": "/shkoly/tipy/online/foxford/",
+      "scope": "Фоксфорд: проверить прикрепление по классам, тарифы и реальные отзывы",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P055",
+      "action": "update",
+      "path": "/shkoly/tipy/online/interneturok/",
+      "scope": "ИнтернетУрок: отличить видеоплатформу от школы с зачислением",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P056",
+      "action": "update",
+      "path": "/shkoly/tipy/online/sinergiya/",
+      "scope": "Синергия: проверить тарифы, зачисление взрослых и независимые отзывы",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P057",
+      "action": "update",
+      "path": "/shkoly/tipy/online/onlajn-shkola-1/",
+      "scope": "Онлайн-школа №1: сопоставить пакеты с зачислением и без него",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P058",
+      "action": "update",
+      "path": "/shkoly/tipy/online/onlajn-gimnaziya-1/",
+      "scope": "Онлайн Гимназия №1: подтвердить уровни, документы и полную цену",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P059",
+      "action": "update",
+      "path": "/shkoly/tipy/online/bit/",
+      "scope": "БИТ: проверить заочную форму, публичные тарифы и условия сопровождения",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P060",
+      "action": "update",
+      "path": "/shkoly/tipy/online/cifrium/",
+      "scope": "Цифриум: отличить репетиторские услуги от полной домашней школы",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P061",
+      "action": "update",
+      "path": "/shkoly/tipy/online/ibls/",
+      "scope": "IBLS: объяснить связь с «Нашими Пенатами», проверить формы и тарифы",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P062",
+      "action": "update",
+      "path": "/shkoly/tipy/online/cpso/",
+      "scope": "ЦПСО / ЭдПалм: согласовать название, документы и схему аттестации",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P063",
+      "action": "update",
+      "path": "/shkoly/tipy/online/tochka-znaniy/",
+      "scope": "Точка Знаний: разделить курсы подготовки и полную школьную программу",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P064",
+      "action": "update",
+      "path": "/shkoly/tipy/online/hochu-uchitsya/",
+      "scope": "Хочу Учиться: отличить аттестационный пакет от полного обучения",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P065",
+      "action": "update",
+      "path": "/shkoly/tipy/online/mshzd/",
+      "scope": "Международная школа завтрашнего дня: проверить дистанционное отделение",
+      "status": "implemented_pending_release_validation",
+      "limits": "Тарифы16.09сохраненыкакдатированныйсрез;суммыперепроверятьпередоплатой"
+    },
+    {
+      "id": "P066",
+      "action": "check",
+      "path": "/blog/domashnee-obuchenie-plyusy-minusy/",
+      "scope": "Проверить два похожих гайда о домашнем обучении",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P067",
+      "action": "check",
+      "path": "/blog/nadomnoe-obuchenie-po-zdorovyu/",
+      "scope": "Проверить выбор онлайн-школ для детей с ОВЗ",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P068",
+      "action": "update",
+      "path": "/shkoly/moskva/vechernie/",
+      "scope": "Вечерние школы Москвы: подтвердить приём взрослых и условия",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P069",
+      "action": "new",
+      "path": "/shkoly/tipy/online/1-klass/",
+      "scope": "Онлайн-школы: 1 класс: первый школьный опыт и роль родителя",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P070",
+      "action": "new",
+      "path": "/shkoly/tipy/online/2-klass/",
+      "scope": "Онлайн-школы: 2 класс: закрепление чтения, письма и самостоятельности",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P071",
+      "action": "new",
+      "path": "/shkoly/tipy/online/3-klass/",
+      "scope": "Онлайн-школы: 3 класс: рост учебной самостоятельности",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P072",
+      "action": "new",
+      "path": "/shkoly/tipy/online/4-klass/",
+      "scope": "Онлайн-школы: 4 класс: завершение начальной ступени",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P073",
+      "action": "new",
+      "path": "/shkoly/tipy/online/6-klass/",
+      "scope": "Онлайн-школы: 6 класс: программа и контроль самостоятельной работы",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P074",
+      "action": "new",
+      "path": "/shkoly/tipy/online/7-klass/",
+      "scope": "Онлайн-школы: 7 класс: новые предметные нагрузки и поддержка",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P075",
+      "action": "new",
+      "path": "/shkoly/tipy/online/8-klass/",
+      "scope": "Онлайн-школы: 8 класс: программа и выбор маршрута к ОГЭ",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P076",
+      "action": "new",
+      "path": "/shkoly/tipy/online/10-klass/",
+      "scope": "Онлайн-школы: 10 класс: профиль и начало старшей ступени",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    },
+    {
+      "id": "P077",
+      "action": "new",
+      "path": "/shkoly/tipy/online/11-klass/",
+      "scope": "Онлайн-школы: 11 класс: выпуск, сочинение и ЕГЭ",
+      "status": "implemented_pending_release_validation",
+      "limits": ""
+    }
+  ],
+  "additional_work": [
+    "Удаление2нерелевантныхкарточек",
+    "Исправление2московскихкарточек",
+    "Разведение3статейобэкстернате",
+    "Обновлениепоиска/sitemap/dateModified",
+    "Раскрытиеполучателязаявки",
+    "Отсутствующаяценанесчитаетсябесплатной"
+  ]
+}

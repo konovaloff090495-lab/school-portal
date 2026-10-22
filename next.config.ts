@@ -1,3 +1,4 @@
+import schoolBlogRedirects from './scripts/seo/school-blog-redirects.json';
 import type { NextConfig } from "next";
 import { readFileSync } from "fs";
 import path from "path";
@@ -94,6 +95,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      ...Object.entries(schoolBlogRedirects).map(([source, destination]) => ({ source, destination, statusCode: 301 as const })),
       ...Object.entries(legacySchoolPaths).map(([source, destination]) => ({
         source, destination, permanent: true,
       })),

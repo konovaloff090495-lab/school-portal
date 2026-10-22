@@ -28,6 +28,7 @@ jobs:
       - run: npm run lint:leads
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
+      - run: node scripts/seo-school-formats/check.mjs
       - run: npx playwright install --with-deps chromium
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 5

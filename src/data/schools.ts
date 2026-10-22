@@ -1,3 +1,5 @@
+import schoolFormatUpdates from './school-format-card-updates.json'
+import schoolCatalogExclusions from './school-catalog-exclusions.json'
 import programmingGeography from './programming-geography.json'
 import verifiedProgrammingSchools from './programming-imported-schools.json'
 import programmingSchoolUpdates from './programming-school-updates.json'
@@ -287869,7 +287871,7 @@ export const schools = ([
   },
   ...verifiedFamilySchools,
   ...verifiedProgrammingSchools,
-] as any[] as School[]).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}) }))
+] as any[] as School[]).filter(s => !(s.slug in schoolCatalogExclusions)).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((schoolFormatUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...(s.slug in schoolFormatUpdates ? { priceFrom: undefined, priceTo: undefined, faq: undefined } : {}) }))
 export const typeLabels: Record<SchoolType, string> = {
   gosudarstvennye: 'Государственные',
   chastnie: 'Частные',

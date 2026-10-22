@@ -17,6 +17,7 @@ export interface BlogPost {
   tags: string[]
   author: string
   authorRole: string
+  updatedAt?: string // Actual substantive editorial update
   publishedAt: string // ISO date
   readTime: number // minutes
   imageAlt: string
