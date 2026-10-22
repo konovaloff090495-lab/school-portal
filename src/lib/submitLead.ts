@@ -39,7 +39,7 @@ export async function submitLead(payload: LeadPayload | SchoolSubmissionPayload)
   const lead = payload as LeadPayload
 
   try {
-    const res = await fetch('/api/leads/submit', {
+    const res = await fetch('/api/leads/submit/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

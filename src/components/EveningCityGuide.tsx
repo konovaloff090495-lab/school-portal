@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import EveningVerifiedAdmissions from '@/components/EveningVerifiedAdmissions'
 import { regionLabels, type RegionSlug } from '@/data/schools'
 
 const guides: Partial<Record<RegionSlug, { title: string; text: string; checks: string[] }>> = {
@@ -19,6 +20,7 @@ const guides: Partial<Record<RegionSlug, { title: string; text: string; checks: 
   },
 }
 export default function EveningCityGuide({ region }: { region: RegionSlug }) {
+  if (['ekaterinburg', 'sankt-peterburg'].includes(region)) return <EveningVerifiedAdmissions region={region} />
   const guide = guides[region]
   if (!guide) return null
   return <section className="rounded-2xl bg-white border border-slate-200 p-5 sm:p-7 mb-7">

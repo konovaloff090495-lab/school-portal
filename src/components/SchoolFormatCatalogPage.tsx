@@ -1,3 +1,4 @@
+import EveningVerifiedAdmissions from '@/components/EveningVerifiedAdmissions'
 import EveningPathChooser from '@/components/EveningPathChooser'
 import CatalogClient from '@/app/shkoly/CatalogClient'
 import { getSchoolsByType, type SchoolType } from '@/data/schools'
@@ -19,7 +20,7 @@ export default function SchoolFormatCatalogPage({ path }: { path: string }) {
     (!page.onlineOnly || s.remoteOnly || s.features.some(f => /онлайн|дистанцион/i.test(f)))
   )
   return <CatalogClient initialTypes={[type]} lockType allowedSchoolSlugs={selected.map(s => s.slug)}
-    introContent={<><p className="max-w-4xl mx-auto text-lg leading-8 mb-5">{page.intro}</p>{type === 'vechernie' && <EveningPathChooser />}</>}
+    introContent={<><p className="max-w-4xl mx-auto text-lg leading-8 mb-5">{page.intro}</p>{type === 'vechernie' && <EveningPathChooser />}{path === '/shkoly/tipy/vechernie/besplatnye/' && <EveningVerifiedAdmissions />}</>}
     title={page.h1} subtitle={`${selected.length} карточек по указанным в каталоге параметрам. Программу и текущий приём подтвердите у школы.`}
     breadcrumbs={[{ label: 'Все школы', href: '/shkoly/' }, { label: page.parentLabel, href: `/shkoly/tipy/${type}/` }, { label: page.shortLabel }]}
     seoContent={<div className="max-w-4xl mx-auto space-y-7 pb-8">
