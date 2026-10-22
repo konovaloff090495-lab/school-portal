@@ -1140,18 +1140,19 @@ export default function CatalogClient({
         </aside>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between mb-5 bg-white rounded-xl border border-gray-200 px-4 py-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-5 bg-white rounded-xl border border-gray-200 px-4 py-3">
             <span className="text-sm text-gray-500 hidden sm:block">
               Показано: <span className="font-semibold text-[#0F172A]">{filtered.length}</span> школ
             </span>
-            <div className="flex items-center gap-3 ml-auto">
+            <div className="flex flex-wrap items-center gap-3 ml-auto max-w-full">
               {viewMode === 'grid' && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0 max-w-full">
                   <span className="text-sm text-gray-500 hidden sm:block">Сортировка:</span>
                   <select
+                    aria-label="Сортировка школ"
                     value={filters.sort}
                     onChange={e => setFilters(f => ({ ...f, sort: e.target.value as SortKey }))}
-                    className="text-sm font-medium text-[#0F172A] bg-transparent border-none outline-none cursor-pointer"
+                    className="min-w-0 max-w-full text-sm font-medium text-[#0F172A] bg-transparent border-none outline-none cursor-pointer"
                   >
                     <option value="rating">По рейтингу</option>
                     <option value="reviews">По отзывам ProSchools</option>
