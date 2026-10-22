@@ -46,7 +46,7 @@ function SchoolGallery({ school }: { school: School }) {
             !errors[slot] && activeSlot === slot ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          {!errors[slot] ? (
+          {!errors[slot] && activeSlot === slot ? (
             <Image
               src={school.photoUrls?.[slot-1] || `/schools/${school.slug}-${slot}.jpg`}
               unoptimized={!!school.photoUrls}
@@ -55,7 +55,6 @@ function SchoolGallery({ school }: { school: School }) {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 400px"
               onError={() => markError(slot)}
-              priority={slot === 1}
             />
           ) : null}
         </div>
