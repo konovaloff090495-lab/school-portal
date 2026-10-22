@@ -65,7 +65,10 @@ try {
         assert.ok(choiceBox && cardBox && choiceBox.y < cardBox.y, 'Route must precede cards')
       }
     }
-    if (['/shkoly/ekaterinburg/vechernie/', '/shkoly/sankt-peterburg/vechernie/'].includes(path)) assert.equal(await page.locator('[data-verified-admissions]').count(), 1)
+    if (['/shkoly/ekaterinburg/vechernie/', '/shkoly/sankt-peterburg/vechernie/'].includes(path)) {
+      assert.equal(await page.locator('#proverennyj-priem[data-verified-admissions]').count(), 1)
+      assert.equal(await page.locator('[data-growth-choice=local-school]').getAttribute('href'), '#proverennyj-priem')
+    }
     if (path === '/shkoly/tipy/online/') assert.equal(await page.locator('[data-growth-block=online-intent]').count(), 1)
     if (path.includes('/shkola/')) assert.equal(await page.locator('#kontakty').count(), 1)
     results.push({ path, status: 200, canonical: 'valid' })
