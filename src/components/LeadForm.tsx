@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useId, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { selectedGrowthRoute } from '@/lib/growth-tracking'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
@@ -22,6 +23,7 @@ interface LeadFormProps {
 
 export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '' }: LeadFormProps) {
   const router = useRouter()
+  const pathname = usePathname()
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
@@ -34,12 +36,14 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   useEffect(() => {
     if (!attestat) return
     const selectRoute = () => {
-      const goal = window.location.hash === '#programma-9' ? 'Аттестат за 9 класс' : window.location.hash === '#programma-11' ? 'Аттестат за 11 класс' : ''
-      if (goal) setQualification(q => ({ ...q, goal: q.goal || goal }))
+      const hashRoute = window.location.hash === '#programma-9' ? 'attestat-9' : window.location.hash === '#programma-11' ? 'attestat-11' : undefined
+      const selected = hashRoute || selectedGrowthRoute()
+      const goal = selected === 'attestat-9' ? 'Аттестат за 9 класс' : selected === 'attestat-11' ? 'Аттестат за 11 класс' : ''
+      if (goal) setQualification(q => ({ ...q, goal: hashRoute ? goal : q.goal || goal }))
     }
     selectRoute(); window.addEventListener('hashchange', selectRoute)
     return () => window.removeEventListener('hashchange', selectRoute)
-  }, [attestat])
+  }, [attestat, pathname])
 
   function handlePhone(e: React.ChangeEvent<HTMLInputElement>) {
     const masked = formatPhone(e.target.value)

@@ -90,6 +90,7 @@ try {
   await page.locator('[data-evening-route] a[href="/attestat-vzroslomu/#programma-9"]').click()
   await page.waitForURL('**/attestat-vzroslomu/#programma-9')
   const form = page.locator('#konsultaciya form')
+  await page.waitForFunction(() => document.querySelector('#konsultaciya select')?.value === 'Аттестат за 9 класс', null, { timeout: 5000 })
   assert.equal(await form.getByLabel('Что хотите закончить?').inputValue(), 'Аттестат за 9 класс', 'Route preselects the programme without requiring another answer')
   await form.getByRole('button', { name: 'Узнать условия онлайн-обучения' }).click()
   assert.equal(payload, undefined, 'Invalid form cannot submit')
