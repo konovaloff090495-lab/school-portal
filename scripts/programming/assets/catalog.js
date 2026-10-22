@@ -1,3 +1,8 @@
+document.addEventListener('error',e=>{
+ const img=e.target;if(!(img instanceof HTMLImageElement)||!img.matches('[data-school-cover]')||img.dataset.failed)return;
+ img.dataset.failed='1';img.src=img.dataset.fallback;img.alt='Тематическая иллюстрация об обучении';
+ const cover=img.closest('.ps-card-cover');cover.classList.remove('ps-card-cover-official');cover.querySelector('span').textContent='Иллюстрация';
+},true);
 document.addEventListener('DOMContentLoaded',()=>{
  document.querySelector('#ps-city')?.addEventListener('change',e=>window.location.assign(e.target.value));
  const input=document.querySelector('#ps-search'),sort=document.querySelector('#ps-sort'),grid=document.querySelector('#ps-grid');

@@ -5,12 +5,13 @@ and creates real HTML pagination. No synthetic city offices or course inventory.
 """
 import html,json,re,math,shutil,subprocess
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from collections import Counter
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[2]
 WORK=ROOT/'work/programming';OUT=WORK/'release';BASE='https://pro-schools.ru'
+MEDIA=json.loads((ROOT/'src/data/school-media.json').read_text())
 D=json.loads((WORK/'runtime.json').read_text());HUB='/shkoly/tipy/programmirovanie/'
 CHROME=ROOT/'scripts/courses/design'
 shared=json.loads((ROOT/'src/site-navigation/chrome.json').read_text())
@@ -31,7 +32,7 @@ def doc(path,title,description,body,index=True,schema=None):
  title=title+' | ProSchools';ALL.append(path)
  if index:INDEX.append(path)
  payload=json.dumps(schema or {'@context':'https://schema.org','@type':'CollectionPage','name':title,'url':BASE+path},ensure_ascii=False).replace('<','\\u003c')
- h=f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title><meta name="description" content="{E(description)}"><meta name="robots" content="{'index' if index else 'noindex'},follow"><link rel="canonical" href="{BASE+path}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}"><meta property="og:url" content="{BASE+path}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/fonts.css"><link rel="stylesheet" href="/kursy/assets/style.css"><link rel="stylesheet" href="/site-navigation/navigation.css?v=20261020"><link rel="stylesheet" href="/_programming/style.css?v=20261019"><script type="application/ld+json">{payload}</script><script defer src="/_programming/catalog.js?v=20261019"></script></head><body>{HEADER}<main id="main" class="ps-main">{body}</main>{FOOTER}{METRIKA}</body></html>'''
+ h=f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title><meta name="description" content="{E(description)}"><meta name="robots" content="{'index' if index else 'noindex'},follow"><link rel="canonical" href="{BASE+path}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}"><meta property="og:url" content="{BASE+path}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/kursy/assets/fonts.css"><link rel="stylesheet" href="/kursy/assets/style.css"><link rel="stylesheet" href="/site-navigation/navigation.css?v=20261020"><link rel="stylesheet" href="/_programming/style.css?v=20261022-media"><script type="application/ld+json">{payload}</script><script defer src="/_programming/catalog.js?v=20261022-media"></script></head><body>{HEADER}<main id="main" class="ps-main">{body}</main>{FOOTER}{METRIKA}</body></html>'''
  h=h.replace('</head>','<script defer src="/site-navigation/navigation.js?v=20261020"></script></head>')
  start=h.find('<nav class="ps-tabs"');end=h.find('</nav>',start)
  if start>=0:
@@ -47,13 +48,24 @@ def rating(s):
  if not s.get('yandexRating'):return ''
  reviews=s.get('yandexReviewCount');info=f'Яндекс Карты: {s["yandexRating"]:g}'+(f' · {reviews} отзывов' if reviews is not None else '')+' · сентябрь 2026'
  return '<p class="ps-map-rating">'+a(s.get('yandexMapsUrl') or 'https://yandex.ru/maps/?text='+quote(s['name']+' '+s['city']+' '+s['address']),info)+'</p>'
+def cover(s):
+ fallback='/blog/images/editorial-20261021/inzhenernye-klassy-v-shkole.webp'
+ src=fallback;label='Иллюстрация';kind='illustration'
+ if MEDIA['photos'].get(s['slug']):
+  src='/schools/'+s['slug']+'-1.jpg';label='Фото школы';kind='photo'
+ else:
+  host=urlparse(s.get('website') or '').hostname or '';host=host.removeprefix('www.')
+  network=next((d for d in ['kiber-one.com','coddyschool.com','top-academy.ru','algoritmika.org'] if host.endswith('.'+d)),None)
+  official=MEDIA['websites'].get(host) or MEDIA['websites'].get(network)
+  if official:src=official['src'];label='С сайта школы';kind='official'
+ return '<a class="ps-card-cover ps-card-cover-'+kind+'" href="/shkola/'+E(s['slug'])+'/"><img data-school-cover data-fallback="'+fallback+'" src="'+E(src)+'" alt="'+E(s['name']+' — '+label)+'" width="600" height="315" loading="lazy"><span>'+label+'</span></a>'
 def card(s):
  age=f'Ориентир сети: {s["ageRange"][0]}–{s["ageRange"][1]} лет' if s.get('ageRange') else 'Возраст и группы уточняются'
- return f'''<article class="ps-card" data-card data-search="{E(' '.join([s['name'],s['city'],s['address']]))}" data-rating="{s.get('yandexRating','')}" data-reviews="{s.get('yandexReviewCount','')}"><div class="ps-card-top"><span class="ps-initial">{E(s['name'][0])}</span><span class="ps-label">Очная площадка</span></div><h3>{a('/shkola/'+s['slug']+'/',s['name'])}</h3><p class="ps-address">{E(s['city'])}, {E(s['address'])}</p><p class="ps-small">{E(age)}</p>{rating(s)}<div class="ps-card-bottom">{a('/shkola/'+s['slug']+'/','Контакты и условия →')}{'<a href="tel:'+E(re.sub('[^+0-9]','',s['phone']))+'">Позвонить</a>' if s.get('phone') else ''}</div></article>'''
+ return f'''<article class="ps-card" data-card data-search="{E(' '.join([s['name'],s['city'],s['address']]))}" data-rating="{s.get('yandexRating','')}" data-reviews="{s.get('yandexReviewCount','')}">{cover(s)}<div class="ps-card-top"><span class="ps-label">Очная площадка</span></div><h3>{a('/shkola/'+s['slug']+'/',s['name'])}</h3><p class="ps-address">{E(s['city'])}, {E(s['address'])}</p><p class="ps-small">{E(age)}</p>{rating(s)}<div class="ps-card-bottom">{a('/shkola/'+s['slug']+'/','Контакты и условия →')}{'<a href="tel:'+E(re.sub('[^+0-9]','',s['phone']))+'">Позвонить</a>' if s.get('phone') else ''}</div></article>'''
 def brand_card(b):
  arr=[c for c in COURSES if c['brandId']==b['id'] and c['online']]
  topics=[TOPICS.get(t,t) for t in b.get('topics',[]) if t in TOPICS]
- return '<article class="ps-card"><div class="ps-card-top"><span class="ps-initial">'+E(b['name'][0])+'</span><span class="ps-label">'+E(b.get('format','Онлайн'))+'</span></div><h3>'+a('/shkola/'+b['slug']+'/',b['name'])+'</h3><p>'+E(b['description'])+'</p>'+('<p class="ps-small">'+E(' · '.join(topics))+'</p>' if topics else '')+'<div class="ps-card-bottom">'+a('/shkola/'+b['slug']+'/','О школе →')+(a('/kursy/shkoly/'+b['id']+'/',str(len(arr))+' программ →') if arr else '')+'</div></article>'
+ return '<article class="ps-card">'+cover(b)+'<div class="ps-card-top"><span class="ps-label">'+E(b.get('format','Онлайн'))+'</span></div><h3>'+a('/shkola/'+b['slug']+'/',b['name'])+'</h3><p>'+E(b['description'])+'</p>'+('<p class="ps-small">'+E(' · '.join(topics))+'</p>' if topics else '')+'<div class="ps-card-bottom">'+a('/shkola/'+b['slug']+'/','О школе →')+(a('/kursy/shkoly/'+b['id']+'/',str(len(arr))+' программ →') if arr else '')+'</div></article>'
 def tools(count,hasratings=True):
  return f'''<div class="ps-tools"><label class="ps-search">Найти на этой странице<input type="search" id="ps-search" placeholder="Название, улица или город"></label><label>Сортировать<select id="ps-sort"><option value="default">По названию</option>{'<option value="rating">По оценке Карт</option><option value="reviews">По отзывам Карт</option>' if hasratings else ''}</select></label><p id="ps-count" aria-live="polite">{count} {num(count)} на странице</p></div>'''
 def courses_table(arr,limit=None):
