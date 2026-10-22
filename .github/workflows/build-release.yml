@@ -41,6 +41,7 @@ jobs:
           name: school-form-debug
           path: work/school-submission-qa/
           retention-days: 2
+      - run: node scripts/schools/check-media.mjs
       - run: npm run build
       - run: node scripts/seo-school-formats/check-http.mjs
         timeout-minutes: 3

@@ -14,6 +14,8 @@ import SchoolCard from '@/components/SchoolCard'
 import SchoolPageGallery from '@/components/SchoolPageGallery'
 import SchoolMatchModal from '@/components/SchoolMatchModal'
 import ReviewsBlock from '@/components/ReviewsBlock'
+import { schoolPhotoCount } from '@/lib/school-media'
+import programmingCourses from '@/data/programming-school-courses.json'
 
 
 interface Props {
@@ -260,8 +262,8 @@ export default async function SchoolPage({ params }: Props) {
     url: school.website ?? pageUrl,
     // Фото есть не у всех школ — photoCount проставляет scripts/set-photo-count.mjs.
     // Без проверки в разметку уходит ссылка на несуществующий файл (404).
-    ...(school.photoCount > 0
-      ? { image: `https://pro-schools.ru/schools/${school.slug}-1.jpg` }
+    ...(schoolPhotoCount(school) > 0
+      ? { image: school.photoUrls?.[0] ? new URL(school.photoUrls[0], 'https://pro-schools.ru').href : `https://pro-schools.ru/schools/${school.slug}-1.jpg` }
       : {}),
     telephone: school.phone,
     ...(!school.remoteOnly ? {
@@ -320,7 +322,7 @@ export default async function SchoolPage({ params }: Props) {
       <Breadcrumbs crumbs={crumbs} />
 
       {/* Hero галерея */}
-      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={school.photoCount} photoUrls={school.photoUrls} photoCaptions={school.photoCaptions} name={school.name}>
+      <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={schoolPhotoCount(school)} photoUrls={school.photoUrls} photoCaptions={school.photoCaptions} name={school.name} type={school.type} website={school.website}>
         <div>
           <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
             {typeLabels[school.type]}
@@ -398,6 +400,20 @@ export default async function SchoolPage({ params }: Props) {
               </div>
             </div>
           </div>
+
+          {school.type === 'programmirovanie' && <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Программы и условия записи</h2>
+            <p className="text-sm text-gray-600 mb-4">Программы сети могут отличаться от занятий в конкретном филиале. Уточните возраст группы, расписание и полную стоимость по официальным контактам школы.</p>
+            {school.sourceUrl && <p className="text-xs text-gray-500 mb-4"><a className="text-[#0369A1] hover:underline" href={school.sourceUrl} target="_blank" rel="noopener noreferrer">Официальный источник</a>{school.checkedAt ? ` · проверено ${school.checkedAt}` : ''}</p>}
+            <div className="divide-y divide-gray-100">
+              {((programmingCourses as Record<string, { title: string; slug: string; online: boolean }[]>)[school.programmingBrandId ?? ''] ?? []).slice(0, 12).map(course => <div key={course.slug} className="py-3 text-sm">
+                <Link href={`/kursy/kurs/${course.slug}/`} className="font-medium text-[#0369A1] hover:underline">{course.title}</Link>
+                <p className="text-xs text-gray-500 mt-1">{course.online ? 'Онлайн' : 'Формат и площадка уточняются'}</p>
+              </div>)}
+            </div>
+            {school.programmingBrandId && Boolean((programmingCourses as Record<string, unknown>)[school.programmingBrandId]) && <Link href={`/kursy/shkoly/${school.programmingBrandId}/`} className="block mt-4 text-sm font-semibold text-[#0369A1] hover:underline">Все программы этой школы →</Link>}
+            <Link href="/kursy/programmirovanie/" className="inline-block mt-4 text-sm font-semibold text-[#0369A1] hover:underline">Сравнить все курсы программирования →</Link>
+          </div>}
 
           {/* Features */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">

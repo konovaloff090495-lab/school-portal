@@ -27,15 +27,7 @@ block='''
         add_header Referrer-Policy strict-origin-when-cross-origin always;
         add_header Cache-Control "public, max-age=300, must-revalidate" always;
     }
-    location /shkola/ {
-        root /var/www/school-portal/programming-current;
-        if ($uri !~ "/$") { return 301 $uri/$is_args$args; }
-        try_files $uri/index.html @programming_next;
-        add_header X-Robots-Tag $ps_courses_robots always;
-        add_header X-Content-Type-Options nosniff always;
-        add_header X-Frame-Options SAMEORIGIN always;
-        add_header Cache-Control "public, max-age=300, must-revalidate" always;
-    }
+    # School detail pages use the shared Next template (including galleries).
     location @programming_next {
         proxy_pass http://127.0.0.1:3001;
         proxy_set_header Host $host;
