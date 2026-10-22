@@ -24,7 +24,7 @@ export function rememberUtm(): void {
     const params = new URLSearchParams(window.location.search)
     const found: Record<string, string> = {}
     for (const k of UTM_KEYS) { const v = params.get(k); if (v) found[k] = v }
-    if (Object.keys(found).length && !sessionStorage.getItem(UTM_KEY)) sessionStorage.setItem(UTM_KEY, JSON.stringify(found))
+    if (!sessionStorage.getItem(UTM_KEY)) sessionStorage.setItem(UTM_KEY, JSON.stringify(found))
   } catch {}
 }
 
