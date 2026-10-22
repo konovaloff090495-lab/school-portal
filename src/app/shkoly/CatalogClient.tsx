@@ -104,6 +104,7 @@ export interface CatalogClientProps {
   breadcrumbs?: { label: string; href?: string }[]
   featureFilter?: FeatureSlug
   languageFilter?: LanguageSlug
+  introContent?: React.ReactNode
   seoContent?: React.ReactNode
   /** Блок расширенной выборки — показывается, когда по строгому фильтру школ нет. */
   emptyFallback?: React.ReactNode
@@ -271,6 +272,7 @@ export default function CatalogClient({
   breadcrumbs = [{ label: 'Все школы' }],
   featureFilter,
   languageFilter,
+  introContent,
   seoContent,
   emptyFallback,
 }: CatalogClientProps) {
@@ -1045,6 +1047,8 @@ export default function CatalogClient({
           counts={metroCount}
         />
       )}
+
+      {introContent && <div className="mb-8">{introContent}</div>}
 
       {activeCount > 0 && (
         <button

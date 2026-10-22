@@ -151,8 +151,9 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
+        introContent={r === 'moskva' && t === 'vechernie' ? <MoscowEveningVerification /> : undefined}
         seoContent={
-          r === 'moskva' && t === 'vechernie' ? <MoscowEveningVerification /> : t === 'vechernie' || t === 'eksternal'
+          r === 'moskva' && t === 'vechernie' ? null : t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
             : t === 'podgotovka-ege' || t === 'podgotovka-oge'
             ? <><EgeCityExtras region={r} variant={t === 'podgotovka-ege' ? 'ege' : 'oge'} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
