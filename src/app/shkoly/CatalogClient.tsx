@@ -1048,8 +1048,6 @@ export default function CatalogClient({
         />
       )}
 
-      {introContent && <div className="mb-8">{introContent}</div>}
-
       {activeCount > 0 && (
         <button
           onClick={resetFilters}
@@ -1083,6 +1081,8 @@ export default function CatalogClient({
           )}
         </button>
       </div>
+
+      {introContent && <div className="mb-8">{introContent}</div>}
 
       {activeCount > 0 && (
         <div className="flex flex-wrap gap-2 mb-5">
