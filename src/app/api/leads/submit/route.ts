@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     const {
       name, phone, email, question, school, city, source, pd_agreed, marketing_agreed,
       crm = true, utm, page_url, referrer, ym_client_id, landing_url, first_referrer,
-      form_id, product, qualification,
+      form_id, product, qualification, growth_release, selected_route,
     } = body
 
     if (!name || !phone || !email) {
@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
       if (page_url) commentParts.push(`Страница: ${page_url}`)
       if (landing_url) commentParts.push(`Страница входа: ${landing_url}`)
       if (form_id || source) commentParts.push(`Форма: ${form_id || source}`)
+      if (typeof selected_route === 'string') commentParts.push(`Выбранный маршрут: ${selected_route.slice(0, 80)}`)
       if (product) commentParts.push(`Продукт: ${product}`)
       if (qualification && typeof qualification === 'object') {
         for (const [key, label] of [['goal', 'Цель'], ['audience', 'Кому нужно обучение'], ['callback_time', 'Время звонка']]) {
@@ -72,7 +73,7 @@ export async function POST(req: NextRequest) {
         ymClientId: ym_client_id,
         personalDataAgree: pd_agreed !== false,
         marketingAgree: marketing_agreed === true,
-        extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source, qualification },
+        extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source, qualification, growth_release, selected_route },
       })
       if (result.ok) {
         crmReceipt = { status: 'accepted', id: result.id }

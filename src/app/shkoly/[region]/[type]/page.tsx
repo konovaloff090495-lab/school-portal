@@ -153,7 +153,7 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
+        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} localHref={['ekaterinburg', 'sankt-peterburg'].includes(r) ? '#proverennyj-priem' : '#spisok-shkol'} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
         seoContent={
           r === 'moskva' && t === 'vechernie' ? null : t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
@@ -163,9 +163,9 @@ export default async function TypePage({ params }: Props) {
             ? <>
                 <OnlineLeadCta
                   source={`Семейные школы: город ${regionName}`}
-                  heading={`Семейное обучение ${regionIn}: подберём школу для прикрепления`}
-                  text={`Скажите класс и цель перехода — за 30 минут перезвоним, объясним, как оформить семейную форму ${regionIn} (уведомление, прикрепление, аттестации) и какая онлайн-школа возьмёт на себя уроки и аттестацию, чтобы не искать школу самим.`}
-                  bullets={['уведомление в управление образования и документы', 'прикрепление к аккредитованной школе — бесплатно или онлайн', 'аттестации дистанционно, ОГЭ/ЕГЭ — в вашем городе']}
+                  heading={`Платная семейная программа Синергии ${regionIn}`}
+                  text="Консультант Синергии расскажет об условиях её платной программы. Укажите класс, задачу и удобное время звонка. Форма не подаёт заявление в местную муниципальную школу; зачисление, цену и аттестации согласуйте до оплаты."
+                  bullets={['уведомление в управление образования и документы', 'принимающая организация и оформление школьных результатов', 'место аттестаций и ОГЭ/ЕГЭ — по условиям выбранной программы']}
                   city={regionName}
                 />
                 <OnlineBrandsTable
