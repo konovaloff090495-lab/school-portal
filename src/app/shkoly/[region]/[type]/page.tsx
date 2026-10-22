@@ -153,7 +153,7 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
+        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} localHref={['ekaterinburg', 'sankt-peterburg'].includes(r) ? '#proverennyj-priem' : '#spisok-shkol'} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
         seoContent={
           r === 'moskva' && t === 'vechernie' ? null : t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>

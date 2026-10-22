@@ -657,7 +657,7 @@ export default async function GlobalTypePage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
       ]}
-      introContent={<>{t === 'vechernie' && <><EveningPathChooser /><EveningVerifiedAdmissions /></>}<SchoolFormatAdvice type={t} />{t === 'online' && <><OnlinePathChooser /><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
+      introContent={<>{t === 'vechernie' && <><EveningPathChooser /><EveningVerifiedAdmissions /></>}{t === 'online' && <OnlinePathChooser />}<SchoolFormatAdvice type={t} />{t === 'online' && <><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
       seoContent={seoContent}
     />
   )
