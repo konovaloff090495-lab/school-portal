@@ -22,8 +22,8 @@ export default function AdultAttestatPage() {
     <FaqJsonLd faqs={faq.map(f => ({ question: f.q, answer: f.a }))} />
     <div className="rounded-3xl bg-[#123d4b] text-white p-6 sm:p-12 mb-9">
       <p className="text-xs font-bold tracking-widest text-[#b8d9de] mb-5">ВЕРНУТЬСЯ К ОБРАЗОВАНИЮ</p>
-      <h1 className="text-3xl sm:text-5xl font-bold leading-tight max-w-3xl">Получить аттестат взрослому: начните со своего маршрута</h1>
-      <p className="mt-5 max-w-2xl text-lg leading-8 text-[#dfedf0]">Не закончили 9 класс или хотите продолжить после него? Разберём документы, формат и сроки платного онлайн-обучения Синергии. Учиться можно по записям, а государственные экзамены проходят очно в Москве.</p>
+      <h1 className="text-3xl sm:text-5xl font-bold leading-tight max-w-3xl">Аттестат взрослому: 9 или 11 класс</h1>
+      <p className="mt-5 max-w-2xl text-lg leading-8 text-[#dfedf0]">Платное онлайн-обучение Синергии. Подберём программу по вашим документам. Занятия — в записи, ОГЭ/ЕГЭ — очно в Москве.</p>
       <div className="mt-7 flex flex-wrap gap-3"><a href="#programma-9" className="rounded-xl bg-white text-[#123d4b] px-5 py-3 font-bold">Нужен аттестат за 9 класс</a><a href="#programma-11" className="rounded-xl border border-white/50 px-5 py-3 font-bold">У меня уже есть 9 классов</a></div>
     </div>
     <div className="grid md:grid-cols-2 gap-6 mb-9">

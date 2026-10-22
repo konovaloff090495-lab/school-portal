@@ -67,11 +67,15 @@ try {
     results.push({ path, status: 200, canonical: 'valid' })
   }
   for (const width of [1440, 1024, 768, 390, 320]) {
-    await page.setViewportSize({ width, height: 1000 })
+    await page.setViewportSize({ width, height: width <= 390 ? 844 : 1000 })
     for (const path of ['/attestat-vzroslomu/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/tipy/vechernie/9-klass/']) {
       await page.goto(base + path)
       await page.evaluate(() => document.fonts.ready)
       await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1, null, { timeout: 5000 })
+      if (path === '/attestat-vzroslomu/' && width <= 390) {
+        const cta = await page.locator('a[href="#programma-9"]').first().boundingBox()
+        assert.ok(cta && cta.y + cta.height <= 844, 'Adult programme choice must fit the first mobile screen')
+      }
       results.push({ path, width, overflow: false })
       if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${output}/${path.includes('attestat') ? 'adult' : path.includes('9-klass') ? 'grade9' : 'city'}-${width}.png` })
     }
