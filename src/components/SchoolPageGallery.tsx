@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import SchoolCover from './SchoolCover'
 
 const PHOTOS_MAX = 3
 
@@ -11,11 +12,13 @@ interface Props {
   photoUrls?: string[]
   photoCaptions?: string[]
   photoCount?: number         // фактическое число фото из данных (0..3)
+  type?: import('@/data/schools').SchoolType
+  website?: string
   name?: string               // для alt плейсхолдера
   children: React.ReactNode  // overlay (title, badge, rating)
 }
 
-export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrls, photoCaptions, name, children }: Props) {
+export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrls, photoCaptions, type, website, children }: Props) {
   const [current, setCurrent]   = useState(0)
   const [errors, setErrors]     = useState<Record<number, boolean>>({})
 
@@ -38,13 +41,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrl
   return (
     <div className="mt-6 relative h-64 md:h-80 rounded-2xl overflow-hidden bg-gray-200 group">
       {/* Плейсхолдер, если фото нет вовсе — не запрашиваем /_next/image */}
-      {count === 0 && (
-        <div
-          role="img"
-          aria-label={`${name ?? imageAlt} — фото недоступно`}
-          className="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-gray-200"
-        />
-      )}
+      {available.length === 0 && <SchoolCover school={{ slug, type: type ?? 'gosudarstvennye', website }} hero />}
 
       {/* Главное фото */}
       {Array.from({ length: count }, (_, i) => (

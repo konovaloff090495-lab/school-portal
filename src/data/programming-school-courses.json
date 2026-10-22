@@ -1,0 +1,1188 @@
+{
+  "umschool": [
+    {
+      "title": "Годовой курс ЕГЭ по информатике с Софьей Вайб (10 класс)",
+      "slug": "umschool-computer-science-59cf3",
+      "online": true
+    }
+  ],
+  "synergy": [
+    {
+      "title": "Искусственный интеллект: первый шаг в будущее — курс по нейросетям для подростков",
+      "slug": "synergy-iskusstvennyy-intellekt-pervyy-shag-v-buduschee-b4845",
+      "online": true
+    },
+    {
+      "title": "Нейростарт — учим школьников создавать тексты, картинки и видео с ии",
+      "slug": "synergy-neirostart-cifrovoe-tvorchestvo-7ad17",
+      "online": true
+    },
+    {
+      "title": "Вайб-кодинг для школьников: создавай сайты и telegram-ботов с ии",
+      "slug": "synergy-sozdanie-koda-s-pomoschyu-neyrosetey-4ebe1",
+      "online": true
+    },
+    {
+      "title": "Создай свою первую игру с помощью нейросетей: от идеи до релиза",
+      "slug": "synergy-sozdanie-igr-s-pomoschyu-neyrosetey-c94ee",
+      "online": true
+    },
+    {
+      "title": "Создание приложений: от идеи до прототипа — курс no-code разработки для подростков",
+      "slug": "synergy-sozdanie-prilozheniy-ot-idei-do-prototipa-862a0",
+      "online": true
+    },
+    {
+      "title": "Дизайн сайтов на Tilda: курс веб-дизайна «под ключ» для подростков",
+      "slug": "synergy-dizayn-saytov-na-tilda-fad80",
+      "online": true
+    },
+    {
+      "title": "От идеи до прототипа: собери и запрограммируй своего первого робота",
+      "slug": "synergy-robototehnika-ot-idei-do-prototipa-42ef9",
+      "online": true
+    },
+    {
+      "title": "Играй и создавай: первая игра ребёнка на Godot с помощью ИИ",
+      "slug": "synergy-igray-i-sozdavay-b225b",
+      "online": true
+    },
+    {
+      "title": "Вайбкодинг: программируй с помощью ИИ",
+      "slug": "synergy-vaybkoding-74af1",
+      "online": true
+    },
+    {
+      "title": "Дизайн с ИИ: от идеи до готовых проектов",
+      "slug": "synergy-dizayn-s-ii-6daa5",
+      "online": true
+    },
+    {
+      "title": "Учим учиться с ИИ: помощник в любом предмете",
+      "slug": "synergy-uchim-uchitsya-s-ii-6066b",
+      "online": true
+    },
+    {
+      "title": "Навыки будущего: от общения до фриланса",
+      "slug": "synergy-navyki-budushchego-f7e6d",
+      "online": true
+    },
+    {
+      "title": "Создатель интерактивных миров: программирование для детей 6–9 лет",
+      "slug": "synergy-sozdatel-mirov-6-9-let-0b159",
+      "online": true
+    },
+    {
+      "title": "Создатель интерактивных миров: геймдев для подростков 10–17 лет",
+      "slug": "synergy-sozdatel-mirov-10-17-let-f36d0",
+      "online": true
+    },
+    {
+      "title": "Художник в мире технологий: цифровое творчество для детей 6–9 лет",
+      "slug": "synergy-hudozhnik-6-9-let-2371b",
+      "online": true
+    },
+    {
+      "title": "Художник в мире технологий: дизайн для подростков 10–17 лет",
+      "slug": "synergy-hudozhnik-10-17-let-7e9c1",
+      "online": true
+    },
+    {
+      "title": "fullstack разработчик: от Python до собственного веб-сервиса",
+      "slug": "synergy-fullstack-razrabotchik-84bc4",
+      "online": true
+    }
+  ],
+  "kodland": [
+    {
+      "title": "Roblox: основы программирования на Lua",
+      "slug": "kodland-roblox-game-design-1d878",
+      "online": true
+    },
+    {
+      "title": "Unity: разработка игр с нуля",
+      "slug": "kodland-unity-game-design-406c8",
+      "online": true
+    },
+    {
+      "title": "ФанТех: цифровые технологии для детей 5–7 лет",
+      "slug": "kodland-funtech-928d2",
+      "online": true
+    },
+    {
+      "title": "Scratch: программирование игр и мультфильмов",
+      "slug": "kodland-dea31050d9",
+      "online": true
+    },
+    {
+      "title": "Roblox PRO: разработка игр и программирование",
+      "slug": "kodland-8e44be22ad",
+      "online": true
+    },
+    {
+      "title": "Minecraft Education: начальный курс",
+      "slug": "kodland-1bd8aa6431",
+      "online": true
+    },
+    {
+      "title": "Minecraft Education: уровень 2",
+      "slug": "kodland-70755249f2",
+      "online": true
+    },
+    {
+      "title": "Python: основы текстового программирования",
+      "slug": "kodland-351d31ef84",
+      "online": true
+    },
+    {
+      "title": "Python PRO: командная разработка и прикладные проекты",
+      "slug": "kodland-dafe330fbe",
+      "online": true
+    },
+    {
+      "title": "Python: ООП, боты и архитектура проектов",
+      "slug": "kodland-0b56a714f5",
+      "online": true
+    },
+    {
+      "title": "JavaScript: интерактивные сайты и браузерные игры",
+      "slug": "kodland-a1acaf019c",
+      "online": true
+    },
+    {
+      "title": "Unity PRO: мобильные игры и сложные 3D-проекты",
+      "slug": "kodland-644d0ba987",
+      "online": true
+    },
+    {
+      "title": "Веб-дизайн: от макета до публикации сайта",
+      "slug": "kodland-990617d90b",
+      "online": true
+    },
+    {
+      "title": "Графический дизайн: Figma, Photopea и портфолио",
+      "slug": "kodland-275e5ab46f",
+      "online": true
+    }
+  ],
+  "coddy": [
+    {
+      "title": "Нейросети для детей: промпт-инжиниринг (разработка запросов)",
+      "slug": "coddy-prompt-engineering-2c09d",
+      "online": true
+    },
+    {
+      "title": "Цифровой иммунитет: защита от телефонных мошенников для детей и взрослых",
+      "slug": "coddy-telephone-scam-8d2e0",
+      "online": true
+    },
+    {
+      "title": "Робототехника для детей 6-9 лет: первые шаги в программировании с WeDo 2.0",
+      "slug": "coddy-robotics-464e5",
+      "online": true
+    },
+    {
+      "title": "Swift Playgrounds: первые шаги в iOS разработку",
+      "slug": "coddy-swift-playgrounds-ios-55633",
+      "online": true
+    },
+    {
+      "title": "Курсы веб-дизайна с нуля — обучение веб дизайну сайтов для начинающих",
+      "slug": "coddy-web-design-from-scratch-f6c14",
+      "online": true
+    },
+    {
+      "title": "Создание сайтов на Tilda",
+      "slug": "coddy-sozdanie-saytov-na-tilda-0b597",
+      "online": true
+    },
+    {
+      "title": "Стэнфордский курс iOS разработки на Swift",
+      "slug": "coddy-stenfordskiy-kurs-swift-e53c1",
+      "online": true
+    },
+    {
+      "title": "Курс Android разработчик – обучение мобильной разработке под Андроид",
+      "slug": "coddy-sozdanie-mobilih-prilozgeniy-e637c",
+      "online": true
+    },
+    {
+      "title": "Обучение созданию игр в Roblox Studio",
+      "slug": "coddy-sozdanie-igr-v-roblox-studio-acd41",
+      "online": true
+    },
+    {
+      "title": "Обучение веб-дизайну сайтов",
+      "slug": "coddy-site-design-84227",
+      "online": true
+    },
+    {
+      "title": "Создание чат-ботов на Python для ВК и Telegram",
+      "slug": "coddy-python-bots-d0133",
+      "online": true
+    },
+    {
+      "title": "Создание игр на C# для начинающих: первые шаги в разработке",
+      "slug": "coddy-creating-games-c-sharp-855b6",
+      "online": true
+    },
+    {
+      "title": "Создание двумерных (2D) и трехмерных (3D) игр на C#",
+      "slug": "coddy-c-sharp-6c2a9",
+      "online": true
+    },
+    {
+      "title": "Обучение разработке игр на Python с нуля",
+      "slug": "coddy-programmirovanie-igr-na-python-e2b28",
+      "online": true
+    },
+    {
+      "title": "Разработчик интерфейсов (Frontend): сайты на HTML/CSS/JavaScript",
+      "slug": "coddy-web-mastering-4b7f6",
+      "online": true
+    },
+    {
+      "title": "Этичный хакер",
+      "slug": "coddy-ethical-hacker-9adab",
+      "online": true
+    },
+    {
+      "title": "Кибербезопасность детей в интернете",
+      "slug": "coddy-kiberbezopasnost-e0944",
+      "online": true
+    },
+    {
+      "title": "Курс компьютерной верстки сайтов с нуля",
+      "slug": "coddy-html-css-3f065",
+      "online": true
+    },
+    {
+      "title": "Minecraft: введение в искусственный интеллект",
+      "slug": "coddy-minecraft-vvedenie-v-iskusstvennyy-intellekt-d431e",
+      "online": true
+    },
+    {
+      "title": "Курсы Unreal Engine",
+      "slug": "coddy-unreal-engine-4-6a544",
+      "online": true
+    },
+    {
+      "title": "Программирование Python и машинное обучение",
+      "slug": "coddy-python-i-mashinnoe-obuchenie-b94f9",
+      "online": true
+    },
+    {
+      "title": "Курс по программированию Майнкрафт для детей",
+      "slug": "coddy-minecraft-programming-5d8bf",
+      "online": true
+    },
+    {
+      "title": "Разработчик видеоигр: создание двухмерных (2D) игр разных жанров",
+      "slug": "coddy-construct2-35b8e",
+      "online": true
+    },
+    {
+      "title": "Python и JavaScript: игровое программирование в CodeCombat",
+      "slug": "coddy-python-i-javascript-igrovoe-programmirovanie-v-codecombat-d9010",
+      "online": true
+    },
+    {
+      "title": "Курс обучения Unity 3D для детей — обучение программированию на Юнити с нуля",
+      "slug": "coddy-unity-3d-cd998",
+      "online": true
+    },
+    {
+      "title": "Обучение программированию Minecraft в Scratch для ребенка",
+      "slug": "coddy-minecraft-scratch-038d8",
+      "online": true
+    },
+    {
+      "title": "Курс программирования JS (JavaScript) для начинающих",
+      "slug": "coddy-programmirovanie-na-javascript-5ac05",
+      "online": true
+    },
+    {
+      "title": "Курс по разработке мобильных игр на Android",
+      "slug": "coddy-razrabotka-mobilnykh-igr-na-android-974fd",
+      "online": true
+    },
+    {
+      "title": "Курсы для детей по разработке игр на Scratch",
+      "slug": "coddy-sozdanie-igr-v-scratch-82ec3",
+      "online": true
+    },
+    {
+      "title": "Разработка игр на C++",
+      "slug": "coddy-razrabotka-igr-c-059e8",
+      "online": true
+    },
+    {
+      "title": "Программирование игр на Java",
+      "slug": "coddy-java-programming-a0f7b",
+      "online": true
+    },
+    {
+      "title": "Курс «Язык программирования Swift»",
+      "slug": "coddy-swift-playgrounds-333ad",
+      "online": true
+    },
+    {
+      "title": "Основы программирования на языке Python и технический английский",
+      "slug": "coddy-english-python-3c646",
+      "online": true
+    },
+    {
+      "title": "Программирование для дошкольников",
+      "slug": "coddy-programmirovanie-dlya-samih-malenkih-33ab1",
+      "online": true
+    },
+    {
+      "title": "Minecraft: программирование на JavaScript",
+      "slug": "coddy-minecraft-programmirovanie-na-javascript-5b048",
+      "online": true
+    },
+    {
+      "title": "Программирование на Python3",
+      "slug": "coddy-programmirovanie-na-python3-c59ec",
+      "online": true
+    },
+    {
+      "title": "Изучение Python через популярнейшую игру",
+      "slug": "coddy-minecraft-python-db200",
+      "online": true
+    },
+    {
+      "title": "Robowin: основы логики и алгоритмики",
+      "slug": "coddy-robowin-osnovy-logiki-i-algoritmiki-691de",
+      "online": true
+    },
+    {
+      "title": "Создание игрового персонажа в Photoshop",
+      "slug": "coddy-sozdanie-igrovogo-personazha-v-photoshop-16f83",
+      "online": true
+    },
+    {
+      "title": "Программирование чат-ботов и игр на Python: курс CODDY и ВМК МГУ",
+      "slug": "coddy-razrabotka-na-python-pri-vmk-mgu-im-m-v-lomonosova-18ae9",
+      "online": true
+    },
+    {
+      "title": "Создание веб-приложений на Python: курс CODDY и ВМК МГУ",
+      "slug": "coddy-web-prilozheniya-na-python-pri-partnerstve-s-vmk-mgu-im-m--d1ce5",
+      "online": true
+    },
+    {
+      "title": "Обучение блокчейн-технологиям с нуля",
+      "slug": "coddy-blockchain-tehnology-f14f6",
+      "online": true
+    },
+    {
+      "title": "Разработка модификаций (модов) в Minecraft",
+      "slug": "coddy-razrabotka-modov-dlya-minecraft-7dde6",
+      "online": true
+    },
+    {
+      "title": "Курс по разработке двумерных (2D) и трехмерных (3D) игр в Godot на Python",
+      "slug": "coddy-razrabotka-2d-i-3d-igr-na-python-c381c",
+      "online": true
+    },
+    {
+      "title": "Обучение программированию трехмерных (3D) игр в Scratch для детей",
+      "slug": "coddy-3d-games-scratch-3da98",
+      "online": true
+    },
+    {
+      "title": "Нейросети для детей: основы и практика",
+      "slug": "coddy-d547100788",
+      "online": false
+    },
+    {
+      "title": "Программирование мобильных приложений в App Inventor",
+      "slug": "coddy-b4c86c97a0",
+      "online": false
+    },
+    {
+      "title": "Разработка игр на CryEngine 5",
+      "slug": "coddy-0973a22808",
+      "online": false
+    },
+    {
+      "title": "Комплексный старт: первые шаги в ИТ",
+      "slug": "coddy-8465b92b2c",
+      "online": false
+    },
+    {
+      "title": "Создание игр с помощью нейросетей",
+      "slug": "coddy-89db233a87",
+      "online": false
+    },
+    {
+      "title": "Разработчик мобильных приложений на Kotlin",
+      "slug": "coddy-50ec4956d2",
+      "online": false
+    },
+    {
+      "title": "Математика в Minecraft",
+      "slug": "coddy-ea1d5a33f4",
+      "online": false
+    },
+    {
+      "title": "Обучение олимпиадному программированию для школьников",
+      "slug": "coddy-134a3312c8",
+      "online": false
+    },
+    {
+      "title": "Программирование игр: ознакомительный курс для новичков",
+      "slug": "coddy-e661ce33cb",
+      "online": false
+    },
+    {
+      "title": "Программирование на Lua в Minecraft для начинающих",
+      "slug": "coddy-a7e3a32a9a",
+      "online": false
+    },
+    {
+      "title": "Разработка веб-приложений для бизнеса",
+      "slug": "coddy-51c8d02e06",
+      "online": false
+    },
+    {
+      "title": "Создание приложений дополненной реальности (AR) на Unity 3D",
+      "slug": "coddy-b596532316",
+      "online": false
+    },
+    {
+      "title": "Создание игр в Roblox с Шоном",
+      "slug": "coddy-6578761111",
+      "online": false
+    },
+    {
+      "title": "Создание мультиплеерной игры в Roblox Studio",
+      "slug": "coddy-f12a407fc6",
+      "online": false
+    },
+    {
+      "title": "TinkerCAD: cоздание трехмерных (3D) объектов для Minecraft",
+      "slug": "coddy-57019a1026",
+      "online": false
+    },
+    {
+      "title": "Программирование для самых маленьких в Tynker",
+      "slug": "coddy-71d8de5b3d",
+      "online": false
+    },
+    {
+      "title": "Разработка сценария игр",
+      "slug": "coddy-abf3f609d0",
+      "online": false
+    }
+  ],
+  "easycode": [
+    {
+      "title": "Fullstack-разработчик, 10–17 лет",
+      "slug": "easycode-fullstack-10-17-ba2fa",
+      "online": true
+    },
+    {
+      "title": "Создатель интерактивных миров: Junior, 6–9 лет",
+      "slug": "easycode-interactive-world-creator-6-9-f7d17",
+      "online": true
+    },
+    {
+      "title": "Создатель интерактивных миров: Middle, 10–12 лет",
+      "slug": "easycode-interactive-world-creator-10-12-367a4",
+      "online": true
+    },
+    {
+      "title": "Создатель интерактивных миров: Senior, 13–17 лет",
+      "slug": "easycode-interactive-world-creator-13-17-eb8e2",
+      "online": true
+    }
+  ],
+  "rebotica": [
+    {
+      "title": "Программирование на Python для детей",
+      "slug": "rebotica-programmer-569c3",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Roblox",
+      "slug": "rebotica-gamedev-2c4fe",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Unity",
+      "slug": "rebotica-gamedev-unity-ee488",
+      "online": true
+    },
+    {
+      "title": "Создание игр в GDevelop",
+      "slug": "rebotica-gdevelop-9d973",
+      "online": true
+    }
+  ],
+  "pixel": [
+    {
+      "title": "Детское программирование. Scratch для детей от 6 до 9 лет",
+      "slug": "pixel-detskoe-programmirovanie-scratch-64d4d",
+      "online": true
+    },
+    {
+      "title": "Программирование в Scratch с ИИ для детей",
+      "slug": "pixel-scratch-s-ii-0652b",
+      "online": true
+    },
+    {
+      "title": "Курс Scratch —программирование для детей 8-12 лет",
+      "slug": "pixel-scratch-2e392",
+      "online": true
+    },
+    {
+      "title": "Программирование на Python в Minecraft с ИИ для детей",
+      "slug": "pixel-programmirovanie-python-v-minecraft-s-ii-3c692",
+      "online": true
+    },
+    {
+      "title": "Курс Roblox Studio с ИИ для детей",
+      "slug": "pixel-roblox-s-ii-cca41",
+      "online": true
+    },
+    {
+      "title": "Roblox Studio — создание игр и программирование на языке Lua",
+      "slug": "pixel-roblox-d9be4",
+      "online": true
+    },
+    {
+      "title": "3D-моделирование для детей в Roblox",
+      "slug": "pixel-roblox-modelirovanie-4ea47",
+      "online": true
+    },
+    {
+      "title": "Курс Python и искусственного интеллекта для детей 10–13 лет",
+      "slug": "pixel-python-ai-dlja-detej-d5ac8",
+      "online": true
+    },
+    {
+      "title": "Программирование на Python для детей",
+      "slug": "pixel-python-5b4eb",
+      "online": true
+    },
+    {
+      "title": "Курс Python Django для школьников 14-17 лет",
+      "slug": "pixel-django-dlya-detej-f3329",
+      "online": true
+    },
+    {
+      "title": "Unity для детей: курс разработки мобильных игр",
+      "slug": "pixel-kurs-unity-dlya-detey-razrabotka-mobilnyh-igr-3abf1",
+      "online": true
+    }
+  ],
+  "skysmart": [
+    {
+      "title": "Курс по Python, базовый курс, с репетитором — 32 урока",
+      "slug": "skysmart-mini-course-cc-python-kids-f2f-32-urokov-7ff54",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, параллельные уроки — 32 урока",
+      "slug": "skysmart-mini-course-cc-python-kids-pl-32-urokov-5df32",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, с репетитором — 16 уроков",
+      "slug": "skysmart-mini-course-cc-python-kids-f2f-16-urokov-0b6d7",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, параллельные уроки — 16 уроков",
+      "slug": "skysmart-mini-course-cc-python-kids-pl-16-urokov-9d231",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, параллельные уроки — 64 урока",
+      "slug": "skysmart-mini-course-cc-python-kids-pl-64-urokov-48194",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, параллельные уроки — 128 уроков",
+      "slug": "skysmart-mini-course-cc-python-kids-pl-128-urokov-24b05",
+      "online": false
+    },
+    {
+      "title": "Курс по Python, базовый курс, параллельные уроки — 160 уроков",
+      "slug": "skysmart-mini-course-cc-python-kids-pl-160-urokov-0ea43",
+      "online": false
+    }
+  ],
+  "sotka": [
+    {
+      "title": "Информатика 8 класса с экспертом в области программирования и дизайна",
+      "slug": "sotka-informatika-4e1ca",
+      "online": true
+    },
+    {
+      "title": "Информатика 7 класса с экспертом в области программирования и дизайна",
+      "slug": "sotka-informatika-8622d",
+      "online": true
+    }
+  ],
+  "stop-ugroza": [
+    {
+      "title": "Онлайн-квест «Агент Безопасности»",
+      "slug": "stop-ugroza-1519b68145",
+      "online": true
+    }
+  ],
+  "amakids": [
+    {
+      "title": "Нейросети: первый видеоклип",
+      "slug": "amakids-ce4e6e11a7",
+      "online": true
+    }
+  ],
+  "hello-world": [
+    {
+      "title": "Minecraft: программирование на Python",
+      "slug": "hello-world-3882b10441",
+      "online": true
+    },
+    {
+      "title": "Scratch: первые игровые проекты",
+      "slug": "hello-world-2b7547faab",
+      "online": true
+    },
+    {
+      "title": "Roblox Studio и Lua",
+      "slug": "hello-world-b78407a162",
+      "online": true
+    },
+    {
+      "title": "Python: от основ к приложениям",
+      "slug": "hello-world-8a4b9d0f7f",
+      "online": true
+    },
+    {
+      "title": "Веб-разработка: HTML, CSS и JavaScript",
+      "slug": "hello-world-2abcb299a1",
+      "online": true
+    },
+    {
+      "title": "Unity: разработка игр",
+      "slug": "hello-world-42b7370eee",
+      "online": true
+    },
+    {
+      "title": "Нейросети для детских проектов",
+      "slug": "hello-world-3d05962b9d",
+      "online": true
+    }
+  ],
+  "rostelecom-lyceum": [
+    {
+      "title": "Безопасность в сети: детские возрастные треки",
+      "slug": "rostelecom-lyceum-ce70a7a481",
+      "online": true
+    },
+    {
+      "title": "Python: бесплатный вводный курс",
+      "slug": "rostelecom-lyceum-4edbe79a93",
+      "online": true
+    },
+    {
+      "title": "3D-игры на Python",
+      "slug": "rostelecom-lyceum-b720cf6bb1",
+      "online": true
+    },
+    {
+      "title": "Создание сайтов на Tilda",
+      "slug": "rostelecom-lyceum-c18e6213fa",
+      "online": true
+    },
+    {
+      "title": "Unity: создание игр",
+      "slug": "rostelecom-lyceum-b5ee7742b7",
+      "online": true
+    },
+    {
+      "title": "Веб-дизайн для детей",
+      "slug": "rostelecom-lyceum-31b0cf9615",
+      "online": true
+    },
+    {
+      "title": "Основы нейросетей",
+      "slug": "rostelecom-lyceum-1981bf0cdb",
+      "online": true
+    },
+    {
+      "title": "Нейросети: создание кода",
+      "slug": "rostelecom-lyceum-2aefafeef4",
+      "online": true
+    },
+    {
+      "title": "Робототехника в цифровой среде",
+      "slug": "rostelecom-lyceum-dca9592205",
+      "online": true
+    },
+    {
+      "title": "Игры с помощью нейросетей",
+      "slug": "rostelecom-lyceum-e866b4fd7f",
+      "online": true
+    },
+    {
+      "title": "Python с нуля",
+      "slug": "rostelecom-lyceum-b3b783da01",
+      "online": true
+    },
+    {
+      "title": "Python: продвинутый маршрут",
+      "slug": "rostelecom-lyceum-66530da39f",
+      "online": true
+    },
+    {
+      "title": "Цифровая мастерская: первый проект",
+      "slug": "rostelecom-lyceum-cd04f2f443",
+      "online": true
+    },
+    {
+      "title": "Unity: продвинутая разработка игр",
+      "slug": "rostelecom-lyceum-bd1c3596e3",
+      "online": true
+    }
+  ],
+  "interneturok": [
+    {
+      "title": "Нейросети для учёбы и жизни",
+      "slug": "interneturok-f03e003ef1",
+      "online": true
+    }
+  ],
+  "itgenio": [
+    {
+      "title": "Python для детей",
+      "slug": "itgenio-03fbf57053",
+      "online": true
+    },
+    {
+      "title": "Scratch: визуальное программирование",
+      "slug": "itgenio-e6cc16f761",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Roblox",
+      "slug": "itgenio-f422ef39b4",
+      "online": true
+    },
+    {
+      "title": "Программирование в Minecraft",
+      "slug": "itgenio-4a3865b90c",
+      "online": true
+    },
+    {
+      "title": "Создание 2D- и 3D-игр в Unity",
+      "slug": "itgenio-db0ed1d9c7",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Unreal Engine",
+      "slug": "itgenio-360a6b651b",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Godot",
+      "slug": "itgenio-91440617c6",
+      "online": true
+    },
+    {
+      "title": "Создание игр в GameMaker",
+      "slug": "itgenio-ab597e1295",
+      "online": true
+    },
+    {
+      "title": "Юный программист: первый шаг в IT",
+      "slug": "itgenio-12d4b95d60",
+      "online": true
+    },
+    {
+      "title": "Мобильные приложения в App Inventor",
+      "slug": "itgenio-eefc0a7056",
+      "online": true
+    },
+    {
+      "title": "Веб-программирование: сайты и приложения",
+      "slug": "itgenio-2ac40dd224",
+      "online": true
+    },
+    {
+      "title": "Java: текстовое программирование",
+      "slug": "itgenio-f482d77d91",
+      "online": true
+    },
+    {
+      "title": "C++ для детей и подростков",
+      "slug": "itgenio-c3f81dc73e",
+      "online": true
+    },
+    {
+      "title": "Основы кибербезопасности",
+      "slug": "itgenio-4a9a76c936",
+      "online": true
+    },
+    {
+      "title": "Блочный Python: переход к коду",
+      "slug": "itgenio-e5b606a802",
+      "online": true
+    },
+    {
+      "title": "Веб-дизайн и интерфейсы в Figma",
+      "slug": "itgenio-3e57be59c2",
+      "online": true
+    },
+    {
+      "title": "Нейросети для детей",
+      "slug": "itgenio-8bb3541e61",
+      "online": true
+    }
+  ],
+  "sirius": [
+    {
+      "title": "Введение в программирование на языке C++",
+      "slug": "sirius-3005",
+      "online": true
+    },
+    {
+      "title": "Анализ данных на Python",
+      "slug": "sirius-3006",
+      "online": true
+    },
+    {
+      "title": "Знакомство с искусственным интеллектом",
+      "slug": "sirius-3125",
+      "online": true
+    },
+    {
+      "title": "Обработка естественного языка",
+      "slug": "sirius-3007",
+      "online": true
+    },
+    {
+      "title": "Обучение с подкреплением",
+      "slug": "sirius-3008",
+      "online": true
+    },
+    {
+      "title": "Введение в программирование на языке Python",
+      "slug": "sirius-3124",
+      "online": true
+    },
+    {
+      "title": "Введение в машинное обучение",
+      "slug": "sirius-3185",
+      "online": true
+    }
+  ],
+  "algoritmika": [
+    {
+      "title": "Scratch: игры, мультфильмы и алгоритмы",
+      "slug": "algoritmika-ea03070c6b",
+      "online": true
+    },
+    {
+      "title": "Python Старт: основы языка и Pygame",
+      "slug": "algoritmika-b48c0a595c",
+      "online": true
+    },
+    {
+      "title": "Python: анализ данных и прикладная разработка",
+      "slug": "algoritmika-ee14ea21be",
+      "online": true
+    },
+    {
+      "title": "Roblox: сюжетные игры и игровые механики",
+      "slug": "algoritmika-f58de32a0b",
+      "online": true
+    },
+    {
+      "title": "Геймдизайн Старт в GDevelop",
+      "slug": "algoritmika-9b99cb6829",
+      "online": true
+    },
+    {
+      "title": "Геймдизайн Базовый в Roblox",
+      "slug": "algoritmika-f9b21e6074",
+      "online": true
+    },
+    {
+      "title": "Разработка игр в Unity для детей 12–14 лет",
+      "slug": "algoritmika-2578d0077a",
+      "online": true
+    },
+    {
+      "title": "Создание сайтов и веб-дизайн",
+      "slug": "algoritmika-88403e1873",
+      "online": true
+    },
+    {
+      "title": "Графический дизайн Профессиональный",
+      "slug": "algoritmika-8dbed868f5",
+      "online": true
+    },
+    {
+      "title": "Minecraft: первый курс для детей 7–9 лет",
+      "slug": "algoritmika-22cb23b61e",
+      "online": true
+    },
+    {
+      "title": "Minecraft: программирование для детей 9–12 лет",
+      "slug": "algoritmika-e04c837803",
+      "online": true
+    }
+  ],
+  "skillbox-kids": [
+    {
+      "title": "IT-Старт: цифровая грамотность",
+      "slug": "skillbox-kids-45d2637dfb",
+      "online": true
+    },
+    {
+      "title": "Программирование на Python PRO и нейросети",
+      "slug": "skillbox-kids-9541de5a8c",
+      "online": true
+    },
+    {
+      "title": "Python с нуля до первых проектов и нейросети",
+      "slug": "skillbox-kids-ee104379c2",
+      "online": true
+    },
+    {
+      "title": "Программирование на Python",
+      "slug": "skillbox-kids-53781d29ef",
+      "online": true
+    },
+    {
+      "title": "Разработка сайтов",
+      "slug": "skillbox-kids-76621a018e",
+      "online": true
+    },
+    {
+      "title": "Кибербезопасность и приложения на Python",
+      "slug": "skillbox-kids-ad9499e225",
+      "online": true
+    },
+    {
+      "title": "Создание сайтов",
+      "slug": "skillbox-kids-3326dd276d",
+      "online": true
+    },
+    {
+      "title": "Minecraft: программирование на Python",
+      "slug": "skillbox-kids-8443158420",
+      "online": true
+    }
+  ],
+  "codim-online": [
+    {
+      "title": "Scratch Junior",
+      "slug": "codim-online-e7b735a928",
+      "online": true
+    },
+    {
+      "title": "Minecraft Junior",
+      "slug": "codim-online-3155d84e87",
+      "online": true
+    },
+    {
+      "title": "Scratch: первый уровень",
+      "slug": "codim-online-4523cbfbbf",
+      "online": true
+    },
+    {
+      "title": "Scratch: второй уровень",
+      "slug": "codim-online-cf3418e968",
+      "online": true
+    },
+    {
+      "title": "Scratch: Большое путешествие",
+      "slug": "codim-online-bdbffae3ee",
+      "online": true
+    },
+    {
+      "title": "Scratch: Наглядная математика",
+      "slug": "codim-online-1e38349686",
+      "online": true
+    },
+    {
+      "title": "Minecraft: блочное программирование",
+      "slug": "codim-online-6fefeb57bc",
+      "online": true
+    },
+    {
+      "title": "App Inventor: мобильные приложения",
+      "slug": "codim-online-55612a5666",
+      "online": true
+    },
+    {
+      "title": "CoSpaces: виртуальные миры",
+      "slug": "codim-online-481939fefb",
+      "online": true
+    },
+    {
+      "title": "Python в Minecraft",
+      "slug": "codim-online-136bb29946",
+      "online": true
+    },
+    {
+      "title": "Python: первый уровень",
+      "slug": "codim-online-eeacd8cb8e",
+      "online": true
+    },
+    {
+      "title": "Python: второй уровень",
+      "slug": "codim-online-ee4546251c",
+      "online": true
+    },
+    {
+      "title": "Pygame: создание игр",
+      "slug": "codim-online-24d575244f",
+      "online": true
+    },
+    {
+      "title": "Unity: блочное программирование",
+      "slug": "codim-online-4b992b01f5",
+      "online": true
+    },
+    {
+      "title": "Unity: программирование на C#",
+      "slug": "codim-online-6c967938ee",
+      "online": true
+    },
+    {
+      "title": "Java для детей",
+      "slug": "codim-online-6f2019d14e",
+      "online": true
+    },
+    {
+      "title": "Colobot: программирование роботов",
+      "slug": "codim-online-400268066b",
+      "online": true
+    },
+    {
+      "title": "Telegram-боты на Python",
+      "slug": "codim-online-608decdb85",
+      "online": true
+    },
+    {
+      "title": "Веб-разработка: HTML, CSS и JavaScript",
+      "slug": "codim-online-c3fb8d06ba",
+      "online": true
+    },
+    {
+      "title": "Arduino: робототехника",
+      "slug": "codim-online-a723c93d4e",
+      "online": true
+    },
+    {
+      "title": "Искусственный интеллект просто",
+      "slug": "codim-online-0a5f1896c7",
+      "online": true
+    }
+  ],
+  "rocket-tech-school": [
+    {
+      "title": "Junior: первое знакомство с компьютером и кодом",
+      "slug": "rocket-tech-school-5a9728b686",
+      "online": true
+    },
+    {
+      "title": "Scratch: создание игр и анимаций",
+      "slug": "rocket-tech-school-a73bfb8bec",
+      "online": true
+    },
+    {
+      "title": "Roblox: разработка игровых миров",
+      "slug": "rocket-tech-school-e573be00e9",
+      "online": true
+    },
+    {
+      "title": "Minecraft: программирование",
+      "slug": "rocket-tech-school-5551b1b41f",
+      "online": true
+    },
+    {
+      "title": "Python для школьников",
+      "slug": "rocket-tech-school-de4a7a63c9",
+      "online": true
+    },
+    {
+      "title": "Unity: создание игр",
+      "slug": "rocket-tech-school-acd644aeb0",
+      "online": true
+    },
+    {
+      "title": "Веб-разработка: создание сайтов",
+      "slug": "rocket-tech-school-f0df7d68e5",
+      "online": true
+    },
+    {
+      "title": "AI Start: нейросети для детей",
+      "slug": "rocket-tech-school-b88db0463c",
+      "online": true
+    }
+  ],
+  "foxford": [
+    {
+      "title": "Компьютерная грамотность и кибербезопасность",
+      "slug": "foxford-75b80895f5",
+      "online": true
+    },
+    {
+      "title": "Питон: начальный курс",
+      "slug": "foxford-444f7a2cc5",
+      "online": true
+    },
+    {
+      "title": "Питон: базовый курс, 1 ступень",
+      "slug": "foxford-ea003b4bbb",
+      "online": true
+    },
+    {
+      "title": "Питон: базовый курс, 2 ступень",
+      "slug": "foxford-d120ac6dfd",
+      "online": true
+    },
+    {
+      "title": "Скретч: визуальное программирование",
+      "slug": "foxford-016ea260a1",
+      "online": true
+    },
+    {
+      "title": "Питон: продвинутый курс, 1 ступень",
+      "slug": "foxford-ab9907ee57",
+      "online": true
+    }
+  ],
+  "kvantastica": [
+    {
+      "title": "Программирование: Junior",
+      "slug": "kvantastica-767e2de361",
+      "online": true
+    },
+    {
+      "title": "Программирование: Middle",
+      "slug": "kvantastica-e84e97a16a",
+      "online": true
+    },
+    {
+      "title": "Программирование: High",
+      "slug": "kvantastica-fdc91fbbae",
+      "online": true
+    }
+  ],
+  "mshp": [
+    {
+      "title": "Виртуальный класс: фундаментальная программа МШП",
+      "slug": "mshp-76250f93f3",
+      "online": true
+    }
+  ]
+}
