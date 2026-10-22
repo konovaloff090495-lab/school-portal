@@ -16,6 +16,7 @@ import SchoolMatchModal from '@/components/SchoolMatchModal'
 import ReviewsBlock from '@/components/ReviewsBlock'
 import { schoolPhotoCount } from '@/lib/school-media'
 import programmingCourses from '@/data/programming-school-courses.json'
+import EveningPathChooser from '@/components/EveningPathChooser'
 
 
 interface Props {
@@ -31,10 +32,10 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   ]
   const faq: { q: string; a: string }[] = []
   // Телефон есть не у всех школ — без фолбэка в тексте появлялось «по телефону undefined»
-  const callTo = school.phone ? `по телефону ${school.phone}` : 'через форму заявки на этой странице'
+  const callTo = school.phone ? `по телефону ${school.phone}` : school.website ? `на официальном сайте ${school.website}` : 'по официальным контактам школы; актуальные сведения можно запросить в управлении образования города'
   const callImperative = school.phone
     ? `Позвоните по телефону ${school.phone}`
-    : 'Оставьте заявку через форму на этой странице'
+    : 'Уточните официальные контакты школы в управлении образования города'
   const haystack = [school.name, school.description, school.fullDescription ?? '', ...school.features]
     .join(' ').toLowerCase()
 
@@ -56,7 +57,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
   } else {
     faq.push({
       q: `Где находится ${school.name}?`,
-      a: `Адрес школы: ${school.city}, ${school.address}. По дополнительным вопросам о местоположении ${school.phone ? `звоните: ${school.phone}` : 'оставьте заявку через форму на этой странице'}.`,
+      a: `Адрес школы: ${school.city}, ${school.address}. По дополнительным вопросам о местоположении ${school.phone ? `звоните: ${school.phone}` : 'используйте официальный сайт школы или контакты управления образования города'}.`,
     })
   }
 
@@ -66,7 +67,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `Как ${enrollVerb} в ${school.name}?`,
     a: school.website
       ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')})${school.phone ? ` или позвоните ${callTo}` : ''}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
-      : `${school.phone ? `${callImperative} или оставьте заявку через форму на нашем сайте` : 'Оставьте заявку через форму на этой странице'}. Для связи с этой организацией используйте её официальные контакты. Форма на портале передаёт запрос консультанту онлайн-школы Синергия.`,
+      : `${callImperative}. Уточните наличие мест, возраст и документы для поступления. Форма на портале — отдельная консультация Синергии по платному онлайн-обучению; она не отправляет заявление в эту школу.`,
   })
 
   // 3. Стоимость обучения
@@ -433,6 +434,8 @@ export default async function SchoolPage({ params }: Props) {
             </div>
           </div>
 
+          {school.type === 'vechernie' && <EveningPathChooser city={school.city} localHref="#kontakty" />}
+
           {/* FAQ */}
           {faq.length > 0 && (
             <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -468,7 +471,7 @@ export default async function SchoolPage({ params }: Props) {
 
           {/* Contacts */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">{school.remoteOnly ? 'Контакты' : 'Контакты и адрес'}</h2>
+            <h2 id="kontakty" className="text-lg font-semibold text-gray-900 mb-4 scroll-mt-28">{school.remoteOnly ? 'Контакты' : 'Контакты и адрес'}</h2>
 
             {/* Карта OpenStreetMap (рендерится без API-ключа). При наличии координат —
                 с меткой; без координат — аккуратный блок с адресом (без пустой карты). */}
@@ -601,7 +604,7 @@ export default async function SchoolPage({ params }: Props) {
 
         {/* Sidebar */}
         <div className="space-y-6">
-          <LeadForm schoolName={school.name} schoolCity={school.city} />
+          <LeadForm schoolName={school.name} schoolCity={school.city} attestat={school.type === 'vechernie'} />
 
           {/* School match widget */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">

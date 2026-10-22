@@ -21,6 +21,7 @@ function clickedThisSession(): boolean {
 
 export default function PartnerOfferPopup() {
   const pathname = usePathname()
+  const adult = /vechern|vzrosl|ne-zakonchil-shkolu|eksternat|attestat-v-/.test(pathname)
   const [open, setOpen] = useState(false)
   const openedRef = useRef(false)
 
@@ -45,7 +46,7 @@ export default function PartnerOfferPopup() {
   }, [pathname, show])
 
   function handleCta() {
-    window.ym?.(YM_ID, 'reachGoal', 'partner_popup_click')
+    window.ym?.(YM_ID, 'reachGoal', 'partner_popup_click', { page_path: pathname, offer: adult ? 'adult-route-v1' : 'online-school' })
     try { sessionStorage.setItem(DONE_KEY, '1') } catch {}
     setOpen(false)
   }
@@ -76,14 +77,14 @@ export default function PartnerOfferPopup() {
 
         <div className="p-6 sm:p-8 overflow-y-auto">
           <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] leading-snug mb-3">
-            Поступите в школу, вуз и колледж на льготных условиях
+            {adult ? 'Нужен аттестат за 9 или 11 класс?' : 'Сравните программы онлайн-обучения'}
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mb-4">
-            Подберём подходящий формат обучения под ваши цели — от бюджетных мест до онлайн-обучения.
+            {adult ? 'Посмотрите маршруты платного онлайн-обучения Синергии. Уроки в записи, промежуточные аттестации онлайн; ОГЭ/ЕГЭ по программе — очно в Москве.' : 'Платное обучение Синергии: уточните программу, формат и полную стоимость до записи.'}
           </p>
 
           <div className="flex flex-wrap gap-2 mb-6">
-            {FORMATS.map(f => (
+            {(adult ? ['9 класс', '10–11 классы', 'Для взрослых', 'Платное обучение'] : FORMATS.filter(f => f !== 'Бюджет')).map(f => (
               <span key={f} className="bg-blue-50 text-[#0369A1] text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full border border-blue-100">
                 {f}
               </span>
@@ -91,13 +92,13 @@ export default function PartnerOfferPopup() {
           </div>
 
           <a
-            href={PARTNER_URL}
-            target="_blank"
-            rel="noopener sponsored"
+            href={adult ? '/attestat-vzroslomu/' : PARTNER_URL}
+            target={adult ? undefined : '_blank'}
+            rel={adult ? undefined : 'noopener sponsored'}
             onClick={handleCta}
             className="block w-full text-center bg-[#0369A1] text-white py-3.5 rounded-xl text-base font-semibold hover:bg-blue-500 transition-colors cursor-pointer"
           >
-            Узнать детали
+            {adult ? 'Выбрать маршрут к аттестату' : 'Узнать детали'}
           </a>
         </div>
       </div>

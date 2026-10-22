@@ -1,4 +1,5 @@
 import formatMetadata from '@/data/school-format-metadata.json'
+import EveningPathChooser from '@/components/EveningPathChooser'
 import SchoolFormatAdvice from '@/components/SchoolFormatAdvice'
 import OnlineGradeNav from '@/components/OnlineGradeNav'
 import type { Metadata } from 'next'
@@ -292,6 +293,8 @@ function EksternalSubNav() {
 
 function VechernieSubNav() {
   const tiles = [
+    { href: '/shkoly/tipy/vechernie/9-klass/', icon: '9', label: 'Закончить 9 класс', sub: 'Программа и ОГЭ' },
+    { href: '/attestat-vzroslomu/', icon: '→', label: 'Аттестат взрослому', sub: 'Платное онлайн-обучение' },
     { href: '/shkoly/tipy/vechernie/online/',          icon: '💻', label: 'Онлайн',             sub: 'Дистанционное вечернее' },
     { href: '/shkoly/tipy/vechernie/besplatnye/',      icon: '🆓', label: 'Бесплатные',          sub: 'Государственные школы' },
     { href: '/shkoly/tipy/vechernie/smennye/',         icon: '🔄', label: 'Сменные школы',       sub: 'Вечерняя сменная форма' },
@@ -580,9 +583,10 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <>
         <EksternalSubNav />
         <OnlineLeadCta
+          attestat
           source="Экстернат: хаб /shkoly/tipy/eksternal/"
           heading="Экстернат онлайн: 10–11 класс за один год"
-          text="Онлайн-школа с государственной лицензией и аккредитацией зачисляет на экстернат дистанционно: два класса за год, аттестации онлайн, ЕГЭ — в вашем городе, аттестат государственного образца. Оставьте контакты — перезвоним за 30 минут и расскажем условия."
+          text="Платная онлайн-программа Синергии: материалы в записи и промежуточные аттестации онлайн. Темп и сроки согласуются по документам; ОГЭ/ЕГЭ по программе проходят очно в Москве. Уточните условия до оплаты."
           bullets={['документы сканами, зачисление круглый год', 'для подростков и взрослых с перерывом в учёбе', 'рассрочка, маткапитал, налоговый вычет']}
         />
         <TypeGuide type={t} />
@@ -651,7 +655,7 @@ export default async function GlobalTypePage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
       ]}
-      introContent={<><SchoolFormatAdvice type={t} />{t === 'online' && <><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
+      introContent={<>{t === 'vechernie' && <EveningPathChooser />}<SchoolFormatAdvice type={t} />{t === 'online' && <><OnlineGradeNav /><OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." /></>}</>}
       seoContent={seoContent}
     />
   )

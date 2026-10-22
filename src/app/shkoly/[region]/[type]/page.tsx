@@ -1,4 +1,6 @@
 import formatMetadata from '@/data/school-format-metadata.json'
+import EveningPathChooser from '@/components/EveningPathChooser'
+import EveningCityGuide from '@/components/EveningCityGuide'
 import MoscowEveningVerification from '@/components/MoscowEveningVerification'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -151,7 +153,7 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        introContent={r === 'moskva' && t === 'vechernie' ? <MoscowEveningVerification /> : undefined}
+        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
         seoContent={
           r === 'moskva' && t === 'vechernie' ? null : t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>

@@ -12,7 +12,8 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const {
       name, phone, email, question, school, city, source, pd_agreed, marketing_agreed,
-      crm = true, utm, page_url, referrer, ym_client_id,
+      crm = true, utm, page_url, referrer, ym_client_id, landing_url, first_referrer,
+      form_id, product, qualification,
     } = body
 
     if (!name || !phone || !email) {
@@ -47,6 +48,15 @@ export async function POST(req: NextRequest) {
       else if (city) commentParts.push(`Город: ${city}`)
       if (question) commentParts.push(`Комментарий: ${question}`)
       if (page_url) commentParts.push(`Страница: ${page_url}`)
+      if (landing_url) commentParts.push(`Страница входа: ${landing_url}`)
+      if (form_id || source) commentParts.push(`Форма: ${form_id || source}`)
+      if (product) commentParts.push(`Продукт: ${product}`)
+      if (qualification && typeof qualification === 'object') {
+        for (const [key, label] of [['goal', 'Цель'], ['audience', 'Кому нужно обучение'], ['callback_time', 'Время звонка']]) {
+          const value = qualification[key]
+          if (typeof value === 'string' && value) commentParts.push(`${label}: ${value.slice(0, 160)}`)
+        }
+      }
 
       const result = await sendLeadToSynergy({
         name, phone, email,
@@ -54,11 +64,15 @@ export async function POST(req: NextRequest) {
         comment: commentParts.join('. ') || undefined,
         utm: utm && typeof utm === 'object' ? utm : undefined,
         pageUrl: page_url,
+        landingUrl: landing_url,
+        firstReferrer: first_referrer,
+        formId: form_id || source,
+        product,
         referrer,
         ymClientId: ym_client_id,
         personalDataAgree: pd_agreed !== false,
         marketingAgree: marketing_agreed === true,
-        extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source },
+        extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source, qualification },
       })
       if (result.ok) {
         crmReceipt = { status: 'accepted', id: result.id }
@@ -116,7 +130,7 @@ export async function POST(req: NextRequest) {
       // A mail outage must not duplicate an accepted CRM lead when the visitor retries.
       console.error('[Welcome] send failed:', error instanceof Error ? error.message : 'unknown')
     }
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, crm_id: crmReceipt.id ?? null })
   } catch (err) {
     console.error('leads submit error:', err)
     return NextResponse.json({ error: 'Внутренняя ошибка сервера' }, { status: 500 })

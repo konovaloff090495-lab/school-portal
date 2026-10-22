@@ -22,6 +22,7 @@ function convertedThisSession(): boolean {
 export default function CatalogOfferPopup() {
   const router = useRouter()
   const pathname = usePathname()
+  const adult = /vechern|eksternal/.test(pathname)
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
@@ -69,7 +70,8 @@ export default function CatalogOfferPopup() {
         name: form.name,
         phone: form.phone,
         email: form.email,
-        source: SOURCE,
+        source: adult ? 'Поп-ап: аттестат взрослому онлайн (вечерние/экстернат)' : SOURCE,
+        ...(adult ? { product: 'attestat-online' } : {}),
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
       })
@@ -119,15 +121,15 @@ export default function CatalogOfferPopup() {
         {/* Контент */}
         <div className="p-5 sm:p-6 overflow-y-auto">
           <div className="inline-block bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-            {isDeadlinePassed() ? 'Приём в течение всего учебного года' : 'Идёт I четверть — переход без потери оценок'}
+            {adult ? 'Платная онлайн-программа Синергии' : isDeadlinePassed() ? 'Приём в течение всего учебного года' : 'Идёт I четверть — переход без потери оценок'}
           </div>
           <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug mb-3">
-            {isDeadlinePassed()
+            {adult ? 'Аттестат за 9 или 11 класс: уточните маршрут по вашим документам' : isDeadlinePassed()
               ? 'Переведитесь в онлайн-школу с аттестатом гособразца — неделя доступа к платформе бесплатно'
               : 'Переведитесь в онлайн-школу до конца четверти — оценки за неё выставит уже новая школа. Неделя доступа бесплатно'}
           </h3>
 
-          {!isDeadlinePassed() && (
+          {!adult && !isDeadlinePassed() && (
             <div className="bg-blue-50 border border-blue-100 rounded-xl px-3 py-2.5 mb-3">
               <p className="text-xs text-gray-500 mb-1.5">До конца I четверти:</p>
               <Countdown variant="light" />
@@ -135,7 +137,7 @@ export default function CatalogOfferPopup() {
           )}
 
           <p className="text-sm text-gray-600 mb-4">
-            Зачисление за 1–3 дня, <b>взрослые и дети с 1 по 11 класс</b>, аттестат государственного образца. Перезвоним в течение 30 минут, откроем пробный доступ и подскажем, как оформить перевод.
+            {adult ? 'Занятия и промежуточные аттестации онлайн; ОГЭ/ЕГЭ по программе — очно в Москве. Консультант Синергии уточнит документы, сроки и полную стоимость. Это не заявка в местную вечернюю школу.' : 'Платное онлайн-обучение Синергии для 5–11 классов; начальная школа — отдельная программа. Консультант уточнит условия перевода и пробного доступа.'}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-3">
