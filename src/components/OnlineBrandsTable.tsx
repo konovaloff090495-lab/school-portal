@@ -35,7 +35,7 @@ export default function OnlineBrandsTable({
               <th style={th}>Школа</th>
               <th style={th}>Классы</th>
               <th style={th}>Кто выдаёт аттестат</th>
-              <th style={th}>{grades ? 'Ориентир по бренду' : 'Цена с зачислением'}</th>
+              <th style={th}>Ориентир по бренду</th>
               <th style={th}>Пробный период</th>
             </tr>
           </thead>

@@ -67,7 +67,6 @@ export default async function OnlineBrandPage({ params }: Props) {
 
   const verified = (verification as Record<string, { checkedAt: string; note: string; sources: string[] }>)[brand]
   const others = onlineBrands.filter(x => x.slug !== b.slug)
-  const cheaper = others.filter(x => x.priceFrom && b.priceFrom && x.priceFrom < b.priceFrom)
   const ownAccredited = others.filter(x => x.attestation === 'own')
   // 12 крупнейших городов — ссылки на городские страницы онлайн-школ (внутренний вес + гео-интент)
   const cities = regionSlugs.filter(r => r !== 'moskovskaya-oblast').slice(0, 13)
@@ -96,9 +95,9 @@ export default async function OnlineBrandPage({ params }: Props) {
         <p style={{ fontSize: 17, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 20px' }}>
           {b.name} — {b.attestation === 'own' ? 'онлайн-школа с собственной государственной аккредитацией' : b.attestation === 'partner' ? 'лицензированная онлайн-школа, которая оформляет аттестат через школу-партнёра' : 'проект с несколькими схемами школьного оформления: проверяйте класс и договор'},
           {' '}{b.grades} классы. {b.priceFrom
-            ? `Полноценный формат с зачислением стоит от ${b.priceFrom.toLocaleString('ru-RU')} ₽ в месяц (${b.priceFromNote}).`
+            ? `Опубликованный учебный тариф — от ${b.priceFrom.toLocaleString('ru-RU')} ₽ в месяц (${b.priceFromNote}).`
             : `Цены считаются по классу и озвучиваются на консультации (${b.priceFromNote}).`}
-          {' '}Ниже — тарифы 2026/27 как на сайте школы, схема аттестации, честные плюсы и минусы и сравнение с другими онлайн-школами.
+          {' '}Ниже — датированные тарифные ориентиры 2026/27, схема аттестации, честные плюсы и минусы и сравнение с другими онлайн-школами.
           Тарифный срез: {b.verified}; актуальную сумму и состав подтвердите перед оплатой.
         </p>
 
@@ -113,6 +112,7 @@ export default async function OnlineBrandPage({ params }: Props) {
         </div>
 
         {verified && <section className="border border-slate-200 rounded-xl p-5 mb-8 bg-slate-50"><h2 className="text-xl font-bold mb-3">Школьные документы и состав продукта: проверка {verified.checkedAt}</h2><p className="leading-7 mb-3">{verified.note}</p><p className="text-sm text-slate-600 mb-3">Проверены опубликованные сведения провайдера. Для своего договора дополнительно сверяйте юридическое лицо и уровень программы в реестрах; это не независимая оценка качества школы.</p><ul className="list-disc pl-5 space-y-2">{verified.sources.map((url, i) => <li key={url}><a href={url} className="text-blue-800 underline break-all">Официальный источник {i + 1}</a></li>)}</ul></section>}
+        <p className="text-sm text-slate-600 mb-5">Минимальный учебный тариф может не включать зачисление и аттестацию. Сопоставляйте один класс, одинаковый состав услуг и полную сумму за год. Исторический ориентир не гарантирует текущую цену.</p>
         {/* Тарифы */}
         <h2 style={h2}>Тарифы {b.name} на 2026/27 учебный год</h2>
         <div style={{ overflowX: 'auto', border: '1px solid #E8E0D6', borderRadius: 14, background: '#fff', marginBottom: 12 }}>
@@ -137,12 +137,8 @@ export default async function OnlineBrandPage({ params }: Props) {
           </table>
         </div>
         <p style={{ fontSize: 13, color: '#8A837D', margin: '0 0 28px', lineHeight: 1.5 }}>
-          Исторический тарифный срез официального сайта {b.name} {b.verified}. Школа может менять тарифы и акции в течение года —
-          итоговую сумму подтверждайте перед оплатой. {cheaper.length > 0 && (
-            <>Дешевле среди сравниваемых школ: {cheaper.map((x, i) => (
-              <span key={x.slug}>{i > 0 && ', '}<Link href={`/shkoly/tipy/online/${x.slug}/`} style={{ color: '#0369A1' }}>{x.name}</Link> (от {x.priceFrom.toLocaleString('ru-RU')} ₽)</span>
-            ))}.</>
-          )}
+          Исходная дата тарифного среза {b.name}: {b.verified}. Состав и условия отдельных продуктов уточнены в блоке проверки выше. Школа может менять тарифы и акции —
+          итоговую сумму подтверждайте перед оплатой.
         </p>
 
         {/* Аттестация */}
