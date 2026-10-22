@@ -1,3 +1,4 @@
+import safeOverrides from './online-brand-safe-overrides.json'
 /**
  * Федеральные онлайн-школы (бренды) — данные для страниц /shkoly/tipy/online/<brand>/,
  * сравнительной таблицы на хабе онлайн-школ и городских страниц /shkoly/<город>/online/.
@@ -42,7 +43,7 @@ export type OnlineBrand = {
   verified: string       // дата снятия данных
 }
 
-export const onlineBrands: OnlineBrand[] = [
+const originalOnlineBrands: OnlineBrand[] = [
   {
     slug: 'foxford',
     tier: 1,
@@ -769,6 +770,9 @@ export const onlineBrands: OnlineBrand[] = [
     verified: '16.09.2026',
   },
 ]
+
+// Verified corrections apply consistently to comparisons and brand pages.
+export const onlineBrands: OnlineBrand[] = originalOnlineBrands.map(b => ({ ...b, ...((safeOverrides as Record<string, Partial<OnlineBrand>>)[b.slug] ?? {}) }))
 
 export const onlineBrandSlugs = onlineBrands.map(b => b.slug)
 

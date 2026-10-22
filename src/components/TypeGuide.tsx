@@ -463,8 +463,10 @@ const GUIDES: Partial<Record<SchoolType, Guide>> = {
 }
 
 export default function TypeGuide({ type }: { type: SchoolType }) {
-  const guide = GUIDES[type]
-  if (!guide) return null
+  const original = GUIDES[type]
+  if (!original) return null
+  const cost = 'Цена зависит от класса, состава уроков, проверки, оформления и сопровождения. Сравнивайте полную сумму за учебный год; аттестационный пакет не является полной школой. Даты тарифных срезов указаны в обзорах брендов, а актуальный расчёт нужно получить для выбранного продукта. Предусмотренная бесплатная аттестация и платные уроки — разные услуги.'
+  const guide = { ...original, sections: original.sections.map(s => /сколько.*стоит/i.test(s.h) ? { ...s, p: [cost] } : s), faqs: original.faqs.map(f => /₽|рубл/.test(f.answer) ? { ...f, answer: cost } : f) }
 
   return (
     <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 0 40px', fontFamily: 'var(--font-manrope, system-ui)' }}>

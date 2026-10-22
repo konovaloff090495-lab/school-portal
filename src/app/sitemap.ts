@@ -1,3 +1,5 @@
+import schoolFormatMetadata from '@/data/school-format-metadata.json'
+import onlineGradePages from '@/data/online-grade-pages.json'
 import type { MetadataRoute } from 'next'
 import {publishedSchools} from '@/lib/school-submissions/catalog'
 import {
@@ -26,6 +28,7 @@ import { isCityTypeIndexable } from '@/lib/index-rules'
 
 // Статические лендинги-страницы (отдельные page.tsx, не в динамических роутах)
 const STATIC_LANDINGS = [
+  '/shkoly/tipy/zaochnye', ...onlineGradePages.map(p => `/shkoly/tipy/online/${p.slug}`),
   '/shkoly/tipy/nachalnaya-shkola', '/shkoly/tipy/osnovnaya-shkola', '/shkoly/tipy/starshaya-shkola',
   '/shkoly/tipy/domashnie/anglijskij', '/shkoly/tipy/domashnie/chastnie', '/shkoly/tipy/domashnie/luchshie', '/shkoly/tipy/domashnie/online', '/shkoly/tipy/domashnie/srednie-klassy',
   '/shkoly/tipy/eksternal/10-11-klass', '/shkoly/tipy/eksternal/9-klass', '/shkoly/tipy/eksternal/besplatnye', '/shkoly/tipy/eksternal/online',
@@ -344,7 +347,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const NOW = new Date()
   const blogPostPages: MetadataRoute.Sitemap = getAllPostsMeta().map(p => {
     // Защита от кривых дат: невалидный publishedAt не должен ломать сборку sitemap
-    const d = p.publishedAt ? new Date(p.publishedAt) : D_BLOG
+    const d = p.updatedAt || p.publishedAt ? new Date(p.updatedAt || p.publishedAt) : D_BLOG
     const safe = isNaN(d.getTime()) ? D_BLOG : d
     return {
       url: `${BASE_URL}/blog/${p.slug}/`,
@@ -412,5 +415,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (seen.has(entry.url)) return false
     seen.add(entry.url)
     return true
-  })
+  }).map(entry => entry.url.replace(BASE_URL, '') in schoolFormatMetadata ? { ...entry, lastModified: new Date('2026-10-22') } : entry)
 }

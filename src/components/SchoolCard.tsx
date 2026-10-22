@@ -341,7 +341,7 @@ export default function SchoolCard({ school }: { school: School }) {
             ) : school.type === 'podgotovka-ege' || school.type === 'podgotovka-oge' || school.type === 'programmirovanie' || school.type === 'shahmatnye' || school.type === 'sportivnye' || school.type === 'litsei' || school.type === 'muzykalnye' || school.type === 'hudozhestvennye' || school.type === 'iskusstv' ? (
               <span className="text-gray-500">Платно, цена по запросу</span>
             ) : (
-              <span className="text-emerald-600 font-semibold">Бесплатно</span>
+              <span className="text-gray-500">Стоимость уточняется</span>
             )}
           </div>
           <div className="flex items-center gap-2">

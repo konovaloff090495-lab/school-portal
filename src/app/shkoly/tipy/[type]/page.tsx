@@ -1,3 +1,6 @@
+import formatMetadata from '@/data/school-format-metadata.json'
+import SchoolFormatAdvice from '@/components/SchoolFormatAdvice'
+import OnlineGradeNav from '@/components/OnlineGradeNav'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { typeSlugs, profileMetas, languageMetas, getSchoolsByLanguage, schools, SchoolType, getSchoolsByType } from '@/data/schools'
@@ -113,13 +116,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = type as SchoolType
   const displayTitle = typeDisplayTitles[t]
   const count = getSchoolsByType(t).length
-  const title = typeTitleOverrides[t]?.(count) ?? `${displayTitle} России — ${count} в каталоге`
+  const chosen = (formatMetadata as Record<string, { title: string; description: string; h1: string }>)[`/shkoly/tipy/${t}/`]
+  const title = chosen?.title ?? typeTitleOverrides[t]?.(count) ?? `${displayTitle} России — ${count} в каталоге`
+  const description = chosen?.description ?? typeDescriptions[t]
   return {
     title,
-    description: typeDescriptions[t],
+    description,
     keywords: buildKeywords(undefined, t),
     alternates: { canonical: `https://pro-schools.ru/shkoly/tipy/${t}/` },
-    openGraph: { title, description: typeDescriptions[t], url: `https://pro-schools.ru/shkoly/tipy/${t}/` },
+    openGraph: { title, description, url: `https://pro-schools.ru/shkoly/tipy/${t}/` },
   }
 }
 
@@ -567,7 +572,7 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'yazykovye'
     ? <><LanguageNavSection /><SeoBlock type={t} count={count} /></>
     : t === 'vechernie'
-    ? <><VechernieSubNav /><SeoBlock type={t} count={count} /></>
+    ? <VechernieSubNav />
     // У этих двух хабов SeoBlock не выводим: TypeGuide покрывает те же темы
     // («как поступить», «стоимость», «кому подходит») подробнее, а вместе они
     // дают на одной странице два разных диапазона цен.
@@ -584,6 +589,7 @@ export default async function GlobalTypePage({ params }: Props) {
       </>
     : t === 'online'
     ? <>
+        <OnlineGradeNav />
         <p style={{ margin: '0 0 16px', fontSize: 16 }}><Link href="/otzyvy/online-shkoly/" style={{ color: '#0369A1', fontWeight: 700 }}>Отзывы об онлайн-школах: что хвалят и на что жалуются →</Link></p>
         <OnlineBrandsTable
           intro="Все школы федеральные — учиться можно из любого города. Сначала идут школы с собственной государственной аккредитацией (аттестат выдают сами), дальше — по цене формата с зачислением; для школ без открытых цен указано «по запросу». Нажмите на название, чтобы открыть тарифы, схему аттестации и отзывы."
@@ -650,7 +656,7 @@ export default async function GlobalTypePage({ params }: Props) {
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },
       ]}
-      seoContent={seoContent}
+      seoContent={<><SchoolFormatAdvice type={t} />{seoContent}</>}
     />
   )
 }

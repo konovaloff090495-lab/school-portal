@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { onlineBrandsForTable, type OnlineBrand } from '@/data/online-brands'
+import { explicitSchoolGrades } from '@/lib/school-grades'
 
 /**
  * Сравнительная таблица федеральных онлайн-школ. Стоит на хабе /shkoly/tipy/online/,
@@ -12,6 +13,7 @@ export default function OnlineBrandsTable({
   exclude,
   compact = false,
   all = false,
+  grades,
 }: {
   title?: string
   intro?: string
@@ -19,8 +21,9 @@ export default function OnlineBrandsTable({
   compact?: boolean
   /** true — все бренды, включая краткие обзоры второго эшелона */
   all?: boolean
+  grades?: number[]
 }) {
-  const rows = onlineBrandsForTable(all).filter(b => b.slug !== exclude)
+  const rows = onlineBrandsForTable(all).filter(b => b.slug !== exclude && (!grades || grades.every(g => explicitSchoolGrades(b.grades).includes(g))))
   return (
     <section style={{ maxWidth: 960, margin: '0 auto 32px', fontFamily: 'var(--font-manrope, system-ui)' }}>
       <h2 style={{ fontSize: compact ? 18 : 22, fontWeight: 700, color: '#1A1814', margin: '0 0 8px', lineHeight: 1.3 }}>{title}</h2>
@@ -32,7 +35,7 @@ export default function OnlineBrandsTable({
               <th style={th}>Школа</th>
               <th style={th}>Классы</th>
               <th style={th}>Кто выдаёт аттестат</th>
-              <th style={th}>Цена с зачислением</th>
+              <th style={th}>{grades ? 'Ориентир по бренду' : 'Цена с зачислением'}</th>
               <th style={th}>Пробный период</th>
             </tr>
           </thead>
@@ -51,7 +54,7 @@ export default function OnlineBrandsTable({
                     ? <span style={{ color: '#15803D', fontWeight: 600 }}>сама школа (своя аккредитация)</span>
                     : b.attestation === 'partner'
                     ? <span>школа-партнёр</span>
-                    : <span style={{ color: '#8A837D' }}>на сайте не раскрыто</span>}
+                    : <span style={{ color: '#8A837D' }}>зависит от программы — см. обзор</span>}
                 </td>
                 <td style={td}>
                   <span style={{ fontWeight: 700 }}>{priceLabel(b)}</span>
@@ -64,8 +67,8 @@ export default function OnlineBrandsTable({
         </table>
       </div>
       <p style={{ fontSize: 12, color: '#9B9490', margin: '8px 0 0', lineHeight: 1.5 }}>
-        Цены и условия — с официальных сайтов школ на 16.09.2026 для учебного года 2026/27; у брендов они зависят от класса,
-        срока оплаты и акций. Перед оплатой сверяйте на сайте школы.
+        Дата проверки указана в обзоре каждой школы. Цены зависят от класса, срока оплаты и акций.
+        {grades ? ' В таблице минимальная опубликованная цена бренда, а не индивидуальный расчёт выбранного класса. Запросите тариф именно для своего класса, состав услуг и полную сумму за год.' : ' Перед оплатой сверяйте состав тарифа и итоговую сумму на сайте школы.'}
       </p>
     </section>
   )

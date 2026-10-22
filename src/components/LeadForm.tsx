@@ -77,9 +77,9 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   return (
     <div className={`bg-blue-50 border border-blue-200 rounded-xl ${compact ? 'p-4' : 'p-6'}`}>
       <h3 className={`font-semibold text-gray-900 mb-1 ${compact ? 'text-base' : 'text-lg'}`}>
-        {title ?? (schoolName ? `Оставить заявку в «${schoolName}»` : 'Узнать подробнее о школе')}
+        {title ?? (schoolName ? `Консультация по обучению: «${schoolName}»` : 'Узнать подробнее о школе')}
       </h3>
-      <p className="text-sm text-gray-600 mb-4">Перезвоним в течение 30 минут</p>
+      <p className="text-sm text-gray-600 mb-4">{crm ? 'Заявку получит консультант онлайн-школы Синергия. Для обращения непосредственно в выбранную школу используйте её официальный сайт или телефон.' : 'Свяжемся после обработки заявки.'}</p>
       <form onSubmit={handleSubmit} className="space-y-3">
         <input
           type="text"

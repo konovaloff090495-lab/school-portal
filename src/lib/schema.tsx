@@ -80,6 +80,7 @@ export function ArticleJsonLd({
       jobTitle: post.authorRole,
     },
     datePublished: safePublishedAt(post),
+    ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
     publisher: {
       '@type': 'Organization',
       name: 'pro-schools.ru',

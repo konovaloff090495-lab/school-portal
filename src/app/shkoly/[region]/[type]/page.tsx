@@ -1,3 +1,5 @@
+import formatMetadata from '@/data/school-format-metadata.json'
+import MoscowEveningVerification from '@/components/MoscowEveningVerification'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
@@ -46,6 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!typeSlugs.includes(type as SchoolType)) return {}
   const r = region as RegionSlug
   const t = type as SchoolType
+  const custom = (formatMetadata as Record<string, { title: string; description: string }>)[`/shkoly/${r}/${t}/`]
+  if (custom) { const url = `https://pro-schools.ru/shkoly/${r}/${t}/`; return { title: custom.title, description: custom.description, alternates: { canonical: url }, openGraph: { title: custom.title, description: custom.description, url } } }
   if (t === 'online') {
     const cityIn = regionLabelsIn[r]
     const list = onlineSchoolsForCity(r)
@@ -148,7 +152,7 @@ export default async function TypePage({ params }: Props) {
           { label: typeName },
         ]}
         seoContent={
-          t === 'vechernie' || t === 'eksternal'
+          r === 'moskva' && t === 'vechernie' ? <MoscowEveningVerification /> : t === 'vechernie' || t === 'eksternal'
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
             : t === 'podgotovka-ege' || t === 'podgotovka-oge'
             ? <><EgeCityExtras region={r} variant={t === 'podgotovka-ege' ? 'ege' : 'oge'} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
