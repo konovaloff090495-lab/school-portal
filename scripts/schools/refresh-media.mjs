@@ -26,7 +26,7 @@ for (const s of schools) {
 }
 const hosts = new Map()
 for (const s of schools.filter(s => !data.photos[s.slug] && s.website)) {
-  try { const h = new URL(s.website).hostname.replace(/^www\./, ''); const item = hosts.get(h) || { count: 0, urls: [] }; item.count++; if (!item.urls.includes(s.website)) item.urls.push(s.website); hosts.set(h, item) } catch {}
+  try { const h = new URL(s.website).hostname.replace(/^www\./, ''); if (['t.me','vk.com','vk.ru','ok.ru','tilda.ws','taplink.cc'].includes(h)) continue; const item = hosts.get(h) || { count: 0, urls: [] }; item.count++; if (!item.urls.includes(s.website)) item.urls.push(s.website); hosts.set(h, item) } catch {}
 }
 const queue = [...hosts].sort((a,b) => b[1].count-a[1].count).slice(0, Number(args.limit || 80))
 // Always include the schools from the reported screenshot.
