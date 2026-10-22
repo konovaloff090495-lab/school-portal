@@ -15,7 +15,7 @@ child.stdout.on('data', data => { logs += data })
 child.stderr.on('data', data => { logs += data })
 function stop() { try { process.kill(-child.pid, 'SIGTERM') } catch { child.kill('SIGTERM') } }
 const timeout = setTimeout(() => { stop(); process.exit(1) }, 150000)
-const checks = []
+const checks = [], errors = []
 try {
   let ready = false
   for (let attempt = 0; attempt < 50; attempt++) {
@@ -38,8 +38,19 @@ try {
     const firstCard = page.locator('a[href^="/shkola/"]').first()
     const choiceBox = await choice.boundingBox(), cardBox = await firstCard.boundingBox()
     assert.ok(choiceBox && cardBox && choiceBox.y + choiceBox.height < cardBox.y, 'Program choice must precede school cards')
+    await page.evaluate(() => document.fonts.ready)
+    // Resizing and navigation can precede hydration/font layout. Require the
+    // final document to fit; retain diagnostics for every width if it does not.
+    await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1, { timeout: 5000 }).catch(() => {})
     const dimensions = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }))
-    assert.ok(dimensions.scrollWidth <= width + 1, 'Horizontal page overflow')
+    if (dimensions.scrollWidth > width + 1) {
+      const offenders = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(node => {
+        const box = node.getBoundingClientRect()
+        return box.width && box.right > innerWidth + 1 && getComputedStyle(node).position !== 'fixed'
+      }).slice(0, 25).map(node => ({ tag: node.tagName, classes: node.className, text: node.textContent.slice(0, 80), right: node.getBoundingClientRect().right, overflow: getComputedStyle(node).overflowX })))
+      errors.push({ ...dimensions, offenders })
+      await page.screenshot({ path: `${output}/overflow-${width}.png` })
+    }
     const later = page.getByRole('button', { name: 'Позже', exact: true })
     if (await later.isVisible().catch(() => false)) await later.click()
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${output}/hub-${width}.png` })
@@ -51,7 +62,8 @@ try {
   assert.match(await page.locator('h1').innerText(), /1 класса/)
   await page.screenshot({ path: `${output}/class-1-390.png` })
   checks.push({ page: 'class 1', status: 200, width: 390 })
-  await writeFile(`${output}/qa.json`, JSON.stringify({ result: 'passed', checks }, null, 2))
+  await writeFile(`${output}/qa.json`, JSON.stringify({ result: errors.length ? 'failed' : 'passed', checks, errors }, null, 2))
+  assert.equal(errors.length, 0, JSON.stringify(errors))
   console.log(JSON.stringify({ result: 'passed', checks: checks.length, primaryChoice: 'outside filters and before cards' }))
 } finally {
   clearTimeout(timeout)
