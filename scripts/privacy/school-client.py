@@ -20,8 +20,8 @@ if action in ['create','resubmit']:
    if p.is_file() and not p.is_symlink():subprocess.run(['/usr/bin/setfacl','-m','u:lead-gerasimov:r',str(p)],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 writer=json.loads(pathlib.Path(cfg['writer_config']).read_text());request=urllib.request.Request(writer['endpoint']+'/school/'+action,data=raw,headers={'Content-Type':'application/json','Authorization':'Bearer '+writer['ingest_token']})
 try:
- with urllib.request.urlopen(request,timeout=95 if action=='telegram-run' else 13) as response:result=response.read(2*1024*1024+1)
- if len(result)>2*1024*1024:raise ValueError('Response too large')
+ with urllib.request.urlopen(request,timeout=95 if action=='telegram-run' else 13) as response:result=response.read(8*1024*1024+1)
+ if len(result)>8*1024*1024:raise ValueError('Response too large')
  json.loads(result);sys.stdout.buffer.write(result)
 except Exception:raise SystemExit('Private school operation temporarily unavailable')
 finally:os.close(lock)
