@@ -4,6 +4,8 @@ import {DatabaseSync} from 'node:sqlite';
 import {createHash,timingSafeEqual,scryptSync} from 'node:crypto';
 import {open} from './crypto.mjs';
 import {mailer} from './mailer.mjs';
+import {mfa} from './mfa.mjs';
+import {school} from './school.mjs';
 const cfg=JSON.parse(readFileSync(process.argv[2],'utf8')),publicKey=readFileSync(cfg.public_key,'utf8'),privateKey=readFileSync(cfg.private_key,'utf8');
 mkdirSync(cfg.state,{recursive:true,mode:0o700});
 const db=new DatabaseSync(cfg.state+'/leads.sqlite3');chmodSync(cfg.state+'/leads.sqlite3',0o600);
@@ -17,6 +19,7 @@ const digest=s=>createHash('sha256').update(s).digest('hex');
 const equal=(a,b)=>timingSafeEqual(Buffer.from(digest(a)),Buffer.from(digest(b)));
 const audit=(action,id,actor)=>db.prepare('INSERT INTO audit(at,action,lead_id,actor) VALUES(?,?,?,?)').run(new Date().toISOString(),action,id,actor);
 function writer(req){const token=String(req.headers.authorization||'').replace(/^Bearer /,'');return Object.entries(cfg.ingest).find(([,v])=>equal(digest(token),v))?.[0]}
+const factor=mfa(cfg,audit);
 const attempts=new Map();
 function admin(req){
  const ip=req.headers['x-real-ip']||req.socket.remoteAddress,now=Date.now(),state=attempts.get(ip);
@@ -29,16 +32,19 @@ function admin(req){
 }
 async function body(req){let n=0;const chunks=[];for await(const chunk of req){n+=chunk.length;if(n>160000)throw Error('too_large');chunks.push(chunk)}return JSON.parse(Buffer.concat(chunks).toString('utf8'))}
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const page=body=>'<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Закрытые заявки</title><body><h1>'+escape(cfg.label)+'</h1>'+body+'</body></html>';
+const page=(body,authenticated=false)=>'<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Закрытые заявки</title><body><h1>'+escape(cfg.label)+'</h1>'+body+(authenticated&&cfg.mfa?'<form method="post" action="/auth/logout"><button type="submit">Выйти</button></form>':'')+'</body></html>';
 const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
- res.setHeader('Cross-Origin-Resource-Policy','same-origin');res.setHeader('Cross-Origin-Opener-Policy','same-origin');res.setHeader('X-Frame-Options','DENY');res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('Content-Security-Policy',"default-src 'none'; frame-ancestors 'none'; form-action 'none'");
+ res.setHeader('Cross-Origin-Resource-Policy','same-origin');res.setHeader('Cross-Origin-Opener-Policy','same-origin');res.setHeader('X-Frame-Options','DENY');res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('Content-Security-Policy',"default-src 'none'; frame-ancestors 'none'; form-action 'self'");
  const json=(status,obj)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(obj))};
  try{
   const url=new URL(req.url,'http://local'),path=url.pathname;
   if(path==='/health'&&req.method==='GET')return json(200,{status:'ok',operator:cfg.operator});
-  if(req.method==='POST'&&(path==='/ingest'||path==='/delivery'||path==='/heartbeat'||path.startsWith('/mail/'))){
+  if(req.method==='POST'&&(path==='/ingest'||path==='/delivery'||path==='/heartbeat'||path.startsWith('/mail/')||path.startsWith('/school/'))){
    const site=writer(req);if(!site)return json(401,{error:'unauthorized'});
    const input=await body(req);
+   if(path.startsWith('/school/')){
+    try{const result=await school(cfg,site,path.slice(8),input);return json(200,result)}catch{return json(503,{error:'school_operation_unavailable'})}
+   }
    if(path.startsWith('/mail/')){
     if(!cfg.mailer||cfg.mailer.site!==site||!['enroll','confirm','unsubscribe','reserve-welcome'].includes(path.slice(6)))return json(404,{error:'operation_not_allowed'});
     try{const result=await mailer(cfg,site,path.slice(6),input);audit('mailer_ok',null,site);return json(200,result)}
@@ -64,16 +70,37 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
    }catch(e){db.exec('ROLLBACK');throw e}
    return json(201,{id:input.id,stored:true});
   }
-  if(req.method==='GET'&&(path==='/'||/^\/[a-f0-9-]{36}$/.test(path))){
+  if(path==='/auth/logout'&&req.method==='POST'&&factor){
+   if(!cfg.admin_hosts?.includes(String(req.headers.host||'').toLowerCase().split(':')[0])||req.headers.origin!=='https://'+req.headers.host||!factor.valid(req))return json(403,{error:'forbidden'});
+   factor.logout(req,res);res.writeHead(303,{Location:'/'});res.end();return;
+  }
+  if(path==='/auth/login'&&req.method==='POST'&&factor){
+   if(!cfg.admin_hosts?.includes(String(req.headers.host||'').toLowerCase().split(':')[0]))return json(421,{error:'private_origin_required'});
+   let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>2048)return json(400,{error:'too_large'})}
+   const input=Object.fromEntries(new URLSearchParams(raw));
+   const passwordRequest={headers:{...req.headers,authorization:'Basic '+Buffer.from(String(input.username||'')+':'+String(input.password||'')).toString('base64')},socket:req.socket};
+   if(!admin(passwordRequest)||!factor.verify(req,input))return json(403,{error:'invalid_or_expired_credentials'});
+   factor.session(res);res.writeHead(303,{Location:'/'});res.end();return;
+  }
+  if(req.method==='GET'&&(path==='/'||/^\/[a-f0-9-]{36}$/.test(path)||/^\/schools\/[a-f0-9]{32}(?:\/photo\/[a-f0-9]{32}\.jpg)?$/.test(path))){
    if(cfg.admin_hosts&&!cfg.admin_hosts.includes(String(req.headers.host||'').toLowerCase().split(':')[0]))return json(421,{error:'private_origin_required'});
-   if(!admin(req)){res.setHeader('WWW-Authenticate','Basic realm="Private leads '+cfg.operator+'"');return json(401,{error:'unauthorized'})}
+   if(!factor&&!admin(req)){res.setHeader('WWW-Authenticate','Basic realm="Private leads '+cfg.operator+'"');return json(401,{error:'unauthorized'})}
    res.setHeader('Content-Type','text/html; charset=utf-8');
+   if(factor&&!factor.valid(req)){res.end(page(factor.form(req,res)));return}
+   if(path.startsWith('/schools/')){
+    const parts=path.split('/'),row=await school(cfg,'proschools','admin-get',{id:parts[2]},true);if(row.error)return json(404,{error:'not_found'});
+    if(parts[3]==='photo'){
+     if(!row.photos?.some(x=>x.file===parts[4]))return json(404,{error:'photo_not_found'});
+     const bytes=readFileSync(cfg.school.photos+'/'+parts[2]+'/'+parts[4]);audit('school_photo_view',parts[2],cfg.admin_user);res.setHeader('Content-Type','image/jpeg');res.end(bytes);return;
+    }
+    audit('school_view',parts[2],cfg.admin_user);res.end(page('<p><a href="/">К списку заявок</a></p><h2>Заявка школы</h2><pre>'+escape(JSON.stringify(row,null,2))+'</pre><p>'+row.photos.map((x,i)=>'<a href="'+path+'/photo/'+escape(x.file)+'">Фото '+String(i+1)+'</a>').join(' · ')+'</p>',true));return;
+   }
    if(path==='/'){
     audit('list',null,cfg.admin_user);const value=url.searchParams.get('page')||'0';if(!/^[0-9]{1,5}$/.test(value))return json(400,{error:'invalid_page'});const offset=Number(value)*100;const rows=db.prepare('SELECT id,site,created_at,delivery FROM leads ORDER BY received_at DESC LIMIT 100 OFFSET ?').all(offset);const total=db.prepare('SELECT COUNT(*) AS n FROM leads').get().n;const navigation='<p>'+ (offset>0?'<a href="?page='+String(Number(value)-1)+'">← Новее</a> · ':'')+'Страница '+String(Number(value)+1)+' · Всего '+String(total)+(offset+100<total?' · <a href="?page='+String(Number(value)+1)+'">Старее →</a>':'')+'</p>';
-    res.end(page(navigation+'<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a> · '+escape(JSON.stringify(JSON.parse(x.delivery)))+'</li>').join('')+'</ul>'));return;
+    res.end(page(navigation+'<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a> · '+escape(JSON.stringify(JSON.parse(x.delivery)))+'</li>').join('')+'</ul>',true));return;
    }
    const row=db.prepare('SELECT envelope FROM leads WHERE id=?').get(path.slice(1));if(!row)return json(404,{error:'not_found'});
-   const payload=open(JSON.parse(row.envelope),{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});audit('view',path.slice(1),cfg.admin_user);res.end(page('<p><a href="./">К списку</a></p><pre>'+escape(JSON.stringify(payload,null,2))+'</pre>'));return;
+   const payload=open(JSON.parse(row.envelope),{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});audit('view',path.slice(1),cfg.admin_user);res.end(page('<p><a href="./">К списку</a></p><pre>'+escape(JSON.stringify(payload,null,2))+'</pre>',true));return;
   }
   return json(404,{error:'not_found'});
  }catch{json(400,{error:'request_not_accepted'})}

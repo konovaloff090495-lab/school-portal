@@ -105,6 +105,22 @@ if '--verify' in sys.argv:
         databases=list(restored.rglob('leads.sqlite3'));assert len(databases)==1
         for database in restored.rglob('*.sqlite3'):
             with sqlite3.connect(database) as db:assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+        # Verify the restored DELA archive itself, including field-key decryption.
+        for archive_path in restored.rglob('delomba-private.tar'):
+            import tarfile, importlib.util
+            spec=importlib.util.spec_from_file_location('private_fields','/opt/portfolio-lead-vault/field_crypto.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+            keys=list(restored.rglob('legacy-delomba-fields.key'));assert len(keys)==1;codec=module.Fields(keys[0])
+            with tarfile.open(archive_path) as archive:
+                members=archive.getmembers();database=next(x for x in members if x.name.endswith('/.crm/crm.sqlite'));target=temporary/'delomba-check.sqlite';target.write_bytes(archive.extractfile(database).read())
+                with sqlite3.connect(target) as db:
+                    db.row_factory=sqlite3.Row;assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+                    for row in db.execute('SELECT * FROM subscribers'):
+                        assert row['email'].startswith('pf1:');assert '@' in codec.open(row['email'],'deLomBa.email')
+                        for key in ['ip','ua','src','note']:codec.open(row[key],'deLomBa.'+key)
+                    for row in db.execute('SELECT data FROM log'):codec.open(row['data'],'deLomBa.data')
+                for member in members:
+                    if member.isfile() and member.name.endswith('.json') and ('/.submissions/' in member.name or '/.franchise_submissions/' in member.name):
+                        value=json.loads(archive.extractfile(member).read());assert value['format']=='pf-json-v1';assert isinstance(json.loads(codec.open(value['data'],'deLomBa.record')),dict)
         assert len(list(restored.rglob('private.pem')))==1
         (status.parent/'restore-verified.json').write_text(json.dumps({'operator':OPERATOR,'verified':dt.datetime.now(dt.timezone.utc).isoformat(),'objects':len(manifest['objects'])}))
         print('Pinned S3 download, restic read-data and SQLite/key restoration verified: '+OPERATOR)

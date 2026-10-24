@@ -8,6 +8,26 @@ ROOT = Path(__file__).resolve().parents[1]
 STORE = Path(os.environ.get('SCHOOL_SUBMISSIONS_DIR', '/var/lib/school-portal/school-submissions' if os.environ.get('NODE_ENV') == 'production' else ROOT / 'data-private/school-submissions'))
 BASE = 'https://pro-schools.ru'
 FROM = 'hello@pro-schools.ru'
+sys.path.insert(0,str(Path(__file__).resolve().parent/'privacy'))
+from pii_fields import Fields
+_field_codec=None
+def field_codec():
+    global _field_codec
+    if _field_codec is None:
+        location=os.environ.get('SCHOOL_FIELDS_KEY')
+        if not location and os.environ.get('NODE_ENV')=='production':raise RuntimeError('Private school data key missing')
+        key=Path(location) if location else STORE/'test-fields.key'
+        if not key.exists() and not location:Fields.create(key,'gerasimov','school-submissions')
+        _field_codec=Fields(key)
+    return _field_codec
+def protected(value,kind):return field_codec().seal(value,'school.'+kind)
+class PrivateRow(dict):
+    def __getitem__(self,key):return list(self.values())[key] if isinstance(key,int) else super().__getitem__(key)
+def private_row(cursor,values):
+    result=PrivateRow(zip([c[0] for c in cursor.description],values))
+    for key in ['data','live_data','photos','live_photos','comment','feedback','detail']:
+        if key in result:result[key]=field_codec().open(result[key],'school.'+{'live_data':'data','live_photos':'photos'}.get(key,key))
+    return result
 
 def now(): return int(time.time())
 def load_env():
@@ -42,8 +62,9 @@ def db():
     STORE.mkdir(parents=True, exist_ok=True, mode=0o700)
     con = sqlite3.connect(STORE/'applications.sqlite3', timeout=15)
     os.chmod(STORE/'applications.sqlite3', 0o600)
-    con.row_factory = sqlite3.Row
-    con.executescript('''PRAGMA journal_mode=WAL;
+    field_codec()
+    con.row_factory = private_row
+    con.executescript('''PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON;
     CREATE TABLE IF NOT EXISTS applications(id TEXT PRIMARY KEY,request_id TEXT UNIQUE NOT NULL,data TEXT NOT NULL,photos TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'unconfirmed',confirmed INTEGER,created INTEGER NOT NULL,updated INTEGER NOT NULL,comment TEXT NOT NULL DEFAULT '',live_data TEXT,live_photos TEXT,published INTEGER,marketing INTEGER NOT NULL DEFAULT 0,subscribed INTEGER,unsubscribed INTEGER,score INTEGER,feedback TEXT,ip TEXT,last_request TEXT,revision INTEGER NOT NULL DEFAULT 0);
     CREATE TABLE IF NOT EXISTS audit(seq INTEGER PRIMARY KEY,id TEXT,event TEXT,at INTEGER,detail TEXT);
     CREATE TABLE IF NOT EXISTS mail(id INTEGER PRIMARY KEY,application TEXT NOT NULL,kind TEXT NOT NULL,dedupe TEXT UNIQUE NOT NULL,due INTEGER NOT NULL,state TEXT DEFAULT 'queued',attempts INTEGER DEFAULT 0,lease INTEGER,error TEXT,sent INTEGER);
@@ -56,7 +77,7 @@ def db():
             if 'revision' not in [r[1] for r in con.execute('PRAGMA table_info(applications)')]:raise
     return con
 
-def audit(c,id,event,detail=''): c.execute('INSERT INTO audit(id,event,at,detail) VALUES(?,?,?,?)',(id,event,now(),detail[:2000]))
+def audit(c,id,event,detail=''): c.execute('INSERT INTO audit(id,event,at,detail) VALUES(?,?,?,?)',(id,event,now(),protected(detail[:2000],'detail')))
 def enqueue(c,id,kind,key,due=None): c.execute('INSERT OR IGNORE INTO mail(application,kind,dedupe,due) VALUES(?,?,?,?)',(id,kind,key,due or now()))
 def limited(c,key,cap,window):
     row=c.execute('SELECT * FROM limits WHERE key=?',(key,)).fetchone()
@@ -93,13 +114,14 @@ def operate(action,p):
                 if prev['ip']!=p['ip']: raise ValueError('Повторите отправку с новой страницы')
                 return {'id':prev['id'],'token':token(prev['id']),'duplicate':True}
             limited(c,'new-ip:'+p['ip'],5,86400)
-            limited(c,'new-email:'+p['data']['email'].lower(),3,86400)
-            c.execute('INSERT INTO applications(id,request_id,data,photos,created,updated,marketing,ip) VALUES(?,?,?,?,?,?,?,?)',(id,p['request_id'],json.dumps(p['data'],ensure_ascii=False),json.dumps(p['photos'],ensure_ascii=False),now(),now(),int(p['data']['marketing_agreed']),p['ip']))
+            limited(c,field_codec().index('new-email:'+p['data']['email'].lower(),'school-limits'),3,86400)
+            c.execute('INSERT INTO applications(id,request_id,data,photos,created,updated,marketing,ip) VALUES(?,?,?,?,?,?,?,?)',(id,p['request_id'],protected(json.dumps(p['data'],ensure_ascii=False),'data'),protected(json.dumps(p['photos'],ensure_ascii=False),'photos'),now(),now(),int(p['data']['marketing_agreed']),p['ip']))
             audit(c,id,'created');enqueue(c,id,'confirm','confirm:'+id)
             return {'id':id,'token':token(id)}
         if action=='public':
             rows=c.execute('SELECT id,live_data,live_photos,published FROM applications WHERE published IS NOT NULL ORDER BY published DESC').fetchall()
             return [{'id':r['id'],'data':json.loads(r['live_data']),'photos':json.loads(r['live_photos']),'published':r['published']} for r in rows if not p.get('id') or r['id']==p['id']]
+        if action=='admin-get':return private(c,application(c,p['id']),False)
         if action=='admin-list':
             return [private(c,dict(r),False) for r in c.execute('SELECT * FROM applications ORDER BY CASE status WHEN "pending" THEN 0 WHEN "changes" THEN 1 ELSE 2 END,updated DESC LIMIT 300')]
         if action=='rate':
@@ -128,7 +150,7 @@ def operate(action,p):
             if row['status']=='unconfirmed': raise ValueError('Сначала подтвердите почту')
             limited(c,'edit:'+id,10,3600)
             if p['data']['email'].lower()!=json.loads(row['data'])['email'].lower(): raise ValueError('Для смены почты обратитесь в редакцию')
-            c.execute('UPDATE applications SET data=?,photos=?,status="pending",updated=?,comment="",marketing=?,last_request=?,revision=revision+1 WHERE id=?',(json.dumps(p['data'],ensure_ascii=False),json.dumps(p['photos'],ensure_ascii=False),now(),int(p['data']['marketing_agreed']),p['request_id'],id));audit(c,id,'resubmitted');enqueue(c,id,'pending','pending:'+id+':'+p['request_id'])
+            c.execute('UPDATE applications SET data=?,photos=?,status="pending",updated=?,comment="",marketing=?,last_request=?,revision=revision+1 WHERE id=?',(protected(json.dumps(p['data'],ensure_ascii=False),'data'),protected(json.dumps(p['photos'],ensure_ascii=False),'photos'),now(),int(p['data']['marketing_agreed']),p['request_id'],id));audit(c,id,'resubmitted');enqueue(c,id,'pending','pending:'+id+':'+p['request_id'])
             if p['data']['marketing_agreed']:
                 if not row['marketing'] or row['unsubscribed']:
                     c.execute('UPDATE applications SET subscribed=NULL,unsubscribed=NULL WHERE id=?',(id,))
@@ -140,7 +162,7 @@ def operate(action,p):
         if action=='feedback':
             score=p.get('score');text=p.get('text','')
             if type(score)!=int or score not in range(1,6) or not isinstance(text,str) or len(text)>2000:raise ValueError('Выберите оценку от 1 до 5')
-            c.execute('UPDATE applications SET score=?,feedback=? WHERE id=?',(score,text,id));audit(c,id,'feedback',str(score));return {'ok':True}
+            c.execute('UPDATE applications SET score=?,feedback=? WHERE id=?',(score,protected(text,'feedback'),id));audit(c,id,'feedback',str(score));return {'ok':True}
         if action in ('moderate','moderation-note') and p.get('update_id') and c.execute('SELECT 1 FROM telegram_decisions WHERE update_id=?',(str(p['update_id']),)).fetchone():return {'ok':True}
         if action in ('moderate','moderation-note') and p.get('expected_revision'):
             expected=hashlib.sha256((row['id']+':'+str(row['revision'])).encode()).hexdigest()[:16]
@@ -150,7 +172,7 @@ def operate(action,p):
             if row['status'] not in ('changes','rejected') or not comment or len(comment)>3000:raise ValueError('Комментарий недоступен')
             key='telegram-note:'+str(p['update_id'])
             if c.execute('SELECT 1 FROM mail WHERE dedupe=?',(key,)).fetchone():return {'ok':True}
-            c.execute('UPDATE applications SET comment=?,updated=? WHERE id=?',(comment,now(),id));audit(c,id,'moderation_note',comment);enqueue(c,id,row['status'],key);c.execute('INSERT OR IGNORE INTO telegram_decisions VALUES(?,?)',(str(p['update_id']),id));return {'ok':True}
+            c.execute('UPDATE applications SET comment=?,updated=? WHERE id=?',(protected(comment,'comment'),now(),id));audit(c,id,'moderation_note',comment);enqueue(c,id,row['status'],key);c.execute('INSERT OR IGNORE INTO telegram_decisions VALUES(?,?)',(str(p['update_id']),id));return {'ok':True}
         if action=='moderate':
             status=p.get('status');comment=p.get('comment','').strip()
             if not row['confirmed'] or row['status']=='unconfirmed': raise ValueError('Почта представителя ещё не подтверждена')
@@ -158,7 +180,7 @@ def operate(action,p):
             if row['status']!='pending': raise ValueError('Решение уже принято. Обновите список заявок.')
             if status!='published' and not comment: raise ValueError('Напишите, что нужно исправить или почему заявка отклонена')
             if len(comment)>3000:raise ValueError('Комментарий слишком длинный')
-            c.execute('UPDATE applications SET status=?,comment=?,updated=? WHERE id=?',(status,comment,now(),id))
+            c.execute('UPDATE applications SET status=?,comment=?,updated=? WHERE id=?',(status,protected(comment,'comment'),now(),id))
             if status=='published':c.execute('UPDATE applications SET live_data=data,live_photos=photos,published=? WHERE id=?',(now(),id))
             audit(c,id,status,comment);enqueue(c,id,status,status+':'+id+':'+str(now()))
             if p.get('update_id'):c.execute('INSERT OR IGNORE INTO telegram_decisions VALUES(?,?)',(str(p['update_id']),id))
@@ -234,10 +256,23 @@ def run_mail():
                 c.execute('UPDATE mail SET state=?,due=?,error=? WHERE id=?',('failed' if attempt>=8 else 'queued',now()+min(86400,300*2**attempt),type(error).__name__,job['id']));c.commit();failed+=1
         c.close();return {'smtp_accepted':sent,'failed_attempts':failed}
 
+def encrypt_state():
+    c=db();c.row_factory=sqlite3.Row
+    for table,identity,columns in [('applications','id',['data','live_data','photos','live_photos','comment','feedback']),('audit','seq',['detail'])]:
+        for row in c.execute('SELECT * FROM '+table).fetchall():
+            for column in columns:
+                kind={'live_data':'data','live_photos':'photos'}.get(column,column)
+                value=field_codec().open(row[column],'school.'+kind)
+                c.execute('UPDATE '+table+' SET '+column+'=? WHERE '+identity+'=?',(protected(value,kind),row[identity]))
+    for row in c.execute("SELECT key FROM limits WHERE key LIKE 'new-email:%'").fetchall():c.execute('UPDATE limits SET key=? WHERE key=?',(field_codec().index(row['key'],'school-limits'),row['key']))
+    c.commit();assert c.execute('PRAGMA wal_checkpoint(TRUNCATE)').fetchone()[0]==0;c.execute('VACUUM');c.execute('PRAGMA wal_checkpoint(TRUNCATE)');c.close()
+    return {'encrypted':True}
+
 if __name__=='__main__':
     try:
         action=sys.argv[1]
-        if action=='mail-run':result=run_mail()
+        if action=='encrypt-state':result=encrypt_state()
+        elif action=='mail-run':result=run_mail()
         elif action=='telegram-run':result=operate(action,{})
         else:result=operate(action,json.load(sys.stdin))
         print(json.dumps(result,ensure_ascii=False))
