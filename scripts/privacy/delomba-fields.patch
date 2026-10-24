@@ -1,222 +1,94 @@
 --- a/_crm.php
 +++ b/_crm.php
-@@ -1,4 +1,5 @@
- <?php
+@@ -1,0 +2 @@
 +require_once dirname(__FILE__) . '/_private-fields.php';
- /**
-  * CRM-маркетинг delo.mba — общий слой: база подписчиков, очередь писем,
-  * транспорт отправки, трекинг. Подключается из subscribe.php, crm.php (публичные
-@@ -29,6 +30,9 @@
-     $db = new PDO('sqlite:' . CRM_DIR . '/crm.sqlite');
-     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-     $db->exec('PRAGMA journal_mode=WAL');
+@@ -31,0 +33,3 @@
 +    $db->exec('PRAGMA synchronous=FULL');
 +    $db->exec('PRAGMA secure_delete=ON');
 +    @chmod(CRM_DIR . '/crm.sqlite',0600);
-     $db->exec('PRAGMA busy_timeout=5000');
-     $db->exec('CREATE TABLE IF NOT EXISTS subscribers (
-         id INTEGER PRIMARY KEY AUTOINCREMENT,
-@@ -61,12 +65,14 @@
-     foreach ($db->query('PRAGMA table_info(subscribers)') as $c) { $cols[] = $c['name']; }
-     if (!in_array('role', $cols, true))      { $db->exec('ALTER TABLE subscribers ADD COLUMN role TEXT DEFAULT \'\''); }
-     if (!in_array('org_since', $cols, true)) { $db->exec('ALTER TABLE subscribers ADD COLUMN org_since INTEGER'); }
+@@ -63,0 +68,2 @@
 +    if (!in_array('email_lookup', $cols, true)) { $db->exec('ALTER TABLE subscribers ADD COLUMN email_lookup TEXT'); }
 +    $db->exec('CREATE UNIQUE INDEX IF NOT EXISTS subscribers_email_lookup ON subscribers(email_lookup)');
-     return $db;
- }
- 
- function crm_log($sub_id, $type, $data = '') {
-     $st = crm_db()->prepare('INSERT INTO log(ts,sub_id,type,data) VALUES(?,?,?,?)');
+@@ -69 +75 @@
 -    $st->execute(array(time(), $sub_id, $type, is_string($data) ? $data : json_encode($data, JSON_UNESCAPED_UNICODE)));
 +    $st->execute(array(time(), $sub_id, $type, dlm_seal(is_string($data) ? $data : json_encode($data, JSON_UNESCAPED_UNICODE),'data')));
- }
- function crm_kv_get($k, $d = '') {
-     $st = crm_db()->prepare('SELECT v FROM kv WHERE k=?'); $st->execute(array($k));
-@@ -85,10 +91,12 @@
- 
- function crm_sub_by($field, $val) {
-     if (!in_array($field, array('id', 'email', 'token'), true)) { return null; }
+@@ -87,0 +94 @@
 +    if($field==='email'&&dlm_private_enabled()){ $field='email_lookup';$val=dlm_email_index($val); }
-     $st = crm_db()->prepare("SELECT * FROM subscribers WHERE $field=?"); $st->execute(array($val));
+@@ -89 +96 @@
 -    $r = $st->fetch(PDO::FETCH_ASSOC); return $r ? $r : null;
 +    $r = $st->fetch(PDO::FETCH_ASSOC); return $r ? dlm_private_fields($r) : null;
- }
- function crm_sub_update($id, $fields) {
+@@ -91,0 +99 @@
 +    if(dlm_private_enabled()){if(isset($fields['email']))$fields['email_lookup']=dlm_email_index($fields['email']);foreach(array('email','ip','ua','src','note') as $name)if(array_key_exists($name,$fields))$fields[$name]=dlm_seal($fields[$name],$name);}
-     $set = array(); $vals = array();
-     foreach ($fields as $k => $v) { $set[] = "$k=?"; $vals[] = $v; }
-     $vals[] = $id;
-@@ -230,6 +238,7 @@
-         $sub = crm_sub_by('id', $sub['id']);
-     } else {
-         $fields['email'] = $email; $fields['token'] = crm_token(24);
+@@ -232,0 +241 @@
 +        if(dlm_private_enabled()){$fields['email_lookup']=dlm_email_index($email);foreach(array('email','ip','ua','src','note') as $name)if(array_key_exists($name,$fields))$fields[$name]=dlm_seal($fields[$name],$name);}
-         $cols = array_keys($fields);
-         $db->prepare('INSERT INTO subscribers(' . implode(',', $cols) . ') VALUES(' . implode(',', array_fill(0, count($cols), '?')) . ')')
-            ->execute(array_values($fields));
-@@ -315,7 +324,7 @@
-         crm_log($sub['id'], 'sent', $msg['kind']);
-         return true;
-     }
+@@ -318 +327 @@
 -    $db->prepare('UPDATE messages SET status=\'failed\', error=?, subject=? WHERE id=?')->execute(array(mb_substr($err, 0, 300), $r['subject'], $msg['id']));
 +    $db->prepare('UPDATE messages SET status=\'failed\', error=?, subject=? WHERE id=?')->execute(array(dlm_seal(mb_substr($err, 0, 300),'error'), $r['subject'], $msg['id']));
-     crm_log($sub['id'], 'send_failed', $msg['kind'] . ': ' . $err);
-     return false;
- }
 --- a/_subs.php
 +++ b/_subs.php
-@@ -1,4 +1,5 @@
- <?php
+@@ -1,0 +2 @@
 +require_once dirname(__FILE__) . '/_private-fields.php';
- /**
-  * Общий слой работы с заявками организаторов (файловое хранилище).
-  * Подключается из event.php, bot.php, inbox.php, zayavka/index.php, crm_cron.php.
-@@ -23,7 +24,7 @@
-     if (!sub_valid_token($token)) { return null; }
-     $raw = @file_get_contents(sub_path($token));
-     if ($raw === false || $raw === '') { return null; }
+@@ -26 +27 @@
 -    $rec = json_decode($raw, true);
 +    $rec = dlm_read_record(sub_path($token));
-     return is_array($rec) ? $rec : null;
- }
- 
-@@ -31,8 +32,7 @@
-     if (!isset($rec['token']) || !sub_valid_token($rec['token'])) { return false; }
-     if (!is_dir(SUBS_DIR)) { @mkdir(SUBS_DIR, 0700, true); }
-     $rec['updated'] = time();
+@@ -34,2 +35 @@
 -    return (bool) @file_put_contents(sub_path($rec['token']),
 -                                     json_encode($rec, JSON_UNESCAPED_UNICODE));
 +    return dlm_write_record(sub_path($rec['token']),$rec);
- }
- 
- /** Сменить статус заявки. $note — комментарий редакции (виден отправителю). */
-@@ -51,7 +51,7 @@
-     $want = is_array($status) ? $status : ($status === '' ? array() : array($status));
-     $out = array();
-     foreach ((array) @glob(SUBS_DIR . '/*.json') as $f) {
+@@ -54 +54 @@
 -        $rec = json_decode(@file_get_contents($f), true);
 +        $rec = dlm_read_record($f);
-         if (!is_array($rec)) { continue; }
-         if ($want && (!isset($rec['status']) || !in_array($rec['status'], $want, true))) { continue; }
-         $out[] = $rec;
 --- a/event.php
 +++ b/event.php
-@@ -131,7 +131,7 @@
-     $rec['spam_reason'] = !$jsk_ok ? 'no-js-key' : 'spam-words';
-     $sd = SUBS_DIR . '/spam';
-     if (!is_dir($sd)) { @mkdir($sd, 0700, true); }
+@@ -134 +134 @@
 -    @file_put_contents($sd . '/' . $token . '.json', json_encode($rec, JSON_UNESCAPED_UNICODE));
 +    dlm_write_record($sd . '/' . $token . '.json',$rec);
-     done_ok();                            // боту показываем «принято», он не подстраивается
- }
- 
 --- a/feedback.php
 +++ b/feedback.php
-@@ -32,14 +32,14 @@
-     header('Location: ' . $url . '?feedback=thanks', true, 303); exit;
- }
- $data = array('token' => $token, 'rating' => (int) $rating, 'comment' => $comment, 'created' => time());
+@@ -35 +35 @@
 -if (@file_put_contents($dir . '/' . $token . '.json', json_encode($data, JSON_UNESCAPED_UNICODE)) === false) {
 +if (dlm_write_record($dir . '/' . $token . '.json',$data) === false) {
-     flock($lock, LOCK_UN); fclose($lock);
-     header('Location: ' . $url . '?feedback=retry', true, 303); exit;
- }
- $safe_comment = preg_replace('/#z(?=[a-f0-9]{16}\b)/i', '# z', $comment);
- $message = "⭐ Отзыв о добавлении мероприятия: " . $rating . "/5\n\n"
-     . "🏷 " . (isset($rec['title']) ? $rec['title'] : '') . "\n"
+@@ -42 +42 @@
 -    . "✉️ " . sub_email($rec) . "\n"
 +
-     . "💬 " . ($safe_comment !== '' ? $safe_comment : 'Без комментария') . "\n\n"
-     . "🔎 " . $url;
- $result = sub_admin_tg($message);
 --- a/franchise_submit.php
 +++ b/franchise_submit.php
-@@ -1,4 +1,5 @@
- <?php
+@@ -1,0 +2 @@
 +require_once dirname(__FILE__) . '/_private-fields.php';
- /* Заявки на франшизы: приватное хранилище над public_html, публикация после проверки. */
- header('Content-Type: text/html; charset=utf-8');
- require_once dirname(__FILE__) . '/_consent.php';
-@@ -38,7 +39,7 @@
-     'suspicious'=>$suspicious
- );
- $path = $base . '/' . $token . '.json';
+@@ -41 +42 @@
 -if (@file_put_contents($path, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT), LOCK_EX) === false) { back('error'); }
 +if (dlm_write_record($path,$row) === false) { back('error'); }
- @chmod($path, 0600);
- require_once dirname(__FILE__) . '/_subs.php';
- if (function_exists('sub_admin_tg')) {
 --- a/franchise_inbox.php
 +++ b/franchise_inbox.php
-@@ -1,4 +1,5 @@
- <?php
+@@ -1,0 +2 @@
 +require_once dirname(__FILE__) . '/_private-fields.php';
- /* Закрытый интерфейс модерации для локального пайплайна. PHP 5.6+. */
- header('Content-Type: application/json; charset=utf-8');
- function reply($x, $status) { http_response_code($status); echo json_encode($x, JSON_UNESCAPED_UNICODE); exit; }
-@@ -12,19 +13,19 @@
-     $token = isset($_POST['token']) ? $_POST['token'] : '';
-     if (!preg_match('/^[a-f0-9]{24}$/', $token)) { reply(array('ok'=>false),400); }
-     $path = $base . '/' . $token . '.json';
+@@ -15 +16 @@
 -    $row = json_decode(@file_get_contents($path), true);
 +    $row = dlm_read_record($path);
-     if (!is_array($row)) { reply(array('ok'=>false),404); }
-     if (!isset($row['status']) || $row['status'] !== 'pending') { reply(array('ok'=>false,'error'=>'not pending'),409); }
-     $row['status'] = $op === 'approve' ? 'approved' : 'rejected';
-     if ($op === 'approve') { $row['approved_at'] = gmdate('c'); }
-     else { $row['rejected_at'] = gmdate('c'); }
+@@ -21 +22 @@
 -    if (@file_put_contents($path, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT), LOCK_EX) === false) { reply(array('ok'=>false),500); }
 +    if (dlm_write_record($path,$row) === false) { reply(array('ok'=>false),500); }
-     reply(array('ok'=>true),200);
- }
- if ($op !== 'approved' && $op !== 'pending') { reply(array('ok'=>false),400); }
- $items = array();
- foreach (glob($base . '/*.json') as $path) {
+@@ -27 +28 @@
 -    $row = json_decode(@file_get_contents($path), true);
 +    $row = dlm_read_record($path);
-     if (is_array($row) && isset($row['status']) && $row['status'] === $op) { $items[] = $row; }
- }
- reply(array('ok'=>true,'items'=>$items),200);
 --- a/crm_api.php
 +++ b/crm_api.php
-@@ -45,16 +45,16 @@
-     $status = isset($_GET['status']) ? $_GET['status'] : '';
-     $sql = 'SELECT id,email,status,created,confirmed,unsubscribed,src,city,event_slug,sent_count,open_count,click_count FROM subscribers'
-          . ($status ? ' WHERE status=' . $db->quote($status) : '') . ' ORDER BY id DESC LIMIT 200';
+@@ -48 +48 @@
 -    j($db->query($sql)->fetchAll(PDO::FETCH_ASSOC));
 +    j(dlm_private_rows($db->query($sql)->fetchAll(PDO::FETCH_ASSOC)));
- 
- case 'log':
-     $n = isset($_GET['n']) ? max(1, min(1000, (int) $_GET['n'])) : 100;
+@@ -52 +52 @@
 -    j($db->query("SELECT l.ts,l.type,l.data,s.email FROM log l LEFT JOIN subscribers s ON s.id=l.sub_id ORDER BY l.id DESC LIMIT $n")->fetchAll(PDO::FETCH_ASSOC));
 +    j(dlm_private_rows($db->query("SELECT l.ts,l.type,l.data,s.email FROM log l LEFT JOIN subscribers s ON s.id=l.sub_id ORDER BY l.id DESC LIMIT $n")->fetchAll(PDO::FETCH_ASSOC)));
- 
- case 'queue':
-     j(array(
+@@ -56,2 +56,2 @@
 -        'queued' => $db->query('SELECT m.kind,m.campaign,m.send_after,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status=\'queued\' ORDER BY m.send_after LIMIT 100')->fetchAll(PDO::FETCH_ASSOC),
 -        'recent' => $db->query('SELECT m.kind,m.campaign,m.status,m.sent,m.opened,m.clicked,m.error,m.subject,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status<>\'queued\' ORDER BY m.id DESC LIMIT 50')->fetchAll(PDO::FETCH_ASSOC),
 +        'queued' => dlm_private_rows($db->query('SELECT m.kind,m.campaign,m.send_after,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status=\'queued\' ORDER BY m.send_after LIMIT 100')->fetchAll(PDO::FETCH_ASSOC)),
 +        'recent' => dlm_private_rows($db->query('SELECT m.kind,m.campaign,m.status,m.sent,m.opened,m.clicked,m.error,m.subject,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status<>\'queued\' ORDER BY m.id DESC LIMIT 50')->fetchAll(PDO::FETCH_ASSOC)),
-     ));
- 
- case 'preview':
-@@ -78,7 +78,7 @@
- case 'export':
-     header('Content-Type: text/csv; charset=utf-8'); header('Content-Disposition: attachment; filename="subscribers.csv"');
-     $f = fopen('php://output', 'w'); fputcsv($f, array('email', 'status', 'created', 'confirmed', 'city', 'src'));
+@@ -81 +81 @@
 -    foreach ($db->query('SELECT email,status,created,confirmed,city,src FROM subscribers ORDER BY id') as $r) {
 +    foreach ($db->query('SELECT email,status,created,confirmed,city,src FROM subscribers ORDER BY id') as $r) { $r=dlm_private_fields($r);
-         $r['created'] = date('Y-m-d H:i', $r['created']); $r['confirmed'] = $r['confirmed'] ? date('Y-m-d H:i', $r['confirmed']) : '';
-         fputcsv($f, $r);
-     }
 --- a/crm.php
 +++ b/crm.php
-@@ -33,7 +33,7 @@
-     $st->execute(array($sub['id']));
-     if ($m = $st->fetch(PDO::FETCH_ASSOC)) { crm_deliver($m); }
-     $stat = crm_stats();
+@@ -36 +36 @@
 -    crm_notify_admin("✅ Подписка подтверждена: " . $sub['email'] . ($sub['city'] ? " · " . $sub['city'] : '') . ($sub['role'] === 'organizer' ? ' · организатор' : '')
 +    crm_notify_admin("✅ Подписка подтверждена. Номер: " . $sub['id'] . ($sub['city'] ? " · " . $sub['city'] : '') . ($sub['role'] === 'organizer' ? ' · организатор' : '')
-         . "\nВсего подтверждённых: " . (isset($stat['subs_confirmed']) ? $stat['subs_confirmed'] : 0));
-     go(CRM_SITE . '/podpiska/gotovo/');
- 
