@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import { getReviewsBySchool, getAverageRating, type Review } from '@/data/reviews'
+import { useEffect, useState } from 'react'
+import { getReviewsBySchool, type Review } from '@/data/reviews'
 import ReviewForm from '@/components/ReviewForm'
 
 interface ReviewsBlockProps {
@@ -59,8 +59,17 @@ function ReviewCard({ review }: { review: Review }) {
 
 export default function ReviewsBlock({ schoolSlug, schoolName }: ReviewsBlockProps) {
   const [showForm, setShowForm] = useState(false)
-  const reviews = getReviewsBySchool(schoolSlug)
-  const avgRating = getAverageRating(schoolSlug)
+  const [published, setPublished] = useState<Review[]>([])
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch(`/api/reviews/published/?school=${encodeURIComponent(schoolSlug)}`, { signal: controller.signal })
+      .then(response => response.ok ? response.json() : null)
+      .then(data => { if (data && Array.isArray(data.reviews)) setPublished(data.reviews) })
+      .catch(() => {})
+    return () => controller.abort()
+  }, [schoolSlug])
+  const reviews = [...published.filter(review => review.schoolSlug === schoolSlug), ...getReviewsBySchool(schoolSlug)]
+  const avgRating = reviews.length ? Math.round(reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length * 10) / 10 : null
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
