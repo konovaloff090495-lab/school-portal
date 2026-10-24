@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {generateKeyPairSync,randomBytes,scryptSync,createHash} from 'node:crypto';
+import {mkdtempSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawn} from 'node:child_process';import {once} from 'node:events';
+import {seal,open} from './crypto.mjs';
+const pair=()=>generateKeyPairSync('rsa',{modulusLength:2048,publicKeyEncoding:{type:'spki',format:'pem'},privateKeyEncoding:{type:'pkcs8',format:'pem'}});
+const a=pair(),b=pair(),payload={name:'Synthetic privacy check',email:'privacy@example.test',phone:'+70000000000',pd_agreed:true};
+const e=seal(payload,{publicKey:a.publicKey,operator:'gerasimov',site:'proschools'});
+assert.deepEqual(open(e,{...a,operator:'gerasimov',sites:['proschools']}),payload);
+assert(!JSON.stringify(e).includes(payload.name)&&!JSON.stringify(e).includes(payload.email));
+assert.throws(()=>open({...e,site:'cardopen'},{...a,operator:'gerasimov',sites:['proschools']}));
+assert.throws(()=>open(e,{...b,operator:'gerasimov',sites:['proschools']}));
+assert.throws(()=>open({...e,data:e.data.slice(0,-4)+'AAAA'},{...a,operator:'gerasimov',sites:['proschools']}));
+const dir=mkdtempSync(join(tmpdir(),'lead-vault-test-'));let child;
+try{
+ writeFileSync(join(dir,'public.pem'),a.publicKey);writeFileSync(join(dir,'private.pem'),a.privateKey,{mode:0o600});const password=randomBytes(32).toString('hex'),token=randomBytes(32).toString('hex'),salt=randomBytes(16).toString('hex');
+ const cfg={operator:'gerasimov',label:'Synthetic operator',port:0,state:join(dir,'state'),public_key:join(dir,'public.pem'),private_key:join(dir,'private.pem'),ingest:{proschools:createHash('sha256').update(token).digest('hex')},admin_user:'owner',admin_salt:salt,admin_hash:scryptSync(password,salt,32).toString('hex')};
+ writeFileSync(join(dir,'config.json'),JSON.stringify(cfg));
+ child=spawn(process.execPath,[new URL('./server.mjs',import.meta.url).pathname,join(dir,'config.json')],{stdio:['ignore','pipe','pipe']});
+ const port=await new Promise((resolve,reject)=>{let data='';child.stdout.on('data',x=>{data+=x;try{resolve(JSON.parse(data.trim()).port)}catch{}});child.once('exit',()=>reject(Error('server_exited')));setTimeout(()=>reject(Error('startup_timeout')),5000).unref()});
+ const base='http://127.0.0.1:'+port;
+ const post=(value,auth=token,path='/ingest')=>fetch(base+path,{method:'POST',headers:{Authorization:'Bearer '+auth,'Content-Type':'application/json'},body:JSON.stringify(value)});
+ assert.equal((await post(e,'wrong')).status,401);assert.equal((await post(e)).status,201);assert.equal((await post(e)).status,200);
+ assert.equal((await post({...e,data:e.data.slice(0,-4)+'AAAA'})).status,400);
+ assert.equal((await fetch(base+'/')).status,401);
+ const headers={Authorization:'Basic '+Buffer.from('owner:'+password).toString('base64')};
+ const list=await (await fetch(base+'/',{headers})).text();assert(list.includes(e.id)&&!list.includes(payload.email));
+ const card=await fetch(base+'/'+e.id,{headers});assert.equal(card.status,200);assert((await card.text()).includes(payload.email));assert.equal(card.headers.get('cache-control'),'no-store');
+ assert.equal((await post({id:e.id,channel:'crm',status:'sent'},token,'/delivery')).status,200);
+ const bytes=readFileSync(join(dir,'state/leads.sqlite3'));assert(!bytes.includes(Buffer.from(payload.email)));assert(!bytes.includes(Buffer.from(payload.name)));
+ console.log('Encrypted lead vault checks passed: crypto integrity, operator isolation, durable idempotent ingest, writer/read separation, private access and non-plaintext storage; no messages sent');
+}finally{if(child&&child.exitCode===null){const stopped=once(child,'exit');child.kill();await stopped}rmSync(dir,{recursive:true,force:true})}
