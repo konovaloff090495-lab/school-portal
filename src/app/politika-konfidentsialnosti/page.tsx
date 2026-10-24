@@ -15,7 +15,7 @@ export default function PolitikaKonfidentsialnosti() {
       </div>
 
       <h1 className="text-3xl font-bold text-[#0F172A] mb-2">Политика конфиденциальности</h1>
-      <p className="text-sm text-gray-500 mb-8">Последнее обновление: апрель 2025 г.</p>
+      <p className="text-sm text-gray-500 mb-8">Последнее обновление: 24 октября 2026 г.</p>
 
       <div className="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">
 
@@ -87,8 +87,7 @@ export default function PolitikaKonfidentsialnosti() {
             <li>Это предусмотрено действующим законодательством</li>
           </ul>
           <p className="mt-3">
-            Для технической обработки заявок используется сервис Formspree (США). Передача данных осуществляется
-            в соответствии с условиями конфиденциальности Formspree.
+            Отправка заявок в сервис Formspree отключена. Формы консультации по программам онлайн-школы «Синергия» предоставляют данные АНО ВО «Московский университет «Синергия» (ИНН 9702078886, ОГРН 1257700508493) для рассмотрения заявки. Получатель указан у формы; обращения в редакцию в CRM школы не передаются.
           </p>
         </section>
 

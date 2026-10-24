@@ -28,7 +28,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
-  const [pdAgreed, setPdAgreed] = useState(true)
+  const [pdAgreed, setPdAgreed] = useState(false)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const fieldId = useId()
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
@@ -161,6 +161,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
           />
         )}
         {crm && <CallbackTimeField id={`${fieldId}-callback`} value={qualification.callback_time} onChange={value => setQualification(q => ({ ...q, callback_time: value }))} />}
+        {crm && (<p className="text-xs text-gray-600 leading-relaxed">Заявка на консультацию по программам онлайн-школы «Синергия» будет передана АНО ВО «Московский университет «Синергия». Она не направляется другой школе из каталога.</p>)}
         <LeadGiftNotice />
         {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
         <button
@@ -179,9 +180,9 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
               className="mt-0.5 shrink-0 accent-[#0369A1]"
             />
             <span className="text-xs text-gray-500 leading-relaxed">
-              Согласен(а) с{' '}
-              <Link href="/politika-konfidentsialnosti/" className="text-[#0369A1] hover:underline" target="_blank">
-                политикой обработки персональных данных
+              Даю согласие на{' '}
+              <Link href="/soglasie-na-obrabotku-personalnyh-dannyh/" className="text-[#0369A1] hover:underline" target="_blank">
+                обработку персональных данных
               </Link>
             </span>
           </label>
