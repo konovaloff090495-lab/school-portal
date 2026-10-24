@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {request} from 'node:http';
 import {generateKeyPairSync,randomBytes,scryptSync,createHash} from 'node:crypto';
-import {mkdtempSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
+import {mkdtempSync,writeFileSync,readFileSync,rmSync,mkdirSync,symlinkSync,realpathSync,truncateSync} from 'node:fs';
 import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawn,spawnSync} from 'node:child_process';import {once} from 'node:events';
 import {seal,open} from './crypto.mjs';
 import {totp} from './mfa.mjs';
@@ -13,14 +13,14 @@ assert(!JSON.stringify(e).includes(payload.name)&&!JSON.stringify(e).includes(pa
 assert.throws(()=>open({...e,site:'cardopen'},{...a,operator:'gerasimov',sites:['proschools']}));
 assert.throws(()=>open(e,{...b,operator:'gerasimov',sites:['proschools']}));
 assert.throws(()=>open({...e,data:e.data.slice(0,-4)+'AAAA'},{...a,operator:'gerasimov',sites:['proschools']}));
-const dir=mkdtempSync(join(tmpdir(),'lead-vault-test-'));let child;
+const dir=realpathSync(mkdtempSync(join(tmpdir(),'lead-vault-test-')));let child;
 try{
  writeFileSync(join(dir,'public.pem'),a.publicKey);writeFileSync(join(dir,'private.pem'),a.privateKey,{mode:0o600});const password=randomBytes(32).toString('hex'),token=randomBytes(32).toString('hex'),salt=randomBytes(16).toString('hex');
  const cfg={operator:'gerasimov',label:'Synthetic operator',admin_hosts:['127.0.0.1'],port:0,state:join(dir,'state'),public_key:join(dir,'public.pem'),private_key:join(dir,'private.pem'),ingest:{proschools:createHash('sha256').update(token).digest('hex')},admin_user:'owner',admin_salt:salt,admin_hash:scryptSync(password,salt,32).toString('hex')};
  writeFileSync(join(dir,'mail.py'),"import sys,json\nx=json.load(sys.stdin)\nprint(json.dumps({'status':'pending','token':'synthetic-only-token','private_contact':x.get('email')}))\n");
  cfg.mfa={secret:'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ',recovery_salt:'synthetic',recovery_hashes:[]};
  cfg.mailer={site:'proschools',script:join(dir,'mail.py'),cwd:dir,db:'synthetic',field_key:'synthetic',pause:'synthetic',smtp_password:'synthetic-only'};
- writeFileSync(join(dir,'school.py'),"import sys,json\nx=json.load(sys.stdin)\nprint(json.dumps({'photos':[],'data':{'email':'privacy@example.test'}} if sys.argv[1]=='admin-get' else {'ok':True}))\n");cfg.school={site:'proschools',script:join(dir,'school.py'),cwd:dir,env:{},photos:dir};
+ writeFileSync(join(dir,'school.py'),"import sys,json\nx=json.load(sys.stdin)\nprint(json.dumps({'photos':[{'file':c*32+'.jpg'} for c in 'bcd'],'data':{'email':'privacy@example.test'}} if sys.argv[1]=='admin-get' else {'ok':True}))\n");const photos=join(dir,'photos');mkdirSync(join(photos,'a'.repeat(32)),{recursive:true});writeFileSync(join(photos,'a'.repeat(32),'b'.repeat(32)+'.jpg'),'synthetic-image');symlinkSync(join(dir,'private.pem'),join(photos,'a'.repeat(32),'c'.repeat(32)+'.jpg'));writeFileSync(join(photos,'a'.repeat(32),'d'.repeat(32)+'.jpg'),'');truncateSync(join(photos,'a'.repeat(32),'d'.repeat(32)+'.jpg'),16*1024*1024+1);cfg.school={site:'proschools',script:join(dir,'school.py'),cwd:dir,env:{},photos};
  writeFileSync(join(dir,'config.json'),JSON.stringify(cfg));
  child=spawn(process.execPath,[new URL('./server.mjs',import.meta.url).pathname,join(dir,'config.json')],{stdio:['ignore','pipe','pipe']});
  const port=await new Promise((resolve,reject)=>{let data='';child.stdout.on('data',x=>{data+=x;try{resolve(JSON.parse(data.trim()).port)}catch{}});child.once('exit',()=>reject(Error('server_exited')));setTimeout(()=>reject(Error('startup_timeout')),5000).unref()});
@@ -46,6 +46,7 @@ try{
  const imported=spawnSync(process.execPath,[new URL('./import.mjs',import.meta.url).pathname,join(dir,'config.json')],{input:JSON.stringify([{envelope:historical,status:'sent'}]),encoding:'utf8'});
  assert.equal(imported.status,0,imported.stderr);assert.equal(JSON.parse(imported.stdout).imported,1);
  assert.equal((await fetch(base+'/'+historical.id,{headers})).status,200);
+ const photo=await fetch(base+'/schools/'+('a'.repeat(32))+'/photo/'+('b'.repeat(32))+'.jpg',{headers});assert.equal(photo.status,200);assert.equal(await photo.text(),'synthetic-image');assert.equal((await fetch(base+'/schools/'+('a'.repeat(32))+'/photo/'+('c'.repeat(32))+'.jpg',{headers})).status,404);assert.equal((await fetch(base+'/schools/'+('a'.repeat(32))+'/photo/'+('d'.repeat(32))+'.jpg',{headers})).status,400);
  const deniedLogout=await fetch(base+'/auth/logout',{method:'POST',headers:{...headers,Origin:'https://public.example.test'},redirect:'manual'});assert.equal(deniedLogout.status,403);
  const logout=await fetch(base+'/auth/logout',{method:'POST',headers:{...headers,Origin:base.replace('http:','https:')},redirect:'manual'});assert.equal(logout.status,303);assert(!(await (await fetch(base+'/'+e.id,{headers})).text()).includes(payload.email));
  const bytes=readFileSync(join(dir,'state/leads.sqlite3'));assert(!bytes.includes(Buffer.from(payload.email)));assert(!bytes.includes(Buffer.from(payload.name)));
