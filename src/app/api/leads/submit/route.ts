@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { sendTelegramMessage } from '@/lib/telegram'
+import { captureLeadSubmission, recordVaultDelivery } from '@/lib/lead-vault'
 import { sendLeadToSynergy } from '@/lib/synergy'
 import { sendWelcome } from '@/lib/welcome-mail'
 import { crmMailer } from '@/lib/crm-mailer'
@@ -9,16 +9,22 @@ const FORMSPREE_ID = process.env.FORMSPREE_ID
 
 export async function POST(req: NextRequest) {
   try {
+    if (Number(req.headers.get('content-length') || 0) > 65536) return NextResponse.json({ error: 'Слишком большой запрос' }, { status: 413 })
     const body = await req.json()
+    if (!body || typeof body !== 'object' || Array.isArray(body) || Buffer.byteLength(JSON.stringify(body)) > 65536) return NextResponse.json({ error: 'Некорректный запрос' }, { status: 400 })
     const {
       name, phone, email, question, school, city, source, pd_agreed, marketing_agreed,
       crm = true, utm, page_url, referrer, ym_client_id, landing_url, first_referrer,
       form_id, product, qualification, growth_release, selected_route,
     } = body
 
-    if (!name || !phone || !email) {
+    if (typeof name !== 'string' || typeof phone !== 'string' || typeof email !== 'string' || !name.trim() || name.length > 120 || phone.length > 40 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Заполните все обязательные поля' }, { status: 400 })
     }
+
+    if (pd_agreed !== true) return NextResponse.json({ error: 'Необходимо согласие на обработку данных' }, { status: 400 })
+    // Fail before forwarding if durable encrypted capture is unavailable.
+    const eventId = await captureLeadSubmission(body)
 
     // Forward to Formspree if configured
     if (FORMSPREE_ID) {
@@ -39,7 +45,6 @@ export async function POST(req: NextRequest) {
     const schoolLabel = school && school !== 'Не указана' ? school : null
 
     // CRM Синергии (GraphQL sendLead). B2B-формы (crm=false) туда не идут.
-    let crmLine = ''
     let crmFailed = false
     let crmReceipt: { status: 'accepted' | 'failed' | 'not_requested'; id?: string | null; error?: string } = { status: 'not_requested' }
     if (crm !== false) {
@@ -71,7 +76,7 @@ export async function POST(req: NextRequest) {
         product,
         referrer,
         ymClientId: ym_client_id,
-        personalDataAgree: pd_agreed !== false,
+        personalDataAgree: pd_agreed === true,
         marketingAgree: marketing_agreed === true,
         extra: { school: schoolLabel ?? undefined, city: city ?? undefined, source, qualification, growth_release, selected_route },
       })
@@ -79,34 +84,23 @@ export async function POST(req: NextRequest) {
         crmReceipt = { status: 'accepted', id: result.id }
         // Keep a receipt without contact details so accepted leads can be traced in Synergy.
         console.info('[Synergy] sendLead accepted:', JSON.stringify({ id: result.id, source: source ?? 'unknown' }))
-        crmLine = `\n✅ CRM Синергии: лид #${result.id ?? '?'}`
       } else {
         crmReceipt = { status: 'failed', error: result.error }
-        console.error('[Synergy] sendLead failed:', result.error)
+        console.error('[Synergy] sendLead failed:', JSON.stringify({ event_id: eventId }))
         crmFailed = true
-        crmLine = `\n⚠️ CRM Синергии: не отправлено (${result.error})`
       }
     }
 
     if (crm !== false) {
       try {
-        await recordLeadSubmission(body, crmReceipt)
+        await recordLeadSubmission({ event_id: eventId }, crmReceipt)
       } catch (error) {
         console.error('[Lead journal] write failed:', error instanceof Error ? error.message : 'unknown')
       }
     }
 
-    // Telegram notification
-    let msg = `🔔 <b>Новая заявка</b>\n\n`
-    msg += `👤 Имя: <b>${name}</b>\n`
-    msg += `📞 Телефон: <b>${phone}</b>\n`
-    msg += `📧 Email: ${email}\n`
-    if (schoolLabel) msg += `🏫 Школа: ${schoolLabel}${city ? ` (${city})` : ''}\n`
-    if (source) msg += `📍 Источник: <b>${source}</b>\n`
-    if (question) msg += `\n💬 Вопрос: ${question}`
-    msg += crmLine
-
-    await sendTelegramMessage(msg)
+    // Telegram notices are queued by the isolated vault, without contact details.
+    if (crm !== false) await recordVaultDelivery(eventId, crmFailed ? 'failed' : 'sent')
 
     if (crmFailed) {
       return NextResponse.json({ error: 'Заявка не дошла до CRM. Попробуйте ещё раз.' }, { status: 502 })
@@ -133,7 +127,7 @@ export async function POST(req: NextRequest) {
     }
     return NextResponse.json({ success: true, crm_id: crmReceipt.id ?? null })
   } catch (err) {
-    console.error('leads submit error:', err)
+    console.error('leads submit error:', err instanceof Error ? err.name : 'unknown')
     return NextResponse.json({ error: 'Внутренняя ошибка сервера' }, { status: 500 })
   }
 }
