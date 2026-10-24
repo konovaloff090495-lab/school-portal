@@ -335,7 +335,7 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
   const [name, setName] = useState(user?.name ?? '')
   const [email, setEmail] = useState(user?.email ?? '')
   const [phone, setPhone] = useState(user?.phone ?? '')
-  const [pdAgreed, setPdAgreed] = useState(true)
+  const [pdAgreed, setPdAgreed] = useState(false)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
@@ -415,6 +415,7 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
             Результаты теста будут сохранены и доступны в любое время
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
+            <p className="text-xs text-gray-600 leading-relaxed">Заявка на консультацию по программам онлайн-школы «Синергия» будет передана АНО ВО «Московский университет «Синергия». Она не направляется другой школе из каталога.</p>
             <div>
               <label className="block text-xs font-semibold text-gray-600 mb-1">Имя *</label>
               <input
@@ -466,8 +467,8 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={pdAgreed} onChange={e => setPdAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
                 <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Согласен(а) с{' '}
-                  <Link href="/politika-konfidentsialnosti/" className="text-[#7C3AED] hover:underline" target="_blank">политикой обработки персональных данных</Link>
+                  Даю согласие на{' '}
+                  <Link href="/soglasie-na-obrabotku-personalnyh-dannyh/" className="text-[#7C3AED] hover:underline" target="_blank">обработку персональных данных</Link>
                 </span>
               </label>
               <label className="flex items-start gap-2 cursor-pointer">

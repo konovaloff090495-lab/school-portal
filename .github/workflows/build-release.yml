@@ -33,6 +33,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - run: node scripts/test-lead-consent.mjs
       - run: node scripts/security/lead-vault/test.mjs
       - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
       - run: node --experimental-strip-types scripts/test-review-store.mjs
