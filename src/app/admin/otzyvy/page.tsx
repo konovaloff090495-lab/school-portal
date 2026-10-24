@@ -1,112 +1,32 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+import { ADMIN_COOKIE, validAdminSession } from '@/lib/review-admin'
+import { listPendingReviews } from '@/lib/review-store'
 import ApproveButton from './ApproveButton'
 
-// Служебная страница модерации — не индексировать
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-}
+export const metadata: Metadata = { robots: { index: false, follow: false }, referrer: 'no-referrer' }
 
-interface PendingReview {
-  schoolSlug: string
-  schoolName: string
-  authorName: string
-  childGrade?: string
-  rating: number
-  text: string
-  pros?: string
-  cons?: string
-  submittedAt: string
-}
-
-interface GithubFile {
-  name: string
-  path: string
-  sha: string
-  download_url: string | null
-  type: string
-  url: string
-}
-
-interface Props {
-  searchParams: Promise<{ secret?: string }>
-}
-
-async function fetchPendingReviews(): Promise<{ filename: string; review: PendingReview }[]> {
-  const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-  const GITHUB_OWNER = process.env.GITHUB_OWNER
-  const GITHUB_REPO = process.env.GITHUB_REPO
-
-  if (!GITHUB_TOKEN || !GITHUB_OWNER || !GITHUB_REPO) {
-    return []
+export default async function AdminReviewsPage() {
+  if (!validAdminSession((await cookies()).get(ADMIN_COOKIE)?.value)) {
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <form action="/api/reviews/login/" method="post" className="w-full max-w-sm bg-white p-6 rounded-xl border border-gray-200">
+        <h1 className="text-xl font-semibold mb-4">Модерация отзывов</h1>
+        <label htmlFor="review-password" className="block text-sm mb-2">Пароль администратора</label>
+        <input id="review-password" name="password" type="password" autoComplete="current-password" required maxLength={256} className="w-full rounded-lg border border-gray-300 p-3 mb-4" />
+        <button className="w-full bg-[#0369A1] text-white rounded-lg p-3">Войти</button>
+      </form>
+    </div>
   }
-
-  // List files in scripts/pending-reviews/
-  const listRes = await fetch(
-    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/scripts/pending-reviews`,
-    {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28',
-      },
-      cache: 'no-store',
-    }
-  )
-
-  if (!listRes.ok) {
-    // Directory doesn't exist yet — no pending reviews
-    return []
-  }
-
-  const files: GithubFile[] = await listRes.json()
-  const jsonFiles = files.filter(f => f.type === 'file' && f.name.endsWith('.json'))
-
-  // Fetch content of each file in parallel
-  const results = await Promise.allSettled(
-    jsonFiles.map(async (file) => {
-      const fileRes = await fetch(file.url, {
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
-          Accept: 'application/vnd.github+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-        },
-        cache: 'no-store',
-      })
-      if (!fileRes.ok) return null
-      const fileData = await fileRes.json() as { content: string }
-      const review: PendingReview = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf-8'))
-      return { filename: file.name, review }
-    })
-  )
-
-  return results
-    .filter((r): r is PromiseFulfilledResult<{ filename: string; review: PendingReview } | null> => r.status === 'fulfilled')
-    .map(r => r.value)
-    .filter((r): r is { filename: string; review: PendingReview } => r !== null)
-}
-
-export default async function AdminReviewsPage({ searchParams }: Props) {
-  const { secret } = await searchParams
-  const ADMIN_SECRET = process.env.ADMIN_SECRET
-
-  if (!ADMIN_SECRET || secret !== ADMIN_SECRET) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">403</h1>
-          <p className="text-gray-600">Forbidden — неверный секрет</p>
-        </div>
-      </div>
-    )
-  }
-
-  const pending = await fetchPendingReviews()
+  const pending = await listPendingReviews()
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-gray-900">Модерация отзывов</h1>
+          <form action="/api/reviews/logout/" method="post" className="mt-3">
+            <button className="text-sm text-gray-500 underline">Выйти</button>
+          </form>
           <p className="text-gray-500 text-sm mt-1">
             {pending.length === 0
               ? 'Нет отзывов на проверке'
@@ -156,7 +76,7 @@ export default async function AdminReviewsPage({ searchParams }: Props) {
                   </div>
 
                   <div className="shrink-0">
-                    <ApproveButton filename={filename} adminSecret={ADMIN_SECRET} />
+                    <ApproveButton filename={filename}  />
                   </div>
                 </div>
               </div>

@@ -4,10 +4,9 @@ import { useRouter } from 'next/navigation'
 
 interface ApproveButtonProps {
   filename: string
-  adminSecret: string
 }
 
-export default function ApproveButton({ filename, adminSecret }: ApproveButtonProps) {
+export default function ApproveButton({ filename }: ApproveButtonProps) {
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -21,7 +20,6 @@ export default function ApproveButton({ filename, adminSecret }: ApproveButtonPr
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: adminSecret,
         },
         body: JSON.stringify({ filename }),
       })
