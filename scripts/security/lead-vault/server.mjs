@@ -66,7 +66,7 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
    const value=JSON.stringify(input),hash=digest(value),old=db.prepare('SELECT digest FROM leads WHERE id=?').get(input.id);
    if(old)return json(old.digest===hash?200:409,old.digest===hash?{id:input.id,stored:true,duplicate:true}:{error:'conflict'});
    db.exec('BEGIN IMMEDIATE');try{
-    db.prepare('INSERT INTO leads(id,site,created_at,received_at,envelope,digest) VALUES(?,?,?,?,?,?)').run(input.id,site,input.created_at,new Date().toISOString(),value,hash);audit('stored',input.id,site);if(cfg.notifications?.[site]&&captured?._vault_notification!=='silent')db.prepare("INSERT INTO jobs(lead_id,channel,site) VALUES(?,'telegram',?)").run(input.id,site);db.exec('COMMIT');
+    db.prepare('INSERT INTO leads(id,site,created_at,received_at,envelope,digest) VALUES(?,?,?,?,?,?)').run(input.id,site,input.created_at,new Date().toISOString(),value,hash);audit('stored',input.id,site);if(cfg.notifications?.[site]&&!(site==='cardopen'&&captured?.kind==='bank_postback'&&captured?._vault_notification==='silent'))db.prepare("INSERT INTO jobs(lead_id,channel,site) VALUES(?,'telegram',?)").run(input.id,site);db.exec('COMMIT');
    }catch(e){db.exec('ROLLBACK');throw e}
    return json(201,{id:input.id,stored:true});
   }
