@@ -62,11 +62,11 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
     db.prepare('UPDATE leads SET delivery=? WHERE id=? AND site=?').run(JSON.stringify(status),input.id,site);return json(200,{stored:true});
    }
    if(input.site!==site)return json(403,{error:'wrong_site'});
-   open(input,{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});
+   const captured=open(input,{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});
    const value=JSON.stringify(input),hash=digest(value),old=db.prepare('SELECT digest FROM leads WHERE id=?').get(input.id);
    if(old)return json(old.digest===hash?200:409,old.digest===hash?{id:input.id,stored:true,duplicate:true}:{error:'conflict'});
    db.exec('BEGIN IMMEDIATE');try{
-    db.prepare('INSERT INTO leads(id,site,created_at,received_at,envelope,digest) VALUES(?,?,?,?,?,?)').run(input.id,site,input.created_at,new Date().toISOString(),value,hash);audit('stored',input.id,site);if(cfg.notifications?.[site])db.prepare("INSERT INTO jobs(lead_id,channel,site) VALUES(?,'telegram',?)").run(input.id,site);db.exec('COMMIT');
+    db.prepare('INSERT INTO leads(id,site,created_at,received_at,envelope,digest) VALUES(?,?,?,?,?,?)').run(input.id,site,input.created_at,new Date().toISOString(),value,hash);audit('stored',input.id,site);if(cfg.notifications?.[site]&&captured?._vault_notification!=='silent')db.prepare("INSERT INTO jobs(lead_id,channel,site) VALUES(?,'telegram',?)").run(input.id,site);db.exec('COMMIT');
    }catch(e){db.exec('ROLLBACK');throw e}
    return json(201,{id:input.id,stored:true});
   }
@@ -110,10 +110,10 @@ let sending=false,stopping=false;
 async function notifications(){
  if(sending||stopping)return;sending=true;
  try{for(const job of db.prepare("SELECT * FROM jobs WHERE status='pending' AND next_at<=? ORDER BY next_at LIMIT 10").all(Date.now())){
-  if(stopping)break;const target=cfg.notifications?.[job.site];if(!target)continue;
+  if(stopping)break;const stored=db.prepare('SELECT envelope FROM leads WHERE id=?').get(job.lead_id);const payload=open(JSON.parse(stored.envelope),{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});const bank=job.site==='cardopen'&&payload.kind==='bank_postback';const bankTarget=cfg.bank_notification||cfg.notifications?.cardopen;const target=bank?(bankTarget?.use_cardopen_token?{...bankTarget,token:cfg.notifications?.cardopen?.token}:bankTarget):cfg.notifications?.[job.site];if(!target?.token)continue;
   db.prepare('UPDATE jobs SET attempts=attempts+1,next_at=? WHERE lead_id=? AND channel=?').run(Date.now()+Math.min(3600000,30000*2**Math.min(job.attempts,7)),job.lead_id,job.channel);
   try{
-   const text='Новая заявка · '+job.site+'\nНомер: '+job.lead_id+'\nЗакрытая карточка: '+cfg.admin_url+job.lead_id;
+   const label=bank?'Card Open: событие банка · '+({'pending':'заявка','approved':'карта выпущена','rejected':'отказ'}[payload.record?.status]||'новое событие'):'Новая заявка · '+job.site;const text=label+'\nНомер: '+job.lead_id+'\nЗакрытая карточка: '+cfg.admin_url+job.lead_id;
    const response=await fetch('https://api.telegram.org/bot'+target.token+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:target.chat_id,text,disable_web_page_preview:true}),signal:AbortSignal.timeout(15000)});
    const receipt=await response.json();if(!response.ok||!receipt.ok)throw Error('retry');
    db.exec('BEGIN IMMEDIATE');try{

@@ -11,7 +11,7 @@ import time
 import sys
 
 HOME = pathlib.Path('/home/k/kvantb7q')
-SITES = {'card-open': 'card-open.ru', 'delomba': 'delo.mba', 'delomba-private': 'delo.mba', 'delomba-records': 'delo.mba'}
+SITES = {'card-open': 'card-open.ru', 'delomba': 'delo.mba', 'delomba-private': 'delo.mba', 'delomba-records': 'delo.mba', 'cardopen-records': 'card-open.ru'}
 selection = os.environ.get('SSH_ORIGINAL_COMMAND', '')
 if selection not in SITES:
     sys.exit('Only fixed site exports are allowed')
@@ -24,6 +24,7 @@ with tempfile.TemporaryDirectory(prefix='portfolio-db-') as temp, tarfile.open(f
     for folder, dirs, files in os.walk(str(root), followlinks=False):
         dirs[:] = sorted(d for d in dirs if d not in manifest['excluded'])
         base = pathlib.Path(folder)
+        if selection=='cardopen-records' and base==root:dirs[:]=[];files=[name for name in files if name=='ppm_postbacks.jsonl']
         if selection in ('delomba-private','delomba-records') and base==root:dirs[:]=[d for d in dirs if d in ['.crm','.submissions','.franchise_submissions','.consent-evidence','.privacy']];files=[]
         archive.add(str(base), arcname=str(base.relative_to(HOME)), recursive=False)
         if selection=='delomba-records':

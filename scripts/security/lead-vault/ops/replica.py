@@ -121,6 +121,12 @@ if '--verify' in sys.argv:
                 for member in members:
                     if member.isfile() and member.name.endswith('.json') and ('/.submissions/' in member.name or '/.franchise_submissions/' in member.name):
                         value=json.loads(archive.extractfile(member).read());assert value['format']=='pf-json-v1';assert isinstance(json.loads(codec.open(value['data'],'deLomBa.record')),dict)
+        for archive_path in restored.rglob('cardopen-postbacks.tar'):
+            import tarfile,importlib.util
+            spec=importlib.util.spec_from_file_location('private_fields','/opt/portfolio-lead-vault/field_crypto.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);keys=list(restored.rglob('legacy-cardopen-fields.key'));assert len(keys)==1;codec=module.Fields(keys[0])
+            with tarfile.open(archive_path) as archive:
+                for line in archive.extractfile('card-open.ru/ppm_postbacks.jsonl').read().splitlines():
+                    value=json.loads(line);assert value['format']=='pf-jsonl-v1';assert isinstance(json.loads(codec.open(value['data'],'cardopen.postback')),dict)
         assert len(list(restored.rglob('private.pem')))==1
         (status.parent/'restore-verified.json').write_text(json.dumps({'operator':OPERATOR,'verified':dt.datetime.now(dt.timezone.utc).isoformat(),'objects':len(manifest['objects'])}))
         print('Pinned S3 download, restic read-data and SQLite/key restoration verified: '+OPERATOR)
