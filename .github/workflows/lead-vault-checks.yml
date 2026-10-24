@@ -3,11 +3,15 @@ on:
   push:
     paths:
       - scripts/security/lead-vault/**
+      - scripts/privacy/**
+      - scripts/crm-mailer.py
       - src/lib/lead-vault.ts
       - .github/workflows/lead-vault-checks.yml
   pull_request:
     paths:
       - scripts/security/lead-vault/**
+      - scripts/privacy/**
+      - scripts/crm-mailer.py
       - src/lib/lead-vault.ts
       - .github/workflows/lead-vault-checks.yml
 permissions:
@@ -24,6 +28,8 @@ jobs:
           sparse-checkout: |
             /scripts/security/lead-vault/
             /src/lib/lead-vault.ts
+            /scripts/privacy/
+            /scripts/crm-mailer.py
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -31,3 +37,7 @@ jobs:
       - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
       - run: node scripts/security/lead-vault/test-outbox.mjs
       - run: python3 -m py_compile scripts/security/lead-vault/ops/*.py
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends python3-cryptography
+      - run: /usr/bin/python3 scripts/privacy/test-fields.py
+      - run: /usr/bin/python3 scripts/privacy/test-proschools-mailer.py
+      - run: /usr/bin/python3 scripts/privacy/test-mailer-client.py
