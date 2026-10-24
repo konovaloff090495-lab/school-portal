@@ -79,7 +79,7 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
    let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>2048)return json(400,{error:'too_large'})}
    const input=Object.fromEntries(new URLSearchParams(raw));
    const passwordRequest={headers:{...req.headers,authorization:'Basic '+Buffer.from(String(input.username||'')+':'+String(input.password||'')).toString('base64')},socket:req.socket};
-   if(!admin(passwordRequest)||!factor.verify(req,input))return json(403,{error:'invalid_or_expired_credentials'});
+   if(!admin(passwordRequest)||!factor.verify(req,input)){res.writeHead(403,{'Content-Type':'text/html; charset=utf-8'});res.end(page('<p>Не удалось войти. Проверьте логин, пароль и текущий код приложения.</p><p><a href="/">Открыть форму входа заново</a></p>'));return;}
    factor.session(res);res.writeHead(303,{Location:'/'});res.end();return;
   }
   if(req.method==='GET'&&(path==='/'||/^\/[a-f0-9-]{36}$/.test(path)||/^\/schools\/[a-f0-9]{32}(?:\/photo\/[a-f0-9]{32}\.jpg)?$/.test(path))){
