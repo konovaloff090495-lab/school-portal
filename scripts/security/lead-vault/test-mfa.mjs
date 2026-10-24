@@ -7,6 +7,9 @@ try{const factor=mfa(cfg,(x)=>audits.push(x));assert(!factor.active());const req
  assert(factor.verify(req,{nonce,code:totp(secret,Math.floor(Date.now()/30000))}));assert(factor.active());factor.session(res);req.headers.cookie=headers['Set-Cookie'][0].split(';')[0];assert(factor.valid(req));assert(!factor.valid({...req,headers:{cookie:'__Host-vault-session=bad'}}));
  nonce=challenge();assert(!factor.verify(req,{nonce,code:totp(secret,Math.floor(Date.now()/30000))}));
  nonce=challenge();assert(factor.verify(req,{nonce,code:recovery}));nonce=challenge();assert(!factor.verify(req,{nonce,code:recovery}));
- const restored=mfa(cfg,()=>{});assert(restored.active());assert(audits.includes('mfa_login')&&audits.includes('mfa_failed'));
- console.log('MFA: RFC6238 vectors, cross-origin rejection, activation, replay rejection, one-use recovery codes and persisted state passed; synthetic only');
+ const restored=mfa(cfg,()=>{});assert(restored.active());
+ const secondRecovery='abcdef1234567890abcdef12';cfg.mfa.recovery_hashes.push(createHash('sha256').update(salt+':'+secondRecovery).digest('hex'));
+ for(let i=0;i<5;i++){nonce=challenge();assert(!factor.verify({...req,headers:{...req.headers,'x-real-ip':'192.0.2.'+String(i+1)}},{nonce,code:'invalid-format'}))}
+ nonce=challenge();assert(!factor.verify({...req,headers:{...req.headers,'x-real-ip':'198.51.100.1'}},{nonce,code:secondRecovery}));assert(audits.includes('mfa_login')&&audits.includes('mfa_failed'));
+ console.log('MFA: RFC6238 vectors, cross-origin rejection, activation, replay rejection, one-use recovery codes, distributed-guessing lockout and persisted state passed; synthetic only');
 }finally{rmSync(dir,{recursive:true,force:true})}

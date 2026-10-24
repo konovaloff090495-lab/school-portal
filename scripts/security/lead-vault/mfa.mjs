@@ -20,14 +20,14 @@ export function mfa(cfg,audit){
    const host=String(req.headers.host||'').toLowerCase();if(req.headers.origin!=='https://'+host)return false;
    const nonce=cookie(req)['__Host-vault-challenge'];if(!nonce||!eq(nonce,String(input.nonce||'')))return false;
    if(!db.prepare('DELETE FROM challenges WHERE token=? AND expires>?').run(hash(nonce),Date.now()).changes)return false;
-   const ip=String(req.headers['x-real-ip']||req.socket.remoteAddress),now=Date.now(),a=db.prepare('SELECT n,until FROM attempts WHERE ip=?').get(ip);if(a&&a.until>now&&a.n>=5)return false;
+   const ip=String(req.headers['x-real-ip']||req.socket.remoteAddress),account='@account:'+cfg.admin_user,now=Date.now();const actors=[ip,account].map(key=>({key,state:db.prepare('SELECT n,until FROM attempts WHERE ip=?').get(key)}));if(actors.some(({state})=>state&&state.until>now&&state.n>=5))return false;
    const code=String(input.code||'').trim().replace(/[ -]/g,'');let success=false;
    db.exec('BEGIN IMMEDIATE');try{
     const last=Number(db.prepare("SELECT v FROM state WHERE k='last_counter'").get()?.v||'-1'),step=Math.floor(now/30000);
     if(/^\d{6}$/.test(code)){for(const c of [step-1,step,step+1])if(c>last&&eq(totp(cfg.mfa.secret,c),code)){db.prepare("INSERT INTO state VALUES('last_counter',?) ON CONFLICT(k) DO UPDATE SET v=excluded.v").run(String(c));success=true;break}}
     else if(enabled()&&/^[a-f0-9]{24}$/.test(code)){const h=hash(cfg.mfa.recovery_salt+':'+code);if(cfg.mfa.recovery_hashes.includes(h)&&!db.prepare('SELECT hash FROM used_recovery WHERE hash=?').get(h)){db.prepare('INSERT INTO used_recovery VALUES(?)').run(h);success=true}}
-    if(success){db.prepare("INSERT INTO state VALUES('enabled','1') ON CONFLICT(k) DO UPDATE SET v='1'").run();db.prepare('DELETE FROM attempts WHERE ip=?').run(ip)}
-    else db.prepare('INSERT INTO attempts VALUES(?,?,?) ON CONFLICT(ip) DO UPDATE SET n=excluded.n,until=excluded.until').run(ip,a&&a.until>now?a.n+1:1,now+900000);
+    if(success){db.prepare("INSERT INTO state VALUES('enabled','1') ON CONFLICT(k) DO UPDATE SET v='1'").run();db.prepare('DELETE FROM attempts WHERE ip IN (?,?)').run(ip,account)}
+    else for(const {key,state} of actors)db.prepare('INSERT INTO attempts VALUES(?,?,?) ON CONFLICT(ip) DO UPDATE SET n=excluded.n,until=excluded.until').run(key,state&&state.until>now?state.n+1:1,now+900000);
     db.exec('COMMIT');
    }catch(e){db.exec('ROLLBACK');throw e}
    audit(success?'mfa_login':'mfa_failed',null,cfg.admin_user);return success;
