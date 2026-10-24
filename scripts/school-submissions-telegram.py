@@ -36,25 +36,9 @@ def admin():
     return chat,owner
 
 def body(row):
-    d=json.loads(row['data']);e=lambda v:html.escape(str(v or ''))
-    lines=['🏫 <b>'+('Правки школы на модерации' if row['revision'] else 'Новая школа на модерации')+'</b>','<b>'+e(d['school'])+'</b>',e(d.get('city'))+' · '+e(d.get('address')),e(d.get('type'))+' · '+e(d.get('format'))]
-    for title,key,limit in [('Классы / возраст','age',100),('Стоимость','price',180),('Сайт','website',250),('Лицензия','license',180)]:
-        value=', '.join(map(str,d.get('grades',[]))) if key=='age' and d.get('grades') else d.get(key)
-        if value:lines.append('<b>'+title+':</b> '+e(value[:limit]))
-    lines.extend(['','<b>О школе:</b> '+e(d.get('description','')[:900])])
-    for title,key in [('Программы','features'),('Поступление','admission')]:
-        if d.get(key):lines.append('<b>'+title+':</b> '+e(d[key][:180]))
-    lines.extend(['','<b>Представитель:</b> '+e(d.get('name'))+' · '+e(d.get('role')),e(d.get('email')),'Фото: '+str(len(json.loads(row['photos']))),'', 'Выберите решение кнопкой ниже. Чтобы вернуть на доработку или уточнить причину отказа — ответьте на это сообщение текстом.','#school_'+row['id']])
-    result='\n'.join(lines)
-    plain=html.unescape(re.sub(r'</?b>','',result))
-    if len(plain.encode('utf-16-le'))>5600:
-        plain=plain.encode('utf-16-le')[:5100].decode('utf-16-le',errors='ignore')+'\n\nПолные сведения — в приложенном файле.\n#school_'+row['id']
-        result=html.escape(plain)
-    return result
+    e=lambda value:html.escape(str(value))
+    return '🏫 <b>Заявка школы на модерации</b>\nНомер: '+e(row['id'])+'\nЗакрытая карточка: https://vault.pro-schools.ru/schools/'+row['id']+'\n\nВыберите решение кнопкой ниже.\n#school_'+row['id']
 
-def full_details(row):
-    d=json.loads(row['data']);labels={'school':'Школа','type':'Тип','format':'Формат','city':'Город','address':'Адрес','grades':'Классы','age':'Возраст','price':'Стоимость','license':'Лицензия','website':'Сайт','schoolPhone':'Телефон школы','schoolEmail':'Почта школы','description':'О школе','features':'Программы','admission':'Как поступить','name':'Представитель','role':'Должность','email':'Почта представителя'}
-    return '\n\n'.join(label+':\n'+(', '.join(map(str,d.get(key,[]))) if key=='grades' else str(d.get(key,''))) for key,label in labels.items())
 
 def feedback(m,c,chat):
     sent=0;tried=0
@@ -69,7 +53,7 @@ def feedback(m,c,chat):
         school=json.loads(row['data'])['school'];note=(row['feedback'] or '').encode('utf-16-le')[:5500].decode('utf-16-le',errors='ignore')
         tried+=1
         try:
-            api('sendMessage',{'chat_id':chat,'text':'⭐ Удобство добавления школы: '+str(row['score'])+'/5\n'+school+'\n\n'+note+'\n\n#school_'+row['id'],'link_preview_options':{'is_disabled':True}})
+            api('sendMessage',{'chat_id':chat,'text':'⭐ Удобство добавления школы: '+str(row['score'])+'/5\n'+'Закрытый отзыв: https://vault.pro-schools.ru/schools/'+row['id']+'\n\n#school_'+row['id'],'link_preview_options':{'is_disabled':True}})
             c.execute('UPDATE telegram_feedback SET sent_digest=?,attempts=0,due=0 WHERE application=?',(digest,row['id']));c.commit();sent+=1
         except RuntimeError:
             c.execute('UPDATE telegram_feedback SET attempts=attempts+1,due=? WHERE application=?',(m.now()+min(3600,60*2**(job['attempts']+1)),row['id']));c.commit()
@@ -93,23 +77,7 @@ def run(m):
                 if sent+failed>=5:break
                 try:
                     photos=json.loads(row['photos'])
-                    if photos and not job['photos_sent']:
-                        files={};media=[]
-                        for i,photo in enumerate(photos):
-                            if not re.fullmatch(r'[a-f0-9]{32}\.jpg',photo['file']):raise ValueError('Invalid photo')
-                            files['photo'+str(i)]=m.STORE/'photos'/row['id']/photo['file']
-                            media.append({'type':'photo','media':'attach://photo'+str(i),'caption':(json.loads(row['data'])['school']+' · '+photo.get('caption',''))[:1000]})
-                        if len(media)==1:api('sendPhoto',{'chat_id':chat,'photo':'attach://photo0','caption':media[0]['caption']},files)
-                        else:api('sendMediaGroup',{'chat_id':chat,'media':media},files)
-                        c.execute('UPDATE telegram_cards SET photos_sent=1 WHERE application=? AND revision=?',(row['id'],rev));c.commit()
-                    data=json.loads(row['data'])
-                    if not job['details_sent']:
-                        directory=m.STORE/'telegram-details';directory.mkdir(mode=0o700,exist_ok=True)
-                        document=directory/(row['id']+'-'+rev+'.txt')
-                        fd=os.open(document,os.O_WRONLY|os.O_CREAT|os.O_TRUNC,0o600)
-                        with os.fdopen(fd,'w') as f:f.write(full_details(row))
-                        api('sendDocument',{'chat_id':chat,'document':'attach://details','caption':('Полная заявка: '+data['school'])[:900]},{'details':document})
-                        c.execute('UPDATE telegram_cards SET details_sent=1 WHERE application=? AND revision=?',(row['id'],rev));c.commit()
+                    c.execute('UPDATE telegram_cards SET photos_sent=1,details_sent=1 WHERE application=? AND revision=?',(row['id'],rev));c.commit()
                     text=body(row)
                     result=api('sendMessage',{'chat_id':chat,'text':text,'parse_mode':'HTML','link_preview_options':{'is_disabled':True},'reply_markup':{'inline_keyboard':[[{'text':'✅ Опубликовать','callback_data':'ps:p:'+row['id']+':'+rev},{'text':'🚫 Отклонить','callback_data':'ps:r:'+row['id']+':'+rev}]]}})
                     c.execute('UPDATE telegram_cards SET message_id=?,body=?,error=NULL WHERE application=? AND revision=?',(result['message_id'],text,row['id'],rev));c.commit();sent+=1

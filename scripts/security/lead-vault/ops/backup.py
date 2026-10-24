@@ -11,12 +11,25 @@ state=pathlib.Path('/var/lib/portfolio-leads')/operator
 if shutil.disk_usage(base).free < 20*1024**3:raise RuntimeError('Free disk guard: need 20 GiB')
 with sqlite3.connect('file:'+str(state/'leads.sqlite3')+'?mode=ro',uri=True) as source,sqlite3.connect(stage/'leads.sqlite3') as target:source.backup(target)
 with sqlite3.connect(stage/'leads.sqlite3') as db:assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+auth=state/'auth.sqlite3'
+if auth.exists():
+ with sqlite3.connect('file:'+str(auth)+'?mode=ro',uri=True) as incoming,sqlite3.connect(stage/'auth.sqlite3') as outgoing:incoming.backup(outgoing)
+
 # Operational newsletter state belongs only to the Gerasimov contour.
 if operator=='gerasimov':
     operational=state/'crm-mailer.sqlite3'
     if operational.exists():
         with sqlite3.connect('file:'+str(operational)+'?mode=ro',uri=True) as source,sqlite3.connect(stage/'mailer.sqlite3') as target:source.backup(target)
         with sqlite3.connect(stage/'mailer.sqlite3') as check:assert check.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+# Only a fixed read-only subset of DELA private state can be exported.
+if operator=='konovalov' and pathlib.Path('/etc/portfolio-leads/konovalov/delomba-backup-enabled').exists():
+    temporary=stage/'delomba-private.incoming'
+    with temporary.open('wb') as output:
+        subprocess.run(['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=30','kvantb7q@kvantb7q.beget.tech','delomba-private'],stdout=output,check=True,timeout=180)
+    os.replace(temporary,stage/'delomba-private.tar')
+school=state/'school-submissions/applications.sqlite3'
+if operator=='gerasimov' and school.exists():
+    with sqlite3.connect('file:'+str(school)+'?mode=ro',uri=True) as incoming,sqlite3.connect(stage/'school-applications.sqlite3') as outgoing:incoming.backup(outgoing)
 password=config/'backup.key'
 if not password.exists():
  import secrets
