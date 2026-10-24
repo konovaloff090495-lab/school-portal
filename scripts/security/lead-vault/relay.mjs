@@ -11,3 +11,8 @@ for(const suffix of ['.pending','.delivery'])for(const name of files.filter(n=>/
   if(response.ok&&receipt.stored&&(suffix!=='.pending'||receipt.id===input.id))await rename(join(cfg.spool,name),join(cfg.spool,name.replace(suffix,suffix==='.pending'?'.json':'.delivery.json')));
  }catch{console.log(JSON.stringify({event:'relay_pending',site:cfg.site}));break}
 }
+
+try {
+ const pending=(await readdir(cfg.spool).catch(()=>[])).filter(n=>n.endsWith('.pending')).length;
+ await fetch(cfg.endpoint+'/heartbeat',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+cfg.ingest_token},body:JSON.stringify({pending}),signal:AbortSignal.timeout(3000)});
+}catch{console.log(JSON.stringify({event:'heartbeat_pending',site:cfg.site}))}

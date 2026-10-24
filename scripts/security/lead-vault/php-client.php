@@ -42,3 +42,10 @@ function pv_relay($cfg, $db, $id = null) {
         }
     }
 }
+
+function pv_heartbeat($cfg,$pending) {
+    if (!function_exists('curl_init') || !defined('CURLOPT_RESOLVE')) return;
+    $url=preg_replace('~/ingest$~','/heartbeat',$cfg['endpoint']);$ch=curl_init($url);
+    curl_setopt_array($ch,array(CURLOPT_POST=>true,CURLOPT_POSTFIELDS=>json_encode(array('pending'=>(int)$pending)),CURLOPT_HTTPHEADER=>array('Content-Type: application/json','Authorization: Bearer '.$cfg['ingest_token']),CURLOPT_RETURNTRANSFER=>true,CURLOPT_TIMEOUT=>3,CURLOPT_CONNECTTIMEOUT=>2,CURLOPT_SSL_VERIFYPEER=>true,CURLOPT_SSL_VERIFYHOST=>2,CURLOPT_RESOLVE=>array('pro-schools.ru:443:155.212.140.76')));
+    curl_exec($ch);curl_close($ch);
+}
