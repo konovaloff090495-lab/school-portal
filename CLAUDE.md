@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+School applications also require `portfolio-school-bridge-prepare.service` and `private-school.conf` on every deploy. Do not restore public database processing. See `docs/operational-data-protection.md` for the active encrypted stores, MFA and recovery boundaries.
+
+
 ## Актуальные правила после 24 октября 2026
 
 - Перед запуском любого релиза сохранять зависимость `portfolio-mailer-bridge-prepare.service`: root-hook устанавливает `scripts/crm-mailer.py` как клиент закрытого сервиса. БД подписчиков и ключ доступны только `lead-gerasimov`; не возвращать локальную обработку базы публичному пользователю. См. `docs/crm-mailer.md` и `docs/encrypted-lead-vault.md`.

@@ -1,0 +1,17 @@
+[Unit]
+Description=Encrypted operational state archive
+After=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/portfolio-ops-archive
+TimeoutStartSec=110
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/backups/portfolio-leads /var/lib/portfolio-leads/gerasimov /var/lib/portfolio/education-gifts /var/lib/portfolio-leads/konovalov
+CapabilityBoundingSet=CAP_DAC_READ_SEARCH CAP_SETUID CAP_SETGID CAP_CHOWN
+MemoryMax=192M
+TasksMax=32

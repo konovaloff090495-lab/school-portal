@@ -7,7 +7,7 @@ spec=importlib.util.spec_from_file_location('applications',Path(__file__).with_n
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 class ApplicationTests(unittest.TestCase):
  def setUp(self):
-  self.temp=tempfile.TemporaryDirectory();m.STORE=Path(self.temp.name);self.id='a'*32
+  self.temp=tempfile.TemporaryDirectory();m._field_codec=None;m.STORE=Path(self.temp.name);self.id='a'*32
   self.data={'school':'Школа <Тест>','email':'owner@example.test','name':'Анна','city':'Москва','marketing_agreed':True,'description':'Описание школы','pd_agreed':True,'rights':True}
   self.photo={'file':'b'*32+'.jpg','caption':'Класс'}
   self.payload={'id':self.id,'request_id':'12345678-1234-1234-1234-123456789012','data':self.data,'photos':[self.photo],'ip':'test-ip'}
@@ -20,6 +20,13 @@ class ApplicationTests(unittest.TestCase):
   with self.assertRaises(ValueError):m.operate('moderate',{'id':self.id,'status':'published'})
   self.assertEqual(m.operate('public',{}),[]);self.confirm()
   self.assertEqual(m.operate('get',self.auth)['status'],'pending')
+ def test_encrypted_storage_and_roundtrip_migration(self):
+  import sqlite3
+  m.operate('feedback',{**self.auth,'score':4,'text':'Private synthetic feedback'})
+  before=m.operate('get',self.auth);m.encrypt_state();after=m.operate('get',self.auth);self.assertEqual(before,after)
+  with sqlite3.connect(m.STORE/'applications.sqlite3') as raw:
+   self.assertTrue(raw.execute('SELECT data FROM applications').fetchone()[0].startswith('pf1:'))
+  data=(m.STORE/'applications.sqlite3').read_bytes();self.assertNotIn(self.data['email'].encode(),data);self.assertNotIn(b'Private synthetic feedback',data)
  def test_private_images_and_feedback(self):
   with self.assertRaises(PermissionError):m.operate('image',{'id':self.id,'photo':self.photo['file']})
   self.assertFalse(m.operate('image',{**self.auth,'photo':self.photo['file']})['public'])
@@ -71,7 +78,7 @@ class ApplicationTests(unittest.TestCase):
   c=m.db();self.assertEqual(m.application(c,self.id)['revision'],0);c.close()
  def test_telegram_notification_photos_and_owner_only_buttons(self):
   t=self.telegram();calls,rev=self.telegram_card(t)
-  self.assertEqual(calls[0][0],'sendPhoto');self.assertTrue(calls[0][2]);self.assertNotIn('https://pro-schools.ru/api/school-submissions/images/',str(calls))
+  self.assertEqual(calls[0][0],'sendMessage');self.assertNotIn('sendPhoto',str(calls));self.assertNotIn('sendDocument',str(calls));self.assertNotIn(self.data['email'],str(calls));self.assertNotIn('Представитель:',str(calls));self.assertIn('https://vault.pro-schools.ru/schools/'+self.id,str(calls))
   buttons=calls[-1][1]['reply_markup']['inline_keyboard'][0];self.assertEqual([b['text'] for b in buttons],['✅ Опубликовать','🚫 Отклонить']);self.assertTrue(all(len(b['callback_data'].encode())<=64 for b in buttons))
   with patch.dict(os.environ,{'TELEGRAM_CHAT_ID':'111'}),patch.object(t,'api',return_value={'message_id':123}):
    self.assertTrue(t.handle(m,self.telegram_update(rev,owner=222))['ignored']);self.assertTrue(t.handle(m,self.telegram_update(rev,msgid=999))['ignored'])
