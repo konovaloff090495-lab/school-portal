@@ -28,9 +28,13 @@ try {
   assert.equal((await post('/api/reviews/submit/', review)).status, 200)
   assert.equal((await (await fetch(origin + '/api/reviews/published/?school=' + review.schoolSlug)).json()).reviews.length, 0)
   const filename = (await readdir(path.join(state, 'pending')))[0]
-  const anonymous = await (await fetch(origin + '/admin/otzyvy/?secret=' + password)).text()
+  const anonymous = await (await fetch(origin + '/admin/otzyvy/')).text()
   assert.ok(anonymous.includes('Пароль администратора'))
   assert.ok(!anonymous.includes(password) && !anonymous.includes(review.authorName))
+  // Next includes the request URL in its Flight payload: a caller-supplied query
+  // is not a server secret leak. Check legacy URLs grant no access separately.
+  const legacy = await (await fetch(origin + '/admin/otzyvy/?secret=' + password)).text()
+  assert.ok(legacy.includes('Пароль администратора') && !legacy.includes(review.authorName))
   assert.equal((await post('/api/reviews/approve/', { filename }, { Authorization: password })).status, 401)
   assert.equal((await fetch(origin + '/api/reviews/login/', { method: 'POST', headers: { Origin: 'https://evil.example' }, body: new URLSearchParams({ password }) })).status, 403)
   const login = await fetch(origin + '/api/reviews/login/', { method: 'POST', redirect: 'manual', headers: { Origin: origin }, body: new URLSearchParams({ password }) })
