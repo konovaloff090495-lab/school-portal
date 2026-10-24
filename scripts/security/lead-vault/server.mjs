@@ -1,5 +1,5 @@
 import http from 'node:http';
-import {readFileSync,mkdirSync,chmodSync} from 'node:fs';
+import {readFileSync,mkdirSync,chmodSync,realpathSync,openSync,fstatSync,closeSync,constants} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
 import {createHash,timingSafeEqual,scryptSync} from 'node:crypto';
 import {open} from './crypto.mjs';
@@ -91,7 +91,7 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
     const parts=path.split('/'),row=await school(cfg,'proschools','admin-get',{id:parts[2]},true);if(row.error)return json(404,{error:'not_found'});
     if(parts[3]==='photo'){
      if(!row.photos?.some(x=>x.file===parts[4]))return json(404,{error:'photo_not_found'});
-     const bytes=readFileSync(cfg.school.photos+'/'+parts[2]+'/'+parts[4]);audit('school_photo_view',parts[2],cfg.admin_user);res.setHeader('Content-Type','image/jpeg');res.end(bytes);return;
+     const expected=cfg.school.photos+'/'+parts[2]+'/'+parts[4];if(realpathSync(expected)!==expected)return json(404,{error:'photo_not_found'});const fd=openSync(expected,constants.O_RDONLY|constants.O_NOFOLLOW);let bytes;try{const stat=fstatSync(fd);if(!stat.isFile()||stat.size>16*1024*1024)throw Error('invalid_photo');bytes=readFileSync(fd)}finally{closeSync(fd)}audit('school_photo_view',parts[2],cfg.admin_user);res.setHeader('Content-Type','image/jpeg');res.end(bytes);return;
     }
     audit('school_view',parts[2],cfg.admin_user);res.end(page('<p><a href="/">К списку заявок</a></p><h2>Заявка школы</h2><pre>'+escape(JSON.stringify(row,null,2))+'</pre><p>'+row.photos.map((x,i)=>'<a href="'+path+'/photo/'+escape(x.file)+'">Фото '+String(i+1)+'</a>').join(' · ')+'</p>',true));return;
    }
