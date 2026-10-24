@@ -1,4 +1,8 @@
 #!/bin/bash
+# SECURITY CUTOVER 2026-10-24: legacy host was compromised.
+printf '%s\n' 'Legacy deployment is disabled. Production is portfolio-admin@155.212.140.76.' 'Use docs/clean-host-deployment.md and a verified cloud artifact.' >&2
+exit 78
+
 # Deploy school-portal → VPS 45.80.70.209
 # Стратегия: собираем ЛОКАЛЬНО (Turbopack на VPS падает из-за RAM), rsync .next на VPS
 set -e
