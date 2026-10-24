@@ -1,3 +1,7 @@
+## Действующая схема безопасности с 24.10.2026
+
+Прод pro-schools.ru перенесён на **155.212.140.76**, SSH `portfolio-admin`, отдельный ключ `~/.ssh/portfolio_security_20261024`. Служба — `portfolio-site@proschools`, код `/srv/portfolio/proschools/current`. Домен и www переключены. Старый 45.80.70.209 скомпрометирован: не выкладывать туда код, не возвращать ему GitHub-доступ и не передавать новые секреты. Старый deploy.sh заблокирован. Использовать docs/clean-host-deployment.md; прежние инструкции PM2/root/45.80.70.209 ниже и в CLAUDE.md являются историческими.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
