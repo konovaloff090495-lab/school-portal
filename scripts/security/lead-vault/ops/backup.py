@@ -27,6 +27,11 @@ if operator=='konovalov' and pathlib.Path('/etc/portfolio-leads/konovalov/delomb
     with temporary.open('wb') as output:
         subprocess.run(['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=30','kvantb7q@kvantb7q.beget.tech','delomba-private'],stdout=output,check=True,timeout=180)
     os.replace(temporary,stage/'delomba-private.tar')
+if operator=='konovalov' and pathlib.Path('/etc/portfolio-leads/konovalov/card-postback-backup-enabled').exists():
+    temporary=stage/'cardopen-postbacks.incoming'
+    with temporary.open('wb') as output:
+        subprocess.run(['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=30','kvantb7q@kvantb7q.beget.tech','cardopen-records'],stdout=output,check=True,timeout=90)
+    os.replace(temporary,stage/'cardopen-postbacks.tar')
 school=state/'school-submissions/applications.sqlite3'
 if operator=='gerasimov' and school.exists():
     with sqlite3.connect('file:'+str(school)+'?mode=ro',uri=True) as incoming,sqlite3.connect(stage/'school-applications.sqlite3') as outgoing:incoming.backup(outgoing)

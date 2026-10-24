@@ -20,6 +20,12 @@ The site-specific key and codec live above `public_html`, in `.privacy`, with pr
 
 Requests take a shared handoff lock; migration takes it exclusively. JSON writes are atomic, and SQLite rejects legacy plaintext email writes after activation. Primary `forum` sources were synchronized only after SHA checks, preserving legal controls. The patch and before/after manifest in `scripts/privacy` contain no credentials. Reconcile future source changes before reapplying the patch.
 
+## Card Open bank callbacks / Konovalov
+
+The six historical bank postback records are encrypted in place, roundtripped and restored from pinned S3 without replaying notifications. The callback URL and sender key remain unchanged. Authorized SSH analytics can use `/usr/local/bin/php5.6 /home/k/kvantb7q/card-open.ru/.privacy/postback-export.php` to obtain the original JSON records. Private field codec/key stay above public_html. The callback preserves duplicate detection, encrypts and commits a durable vault receipt before acknowledging; storage failure returns503 instead of a false200.
+
+The revoked old bot token was removed from shared-hosting callback configuration. Notifications now use the clean server's durable queue and original recipient. They reference the active main Card token dynamically so future token rotations also apply to bank notices. Tests and duplicates do not notify. Bank identifiers stay in protected cards; Telegram receives event type and an authenticated link. The last old bank record was6 October; no new non-test events occurred after the token file update. No history was replayed and no real test callback/message was sent. Fixed `cardopen-records` read-only exports feed the minute and hourly Konovalov backups.
+
 ## Education gifts / separate scope
 
 Contacts already used application AES-GCM. The entire working directory is additionally on LUKS2/ext4: `/var/lib/portfolio-encrypted/education-gifts.luks` mounted at `/var/lib/portfolio/education-gifts`. This covers Telegram identifiers, routing, outbox and WAL as well. Native filesystem locking is retained. Concurrent SQLite writers and close/reopen recovery were tested before switching; all four live state files and table counts were then compared before restarting the existing services. Bot code and delivery statuses were unchanged.
