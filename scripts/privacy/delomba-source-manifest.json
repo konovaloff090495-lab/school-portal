@@ -1,0 +1,34 @@
+{
+  "_crm.php": {
+    "before": "246f114424837194c92310491f8ca930fc4d57c4ec3435af425327e01ebdc526",
+    "after": "9f79e2baaa4477496b58b91c9d119d349c13b7c304865f6ba0c02e1dbdeba7d1"
+  },
+  "_subs.php": {
+    "before": "017056842c0f47856db5c53ee5181cc2cede6bf344e5547e8161928a18649f52",
+    "after": "a780291410a6386bc490ead5ef676afb7744308ae97744ab3cc65947a6261cbf"
+  },
+  "event.php": {
+    "before": "1efce88f7e496eacd8ba4da9a46585463066ef5b53ce317e831fc814e4ecfaaa",
+    "after": "9dabe296179517521867c243306ddafeaf21204b4c5e5949c313af14e61489f6"
+  },
+  "feedback.php": {
+    "before": "b70c64882549223092985ec708e69ef0b637a907d4470c91a7bf7bc0ad15aa4e",
+    "after": "96e7d2b54e137345594d475431ae00328209113edee728d8c5cfc15ef4a306ea"
+  },
+  "franchise_submit.php": {
+    "before": "12b80013287ae5845d5b2ff51f0800f3c830c137ea5975fbc93493f159529bee",
+    "after": "3ec951d60f017a04f3d095666fe441b20fa754faa05d2b7d4eb16dca096390c6"
+  },
+  "franchise_inbox.php": {
+    "before": "579a66e6c00ab6d215a4c510a2b79392ee25d6669cf932d50852b466cac77c37",
+    "after": "a21ad828c06a7077a640c33b7da83337ae467702c36beb0be2e07b002f68ae99"
+  },
+  "crm_api.php": {
+    "before": "ce41e12d8cdde590489420fefd0f2e636dac8e5826ddffcadb62c33a035a2bd6",
+    "after": "ed93ca1ebc57fc4ada2bf8b12df5fce5bd0c332d90364d7540dac4f29772c357"
+  },
+  "crm.php": {
+    "before": "e7ff02923222beb79bc44ab12d9a890d12ca3037a77cb182441990df084aa539",
+    "after": "e28c7f29e03f9514eb50d68463f46611e9ed4a67682d91eaf5a1ee5c6b55e190"
+  }
+}

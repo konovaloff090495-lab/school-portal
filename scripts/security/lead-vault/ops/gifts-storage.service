@@ -1,0 +1,14 @@
+[Unit]
+Description=Unlock isolated encrypted education gifts state
+Before=portfolio-gifts@app-server.service portfolio-gifts@poll.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/portfolio-gifts-storage open
+ExecStop=/usr/local/sbin/portfolio-gifts-storage close
+TimeoutStartSec=45
+TimeoutStopSec=45
+UMask=0077
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target

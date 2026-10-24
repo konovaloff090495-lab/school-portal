@@ -1,0 +1,94 @@
+--- a/_crm.php
++++ b/_crm.php
+@@ -1,0 +2 @@
++require_once dirname(__FILE__) . '/_private-fields.php';
+@@ -31,0 +33,3 @@
++    $db->exec('PRAGMA synchronous=FULL');
++    $db->exec('PRAGMA secure_delete=ON');
++    @chmod(CRM_DIR . '/crm.sqlite',0600);
+@@ -63,0 +68,2 @@
++    if (!in_array('email_lookup', $cols, true)) { $db->exec('ALTER TABLE subscribers ADD COLUMN email_lookup TEXT'); }
++    $db->exec('CREATE UNIQUE INDEX IF NOT EXISTS subscribers_email_lookup ON subscribers(email_lookup)');
+@@ -69 +75 @@
+-    $st->execute(array(time(), $sub_id, $type, is_string($data) ? $data : json_encode($data, JSON_UNESCAPED_UNICODE)));
++    $st->execute(array(time(), $sub_id, $type, dlm_seal(is_string($data) ? $data : json_encode($data, JSON_UNESCAPED_UNICODE),'data')));
+@@ -87,0 +94 @@
++    if($field==='email'&&dlm_private_enabled()){ $field='email_lookup';$val=dlm_email_index($val); }
+@@ -89 +96 @@
+-    $r = $st->fetch(PDO::FETCH_ASSOC); return $r ? $r : null;
++    $r = $st->fetch(PDO::FETCH_ASSOC); return $r ? dlm_private_fields($r) : null;
+@@ -91,0 +99 @@
++    if(dlm_private_enabled()){if(isset($fields['email']))$fields['email_lookup']=dlm_email_index($fields['email']);foreach(array('email','ip','ua','src','note') as $name)if(array_key_exists($name,$fields))$fields[$name]=dlm_seal($fields[$name],$name);}
+@@ -232,0 +241 @@
++        if(dlm_private_enabled()){$fields['email_lookup']=dlm_email_index($email);foreach(array('email','ip','ua','src','note') as $name)if(array_key_exists($name,$fields))$fields[$name]=dlm_seal($fields[$name],$name);}
+@@ -318 +327 @@
+-    $db->prepare('UPDATE messages SET status=\'failed\', error=?, subject=? WHERE id=?')->execute(array(mb_substr($err, 0, 300), $r['subject'], $msg['id']));
++    $db->prepare('UPDATE messages SET status=\'failed\', error=?, subject=? WHERE id=?')->execute(array(dlm_seal(mb_substr($err, 0, 300),'error'), $r['subject'], $msg['id']));
+--- a/_subs.php
++++ b/_subs.php
+@@ -1,0 +2 @@
++require_once dirname(__FILE__) . '/_private-fields.php';
+@@ -26 +27 @@
+-    $rec = json_decode($raw, true);
++    $rec = dlm_read_record(sub_path($token));
+@@ -34,2 +35 @@
+-    return (bool) @file_put_contents(sub_path($rec['token']),
+-                                     json_encode($rec, JSON_UNESCAPED_UNICODE));
++    return dlm_write_record(sub_path($rec['token']),$rec);
+@@ -54 +54 @@
+-        $rec = json_decode(@file_get_contents($f), true);
++        $rec = dlm_read_record($f);
+--- a/event.php
++++ b/event.php
+@@ -134 +134 @@
+-    @file_put_contents($sd . '/' . $token . '.json', json_encode($rec, JSON_UNESCAPED_UNICODE));
++    dlm_write_record($sd . '/' . $token . '.json',$rec);
+--- a/feedback.php
++++ b/feedback.php
+@@ -35 +35 @@
+-if (@file_put_contents($dir . '/' . $token . '.json', json_encode($data, JSON_UNESCAPED_UNICODE)) === false) {
++if (dlm_write_record($dir . '/' . $token . '.json',$data) === false) {
+@@ -42 +42 @@
+-    . "✉️ " . sub_email($rec) . "\n"
++
+--- a/franchise_submit.php
++++ b/franchise_submit.php
+@@ -1,0 +2 @@
++require_once dirname(__FILE__) . '/_private-fields.php';
+@@ -41 +42 @@
+-if (@file_put_contents($path, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT), LOCK_EX) === false) { back('error'); }
++if (dlm_write_record($path,$row) === false) { back('error'); }
+--- a/franchise_inbox.php
++++ b/franchise_inbox.php
+@@ -1,0 +2 @@
++require_once dirname(__FILE__) . '/_private-fields.php';
+@@ -15 +16 @@
+-    $row = json_decode(@file_get_contents($path), true);
++    $row = dlm_read_record($path);
+@@ -21 +22 @@
+-    if (@file_put_contents($path, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT), LOCK_EX) === false) { reply(array('ok'=>false),500); }
++    if (dlm_write_record($path,$row) === false) { reply(array('ok'=>false),500); }
+@@ -27 +28 @@
+-    $row = json_decode(@file_get_contents($path), true);
++    $row = dlm_read_record($path);
+--- a/crm_api.php
++++ b/crm_api.php
+@@ -48 +48 @@
+-    j($db->query($sql)->fetchAll(PDO::FETCH_ASSOC));
++    j(dlm_private_rows($db->query($sql)->fetchAll(PDO::FETCH_ASSOC)));
+@@ -52 +52 @@
+-    j($db->query("SELECT l.ts,l.type,l.data,s.email FROM log l LEFT JOIN subscribers s ON s.id=l.sub_id ORDER BY l.id DESC LIMIT $n")->fetchAll(PDO::FETCH_ASSOC));
++    j(dlm_private_rows($db->query("SELECT l.ts,l.type,l.data,s.email FROM log l LEFT JOIN subscribers s ON s.id=l.sub_id ORDER BY l.id DESC LIMIT $n")->fetchAll(PDO::FETCH_ASSOC)));
+@@ -56,2 +56,2 @@
+-        'queued' => $db->query('SELECT m.kind,m.campaign,m.send_after,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status=\'queued\' ORDER BY m.send_after LIMIT 100')->fetchAll(PDO::FETCH_ASSOC),
+-        'recent' => $db->query('SELECT m.kind,m.campaign,m.status,m.sent,m.opened,m.clicked,m.error,m.subject,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status<>\'queued\' ORDER BY m.id DESC LIMIT 50')->fetchAll(PDO::FETCH_ASSOC),
++        'queued' => dlm_private_rows($db->query('SELECT m.kind,m.campaign,m.send_after,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status=\'queued\' ORDER BY m.send_after LIMIT 100')->fetchAll(PDO::FETCH_ASSOC)),
++        'recent' => dlm_private_rows($db->query('SELECT m.kind,m.campaign,m.status,m.sent,m.opened,m.clicked,m.error,m.subject,s.email FROM messages m JOIN subscribers s ON s.id=m.sub_id WHERE m.status<>\'queued\' ORDER BY m.id DESC LIMIT 50')->fetchAll(PDO::FETCH_ASSOC)),
+@@ -81 +81 @@
+-    foreach ($db->query('SELECT email,status,created,confirmed,city,src FROM subscribers ORDER BY id') as $r) {
++    foreach ($db->query('SELECT email,status,created,confirmed,city,src FROM subscribers ORDER BY id') as $r) { $r=dlm_private_fields($r);
+--- a/crm.php
++++ b/crm.php
+@@ -36 +36 @@
+-    crm_notify_admin("✅ Подписка подтверждена: " . $sub['email'] . ($sub['city'] ? " · " . $sub['city'] : '') . ($sub['role'] === 'organizer' ? ' · организатор' : '')
++    crm_notify_admin("✅ Подписка подтверждена. Номер: " . $sub['id'] . ($sub['city'] ? " · " . $sub['city'] : '') . ($sub['role'] === 'organizer' ? ' · организатор' : '')
