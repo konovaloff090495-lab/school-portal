@@ -22,9 +22,14 @@ import time
 from email.message import EmailMessage
 from urllib.parse import urlencode
 
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'privacy'))
+from pii_fields import Fields
+
 ROOT = Path(__file__).resolve().parents[1]
-DB = Path(os.environ.get('CRM_MAILER_DB', ROOT / '.crm-mailer.sqlite3'))
-PAUSE = ROOT / '.crm-mailer-paused'
+DEPLOYMENT_FILE = Path(__file__).resolve().parent / 'deployment.json'
+DEPLOYMENT = json.loads(DEPLOYMENT_FILE.read_text()) if DEPLOYMENT_FILE.exists() else {}
+DB = Path(os.environ.get('CRM_MAILER_DB', DEPLOYMENT.get('db', ROOT / '.crm-mailer.sqlite3')))
+PAUSE = Path(os.environ.get('CRM_MAILER_PAUSE_PATH', DB.parent / '.crm-mailer-paused'))
 FROM = 'hello@pro-schools.ru'
 BASE = 'https://pro-schools.ru'
 PARTNER = 'https://school-university.com'
@@ -74,11 +79,39 @@ def now():
     return dt.datetime.now(UTC)
 
 
+_fields = None
+
+def fields():
+    global _fields
+    if _fields is None:
+        configured = os.environ.get('PII_FIELDS_KEY_PATH') or DEPLOYMENT.get('field_key')
+        if not configured and os.environ.get('NODE_ENV') == 'production':
+            raise RuntimeError('Operational data encryption key is not configured')
+        key = Path(configured) if configured else ROOT / 'data-private' / 'pii-fields.key'
+        if not key.exists() and not configured:
+            Fields.create(key, 'gerasimov', 'proschools')
+        _fields = Fields(key)
+    return _fields
+
+def private_row(cursor, values):
+    row = sqlite3.Row(cursor, values)
+    if 'email_cipher' not in row.keys():
+        return row
+    data = dict(row)
+    if data['email_cipher']:
+        data['email'] = fields().open(data['email_cipher'], 'subscriber.email')
+    for key in ('first_name', 'consent_source'):
+        if key in data:
+            data[key] = fields().open(data[key], 'subscriber.' + key)
+    return data
+
+
 def connect():
     DB.parent.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(DB, timeout=10)
     os.chmod(DB, 0o600)
-    db.row_factory = sqlite3.Row
+    db.row_factory = private_row
+    db.execute('PRAGMA secure_delete=ON')
     db.execute('PRAGMA busy_timeout=10000')
     db.execute('''CREATE TABLE IF NOT EXISTS subscribers (
       email TEXT PRIMARY KEY COLLATE NOCASE,
@@ -93,6 +126,9 @@ def connect():
       last_sent_at TEXT,
       attempts INTEGER NOT NULL DEFAULT 0
     )''')
+    if 'email_cipher' not in [row['name'] for row in db.execute('PRAGMA table_info(subscribers)')]:
+        db.execute('ALTER TABLE subscribers ADD COLUMN email_cipher TEXT')
+    fields()  # Fail before modifying data if the configured key is unavailable.
     db.execute('CREATE INDEX IF NOT EXISTS subscribers_due ON subscribers(status,next_at)')
     db.execute('CREATE TABLE IF NOT EXISTS welcome_sends (sent_at REAL NOT NULL, recipient_hash TEXT NOT NULL)')
     db.execute('CREATE INDEX IF NOT EXISTS welcome_sends_time ON welcome_sends(sent_at)')
@@ -112,13 +148,13 @@ def enroll(db, data):
         return {'status': 'no-consent'}
     name = str(data.get('name', '')).strip().split(' ')[0][:60] or 'Здравствуйте'
     source = str(data.get('source', 'site'))[:200]
-    previous = db.execute('SELECT token,status FROM subscribers WHERE email=?', (address,)).fetchone()
+    previous = db.execute('SELECT token,status FROM subscribers WHERE email IN (?,?)', (fields().index(address), address)).fetchone()
     if previous:
         # A new form submission cannot silently reverse an earlier opt-out.
         return {'status': previous['status'], 'token': previous['token'] if previous['status'] in ('pending', 'active') else None}
     token = secrets.token_urlsafe(32)
-    db.execute('INSERT INTO subscribers(email,first_name,token,status,consent_at,consent_source) VALUES(?,?,?,?,?,?)',
-               (address, name, token, 'pending', now().isoformat(), source))
+    db.execute('INSERT INTO subscribers(email,email_cipher,first_name,token,status,consent_at,consent_source) VALUES(?,?,?,?,?,?,?)',
+               (fields().index(address), fields().seal(address, 'subscriber.email'), fields().seal(name, 'subscriber.first_name'), token, 'pending', now().isoformat(), fields().seal(source, 'subscriber.consent_source')))
     db.commit()
     return {'status': 'pending', 'token': token}
 
@@ -146,12 +182,13 @@ def reserve_welcome(db, data):
     if len(address) > 254 or not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+', address):
         return {'status': 'invalid'}
     current = time.time()
-    digest = hashlib.sha256(address.encode()).hexdigest()
+    original_digest = hashlib.sha256(address.encode()).hexdigest()
+    digest = fields().index(original_digest, 'welcome')
     db.execute('BEGIN IMMEDIATE')
     db.execute('DELETE FROM welcome_sends WHERE sent_at<?', (current - 86400,))
     minute = db.execute('SELECT COUNT(*) FROM welcome_sends WHERE sent_at>?', (current - 60,)).fetchone()[0]
     day = db.execute('SELECT COUNT(*) FROM welcome_sends').fetchone()[0]
-    same = db.execute('SELECT COUNT(*) FROM welcome_sends WHERE recipient_hash=?', (digest,)).fetchone()[0]
+    same = db.execute('SELECT COUNT(*) FROM welcome_sends WHERE recipient_hash IN (?,?)', (digest, original_digest)).fetchone()[0]
     if minute >= MAX_WELCOME_MINUTE or day >= MAX_WELCOME_DAY or same >= 3:
         db.commit()
         return {'status': 'limited'}
@@ -187,6 +224,9 @@ def make_message(row):
 
 
 def smtp_password():
+    configured = os.environ.get('PROSCHOOLS_SMTP_PASSWORD')
+    if configured:
+        return configured
     for line in (ROOT / '.env.local').read_text().splitlines():
         if line.startswith('PROSCHOOLS_SMTP_PASSWORD='):
             return json.loads(line.partition('=')[2])
@@ -217,19 +257,19 @@ def run(db):
         smtp.login(FROM, password)
         for row in due:
             # Recheck suppression just before every send.
-            fresh = db.execute('SELECT status,step FROM subscribers WHERE email=?', (row['email'],)).fetchone()
+            fresh = db.execute('SELECT status,step FROM subscribers WHERE email IN (?,?)', (fields().index(row['email']), row['email'])).fetchone()
             if not fresh or fresh['status'] != 'active' or fresh['step'] != row['step']:
                 continue
             try:
                 smtp.send_message(make_message(row))
             except smtplib.SMTPRecipientsRefused:
-                db.execute("UPDATE subscribers SET status='failed',next_at=NULL WHERE email=?", (row['email'],))
+                db.execute("UPDATE subscribers SET status='failed',next_at=NULL WHERE email IN (?,?)", (fields().index(row['email']), row['email']))
                 db.commit()
                 continue
             except (smtplib.SMTPException, OSError):
                 attempts = row['attempts'] + 1
-                db.execute('UPDATE subscribers SET attempts=?,next_at=?,status=? WHERE email=?',
-                           (attempts, (now() + dt.timedelta(days=1)).isoformat(), 'failed' if attempts >= 3 else 'active', row['email']))
+                db.execute('UPDATE subscribers SET attempts=?,next_at=?,status=? WHERE email IN (?,?)',
+                           (attempts, (now() + dt.timedelta(days=1)).isoformat(), 'failed' if attempts >= 3 else 'active', fields().index(row['email']), row['email']))
                 db.commit()
                 PAUSE.touch(mode=0o600)
                 print('SMTP error: campaign paused for review')
@@ -237,18 +277,42 @@ def run(db):
             step = row['step'] + 1
             status = 'complete' if step == len(CAMPAIGNS) else 'active'
             next_at = None if status == 'complete' else (dt.datetime.fromisoformat(row['confirmed_at']) + dt.timedelta(days=STAGES[step])).isoformat()
-            db.execute('UPDATE subscribers SET step=?,status=?,next_at=?,last_sent_at=?,attempts=0 WHERE email=?',
-                       (step, status, next_at, now().isoformat(), row['email']))
+            db.execute('UPDATE subscribers SET step=?,status=?,next_at=?,last_sent_at=?,attempts=0 WHERE email IN (?,?)',
+                       (step, status, next_at, now().isoformat(), fields().index(row['email']), row['email']))
             db.commit()
             sent += 1
             time.sleep(3)
     print(f'checked={len(due)} sent={sent}')
 
 
+def encrypt_state(db):
+    # This explicit migration preserves all tokens, statuses, consent and schedules.
+    db.row_factory = sqlite3.Row
+    rows = db.execute('SELECT * FROM subscribers').fetchall()
+    db.execute('BEGIN IMMEDIATE')
+    for row in rows:
+        address = (fields().open(row['email_cipher'], 'subscriber.email') if row['email_cipher'] else row['email']).strip().lower()
+        if not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+', address):
+            raise RuntimeError('Cannot safely migrate subscriber identity')
+        db.execute('UPDATE subscribers SET email=?,email_cipher=?,first_name=?,consent_source=? WHERE email=?',
+                   (fields().index(address), fields().seal(address, 'subscriber.email'),
+                    fields().seal(fields().open(row['first_name'], 'subscriber.first_name'), 'subscriber.first_name'),
+                    fields().seal(fields().open(row['consent_source'], 'subscriber.consent_source'), 'subscriber.consent_source'), row['email']))
+    db.execute("UPDATE welcome_sends SET recipient_hash=pii_index(recipient_hash) WHERE recipient_hash NOT LIKE 'h1:%'")
+    db.commit()
+    if db.execute('PRAGMA wal_checkpoint(TRUNCATE)').fetchone()[0] != 0:
+        raise RuntimeError('Busy database; retry checkpoint before considering migration complete')
+    db.execute('VACUUM')
+    db.execute('PRAGMA wal_checkpoint(TRUNCATE)')
+    db.row_factory = private_row
+    return {'status': 'encrypted', 'subscribers_preserved': len(rows), 'tokens_and_delivery_state_preserved': True}
+
+
 def main():
-    if len(sys.argv) != 2 or sys.argv[1] not in ('enroll', 'confirm', 'unsubscribe', 'reserve-welcome', 'run', 'status'):
+    if len(sys.argv) != 2 or sys.argv[1] not in ('enroll', 'confirm', 'unsubscribe', 'reserve-welcome', 'run', 'status', 'encrypt-state'):
         raise SystemExit('usage: crm-mailer.py enroll|confirm|unsubscribe|reserve-welcome|run|status')
     with connect() as db:
+        db.create_function('pii_index', 1, lambda value: fields().index(value, 'welcome'))
         action = sys.argv[1]
         if action in ('enroll', 'confirm', 'unsubscribe', 'reserve-welcome'):
             data = json.load(sys.stdin)
@@ -257,6 +321,8 @@ def main():
             elif action == 'confirm': result = confirm(db, str(data.get('token', '')))
             else: result = unsubscribe(db, str(data.get('token', '')))
             reply(result)
+        elif action == 'encrypt-state':
+            reply(encrypt_state(db))
         elif action == 'run':
             run(db)
         else:
