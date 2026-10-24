@@ -1,0 +1,33 @@
+name: Encrypted lead vault checks
+on:
+  push:
+    paths:
+      - scripts/security/lead-vault/**
+      - src/lib/lead-vault.ts
+      - .github/workflows/lead-vault-checks.yml
+  pull_request:
+    paths:
+      - scripts/security/lead-vault/**
+      - src/lib/lead-vault.ts
+      - .github/workflows/lead-vault-checks.yml
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/security/lead-vault/
+            /src/lib/lead-vault.ts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/security/lead-vault/test.mjs
+      - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
+      - run: node scripts/security/lead-vault/test-outbox.mjs
+      - run: python3 -m py_compile scripts/security/lead-vault/ops/*.py

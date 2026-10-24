@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {generateKeyPairSync,randomBytes,scryptSync,createHash} from 'node:crypto';
 import {mkdtempSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
-import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawn} from 'node:child_process';import {once} from 'node:events';
+import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawn,spawnSync} from 'node:child_process';import {once} from 'node:events';
 import {seal,open} from './crypto.mjs';
 const pair=()=>generateKeyPairSync('rsa',{modulusLength:2048,publicKeyEncoding:{type:'spki',format:'pem'},privateKeyEncoding:{type:'pkcs8',format:'pem'}});
 const a=pair(),b=pair(),payload={name:'Synthetic privacy check',email:'privacy@example.test',phone:'+70000000000',pd_agreed:true};
@@ -27,6 +27,12 @@ try{
  const list=await (await fetch(base+'/',{headers})).text();assert(list.includes(e.id)&&!list.includes(payload.email));
  const card=await fetch(base+'/'+e.id,{headers});assert.equal(card.status,200);assert((await card.text()).includes(payload.email));assert.equal(card.headers.get('cache-control'),'no-store');
  assert.equal((await post({id:e.id,channel:'crm',status:'sent'},token,'/delivery')).status,200);
+ assert.equal((await post({pending:0},token,'/heartbeat')).status,200);
+ assert.equal((await post({pending:-1},token,'/heartbeat')).status,400);
+ const historical=seal({...payload,kind:'synthetic_history'},{publicKey:a.publicKey,operator:'gerasimov',site:'proschools'});
+ const imported=spawnSync(process.execPath,[new URL('./import.mjs',import.meta.url).pathname,join(dir,'config.json')],{input:JSON.stringify([{envelope:historical,status:'sent'}]),encoding:'utf8'});
+ assert.equal(imported.status,0,imported.stderr);assert.equal(JSON.parse(imported.stdout).imported,1);
+ assert.equal((await fetch(base+'/'+historical.id,{headers})).status,200);
  const bytes=readFileSync(join(dir,'state/leads.sqlite3'));assert(!bytes.includes(Buffer.from(payload.email)));assert(!bytes.includes(Buffer.from(payload.name)));
  console.log('Encrypted lead vault checks passed: crypto integrity, operator isolation, durable idempotent ingest, writer/read separation, private access and non-plaintext storage; no messages sent');
 }finally{if(child&&child.exitCode===null){const stopped=once(child,'exit');child.kill();await stopped}rmSync(dir,{recursive:true,force:true})}
