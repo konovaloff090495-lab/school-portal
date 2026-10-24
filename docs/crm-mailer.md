@@ -15,20 +15,14 @@
 - В письмах есть текстовая и HTML-версии, заголовок `List-Unsubscribe`, прямая ссылка отписки и партнёрская UTM `utm_source=gerasimov_lav`.
 - База `.crm-mailer.sqlite3` находится только на VPS, имеет права 600 и не попадает в Git. В логах нет адресов и имён.
 
-## Управление на VPS
+## Закрытая база и управление на чистом VPS
 
-```bash
-cd /var/www/school-portal
-python3 scripts/crm-mailer.py status
-touch .crm-mailer-paused               # сразу остановить плановую отправку
-rm .crm-mailer-paused                  # возобновить после проверки
-python3 scripts/crm-mailer.py run      # ручной запуск с теми же лимитами
-```
+С 24.10.2026 рабочая БД находится в `/var/lib/portfolio-leads/gerasimov/crm-mailer.sqlite3`, доступна только `lead-gerasimov` и root. Адреса, имена и источник согласия зашифрованы отдельным ключом `/etc/portfolio-leads/gerasimov/legacy-proschools-fields.key`; поиск адреса использует HMAC. Статусы, токены подтверждения/отписки, даты и лимиты сохранены. Старый файл в состоянии публичного сайта содержит только зашифрованный снимок и больше не является рабочей базой.
 
-Расписание root crontab (UTC, 10:00 и 15:00 МСК):
+Публичный Next вызывает совместимый `scripts/crm-mailer.py`, установленный как ссылка на `/opt/portfolio-mailer/proschools/mailer-client.py`. Клиент имеет только ограниченные операции enroll/confirm/unsubscribe/reserve-welcome; читать список подписчиков он не может. Ключ расшифровки на сайт не передаётся. Root-hook `/usr/local/sbin/portfolio-mailer-bridge-prepare` обязателен перед каждым запуском нового релиза; зависимость задана в `portfolio-site@proschools.service.d/private-mailer.conf`. Не заменять эту схему старым локальным обработчиком при deploy/rollback.
 
-```cron
-0 7,12 * * * cd /var/www/school-portal && /usr/bin/flock -n /tmp/proschools-crm-mailer.lock /usr/bin/python3 scripts/crm-mailer.py run >> /var/log/school-portal/crm-mailer.log 2>&1 # proschools-crm-mailer
-```
+Плановую рассылку выполняет `portfolio-crm-mailer.service` под `lead-gerasimov`; `portfolio-crm-mailer.timer` сохраняет 07:00 и 12:00 UTC. Не запускать реальную отправку для теста. Состояние проверяется root через приватный Python-компонент с его EnvironmentFile; временная остановка — `/var/lib/portfolio-leads/gerasimov/.crm-mailer-paused`. Существующую остановку нельзя снимать без выяснения причины.
+
+Рабочая база входит в отдельную зашифрованную почасовую копию оператора и общую согласованную SQLite-копию. Ключ восстановления оператора дополнительно упакован под исходный мастер-пароль владельца. Перед удалением открытой старой истории проверено скачивание зафиксированной версии S3, целостность restic/SQLite и восстановление ключа. Тесты используют только вымышленные данные и подменённый SMTP.
 
 DKIM Beget для SMTP включается через обращение в поддержку из панели Beget. До его включения нужно следить за доставкой и не повышать лимиты.
