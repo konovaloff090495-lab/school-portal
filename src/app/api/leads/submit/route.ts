@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       form_id, product, qualification, growth_release, selected_route,
     } = body
 
-    if (typeof name !== 'string' || typeof phone !== 'string' || typeof email !== 'string' || !name.trim() || name.length > 120 || phone.length > 40 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (typeof name !== 'string' || typeof phone !== 'string' || typeof email !== 'string' || !name.trim() || phone.replace(/\D/g, '').length < 10 || phone.replace(/\D/g, '').length > 15 || name.length > 120 || phone.length > 40 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Заполните все обязательные поля' }, { status: 400 })
     }
 
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
       if (result.ok) {
         crmReceipt = { status: 'accepted', id: result.id }
         // Keep a receipt without contact details so accepted leads can be traced in Synergy.
-        console.info('[Synergy] sendLead accepted:', JSON.stringify({ id: result.id, source: source ?? 'unknown' }))
+        console.info('[Synergy] sendLead accepted:', JSON.stringify({ id: result.id, event_id: eventId }))
       } else {
         crmReceipt = { status: 'failed', error: result.error }
         console.error('[Synergy] sendLead failed:', JSON.stringify({ event_id: eventId }))
@@ -111,19 +111,19 @@ export async function POST(req: NextRequest) {
         const enrolled = await crmMailer('enroll', { email, name, source: source ?? page_url ?? 'site', consent: true })
         if (enrolled.status === 'pending' || enrolled.status === 'active') confirmationToken = enrolled.token
       } catch (error) {
-        console.error('[CRM mailer] enroll failed:', error instanceof Error ? error.message : 'unknown')
+        console.error('[CRM mailer] enroll failed:', JSON.stringify({ event_id: eventId }))
       }
     }
     try {
-      const mail = await sendWelcome({
+      await sendWelcome({
         name, email, school: schoolLabel ?? undefined, city,
         pageUrl: page_url, marketingAgreed: !!confirmationToken,
         confirmationToken,
       })
-      console.info('[Welcome] result:', mail)
+      console.info('[Welcome] completed:', JSON.stringify({ event_id: eventId }))
     } catch (error) {
       // A mail outage must not duplicate an accepted CRM lead when the visitor retries.
-      console.error('[Welcome] send failed:', error instanceof Error ? error.message : 'unknown')
+      console.error('[Welcome] send failed:', JSON.stringify({ event_id: eventId }))
     }
     return NextResponse.json({ success: true, crm_id: crmReceipt.id ?? null })
   } catch (err) {
