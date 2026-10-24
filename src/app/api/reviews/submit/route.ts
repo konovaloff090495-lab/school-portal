@@ -1,94 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { allowReviewAttempt, boundedReviewBody } from '@/lib/review-admin'
+import { savePendingReview, validateReview } from '@/lib/review-store'
 import { sendTelegramMessage } from '@/lib/telegram'
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-const GITHUB_OWNER = process.env.GITHUB_OWNER
-const GITHUB_REPO  = process.env.GITHUB_REPO
-
 export async function POST(req: NextRequest) {
+  if (!allowReviewAttempt(req, 'submit')) return NextResponse.json({ error: 'Слишком много попыток. Попробуйте позже.' }, { status: 429 })
+  let review
+  try { review = validateReview(JSON.parse(await boundedReviewBody(req))) } catch {
+    return NextResponse.json({ error: 'Проверьте поля отзыва: имя, школу, оценку и текст от 10 до 2000 символов.' }, { status: 400 })
+  }
   try {
-    const body = await req.json()
-    const { schoolSlug, schoolName, authorName, childGrade, rating, text, pros, cons } = body
-
-    // Validation
-    if (!authorName || typeof authorName !== 'string' || authorName.trim().length === 0) {
-      return NextResponse.json({ error: 'Укажите ваше имя' }, { status: 400 })
-    }
-    if (!text || typeof text !== 'string' || text.trim().length < 10) {
-      return NextResponse.json({ error: 'Отзыв слишком короткий (минимум 10 символов)' }, { status: 400 })
-    }
-    if (text.trim().length > 2000) {
-      return NextResponse.json({ error: 'Отзыв слишком длинный (максимум 2000 символов)' }, { status: 400 })
-    }
-    if (!rating || typeof rating !== 'number' || rating < 1 || rating > 5 || !Number.isInteger(rating)) {
-      return NextResponse.json({ error: 'Укажите оценку от 1 до 5' }, { status: 400 })
-    }
-    if (!schoolSlug || typeof schoolSlug !== 'string') {
-      return NextResponse.json({ error: 'Не указана школа' }, { status: 400 })
-    }
-
-    if (!GITHUB_TOKEN || !GITHUB_OWNER || !GITHUB_REPO) {
-      console.error('Missing GitHub env vars')
-      return NextResponse.json({ error: 'Сервис временно недоступен' }, { status: 500 })
-    }
-
-    const timestamp = Date.now()
-    const filename = `${timestamp}-${schoolSlug}.json`
-    const reviewData = {
-      schoolSlug: schoolSlug.trim(),
-      schoolName: (schoolName ?? '').trim(),
-      authorName: authorName.trim(),
-      childGrade: childGrade ? childGrade.trim() : undefined,
-      rating,
-      text: text.trim(),
-      pros: pros ? pros.trim() : undefined,
-      cons: cons ? cons.trim() : undefined,
-      submittedAt: new Date().toISOString(),
-    }
-
-    const content = Buffer.from(JSON.stringify(reviewData, null, 2)).toString('base64')
-
-    const ghRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/scripts/pending-reviews/${filename}`,
-      {
-        method: 'PUT',
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
-          'Content-Type': 'application/json',
-          Accept: 'application/vnd.github+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-        },
-        body: JSON.stringify({
-          message: `Add pending review: ${filename}`,
-          content,
-        }),
-      }
-    )
-
-    if (!ghRes.ok) {
-      const ghErr = await ghRes.text()
-      console.error('GitHub API error:', ghErr)
-      return NextResponse.json({ error: 'Не удалось сохранить отзыв. Попробуйте позже.' }, { status: 500 })
-    }
-
-    // Telegram notification (fire-and-forget)
-    const stars = '⭐'.repeat(rating)
-    const schoolLabel = reviewData.schoolName || schoolSlug
-    let msg = `📝 <b>Новый отзыв</b>\n\n`
-    msg += `🏫 Школа: <b>${schoolLabel}</b>\n`
-    msg += `👤 Автор: ${reviewData.authorName}`
-    if (reviewData.childGrade) msg += ` (класс: ${reviewData.childGrade})`
-    msg += `\n${stars} Оценка: ${rating}/5\n\n`
-    msg += `💬 ${reviewData.text}`
-    if (reviewData.pros) msg += `\n\n✅ Плюсы: ${reviewData.pros}`
-    if (reviewData.cons) msg += `\n\n❌ Минусы: ${reviewData.cons}`
-    msg += `\n\n⏳ Ожидает модерации`
-
-    sendTelegramMessage(msg).catch(() => {})
-
+    await savePendingReview(review)
+    const escape = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    sendTelegramMessage(`📝 <b>Новый отзыв</b>\n🏫 ${escape(review.schoolName)}\n👤 ${escape(review.authorName)}\n${'⭐'.repeat(review.rating)}\n\n${escape(review.text)}\n\n⏳ Ожидает модерации\nhttps://pro-schools.ru/admin/otzyvy/`).catch(() => {})
     return NextResponse.json({ success: true })
-  } catch (err) {
-    console.error('submit review error:', err)
-    return NextResponse.json({ error: 'Внутренняя ошибка сервера' }, { status: 500 })
+  } catch {
+    console.error('Review queue write failed')
+    return NextResponse.json({ error: 'Не удалось сохранить отзыв. Попробуйте позже.' }, { status: 503 })
   }
 }
