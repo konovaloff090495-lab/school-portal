@@ -79,6 +79,6 @@ try {
   await recordLeadSubmission({ page_url: input.pageUrl, landing_url: input.landingUrl, form_id: input.formId }, { status: 'accepted', id: 'test-crm-id' })
   const entry = JSON.parse(readFileSync(process.env.LEAD_JOURNAL_PATH, 'utf8').trim())
   assert.equal(entry.crm.id, 'test-crm-id')
-  assert.equal(entry.landing_url, context.landing_url)
+  assert.equal(entry.landing_url, undefined, 'Receipt journal must not retain visitor data')
 } finally { rmSync(temp, { recursive: true, force: true }) }
 console.log('Passed: class coverage, first-entry attribution, UTM preservation, CRM mapping and private receipt')

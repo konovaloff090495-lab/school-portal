@@ -29,7 +29,7 @@ export default function CatalogOfferPopup() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
-  const [pdAgreed, setPdAgreed] = useState(true)
+  const [pdAgreed, setPdAgreed] = useState(false)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const openedRef = useRef(false)
   const [callbackTime, setCallbackTime] = useState('')
@@ -144,6 +144,7 @@ export default function CatalogOfferPopup() {
           </p>
 
           <form data-growth-form="catalog-popup" onSubmit={handleSubmit} className="space-y-3">
+            <p className="text-xs text-gray-600 leading-relaxed">Заявка на консультацию по программам онлайн-школы «Синергия» будет передана АНО ВО «Московский университет «Синергия». Она не направляется другой школе из каталога.</p>
             <input
               type="text" placeholder="Ваше имя" required
               value={form.name}
@@ -184,8 +185,8 @@ export default function CatalogOfferPopup() {
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={pdAgreed} onChange={e => setPdAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#0369A1]" />
                 <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Согласен(а) с{' '}
-                  <Link href="/politika-konfidentsialnosti/" className="text-[#0369A1] hover:underline" target="_blank">политикой обработки персональных данных</Link>
+                  Даю согласие на{' '}
+                  <Link href="/soglasie-na-obrabotku-personalnyh-dannyh/" className="text-[#0369A1] hover:underline" target="_blank">обработку персональных данных</Link>
                 </span>
               </label>
               <label className="flex items-start gap-2 cursor-pointer">

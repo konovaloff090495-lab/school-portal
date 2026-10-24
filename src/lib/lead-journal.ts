@@ -15,11 +15,10 @@ export async function recordLeadSubmission(
 ): Promise<void> {
   await mkdir(dirname(journalPath), { recursive: true, mode: 0o700 })
   const entry = {
-    event_id: randomUUID(),
     ts: new Date().toISOString(),
     site: 'pro-schools.ru',
-    ...body,
-    crm,
+    event_id: typeof body.event_id === 'string' ? body.event_id : randomUUID(),
+    crm: { status: crm.status, id: crm.id ?? null },
   }
   await appendFile(journalPath, `${JSON.stringify(entry)}\n`, { encoding: 'utf8', mode: 0o600 })
 }

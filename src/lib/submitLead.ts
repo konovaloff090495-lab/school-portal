@@ -4,6 +4,7 @@
 // контекстом визита (UTM, страница, реферер, ClientID Метрики).
 // Прямой fetch('/api/leads/submit') из компонентов запрещён — см. scripts/check-lead-forms.sh.
 
+import { LEAD_CONSENT_VERSION } from '@/lib/lead-consent'
 import { getLeadContext } from '@/lib/leadContext'
 import { saveLeadProfile } from '@/lib/leadProfile'
 
@@ -38,12 +39,14 @@ export async function submitLead(payload: LeadPayload | SchoolSubmissionPayload)
   }
   const lead = payload as LeadPayload
 
+  if (lead.pd_agreed !== true) return false
   try {
     const res = await fetch('/api/leads/submit/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...lead,
+        consent_version: LEAD_CONSENT_VERSION,
         school: lead.school ?? 'Не указана',
         crm: lead.crm ?? true,
         form_id: lead.form_id || lead.source,

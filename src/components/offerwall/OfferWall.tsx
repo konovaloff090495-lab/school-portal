@@ -277,7 +277,7 @@ function OfferDrawer({
       : { name: '', phone: '+7 (', email: '' }
   })
   const [phoneError, setPhoneError] = useState<string | null>(null)
-  const [pdAgreed, setPdAgreed] = useState(true)
+  const [pdAgreed, setPdAgreed] = useState(false)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)
@@ -400,6 +400,7 @@ function OfferDrawer({
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-3">
+            <p className="text-xs text-gray-600 leading-relaxed">Заявка на консультацию по программам онлайн-школы «Синергия» будет передана АНО ВО «Московский университет «Синергия». Она не направляется другой школе из каталога.</p>
               <p className="text-sm font-semibold text-[#1A1814]">Заберите подарок</p>
               <input
                 type="text"
@@ -454,9 +455,9 @@ function OfferDrawer({
                     className="mt-0.5 shrink-0 accent-[#FF6B3D]"
                   />
                   <span className="text-xs text-gray-500 leading-relaxed">
-                    Согласен(а) с{' '}
-                    <Link href="/politika-konfidentsialnosti/" className="text-[#C2410C] hover:underline" target="_blank">
-                      политикой обработки персональных данных
+                    Даю согласие на{' '}
+                    <Link href="/soglasie-na-obrabotku-personalnyh-dannyh/" className="text-[#C2410C] hover:underline" target="_blank">
+                      обработку персональных данных
                     </Link>
                   </span>
                 </label>
