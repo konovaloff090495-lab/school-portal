@@ -5,7 +5,8 @@ import { sendWelcome } from '@/lib/welcome-mail'
 import { crmMailer } from '@/lib/crm-mailer'
 import { recordLeadSubmission } from '@/lib/lead-journal'
 
-const FORMSPREE_ID = process.env.FORMSPREE_ID
+import { createHash } from 'node:crypto'
+import { LEAD_CONSENT_VERSION, PDN_CONSENT_TEXT, MARKETING_CONSENT_TEXT } from '@/lib/lead-consent'
 
 export async function POST(req: NextRequest) {
   try {
@@ -24,23 +25,19 @@ export async function POST(req: NextRequest) {
 
     if (pd_agreed !== true) return NextResponse.json({ error: 'Необходимо согласие на обработку данных' }, { status: 400 })
     // Fail before forwarding if durable encrypted capture is unavailable.
-    const eventId = await captureLeadSubmission(body)
-
-    // Forward to Formspree if configured
-    if (FORMSPREE_ID) {
-      fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name, phone, email, question,
-          school: school ?? 'Не указана',
-          source: source ?? 'Сайт',
-          pd_agreed,
-          marketing_agreed,
-          _subject: `Заявка со школьного портала: ${source ?? school ?? 'общая'}`,
-        }),
-      }).catch(() => {})
+    const receipt = {
+      captured_at: new Date().toISOString(),
+      document_version: LEAD_CONSENT_VERSION,
+      presented_version: body.consent_version === LEAD_CONSENT_VERSION ? LEAD_CONSENT_VERSION : 'legacy-unversioned',
+      pd_agreed: true,
+      pd_text: PDN_CONSENT_TEXT,
+      pd_sha256: createHash('sha256').update(PDN_CONSENT_TEXT).digest('hex'),
+      marketing_agreed: marketing_agreed === true,
+      marketing_text: marketing_agreed === true ? MARKETING_CONSENT_TEXT : null,
+      marketing_sha256: marketing_agreed === true ? createHash('sha256').update(MARKETING_CONSENT_TEXT).digest('hex') : null,
+      recipient: crm === false ? 'pro-schools.ru editorial' : 'ANO VO Moscow University Synergy INN 9702078886',
     }
+    const eventId = await captureLeadSubmission({ ...body, consent_receipt: receipt })
 
     const schoolLabel = school && school !== 'Не указана' ? school : null
 
