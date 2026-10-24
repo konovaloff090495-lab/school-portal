@@ -8,7 +8,9 @@ export function totp(secret,counter,digits=6){const b=Buffer.alloc(8);b.writeBig
 export function mfa(cfg,audit){
  if(!cfg.mfa)return null;
  const db=new DatabaseSync(cfg.state+'/auth.sqlite3');chmodSync(cfg.state+'/auth.sqlite3',0o600);
- db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; CREATE TABLE IF NOT EXISTS state(k TEXT PRIMARY KEY,v TEXT); CREATE TABLE IF NOT EXISTS sessions(token TEXT PRIMARY KEY,expires INTEGER); CREATE TABLE IF NOT EXISTS challenges(token TEXT PRIMARY KEY,expires INTEGER); CREATE TABLE IF NOT EXISTS attempts(ip TEXT PRIMARY KEY,n INTEGER,until INTEGER); CREATE TABLE IF NOT EXISTS used_recovery(hash TEXT PRIMARY KEY);');
+ db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON; CREATE TABLE IF NOT EXISTS state(k TEXT PRIMARY KEY,v TEXT); CREATE TABLE IF NOT EXISTS sessions(token TEXT PRIMARY KEY,expires INTEGER); CREATE TABLE IF NOT EXISTS challenges(token TEXT PRIMARY KEY,expires INTEGER); CREATE TABLE IF NOT EXISTS attempts(ip TEXT PRIMARY KEY,n INTEGER,until INTEGER); CREATE TABLE IF NOT EXISTS used_recovery(hash TEXT PRIMARY KEY);');
+ const rateKey=ip=>'ip:'+createHmac('sha256',cfg.mfa.secret).update('vault-rate-v1:'+ip).digest('hex');
+ for(const row of db.prepare("SELECT * FROM attempts WHERE ip NOT LIKE 'ip:%' AND ip NOT LIKE '@account:%'").all()){db.prepare('INSERT INTO attempts VALUES(?,?,?) ON CONFLICT(ip) DO UPDATE SET n=MAX(n,excluded.n),until=MAX(until,excluded.until)').run(rateKey(row.ip),row.n,row.until);db.prepare('DELETE FROM attempts WHERE ip=?').run(row.ip)}
  const cookie=req=>Object.fromEntries(String(req.headers.cookie||'').split(';').map(s=>s.trim().split('=')));
  const enabled=()=>db.prepare("SELECT v FROM state WHERE k='enabled'").get()?.v==='1';
  const prune=()=>{const now=Date.now();for(const t of ['sessions','challenges'])db.prepare('DELETE FROM '+t+' WHERE expires<?').run(now);db.prepare('DELETE FROM attempts WHERE until<?').run(now)};
@@ -20,7 +22,7 @@ export function mfa(cfg,audit){
    const host=String(req.headers.host||'').toLowerCase();if(req.headers.origin!=='https://'+host)return false;
    const nonce=cookie(req)['__Host-vault-challenge'];if(!nonce||!eq(nonce,String(input.nonce||'')))return false;
    if(!db.prepare('DELETE FROM challenges WHERE token=? AND expires>?').run(hash(nonce),Date.now()).changes)return false;
-   const ip=String(req.headers['x-real-ip']||req.socket.remoteAddress),account='@account:'+cfg.admin_user,now=Date.now();const actors=[ip,account].map(key=>({key,state:db.prepare('SELECT n,until FROM attempts WHERE ip=?').get(key)}));if(actors.some(({state})=>state&&state.until>now&&state.n>=5))return false;
+   const ip=rateKey(String(req.headers['x-real-ip']||req.socket.remoteAddress)),account='@account:'+cfg.admin_user,now=Date.now();const actors=[ip,account].map(key=>({key,state:db.prepare('SELECT n,until FROM attempts WHERE ip=?').get(key)}));if(actors.some(({state})=>state&&state.until>now&&state.n>=5))return false;
    const code=String(input.code||'').trim().replace(/[ -]/g,'');let success=false;
    db.exec('BEGIN IMMEDIATE');try{
     const last=Number(db.prepare("SELECT v FROM state WHERE k='last_counter'").get()?.v||'-1'),step=Math.floor(now/30000);
