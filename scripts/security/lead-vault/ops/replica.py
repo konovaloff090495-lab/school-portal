@@ -103,7 +103,8 @@ if '--verify' in sys.argv:
         restored=temporary/'restored'
         subprocess.run(args+['restore','latest','--target',str(restored)],check=True,stdout=subprocess.DEVNULL)
         databases=list(restored.rglob('leads.sqlite3'));assert len(databases)==1
-        with sqlite3.connect(databases[0]) as db:assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+        for database in restored.rglob('*.sqlite3'):
+            with sqlite3.connect(database) as db:assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
         assert len(list(restored.rglob('private.pem')))==1
         (status.parent/'restore-verified.json').write_text(json.dumps({'operator':OPERATOR,'verified':dt.datetime.now(dt.timezone.utc).isoformat(),'objects':len(manifest['objects'])}))
         print('Pinned S3 download, restic read-data and SQLite/key restoration verified: '+OPERATOR)

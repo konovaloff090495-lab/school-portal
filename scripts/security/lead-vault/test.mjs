@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {request} from 'node:http';
 import {generateKeyPairSync,randomBytes,scryptSync,createHash} from 'node:crypto';
 import {mkdtempSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawn,spawnSync} from 'node:child_process';import {once} from 'node:events';
@@ -14,7 +15,9 @@ assert.throws(()=>open({...e,data:e.data.slice(0,-4)+'AAAA'},{...a,operator:'ger
 const dir=mkdtempSync(join(tmpdir(),'lead-vault-test-'));let child;
 try{
  writeFileSync(join(dir,'public.pem'),a.publicKey);writeFileSync(join(dir,'private.pem'),a.privateKey,{mode:0o600});const password=randomBytes(32).toString('hex'),token=randomBytes(32).toString('hex'),salt=randomBytes(16).toString('hex');
- const cfg={operator:'gerasimov',label:'Synthetic operator',port:0,state:join(dir,'state'),public_key:join(dir,'public.pem'),private_key:join(dir,'private.pem'),ingest:{proschools:createHash('sha256').update(token).digest('hex')},admin_user:'owner',admin_salt:salt,admin_hash:scryptSync(password,salt,32).toString('hex')};
+ const cfg={operator:'gerasimov',label:'Synthetic operator',admin_hosts:['127.0.0.1'],port:0,state:join(dir,'state'),public_key:join(dir,'public.pem'),private_key:join(dir,'private.pem'),ingest:{proschools:createHash('sha256').update(token).digest('hex')},admin_user:'owner',admin_salt:salt,admin_hash:scryptSync(password,salt,32).toString('hex')};
+ writeFileSync(join(dir,'mail.py'),"import sys,json\nx=json.load(sys.stdin)\nprint(json.dumps({'status':'pending','token':'synthetic-only-token','private_contact':x.get('email')}))\n");
+ cfg.mailer={site:'proschools',script:join(dir,'mail.py'),cwd:dir,db:'synthetic',field_key:'synthetic',pause:'synthetic',smtp_password:'synthetic-only'};
  writeFileSync(join(dir,'config.json'),JSON.stringify(cfg));
  child=spawn(process.execPath,[new URL('./server.mjs',import.meta.url).pathname,join(dir,'config.json')],{stdio:['ignore','pipe','pipe']});
  const port=await new Promise((resolve,reject)=>{let data='';child.stdout.on('data',x=>{data+=x;try{resolve(JSON.parse(data.trim()).port)}catch{}});child.once('exit',()=>reject(Error('server_exited')));setTimeout(()=>reject(Error('startup_timeout')),5000).unref()});
@@ -24,9 +27,12 @@ try{
  assert.equal((await post({...e,data:e.data.slice(0,-4)+'AAAA'})).status,400);
  assert.equal((await fetch(base+'/')).status,401);
  const headers={Authorization:'Basic '+Buffer.from('owner:'+password).toString('base64')};
+ assert.equal(await new Promise((resolve,reject)=>{const r=request(base+'/',{headers:{...headers,Host:'public.example.test'}},res=>{res.resume();resolve(res.statusCode)});r.on('error',reject);r.end()}),421);
  const list=await (await fetch(base+'/',{headers})).text();assert(list.includes(e.id)&&!list.includes(payload.email));
  const card=await fetch(base+'/'+e.id,{headers});assert.equal(card.status,200);assert((await card.text()).includes(payload.email));assert.equal(card.headers.get('cache-control'),'no-store');
  assert.equal((await post({id:e.id,channel:'crm',status:'sent'},token,'/delivery')).status,200);
+ const mailResponse=await post({email:payload.email},token,'/mail/enroll');assert.equal(mailResponse.status,200);assert.deepEqual(await mailResponse.json(),{status:'pending',token:'synthetic-only-token'});
+ assert.equal((await post({},token,'/mail/status')).status,404);assert.equal((await post({},'wrong','/mail/enroll')).status,401);
  assert.equal((await post({pending:0},token,'/heartbeat')).status,200);
  assert.equal((await post({pending:-1},token,'/heartbeat')).status,400);
  const historical=seal({...payload,kind:'synthetic_history'},{publicKey:a.publicKey,operator:'gerasimov',site:'proschools'});

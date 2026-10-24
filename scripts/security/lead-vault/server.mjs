@@ -3,6 +3,7 @@ import {readFileSync,mkdirSync,chmodSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
 import {createHash,timingSafeEqual,scryptSync} from 'node:crypto';
 import {open} from './crypto.mjs';
+import {mailer} from './mailer.mjs';
 const cfg=JSON.parse(readFileSync(process.argv[2],'utf8')),publicKey=readFileSync(cfg.public_key,'utf8'),privateKey=readFileSync(cfg.private_key,'utf8');
 mkdirSync(cfg.state,{recursive:true,mode:0o700});
 const db=new DatabaseSync(cfg.state+'/leads.sqlite3');chmodSync(cfg.state+'/leads.sqlite3',0o600);
@@ -30,14 +31,19 @@ async function body(req){let n=0;const chunks=[];for await(const chunk of req){n
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const page=body=>'<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Закрытые заявки</title><body><h1>'+escape(cfg.label)+'</h1>'+body+'</body></html>';
 const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
- res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('Content-Security-Policy',"default-src 'none'; frame-ancestors 'none'; form-action 'none'");
+ res.setHeader('Cross-Origin-Resource-Policy','same-origin');res.setHeader('Cross-Origin-Opener-Policy','same-origin');res.setHeader('X-Frame-Options','DENY');res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('Content-Security-Policy',"default-src 'none'; frame-ancestors 'none'; form-action 'none'");
  const json=(status,obj)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(obj))};
  try{
-  const path=new URL(req.url,'http://local').pathname;
+  const url=new URL(req.url,'http://local'),path=url.pathname;
   if(path==='/health'&&req.method==='GET')return json(200,{status:'ok',operator:cfg.operator});
-  if(req.method==='POST'&&(path==='/ingest'||path==='/delivery'||path==='/heartbeat')){
+  if(req.method==='POST'&&(path==='/ingest'||path==='/delivery'||path==='/heartbeat'||path.startsWith('/mail/'))){
    const site=writer(req);if(!site)return json(401,{error:'unauthorized'});
    const input=await body(req);
+   if(path.startsWith('/mail/')){
+    if(!cfg.mailer||cfg.mailer.site!==site||!['enroll','confirm','unsubscribe','reserve-welcome'].includes(path.slice(6)))return json(404,{error:'operation_not_allowed'});
+    try{const result=await mailer(cfg,site,path.slice(6),input);audit('mailer_ok',null,site);return json(200,result)}
+    catch{audit('mailer_failed',null,site);return json(503,{error:'mail_operation_unavailable'})}
+   }
    if(path==='/heartbeat'){
     if(!Number.isSafeInteger(input.pending)||input.pending<0||input.pending>10000000)return json(400,{error:'invalid_heartbeat'});
     db.prepare('INSERT INTO heartbeat(site,at,pending) VALUES(?,?,?) ON CONFLICT(site) DO UPDATE SET at=excluded.at,pending=excluded.pending').run(site,new Date().toISOString(),input.pending);
@@ -59,11 +65,12 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
    return json(201,{id:input.id,stored:true});
   }
   if(req.method==='GET'&&(path==='/'||/^\/[a-f0-9-]{36}$/.test(path))){
-   if(!admin(req)){res.setHeader('WWW-Authenticate','Basic realm="Private operator leads"');return json(401,{error:'unauthorized'})}
+   if(cfg.admin_hosts&&!cfg.admin_hosts.includes(String(req.headers.host||'').toLowerCase().split(':')[0]))return json(421,{error:'private_origin_required'});
+   if(!admin(req)){res.setHeader('WWW-Authenticate','Basic realm="Private leads '+cfg.operator+'"');return json(401,{error:'unauthorized'})}
    res.setHeader('Content-Type','text/html; charset=utf-8');
    if(path==='/'){
-    audit('list',null,cfg.admin_user);const rows=db.prepare('SELECT id,site,created_at,delivery FROM leads ORDER BY received_at DESC LIMIT 100').all();
-    res.end(page('<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a> · '+escape(JSON.stringify(JSON.parse(x.delivery)))+'</li>').join('')+'</ul>'));return;
+    audit('list',null,cfg.admin_user);const value=url.searchParams.get('page')||'0';if(!/^[0-9]{1,5}$/.test(value))return json(400,{error:'invalid_page'});const offset=Number(value)*100;const rows=db.prepare('SELECT id,site,created_at,delivery FROM leads ORDER BY received_at DESC LIMIT 100 OFFSET ?').all(offset);const total=db.prepare('SELECT COUNT(*) AS n FROM leads').get().n;const navigation='<p>'+ (offset>0?'<a href="?page='+String(Number(value)-1)+'">← Новее</a> · ':'')+'Страница '+String(Number(value)+1)+' · Всего '+String(total)+(offset+100<total?' · <a href="?page='+String(Number(value)+1)+'">Старее →</a>':'')+'</p>';
+    res.end(page(navigation+'<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a> · '+escape(JSON.stringify(JSON.parse(x.delivery)))+'</li>').join('')+'</ul>'));return;
    }
    const row=db.prepare('SELECT envelope FROM leads WHERE id=?').get(path.slice(1));if(!row)return json(404,{error:'not_found'});
    const payload=open(JSON.parse(row.envelope),{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});audit('view',path.slice(1),cfg.admin_user);res.end(page('<p><a href="./">К списку</a></p><pre>'+escape(JSON.stringify(payload,null,2))+'</pre>'));return;
