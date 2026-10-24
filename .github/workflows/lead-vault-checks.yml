@@ -45,8 +45,9 @@ jobs:
       - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
       - run: node scripts/security/lead-vault/test-outbox.mjs
       - run: python3 -m py_compile scripts/security/lead-vault/ops/*.py
-      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends python3-cryptography
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends python3-cryptography php-cli php-mbstring
       - run: /usr/bin/python3 scripts/privacy/test-fields.py
       - run: /usr/bin/python3 scripts/privacy/test-proschools-mailer.py
       - run: /usr/bin/python3 scripts/privacy/test-mailer-client.py
       - run: /usr/bin/python3 scripts/test-school-submissions.py
+      - run: /usr/bin/python3 scripts/privacy/test-card-postbacks.py

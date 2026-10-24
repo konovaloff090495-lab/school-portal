@@ -29,7 +29,7 @@ for operator in operators:
     output=io.BytesIO()
     with tarfile.open(fileobj=output,mode='w') as archive:
      for name,source in sources:
-      if not source.exists():continue
+      assert source.is_file(),'Configured operational database missing'
       target=pathlib.Path(temporary)/name
       snapshot="import sqlite3,sys; a=sqlite3.connect('file:'+sys.argv[1]+'?mode=ro',uri=True);b=sqlite3.connect(sys.argv[2]);a.backup(b);assert b.execute('PRAGMA integrity_check').fetchone()[0]=='ok';b.close();a.close()"
       subprocess.run(['runuser','-u',username,'--','/usr/bin/python3','-c',snapshot,str(source),str(target)],check=True,capture_output=True,timeout=15)
@@ -38,6 +38,12 @@ for operator in operators:
   else:
    command=['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=15','kvantb7q@kvantb7q.beget.tech','delomba-records']
    result=subprocess.run(command,capture_output=True,timeout=45);assert result.returncode==0,'Shared snapshot failed';raw=result.stdout
+  if operator=='konovalov':
+   extra=subprocess.run(command[:-1]+['cardopen-records'],capture_output=True,timeout=45);assert extra.returncode==0,'Card postback export failed'
+   buffer=io.BytesIO(raw)
+   with tarfile.open(fileobj=io.BytesIO(extra.stdout)) as incoming,tarfile.open(fileobj=buffer,mode='a') as outgoing:
+    member=incoming.getmember('card-open.ru/ppm_postbacks.jsonl');assert member.isfile();outgoing.addfile(member,incoming.extractfile(member))
+   raw=buffer.getvalue()
   if operator in ('gerasimov','konovalov'):
    username='lead-'+operator
    with operator_temporary(username) as temporary:
@@ -54,6 +60,11 @@ for operator in operators:
   with tarfile.open(fileobj=io.BytesIO(raw)) as archive:
    for member in sorted(archive.getmembers(),key=lambda x:x.name):
     if member.isfile() and member.name!='PORTFOLIO-BACKUP-MANIFEST.json':normalized.update(member.name.encode()+b'\x00'+archive.extractfile(member).read())
+  with tarfile.open(fileobj=io.BytesIO(raw)) as archive:
+   names=[m.name for m in archive if m.isfile()]
+   required=['newsletter.sqlite3','schools.sqlite3','operator-auth.sqlite3'] if operator=='gerasimov' else ['contest.sqlite3'] if operator=='education-gifts' else ['operator-auth.sqlite3','card-open.ru/ppm_postbacks.jsonl']
+   assert all(name in names for name in required),'Incomplete operational archive'
+   if operator=='konovalov':assert any(name.endswith('/.crm/crm.sqlite') for name in names),'DELA database missing from export'
   content_hash=normalized.hexdigest();path=folder/'last-ops-archive.json';previous=json.loads(path.read_text()) if path.exists() else {}
   if previous.get('content_sha256')==content_hash:
    previous['checked_at']=now.isoformat();path.write_text(json.dumps(previous));continue

@@ -1,6 +1,6 @@
 [Unit]
 Description=Encrypted operational state archive
-After=network-online.target
+After=network-online.target portfolio-gifts-storage.service
 [Service]
 Type=oneshot
 ExecStart=/usr/local/sbin/portfolio-ops-archive
