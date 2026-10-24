@@ -57,7 +57,7 @@ const server=http.createServer({maxHeaderSize:8192},async(req,res)=>{
    res.setHeader('Content-Type','text/html; charset=utf-8');
    if(path==='/'){
     audit('list',null,cfg.admin_user);const rows=db.prepare('SELECT id,site,created_at,delivery FROM leads ORDER BY received_at DESC LIMIT 100').all();
-    res.end(page('<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a></li>').join('')+'</ul>'));return;
+    res.end(page('<p>Контакты открываются только в отдельной карточке. Все просмотры учитываются.</p><ul>'+rows.map(x=>'<li><a href="./'+escape(x.id)+'">'+escape(x.created_at)+' · '+escape(x.site)+' · '+escape(x.id)+'</a> · '+escape(JSON.stringify(JSON.parse(x.delivery)))+'</li>').join('')+'</ul>'));return;
    }
    const row=db.prepare('SELECT envelope FROM leads WHERE id=?').get(path.slice(1));if(!row)return json(404,{error:'not_found'});
    const payload=open(JSON.parse(row.envelope),{privateKey,publicKey,operator:cfg.operator,sites:Object.keys(cfg.ingest)});audit('view',path.slice(1),cfg.admin_user);res.end(page('<p><a href="./">К списку</a></p><pre>'+escape(JSON.stringify(payload,null,2))+'</pre>'));return;

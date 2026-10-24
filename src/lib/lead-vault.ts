@@ -40,6 +40,12 @@ export async function captureLeadSubmission(payload: Record<string, unknown>): P
 export async function recordVaultDelivery(id: string, status: 'sent' | 'failed' | 'unknown' | 'pending'): Promise<void> {
   try {
     const cfg = await config()
-    await fetch(cfg.endpoint + '/delivery', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + cfg.ingest_token }, body: JSON.stringify({ id, channel: 'crm', status }), signal: AbortSignal.timeout(3000) })
-  } catch { /* The encrypted original remains available for reconciliation. */ }
+    const value = JSON.stringify({ id, channel: 'crm', status })
+    const path = join(cfg.spool, id + '.delivery')
+    const file = await open(path + '.incoming', 'w', 0o600)
+    try { await file.writeFile(value); await file.sync() } finally { await file.close() }
+    await rename(path + '.incoming', path)
+    const response = await fetch(cfg.endpoint + '/delivery', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + cfg.ingest_token }, body: value, signal: AbortSignal.timeout(3000) })
+    if (response.ok) await rename(path, path + '.json')
+  } catch { /* Durable metadata is retried by the relay; the encrypted original is retained. */ }
 }
