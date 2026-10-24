@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Independent read-only checks. Secrets stay in Actions; no successful heartbeat messages."""
-import base64,datetime as dt,hashlib,json,os,pathlib,urllib.request,urllib.parse
+import base64,datetime as dt,hashlib,json,os,pathlib,subprocess,urllib.request,urllib.parse
 UTC=dt.timezone.utc
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):return None
@@ -28,6 +28,12 @@ def main():
  urls={'health':os.environ['PORTFOLIO_MONITOR_URL'],'proschools':'https://pro-schools.ru/','delomba':'https://delo.mba/','cardopen':'https://card-open.ru/'}
  auth=base64.b64encode((os.environ['PORTFOLIO_MONITOR_USER']+':'+os.environ['PORTFOLIO_MONITOR_PASSWORD']).encode()).decode()
  def fetch(label):
+  if label=='health':
+   # Pin the new host so a stale DNS cache cannot expose this credential to the old proxy.
+   config='url = '+json.dumps(urls[label])+'\nheader = '+json.dumps('Authorization: Basic '+auth)+'\n'
+   result=subprocess.run(['curl','--silent','--show-error','--fail','--max-time','20','--max-filesize','16384','--proto','=https','--resolve','pro-schools.ru:443:155.212.140.76','--config','-'],input=config,text=True,capture_output=True,timeout=25)
+   if result.returncode:raise ValueError('private_health_unavailable')
+   return json.loads(result.stdout)
   req=urllib.request.Request(urls[label],headers={'User-Agent':'Portfolio-independent-watch/1.0',**({'Authorization':'Basic '+auth} if label=='health' else {})},method='GET' if label=='health' else 'HEAD')
   opener=urllib.request.build_opener(NoRedirect()) if label=='health' else urllib.request.build_opener()
   with opener.open(req,timeout=20) as r:
