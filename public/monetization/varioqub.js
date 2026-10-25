@@ -28,6 +28,7 @@
   function updateGuard() {
     if (guard) { guard.disconnect(); guard = null; }
     if (eligible()) return;
+    document.documentElement.removeAttribute('data-ps-varioqub-ready');
     destroyFloor();
     // Also remove a late vendor render after an SPA transition out of a test page.
     guard = new MutationObserver(function (records) {
@@ -57,6 +58,7 @@
     var url = window.location.href;
     if (url === previousUrl) return;
     previousUrl = url;
+    document.documentElement.removeAttribute('data-ps-varioqub-ready');
     var current = ++generation;
     destroyFloor();
     updateGuard();
@@ -77,9 +79,12 @@
         }
         loadVendor();
         window.__psVarioqubStatus = 'initializing';
+        // Required by the RSYA experiment embed to associate ad revenue with a visitor.
+        window.ymab('metrika.' + config.counterId, 'setConfig', {enableSetYmUid: true});
         window.ymab('metrika.' + config.counterId, 'init', {}, function () {
           if (current !== generation || !eligible()) { destroyFloor(); return; }
           window.__psVarioqubStatus = 'ready';
+          document.documentElement.setAttribute('data-ps-varioqub-ready', 'true');
         });
       })
       .catch(function () {
