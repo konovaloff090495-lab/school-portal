@@ -1,9 +1,12 @@
 /** Real Next routes + SQLite + image pipeline, isolated temporary state. No external mail. */
-import {spawn} from 'node:child_process';import {mkdtemp,readFile,rm,mkdir} from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import {createHmac,randomUUID} from 'node:crypto';import sharp from 'sharp';import assert from 'node:assert/strict';
+import {spawn,execFileSync} from 'node:child_process';import {mkdtemp,readFile,rm,mkdir} from 'node:fs/promises';import os from 'node:os';import path from 'node:path';import {createHmac,randomUUID} from 'node:crypto';import sharp from 'sharp';import assert from 'node:assert/strict';
 const dir=await mkdtemp(path.join(os.tmpdir(),'school-submission-test-')),port=3198,base='http://localhost:'+port;
 const dev=process.env.SCHOOL_SUBMISSIONS_SMOKE_DEV==='1';
 const site=dev?base:'https://pro-schools.ru';
-const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'111',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
+// Production requires an explicit private-field key. CI uses only an ephemeral key.
+const fieldsKey=path.join(dir,'fields.key');
+execFileSync('python3',['-c',"import sys;sys.path.insert(0,'scripts/privacy');from pii_fields import Fields;Fields.create(sys.argv[1],'gerasimov','school-submissions')",fieldsKey]);
+const child=spawn(process.execPath,['node_modules/next/dist/bin/next',...(dev?['dev','--webpack']:['start']),'-p',String(port)],{detached:true,env:{...process.env,NODE_ENV:dev?'development':'production',ADMIN_SECRET:'school-qa-admin',SCHOOL_SUBMISSIONS_DIR:dir,SCHOOL_FIELDS_KEY:fieldsKey,TELEGRAM_BOT_TOKEN:'',TELEGRAM_CHAT_ID:'111',PROSCHOOLS_SMTP_PASSWORD:''},stdio:['ignore','pipe','pipe']});let output='';child.stdout.on('data',b=>output+=b);child.stderr.on('data',b=>output+=b);
 const killServer=(signal='SIGTERM')=>{try{process.kill(-child.pid,signal)}catch{child.kill(signal)}};
 let browserRef,pageRef;
 const globalTimeout=setTimeout(()=>{console.error('Integration timeout',output.slice(-3000));killServer('SIGKILL');void browserRef?.close();process.exit(1)},240000);
