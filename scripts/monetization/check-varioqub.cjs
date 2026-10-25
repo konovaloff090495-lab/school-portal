@@ -16,7 +16,8 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
     addEventListener: (name, fn) => { events[name] = fn; },
     Ya: {Context: {AdvManager: {destroy: value => destroyed.push(value.blockId)}}},
   };
-  const document = {body: {}, head: {appendChild: script => scripts.push(script)}, createElement: () => ({})};
+  const attrs = {};
+  const document = {documentElement: {setAttribute: (key, value) => {attrs[key] = value;}, removeAttribute: key => {delete attrs[key];}}, body: {}, head: {appendChild: script => scripts.push(script)}, createElement: () => ({})};
   class MutationObserver {
     constructor(fn) { this.fn = fn; observers.push(this); }
     observe() {}
@@ -25,7 +26,7 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
   const context = vm.createContext({window, document, MutationObserver,
     fetch: () => new Promise(resolve => pending.push(resolve))});
   vm.runInContext(source, context);
-  return {window, events, pending, scripts, destroyed, observers, context,
+  return {window, events, pending, scripts, destroyed, observers, context, attrs,
     respond(value = config) { pending.shift()({ok: true, json: async () => value}); },
     route(path) { window.location.pathname = path; window.location.href = 'https://pro-schools.ru' + path; events['ps:navigation-route'](); }};
 }
@@ -38,9 +39,12 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
   assert.equal(f.window.ymab.a[0][1], 'setConfig');
   assert.equal(f.window.ymab.a[0][2].enableSetYmUid, true);
   const lateCallback = f.window.ymab.a[1][3];
+  lateCallback();
+  assert.equal(f.attrs['data-ps-varioqub-ready'], 'true');
   f.route('/shkoly/moskva/'); f.respond(); await settle();
   lateCallback();
   assert.equal(f.window.__psVarioqubStatus, 'excluded');
+  assert.equal(f.attrs['data-ps-varioqub-ready'], undefined);
   assert.ok(f.destroyed.includes('R-A-19425636-4'));
   assert.equal(f.window.ymab.a.length, 2, 'catalog must not initialize an experiment');
   f.route('/blog/test/'); f.respond(); await settle();
