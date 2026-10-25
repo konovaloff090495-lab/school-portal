@@ -33,19 +33,21 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
 (async () => {
   const f = fixture(); f.respond(); await settle();
   assert.equal(f.scripts.length, 1);
-  assert.equal(f.window.ymab.a.length, 1);
+  assert.equal(f.window.ymab.a.length, 2);
   assert.equal(f.window.ymab.a[0][0], 'metrika.108789843');
-  const lateCallback = f.window.ymab.a[0][3];
+  assert.equal(f.window.ymab.a[0][1], 'setConfig');
+  assert.equal(f.window.ymab.a[0][2].enableSetYmUid, true);
+  const lateCallback = f.window.ymab.a[1][3];
   f.route('/shkoly/moskva/'); f.respond(); await settle();
   lateCallback();
   assert.equal(f.window.__psVarioqubStatus, 'excluded');
   assert.ok(f.destroyed.includes('R-A-19425636-4'));
-  assert.equal(f.window.ymab.a.length, 1, 'catalog must not initialize an experiment');
+  assert.equal(f.window.ymab.a.length, 2, 'catalog must not initialize an experiment');
   f.route('/blog/test/'); f.respond(); await settle();
   assert.equal(f.scripts.length, 1, 'vendor loader must be unique');
-  assert.equal(f.window.ymab.a.length, 2, 'SPA info navigation must initialize its new URL');
+  assert.equal(f.window.ymab.a.length, 4, 'SPA info navigation must initialize its new URL');
   f.events['ps:monetization-stop']();
-  f.window.ymab.a[1][3]();
+  f.window.ymab.a[3][3]();
   assert.equal(f.window.__psVarioqubStatus, 'disabled');
 
   const race = fixture(); race.route('/shkola/test/');

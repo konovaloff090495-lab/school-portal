@@ -77,6 +77,8 @@
         }
         loadVendor();
         window.__psVarioqubStatus = 'initializing';
+        // Required by the RSYA experiment embed to associate ad revenue with a visitor.
+        window.ymab('metrika.' + config.counterId, 'setConfig', {enableSetYmUid: true});
         window.ymab('metrika.' + config.counterId, 'init', {}, function () {
           if (current !== generation || !eligible()) { destroyFloor(); return; }
           window.__psVarioqubStatus = 'ready';
