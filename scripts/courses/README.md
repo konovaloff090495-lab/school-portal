@@ -2,6 +2,24 @@
 
 Рабочий раздел: https://pro-schools.ru/kursy/.
 
+## Актуальная публикация после переноса 24.10.2026
+
+Рабочий VPS: `portfolio-admin@155.212.140.76`, ключ
+`~/.ssh/portfolio_security_20261024`. Старый root@45.80.70.209, legacy
+`deploy.sh` и приведённые ниже старые `/var/www/` пути не использовать.
+Актуальные правила — `docs/clean-host-deployment.md` в основной ветке и
+общая память `reference_pro_schools_deploy.md`.
+
+Изолированный runtime: `/srv/portfolio/proschools/static-runtime`, выпуски:
+`/srv/portfolio/proschools/static/courses-releases`, активная ссылка:
+`/srv/portfolio/proschools/static/courses`. Публикует отдельный пользователь
+`site-proschools-publisher`, без доступа к секретам приложения и записи в код.
+Обычный ежедневный цикл — `portfolio-static-refresh@courses.service`.
+Браузерная проверка — `portfolio-static-refresh@courses-browser.service`.
+Обе используют один lock, сборку/проверку и атомарное переключение с откатом.
+Для этих двух экземпляров службы установлен MemoryHigh=1G/MemoryMax=1536M:
+прежний лимит512M приводил к OOM при сборке каталога. Остальная изоляция сохранена.
+
 ## Устройство
 
 Раздел выпускается как готовый HTML через Nginx. Полный Next build на Mac был
@@ -199,9 +217,20 @@ Heartbeat `automation-7` проверяет цены ежедневно в 10:20
 Для нового снимка использовать `work/courses/foxford-browser-latest.json`.
 
 Проверка без записи: `python3 scripts/courses/refresh-browser.py --input <snapshot>`.
-Затем передать снимок в runtime VPS и запустить там:
-`/bin/bash scripts/courses/run-refresh.sh --browser-input work/courses/foxford-browser-latest.json`.
-Это использует общий lock, проверяет названия и допустимые изменения цены,
+Цены догружаются отдельно от карточек: после последней кнопки перечитать DOM
+и убедиться, что загрузка закончилась; её задержка не означает закрытие программы.
+На новый VPS передать только публичный снимок в
+`/home/portfolio-admin/foxford-browser-latest.json`, затем выполнить:
+
+```sh
+sudo -n install -o site-proschools-publisher -g site-proschools-publisher -m 0640 /home/portfolio-admin/foxford-browser-latest.json /srv/portfolio/proschools/static-runtime/work/courses/foxford-browser-latest.json
+sudo -n systemctl start --no-block portfolio-static-refresh@courses-browser.service
+```
+
+Дождаться `inactive`, `Result=success`, `ExecMainStatus=0`; состояние `activating`
+ещё не означает публикацию. Отчёты `browser-refresh-report.json` и
+`check-report.json` лежат в новом runtime `work/courses/`.
+Служба использует общий lock, проверяет названия и допустимые изменения цены,
 сохраняет очередь, пересобирает только /kursy/ и атомарно публикует результат.
 Изменившиеся названия, исчезнувшие курсы и большие изменения идут на проверку.
 Новые программы автоматически из снимка не публикуются.
