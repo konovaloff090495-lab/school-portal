@@ -6,7 +6,7 @@ on:
       runner:
         description: GitHub-hosted build image
         type: choice
-        default: ubuntu-latest
+        default: ubuntu-22.04
         options:
           - ubuntu-latest
           - ubuntu-22.04
@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ${{ inputs.runner || 'ubuntu-latest' }}
+    runs-on: ${{ inputs.runner || 'ubuntu-22.04' }}
     timeout-minutes: 45
     env:
       NODE_OPTIONS: --max-old-space-size=4096
@@ -33,6 +33,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - run: node scripts/monetization/check-varioqub.cjs
       - run: node scripts/test-lead-consent.mjs
       - run: node scripts/security/lead-vault/test.mjs
       - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
