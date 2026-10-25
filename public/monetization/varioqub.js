@@ -9,6 +9,56 @@
   var loaderStarted = false;
   var stopped = false;
   var guard = null;
+  var clearance = 0;
+  var layoutPending = false;
+
+  function updateFloatingControls() {
+    var height = 0;
+    if (eligible() && loaderStarted) {
+      Array.prototype.forEach.call(document.body.children, function (element) {
+        if (element.tagName !== 'DIV') return;
+        var box = element.getBoundingClientRect();
+        if (box.width >= window.innerWidth * 0.7 && box.height >= 40 &&
+            box.height <= window.innerHeight * 0.4 && Math.abs(box.bottom - window.innerHeight) < 3 &&
+            window.getComputedStyle(element).position === 'fixed' && element.querySelector('[data-ad-id],iframe')) {
+          height = Math.max(height, Math.ceil(box.height));
+        }
+      });
+    }
+    var next = height ? height + 24 : 0;
+    if (next !== clearance) {
+      clearance = next;
+      if (next) {
+        document.documentElement.style.setProperty('--ps-floor-clearance', next + 'px');
+        document.documentElement.setAttribute('data-ps-floor-visible', 'true');
+      } else {
+        document.documentElement.style.removeProperty('--ps-floor-clearance');
+        document.documentElement.removeAttribute('data-ps-floor-visible');
+      }
+    }
+    if (!height) return;
+    if (!document.getElementById('ps-floor-controls')) {
+      var style = document.createElement('style');
+      style.id = 'ps-floor-controls';
+      style.textContent = 'html[data-ps-floor-visible="true"] button[aria-label="Наверх"]{bottom:calc(24px + var(--ps-floor-clearance))!important}html[data-ps-floor-visible="true"] body{padding-bottom:var(--ps-floor-clearance)}';
+      document.head.appendChild(style);
+    }
+    var host = document.getElementById('Logos-widget');
+    var shadow = host && host.shadowRoot;
+    if (shadow && !shadow.getElementById('ps-floor-widget-clearance')) {
+      var widgetStyle = document.createElement('style');
+      widgetStyle.id = 'ps-floor-widget-clearance';
+      widgetStyle.textContent = ':host .uc-main:not(.open){bottom:calc(24px + var(--ps-widget-clearance,0px) + var(--ps-floor-clearance,0px))!important}';
+      shadow.appendChild(widgetStyle);
+    }
+    if (shadow && shadow.querySelector('.uc-main.open')) destroyFloor();
+  }
+
+  function scheduleLayout() {
+    if (layoutPending) return;
+    layoutPending = true;
+    window.requestAnimationFrame(function () { layoutPending = false; updateFloatingControls(); });
+  }
 
   function eligible() {
     return !stopped && config && config.enabled === true &&
@@ -97,11 +147,16 @@
 
   window.addEventListener('ps:navigation-route', routeChanged);
   window.addEventListener('popstate', routeChanged);
+  window.addEventListener('resize', scheduleLayout);
+  var layoutObserver = new MutationObserver(scheduleLayout);
+  layoutObserver.observe(document.body, {childList: true, subtree: true});
+  window.setInterval(scheduleLayout, 1000);
   window.addEventListener('ps:monetization-stop', function () {
     stopped = true;
     ++generation;
     window.__psVarioqubStatus = 'disabled';
     updateGuard();
+    updateFloatingControls();
   });
   routeChanged();
 })();
