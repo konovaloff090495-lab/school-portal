@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "counterId": 108789843,
+  "floorBlockIds": ["R-A-19425636-4"],
+  "allowedPathPrefixes": ["/uchebnik/", "/gdz/", "/blog/", "/olimpiady/", "/ege/", "/oge/"]
+}

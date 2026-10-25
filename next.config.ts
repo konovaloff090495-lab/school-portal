@@ -35,7 +35,7 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Next.js inline scripts + загрузчик и скрипты рекламы РСЯ (Яндекс)
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru *.yandex.ru yastatic.net https://ssynergy.logos.unis.studio",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru *.yandex.ru yastatic.net abt.s3.yandex.net https://ssynergy.logos.unis.studio",
       // Inline стили — для CSS-in-JS и контента блога
       "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
       // Картинки: свои + data-URI + креативы и аватары рекламы РСЯ
