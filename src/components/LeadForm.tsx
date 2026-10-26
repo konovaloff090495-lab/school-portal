@@ -29,7 +29,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
-  const [marketingAgreed, setMarketingAgreed] = useState(MARKETING_DEFAULT_SELECTED)
+  const [marketingAgreed, setMarketingAgreed] = useState(crm && MARKETING_DEFAULT_SELECTED)
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         source: source ?? (schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы'),
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
-        marketing_default_selected: MARKETING_DEFAULT_SELECTED,
+        marketing_default_selected: crm && MARKETING_DEFAULT_SELECTED,
         crm,
         ...(crm ? { qualification } : {}),
         ...(attestat ? { product: 'attestat-online' } : {}),

@@ -13,7 +13,7 @@ export const MARKETING_CONSENT_TEXT = [
   'Для этих целей оператор использует мои имя, телефон и email. Выбор необязателен и не является условием консультации. Перед отправкой заявки его можно изменить. Согласие действует до отзыва. Можно немедленно отписаться ссылкой в письме или направить требование на hello@pro-schools.ru. После получения требования рекламные сообщения прекращаются. Согласие не разрешает передачу контактов неопределённому кругу рекламодателей.',
 ].join('\n\n')
 
-// Owner-approved form defaults, separate from the unchanged document text version.
+// Owner-approved form defaults, versioned separately from the document text.
 export const LEAD_FORM_POLICY_VERSION = '2026-10-26-v2'
 export const PDN_DEFAULT_SELECTED = true
 
