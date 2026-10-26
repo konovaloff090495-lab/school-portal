@@ -1,0 +1,431 @@
+{
+  "onlain-shkola-foxford-moskva": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-vybrat-shkolu-dlya-rebenka.webp",
+    "src": "/blog/images/editorial-20261021/kak-vybrat-shkolu-dlya-rebenka.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlain-shkola-interneturok-moskva": {
+    "fallbackSrc": "/blog/images/editorial-20261021/adaptatsiya-v-novoj-shkole.webp",
+    "src": "/schools/online-covers-20261026/onlain-shkola-interneturok-moskva.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://interneturok.ru/",
+    "sourceUrl": "https://interneturok.ru/static/img/og/vk_main.png",
+    "sha256": "8c68be9e1d623b24ce5e8f05e30682df78c464d02efc0aba0b3455e1e629d7d9"
+  },
+  "onlain-shkola-sinergiya-moskva": {
+    "fallbackSrc": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat-roditelyam.webp",
+    "src": "/schools/online-covers-20261026/onlain-shkola-sinergiya-moskva.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://schooluniversity.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild3166-3865-4138-b039-636437313233/photo.png",
+    "sha256": "cc01246b6ff2047529a0c9a89c2f279a165160b8c2cf86166bef580ea31b8f02"
+  },
+  "onlajn-shkola-onlajn-gimnaziya-1": {
+    "fallbackSrc": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-onlajn-gimnaziya-1.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://og1.ru/",
+    "sourceUrl": "https://og1.ru/wp-content/uploads/2024/11/bg_home.png",
+    "sha256": "c184b45283977c77829cceed20911a3e54de1020bbc366e978b6140edd4808d3"
+  },
+  "onlajn-shkola-onlajn-shkola-1": {
+    "fallbackSrc": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp",
+    "src": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlain-shkola-skysmart-moskva": {
+    "fallbackSrc": "/blog/images/editorial-20261021/byudzhetnye-mesta-v-vuzah-2026.webp",
+    "src": "/schools/online-covers-20261026/onlain-shkola-skysmart-moskva.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://homeschooling.skysmart.ru/",
+    "sourceUrl": "https://homeschooling.skysmart.ru/assets/images/header/ogp/1200x630/share_uk.png?v=4",
+    "sha256": "e8e026d92af509938fcc2654cd789089b79d3b352c323878f06bd8a829c0fd16"
+  },
+  "onlayn-shkola-mtssh-bit-moskva": {
+    "fallbackSrc": "/blog/images/editorial-20261021/onlajn-shkoly-akkreditatsiya-2026.webp",
+    "src": "/blog/images/editorial-20261021/onlajn-shkoly-akkreditatsiya-2026.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-cifrium": {
+    "fallbackSrc": "/blog/images/editorial-20261021/celevoe-mesto-v-vuze.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-cifrium.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://cifrium.ru/school/",
+    "sourceUrl": "https://cdn-wp.cifrium.ru/sites/3/2025/11/07174220/banner.png",
+    "sha256": "229bf05d017950ae53e9010b76f825929da1a8014814b2bbe10e0e61bd487653"
+  },
+  "onlajn-shkola-ibls": {
+    "fallbackSrc": "/blog/images/editorial-20261021/chastnie-shkoly-moskvy-tseny-2026.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-ibls.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://ibls.one/",
+    "sourceUrl": "https://static.tildacdn.com/tild3630-6363-4133-b332-313665393364/ibls-badge-new-2.jpg",
+    "sha256": "af9f229072dde6861bbc4eda4270b86ddfc522db6644daaa1e36edf504f4d1f9"
+  },
+  "onlajn-shkola-edpalm-cpso": {
+    "fallbackSrc": "/blog/images/editorial-20261021/chto-chitat-shkolniku-letom.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-edpalm-cpso.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://hss.center/",
+    "sourceUrl": "https://hss.center/og-default.jpg",
+    "sha256": "128979ba1c5107df73b65d8897d149ebd04c5d7c1fb1cbc70599c9d024c241d5"
+  },
+  "onlajn-shkola-tochka-znaniy": {
+    "fallbackSrc": "/blog/images/editorial-20261021/domashnie-zadaniya-normy.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-tochka-znaniy.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://tochka-school.ru/so",
+    "sourceUrl": "https://tochka-school.ru/themes/school-point/assets/img/cover1.png",
+    "sha256": "2e0ba0f40efea9dc60ab8bec65b89ca954f049516e6dc5292cc5b6aadc64db8e"
+  },
+  "onlajn-shkola-online-licey": {
+    "fallbackSrc": "/blog/images/editorial-20261021/dorozhnaya-bezopasnost-shkolnika.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-online-licey.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://online-licey.ru/",
+    "sourceUrl": "https://online-licey.ru/wp-content/uploads/2024/10/structure-bg.png",
+    "sha256": "0edc09825cb8aca624277035f6bf1f74dbf95e4110dc09d47b133deb37df4fb4"
+  },
+  "onlajn-shkola-dom-znaniy": {
+    "fallbackSrc": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
+    "src": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-akademicheskaya-gimnaziya": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-2026-pomoch-podgotovitsya.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-akademicheskaya-gimnaziya.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://academ-school.online/",
+    "sourceUrl": "https://static.tildacdn.com/tild6630-3631-4532-b864-616561333164/fde3e5cc-c279-486d-9.png",
+    "sha256": "f109fced45c01fc379d1c620b725536e1cf3f482faf868cc4833e7f6bf0004ec"
+  },
+  "onlajn-shkola-umaklass": {
+    "fallbackSrc": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
+    "src": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-zorkium": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-biologiya-2026-kak-sdat.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-zorkium.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://zorkium.ru/",
+    "sourceUrl": "https://zorkium.ru/images/advantages/1.png",
+    "sha256": "6ebb96f87581448e196f3353a9b8488ed4a314a23771d79cc4a5619382b738b5"
+  },
+  "onlajn-shkola-hochu-uchitsya": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-geografiya-2026-sovety.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-hochu-uchitsya.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://zaochno.schoolattestation.ru",
+    "sourceUrl": "https://schoolattestation.ru/wp-content/uploads/2024/03/attestation1.png",
+    "sha256": "853e347fa34485d65b3dd5beab04000a2635dae700f1492a70dd166ca838a29b"
+  },
+  "onlajn-shkola-svobodnoe-obrazovanie": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-istoriya-2026-podgotovka.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-svobodnoe-obrazovanie.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://onlineso.ru/",
+    "sourceUrl": "https://onlineso.ru/wp-content/uploads/2026/09/firstbanner-1.png",
+    "sha256": "7eaab68a60a301be548f8b55dcca75220d24b66a70eb5e15f093f3a1152b1b79"
+  },
+  "onlajn-shkola-korifey": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-literatura-2026-podgotovka.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-korifey.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://koriphey.online/",
+    "sourceUrl": "https://koriphey.online/site/assets/files/2539/cover-main_3.jpg",
+    "sha256": "46825206bea78122b21cb29dd8ebeac4bb3dd8abc6e892ce233ddf5114ab0719"
+  },
+  "onlajn-shkola-mshzd": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ege-obshchestvoznanie-2026-popular.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-mshzd.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://distant.isotm.ru/",
+    "sourceUrl": "https://distant.isotm.ru/wp-content/uploads/2026/09/1_September-banner-2026-—-VIDEO-01-729x356.jpg",
+    "sha256": "2d00485e5716db1341fca2af018d27470d26374e0b14e471ec9084fe440ef69c"
+  },
+  "onlajn-shkola-stimul": {
+    "fallbackSrc": "/blog/images/editorial-20261021/ucheba-s-udovolstviem-metodiki.webp",
+    "src": "/blog/images/editorial-20261021/ucheba-s-udovolstviem-metodiki.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-algoritm": {
+    "fallbackSrc": "/blog/images/editorial-20261021/fgos-chto-eto-roditeli.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-algoritm.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://a-edu.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild3437-6364-4431-b864-653030626336/image.png",
+    "sha256": "a46d4ddd9e3457f0a8113a80150603067e563cfcf48aae87626ce13f3a73e50d"
+  },
+  "onlajn-shkola-proschool": {
+    "fallbackSrc": "/blog/images/editorial-20261021/gimnaziya-ili-licej-v-chem-raznica.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-proschool.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://www.proschool-online.com/",
+    "sourceUrl": "https://static.tildacdn.com/tild6461-3261-4130-b336-393062306332/__PROschool.png",
+    "sha256": "ccc409409884d58ef42336742d88812bd22e55577b697dcce71b6c579e3eccaa"
+  },
+  "onlajn-shkola-ecofamilyschool": {
+    "fallbackSrc": "/blog/images/editorial-20261021/gosudarstvennaya-ili-chastnaya-shkola-sravnenie.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-ecofamilyschool.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://ecofamilyschool.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild6538-3938-4936-b862-346635373063/__2025-07-02_234954.png",
+    "sha256": "efdc1f45498bcd3e89af8dacbc481aef362b01c165793b0728049e5cb33177ec"
+  },
+  "onlajn-shkola-sodruzhestvo-2100": {
+    "fallbackSrc": "/blog/images/editorial-20261021/gosudarstvennaya-ili-chastnaya-shkola.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-sodruzhestvo-2100.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://sodrujestvo2100.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild3536-6562-4933-b262-396639336264/_-_Google___.jpg",
+    "sha256": "b1b16636bcd010af4383b6e356a42662417f296994012587a1306b0f2e65fcb1"
+  },
+  "onlajn-shkola-rshdo": {
+    "fallbackSrc": "/blog/images/editorial-20261021/horoshie-ocenki-bez-zubrjozki-metodiki.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-rshdo.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://dom-shkola.ru/",
+    "sourceUrl": "https://dom-shkola.ru/wp-content/uploads/2025/02/lk.jpg",
+    "sha256": "78eaa38568fc13ea38500bdf72163f40dc32720215f637a0f7d8db92333c132a"
+  },
+  "onlajn-shkola-yoshkola": {
+    "fallbackSrc": "/blog/images/editorial-20261021/inzhenernye-klassy-v-shkole.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-yoshkola.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://yoshkola.ru/",
+    "sourceUrl": "https://yoshkola.ru/static/landings/yoshkola_com/assets/images/hero-student.dfb7e5e1bdeb.png",
+    "sha256": "cbbd2f05552ef7095323f39ae1cce6efecc64a7fc9ffdffc3b5d82cf1e5071cf"
+  },
+  "onlajn-shkola-lobachevskogo": {
+    "fallbackSrc": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-lobachevskogo.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://externlobach.ru/",
+    "sourceUrl": "https://externlobach.ru/images/2.jpg",
+    "sha256": "8f8e36f2bfee5675d4a71e7a13a874ed2ccacade4cfd45d864fb1d80c7fdde7a"
+  },
+  "onlajn-shkola-olwood": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kadetskaya-shkola-chto-nuzhno-znat.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-olwood.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://olwood.online/",
+    "sourceUrl": "https://static.tildacdn.com/tild6435-3038-4432-a437-663235643738/1_49.png",
+    "sha256": "91f0b3467fba1d2d146b08b6ce03a6a140bb82874f37f786d84f33b20f8ce0f3"
+  },
+  "onlajn-shkola-shkola-good-teach": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kadetskie-shkoly-moskvy-spisok.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-shkola-good-teach.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://good-teach.online/",
+    "sourceUrl": "https://good-teach.online/wp-content/uploads/2026/01/yoast-img.jpg",
+    "sha256": "3b9aa15033368c8fa52ea5fc915100813a2418ca7dd042cae2aac88d7dd12757"
+  },
+  "onlajn-shkola-mosh": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-ne-poteryat-znania-za-leto.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-mosh.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://moschool.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild3561-3534-4163-b237-643766626131/wDJZjikVkLs3oRPiXFKE.jpg",
+    "sha256": "2081b8a5b1deb8e4992c25946ea54c064102acddca77f6f3e7eda7eb4d1c6bfa"
+  },
+  "onlajn-shkola-soft-school": {
+    "fallbackSrc": "/blog/images/editorial-20261021/pohvala-v-obuchenii-kak-pravilno.webp",
+    "src": "/blog/images/editorial-20261021/pohvala-v-obuchenii-kak-pravilno.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-ls-lancman": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-podgotovitsya-k-ege-letom.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-ls-lancman.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://world.lancman.online",
+    "sourceUrl": "https://static.tildacdn.com/tild6136-3738-4037-b735-313838646632/__2025-03-06_114240.png",
+    "sha256": "2f516490298ea991bdf450e9fd394238c4d90ad909de8972929612e9b8fecc83"
+  },
+  "onlajn-shkola-imtp": {
+    "fallbackSrc": "/blog/images/editorial-20261021/profil-v-starshej-shkole-kak-vybrat.webp",
+    "src": "/blog/images/editorial-20261021/profil-v-starshej-shkole-kak-vybrat.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-codiv": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-pomoch-rebenku-s-anglijskim.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-codiv.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://codiv.ru/zaochnoe-obuchenie/",
+    "sourceUrl": "https://codiv.ru/simai.data/image/logo/codiv_b_png.png",
+    "sha256": "1f1b7948781d508222c09b7f4c36bcf6f15016c2fc120ae07969b2866db92b8a"
+  },
+  "onlajn-shkola-raduga-znaniy": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-pomoch-rebenku-s-sochineniyami.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-raduga-znaniy.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://disobr.com",
+    "sourceUrl": "https://disobr.com/wp-content/uploads/2025/05/srednii-vystrel-smailikov-druzei-s-knigami-1080x675.jpg",
+    "sha256": "7d934cb961ff102e8fcea68d6faebbb837224b525f98f29b19b169135c454f13"
+  },
+  "onlajn-shkola-retro": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-retro.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://retroonline.ru",
+    "sourceUrl": "https://static.tildacdn.com/tild6336-3938-4438-b465-613562323164/img-2.png",
+    "sha256": "c7448fd45eafedc8bb8ed771d67177478613f6e517952c640e26cc0598a32f52"
+  },
+  "onlajn-shkola-inter": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-prohodit-ege-procedura.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-inter.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://school-inter.net",
+    "sourceUrl": "https://school-inter.net/static/img/og.jpg",
+    "sha256": "9bd16624aa24cac70479fad260b5288e481cc2570ad47fc6a6505d5c011a0ae0"
+  },
+  "onlajn-shkola-stolichnaya": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-prohodit-oge-procedura.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-stolichnaya.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://school-stol.com",
+    "sourceUrl": "https://school-stol.com/media/new-sources/mob_hero_clean.webp",
+    "sha256": "ab3f28da367dfbafb1c79e25766428b55ab72520d5552805c57cf09586a02331"
+  },
+  "onlajn-shkola-cpm": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-razvit-samodisciplinu-rebenka.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-cpm.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://school-cpm.online/",
+    "sourceUrl": "https://school-cpm.online/wp-content/uploads/2025/05/frame-26-scaled.jpg",
+    "sha256": "4eadc3e66a7baffafe31625d6f0b69b58c61ec693df664435b5e0acf6af3a77d"
+  },
+  "onlajn-shkola-hse": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-sdat-ege-na-100-ballov.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-hse.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://school.hse.ru/lyceum-online",
+    "sourceUrl": "https://www.hse.ru/images/fb/hse_ru_thumb.jpg",
+    "sha256": "b05e4db6afb24b731a660474514db8a416d6639673d7c60de96bede12f50a546"
+  },
+  "onlajn-shkola-sibirskiy-new": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-sdat-oge-na-pyat.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-sibirskiy-new.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://snms.mano.pro",
+    "sourceUrl": "https://snms.mano.pro/themes/snms/images/distant.png",
+    "sha256": "fa7ab39f2ebc6aae9abf0ab076d51d95e74a0fc3a6790c7682ae2a752d4715c0"
+  },
+  "onlajn-shkola-macarun": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-vybrat-kruzhok-rebenku.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-macarun.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://online.macarun.ru/",
+    "sourceUrl": "https://online.macarun.ru/upload/webp/90/local/templates/ITJust/assets/picture/image/o-banner_v2.png.webp",
+    "sha256": "8d35389484732ba74b02df896ae9a5b59b96090f41234bf9e306ddbd2628a8b0"
+  },
+  "onlajn-shkola-e-licey": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-vybrat-napravlenie-v-vuze.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-e-licey.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://e-licey.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild6633-3336-4066-b538-666230383063/656656.png",
+    "sha256": "4dbaee0f89b2e6394df8ae61abd978787897f5d0e9f55a8bf7c241e533ee4c0d"
+  },
+  "onlajn-shkola-epischool": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-vybrat-shkolu-po-propiske-2026.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-epischool.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://online.epischool.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild6530-6535-4035-a635-616265386134/Rectangle_674.png",
+    "sha256": "9dfcd00995256e54b040fbb220f132883e8b8be24f17fba3a1a5844e43533379"
+  },
+  "onlajn-shkola-express": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-zainteresovat-rebenka-naukoj.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-express.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://express-externat.spb.ru/",
+    "sourceUrl": "https://express-externat.spb.ru/images/home/main/IMG_3361_1_cut_web.jpg",
+    "sha256": "bf3bdf560fe441095704417840bad4cc8d8b000333aeb412dc3598f0addbd5fb"
+  },
+  "onlajn-shkola-sotvorchestvo": {
+    "fallbackSrc": "/blog/images/editorial-20261021/elektronnyj-dnevnik-roditeli.webp",
+    "src": "/blog/images/editorial-20261021/elektronnyj-dnevnik-roditeli.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-kedr": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-kedr.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://cedar.school/",
+    "sourceUrl": "https://static.tildacdn.com/tild3632-3437-4231-b264-373938346138/__.png",
+    "sha256": "4323e33620a16ca0bdb0e50c0f9fb0a06522710c6625036c67907fcecb393334"
+  },
+  "onlajn-proekt-semejnye-klassy": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kiberbulling-kak-zashchitit-rebenka.webp",
+    "src": "/schools/online-covers-20261026/onlajn-proekt-semejnye-klassy.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://7ya-class.ru/",
+    "sourceUrl": "https://static.tildacdn.com/tild3730-3962-4839-a361-366461346234/_.png",
+    "sha256": "0e259a76c9c1d9ab331d8192047ababb4f1ae68ffc70ee46397abc59edfd4d12"
+  },
+  "onlajn-semejnye-klassy-tutoriya": {
+    "fallbackSrc": "/blog/images/editorial-20261021/bezopasnost-v-internete-dlya-detej.webp",
+    "src": "/blog/images/editorial-20261021/bezopasnost-v-internete-dlya-detej.webp",
+    "kind": "illustration",
+    "checkedAt": "2026-10-26"
+  },
+  "onlajn-shkola-semejnogo-obrazovaniya-intellekt": {
+    "fallbackSrc": "/blog/images/editorial-20261021/kogda-nachinat-gotovitsya-k-ege.webp",
+    "src": "/schools/online-covers-20261026/onlajn-shkola-semejnogo-obrazovaniya-intellekt.webp",
+    "kind": "official",
+    "checkedAt": "2026-10-26",
+    "website": "https://intel-school.ru/index/o_nas/0-82",
+    "sourceUrl": "https://intel-school.ru/articles_for_website_ten.jpg",
+    "sha256": "a9b370ebeb4cd0abf421d6f33b8d631206cd185591382e4f2b5e356172059acd"
+  }
+}
