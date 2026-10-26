@@ -3,6 +3,8 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import LeadForm from './LeadForm'
+import CatalogSynergyDetails from './CatalogSynergyDetails'
+import { trackCatalogOffer } from '@/lib/catalog-offer-tracking'
 import styles from './CatalogSynergyOffer.module.css'
 
 // Confirmed by the owner on 26.10.2026: a ProSchools-specific 14-day offer.
@@ -16,15 +18,6 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
   const goal = credential ? '14 дней бесплатно в онлайн-школе «Синергия». Цель: школьная программа и аттестат государственного образца' : OFFER_GOAL
   const image = credential ? '/offers/synergy/family-attestat-gpt-20261026.webp' : '/offers/synergy/online-lesson-gpt-20261026.webp'
   const imageAlt = credential ? 'Иллюстрация семьи с выпускницей и аттестатом' : 'Иллюстрация: ученик занимается онлайн с преподавателем'
-  const details = credential ? [
-    ['Школьная программа', 'Уроки и задания для 5–11 классов на онлайн-платформе.'],
-    ['Зачисление в школу', 'Консультант объяснит порядок перевода, документы и условия выбранной программы.'],
-    ['Аттестат государственного образца', 'После освоения программы и итоговой аттестации — аттестат за 9 или 11 класс.'],
-  ] : [
-    ['Учёба на одной платформе', 'Уроки, задания и учебные материалы собраны в личном кабинете.'],
-    ['Подходящий формат занятий', 'Живые уроки и записи; состав занятий и поддержки зависит от выбранной программы.'],
-    ['Поддержка в течение учёбы', 'Классный руководитель помогает с организационными вопросами, а родитель может следить за успеваемостью.'],
-  ]
   const [open, setOpen] = useState(false)
   const panelId = useId()
   const headingId = useId()
@@ -54,7 +47,7 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
         className={styles.banner}
         aria-haspopup="dialog"
         aria-controls={panelId}
-        onClick={() => setOpen(true)}
+        onClick={() => { trackCatalogOffer(kind, 'banner_click'); setOpen(true) }}
       >
         <span className={styles.bannerCopy}>
           <span className={`${styles.bannerTitle} ${credential ? styles.credentialTitle : ''}`}>{credential ? <><span>Онлайн-школа</span><strong>с аттестатом государственного образца</strong></> : <>Попробуйте <strong>14 дней бесплатно</strong><span>в онлайн-школе «Синергия»</span></>}</span>
@@ -98,13 +91,11 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
               title={credential ? 'Попробуйте школу 14 дней бесплатно' : 'Получить бесплатный доступ'}
               submitLabel="Попробовать 14 дней бесплатно"
               showGiftNotice={false}
+              offerTracking={{ kind, placement: 'top' }}
             />
           </div>
 
-          <section className={styles.details} aria-label="Об онлайн-школе Синергия">
-            <h3>{credential ? 'Школа и аттестат — в одном месте' : 'Что вас ждёт в онлайн-школе'}</h3>
-            <ul>{details.map(([title, text], index) => <li key={title}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><strong>{title}</strong><p>{text}</p></div></li>)}</ul>
-          </section>
+          <CatalogSynergyDetails kind={kind} source={source} goal={goal} />
 
           <div className={styles.conditions}>
             <h3>Что важно знать</h3>
