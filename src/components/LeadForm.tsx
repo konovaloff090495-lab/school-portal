@@ -120,8 +120,10 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
       }
       if (giftOfferId) trackGift('lead_success', giftOfferId)
       if (offerTracking) trackCatalogOffer(offerTracking.kind, 'lead_success', offerTracking.placement)
-      window.ym?.(108789843, 'reachGoal', 'lead_submit')
-      window.ym?.(108789843, 'reachGoal', 'card_lead', { form_id: source || 'school-card', flow: attestat ? 'attestat-v1' : 'existing', goal: qualification.goal })
+      try {
+        window.ym?.(108789843, 'reachGoal', 'lead_submit')
+        window.ym?.(108789843, 'reachGoal', 'card_lead', { form_id: source || 'school-card', flow: attestat ? 'attestat-v1' : 'existing', goal: qualification.goal })
+      } catch { /* A submitted lead must not fail because analytics is unavailable. */ }
     } catch {
       if (giftOfferId) trackGift('lead_error', giftOfferId)
       setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
