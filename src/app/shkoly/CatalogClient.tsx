@@ -1203,8 +1203,16 @@ export default function CatalogClient({
             const page = filtered.slice(0, visibleCount)
             const cards = page.map((school, i) => {
               const elements: React.ReactNode[] = []
+              // Keep the full-width banner between complete rows at both column counts.
               if (i === 3) {
-                elements.push(<ExternatBanner key="externat-banner" />)
+                elements.push(
+                  <div key="externat-banner-wide" className="col-span-full sm:hidden xl:block"><ExternatBanner /></div>
+                )
+              }
+              if (i === 4) {
+                elements.push(
+                  <div key="externat-banner-two-columns" className="col-span-full hidden sm:block xl:hidden"><ExternatBanner /></div>
+                )
               }
               if (i === 12) {
                 elements.push(
