@@ -19,9 +19,11 @@ interface LeadFormProps {
   crm?: boolean
   attestat?: boolean
   defaultGoal?: string
+  submitLabel?: string
+  showGiftNotice?: boolean
 }
 
-export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '' }: LeadFormProps) {
+export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '', submitLabel = 'Отправить заявку', showGiftNotice = true }: LeadFormProps) {
   const router = useRouter()
   const pathname = usePathname()
   const [loading, setLoading] = useState(false)
@@ -187,10 +189,10 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
           disabled={loading || !pdAgreed}
           className="w-full bg-[#0369A1] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-colors disabled:opacity-60 cursor-pointer"
         >
-          {loading ? 'Отправляем...' : 'Отправить заявку'}
+          {loading ? 'Отправляем...' : submitLabel}
         </button>
       </form>
-      <div className="mt-3"><LeadGiftNotice /></div>
+      {showGiftNotice && <div className="mt-3"><LeadGiftNotice /></div>}
     </div>
   )
 }

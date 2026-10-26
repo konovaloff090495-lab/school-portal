@@ -40,13 +40,15 @@ export default function CatalogSynergyOffer() {
         aria-controls={panelId}
         onClick={() => setOpen(true)}
       >
-        <span className={styles.trialBadge} aria-hidden="true"><span>14</span>дней бесплатно</span>
         <span className={styles.bannerCopy}>
-          <span className={styles.eyebrow}>Реклама · Онлайн-школа «Синергия»</span>
-          <span className={styles.bannerTitle}>Найдите школу, в которой ребёнку удобно учиться</span>
-          <span className={styles.bannerDescription}>Попробуйте онлайн-обучение для 5–11 классов — 14 дней бесплатно по спецпредложению ProSchools.</span>
+          <span className={styles.bannerTitle}>Попробуйте <strong>14 дней бесплатно</strong><span>в онлайн-школе «Синергия»</span></span>
+          <span className={styles.bannerDescription}>Школьная программа для 5–11 классов</span>
+          <span className={styles.bannerCta}>Получить бесплатный доступ <span aria-hidden="true">→</span></span>
+          <span className={styles.bannerNote}>Спецпредложение ProSchools</span>
         </span>
-        <span className={styles.bannerCta}>Получить 14 дней <span aria-hidden="true">↗</span></span>
+        {/* Generated campaign illustration; not a photograph of actual school staff. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className={styles.bannerPhoto} src="/offers/synergy/online-lesson-gpt-20261026.webp" alt="Иллюстрация: ученик занимается онлайн с преподавателем" width="1448" height="1086" loading="lazy" />
       </button>
 
       <dialog
@@ -59,15 +61,16 @@ export default function CatalogSynergyOffer() {
         onClick={event => { if (event.target === event.currentTarget) setOpen(false) }}
       >
         <header className={styles.header}>
-          <span>Синергия <span className={styles.headerTag}>онлайн-школа</span></span>
+          <span>Онлайн-школа «Синергия»</span>
           <button type="button" onClick={() => setOpen(false)} className={styles.close} aria-label="Закрыть информацию об онлайн-школе">×</button>
         </header>
         <div className={styles.panelBody}>
           <div className={styles.hero}>
-            <p className={styles.heroEyebrow}>Для учеников 5–11 классов</p>
-            <h2 id={headingId}>14 дней бесплатно,<br />чтобы попробовать<br /><span>новый формат учёбы</span></h2>
-            <p>Спецпредложение для посетителей ProSchools. Познакомьтесь с платформой онлайн-школы «Синергия» и узнайте, подходит ли она вашему ребёнку.</p>
-            <div className={styles.heroPills}><span>Школьная программа</span><span>Из любой точки мира</span></div>
+            <h2 id={headingId}>Попробуйте онлайн-школу<br /><span>14 дней бесплатно</span></h2>
+            <p className={styles.heroGrade}>Для учеников 5–11 классов</p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className={styles.panelPhoto} src="/offers/synergy/online-lesson-gpt-20261026.webp" alt="Иллюстрация онлайн-урока с преподавателем" width="1448" height="1086" />
+            <p className={styles.heroDescription}>Познакомьтесь с уроками и платформой до выбора школы.</p>
           </div>
 
           <div className={styles.form}>
@@ -76,12 +79,14 @@ export default function CatalogSynergyOffer() {
               schoolName="Онлайн-школа «Синергия»"
               source={OFFER_SOURCE}
               defaultGoal={OFFER_GOAL}
-              title="Получить 14 дней бесплатного доступа"
+              title="Получить бесплатный доступ"
+              submitLabel="Попробовать 14 дней бесплатно"
+              showGiftNotice={false}
             />
           </div>
 
           <section className={styles.details} aria-label="Об онлайн-школе Синергия">
-            <h3>Как устроено обучение</h3>
+            <h3>Что вас ждёт в онлайн-школе</h3>
             <ul>
               <li><span aria-hidden="true">01</span><div><strong>Учёба на одной платформе</strong><p>Уроки, задания и учебные материалы собраны в личном кабинете.</p></div></li>
               <li><span aria-hidden="true">02</span><div><strong>Подходящий формат занятий</strong><p>Живые уроки и записи; состав занятий и поддержки зависит от выбранной программы.</p></div></li>
