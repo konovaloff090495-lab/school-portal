@@ -1,5 +1,5 @@
 /** Only fixed route enums and paths; never send input values to analytics. */
-export const GROWTH_RELEASE = 'leads-growth-20261022-r2'
+export const GROWTH_RELEASE = 'leads-growth-20261026-recovery'
 export const GROWTH_ROUTE_KEY = 'ps_growth_route_v1'
 export const GROWTH_CHOICES = ['local-school', 'attestat-9', 'attestat-11', 'full-school', 'adult-attestat', 'subject-courses'] as const
 export function rememberGrowthRoute(choice: string): void {

@@ -21,6 +21,7 @@ export default function PartnerStickyBanner() {
   const pathname = usePathname()
   const adult = /vechern|eksternal|attestat-vzroslomu/.test(pathname)
   const [visible, setVisible] = useState(false)
+  const [formVisible, setFormVisible] = useState(false)
 
   useEffect(() => {
     if (recentlyClosed()) return
@@ -30,13 +31,26 @@ export default function PartnerStickyBanner() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const forms = new Set<Element>()
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) forms.add(entry.target)
+        else forms.delete(entry.target)
+      }
+      setFormVisible(forms.size > 0)
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' })
+    document.querySelectorAll('form[data-growth-form]').forEach(form => observer.observe(form))
+    return () => observer.disconnect()
+  }, [pathname])
+
   function close(e: React.MouseEvent) {
     e.preventDefault(); e.stopPropagation()
     setVisible(false)
     try { localStorage.setItem(STORAGE_KEY, String(Date.now())) } catch {}
   }
 
-  if (!visible) return null
+  if (!visible || formVisible) return null
 
   return (
     <div data-partner-sticky-banner className="fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-[#0F3A5F] to-[#0369A1] text-white shadow-[0_-4px_20px_rgba(0,0,0,0.25)]">
