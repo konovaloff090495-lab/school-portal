@@ -1,0 +1,86 @@
+{
+  "counter": 108789843,
+  "verified": "2026-10-26",
+  "goals": [
+    {
+      "event": "catalog_trial_banner_click",
+      "id": 674703088,
+      "name": "Каталог · Пробные 14 дней · Клик по баннеру"
+    },
+    {
+      "event": "catalog_trial_form_view",
+      "id": 674703089,
+      "name": "Каталог · Пробные 14 дней · Увидели форму"
+    },
+    {
+      "event": "catalog_trial_form_start",
+      "id": 674703090,
+      "name": "Каталог · Пробные 14 дней · Начали заполнять форму"
+    },
+    {
+      "event": "catalog_trial_cta_click",
+      "id": 674703091,
+      "name": "Каталог · Пробные 14 дней · Клик по CTA"
+    },
+    {
+      "event": "catalog_trial_lead_success",
+      "id": 674703092,
+      "name": "Каталог · Пробные 14 дней · Заявка отправлена"
+    },
+    {
+      "event": "catalog_trial_lead_top",
+      "id": 674703094,
+      "name": "Каталог · Пробные 14 дней · Заявка: верхняя форма"
+    },
+    {
+      "event": "catalog_trial_lead_middle",
+      "id": 674703096,
+      "name": "Каталог · Пробные 14 дней · Заявка: середина панели"
+    },
+    {
+      "event": "catalog_trial_lead_bottom",
+      "id": 674703097,
+      "name": "Каталог · Пробные 14 дней · Заявка: конец панели"
+    },
+    {
+      "event": "catalog_attestat_banner_click",
+      "id": 674703098,
+      "name": "Каталог · Аттестат · Клик по баннеру"
+    },
+    {
+      "event": "catalog_attestat_form_view",
+      "id": 674703099,
+      "name": "Каталог · Аттестат · Увидели форму"
+    },
+    {
+      "event": "catalog_attestat_form_start",
+      "id": 674703100,
+      "name": "Каталог · Аттестат · Начали заполнять форму"
+    },
+    {
+      "event": "catalog_attestat_cta_click",
+      "id": 674703102,
+      "name": "Каталог · Аттестат · Клик по CTA"
+    },
+    {
+      "event": "catalog_attestat_lead_success",
+      "id": 674703103,
+      "name": "Каталог · Аттестат · Заявка отправлена"
+    },
+    {
+      "event": "catalog_attestat_lead_top",
+      "id": 674703104,
+      "name": "Каталог · Аттестат · Заявка: верхняя форма"
+    },
+    {
+      "event": "catalog_attestat_lead_middle",
+      "id": 674703105,
+      "name": "Каталог · Аттестат · Заявка: середина панели"
+    },
+    {
+      "event": "catalog_attestat_lead_bottom",
+      "id": 674703106,
+      "name": "Каталог · Аттестат · Заявка: конец панели"
+    }
+  ]
+}
