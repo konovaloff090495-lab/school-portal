@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import LeadForm from './LeadForm'
 import styles from './CatalogSynergyOffer.module.css'
 
@@ -66,7 +67,7 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
         <img className={styles.bannerPhoto} src={image} alt={imageAlt} width="1448" height="1086" loading="lazy" />
       </button>
 
-      <dialog
+      {open && createPortal(<dialog
         ref={dialog}
         id={panelId}
         className={`${styles.panel} ${credential ? styles.credentialPanel : ''}`}
@@ -112,7 +113,7 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
           </div>
           <button type="button" className={styles.back} onClick={() => setOpen(false)}>Вернуться к выбору школы</button>
         </div>
-      </dialog>
+      </dialog>, document.body)}
     </div>
   )
 }
