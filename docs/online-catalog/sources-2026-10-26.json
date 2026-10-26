@@ -1,0 +1,448 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "Российская школьная программа; обучение с учителями или сопровождением; собственная школа либо организация аттестации через партнёра. Не государственный реестр и не гарантия исчерпывающего охвата.",
+  "schools": [
+    {
+      "slug": "onlain-shkola-foxford-moskva",
+      "name": "Домашняя школа Фоксфорд",
+      "source": "https://foxford.ru/home-school",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": null
+    },
+    {
+      "slug": "onlain-shkola-interneturok-moskva",
+      "name": "Домашняя школа «ИнтернетУрок»",
+      "source": "https://interneturok.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "f8f8d076bef007.txt"
+    },
+    {
+      "slug": "onlain-shkola-sinergiya-moskva",
+      "name": "Онлайн-школа «Синергия» (Школьный Университет)",
+      "source": "https://schooluniversity.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "3e94c4c286e373.txt"
+    },
+    {
+      "slug": "onlajn-shkola-onlajn-gimnaziya-1",
+      "name": "Онлайн Гимназия № 1",
+      "source": "https://og1.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "7c200fcaafb141.txt"
+    },
+    {
+      "slug": "onlajn-shkola-onlajn-shkola-1",
+      "name": "Онлайн-школа № 1",
+      "source": "https://onlineschool-1.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "7172fd8444961a.txt"
+    },
+    {
+      "slug": "onlain-shkola-skysmart-moskva",
+      "name": "Домашний лицей Skysmart",
+      "source": "https://homeschooling.skysmart.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "ecde5bd2f88aad.txt"
+    },
+    {
+      "slug": "onlayn-shkola-mtssh-bit-moskva",
+      "name": "Онлайн-школа «БИТ»",
+      "source": "https://school-bit.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "cfc4ec5cbff719.txt"
+    },
+    {
+      "slug": "onlajn-shkola-cifrium",
+      "name": "Домашняя школа «Цифриум»",
+      "source": "https://cifrium.ru/school/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "e3aa73ab5b1950.txt"
+    },
+    {
+      "slug": "onlajn-shkola-ibls",
+      "name": "Онлайн-школа IBLS (ex. «Наши Пенаты»)",
+      "source": "https://ibls.one/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "3eafcc42d6e9e3.txt"
+    },
+    {
+      "slug": "onlajn-shkola-edpalm-cpso",
+      "name": "Центр поддержки семейного образования (ЭдПалм)",
+      "source": "https://hss.center/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "24204cbbf7c2f2.txt"
+    },
+    {
+      "slug": "onlajn-shkola-tochka-znaniy",
+      "name": "Онлайн-школа «Точка Знаний»",
+      "source": "https://tochka-school.ru/so",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "f9260aa01fb6ef.txt"
+    },
+    {
+      "slug": "onlajn-shkola-online-licey",
+      "name": "Онлайн-лицей",
+      "source": "https://online-licey.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "cbca4540ef3038.txt"
+    },
+    {
+      "slug": "onlajn-shkola-dom-znaniy",
+      "name": "Онлайн-школа «Дом Знаний»",
+      "source": "https://domznaniy.school/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "cd9da01eb54bd8.txt"
+    },
+    {
+      "slug": "onlajn-shkola-akademicheskaya-gimnaziya",
+      "name": "Онлайн-школа Академической гимназии",
+      "source": "https://academ-school.online/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "cb8031cafc7bc6.txt"
+    },
+    {
+      "slug": "onlajn-shkola-umaklass",
+      "name": "Онлайн-школа «Умакласс»",
+      "source": "https://umaclass.school/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "b58bca713633f7.txt"
+    },
+    {
+      "slug": "onlajn-shkola-zorkium",
+      "name": "Zorkium (ранее «Школа Будущего Онлайн»)",
+      "source": "https://zorkium.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "b14e6bddf1cc90.txt"
+    },
+    {
+      "slug": "onlajn-shkola-hochu-uchitsya",
+      "name": "Центр семейного образования «Хочу Учиться»",
+      "source": "https://zaochno.schoolattestation.ru",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "12d3c8d3e20806.txt"
+    },
+    {
+      "slug": "onlajn-shkola-svobodnoe-obrazovanie",
+      "name": "Онлайн-школа «Свободное образование»",
+      "source": "https://onlineso.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "759c5978f0e6a5.txt"
+    },
+    {
+      "slug": "onlajn-shkola-korifey",
+      "name": "Онлайн-школа «Корифей»",
+      "source": "https://koriphey.online/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "dcaf9d57108aa3.txt"
+    },
+    {
+      "slug": "onlajn-shkola-mshzd",
+      "name": "Международная школа завтрашнего дня (ISOT), дистанционное отделение",
+      "source": "https://distant.isotm.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "78b5bb02359e58.txt"
+    },
+    {
+      "slug": "onlajn-shkola-stimul",
+      "name": "Лицензированная онлайн-школа «Стимул»",
+      "source": "https://stimul.school/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "486ccdcd19b0ee.txt"
+    },
+    {
+      "slug": "onlajn-shkola-algoritm",
+      "name": "Школа «Алгоритм» (онлайн и гибрид)",
+      "source": "https://a-edu.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "5fe65ff10c98ab.txt"
+    },
+    {
+      "slug": "onlajn-shkola-proschool",
+      "name": "Онлайн-школа PROschool online",
+      "source": "https://www.proschool-online.com/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "2654fa33272e94.txt"
+    },
+    {
+      "slug": "onlajn-shkola-ecofamilyschool",
+      "name": "Ecofamilyschool",
+      "source": "https://ecofamilyschool.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "fcae344d2b6667.txt"
+    },
+    {
+      "slug": "onlajn-shkola-sodruzhestvo-2100",
+      "name": "Онлайн-школа «Содружество 2100»",
+      "source": "https://sodrujestvo2100.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "f7751af4ea2405.txt"
+    },
+    {
+      "slug": "onlajn-shkola-rshdo",
+      "name": "Российская школа дистанционного образования (РШДО)",
+      "source": "https://dom-shkola.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "8eddbf4d560f8f.txt"
+    },
+    {
+      "slug": "onlajn-shkola-yoshkola",
+      "name": "Ёшкола",
+      "source": "https://yoshkola.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "c54f0b3533ba02.txt"
+    },
+    {
+      "slug": "onlajn-shkola-lobachevskogo",
+      "name": "ЧОУ «Средняя школа им. Н. И. Лобачевского»",
+      "source": "https://externlobach.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "9348c7e853220b.txt"
+    },
+    {
+      "slug": "onlajn-shkola-olwood",
+      "name": "Школа семейного и дистанционного обучения «Олвуд»",
+      "source": "https://olwood.online/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "c8822f3c9a8e4b.txt"
+    },
+    {
+      "slug": "onlajn-shkola-shkola-good-teach",
+      "name": "Онлайн-школа SHKOLA (good-teach.online)",
+      "source": "https://good-teach.online/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "651994147420a4.txt"
+    },
+    {
+      "slug": "onlajn-shkola-mosh",
+      "name": "Московская онлайн-школа (МОШ)",
+      "source": "https://moschool.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "2a6b2caf14f378.txt"
+    },
+    {
+      "slug": "onlajn-shkola-soft-school",
+      "name": "Онлайн-школа SOFT SCHOOL",
+      "source": "https://soft-school.space",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "50d0ce0aaaca62.txt"
+    },
+    {
+      "slug": "onlajn-shkola-ls-lancman",
+      "name": "Моя школа LS (Lancman School)",
+      "source": "https://world.lancman.online",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "785283af719069.txt"
+    },
+    {
+      "slug": "onlajn-shkola-imtp",
+      "name": "Школа ИМТП — 10–11 классы онлайн",
+      "source": "https://school.imtp.ru",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "a035aba16d3df3.txt"
+    },
+    {
+      "slug": "onlajn-shkola-codiv",
+      "name": "ЦОДИВ — заочное обучение",
+      "source": "https://codiv.ru/zaochnoe-obuchenie/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "11bdacb96bf911.txt"
+    },
+    {
+      "slug": "onlajn-shkola-raduga-znaniy",
+      "name": "Радуга знаний — онлайн и экстернат",
+      "source": "https://disobr.com",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "d9fe5468e37504.txt"
+    },
+    {
+      "slug": "onlajn-shkola-retro",
+      "name": "РЕТРО — онлайн-школа",
+      "source": "https://retroonline.ru",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "599d3cde47c3b1.txt"
+    },
+    {
+      "slug": "onlajn-shkola-inter",
+      "name": "School Inter",
+      "source": "https://school-inter.net",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "fad65499e6b6e9.txt"
+    },
+    {
+      "slug": "onlajn-shkola-stolichnaya",
+      "name": "Онлайн-школа «Столичная»",
+      "source": "https://school-stol.com",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "370aee1d0023d5.txt"
+    },
+    {
+      "slug": "onlajn-shkola-cpm",
+      "name": "Онлайн-школа ЦПМ",
+      "source": "https://school-cpm.online/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "07ee10d785f501.txt"
+    },
+    {
+      "slug": "onlajn-shkola-hse",
+      "name": "Лицей Онлайн НИУ ВШЭ",
+      "source": "https://school.hse.ru/lyceum-online",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "7febcc133d6c56.txt"
+    },
+    {
+      "slug": "onlajn-shkola-sibirskiy-new",
+      "name": "Сибирская школа нового поколения",
+      "source": "https://snms.mano.pro",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "d680026d6ca058.txt"
+    },
+    {
+      "slug": "onlajn-shkola-macarun",
+      "name": "Макарун — онлайн-школа",
+      "source": "https://online.macarun.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "610869b615004f.txt"
+    },
+    {
+      "slug": "onlajn-shkola-e-licey",
+      "name": "Е-ЛИЦЕЙ — Екатерининский лицей онлайн",
+      "source": "https://e-licey.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "facbd7e31763fe.txt"
+    },
+    {
+      "slug": "onlajn-shkola-epischool",
+      "name": "Эпишкола Онлайн",
+      "source": "https://online.epischool.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "172c67ca7997da.txt"
+    },
+    {
+      "slug": "onlajn-shkola-express",
+      "name": "Школа «Экспресс» — дистанционное обучение",
+      "source": "https://express-externat.spb.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальная страница: школьная программа и дистанционный формат; реестр аккредитации отдельно не проверялся",
+      "capture": "c8dedffe8305a3.txt"
+    },
+    {
+      "slug": "onlajn-shkola-sotvorchestvo",
+      "name": "СОтворчество — онлайн-школа семейного образования",
+      "source": "https://www.sotvorchestvo21.ru/oshlending",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальный сайт подтверждает дистанционное сопровождение школьной программы; классы и зачисление уточняются."
+    },
+    {
+      "slug": "onlajn-shkola-kedr",
+      "name": "Кедр — онлайн-школа",
+      "source": "https://cedar.school/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальный сайт подтверждает дистанционное сопровождение школьной программы; классы и зачисление уточняются."
+    },
+    {
+      "slug": "onlajn-proekt-semejnye-klassy",
+      "name": "Семейные классы — онлайн-обучение",
+      "source": "https://7ya-class.ru/",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальный сайт подтверждает дистанционное сопровождение школьной программы; классы и зачисление уточняются."
+    },
+    {
+      "slug": "onlajn-semejnye-klassy-tutoriya",
+      "name": "Тьютория — онлайн-классы семейного обучения",
+      "source": "https://tutoriya.ru/publikacii/semejnaya-shkola/semejnye-klassy.html",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальный сайт подтверждает дистанционное сопровождение школьной программы; классы и зачисление уточняются."
+    },
+    {
+      "slug": "onlajn-shkola-semejnogo-obrazovaniya-intellekt",
+      "name": "Интеллект — онлайн-школа семейного образования",
+      "source": "https://intel-school.ru/index/o_nas/0-82",
+      "checkedAt": "2026-10-26",
+      "verification": "Официальный сайт подтверждает дистанционное сопровождение школьной программы; классы и зачисление уточняются."
+    }
+  ],
+  "pending": [
+    {
+      "name": "НИКА",
+      "site": "https://nika-school.ru/",
+      "reason": "Главная подтверждает очную школу; самостоятельная онлайн-программа не подтверждена. Не дублируем «Хочу Учиться»."
+    },
+    {
+      "name": "Онлайн-школа СПбГУ",
+      "site": "https://online-school.spbu.ru",
+      "reason": "Дополнительный проект: сертификаты/дипломы участия, не замена зачислению в общеобразовательную школу."
+    },
+    {
+      "name": "Академия MAXIMUM",
+      "site": "https://maximumtest.ru",
+      "reason": "Найдено упоминание домашней школы в каталоге; действующая официальная страница полной программы не подтверждена."
+    },
+    {
+      "name": "Академия ТОП",
+      "site": "https://online.top-academy.ru",
+      "reason": "Проверенный адрес ведёт на IT-курсы. Полная общеобразовательная онлайн-программа по этому адресу не подтверждена."
+    },
+    {
+      "name": "Ломоносовская школа",
+      "site": "https://lomon.ru/",
+      "reason": "На проверенной странице есть очные школы, отдельное дистанционное направление не подтверждено."
+    },
+    {
+      "name": "Репетитор Плюс Школа",
+      "site": "http://schoolrepetitor.ru",
+      "reason": "Официальный адрес возвращает 403; текущая полная программа не подтверждена."
+    }
+  ],
+  "resources": {
+    "onlain-platforma-uchiru-moskva": "Учебная платформа с заданиями и курсами; не замена общеобразовательной школе.",
+    "onlain-shkola-algoritmika-moskva": "Школа программирования; отдельные курсы вместо полной школьной программы.",
+    "onlain-shkola-kodabra-moskva": "Курсы программирования и цифрового творчества; не общеобразовательная школа.",
+    "yandeks-uchebnik-onlain-moskva": "Учебный сервис с заданиями и материалами; не организация для зачисления в школу.",
+    "onlain-platforma-infourok-moskva": "По проверенному адресу работает «Виртуальный класс» для создания и проведения курсов; полная школьная программа с зачислением не подтверждена."
+  }
+}

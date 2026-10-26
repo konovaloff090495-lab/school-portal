@@ -1,3 +1,5 @@
+import onlineCatalogSchools from './online-catalog-schools.json'
+import onlineCatalogUpdates from './online-catalog-updates.json'
 import schoolFormatUpdates from './school-format-card-updates.json'
 import schoolCatalogExclusions from './school-catalog-exclusions.json'
 import programmingGeography from './programming-geography.json'
@@ -35,6 +37,7 @@ export interface School {
   address: string
   phone: string
   website?: string
+  onlineSchoolScope?: 'national' | 'regional' | 'resource'
   remoteOnly?: boolean
   email?: string
   description: string
@@ -243470,7 +243473,7 @@ export const schools = ([
     features: ["Дистанционное обучение","Занятия из любой точки","Подготовка к ОГЭ и ЕГЭ","Гибкий график","Аттестат государственного образца"],
     rating: null,
     reviewCount: 0,
-    priceFrom: 0,
+    priceFrom: undefined,
     imageAlt: 'Мобильная цифровая школа «Бит» — онлайн-школа в Москве',
   },
   {
@@ -287869,9 +287872,10 @@ export const schools = ([
     imageAlt: 'Детская школа искусств Красносельского района в Санкт-Петербурге — школа искусств',
     photoCount: 0,
   },
+  ...onlineCatalogSchools,
   ...verifiedFamilySchools,
   ...verifiedProgrammingSchools,
-] as any[] as School[]).filter(s => !(s.slug in schoolCatalogExclusions)).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((schoolFormatUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...(s.slug in schoolFormatUpdates ? { priceFrom: undefined, priceTo: undefined, faq: undefined } : {}) }))
+] as any[] as School[]).filter(s => !(s.slug in schoolCatalogExclusions)).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((schoolFormatUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...(s.slug in schoolFormatUpdates ? { priceFrom: undefined, priceTo: undefined, faq: undefined } : {}), ...((onlineCatalogUpdates as Record<string, Partial<School>>)[s.slug] ?? {}) }))
 export const typeLabels: Record<SchoolType, string> = {
   gosudarstvennye: 'Государственные',
   chastnie: 'Частные',
@@ -288406,6 +288410,7 @@ export function getSchoolsByRegion(region: RegionSlug): School[] {
 // в Яндекс Картах, 09.2026). Карточка хранится с type 'podgotovka-ege', а страницы
 // типа 'podgotovka-oge' показывают те из них, у кого в features есть «Подготовка к ОГЭ».
 export function schoolMatchesType(s: School, type: SchoolType): boolean {
+  if (type === 'online' && (s.onlineSchoolScope === 'resource' || s.onlineSchoolScope === 'regional')) return false
   if (type === 'programmirovanie' && s.programmingBrandId) return true
   if (type === 'semejnye' && (familySchoolMatches as string[]).includes(s.slug)) return true
   if (s.type === type) return true
