@@ -38,7 +38,7 @@ try {
     assert.equal(await choice.evaluate(node => Boolean(node.closest('aside'))), false, 'Primary program choice must be outside the filter sidebar')
     const firstCard = page.locator('a[href^="/shkola/"]').first()
     const choiceBox = await choice.boundingBox(), cardBox = await firstCard.boundingBox()
-    assert.ok(choiceBox && cardBox && choiceBox.y + choiceBox.height < cardBox.y, 'Program choice must precede school cards')
+    assert.ok(choiceBox && cardBox && cardBox.y < choiceBox.y, 'Catalog cards must precede the comparison and advice')
     await page.evaluate(() => document.fonts.ready)
     // Resizing and navigation can precede hydration/font layout. Require the
     // final document to fit; retain diagnostics for every width if it does not.
@@ -55,7 +55,7 @@ try {
     const later = page.getByRole('button', { name: 'Позже', exact: true })
     if (await later.isVisible().catch(() => false)) await later.click()
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${output}/hub-${width}.png` })
-    checks.push({ page: 'online hub', ...dimensions, primaryChoiceOutsideFilters: true, beforeCards: true })
+    checks.push({ page: 'online hub', ...dimensions, primaryChoiceOutsideFilters: true, cardsFirst: true })
   }
   await page.setViewportSize({ width: 390, height: 1000 })
   const response = await page.goto(base + '/shkoly/tipy/online/1-klass/', { waitUntil: 'domcontentloaded' })
@@ -65,7 +65,7 @@ try {
   checks.push({ page: 'class 1', status: 200, width: 390 })
   await writeFile(`${output}/qa.json`, JSON.stringify({ result: errors.length ? 'failed' : 'passed', checks, errors }, null, 2))
   assert.equal(errors.length, 0, JSON.stringify(errors))
-  console.log(JSON.stringify({ result: 'passed', checks: checks.length, primaryChoice: 'outside filters and before cards' }))
+  console.log(JSON.stringify({ result: 'passed', checks: checks.length, primaryChoice: 'outside filters and after cards' }))
 } finally {
   clearTimeout(timeout)
   if (browser) await browser.close()
