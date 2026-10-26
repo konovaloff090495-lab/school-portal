@@ -1,0 +1,57 @@
+{
+  "counter": 108789843,
+  "verified": "2026-10-26",
+  "experiment": "catalog-gifts-v1",
+  "goals": [
+    {
+      "event": "catalog_gifts_view",
+      "id": 674774666,
+      "name": "Подарки каталога · Показ плашки"
+    },
+    {
+      "event": "catalog_gifts_click",
+      "id": 674774667,
+      "name": "Подарки каталога · Открыли подарки"
+    },
+    {
+      "event": "catalog_gifts_close",
+      "id": 674774669,
+      "name": "Подарки каталога · Закрыли плашку"
+    },
+    {
+      "event": "catalog_gifts_panel_view",
+      "id": 674774670,
+      "name": "Подарки каталога · Увидели панель"
+    },
+    {
+      "event": "catalog_gifts_offer_open",
+      "id": 674774671,
+      "name": "Подарки каталога · Выбрали подарок"
+    },
+    {
+      "event": "catalog_gifts_form_view",
+      "id": 674774672,
+      "name": "Подарки каталога · Увидели форму"
+    },
+    {
+      "event": "catalog_gifts_form_start",
+      "id": 674774673,
+      "name": "Подарки каталога · Начали форму"
+    },
+    {
+      "event": "catalog_gifts_form_submit",
+      "id": 674774674,
+      "name": "Подарки каталога · Отправляют форму"
+    },
+    {
+      "event": "catalog_gifts_lead_success",
+      "id": 674774676,
+      "name": "Подарки каталога · Заявка принята"
+    },
+    {
+      "event": "catalog_gifts_lead_error",
+      "id": 674774677,
+      "name": "Подарки каталога · Ошибка заявки"
+    }
+  ]
+}
