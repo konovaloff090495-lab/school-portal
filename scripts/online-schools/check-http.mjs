@@ -37,8 +37,9 @@ try{
  }
  for(const [width,marketing]of [[1440,true],[390,false]]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'/shkoly/moskva/online/',{waitUntil:'domcontentloaded'});await page.evaluate(()=>window.dispatchEvent(new Event('ps:catalog-drawer-open')))
-  const form=page.locator('#podbor form');await form.scrollIntoViewIfNeeded();await form.getByPlaceholder('Ваше имя',{exact:true}).fill('Проверка каталога');await form.locator('input[type="tel"]').fill('+79162847319');await form.locator('input[type="email"]').fill('catalog-check@example.invalid')
-  const flags=form.locator('input[type="checkbox"]');assert.equal(await flags.nth(0).isChecked(),true);await flags.nth(0).uncheck();assert.equal(await form.locator('button[type="submit"]').isDisabled(),true);await flags.nth(0).check();await flags.nth(1).setChecked(marketing);await form.locator('button[type="submit"]').click();await page.waitForURL('**/spasibo/**',{timeout:120000})
+  await page.waitForFunction(()=>{const input=document.querySelector('#podbor form input[type="tel"]');return input&&Object.keys(input).some(k=>k.startsWith('__reactProps$'))})
+  const form=page.locator('#podbor form');await form.scrollIntoViewIfNeeded();await form.getByPlaceholder('Ваше имя',{exact:true}).fill('Проверка каталога');await form.locator('input[type="tel"]').fill('+79162847319');await form.locator('input[type="email"]').fill('catalog-check@example.invalid');assert.match(await form.locator('input[type="tel"]').inputValue(),/^\+7 \(/)
+  const flags=form.locator('input[type="checkbox"]');assert.equal(await flags.nth(0).isChecked(),true);await flags.nth(0).uncheck();await page.waitForFunction(()=>document.querySelector('#podbor button[type="submit"]')?.disabled===true);assert.equal(await form.locator('button[type="submit"]').isDisabled(),true);await flags.nth(0).check();await flags.nth(1).setChecked(marketing);await form.locator('button[type="submit"]').click();await page.waitForURL('**/spasibo/**',{timeout:120000})
   const lead=leads.at(-1);assert.equal(lead.crm,true);assert.equal(lead.pd_agreed,true);assert.equal(lead.marketing_agreed,marketing);assert.equal(lead.source,'Онлайн-школы: город Москва');assert.equal(lead.city,'Москва');checks.push({mock:true,width,marketing,thanks:true})
  }
  assert.equal(leads.length,2);assert.deepEqual(errors,[])
