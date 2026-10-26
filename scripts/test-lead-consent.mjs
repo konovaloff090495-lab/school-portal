@@ -49,4 +49,9 @@ for(const f of ['src/components/LeadForm.tsx','src/components/CatalogOfferPopup.
  const check=ts.transpileModule(text,{reportDiagnostics:true,compilerOptions:{jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}})
  assert.deepEqual((check.diagnostics||[]).filter(d=>d.category===ts.DiagnosticCategory.Error),[])
 }
-console.log('PASS consent rejects missing/false/coerced flags before capture or forwarding; encrypted receipt binds text/hash/time; no marketing without opt-in; owner-approved PD default recorded separately; marketing stays opt-in')
+assert.equal(consent.MARKETING_DEFAULT_SELECTED,true)
+assert.equal((await POST(req({...valid,marketing_agreed:true,marketing_default_selected:true,form_policy_version:consent.LEAD_FORM_POLICY_VERSION}))).status,200)
+assert.equal(captured.consent_receipt.marketing_default_selected,true)
+assert.equal(captured.consent_receipt.marketing_agreed,true)
+assert.equal(captured.consent_receipt.marketing_text,consent.MARKETING_CONSENT_TEXT)
+console.log('PASS consent rejects missing/false/coerced flags before capture or forwarding; encrypted receipt binds text/hash/time; no marketing without opt-in; owner-approved PD default recorded separately; marketing UI default recorded without implying a checkbox click')
