@@ -1,4 +1,5 @@
 'use client'
+import { trackGift } from '@/lib/catalog-gifts'
 import { PDN_DEFAULT_SELECTED, MARKETING_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useEffect, useRef, useState } from 'react'
 import { trackCatalogOffer, type CatalogOfferFormTracking } from '@/lib/catalog-offer-tracking'
@@ -22,10 +23,11 @@ interface LeadFormProps {
   defaultGoal?: string
   submitLabel?: string
   showGiftNotice?: boolean
+  giftOfferId?: string
   offerTracking?: CatalogOfferFormTracking
 }
 
-export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '', submitLabel = 'Отправить заявку', showGiftNotice = true, offerTracking }: LeadFormProps) {
+export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '', submitLabel = 'Отправить заявку', showGiftNotice = true, offerTracking, giftOfferId }: LeadFormProps) {
   const router = useRouter()
   const pathname = usePathname()
   const [loading, setLoading] = useState(false)
@@ -37,8 +39,19 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
   const formContainer = useRef<HTMLDivElement>(null)
   const offerStarted = useRef(false)
+  const giftStarted = useRef(false)
   const offerKind = offerTracking?.kind
   const offerPlacement = offerTracking?.placement
+
+  useEffect(() => {
+    if (!giftOfferId || !formContainer.current || typeof IntersectionObserver === 'undefined') return
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting && entry.intersectionRatio >= 0.25)) return
+      trackGift('form_view', giftOfferId); observer.disconnect()
+    }, { threshold: 0.25 })
+    observer.observe(formContainer.current)
+    return () => observer.disconnect()
+  }, [giftOfferId])
 
   useEffect(() => {
     if (!offerKind || !offerPlacement || !formContainer.current || typeof IntersectionObserver === 'undefined') return
@@ -78,6 +91,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
     e.preventDefault()
     const err = validatePhone(form.phone)
     if (err) { setPhoneError(err); return }
+    if (giftOfferId) trackGift('form_submit', giftOfferId)
     setLoading(true)
     setSubmitError(null)
 
@@ -96,16 +110,22 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         crm,
         ...(crm ? { qualification } : {}),
         ...(attestat ? { product: 'attestat-online' } : {}),
+        ...(giftOfferId ? { product: giftOfferId } : {}),
       })
       if (!sent) {
+        if (giftOfferId) trackGift('lead_error', giftOfferId)
         setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
         setLoading(false)
         return
       }
+      if (giftOfferId) trackGift('lead_success', giftOfferId)
       if (offerTracking) trackCatalogOffer(offerTracking.kind, 'lead_success', offerTracking.placement)
-      window.ym?.(108789843, 'reachGoal', 'lead_submit')
-      window.ym?.(108789843, 'reachGoal', 'card_lead', { form_id: source || 'school-card', flow: attestat ? 'attestat-v1' : 'existing', goal: qualification.goal })
+      try {
+        window.ym?.(108789843, 'reachGoal', 'lead_submit')
+        window.ym?.(108789843, 'reachGoal', 'card_lead', { form_id: source || 'school-card', flow: attestat ? 'attestat-v1' : 'existing', goal: qualification.goal })
+      } catch { /* A submitted lead must not fail because analytics is unavailable. */ }
     } catch {
+      if (giftOfferId) trackGift('lead_error', giftOfferId)
       setSubmitError('Не удалось отправить заявку. Попробуйте ещё раз.')
       setLoading(false)
       return
@@ -122,6 +142,9 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
       </h3>
       {(attestat || !crm) && <p className="text-sm text-gray-600 mb-4">{attestat ? 'Консультант Синергии уточнит программу, стоимость и документы. Обучение платное; ОГЭ/ЕГЭ — очно в Москве.' : 'Свяжемся после обработки заявки.'}</p>}
       <form data-growth-form={crm ? source || 'school-card' : undefined} data-offer-form={offerTracking?.placement} onSubmit={handleSubmit} onChangeCapture={event => {
+        if (giftOfferId && !giftStarted.current && event.target instanceof HTMLInputElement && event.target.type !== 'checkbox') {
+          giftStarted.current = true; trackGift('form_start', giftOfferId)
+        }
         if (!offerTracking || offerStarted.current || !(event.target instanceof HTMLInputElement) || event.target.type === 'checkbox') return
         offerStarted.current = true
         trackCatalogOffer(offerTracking.kind, 'form_start', offerTracking.placement)
