@@ -17,7 +17,7 @@ import { hasConfirmedFreePrice } from '@/lib/school-price'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
-import AdBanner from '@/components/AdBanner'
+import CatalogSynergyOffer from '@/components/CatalogSynergyOffer'
 import ExternatBanner from '@/components/ExternatBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
@@ -1216,8 +1216,7 @@ export default function CatalogClient({
               }
               if (i === 12) {
                 elements.push(
-                  <div key="ad-desktop" className="col-span-full"><AdBanner variant="leaderboard" /></div>,
-                  <div key="ad-mobile" className="col-span-full"><AdBanner variant="mobile" /></div>
+                  <div key="synergy-trial" className="col-span-full"><CatalogSynergyOffer /></div>
                 )
               }
               elements.push(<SchoolCard key={school.id} school={school} />)
