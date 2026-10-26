@@ -2,7 +2,11 @@ import { WALL_OFFERS } from '@/lib/offerwall'
 
 /** Same verified offers as /spasibo/; no external offers without our CRM form. */
 const GIFT_IDS = ['online-school', 'kursy-ege', 'kursy-oge', 'repetitor', 'nachalnaya-shkola', 'programmirovanie', 'soft-skills', 'lektoriy', 'profilnye-klassy', 'vneurochka']
-export const CATALOG_GIFTS = GIFT_IDS.map(id => WALL_OFFERS.find(offer => offer.id === id)!).filter(Boolean)
+export const CATALOG_GIFTS = GIFT_IDS.map(id => WALL_OFFERS.find(offer => offer.id === id)!).filter(Boolean).map(offer => offer.id === 'online-school' ? {
+  ...offer,
+  lead: 'Познакомьтесь с онлайн-школой для 5–11 классов: живые уроки, записи и поддержка педагогов. Условия пробного доступа уточнит консультант.',
+  bullets: ['Школьная программа 5–11 классов: живые уроки и записи', 'Классный руководитель, наставник и психолог — состав поддержки зависит от тарифа', 'Пробное знакомство со школой перед выбором платного обучения'],
+} : offer)
 export const GIFT_EXPERIMENT = 'catalog-gifts-v1'
 
 /** Refresh the selection's date at Moscow midnight, not 24 hours after a visit. */
