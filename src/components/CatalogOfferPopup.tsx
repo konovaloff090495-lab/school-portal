@@ -184,7 +184,7 @@ export default function CatalogOfferPopup() {
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={marketingAgreed} onChange={e => setMarketingAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#0369A1]" />
                 <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Хочу получать письма о программах «Синергии» —{' '}
+                  Согласен получать уведомления —{' '}
                   <Link href="/soglasie-marketing/" className="text-[#0369A1] hover:underline" target="_blank">условия рассылки</Link>
                 </span>
               </label>

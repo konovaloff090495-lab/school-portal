@@ -198,7 +198,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
               className="mt-0.5 shrink-0 accent-[#0369A1]"
             />
             <span className="text-xs text-gray-500 leading-relaxed">
-              Хочу получать письма о программах «Синергии» —{' '}
+              Согласен получать уведомления —{' '}
               <Link href="/soglasie-marketing/" className="text-[#0369A1] hover:underline" target="_blank">
                 условия рассылки
               </Link>

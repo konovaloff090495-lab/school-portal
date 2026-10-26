@@ -470,7 +470,7 @@ function OfferDrawer({
                     className="mt-0.5 shrink-0 accent-[#FF6B3D]"
                   />
                   <span className="text-xs text-gray-500 leading-relaxed">
-                    Хочу получать письма о программах «Синергии» —{' '}
+                    Согласен получать уведомления —{' '}
                     <Link href="/soglasie-marketing/" className="text-[#C2410C] hover:underline" target="_blank">
                       условия рассылки
                     </Link>
