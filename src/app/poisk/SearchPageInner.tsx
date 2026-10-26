@@ -7,8 +7,8 @@ import { schools, typeLabels, regionLabels } from '@/data/schools'
 import SchoolCard from '@/components/SchoolCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
-function normalize(s: string) {
-  return s.toLowerCase().replace(/ё/g, 'е')
+function normalize(s: string | null | undefined) {
+  return (s ?? '').toLowerCase().replace(/ё/g, 'е')
 }
 
 export default function SearchPageInner() {
