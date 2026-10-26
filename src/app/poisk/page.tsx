@@ -1,5 +1,8 @@
 import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import SearchPageInner from './SearchPageInner'
+
+export const metadata: Metadata = { robots: { index: false, follow: true } }
 
 export default function SearchPage() {
   return (
