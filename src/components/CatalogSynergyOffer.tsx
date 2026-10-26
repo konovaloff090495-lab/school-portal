@@ -35,6 +35,7 @@ export default function CatalogSynergyOffer({ kind = 'trial' }: { kind?: 'trial'
     if (!panel || !open) return
     const previousOverflow = document.body.style.overflow
     panel.showModal()
+    window.dispatchEvent(new Event('ps:catalog-drawer-open'))
     document.body.style.overflow = 'hidden'
     window.ym?.(108789843, 'reachGoal', 'catalog_synergy_offer_open', { offer: credential ? 'attestat-14-days' : 'proschools-14-days' })
     return () => {
