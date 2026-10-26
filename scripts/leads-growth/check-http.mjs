@@ -45,7 +45,7 @@ try {
     }
     return request.url().startsWith(base) ? route.continue() : route.abort()
   })
-  const page = await context.newPage()
+  let page = await context.newPage()
   page.on('pageerror', error => errors.push(error.message))
   const paths = ['/attestat-vzroslomu/', '/shkoly/tipy/online/', '/shkoly/sankt-peterburg/vechernie/', '/shkoly/tipy/vechernie/besplatnye/', '/blog/eksternat-ili-vechernyaya-shkola/', '/blog/attestat-vzroslomu-11-klass/', '/blog/kak-poluchit-attestat-esli-ne-zakonchil-shkolu/', '/shkola/vechernyaya-shkola-185-ekaterinburg-1/', '/shkola/centr-obrazovaniya-195-sankt-peterburg/', '/shkoly/tipy/vechernie/9-klass/', '/shkoly/tipy/vechernie/posle-9-klassa/', '/shkoly/tipy/vechernie/starshie-klassy/', '/shkoly/ekaterinburg/vechernie/', '/shkoly/moskva/vechernie/', '/shkoly/tyumen/vechernie/', '/shkoly/omsk/vechernie/', '/blog/attestat-vzroslomu-9-klass/', '/shkola/vechernyaya-shkola-kalininskogo-rayona-chelyabinsk/']
   for (const path of paths) {
@@ -110,7 +110,10 @@ try {
   results.push({ flow: 'city direct three-field submission without optional answers', passed: true, realLeadsSent: 0 })
   payload = undefined
   // This is a real internal navigation: retain the first entry, submit on a different URL.
-  await page.evaluate(() => { sessionStorage.removeItem('ps_utm'); sessionStorage.removeItem('ps_visit_entry_v1') })
+  // A fresh tab isolates this visitor from the preceding successful mock submission.
+  await page.close()
+  page = await context.newPage()
+  page.on('pageerror', error => errors.push(error.message))
   await page.goto(base + '/shkoly/ekaterinburg/vechernie/?utm_source=yandex&utm_campaign=qa-first-entry')
   await page.locator('a[href="/attestat-vzroslomu/"]').first().click()
   await page.waitForURL('**/attestat-vzroslomu/')
