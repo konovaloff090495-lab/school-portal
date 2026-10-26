@@ -1,5 +1,5 @@
 'use client'
-import { PDN_DEFAULT_SELECTED } from '@/lib/lead-consent'
+import { PDN_DEFAULT_SELECTED, MARKETING_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { selectedGrowthRoute } from '@/lib/growth-tracking'
@@ -29,7 +29,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '', question: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
   const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
-  const [marketingAgreed, setMarketingAgreed] = useState(false)
+  const [marketingAgreed, setMarketingAgreed] = useState(crm && MARKETING_DEFAULT_SELECTED)
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
 
   useEffect(() => {
@@ -73,6 +73,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         source: source ?? (schoolName ? `Карточка школы: ${schoolName}` : 'Карточка школы'),
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
+        marketing_default_selected: crm && MARKETING_DEFAULT_SELECTED,
         crm,
         ...(crm ? { qualification } : {}),
         ...(attestat ? { product: 'attestat-online' } : {}),
@@ -99,7 +100,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
       <h3 className={`font-semibold text-gray-900 mb-1 ${compact ? 'text-base' : 'text-lg'}`}>
         {title ?? (attestat ? 'Узнать условия платного онлайн-обучения' : schoolName ? `Консультация по обучению: «${schoolName}»` : 'Узнать подробнее о школе')}
       </h3>
-      <p className="text-sm text-gray-600 mb-4">{crm ? attestat ? 'Консультант Синергии уточнит программу, стоимость и документы. Обучение платное; ОГЭ/ЕГЭ — очно в Москве.' : 'Заявку получит консультант онлайн-школы Синергия. Для обращения непосредственно в выбранную школу используйте её официальный сайт или телефон.' : 'Свяжемся после обработки заявки.'}</p>
+      {(attestat || !crm) && <p className="text-sm text-gray-600 mb-4">{attestat ? 'Консультант Синергии уточнит программу, стоимость и документы. Обучение платное; ОГЭ/ЕГЭ — очно в Москве.' : 'Свяжемся после обработки заявки.'}</p>}
       <form data-growth-form={crm ? source || 'school-card' : undefined} onSubmit={handleSubmit} className="space-y-3">
         <input
           type="text"
@@ -149,7 +150,6 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
           />
         )}
 
-        {crm && (<p className="text-xs text-gray-600 leading-relaxed">Заявку получит АНО ВО «Московский университет «Синергия».</p>)}
         {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
         <div className="space-y-2 pt-1">
           <label className="flex items-start gap-2 cursor-pointer">
