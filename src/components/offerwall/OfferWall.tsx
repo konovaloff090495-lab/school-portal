@@ -14,6 +14,7 @@
  * продукта с партнёрской меткой.
  */
 
+import { PDN_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
@@ -277,7 +278,7 @@ function OfferDrawer({
       : { name: '', phone: '+7 (', email: '' }
   })
   const [phoneError, setPhoneError] = useState<string | null>(null)
-  const [pdAgreed, setPdAgreed] = useState(false)
+  const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)

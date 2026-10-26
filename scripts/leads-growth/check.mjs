@@ -47,7 +47,7 @@ assert.equal(selectedGrowthRoute(), 'attestat-9')
 rememberGrowthRoute('email@example.invalid')
 assert.equal(selectedGrowthRoute(), 'attestat-9', 'Reject values outside the route enum')
 assert.equal(getLeadContext().selected_route, 'attestat-9')
-assert.equal(getLeadContext().growth_release, 'leads-growth-20261022-r2')
+assert.equal(getLeadContext().growth_release, 'leads-growth-20261026-recovery')
 
 delete globalThis.window
 delete globalThis.document
