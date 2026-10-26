@@ -6,7 +6,7 @@ import { crmMailer } from '@/lib/crm-mailer'
 import { recordLeadSubmission } from '@/lib/lead-journal'
 
 import { createHash } from 'node:crypto'
-import { LEAD_CONSENT_VERSION, PDN_CONSENT_TEXT, MARKETING_CONSENT_TEXT } from '@/lib/lead-consent'
+import { LEAD_CONSENT_VERSION, LEAD_FORM_POLICY_VERSION, PDN_DEFAULT_SELECTED, PDN_CONSENT_TEXT, MARKETING_CONSENT_TEXT } from '@/lib/lead-consent'
 
 export async function POST(req: NextRequest) {
   try {
@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
       document_version: LEAD_CONSENT_VERSION,
       presented_version: body.consent_version === LEAD_CONSENT_VERSION ? LEAD_CONSENT_VERSION : 'legacy-unversioned',
       pd_agreed: true,
+      form_policy_version: body.form_policy_version === LEAD_FORM_POLICY_VERSION ? LEAD_FORM_POLICY_VERSION : null,
+      pd_default_selected: body.form_policy_version === LEAD_FORM_POLICY_VERSION ? PDN_DEFAULT_SELECTED : null,
       pd_text: PDN_CONSENT_TEXT,
       pd_sha256: createHash('sha256').update(PDN_CONSENT_TEXT).digest('hex'),
       marketing_agreed: marketing_agreed === true,

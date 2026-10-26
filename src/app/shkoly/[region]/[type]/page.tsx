@@ -1,5 +1,4 @@
 import formatMetadata from '@/data/school-format-metadata.json'
-import EveningPathChooser from '@/components/EveningPathChooser'
 import EveningCityGuide from '@/components/EveningCityGuide'
 import MoscowEveningVerification from '@/components/MoscowEveningVerification'
 import type { Metadata } from 'next'
@@ -153,10 +152,10 @@ export default async function TypePage({ params }: Props) {
           { label: regionName, href: `/shkoly/${r}/` },
           { label: typeName },
         ]}
-        introContent={t === 'vechernie' ? <><EveningPathChooser city={regionName} localHref={['ekaterinburg', 'sankt-peterburg'].includes(r) ? '#proverennyj-priem' : '#spisok-shkol'} />{r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} />}</> : undefined}
+
         seoContent={
-          r === 'moskva' && t === 'vechernie' ? null : t === 'vechernie' || t === 'eksternal'
-            ? <><VechernieCityExtras region={r} count={list.length} variant={t} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
+          t === 'vechernie' || t === 'eksternal'
+            ? <><VechernieCityExtras region={r} count={list.length} variant={t} afterLead={t === 'vechernie' ? r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} /> : undefined} />{!(r === 'moskva' && t === 'vechernie') && <SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />}</>
             : t === 'podgotovka-ege' || t === 'podgotovka-oge'
             ? <><EgeCityExtras region={r} variant={t === 'podgotovka-ege' ? 'ege' : 'oge'} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
             : t === 'semejnye'

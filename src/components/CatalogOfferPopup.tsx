@@ -1,11 +1,11 @@
 'use client'
 
+import { PDN_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { formatPhone, validatePhone } from '@/lib/phone'
 import { submitLead } from '@/lib/submitLead'
-import CallbackTimeField from '@/components/CallbackTimeField'
 import LeadGiftNotice from '@/components/LeadGiftNotice'
 import Countdown, { isDeadlinePassed } from '@/components/Countdown'
 
@@ -29,10 +29,9 @@ export default function CatalogOfferPopup() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [form, setForm] = useState({ name: '', phone: '+7 (', email: '' })
   const [phoneError, setPhoneError] = useState<string | null>(null)
-  const [pdAgreed, setPdAgreed] = useState(false)
+  const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const openedRef = useRef(false)
-  const [callbackTime, setCallbackTime] = useState('')
 
   const show = useCallback(() => {
     if (openedRef.current || convertedThisSession()) return
@@ -74,7 +73,6 @@ export default function CatalogOfferPopup() {
         email: form.email,
         source: adult ? 'Поп-ап: аттестат взрослому онлайн (вечерние/экстернат)' : SOURCE,
         ...(adult ? { product: 'attestat-online' } : {}),
-        qualification: { callback_time: callbackTime },
         pd_agreed: pdAgreed,
         marketing_agreed: marketingAgreed,
       })
@@ -112,7 +110,7 @@ export default function CatalogOfferPopup() {
         </button>
 
         {/* Фото-шапка */}
-        <div className="h-44 sm:h-52 shrink-0 relative bg-blue-100">
+        <div className={`${adult ? 'h-28 sm:h-36' : 'h-44 sm:h-52'} shrink-0 relative bg-blue-100`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/diplom-popup.jpg"
@@ -170,17 +168,8 @@ export default function CatalogOfferPopup() {
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
-            <CallbackTimeField id="catalog-callback-time" value={callbackTime} onChange={setCallbackTime} />
-            <LeadGiftNotice />
-            {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
-            <button
-              type="submit"
-              disabled={loading || !pdAgreed}
-              className="w-full bg-[#0369A1] text-white py-3 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-colors disabled:opacity-60 cursor-pointer"
-            >
-              {loading ? 'Отправляем...' : 'Оставить заявку'}
-            </button>
 
+            {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
             <div className="space-y-1.5 pt-1">
               <label className="flex items-start gap-2 cursor-pointer">
                 <input type="checkbox" checked={pdAgreed} onChange={e => setPdAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#0369A1]" />
@@ -197,7 +186,17 @@ export default function CatalogOfferPopup() {
                 </span>
               </label>
             </div>
+            <button
+              type="submit"
+              disabled={loading || !pdAgreed}
+              className="w-full bg-[#0369A1] text-white py-3 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-colors disabled:opacity-60 cursor-pointer"
+            >
+              {loading ? 'Отправляем...' : 'Оставить заявку'}
+            </button>
+
+
           </form>
+          <div className="mt-3"><LeadGiftNotice /></div>
         </div>
       </div>
     </div>
