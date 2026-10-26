@@ -1,4 +1,5 @@
 'use client'
+import { PDN_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
@@ -335,7 +336,7 @@ function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue
   const [name, setName] = useState(user?.name ?? '')
   const [email, setEmail] = useState(user?.email ?? '')
   const [phone, setPhone] = useState(user?.phone ?? '')
-  const [pdAgreed, setPdAgreed] = useState(false)
+  const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
   const [marketingAgreed, setMarketingAgreed] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
