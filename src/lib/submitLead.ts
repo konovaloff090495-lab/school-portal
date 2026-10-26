@@ -23,6 +23,8 @@ export interface LeadPayload {
   qualification?: { goal?: string; audience?: string; callback_time?: string }
   pd_agreed: boolean
   marketing_agreed: boolean
+  /** UI default, distinct from an individual checkbox click. */
+  marketing_default_selected?: boolean
   /** false — только Telegram, без CRM (B2B-формы вроде «Разместить школу») */
   crm?: boolean
 }

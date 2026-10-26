@@ -34,6 +34,7 @@ export async function POST(req: NextRequest) {
       pd_default_selected: body.form_policy_version === LEAD_FORM_POLICY_VERSION ? PDN_DEFAULT_SELECTED : null,
       pd_text: PDN_CONSENT_TEXT,
       pd_sha256: createHash('sha256').update(PDN_CONSENT_TEXT).digest('hex'),
+      marketing_default_selected: body.form_policy_version === LEAD_FORM_POLICY_VERSION && typeof body.marketing_default_selected === 'boolean' ? body.marketing_default_selected : null,
       marketing_agreed: marketing_agreed === true,
       marketing_text: marketing_agreed === true ? MARKETING_CONSENT_TEXT : null,
       marketing_sha256: marketing_agreed === true ? createHash('sha256').update(MARKETING_CONSENT_TEXT).digest('hex') : null,
