@@ -17,3 +17,13 @@
 Конкурс изолирован пользователем site-education-gifts, данные /var/lib/portfolio/education-gifts, службы portfolio-gifts@app-server и portfolio-gifts@poll. Не запускать второй опрос Telegram с тем же токеном; смена ключей шифрования требует проверенного переноса базы.
 
 portfolio-live-backup ежедневно в 03:20 UTC + до 15 минут копирует DELA MBA/Card Open с shared Beget, ProSchools с чистого VPS. Selectel: шифрование до загрузки, COMPLIANCE минимум 30 дней. Не запускать prune/forget/delete. Проверка: portfolio-backup-status. Полная копия всего Mac и всех 58 проектов ещё не завершена из-за ограничений ресурсов.
+
+## Внутренний поиск: исключение из выдачи
+
+`/poisk/` и все варианты `?q=` отдают `X-Robots-Tag: noindex, follow` на Nginx.
+В robots.txt обход разрешён, чтобы поисковик прочитал этот заголовок. Поиск для
+посетителей сохраняется. Идемпотентный установщик: `scripts/seo/install-search-indexing.py`
+(запуск root на чистом сервере). Он сохраняет обе исходные конфигурации в
+`/var/backups/portfolio/search-indexing-*`, проверяет `nginx -t`, перезагружает
+только Nginx и обновляет фактически обслуживаемый robots.txt. Next не пересобирается.
+При замене Nginx-конфигурации сохранять блок `PROSCHOOLS_SEARCH_NOINDEX`.
