@@ -619,8 +619,8 @@ export default function CatalogClient({
       case 'rating': list.sort((a, b) => (catalogRating(b) ?? 0) - (catalogRating(a) ?? 0)); break
       case 'reviews': list.sort((a, b) => b.reviewCount - a.reviewCount); break
       case 'yandex_reviews': list.sort((a, b) => (b.yandexReviewCount ?? 0) - (a.yandexReviewCount ?? 0)); break
-      case 'price_asc': list.sort((a, b) => (a.priceFrom ?? 0) - (b.priceFrom ?? 0)); break
-      case 'price_desc': list.sort((a, b) => (b.priceFrom ?? 0) - (a.priceFrom ?? 0)); break
+      case 'price_asc': list.sort((a, b) => (a.priceFrom ?? Infinity) - (b.priceFrom ?? Infinity)); break
+      case 'price_desc': list.sort((a, b) => (b.priceFrom ?? -Infinity) - (a.priceFrom ?? -Infinity)); break
     }
     return list
   }, [applyBaseFilters, filters.sort, featureFilter])
@@ -1162,7 +1162,7 @@ export default function CatalogClient({
                   </select>
                 </div>
               )}
-              <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-0.5">
+              {!(lockType && initialTypes.length === 1 && initialTypes[0] === 'online') && <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-0.5">
                 <button
                   onClick={() => setViewMode('grid')}
                   title="Плиткой"
@@ -1181,7 +1181,7 @@ export default function CatalogClient({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                   </svg>
                 </button>
-              </div>
+              </div>}
             </div>
           </div>
 
