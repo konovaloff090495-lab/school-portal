@@ -11,7 +11,7 @@ try{
  for(let n=0;n<60;n++){try{if((await fetch(base,{signal:AbortSignal.timeout(2000)})).ok)break}catch{};await new Promise(r=>setTimeout(r,400))}
  browser=await chromium.launch({headless:true,...(process.env.ONLINE_QA_BROWSER?{executablePath:process.env.ONLINE_QA_BROWSER}:{})});const context=await browser.newContext()
  await context.route('**/*',route=>route.request().url().startsWith(base)?route.continue():route.abort())
- await context.addInitScript(()=>{window.sessionStorage.setItem('ps_catalog_popup_done','1');window.sessionStorage.setItem('ps_partner_popup_done','1')})
+ await context.addInitScript(()=>{if(window.top!==window)return;try{sessionStorage.setItem('ps_catalog_popup_done','1');sessionStorage.setItem('ps_partner_popup_done','1');localStorage.setItem('proschools-first-city-dismissed','1')}catch{}})
  page=await context.newPage();page.setDefaultTimeout(20000)
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
  await page.route('**/api/leads/submit/**',async route=>{leads.push(route.request().postDataJSON());await route.fulfill({status:200,contentType:'application/json',body:'{"success":true,"crm_id":"mock-only"}'})})
@@ -29,7 +29,7 @@ try{
    if(width<768){await page.getByRole('button',{name:'Фильтры',exact:true}).click();await page.getByRole('button',{name:'Ступень обучения',exact:true}).last().click();await page.getByRole('checkbox',{name:/Начальная/}).last().check();await page.getByRole('button',{name:/Показать \d+ школ/}).click()}
    else{const sidebar=page.locator('aside').filter({hasText:'Ступень обучения'});await sidebar.getByRole('button',{name:'Ступень обучения',exact:true}).click();await sidebar.getByRole('checkbox',{name:/Начальная/}).check()}
    assert.equal(new URL(page.url()).pathname,path,'School-level filter remains on current online page')
-   assert.ok(await page.getByText('Начальная (1–4 кл.)',{exact:true}).count())
+   await page.waitForFunction(()=>{const counter=[...document.querySelectorAll('span')].find(n=>/^Показано:/.test(n.textContent||''));const count=Number(counter?.textContent?.match(/\d+/)?.[0]);return count>0&&count<51})
    await page.locator('select').selectOption('price_asc')
    if([1440,390].includes(width))await page.screenshot({path:`${output}/${path.includes('/moskva/')?'moskva':path.includes('/tomsk/')?'tomsk':'hub'}-${width}.png`})
    checks.push({path,width,filters:true,cardsBeforeComparison:true,overflow:false})
