@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import {
-  schools, regionSlugs, regionLabels, regionLabelsIn, type RegionSlug, type School,
+  schools, schoolMatchesType, regionSlugs, regionLabels, regionLabelsIn, type RegionSlug, type School,
 } from '@/data/schools'
 import { onlineBrands } from '@/data/online-brands'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
-import Breadcrumbs from '@/components/Breadcrumbs'
-import SchoolCard from '@/components/SchoolCard'
+import CatalogClient from '../../CatalogClient'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 
@@ -15,8 +14,8 @@ import OnlineLeadCta from '@/components/OnlineLeadCta'
  * Раньше страница показывала только школы с region === город, а у онлайн-школ
  * регион «Москва» — почти все города отдавали «0 школ» и noindex, при этом именно
  * эти страницы давали заявки (6 из 7 по разделу за июль–сентябрь 2026). Теперь:
- * местные онлайн-школы первыми, дальше — все федеральные, сверху таблица брендов
- * и лид-форма. Индексируются только крупные города (ONLINE_INDEX_REGIONS).
+ * местные онлайн-школы первыми, дальше — федеральные. Общий каталог с фильтрами
+ * показывается первым; сравнение, пояснения и форма — после карточек. Индексируются только крупные города (ONLINE_INDEX_REGIONS).
  */
 
 export { ONLINE_INDEX_REGIONS } from '@/lib/index-rules'
@@ -29,7 +28,7 @@ export function schoolsWord(n: number): string {
 }
 
 export function onlineSchoolsForCity(region: RegionSlug): School[] {
-  const all = schools.filter(s => s.type === 'online')
+  const all = schools.filter(s => schoolMatchesType(s, 'online') && (s.onlineSchoolScope === 'national' || s.region === region))
   const local = all.filter(s => s.region === region)
   const federal = all.filter(s => s.region !== region)
   return [...local, ...federal]
@@ -57,28 +56,31 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
       />
       <SchoolListJsonLd schools={list} url={url} name={`Онлайн-школы ${regionIn}`} />
 
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '20px 16px 48px', fontFamily: 'var(--font-manrope, system-ui)', color: '#1A1814' }}>
-        <Breadcrumbs crumbs={[
+      <CatalogClient
+        initialTypes={['online']}
+        lockType
+        lockRegion
+        allowedSchoolSlugs={list.map(s => s.slug)}
+        title={`Онлайн-школы ${regionIn}: ${list.length} ${schoolsWord(list.length)} с государственным аттестатом`}
+        subtitle="Дистанционное обучение по школьной программе — сравните классы, стоимость и условия аттестации"
+        breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
           { label: 'Онлайн-школы' },
-        ]} />
-
-        <h1 style={{ fontSize: 'clamp(24px, 4vw, 34px)', fontWeight: 800, lineHeight: 1.2, margin: '18px 0 12px' }}>
-          Онлайн-школы {regionIn}: {list.length} {schoolsWord(list.length)} с государственным аттестатом
-        </h1>
+        ]}
+        seoContent={<div className="mt-10 space-y-6">
         <p style={{ fontSize: 16.5, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 22px', maxWidth: 860 }}>
           Онлайн-школа не привязана к городу: ребёнок {regionIn} учится в той же Фоксфорд, ИнтернетУрок или Синергии,
           что и ученик из Москвы, а аттестат получает такой же — государственного образца.
           {local.length > 0
-            ? ` Ниже сначала ${local.length === 1 ? 'местная онлайн-школа' : `${local.length} местных онлайн-школы`} ${regionIn}, затем федеральные.`
+            ? ` Ниже сначала ${local.length === 1 ? 'местная онлайн-школа' : `${local.length} ${schoolsWord(local.length)}`} ${regionIn}, затем федеральные.`
             : ` Ниже — федеральные онлайн-школы, которые принимают учеников ${regionIn} дистанционно, с ценами 2026/27 и схемой аттестации.`}
           {' '}Формат промежуточных аттестаций и место ОГЭ/ЕГЭ зависят от принимающей школы и программы. Подтвердите их до оплаты: онлайн-уроки не означают экзамены в городе проживания.
         </p>
 
         <OnlineBrandsTable
           title={`Какую онлайн-школу выбрать ${regionIn}: сравнение цен и аттестации`}
-          intro={`Все школы работают по всей России. Собственная аккредитация — у ${own.map(b => b.name).join(', ')}: они зачисляют ребёнка к себе и сами выдают аттестат. Остальные оформляют аттестат через школу-партнёра.`}
+          intro={`В таблице — федеральные онлайн-школы. Собственная аккредитация — у ${own.map(b => b.name).join(', ')}: они зачисляют ребёнка к себе и сами выдают аттестат. Остальные оформляют аттестат через школу-партнёра.`}
         />
 
         <OnlineLeadCta
@@ -87,11 +89,6 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
           text={`Для сравнения школ используйте таблицу и официальные сайты. Заявка из этой формы поступит консультанту Синергии: укажите класс, задачу и удобное время звонка. Документы, полную стоимость и место экзаменов уточните до договора.`}
           city={regionName}
         />
-
-        <h2 style={{ fontSize: 22, fontWeight: 800, margin: '8px 0 14px' }}>Онлайн-школы, которые принимают учеников {regionIn}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ marginBottom: 32 }}>
-          {list.map(s => <SchoolCard key={s.id} school={s} />)}
-        </div>
 
         <h2 style={{ fontSize: 22, fontWeight: 800, margin: '8px 0 12px' }}>Как перевести ребёнка {regionIn} на онлайн-обучение</h2>
         <ol style={{ fontSize: 15.5, lineHeight: 1.65, color: '#3F3A35', margin: '0 0 20px', paddingLeft: 22 }}>
@@ -114,7 +111,8 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
             <span key={x}>{i > 0 && ' · '}<Link href={`/shkoly/${x}/online/`} style={a}>{regionLabelsIn[x].replace(/^в(о)? /, '')}</Link></span>
           ))}
         </p>
-      </div>
+        </div>}
+      />
     </>
   )
 }
