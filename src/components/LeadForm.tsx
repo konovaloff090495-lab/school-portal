@@ -1,6 +1,7 @@
 'use client'
 import { PDN_DEFAULT_SELECTED, MARKETING_DEFAULT_SELECTED } from '@/lib/lead-consent'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { trackCatalogOffer, type CatalogOfferFormTracking } from '@/lib/catalog-offer-tracking'
 import { usePathname, useRouter } from 'next/navigation'
 import { selectedGrowthRoute } from '@/lib/growth-tracking'
 import Link from 'next/link'
@@ -21,9 +22,10 @@ interface LeadFormProps {
   defaultGoal?: string
   submitLabel?: string
   showGiftNotice?: boolean
+  offerTracking?: CatalogOfferFormTracking
 }
 
-export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '', submitLabel = 'Отправить заявку', showGiftNotice = true }: LeadFormProps) {
+export default function LeadForm({ schoolName, schoolCity, compact = false, title, source, crm = true, attestat = false, defaultGoal = '', submitLabel = 'Отправить заявку', showGiftNotice = true, offerTracking }: LeadFormProps) {
   const router = useRouter()
   const pathname = usePathname()
   const [loading, setLoading] = useState(false)
@@ -33,6 +35,21 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
   const [marketingAgreed, setMarketingAgreed] = useState(crm && MARKETING_DEFAULT_SELECTED)
   const [qualification, setQualification] = useState({ goal: defaultGoal, audience: '', callback_time: '' })
+  const formContainer = useRef<HTMLDivElement>(null)
+  const offerStarted = useRef(false)
+  const offerKind = offerTracking?.kind
+  const offerPlacement = offerTracking?.placement
+
+  useEffect(() => {
+    if (!offerKind || !offerPlacement || !formContainer.current || typeof IntersectionObserver === 'undefined') return
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting && entry.intersectionRatio >= 0.25)) return
+      trackCatalogOffer(offerKind, 'form_view', offerPlacement)
+      observer.disconnect()
+    }, { threshold: 0.25 })
+    observer.observe(formContainer.current)
+    return () => observer.disconnect()
+  }, [offerKind, offerPlacement])
 
   useEffect(() => {
     if (!attestat) return
@@ -85,6 +102,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         setLoading(false)
         return
       }
+      if (offerTracking) trackCatalogOffer(offerTracking.kind, 'lead_success', offerTracking.placement)
       window.ym?.(108789843, 'reachGoal', 'lead_submit')
       window.ym?.(108789843, 'reachGoal', 'card_lead', { form_id: source || 'school-card', flow: attestat ? 'attestat-v1' : 'existing', goal: qualification.goal })
     } catch {
@@ -98,12 +116,16 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
   }
 
   return (
-    <div className={`bg-blue-50 border border-blue-200 rounded-xl ${compact ? 'p-4' : 'p-6'}`}>
+    <div ref={formContainer} className={`bg-blue-50 border border-blue-200 rounded-xl ${compact ? 'p-4' : 'p-6'}`}>
       <h3 className={`font-semibold text-gray-900 mb-1 ${compact ? 'text-base' : 'text-lg'}`}>
         {title ?? (attestat ? 'Узнать условия платного онлайн-обучения' : schoolName ? `Консультация по обучению: «${schoolName}»` : 'Узнать подробнее о школе')}
       </h3>
       {(attestat || !crm) && <p className="text-sm text-gray-600 mb-4">{attestat ? 'Консультант Синергии уточнит программу, стоимость и документы. Обучение платное; ОГЭ/ЕГЭ — очно в Москве.' : 'Свяжемся после обработки заявки.'}</p>}
-      <form data-growth-form={crm ? source || 'school-card' : undefined} onSubmit={handleSubmit} className="space-y-3">
+      <form data-growth-form={crm ? source || 'school-card' : undefined} data-offer-form={offerTracking?.placement} onSubmit={handleSubmit} onChangeCapture={event => {
+        if (!offerTracking || offerStarted.current || !(event.target instanceof HTMLInputElement) || event.target.type === 'checkbox') return
+        offerStarted.current = true
+        trackCatalogOffer(offerTracking.kind, 'form_start', offerTracking.placement)
+      }} className="space-y-3">
         <input
           type="text"
           autoComplete="name"
@@ -186,6 +208,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         {!pdAgreed && <p className="text-xs text-gray-600">Для отправки заявки выберите согласие на обработку данных.</p>}
         <button
           type="submit"
+          onClick={() => { if (offerTracking) trackCatalogOffer(offerTracking.kind, 'cta_click', offerTracking.placement) }}
           disabled={loading || !pdAgreed}
           className="w-full bg-[#0369A1] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-colors disabled:opacity-60 cursor-pointer"
         >
