@@ -3,8 +3,12 @@ import path from 'node:path'
 import {createJiti} from '../node_modules/jiti/lib/jiti.mjs'
 const jiti=createJiti(import.meta.url,{alias:{'@':path.resolve('src')}})
 const {CATALOG_GIFTS,dailyGiftClock,trackGift}=await jiti.import('../src/lib/catalog-gifts.ts')
-assert.equal(CATALOG_GIFTS.length,10)
-assert.equal(new Set(CATALOG_GIFTS.map(o=>o.id)).size,10)
+assert.equal(CATALOG_GIFTS.length,8)
+assert.equal(new Set(CATALOG_GIFTS.map(o=>o.id)).size,8)
+assert.ok(!CATALOG_GIFTS.some(o=>['nachalnaya-shkola','programmirovanie','soft-skills'].includes(o.id)))
+assert.match(CATALOG_GIFTS[0].terms,/без зачисления и аттестации/i)
+assert.match(CATALOG_GIFTS[0].badge,/40%/)
+assert.equal(new Set(CATALOG_GIFTS.map(o=>o.hero.src)).size,8)
 assert.ok(CATALOG_GIFTS.every(o=>o.suProduct&&!o.partner&&o.badge&&o.bullets.length))
 assert.deepEqual(dailyGiftClock(Date.parse('2026-10-26T20:59:59Z')),{day:'2026-10-26',date:'26.10',countdown:'00:00:01'})
 assert.deepEqual(dailyGiftClock(Date.parse('2026-10-26T21:00:00Z')),{day:'2026-10-27',date:'27.10',countdown:'24:00:00'})
@@ -15,4 +19,4 @@ globalThis.window={location:{pathname:'/shkoly/tipy/online/'},ym:(...args)=>call
 trackGift('lead_success','online-school');assert.equal(calls[0][2],'catalog_gifts_lead_success');assert.equal(calls[0][3].offer,'online-school')
 window.ym=()=>{throw Error('Analytics unavailable')};trackGift('click')
 delete globalThis.window
-console.log(JSON.stringify({result:'passed',offers:10,midnightRollover:true,analyticsFailureSafe:true}))
+console.log(JSON.stringify({result:'passed',offers:8,midnightRollover:true,analyticsFailureSafe:true}))
