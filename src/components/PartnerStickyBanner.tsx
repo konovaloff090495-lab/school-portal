@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 import LeadForm from '@/components/LeadForm'
 import OfferIcon from '@/components/offerwall/OfferIcon'
 import { CATALOG_GIFTS, dailyGiftClock, trackGift } from '@/lib/catalog-gifts'
-import type { WallOffer } from '@/lib/offerwall'
+import type { CatalogGift } from '@/lib/catalog-gifts'
 import { usePathname } from 'next/navigation'
 import styles from './PartnerStickyBanner.module.css'
 
@@ -23,7 +23,7 @@ export default function PartnerStickyBanner() {
   const [formVisible, setFormVisible] = useState(false)
   const [otherDialog, setOtherDialog] = useState(false)
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState<WallOffer | null>(null)
+  const [active, setActive] = useState<CatalogGift | null>(null)
   const banner = useRef<HTMLDivElement>(null)
   const opener = useRef<HTMLButtonElement>(null)
   const panel = useRef<HTMLDialogElement>(null)
@@ -87,7 +87,7 @@ export default function PartnerStickyBanner() {
     return () => { dialog.close(); document.body.style.overflow = overflow; requestAnimationFrame(() => opener.current?.focus({ preventScroll: true })) }
   }, [open])
 
-  function select(offer: WallOffer) {
+  function select(offer: CatalogGift) {
     setActive(offer); trackGift('offer_open', offer.id)
     body.current?.scrollTo({ top: 0 })
   }
@@ -113,17 +113,26 @@ export default function PartnerStickyBanner() {
         <div className={styles.daily}><span>Подборка на {clock.date}</span><span>Обновится через <b data-gift-countdown>{clock.countdown}</b></span></div>
         {active ? <section className={styles.detail}>
           <button type="button" className={styles.back} onClick={() => { setActive(null); body.current?.scrollTo({ top: 0 }) }}>← Все {CATALOG_GIFTS.length} предложений</button>
-          <div className={styles.detailIcon} style={{ background: active.tint[0] }}><OfferIcon name={active.icon} /></div>
+          <div className={styles.detailHero}>
+            {/* Existing editorial illustration, not a photograph of school staff. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={active.hero.src} alt={active.hero.alt} width="1200" height="200" />
+            <div><small>{active.hero.label}</small><strong>{active.hero.headline}</strong></div>
+          </div>
           <span className={styles.brand}>{active.brand}</span>
           <h2 id={heading}>{active.badge}</h2>
           <p>{active.lead}</p>
+          <div className={styles.facts}>{active.facts.map(fact => <span key={fact}>{fact}</span>)}</div>
+          {active.price && <div className={styles.price}><del>{active.price.previous}</del><strong>{active.price.current}</strong><span>{active.price.note}</span></div>}
           <ul>{active.bullets.map(text => <li key={text}>{text}</li>)}</ul>
           <div className={styles.form}>
-            <LeadForm key={active.id} compact schoolName={active.productName} source={`Растяжка подарков: ${active.productName}`} defaultGoal={`${active.productName}: ${active.badge}`} title="Забрать подарок" submitLabel="Забрать подарок" showGiftNotice={false} giftOfferId={active.id} />
+            <LeadForm key={active.id} compact schoolName={active.productName} source={`Растяжка подарков: ${active.productName}`} defaultGoal={`${active.productName}: ${active.badge}`} title={active.formLabel || "Забрать подарок"} submitLabel={active.formLabel || "Забрать подарок"} showGiftNotice={false} giftOfferId={active.id} />
           </div>
-          <p className={styles.conditions}>Консультант Синергии свяжется с вами и поможет подключить выбранное предложение. Бесплатный период и включённые занятия зависят от программы; дальнейшее обучение платное. Дата выше относится к подборке, условия подарка — к выбранной программе.</p>
+          <div className={styles.landingSections}>{active.sections.map(section => <section key={section.title}><h3>{section.title}</h3><p>{section.text}</p></section>)}</div>
+          <div className={styles.offerTerms}><h3>Условия предложения</h3><p>{active.terms}</p>{active.sourceUrl && <a href={active.sourceUrl} target="_blank" rel="noopener sponsored">Посмотреть тарифы на сайте школы ↗</a>}</div>
+          <p className={styles.conditions}>Консультант Синергии свяжется с вами по выбранному предложению. Дата и таймер относятся к обновлению подборки, а не к сроку действия договора или скидки.</p>
         </section> : <>
-          <div className={styles.intro}><span className={styles.kicker}>ВЫБЕРИТЕ СВОЁ</span><h2 id={heading}>{CATALOG_GIFTS.length} поводов попробовать<br /><em>что-то новое</em></h2><p>Уроки, пробные занятия и полезные бонусы от Синергии, Synergy Kids, EasyCode и Ukids. Откройте подарок и посмотрите условия.</p></div>
+          <div className={styles.intro}><span className={styles.kicker}>ВЫБЕРИТЕ СВОЁ</span><h2 id={heading}>{CATALOG_GIFTS.length} поводов попробовать<br /><em>что-то новое</em></h2><p>Скидка на домашнюю школу, пробные занятия и полезные бонусы Синергии. Выберите предложение и посмотрите подробные условия.</p></div>
           <div className={styles.offers}>{CATALOG_GIFTS.map((offer, index) => <button type="button" key={offer.id} className={styles.offer} data-gift-offer={offer.id} onClick={() => select(offer)}>
             <span className={styles.offerIcon} style={{ background: offer.tint[0] }}><OfferIcon name={offer.icon} /></span>
             <span className={styles.offerCopy}><small>{offer.brand} <span>· {String(index + 1).padStart(2, '0')}</span></small><strong>{offer.badge}</strong><span>{offer.tile}</span></span><span className={styles.arrow} aria-hidden="true">↗</span>

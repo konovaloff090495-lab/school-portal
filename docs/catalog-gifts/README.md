@@ -1,6 +1,6 @@
 # Catalog gifts experiment
 
-`PartnerStickyBanner` now opens an on-site native dialog with 10 offers from the
+`PartnerStickyBanner` now opens an on-site native dialog with 8 offers from the
 same `WALL_OFFERS` registry as `/spasibo/`. Selecting an offer shows its terms and
 the shared `LeadForm`. It calls `submitLead` with CRM enabled, a dedicated source,
 the selected product and offer in qualification.goal; successful requests go to
@@ -26,6 +26,13 @@ no contacts. Old partner_banner_click stays historical and is not emitted for th
 new on-site flow. Existing lead_submit/card_lead remain available.
 
 Verification: test-catalog-gifts.mjs covers real offer count and midnight/year
-rollover. test-catalog-gifts-http.mjs tests five widths, ten full mock lead paths,
+rollover. test-catalog-gifts-http.mjs tests five widths, eight full mock lead paths,
 consent refusal, source/product, a failed submission and retry, all ten analytics
 events, dismissal and next-day return. All analytics/external requests are isolated.
+
+2026-10-26 owner revision: Synergy Kids, EasyCode and Ukids removed from this
+selection. Added a separate −40% Standard offer verified at
+https://schooluniversity.ru/online-school : from 3,668 instead of 6,114 RUB/month,
+12-month installments, no enrollment or attestation. Every detail has a 96px
+full-width editorial banner, facts, three explanatory sections and explicit terms.
+The panel width is now 720px (100% on mobile).
