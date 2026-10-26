@@ -44,13 +44,16 @@ export default function CatalogOfferPopup() {
   useEffect(() => {
     if (convertedThisSession()) return
     openedRef.current = false
+    // An explicitly opened drawer takes priority over the automatic offer on this page.
+    const onDrawerOpen = () => { openedRef.current = true; setOpen(false) }
+    window.addEventListener('ps:catalog-drawer-open', onDrawerOpen)
     const timer = setTimeout(show, DELAY_MS)
     const onScroll = () => {
       const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight || 1)
       if (scrolled > 0.3) show()
     }
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll) }
+    return () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll); window.removeEventListener('ps:catalog-drawer-open', onDrawerOpen) }
   }, [pathname, show])
 
   function close() { setOpen(false) }
