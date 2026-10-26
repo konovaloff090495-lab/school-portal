@@ -36,6 +36,7 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: node scripts/monetization/check-varioqub.cjs
       - run: node scripts/test-lead-consent.mjs
+      - run: node scripts/test-catalog-gifts.mjs
       - run: node --experimental-strip-types scripts/test-catalog-offer-tracking.mjs
       - run: node scripts/security/lead-vault/test.mjs
       - run: node --experimental-strip-types scripts/security/lead-vault/test-client.mjs
@@ -72,6 +73,14 @@ jobs:
           retention-days: 2
       - run: node scripts/schools/check-media.mjs
       - run: npm run build
+      - run: node scripts/test-catalog-gifts-http.mjs
+        timeout-minutes: 5
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: catalog-gifts-debug
+          path: work/catalog-gifts-qa/
+          retention-days: 2
       - run: node scripts/seo/search-http.mjs
         timeout-minutes: 3
       - run: node scripts/online-schools/check-http.mjs
@@ -112,6 +121,7 @@ jobs:
           cp -r work/seo-school-formats-qa build-release/qa-school-formats
           cp -r work/leads-growth-qa build-release/qa-leads-growth
           cp -r work/search-qa build-release/qa-search
+          cp -r work/catalog-gifts-qa build-release/qa-catalog-gifts
           cp .next/BUILD_ID build-release/BUILD_ID
           git rev-parse HEAD > build-release/SOURCE_COMMIT
       - run: node scripts/test-school-submissions-http.mjs
