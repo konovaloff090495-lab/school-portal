@@ -45,6 +45,7 @@ jobs:
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
       - run: node scripts/online-schools/check.mjs
+      - run: node scripts/online-schools/check-covers.mjs
       - run: node scripts/seo-school-formats/check.mjs
       - run: node scripts/leads-growth/check.mjs
       - run: npx tsc --noEmit --incremental false
