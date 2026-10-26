@@ -46,6 +46,15 @@ jobs:
       - run: node scripts/seo-school-formats/check.mjs
       - run: node scripts/leads-growth/check.mjs
       - run: npx tsc --noEmit --incremental false
+      - name: Use Ubuntu archive for browser dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt >/dev/null
+          fi
+          printf '%s\n' 'Acquire::http::Timeout "30";' 'Acquire::https::Timeout "30";' 'Acquire::Retries "2";' | sudo tee /etc/apt/apt.conf.d/99-browser-install-network >/dev/null
       - run: npx playwright install --with-deps chromium
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 5
