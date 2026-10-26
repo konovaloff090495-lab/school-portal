@@ -9,6 +9,8 @@
 @media(max-height:760px) and (min-width:600px){.panelBody{padding-top:16px}.hero h2{font-size:25px}.hero h2>span{font-size:29px}.heroGrade{font-size:12px;margin-bottom:10px}.panelPhoto{height:92px}.hero{margin-bottom:14px}.heroDescription{font-size:12px}.form>div{padding:16px}.form h3{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.panel[open]{animation:none}.banner{transition:none}}
 
-.credentialTitle>span{font-size:clamp(25px,2.6vw,31px)}.credentialTitle strong{font-size:clamp(26px,2.7vw,35px);line-height:1.12}.bannerGrade{display:block;font-size:12px;margin-top:6px}.credentialPanel .hero h2{font-family:Georgia,'Times New Roman',serif;font-size:30px;letter-spacing:-.03em}.credentialPanel .hero h2>span{font-size:32px}.credentialPanel .panelPhoto{object-position:center 45%}
+.credentialTitle>span{font-size:clamp(25px,2.6vw,31px)}.credentialTitle strong{font-size:clamp(26px,2.7vw,35px);line-height:1.12}.bannerGrade{display:block;font-size:12px;margin-top:6px}.credentialPanel .hero h2{font-family:Georgia,'Times New Roman',serif;font-size:30px;letter-spacing:-.03em}.credentialPanel .hero h2>span{font-size:32px}.credentialPanel .panelPhoto{height:200px;object-position:center 25%}
 @media(max-width:599px){.credentialTitle>span{font-size:26px}.credentialTitle strong{font-size:29px}.credentialPanel .hero h2{font-size:27px}.credentialPanel .hero h2>span{font-size:29px}}
 @media(max-height:760px) and (min-width:600px){.credentialPanel .hero h2{font-size:27px}.credentialPanel .hero h2>span{font-size:29px}}
+
+@media(max-width:599px){.credentialPanel .panelPhoto{height:150px;object-position:center 35%}}
