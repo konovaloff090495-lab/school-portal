@@ -20,7 +20,7 @@ try{
  await context.addInitScript(()=>{
   try{sessionStorage.setItem('ps_catalog_popup_done','1');sessionStorage.setItem('ps_partner_popup_done','1');localStorage.setItem('proschools-first-city-dismissed','1')}catch{}
   window.__giftGoals=[]
-  window.ym=(_counter,action,name,params)=>{if(action==='getClientID'&&typeof name==='function')name('mock-gift-client');if(action==='reachGoal')(window.__giftGoals.push({name,params}),window.__captureGiftGoal(name,params))}
+  window.ym=(_counter,action,name,params)=>{if(action==='getClientID'&&typeof name==='function')name('mock-gift-client');if(action==='reachGoal'){if(window.__throwSharedAnalytics&&['lead_submit','card_lead'].includes(name))throw Error('Synthetic analytics failure');window.__giftGoals.push({name,params});window.__captureGiftGoal(name,params)}}
  })
  page=await context.newPage();page.setDefaultTimeout(20000)
  const errors=[];page.on('pageerror',e=>errors.push(e.message))
@@ -59,6 +59,7 @@ try{
   await flags.nth(0).uncheck();await page.waitForFunction(()=>document.querySelector('[data-catalog-gifts-panel] button[type="submit"]')?.disabled===true)
   await flags.nth(0).check();await flags.nth(1).setChecked(index%2===0)
   if(index===0){await page.screenshot({path:`${out}/detail-mobile.png`});await page.setViewportSize({width:1440,height:1000});assert.equal(await page.locator('dialog[open]').count(),1)}
+  if(index===0)await page.evaluate(()=>{window.__throwSharedAnalytics=true})
   const before=leads.length;await form.locator('button[type="submit"]').click();await page.waitForURL('**/spasibo/**')
   assert.equal(leads.length,before+1);const lead=leads.at(-1)
   assert.equal(lead.crm,true);assert.equal(lead.product,offer.id);assert.equal(lead.source,`Растяжка подарков: ${offer.productName}`)
