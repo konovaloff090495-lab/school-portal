@@ -2,6 +2,8 @@
 import assert from 'node:assert/strict'
 import { spawn } from 'node:child_process'
 import { mkdir, writeFile } from 'node:fs/promises'
+import { createJiti } from '../../node_modules/jiti/lib/jiti.mjs'
+import { readFileSync } from 'node:fs'
 import { chromium } from 'playwright'
 
 const base = 'http://127.0.0.1:3196'
@@ -14,7 +16,7 @@ let logs = '', browser
 child.stdout.on('data', data => { logs += data })
 child.stderr.on('data', data => { logs += data })
 function stop() { try { process.kill(-child.pid, 'SIGTERM') } catch { child.kill('SIGTERM') } }
-const timeout = setTimeout(() => { stop(); process.exit(1) }, 150000)
+const timeout = setTimeout(() => { stop(); process.exit(1) }, 240000)
 const checks = [], errors = []
 try {
   let ready = false
@@ -26,7 +28,18 @@ try {
   browser = await chromium.launch({ headless: true })
   const context = await browser.newContext()
   await context.route('**/*', route => route.request().url().startsWith(base) ? route.continue() : route.abort())
+  await context.addInitScript(() => { try {
+    sessionStorage.setItem('ps_catalog_popup_done', '1')
+    sessionStorage.setItem('ps_partner_popup_done', '1')
+    localStorage.setItem('proschools-first-city-dismissed', '1')
+  } catch {} })
   const page = await context.newPage()
+  const pageErrors = [], leads = []
+  page.on('pageerror', error => pageErrors.push(error.message))
+  await page.route('**/api/leads/submit/**', async route => {
+    leads.push(route.request().postDataJSON())
+    await route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true,"crm_id":"mock-only"}' })
+  })
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 })
     // Layout checks wait for DOM/fonts, independently of off-screen gallery requests.
@@ -57,12 +70,61 @@ try {
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${output}/hub-${width}.png` })
     checks.push({ page: 'online hub', ...dimensions, primaryChoiceOutsideFilters: true, cardsFirst: true })
   }
+  const jiti = createJiti(import.meta.url, { interopDefault: true })
+  const { getSchoolsByType } = await jiti.import('../../src/data/schools.ts')
+  const { explicitSchoolGrades } = await jiti.import('../../src/lib/school-grades.ts')
+  const gradePages = JSON.parse(readFileSync('src/data/online-grade-pages.json', 'utf8'))
+  for (const [index, grade] of gradePages.entries()) {
+    const width = index % 2 ? 1440 : 390
+    await page.setViewportSize({ width, height: 1000 })
+    const path = `/shkoly/tipy/online/${grade.slug}/`
+    const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
+    assert.equal(response.status(), 200)
+    assert.equal(await page.locator('h1').count(), 1)
+    assert.equal(await page.locator('h1').innerText(), grade.h1)
+    await page.waitForFunction(() => {
+      const button = [...document.querySelectorAll('button')].find(b => b.textContent?.trim() === 'Ступень обучения')
+      return button && Object.keys(button).some(key => key.startsWith('__reactProps$'))
+    })
+    const expected = getSchoolsByType('online').filter(s => grade.grades.every(g => explicitSchoolGrades(s.grades).includes(g)))
+    assert.ok(expected.length >= 40, `${path}: expanded catalog`)
+    const schema = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(n => JSON.parse(n.textContent)).find(data => data['@type'] === 'ItemList'))
+    assert.equal(schema.numberOfItems, expected.length)
+    assert.deepEqual(schema.itemListElement.map(item => item.url).sort(), expected.map(s => `https://pro-schools.ru/shkola/${s.slug}/`).sort())
+    const firstCard = page.locator('article a[href^="/shkola/"]').first()
+    assert.ok((await firstCard.boundingBox()).y < (await page.locator('table').first().boundingBox()).y)
+    assert.equal(await page.getByTitle('На карте', { exact: true }).count(), 0)
+    while (await page.getByRole('button', { name: /Загрузить ещё/ }).count()) await page.getByRole('button', { name: /Загрузить ещё/ }).click()
+    const hrefs = await page.locator('article a[href^="/shkola/"]').evaluateAll(nodes => [...new Set(nodes.map(n => n.getAttribute('href')))])
+    assert.deepEqual(hrefs.sort(), expected.map(s => `/shkola/${s.slug}/`).sort(), `${path}: all and only eligible schools`)
+    await page.evaluate(() => document.fonts.ready)
+    const dimensions = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }))
+    assert.ok(dimensions.scrollWidth <= width + 1, JSON.stringify({ path, ...dimensions }))
+    checks.push({ path, width, schools: expected.length, cardsFirst: true, eligibleSchoolsOnly: true })
+    if (grade.slug === '10-klass') await page.screenshot({ path: `${output}/class-10-1440.png` })
+  }
   await page.setViewportSize({ width: 390, height: 1000 })
-  const response = await page.goto(base + '/shkoly/tipy/online/1-klass/', { waitUntil: 'domcontentloaded' })
-  assert.equal(response.status(), 200)
-  assert.match(await page.locator('h1').innerText(), /1 класса/)
-  await page.screenshot({ path: `${output}/class-1-390.png` })
-  checks.push({ page: 'class 1', status: 200, width: 390 })
+  await page.goto(base + '/shkoly/tipy/online/10-klass/', { waitUntil: 'domcontentloaded' })
+  await page.screenshot({ path: `${output}/class-10-390.png` })
+  const form = page.locator('#podbor form')
+  await page.waitForFunction(() => { const input = document.querySelector('#podbor input[type="tel"]'); return input && Object.keys(input).some(key => key.startsWith('__reactProps$')) })
+  await form.getByPlaceholder('Ваше имя', { exact: true }).fill('Проверка класса')
+  await form.locator('input[type="tel"]').fill('+79162847319')
+  await form.locator('input[type="email"]').fill('grade-check@example.invalid')
+  const flags = form.locator('input[type="checkbox"]')
+  await flags.nth(0).uncheck()
+  await page.waitForFunction(() => document.querySelector('#podbor button[type="submit"]')?.disabled === true)
+  await flags.nth(0).check()
+  await flags.nth(1).uncheck()
+  await form.locator('button[type="submit"]').click()
+  await page.waitForURL('**/spasibo/**')
+  assert.equal(leads.length, 1)
+  assert.equal(leads[0].source, 'Онлайн-школы по классам: 10-klass')
+  assert.equal(leads[0].crm, true)
+  assert.equal(leads[0].pd_agreed, true)
+  assert.equal(leads[0].marketing_agreed, false)
+  assert.deepEqual(pageErrors, [])
+  checks.push({ page: 'class 10', mockLead: true, attribution: true, consentRefusal: true })
   await writeFile(`${output}/qa.json`, JSON.stringify({ result: errors.length ? 'failed' : 'passed', checks, errors }, null, 2))
   assert.equal(errors.length, 0, JSON.stringify(errors))
   console.log(JSON.stringify({ result: 'passed', checks: checks.length, primaryChoice: 'outside filters and after cards' }))
