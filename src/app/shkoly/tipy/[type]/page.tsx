@@ -621,7 +621,7 @@ export default async function GlobalTypePage({ params }: Props) {
       lockRegion={t === 'online'}
       lockType
       title={`${displayTitle} в России`}
-      subtitle={t === 'online' ? `${count} школ: классы, стоимость и условия дистанционного обучения` : (t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} ${centersWord(count)} подготовки в 30 крупных городах — выберите город в фильтре` : t === 'programmirovanie' ? `${count} школ и клубов: очные занятия в ${programmingLocalityCount()} городах и населённых пунктах, онлайн из любого города` : t === 'litsei' ? `${count} лицеев — государственных, при вузах и частных — выберите город в фильтре` : `${count} школ — выберите город в фильтре`}
+      subtitle={t === 'online' ? `${count} школ: классы, стоимость и условия дистанционного обучения` : (t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${count} ${centersWord(count)} подготовки в 30 крупных городах — выберите город в фильтре` : t === 'programmirovanie' ? `${count} школ и клубов: очные занятия в ${programmingLocalityCount()} городах и населённых пунктах, онлайн из любого города` : t === 'litsei' ? `${count} лицеев — государственных, при вузах и частных — выберите город в фильтре` : `${count} ${schoolWord(count)} — выберите город в фильтре`}
       breadcrumbs={[
         { label: 'Все школы', href: '/shkoly/' },
         { label: displayTitle },

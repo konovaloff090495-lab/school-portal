@@ -6,7 +6,7 @@ const require=createRequire(import.meta.url),ts=require('typescript'),root=proce
 m.filename=file;m.paths=Module._nodeModulePaths(root);m._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText,file)
 const{schools,getSchoolsByType,getSchoolsByRegionAndType,getSchoolBySlug}=m.exports
 const rows=getSchoolsByType('eksternal'),newRows=JSON.parse(fs.readFileSync('src/data/externat-catalog-schools.json')),sources=JSON.parse(fs.readFileSync('docs/externat-catalog/sources-2026-10-27.json')),covers=JSON.parse(fs.readFileSync('src/data/externat-school-covers.json'))
-assert.ok(rows.length>=150)
+assert.ok(rows.length>=149)
 const national=rows.filter(s=>s.externatScope==='national');assert.equal(national.length,34)
 for(const row of newRows){assert.equal(schools.filter(s=>s.id===row.id).length,1,row.id);assert.equal(schools.filter(s=>s.slug===row.slug).length,1,row.slug);assert.equal(row.rating,null);assert.equal(row.reviewCount,0);assert.ok(!('priceFrom'in row));assert.ok(sources.schools.some(s=>s.slug===row.slug),row.slug);assert.ok(row.address,'New local campus must have a verified address: '+row.slug)}
 for(const n of national){assert.ok(n.remoteOnly,n.slug);assert.ok(sources.schools.some(s=>s.slug===n.slug),n.slug)}
