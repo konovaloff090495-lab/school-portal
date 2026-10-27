@@ -1,0 +1,1491 @@
+{
+  "checkedAt": "2026-10-27",
+  "limitations": [
+    "Каталог не является исчерпывающим государственным реестром. Экстернат — статус аттестуемого, а не отдельная категория лицензии.",
+    "Указание программы на официальном сайте не заменяет независимую проверку лицензии, аккредитации и свободных мест.",
+    "ТОП: городские адреса и ссылки Аттестация проверены на официальных страницах. Общие условия программы сверены по странице Томска, Ижевска, Саратова и Калининграда; зачисление оформляется в московскую школу. На Mac отдельные страницы attestaciya отвечают 403.",
+    "Дистанционные предложения учитываются один раз по России, без выдуманных городских филиалов.",
+    "Неперепроверенные ранее опубликованные муниципальные карточки сохранены с оговоркой об уточнении приема."
+  ],
+  "schools": [
+    {
+      "slug": "shkola-top-attestaciya-adler",
+      "sourceUrl": "https://topitschool.ru/adler",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-adler",
+      "evidence": "Школа ТОП, Адлер: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/adler/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "2e76e6902010b46abc3969addcf98bc03a9b064b7bd6bbab5a1e38b5bf361dce"
+    },
+    {
+      "slug": "shkola-top-attestaciya-armavir",
+      "sourceUrl": "https://topitschool.ru/armavir",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-armavir",
+      "evidence": "Школа ТОП, Армавир: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/armavir/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "819a196e24926e9fc10f7af26d89dd0b66c41a2edae1190cf11350ce4462bee6"
+    },
+    {
+      "slug": "shkola-top-attestaciya-astrakhan",
+      "sourceUrl": "https://topitschool.ru/astrakhan",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-astrakhan",
+      "evidence": "Школа ТОП, Астрахань: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/astrakhan/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "fb432bebfa5f53f1f3b354dc3027243da54d9bcbc37b837ffa059655eeb2b7fb"
+    },
+    {
+      "slug": "shkola-top-attestaciya-balakovo",
+      "sourceUrl": "https://topitschool.ru/balakovo",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-balakovo",
+      "evidence": "Школа ТОП, Балаково: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/balakovo/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "a3ed060e0c4bbfded8b7759960919254a3d10bfcf3fc2684f15d3a456f65588f"
+    },
+    {
+      "slug": "shkola-top-attestaciya-balashiha",
+      "sourceUrl": "https://topitschool.ru/balashiha",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-balashiha",
+      "evidence": "Школа ТОП, Балашиха: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/balashiha/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "87ec250dc081bd3ba7cb6483ed5a84a958eaae92d63aa807375c27c461cff66c"
+    },
+    {
+      "slug": "shkola-top-attestaciya-belgorod",
+      "sourceUrl": "https://topitschool.ru/belgorod",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-belgorod",
+      "evidence": "Школа ТОП, Белгород: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/belgorod/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "5b5991a5d5b848a471ee4d67deb4fa5aec7f6ab3866a721a7864a813f40fe023"
+    },
+    {
+      "slug": "shkola-top-attestaciya-velikiy-novgorod",
+      "sourceUrl": "https://topitschool.ru/velikiy-novgorod",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-velikiy-novgorod",
+      "evidence": "Школа ТОП, Великий Новгород: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/velikiy-novgorod/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "1993f6c79d13f1b41ce1cd9965adf629fd1079ba42b03f839d39c111d72210de"
+    },
+    {
+      "slug": "shkola-top-attestaciya-vladivostok",
+      "sourceUrl": "https://topitschool.ru/vladivostok",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-vladivostok",
+      "evidence": "Школа ТОП, Владивосток: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/vladivostok/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "b127d7d480f7737685503c8396ecdb997018c5f1f6a388977df3a881fbf3faa5"
+    },
+    {
+      "slug": "shkola-top-attestaciya-vladikavkaz",
+      "sourceUrl": "https://topitschool.ru/vladikavkaz",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-vladikavkaz",
+      "evidence": "Школа ТОП, Владикавказ: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/vladikavkaz/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "c5f3c24af7adaf54621c89f946d0e8370302c9cebf45ab6ef7efb9d8442763a8"
+    },
+    {
+      "slug": "shkola-top-attestaciya-vladimir",
+      "sourceUrl": "https://topitschool.ru/vladimir",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-vladimir",
+      "evidence": "Школа ТОП, Владимир: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/vladimir/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "7e40d20933f6e731d1188228815c19b7eb05bde4760391b7d36c8979f51f6ade"
+    },
+    {
+      "slug": "shkola-top-attestaciya-volgograd",
+      "sourceUrl": "https://topitschool.ru/volgograd",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-volgograd",
+      "evidence": "Школа ТОП, Волгоград: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/volgograd/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "dee1ac8ecc00460b1d82c807bd38b45f07dba2992fa44ff8b96483ae35c5a498"
+    },
+    {
+      "slug": "shkola-top-attestaciya-voronezh",
+      "sourceUrl": "https://topitschool.ru/voronezh",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-voronezh",
+      "evidence": "Школа ТОП, Воронеж: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/voronezh/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "25ed93f254c9185fa7a8d932caa06f560a1aaad936277646e5c465d03af29de6"
+    },
+    {
+      "slug": "shkola-top-attestaciya-ekaterinburg",
+      "sourceUrl": "https://topitschool.ru/ekaterinburg",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-ekaterinburg",
+      "evidence": "Школа ТОП, Екатеринбург: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/ekaterinburg/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "36f7fd375393c8bf2a523a89fd03a418f3fbcd605ccf1640395e6930fd172f81"
+    },
+    {
+      "slug": "shkola-top-attestaciya-izhevsk",
+      "sourceUrl": "https://topitschool.ru/izhevsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-izhevsk",
+      "evidence": "Школа ТОП, Ижевск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/izhevsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "000d2ce7519229326d575f1712e94c787276fb6ec682557ebf0482b1df439edb"
+    },
+    {
+      "slug": "shkola-top-attestaciya-irkutsk",
+      "sourceUrl": "https://topitschool.ru/irkutsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-irkutsk",
+      "evidence": "Школа ТОП, Иркутск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/irkutsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "3dcc4100d21eb1ebf0630dca4a4addc8c17d20d41b5ef4b4975635c86f5b2022"
+    },
+    {
+      "slug": "shkola-top-attestaciya-yoshkar-ola",
+      "sourceUrl": "https://topitschool.ru/yoshkar-ola",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-yoshkar-ola",
+      "evidence": "Школа ТОП, Йошкар-Ола: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/yoshkar-ola/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "e5509c8cd980467097e3c9028ddd193e36e644a894cda77a04c00d056b275221"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kazan",
+      "sourceUrl": "https://topitschool.ru/kazan",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kazan",
+      "evidence": "Школа ТОП, Казань: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kazan/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "4a50145c9b195e8f79f63a68a48a82a3f210db619fb4aeec54eae2c564cf5ca7"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kaliningrad",
+      "sourceUrl": "https://topitschool.ru/kaliningrad",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kaliningrad",
+      "evidence": "Школа ТОП, Калининград: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kaliningrad/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "f621048684cc5f9a908b083197c35d7b0f6c0ffe12b150f37b4a7e8d76590dd3"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kaluga",
+      "sourceUrl": "https://topitschool.ru/kaluga",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kaluga",
+      "evidence": "Школа ТОП, Калуга: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kaluga/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "265450dd215a0fd4a0d1cccd3bf7f27dc165fdcd0451c89be7e2cc529d7b0694"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kerch",
+      "sourceUrl": "https://topitschool.ru/kerch",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kerch",
+      "evidence": "Школа ТОП, Керчь: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kerch/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "f515755e0d0c68945157fce91a41ae5d33c9cd788acee974f2a3ba9ff8903315"
+    },
+    {
+      "slug": "shkola-top-attestaciya-komsomolsk-na-amure",
+      "sourceUrl": "https://topitschool.ru/komsomolsk-na-amure",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-komsomolsk-na-amure",
+      "evidence": "Школа ТОП, Комсомольск-на-Амуре: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/komsomolsk-na-amure/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "bc94a7d7fdf040650dbfeff0c31a765570ff2446b74ad77c0704877d296fa003"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kostroma",
+      "sourceUrl": "https://topitschool.ru/kostroma",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kostroma",
+      "evidence": "Школа ТОП, Кострома: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kostroma/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "48034b06bd52b168c006d5f3ecd1bc363d07d9cd87d0d4a5b010bc924efd4bfc"
+    },
+    {
+      "slug": "shkola-top-attestaciya-krasnogorsk",
+      "sourceUrl": "https://topitschool.ru/krasnogorsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-krasnogorsk",
+      "evidence": "Школа ТОП, Красногорск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/krasnogorsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "c666e82a96f59902f09c044c05150b716d4a6579fd5ea8b699786ac0201578ea"
+    },
+    {
+      "slug": "shkola-top-attestaciya-krasnodar",
+      "sourceUrl": "https://topitschool.ru/krasnodar",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-krasnodar",
+      "evidence": "Школа ТОП, Краснодар: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/krasnodar/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "9c3f86552169e04a75433f311c67b7cbf634b60e43816d5bc23f339f73a7c08e"
+    },
+    {
+      "slug": "shkola-top-attestaciya-krasnoyarsk",
+      "sourceUrl": "https://topitschool.ru/krasnoyarsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-krasnoyarsk",
+      "evidence": "Школа ТОП, Красноярск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/krasnoyarsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "4de2fb2b5bfe21caa96f233cb144ce88b3413724cd69fc80793ff8afe72ec315"
+    },
+    {
+      "slug": "shkola-top-attestaciya-kurgan",
+      "sourceUrl": "https://topitschool.ru/kurgan",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kurgan",
+      "evidence": "Школа ТОП, Курган: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kurgan/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "f9286eebf3642f1e244bc7c0f3ff9a580f5b7456adbfd8cb4fb833452ae6fca5"
+    },
+    {
+      "slug": "shkola-top-kursk",
+      "sourceUrl": "https://topitschool.ru/kursk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-kursk",
+      "evidence": "Городская площадка Школы ТОП в Курск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/kursk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "e93bc1e4a6e54be615ae6c4a8d5e3cb109c68ded2d59ecc0de7fb654e498048a"
+    },
+    {
+      "slug": "shkola-top-attestaciya-lipetsk",
+      "sourceUrl": "https://topitschool.ru/lipetsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-lipetsk",
+      "evidence": "Школа ТОП, Липецк: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/lipetsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "a42d2884d9aa7c9e8a1702a8ee526c11e8a82cccb64c54ed61525b133e9290db"
+    },
+    {
+      "slug": "shkola-top-attestaciya-makhachkala",
+      "sourceUrl": "https://topitschool.ru/makhachkala",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-makhachkala",
+      "evidence": "Школа ТОП, Махачкала: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/makhachkala/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "e377f9236dc9dbd49c6103fb1a00b7f19091e3385900a0e63b6acb7e4df2c2bc"
+    },
+    {
+      "slug": "shkola-top-attestaciya-moscow",
+      "sourceUrl": "https://topitschool.ru/moscow",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-moscow",
+      "evidence": "Школа ТОП, Москва: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/moscow/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "6023ebd4200d9a7e5b87c7da19513dff9c405f425e60d3ab477c04beb95f9a23"
+    },
+    {
+      "slug": "shkola-top-attestaciya-murmansk",
+      "sourceUrl": "https://topitschool.ru/murmansk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-murmansk",
+      "evidence": "Школа ТОП, Мурманск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/murmansk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "14a94b949360182c1629c5a2408d1e7d40f11ebab56bb3a9f7dc810393192b6c"
+    },
+    {
+      "slug": "shkola-top-attestaciya-naberezhnye-chelny",
+      "sourceUrl": "https://topitschool.ru/naberezhnye-chelny",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-naberezhnye-chelny",
+      "evidence": "Школа ТОП, Набережные Челны: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/naberezhnye-chelny/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "cb41ac301b74537a52fb35c439b7ba494eee74ef0d83d10ffd946422a414f0a4"
+    },
+    {
+      "slug": "shkola-top-attestaciya-nizhnevartovsk",
+      "sourceUrl": "https://topitschool.ru/nizhnevartovsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-nizhnevartovsk",
+      "evidence": "Школа ТОП, Нижневартовск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/nizhnevartovsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "5753b4d7c8d4a8a19bd198960c6fc738a05e82d4a2cc01f366f0189bbe3f960f"
+    },
+    {
+      "slug": "shkola-top-attestaciya-nizhnekamsk",
+      "sourceUrl": "https://topitschool.ru/nizhnekamsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-nizhnekamsk",
+      "evidence": "Школа ТОП, Нижнекамск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/nizhnekamsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "fca124a1a39e62fa7faab9f4f28f6bc0ab2125d2cd354d0c9607882d9561a261"
+    },
+    {
+      "slug": "shkola-top-attestaciya-nizhniy-novgorod",
+      "sourceUrl": "https://topitschool.ru/nizhniy-novgorod",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-nizhniy-novgorod",
+      "evidence": "Школа ТОП, Нижний Новгород: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/nizhniy-novgorod/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "17ebc2826533ee9ea29692e9dbe65a89819cd39168543d4727dd208d2c8bfa36"
+    },
+    {
+      "slug": "shkola-top-attestaciya-novorossiysk",
+      "sourceUrl": "https://topitschool.ru/novorossiysk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-novorossiysk",
+      "evidence": "Школа ТОП, Новороссийск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/novorossiysk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "f9412b2bb25438ffdcad70c0b23ef8feb188d9c110c2e79523819da39ae7685a"
+    },
+    {
+      "slug": "shkola-top-attestaciya-novosibirsk",
+      "sourceUrl": "https://topitschool.ru/novosibirsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-novosibirsk",
+      "evidence": "Школа ТОП, Новосибирск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/novosibirsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "cd5c0dadc2540dbb2b952c693a51458fd4be2a263c1846e3131a21110ad37649"
+    },
+    {
+      "slug": "shkola-top-attestaciya-omsk",
+      "sourceUrl": "https://topitschool.ru/omsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-omsk",
+      "evidence": "Школа ТОП, Омск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/omsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "19911daa8a6ebf0c5d93a0da3d9df5024c2336fc86e5d3cd416f1b3c0af7eac4"
+    },
+    {
+      "slug": "shkola-top-attestaciya-orel",
+      "sourceUrl": "https://topitschool.ru/orel",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-orel",
+      "evidence": "Школа ТОП, Орёл: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/orel/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "9d64a827285a7a9ae1759b63d578d320bdc72924dd16aa8d10043218601abd40"
+    },
+    {
+      "slug": "shkola-top-attestaciya-penza",
+      "sourceUrl": "https://topitschool.ru/penza",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-penza",
+      "evidence": "Школа ТОП, Пенза: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/penza/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "27029b2dd15219a01101ba439bf3b609942f20571868bac52aa1bc5ae08021e3"
+    },
+    {
+      "slug": "shkola-top-attestaciya-perm",
+      "sourceUrl": "https://topitschool.ru/perm",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-perm",
+      "evidence": "Школа ТОП, Пермь: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/perm/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "b8e42c88946c140d8fd61e65957b2df6553c365bbcaeff9198d1c46d56f7632c"
+    },
+    {
+      "slug": "shkola-top-attestaciya-pskov",
+      "sourceUrl": "https://topitschool.ru/pskov",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-pskov",
+      "evidence": "Школа ТОП, Псков: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/pskov/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "16706f511f83ab15846a99bf5b6d1f92801af696c656adf4c9a47b1d6e762f27"
+    },
+    {
+      "slug": "shkola-top-attestaciya-pushkin",
+      "sourceUrl": "https://topitschool.ru/pushkin",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-pushkin",
+      "evidence": "Школа ТОП, Пушкин: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/pushkin/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "ab68d5119dd8b9683c2efc535cca74ec65e6ec805491385f5018aef0cf49b611"
+    },
+    {
+      "slug": "shkola-top-attestaciya-rostov",
+      "sourceUrl": "https://topitschool.ru/rostov",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-rostov",
+      "evidence": "Школа ТОП, Ростов-на-Дону: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/rostov/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "3c883e7059828ca1bfc347fbe25128567e070f5685752f08358f8adb693b431f"
+    },
+    {
+      "slug": "shkola-top-attestaciya-ryazan",
+      "sourceUrl": "https://topitschool.ru/ryazan",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-ryazan",
+      "evidence": "Школа ТОП, Рязань: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/ryazan/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "c5f4a57afb9eabe8398abe15536089ad376aeaf8ded663cc2c33289eceae1647"
+    },
+    {
+      "slug": "shkola-top-attestaciya-samara",
+      "sourceUrl": "https://topitschool.ru/samara",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-samara",
+      "evidence": "Школа ТОП, Самара: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/samara/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "f2fd222221da44cf72526bf35d309aaba74fee40ef43ff000d8c8e02a6de008b"
+    },
+    {
+      "slug": "shkola-top-attestaciya-saint-petersburg",
+      "sourceUrl": "https://topitschool.ru/saint-petersburg",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-saint-petersburg",
+      "evidence": "Школа ТОП, Санкт-Петербург: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/saint-petersburg/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "cd0df0855dec11954692464d0fbd1e5b1ffffb9b9daf3b023f6e365fd30d23f0"
+    },
+    {
+      "slug": "shkola-top-attestaciya-saransk",
+      "sourceUrl": "https://topitschool.ru/saransk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-saransk",
+      "evidence": "Школа ТОП, Саранск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/saransk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "2ef893fa6743aad1f1242d6f41f466e97cfffc66c962e0227b9a46bc0807a637"
+    },
+    {
+      "slug": "shkola-top-attestaciya-saratov",
+      "sourceUrl": "https://topitschool.ru/saratov",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-saratov",
+      "evidence": "Школа ТОП, Саратов: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/saratov/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "483586eb5e495ee4f4b9eb5a19a9552801643289d35879bd7d6f60576366c3c0"
+    },
+    {
+      "slug": "shkola-top-attestaciya-sevastopol",
+      "sourceUrl": "https://topitschool.ru/sevastopol",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-sevastopol",
+      "evidence": "Школа ТОП, Севастополь: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/sevastopol/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "9e7af6b5f71023aa724cb11ee89e16aa0153cb429f01e838b48fced842a4f559"
+    },
+    {
+      "slug": "shkola-top-attestaciya-simferopol",
+      "sourceUrl": "https://topitschool.ru/simferopol",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-simferopol",
+      "evidence": "Школа ТОП, Симферополь: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/simferopol/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "d997d9ef13ad00390ee136f25dcf178bcc040880b97e3de6eaca1bac93a3035a"
+    },
+    {
+      "slug": "shkola-top-attestaciya-smolensk",
+      "sourceUrl": "https://topitschool.ru/smolensk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-smolensk",
+      "evidence": "Школа ТОП, Смоленск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/smolensk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "651d2d5f613c09072879a4f8b914deb93a9a80a3634d24957883aea9d7b11df7"
+    },
+    {
+      "slug": "shkola-top-attestaciya-sochi",
+      "sourceUrl": "https://topitschool.ru/sochi",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-sochi",
+      "evidence": "Школа ТОП, Сочи: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/sochi/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "3750c1bbf3f52dca0017e51ebe3057b127e6f50b46435ca8cfbd39951e9b3383"
+    },
+    {
+      "slug": "shkola-top-attestaciya-stary-oskol",
+      "sourceUrl": "https://topitschool.ru/stary-oskol",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-stary-oskol",
+      "evidence": "Школа ТОП, Старый Оскол: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/stary-oskol/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "29d4325065df328f91f1f3ec1c87ab8609e7d304a88dc7e84c5868692354e0da"
+    },
+    {
+      "slug": "shkola-top-attestaciya-sterlitamak",
+      "sourceUrl": "https://topitschool.ru/sterlitamak",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-sterlitamak",
+      "evidence": "Школа ТОП, Стерлитамак: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/sterlitamak/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "845357cc179bb607656877bcf85476ddce342fb2b16b56fe28f825f79fc52447"
+    },
+    {
+      "slug": "shkola-top-attestaciya-surgut",
+      "sourceUrl": "https://topitschool.ru/surgut",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-surgut",
+      "evidence": "Школа ТОП, Сургут: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/surgut/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "8063e14dfb0318746d3eb0afa26bb1044015b6301e8b9311bec8ac1b2a5a94ef"
+    },
+    {
+      "slug": "shkola-top-attestaciya-syktyvkar",
+      "sourceUrl": "https://topitschool.ru/syktyvkar",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-syktyvkar",
+      "evidence": "Школа ТОП, Сыктывкар: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/syktyvkar/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "1af7509c4e0059e6b62136a0ac8e2840715f7fef1a98059e2eebef0ca2e8e6ce"
+    },
+    {
+      "slug": "shkola-top-attestaciya-taganrog",
+      "sourceUrl": "https://topitschool.ru/taganrog",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-taganrog",
+      "evidence": "Школа ТОП, Таганрог: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/taganrog/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "2b826c984145cf69f3468e3f66a941aeb8e7ec1257a323c215b80d817bf0cdc6"
+    },
+    {
+      "slug": "shkola-top-attestaciya-tambov",
+      "sourceUrl": "https://topitschool.ru/tambov",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tambov",
+      "evidence": "Школа ТОП, Тамбов: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/tambov/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "6874568450a392727901980751947529102fab10445f9b397373d3556fc6161c"
+    },
+    {
+      "slug": "shkola-top-attestaciya-tver",
+      "sourceUrl": "https://topitschool.ru/tver",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tver",
+      "evidence": "Школа ТОП, Тверь: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/tver/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "cf26c79930f00d073c57045b6f4110c12d1a867fccf8c1cf7dc75fa162a7188b"
+    },
+    {
+      "slug": "shkola-top-attestaciya-tolyatti",
+      "sourceUrl": "https://topitschool.ru/tolyatti",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tolyatti",
+      "evidence": "Школа ТОП, Тольятти: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/tolyatti/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "d57f933d07768be6a3579d26c25763a166743767162cdb3d0206ea44aee6f519"
+    },
+    {
+      "slug": "shkola-top-attestaciya-tula",
+      "sourceUrl": "https://topitschool.ru/tula",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tula",
+      "evidence": "Школа ТОП, Тула: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/tula/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "322eb058c1c697c73daa47990170af9ed2077ad42410034639a99439f02d8d6a"
+    },
+    {
+      "slug": "shkola-top-attestaciya-tyumen",
+      "sourceUrl": "https://topitschool.ru/tyumen",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tyumen",
+      "evidence": "Школа ТОП, Тюмень: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/tyumen/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "93bf44271785f7684b9953500317cdf2377c6e36c06bdc070e0ffadaa0639db7"
+    },
+    {
+      "slug": "shkola-top-attestaciya-ulan-ude",
+      "sourceUrl": "https://topitschool.ru/ulan-ude",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-ulan-ude",
+      "evidence": "Школа ТОП, Улан-Удэ: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/ulan-ude/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "5205df811bef8b3df4515f5c24dbab462b878a8e18b775559a142efdd0cd7729"
+    },
+    {
+      "slug": "shkola-top-attestaciya-ulyanovsk",
+      "sourceUrl": "https://topitschool.ru/ulyanovsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-ulyanovsk",
+      "evidence": "Школа ТОП, Ульяновск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/ulyanovsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "a15dff9d894b089449c8e468700e9931da01522486bb5df6b25b9ef059ea72c8"
+    },
+    {
+      "slug": "shkola-top-attestaciya-ussuriysk",
+      "sourceUrl": "https://topitschool.ru/ussuriysk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-ussuriysk",
+      "evidence": "Школа ТОП, Уссурийск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/ussuriysk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "0485bb867aae51282896cbecef9196df5c5350a1e9410db0fae9132cd79b2792"
+    },
+    {
+      "slug": "shkola-top-attestaciya-chelyabinsk",
+      "sourceUrl": "https://topitschool.ru/chelyabinsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-chelyabinsk",
+      "evidence": "Школа ТОП, Челябинск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/chelyabinsk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "09991dda197f089ccf69cc0c3b6d9be95aa090e0fe2c651885dd2a4421aa7731"
+    },
+    {
+      "slug": "shkola-top-attestaciya-cherepovets",
+      "sourceUrl": "https://topitschool.ru/cherepovets",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-cherepovets",
+      "evidence": "Школа ТОП, Череповец: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/cherepovets/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "1b1a3ff1e00e2895e1003207eb07e0fb326a2cf0844ff7869c1f117416253711"
+    },
+    {
+      "slug": "shkola-top-attestaciya-cherkessk",
+      "sourceUrl": "https://topitschool.ru/cherkessk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-cherkessk",
+      "evidence": "Школа ТОП, Черкесск: сопровождение семейного образования и прикрепления к московской Школе ТОП, промежуточная аттестация по школьной программе. Прикрепление оформляется в московскую школу; местный адрес — площадка сопровождения, а не подтверждённое место ОГЭ или ЕГЭ. Пакет только промежуточной аттестации не включает допуск к ГИА и выдачу аттестата.",
+      "serviceUrl": "https://topitschool.ru/cherkessk/attestaciya",
+      "commonServiceSource": "https://topitschool.ru/tomsk/attestaciya",
+      "sourceSha256": "e52fd1bc03668ade6f3e263d3e99c58c32e8df6e5830c800fc2a3634ee99eb98"
+    },
+    {
+      "slug": "onlain-shkola-skysmart-moskva",
+      "sourceUrl": "https://homeschooling.skysmart.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlain-shkola-skysmart-moskva",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов.  Skysmart Бесплатный период Как устроено обучение Аттестация FAQ База знаний Ещё 1 класс 2 класс 3 класс 4 класс 5 класс 6 класс 7 класс 8 класс 9 класс 10 класс 11 класс 10–11 классы Ещё Открыть диалоговое окно с формой по клику Профильны"
+    },
+    {
+      "slug": "onlain-shkola-sinergiya-moskva",
+      "sourceUrl": "https://schooluniversity.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlain-shkola-sinergiya-moskva",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. а, куратор, наставник и школьный психолог, онлайн-аттестация дома в комфорте. Познакомьтесь с платформой и преподавателями получить доступ 7 дней бесплатно ^ № 1 *в образовании по версии Smart Ranking в 2025 году Льготы при поступлении в в"
+    },
+    {
+      "slug": "onlain-shkola-interneturok-moskva",
+      "sourceUrl": "https://interneturok.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlain-shkola-interneturok-moskva",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. процесс ДЗ и оценки Начало обучения Дополнительно Экстернат два класса за один год Школа в эфире онлайн-уроки для уверенности в знаниях Школа вместе ежедневные занятия в микроклассе Школа Лайт школьный курс без зачисления Подготовка к шк"
+    },
+    {
+      "slug": "onlayn-shkola-mtssh-bit-moskva",
+      "sourceUrl": "https://school-bit.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlayn-shkola-mtssh-bit-moskva",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. ности Разбор тестовых заданий, прохождение онлайн-аттестации Государственный аттестат или справка установленного образца Аттестация Подготовка Разнообразие Гибкость Поддержка Богатая история успеха Более 20 лет мы доказываем эффективность "
+    },
+    {
+      "slug": "onlajn-shkola-onlajn-gimnaziya-1",
+      "sourceUrl": "https://og1.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-onlajn-gimnaziya-1",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. й кабинет Сведения об образовательной организации Аттестация Пробный день Тариф «Ученический» Тариф «Школьный» Любознательный 3 класс 4 класс 5 класс 6 класс 7 класс 8 класс 9 класс ГИА 9 класс 10 класс 11 класс ГИА 11 класс Особенности об"
+    },
+    {
+      "slug": "onlajn-shkola-onlajn-shkola-1",
+      "sourceUrl": "https://onlineschool-1.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-onlajn-shkola-1",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. й процесс Как проходят занятия Программа обучения Аттестация Дополнительные активности Форматы обучения Домашнее обучение Экстернат Семейное обучение Анскулинг Вечерняя школа Заочное обучение Начальная школа 1 класс 2 класс 3 класс 4 класс"
+    },
+    {
+      "slug": "onlajn-shkola-ibls",
+      "sourceUrl": "https://ibls.one/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-ibls",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. е обучение Семейное обучение Предметные интенсивы Экстернат Как поступить Разница в формах обучения Учеба Начальная школа Средняя школа Старшая школа Подготовка к ЕГЭ Подготовка к ОГЭ Аттестация Библиотека Школа Наши преимущества Наши Пе"
+    },
+    {
+      "slug": "onlajn-shkola-tochka-znaniy",
+      "sourceUrl": "https://tochka-school.ru/so",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-tochka-znaniy",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. обучение Бесплатное прикрепление к школе и онлайн-аттестация Начать обучение Дайте ребёнку отличное образование. Дома. Онлайн. Онлайн-уроки от лучших учителей страны* По результатам всероссийских конкурсов Помощь педагога-тьютора Учебная н"
+    },
+    {
+      "slug": "onlajn-shkola-akademicheskaya-gimnaziya",
+      "sourceUrl": "https://academ-school.online/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-akademicheskaya-gimnaziya",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. тельной платформе Учебные материалы Контрольные и аттестации Обучение из любой точки мира 25 000 ₽ /год Прикрепление к школе входит в стоимость. Рассрочка платежа по запросу Москва* Доступ к образовательной платформе Учебные материалы Конт"
+    },
+    {
+      "slug": "onlajn-shkola-zorkium",
+      "sourceUrl": "https://zorkium.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-zorkium",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. сы 9 класс 10 класс 11 класс Все о школе Все о СО Аттестация Документы Контакты Отзывы Войти 1-4 класс 1 класс 2 класс 3 класс 4 класс 5-8 класс 5 класс 6 класс 7 класс 8 класс 9-11 класс 9 класс 10 класс 11 класс Все о СО Аттестация Конта"
+    },
+    {
+      "slug": "onlajn-shkola-hochu-uchitsya",
+      "sourceUrl": "https://zaochno.schoolattestation.ru",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-hochu-uchitsya",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. и справки ПА Зачисляем от 2 рабочих дней Проводим аттестации согласно 273-ФЗ РФ ПРЕИМУЩЕСТВА без видеокамер 3 попытки на сдачу в любом месте и время можно с телефона Персональная поддержка куратора на всех этапах C 2016 прошло 27 000+ дете"
+    },
+    {
+      "slug": "onlajn-shkola-svobodnoe-obrazovanie",
+      "sourceUrl": "https://onlineso.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-svobodnoe-obrazovanie",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов.  Старшая школа. Минигруппы 10 класс Промежуточная аттестация Расписание Экстернат в онлайн-школе Программы по предметам Русский язык Математика Английский язык Биология Химия География Окружающий мир Физика Литература История Бесплатный до"
+    },
+    {
+      "slug": "onlajn-shkola-stimul",
+      "sourceUrl": "https://stimul.school/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-stimul",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. и ученики блестяще сдают государственную итоговую аттестацию в форме ОГЭ и ЕГЭ.\" Коллеги рассказывают: \"Александр Владимирович очень спокойный человек. Очень. И дотошный. Способен научить связно и грамотно излагать свои мысли любого. Даже "
+    },
+    {
+      "slug": "onlajn-shkola-algoritm",
+      "sourceUrl": "https://a-edu.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-algoritm",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. овная и средняя школа (5-11 классы) Гибрид Онлайн Экстернат Целевой набор в 10-11 классы для поступления в МГУ-ППИ Дополнительное образование Мероприятия школы Поступление Стоимость Подготовка к международным экзаменам Английский язык Во"
+    },
+    {
+      "slug": "onlajn-shkola-proschool",
+      "sourceUrl": "https://www.proschool-online.com/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-proschool",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. дивидуально Персональное расписание узнать больше Аттестация Официальное подтверждение освоения школьной программы узнать больше Образовательная лицензия в PROschool online вы можете получить налоговый вычет и использовать материнский капи"
+    },
+    {
+      "slug": "onlajn-shkola-ecofamilyschool",
+      "sourceUrl": "https://ecofamilyschool.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-ecofamilyschool",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. й в Ecofamilyschool | Дистанционное образование с аттестацией Записаться в школу Контакты Преподаватели Программа +7 (495) 476-49-49 Оставьте свои контакты Мы свяжемся с Вами в ближайшее время Ваше имя Номер телефона Возраст ребенка ОТПРАВ"
+    },
+    {
+      "slug": "onlajn-shkola-sodruzhestvo-2100",
+      "sourceUrl": "https://sodrujestvo2100.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-sodruzhestvo-2100",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. о? Как всё устроено? Форматы Отзывы Промежуточная аттестация Условия, скидки, предложения Контакты Сведения об образовательной организации Смотреть уроки Первый класс 2026/2027 уч. год и подготовка к школе Рады приветствовать Вас на нашей "
+    },
+    {
+      "slug": "onlajn-shkola-rshdo",
+      "sourceUrl": "https://dom-shkola.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-rshdo",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. йн-обучение и полноценно учиться в школе, сдавать аттестации и получать оценки, вам будет необходимо перевесить на семейную форму обучения. Можно ли закончить вашу школу дистанционно и получить аттестат? Да, конечно. Наши школы-партнеры на"
+    },
+    {
+      "slug": "onlajn-shkola-yoshkola",
+      "sourceUrl": "https://yoshkola.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-yoshkola",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов.  Больше, чем школа! Больше знаний за то же время. Аттестация, Soft Skills и умение учиться. Поступить в школу Как всё устроено ↓ знания умения навыки Ёшкола — это твоя школа Учим детей учиться и работать с информацией 01 Школьная программа"
+    },
+    {
+      "slug": "onlajn-shkola-lobachevskogo",
+      "sourceUrl": "https://externlobach.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-lobachevskogo",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. ок официально зачисляется в школу для прохождения аттестации. Все занятия проводятся в формате видеоконференций или по видеозаписи. Домашние задания ученик загружает в своем личном кабинете на сайте. Проверенные задания с оценками и коммен"
+    },
+    {
+      "slug": "onlajn-shkola-mosh",
+      "sourceUrl": "https://moschool.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-mosh",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. е 1–11 класс | МОШ Московская онлайн-школа — меню Аттестация Обучение О нас Тарифы Блог 8 (800) 555-76-71 Перезвоните мне Войти Промежуточная аттестация 2026/2027 учебный год Самостоятельное обучение по материалам на платформе с последующе"
+    },
+    {
+      "slug": "onlajn-shkola-ls-lancman",
+      "sourceUrl": "https://world.lancman.online",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-ls-lancman",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. ся вода и все лишние предметы 4. Понятная система аттестации и оценки усвоения 5. По ключевым предметам внедрены сдвоенные уроки, позволяющие лучше погрузиться в тему» Мы разработали собственные методические пособия и материалы по основным"
+    },
+    {
+      "slug": "onlajn-shkola-imtp",
+      "sourceUrl": "https://school.imtp.ru",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-imtp",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. 10-11 классы онлайн с аттестатом, экстернат и ЕГЭ - Школа ИМТП Перейти к содержимому Главная О Школе ИМТП Электронная среда Среднее образование для детей Среднее образование для взрослых Дополнительные программы Экстернат"
+    },
+    {
+      "slug": "onlajn-shkola-raduga-znaniy",
+      "sourceUrl": "https://disobr.com",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-raduga-znaniy",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. школа-экстернат - Радуга знаний Школа-экстернат Курсы Подготовка к ЕГЭ Подготовка к ОГЭ Подготовка к школе Китайский язык для начинающих Преподаватели Стоимость Акции Контакты О нас тел. +7(499"
+    },
+    {
+      "slug": "onlajn-shkola-retro",
+      "sourceUrl": "https://retroonline.ru",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-retro",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. ний учителями. — Доступ к электронному журналу. — Аттестация по четвертям. — Отчеты об успеваемости. — Поддержка куратора 5 дней в неделю с 9:00 до 19:00 по всем вопросам, связанным с обучением, в индивидуальном порядке. 18 500 ₽/мес Тариф"
+    },
+    {
+      "slug": "onlajn-shkola-inter",
+      "sourceUrl": "https://school-inter.net",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-inter",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. коле. В конце учебного года наши учителя проводят аттестацию в виде контрольных работ, после этого выдается справка об аттестации и выставляются оценки в личное дело (если оно есть). Что дает прикрепление к вашей школе, какие преимущества?"
+    },
+    {
+      "slug": "onlajn-shkola-e-licey",
+      "sourceUrl": "https://e-licey.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-e-licey",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. тестат Форматы Вопросы Лицензия Отзывы Репетиторы Экстернат Позвонить 8 (495) 500-00-37 Поступить в школу Форматы обучения 01 Вопросы 02 Лицензия 03 Отзывы 04 Репетиторы 05 Экстернат 06 Телефон 8 (495) 500-00-37 Поступить в школу → Е-ЛИЦ"
+    },
+    {
+      "slug": "onlajn-shkola-express",
+      "sourceUrl": "https://express-externat.spb.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-express",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. образования Оформление документов Частые вопросы: аттестация экстерном Вторник - день открытых дверей Запись на приём Всем Сопровождение семейного образования Информационная безопасность Профилактика экстремизма Безопасность жизнедеятельно"
+    },
+    {
+      "slug": "onlajn-shkola-sotvorchestvo",
+      "sourceUrl": "https://www.sotvorchestvo21.ru/oshlending",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-sotvorchestvo",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. Школа семейного образования «СОтворчество» Аттестация 9-11 классы и ГИА Заочное образование МСК Обратный звонок Нажмите кнопку и получите уроки + платформу с тестами на 3 дня! Хочу забрать доступ! - видеоуроки \"фрагмент + тест на от"
+    },
+    {
+      "slug": "onlajn-shkola-kedr",
+      "sourceUrl": "https://cedar.school/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-kedr",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. Центр семейного образования \"Кедр\" Программа Аттестация Учителя Отзывы Цены Родителям +7 (967) 555-42-40 Безопасная онлайн - образовательная среда для детей с 1 по 11 класс — от 4 500 ₽ в месяц. Курсы для жизни (профориентация) Остави"
+    },
+    {
+      "slug": "onlajn-proekt-semejnye-klassy",
+      "sourceUrl": "https://7ya-class.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-proekt-semejnye-klassy",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. нительные курсы Школа выходного дня Промежуточная аттестация Оплата услуг Обучение Промежуточная аттестация Войти Семейные классы Мы соединяем современное онлайн-обучение с проверенными принципами семейного воспитания. Ребенок получает кач"
+    },
+    {
+      "slug": "onlajn-shkola-edpalm-cpso",
+      "sourceUrl": "https://hss.center/",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-edpalm-cpso",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. разования Образование Программы обучения 📝 Онлайн-аттестация с зачислением в школу Тариф «Базовый» 💻 Цифровая школа с наставником Тариф «Классный» 🎓 Выпускникам Экстернат и подготовка к ГИА 📚 Заочное обучение Только с регистрацией в Москве"
+    },
+    {
+      "slug": "onlajn-shkola-semejnogo-obrazovaniya-intellekt",
+      "sourceUrl": "https://intel-school.ru/index/o_nas/0-82",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "onlajn-shkola-semejnogo-obrazovaniya-intellekt",
+      "evidence": "На официальном сайте подтверждена школьная программа с аттестацией или сопровождением экстернов. Новости Стоимость услуг Подать заявку на обучение Аттестация с 1 по 11 класс Начальная школа 1 класс 2 класс 3 класс 4 класс Основная школа 5 класс 6 класс 7 класс 8 класс 9 класс Средняя школа 10 класс 11 класс Электронные учебники Компле"
+    },
+    {
+      "slug": "eksternal-foxford-moskva",
+      "sourceUrl": "https://foxford.ru/externat",
+      "checkedAt": "2026-10-27",
+      "scope": "national",
+      "sourceKey": "foxford-web",
+      "evidence": "Программа 10–11 классов за год; аттестационные листы и ведомости школы-партнёра. Итоговое сочинение и ЕГЭ проходят очно."
+    },
+    {
+      "slug": "moskovskaya-shkola-ekonomiki-eksternat",
+      "sourceUrl": "https://mos-extern.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "mos-econ",
+      "evidence": "Подготовка к аттестации экстерном: дневные и вечерние занятия, программа старших классов и подготовка к ЕГЭ."
+    },
+    {
+      "slug": "eltri-shkola-eksternat-moskva",
+      "sourceUrl": "https://www.xn--h1afph7c.xn--p1ai/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "eltri",
+      "evidence": "Программа прохождения 10–11 классов за один год с индивидуальным учебным планом и подготовкой к ЕГЭ."
+    },
+    {
+      "slug": "startschool-eksternat-moskva",
+      "sourceUrl": "https://startschool-msk.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "startschool",
+      "evidence": "Школа-экстернат для 1–11 классов. На официальном сайте заявлено интенсивное прохождение программы двух классов за год."
+    },
+    {
+      "slug": "shkola-eksternat-spbieu",
+      "sourceUrl": "https://www.spbiem.ru/abitur/jeksternat",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spbiem",
+      "evidence": "Программа 10–11 классов за один учебный год, подготовка и прохождение аттестации и ЕГЭ. На официальном сайте открыт набор на 2026/27 учебный год."
+    },
+    {
+      "slug": "egeburg-ekaterinburg",
+      "sourceUrl": "https://egeburg.ru/extern",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "egeburg",
+      "evidence": "Экстернат для 9–11 классов: освоение школьной программы, аттестация и подготовка к ОГЭ/ЕГЭ."
+    },
+    {
+      "slug": "uralskij-ege-centr-ekaterinburg",
+      "sourceUrl": "https://ural-ege.ru/ecsternat",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "ural-ege",
+      "evidence": "На официальной странице представлены 9 класс и 10–11 классы за один год, очные занятия и еженедельные аттестации с личным присутствием."
+    },
+    {
+      "slug": "pro-ekzamen-eksternat-chelyabinsk",
+      "sourceUrl": "https://proexamen.ru/externat",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "proexamen",
+      "evidence": "Подготовка экстернов к ОГЭ/ЕГЭ с преподавателями. Еженедельные аттестации требуют личного присутствия."
+    },
+    {
+      "slug": "elena-servis-kazan",
+      "sourceUrl": "https://www.elenaservis.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "elena",
+      "evidence": "Частная школа в Казани с заочным отделением и экстернатом; условия конкретного класса и текущего набора согласуются со школой."
+    },
+    {
+      "slug": "obscheobrazovatelnoe-srednyaya-obscheobrazovatelnaya-yuventa-sankt-peterburg",
+      "sourceUrl": "https://nwedu.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "yuventa",
+      "evidence": "На официальном сайте подтверждены индивидуальное ускоренное обучение и аттестация для экстернов 1–11 классов."
+    },
+    {
+      "slug": "paragraf-eksternat-rostov-na-donu",
+      "sourceUrl": "https://paragraf-school.ru/poleznaya-informacziya/shkola-eksternat-paragraf-v-rostove-na-donu.html",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "paragraf",
+      "evidence": "Школа предлагает прохождение 8–11 классов экстерном с индивидуальным сопровождением. Условия зачисления, принимающую организацию и место ГИА нужно согласовать до оплаты."
+    },
+    {
+      "slug": "avtorskaya-eksperimentalnaya-shkola-eksternat-omsk",
+      "sourceUrl": "https://aes-omsk.ru/sved/7-obrazovanie.html",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "aes-omsk",
+      "evidence": "В разделе «Образование» официального сайта среди доступных форм указаны экстернат, семейное и дистанционное обучение."
+    },
+    {
+      "slug": "rittel-school-academ-eksternat",
+      "sourceUrl": "https://rittelschool.ru/academ",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "rittel",
+      "evidence": "На странице школы в Академическом районе представлена ускоренная программа 10–11 классов за один год."
+    },
+    {
+      "slug": "lancman-school-eksternat-moskva",
+      "sourceUrl": "https://lancmanschool.ru/externat/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "lancman",
+      "evidence": "Очная подготовка к ЕГЭ и школьная программа через школу-партнёра. Аттестация проводится онлайн или очно по условиям выбранной программы, аттестат выдаёт школа-партнёр."
+    },
+    {
+      "slug": "shkola-137-eksternat-chelyabinsk",
+      "sourceUrl": "https://www.chel-edu.ru/organisations/?id=10337",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "chelyabinsk137",
+      "evidence": "Муниципальный комитет образования указывает очно-заочные классы и экстернат среди возможностей школы."
+    },
+    {
+      "slug": "centr-obrazovaniya-195-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "vechernyaya-shkola-162-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "shkola-140-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "litsey-533-obrazovatelnyy-kompleks-malaya-okhta-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "spb-eksternat-425",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "shkola-340-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "spb-eksternat-173",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "litsey-40-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "shkola-57-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "shkola-428-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Включена в официальный перечень учреждений Санкт-Петербурга, принимающих учащихся для промежуточной и государственной итоговой аттестации экстерном. Это не подтверждает ускоренную программу или наличие свободных мест; порядок прикрепления согласуется с учреждением."
+    },
+    {
+      "slug": "shkola-top-attestaciya-tomsk",
+      "sourceUrl": "https://topitschool.ru/tomsk/attestaciya",
+      "cityPage": "https://topitschool.ru/tomsk",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "top-tomsk",
+      "evidence": "Городская площадка Школы ТОП в Томске: сопровождение прикрепления к московской Школе ТОП и промежуточной аттестации на семейном образовании. Местный адрес — площадка сопровождения. Место ОГЭ/ЕГЭ и состав услуг определяются выбранным пакетом; промежуточная аттестация сама по себе не включает допуск к ГИА."
+    }
+  ],
+  "categoryExclusions": {
+    "eksternal-rshdo-moskva": "Дубль РШДО; в подборке используется onlajn-shkola-rshdo",
+    "eksternal-interneturok-moskva": "Дубль ИнтернетУрока; используется основная онлайн-карточка",
+    "eksternal-nashi-penaty-moskva": "Дубль школы IBLS (Наши Пенаты); используется актуальная карточка бренда",
+    "raduga-znaniy-shkola-eksternat-moskva-1": "Дубль Радуги знаний; используется проверенная карточка с официальным сайтом",
+    "pervyj-eksternat-kutuzovskij-moskva": "Дубль Первого Экстерната по тому же адресу",
+    "ekstern-tsentr-dopolnitelnogo-profession-sankt-peterburg-7": "Центр дополнительного профессионального образования, школьная программа не подтверждена",
+    "moi-otkrytiya-chastnaya-semeynaya-shkola-syktyvkar-2": "Семейный класс: прием экстернов и аттестация не подтверждены",
+    "rodnye-penaty-semeynaya-chastnaya-sredny-astrakhan-2": "Семейный класс: прием экстернов и аттестация не подтверждены"
+  },
+  "topPending": [
+    {
+      "city": "Абакан",
+      "url": "https://topitschool.ru/abakan",
+      "reason": "error"
+    },
+    {
+      "city": "Альметьевск",
+      "url": "https://topitschool.ru/almetevsk",
+      "reason": "error"
+    },
+    {
+      "city": "Ангарск",
+      "url": "https://topitschool.ru/angarsk",
+      "reason": "error"
+    },
+    {
+      "city": "Архангельск",
+      "url": "https://topitschool.ru/arhangelsk",
+      "reason": "error"
+    },
+    {
+      "city": "Барнаул",
+      "url": "https://topitschool.ru/barnaul",
+      "reason": "error"
+    },
+    {
+      "city": "Бийск",
+      "url": "https://topitschool.ru/bijsk",
+      "reason": "error"
+    },
+    {
+      "city": "Благовещенск",
+      "url": "https://topitschool.ru/blagoveshchensk",
+      "reason": "error"
+    },
+    {
+      "city": "Брянск",
+      "url": "https://topitschool.ru/bryansk",
+      "reason": "error"
+    },
+    {
+      "city": "Волжский",
+      "url": "https://topitschool.ru/volzhskij",
+      "reason": "error"
+    },
+    {
+      "city": "Грозный",
+      "url": "https://topitschool.ru/groznyj",
+      "reason": "error"
+    },
+    {
+      "city": "Дзержинск",
+      "url": "https://topitschool.ru/dzerzhinsk",
+      "reason": "error"
+    },
+    {
+      "city": "Иваново",
+      "url": "https://topitschool.ru/ivanovo",
+      "reason": "error"
+    },
+    {
+      "city": "Кемерово",
+      "url": "https://topitschool.ru/kemerovo",
+      "reason": "error"
+    },
+    {
+      "city": "Киров",
+      "url": "https://topitschool.ru/kirov",
+      "reason": "error"
+    },
+    {
+      "city": "Королёв",
+      "url": "https://topitschool.ru/korolev",
+      "reason": "error"
+    },
+    {
+      "city": "Магнитогорск",
+      "url": "https://topitschool.ru/magnitogorsk",
+      "reason": "error"
+    },
+    {
+      "city": "Мытищи",
+      "url": "https://topitschool.ru/mytishchi",
+      "reason": "needs-review"
+    },
+    {
+      "city": "Надым",
+      "url": "https://topitschool.ru/nadym",
+      "reason": "needs-review"
+    },
+    {
+      "city": "Нальчик",
+      "url": "https://topitschool.ru/nalchik",
+      "reason": "error"
+    },
+    {
+      "city": "Находка",
+      "url": "https://topitschool.ru/nahodka",
+      "reason": "error"
+    },
+    {
+      "city": "Нижний Тагил",
+      "url": "https://topitschool.ru/nizhnijtagil",
+      "reason": "error"
+    },
+    {
+      "city": "Новокузнецк",
+      "url": "https://topitschool.ru/novokuzneck",
+      "reason": "error"
+    },
+    {
+      "city": "Новочеркасск",
+      "url": "https://topitschool.ru/novocherkassk",
+      "reason": "error"
+    },
+    {
+      "city": "Новый Уренгой",
+      "url": "https://topitschool.ru/novyj-urengoj",
+      "reason": "error"
+    },
+    {
+      "city": "Норильск",
+      "url": "https://topitschool.ru/norilsk",
+      "reason": "error"
+    },
+    {
+      "city": "Ноябрьск",
+      "url": "https://topitschool.ru/noyabrsk",
+      "reason": "error"
+    },
+    {
+      "city": "Оренбург",
+      "url": "https://topitschool.ru/orenburg",
+      "reason": "error"
+    },
+    {
+      "city": "Орск",
+      "url": "https://topitschool.ru/orsk",
+      "reason": "error"
+    },
+    {
+      "city": "Петрозаводск",
+      "url": "https://topitschool.ru/petrozavodsk",
+      "reason": "error"
+    },
+    {
+      "city": "Подольск",
+      "url": "https://topitschool.ru/podolsk",
+      "reason": "error"
+    },
+    {
+      "city": "Салехард",
+      "url": "https://topitschool.ru/salehard",
+      "reason": "error"
+    },
+    {
+      "city": "Северодвинск",
+      "url": "https://topitschool.ru/severodvinsk",
+      "reason": "error"
+    },
+    {
+      "city": "Серпухов",
+      "url": "https://topitschool.ru/serpukhov",
+      "reason": "error"
+    },
+    {
+      "city": "Ставрополь",
+      "url": "https://topitschool.ru/stavropol",
+      "reason": "error"
+    },
+    {
+      "city": "Сызрань",
+      "url": "https://topitschool.ru/syzran",
+      "reason": "error"
+    },
+    {
+      "city": "Уфа",
+      "url": "https://topitschool.ru/ufa",
+      "reason": "review"
+    },
+    {
+      "city": "Хабаровск",
+      "url": "https://topitschool.ru/habarovsk",
+      "reason": "error"
+    },
+    {
+      "city": "Ханты-Мансийск",
+      "url": "https://topitschool.ru/hanty-mansijsk",
+      "reason": "error"
+    },
+    {
+      "city": "Чебоксары",
+      "url": "https://topitschool.ru/cheboksary",
+      "reason": "review"
+    },
+    {
+      "city": "Южно-Сахалинск",
+      "url": "https://topitschool.ru/yuzhno-sahalinsk",
+      "reason": "error"
+    },
+    {
+      "city": "Якутск",
+      "url": "https://topitschool.ru/yakutsk",
+      "reason": "error"
+    },
+    {
+      "city": "Ярославль",
+      "url": "https://topitschool.ru/yaroslavl",
+      "reason": "error"
+    },
+    {
+      "city": "Политики конфиденциальности",
+      "url": "https://topitschool.ru/privacy",
+      "reason": "error"
+    },
+    {
+      "city": "Блог",
+      "url": "https://topitschool.ru/blog",
+      "reason": "no-local-attestation-link"
+    },
+    {
+      "city": "Жизнь школы",
+      "url": "https://topitschool.ru/life",
+      "reason": "error"
+    },
+    {
+      "city": "Вакансии",
+      "url": "https://topitschool.ru/vacancies",
+      "reason": "error"
+    },
+    {
+      "city": "Сведения об образовательной организации",
+      "url": "https://topitschool.ru/basicinfo",
+      "reason": "no-local-attestation-link"
+    }
+  ]
+}

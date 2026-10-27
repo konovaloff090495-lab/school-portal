@@ -1,5 +1,6 @@
 import media from '@/data/school-media.json'
 import onlineCovers from '@/data/online-school-covers.json'
+import externatCovers from '@/data/externat-school-covers.json'
 import type { School } from '@/data/schools'
 
 type MediaSchool = Pick<School, 'slug' | 'type'> & Partial<Pick<School, 'website' | 'photoCount' | 'photoUrls'>>
@@ -30,10 +31,10 @@ export function schoolPhotoCount(school: MediaSchool): number {
   return school.photoUrls ? Math.min(school.photoUrls.length, 8) : Math.min(photos[school.slug] ?? 0, 3)
 }
 export function schoolCover(school: MediaSchool, illustrationOnly = false) {
-  const assigned = (onlineCovers as Record<string, { src: string; fallbackSrc: string; kind: string }>)[school.slug]
+  const assigned = (externatCovers as Record<string, { src: string; fallbackSrc: string; kind: string }>)[school.slug] ?? (onlineCovers as Record<string, { src: string; fallbackSrc: string; kind: string }>)[school.slug]
   if (assigned) {
     const illustration = illustrationOnly || assigned.kind === 'illustration'
-    return { src: illustrationOnly ? assigned.fallbackSrc : assigned.src, label: illustration ? 'Иллюстрация' : 'С сайта школы', alt: illustration ? 'Тематическая иллюстрация об обучении; не фотография этой школы' : 'Изображение с официального сайта школы' }
+    return { src: illustrationOnly ? assigned.fallbackSrc : assigned.src, label: illustration ? 'Иллюстрация' : assigned.kind === 'photo' ? 'Фото школы' : 'С сайта школы', alt: illustration ? 'Тематическая иллюстрация об обучении; не фотография этой школы' : assigned.kind === 'photo' ? 'Фотография из галереи школы' : 'Изображение с официального сайта школы' }
   }
   if (!illustrationOnly && school.website) {
     try {

@@ -77,6 +77,7 @@ interface Filters {
   metro: string[]
   profiles: ProfileId[]
   featureFilters: FeatureSlug[]
+  externatMode: 'all' | 'local' | 'online'
   sort: SortKey
 }
 
@@ -300,6 +301,7 @@ export default function CatalogClient({
     metro: initialMetro ? [initialMetro] : [],
     profiles: initialProfile ? [initialProfile as ProfileId] : [],
     featureFilters: [],
+    externatMode: 'all',
     sort: 'rating',
   })
   const router = useRouter()
@@ -310,10 +312,10 @@ export default function CatalogClient({
   const filterKey = useMemo(() => JSON.stringify([
     filters.regions, filters.types, filters.districts, filters.neighborhoods,
     filters.moCities, filters.metro, filters.profiles, filters.levels,
-    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating,
+    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating, filters.externatMode,
   ]), [filters.regions, filters.types, filters.districts, filters.neighborhoods,
     filters.moCities, filters.metro, filters.profiles, filters.levels,
-    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating])
+    filters.featureFilters, filters.priceMode, filters.priceCategories, filters.minRating, filters.externatMode])
   useEffect(() => { setVisibleCount(PAGE_SIZE) }, [filterKey])
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid')
   const [mapSchoolId, setMapSchoolId] = useState<string | null>(null)
@@ -497,16 +499,18 @@ export default function CatalogClient({
 
   // ── Вспомогательная функция: базовые фильтры без конкретного измерения ───────
   const applyBaseFilters = useCallback((
-    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'features' | 'regions' | 'levels' | 'price' | 'none' = 'none'
+    skip: 'districts' | 'neighborhoods' | 'moCities' | 'types' | 'metro' | 'profiles' | 'features' | 'regions' | 'levels' | 'price' | 'externatMode' | 'none' = 'none'
   ) => {
     let list = [...schools]
     const activeRegions = lockRegion ? initialRegions : filters.regions
-    if (skip !== 'regions' && activeRegions.length) list = list.filter(s => activeRegions.includes(s.region))
+    const activeTypes = lockType ? initialTypes : filters.types
+    const externat = activeTypes.length === 1 && activeTypes[0] === 'eksternal'
+    if (skip !== 'regions' && activeRegions.length) list = list.filter(s => activeRegions.includes(s.region) || (externat && s.externatScope === 'national'))
+    if (externat && skip !== 'externatMode' && filters.externatMode !== 'all') list = list.filter(s => filters.externatMode === 'online' ? s.externatScope === 'national' : !s.remoteOnly && s.externatScope !== 'national')
     if (skip !== 'districts' && filters.districts.length) list = list.filter(s => s.district && filters.districts.includes(s.district))
     if (skip !== 'neighborhoods' && filters.neighborhoods.length) list = list.filter(s => s.neighborhood && filters.neighborhoods.includes(s.neighborhood))
     if (skip !== 'moCities' && filters.moCities.length) list = list.filter(s => filters.moCities.some(city => s.city === city || schoolMatchesMoCity(s, city)))
     if (skip !== 'metro' && filters.metro.length) list = list.filter(s => s.metro && filters.metro.includes(s.metro))
-    const activeTypes = lockType ? initialTypes : filters.types
     // Городская выборка программирования включает местные площадки; онлайн — отдельная подборка.
     if (activeRegions.length > 0 && activeTypes.length === 1 && activeTypes[0] === 'programmirovanie') list = list.filter(s => !s.remoteOnly)
     if (skip !== 'types' && activeTypes.length) list = list.filter(s => {
@@ -551,6 +555,8 @@ export default function CatalogClient({
   const baseForTypes        = useMemo(() => applyBaseFilters('types'),        [applyBaseFilters])
   const baseForMetro        = useMemo(() => applyBaseFilters('metro'),        [applyBaseFilters])
   const baseForProfiles     = useMemo(() => applyBaseFilters('profiles'),     [applyBaseFilters])
+  const baseForExternatMode = useMemo(() => applyBaseFilters('externatMode'), [applyBaseFilters])
+  const externatContext = (lockType ? initialTypes : filters.types).length === 1 && (lockType ? initialTypes : filters.types)[0] === 'eksternal'
   const baseForRegions      = useMemo(() => applyBaseFilters('regions'),      [applyBaseFilters])
   const baseForFeatures     = useMemo(() => applyBaseFilters('features'),     [applyBaseFilters])
 
@@ -622,8 +628,9 @@ export default function CatalogClient({
       case 'price_asc': list.sort((a, b) => (a.priceFrom ?? Infinity) - (b.priceFrom ?? Infinity)); break
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? -Infinity) - (a.priceFrom ?? -Infinity)); break
     }
+    if ((lockType ? initialTypes : filters.types).length === 1 && (lockType ? initialTypes : filters.types)[0] === 'eksternal') list.sort((a, b) => Number(a.externatScope === 'national') - Number(b.externatScope === 'national'))
     return list
-  }, [applyBaseFilters, filters.sort, featureFilter])
+  }, [applyBaseFilters, filters.sort, featureFilter, lockType, initialTypes, filters.types])
 
   const resetableFilters: Filters = {
     regions: lockRegion ? initialRegions : [],
@@ -638,10 +645,12 @@ export default function CatalogClient({
     metro: lockMetro && initialMetro ? [initialMetro] : [],
     profiles: [],
     featureFilters: [],
+    externatMode: 'all',
     sort: 'rating',
   }
 
   const activeCount =
+    (externatContext && filters.externatMode !== 'all' ? 1 : 0) +
     (lockRegion ? 0 : filters.regions.length) +
     (lockType ? 0 : filters.types.length) +
     filters.districts.length +
@@ -844,7 +853,7 @@ export default function CatalogClient({
       {!lockRegion && (
         <FilterSection title="Регион" scrollable>
           {regionSlugs.map(r => {
-            const cnt = baseForRegions.filter(s => s.region === r).length
+            const cnt = baseForRegions.filter(s => s.region === r || (externatContext && s.externatScope === 'national')).length
             if (cnt === 0 && !filters.regions.includes(r)) return null
             return (
               <Checkbox
@@ -858,6 +867,33 @@ export default function CatalogClient({
           })}
         </FilterSection>
       )}
+      {externatContext && <FilterSection title="Формат обучения">
+        {([['all', 'Все варианты'], ['local', 'Школы и площадки в городе'], ['online', 'Дистанционно по России']] as const).map(([value, label]) => (
+          <label key={value} className="flex min-h-11 cursor-pointer items-center justify-between gap-2 py-2 text-sm text-slate-600">
+            <span className="flex items-center gap-2"><input type="radio" name={undefined} checked={filters.externatMode === value} onChange={() => setFilters(f => ({ ...f, externatMode: value }))} className="h-4 w-4 accent-[#0369A1]" />{label}</span>
+            <span className="text-xs text-slate-400">{baseForExternatMode.filter(s => value === 'all' || (value === 'online' ? s.externatScope === 'national' : !s.remoteOnly && s.externatScope !== 'national')).length}</span>
+          </label>
+        ))}
+      </FilterSection>}
+      {lockType && initialTypes.length === 1 && initialTypes[0] === 'eksternal' && (
+        <details className="border-b border-gray-100 pb-4 mb-4">
+          <summary className="cursor-pointer text-sm font-semibold text-[#0F172A]">Класс и задача</summary>
+          <nav aria-label="Программы экстерната" className="mt-3 space-y-1">
+            {[
+              ['/shkoly/tipy/eksternal/9-klass/', '9 класс / ОГЭ'],
+              ['/shkoly/tipy/eksternal/10-11-klass/', '10–11 классы'],
+              ['/shkoly/tipy/eksternal/online/', 'Дистанционно'],
+              ['/shkoly/tipy/eksternal/besplatnye/', 'Бесплатная аттестация'],
+              ['/blog/shkola-eksternat-dlya-vzroslyh/', 'Для взрослых'],
+            ].map(([href, label]) => (
+              <Link key={href} href={href} className="group flex min-h-11 items-center justify-between gap-2 rounded-lg px-2 py-2 text-sm text-slate-600 transition-colors hover:bg-sky-50 hover:text-[#0369A1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0369A1]">
+                <span>{label}</span><span aria-hidden="true" className="text-slate-400 group-hover:text-[#0369A1]">→</span>
+              </Link>
+            ))}
+          </nav>
+        </details>
+      )}
+
 
       {moscowDistricts.length > 0 && (
         <FilterSection title="Округ Москвы" scrollable>
@@ -1108,6 +1144,7 @@ export default function CatalogClient({
           {filters.priceMode !== 'all' && (
             <ActiveChip label={filters.priceMode === 'free' ? 'Бесплатно' : 'Платные'} onRemove={() => setFilters(f => ({ ...f, priceMode: 'all' }))} />
           )}
+          {externatContext && filters.externatMode !== 'all' && <ActiveChip label={filters.externatMode === 'local' ? 'Школы и площадки в городе' : 'Дистанционно по России'} onRemove={() => setFilters(f => ({ ...f, externatMode: 'all' }))} />}
           {filters.minRating > 0 && (
             <ActiveChip label={`Рейтинг от ${filters.minRating}`} onRemove={() => setFilters(f => ({ ...f, minRating: 0 }))} />
           )}
@@ -1140,6 +1177,7 @@ export default function CatalogClient({
         </aside>
 
         <div id="spisok-shkol" className="flex-1 min-w-0 scroll-mt-28">
+          {externatContext && <p className="mb-4 text-sm leading-6 text-slate-500">{filtered.filter(s => s.externatScope !== 'national').length} местных школ и площадок · {filtered.filter(s => s.externatScope === 'national').length} дистанционных программ. Онлайн-программы доступны из любого города; место ОГЭ/ЕГЭ определяется отдельно.</p>}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-5 bg-white rounded-xl border border-gray-200 px-4 py-3">
             <span className="text-sm text-gray-500 hidden sm:block">
               Показано: <span className="font-semibold text-[#0F172A]">{filtered.length}</span> школ
