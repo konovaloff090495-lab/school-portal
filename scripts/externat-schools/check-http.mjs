@@ -3,6 +3,9 @@ import fs from 'node:fs/promises'
 import{spawn}from'node:child_process'
 import{chromium}from'playwright'
 import{createHash}from'node:crypto'
+import Module,{createRequire}from'node:module'
+const require=createRequire(import.meta.url),ts=require('typescript'),dataFile=process.cwd()+'/src/data/schools.ts',dataModule=new Module(dataFile);dataModule.filename=dataFile;dataModule.paths=Module._nodeModulePaths(process.cwd());dataModule._compile(ts.transpileModule(await fs.readFile(dataFile,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText,dataFile)
+const sourceSchools=new Map(dataModule.exports.getSchoolsByType('eksternal').map(s=>[s.slug,s]))
 const base=process.env.EXTERNAT_QA_BASE||'http://127.0.0.1:3194',output='work/externat-qa'
 await fs.mkdir(output,{recursive:true})
 const child=process.env.EXTERNAT_QA_BASE?null:spawn(process.execPath,['node_modules/next/dist/bin/next','start','-p','3194'],{detached:true,stdio:'ignore'})
@@ -42,6 +45,8 @@ try{
    checks.push({path,width,localFilter:true,nationalFilter:true,sidebarLinks:true,overflow:false})
   }
  }
+ await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/shkoly/tipy/eksternal/',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>{const select=document.querySelector('#spisok-shkol select');return select&&Object.keys(select).some(k=>k.startsWith('__reactProps$'))});await page.locator('#spisok-shkol select').selectOption('price_asc');while(await page.getByRole('button',{name:/Загрузить ещё/}).count())await page.getByRole('button',{name:/Загрузить ещё/}).click()
+ const ordered=await page.locator('article').evaluateAll(cards=>cards.map(c=>c.querySelector('a[href^="/shkola/"]').getAttribute('href').split('/')[2]));assert.equal(ordered.length,sourceSchools.size);let unknown=false,last=-Infinity;for(const slug of ordered){const price=sourceSchools.get(slug).priceFrom;if(price===undefined)unknown=true;else{assert.equal(unknown,false,'Known tuition must precede unknown tuition');assert.ok(price>=last,'Price sorting must apply across local and national providers');last=price}}checks.push({priceSort:true,knownBeforeUnknown:true})
  const detail=await fetch(base+'/shkola/spb-eksternat-449/');assert.equal(detail.status,200);assert.ok(!(await detail.text()).includes('href="/shkola/ekstern-tsentr-dopolnitelnogo-profession-sankt-peterburg-7/"'),'Do not recommend a DPO center as another externat school');checks.push({excludedNotRecommended:true})
  const covers=JSON.parse(await fs.readFile('src/data/externat-school-covers.json','utf8'));for(const c of Object.values(covers)){const r=await fetch(base+c.src);assert.equal(r.status,200,c.src);const hash=createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex');assert.equal(hash,c.sha256,c.src);const fallback=await fetch(base+c.fallbackSrc);assert.equal(fallback.status,200,c.fallbackSrc);await fallback.arrayBuffer()}checks.push({coverFiles:Object.keys(covers).length,allLoaded:true,sha256:true})
  // Mock the existing conversion path on this page, never send a real lead.
