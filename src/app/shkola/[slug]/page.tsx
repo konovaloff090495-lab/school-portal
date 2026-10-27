@@ -18,6 +18,9 @@ import { schoolPhotoCount } from '@/lib/school-media'
 import programmingCourses from '@/data/programming-school-courses.json'
 import EveningVerifiedAdmissions from '@/components/EveningVerifiedAdmissions'
 import EveningPathChooser from '@/components/EveningPathChooser'
+import SchoolCardGuide from '@/components/SchoolCardGuide'
+import { getSchoolCardGuide } from '@/lib/school-card-guide'
+import './school-card.css'
 
 
 interface Props {
@@ -227,7 +230,8 @@ export default async function SchoolPage({ params }: Props) {
     .filter(s => s.id !== school.id && s.type === school.type && s.region === school.region && s.externatScope !== 'excluded')
     .slice(0, 3)
 
-  const faq = generateFaq(school)
+  const guide = getSchoolCardGuide(school.slug)
+  const faq = guide?.faq ?? generateFaq(school)
 
   const stars = school.rating ? Math.round(school.rating) : 0
 
@@ -316,7 +320,7 @@ export default async function SchoolPage({ params }: Props) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div data-school-card-release="cards-20261027" className="school-card-page max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />
@@ -342,13 +346,17 @@ export default async function SchoolPage({ params }: Props) {
           </div>
         )}
       </SchoolPageGallery>
+      <nav aria-label="Быстро перейти в карточке" className="mt-4 flex flex-wrap gap-2 sm:gap-3">
+        <a href="#school-card-form" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-[#0369A1] px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700">{school.type === 'vechernie' || school.type === 'eksternal' ? 'Консультация по онлайн-обучению' : 'Консультация по обучению'}</a>
+        <a href="#kontakty" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">Контакты школы</a>
+        {guide && <a href="#usloviya-priema" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-medium text-[#0369A1] underline underline-offset-4">Условия приёма</a>}
+      </nav>
       {school.yandexRating && <p className="mt-3 text-sm text-amber-700">
         ★ {school.yandexRating} · <a href={school.yandexMapsUrl || `https://yandex.ru/maps/?text=${encodeURIComponent([school.name, school.city, school.address].join(' '))}`} target="_blank" rel="noopener noreferrer" className="hover:underline">Яндекс Карты</a>{school.yandexReviewCount !== undefined ? ` · ${school.yandexReviewCount} отзывов` : ''}
       </p>}
 
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Main content */}
-        <div className="lg:col-span-2 space-y-6">
+      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="lg:col-span-2 min-w-0">
           {/* Header card */}
           <div className={`bg-white rounded-xl border-2 ${getTypeBorderColor(school.type)} p-6`}>
             <div className="flex items-center gap-2 flex-wrap mb-3">
@@ -364,10 +372,12 @@ export default async function SchoolPage({ params }: Props) {
               )}
             </div>
 
-            <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">{school.fullDescription}</p>
+            {guide && guide.status !== 'official' && <p className="mb-3 rounded-lg bg-amber-50 px-3 py-2 text-sm leading-6 text-amber-900">Приём в школу по этой записи пока не подтверждён. Ниже — проверенный маршрут и вопросы для обращения.</p>}
+            <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">{guide?.summary ?? school.fullDescription}</p>
             {school.representativeSubmitted && <><p className="text-xs text-gray-500 mb-4">Информация и фотографии предоставлены представителем школы и прошли модерацию редакции.</p>{school.priceDescription&&<p className="text-sm mb-3"><strong>Стоимость:</strong> {school.priceDescription}</p>}{school.admission&&<p className="text-sm mb-4 whitespace-pre-line"><strong>Как поступить:</strong> {school.admission}</p>}</>}
 
             {/* Key facts */}
+            {guide && guide.status !== 'official' && <p className="mb-3 text-xs leading-5 text-gray-500">Характеристики ниже — сведения каталога. Они не подтверждают текущие условия приёма.</p>}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <div className="text-xs text-gray-500 mb-1">Классы</div>
@@ -405,6 +415,16 @@ export default async function SchoolPage({ params }: Props) {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* One form instance; on mobile it precedes the long content and recommendations. */}
+        <div id="school-card-form" className="min-w-0 scroll-mt-32 lg:col-start-3 lg:row-start-1">
+          <LeadForm schoolName={school.name} schoolCity={school.city} attestat={school.type === 'vechernie'} />
+        </div>
+
+        {/* Main content */}
+        <div className="lg:col-span-2 min-w-0 space-y-6">
+          {guide && <SchoolCardGuide guide={guide} />}
 
           {school.type === 'programmirovanie' && <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-3">Программы и условия записи</h2>
@@ -422,7 +442,7 @@ export default async function SchoolPage({ params }: Props) {
 
           {/* Features */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Особенности и преимущества</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{guide && guide.status !== 'official' ? 'Сведения каталога — что уточнить' : 'Особенности и преимущества'}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {school.features.map(feature => (
                 <div key={feature} className="flex items-center gap-2 text-sm text-gray-700">
@@ -436,7 +456,7 @@ export default async function SchoolPage({ params }: Props) {
           </div>
 
           {school.type === 'vechernie' && <EveningPathChooser city={school.city} localHref="#kontakty" />}
-          {['vechernyaya-shkola-185-ekaterinburg-1', 'centr-obrazovaniya-195-sankt-peterburg'].includes(school.slug) && <EveningVerifiedAdmissions region={school.region} />}
+          {!guide && ['vechernyaya-shkola-185-ekaterinburg-1', 'centr-obrazovaniya-195-sankt-peterburg'].includes(school.slug) && <EveningVerifiedAdmissions region={school.region} />}
 
           {/* FAQ */}
           {faq.length > 0 && (
@@ -473,7 +493,8 @@ export default async function SchoolPage({ params }: Props) {
 
           {/* Contacts */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 id="kontakty" className="text-lg font-semibold text-gray-900 mb-4 scroll-mt-28">{school.remoteOnly ? 'Контакты' : 'Контакты и адрес'}</h2>
+            <h2 id="kontakty" className="text-lg font-semibold text-gray-900 mb-4 scroll-mt-32">{school.remoteOnly ? 'Контакты' : 'Контакты и адрес'}</h2>
+            {guide && guide.status !== 'official' && <p className="mb-4 text-sm leading-6 text-amber-900">Адрес и телефон ниже сохранены из каталога; их актуальность не подтверждена. {guide.contact ? 'Используйте проверенный контакт в блоке «Обучение и поступление».' : 'Перед поездкой уточните действующую организацию через орган образования.'}</p>}
 
             {/* Карта OpenStreetMap (рендерится без API-ключа). При наличии координат —
                 с меткой; без координат — аккуратный блок с адресом (без пустой карты). */}
@@ -605,8 +626,7 @@ export default async function SchoolPage({ params }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
-          <LeadForm schoolName={school.name} schoolCity={school.city} attestat={school.type === 'vechernie'} />
+        <div className="space-y-6 min-w-0">
 
           {/* School match widget */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">

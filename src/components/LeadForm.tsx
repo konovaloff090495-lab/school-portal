@@ -152,6 +152,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         <input
           type="text"
           autoComplete="name"
+          aria-label="Ваше имя"
           placeholder="Ваше имя"
           required
           value={form.name}
@@ -162,6 +163,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
           <input
             type="tel"
             autoComplete="tel"
+            aria-label="Номер телефона"
             placeholder="+7 (___) ___-__-__"
             required
             value={form.phone}
@@ -181,6 +183,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         <input
           type="email"
           autoComplete="email"
+          aria-label="Электронная почта"
           placeholder="Электронная почта"
           required
           value={form.email}
@@ -190,6 +193,7 @@ export default function LeadForm({ schoolName, schoolCity, compact = false, titl
         {!compact && (
           <textarea
             placeholder="Вопрос или комментарий (необязательно)"
+            aria-label="Вопрос или комментарий (необязательно)"
             value={form.question}
             onChange={e => setForm(f => ({ ...f, question: e.target.value }))}
             rows={2}
