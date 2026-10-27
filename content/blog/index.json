@@ -2153,9 +2153,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 8,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/russian.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261022/russian.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "zapyataya-pered-kak",
@@ -2557,9 +2558,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 9,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kavychki-elochki-ili-lapki",
@@ -11736,8 +11738,8 @@
   },
   {
     "slug": "kak-postupit-v-vuz-mvd-2026",
-    "title": "Как поступить в вуз МВД в 2026 году: требования и отбор",
-    "excerpt": "Разбираем порядок поступления в вузы МВД и Росгвардии: направление от территориального органа, медкомиссию, физнормативы и обязательства по контракту.",
+    "title": "Как поступить в вуз МВД: программа, оформление кандидата и подготовка",
+    "excerpt": "Как проверить ведомственный маршрут поступления: уровень образования, выбранная программа, комплектующий орган, испытания и обязательства. Без универсальных нормативов и обещаний.",
     "category": "Поступление",
     "tags": [
       "вуз МВД",
@@ -11748,9 +11750,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-20",
-    "readTime": 12,
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261021/kolledz-ili-vuz-posle-9-klassa.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/kolledz-ili-vuz-posle-9-klassa.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-postupit-v-vuz-mchs-2026",
@@ -17712,9 +17715,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-napravlenie-v-vuze.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-napravlenie-v-vuze.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "universitetskaya-gimnaziya-mgu-postuplenie",
@@ -21667,9 +21671,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 7,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-matematiki-dlya-11-klassa",
@@ -26002,6 +26007,25 @@
     "imageAlt": "Тематическая иллюстрация: школьники выбирают направление обучения",
     "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
     "readTime": 5,
+    "updatedAt": "2026-10-27"
+  },
+  {
+    "slug": "mcko-v-10-klasse-podgotovka",
+    "title": "МЦКО в 10 классе: как проверить формат диагностики и подготовиться",
+    "excerpt": "Где проверить предмет, уровень и год диагностики МЦКО в 10 классе, как использовать демоверсию и составить план повторения без поиска готовых ответов.",
+    "category": "Учёба",
+    "tags": [
+      "МЦКО",
+      "10 класс",
+      "диагностика",
+      "подготовка"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-27",
+    "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp",
+    "readTime": 4,
     "updatedAt": "2026-10-27"
   }
 ]
