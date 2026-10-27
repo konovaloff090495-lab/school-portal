@@ -11,6 +11,14 @@ const advice: Record<string, { heading: string; text: string; checks: string[]; 
 export default function SchoolFormatAdvice({ type, hideLinks = false }: { type: string; hideLinks?: boolean }) {
   const item = advice[type]
   if (!item) return null
+  if (type === 'eksternal' && hideLinks) return <details className="mb-8 rounded-2xl border border-gray-200 bg-white px-5 py-4">
+    <summary className="cursor-pointer text-sm font-semibold text-[#0F172A]">Как устроены экстернат и аттестация</summary>
+    <div className="mt-4 text-sm leading-6 text-slate-600">
+      <h2 className="mb-3 text-base font-semibold text-[#0F172A]">{item.heading}</h2>
+      <p className="mb-3">{item.text}</p>
+      <ul className="list-disc space-y-2 pl-5">{item.checks.map(text => <li key={text}>{text}</li>)}</ul>
+    </div>
+  </details>
   return <section className="max-w-4xl mx-auto pb-8">
     <h2 className="text-2xl font-bold mb-3">{item.heading}</h2><p className="leading-7 mb-4">{item.text}</p>
     <ul className="list-disc pl-6 space-y-2 leading-7 mb-4">{item.checks.map(t => <li key={t}>{t}</li>)}</ul>
