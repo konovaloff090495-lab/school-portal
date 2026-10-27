@@ -134,6 +134,7 @@ export default function SchoolCard({ school }: { school: School }) {
           <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold backdrop-blur-sm bg-white/90 ${getTypeColor(school.type)}`}>
             {typeLabels[school.type]}
           </span>
+          {school.externatScope === 'national' && <span className="inline-flex items-center rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-[#0369A1]">Дистанционно</span>}
           {school.metro && (
             <span className="flex items-center gap-1 bg-white/90 backdrop-blur-sm text-xs text-gray-700 px-2 py-1 rounded-full">
               <span className="w-3.5 h-3.5 bg-red-500 rounded-full text-white text-[7px] flex items-center justify-center font-bold shrink-0">М</span>
@@ -174,7 +175,7 @@ export default function SchoolCard({ school }: { school: School }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
           </svg>
-          <span className="truncate">{[school.city, school.address].filter(Boolean).join(', ')}</span>
+          <span className="truncate">{school.remoteOnly && school.externatScope === 'national' ? 'Дистанционно, вся Россия' : [school.city, school.address].filter(Boolean).join(', ')}</span>
         </div>
 
         {school.features.length > 0 && (

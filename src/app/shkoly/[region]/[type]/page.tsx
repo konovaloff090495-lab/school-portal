@@ -146,7 +146,7 @@ export default async function TypePage({ params }: Props) {
         lockRegion
         lockType
         title={pageTitle}
-        subtitle={list.length === 0 && t === 'vechernie' ? 'Отдельной вечерней школы в каталоге нет — ниже, как получить аттестат в городе' : (t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${list.length} ${list.length % 10 === 1 && list.length % 100 !== 11 ? 'центр' : list.length % 10 >= 2 && list.length % 10 <= 4 && (list.length % 100 < 10 || list.length % 100 >= 20) ? 'центра' : 'центров'} подготовки по данным Яндекс Карт, 09.2026` : `${list.length} ${schoolsWord(list.length)} в каталоге`}
+        subtitle={t === 'eksternal' ? `${list.filter(s => s.region === r && !s.remoteOnly).length} местных школ и площадок · ${list.filter(s => s.externatScope === 'national').length} дистанционных программ` : list.length === 0 && t === 'vechernie' ? 'Отдельной вечерней школы в каталоге нет — ниже, как получить аттестат в городе' : (t === 'podgotovka-ege' || t === 'podgotovka-oge') ? `${list.length} ${list.length % 10 === 1 && list.length % 100 !== 11 ? 'центр' : list.length % 10 >= 2 && list.length % 10 <= 4 && (list.length % 100 < 10 || list.length % 100 >= 20) ? 'центра' : 'центров'} подготовки по данным Яндекс Карт, 09.2026` : `${list.length} ${schoolsWord(list.length)} в каталоге`}
         breadcrumbs={[
           { label: 'Все школы', href: '/shkoly/' },
           { label: regionName, href: `/shkoly/${r}/` },
