@@ -628,7 +628,6 @@ export default function CatalogClient({
       case 'price_asc': list.sort((a, b) => (a.priceFrom ?? Infinity) - (b.priceFrom ?? Infinity)); break
       case 'price_desc': list.sort((a, b) => (b.priceFrom ?? -Infinity) - (a.priceFrom ?? -Infinity)); break
     }
-    if ((lockType ? initialTypes : filters.types).length === 1 && (lockType ? initialTypes : filters.types)[0] === 'eksternal') list.sort((a, b) => Number(a.externatScope === 'national') - Number(b.externatScope === 'national'))
     return list
   }, [applyBaseFilters, filters.sort, featureFilter, lockType, initialTypes, filters.types])
 
