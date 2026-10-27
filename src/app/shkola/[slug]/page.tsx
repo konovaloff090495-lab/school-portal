@@ -355,8 +355,8 @@ export default async function SchoolPage({ params }: Props) {
         ★ {school.yandexRating} · <a href={school.yandexMapsUrl || `https://yandex.ru/maps/?text=${encodeURIComponent([school.name, school.city, school.address].join(' '))}`} target="_blank" rel="noopener noreferrer" className="hover:underline">Яндекс Карты</a>{school.yandexReviewCount !== undefined ? ` · ${school.yandexReviewCount} отзывов` : ''}
       </p>}
 
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
-        <div className="lg:col-span-2 min-w-0">
+      <div className="school-card-layout mt-6">
+        <div className="school-card-intro min-w-0">
           {/* Header card */}
           <div className={`bg-white rounded-xl border-2 ${getTypeBorderColor(school.type)} p-6`}>
             <div className="flex items-center gap-2 flex-wrap mb-3">
@@ -418,12 +418,12 @@ export default async function SchoolPage({ params }: Props) {
         </div>
 
         {/* One form instance; on mobile it precedes the long content and recommendations. */}
-        <div id="school-card-form" className="min-w-0 scroll-mt-32 lg:col-start-3 lg:row-start-1">
+        <div id="school-card-form" className="school-card-lead min-w-0 scroll-mt-32">
           <LeadForm schoolName={school.name} schoolCity={school.city} attestat={school.type === 'vechernie'} />
         </div>
 
         {/* Main content */}
-        <div className="lg:col-span-2 min-w-0 space-y-6">
+        <div className="school-card-main min-w-0 space-y-6">
           {guide && <SchoolCardGuide guide={guide} />}
 
           {school.type === 'programmirovanie' && <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -626,7 +626,7 @@ export default async function SchoolPage({ params }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6 min-w-0">
+        <div className="school-card-extra space-y-6 min-w-0">
 
           {/* School match widget */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">

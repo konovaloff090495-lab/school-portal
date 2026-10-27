@@ -65,6 +65,10 @@ try {
         assert.ok(geometry.formY < geometry.faqY, 'The mobile form must precede FAQ')
         assert.ok(geometry.inputFont >= 16, 'No iOS focus zoom')
         assert.ok(geometry.inputHeight >= 44 && geometry.submitHeight >= 44, 'Usable touch targets')
+        if (width >= 1024) {
+          const intro = await page.locator('.school-card-intro').boundingBox(), main = await page.locator('.school-card-main').boundingBox()
+          assert.ok(main.y - intro.y - intro.height <= 26, 'Desktop content must not wait for the taller form column')
+        }
         const titleGeometry = await page.evaluate(() => {
           const h = document.querySelector('h1').getBoundingClientRect(), g = document.querySelector('[data-school-gallery]').getBoundingClientRect()
           return { inside: h.top >= g.top && h.bottom <= g.bottom, controlsClear: innerWidth >= 768 || h.top >= g.top + 64 }
