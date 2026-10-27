@@ -87,7 +87,7 @@
   {
     "slug": "kak-vybrat-shkolu-dlya-rebenka",
     "title": "Как выбрать школу для ребёнка: полное руководство для родителей",
-    "excerpt": "Разбираем все критерии выбора — от расположения и рейтинга до образовательной программы и атмосферы. Чек-лист на 12 пунктов, который поможет принять правильное решение.",
+    "excerpt": "Как сравнить школу по дороге, учебному плану, поддержке ребёнка и полному бюджету. Матрица проверки и вопросы для встречи с педагогами.",
     "category": "Советы родителям",
     "tags": [
       "выбор школы",
@@ -98,9 +98,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-04-01",
-    "readTime": 10,
+    "readTime": 2,
     "imageAlt": "Иллюстрация: Как выбрать школу для ребёнка",
-    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-shkolu-dlya-rebenka.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-shkolu-dlya-rebenka.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "gosudarstvennaya-ili-chastnaya-shkola",
@@ -446,8 +447,8 @@
   },
   {
     "slug": "kak-zapisat-rebyonka-v-shkolu-2026",
-    "title": "Как записать ребёнка в школу в 2026 году: полная инструкция для родителей",
-    "excerpt": "Подробный гайд по записи ребёнка в первый класс в 2026 году: сроки подачи заявлений, документы, Госуслуги и территориальный принцип.",
+    "title": "Как записать ребёнка в первый класс: документы, заявление и проверка статуса",
+    "excerpt": "Как подготовить заявление в первый класс, проверить документы и статус зачисления. Чем прошедшая кампания отличается от планирования следующего года.",
     "category": "Советы родителям",
     "tags": [
       "запись в школу",
@@ -459,13 +460,14 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-05",
-    "readTime": 10,
+    "readTime": 2,
     "imageAlt": "Иллюстрация: Как записать ребёнка в школу в 2026 году",
-    "imageUrl": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kogda-otdavat-rebyonka-v-pervyj-klass",
-    "title": "Когда отдавать ребёнка в первый класс: возраст по закону и признаки готовности",
+    "title": "Когда отдавать ребёнка в первый класс: возраст и готовность",
     "excerpt": "Разбираем, в каком возрасте по закону можно отдать ребёнка в школу, как определить готовность и что делать, если сомневаетесь в решении.",
     "category": "Советы родителям",
     "tags": [
@@ -478,9 +480,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-05",
-    "readTime": 10,
+    "readTime": 3,
     "imageAlt": "Иллюстрация: Когда отдавать ребёнка в первый класс",
-    "imageUrl": "/blog/images/editorial-20261021/kogda-otdavat-rebyonka-v-pervyj-klass.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kogda-otdavat-rebyonka-v-pervyj-klass.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "oge-2026-izmeneniya-kak-podgotovitsya",
@@ -865,8 +868,8 @@
   },
   {
     "slug": "kak-vybrat-shkolu-po-propiske-2026",
-    "title": "Как выбрать школу по прописке или не по прописке в 2026: полный гайд для родителей",
-    "excerpt": "Разбираемся, как работает территориальный принцип приёма в школу, можно ли попасть в учебное заведение без прописки и какие документы понадобятся в 2026 году.",
+    "title": "Как узнать школу по адресу и поступить в школу не по прописке",
+    "excerpt": "Как проверить закрепление дома за школой, выбрать корпус и уточнить приём на свободные места. Что делать, если сведения расходятся или мест нет.",
     "category": "Советы родителям",
     "tags": [
       "школа по прописке",
@@ -878,9 +881,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-07",
-    "readTime": 10,
+    "readTime": 3,
     "imageAlt": "Иллюстрация: Как выбрать школу по прописке или не по прописке в 2026",
-    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-shkolu-po-propiske-2026.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kak-vybrat-shkolu-po-propiske-2026.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "gosudarstvennaya-ili-chastnaya-shkola-sravnenie",
@@ -2130,8 +2134,9 @@
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
     "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "ne-ili-ni-pravilo",
@@ -2301,8 +2306,9 @@
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
     "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/ege-obshchestvoznanie-2026-popular.webp",
     "imageAlt": "Иллюстрация: Подготовка школьников к экзаменам",
-    "imageUrl": "/blog/images/editorial-20261021/ege-obshchestvoznanie-2026-popular.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-uchit-anglijskie-slova",
@@ -2591,9 +2597,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 8,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-pishetsya-takzhe-ili-tak-zhe",
@@ -2668,9 +2675,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 8,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/russian.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261022/russian.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-sdat-oge-po-matematike",
@@ -2926,7 +2934,7 @@
   {
     "slug": "kak-postupit-na-byudzhet",
     "title": "Как поступить на бюджет в вуз: что важно знать абитуриенту",
-    "excerpt": "Как поступить на бюджет в вуз: разбираем баллы ЕГЭ, олимпиады, индивидуальные достижения, целевое обучение, волны зачисления и пошаговый план подготовки заранее.",
+    "excerpt": "Как сравнить программы, экзамены, конкурсные основания и сроки. Практический план поступления без обещаний гарантированного бюджета.",
     "category": "Профориентация",
     "tags": [
       "поступление на бюджет",
@@ -2939,9 +2947,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 11,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/postuplenie-v-mgu-2026-bally.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/postuplenie-v-mgu-2026-bally.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "celevoe-obuchenie-chto-eto",
@@ -3966,9 +3975,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-06-07",
-    "readTime": 9,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/olimpiady-dlya-shkolnikov-2026.webp",
     "imageAlt": "Иллюстрация: Подготовка школьников к экзаменам",
-    "imageUrl": "/blog/images/editorial-20261021/olimpiady-dlya-shkolnikov-2026.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "proktoring-na-onlajn-ekzamenah",
@@ -5401,7 +5411,7 @@
   {
     "slug": "priemnaya-komissiya-kak-rabotaet",
     "title": "Как работает приёмная комиссия вуза: пошаговый разбор для абитуриента",
-    "excerpt": "Рейтинговые списки, волны зачисления, согласия — разбираем всё, что происходит после сдачи ЕГЭ до зачисления в вуз. Без паники и без мифов.",
+    "excerpt": "Как задать приёмной комиссии точный вопрос, проверить заявление, документы и необходимость справки для выбранного направления.",
     "category": "Поступление",
     "tags": [
       "приёмная комиссия",
@@ -5413,9 +5423,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-03",
-    "readTime": 10,
+    "readTime": 2,
     "imageAlt": "Иллюстрация: Как работает приёмная комиссия вуза",
-    "imageUrl": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp"
+    "imageUrl": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "byudzhetnye-mesta-v-vuzah-2026",
@@ -5671,8 +5682,8 @@
   },
   {
     "slug": "minimalnye-bally-ege-dlya-postupleniya",
-    "title": "Минимальные баллы ЕГЭ для поступления в вузы 2026: сколько нужно набрать",
-    "excerpt": "Разница между минимальным порогом Рособрнадзора, вузовским минимумом и реальным проходным баллом. Сколько нужно набрать, чтобы поступить куда хотите.",
+    "title": "Минимальные и проходные баллы ЕГЭ: как проверить требования выбранного вуза",
+    "excerpt": "Чем отличаются минимум для аттестата, допуск в вуз и проходной балл. Как составить таблицу требований конкретных программ.",
     "category": "ЕГЭ и ОГЭ",
     "tags": [
       "минимальные баллы ЕГЭ",
@@ -5683,9 +5694,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-18",
-    "readTime": 8,
+    "readTime": 2,
     "imageAlt": "Иллюстрация: Минимальные баллы ЕГЭ для поступления в вузы 2026",
-    "imageUrl": "/blog/images/editorial-20261021/minimalnye-bally-ege-dlya-postupleniya.webp"
+    "imageUrl": "/blog/images/editorial-20261021/minimalnye-bally-ege-dlya-postupleniya.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-podgotovitsya-k-ege-letom",
@@ -6474,8 +6486,8 @@
   },
   {
     "slug": "ligoty-pobeditelyam-olimpiad",
-    "title": "Льготы победителям олимпиад при поступлении в вуз 2026",
-    "excerpt": "Как олимпиадный диплом помогает поступить в вуз: зачисление без ЕГЭ, 100 баллов, БВИ. Какие олимпиады дают льготы и как ими правильно воспользоваться.",
+    "title": "Льготы победителям олимпиад: как проверить БВИ, 100 баллов и условия вуза",
+    "excerpt": "Как проверить олимпиадное право для выбранной программы: тип диплома, БВИ, максимальный балл и подтверждение результатом ЕГЭ.",
     "category": "ПОСТУПЛЕНИЕ",
     "tags": [
       "льготы олимпиадников",
@@ -6487,9 +6499,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-13",
-    "readTime": 10,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/celevoe-mesto-v-vuze.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/celevoe-mesto-v-vuze.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-podgotovitsya-k-olimpiade",
@@ -6599,9 +6612,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-19",
-    "readTime": 10,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "mezhdunarodnye-olimpiady-dlya-shkolnikov",
@@ -9634,7 +9648,7 @@
   },
   {
     "slug": "otkaz-v-prieme-v-shkolu",
-    "title": "Отказали в приёме в школу: что делать и на что вы имеете право в 2026 году",
+    "title": "Отказали в приёме в школу: как проверить основание и что делать дальше",
     "excerpt": "Школа отказала в зачислении ребёнка? Разбираем, когда отказ законен, а когда нет, как действовать по шагам и куда жаловаться, если нарушают права.",
     "category": "Советы родителям",
     "tags": [
@@ -9647,9 +9661,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-07",
-    "readTime": 10,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/nalogovyj-vychet-obuchenie-detej-2026.webp",
     "imageAlt": "Иллюстрация: Родители обсуждают документы и порядок обучения",
-    "imageUrl": "/blog/images/editorial-20261021/nalogovyj-vychet-obuchenie-detej-2026.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "otsrochka-ot-shkoly-7-let",
@@ -10738,9 +10753,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-15",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "konflikty-v-klasse-kak-pomoch-roditelyam",
@@ -11142,7 +11158,7 @@
   {
     "slug": "individualnye-dostizheniya-postuplenie-vuz",
     "title": "Индивидуальные достижения при поступлении: как получить баллы",
-    "excerpt": "Полный список индивидуальных достижений, за которые вузы начисляют дополнительные баллы к ЕГЭ в 2026 году: аттестат, ГТО, олимпиады, волонтёрство, спорт.",
+    "excerpt": "Как проверить, какие достижения учитывает конкретный вуз, подготовить подтверждения и не тратить время на бесполезные сертификаты.",
     "category": "ЕГЭ и ОГЭ",
     "tags": [
       "индивидуальные достижения",
@@ -11153,9 +11169,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-18",
-    "readTime": 9,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
     "imageAlt": "Иллюстрация: Совместное занятие ребёнка и родителя",
-    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "soglasie-na-zachislenie-vuz-2026",
@@ -11556,8 +11573,8 @@
   },
   {
     "slug": "kak-postupit-v-vuz-posle-kolledzha-bez-ege",
-    "title": "Как поступить в вуз после колледжа без сдачи ЕГЭ в 2026 году",
-    "excerpt": "Объясняем, как выпускник колледжа может поступить в вуз без сдачи ЕГЭ по внутренним вступительным испытаниям и какие специальности дают такое право.",
+    "title": "Как поступить в вуз после колледжа: когда можно без ЕГЭ и что проверить",
+    "excerpt": "Когда выпускнику СПО доступны внутренние испытания, как проверить соответствие профиля и когда нужен ЕГЭ. Запрос в приёмную комиссию и план действий.",
     "category": "Советы родителям",
     "tags": [
       "поступление после колледжа",
@@ -11568,9 +11585,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-20",
-    "readTime": 11,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/postuplenie-na-byudzhet-v-regionalnyj-vuz.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/postuplenie-na-byudzhet-v-regionalnyj-vuz.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "obrazovatelnyj-kredit-s-gospodderzhkoy-2026",
@@ -12088,9 +12106,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-24",
-    "readTime": 10,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-1-klassu.webp",
     "imageAlt": "Иллюстрация: Подготовка ребёнка к первым школьным занятиям",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-1-klassu.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "plohoy-pocherk-u-rebenka",
@@ -13928,8 +13947,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-02",
     "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261022/russian.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261022/russian.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "professiya-yurist-dlya-shkolnika",
@@ -15746,8 +15766,8 @@
   },
   {
     "slug": "komanda-shkoly-letovo",
-    "title": "Кто учит в Летово: директор Михаил Мокринский, руководство школы и как устроена команда",
-    "excerpt": "Кто руководит школой Летово, откуда пришли директор и президент, кто отвечает за учёбу, пансион, наставников и психологов, сколько в школе наставников и как школа набирает учителей.",
+    "title": "Кто учит в Летово: руководство, преподаватели и сопровождение ученика",
+    "excerpt": "Где проверить руководство и педагогов Летово, кто отвечает за учебный маршрут и сопровождение. Вопросы семье перед выбором школы.",
     "category": "Выбор школы",
     "tags": [
       "школа Летово",
@@ -15755,12 +15775,13 @@
       "учителя",
       "частные школы Москвы"
     ],
+    "readTime": 2,
+    "imageUrl": "/blog/images/letovo-nastavniki.jpg",
+    "imageAlt": "Сотрудники школы Летово общаются с ученицей у стойки в кампусе",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 6,
-    "imageAlt": "Сотрудники школы Летово общаются с ученицей у стойки в кампусе",
-    "imageUrl": "/blog/images/letovo-nastavniki.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "komu-prinadlezhit-letovo",
@@ -15819,8 +15840,8 @@
   },
   {
     "slug": "letovo-kids-detskiy-sad",
-    "title": "Летово Кидс: детский сад Летово на Павелецкой — цены 2026/27, программа, как записаться",
-    "excerpt": "Частный билингвальный детский сад «Летово Кидс» для детей 2–6 лет в ЖК «Левел Павелецкая Сити»: три тарифа от 95 000 до 230 000 ₽ в месяц, что входит в цену, группы до 15 человек, английский с носителем и бесплатный пробный день.",
+    "title": "Летово Кидс: детский сад на Павелецкой, программа и условия записи",
+    "excerpt": "Летово Кидс на Дубининской: что проверить на экскурсии, как сравнить режим и полный бюджет, какие условия запросить перед договором.",
     "category": "Выбор школы",
     "tags": [
       "Летово Кидс",
@@ -15828,12 +15849,13 @@
       "частные детские сады Москвы",
       "Павелецкая"
     ],
+    "readTime": 2,
+    "imageUrl": "/blog/images/letovo-kids-deti.jpg",
+    "imageAlt": "Дети играют в игровой комнате детского сада Летово Кидс с цветными стеллажами и мягкими модулями",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 6,
-    "imageAlt": "Дети играют в игровой комнате детского сада Летово Кидс с цветными стеллажами и мягкими модулями",
-    "imageUrl": "/blog/images/letovo-kids-deti.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "letovo-online-platforma",
@@ -15892,8 +15914,8 @@
   },
   {
     "slug": "shkola-letovo-otzyvy",
-    "title": "Отзывы о школе Летово: что говорят родители, ученики и сотрудники — плюсы и минусы",
-    "excerpt": "Сводка отзывов о школе Летово с карт, форумов и сайтов для сотрудников: за что хвалят, на что жалуются, какие мифы не подтверждаются. Без рекламы и без выдуманных цитат.",
+    "title": "Отзывы о школе Летово: как проверить опыт родителей и оценить условия",
+    "excerpt": "Как отличить отзывы о школе, Джуниоре и Кидс, проверить контекст и сформулировать вопросы о нагрузке, поддержке и пансионе.",
     "category": "Выбор школы",
     "tags": [
       "школа Летово",
@@ -15901,12 +15923,13 @@
       "частные школы Москвы",
       "школы-пансионы"
     ],
+    "readTime": 2,
+    "imageUrl": "/blog/images/letovo-ucheniki-otdyh.jpg",
+    "imageAlt": "Две ученицы школы Летово общаются на жёлтых ступенях амфитеатра в кампусе",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 8,
-    "imageAlt": "Две ученицы школы Летово общаются на жёлтых ступенях амфитеатра в кампусе",
-    "imageUrl": "/blog/images/letovo-ucheniki-otdyh.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "vstupitelnye-ekzameny-letovo",
@@ -20360,9 +20383,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 3,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-algebry-dlya-11-klassa",
@@ -20648,9 +20672,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 6,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/biology.webp",
     "imageAlt": "Иллюстрация: Школьники рассматривают образец в микроскоп на занятии по биологии",
-    "imageUrl": "/blog/images/editorial-20261022/biology.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-biologii-dlya-5-klassa",
@@ -20756,9 +20781,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 6,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261022/physics.webp",
     "imageAlt": "Иллюстрация: Школьники исследуют простую электрическую цепь с лампочкой",
-    "imageUrl": "/blog/images/editorial-20261022/physics.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-fiziki-dlya-11-klassa",
@@ -20954,9 +20980,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-geometrii-dlya-11-klassa",
@@ -21044,9 +21071,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 5,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/chemistry.webp",
     "imageAlt": "Иллюстрация: Подростки в защитных очках проводят опыт под руководством преподавателя",
-    "imageUrl": "/blog/images/editorial-20261022/chemistry.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-himii-dlya-11-klassa",
@@ -21116,9 +21144,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 3,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-informatiki-dlya-11-klassa",
@@ -21890,9 +21919,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/elektronnyj-dnevnik-roditeli.webp",
     "imageAlt": "Иллюстрация: Занятие с ноутбуком и учебными материалами",
-    "imageUrl": "/blog/images/editorial-20261021/elektronnyj-dnevnik-roditeli.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "luchshie-kursy-obshchestvoznaniya-dlya-6-klassa",
