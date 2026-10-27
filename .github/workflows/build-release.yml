@@ -74,6 +74,14 @@ jobs:
           retention-days: 2
       - run: node scripts/schools/check-media.mjs
       - run: npm run build
+      - run: node scripts/school-cards/check-http.mjs
+        timeout-minutes: 8
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: school-cards-debug
+          path: work/school-cards-qa/
+          retention-days: 2
       - run: node scripts/test-catalog-gifts-http.mjs
         timeout-minutes: 5
       - uses: actions/upload-artifact@v4
@@ -132,6 +140,7 @@ jobs:
           cp -r work/leads-growth-qa build-release/qa-leads-growth
           cp -r work/search-qa build-release/qa-search
           cp -r work/catalog-gifts-qa build-release/qa-catalog-gifts
+          cp -r work/school-cards-qa build-release/qa-school-cards
           cp .next/BUILD_ID build-release/BUILD_ID
           git rev-parse HEAD > build-release/SOURCE_COMMIT
       - run: node scripts/test-school-submissions-http.mjs

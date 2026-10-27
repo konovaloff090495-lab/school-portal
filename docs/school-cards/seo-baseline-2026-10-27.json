@@ -1,0 +1,426 @@
+[
+  {
+    "path": "/shkola/vechernyaya-shkola-1-vasileostrovsky-sankt-peterburg/",
+    "status": 200,
+    "title": "Вечерняя (сменная) общеобразовательная школа №1 Василеостровского района — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Вечерняя (сменная) общеобразовательная школа №1 Василеостровского района (Санкт-Петербург) — Старейшая вечерняя школа Санкт-Петербурга для взрослых с гибким графиком обучения и индивидуальным подходом. Адрес: ул. Наличная, д. 23. Телефон: +7 (812) 321-45-67.",
+    "h1": "Вечерняя (сменная) общеобразовательная школа №1 Василеостровского района",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-1-vasileostrovsky-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-12-vyborgsky-sankt-peterburg/",
+    "status": 200,
+    "title": "Вечерняя (сменная) общеобразовательная школа №12 Выборгского района — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Вечерняя (сменная) общеобразовательная школа №12 Выборгского района (Санкт-Петербург) — Вечерняя школа с развитой системой социальной поддержки учащихся из сложных жизненных ситуаций. Адрес: пр. Просвещения, д. 45. Телефон: +7 (812) 597-82-15.",
+    "h1": "Вечерняя (сменная) общеобразовательная школа №12 Выборгского района",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-12-vyborgsky-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-27-kalininsky-sankt-peterburg/",
+    "status": 200,
+    "title": "Вечерняя (сменная) общеобразовательная школа №27 Калининского района — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Вечерняя (сменная) общеобразовательная школа №27 Калининского района (Санкт-Петербург) — Государственная вечерняя школа с традициями качественного образования для взрослых учащихся северных районов города. Адрес: ул. Верности, д. 14. Телефон: +7 (812) 534-78-92.",
+    "h1": "Вечерняя (сменная) общеобразовательная школа №27 Калининского района",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-27-kalininsky-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-8-moskovsky-sankt-peterburg/",
+    "status": 200,
+    "title": "Вечерняя (сменная) общеобразовательная школа №8 Московского района — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Вечерняя (сменная) общеобразовательная школа №8 Московского района (Санкт-Петербург) — Вечерняя школа с углублённой подготовкой по математике для работающей молодёжи промышленного района. Адрес: Московский пр., д. 129. Телефон: +7 (812) 373-44-29.",
+    "h1": "Вечерняя (сменная) общеобразовательная школа №8 Московского района",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-8-moskovsky-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/centr-obrazovaniya-18-nevsky-sankt-peterburg/",
+    "status": 200,
+    "title": "Центр образования №18 Невского района — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Центр образования №18 Невского района (Санкт-Петербург) — Многопрофильный центр образования для взрослых с возможностью получения профессиональных навыков параллельно с аттестатом. Адрес: пр. Обуховской Обороны, д. 163. Телефон: +7 (812) 560-23-41.",
+    "h1": "Центр образования №18 Невского района",
+    "canonical": "https://pro-schools.ru/shkola/centr-obrazovaniya-18-nevsky-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/eksternal-shkola-185-moskva/",
+    "status": 200,
+    "title": "Вечерняя школа-экстернат № 185 — Москва | адрес, телефон, описание",
+    "description": "Вечерняя школа-экстернат № 185 (Москва) — Запись о школе-экстернате №185 в Москве. Действующая организация и условия приёма требуют подтверждения актуальным официальным источником. Адрес: ул. Авиамоторная, д. 30А. Телефон: +7 (495) 673-13-65.",
+    "h1": "Вечерняя школа-экстернат № 185",
+    "canonical": "https://pro-schools.ru/shkola/eksternal-shkola-185-moskva/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/mbou-vechernyaya-shkola-1-novosibirsk/",
+    "status": 200,
+    "title": "МБОУ Вечерняя (сменная) общеобразовательная школа № 1 — Новосибирск | адрес, телефон, описание",
+    "description": "МБОУ Вечерняя (сменная) общеобразовательная школа № 1 (Новосибирск) — Крупнейшая вечерняя школа Новосибирска для работающих граждан. Занятия в три смены. Адрес: ул. Серебренниковская, д. 36. Телефон: +7 (383) 222-09-47.",
+    "h1": "МБОУ Вечерняя (сменная) общеобразовательная школа № 1",
+    "canonical": "https://pro-schools.ru/shkola/mbou-vechernyaya-shkola-1-novosibirsk/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-15-novosibirsk-1/",
+    "status": 200,
+    "title": "Вечерняя школа №15 — Новосибирск | адрес, телефон, описание",
+    "description": "Вечерняя школа №15 (Новосибирск) — Вечерняя школа №15 — вечерняя школа в Новосибирске для тех, кто совмещает учёбу с работой. Адрес: Волочаевская улица, 111.",
+    "h1": "Вечерняя школа №15",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-15-novosibirsk-1/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-162-sankt-peterburg/",
+    "status": 200,
+    "title": "Вечерняя школа №162 — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Вечерняя школа №162 (Санкт-Петербург) — Вечерняя (сменная) школа в Санкт-Петербурге: обучение по вечерам для работающих подростков и взрослых. Адрес: Турбинная ул., д. 50. Телефон: +7 812 7862612.",
+    "h1": "Вечерняя школа №162",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-162-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/centr-obrazovaniya-195-sankt-peterburg/",
+    "status": 200,
+    "title": "Центр образования №195 — Санкт-Петербург | адрес, телефон, описание",
+    "description": "Центр образования №195 (Санкт-Петербург) — Центр образования №195: сведения о приёме по официальному объявлению 2026 года. Оставшиеся места, возраст и условия уточните непосредственно в центре. Адрес: Бородинская ул., д. 11, лит. А. Телефон: +78127620735.",
+    "h1": "Центр образования №195",
+    "canonical": "https://pro-schools.ru/shkola/centr-obrazovaniya-195-sankt-peterburg/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/vechernyaya-shkola-185-ekaterinburg-1/",
+    "status": 200,
+    "title": "Центр образования №185 — Екатеринбург | адрес, телефон, описание",
+    "description": "Центр образования №185 (Екатеринбург) — Центр образования №185: сведения о приёме по официальному объявлению 2026 года. Оставшиеся места, возраст и условия уточните непосредственно в центре. Адрес: улица Бебеля, 16. Телефон: +73432453157.",
+    "h1": "Центр образования №185",
+    "canonical": "https://pro-schools.ru/shkola/vechernyaya-shkola-185-ekaterinburg-1/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/onlain-shkola-skysmart-moskva/",
+    "status": 200,
+    "title": "Домашний лицей Skysmart — онлайн-школа | дистанционное обучение",
+    "description": "Домашний лицей Skysmart — дистанционное обучение. Домашний лицей Skysmart: школьная программа 1–11 классов с онлайн-уроками и поддержкой учителей. Для официальной аттестации нужен формат с прикреплением. Телефон: +7 (800) 333-52-36.",
+    "h1": "Домашний лицей Skysmart",
+    "canonical": "https://pro-schools.ru/shkola/onlain-shkola-skysmart-moskva/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/gbou-shkola-179-moskva/",
+    "status": 200,
+    "title": "ГБОУ Школа № 179 — Москва | адрес, телефон, описание",
+    "description": "ГБОУ Школа № 179 (Москва) — Одна из лучших математических школ Москвы с углублённым изучением математики и физики. Входит в топ-10 школ России. Адрес: ул. Преображенский Вал, д. 17А. Телефон: +7 (495) 963-52-96.",
+    "h1": "ГБОУ Школа № 179",
+    "canonical": "https://pro-schools.ru/shkola/gbou-shkola-179-moskva/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/shkola/maou-vechernyaya-shkola-1-chelyabinsk/",
+    "status": 200,
+    "title": "МАОУ «Вечерняя (сменная) школа № 1» — Челябинск | адрес, телефон, описание",
+    "description": "МАОУ «Вечерняя (сменная) школа № 1» (Челябинск) — Вечерняя школа для работающей молодёжи и взрослых, получение аттестата без отрыва от работы. Адрес: ул. Энгельса, д. 45. Телефон: +7 (351) 266-18-43.",
+    "h1": "МАОУ «Вечерняя (сменная) школа № 1»",
+    "canonical": "https://pro-schools.ru/shkola/maou-vechernyaya-shkola-1-chelyabinsk/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": [
+      {
+        "type": "text",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "required": true
+      },
+      {
+        "type": "email",
+        "required": true
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "title": "Школы России, курсы для детей и бесплатные уроки — ProSchools",
+    "description": "Выберите школу и курсы для ребёнка. Бесплатные онлайн-уроки, учебник, ГДЗ, подготовка к ЕГЭ и ОГЭ и статьи для родителей — на ProSchools.",
+    "h1": "Всё для учёбы и развития ребёнка",
+    "canonical": "https://pro-schools.ru/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/",
+    "status": 200,
+    "title": "Все школы России — каталог 2026",
+    "description": "Полный каталог школ России: государственные, частные, онлайн, вечерние и экстернат. 14483 школ с адресами, телефонами и описаниями.",
+    "h1": "Каталог школ России",
+    "canonical": "https://pro-schools.ru/shkoly/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/tipy/online/",
+    "status": 200,
+    "title": "Онлайн-школы России: программы, цены и сравнение условий",
+    "description": "Сравните онлайн-школы по классам, формату уроков, зачислению, аттестации и полной стоимости. Условия и документы — со ссылками и датой проверки.",
+    "h1": "Онлайн-школы в России",
+    "canonical": "https://pro-schools.ru/shkoly/tipy/online/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/tipy/eksternal/",
+    "status": 200,
+    "title": "Школы-экстернаты: программы, аттестация и стоимость",
+    "description": "Сравните проверенные программы экстерната: классы, возраст, сроки, аттестация и стоимость подготовки. Что бесплатно и где проходит ОГЭ или ЕГЭ.",
+    "h1": "Школы-экстернаты в России",
+    "canonical": "https://pro-schools.ru/shkoly/tipy/eksternal/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/sankt-peterburg/vechernie/",
+    "status": 200,
+    "title": "Вечерние школы Санкт-Петербурга: классы, приём и контакты",
+    "description": "Вечерние школы и центры образования Санкт-Петербурга: классы, адреса и контакты. Проверенное объявление центра №195 на 2026/27, документы и часы приёма. Места уточняйте у школы.",
+    "h1": "Вечерние школы в Санкт-Петербурге",
+    "canonical": "https://pro-schools.ru/shkoly/sankt-peterburg/vechernie/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/moskva/vechernie/",
+    "status": 200,
+    "title": "Вечерние школы Москвы: 9–11 классы, адреса и поступление",
+    "description": "Вечерние школы Москвы: сравните адреса и классы. Какие документы подготовить, как уточнить набор и расписание. Местные школы и платное онлайн-обучение — отдельные маршруты.",
+    "h1": "Вечерние школы в Москве",
+    "canonical": "https://pro-schools.ru/shkoly/moskva/vechernie/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/shkoly/tomsk/programmirovanie/",
+    "status": 200,
+    "title": "Школы программирования для детей в Томске | ProSchools",
+    "description": "Очные детские IT-школы и кружки в Томске: адреса, контакты и источники. В каталоге 31 площадка. Программу и набор проверяйте для конкретного филиала.",
+    "h1": "Школы программирования для детей в Томске",
+    "canonical": "https://pro-schools.ru/shkoly/tomsk/programmirovanie/",
+    "robots": "index,follow",
+    "xRobots": "",
+    "formFields": []
+  },
+  {
+    "path": "/attestat-vzroslomu/",
+    "status": 200,
+    "title": "Получить аттестат взрослому: онлайн-программы 9 и 11 класса, условия",
+    "description": "Не закончили школу? Выберите маршрут к аттестату за 9 или 11 класс: документы, платное онлайн-обучение Синергии, сроки и очные экзамены в Москве. Консультация по вашей ситуации.",
+    "h1": "Аттестат взрослому: 9 или 11 класс",
+    "canonical": "https://pro-schools.ru/attestat-vzroslomu/",
+    "robots": "index, follow",
+    "xRobots": "",
+    "formFields": []
+  }
+]
