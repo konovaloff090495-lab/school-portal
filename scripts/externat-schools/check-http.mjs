@@ -42,6 +42,7 @@ try{
    checks.push({path,width,localFilter:true,nationalFilter:true,sidebarLinks:true,overflow:false})
   }
  }
+ const detail=await fetch(base+'/shkola/spb-eksternat-449/');assert.equal(detail.status,200);assert.ok(!(await detail.text()).includes('href="/shkola/ekstern-tsentr-dopolnitelnogo-profession-sankt-peterburg-7/"'),'Do not recommend a DPO center as another externat school');checks.push({excludedNotRecommended:true})
  const covers=JSON.parse(await fs.readFile('src/data/externat-school-covers.json','utf8'));for(const c of Object.values(covers)){const r=await fetch(base+c.src);assert.equal(r.status,200,c.src);const hash=createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex');assert.equal(hash,c.sha256,c.src);const fallback=await fetch(base+c.fallbackSrc);assert.equal(fallback.status,200,c.fallbackSrc);await fallback.arrayBuffer()}checks.push({coverFiles:Object.keys(covers).length,allLoaded:true,sha256:true})
  // Mock the existing conversion path on this page, never send a real lead.
  for(const[width,marketing]of[[1440,true],[390,false]]){

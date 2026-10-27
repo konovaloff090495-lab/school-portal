@@ -224,7 +224,7 @@ export default async function SchoolPage({ params }: Props) {
   if (!school) notFound()
 
   const similar = schools
-    .filter(s => s.id !== school.id && s.type === school.type && s.region === school.region)
+    .filter(s => s.id !== school.id && s.type === school.type && s.region === school.region && s.externatScope !== 'excluded')
     .slice(0, 3)
 
   const faq = generateFaq(school)
