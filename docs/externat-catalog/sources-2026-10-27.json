@@ -1271,6 +1271,70 @@
       "scope": "local",
       "sourceKey": "pervyy-eksternat-shkola-intensivnogo-obu-moskva-3",
       "evidence": "Официальный сайт действующей школы интенсивного обучения «Первый Экстернат»: Москва, Кутузовский проспект, д. 30/32. У школы нет филиалов; программа и срок обучения определяются при поступлении."
+    },
+    {
+      "slug": "spb-eksternat-438",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "shkola-440-imeni-p-v-vittenburga-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "shkola-601-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "shkola-618-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "shkola-632-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "shkola-635-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "spb-eksternat-449",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
+    },
+    {
+      "slug": "tsentr-obrazovaniya-80-rozhdestvenskaya-shkola-sankt-peterburg",
+      "sourceUrl": "https://www.ege.spb.ru/index.php?Itemid=355&id=187&layout=item&option=com_k2&view=item",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "spb-official",
+      "evidence": "Учреждение включено в официальный перечень Санкт-Петербурга для приёма учащихся на промежуточную и государственную итоговую аттестацию экстерном. Наличие ускоренной программы и текущих свободных мест следует уточнять отдельно."
     }
   ],
   "categoryExclusions": {
