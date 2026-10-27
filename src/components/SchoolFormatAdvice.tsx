@@ -8,12 +8,20 @@ const advice: Record<string, { heading: string; text: string; checks: string[]; 
   vechernie: { heading: 'Проверьте текущий набор и расписание', text: 'Вечерняя школа не означает одинаковое начало занятий, возраст набора и срок обучения во всех организациях. Покажите документ об уже освоенном уровне и попросите подтвердить приём на нужную программу. Утрата аттестата может требовать дубликата, а не повторного обучения.', checks: ['Возраст и документ для приёма; наличие мест на текущий год.', 'Очная, очно-заочная или заочная форма; обязательные дни посещения.', 'Бюджетные места и платные услуги, срок программы, аттестации и ГИА.'], links: [['/blog/vechernyaya-shkola-kak-postupit/', 'Как поступить'], ['/blog/vechernyaya-shkola-dlya-vzroslyh/', 'Документы взрослому'], ['/shkoly/tipy/zaochnye/', 'Заочные программы']] },
 }
 
-export default function SchoolFormatAdvice({ type }: { type: string }) {
+export default function SchoolFormatAdvice({ type, hideLinks = false }: { type: string; hideLinks?: boolean }) {
   const item = advice[type]
   if (!item) return null
+  if (type === 'eksternal' && hideLinks) return <details className="mb-8 rounded-2xl border border-gray-200 bg-white px-5 py-4">
+    <summary className="cursor-pointer text-sm font-semibold text-[#0F172A]">Как устроены экстернат и аттестация</summary>
+    <div className="mt-4 text-sm leading-6 text-slate-600">
+      <h2 className="mb-3 text-base font-semibold text-[#0F172A]">{item.heading}</h2>
+      <p className="mb-3">{item.text}</p>
+      <ul className="list-disc space-y-2 pl-5">{item.checks.map(text => <li key={text}>{text}</li>)}</ul>
+    </div>
+  </details>
   return <section className="max-w-4xl mx-auto pb-8">
     <h2 className="text-2xl font-bold mb-3">{item.heading}</h2><p className="leading-7 mb-4">{item.text}</p>
     <ul className="list-disc pl-6 space-y-2 leading-7 mb-4">{item.checks.map(t => <li key={t}>{t}</li>)}</ul>
-    <nav aria-label="Инструкции и программы" className="flex flex-wrap gap-4">{item.links.map(([url, label]) => <Link className="text-blue-800 underline" key={url} href={url}>{label}</Link>)}</nav>
+    {!hideLinks && <nav aria-label="Инструкции и программы" className="flex flex-wrap gap-4">{item.links.map(([url, label]) => <Link className="text-blue-800 underline" key={url} href={url}>{label}</Link>)}</nav>}
   </section>
 }
