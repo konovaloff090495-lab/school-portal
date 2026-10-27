@@ -1239,6 +1239,38 @@
       "scope": "local",
       "sourceKey": "top-tomsk",
       "evidence": "Городская площадка Школы ТОП в Томске: сопровождение прикрепления к московской Школе ТОП и промежуточной аттестации на семейном образовании. Местный адрес — площадка сопровождения. Место ОГЭ/ЕГЭ и состав услуг определяются выбранным пакетом; промежуточная аттестация сама по себе не включает допуск к ГИА."
+    },
+    {
+      "slug": "eksternal-ege-centr-moskva",
+      "sourceUrl": "https://ege-centr.ru/courses/external",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "eksternal-ege-centr-moskva",
+      "evidence": "На официальной странице представлен экстернат 10–11 классов за один год с подготовкой к ЕГЭ."
+    },
+    {
+      "slug": "eksternal-talantum-moskva",
+      "sourceUrl": "https://talantum.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "eksternal-talantum-moskva",
+      "evidence": "На официальном сайте центра есть отдельное направление «Экстернат». Доступные классы, текущий набор и принимающую школу следует уточнять."
+    },
+    {
+      "slug": "godograf-chastnaya-shkola-eksternat-moskva-2",
+      "sourceUrl": "https://godege.ru/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "godograf-chastnaya-shkola-eksternat-moskva-2",
+      "evidence": "Экстернат 10–11 классов представлен на официальном сайте для главного корпуса: Москва, Садовая-Самотёчная улица, д. 15/1. Другие адреса курсов ЕГЭ не считаются филиалами экстерната."
+    },
+    {
+      "slug": "pervyy-eksternat-shkola-intensivnogo-obu-moskva-3",
+      "sourceUrl": "https://externat1.ru/svedeniya-ob-obrazovatelnoj-organizacii/",
+      "checkedAt": "2026-10-27",
+      "scope": "local",
+      "sourceKey": "pervyy-eksternat-shkola-intensivnogo-obu-moskva-3",
+      "evidence": "Официальный сайт действующей школы интенсивного обучения «Первый Экстернат»: Москва, Кутузовский проспект, д. 30/32. У школы нет филиалов; программа и срок обучения определяются при поступлении."
     }
   ],
   "categoryExclusions": {
@@ -1249,7 +1281,9 @@
     "pervyj-eksternat-kutuzovskij-moskva": "Дубль Первого Экстерната по тому же адресу",
     "ekstern-tsentr-dopolnitelnogo-profession-sankt-peterburg-7": "Центр дополнительного профессионального образования, школьная программа не подтверждена",
     "moi-otkrytiya-chastnaya-semeynaya-shkola-syktyvkar-2": "Семейный класс: прием экстернов и аттестация не подтверждены",
-    "rodnye-penaty-semeynaya-chastnaya-sredny-astrakhan-2": "Семейный класс: прием экстернов и аттестация не подтверждены"
+    "rodnye-penaty-semeynaya-chastnaya-sredny-astrakhan-2": "Семейный класс: прием экстернов и аттестация не подтверждены",
+    "ekstern-repetitorskiy-tsentr-rostov-na-donu-4": "На официальном сайте rostov-ege.ru подтверждена подготовка к ЕГЭ/ОГЭ, а не школьная аттестация экстернов. Название бренда «Экстерн» не является доказательством экстерната.",
+    "otkrytaya-shkola-semeynyy-tsentr-angarsk-1": "Семейный центр: организация школьной аттестации не подтверждена официальным источником."
   },
   "topPending": [
     {

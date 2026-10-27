@@ -23,18 +23,18 @@ try{
    const advice=page.getByRole('heading',{name:'Экстернат: аттестация и учебная программа отдельно'});if(await advice.count())assert.ok((await advice.boundingBox()).y>(await card.boundingBox()).y)
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal overflow')
    let panel
-   if(width<768){await page.getByRole('button',{name:'Фильтры',exact:true}).click();panel=page.locator('[role="dialog"]').filter({hasText:'Формат обучения'});if(!await panel.count())panel=page.locator('div.fixed').filter({has:page.getByRole('button',{name:/Показать \d+ школ/})}).last()}
+   if(width<768){await page.getByRole('button',{name:/^Фильтры/}).click();panel=page.locator('[role="dialog"]').filter({hasText:'Формат обучения'});if(!await panel.count())panel=page.locator('div.fixed').filter({has:page.getByRole('button',{name:/Показать \d+ школ/})}).last()}
    else panel=page.locator('aside').filter({hasText:'Формат обучения'})
    // There are desktop/mobile copies of the panel; use the visible controls.
    const localRadio=page.getByRole('radio',{name:/Школы и площадки в городе/}).filter({visible:true});await localRadio.check()
    if(width<768)await page.getByRole('button',{name:/Показать \d+ школ/}).click()
    await page.waitForTimeout(150);assert.ok(!await page.locator('article').filter({hasText:'Дистанционно, вся Россия'}).count(),'Local filter excludes national providers')
-   if(width<768)await page.getByRole('button',{name:'Фильтры',exact:true}).click()
+   if(width<768)await page.getByRole('button',{name:/^Фильтры/}).click()
    const onlineRadio=page.getByRole('radio',{name:/Дистанционно по России/}).filter({visible:true});await onlineRadio.check()
    if(width<768)await page.getByRole('button',{name:/Показать \d+ школ/}).click()
-   await page.waitForTimeout(150);assert.equal(await page.locator('article').count(),24,'Online page first batch');assert.match(await page.locator('body').innerText(),/34 дистанционных программ/)
+   await page.waitForTimeout(150);assert.equal(await page.locator('article').count(),24,'Online page first batch');assert.match(await page.locator('body').innerText(),/Дистанционные программы: 34/)
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1))
-   if(width<768)await page.getByRole('button',{name:'Фильтры',exact:true}).click()
+   if(width<768)await page.getByRole('button',{name:/^Фильтры/}).click()
    await page.getByRole('radio',{name:/Все варианты/}).filter({visible:true}).check()
    const details=page.locator('details').filter({has:page.locator('nav[aria-label="Программы экстерната"]')}).filter({visible:true});await details.locator('summary').click();assert.ok(await details.getByRole('link',{name:'9 класс / ОГЭ',exact:true}).isVisible())
    if(width<768)await page.getByRole('button',{name:/Показать \d+ школ/}).click()
