@@ -70,6 +70,13 @@ try {
           return { inside: h.top >= g.top && h.bottom <= g.bottom, controlsClear: innerWidth >= 768 || h.top >= g.top + 64 }
         })
         assert.ok(titleGeometry.inside && titleGeometry.controlsClear, 'Long school name must fit below the mobile photo controls')
+        if (width < 768) {
+          const breadcrumbLinks = page.getByRole('navigation', { name: 'Хлебные крошки' }).locator('a')
+          if (await breadcrumbLinks.count() > 1) {
+            const first = await breadcrumbLinks.nth(0).boundingBox(), second = await breadcrumbLinks.nth(1).boundingBox()
+            assert.ok(Math.abs(first.y - second.y) < 2, 'Quick action CSS must not put the first breadcrumb on its own row')
+          }
+        }
         const cta = page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]')
         if (width < 768) assert.ok((await cta.boundingBox()).y < 800, 'Consultation shortcut on first mobile screen')
         await cta.click()
