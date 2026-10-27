@@ -45,6 +45,7 @@ jobs:
       - run: npm run lint:leads
       - run: python3 scripts/check-navigation-policy.py
       - run: node scripts/family-schools/check-catalog.mjs
+      - run: node scripts/externat-schools/check.mjs
       - run: node scripts/online-schools/check.mjs
       - run: node scripts/online-schools/check-covers.mjs
       - run: node scripts/seo-school-formats/check.mjs
@@ -83,6 +84,14 @@ jobs:
           retention-days: 2
       - run: node scripts/seo/search-http.mjs
         timeout-minutes: 3
+      - run: node scripts/externat-schools/check-http.mjs
+        timeout-minutes: 5
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: externat-catalog-debug
+          path: work/externat-qa/
+          retention-days: 2
       - run: node scripts/online-schools/check-http.mjs
         timeout-minutes: 5
       - uses: actions/upload-artifact@v4
@@ -117,6 +126,7 @@ jobs:
           COPYFILE_DISABLE=1 tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
           (cd build-release && if command -v sha256sum >/dev/null 2>&1; then sha256sum next-release.tar.zst; else shasum -a 256 next-release.tar.zst; fi > SHA256SUMS)
           cp -r work/school-submission-qa build-release/qa
+          cp -r work/externat-qa build-release/qa-externat-catalog
           cp -r work/online-catalog-qa build-release/qa-online-catalog
           cp -r work/seo-school-formats-qa build-release/qa-school-formats
           cp -r work/leads-growth-qa build-release/qa-leads-growth

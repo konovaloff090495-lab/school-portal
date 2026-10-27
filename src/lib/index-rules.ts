@@ -19,7 +19,9 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   const n = getSchoolsByRegionAndType(region, type).length
   if (type === 'online') return ONLINE_INDEX_REGIONS.has(region)
   if (type === 'vechernie') return n > 0 || VECHERNIE_ZERO_INDEX.has(region)
-  if (type === 'semejnye' || type === 'eksternal') return n > 0
+  // Nationwide alternatives do not make an otherwise empty city indexable.
+  if (type === 'eksternal') return getSchoolsByRegionAndType(region, type).some(s => s.region === region && !s.remoteOnly)
+  if (type === 'semejnye') return n > 0
   // Центры ЕГЭ/ОГЭ: карточки собраны вручную по Яндекс Картам, страница дополнена онлайн-курсами — индексируем от 2 центров.
   if (type === 'podgotovka-ege' || type === 'podgotovka-oge') return n >= 2
   // Кадетских школ в городе физически 1–2 (Н.Новгород, Уфа, Иркутск…), а спрос «кадетская школа <город>» 1–2 тыс./мес —
