@@ -578,16 +578,51 @@
       "checkedAt": "2026-10-27",
       "sha256": "a01b4afc06edf255dad3728c2ff57561a03fac5c2964cfa0e7a2993ae8178f05"
     },
-    "shkola-57-sankt-peterburg": {
+    "shkola-440-imeni-p-v-vittenburga-sankt-peterburg": {
       "src": "/blog/images/editorial-20261021/postuplenie-v-pedagogicheskij-vuz.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/postuplenie-v-mgu-2026-bally.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "54681f136910c432b010bf1139f32c26cf94d2510e15256acc8d03b7ba85a7aa"
     },
+    "shkola-57-sankt-peterburg": {
+      "src": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/postuplenie-v-pedagogicheskij-vuz.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "a557905cb0f94ba3a56c6e5eb348d735a9a52a6628ff165bb35e7c335be2b059"
+    },
+    "shkola-601-sankt-peterburg": {
+      "src": "/blog/images/editorial-20261021/prava-roditelej-v-shkole.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "b0f05a5eb9eb446766d98d0abd695592e8057d22181f44ee13fed612e767fcae"
+    },
+    "shkola-618-sankt-peterburg": {
+      "src": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/prava-roditelej-v-shkole.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "1185fb58ff5e8c24f0862b2fdf91752cf1218edf5ee693ba8a6cc17c0e24534b"
+    },
+    "shkola-632-sankt-peterburg": {
+      "src": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "ba2feaebbfb8c38a31966f69c91892efd9e23bb57c07faf360ed6efd32fa178b"
+    },
+    "shkola-635-sankt-peterburg": {
+      "src": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/profil-v-starshej-shkole-kak-vybrat.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "7487b6863b09a9540c3b7f2adabb11ff6149dd23b99ef478d111347301cf099d"
+    },
     "shkola-eksternat-spbieu": {
       "src": "/schools/externat-covers-20261027/shkola-eksternat-spbieu.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/postuplenie-v-pedagogicheskij-vuz.webp",
+      "fallbackSrc": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
       "kind": "official",
       "checkedAt": "2026-10-27",
       "sourceUrl": "https://www.spbiem.ru/images/update/26-site-EXS.png",
@@ -595,531 +630,552 @@
       "sha256": "cc31d1598d08bfdef1a952b4988d2d9824d20975e4a6cf4c21873cd0b722d51b"
     },
     "shkola-top-attestaciya-adler": {
-      "src": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/postuplenie-v-yuridicheskij-vuz-2026.webp",
-      "kind": "illustration",
-      "checkedAt": "2026-10-27",
-      "sha256": "a557905cb0f94ba3a56c6e5eb348d735a9a52a6628ff165bb35e7c335be2b059"
-    },
-    "shkola-top-attestaciya-armavir": {
-      "src": "/blog/images/editorial-20261021/prava-roditelej-v-shkole.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/prava-roditelej-v-shkole.webp",
-      "kind": "illustration",
-      "checkedAt": "2026-10-27",
-      "sha256": "b0f05a5eb9eb446766d98d0abd695592e8057d22181f44ee13fed612e767fcae"
-    },
-    "shkola-top-attestaciya-astrakhan": {
-      "src": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/priemnaya-komissiya-kak-rabotaet.webp",
-      "kind": "illustration",
-      "checkedAt": "2026-10-27",
-      "sha256": "1185fb58ff5e8c24f0862b2fdf91752cf1218edf5ee693ba8a6cc17c0e24534b"
-    },
-    "shkola-top-attestaciya-balakovo": {
-      "src": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/profil-v-starshej-shkole-kak-vybrat.webp",
-      "kind": "illustration",
-      "checkedAt": "2026-10-27",
-      "sha256": "ba2feaebbfb8c38a31966f69c91892efd9e23bb57c07faf360ed6efd32fa178b"
-    },
-    "shkola-top-attestaciya-balashiha": {
-      "src": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp",
-      "fallbackSrc": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
-      "kind": "illustration",
-      "checkedAt": "2026-10-27",
-      "sha256": "7487b6863b09a9540c3b7f2adabb11ff6149dd23b99ef478d111347301cf099d"
-    },
-    "shkola-top-attestaciya-belgorod": {
       "src": "/blog/images/editorial-20261021/proforientatsiya-shkolnikov.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8be95091858eb3dd33cd4153650b717739daa4dccc1f9578dcd8d71d6d13457e"
     },
-    "shkola-top-attestaciya-chelyabinsk": {
+    "shkola-top-attestaciya-armavir": {
       "src": "/blog/images/editorial-20261021/psihologicheskaya-bezopasnost-v-shkole.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/proforientatsiya-shkolnikov.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8fe4101c52b5abdfc93acd6ca6bf6ae9cd2d5e45787b3d59764db3dabe6acb85"
     },
-    "shkola-top-attestaciya-cherepovets": {
+    "shkola-top-attestaciya-astrakhan": {
       "src": "/blog/images/editorial-20261021/psihologicheskaya-gotovnost-k-shkole.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/psihologicheskaya-bezopasnost-v-shkole.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "42a73d533f6a567fd64f1994b001cbe4385b87f3fa9e364ae4875d965a0a24b7"
     },
-    "shkola-top-attestaciya-cherkessk": {
+    "shkola-top-attestaciya-balakovo": {
       "src": "/blog/images/editorial-20261021/psikhologicheskaya-podgotovka-k-ege.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/psihologicheskaya-gotovnost-k-shkole.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "99ff6ef5aa68c964362b1cd2d246f44a3e71740cce837b3cd00d3d8e7db8d002"
     },
-    "shkola-top-attestaciya-ekaterinburg": {
+    "shkola-top-attestaciya-balashiha": {
       "src": "/blog/images/editorial-20261021/razvitie-rebenka-letom.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/psikhologicheskaya-podgotovka-k-ege.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "e1846516d9a9e8f8d8ca4455a16c9fcb69fc6b083a674e5e76c756e8d0208a4e"
     },
-    "shkola-top-attestaciya-irkutsk": {
+    "shkola-top-attestaciya-belgorod": {
       "src": "/blog/images/editorial-20261021/rebenok-dvoechnik-chto-delat.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/razvitie-rebenka-letom.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "ced8b3610facf417695fb94d9b6690f0a4363afee62ad2a9cdfbf32f76e70971"
     },
-    "shkola-top-attestaciya-izhevsk": {
+    "shkola-top-attestaciya-chelyabinsk": {
       "src": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/rebenok-dvoechnik-chto-delat.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "de2342e1195bdb9f119a3c9002d53836eb4a280347772f484d43356f662ab6da"
     },
-    "shkola-top-attestaciya-kaliningrad": {
+    "shkola-top-attestaciya-cherepovets": {
       "src": "/blog/images/editorial-20261021/rebenok-ne-hochet-uchitsya-prichiny.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "1a741b54216fbca0095ea5a2bf886bed3e8bdb9ecb54d0fd76e9832b5139ea6c"
     },
-    "shkola-top-attestaciya-kaluga": {
+    "shkola-top-attestaciya-cherkessk": {
       "src": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/rebenok-ne-hochet-uchitsya-prichiny.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "92afd3b2aaf8a0c36e111b03bdb16dc3c25e16b68e4ab3653987942d16face9c"
     },
-    "shkola-top-attestaciya-kazan": {
+    "shkola-top-attestaciya-ekaterinburg": {
       "src": "/blog/images/editorial-20261021/shkola-i-sport-kak-sovmeshchat.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8cb0feec64bba4651a6554f254fdd34272c3a9cb5d3f7fabc3af7cc0110c3765"
     },
-    "shkola-top-attestaciya-kerch": {
+    "shkola-top-attestaciya-irkutsk": {
       "src": "/blog/images/editorial-20261021/shkolnaya-forma-rossiya.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/shkola-i-sport-kak-sovmeshchat.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "6fa5b28f21583b2d8dbef0941b6b6759baa52bdf38015a8df4e3ab5525cb3152"
     },
-    "shkola-top-attestaciya-komsomolsk-na-amure": {
+    "shkola-top-attestaciya-izhevsk": {
       "src": "/blog/images/editorial-20261021/sochinenie-ege-maksimum-ballov.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/shkolnaya-forma-rossiya.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "276763289d4bb70a0f1767ef1e618c2571e38c9cf023d2e96bf2074fad00dcf4"
     },
-    "shkola-top-attestaciya-kostroma": {
+    "shkola-top-attestaciya-kaliningrad": {
       "src": "/blog/images/editorial-20261021/suvorovskie-nahimovskie-postuplenie.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/sochinenie-ege-maksimum-ballov.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "fbe58fedd506a4edae81470f1b28228edf5d8f89155eca3093a9107b69a2c79a"
     },
-    "shkola-top-attestaciya-krasnodar": {
+    "shkola-top-attestaciya-kaluga": {
       "src": "/blog/images/editorial-20261021/trenirovochnye-varianty-ege.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/suvorovskie-nahimovskie-postuplenie.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "4752bf96faf3f5b8152837107fef614531c89c33c1a04729b0c4e9aa7a795f8c"
     },
-    "shkola-top-attestaciya-krasnogorsk": {
+    "shkola-top-attestaciya-kazan": {
       "src": "/blog/images/editorial-20261021/tvorcheskie-professii-2026.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/trenirovochnye-varianty-ege.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "49efb2bfc2b1f01e5805a6ae3db635d7ed3057fa3fbf2f656842c896cf10690e"
     },
-    "shkola-top-attestaciya-krasnoyarsk": {
+    "shkola-top-attestaciya-kerch": {
       "src": "/blog/images/editorial-20261021/uchebniki-v-shkole.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/tvorcheskie-professii-2026.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "0cd8e0080e4d48314a71ea5a7c3763625957a2ee64d12a8a06ce5e3ccd8afed2"
     },
-    "shkola-top-attestaciya-kurgan": {
+    "shkola-top-attestaciya-komsomolsk-na-amure": {
       "src": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/ucheba-s-udovolstviem-metodiki.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "d024cb89cbb2daa8051844dd298ca9c05bbe230a1c00ffe600a2fadea17c8a13"
     },
-    "shkola-top-attestaciya-lipetsk": {
+    "shkola-top-attestaciya-kostroma": {
       "src": "/blog/images/editorial-20261021/vosh-vserossijskaya-olimpiada.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/uchebniki-v-shkole.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "ecae55b928c6c2dec9adccf91d4266cac71309830ecbe2c59d564778b43a7342"
     },
-    "shkola-top-attestaciya-makhachkala": {
+    "shkola-top-attestaciya-krasnodar": {
       "src": "/blog/images/editorial-20261021/zapis-v-1-klass-2026.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "7ee06aa5d71f79c8eedf55154bc6065a91ef113054a9ea19bfc49c3dd8039d7c"
     },
-    "shkola-top-attestaciya-moscow": {
+    "shkola-top-attestaciya-krasnogorsk": {
       "src": "/blog/images/editorial-20261022/abroad.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "1bb5d3642af9e39f5bfab95b46d33d086c8b0a72df7b6ccf50bb56b497714662"
     },
-    "shkola-top-attestaciya-murmansk": {
+    "shkola-top-attestaciya-krasnoyarsk": {
       "src": "/blog/images/editorial-20261022/adult-learning.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/vosh-vserossijskaya-olimpiada.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "be71adf444639e9b28c3081a7bf4aa72fc43cc81791cc6a984962bf16ee40741"
     },
-    "shkola-top-attestaciya-naberezhnye-chelny": {
+    "shkola-top-attestaciya-kurgan": {
       "src": "/blog/images/editorial-20261022/biology.webp",
       "fallbackSrc": "/blog/images/editorial-20261021/zapis-v-1-klass-2026.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8c0f4992f690e0980ac358564c9c99b0056258f8d55f301a259992aec26b73bd"
     },
-    "shkola-top-attestaciya-nizhnekamsk": {
+    "shkola-top-attestaciya-lipetsk": {
       "src": "/blog/images/editorial-20261022/chemistry.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/abroad.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "1d2b7b23230d679ba9376b60098f23c3218d20e7ed1d7aac4d3c2225cb49a227"
     },
-    "shkola-top-attestaciya-nizhnevartovsk": {
+    "shkola-top-attestaciya-makhachkala": {
       "src": "/blog/images/editorial-20261022/chess.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/adult-learning.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "9e197cf4b7316012e9abfa5e5b81e386f0662f87d9cbc810cb77825fbfd9d35e"
     },
-    "shkola-top-attestaciya-nizhniy-novgorod": {
+    "shkola-top-attestaciya-moscow": {
       "src": "/blog/images/editorial-20261022/coding.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/biology.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "0b8d57a5d3ddcc57f9f1d84fe787dd98cba2a0d36560107d198f5f155f957219"
     },
-    "shkola-top-attestaciya-novorossiysk": {
+    "shkola-top-attestaciya-murmansk": {
       "src": "/blog/images/editorial-20261022/dance.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/chemistry.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "ebd9248173a1bfc3f4273c23f7e4901fbb8bb01312224a53e7c73600df286972"
     },
-    "shkola-top-attestaciya-novosibirsk": {
+    "shkola-top-attestaciya-naberezhnye-chelny": {
       "src": "/blog/images/editorial-20261022/digital-art.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/chess.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "1beb1d47e9045a6315aba39a68e07eccb3b0c3cd614034c6fcc769cf2b7f7579"
     },
-    "shkola-top-attestaciya-omsk": {
+    "shkola-top-attestaciya-nizhnekamsk": {
       "src": "/blog/images/editorial-20261022/drawing.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/coding.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "14ea82e9da4f6a7ad5666aaceca3e427ac4505651b3babd812e58c99b5cc46b7"
     },
-    "shkola-top-attestaciya-orel": {
+    "shkola-top-attestaciya-nizhnevartovsk": {
       "src": "/blog/images/editorial-20261022/finance.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/dance.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "88ae7a8ff11c0e181865867efd9c5f7cb4997679d1c1e22478d6d90564ca8ec4"
     },
-    "shkola-top-attestaciya-penza": {
+    "shkola-top-attestaciya-nizhniy-novgorod": {
       "src": "/blog/images/editorial-20261022/geography.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/digital-art.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "b460e5f8de0b97961b359b943de8302afd9ac3949279ea1eac24a91938c5e252"
     },
-    "shkola-top-attestaciya-perm": {
+    "shkola-top-attestaciya-novorossiysk": {
       "src": "/blog/images/editorial-20261022/history.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/drawing.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "286fcb39477bd8c5aecfba592c8dcecb4cc8dad432111686b2adaa1bd93d2da9"
     },
-    "shkola-top-attestaciya-pskov": {
+    "shkola-top-attestaciya-novosibirsk": {
       "src": "/blog/images/editorial-20261022/languages.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/finance.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "85108a00b3fb2d3262e571680b793d26c06ef7fd8ff0db2617d8780961279333"
     },
-    "shkola-top-attestaciya-pushkin": {
+    "shkola-top-attestaciya-omsk": {
       "src": "/blog/images/editorial-20261022/math.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/geography.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "dddeacc197f1c4c537d373e343dd2c2b014e557ef6ea5cdc5a7538b78d759276"
     },
-    "shkola-top-attestaciya-rostov": {
+    "shkola-top-attestaciya-orel": {
       "src": "/blog/images/editorial-20261022/music.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/history.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "e7221c415bd5799e92901d5b4249c4674c3dffd89577821b9ae4ba890e6dc3a7"
     },
-    "shkola-top-attestaciya-ryazan": {
+    "shkola-top-attestaciya-penza": {
       "src": "/blog/images/editorial-20261022/physics.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/languages.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "68e4582338379b0895af836528c46290f003d4cea0587eb822b3757f38b727fb"
     },
-    "shkola-top-attestaciya-saint-petersburg": {
+    "shkola-top-attestaciya-perm": {
       "src": "/blog/images/editorial-20261022/reading.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/math.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "0148895d0af7bb614e98dc47f1cd5fd8ab6851798337acd5169e17bb7b436751"
     },
-    "shkola-top-attestaciya-samara": {
+    "shkola-top-attestaciya-pskov": {
       "src": "/blog/images/editorial-20261022/robotics.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/music.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "c73d34ca822b9725eed0544fb122414fdc7fe1e3ee6aff51705a6924f132b30b"
     },
-    "shkola-top-attestaciya-saransk": {
+    "shkola-top-attestaciya-pushkin": {
       "src": "/blog/images/editorial-20261022/russian.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/physics.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "3dc2bfd4908eb54da87efcba21f4610a986393490aa661a3875463346527e09e"
     },
-    "shkola-top-attestaciya-saratov": {
+    "shkola-top-attestaciya-rostov": {
       "src": "/blog/images/editorial-20261022/school-admission.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/reading.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8060005a4c0be04cdefcb8868ac6a74d2ab1c4c1a3263be0c35049f7afc8a46a"
     },
-    "shkola-top-attestaciya-sevastopol": {
+    "shkola-top-attestaciya-ryazan": {
       "src": "/blog/images/editorial-20261022/school-choice.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/robotics.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "a3e59b23af72a4e55723a81d3ec411429d5809b6caac716fd8c99b7123347c83"
     },
-    "shkola-top-attestaciya-simferopol": {
+    "shkola-top-attestaciya-saint-petersburg": {
       "src": "/blog/images/editorial-20261022/school-classroom.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/russian.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "fd64f9a3c3d9b7cffaf524aed8a72948f33603ea42145dee5cb5c0e643da7a74"
     },
-    "shkola-top-attestaciya-smolensk": {
+    "shkola-top-attestaciya-samara": {
       "src": "/blog/images/editorial-20261022/school-library.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/school-admission.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "103ae9c959c52080a1f06152b1fd4ec76df17227fc59b7b2163622fb7ff3fe5a"
     },
-    "shkola-top-attestaciya-sochi": {
+    "shkola-top-attestaciya-saransk": {
       "src": "/blog/images/editorial-20261022/school-science.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/school-choice.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "95585468d4ef6260926d2b0bae4221ada9e706fed4fa07976742eb862ee54173"
     },
-    "shkola-top-attestaciya-stary-oskol": {
+    "shkola-top-attestaciya-saratov": {
       "src": "/blog/images/editorial-20261022/speech.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/school-classroom.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "b61fac326aa47284271533982aac2ba20b39c871aed61eca621527b2fbf8c633"
     },
-    "shkola-top-attestaciya-sterlitamak": {
+    "shkola-top-attestaciya-sevastopol": {
       "src": "/blog/images/editorial-20261022/sports.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/school-library.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "be896493f98085c56327bf8c66e34921d278ed1a01f10e3add273fe5227a78cc"
     },
-    "shkola-top-attestaciya-surgut": {
+    "shkola-top-attestaciya-simferopol": {
       "src": "/blog/images/editorial-20261022/study-plan.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/school-science.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "d40110674f66e7ce473359189340c4973a1398dee34523e2958c89111e53fc3c"
     },
-    "shkola-top-attestaciya-syktyvkar": {
+    "shkola-top-attestaciya-smolensk": {
       "src": "/blog/images/editorial-20261022/study-rest.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/speech.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "176ed2a199248547bfb02f5a430a8c83701812fb45eeaeb2b296f7b13b333887"
     },
-    "shkola-top-attestaciya-taganrog": {
+    "shkola-top-attestaciya-sochi": {
       "src": "/blog/images/editorial-20261022/theatre.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/sports.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "404814b381609e09e728b1b5bea886c981b23ffbe6a1d82488a46368cd8659ef"
     },
-    "shkola-top-attestaciya-tambov": {
+    "shkola-top-attestaciya-stary-oskol": {
       "src": "/blog/images/editorial-20261022/university-admission.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/study-plan.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "5deaf8151a4a0e66b8eb70e18898eab2a8c886466ea782c2372ab1feb4068f40"
     },
-    "shkola-top-attestaciya-tolyatti": {
+    "shkola-top-attestaciya-sterlitamak": {
       "src": "/blog/images/editorial-20261022/university-study.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/study-rest.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "fac1a4929caadcb2450cc87448c3f77ae34b49455812a0bf9f533246a0366bab"
     },
-    "shkola-top-attestaciya-tomsk": {
+    "shkola-top-attestaciya-surgut": {
       "src": "/blog/images/editorial-20261022/video.webp",
       "fallbackSrc": "/blog/images/editorial-20261022/theatre.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "bcc47149660efaf6c36aa45629a076da996b06d18e595ad575c76499d160b2d5"
     },
-    "shkola-top-attestaciya-tula": {
+    "shkola-top-attestaciya-syktyvkar": {
       "src": "/school-types/domashnie.png",
       "fallbackSrc": "/blog/images/editorial-20261022/university-admission.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "cbd27e68a27127fdfd0a6fc07dc91683401c6cbb4e753e41a35fa1ef0f05409c"
     },
-    "shkola-top-attestaciya-tver": {
+    "shkola-top-attestaciya-taganrog": {
       "src": "/school-types/eksternal.png",
       "fallbackSrc": "/blog/images/editorial-20261022/university-study.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "3b1c3a0b21d8e44bc102173d849eaa60648b7407d455803d6eb713dba97deb36"
     },
-    "shkola-top-attestaciya-tyumen": {
+    "shkola-top-attestaciya-tambov": {
       "src": "/school-types/gimnazii.png",
       "fallbackSrc": "/blog/images/editorial-20261022/video.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8c27e37a8ca0a695e04d376ef174eaaabcb4a7c9ea1423e130237ff99b2bdb9f"
     },
-    "shkola-top-attestaciya-ulan-ude": {
+    "shkola-top-attestaciya-tolyatti": {
       "src": "/school-types/kadetskie.png",
       "fallbackSrc": "/school-types/domashnie.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "87c16c1928113e6d2d29de0f8f1d104ffc152eccb4df4f63ae656f436d4b390f"
     },
-    "shkola-top-attestaciya-ulyanovsk": {
+    "shkola-top-attestaciya-tomsk": {
       "src": "/school-types/korrektsionnye.png",
       "fallbackSrc": "/school-types/eksternal.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "0c609c0ca5c06f4e04594eb1da55848c63aedf14b287045e0386a988684e40e3"
     },
-    "shkola-top-attestaciya-ussuriysk": {
+    "shkola-top-attestaciya-tula": {
       "src": "/school-types/online.png",
       "fallbackSrc": "/school-types/gimnazii.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "bc5fd341b3ca0d61ee1c3918b55ae68f3e710557286a9dc131f8a1083368e65d"
     },
-    "shkola-top-attestaciya-velikiy-novgorod": {
+    "shkola-top-attestaciya-tver": {
       "src": "/school-types/podgotovka-ege.png",
       "fallbackSrc": "/school-types/kadetskie.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "75c1fbd6400ace3218823bc87ee7c1bb3ff743150a0976f481327bd06ae8b7b9"
     },
-    "shkola-top-attestaciya-vladikavkaz": {
+    "shkola-top-attestaciya-tyumen": {
       "src": "/school-types/podgotovka-k-ege.png",
       "fallbackSrc": "/school-types/korrektsionnye.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "8e649b588d0c0a5ccec71bf2a709e6fddf0b3c1f32503b80c7a9fa28b2e8e111"
     },
-    "shkola-top-attestaciya-vladimir": {
+    "shkola-top-attestaciya-ulan-ude": {
       "src": "/school-types/podgotovka-k-oge.png",
       "fallbackSrc": "/school-types/online.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "535dd1d30efd8567326f0bd83c7a5ce64f303f368598a1ab0e8b570901ba1950"
     },
-    "shkola-top-attestaciya-vladivostok": {
+    "shkola-top-attestaciya-ulyanovsk": {
       "src": "/school-types/podgotovka-oge.png",
       "fallbackSrc": "/school-types/podgotovka-ege.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "7ed4879461aac4b7891695b8ecc0a10205b19d5c76e734c4eefb71fb65929dfc"
     },
-    "shkola-top-attestaciya-volgograd": {
+    "shkola-top-attestaciya-ussuriysk": {
       "src": "/school-types/pri-vuzakh.png",
       "fallbackSrc": "/school-types/podgotovka-k-ege.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "0c731077a73496dd02d5039c404fdcd102734e1accdb642fda7535794ea5d9f4"
     },
-    "shkola-top-attestaciya-voronezh": {
+    "shkola-top-attestaciya-velikiy-novgorod": {
       "src": "/school-types/private.png",
       "fallbackSrc": "/school-types/podgotovka-k-oge.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "74d485cef18ab6fb3c26751f84c66b0dff5a5d842f32ae8176b26be6e6a7fa84"
     },
-    "shkola-top-attestaciya-yoshkar-ola": {
+    "shkola-top-attestaciya-vladikavkaz": {
       "src": "/school-types/profilnye.png",
       "fallbackSrc": "/school-types/podgotovka-oge.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "fd6b19c74e9e77a274bb1c3f9a5d58d7125e57faff407e06694cd190c42bd8c2"
     },
-    "shkola-top-kursk": {
+    "shkola-top-attestaciya-vladimir": {
       "src": "/school-types/semejnye.png",
       "fallbackSrc": "/school-types/pri-vuzakh.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "7f85848ef4c7789422a40301fadadd4edbda2727dcd809972db95f153221f5cb"
     },
-    "spb-eksternat-173": {
+    "shkola-top-attestaciya-vladivostok": {
       "src": "/school-types/shahmatnye.png",
       "fallbackSrc": "/school-types/private.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "4f9790075c01cb607abb0a4e65b231701400a4b62357b72c057b6b6b90893540"
     },
-    "spb-eksternat-425": {
+    "shkola-top-attestaciya-volgograd": {
       "src": "/school-types/state.png",
       "fallbackSrc": "/school-types/profilnye.png",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
       "sha256": "41e50463c3cc9c1b51a5fa15c8212934c25154944b0c8cf05b16a590832f78fa"
     },
+    "shkola-top-attestaciya-voronezh": {
+      "src": "/school-types/vechernie.png",
+      "fallbackSrc": "/school-types/semejnye.png",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "868bb8ecbc5a6967bd5de2024d5a69389d0766495293069330c32014cc73352c"
+    },
+    "shkola-top-attestaciya-yoshkar-ola": {
+      "src": "/offers/synergy/online-lesson-gpt-20261026.webp",
+      "fallbackSrc": "/school-types/shahmatnye.png",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "a12bbb529111881118231f37f2bf91b883522fde79c3fe432bf68158976f0a31"
+    },
+    "shkola-top-kursk": {
+      "src": "/homepage/assets/school-type-chastnie-v3.webp",
+      "fallbackSrc": "/school-types/state.png",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "83da03053cc7998285e5741b0b2e1938b68be007f9fb9555c0ca7248ab381b04"
+    },
+    "spb-eksternat-173": {
+      "src": "/homepage/assets/school-type-eksternal-v3.webp",
+      "fallbackSrc": "/school-types/vechernie.png",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "fbe40393432d39c8bd73d81925a207a8e064e83cd368c2da7838a9e412dbb515"
+    },
+    "spb-eksternat-425": {
+      "src": "/homepage/assets/school-type-gosudarstvennye-v3.webp",
+      "fallbackSrc": "/offers/synergy/online-lesson-gpt-20261026.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "9e28e5211d08eb2ac2928d3346356f6db00aeebb5060018165db028d81a1fdd8"
+    },
+    "spb-eksternat-438": {
+      "src": "/homepage/assets/school-type-online-v3.webp",
+      "fallbackSrc": "/homepage/assets/school-type-chastnie-v3.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "cf5ced090ccccaf005e5394dc996e39c673d3d9c4099f3e624ac1b73cfd1d0e0"
+    },
+    "spb-eksternat-449": {
+      "src": "/homepage/assets/school-type-semejnye-v3.webp",
+      "fallbackSrc": "/homepage/assets/school-type-eksternal-v3.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "d8528ce6e19097ada15ae502aa495d78c0991a1ab9209f23c9e5e25a0915b8a8"
+    },
     "startschool-eksternat-moskva": {
       "src": "/schools/externat-covers-20261027/startschool-eksternat-moskva.webp",
-      "fallbackSrc": "/school-types/semejnye.png",
+      "fallbackSrc": "/homepage/assets/school-type-gosudarstvennye-v3.webp",
       "kind": "official",
       "checkedAt": "2026-10-27",
       "sourceUrl": "https://startschool-msk.ru/wp-content/uploads/2025/03/utp-glavnaya.png",
       "website": "https://startschool-msk.ru/",
       "sha256": "420e946d443b1e7066015cd57a008ff21b514190048d61414688019b81622b51"
     },
-    "uralskij-ege-centr-ekaterinburg": {
-      "src": "/school-types/vechernie.png",
-      "fallbackSrc": "/school-types/shahmatnye.png",
+    "tsentr-obrazovaniya-80-rozhdestvenskaya-shkola-sankt-peterburg": {
+      "src": "/homepage/assets/school-type-vechernie-v3.webp",
+      "fallbackSrc": "/homepage/assets/school-type-online-v3.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
-      "sha256": "868bb8ecbc5a6967bd5de2024d5a69389d0766495293069330c32014cc73352c"
+      "sha256": "00b0f70c4be0c03247f21e8ca8e5bf69e5c6d482bc77484649f323e83fa0f0fe"
+    },
+    "uralskij-ege-centr-ekaterinburg": {
+      "src": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat.webp",
+      "fallbackSrc": "/homepage/assets/school-type-semejnye-v3.webp",
+      "kind": "illustration",
+      "checkedAt": "2026-10-27",
+      "sha256": "aa0f4e3f9dfe0f6190d8841949771271a927862e23fb8c67c2c197d1e40054a0"
     },
     "vechernyaya-shkola-162-sankt-peterburg": {
-      "src": "/offers/synergy/online-lesson-gpt-20261026.webp",
-      "fallbackSrc": "/school-types/state.png",
+      "src": "/blog/images/editorial-20261021/horoshie-ocenki-bez-zubrjozki-metodiki.webp",
+      "fallbackSrc": "/homepage/assets/school-type-vechernie-v3.webp",
       "kind": "illustration",
       "checkedAt": "2026-10-27",
-      "sha256": "a12bbb529111881118231f37f2bf91b883522fde79c3fe432bf68158976f0a31"
+      "sha256": "7e5f76d6805459afb1163d6cb90a0138d9ca89c7b26cf546a3261f1e3fd3a1f9"
     }
   }
 }
