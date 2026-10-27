@@ -9,6 +9,7 @@ const output = baselineMode ? 'work/school-cards-before' : 'work/school-cards-qa
 await fs.mkdir(output, { recursive: true })
 const guides = JSON.parse(await fs.readFile('src/data/school-card-guides.json', 'utf8'))
 const seoBaseline = JSON.parse(await fs.readFile('docs/school-cards/seo-baseline-2026-10-27.json', 'utf8'))
+const seoCorrections = JSON.parse(await fs.readFile('docs/school-cards/intentional-seo-corrections.json', 'utf8'))
 const child = process.env.SCHOOL_CARD_QA_BASE ? null : spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-p', '3196'], { detached: true, stdio: 'ignore' })
 const checks = [], errors = [], leads = [], failedAssets = []
 let browser, page
@@ -70,6 +71,7 @@ try {
         })
         assert.ok(titleGeometry.inside && titleGeometry.controlsClear, 'Long school name must fit below the mobile photo controls')
         const cta = page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]')
+        if (width < 768) assert.ok((await cta.boundingBox()).y < 800, 'Consultation shortcut on first mobile screen')
         await cta.click()
         await page.waitForFunction(() => location.hash === '#school-card-form')
         const clickCheck = await page.locator('#school-card-form input[type="text"]').first().evaluate(el => {
@@ -77,6 +79,8 @@ try {
           return { top: r.top, visible: el === top || el.contains(top) }
         })
         assert.ok(clickCheck.visible, 'Form input must not be covered after anchor navigation: ' + JSON.stringify(clickCheck))
+        const titleVisible = await page.locator('#school-card-form h3').first().evaluate(el => { const r = el.getBoundingClientRect(); const top = document.elementFromPoint(r.x + Math.min(r.width / 2, 50), r.y + 8); return el === top || el.contains(top) })
+        assert.ok(titleVisible, 'The sticky header must not cover the form heading after anchor navigation')
         await page.goto(base + path, { waitUntil: 'domcontentloaded' })
         await page.evaluate(() => document.fonts.ready)
       }
@@ -84,7 +88,7 @@ try {
         const name = path.split('/').at(-2)
         await page.screenshot({ path: `${output}/${name}-${width}.png` })
         if (!baselineMode && width === 360) {
-          await page.locator('#school-card-form').scrollIntoViewIfNeeded()
+          await page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]').click()
           await page.screenshot({ path: `${output}/${name}-${width}-form.png` })
           if (await page.locator('[data-school-card-guide]').count()) {
             await page.locator('[data-school-card-guide]').scrollIntoViewIfNeeded()
@@ -97,9 +101,14 @@ try {
   }
   if (!baselineMode) {
     for (const row of seoBaseline) {
+      // This catalog is served by the isolated static publisher in Nginx, not Next.
+      // Keep its public baseline for post-deploy verification; a loopback Next response is a different page.
+      if (row.path === '/shkoly/tomsk/programmirovanie/' && !base.startsWith('https://pro-schools.ru')) {
+        checks.push({ staticDeploymentSurface: row.path, publicCheckRequired: true }); continue
+      }
       await page.goto(base + row.path, { waitUntil: 'domcontentloaded', timeout: 120000 })
       const actual = await page.evaluate(() => ({ title: document.title, description: document.querySelector('meta[name="description"]')?.content || '', canonical: document.querySelector('link[rel="canonical"]')?.href || '', h1: document.querySelector('h1')?.textContent?.replace(/\s+/g, ' ').trim() || '', robots: document.querySelector('meta[name="robots"]')?.content || '' }))
-      for (const key of ['title', 'description', 'canonical', 'h1', 'robots']) assert.equal(actual[key], row[key], row.path + ' ' + key)
+      for (const key of ['title', 'description', 'canonical', 'h1', 'robots']) assert.equal(actual[key], seoCorrections[row.path]?.[key] ?? row[key], row.path + ' ' + key)
       checks.push({ seo: row.path, unchanged: true })
     }
     for (const slug of Object.keys(guides)) {
