@@ -42,8 +42,24 @@ def overlay_blog(source, posts):
    if last is None:last=ET.SubElement(node,'{'+NS+'}lastmod')
    last.text=min(stamp[:10],today)
  return ET.tostring(root,encoding='utf-8',xml_declaration=True)
+def overlay_textbook(source, articles):
+ # Update only already-indexed lesson URLs with a real content revision stamp.
+ # This does not add unlisted topics or turn every refresh into a content change.
+ root=ET.fromstring(source)
+ by_url={item.findtext('{'+NS+'}loc'):item for item in root}
+ today=date.today().isoformat()
+ for article in articles:
+  stamp=article.get('updatedAt')
+  if not stamp:continue
+  url=BASE+'/uchebnik/'+article['subject']+'/'+str(article['klass'])+'-klass/'+article['topicSlug']+'/'
+  node=by_url.get(url)
+  if node is None:continue
+  last=node.find('{'+NS+'}lastmod')
+  if last is None:last=ET.SubElement(node,'{'+NS+'}lastmod')
+  last.text=min(stamp[:10],today)
+ return ET.tostring(root,encoding='utf-8',xml_declaration=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--release',default='/var/www/school-portal/programming-current');p.add_argument('--source');p.add_argument('--blog-manifest');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--release',default='/var/www/school-portal/programming-current');p.add_argument('--source');p.add_argument('--blog-manifest');p.add_argument('--textbook-manifest');args=p.parse_args()
  release=Path(args.release)
  if not (release/'_programming/manifest.json').exists():return
  if args.source:source=Path(args.source).read_bytes()
@@ -51,6 +67,8 @@ def main():
   with urllib.request.urlopen('http://127.0.0.1:3001/sitemap.xml',timeout=90) as r:source=r.read()
  blog=Path(args.blog_manifest) if args.blog_manifest else Path(__file__).resolve().parents[2]/'content/blog/index.json'
  if blog.exists():source=overlay_blog(source,json.loads(blog.read_text()))
+ textbook=Path(args.textbook_manifest) if args.textbook_manifest else Path(__file__).resolve().parents[2]/'src/data/textbook-articles.json'
+ if textbook.exists():source=overlay_textbook(source,json.loads(textbook.read_text()))
  manifest=json.loads((release/'_programming/manifest.json').read_text())
  content=release/'_programming/content-paths.json'
  if content.exists():manifest['indexable']+=json.loads(content.read_text())
