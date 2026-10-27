@@ -17,7 +17,7 @@ const DIR = join(ROOT, 'content/blog')
 const INDEX = join(DIR, 'index.json')
 
 const META_FIELDS = ['slug', 'title', 'excerpt', 'category', 'tags', 'author',
-  'authorRole', 'publishedAt', 'readTime', 'imageAlt', 'imageUrl']
+  'authorRole', 'publishedAt', 'updatedAt', 'readTime', 'imageAlt', 'imageUrl']
 const REQUIRED = ['slug', 'title', 'excerpt', 'content', 'category', 'author', 'publishedAt']
 
 const files = readdirSync(DIR).filter((f) => f.endsWith('.json') && f !== 'index.json')
