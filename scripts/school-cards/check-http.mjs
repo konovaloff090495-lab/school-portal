@@ -64,6 +64,11 @@ try {
         assert.ok(geometry.formY < geometry.faqY, 'The mobile form must precede FAQ')
         assert.ok(geometry.inputFont >= 16, 'No iOS focus zoom')
         assert.ok(geometry.inputHeight >= 44 && geometry.submitHeight >= 44, 'Usable touch targets')
+        const titleGeometry = await page.evaluate(() => {
+          const h = document.querySelector('h1').getBoundingClientRect(), g = document.querySelector('[data-school-gallery]').getBoundingClientRect()
+          return { inside: h.top >= g.top && h.bottom <= g.bottom, controlsClear: innerWidth >= 768 || h.top >= g.top + 64 }
+        })
+        assert.ok(titleGeometry.inside && titleGeometry.controlsClear, 'Long school name must fit below the mobile photo controls')
         const cta = page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]')
         await cta.click()
         await page.waitForFunction(() => location.hash === '#school-card-form')

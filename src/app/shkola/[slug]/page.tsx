@@ -329,7 +329,7 @@ export default async function SchoolPage({ params }: Props) {
 
       {/* Hero галерея */}
       <SchoolPageGallery slug={school.slug} imageAlt={school.imageAlt} photoCount={schoolPhotoCount(school)} photoUrls={school.photoUrls} photoCaptions={school.photoCaptions} name={school.name} type={school.type} website={school.website}>
-        <div>
+        <div className="min-w-0">
           <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 bg-white/95 ${getTypeColor(school.type)}`}>
             {typeLabels[school.type]}
           </span>

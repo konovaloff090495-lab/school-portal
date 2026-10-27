@@ -39,7 +39,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrl
   const src = (i: number) => photoUrls?.[i] || `/schools/${slug}-${i + 1}.jpg`
 
   return (
-    <div className="mt-6 relative h-64 md:h-80 rounded-2xl overflow-hidden bg-gray-200 group">
+    <div data-school-gallery className="mt-6 relative min-h-64 md:h-80 rounded-2xl overflow-hidden bg-gray-200 group">
       {/* Плейсхолдер, если фото нет вовсе — не запрашиваем /_next/image */}
       {available.length === 0 && <SchoolCover school={{ slug, type: type ?? 'gosudarstvennye', website }} hero />}
 
@@ -60,7 +60,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrl
 
       {/* Градиент + оверлей */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none" />
-      <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
+      <div className="relative min-h-64 px-5 pt-20 pb-4 md:absolute md:bottom-4 md:left-5 md:right-5 md:min-h-0 md:p-0 flex items-end justify-between gap-3">
         {children}
       </div>
 
@@ -69,7 +69,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrl
         <>
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-black/60 text-white hidden md:flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer"
             aria-label="Предыдущее фото"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ export default function SchoolPageGallery({ slug, imageAlt, photoCount, photoUrl
           </button>
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer"
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-black/60 text-white hidden md:flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer"
             aria-label="Следующее фото"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
