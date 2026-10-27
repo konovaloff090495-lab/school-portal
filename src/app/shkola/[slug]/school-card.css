@@ -1,6 +1,6 @@
 /* Scope improvements to school detail pages; keep catalog and other forms stable. */
 .school-card-page { overflow-wrap: anywhere; }
-.school-card-page > nav a { overflow-wrap: normal; }
+.school-card-page > nav[aria-label="Быстро перейти в карточке"] a { overflow-wrap: normal; }
 .school-card-page #school-card-form input:not([type="checkbox"]),
 .school-card-page #school-card-form textarea {
   font-size: 16px; /* iOS must not zoom when focusing the short form. */
@@ -13,5 +13,5 @@
 .school-card-page #kontakty ~ div a[href^="mailto:"] { display: inline-flex; min-height: 44px; align-items: center; }
 @media (max-width: 639px) {
   .school-card-page #school-card-form > div { padding: 20px; }
-  .school-card-page > nav a:first-child { flex: 1 1 100%; }
+  .school-card-page > nav[aria-label="Быстро перейти в карточке"] a:first-child { flex: 1 1 100%; }
 }
