@@ -1,6 +1,17 @@
 /* Scope improvements to school detail pages; keep catalog and other forms stable. */
 .school-card-page { overflow-wrap: anywhere; }
-.school-card-page > nav a { overflow-wrap: normal; }
+.school-card-page > nav[aria-label="Быстро перейти в карточке"] a { overflow-wrap: normal; }
+/* Preserve the mobile DOM/tab order while letting desktop columns flow independently. */
+.school-card-layout { display: flow-root; }
+.school-card-layout > * + * { margin-top: 24px; }
+@media (min-width: 1024px) {
+  .school-card-layout > * + * { margin-top: 0; }
+  .school-card-intro, .school-card-main { float: left; width: calc((100% - 32px) * 2 / 3); }
+  .school-card-lead, .school-card-extra { float: right; width: calc((100% - 32px) / 3); }
+  .school-card-intro, .school-card-lead { margin-bottom: 24px; }
+  .school-card-main { clear: left; }
+  .school-card-extra { clear: right; }
+}
 .school-card-page #school-card-form input:not([type="checkbox"]),
 .school-card-page #school-card-form textarea {
   font-size: 16px; /* iOS must not zoom when focusing the short form. */
@@ -13,5 +24,5 @@
 .school-card-page #kontakty ~ div a[href^="mailto:"] { display: inline-flex; min-height: 44px; align-items: center; }
 @media (max-width: 639px) {
   .school-card-page #school-card-form > div { padding: 20px; }
-  .school-card-page > nav a:first-child { flex: 1 1 100%; }
+  .school-card-page > nav[aria-label="Быстро перейти в карточке"] a:first-child { flex: 1 1 100%; }
 }
