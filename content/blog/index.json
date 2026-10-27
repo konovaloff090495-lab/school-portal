@@ -153,9 +153,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-04-20",
-    "readTime": 9,
+    "readTime": 8,
     "imageAlt": "Иллюстрация: Кадетская школа",
-    "imageUrl": "/blog/images/editorial-20261021/kadetskaya-shkola-chto-nuzhno-znat.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kadetskaya-shkola-chto-nuzhno-znat.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "onlajn-shkola-plyusy-minusy",
@@ -248,9 +249,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-15",
-    "readTime": 10,
+    "readTime": 11,
     "imageAlt": "Иллюстрация: Кадетские школы Москвы",
-    "imageUrl": "/blog/images/editorial-20261021/kadetskie-shkoly-moskvy-spisok.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kadetskie-shkoly-moskvy-spisok.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "ege-2026-pomoch-podgotovitsya",
@@ -614,6 +616,7 @@
     "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp"
   },
   {
+    "imageUrl": "/blog/images/editorial-20261021/suvorovskie-nahimovskie-postuplenie.webp",
     "slug": "suvorovskie-nahimovskie-postuplenie",
     "title": "Как поступить в суворовское или нахимовское училище: порядок действий",
     "excerpt": "Для поступления в суворовское или нахимовское училище сначала выберите конкретное учреждение и проверьте его действующие правила: класс набора, требования к.",
@@ -627,9 +630,9 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-05",
-    "readTime": 5,
+    "readTime": 7,
     "imageAlt": "Иллюстрация: Суворовское и нахимовское училище",
-    "imageUrl": "/blog/images/editorial-20261021/suvorovskie-nahimovskie-postuplenie.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-sdat-ege-na-100-ballov",
@@ -1092,6 +1095,7 @@
     "imageUrl": "/blog/images/editorial-20261021/onlajn-shkoly-akkreditatsiya-2026.webp"
   },
   {
+    "imageUrl": "/blog/images/shkola-letovo-obzor.jpg",
     "slug": "shkola-letovo-obzor",
     "title": "Школа «Летово»: как поступить, сколько стоит и как работает поддержка",
     "excerpt": "«Летово» — школа-пансион для учеников 7–11 классов; основной набор проводится в 7–9 классы через несколько этапов отбора.",
@@ -1105,9 +1109,9 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-10",
-    "readTime": 5,
+    "readTime": 7,
     "imageAlt": "Главное здание школы Летово в Новой Москве — учебный корпус с флагами и цветущими деревьями во дворе",
-    "imageUrl": "/blog/images/shkola-letovo-obzor.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "ucheba-za-rubezhom-shkola",
@@ -1721,9 +1725,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 9,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/kolledz-ili-vuz-posle-9-klassa.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/kolledz-ili-vuz-posle-9-klassa.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-bystro-vyuchit-stih",
@@ -2086,8 +2091,9 @@
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
     "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "v-obshchem-ili-voobshchem",
@@ -2604,9 +2610,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 6,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
-    "imageUrl": "/blog/images/editorial-20261021/oge-russkij-yazyk-2026-chto-nuzhno.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "zapyataya-pered-chtoby",
@@ -5820,9 +5827,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-26",
-    "readTime": 9,
+    "readTime": 4,
     "imageAlt": "Иллюстрация: Инженерные классы в школах",
-    "imageUrl": "/blog/images/editorial-20261021/inzhenernye-klassy-v-shkole.webp"
+    "imageUrl": "/blog/images/editorial-20261021/inzhenernye-klassy-v-shkole.webp",
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-ne-poteryat-znania-za-leto",
@@ -10045,8 +10053,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-12",
     "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/music.webp",
     "imageAlt": "Иллюстрация: Подросток занимается на цифровом пианино с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/music.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "hudozhestvennaya-shkola-stoit-li",
@@ -10063,9 +10072,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-12",
-    "readTime": 6,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
     "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
-    "imageUrl": "/blog/images/editorial-20261022/school-library.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "sportivnaya-shkola-sshor-kak-postupit",
@@ -10619,8 +10629,8 @@
   },
   {
     "slug": "normativy-postupleniya-suvorovskoe-uchilishche",
-    "title": "Нормативы для поступления в суворовское училище 2026: таблица",
-    "excerpt": "Нормативы физической подготовки для поступления в суворовское училище 2026: бег, отжимания, подтягивания — таблица по возрастам, медосмотр и советы кандидатам.",
+    "title": "Нормативы для поступления в суворовское училище: где найти и как читать",
+    "excerpt": "Как найти действующие физические нормативы выбранного училища, проверить возрастную группу, технику упражнений и оценивание. Памятка семье перед вступительными испытаниями.",
     "category": "Выбор школы",
     "tags": [
       "суворовское училище",
@@ -10632,9 +10642,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-15",
-    "readTime": 8,
+    "readTime": 4,
+    "imageUrl": "/blog/images/editorial-20261021/kadetskaya-shkola-chto-nuzhno-znat.webp",
     "imageAlt": "Иллюстрация: Учёба и поступление в кадетскую школу",
-    "imageUrl": "/blog/images/editorial-20261021/kadetskaya-shkola-chto-nuzhno-znat.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "ne-odin-raz-ili-ni-odin-raz",
@@ -11214,9 +11225,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-18",
-    "readTime": 8,
+    "readTime": 4,
+    "imageUrl": "/blog/images/editorial-20261021/kuda-postupat-posle-11-klassa.webp",
     "imageAlt": "Иллюстрация: Подготовка к поступлению и обучению в вузе",
-    "imageUrl": "/blog/images/editorial-20261021/kuda-postupat-posle-11-klassa.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-vybrat-vuzy-i-specialnosti-dlya-podachi",
@@ -12775,9 +12787,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-27",
-    "readTime": 10,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
     "imageAlt": "Иллюстрация: Обсуждение учебных интересов и выбора профессии",
-    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "kak-motivirovat-podrostka-uchitsya",
@@ -14165,9 +14178,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-06",
-    "readTime": 8,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Обсуждение учебных интересов и выбора профессии",
-    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "ni-k-chemu-ili-ne-k-chemu",
@@ -14829,12 +14843,13 @@
       "биология",
       "профориентация"
     ],
+    "readTime": 6,
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-21",
-    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Обсуждение учебных интересов и выбора профессии",
-    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-dlya-mladshih-shkolnikov.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "internat-dlya-slepyh-i-slabovidyashchih",
@@ -15082,14 +15097,13 @@
       "ЕГЭ"
     ],
     "publishedAt": "2026-08-12",
-    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "category": "Взрослым",
-    "readTime": 6,
-    "suProduct": "vechernyaya-shkola",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp"
+    "readTime": 5,
+    "updatedAt": "2026-10-27",
+    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
+    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами"
   },
   {
     "slug": "attestat-vzroslomu-9-klass",
@@ -15103,14 +15117,13 @@
       "колледж"
     ],
     "publishedAt": "2026-08-13",
-    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "category": "Взрослым",
-    "readTime": 6,
-    "suProduct": "vechernyaya-shkola",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp"
+    "readTime": 5,
+    "updatedAt": "2026-10-27",
+    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
+    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами"
   },
   {
     "slug": "shkola-eksternat-dlya-vzroslyh",
@@ -15769,8 +15782,8 @@
   },
   {
     "slug": "letovo-besplatno-stipendii",
-    "title": "Как учиться в Летово бесплатно: стипендии до 100 %, скоринг Сбербанка и условия договора",
-    "excerpt": "Можно ли попасть в Летово без денег: как работает стипендиальный фонд, кто получает 100 %, как считают размер стипендии, какие документы нужны и что семья обязана взамен.",
+    "title": "Стипендия Летово: как получить поддержку и сколько платить семье",
+    "excerpt": "Как разделены поступление и финансовая оценка в Летово, какие условия проверить в договоре и как рассчитать собственную долю. Действующая месячная стоимость 2026/27.",
     "category": "Поступление",
     "tags": [
       "школа Летово",
@@ -15778,29 +15791,31 @@
       "бесплатное обучение",
       "частные школы Москвы"
     ],
+    "readTime": 4,
+    "imageUrl": "/blog/images/letovo-pansion-dvor.jpg",
+    "imageAlt": "Ученики школы Летово играют в волейбол во дворе жилого квартала пансиона",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 7,
-    "imageAlt": "Ученики школы Летово играют в волейбол во дворе жилого квартала пансиона",
-    "imageUrl": "/blog/images/letovo-pansion-dvor.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "letovo-junior",
-    "title": "Летово Джуниор: поступление, диагностика и стоимость 2026/27",
-    "excerpt": "Школа «Летово Джуниор»: стоимость 2026/27 и дополнительные расходы, вступительная диагностика, городской кампус и отличие от школы-пансиона «Летово».",
+    "title": "Летово Джуниор: поступление на 2027/28 и стоимость обучения",
+    "excerpt": "Статус набора Летово Джуниор, компоненты вступительной диагностики и вопросы к семейному бюджету. Стоимость 2026/27 и условия следующего набора нужно различать.",
     "category": "Выбор школы",
     "tags": [
       "летово джуниор",
       "поступление",
       "выбор образования"
     ],
+    "readTime": 6,
+    "imageUrl": "/blog/images/letovo-junior-kampus.jpg",
+    "imageAlt": "Новый кампус школы Летово Джуниор на Раменском бульваре — волнообразные крыши и детская площадка",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-09-20",
-    "readTime": 4,
-    "imageAlt": "Новый кампус школы Летово Джуниор на Раменском бульваре — волнообразные крыши и детская площадка",
-    "imageUrl": "/blog/images/letovo-junior-kampus.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "letovo-kids-detskiy-sad",
@@ -15831,12 +15846,13 @@
       "олимпиады",
       "подготовка к поступлению"
     ],
+    "readTime": 6,
+    "imageUrl": "/blog/images/letovo-uchenica.jpg",
+    "imageAlt": "Ученица школы Летово сидит с ноутбуком на деревянной скамье во дворе кампуса",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 7,
-    "imageAlt": "Ученица школы Летово сидит с ноутбуком на деревянной скамье во дворе кампуса",
-    "imageUrl": "/blog/images/letovo-uchenica.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "rabota-v-letovo-vakansii",
@@ -15894,8 +15910,8 @@
   },
   {
     "slug": "vstupitelnye-ekzameny-letovo",
-    "title": "Вступительные экзамены в Летово 2026/27: этапы, предметы по классам, демоверсии и как готовиться",
-    "excerpt": "Пошаговый разбор отбора в школу Летово: онлайн-тесты, контрольные с наблюдением, очные экзамены в 7, 8 и 9 классы, собеседования. Какие предметы сдают, где взять демоверсии, что советуют кафедры школы и какие есть обходные дорожки — олимпиады, Январские школы, тесты для 5 класса.",
+    "title": "Вступительные экзамены в Летово 2027/28: даты, предметы и подготовка",
+    "excerpt": "Календарь поступления в 7–9 классы Летово на 2027/28: диагностика 80%, контрольные тесты, основные экзамены и собеседования. Как готовиться по официальным материалам.",
     "category": "Поступление",
     "tags": [
       "вступительные экзамены",
@@ -15903,12 +15919,13 @@
       "поступление в 7 класс",
       "демоверсии"
     ],
+    "readTime": 4,
+    "imageUrl": "/blog/images/letovo-holl.jpg",
+    "imageAlt": "Ученики школы Летово в холле главного здания кампуса",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-20",
-    "readTime": 11,
-    "imageAlt": "Ученики школы Летово в холле главного здания кампуса",
-    "imageUrl": "/blog/images/letovo-holl.jpg"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "zhizn-v-pansione-letovo",
@@ -16531,9 +16548,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 9,
+    "readTime": 11,
+    "imageUrl": "/blog/images/editorial-20261022/school-admission.webp",
     "imageAlt": "Иллюстрация: Родители и дочь-подросток обсуждают поступление с сотрудником школы",
-    "imageUrl": "/blog/images/editorial-20261022/school-admission.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "akademiya-fsb-postuplenie",
@@ -16673,9 +16691,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 4,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
     "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
-    "imageUrl": "/blog/images/editorial-20261022/school-library.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "gimnaziya-spbgu-postuplenie",
@@ -16931,9 +16950,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp",
     "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
-    "imageUrl": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "lomonosovskaya-shkola-postuplenie",
@@ -16948,9 +16968,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 4,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/perevod-v-druguyu-shkolu.webp",
     "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
-    "imageUrl": "/blog/images/editorial-20261021/perevod-v-druguyu-shkolu.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "mei-postuplenie",
@@ -17720,9 +17741,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-18",
-    "readTime": 4,
-    "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
-    "imageUrl": "/blog/images/editorial-20261021/chastnie-shkoly-moskvy-tseny-2026.webp"
+    "readTime": 6,
+    "updatedAt": "2026-10-27",
+    "imageUrl": "/blog/images/editorial-20261021/chastnie-shkoly-moskvy-tseny-2026.webp",
+    "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке"
   },
   {
     "slug": "ekonomicheskiy-fakultet-mgu-postuplenie",
@@ -18163,9 +18185,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-19",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261022/school-admission.webp",
     "imageAlt": "Иллюстрация: Родители и дочь-подросток обсуждают поступление с сотрудником школы",
-    "imageUrl": "/blog/images/editorial-20261022/school-admission.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "shkola-1514-postuplenie",
@@ -24061,9 +24084,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного портала",
     "publishedAt": "2026-10-19",
-    "readTime": 3,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp",
     "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
-    "imageUrl": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp"
+    "updatedAt": "2026-10-27"
   },
   {
     "slug": "barnaulskaya-klassicheskaya-shkola-postuplenie",
@@ -25909,5 +25933,45 @@
     "readTime": 6,
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
     "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+  },
+  {
+    "slug": "socialno-ekonomicheskiy-profil-predmety",
+    "title": "Социально-экономический профиль в 10 классе: предметы, ЕГЭ и куда идти",
+    "excerpt": "Что изучают на социально-экономическом профиле, чем он отличается от физмата и гуманитарного направления. Таблица предметов, примеры учебных задач и вопросы к школе.",
+    "category": "Советы родителям",
+    "tags": [
+      "социально-экономический профиль",
+      "10 класс",
+      "выбор профиля",
+      "предметы",
+      "ЕГЭ"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-27",
+    "imageAlt": "Тематическая иллюстрация: школьники выбирают направление обучения",
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
+    "readTime": 5,
+    "updatedAt": "2026-10-27"
+  },
+  {
+    "slug": "gumanitarnyy-profil-predmety",
+    "title": "Гуманитарный профиль в 10 классе: предметы, ЕГЭ и кому подходит",
+    "excerpt": "Какие предметы изучают на гуманитарном профиле, чем он отличается от соцэконома и как проверить выбор. Учебные задачи, варианты дальнейшего обучения и вопросы к школе.",
+    "category": "Советы родителям",
+    "tags": [
+      "гуманитарный профиль",
+      "10 класс",
+      "предметы",
+      "выбор профиля",
+      "ЕГЭ"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-27",
+    "imageAlt": "Тематическая иллюстрация: школьники выбирают направление обучения",
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
+    "readTime": 5,
+    "updatedAt": "2026-10-27"
   }
 ]
