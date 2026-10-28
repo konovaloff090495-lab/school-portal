@@ -1,6 +1,21 @@
 {
   "enabled": true,
   "counterId": 108789843,
-  "floorBlockIds": ["R-A-19425636-4"],
-  "allowedPathPrefixes": ["/uchebnik/", "/gdz/", "/blog/", "/olimpiady/", "/ege/", "/oge/"]
+  "floorBlockIds": [
+    "R-A-19425636-4"
+  ],
+  "allowedPathPrefixes": [
+    "/uchebnik/",
+    "/gdz/",
+    "/blog/",
+    "/olimpiady/",
+    "/ege/",
+    "/oge/"
+  ],
+  "topAd": {
+    "enabled": true,
+    "blockId": "R-A-19425636-5",
+    "mode": "direct_mobile_pilot",
+    "startedDate": "2026-10-28"
+  }
 }
