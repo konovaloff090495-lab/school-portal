@@ -2362,5 +2362,53 @@
     "klass": 7,
     "topicSlug": "perevod-chisel-dvoichnaya-7",
     "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "matematicheskie-funktsii-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "mnozhestva-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "razlozhenie-na-mnozhiteli-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "klassy-python-osnovy-oop",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "poisk-informacii-v-internete-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "pokoleniya-evm-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "programmnoe-obespechenie-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "seti-7",
+    "updatedAt": "2026-10-28"
   }
 ]
