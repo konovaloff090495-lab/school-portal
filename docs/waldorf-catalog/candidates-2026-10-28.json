@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Апельсин",
+    "city": "Пермь",
+    "status": "needs-current-source",
+    "reason": "Старый сайт переадресует на посторонний ресурс; актуальная работа не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Вальдорфский детский центр в Порошкино",
+    "city": "Порошкино",
+    "status": "needs-school-program",
+    "reason": "В первичном списке школы №658 подтверждён детский сад; школьные классы требуют проверки.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Вальдорфский класс школы «Покровский квартал»",
+    "city": "Москва",
+    "status": "needs-current-source",
+    "reason": "В профильном справочнике есть класс на Коломенской набережной, 8; текущий набор не подтверждён.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "ДомсЛадом",
+    "city": "Москва",
+    "status": "needs-school-program",
+    "reason": "Подтверждается детский сад, школьная программа пока не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Добрый дом",
+    "city": "Балашиха",
+    "status": "needs-current-source",
+    "reason": "Школа-сад в профильном справочнике; актуальное подтверждение школьной программы не найдено.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Импульс",
+    "city": "Краснодар",
+    "status": "needs-current-source",
+    "reason": "Требуется отличить вальдорфскую инициативу на Благоева от одноимённых современных школ.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Поляна",
+    "city": "Красногорск",
+    "status": "needs-school-program",
+    "reason": "В профильном справочнике школа-сад; отдельная актуальная школьная программа не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Рассвет",
+    "city": "Пермь",
+    "status": "needs-current-source",
+    "reason": "В профильном справочнике адрес Елькина, 41; действующая первичная страница не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Наша школа",
+    "city": "Казань",
+    "status": "needs-current-source",
+    "reason": "Есть публикация Ассоциации о семинаре 2018 года, но свежий набор и адрес не подтверждены.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Зелёная дверь",
+    "city": "Калуга",
+    "status": "needs-current-address",
+    "reason": "Есть актуальные упоминания школы; расходятся адреса Чебышёва и Кооперативная, нужен первичный источник.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Школа под Солнцем",
+    "city": "Москва, Дудкино",
+    "status": "conflicting-status",
+    "reason": "В картах отмечено закрытие; старый домен теперь туристический клуб. Не включать по старому адресу.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Про-Вальдорф",
+    "city": "Калининград",
+    "status": "needs-school-program",
+    "reason": "Инициатива школа-сад в справочнике; актуальная школьная программа требует подтверждения.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Семейная школа",
+    "city": "Таруса",
+    "status": "needs-current-source",
+    "reason": "В справочнике адрес Цветаевой, 9; первичная действующая школьная страница не найдена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Времена года",
+    "city": "Феодосия",
+    "status": "needs-school-program",
+    "reason": "В справочнике школа-сад, необходимо подтвердить обучение школьников.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Тёплый дом",
+    "city": "Берёзовский",
+    "status": "kindergarten-only",
+    "reason": "Современное описание: дети 2,5–7 лет. В школьный каталог не добавлен.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Соцветие",
+    "city": "Саратов",
+    "status": "needs-current-source",
+    "reason": "Школа-сад в справочнике; актуальная первичная страница не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Школа самоопределения №734",
+    "city": "Москва",
+    "status": "needs-waldorf-program",
+    "reason": "Школа существует, но включение всей школы как вальдорфской не обосновано актуальной программой.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "София",
+    "city": "Екатеринбург",
+    "status": "needs-current-source",
+    "reason": "Старые упоминания семейной школы и сада; нужна актуальная первичная страница школьных классов.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Школьная инициатива в Алабушево",
+    "city": "Алабушево",
+    "status": "needs-current-source",
+    "reason": "Старый справочник не подтверждает текущий набор.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Никольск-Горка",
+    "city": "Никольск, Пензенская область",
+    "status": "initiative-only",
+    "reason": "Есть у Ассоциации и в World List как инициатива; наличие действующих школьных классов не подтверждено.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Добрый путь",
+    "city": "Сочи",
+    "status": "needs-current-source",
+    "reason": "Историческая школа из партнёрского списка, актуальная первичная страница и набор не подтверждены.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Сияние звезды",
+    "city": "Москва",
+    "status": "needs-current-source",
+    "reason": "Старый сайт и актуальный набор не подтверждены.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Морошка",
+    "city": "Санкт-Петербург",
+    "status": "needs-school-program",
+    "reason": "Официальный сайт moroshka.school подтверждает школу и программу госстандарта; вальдорфский профиль не заявлен. Само проведение семинара не основание для включения.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Солнечный луч",
+    "city": "Нижний Новгород",
+    "status": "needs-current-source",
+    "reason": "В справочнике семейные классы на Горбатовской,43. Старое одноимённое ЧОУ ликвидировано, но это не доказывает закрытие семейной инициативы; актуальная первичная школьная страница не подтверждена.",
+    "source": "https://prowaldorf.nesudobro.ru/address/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Монино",
+    "city": "Монино, Тверская область",
+    "status": "visiting-classes-not-school",
+    "reason": "В публикациях Ассоциации — площадка приёма приезжающих классов и педагогических выездов. Самостоятельный постоянный школьный набор не подтверждён.",
+    "source": "https://drugayashkola.ru/2018/informacionnyj-dajdzhest-associacii-valdorfskix-shkol-rossii-iyul-2018/",
+    "checkedAt": "2026-10-28"
+  },
+  {
+    "name": "Школа без классов Гунтера Гебхарта",
+    "city": "Самурская, Краснодарский край",
+    "status": "seasonal-initiative",
+    "reason": "В школьной газете описана ежегодно собирающая учеников инициатива. Постоянная общеобразовательная школа с действующим набором по адресу не подтверждена.",
+    "source": "https://drugayashkola.ru/wp-content/uploads/2021/10/Vestink202110.pdf",
+    "checkedAt": "2026-10-28"
+  }
+]

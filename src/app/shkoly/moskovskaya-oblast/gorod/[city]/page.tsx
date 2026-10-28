@@ -8,6 +8,8 @@ type Props = { params: Promise<{ city: string }> }
 
 // Предложный падеж (в каком городе?)
 const cityLocative: Record<string, string> = {
+  'Ларюшино': 'в Ларюшино',
+  'Палицы': 'в Палицах',
   ...Object.fromEntries(Object.values(familyGeography.moCities).map(c => [c.label, c.locative])),
   'Балашиха':         'в Балашихе',
   'Дмитров':          'в Дмитрове',
