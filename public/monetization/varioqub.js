@@ -11,8 +11,95 @@
   var guard = null;
   var clearance = 0;
   var layoutPending = false;
+  var topRequestedGeneration = -1;
+  var topSuppressed = false;
+
+  function topEnabled() {
+    return eligible() && config.topAd && config.topAd.enabled === true;
+  }
+
+  function clearTopSpace() {
+    document.documentElement.style.removeProperty('--ps-top-clearance');
+    document.documentElement.removeAttribute('data-ps-top-visible');
+  }
+
+  function suppressTop() {
+    if (!topEnabled()) return;
+    topSuppressed = true;
+    destroyFloor();
+    clearTopSpace();
+    document.documentElement.setAttribute('data-ps-top-status', 'suppressed');
+  }
+
+  function updateTopSpace() {
+    if (!topEnabled() || topSuppressed) { clearTopSpace(); return; }
+    var dialog = document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]');
+    var widget = document.getElementById('Logos-widget');
+    if ((dialog && dialog.getBoundingClientRect().height > 0) ||
+        (widget && widget.shadowRoot && widget.shadowRoot.querySelector('.uc-main.open'))) {
+      suppressTop(); return;
+    }
+    var height = 0;
+    Array.prototype.forEach.call(document.body.children, function (element) {
+      if (element.tagName !== 'DIV') return;
+      var box = element.getBoundingClientRect();
+      if (box.width >= window.innerWidth * 0.7 && box.height >= 40 &&
+          box.height <= 150 && Math.abs(box.top) < 3 &&
+          window.getComputedStyle(element).position === 'fixed' &&
+          element.querySelector('[data-ad-id],iframe')) height = Math.max(height, Math.ceil(box.height));
+    });
+    var next = height ? (height + 12) + 'px' : '';
+    if (document.documentElement.style.getPropertyValue('--ps-top-clearance') !== next) {
+      if (height) {
+        document.documentElement.style.setProperty('--ps-top-clearance', next);
+        document.documentElement.setAttribute('data-ps-top-visible', 'true');
+      } else clearTopSpace();
+    }
+  }
+
+  function requestTop(current) {
+    if (!topEnabled() || !window.matchMedia('(max-width: 1023px)').matches || topSuppressed ||
+        topRequestedGeneration === current) return;
+    topRequestedGeneration = current;
+    if (!document.getElementById('ps-top-controls')) {
+      var style = document.createElement('style');
+      style.id = 'ps-top-controls';
+      style.textContent = 'html[data-ps-top-visible="true"] .ps-chrome-header{padding-top:var(--ps-top-clearance)}html[data-ps-top-visible="true"] .ps-chrome #header{top:var(--ps-top-clearance)}html[data-ps-top-visible="true"] .ps-chrome #first-city-prompt{top:calc(88px + var(--ps-top-clearance))}';
+      document.head.appendChild(style);
+    }
+    document.documentElement.setAttribute('data-ps-top-status', 'queued');
+    window.yaContextCb = window.yaContextCb || [];
+    window.yaContextCb.push(function () {
+      if (current !== generation || !topEnabled() || topSuppressed) return;
+      var manager = window.Ya && window.Ya.Context && window.Ya.Context.AdvManager;
+      if (!manager || typeof manager.render !== 'function') return;
+      document.documentElement.setAttribute('data-ps-top-status', 'requested');
+      try {
+        manager.render({blockId: config.topAd.blockId, type: 'topAd',
+          onRender: function () {
+            if (current !== generation || !topEnabled() || topSuppressed) { destroyFloor(); return; }
+            document.documentElement.setAttribute('data-ps-top-status', 'rendered');
+            scheduleLayout();
+          },
+          onError: function () {
+            if (current !== generation) return;
+            clearTopSpace();
+            document.documentElement.setAttribute('data-ps-top-status', 'error');
+          }
+        });
+      } catch (_) {
+        clearTopSpace();
+        document.documentElement.setAttribute('data-ps-top-status', 'error');
+      }
+    });
+  }
+
+  document.addEventListener('focusin', function (event) {
+    if (event.target && event.target.closest && event.target.closest('form')) suppressTop();
+  });
 
   function updateFloatingControls() {
+    updateTopSpace();
     var height = 0;
     if (eligible() && loaderStarted) {
       Array.prototype.forEach.call(document.body.children, function (element) {
@@ -70,7 +157,7 @@
   function destroyFloor() {
     var manager = window.Ya && window.Ya.Context && window.Ya.Context.AdvManager;
     if (!manager || typeof manager.destroy !== 'function') return;
-    (config && config.floorBlockIds || ['R-A-19425636-4']).forEach(function (blockId) {
+    (config && config.floorBlockIds || ['R-A-19425636-4']).concat(config && config.topAd ? [config.topAd.blockId] : []).forEach(function (blockId) {
       try { manager.destroy({blockId: blockId}); } catch (_) { /* Already closed. */ }
     });
   }
@@ -110,6 +197,9 @@
     previousUrl = url;
     document.documentElement.removeAttribute('data-ps-varioqub-ready');
     var current = ++generation;
+    topSuppressed = false;
+    clearTopSpace();
+    document.documentElement.removeAttribute('data-ps-top-status');
     destroyFloor();
     updateGuard();
     fetch('/monetization/experiments.json', {cache: 'no-store', credentials: 'same-origin'})
@@ -120,11 +210,17 @@
       .then(function (value) {
         if (current !== generation) return;
         if (!Array.isArray(value.allowedPathPrefixes) || !Array.isArray(value.floorBlockIds) ||
-            value.counterId !== 108789843) throw new Error('invalid_config');
+            value.counterId !== 108789843 || (value.topAd &&
+            (value.topAd.blockId !== 'R-A-19425636-5' || typeof value.topAd.enabled !== 'boolean'))) throw new Error('invalid_config');
         config = value;
         updateGuard();
         if (!eligible()) {
           window.__psVarioqubStatus = value.enabled === true ? 'excluded' : 'disabled';
+          return;
+        }
+        if (config.topAd && config.topAd.enabled === true) {
+          window.__psVarioqubStatus = 'direct_mobile_top_pilot';
+          requestTop(current);
           return;
         }
         loadVendor();
@@ -156,6 +252,7 @@
     ++generation;
     window.__psVarioqubStatus = 'disabled';
     updateGuard();
+    clearTopSpace();
     updateFloatingControls();
   });
   routeChanged();
