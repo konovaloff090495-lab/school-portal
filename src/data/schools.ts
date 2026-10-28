@@ -1,3 +1,8 @@
+import waldorfSchools from './waldorf-schools-verified.json'
+import waldorfUpdates from './waldorf-school-updates.json'
+import waldorfMatches from './waldorf-school-matches.json'
+import waldorfRetired from './waldorf-retired-schools.json'
+import waldorfGeography from './waldorf-geography.json'
 import externatCatalogSchools from './externat-catalog-schools.json'
 import externatCatalogUpdates from './externat-catalog-updates.json'
 import onlineCatalogSchools from './online-catalog-schools.json'
@@ -287871,11 +287876,12 @@ export const schools = ([
     imageAlt: 'Детская школа искусств Красносельского района в Санкт-Петербурге — школа искусств',
     photoCount: 0,
   },
+  ...waldorfSchools,
   ...externatCatalogSchools,
   ...onlineCatalogSchools,
   ...verifiedFamilySchools,
   ...verifiedProgrammingSchools,
-] as any[] as School[]).filter(s => !(s.slug in schoolCatalogExclusions)).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((schoolFormatUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...(s.slug in schoolFormatUpdates ? { priceFrom: undefined, priceTo: undefined, faq: undefined } : {}), ...((onlineCatalogUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((externatCatalogUpdates as Record<string, Partial<School>>)[s.slug] ?? {}) }))
+] as any[] as School[]).filter(s => !(s.slug in schoolCatalogExclusions) && !(s.slug in waldorfRetired)).map(s => ({ ...s, ...((programmingSchoolUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((schoolFormatUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...(s.slug in schoolFormatUpdates ? { priceFrom: undefined, priceTo: undefined, faq: undefined } : {}), ...((onlineCatalogUpdates as Record<string, Partial<School>>)[s.slug] ?? {}), ...((externatCatalogUpdates as Record<string, Partial<School>>)[s.slug] ?? {}) })).map(s => (waldorfUpdates as unknown as Record<string, School>)[s.slug] ?? s)
 export const typeLabels: Record<SchoolType, string> = {
   gosudarstvennye: 'Государственные',
   chastnie: 'Частные',
@@ -287917,6 +287923,7 @@ export const MICRO_GEO_SKIP_TYPES: SchoolType[] = ['online', 'eksternal']
 
 export const regionLabels: Record<RegionSlug, string> = {
   ...Object.fromEntries(Object.entries(familyGeography.regions).map(([slug, city]) => [slug, city.label])),
+  ...Object.fromEntries(Object.entries(waldorfGeography.regions).map(([slug, city]) => [slug, city.label])),
   'moskva': 'Москва',
   'moskovskaya-oblast': 'Московская область',
   'novosibirsk': 'Новосибирск',
@@ -288079,6 +288086,7 @@ export const regionLabels: Record<RegionSlug, string> = {
 // Предложный падеж — «в Москве», «в Волгограде» (для H1)
 export const regionLabelsIn: Record<RegionSlug, string> = {
   ...Object.fromEntries(Object.entries(familyGeography.regions).map(([slug, city]) => [slug, city.locative])),
+  ...Object.fromEntries(Object.entries(waldorfGeography.regions).map(([slug, city]) => [slug, city.locative])),
   'moskva':             'в Москве',
   'moskovskaya-oblast': 'в Московской области',
   'novosibirsk':        'в Новосибирске',
@@ -288241,6 +288249,7 @@ export const regionLabelsIn: Record<RegionSlug, string> = {
 // Родительный падеж — «Москвы», «Волгограда» (для meta title/description)
 export const regionLabelsOf: Record<RegionSlug, string> = {
   ...Object.fromEntries(Object.entries(familyGeography.regions).map(([slug, city]) => [slug, city.genitive])),
+  ...Object.fromEntries(Object.entries(waldorfGeography.regions).map(([slug, city]) => [slug, city.genitive])),
   'moskva':             'Москвы',
   'moskovskaya-oblast': 'Московской области',
   'novosibirsk':        'Новосибирска',
@@ -288400,7 +288409,7 @@ export const regionLabelsOf: Record<RegionSlug, string> = {
   'noyabrsk': 'Ноябрьска',
 }
 
-export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk', 'vladivostok', 'yaroslavl', 'orenburg', 'kemerovo', 'novokuznetsk', 'ryazan', 'astrakhan', 'naberezhnye-chelny', 'lipetsk', 'tula', 'kirov', 'cheboksary', 'kaliningrad', 'bryansk', 'kursk', 'stavropol', 'belgorod', 'arkhangelsk', 'vladimir', 'smolensk', 'sochi', 'ulan-ude', 'kostroma', 'vologda', 'kurgan', 'tyumen', 'magnitogorsk', 'nizhnevartovsk', 'novorossiysk', 'vladikavkaz', 'sterlitamak', 'syktyvkar', 'bratsk', 'angarsk', 'dzerzhinsk', 'petrozavodsk', 'cherepovets', 'surgut', 'tolyatti', 'makhachkala', 'penza', 'ivanovo', 'tver', 'nizhniy-tagil', 'murmansk', 'sevastopol', 'stary-oskol', 'kaluga', 'grozny', 'chita', 'orel', 'simferopol', 'rybinsk', 'veliky-novgorod', 'shakhty', 'volzhsky', 'norilsk', 'tambov', 'pskov', 'abakan', 'petropavlovsk-kamchatsky', 'oktyabrsky', 'yuzhno-sakhalinsk', 'nalchik', 'nizhnekamsk', 'zlatoust', 'blagoveshchensk', 'armavir', 'prokopyevsk', 'nakhodka', 'biysk', 'elista', 'taganrog', 'severodvinsk', 'yoshkar-ola', 'saransk', 'miass', 'yakutsk', 'kamensk-uralsky', 'engels', 'almetyevsk', 'neftekamsk', 'kopeysk', 'cherkessk', 'novocherkassk', 'maykop', 'kerch', 'balakovo', 'derbent', 'kovrov', 'yalta', 'obninsk', 'salavat', 'nefteyugansk', 'murom', 'ukhta', 'ussuriysk', 'magadan', 'elabuga', 'vorkuta', 'pyatigorsk', 'pervouralsk', 'achinsk', 'khanty-mansiysk', 'novy-urengoy', 'zelenodolsk', 'komsomolsk-na-amure', 'orsk', 'syzran', 'volgodonsk', 'rubtsovsk', 'khasavyurt', 'berezniki', 'kyzyl', 'kaspiysk', 'kislovodsk', 'bataysk', 'nazran', 'essentuki', 'novocheboksarsk', 'novomoskovsk', 'mikhaylovsk', 'nevinnomyssk', 'dimitrovgrad', 'kamyshin', 'artem', 'evpatoriya', 'seversk', 'novoshakhtinsk', 'arzamas', 'berdsk', 'elets', 'noyabrsk', ...Object.keys(familyGeography.regions)]
+export const regionSlugs: RegionSlug[] = ['moskva', 'moskovskaya-oblast', 'novosibirsk', 'ekaterinburg', 'kazan', 'nizhniy-novgorod', 'sankt-peterburg', 'chelyabinsk', 'omsk', 'samara', 'rostov-na-donu', 'ufa', 'krasnodar', 'perm', 'voronezh', 'volgograd', 'krasnoyarsk', 'saratov', 'tomsk', 'izhevsk', 'barnaul', 'ulyanovsk', 'irkutsk', 'khabarovsk', 'vladivostok', 'yaroslavl', 'orenburg', 'kemerovo', 'novokuznetsk', 'ryazan', 'astrakhan', 'naberezhnye-chelny', 'lipetsk', 'tula', 'kirov', 'cheboksary', 'kaliningrad', 'bryansk', 'kursk', 'stavropol', 'belgorod', 'arkhangelsk', 'vladimir', 'smolensk', 'sochi', 'ulan-ude', 'kostroma', 'vologda', 'kurgan', 'tyumen', 'magnitogorsk', 'nizhnevartovsk', 'novorossiysk', 'vladikavkaz', 'sterlitamak', 'syktyvkar', 'bratsk', 'angarsk', 'dzerzhinsk', 'petrozavodsk', 'cherepovets', 'surgut', 'tolyatti', 'makhachkala', 'penza', 'ivanovo', 'tver', 'nizhniy-tagil', 'murmansk', 'sevastopol', 'stary-oskol', 'kaluga', 'grozny', 'chita', 'orel', 'simferopol', 'rybinsk', 'veliky-novgorod', 'shakhty', 'volzhsky', 'norilsk', 'tambov', 'pskov', 'abakan', 'petropavlovsk-kamchatsky', 'oktyabrsky', 'yuzhno-sakhalinsk', 'nalchik', 'nizhnekamsk', 'zlatoust', 'blagoveshchensk', 'armavir', 'prokopyevsk', 'nakhodka', 'biysk', 'elista', 'taganrog', 'severodvinsk', 'yoshkar-ola', 'saransk', 'miass', 'yakutsk', 'kamensk-uralsky', 'engels', 'almetyevsk', 'neftekamsk', 'kopeysk', 'cherkessk', 'novocherkassk', 'maykop', 'kerch', 'balakovo', 'derbent', 'kovrov', 'yalta', 'obninsk', 'salavat', 'nefteyugansk', 'murom', 'ukhta', 'ussuriysk', 'magadan', 'elabuga', 'vorkuta', 'pyatigorsk', 'pervouralsk', 'achinsk', 'khanty-mansiysk', 'novy-urengoy', 'zelenodolsk', 'komsomolsk-na-amure', 'orsk', 'syzran', 'volgodonsk', 'rubtsovsk', 'khasavyurt', 'berezniki', 'kyzyl', 'kaspiysk', 'kislovodsk', 'bataysk', 'nazran', 'essentuki', 'novocheboksarsk', 'novomoskovsk', 'mikhaylovsk', 'nevinnomyssk', 'dimitrovgrad', 'kamyshin', 'artem', 'evpatoriya', 'seversk', 'novoshakhtinsk', 'arzamas', 'berdsk', 'elets', 'noyabrsk', ...Object.keys(familyGeography.regions), ...Object.keys(waldorfGeography.regions)]
 
 export function getSchoolsByRegion(region: RegionSlug): School[] {
   return schools.filter(s => s.region === region)
@@ -288410,6 +288419,7 @@ export function getSchoolsByRegion(region: RegionSlug): School[] {
 // в Яндекс Картах, 09.2026). Карточка хранится с type 'podgotovka-ege', а страницы
 // типа 'podgotovka-oge' показывают те из них, у кого в features есть «Подготовка к ОГЭ».
 export function schoolMatchesType(s: School, type: SchoolType): boolean {
+  if (type === 'valdorfskie') return (waldorfMatches as string[]).includes(s.slug)
   if (type === 'eksternal' && s.externatScope === 'excluded') return false
   if (type === 'eksternal' && (s.externatScope === 'local' || s.externatScope === 'national')) return true
   if (type === 'online' && (s.onlineSchoolScope === 'resource' || s.onlineSchoolScope === 'regional')) return false
@@ -288687,11 +288697,12 @@ export function getSchoolsByRegionDistrict(region: RegionSlug, label: string): S
   return schools.filter(s => s.region === region && s.district === label)
 }
 
-export type MoCitySlug = 'balashikha' | 'dmitrov' | 'dolgoprudny' | 'domodedovo' | 'zheleznodorozhny' | 'klin' | 'kolomna' | 'korolev' | 'krasnogorsk' | 'lyubertsy' | 'mytishchi' | 'noginsk' | 'odintsovo' | 'podolsk' | 'ramenskoye' | 'reutov' | 'ruza' | 'serpukhov' | 'khimki' | 'shchyolkovo' | keyof typeof familyGeography.moCities | keyof typeof programmingGeography.moCities
+export type MoCitySlug = 'balashikha' | 'dmitrov' | 'dolgoprudny' | 'domodedovo' | 'zheleznodorozhny' | 'klin' | 'kolomna' | 'korolev' | 'krasnogorsk' | 'lyubertsy' | 'mytishchi' | 'noginsk' | 'odintsovo' | 'podolsk' | 'ramenskoye' | 'reutov' | 'ruza' | 'serpukhov' | 'khimki' | 'shchyolkovo' | keyof typeof familyGeography.moCities | keyof typeof programmingGeography.moCities | keyof typeof waldorfGeography.moCities
 
-export const moCitySlugs: MoCitySlug[] = [...(Object.keys(programmingGeography.moCities) as MoCitySlug[]), ...(Object.keys(familyGeography.moCities) as MoCitySlug[]), 'balashikha', 'dmitrov', 'dolgoprudny', 'domodedovo', 'zheleznodorozhny', 'klin', 'kolomna', 'korolev', 'krasnogorsk', 'lyubertsy', 'mytishchi', 'noginsk', 'odintsovo', 'podolsk', 'ramenskoye', 'reutov', 'ruza', 'serpukhov', 'khimki', 'shchyolkovo']
+export const moCitySlugs: MoCitySlug[] = [...(Object.keys(waldorfGeography.moCities) as MoCitySlug[]), ...(Object.keys(programmingGeography.moCities) as MoCitySlug[]), ...(Object.keys(familyGeography.moCities) as MoCitySlug[]), 'balashikha', 'dmitrov', 'dolgoprudny', 'domodedovo', 'zheleznodorozhny', 'klin', 'kolomna', 'korolev', 'krasnogorsk', 'lyubertsy', 'mytishchi', 'noginsk', 'odintsovo', 'podolsk', 'ramenskoye', 'reutov', 'ruza', 'serpukhov', 'khimki', 'shchyolkovo']
 
 export const moCityLabels: Record<MoCitySlug, string> = {
+  ...waldorfGeography.moCities,
   ...programmingGeography.moCities,
   ...Object.fromEntries(Object.entries(familyGeography.moCities).map(([slug, city]) => [slug, city.label])) as Record<keyof typeof familyGeography.moCities, string>,
   balashikha:        'Балашиха',

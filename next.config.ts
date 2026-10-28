@@ -1,3 +1,4 @@
+import waldorfCityRedirects from './scripts/seo/waldorf-city-redirects.json';
 import schoolBlogRedirects from './scripts/seo/school-blog-redirects.json';
 import type { NextConfig } from "next";
 import { readFileSync } from "fs";
@@ -95,6 +96,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      ...Object.entries(waldorfCityRedirects).map(([source, destination]) => ({ source, destination, permanent: true })),
       ...Object.entries(schoolBlogRedirects).map(([source, destination]) => ({ source, destination, statusCode: 301 as const })),
       ...Object.entries(legacySchoolPaths).map(([source, destination]) => ({
         source, destination, permanent: true,

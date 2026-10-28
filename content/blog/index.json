@@ -2899,9 +2899,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 9,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261022/finance.webp",
     "imageAlt": "Иллюстрация: Мама объясняет ребёнку планирование бюджета с калькулятором и копилкой",
-    "imageUrl": "/blog/images/editorial-20261022/finance.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-otuchit-rebenka-ot-telefona",
@@ -3352,7 +3353,7 @@
   {
     "slug": "semejnoe-obuchenie-starshaya-shkola",
     "title": "Домашнее и семейное обучение в 10–11 классе: подготовка к ЕГЭ и поступлению",
-    "excerpt": "Домашнее обучение в 10 и 11 классе: как совместить семейную форму с подготовкой к ЕГЭ и не потерять допуск к экзаменам. Как организовать семейное обучение в старших классах: ЕГЭ, аттестат, поступление в вуз и жизнь без школы в 17–18 лет.",
+    "excerpt": "Семейное образование и самообразование в 10–11 классе: программа, аттестации, подготовка к ГИА и проверка нагрузки.",
     "category": "Домашнее обучение",
     "tags": [
       "семейное обучение",
@@ -3363,9 +3364,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-06-05",
-    "readTime": 11,
-    "imageAlt": "Иллюстрация: Подготовка ребёнка к первым школьным занятиям",
-    "imageUrl": "/blog/images/editorial-20261021/kogda-nachinat-gotovitsya-k-ege.webp"
+    "readTime": 2,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/kogda-nachinat-gotovitsya-k-ege.webp",
+    "imageAlt": "Иллюстрация: Подготовка ребёнка к первым школьным занятиям"
   },
   {
     "slug": "kak-prohodit-distancionnoe-obuchenie",
@@ -3664,7 +3666,7 @@
   {
     "slug": "kak-organizovat-semejnoe-obuchenie",
     "title": "Как организовать семейное обучение с нуля: пошаговый план",
-    "excerpt": "Практический план перехода на семейное обучение: от решения до первого учебного дня за 4 шага.",
+    "excerpt": "Как организовать семейное обучение без обязательной онлайн-школы: материалы, задания, проверка, помощь и календарь.",
     "category": "Домашнее обучение",
     "tags": [
       "семейное обучение",
@@ -3675,9 +3677,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-06-08",
-    "readTime": 10,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
     "imageAlt": "Иллюстрация: Совместное занятие ребёнка и родителя",
-    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "worldschooling-chto-eto",
@@ -3774,7 +3777,7 @@
   {
     "slug": "vechernyaya-shkola-onlajn",
     "title": "Вечерняя школа онлайн: дистанционное обучение для работающих и взрослых",
-    "excerpt": "Как получить аттестат работающему взрослому через онлайн-вечернюю школу: форматы, стоимость и сроки.",
+    "excerpt": "Как выбрать вечернее онлайн-обучение под рабочие смены: расписание, зачисление, аттестации и проверка условий.",
     "category": "Формы обучения",
     "tags": [
       "вечерняя школа",
@@ -3785,9 +3788,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-15",
-    "readTime": 9,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/adult-learning.webp",
     "imageAlt": "Иллюстрация: Взрослая ученица занимается с ноутбуком и тетрадью за домашним столом",
-    "imageUrl": "/blog/images/editorial-20261022/adult-learning.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-pomoch-s-matematicheskimi-zadachami",
@@ -6292,7 +6296,7 @@
   {
     "slug": "semejnoe-obuchenie-kak-perejti",
     "title": "Как перейти на семейное обучение: порядок и документы",
-    "excerpt": "Переход на семейное образование по шагам: уведомление, отчисление, личное дело, прикрепление и аттестация. Ссылки на образцы и действующие нормы.",
+    "excerpt": "Как оформить переход на семейное образование, включая середину года: документы, школа аттестаций и первые учебные недели.",
     "category": "Домашнее обучение",
     "tags": [
       "семейное обучение",
@@ -6304,16 +6308,15 @@
     "author": "Наталья Орлова",
     "authorRole": "Педагог-психолог",
     "publishedAt": "2026-07-02",
-    "readTime": 7,
-    "imageAlt": "Иллюстрация: Абитуриент с родителем обсуждают документы с сотрудником приёмной комиссии",
-    "updatedAt": "2026-10-22",
-    "suProduct": "semeynaya-shkola",
-    "imageUrl": "/blog/images/editorial-20261022/university-admission.webp"
+    "readTime": 2,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/university-admission.webp",
+    "imageAlt": "Иллюстрация: Абитуриент с родителем обсуждают документы с сотрудником приёмной комиссии"
   },
   {
     "slug": "eksternal-shkolnika-chto-eto",
     "title": "Экстернат в школе: как работает, как поступить и сколько стоит",
-    "excerpt": "Всё об экстернате для школьников: разница с семейным обучением, как пройти аттестацию экстерном, плюсы и минусы. Актуально на 2026 год.",
+    "excerpt": "Кто такой экстерн по закону, как оформить аттестации, проверить документы школы и выбрать подходящий темп обучения.",
     "category": "ШКОЛЫ",
     "tags": [
       "экстернат",
@@ -6324,9 +6327,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-03",
-    "readTime": 9,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/kak-sdat-oge-na-pyat.webp",
     "imageAlt": "Иллюстрация: Подготовка школьников к экзаменам",
-    "imageUrl": "/blog/images/editorial-20261021/kak-sdat-oge-na-pyat.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-najti-repetitora-onlayn",
@@ -9216,9 +9220,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-12",
-    "readTime": 11,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261022/study-rest.webp",
     "imageAlt": "Иллюстрация: Подросток делает перерыв и разминку между занятиями",
-    "imageUrl": "/blog/images/editorial-20261022/study-rest.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "chto-chitat-v-5-klasse",
@@ -12334,9 +12339,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-24",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
     "imageAlt": "Иллюстрация: Совместное занятие ребёнка и родителя",
-    "imageUrl": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "chasto-boleyushchij-rebenok-i-shkola",
@@ -12845,9 +12851,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-27",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/psikhologicheskaya-podgotovka-k-ege.webp",
     "imageAlt": "Иллюстрация: Поддерживающий разговор ребёнка со взрослым",
-    "imageUrl": "/blog/images/editorial-20261021/psikhologicheskaya-podgotovka-k-ege.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "konflikty-v-klasse-chto-delat-roditelyam",
@@ -16355,22 +16362,23 @@
     "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
   },
   {
+    "category": "ОБУЧЕНИЕ",
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-07",
     "slug": "onlajn-kursy-programmirovaniya-dlya-detej",
     "title": "Онлайн-школа и курсы программирования для детей: как выбрать",
     "excerpt": "Онлайн-школы программирования для детей и школьников: живые группы, индивидуальные занятия и записи. Что проверить до оплаты.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "онлайн курсы программирования для детей",
       "онлайн школа программирования",
       "дистанционное обучение",
       "школа программирования онлайн"
     ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-10-07",
-    "readTime": 8,
-    "imageAlt": "Иллюстрация: Занятие с ноутбуком и учебными материалами",
-    "imageUrl": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp"
+    "readTime": 4,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp",
+    "imageAlt": "Иллюстрация: Занятие с ноутбуком и учебными материалами"
   },
   {
     "category": "ОБУЧЕНИЕ",
@@ -16392,21 +16400,22 @@
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
+    "category": "ОБУЧЕНИЕ",
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-07",
     "slug": "programmirovanie-dlya-detej-po-vozrastam",
     "title": "Программирование для детей по возрастам: 6–8, 9–12 и 13–17 лет",
     "excerpt": "Что изучать ребёнку в каждом возрасте и как выбрать первый курс без перегруза: проекты, языки и признаки подходящего уровня.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "программирование для детей 7 лет",
       "программирование для детей 10 лет",
       "программирование для подростков"
     ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-10-07",
-    "readTime": 8,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "readTime": 5,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "python-dlya-detej",
@@ -16474,9 +16483,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
-    "readTime": 8,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "readTime": 9,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "minecraft-programmirovanie-dlya-detej",
@@ -16508,9 +16518,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
-    "readTime": 8,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "readTime": 9,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "sozdanie-sajtov-dlya-detej",
@@ -18614,9 +18625,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 7,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261022/digital-art.webp",
     "imageAlt": "Иллюстрация: Подросток рисует пейзаж на графическом планшете",
-    "imageUrl": "/blog/images/editorial-20261022/digital-art.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-chteniya-dlya-detej",
@@ -18751,9 +18763,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 6,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/math.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261022/math.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-nejrosetej-dlya-detej",
@@ -18889,9 +18902,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 6,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp",
     "imageAlt": "Иллюстрация: Общение и совместные занятия школьников",
-    "imageUrl": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-sozdaniya-prilozhenij-dlya-detej",
@@ -18906,9 +18920,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 4,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-videomontazha-dlya-detej",
@@ -23348,9 +23363,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 5,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/onlajn-shkoly-akkreditatsiya-2026.webp",
     "imageAlt": "Иллюстрация: Занятие с ноутбуком и учебными материалами",
-    "imageUrl": "/blog/images/editorial-20261021/onlajn-shkoly-akkreditatsiya-2026.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kursy-estestvennye-nauki-dlya-detej-obzor",
@@ -26326,6 +26342,210 @@
     "tags": [
       "Навыки и проблемы ребёнка",
       "Критическое мышление"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "semejnoe-obuchenie-rabotayushchie-roditeli",
+    "title": "Семейное обучение, если родители работают: расписание, помощь и контроль",
+    "excerpt": "Как организовать семейное обучение, если родители работают: распределение помощи, пример недели и проверка самостоятельности ребёнка.",
+    "category": "Домашнее обучение",
+    "tags": [
+      "Формы обучения",
+      "Быт и расходы"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Иллюстрация: Домашнее обучение в 2026 году",
+    "imageUrl": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "java-dlya-detej",
+    "title": "Java для детей: первые проекты и выбор курса",
+    "excerpt": "Как понять готовность ребёнка к Java, с какого проекта начать, что установить и какие программы обучения сравнить.",
+    "category": "Дополнительное образование",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "slug": "cpp-dlya-detej",
+    "title": "C++ для детей и подростков: с чего начать и как выбрать курс",
+    "excerpt": "C++ для школьника: готовность к старту, первые алгоритмические задачи, проверка решений и программы из каталога.",
+    "category": "Дополнительное образование",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "slug": "csharp-dlya-detej",
+    "title": "C# для детей: как начать программировать и создавать игры",
+    "excerpt": "Как начать C# ребёнку: отличие языка от Unity, небольшой проект, требования к обучению и сравнение программ.",
+    "category": "Дополнительное образование",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "slug": "godot-dlya-detej",
+    "title": "Godot для детей: первые 2D-игры и выбор программы обучения",
+    "excerpt": "Godot для школьника: GDScript и C#, первая 2D-игра, проверка результата и вопросы к программе курса.",
+    "category": "Дополнительное образование",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/video.webp",
+    "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
+  },
+  {
+    "slug": "arduino-dlya-detej",
+    "title": "Arduino для детей: первый проект, набор и выбор курса",
+    "excerpt": "Как выбрать Arduino для ребёнка: плата и кабель, первый Blink, безопасная работа и вопросы к курсу робототехники.",
+    "category": "Дополнительное образование",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/video.webp",
+    "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
+  },
+  {
+    "slug": "rebenok-ne-umeet-rabotat-v-komande",
+    "title": "Ребёнок не умеет работать в команде: как научить сотрудничать",
+    "excerpt": "Почему ребёнку сложно работать в группе: роли, домашнее упражнение на сотрудничество, помощь учителя и признаки прогресса.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Команда"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-ne-umeet-prosit-o-pomoshchi",
+    "title": "Ребёнок не просит о помощи: как научить обращаться за поддержкой",
+    "excerpt": "Как научить ребёнка просить помощь: причины молчания, образец просьбы, упражнение и ситуации, когда взрослого нужно звать сразу.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Команда"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "kak-nauchit-rebenka-stavit-celi",
+    "title": "Как научить ребёнка ставить цели: от желания до первого шага",
+    "excerpt": "Как помочь ребёнку выбрать свою цель, записать первый шаг и проверить результат без давления: карточка цели и пример проекта.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Целеполагание"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-ne-vypolnyaet-dogovorennosti",
+    "title": "Ребёнок не выполняет договорённости: как договариваться без постоянных напоминаний",
+    "excerpt": "Что делать, если ребёнок нарушает договорённости: проверка понятности, пример соглашения и спокойный разбор срыва.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Самоорганизация"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "kak-nauchit-rebenka-ponimat-emocii",
+    "title": "Как научить ребёнка понимать эмоции: упражнения и примеры разговоров",
+    "excerpt": "Упражнения для понимания эмоций: назвать переживание, отделить его от действия, обсудить историю и предложить помощь.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Эмпатия и эмоции"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-obizhaetsya-na-kritiku",
+    "title": "Ребёнок обижается на критику: как давать обратную связь",
+    "excerpt": "Как давать ребёнку обратную связь без ярлыков, что делать после обиды и как отличать полезное замечание от унижения.",
+    "category": "Советы родителям",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Конфликты"
     ],
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",

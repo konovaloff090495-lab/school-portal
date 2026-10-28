@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict'
+import fs from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { createJiti } from '../../node_modules/jiti/lib/jiti.mjs'
+const jiti = createJiti(import.meta.url, { interopDefault: true, alias: { '@': fileURLToPath(new URL('../../src', import.meta.url)) } })
+const d = await jiti.import('../../src/data/schools.ts')
+const { isCityTypeIndexable } = await jiti.import('../../src/lib/index-rules.ts')
+const read = file => JSON.parse(fs.readFileSync(new URL('../../'+file, import.meta.url)))
+const registry = read('docs/waldorf-catalog/sources-2026-10-28.json')
+const retired = read('src/data/waldorf-retired-schools.json')
+const redirects = read('scripts/removed-schools.json')
+const matches = read('src/data/waldorf-school-matches.json')
+const list = d.getSchoolsByType('valdorfskie')
+assert.equal(list.length, registry.length)
+assert.equal(new Set(matches).size, list.length)
+for (const row of registry) {
+  const s = d.getSchoolBySlug(row.slug)
+  assert.ok(s, row.slug)
+  assert.equal(d.schools.filter(x => x.slug === s.slug).length, 1, s.slug)
+  assert.ok(row.sources?.length, s.slug)
+  assert.ok(d.schoolMatchesType(s, 'valdorfskie'), s.slug)
+  assert.ok(d.getSchoolsByRegionAndType(s.region, 'valdorfskie').some(x => x.slug === s.slug), s.slug)
+  assert.ok(d.regionSlugs.includes(s.region) && d.regionLabelsIn[s.region], s.slug)
+  assert.ok(isCityTypeIndexable(s.region, 'valdorfskie'), s.region)
+  assert.equal(s.rating, null, s.slug)
+  assert.equal(s.reviewCount, 0, s.slug)
+  assert.equal(s.priceFrom, undefined, s.slug)
+  assert.equal(s.photoCount, 0, s.slug)
+  assert.deepEqual(s.photoUrls, [], s.slug)
+  assert.equal(s.checkedAt, '2026-10-28')
+  assert.ok(!redirects[s.slug], s.slug)
+}
+for (const slug of Object.keys(retired)) {
+  assert.ok(!d.getSchoolBySlug(slug), slug)
+  assert.ok(redirects[slug], slug)
+  if (redirects[slug].startsWith('/shkola/')) assert.ok(d.getSchoolBySlug(redirects[slug].split('/')[2]), slug)
+}
+assert.match(d.getSchoolBySlug('put-zerna-moskva').address, /Миклухо/)
+assert.match(d.getSchoolBySlug('valdorfskaya-shkola-semejnyj-lad-moskva').address, /Кулакова/)
+assert.equal(d.getSchoolBySlug('shkola-658-sankt-peterburg').type, 'gosudarstvennye')
+assert.equal(d.getSchoolBySlug('put-zerna-moskva').type, 'chastnie')
+assert.equal(list.filter(s => /Эпоха смелых/.test(s.name)).length, 1)
+assert.equal(list.filter(s => s.region === 'babyakovo')[0].city, 'Бабяково')
+for (const city of ['Ларюшино', 'Палицы', 'Жуковский', 'Красногорск']) assert.ok(d.getSchoolsByMoCity(city).some(s => d.schoolMatchesType(s, 'valdorfskie')), city)
+console.log(JSON.stringify({result:'passed', schools:list.length, new:read('src/data/waldorf-schools-verified.json').length, updated:Object.keys(read('src/data/waldorf-school-updates.json')).length, retired:Object.keys(retired).length, regions:new Set(list.map(s => s.region)).size, localities:new Set(list.map(s => s.city)).size}))

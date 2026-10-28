@@ -2,6 +2,8 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs/promises'
 import { spawn } from 'node:child_process'
 import { chromium } from 'playwright'
+import { createJiti } from '../../node_modules/jiti/lib/jiti.mjs'
+const catalogCount = (await createJiti(import.meta.url).import('../../src/data/schools.ts')).schools.length
 
 const base = process.env.SCHOOL_CARD_QA_BASE || 'http://127.0.0.1:3196'
 const baselineMode = process.env.SCHOOL_CARD_BASELINE === '1'
@@ -119,7 +121,13 @@ try {
       }
       await page.goto(base + row.path, { waitUntil: 'domcontentloaded', timeout: 120000 })
       const actual = await page.evaluate(() => ({ title: document.title, description: document.querySelector('meta[name="description"]')?.content || '', canonical: document.querySelector('link[rel="canonical"]')?.href || '', h1: document.querySelector('h1')?.textContent?.replace(/\s+/g, ' ').trim() || '', robots: document.querySelector('meta[name="robots"]')?.content || '' }))
-      for (const key of ['title', 'description', 'canonical', 'h1', 'robots']) assert.equal(actual[key], seoCorrections[row.path]?.[key] ?? row[key], row.path + ' ' + key)
+      for (const key of ['title', 'description', 'canonical', 'h1', 'robots']) {
+        let expected = seoCorrections[row.path]?.[key] ?? row[key]
+        // Catalog growth or source verification changes the factual school count.
+        // Keep every other SEO word under the original regression assertion.
+        if (row.path === '/shkoly/' && key === 'description') expected = expected.replace(/\d+(?= школ с адресами)/, String(catalogCount))
+        assert.equal(actual[key], expected, row.path + ' ' + key)
+      }
       checks.push({ seo: row.path, unchanged: true })
     }
     for (const slug of Object.keys(guides)) {
