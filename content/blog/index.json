@@ -1753,8 +1753,9 @@
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
     "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261022/reading.webp",
     "imageAlt": "Иллюстрация: Дети читают книги за столом в библиотеке",
-    "imageUrl": "/blog/images/editorial-20261022/reading.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-podgotovitsya-k-ekzamenu-za-mesyac",
@@ -2312,10 +2313,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-06-26",
-    "readTime": 8,
+    "readTime": 9,
     "imageUrl": "/blog/images/editorial-20261021/ege-obshchestvoznanie-2026-popular.webp",
     "imageAlt": "Иллюстрация: Подготовка школьников к экзаменам",
-    "updatedAt": "2026-10-27"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-uchit-anglijskie-slova",
@@ -5068,9 +5069,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-02-26",
-    "readTime": 7,
+    "readTime": 3,
+    "imageUrl": "/blog/images/editorial-20261021/kak-prohodit-ege-procedura.webp",
     "imageAlt": "Иллюстрация: Подготовка школьников к экзаменам",
-    "imageUrl": "/blog/images/editorial-20261021/kak-prohodit-ege-procedura.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "chem-oge-otlichaetsya-ot-ege",
@@ -5999,9 +6001,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-03",
-    "readTime": 10,
+    "readTime": 3,
     "imageAlt": "Иллюстрация: Как заинтересовать ребёнка наукой",
-    "imageUrl": "/blog/images/editorial-20261021/kak-zainteresovat-rebenka-naukoj.webp"
+    "imageUrl": "/blog/images/editorial-20261021/kak-zainteresovat-rebenka-naukoj.webp",
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "pohvala-v-obuchenii-kak-pravilno",
@@ -7141,9 +7144,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-06",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/kak-pomoch-rebenku-s-anglijskim.webp",
     "imageAlt": "Иллюстрация: Дети занимаются иностранным языком с преподавателем и карточками",
-    "imageUrl": "/blog/images/editorial-20261021/kak-pomoch-rebenku-s-anglijskim.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "soft-skills-dlya-shkolnikov",
@@ -8365,9 +8369,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-12",
-    "readTime": 10,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-po-matematike-s-nulya.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "vtoroj-inostrannyj-yazyk-5-klass",
@@ -9000,9 +9005,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-01",
-    "readTime": 10,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261021/ege-istoriya-2026-podgotovka.webp",
     "imageAlt": "Иллюстрация: Ученица с преподавателем рассматривают копию древнего глиняного сосуда",
-    "imageUrl": "/blog/images/editorial-20261021/ege-istoriya-2026-podgotovka.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "rebenok-ochen-ustal-5-klass",
@@ -9261,9 +9267,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-14",
-    "readTime": 10,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/geography.webp",
     "imageAlt": "Иллюстрация: Школьники изучают глобус и атлас с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/geography.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "informatika-5-klass-kak-pomoch",
@@ -9281,9 +9288,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-15",
-    "readTime": 10,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-podderzhivat-druzhbu-rebenka-5-klass",
@@ -9380,9 +9388,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-20",
-    "readTime": 12,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "ogeh-9-klass-kak-nachat-gotovitsya",
@@ -9520,9 +9529,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-11",
-    "readTime": 12,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/languages.webp",
     "imageAlt": "Иллюстрация: Дети занимаются иностранным языком с преподавателем и карточками",
-    "imageUrl": "/blog/images/editorial-20261022/languages.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "druzya-i-kompaniya-rebenka-6-klass",
@@ -12513,9 +12523,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-25",
-    "readTime": 8,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp",
     "imageAlt": "Иллюстрация: Совместное занятие ребёнка и родителя",
-    "imageUrl": "/blog/images/editorial-20261021/uspeshnyj-uchenik-kak-vospitat.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-organizovat-rabochee-mesto-shkolnika",
@@ -12627,9 +12638,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-25",
-    "readTime": 9,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/horoshie-ocenki-bez-zubrjozki-metodiki.webp",
     "imageAlt": "Иллюстрация: Совместное занятие ребёнка и родителя",
-    "imageUrl": "/blog/images/editorial-20261021/horoshie-ocenki-bez-zubrjozki-metodiki.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "ustnyj-schet-kak-razvit",
@@ -13304,8 +13316,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-29",
     "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/math.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261022/math.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "pervichnye-bally-ege-fizika-2026",
@@ -13393,9 +13406,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-29",
-    "readTime": 9,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/ege-istoriya-2026-podgotovka.webp",
     "imageAlt": "Иллюстрация: Ученица с преподавателем рассматривают копию древнего глиняного сосуда",
-    "imageUrl": "/blog/images/editorial-20261021/ege-istoriya-2026-podgotovka.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "obshchestvoznanie-9-klass-kak-pomoch",
@@ -13429,9 +13443,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-29",
-    "readTime": 9,
+    "readTime": 7,
+    "imageUrl": "/blog/images/editorial-20261022/physics.webp",
     "imageAlt": "Иллюстрация: Школьники исследуют простую электрическую цепь с лампочкой",
-    "imageUrl": "/blog/images/editorial-20261022/physics.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "chto-delat-esli-ne-hvatilo-ballov-na-byudzhet",
@@ -13958,7 +13973,7 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-02",
-    "readTime": 4,
+    "readTime": 6,
     "imageUrl": "/blog/images/editorial-20261021/rejting-shkol-rossii-2026.webp",
     "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
     "updatedAt": "2026-10-28"
@@ -14340,9 +14355,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-06",
-    "readTime": 9,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp",
     "imageAlt": "Иллюстрация: Школьники решают геометрические задачи с циркулем и объёмными моделями",
-    "imageUrl": "/blog/images/editorial-20261021/oge-matematika-razbor-zadanij.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "anglijskij-yazyk-8-klass-kak-pomoch",
@@ -16232,9 +16248,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-24",
-    "readTime": 6,
+    "readTime": 4,
+    "imageUrl": "/blog/images/editorial-20261022/languages.webp",
     "imageAlt": "Иллюстрация: Дети занимаются иностранным языком с преподавателем и карточками",
-    "imageUrl": "/blog/images/editorial-20261022/languages.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "besplatnaya-proforientaciya-dlya-shkolnikov",
@@ -16250,9 +16267,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-24",
-    "readTime": 6,
+    "readTime": 8,
+    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp",
     "imageAlt": "Иллюстрация: Обсуждение учебных интересов и выбора профессии",
-    "imageUrl": "/blog/images/editorial-20261021/proforientaciya-7-8-klass.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kakie-predmety-sdavat-posle-9-klassa",
@@ -26554,5 +26572,608 @@
     "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
     "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
     "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "zimnij-prazdnik-v-10-klasse-tri-formata",
+    "title": "Зимний праздник в 10 классе: три сценария без обязательных конкурсов",
+    "excerpt": "Редакция школьного альманаха, выставка незавершённых идей и мастерская зимних историй. Программа, роли и задания для подросткового класса.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Зимний праздник в 10 классе: три сценария без обязательных конкурсов"
+  },
+  {
+    "slug": "kak-otvechat-na-davlenie-druzej-i-vzroslyh",
+    "title": "Как отвечать на давление друзей и взрослых: пауза, вопрос и безопасный отказ",
+    "excerpt": "Как отличить просьбу от давления, не ставя диагнозов людям. Редакционные ситуации, короткие ответы и способы обратиться за поддержкой, если спор небезопасен.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как отвечать на давление друзей и взрослых: пауза, вопрос и безопасный отказ"
+  },
+  {
+    "slug": "stihi-k-23-fevralya-dlya-detskogo-prazdnika",
+    "title": "10 коротких стихотворений к 23 февраля: оригинальные тексты для детского праздника",
+    "excerpt": "Небольшие стихи о мире, благодарности, ответственности и поддержке. Как распределить строки и подготовить выступление без обязательных ролей по полу.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "10 коротких стихотворений к 23 февраля: оригинальные тексты для детского праздника"
+  },
+  {
+    "slug": "risuem-yozhika-s-osennim-urozhaem",
+    "title": "Рисуем ёжика с осенним урожаем: пошаговое занятие для 1 класса",
+    "excerpt": "Сказочный сюжет из простых форм: контур, иголки, листья и плоды. Как выбрать композицию и проверить рисунок без требования одинакового результата.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Рисуем ёжика с осенним урожаем: пошаговое занятие для 1 класса"
+  },
+  {
+    "slug": "zolotaya-osen-v-nachalnoj-shkole-tri-scenariya",
+    "title": "Праздник «Золотая осень» в начальной школе: три сценария без сложных костюмов",
+    "excerpt": "Выставка, редакция осенней газеты или небольшая экспедиция: три оригинальных формата праздника для 1–4 классов с ролями, материалами и запасным планом.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Праздник «Золотая осень» в начальной школе: три сценария без сложных костюмов"
+  },
+  {
+    "slug": "mezhdunarodnyj-den-obrazovaniya-v-klasse",
+    "title": "Международный день образования: три идеи для разговора в классе",
+    "excerpt": "Когда отмечают день образования и как провести его содержательно: карта учебных открытий, разбор препятствия и небольшой обмен навыками.",
+    "category": "Школьное образование",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Международный день образования: три идеи для разговора в классе"
+  },
+  {
+    "slug": "chto-podarit-rebenku-na-novyj-god-po-interesam",
+    "title": "Что подарить ребёнку на Новый год: идеи по возрастам и интересам",
+    "excerpt": "Как выбрать подарок ребёнку без случайной покупки: идеи для малышей, школьников и подростков, проверка полного набора и разговор о бюджете.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Что подарить ребёнку на Новый год: идеи по возрастам и интересам"
+  },
+  {
+    "slug": "kak-oformit-laboratornuyu-rabotu",
+    "title": "Как оформить лабораторную работу: структура и пример записи результатов",
+    "excerpt": "Что записать в цель, ход работы, результаты и вывод. Учебный пример с измерениями, проверка единиц и список ошибок перед сдачей.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как оформить лабораторную работу: структура и пример записи результатов"
+  },
+  {
+    "slug": "pervoe-maya-kak-obyasnit-rebenku",
+    "title": "1 мая: как объяснить ребёнку историю Праздника Весны и Труда",
+    "excerpt": "От требования восьмичасового дня до семейного разговора о профессиях. Проверенная историческая основа и три задания, которые помогают отличать факт, источник и семейное воспоминание.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "1 мая: как объяснить ребёнку историю Праздника Весны и Труда"
+  },
+  {
+    "slug": "kak-uchit-istoriyu-voprosy-karta-istochnik",
+    "title": "Как учить историю: событие, карта и источник вместо списка дат",
+    "excerpt": "Пять шагов работы с исторической темой: объяснить изменение, собрать хронологию, увидеть место, разобрать свидетельство и проверить собственный пересказ.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как учить историю: событие, карта и источник вместо списка дат"
+  },
+  {
+    "slug": "risunki-iz-karakulej-igra-s-liniej",
+    "title": "Рисунки из каракулей: творческая игра с линией для ребёнка и взрослого",
+    "excerpt": "Как превратить случайную линию в персонажа, придумать несколько вариантов и рисовать по очереди. Пошаговое занятие без оценки характера по рисунку.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Рисунки из каракулей: творческая игра с линией для ребёнка и взрослого"
+  },
+  {
+    "slug": "knigi-dlya-samorazvitiya-kak-chitat-s-polzoj",
+    "title": "Три книги для саморазвития: как выбрать задачу и проверить совет на практике",
+    "excerpt": "Обучение, привычки и сосредоточенность: три разных направления чтения. Как не принимать авторские обещания за гарантию и извлечь из книги один проверяемый шаг.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Три книги для саморазвития: как выбрать задачу и проверить совет на практике"
+  },
+  {
+    "slug": "kuratorskij-chas-kak-podgotovitsya",
+    "title": "Кураторский час: как подготовить вопросы и использовать встречу с пользой",
+    "excerpt": "Что уточнить о встречах с куратором, какие вопросы принести и как записать договорённость. Различаем организационную поддержку, предметное объяснение и личную консультацию.",
+    "category": "Школьное образование",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Кураторский час: как подготовить вопросы и использовать встречу с пользой"
+  },
+  {
+    "slug": "knigi-na-anglijskom-po-urovnyam-a1-b2",
+    "title": "Книги на английском A1–B2: пять адаптированных изданий и способ выбрать своё",
+    "excerpt": "Подборка с проверенными уровнями конкретных изданий. Почему оригинал и адаптация различаются, как проверить первые страницы и читать без перевода каждого слова.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Книги на английском A1–B2: пять адаптированных изданий и способ выбрать своё"
+  },
+  {
+    "slug": "professiya-aktera-teatra-pervaya-proba",
+    "title": "Профессия актёра театра: работа за пределами сцены и первая проба школьнику",
+    "excerpt": "Из чего складывается подготовка роли, чем репетиция отличается от чтения стихов и как попробовать театральную работу без обещания славы и профессионального отбора.",
+    "category": "Профориентация",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Профессия актёра театра: работа за пределами сцены и первая проба школьнику"
+  },
+  {
+    "slug": "interes-na-uroke-russkogo-yazyka-priemy",
+    "title": "Как поддержать интерес на уроке русского языка: задания с понятной задачей",
+    "excerpt": "Редакторская мастерская, сравнение вариантов и короткая обратная связь. Конкретные упражнения, которые связывают правило с задачей текста.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как поддержать интерес на уроке русского языка: задания с понятной задачей"
+  },
+  {
+    "slug": "ekologicheskaya-gramotnost-shkolnika",
+    "title": "Экологическая грамотность школьника: от вопроса к небольшому проверяемому действию",
+    "excerpt": "Как обсуждать экологию без страшных лозунгов: наблюдение, источник, посильный проект и честная оценка результата. Пример с расходом бумаги в классе.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Экологическая грамотность школьника: от вопроса к небольшому проверяемому действию"
+  },
+  {
+    "slug": "chek-list-dlya-9-10-11-klassa",
+    "title": "Чек-лист для 9, 10 и 11 класса: решения, документы и учебные шаги",
+    "excerpt": "Один рабочий лист на три школьных года: что уточнить в 9 классе, как проверить выбор в 10-м и что контролировать в 11-м. Без выдуманных единых сроков и обязательных репетиторов.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Чек-лист для 9, 10 и 11 класса: решения, документы и учебные шаги"
+  },
+  {
+    "slug": "kak-uchit-schitat-do-10-20-100",
+    "title": "Как учить ребёнка считать до 10, 20 и 100 через предметы и десятки",
+    "excerpt": "Последовательность чисел, количество, ноль и переход через десяток. Простые задания с крупными предметами и проверка понимания без гонки на скорость.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как учить ребёнка считать до 10, 20 и 100 через предметы и десятки"
+  },
+  {
+    "slug": "chek-list-podgotovki-onlajn-meropriyatiya",
+    "title": "Чек-лист подготовки онлайн-мероприятия для класса",
+    "excerpt": "Цель встречи, приглашение, доступность, репетиция и резервный план. Практический список для организатора школьного онлайн-события.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Чек-лист подготовки онлайн-мероприятия для класса"
+  },
+  {
+    "slug": "poteshki-dlya-malyshej-dlya-povsednevnyh-del",
+    "title": "20 коротких потешек для малышей: слова для игры и обычных дел",
+    "excerpt": "Собственные короткие потешки для умывания, прогулки и спокойной игры. Как читать их ребёнку, делать паузы и менять слова под свою семью.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "20 коротких потешек для малышей: слова для игры и обычных дел"
+  },
+  {
+    "slug": "urovni-anglijskogo-a1-c2-kak-ponimat-cefr",
+    "title": "Уровни английского A1–C2: что означает CEFR и как оценить свои навыки",
+    "excerpt": "Шесть уровней CEFR по реальным действиям с языком. Чем отличается самооценка от экзамена, почему один тест не описывает всю речь и как выбрать следующую учебную задачу.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Уровни английского A1–C2: что означает CEFR и как оценить свои навыки"
+  },
+  {
+    "slug": "k-9-maya-pyat-istorij-lyudej-i-dokumentov",
+    "title": "К 9 Мая: пять историй людей и вопросы к музейным источникам",
+    "excerpt": "Маресьев, Туснолобова-Марченко, Кожедуб, Павличенко и Космодемьянская. Как начать разговор о памяти с биографии и документа, сохраняя бережное отношение к ребёнку.",
+    "category": "Школьное образование",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "К 9 Мая: пять историй людей и вопросы к музейным источникам"
+  },
+  {
+    "slug": "stihi-i-muzykalnyj-scenarij-na-den-zashchity-detej",
+    "title": "Стихи и музыкальный сценарий на День защиты детей: короткие тексты для праздника",
+    "excerpt": "Пять новых стихотворений, общий припев и программа на 25 минут для 1 июня. Как распределить роли, провести репетицию и оставить участие добровольным.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Стихи и музыкальный сценарий на День защиты детей: короткие тексты для праздника"
+  },
+  {
+    "slug": "multisensornoe-obuchenie-bez-yarlykov",
+    "title": "Мультисенсорное обучение: как соединять слово, изображение и действие",
+    "excerpt": "Примеры для дробей, слов и последовательности действий. Чем работа с несколькими представлениями отличается от разделения детей на визуалов и аудиалов.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Мультисенсорное обучение: как соединять слово, изображение и действие"
+  },
+  {
+    "slug": "novogodnij-utrennik-pochtovaya-ekspediciya",
+    "title": "Новогодний утренник: сценарий «Почтовая экспедиция» для детского сада и 1 класса",
+    "excerpt": "Оригинальный сценарий с поиском адресов, бумажными снежинками и общей открыткой. Реплики ведущего, роли без обязательного сольного выступления и вариант без музыки.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Новогодний утренник: сценарий «Почтовая экспедиция» для детского сада и 1 класса"
+  },
+  {
+    "slug": "chetyre-uprazhneniya-dlya-ponyatnoj-rechi",
+    "title": "Четыре упражнения для понятной речи: объяснять, пересказывать и задавать вопросы",
+    "excerpt": "Небольшая практика для школьника: структура ответа, точное описание, пересказ смысла и уточняющий вопрос. Примеры и способ заметить прогресс без оценки личности.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Четыре упражнения для понятной речи: объяснять, пересказывать и задавать вопросы"
+  },
+  {
+    "slug": "voprosy-chtoby-luchshe-ponimat-sebya",
+    "title": "Как лучше понять себя: вопросы и небольшие пробы для подростка",
+    "excerpt": "Лист наблюдений о своих занятиях, ценностях и условиях работы. Как отделить интерес от ожидания других и выбрать маленький следующий шаг.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как лучше понять себя: вопросы и небольшие пробы для подростка"
+  },
+  {
+    "slug": "kak-podgotovit-klassnyj-chas-plan",
+    "title": "Как подготовить классный час: цель, обсуждение и понятный итог",
+    "excerpt": "Рабочая схема подготовки классного часа и редакционный пример на 30 минут. Как подобрать вопрос, распределить участие и избежать публичного разбора личных проблем.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как подготовить классный час: цель, обсуждение и понятный итог"
+  },
+  {
+    "slug": "applikacii-dlya-detej-chetyre-bumazhnyh-proekta",
+    "title": "Аппликации для детей: четыре бумажных проекта и простые шаблоны",
+    "excerpt": "Дождик из полосок, город из фигур, птица и книжная закладка. Словесные шаблоны, порядок сборки и варианты сложности без обязательного совпадения с образцом.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Аппликации для детей: четыре бумажных проекта и простые шаблоны"
+  },
+  {
+    "slug": "tsiklogramma-klassnogo-rukovoditelya-rabochij-shablon",
+    "title": "Циклограмма классного руководителя: как собрать свой рабочий календарь",
+    "excerpt": "Редакционный шаблон повторяющихся дел: задача, периодичность, результат и ответственный. Как не превратить календарь в универсальный список обязательных отчётов.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Циклограмма классного руководителя: как собрать свой рабочий календарь"
+  },
+  {
+    "slug": "anglijskij-za-mesyats-posilnyj-plan",
+    "title": "Английский за месяц: как составить посильный план и проверить результат",
+    "excerpt": "Четыре недели работы над одной языковой задачей: исходный образец, короткая практика, обратная связь и итоговое сравнение без обещания освоить весь английский.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Английский за месяц: как составить посильный план и проверить результат"
+  },
+  {
+    "slug": "kak-dognat-programmu-v-10-11-klasse",
+    "title": "Как догнать программу в 10–11 классе: план по пробелам, а не по страницам",
+    "excerpt": "Диагностика нужных тем, порядок восстановления и пример рабочей недели. Как согласовать учебный план с текущими уроками и экзаменационными задачами.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как догнать программу в 10–11 классе: план по пробелам, а не по страницам"
+  },
+  {
+    "slug": "voobrazhenie-i-kreativnost-uprazhneniya",
+    "title": "Как тренировать воображение и креативность: четыре задания с обсуждением",
+    "excerpt": "Придумать несколько вариантов, учесть ограничение и улучшить решение. Редакционные задания для школьника с примерами, критериями и без оценки врождённого таланта.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как тренировать воображение и креативность: четыре задания с обсуждением"
+  },
+  {
+    "slug": "plan-pismennoj-kontrolnoj-raboty",
+    "title": "Как составить план письменной контрольной работы: вопрос, разделы и проверка логики",
+    "excerpt": "План для связного письменного задания: как отличить его от содержания, собрать разделы и проверить, отвечает ли каждый пункт на тему. С редакционным примером.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Как составить план письменной контрольной работы: вопрос, разделы и проверка логики"
+  },
+  {
+    "slug": "professiya-arheologa-chto-delat-shkolniku",
+    "title": "Профессия археолога: как изучают находки и что попробовать школьнику",
+    "excerpt": "Археология не заканчивается находкой: описание, контекст, сравнение и проверка гипотез. Учебная проба без раскопок и реальных исторических предметов.",
+    "category": "Профориентация",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Профессия археолога: как изучают находки и что попробовать школьнику"
+  },
+  {
+    "slug": "obshchenie-uchitelya-s-roditelyami-praktika",
+    "title": "Общение учителя с родителями: как сформулировать вопрос и договориться о следующем шаге",
+    "excerpt": "Структура сообщения, подготовка личной встречи и фиксация договорённостей. Редакционные примеры без обвинений, публичного разбора оценок и требования круглосуточного ответа.",
+    "category": "Методики обучения",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Общение учителя с родителями: как сформулировать вопрос и договориться о следующем шаге"
+  },
+  {
+    "slug": "gde-shkolnye-predmety-nuzhny-v-zhizni",
+    "title": "Где школьные предметы нужны в жизни: пять задач с разбором",
+    "excerpt": "Проверка скидки, карта маршрута, понятное сообщение и работа с источником. Конкретные примеры применения знаний без обещания, что каждый параграф понадобится всем одинаково.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 4,
+    "imageAlt": "Где школьные предметы нужны в жизни: пять задач с разбором"
+  },
+  {
+    "slug": "stihi-k-8-marta-dlya-detej",
+    "title": "10 коротких стихотворений к 8 Марта: оригинальные тексты для детей",
+    "excerpt": "Поздравления маме, бабушке, учительнице и близкому человеку. Простые тексты для открытки и чтения с учётом разных семейных обстоятельств.",
+    "category": "Советы родителям",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "10 коротких стихотворений к 8 Марта: оригинальные тексты для детей"
+  },
+  {
+    "slug": "uchebnaya-sreda-ponyatnye-zadachi-i-podderzhka",
+    "title": "Учебная среда: что помогает ребёнку действовать самостоятельно",
+    "excerpt": "Как проверить ясность задания, доступность материалов, возможность задать вопрос и получить обратную связь. Практика для дома и класса шире выбора стола.",
+    "category": "Учёба и развитие",
+    "tags": [],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Учебная среда: что помогает ребёнку действовать самостоятельно"
+  },
+  {
+    "slug": "kod-okso-kak-chitat",
+    "title": "Код ОКСО: что означают цифры рядом с названием специальности",
+    "excerpt": "Чем отличается классификатор от кода программы и как сравнивать образовательные предложения.",
+    "category": "Поступление",
+    "tags": [
+      "ОКСО",
+      "специальности",
+      "поступление"
+    ],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "imageAlt": "Код ОКСО: что означают цифры рядом с названием специальности",
+    "readTime": 3
+  },
+  {
+    "slug": "pervoe-sobesedovanie-bez-opyta",
+    "title": "Первое собеседование без опыта: рассказ о себе, вопросы и репетиция",
+    "excerpt": "Как подготовиться к разговору о первой работе, честно рассказать о навыках и выяснить условия.",
+    "category": "Профориентация",
+    "tags": [
+      "первая работа",
+      "собеседование"
+    ],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "imageAlt": "Первое собеседование без опыта: рассказ о себе, вопросы и репетиция",
+    "readTime": 4
+  },
+  {
+    "slug": "pervoe-rezyume-bez-opyta",
+    "title": "Первое резюме без опыта: структура, навыки и учебный пример",
+    "excerpt": "Что написать о себе, если ещё не работали: проверяемая структура резюме и пример описания проекта.",
+    "category": "Профориентация",
+    "tags": [
+      "первая работа",
+      "резюме"
+    ],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "imageAlt": "Первое резюме без опыта: структура, навыки и учебный пример",
+    "readTime": 4
+  },
+  {
+    "slug": "nacionalnaya-tehnologicheskaya-olimpiada",
+    "title": "НТО: как участвовать, готовиться и проверять льготы при поступлении",
+    "excerpt": "Треки, этапы и подготовка к инженерной олимпиаде: что проверить перед регистрацией и поступлением в вуз.",
+    "category": "Олимпиады",
+    "tags": [
+      "НТО",
+      "олимпиады",
+      "поступление"
+    ],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "imageAlt": "НТО: как участвовать, готовиться и проверять льготы при поступлении",
+    "readTime": 4
+  },
+  {
+    "slug": "professionalitet-kak-vybrat-programmu",
+    "title": "Профессионалитет: что это, сколько учатся и как выбрать программу",
+    "excerpt": "Что означают кластеры и участие работодателей, почему сроки различаются и что спросить у колледжа.",
+    "category": "Поступление",
+    "tags": [
+      "СПО",
+      "колледж",
+      "профессионалитет"
+    ],
+    "author": "Редакция ProSchools",
+    "authorRole": "Редакция",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "imageAlt": "Профессионалитет: что это, сколько учатся и как выбрать программу",
+    "readTime": 4
   }
 ]
