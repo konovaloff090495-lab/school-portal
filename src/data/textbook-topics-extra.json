@@ -1426,5 +1426,453 @@
     "subject": "angliiskiy-yazyk",
     "klass": 6,
     "slug": "nationalities-nouns-angliyskiy"
+  },
+  {
+    "title": "Extern в C: объявление переменной в нескольких файлах",
+    "excerpt": "Как разделить объявление и определение, собрать два файла и избежать ошибок компоновки.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "extern-peremennye-c"
+  },
+  {
+    "title": "Цикл for в Java: обычный и расширенный обход",
+    "excerpt": "Счётчик, сумма массива и enhanced for: когда нужен индекс и что меняет continue.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "for-v-java"
+  },
+  {
+    "title": "Цикл for в C: порядок выполнения и границы",
+    "excerpt": "Инициализация, проверка, тело, шаг: трассировка суммы и ошибки на единицу.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "for-v-yazyke-c"
+  },
+  {
+    "title": "GoogleTest: первые автоматические тесты C++",
+    "excerpt": "TEST, EXPECT_EQ и ASSERT: проверка функции, выбор случаев и чтение результата.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "googletest-testy-cpp"
+  },
+  {
+    "title": "Malloc и free в C: выделение и освобождение памяти",
+    "excerpt": "Это функции библиотеки, а не сами системные вызовы: проверка NULL, размер блока и срок жизни указателя.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "malloc-free-c-dinamicheskaya-pamyat"
+  },
+  {
+    "title": "Raw types в Java: почему List без параметра опасен",
+    "excerpt": "Чем raw type отличается от diamond и List<Object>, как unchecked предупреждения превращаются в ошибки выполнения.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "raw-types-java"
+  },
+  {
+    "title": "Generics в Java: использование и объявление обобщённых типов",
+    "excerpt": "List<String>, собственный Holder<T> и два параметра: что проверяется компилятором.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "generics-java-obobshchennye-tipy"
+  },
+  {
+    "title": "Выделения и контуры в GIMP: как обвести сложный объект",
+    "excerpt": "Кривая Безье, узлы и направляющие: сохраняемый контур, преобразование в выделение и обводка.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-vydelenie-i-kontury"
+  },
+  {
+    "title": "GIMP: прямоугольное и эллиптическое выделение",
+    "excerpt": "Как ограничить область редактирования, получить квадрат или круг и отличить выделение от нарисованной фигуры.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-pryamougolnoe-ellipticheskoe-vydelenie"
+  },
+  {
+    "title": "GIMP: выделение по цвету и настройка порога",
+    "excerpt": "Как выбрать одинаковый цвет в разных частях изображения и не захватить лишнее.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-vydelenie-po-tsvetu"
+  },
+  {
+    "title": "GIMP как растровый редактор: первый учебный проект",
+    "excerpt": "Пиксели, слои, выделение, XCF и экспорт: как собрать простой плакат и сохранить возможность правки.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-rastrovyy-redaktor-pervyy-proekt"
+  },
+  {
+    "title": "История действий в GIMP: отмена, повтор и ограничения",
+    "excerpt": "Почему новая правка после отката удаляет ветку повтора и почему XCF не хранит историю отмены.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-istoriya-otmena-deystviy"
+  },
+  {
+    "title": "Размер изображения и холста в GIMP: как выбрать команду",
+    "excerpt": "Масштабирование меняет пиксели объектов, размер холста — границу кадра: разбор на числах.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-razmer-izobrazheniya-i-holsta"
+  },
+  {
+    "title": "Экспорт из GIMP: XCF, PNG и JPEG",
+    "excerpt": "Как сохранить редактируемый проект и отдельно получить готовое изображение без потери нужной прозрачности.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-eksport-png-jpeg"
+  },
+  {
+    "title": "Инструменты рисования GIMP: кисть, карандаш и параметры штриха",
+    "excerpt": "Размер, непрозрачность, жёсткость и динамика: как предсказуемо получить нужную линию.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-instrumenty-risovaniya-parametry"
+  },
+  {
+    "title": "Интерфейс GIMP: инструменты, параметры и настройка панелей",
+    "excerpt": "Как найти нужное окно, восстановить слои и различить группы инструментов.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-interfeys-instrumenty-nastroyka"
+  },
+  {
+    "title": "Маски слоя в GIMP: белое, чёрное, серое и способы создания",
+    "excerpt": "Как скрывать пиксели без стирания, получать мягкий переход и выбирать начальное содержимое маски.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-maska-sloya-seryy-gradient"
+  },
+  {
+    "title": "Установка GIMP: выбор системы и первый запуск",
+    "excerpt": "Официальная загрузка для Windows, macOS и Linux, архитектура процессора и проверка установленной программы.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "ustanovka-gimp-pervyy-zapusk"
+  },
+  {
+    "title": "Слои GIMP: порядок объектов, видимость и перемещение",
+    "excerpt": "Как собрать композицию из независимых элементов и исправить объект, который оказался под фоном.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gimp-sloi-poryadok-obektov"
+  },
+  {
+    "title": "Смешивание слоёв в GIMP: Normal, Multiply, Screen и непрозрачность",
+    "excerpt": "Как сочетать цвет верхнего и нижнего слоя и проверять результат без случайного изменения кисти.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-smeshivanie-sloev"
+  },
+  {
+    "title": "Фильтры и эффекты слоёв в GIMP3",
+    "excerpt": "Размытие, предпросмотр, порядок эффектов и Merge Filter: как менять результат с сохранением исходника.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-sloi-i-filtry-effekty"
+  },
+  {
+    "title": "Трансформация в GIMP: масштаб, поворот и выбор объекта",
+    "excerpt": "Как изменить один слой, а не всю композицию, и почему повторное растяжение не возвращает детали.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-transformatsiya-sloya"
+  },
+  {
+    "title": "Штамп в GIMP: источник, выравнивание и аккуратная ретушь",
+    "excerpt": "Как копировать пиксели, менять источник и избегать повторяющихся пятен.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "gimp-shtamp-clone"
+  },
+  {
+    "title": "Git и контроль версий: первый репозиторий и коммит",
+    "excerpt": "Рабочая папка, индекс и история: как сохранить осмысленную версию и проверить, что вошло в коммит.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "git-kontrol-versiy-pervye-komandy"
+  },
+  {
+    "title": "Безопасность GNU/Linux и Windows: что зависит от системы и пользователя",
+    "excerpt": "Обновления, права, защита от вредоносных программ и резервные копии без мифа о неуязвимой ОС.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "bezopasnost-linux-windows-osnovy"
+  },
+  {
+    "title": "Установка GNU/Linux: подготовка и пример с Ubuntu",
+    "excerpt": "Выбор дистрибутива, загрузочная флешка, пробный запуск и проверка диска перед записью.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "ustanovka-gnu-linux-dlya-nachinayushchih"
+  },
+  {
+    "title": "Google Документы: проверка текста, перевод и распознавание PDF",
+    "excerpt": "Встроенные помощники, проверка результата и отличие дополнения от обычной функции редактора.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "google-docs-proverka-perevod-raspoznavanie"
+  },
+  {
+    "title": "Как найти файл на компьютере и Google Диске",
+    "excerpt": "Название, содержимое, тип, дата и владелец: последовательное сужение поиска вместо случайных запросов.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "poisk-faylov-kompyuter-google-drive"
+  },
+  {
+    "title": "Hacer, poner, salir, venir: неправильные формы presente",
+    "excerpt": "Hago, pongo, salgo, vengo и чередование в venir: таблица четырёх глаголов с упражнениями.",
+    "subject": "ispanskiy-yazyk",
+    "klass": 6,
+    "slug": "hacer-poner-salir-venir-presente"
+  },
+  {
+    "title": "Куча heap: быстрый минимум и очередь с приоритетами",
+    "excerpt": "Свойство двоичной кучи, индексы в массиве, подъём и спуск элемента на примере heapq.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "kucha-heap-struktura-dannyh"
+  },
+  {
+    "title": "Hello, World: первая программа на Python, C, C++, Java и JavaScript",
+    "excerpt": "Как вывести строку, чем исходный код отличается от результата и что проверяет первый запуск.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "hello-world-python-c-cpp-java-javascript"
+  },
+  {
+    "title": "If и else в Java: условия, границы и порядок ветвей",
+    "excerpt": "Boolean, цепочка else if и независимые проверки: как выбрать нужную ветвь.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "if-else-v-java"
+  },
+  {
+    "title": "Условный оператор if в C: ноль, сравнение и ветвление",
+    "excerpt": "Как выбирать ветвь, не путать = и == и проверять граничные значения.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "if-else-yazyk-c"
+  },
+  {
+    "title": "Внешняя политика Александра II: направления и результаты",
+    "excerpt": "От последствий Крымской войны до Балкан, Средней Азии и Дальнего Востока.",
+    "subject": "istoriya",
+    "klass": 9,
+    "slug": "vneshnyaya-politika-aleksandra-ii"
+  },
+  {
+    "title": "Национальная и религиозная политика Александра II",
+    "excerpt": "Почему положение регионов и религиозных общин в империи было неодинаковым.",
+    "subject": "istoriya",
+    "klass": 9,
+    "slug": "natsionalnaya-religioznaya-politika-aleksandra-ii"
+  },
+  {
+    "title": "Иван III и Василий III: объединение земель и Московское государство",
+    "excerpt": "Как территориальное расширение связывалось с общими законами и укреплением власти государя.",
+    "subject": "istoriya",
+    "klass": 7,
+    "slug": "ivan-iii-vasilii-iii-moskovskoe-gosudarstvo"
+  },
+  {
+    "title": "Порядок слов при отрицании в немецком: nicht и kein",
+    "excerpt": "Почему nicht не всегда последнее слово, как работает kein и где отрицание меняет смысл.",
+    "subject": "nemetskiy-yazyk",
+    "klass": 6,
+    "slug": "nemetskoe-otritsanie-nicht-kein-poryadok"
+  },
+  {
+    "title": "Import в Java: полные имена, пакеты и static import",
+    "excerpt": "Почему import не скачивает библиотеку и почему java.util.* не включает вложенные пакеты.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "import-v-java"
+  },
+  {
+    "title": "Первая мультимедийная презентация в LibreOffice Impress",
+    "excerpt": "Пять слайдов, изображения, короткое видео, сохранение ODP и проверка показа на другом компьютере.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "libreoffice-impress-multimediynaya-prezentatsiya"
+  },
+  {
+    "title": "Анимация в Impress: объекты, порядок и переходы",
+    "excerpt": "Как последовательно показывать части схемы и отличать анимацию объекта от смены слайда.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "animatsiya-v-libreoffice-impress"
+  },
+  {
+    "title": "Вектор, растр и текст в одном документе Inkscape",
+    "excerpt": "Как собрать плакат из фотографии, геометрических объектов и надписи.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "vektor-rastr-i-tekst-v-inkscape"
+  },
+  {
+    "title": "Inkscape: первый векторный рисунок",
+    "excerpt": "От создания объектов до сохранения SVG и экспорта готовой картинки.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "inkscape-pervyi-vektornyi-risunok"
+  },
+  {
+    "title": "Градиентная заливка в Inkscape",
+    "excerpt": "Линейный и радиальный градиенты, опорные цвета и прозрачные переходы.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gradientnaya-zalivka-inkscape"
+  },
+  {
+    "title": "Группировка объектов в Inkscape",
+    "excerpt": "Как перемещать составной рисунок, редактировать его части и сохранять структуру.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "gruppirovka-obektov-inkscape"
+  },
+  {
+    "title": "Операции над контурами в Inkscape: объединение, разность и разрезание",
+    "excerpt": "Чем отличаются геометрические операции, составной контур и группа.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "operatsii-nad-konturami-i-mnozhestvami-inkscape"
+  },
+  {
+    "title": "Простые фигуры в Inkscape: размеры, скругление и преобразования",
+    "excerpt": "Прямоугольники, эллипсы и разница между ручками фигуры и общим выделением.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "prostye-figury-i-preobrazovaniya-inkscape"
+  },
+  {
+    "title": "Копирование, дублирование, клонирование и распыление в Inkscape",
+    "excerpt": "Как выбрать независимые экземпляры или связанные повторяющиеся элементы.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "kopii-klony-raspylenie-inkscape"
+  },
+  {
+    "title": "Заливка, обводка и прозрачность в Inkscape",
+    "excerpt": "Как оформить внутреннюю область, границу и прозрачность целого объекта.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "zalivka-obvodka-prozrachnost-inkscape"
+  },
+  {
+    "title": "Многоугольники и звёзды в Inkscape",
+    "excerpt": "Число вершин, радиусы звезды, скругление и управляемый силуэт.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "mnogougolniki-i-zvezdy-inkscape"
+  },
+  {
+    "title": "Интерфейс Inkscape: где искать инструменты и настройки",
+    "excerpt": "Как связаны рабочая область, панель инструмента, палитра, диалоги и строка состояния.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "interfeis-inkscape"
+  },
+  {
+    "title": "Как изменять контуры и узлы в Inkscape",
+    "excerpt": "От преобразования фигуры в контур до управления сегментами и кривизной.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "redaktirovanie-i-transformatsiya-konturov-inkscape"
+  },
+  {
+    "title": "Оформление текста в Inkscape",
+    "excerpt": "Шрифт, интервалы, текстовая рамка и надпись вдоль контура.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "oformlenie-teksta-inkscape"
+  },
+  {
+    "title": "Параллелепипед в Inkscape: рисунок в перспективе",
+    "excerpt": "Как инструмент объёмных коробок связывает грани с точками схода.",
+    "subject": "informatika",
+    "klass": 8,
+    "slug": "parallelepiped-v-inkscape"
+  },
+  {
+    "title": "Свободное рисование в Inkscape: карандаш и перо",
+    "excerpt": "Как получить плавную линию, ломаную и замкнутый силуэт.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "svobodnoe-risovanie-inkscape"
+  },
+  {
+    "title": "Установка Inkscape: выбор версии и проверка работы",
+    "excerpt": "Порядок установки для Windows, macOS и Linux без привязки к устаревшим номерам сборок.",
+    "subject": "informatika",
+    "klass": 7,
+    "slug": "ustanovka-inkscape"
+  },
+  {
+    "title": "Iterable и Iterator в Java: объект для обхода и состояние обхода",
+    "excerpt": "HasNext, next, remove и enhanced for: как проходить коллекцию и не удалять элементы небезопасно.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "java-iterable-iterator"
+  },
+  {
+    "title": "Иван IV: первый русский царь",
+    "excerpt": "Главные события правления Ивана Грозного и правила работы с исторической оценкой.",
+    "subject": "okruzhayushchiy-mir",
+    "klass": 4,
+    "slug": "ivan-iv-pervyi-russkii-tsar"
+  },
+  {
+    "title": "Элементы 14-й группы: строение и изменение свойств",
+    "excerpt": "Углерод, кремний, германий, олово и свинец: четыре внешних электрона, степени окисления и пределы аналогии.",
+    "subject": "khimiya",
+    "klass": 9,
+    "slug": "elementy-14-gruppy-iva-stroenie"
+  },
+  {
+    "title": "Модуль sys: аргументы командной строки, выход из программы и служебная информация",
+    "excerpt": "Модуль sys даёт программе доступ к служебной информации интерпретатора: аргументы командной строки, коды завершения, стандартные потоки ввода-вывода и путь поиска модулей.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "modul-sys-python"
+  },
+  {
+    "title": "Аргументы командной строки: как программа получает данные при запуске",
+    "excerpt": "Программу можно запускать с параметрами: python3 sum.py 12 30. Разберёмся, как Python получает эти параметры через sys.argv, почему они всегда строки и как безопасно превращать их в числа.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "argumenty-komandnoy-stroki-python"
+  },
+  {
+    "title": "Словари: храним данные по именам, а не по номерам",
+    "excerpt": "Словарь (dict) сопоставляет каждому ключу значение: вместо «элемент номер 3» — «оценки Ани» или «цена банана». Разберём создание, чтение, метод get и частотный анализ слов.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "slovari-assotsiativnye-massivy-python"
+  },
+  {
+    "title": "Генераторы списков: создаём списки одной строкой",
+    "excerpt": "Генератор списка — компактная запись цикла, который строит новый список: квадраты чётных чисел, имена лучших учеников, проценты баллов. Учимся читать и писать [x ** 2 for x in numbers if x % 2 == 0].",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "generatory-spiskov-python"
+  },
+  {
+    "title": "Практикум: задачи на кортежи и множества",
+    "excerpt": "Четыре учебные задачи: обмен значениями через распаковку, расстояние между точками, уникальные посетители сайта и кружковая статистика. В каждой — полное решение и разбор.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "zadachi-na-kortezhi-i-mnozhestva"
+  },
+  {
+    "title": "Плановая обработка ошибок: try, except и собственные исключения",
+    "excerpt": "Ошибка не должна рушить программу неожиданно. Разберём механику try/except, почему except должен быть конкретным, как поднимать свои ValueError и зачем нужен finally.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "obrabotka-oshibok-isklyucheniya-python"
   }
 ]
