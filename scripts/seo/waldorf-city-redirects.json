@@ -5,5 +5,10 @@
   "/shkoly/nizhniy-novgorod/valdorfskie": "/shkoly/tipy/valdorfskie/",
   "/shkoly/omsk/valdorfskie": "/shkoly/tipy/valdorfskie/",
   "/shkoly/perm/valdorfskie": "/shkoly/tipy/valdorfskie/",
-  "/shkoly/voronezh/valdorfskie": "/shkoly/babyakovo/valdorfskie/"
+  "/shkoly/voronezh/valdorfskie": "/shkoly/babyakovo/valdorfskie/",
+  "/shkoly/moskovskaya-oblast/gorod/odintsovo/valdorfskie": "/shkoly/moskovskaya-oblast/valdorfskie/",
+  "/shkoly/moskovskaya-oblast/gorod/sergiev-posad/valdorfskie": "/shkoly/moskovskaya-oblast/valdorfskie/",
+  "/shkoly/moskovskaya-oblast/gorod/reutov/valdorfskie": "/shkoly/moskovskaya-oblast/valdorfskie/",
+  "/shkoly/moskovskaya-oblast/gorod/mytishchi/valdorfskie": "/shkoly/moskovskaya-oblast/valdorfskie/",
+  "/shkoly/moskovskaya-oblast/gorod/pushkino/valdorfskie": "/shkoly/moskovskaya-oblast/valdorfskie/"
 }

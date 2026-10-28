@@ -36,6 +36,13 @@ try {
     assert.ok(html.includes('https://pro-schools.ru'+path),path)
     checked++
   }
+  for(const city of ['laryushino','palitsy','zhukovsky','krasnogorsk']) {
+    const path='/shkoly/moskovskaya-oblast/gorod/'+city+'/valdorfskie/'
+    const {r,html}=await get(path)
+    assert.equal(r.status,200,path)
+    assert.ok(html.includes('href="/shkola/'),path)
+    checked++
+  }
   for(const [source,dest] of Object.entries(cityRedirects)) {
     const {r}=await get(source+'/','manual')
     assert.equal(r.status,308,source)
