@@ -248,5 +248,30 @@
     "imageAlt": "Школа святого Георгия — лечебная педагогика — Москва",
     "photoCount": 0,
     "photoUrls": []
+  },
+  "valdorfskaya-shkola-sad-cheboksary": {
+    "id": "valdorfskaya-shkola-sad-cheboksary",
+    "slug": "valdorfskaya-shkola-sad-cheboksary",
+    "name": "Вальдорфская школа-сад Чебоксар",
+    "type": "chastnie",
+    "region": "cheboksary",
+    "city": "Чебоксары",
+    "address": "ул. Богдана Хмельницкого, 10",
+    "phone": "+7 (917) 669-17-89",
+    "website": "https://vk.com/waldorf21school",
+    "sourceUrl": "https://cheboksaryi.gdeprof.ru/valdorfskaya-shkola-sad",
+    "checkedAt": "2026-10-28",
+    "description": "Начальные вальдорфские классы и детский сад в Чебоксарах.",
+    "fullDescription": "Вальдорфская школа-сад в Чебоксарах: начальные классы для детей 6,5–11 лет и дошкольные группы. Адрес: ул. Богдана Хмельницкого, 10. Описание школьной программы опубликовано от имени инициативы в открытом профиле с официальной страницей ВКонтакте. Набор классов, порядок аттестации и стоимость уточняйте перед поступлением.",
+    "grades": "1–4",
+    "features": [
+      "Вальдорфская педагогика",
+      "Начальные классы"
+    ],
+    "rating": null,
+    "reviewCount": 0,
+    "imageAlt": "Вальдорфская школа-сад в Чебоксарах",
+    "photoCount": 0,
+    "photoUrls": []
   }
 }
