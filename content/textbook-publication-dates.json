@@ -1624,5 +1624,743 @@
     "klass": 10,
     "topicSlug": "predstavlenie-chisel",
     "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "extern-peremennye-c",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "for-v-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "for-v-yazyke-c",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "googletest-testy-cpp",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "malloc-free-c-dinamicheskaya-pamyat",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "raw-types-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "generics-java-obobshchennye-tipy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-vydelenie-i-kontury",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-pryamougolnoe-ellipticheskoe-vydelenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-vydelenie-po-tsvetu",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-rastrovyy-redaktor-pervyy-proekt",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-istoriya-otmena-deystviy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-razmer-izobrazheniya-i-holsta",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-eksport-png-jpeg",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-instrumenty-risovaniya-parametry",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-interfeys-instrumenty-nastroyka",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-maska-sloya-seryy-gradient",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "ustanovka-gimp-pervyy-zapusk",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-sloi-poryadok-obektov",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-smeshivanie-sloev",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-sloi-i-filtry-effekty",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-transformatsiya-sloya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "gimp-shtamp-clone",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "git-kontrol-versiy-pervye-komandy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "bezopasnost-linux-windows-osnovy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "ustanovka-gnu-linux-dlya-nachinayushchih",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "google-docs-proverka-perevod-raspoznavanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "poisk-faylov-kompyuter-google-drive",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "hacer-poner-salir-venir-presente",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "kucha-heap-struktura-dannyh",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "hello-world-python-c-cpp-java-javascript",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "if-else-v-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "if-else-yazyk-c",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 9,
+    "topicSlug": "vneshnyaya-politika-aleksandra-ii",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 9,
+    "topicSlug": "natsionalnaya-religioznaya-politika-aleksandra-ii",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 7,
+    "topicSlug": "ivan-iii-vasilii-iii-moskovskoe-gosudarstvo",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "nemetskoe-otritsanie-nicht-kein-poryadok",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "import-v-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "libreoffice-impress-multimediynaya-prezentatsiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "animatsiya-v-libreoffice-impress",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "vektor-rastr-i-tekst-v-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "inkscape-pervyi-vektornyi-risunok",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gradientnaya-zalivka-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gruppirovka-obektov-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "operatsii-nad-konturami-i-mnozhestvami-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "prostye-figury-i-preobrazovaniya-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "kopii-klony-raspylenie-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "zalivka-obvodka-prozrachnost-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "mnogougolniki-i-zvezdy-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "interfeis-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "redaktirovanie-i-transformatsiya-konturov-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "oformlenie-teksta-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "parallelepiped-v-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "svobodnoe-risovanie-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "ustanovka-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-iterable-iterator",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "okruzhayushchiy-mir",
+    "klass": 4,
+    "topicSlug": "ivan-iv-pervyi-russkii-tsar",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 9,
+    "topicSlug": "elementy-14-gruppy-iva-stroenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "modul-sys-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "argumenty-komandnoy-stroki-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "slovari-assotsiativnye-massivy-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "generatory-spiskov-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "zadachi-na-kortezhi-i-mnozhestva",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "obrabotka-oshibok-isklyucheniya-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "rekursiya-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "stek-i-ochered-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "szhatie-dannyh-i-kod-haffmana-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "grafy-i-poisk-puti-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "sistemy-schisleniya-i-tochnost-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 3,
+    "topicSlug": "algoritm-i-plan-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 3,
+    "topicSlug": "chislovaya-informaciya-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 3,
+    "topicSlug": "kodirovanie-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 3,
+    "topicSlug": "mnozhestva-i-gruppy-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 3,
+    "topicSlug": "tablica-kak-sposob-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 4,
+    "topicSlug": "komp-grafika-tekst-4",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "deystviya-s-informaciey-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "informatsiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "kompyuter",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "mnozhestva-obektov-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "programmy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "raster-i-piksel-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "shifr-cezarya-sdvig-bukv-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "skanirovanie-i-fotografirovanie-informacii-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "tablica-simvolov-koda-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "ustroystva-vvoda-vyvoda-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "vstavka-tablicy-v-dokument-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "znakovye-sistemy-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "ciklicheskij-algoritm-s-schetchikom-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "diagramma-rassuzhdenij-derevo-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "diagrammy-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "fajlovaya-sistema-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "formaty-fajlov-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "graf-i-poisk-puti-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "graficheskaya-informaciya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "graficheskoe-menyu-i-knopki-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "internet-i-veb-stranicy-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "ispolnitel-vodoley-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "kodirovanie-informacii-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "kompyuternaya-set-osnovy-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "kompyuternye-prezentacii-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "koordinatnaya-ploskost-model-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "mnogourovnevye-spiski-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "otnosheniya-obektov-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "redaktirovanie-formatirovanie-teksta-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "shrift-i-nachertanie-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "tablichnoe-reshenie-zadach-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "tekstovaya-informaciya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "tekstovyj-redaktor-naznachenie-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "velichiny-peremennye-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "vspomogatelnye-algoritmy-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "vychislitelnye-tablicy-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 6,
+    "topicSlug": "zvukozapis-i-redaktor-zvuka-6",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "diagrammy-v-elektronnyh-tablicah-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "graficheskiy-interfeys-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "graficheskiy-redaktor-instrumenty-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "klaviatura-i-goryachie-klavishi-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "klient-server-i-onlayn-servisy-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "kodirovanie-celyh-chisel-v-pamyati-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "kompyuternye-prezentacii-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "logicheskie-zakony-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "nositeli-informacii-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "obshchaya-shema-peredachi-informacii-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "perevod-chisel-dvoichnaya-7",
+    "updatedAt": "2026-10-28"
   }
 ]
