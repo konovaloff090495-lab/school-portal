@@ -75,6 +75,7 @@ jobs:
           retention-days: 2
       - run: node scripts/schools/check-media.mjs
       - run: npm run build
+      - run: node --experimental-strip-types scripts/check-textbook-sanitizer.mjs
       - run: node scripts/check-textbook-extra-http.mjs
         timeout-minutes: 5
       - run: node scripts/waldorf-schools/check-http.mjs
