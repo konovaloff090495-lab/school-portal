@@ -3,25 +3,29 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('public/monetization/varioqub.js', 'utf8');
 const config = JSON.parse(fs.readFileSync('public/monetization/experiments.json', 'utf8'));
+const topConfig = JSON.parse(JSON.stringify(config));
+delete config.topAd;
 const settle = () => new Promise(resolve => setImmediate(resolve));
 
-function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
+function fixture(pathname = '/uchebnik/matematika/5-klass/test/', mobile = false) {
   const events = {};
   const pending = [];
   const scripts = [];
   const destroyed = [];
   const observers = [];
+  const rendered = [], documentEvents = {};
   const window = {
     location: {pathname, href: 'https://pro-schools.ru' + pathname},
     addEventListener: (name, fn) => { events[name] = fn; },
-    innerWidth: 1280, innerHeight: 720,
+    innerWidth: mobile ? 390 : 1280, innerHeight: 720,
+    matchMedia: () => ({matches: mobile}),
     requestAnimationFrame: fn => fn(), setInterval: () => 1,
     getComputedStyle: element => ({position: element.position}),
-    Ya: {Context: {AdvManager: {destroy: value => destroyed.push(value.blockId)}}},
+    Ya: {Context: {AdvManager: {destroy: value => destroyed.push(value.blockId), render: value => rendered.push(value)}}},
   };
   const attrs = {};
   const styles = {}, nodes = {};
-  const document = {documentElement: {style: {setProperty: (key, value) => {styles[key] = value;}, removeProperty: key => {delete styles[key];}}, setAttribute: (key, value) => {attrs[key] = value;}, removeAttribute: key => {delete attrs[key];}}, body: {children: []}, getElementById: id => nodes[id], head: {appendChild: element => {nodes[element.id] = element; if (element.tagName === 'SCRIPT') scripts.push(element);}}, createElement: tag => ({tagName: tag.toUpperCase()})};
+  const document = {addEventListener: (name, fn) => {documentEvents[name] = fn;}, querySelector: () => null, documentElement: {style: {getPropertyValue: key => styles[key] || '', setProperty: (key, value) => {styles[key] = value;}, removeProperty: key => {delete styles[key];}}, setAttribute: (key, value) => {attrs[key] = value;}, removeAttribute: key => {delete attrs[key];}}, body: {children: []}, getElementById: id => nodes[id], head: {appendChild: element => {nodes[element.id] = element; if (element.tagName === 'SCRIPT') scripts.push(element);}}, createElement: tag => ({tagName: tag.toUpperCase()})};
   class MutationObserver {
     constructor(fn) { this.fn = fn; observers.push(this); }
     observe() {}
@@ -30,7 +34,7 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
   const context = vm.createContext({window, document, MutationObserver,
     fetch: () => new Promise(resolve => pending.push(resolve))});
   vm.runInContext(source, context);
-  return {window, document, styles, events, pending, scripts, destroyed, observers, context, attrs,
+  return {rendered, documentEvents, window, document, styles, events, pending, scripts, destroyed, observers, context, attrs,
     respond(value = config) { pending.shift()({ok: true, json: async () => value}); },
     route(path) { window.location.pathname = path; window.location.href = 'https://pro-schools.ru' + path; events['ps:navigation-route'](); }};
 }
@@ -74,5 +78,32 @@ function fixture(pathname = '/uchebnik/matematika/5-klass/test/') {
   assert.equal(invalid.window.__psVarioqubStatus, 'config_error');
   vm.runInContext(source, f.context);
   assert.equal(f.scripts.length, 1, 'duplicate script execution is inert');
+  const top = fixture('/blog/test/', true); top.respond(topConfig); await settle();
+  assert.equal(top.scripts.length, 0, 'direct pilot must not reactivate stopped Varioqub experiment');
+  assert.equal(top.window.yaContextCb.length, 1);
+  top.window.yaContextCb[0]();
+  assert.equal(top.rendered.length, 1);
+  assert.equal(top.rendered[0].type, 'topAd');
+  assert.equal(top.rendered[0].blockId, 'R-A-19425636-5');
+  top.document.body.children.push({tagName:'DIV',position:'fixed',getBoundingClientRect:()=>({width:390,height:100,top:0}),querySelector:()=>({})});
+  top.rendered[0].onRender();
+  assert.equal(top.styles['--ps-top-clearance'], '112px');
+  top.document.body.children = []; top.events.resize();
+  assert.equal(top.styles['--ps-top-clearance'], undefined, 'close must remove reserved space');
+  top.documentEvents.focusin({target:{closest:()=>({})}});
+  assert.ok(top.destroyed.includes('R-A-19425636-5'), 'form focus must hide overlay');
+  top.route('/shkoly/moskva/'); top.respond(topConfig); await settle();
+  top.rendered[0].onRender();
+  assert.equal(top.styles['--ps-top-clearance'], undefined, 'late callback cannot restore catalog ad');
+  assert.equal(top.attrs['data-ps-top-visible'], undefined);
+  const queued = fixture('/blog/test/', true); queued.respond(topConfig); await settle();
+  queued.route('/shkola/test/'); queued.window.yaContextCb[0]();
+  assert.equal(queued.rendered.length, 0, 'queued render cannot escape information scope');
+  const desktop = fixture(); desktop.respond(topConfig); await settle();
+  assert.equal(desktop.rendered.length, 0); assert.equal(desktop.window.yaContextCb, undefined);
+  const stoppedTop = fixture('/blog/test/',true); stoppedTop.respond(topConfig); await settle();
+  stoppedTop.events['ps:monetization-stop'](); stoppedTop.window.yaContextCb[0]();
+  assert.equal(stoppedTop.rendered.length,0,'kill switch must cancel queued Top');
+  console.log('Top Ad checks passed: mobile gate, native type, header clearance, close, lead focus, scope exit, stale queue/callback, desktop exclusion and kill switch.');
   console.log('Varioqub checks passed: route scope, stale response/callback, SPA init, unique loader, kill switch, invalid config.');
 })();
