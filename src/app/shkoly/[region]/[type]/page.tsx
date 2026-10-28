@@ -1,3 +1,4 @@
+import WaldorfCatalogNotes from '@/components/WaldorfCatalogNotes'
 import formatMetadata from '@/data/school-format-metadata.json'
 import EveningCityGuide from '@/components/EveningCityGuide'
 import MoscowEveningVerification from '@/components/MoscowEveningVerification'
@@ -158,6 +159,8 @@ export default async function TypePage({ params }: Props) {
             ? <><VechernieCityExtras region={r} count={list.length} variant={t} afterLead={t === 'vechernie' ? r === 'moskva' ? <MoscowEveningVerification /> : <EveningCityGuide region={r} /> : undefined} />{!(r === 'moskva' && t === 'vechernie') && <SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />}</>
             : t === 'podgotovka-ege' || t === 'podgotovka-oge'
             ? <><EgeCityExtras region={r} variant={t === 'podgotovka-ege' ? 'ege' : 'oge'} count={list.length} /><SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} /></>
+            : t === 'valdorfskie'
+            ? <><WaldorfCatalogNotes /><SeoBlock region={r} type={t} count={list.length} hubHref="/shkoly/tipy/valdorfskie/" hubLabel={hubLabel} /></>
             : t === 'semejnye'
             ? <>
                 <OnlineLeadCta

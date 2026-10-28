@@ -44,6 +44,7 @@ jobs:
       - run: python3 scripts/test-school-submissions.py
       - run: npm run lint:leads
       - run: python3 scripts/check-navigation-policy.py
+      - run: node scripts/waldorf-schools/check.mjs
       - run: node scripts/family-schools/check-catalog.mjs
       - run: node scripts/externat-schools/check.mjs
       - run: node scripts/online-schools/check.mjs
