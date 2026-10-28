@@ -18,7 +18,7 @@ try {
   for(let i=0;i<60;i++) {try{if((await get('/shkoly/tipy/valdorfskie/')).r.ok)break}catch{};await new Promise(r=>setTimeout(r,500))}
   const {html:hub,r} = await get('/shkoly/tipy/valdorfskie/')
   assert.equal(r.status,200)
-  assert.match(hub, /35 школ, подразделений и семейных классов/)
+  assert.ok(hub.includes(`${registry.length} школ, подразделений и семейных классов`))
   assert.match(hub,/Источники и актуальность списка/)
   for(const row of registry) {
     const {r,html} = await get('/shkola/'+row.slug+'/')
