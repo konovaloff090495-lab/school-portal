@@ -747,11 +747,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-06",
-    "readTime": 3,
+    "readTime": 4,
     "imageAlt": "Иллюстрация: Домашнее обучение в 2026 году",
     "imageUrl": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
-    "suProduct": "online-school",
-    "updatedAt": "2026-10-22"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov",
@@ -1073,11 +1072,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-10",
-    "readTime": 11,
+    "readTime": 3,
     "imageAlt": "Иллюстрация: Вечерняя школа 2026",
     "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
-    "suProduct": "vechernyaya-shkola",
-    "updatedAt": "2026-10-22"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "onlajn-shkoly-akkreditatsiya-2026",
@@ -3254,10 +3252,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-05-26",
     "readTime": 6,
-    "imageAlt": "Иллюстрация: Школьники выполняют разминку под руководством тренера",
-    "suProduct": "online-school",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261021/shkola-i-sport-kak-sovmeshchat.webp"
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/shkola-i-sport-kak-sovmeshchat.webp",
+    "imageAlt": "Иллюстрация: Школьники выполняют разминку под руководством тренера"
   },
   {
     "slug": "kak-prohodit-domashneye-obuchenie",
@@ -3329,11 +3326,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-06-02",
-    "readTime": 5,
-    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
-    "suProduct": "zaochnaya-shkola",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261022/school-library.webp"
+    "readTime": 6,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке"
   },
   {
     "slug": "semejnoe-obuchenie-podrostok",
@@ -4425,9 +4421,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-01-20",
-    "readTime": 8,
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261021/domashnie-zadaniya-normy.webp",
     "imageAlt": "Иллюстрация: Организация школьных занятий",
-    "imageUrl": "/blog/images/editorial-20261021/domashnie-zadaniya-normy.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "prava-roditelej-na-semejnom-obuchenii",
@@ -6034,9 +6031,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-08-05",
-    "readTime": 11,
+    "readTime": 5,
     "imageAlt": "Иллюстрация: Ребёнок не хочет учиться",
-    "imageUrl": "/blog/images/editorial-20261021/rebenok-ne-hochet-uchitsya-prichiny.webp"
+    "imageUrl": "/blog/images/editorial-20261021/rebenok-ne-hochet-uchitsya-prichiny.webp",
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-razvit-samodisciplinu-rebenka",
@@ -10386,9 +10384,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-14",
-    "readTime": 7,
+    "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261021/gosudarstvennaya-ili-chastnaya-shkola.webp",
     "imageAlt": "Иллюстрация: Ученики, родители и преподаватели в школьной обстановке",
-    "imageUrl": "/blog/images/editorial-20261021/gosudarstvennaya-ili-chastnaya-shkola.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "kak-nauchit-rebenka-postoyat-za-sebya",
@@ -12430,9 +12429,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-25",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov.webp",
     "imageAlt": "Иллюстрация: Поддерживающий разговор ребёнка со взрослым",
-    "imageUrl": "/blog/images/editorial-20261021/kak-pomoch-rebyonku-s-uchjoboj-bez-skandalov.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "rebenok-gryzet-nogti",
@@ -12487,9 +12487,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Образовательный отдел",
     "publishedAt": "2026-07-25",
-    "readTime": 9,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp",
     "imageAlt": "Иллюстрация: Общение и совместные занятия школьников",
-    "imageUrl": "/blog/images/editorial-20261021/rebenok-i-neznakomcy.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "chitatelskij-dnevnik-kak-vesti",
@@ -15386,14 +15387,13 @@
       "аттестат"
     ],
     "publishedAt": "2026-08-22",
-    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "category": "Взрослым",
     "readTime": 3,
-    "updatedAt": "2026-10-22",
-    "suProduct": "externat",
-    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp"
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
+    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами"
   },
   {
     "slug": "skolko-stoit-eksternat",
@@ -15424,14 +15424,13 @@
       "очно-заочная форма"
     ],
     "publishedAt": "2026-08-23",
-    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "category": "Взрослым",
-    "readTime": 4,
-    "suProduct": "vechernyaya-shkola",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp"
+    "readTime": 5,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/vechernyaya-shkola-kak-postupit.webp",
+    "imageAlt": "Иллюстрация: Взрослые ученики за учебными материалами"
   },
   {
     "slug": "eksternat-ili-vechernyaya-shkola",
@@ -16154,10 +16153,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-24",
     "readTime": 7,
-    "imageAlt": "Иллюстрация: Родители обсуждают документы и порядок обучения",
-    "suProduct": "attestaciya",
-    "updatedAt": "2026-10-22",
-    "imageUrl": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp"
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp",
+    "imageAlt": "Иллюстрация: Родители обсуждают документы и порядок обучения"
   },
   {
     "slug": "vysshee-obrazovanie-bez-ege",
@@ -16375,22 +16373,23 @@
     "imageUrl": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp"
   },
   {
+    "category": "ОБУЧЕНИЕ",
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-07",
     "slug": "programmirovanie-dlya-detej",
     "title": "Программирование для детей и школьников: с чего начать и где учиться",
     "excerpt": "Как выбрать первый язык, курс или кружок для ребёнка и школьника: Scratch, Python, игры, бесплатный старт и школы по городам.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "программирование для детей",
       "обучение программированию",
       "для школьников",
       "программирование для школьников"
     ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-10-07",
-    "readTime": 10,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "readTime": 4,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "programmirovanie-dlya-detej-po-vozrastam",
@@ -16422,9 +16421,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
-    "readTime": 10,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "readTime": 11,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "scratch-dlya-detej",
@@ -16439,9 +16439,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
-    "readTime": 7,
-    "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект",
-    "imageUrl": "/blog/images/editorial-20261022/video.webp"
+    "readTime": 8,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/video.webp",
+    "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
   },
   {
     "slug": "skolko-stoyat-kursy-programmirovaniya-dlya-detej",
@@ -16524,9 +16525,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
-    "readTime": 9,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "readTime": 10,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "gimnaziya-primakova-postuplenie-stoimost",
@@ -18714,9 +18716,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 4,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261021/kiberbulling-kak-zashchitit-rebenka.webp",
     "imageAlt": "Иллюстрация: Ребёнок и взрослый обсуждают безопасное использование компьютера",
-    "imageUrl": "/blog/images/editorial-20261021/kiberbulling-kak-zashchitit-rebenka.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-kompyuternoj-gramotnosti-dlya-detej",
@@ -18765,9 +18768,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 9,
+    "readTime": 10,
+    "imageUrl": "/blog/images/editorial-20261021/tvorcheskie-professii-2026.webp",
     "imageAlt": "Иллюстрация: Ученица рисует натюрморт акварелью в художественной студии",
-    "imageUrl": "/blog/images/editorial-20261021/tvorcheskie-professii-2026.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-po-shkolnym-predmetam",
@@ -18850,9 +18854,10 @@
     "author": "Редакция pro-schools.ru",
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-19",
-    "readTime": 3,
+    "readTime": 5,
+    "imageUrl": "/blog/images/editorial-20261022/robotics.webp",
     "imageAlt": "Иллюстрация: Школьники с преподавателем собирают учебного робота",
-    "imageUrl": "/blog/images/editorial-20261022/robotics.webp"
+    "updatedAt": "2026-10-28"
   },
   {
     "slug": "luchshie-kursy-shahmat-dlya-detej",
@@ -26141,6 +26146,193 @@
     "readTime": 2,
     "imageUrl": "/blog/images/editorial-20261021/podgotovka-k-ege-russkij-yazyk-plan.webp",
     "imageAlt": "Иллюстрация: Ученица пишет в тетради за рабочим столом",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "akademicheskaya-zadolzhennost-semejnoe-obuchenie",
+    "title": "Академическая задолженность на семейном обучении: что делать после несданной аттестации",
+    "excerpt": "Несданная аттестация на семейном обучении: документы, повторные попытки, подготовка и дальнейший маршрут.",
+    "category": "Права и документы",
+    "tags": [
+      "Формы обучения",
+      "Аттестации"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/kak-zapisat-rebyonka-v-shkolu-2026.webp",
+    "imageAlt": "Иллюстрация: Родители обсуждают документы и порядок обучения"
+  },
+  {
+    "slug": "uchebniki-na-semejnom-obuchenii",
+    "title": "Учебники на семейном обучении: где взять и как согласовать программу",
+    "excerpt": "Как согласовать учебники на семейном обучении, запросить библиотечный комплект и избежать лишних покупок.",
+    "category": "Типы школ",
+    "tags": [
+      "Формы обучения",
+      "Быт и расходы"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "imageAlt": "Иллюстрация: Домашнее обучение в 2026 году",
+    "imageUrl": "/blog/images/editorial-20261021/domashnee-obuchenie-plyusy-minusy.webp",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "javascript-dlya-detej",
+    "title": "JavaScript для детей: первые проекты и как выбрать курс",
+    "excerpt": "JavaScript для школьника: что делает язык, какие проекты попробовать и как сравнить программы веб-разработки.",
+    "category": "Курсы для детей",
+    "tags": [
+      "Программирование",
+      "Языки и среды"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "slug": "python-igra-ugadaj-chislo",
+    "title": "Игра «Угадай число» на Python: первый проект с объяснением кода",
+    "excerpt": "Готовая игра на Python 3: подсказки, проверка ввода и счёт попыток. Объяснение кода и задания на доработку.",
+    "category": "Курсы для детей",
+    "tags": [
+      "Программирование",
+      "Навыки и проекты"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "slug": "scratch-pervaya-igra-so-schetom",
+    "title": "Как сделать игру в Scratch: ловим звёзды и считаем очки",
+    "excerpt": "Первая игра в Scratch: переменная очков, пять нажатий до победы и правильный перезапуск. Схема блоков и проверка ошибок.",
+    "category": "Курсы для детей",
+    "tags": [
+      "Программирование",
+      "Навыки и проекты"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Редакция образовательного каталога",
+    "publishedAt": "2026-10-28",
+    "readTime": 3,
+    "updatedAt": "2026-10-28",
+    "imageUrl": "/blog/images/editorial-20261022/video.webp",
+    "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
+  },
+  {
+    "slug": "nizkaya-samoocenka-u-rebenka",
+    "title": "Низкая самооценка у ребёнка: как поддержать уверенность в своих силах",
+    "excerpt": "Как реагировать на «я ничего не умею», обсуждать ошибку и замечать собственный прогресс ребёнка без завышенных обещаний.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Самооценка"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-brosaet-nachatoe",
+    "title": "Ребёнок бросает начатое: как найти причину и помочь завершить дело",
+    "excerpt": "Почему ребёнок бросает занятия и проекты: как определить препятствие, уменьшить объём и договориться о результате.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Целеполагание"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "lichnye-granicy-rebenka-kak-govorit-net",
+    "title": "Личные границы ребёнка: как научить говорить «нет» и просить защиты",
+    "excerpt": "Как обсуждать личные границы, репетировать отказ и обращаться за защитой без требования справляться в одиночку.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Договорённости и границы"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-ne-umeet-proigryvat",
+    "title": "Ребёнок не умеет проигрывать: как поддержать после неудачи",
+    "excerpt": "Как реагировать на слёзы и злость после проигрыша, обсуждать правила и готовить следующую попытку без унижения.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Конфликты"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "rebenok-boitsya-novogo",
+    "title": "Ребёнок боится нового: как подготовить к переменам небольшими шагами",
+    "excerpt": "Как подготовить ребёнка к новому кружку или переменам: информация, небольшая проба, поддержка и обсуждение опыта.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Самоопределение и гибкость"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "slug": "kriticheskoe-myshlenie-dlya-detej",
+    "title": "Критическое мышление у детей: пять заданий на проверку информации",
+    "excerpt": "Пять домашних заданий: факт и мнение, поиск источника, сравнение версий, проверка рекламы и пересмотр решения.",
+    "category": "ПРОФОРИЕНТАЦИЯ",
+    "tags": [
+      "Навыки и проблемы ребёнка",
+      "Критическое мышление"
+    ],
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-28",
+    "readTime": 2,
+    "imageUrl": "/blog/images/editorial-20261022/school-library.webp",
+    "imageAlt": "Иллюстрация: Подростки занимаются с книгами и тетрадями в школьной библиотеке",
     "updatedAt": "2026-10-28"
   }
 ]
