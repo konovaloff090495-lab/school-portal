@@ -429,7 +429,7 @@ export default async function SchoolPage({ params }: Props) {
           {school.type === 'programmirovanie' && <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-3">Программы и условия записи</h2>
             <p className="text-sm text-gray-600 mb-4">Программы сети могут отличаться от занятий в конкретном филиале. Уточните возраст группы, расписание и полную стоимость по официальным контактам школы.</p>
-            {school.sourceUrl && <p className="text-xs text-gray-500 mb-4"><a className="text-[#0369A1] hover:underline" href={school.sourceUrl} target="_blank" rel="noopener noreferrer">Официальный источник</a>{school.checkedAt ? ` · проверено ${school.checkedAt}` : ''}</p>}
+            {school.sourceUrl && <p className="text-xs text-gray-500 mb-4"><a className="text-[#0369A1] hover:underline" href={school.sourceUrl} target="_blank" rel="noopener noreferrer">Источник сведений</a>{school.checkedAt ? ` · проверено ${school.checkedAt}` : ''}</p>}
             <div className="divide-y divide-gray-100">
               {((programmingCourses as Record<string, { title: string; slug: string; online: boolean }[]>)[school.programmingBrandId ?? ''] ?? []).slice(0, 12).map(course => <div key={course.slug} className="py-3 text-sm">
                 <Link href={`/kursy/kurs/${course.slug}/`} className="font-medium text-[#0369A1] hover:underline">{course.title}</Link>

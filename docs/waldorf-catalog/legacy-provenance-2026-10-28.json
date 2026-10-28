@@ -1,0 +1,812 @@
+[
+  {
+    "slug": "waldorf-shkola-ekaterinburg",
+    "name": "Вальдорфская школа Екатеринбурга",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Щорса, д. 22",
+    "website": "",
+    "commit": "9e78a59c",
+    "subject": "Add hero banner from design system + fix SPb photo scraper"
+  },
+  {
+    "slug": "valdorfskaya-shkola-iskusstvo-vospitaniya-moskva",
+    "name": "Вальдорфская школа «Искусство воспитания»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "ул. Стромынка, д. 12, стр. 2",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "moskovskaya-valdorfskaya-shkola-puteyki-moskva",
+    "name": "Московская вальдорфская школа в Путейках",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "ул. Путейская, д. 8",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-semejnyj-lad-moskva",
+    "name": "Вальдорфская школа «Семейный лад»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "ул. Миклухо-Маклая, д. 20А",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-zolotoj-petushok-moskva",
+    "name": "Вальдорфская школа «Золотой петушок»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "Погонный проезд, д. 6, корп. 2",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-solnechnaya-reka-moskva",
+    "name": "Вальдорфская школа «Солнечная река»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "ул. Большая Черкизовская, д. 24А",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-zhivoj-istochnik-moskva",
+    "name": "Вальдорфская школа «Живой источник»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "Ленинградский проспект, д. 80, корп. 17",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-stupeni-moskva",
+    "name": "Вальдорфская школа «Ступени»",
+    "region": "moskva",
+    "city": "Москва",
+    "address": "ул. Профсоюзная, д. 92А",
+    "website": "",
+    "commit": "6b8e6b5e",
+    "subject": "Schools: add 32 schools for Москва (moskva)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-solnechnaya-odincovo",
+    "name": "Вальдорфская школа «Солнечная поляна»",
+    "region": "moskovskaya-oblast",
+    "city": "Одинцово",
+    "address": "ул. Маршала Жукова, д. 32",
+    "website": "",
+    "commit": "9b5f0318",
+    "subject": "Schools: add 40 schools for Московская область (moskovskaya-oblast)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-istok-sergiev-posad",
+    "name": "Вальдорфская школа «Исток»",
+    "region": "moskovskaya-oblast",
+    "city": "Сергиев Посад",
+    "address": "ул. Карла Маркса, д. 7",
+    "website": "",
+    "commit": "9b5f0318",
+    "subject": "Schools: add 40 schools for Московская область (moskovskaya-oblast)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-mikhailovskaya-sloboda-reutov",
+    "name": "Свободная вальдорфская школа «Михайловская слобода»",
+    "region": "moskovskaya-oblast",
+    "city": "Реутов",
+    "address": "ул. Победы, д. 18А",
+    "website": "",
+    "commit": "9b5f0318",
+    "subject": "Schools: add 40 schools for Московская область (moskovskaya-oblast)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-zolotoj-klyuchik-mytishchi",
+    "name": "Вальдорфская школа «Золотой ключик»",
+    "region": "moskovskaya-oblast",
+    "city": "Мытищи",
+    "address": "Олимпийский проспект, д. 15к2",
+    "website": "",
+    "commit": "9b5f0318",
+    "subject": "Schools: add 40 schools for Московская область (moskovskaya-oblast)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-skazka-pushkino",
+    "name": "Вальдорфская школа «Сказка»",
+    "region": "moskovskaya-oblast",
+    "city": "Пушкино",
+    "address": "ул. Чехова, д. 12",
+    "website": "",
+    "commit": "9b5f0318",
+    "subject": "Schools: add 40 schools for Московская область (moskovskaya-oblast)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-dom-gnoma-novosibirsk",
+    "name": "Вальдорфская школа «Дом гнома»",
+    "region": "novosibirsk",
+    "city": "Новосибирск",
+    "address": "ул. Кропоткина, д. 271",
+    "website": "",
+    "commit": "7bd17209",
+    "subject": "Schools: add 40 schools for Новосибирск (novosibirsk)"
+  },
+  {
+    "slug": "centr-waldorf-pedagogiki-sofiya-novosibirsk",
+    "name": "Центр вальдорфской педагогики «София»",
+    "region": "novosibirsk",
+    "city": "Новосибирск",
+    "address": "ул. Державина, д. 14",
+    "website": "",
+    "commit": "7bd17209",
+    "subject": "Schools: add 40 schools for Новосибирск (novosibirsk)"
+  },
+  {
+    "slug": "waldorf-shkola-skazka-novosibirsk",
+    "name": "Вальдорфская школа-сад «Сказка»",
+    "region": "novosibirsk",
+    "city": "Новосибирск",
+    "address": "ул. Выборная, д. 102",
+    "website": "",
+    "commit": "7bd17209",
+    "subject": "Schools: add 40 schools for Новосибирск (novosibirsk)"
+  },
+  {
+    "slug": "shkola-zhivoe-obrazovanie-novosibirsk",
+    "name": "Школа «Живое образование»",
+    "region": "novosibirsk",
+    "city": "Новосибирск",
+    "address": "ул. Тимирязева, д. 58",
+    "website": "",
+    "commit": "7bd17209",
+    "subject": "Schools: add 40 schools for Новосибирск (novosibirsk)"
+  },
+  {
+    "slug": "valdorfskaya-inicziativa-rucheyok-novosibirsk",
+    "name": "Вальдорфская инициатива «Ручеёк»",
+    "region": "novosibirsk",
+    "city": "Новосибирск",
+    "address": "ул. Новогодняя, д. 24",
+    "website": "",
+    "commit": "7bd17209",
+    "subject": "Schools: add 40 schools for Новосибирск (novosibirsk)"
+  },
+  {
+    "slug": "waldorf-ural-ekaterinburg",
+    "name": "Уральская вальдорфская школа",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Посадская, д. 28а",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "valdorfskiy-centr-istok-ekaterinburg",
+    "name": "Вальдорфский образовательный центр «Исток»",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Крауля, д. 44",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "svobodnaya-shkola-valdorf-ekaterinburg",
+    "name": "Свободная вальдорфская школа Екатеринбурга",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Репина, д. 103",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "shkola-mikhail-valdorf-ekaterinburg",
+    "name": "Вальдорфская школа «Михаил»",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Викулова, д. 38",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-solnyshko-ekaterinburg",
+    "name": "Начальная вальдорфская школа «Солнышко»",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Шейнкмана, д. 90",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "lesnaya-valdorfskaya-shkola-ekaterinburg",
+    "name": "Лесная вальдорфская школа",
+    "region": "ekaterinburg",
+    "city": "Екатеринбург",
+    "address": "ул. Санаторная, д. 15",
+    "website": "",
+    "commit": "1c93908c",
+    "subject": "Schools: add 40 schools for Екатеринбург (ekaterinburg)"
+  },
+  {
+    "slug": "valdorfsky-tsentr-istoki-kazan",
+    "name": "Вальдорфский образовательный центр «Истоки»",
+    "region": "kazan",
+    "city": "Казань",
+    "address": "ул. Восстания, д. 78",
+    "website": "",
+    "commit": "18105294",
+    "subject": "Schools: add 40 schools for Казань (kazan)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-zhivoe-obrazovanie-kazan",
+    "name": "Вальдорфская школа «Живое образование»",
+    "region": "kazan",
+    "city": "Казань",
+    "address": "ул. Гвардейская, д. 15",
+    "website": "",
+    "commit": "18105294",
+    "subject": "Schools: add 40 schools for Казань (kazan)"
+  },
+  {
+    "slug": "valdorfskaya-nachalka-semitsvetik-kazan",
+    "name": "Вальдорфская начальная школа «Семицветик»",
+    "region": "kazan",
+    "city": "Казань",
+    "address": "ул. Павлюхина, д. 114",
+    "website": "",
+    "commit": "18105294",
+    "subject": "Schools: add 40 schools for Казань (kazan)"
+  },
+  {
+    "slug": "valdorfsky-klass-pri-gimnazii-42-kazan",
+    "name": "Вальдорфские классы при гимназии № 42",
+    "region": "kazan",
+    "city": "Казань",
+    "address": "ул. Чистопольская, д. 61",
+    "website": "",
+    "commit": "18105294",
+    "subject": "Schools: add 40 schools for Казань (kazan)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-mikhail-kazan",
+    "name": "Вальдорфская школа «Михаил»",
+    "region": "kazan",
+    "city": "Казань",
+    "address": "ул. Академика Парина, д. 8",
+    "website": "",
+    "commit": "18105294",
+    "subject": "Schools: add 40 schools for Казань (kazan)"
+  },
+  {
+    "slug": "valdorfskiy-obrazovatelnyy-centr-istoki-nizhniy-novgorod",
+    "name": "Вальдорфский образовательный центр «Истоки»",
+    "region": "nizhniy-novgorod",
+    "city": "Нижний Новгород",
+    "address": "ул. Родионова, д. 192к3",
+    "website": "",
+    "commit": "f3552217",
+    "subject": "Schools: add 40 schools for Нижний Новгород (nizhniy-novgorod)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-serebryanyy-ruchey-nizhniy-novgorod",
+    "name": "Вальдорфская школа «Серебряный ручей»",
+    "region": "nizhniy-novgorod",
+    "city": "Нижний Новгород",
+    "address": "ул. Ванеева, д. 116",
+    "website": "",
+    "commit": "f3552217",
+    "subject": "Schools: add 40 schools for Нижний Новгород (nizhniy-novgorod)"
+  },
+  {
+    "slug": "valdorfskaya-nachalnya-shkola-zolotoy-kolosok-nizhniy-novgorod",
+    "name": "Вальдорфская начальная школа «Золотой колосок»",
+    "region": "nizhniy-novgorod",
+    "city": "Нижний Новгород",
+    "address": "ул. Краснодонцев, д. 21",
+    "website": "",
+    "commit": "f3552217",
+    "subject": "Schools: add 40 schools for Нижний Новгород (nizhniy-novgorod)"
+  },
+  {
+    "slug": "valdorfskiy-centr-skazka-nizhniy-novgorod",
+    "name": "Вальдорфский центр «Сказка»",
+    "region": "nizhniy-novgorod",
+    "city": "Нижний Новгород",
+    "address": "ул. Бетанкура, д. 6",
+    "website": "",
+    "commit": "f3552217",
+    "subject": "Schools: add 40 schools for Нижний Новгород (nizhniy-novgorod)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-mihailovskaya-sankt-peterburg",
+    "name": "Санкт-Петербургская вальдорфская школа",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "ул. Рубинштейна, д. 15/17",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-solnechnaya-gora-sankt-peterburg",
+    "name": "Вальдорфская школа «Солнечная гора»",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "Приморский пр., д. 72",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-petrogradskaya-sankt-peterburg",
+    "name": "Петроградская вальдорфская школа",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "ул. Большая Пушкарская, д. 34",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-severnaya-zvezda-sankt-peterburg",
+    "name": "Вальдорфская школа «Северная звезда»",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "пр. Просвещения, д. 33, корп. 2",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-v-ozerki-sankt-peterburg",
+    "name": "Вальдорфская школа в Озерках",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "Выборгское шоссе, д. 13",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-garmoniya-sankt-peterburg",
+    "name": "Центр вальдорфской педагогики «Гармония»",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "Московский пр., д. 149",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-vasileostrovskaya-sankt-peterburg",
+    "name": "Васильеостровская вальдорфская школа",
+    "region": "sankt-peterburg",
+    "city": "Санкт-Петербург",
+    "address": "14-я линия В.О., д. 29",
+    "website": "",
+    "commit": "82a8f146",
+    "subject": "Schools: add 40 schools for Санкт-Петербург (sankt-peterburg)"
+  },
+  {
+    "slug": "waldorf-shkola-istok-chelyabinsk",
+    "name": "Вальдорфская школа «Исток»",
+    "region": "chelyabinsk",
+    "city": "Челябинск",
+    "address": "ул. Воровского, д. 34а",
+    "website": "",
+    "commit": "93ca1526",
+    "subject": "Schools: add 40 schools for Челябинск (chelyabinsk)"
+  },
+  {
+    "slug": "waldorf-shkola-zhivaya-shkola-chelyabinsk",
+    "name": "Вальдорфская «Живая школа»",
+    "region": "chelyabinsk",
+    "city": "Челябинск",
+    "address": "ул. Энтузиастов, д. 26",
+    "website": "",
+    "commit": "93ca1526",
+    "subject": "Schools: add 40 schools for Челябинск (chelyabinsk)"
+  },
+  {
+    "slug": "waldorf-centr-razvitiya-ogni-chelyabinsk",
+    "name": "Вальдорфский центр развития «Огни»",
+    "region": "chelyabinsk",
+    "city": "Челябинск",
+    "address": "ул. Цвиллинга, д. 52",
+    "website": "",
+    "commit": "93ca1526",
+    "subject": "Schools: add 40 schools for Челябинск (chelyabinsk)"
+  },
+  {
+    "slug": "waldorf-shkola-skazka-chelyabinsk",
+    "name": "Вальдорфская школа «Сказка»",
+    "region": "chelyabinsk",
+    "city": "Челябинск",
+    "address": "ул. Свободы, д. 78",
+    "website": "",
+    "commit": "93ca1526",
+    "subject": "Schools: add 40 schools for Челябинск (chelyabinsk)"
+  },
+  {
+    "slug": "svobodnaya-shkola-rostok-omsk",
+    "name": "Свободная вальдорфская школа «Росток»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. 10 лет Октября, д. 118",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "valdorfskaya-iniciativa-mir-detstva-omsk",
+    "name": "Вальдорфская инициатива «Мир детства»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. Лермонтова, д. 56А",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "shkola-garmonichnogo-razvitiya-istok-omsk",
+    "name": "Школа гармоничного развития «Исток»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. Иртышская Набережная, д. 23",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-semitsvetik-omsk",
+    "name": "Вальдорфская школа «Семицветик»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. Масленникова, д. 82",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "centr-waldorf-pedagogiki-svetoch-omsk",
+    "name": "Центр вальдорфской педагогики «Светоч»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. Декабристов, д. 45",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "waldorf-shkola-zhivaya-shkola-omsk",
+    "name": "Вальдорфская «Живая школа»",
+    "region": "omsk",
+    "city": "Омск",
+    "address": "ул. 5-я Кордная, д. 12",
+    "website": "",
+    "commit": "c6f52413",
+    "subject": "Schools: add 40 schools for Омск (omsk)"
+  },
+  {
+    "slug": "tsentr-valdorfskoy-pedagogiki-garmoniya-samara",
+    "name": "Центр вальдорфской педагогики «Гармония»",
+    "region": "samara",
+    "city": "Самара",
+    "address": "Московское шоссе, д. 274",
+    "website": "",
+    "commit": "10b7bf72",
+    "subject": "Schools: add 40 schools for Самара (samara)"
+  },
+  {
+    "slug": "valdorfskaya-nachalnaya-shkola-svetlyachok-samara",
+    "name": "Вальдорфская начальная школа «Светлячок»",
+    "region": "samara",
+    "city": "Самара",
+    "address": "ул. Дачная, д. 28",
+    "website": "",
+    "commit": "10b7bf72",
+    "subject": "Schools: add 40 schools for Самара (samara)"
+  },
+  {
+    "slug": "semeynyy-valdorfskiy-klass-teremok-samara",
+    "name": "Семейный вальдорфский класс «Теремок»",
+    "region": "samara",
+    "city": "Самара",
+    "address": "ул. Победы, д. 93",
+    "website": "",
+    "commit": "10b7bf72",
+    "subject": "Schools: add 40 schools for Самара (samara)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-dubrava-samara",
+    "name": "Вальдорфская школа «Дубрава»",
+    "region": "samara",
+    "city": "Самара",
+    "address": "ул. Демократическая, д. 47",
+    "website": "",
+    "commit": "10b7bf72",
+    "subject": "Schools: add 40 schools for Самара (samara)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-zhivaya-shkola-rostov-na-donu",
+    "name": "Вальдорфская школа «Живая школа»",
+    "region": "rostov-na-donu",
+    "city": "Ростов-на-Дону",
+    "address": "ул. Текучёва, д. 205",
+    "website": "",
+    "commit": "05165a27",
+    "subject": "Schools: add 40 schools for Ростов-на-Дону (rostov-na-donu)"
+  },
+  {
+    "slug": "centr-valdorfskoy-pedagogiki-rodnichok-rostov-na-donu",
+    "name": "Центр вальдорфской педагогики «Родничок»",
+    "region": "rostov-na-donu",
+    "city": "Ростов-на-Дону",
+    "address": "ул. Социалистическая, д. 134",
+    "website": "",
+    "commit": "05165a27",
+    "subject": "Schools: add 40 schools for Ростов-на-Дону (rostov-na-donu)"
+  },
+  {
+    "slug": "valdorfskaya-gimnaziya-sofia-rostov-na-donu",
+    "name": "Вальдорфская гимназия «София»",
+    "region": "rostov-na-donu",
+    "city": "Ростов-на-Дону",
+    "address": "ул. Большая Садовая, д. 178",
+    "website": "",
+    "commit": "05165a27",
+    "subject": "Schools: add 40 schools for Ростов-на-Дону (rostov-na-donu)"
+  },
+  {
+    "slug": "svobodnaya-shkola-istok-ufa",
+    "name": "Свободная вальдорфская школа «Исток»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Российская, д. 43",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "waldorf-studiya-berezka-ufa",
+    "name": "Вальдорфская студия «Берёзка»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Гафури, д. 4",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "shkola-garmoniya-waldorf-ufa",
+    "name": "Школа целостного развития «Гармония»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Комсомольская, д. 118",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "semejny-klass-waldorf-ufa",
+    "name": "Семейный вальдорфский класс «Тёплый дом»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Аксакова, д. 62",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "waldorf-gimnaziya-mayak-ufa",
+    "name": "Вальдорфская гимназия «Маяк»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Революционная, д. 78",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "detskaya-studiya-zolotoy-klyuchik-ufa",
+    "name": "Детская вальдорфская студия «Золотой ключик»",
+    "region": "ufa",
+    "city": "Уфа",
+    "address": "ул. Мингажева, д. 29",
+    "website": "",
+    "commit": "25531261",
+    "subject": "Schools: add 40 schools for Уфа (ufa)"
+  },
+  {
+    "slug": "svobodnaya-valdorfskaya-shkola-krasnodar",
+    "name": "Свободная вальдорфская школа Краснодара",
+    "region": "krasnodar",
+    "city": "Краснодар",
+    "address": "ул. Северная, д. 289",
+    "website": "",
+    "commit": "9c3e8139",
+    "subject": "Schools: add 40 schools for Краснодар (krasnodar)"
+  },
+  {
+    "slug": "valdorfskaya-iniciativa-krasnodar",
+    "name": "Образовательный центр «Вальдорфская инициатива»",
+    "region": "krasnodar",
+    "city": "Краснодар",
+    "address": "ул. Ставропольская, д. 183/1",
+    "website": "",
+    "commit": "9c3e8139",
+    "subject": "Schools: add 40 schools for Краснодар (krasnodar)"
+  },
+  {
+    "slug": "shkola-zhivogo-obrazovaniya-krasnodar",
+    "name": "Школа живого образования «Росток»",
+    "region": "krasnodar",
+    "city": "Краснодар",
+    "address": "ул. Тургенева, д. 55",
+    "website": "",
+    "commit": "9c3e8139",
+    "subject": "Schools: add 40 schools for Краснодар (krasnodar)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-semitsvetik-krasnodar",
+    "name": "Вальдорфская школа-сад «Семицветик»",
+    "region": "krasnodar",
+    "city": "Краснодар",
+    "address": "ул. Zip, д. 12",
+    "website": "",
+    "commit": "9c3e8139",
+    "subject": "Schools: add 40 schools for Краснодар (krasnodar)"
+  },
+  {
+    "slug": "centr-valdorfskoy-pedagogiki-yug-krasnodar",
+    "name": "Центр вальдорфской педагогики «Юг»",
+    "region": "krasnodar",
+    "city": "Краснодар",
+    "address": "ул. Российская, д. 71",
+    "website": "",
+    "commit": "9c3e8139",
+    "subject": "Schools: add 40 schools for Краснодар (krasnodar)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-solnyshko-perm",
+    "name": "Вальдорфская школа «Солнышко»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Луначарского, д. 95",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "svobodnaya-shkola-perm",
+    "name": "Свободная вальдорфская школа",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Екатерининская, д. 162",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "waldorf-iniciativa-perm",
+    "name": "Школа «Вальдорфская инициатива»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Краснова, д. 24",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "detstvo-waldorf-shkola-perm",
+    "name": "Вальдорфская школа «Детство»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Сибирская, д. 52",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "zelyonaya-vetka-waldorf-perm",
+    "name": "Вальдорфская школа «Зелёная ветка»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Подлесная, д. 43а",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "waldorf-stupeni-perm",
+    "name": "Начальная вальдорфская школа «Ступени»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Куйбышева, д. 89",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "antropos-waldorf-centr-perm",
+    "name": "Образовательный центр «Антропос»",
+    "region": "perm",
+    "city": "Пермь",
+    "address": "ул. Петропавловская, д. 115",
+    "website": "",
+    "commit": "1df7bc00",
+    "subject": "Schools: add 40 schools for Пермь (perm)"
+  },
+  {
+    "slug": "tsentr-valdorfskoy-pedagogiki-voronezh",
+    "name": "Центр вальдорфской педагогики «Источник»",
+    "region": "voronezh",
+    "city": "Воронеж",
+    "address": "ул. 20-летия Октября, д. 90",
+    "website": "",
+    "commit": "fa69ad05",
+    "subject": "Schools: add 40 schools for Воронеж (voronezh)"
+  },
+  {
+    "slug": "svobodnaya-valdorfskaya-shkola-voronezh",
+    "name": "Свободная вальдорфская школа",
+    "region": "voronezh",
+    "city": "Воронеж",
+    "address": "ул. Пирогова, д. 39",
+    "website": "",
+    "commit": "fa69ad05",
+    "subject": "Schools: add 40 schools for Воронеж (voronezh)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-berezka-voronezh",
+    "name": "Вальдорфская школа «Берёзка»",
+    "region": "voronezh",
+    "city": "Воронеж",
+    "address": "ул. Антонова-Овсеенко, д. 31А",
+    "website": "",
+    "commit": "fa69ad05",
+    "subject": "Schools: add 40 schools for Воронеж (voronezh)"
+  },
+  {
+    "slug": "nachalnaya-valdorfskaya-shkola-semitsvetik-voronezh",
+    "name": "Начальная вальдорфская школа «Семицветик»",
+    "region": "voronezh",
+    "city": "Воронеж",
+    "address": "ул. Хользунова, д. 56",
+    "website": "",
+    "commit": "fa69ad05",
+    "subject": "Schools: add 40 schools for Воронеж (voronezh)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-stupenki-voronezh",
+    "name": "Вальдорфская школа «Ступеньки»",
+    "region": "voronezh",
+    "city": "Воронеж",
+    "address": "ул. Лизюкова, д. 83",
+    "website": "",
+    "commit": "fa69ad05",
+    "subject": "Schools: add 40 schools for Воронеж (voronezh)"
+  },
+  {
+    "slug": "valdorfskaya-shkola-yaroslavl",
+    "name": "Вальдорфская школа",
+    "region": "yaroslavl",
+    "city": "Ярославль",
+    "address": "Вольная улица, 10",
+    "website": "http://www.yarwaldorf.ru",
+    "commit": "687e6663",
+    "subject": "add 1601 schools via Overpass API for 24 cities (Ярославль, Владивосток, Махачкала, Оренбург + 20 more)"
+  }
+]

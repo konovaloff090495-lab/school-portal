@@ -21,6 +21,7 @@ export function isCityTypeIndexable(region: RegionSlug, type: SchoolType): boole
   if (type === 'vechernie') return n > 0 || VECHERNIE_ZERO_INDEX.has(region)
   // Nationwide alternatives do not make an otherwise empty city indexable.
   if (type === 'eksternal') return getSchoolsByRegionAndType(region, type).some(s => s.region === region && !s.remoteOnly)
+  if (type === 'valdorfskie') return n > 0
   if (type === 'semejnye') return n > 0
   // Центры ЕГЭ/ОГЭ: карточки собраны вручную по Яндекс Картам, страница дополнена онлайн-курсами — индексируем от 2 центров.
   if (type === 'podgotovka-ege' || type === 'podgotovka-oge') return n >= 2
