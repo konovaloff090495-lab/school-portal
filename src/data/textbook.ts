@@ -1,5 +1,8 @@
 // ─── Типы ────────────────────────────────────────────────────────────────────
 
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
+
 export interface TextbookSubject {
   slug: string
   title: string       // Математика
@@ -151,6 +154,17 @@ export const textbookSubjects: TextbookSubject[] = [
     classes: [1, 2, 3, 4],
   },
 ]
+
+// Additional subjects share the existing textbook pages and navigation.
+const additionalSubjects = JSON.parse(readFileSync(
+  join(process.cwd(), 'src/data/textbook-subjects-extra.json'), 'utf8',
+)) as TextbookSubject[]
+for (const subject of additionalSubjects) {
+  if (textbookSubjects.some(existing => existing.slug === subject.slug)) {
+    throw new Error(`Duplicate textbook subject: ${subject.slug}`)
+  }
+  textbookSubjects.push(subject)
+}
 
 // ─── Темы по предметам и классам ──────────────────────────────────────────────
 
@@ -6745,6 +6759,22 @@ export const textbookTopics: TextbookTopicMeta[] = Object.entries(RAW_TOPICS).fl
       topics.map(t => ({ ...t, subject, klass: Number(klass) }))
     )
 )
+
+// Runtime metadata allows new lessons to use the same routes, indexes and sitemap.
+const additionalTopics = JSON.parse(readFileSync(
+  join(process.cwd(), 'src/data/textbook-topics-extra.json'), 'utf8',
+)) as TextbookTopicMeta[]
+const topicKeys = new Set(textbookTopics.map(t => `${t.subject}/${t.klass}/${t.slug}`))
+for (const topic of additionalTopics) {
+  const subject = textbookSubjects.find(s => s.slug === topic.subject)
+  if (!subject || !subject.classes.includes(topic.klass)) {
+    throw new Error(`Unknown textbook subject/class: ${topic.subject}/${topic.klass}`)
+  }
+  const key = `${topic.subject}/${topic.klass}/${topic.slug}`
+  if (topicKeys.has(key)) throw new Error(`Duplicate textbook topic: ${key}`)
+  topicKeys.add(key)
+  textbookTopics.push(topic)
+}
 
 // ─── Хелперы ──────────────────────────────────────────────────────────────────
 
