@@ -42,7 +42,7 @@ def overlay_blog(source, posts):
    if last is None:last=ET.SubElement(node,'{'+NS+'}lastmod')
    last.text=min(stamp[:10],today)
  return ET.tostring(root,encoding='utf-8',xml_declaration=True)
-def overlay_textbook(source, articles):
+def overlay_textbook(source, articles, add_missing=False):
  # Update only already-indexed lesson URLs with a real content revision stamp.
  # This does not add unlisted topics or turn every refresh into a content change.
  root=ET.fromstring(source)
@@ -53,7 +53,10 @@ def overlay_textbook(source, articles):
   if not stamp:continue
   url=BASE+'/uchebnik/'+article['subject']+'/'+str(article['klass'])+'-klass/'+article['topicSlug']+'/'
   node=by_url.get(url)
-  if node is None:continue
+  if node is None:
+   if not add_missing:continue
+   node=ET.SubElement(root,'{'+NS+'}url');ET.SubElement(node,'{'+NS+'}loc').text=url
+   by_url[url]=node
   last=node.find('{'+NS+'}lastmod')
   if last is None:last=ET.SubElement(node,'{'+NS+'}lastmod')
   last.text=min(stamp[:10],today)
@@ -69,6 +72,8 @@ def main():
  if blog.exists():source=overlay_blog(source,json.loads(blog.read_text()))
  textbook=Path(args.textbook_manifest) if args.textbook_manifest else Path(__file__).resolve().parents[2]/'src/data/textbook-articles.json'
  if textbook.exists():source=overlay_textbook(source,json.loads(textbook.read_text()))
+ dates=Path(__file__).resolve().parents[2]/'content/textbook-publication-dates.json'
+ if dates.exists():source=overlay_textbook(source,json.loads(dates.read_text()),add_missing=True)
  manifest=json.loads((release/'_programming/manifest.json').read_text())
  content=release/'_programming/content-paths.json'
  if content.exists():manifest['indexable']+=json.loads(content.read_text())

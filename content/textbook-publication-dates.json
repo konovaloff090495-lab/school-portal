@@ -1,0 +1,1628 @@
+[
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "edgar-allan-po",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 9,
+    "topicSlug": "konversiya-anglijskij-yazyk",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-svobodnoe-vydelenie-lasso",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-gradient",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "gimp-kadrirovanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "google-tablicy-sortirovka-peremeshivanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "vektorizaciya-i-rastrirovanie-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "spirali-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "ellipsy-krugi-dugi-inkscape",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "kortezhi-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "peremeshivanie-spiska-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 9,
+    "topicSlug": "halkogeny-gruppa-16",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 3,
+    "topicSlug": "nanayskaya-skazka-ayoga",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 10,
+    "topicSlug": "biologicheskoe-dejstvie-alkanolov",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 10,
+    "topicSlug": "po-stendal-flober",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "allyuziya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 4,
+    "topicSlug": "boroldoy-mergen-i-syn",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 7,
+    "topicSlug": "alfavitnaya-zamena-deshifrovanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "antigeroj",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 10,
+    "topicSlug": "okislitelnoe-fosforilirovanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 10,
+    "topicSlug": "gyugo-balzak-uayld-proza",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 4,
+    "topicSlug": "raspe-myunhauzen",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "okruzhayushchiy-mir",
+    "klass": 4,
+    "topicSlug": "beniluks",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "moem-i-shou",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 9,
+    "topicSlug": "bibleizmy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 4,
+    "topicSlug": "roald-dal-biografiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 10,
+    "topicSlug": "zadachi-molekulyarnaya-biologiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 10,
+    "topicSlug": "hiralnost-biomolekul",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 5,
+    "topicSlug": "zemelnye-reformy-grakhov",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 11,
+    "topicSlug": "supremum-i-infimum",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "matematika",
+    "klass": 6,
+    "topicSlug": "zadachi-na-vzveshivaniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "vidzhety-interfejsa",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "volosatiki-nematomorpha",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "markes-sto-let-odinochestva",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "izoterma-realnogo-gaza",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 9,
+    "topicSlug": "gametofit-i-sporofit",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 10,
+    "topicSlug": "geneticheskoe-kartirovanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "ibsen-meterlink-novaya-drama",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 6,
+    "topicSlug": "rekonkista",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "grebneviki-ctenophora",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 6,
+    "topicSlug": "orfey-i-evridika",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 5,
+    "topicSlug": "dal-matilda",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 4,
+    "topicSlug": "eralash-kinozhurnal",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 10,
+    "topicSlug": "kletochnyj-cikl-i-differencirovka",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "dolnik",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 9,
+    "topicSlug": "konnotaciya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "izogonalnoe-sopryazhenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "instancirovanie-shablonov-cpp",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 7,
+    "topicSlug": "kalevala-i-runy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geografiya",
+    "klass": 7,
+    "topicSlug": "keniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "kolovratki-rotifera",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 10,
+    "topicSlug": "svyazannye-korni-unifiksy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "obshchestvoznanie",
+    "klass": 10,
+    "topicSlug": "pravosoznanie-i-pravovaya-kultura",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "lemma-o-trezubce",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 3,
+    "topicSlug": "sokolov-mikitov-listopadnichek",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 10,
+    "topicSlug": "longrid-i-travelog",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "makrosy-preprocessora-c",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "mnogonozhki",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 2,
+    "topicSlug": "skazka-rukavichka",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "nemertiny-nemertea",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 9,
+    "topicSlug": "okkazionalizm",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "onihofory-i-tihohodki",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "ortotreugolnik",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "okruzhayushchiy-mir",
+    "klass": 4,
+    "topicSlug": "pervopechatanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "formula-pika",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "sipunkulidy-i-pogonofory",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "polifoniya-v-literature",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "poluinvariant",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "predikaty-v-logike",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "matematika",
+    "klass": 6,
+    "topicSlug": "razrezaniya-figur",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "refaktoring-koda",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 6,
+    "topicSlug": "samoylov-sorokovye",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 9,
+    "topicSlug": "silicidy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "biologiya",
+    "klass": 7,
+    "topicSlug": "skrebni-acanthocephala",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "spondej",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "stansy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "superkompyutery",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "html-tablicy-i-frejmy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "russkiy-yazyk",
+    "klass": 9,
+    "topicSlug": "tavtologiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 9,
+    "topicSlug": "transneravenstvo",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "trigger-cifrovaya-shema",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 8,
+    "topicSlug": "folklorizm",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 8,
+    "topicSlug": "hajku-i-hokku",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 10,
+    "topicSlug": "kultura-russkogo-zarubezhya-1920-1930",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 10,
+    "topicSlug": "sovetskaya-vneshnyaya-politika-1920",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "viktor-astafev-biografiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 9,
+    "topicSlug": "chingiz-aytmatov-biografiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "vasiliy-shukshin-biografiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 10,
+    "topicSlug": "frantsiya-britaniya-skandinaviya-1930",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "valentin-rasputin-biografiya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 11,
+    "topicSlug": "zapadnoe-obshchestvo-1945-1970",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 11,
+    "topicSlug": "vneshnyaya-politika-rossii-1990",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 11,
+    "topicSlug": "duhovnaya-zhizn-rossii-1990",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 8,
+    "topicSlug": "kultura-rossii-pri-ekaterine-ii",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "khimiya",
+    "klass": 10,
+    "topicSlug": "pererabotka-uglevodorodov-i-polimery",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 7,
+    "topicSlug": "vneshnyaya-politika-ivana-groznogo",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "literatura",
+    "klass": 11,
+    "topicSlug": "zarubezhnaya-lirika-shest-tekstov",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "istoriya",
+    "klass": 9,
+    "topicSlug": "ekonomika-rossii-1820-1850",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "blender-pervaya-model",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "autodesk-fusion-parametricheskaya-model",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "vavilonskaya-shestidesyatirichnaya-sistema",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "pep8-stil-python",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "kitayskiy-yazyk",
+    "klass": 11,
+    "topicSlug": "ege-kitayskiy-2026-struktura",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "nemetskie-bukvy-i-pravila-chteniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "lozhnye-druzya-i-omonimy-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "priglasitelnoe-pismo-na-angliyskom",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "intel-apple-ibm-istoriya-arhitektur",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "ispanskie-glagoly-na-ar-presente",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-util-arrays-metody",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "otsutstvie-artiklya-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "opredelennyy-artikl-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "chastichnyy-artikl-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "audacity-zapis-i-montazh",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "avoir-present-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "short-biography-angliyskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "code-blocks-pervaya-programma",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-boxing-unboxing",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "nemetskie-soglasnye-sochetaniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "nemetskie-glasnye-dolgota",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "python-tkinter-canvas-risovanie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-try-catch-finally",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "checked-exceptions-throws-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "java-classloader-kak-zagruzhayutsya-klassy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "cms-sistemy-upravleniya-kontentom",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "stil-koda-na-c",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-util-collection-interface",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 11,
+    "topicSlug": "java-collection-hierarchy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "frantsuzskie-sochetaniya-soglasnyh",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "frantsuzskie-sochetaniya-glasnyh",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "ispanskie-glagoly-er-presente",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "ispanskie-glagoly-ir-presente",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "ser-presente-ispanskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "tener-presente-ispanskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "frantsuzskie-bukvy-c-g",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "css-tablicy-stiley-osnovy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "modalnye-glagoly-nemetskiy-prasens",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "ispanskiy-yazyk-kratkie-svedeniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "otritsanie-vo-frantsuzskom",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "presente-de-indicativo-ispanskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "ispanskiy-slog-pravila-perenosa",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "poryadok-slov-ispanskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "cpp-new-delete",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "zhenskiy-rod-sushchestvitelnyh-frantsuzskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "gde-govoryat-po-nemetski-dialekty",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "jdk-javac-java",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "frantsuzskie-diakriticheskie-znaki",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 8,
+    "topicSlug": "java-do-while",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 9,
+    "topicSlug": "eclipse-java-pervyy-proekt",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "ispanskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "gustar-me-gusta-me-gustan",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "frantsuzskoe-stseplenie-enchainement",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "vremya-po-nemetski-uhrzeit",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "nemetskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "nemetskoe-mestoimenie-es",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "frantsuzskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "faire-frantsuzskiy-present",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 6,
+    "topicSlug": "nationalities-nouns-angliyskiy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "formuly-sokrashchennogo-umnozheniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "funktsiya-ponyatie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "kvadrat-summy-i-raznosti-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "polinomy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "razlozhenie-na-mnozhiteli",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "resheniye-zadach-s-pomoshchyu-uravneniy-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "sistemy-uravneniy-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "summa-i-raznost-kubov-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "svoystva-chislovyh-neravenstv-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "vydelenie-polnogo-kvadrata-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "zadachi-na-pokupki-i-stoimost-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 7,
+    "topicSlug": "zadachi-na-sostavlenie-sistem-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "grafik-funktsii-modul-iks-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "kvadratnoe-uravnenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "kvadratnye-korni",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "preobrazovanie-grafikov-sdvig-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "sistemy-linejnyh-neravenstv-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "umnozhenie-i-delenie-ratsionalnyh-drobej-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 8,
+    "topicSlug": "zadachi-na-smesi-i-splavy-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "algebra",
+    "klass": 9,
+    "topicSlug": "celye-uravneniya-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 10,
+    "topicSlug": "delovaya-i-lichnaya-perepiska-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 10,
+    "topicSlug": "gerundiy-infinitiv-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 10,
+    "topicSlug": "idiomy-i-ustoychivye-vyrazheniya-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 10,
+    "topicSlug": "modalnye-glagoly-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 10,
+    "topicSlug": "poryadok-slov-v-predlozhenii-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 11,
+    "topicSlug": "future-forms-comparison-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 2,
+    "topicSlug": "alfavit-2",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 2,
+    "topicSlug": "voprosy-what-how-old-2",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 3,
+    "topicSlug": "pogoda-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 3,
+    "topicSlug": "shkolnye-prinadlezhnosti-3",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "have-got-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "modal-verbs-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 5,
+    "topicSlug": "personal-pronouns-5",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 7,
+    "topicSlug": "present-continuous-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "frazovye-glagoly-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "glagoly-say-tell-speak-talk-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "narechiya-i-stepeni-sravneniya-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "slovoobrazovanie-suffiksy-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "soyuzy-svyazki-because-although-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 8,
+    "topicSlug": "sravnenie-prilagatelnyh-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 9,
+    "topicSlug": "both-either-neither-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 9,
+    "topicSlug": "gerund-infinitive",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "angliiskiy-yazyk",
+    "klass": 9,
+    "topicSlug": "past-perfect-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "elektrostatika",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "mkt-osnovy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "napryazhennost-potencial-polya-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "uravnenie-mendeleeva-klapeyrona-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 10,
+    "topicSlug": "vlazhnost-vozduha-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "fotoeffekt-zakony-stoletova-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "kolebatelnyy-kontur-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "kondensatory-energiya-polya-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "mehanicheskie-kolebaniya-rezonans-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "optika",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 11,
+    "topicSlug": "postoyannyy-tok-zakon-oma-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "grafiki-dvizheniya-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "plotnost-veshhestva-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "prevrashhenie-energii-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "rabota-moshhnost",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "ravnodejstvuyushhaya-sil-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "sila-treniya-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "sila-uprugosti-zakon-guka-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "uslovie-ravnovesiya-rychaga-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 7,
+    "topicSlug": "usloviya-plavaniya-tel-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "elektrodvigatel-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "izmenenie-sostoyaniy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "kipenie-davlenie-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "otrazhenie-prelomlenie-sveta-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "postoyannye-magnity-pole-zemli-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "rabota-toka",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "sila-toka-ampermetr-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "soprotivlenie-zakon-oma-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "svetovye-yavleniya",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "teplovoe-dvizhenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "udelnaya-teployomkost-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 8,
+    "topicSlug": "vlazhnost-vozduha-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 9,
+    "topicSlug": "elektromagnitnaya-indukciya-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 9,
+    "topicSlug": "kolebaniya-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 9,
+    "topicSlug": "matematicheskiy-mayatnik-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 9,
+    "topicSlug": "sostav-yadra-energiya-svyazi-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "fizika",
+    "klass": 9,
+    "topicSlug": "zakony-nyutona-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "mnogogranniki",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "parallelepiped-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "parallelnost-dvuh-ploskostej-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "postroenie-sechenij-metodom-sledov-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "prostranstvo-aksiomy",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 10,
+    "topicSlug": "secheniya-mnogogrannikov-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 11,
+    "topicSlug": "parallelnoe-proektirovanie-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 11,
+    "topicSlug": "shar-sfera-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 11,
+    "topicSlug": "ugol-pryamaya-ploskost-11",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 11,
+    "topicSlug": "vektor-prostranstvo",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "aksioma-i-postulat-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "aksioma-parallelnyh-pryamyh-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "izmerenie-otrezkov-i-uglov-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "perpendikulyar-i-naklonnaya-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "postroenie-treugolnika-po-trem-storonam-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "postroeniya-cirkulem-i-lineykoy-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "rasstoyanie-mezhdu-parallelnymi-pryamymi-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 7,
+    "topicSlug": "ugol-mezhdu-bissektrisami-7",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "koordinaty-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "ploshhad-treugolnika-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "podob-treugolniki",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "sinus-kosinus-tr",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "svojstvo-median-tochka-peresecheniya-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "vneshnij-ugol-treugolnika-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 8,
+    "topicSlug": "zamechatelnye-tochki-treugolnika-8",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "dvizhenie",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "metod-koordinat-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "sin-kosin-teorema",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "skalyarnoe-proizvedenie-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "stepen-tochki-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "geometriya",
+    "klass": 9,
+    "topicSlug": "uravnenie-pryamoy-9",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "algoritmy-i-slozhnost",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "algoritmy-poiska-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "grafy-v-zadachah-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "informaciya-i-ee-svoystva",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "kodirovanie-grafiki-10",
+    "updatedAt": "2026-10-28"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "predstavlenie-chisel",
+    "updatedAt": "2026-10-28"
+  }
+]
