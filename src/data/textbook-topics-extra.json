@@ -1937,5 +1937,12 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "stl-konteyner-list"
+  },
+  {
+    "title": "Контейнер map в C++: учебные примеры словаря для школьников",
+    "excerpt": "Как школьнику использовать std::map: пары ключ–значение, insert и operator[], поиск без вставки, сортировка ключей и частотный словарь. Шесть заданий с ответами.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "stl-konteyner-map"
   }
 ]
