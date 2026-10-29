@@ -2446,5 +2446,11 @@
     "klass": 10,
     "topicSlug": "stl-konteyner-map",
     "updatedAt": "2026-10-29"
+  },
+  {
+    "subject": "informatika",
+    "klass": 5,
+    "topicSlug": "mit-scratch",
+    "updatedAt": "2026-10-29"
   }
 ]
