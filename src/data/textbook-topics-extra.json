@@ -1923,5 +1923,12 @@
     "subject": "informatika",
     "klass": 9,
     "slug": "fayly-i-rabota-s-faylovoy-sistemoy-v-python"
+  },
+  {
+    "title": "Приведение типов в Java: учебные примеры и ошибки школьника",
+    "excerpt": "Как школьнику разобраться в расширении, сужении и cast в Java. Округление, byte, деление, строки и объекты: разобранные примеры и пять заданий с ответами.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "java-privedenie-tipov"
   }
 ]
