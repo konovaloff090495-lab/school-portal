@@ -1930,5 +1930,12 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "java-privedenie-tipov"
+  },
+  {
+    "title": "Контейнер list в C++: урок для школьников с примерами STL",
+    "excerpt": "Как школьнику использовать std::list: вставка, erase, splice, итераторы и сортировка. Сравнение с vector и deque, пять заданий с ответами.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "stl-konteyner-list"
   }
 ]
