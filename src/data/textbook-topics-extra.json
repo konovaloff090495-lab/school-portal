@@ -1916,5 +1916,12 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "polimorfizm-funktsiy-v-python"
+  },
+  {
+    "title": "Файлы и работа с файловой системой в Python: pathlib, with и UTF-8",
+    "excerpt": "Читаем, пишем и дозаписываем текстовые файлы с явной кодировкой UTF-8, собираем пути объектами pathlib, закрываем файлы через with и обрабатываем FileNotFoundError. Все примеры проверены во временной папке.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "fayly-i-rabota-s-faylovoy-sistemoy-v-python"
   }
 ]
