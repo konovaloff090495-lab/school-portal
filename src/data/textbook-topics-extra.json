@@ -1902,5 +1902,12 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "klassy-python-osnovy-oop"
+  },
+  {
+    "title": "Код в одну строку на Python: когда коротко — это читаемо",
+    "excerpt": "Условные выражения, lambda и генераторные выражения помогают писать короткий читаемый код. Разбираем их назначение и случаи, когда обычный цикл понятнее.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "kod-v-odnu-stroku-na-python"
   }
 ]
