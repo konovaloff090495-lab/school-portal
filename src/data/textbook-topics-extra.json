@@ -1965,5 +1965,12 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "komandnaya-stroka-linux"
+  },
+  {
+    "title": "Работа с файлами в Java: учебные примеры для школьника",
+    "excerpt": "Чтение и запись файлов в школьном проекте Java17: Path, Files, UTF-8, APPEND, копирование и IOException. Примеры, пять заданий и программа с закрытием потока.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "java-rabota-s-faylami"
   }
 ]
