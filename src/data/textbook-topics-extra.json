@@ -1902,5 +1902,26 @@
     "subject": "informatika",
     "klass": 10,
     "slug": "klassy-python-osnovy-oop"
+  },
+  {
+    "title": "Код в одну строку на Python: когда коротко — это читаемо",
+    "excerpt": "Условные выражения, lambda и генераторные выражения помогают писать короткий читаемый код. Разбираем их назначение и случаи, когда обычный цикл понятнее.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "kod-v-odnu-stroku-na-python"
+  },
+  {
+    "title": "Полиморфизм функций в Python: один интерфейс — разные объекты",
+    "excerpt": "Полиморфизм в Python держится на утиной типизации: функции важно, что объект умеет, а не от какого он класса. Разбираем общий интерфейс вызова, отличие перегрузки операторов от перегрузки функций.",
+    "subject": "informatika",
+    "klass": 10,
+    "slug": "polimorfizm-funktsiy-v-python"
+  },
+  {
+    "title": "Файлы и работа с файловой системой в Python: pathlib, with и UTF-8",
+    "excerpt": "Читаем, пишем и дозаписываем текстовые файлы с явной кодировкой UTF-8, собираем пути объектами pathlib, закрываем файлы через with и обрабатываем FileNotFoundError. Все примеры проверены во временной папке.",
+    "subject": "informatika",
+    "klass": 9,
+    "slug": "fayly-i-rabota-s-faylovoy-sistemoy-v-python"
   }
 ]
