@@ -2464,5 +2464,11 @@
     "klass": 10,
     "topicSlug": "komandnaya-stroka-linux",
     "updatedAt": "2026-10-29"
+  },
+  {
+    "subject": "informatika",
+    "klass": 10,
+    "topicSlug": "java-rabota-s-faylami",
+    "updatedAt": "2026-10-29"
   }
 ]
