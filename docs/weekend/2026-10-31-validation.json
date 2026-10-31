@@ -78,5 +78,18 @@
     "failed": []
   },
   "image_prompts": "data/blog-visuals/weekend-20261031.json",
-  "publication": "Pending live validation"
+  "publication": {
+    "status": "live",
+    "root": "competitor-coverage-20261028",
+    "content_commit": "63c5aae4",
+    "new_pages": 6,
+    "updated_guides": 3,
+    "sitemap_urls_preserved": true,
+    "public_assets_hash_match": 18,
+    "browser_viewports_verified": 12,
+    "browser_downloads_verified": 6,
+    "actual_course_link_verified": true,
+    "typecheck": "tsc --noEmit --incremental false passed",
+    "diagrams": "All seven diagrams can be opened at full size from five tutorials"
+  }
 }
