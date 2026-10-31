@@ -47,6 +47,7 @@ basejs=re.sub(r"const cities=\[[^;]*;", "const cities=payload.cities.map(c=>c.na
 basejs=re.sub(r"const categories=\[[^;]*;", "const categories=Object.keys(payload.categories).map(t=>[t,'calendar-days',payload.categories[t]+' событий']);",basejs,count=1)
 basejs=basejs.replace("event:\"ps-abaa7073555a5b88a4\"", "event:items[0]?.id||''")
 basejs=basejs.replace("state.catalogPage=0;render();restore(window.openai?.widgetState);", "if(boot.event&&items.some(e=>e.id===boot.event)){state.page='detail';state.event=boot.event}state.catalogPage=0;render();restore(window.openai?.widgetState);initSiteNavigation();")
+a=basejs.index('function drawVenueMap()');b=basejs.index('function renderLocation()',a);basejs=basejs[:a]+(H/'detail-map.production.js').read_text()+'\n'+basejs[b:]
 a=basejs.index('function renderMap(a)');b=basejs.index('function renderContext(a)',a);basejs=basejs[:a]+(H/'map.production.js').read_text()+'\n'+basejs[b:]
 # URL-aware transitions and persistent favourites use the same approved UI.
 overrides=(H/'production.js').read_text();basejs=basejs.replace("if(boot.event&&items.some",overrides+"\nif(boot.event&&items.some",1)

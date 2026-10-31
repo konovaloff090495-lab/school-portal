@@ -1,0 +1,77 @@
+[
+  {
+    "city": "Клин",
+    "venue_source_id": "c0eaed5e9d094dad30aa2d3bcc57a1ee",
+    "venue": "Выставочный зал им. Ю. В. Карапаева",
+    "address": "Московская обл., г. Клин, Клинский р-н., ул. Литейная,  д. 23",
+    "source_address": "Московская обл., г. Клин, г. Клин, ул. Литейная, д. 23",
+    "coordinates": [
+      36.7250981926918,
+      56.33071500809995
+    ],
+    "source": "https://www.culture.ru/institutes/24602/vystavochnyi-zal-im-yu-v-karapaeva",
+    "institution_id": 24602,
+    "institution_name": "vystavochnyi-zal-im-yu-v-karapaeva",
+    "checked": "2026-10-31T13:59:27.915089+00:00",
+    "verification": "Same venue and Litieynaya23; source repeats city and omits district."
+  },
+  {
+    "city": "Северск",
+    "venue_source_id": "seversk-teatr-dyu",
+    "venue": "Северский театр для детей и юношества",
+    "address": "Северск, проспект Коммунистический, 48",
+    "source_address": "Томская обл., г. Северск, Коммунистический пр-кт., д. 48",
+    "coordinates": [
+      84.886123,
+      56.599618
+    ],
+    "source": "https://www.culture.ru/institutes/28169/severskii-teatr-dlya-detei-i-yunoshestva",
+    "institution_id": 28169,
+    "institution_name": "severskii-teatr-dlya-detei-i-yunoshestva",
+    "checked": "2026-10-31T13:59:27.915089+00:00",
+    "verification": "Same theatre and numbered address as its official website and municipal culture directory."
+  },
+  {
+    "city": "Москва",
+    "venue_source_id": "/msk/restaurant/loft-hall-2-312260/",
+    "venue": "Loft Hall №2",
+    "address": "Ленинская Слобода, 26, стр. 11",
+    "source_address": "Ленинская Слобода, 26, стр. 11",
+    "coordinates": [
+      37.6509441,
+      55.708587
+    ],
+    "source": "https://www.afisha.ru/msk/restaurant/loft-hall-no-2-312260/",
+    "checked": "2026-10-31T13:59:27.915089+00:00",
+    "verification": "Published main Restaurant JSON-LD.geo after source308rename; address verified against official Loft2 page."
+  },
+  {
+    "city": "Санкт-Петербург",
+    "venue_source_id": "/spb/restaurant/blagodat-16161/",
+    "venue": "Благодать",
+    "address": "Петровская наб., напротив дома 2, фрегат «Благодать»",
+    "source_address": "Санкт-Петербург, Петровская набережная, 2",
+    "coordinates": [
+      30.329693,
+      59.95266
+    ],
+    "source": "https://fregat-blagodat.ru/",
+    "checked": "2026-10-31T13:59:27.915089+00:00",
+    "verification": "Official venue JSON-LD.geo and its Yandex org1005337750 iframe agree."
+  },
+  {
+    "city": "Каменск-Уральский",
+    "venue_source_id": "/kamensk_uralskij/theatre/drama-nomer-tri-15880723/",
+    "venue": "Драма номер три",
+    "address": "Алюминиевая, 47",
+    "source_address": "Алюминиевая улица, 47, Каменск-Уральский",
+    "coordinates": [
+      61.952781,
+      56.392139
+    ],
+    "source": "https://drama3.ru/contacts",
+    "metadata_source": "https://yandex.ru/map-widget/v1/?um=constructor%3A2c12dfed5fa35181dbfc8002ec43adbfec27c0fb9e87a93e9d440e1b64394f2b&source=constructor",
+    "checked": "2026-10-31T13:59:27.915089+00:00",
+    "verification": "Single named placemark in theatre official constructor map; cross-checked Yandex org1084315321. Uses placemark, not map centre."
+  }
+]

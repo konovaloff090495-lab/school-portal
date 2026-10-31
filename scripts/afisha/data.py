@@ -1,6 +1,7 @@
 # coding: utf-8
 import json,pathlib,datetime,re,os,collections
 from zoneinfo import ZoneInfo
+from geodata import source_index,apply
 R=pathlib.Path(os.environ.get('AFISHA_ROOT',pathlib.Path(__file__).resolve().parents[2]));W=R/'work/afisha-scale';P=R/'work/afisha-production';M=R/'work/moscow-preview'
 def read(p,default):return json.loads(p.read_text())if p.exists()else default
 def norm(v):return re.sub(r'[^а-я0-9]','',(v or'').lower().replace('ё','е'))
@@ -57,6 +58,7 @@ for e in read(M/'extra-events.json',[]):
  if any(t in tags for t in ['za-gorodom','po-podmoskovyu','iz-moskvy','podmoskove']):e={**e,'city':'Московская область','outOfCity':True,'address':'Выезд из Москвы · '+e['address']}
  events.append(e)
 # A programme can appear under several explicit categories, never inflate unique IDs.
+events=apply(events,source_index(R))
 unique={e['id']:e for e in events};events=list(unique.values());seen={c['name']:[]for c in registry}
 for e in events:
  if e['city']in seen:seen[e['city']].append(e)
