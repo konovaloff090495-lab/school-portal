@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-31.1",
+  "version": "2026-10-31.2",
   "partner": "Skysmart",
   "offerId": 1888,
   "url": "https://t-cpa.ru/1lfVIq",
@@ -26,7 +26,10 @@
     "/blog/skolko-stoyat-kursy-programmirovaniya-dlya-detej/",
     "/blog/besplatnye-kursy-programmirovaniya-dlya-detej/",
     "/blog/programmirovanie-dlya-detey-5-klassa/",
-    "/blog/luchshie-kursy-nejrosetej-dlya-detej/"
+    "/blog/luchshie-kursy-nejrosetej-dlya-detej/",
+    "/blog/scratch-besplatno-dlya-detej/",
+    "/blog/python-besplatno-dlya-detej/",
+    "/blog/nejroseti-besplatno-dlya-detej/"
   ],
   "catalogPath": "/besplatnye-uroki/programmirovanie/",
   "autoDelayMs": 35000,
