@@ -1,0 +1,35 @@
+{
+  "version": "2026-10-31.1",
+  "partner": "Skysmart",
+  "offerId": 1888,
+  "url": "https://t-cpa.ru/1lfVIq",
+  "expiresAt": "2026-12-31T23:59:59+03:00",
+  "age": [
+    7,
+    17
+  ],
+  "materials": 18,
+  "paths": [
+    "/blog/sozdanie-igr-dlya-detej-kursy/",
+    "/blog/onlajn-kursy-programmirovaniya-dlya-detej/",
+    "/blog/programmirovaniye-kursy-dlya-detej/",
+    "/blog/python-igra-ugadaj-chislo/",
+    "/blog/kruzhki-programmirovaniya-dlya-detej/",
+    "/blog/nejroseti-dlya-detej/",
+    "/blog/scratch-pervaya-igra-so-schetom/",
+    "/blog/minecraft-programmirovanie-dlya-detej/",
+    "/blog/python-dlya-detej/",
+    "/blog/roblox-studio-dlya-detej/",
+    "/blog/scratch-dlya-detej/",
+    "/blog/programmirovanie-dlya-detej-po-vozrastam/",
+    "/blog/programmirovanie-dlya-detej/",
+    "/blog/skolko-stoyat-kursy-programmirovaniya-dlya-detej/",
+    "/blog/besplatnye-kursy-programmirovaniya-dlya-detej/",
+    "/blog/programmirovanie-dlya-detey-5-klassa/",
+    "/blog/luchshie-kursy-nejrosetej-dlya-detej/"
+  ],
+  "catalogPath": "/besplatnye-uroki/programmirovanie/",
+  "autoDelayMs": 35000,
+  "scrollFraction": 0.35,
+  "dismissDays": 7
+}
