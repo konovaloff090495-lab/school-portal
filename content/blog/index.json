@@ -6929,8 +6929,9 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 9,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "cena-repetitora-2026",
@@ -8123,8 +8124,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-07-11",
     "readTime": 8,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "rezhim-dnya-5-klassa-sovety",
@@ -16213,8 +16215,9 @@
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-09-24",
     "readTime": 6,
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "updatedAt": "2026-10-31"
   },
   {
     "slug": "repetitor-po-matematike-onlajn",
@@ -16346,38 +16349,40 @@
     "imageUrl": "/blog/images/editorial-20261022/dance.webp"
   },
   {
+    "category": "ОБУЧЕНИЕ",
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-07",
     "slug": "besplatnye-kursy-programmirovaniya-dlya-detej",
     "title": "Бесплатное программирование для детей: курсы, кружки и первые проекты",
     "excerpt": "Где школьнику начать бесплатно: Scratch, Code.org, государственные программы и местные IT-кружки; что проверить при записи.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "бесплатные курсы программирования для детей",
       "программирование бесплатно школьникам",
       "бесплатные кружки IT"
     ],
+    "readTime": 7,
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
+  },
+  {
+    "category": "ОБУЧЕНИЕ",
     "author": "Редакция pro-schools.ru",
     "authorRole": "Аналитический отдел",
     "publishedAt": "2026-10-07",
-    "readTime": 7,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
-  },
-  {
     "slug": "kruzhki-programmirovaniya-dlya-detej",
     "title": "Кружки программирования для детей: как найти рядом и выбрать занятия",
     "excerpt": "Школьный кружок, IT-куб, технопарк или частная школа: где искать занятия рядом с домом и какие вопросы задать перед записью.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "кружок программирования для детей",
       "секция программирования для школьников",
       "IT кружки для детей"
     ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-10-07",
     "readTime": 7,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "category": "ОБУЧЕНИЕ",
@@ -16394,7 +16399,7 @@
       "школа программирования онлайн"
     ],
     "readTime": 4,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261021/onlajn-shkola-plyusy-minusy.webp",
     "imageAlt": "Иллюстрация: Занятие с ноутбуком и учебными материалами"
   },
@@ -16413,7 +16418,7 @@
       "программирование для школьников"
     ],
     "readTime": 4,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261022/coding.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -16431,7 +16436,7 @@
       "программирование для подростков"
     ],
     "readTime": 5,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261022/coding.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -16449,7 +16454,7 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 11,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -16467,26 +16472,27 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 8,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261022/video.webp",
     "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
   },
   {
+    "category": "ОБУЧЕНИЕ",
+    "author": "Редакция pro-schools.ru",
+    "authorRole": "Аналитический отдел",
+    "publishedAt": "2026-10-07",
     "slug": "skolko-stoyat-kursy-programmirovaniya-dlya-detej",
     "title": "Сколько стоят курсы программирования для детей и как сравнить цены",
     "excerpt": "Как считать полную стоимость: уроки, длительность, материалы, пропуски и возврат. Чек-лист для сравнения школ без неверных цен.",
-    "category": "ОБУЧЕНИЕ",
     "tags": [
       "цена курсов программирования для детей",
       "сколько стоят курсы программирования",
       "стоимость школы программирования"
     ],
-    "author": "Редакция pro-schools.ru",
-    "authorRole": "Аналитический отдел",
-    "publishedAt": "2026-10-07",
     "readTime": 7,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261022/coding.webp"
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261022/coding.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "sozdanie-igr-dlya-detej-kursy",
@@ -16502,7 +16508,7 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 9,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261022/coding.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -16520,8 +16526,9 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 8,
-    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем",
-    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp"
+    "updatedAt": "2026-10-31",
+    "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
+    "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
   {
     "slug": "roblox-studio-dlya-detej",
@@ -16537,7 +16544,7 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-07",
     "readTime": 9,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -18802,7 +18809,7 @@
     "readTime": 10,
     "imageUrl": "/blog/images/editorial-20261021/tvorcheskie-professii-2026.webp",
     "imageAlt": "Иллюстрация: Ученица рисует натюрморт акварелью в художественной студии",
-    "updatedAt": "2026-10-28"
+    "updatedAt": "2026-10-31"
   },
   {
     "slug": "luchshie-kursy-po-shkolnym-predmetam",
@@ -26246,7 +26253,7 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-28",
     "readTime": 3,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261021/it-professii-dlya-shkolnikov.webp",
     "imageAlt": "Иллюстрация: Подросток изучает программирование на ноутбуке с преподавателем"
   },
@@ -26263,7 +26270,7 @@
     "authorRole": "Редакция образовательного каталога",
     "publishedAt": "2026-10-28",
     "readTime": 3,
-    "updatedAt": "2026-10-28",
+    "updatedAt": "2026-10-31",
     "imageUrl": "/blog/images/editorial-20261022/video.webp",
     "imageAlt": "Иллюстрация: Подростки работают с камерой и снимают учебный проект"
   },
