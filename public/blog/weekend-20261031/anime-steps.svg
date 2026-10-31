@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,96%,92%); fill-rule: evenodd;"/>
+			<text x="40" y="785" style="font-family: Arial-Bold; font-size: 30px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1570) scale(1,-1)">Первый аниме-портрет: шесть этапов</text>
+			<rect x="30" y="415" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="46" y="715" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1430) scale(1,-1)">1. Круг и подбородок</text>
+			<circle cx="215" cy="608.0" r="65.0" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 215,685 L 215,500 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 135,590 L 295,590 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 152 600 C 153 565 187 520 215 504 C 243 520 277 565 278 600 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<rect x="420" y="415" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="436" y="715" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1430) scale(1,-1)">2. Ось и линия глаз</text>
+			<circle cx="605" cy="608.0" r="65.0" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 605,685 L 605,500 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 525,590 L 685,590 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1.4;"/>
+			<path d="M 542 600 C 543 565 577 520 605 504 C 633 520 667 565 668 600 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 558 588 C 568 603 584 603 592 588 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<path d="M 618 588 C 628 603 644 603 652 588 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<path d="M 559,613 L 588,616 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 622,616 L 651,613 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="810" y="415" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="826" y="715" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1430) scale(1,-1)">3. Глаза, нос и рот</text>
+			<path d="M 932 600 C 933 565 967 520 995 504 C 1023 520 1057 565 1058 600 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 948 588 C 958 603 974 603 982 588 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="965.0" cy="585.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="967.0" cy="588.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 952 579 C 961 573 970 573 978 579 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 1008 588 C 1018 603 1034 603 1042 588 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="1025.0" cy="585.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="1027.0" cy="588.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 1012 579 C 1021 573 1030 573 1038 579 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 949,613 L 978,616 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1012,616 L 1041,613 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 995 581 L 991 560 L 998 558 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 983 540 C 992 534 1001 534 1009 541 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.8; fill: none; fill-rule: evenodd;"/>
+			<rect x="30" y="60" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="46" y="360" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,720) scale(1,-1)">4. Волосы крупными прядями</text>
+			<path d="M 152 245 C 153 210 187 165 215 149 C 243 165 277 210 278 245 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 168 233 C 178 248 194 248 202 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="185.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="187.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 172 224 C 181 218 190 218 198 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 228 233 C 238 248 254 248 262 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="245.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="247.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 232 224 C 241 218 250 218 258 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 169,258 L 198,261 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 232,261 L 261,258 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 215 226 L 211 205 L 218 203 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 203 185 C 212 179 221 179 229 186 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.8; fill: none; fill-rule: evenodd;"/>
+			<path d="M 143 230 C 129 335 285 358 292 238 L 274 254 L 265 293 L 242 264 L 240 303 L 211 264 L 208 302 L 172 256 L 162 281 L 156 239 Z " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.3; fill: none; fill-rule: evenodd;"/>
+			<rect x="420" y="60" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="436" y="360" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,720) scale(1,-1)">5. Шея и плечи</text>
+			<path d="M 542 245 C 543 210 577 165 605 149 C 633 165 667 210 668 245 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 558 233 C 568 248 584 248 592 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="575.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="577.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 562 224 C 571 218 580 218 588 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 618 233 C 628 248 644 248 652 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="635.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="637.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 622 224 C 631 218 640 218 648 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 559,258 L 588,261 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 622,261 L 651,258 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 605 226 L 601 205 L 608 203 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 593 185 C 602 179 611 179 619 186 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.8; fill: none; fill-rule: evenodd;"/>
+			<path d="M 533 230 C 519 335 675 358 682 238 L 664 254 L 655 293 L 632 264 L 630 303 L 601 264 L 598 302 L 562 256 L 552 281 L 546 239 Z " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.3; fill: rgb(92%,88%,82%); fill-rule: evenodd;"/>
+			<path d="M 585,160 L 585,124 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 625,160 L 625,124 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 585 135 L 535 114 L 675 114 L 625 135 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<rect x="810" y="60" width="370" height="330" rx="12" ry="12" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="826" y="360" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,720) scale(1,-1)">6. Чистый контур и тени</text>
+			<path d="M 932 245 C 933 210 967 165 995 149 C 1023 165 1057 210 1058 245 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 948 233 C 958 248 974 248 982 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="965.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="967.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 952 224 C 961 218 970 218 978 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 1008 233 C 1018 248 1034 248 1042 233 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: none; fill-rule: evenodd;"/>
+			<circle cx="1025.0" cy="230.0" r="9.0" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="1027.0" cy="233.0" r="2.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 1012 224 C 1021 218 1030 218 1038 224 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 949,258 L 978,261 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1012,261 L 1041,258 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 995 226 L 991 205 L 998 203 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.5; fill: none; fill-rule: evenodd;"/>
+			<path d="M 983 185 C 992 179 1001 179 1009 186 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1.8; fill: none; fill-rule: evenodd;"/>
+			<path d="M 923 230 C 909 335 1065 358 1072 238 L 1054 254 L 1045 293 L 1022 264 L 1020 303 L 991 264 L 988 302 L 952 256 L 942 281 L 936 239 Z " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2.3; fill: rgb(92%,88%,82%); fill-rule: evenodd;"/>
+			<path d="M 975,160 L 975,124 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 1015,160 L 1015,124 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 975 135 L 925 114 L 1065 114 L 1015 135 " style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<path d="M 957,207 L 973,207 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1017,207 L 1033,207 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 2;"/>
+		</g>
+	</g>
+</svg>
