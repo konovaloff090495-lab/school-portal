@@ -30,6 +30,7 @@ try:
  temp=target.with_suffix('.incoming');shutil.copy2(W/'candidate.json',temp);temp.replace(target)
  if os.environ.get('TRIPSTER_PUBLIC_CONFIG'):
   if run(H/'collectors/tripster.py',optional=True):run(H/'collectors/tripster-prepare.py',optional=True)
+ run(H/'collectors/venue-geo.py',optional=True)
  run(H/'data.py')
  # Retain previously published event URLs and their original facts when a donor delists one.
  current=S/'current';previous_current=current.resolve()if current.exists()else None
