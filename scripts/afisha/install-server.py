@@ -76,3 +76,6 @@ robots=pathlib.Path('/srv/portfolio/proschools/static/courses/robots.txt');text=
 if line not in text:robots.write_text(text.rstrip()+'\n'+line+'\n')
 subprocess.run(['systemctl','daemon-reload'],check=True);subprocess.run(['systemctl','reload','nginx'],check=True)
 print('Afisha routes and isolated 48h service installed; timer awaits first verified run')
+
+if(runtime/'html-server.py').exists():subprocess.run([sys.executable,str(runtime/'install-html-service.py')],check=True)
+if(runtime/'refresh-views.py').exists():subprocess.run([sys.executable,str(runtime/'install-views-service.py')],check=True)

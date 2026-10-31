@@ -1,7 +1,7 @@
 # coding:utf-8
-import os,sys,pathlib,json,subprocess,fcntl,datetime,shutil,gzip,time
+import gc,os,sys,pathlib,json,subprocess,fcntl,datetime,shutil,gzip,time
 H=pathlib.Path(__file__).resolve().parent;R=pathlib.Path(os.environ['AFISHA_ROOT']);S=pathlib.Path(os.environ.get('AFISHA_STATIC','/srv/portfolio/proschools/static/afisha'));W=R/'work/afisha-scale';R.mkdir(parents=True,exist_ok=True);W.mkdir(parents=True,exist_ok=True)
-lock=open(R/'refresh.lock','w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);started=datetime.datetime.now(datetime.timezone.utc).isoformat();tag=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ');stage=S/'releases'/tag;warnings=[]
+lock=open(R/'refresh.lock','w');fcntl.flock(lock,fcntl.LOCK_EX);started=datetime.datetime.now(datetime.timezone.utc).isoformat();tag=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ');stage=S/'releases'/tag;warnings=[]
 env={**os.environ,'AFISHA_SCALE_WORK':str(W),'AFISHA_OUTPUT':str(W/'candidate.json'),'AFISHA_RELEASE':str(stage)}
 def run(path,optional=False):
  print('RUN',path.name,flush=True);r=subprocess.run([sys.executable,str(path)],env=env,cwd=R)
@@ -28,20 +28,20 @@ try:
  target=R/'outputs/ProSchools-afisha-national.json';target.parent.mkdir(exist_ok=True);previous=json.loads(target.read_text())if target.exists()else None
  if previous and len(events)<len(previous['events'])*.65:raise RuntimeError('Unexpected source coverage drop; previous catalogue retained')
  temp=target.with_suffix('.incoming');shutil.copy2(W/'candidate.json',temp);temp.replace(target)
+ del events,ids,candidate,previous;gc.collect()
  if os.environ.get('TRIPSTER_PUBLIC_CONFIG'):
   if run(H/'collectors/tripster.py',optional=True):run(H/'collectors/tripster-prepare.py',optional=True)
  run(H/'collectors/venue-geo.py',optional=True)
  run(H/'collectors/afisha-venue-geo.py',optional=True)
  run(H/'collectors/event-venue-geo.py',optional=True)
+ run(H/'collectors/content.py',optional=True)
+ run(H/'collectors/afisha-content.py',optional=True)
  run(H/'data.py')
  # Retain previously published event URLs and their original facts when a donor delists one.
  current=S/'current';previous_current=current.resolve()if current.exists()else None
- if current.exists():
-  for p in current.rglob('index.html.gz'):
-   rel=p.relative_to(current)
-   if 'sobytie'in rel.parts:
-    dest=stage/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest);dest.with_suffix('').touch()
+ if previous_current:env['AFISHA_PREVIOUS_RELEASE']=str(previous_current)
  run(H/'build.py')
+ subprocess.run([sys.executable,str(H/'verify-release.py'),str(stage),str(previous_current)]if previous_current else[sys.executable,str(H/'verify-release.py'),str(stage)],env=env,check=True)
  report=json.loads((stage/'afisha/status.json').read_text())
  if report['cities']<225 or report['moscow_oblast_cities']!=74:raise RuntimeError('City or Moscow Oblast coverage mismatch')
  for city in ['moskva','sankt-peterburg','moskovskaya-oblast/balashikha','moskovskaya-oblast']:
@@ -52,6 +52,8 @@ try:
  status.update({'success':True,'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'release':tag,'events':report['unique_events'],'cities':report['cities'],'moscow_oblast_cities':74,'warnings':warnings,'interval_hours':48})
  (stage/'afisha/refresh-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2))
  link=S/('current-'+tag);link.symlink_to(stage);link.replace(current)
+ registry=stage/'afisha/published-selections.json'
+ if registry.exists():shutil.copyfile(registry,R/'work/afisha-production/published-selections.json')
  releases=sorted([p for p in(S/'releases').iterdir()if p.is_dir()and p.name[0].isdigit()],key=lambda p:p.name,reverse=True)
  for old in releases:
   if old.resolve()not in [current.resolve(),previous_current]:shutil.rmtree(old)

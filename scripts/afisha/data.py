@@ -2,6 +2,8 @@
 import json,pathlib,datetime,re,os,collections
 from zoneinfo import ZoneInfo
 from geodata import source_index,apply
+from enrich import enrich
+from selections import prepare
 R=pathlib.Path(os.environ.get('AFISHA_ROOT',pathlib.Path(__file__).resolve().parents[2]));W=R/'work/afisha-scale';P=R/'work/afisha-production';M=R/'work/moscow-preview'
 def read(p,default):return json.loads(p.read_text())if p.exists()else default
 def norm(v):return re.sub(r'[^а-я0-9]','',(v or'').lower().replace('ё','е'))
@@ -58,9 +60,11 @@ for e in read(M/'extra-events.json',[]):
  if any(t in tags for t in ['za-gorodom','po-podmoskovyu','iz-moskvy','podmoskove']):e={**e,'city':'Московская область','outOfCity':True,'address':'Выезд из Москвы · '+e['address']}
  events.append(e)
 # A programme can appear under several explicit categories, never inflate unique IDs.
-events=apply(events,source_index(R))
+events=prepare(enrich(apply(events,source_index(R)),R,national,byname))
 unique={e['id']:e for e in events};events=list(unique.values());seen={c['name']:[]for c in registry}
 for e in events:
+ if e.get('ageRestriction')is not None and e['ageRestriction']>=18:e['listingStatus']='age_review';e['archived']=True;continue
+ if e.get('finished'):continue
  if e['city']in seen:seen[e['city']].append(e)
  if e['city']in monames:seen['Московская область'].append(e)
 metro=read(P/'metro-all.json',[]);metromap={c['name']:c for c in metro};districts=read(P/'districts.json',{})
@@ -72,4 +76,9 @@ for c in registry:
    for st in line['stations']:g['stations'].append({'id':st['id'],'name':st['name'],'line':line['name'],'lat':st['lat'],'lng':st['lng']})
   g['districts']=[{'id':d,'name':d,'okrug':''}for d in districts.get(c['slug'],[])]
  c['geography']=g
-P.mkdir(exist_ok=True);(P/'registry.json').write_text(json.dumps(registry,ensure_ascii=False));(P/'events.json').write_text(json.dumps(events,ensure_ascii=False));(P/'city-events.json').write_text(json.dumps(seen,ensure_ascii=False));print('Prepared',len(events),'events',len(registry)-1,'cities',len(monames),'MO; media',sum(bool(e['media'])for e in events))
+P.mkdir(exist_ok=True)
+for filename,value in [('registry.json',registry),('events.json',events)]:
+ target=P/filename;temp=target.with_suffix('.incoming')
+ with temp.open('w',encoding='utf-8')as f:json.dump(value,f,ensure_ascii=False,separators=(',',':'))
+ temp.replace(target)
+print('Prepared',len(events),'events',len(registry)-1,'cities',len(monames),'MO; media',sum(bool(e['media'])for e in events))
