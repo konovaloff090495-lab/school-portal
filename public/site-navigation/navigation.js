@@ -112,3 +112,6 @@ $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_sel
 update();
 try{if(!representativePage()&&!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
 })();
+
+/* Contextual education offers; standalone module, no navigation changes. */
+(()=>{let loaded=false;function load(){if(loaded||!location.pathname.startsWith('/blog/'))return;loaded=true;const s=document.createElement('script');s.src='/partners/skysmart/offer.js?v=20261031';s.defer=true;document.head.append(s)}load();window.addEventListener('ps:navigation-route',load)})();

@@ -13,12 +13,13 @@ def age(e):
  if g:return str(g[0])+' класс' if len(g)==1 else (str(g[0])+'–'+str(g[-1]) if g==list(range(g[0],g[-1]+1)) else ', '.join(map(str,g)))+' классы'
  a=e.get('ages');return (str(a[0])+('–'+str(a[1]) if a[1] else '+')+' лет') if a else 'Возраст уточняется'
 def card(e,topics):
- own=e['id'].startswith('su-');title=ESC(e.get('shortTitle') or e['title']);kind={'scheduled':'По расписанию','recording':'Видеозапись','appointment':'По записи'}[e['kind']]
+ own=e['id'].startswith('su-');title=ESC(e.get('shortTitle') or e['title']);kind=e.get('formatLabel') or {'scheduled':'По расписанию','recording':'Видеозапись','appointment':'По записи'}[e['kind']]
  if e.get('start'):
   t=iso(e['start']).astimezone(MSK);when=f'{t.day} {MONTH[t.month-1]} · {t:%H:%M} МСК'
  else:when='Смотрите в удобное время' if e['kind']=='recording' else 'Время согласуется при записи'
- action=f'<button class="card-action" data-lektoriy="{ESC(e["id"])}">Записаться <span>↗</span></button>' if own else f'<a class="card-action" href="{ESC(e["outboundUrl"])}" target="_blank" rel="noopener noreferrer">'+('Смотреть' if e['kind']=='recording' else 'На сайт школы')+' <span>↗</span></a>'
- return f'''<article class="card"><div class="card-visual"><a class="cover photographic" href="{ESC(e['url'])}" aria-label="{title}"><img src="{ESC(e['cover'])}" alt="" loading="lazy" decoding="async" width="1536" height="1024"><span class="cover-gradient"></span><span class="cover-label">{ESC(topics.get(e['topics'][0],'Занятие'))}</span><span class="poster-title">{title}</span><span class="cover-bottom">{kind}</span></a><button class="save" aria-label="В избранное: {title}" aria-pressed="false" data-save="{ESC(e['id'])}">♡</button><span class="free-badge">0 ₽</span></div><div class="card-copy"><p class="date">{when}</p><h3><a href="{ESC(e['url'])}">{title}</a></h3><p class="meta">{age(e)} · {str(e['duration'])+' мин' if e.get('duration') else 'Длительность уточняется'}</p><p class="org">{ESC(e.get('publicOrganizer',e['organizer']))} · онлайн</p><div class="card-foot"><span>{'Бесплатное участие' if own else 'Бесплатный старт' if e['kind']=='appointment' else 'Бесплатная запись'}</span>{action}</div></div></article>'''
+ linkrel='sponsored nofollow noopener noreferrer' if e.get('sponsored') else 'noopener noreferrer'
+ action=f'<button class="card-action" data-lektoriy="{ESC(e["id"])}">Записаться <span>↗</span></button>' if own else f'<a class="card-action" href="{ESC(e["outboundUrl"])}" target="_blank" rel="{linkrel}">'+(ESC(e.get('actionLabel')) if e.get('actionLabel') else 'Смотреть' if e['kind']=='recording' else 'На сайт школы')+' <span>↗</span></a>'
+ return f'''<article class="card"><div class="card-visual"><a class="cover photographic" href="{ESC(e['url'])}" aria-label="{title}"><img src="{ESC(e['cover'])}" alt="" loading="lazy" decoding="async" width="1536" height="1024"><span class="cover-gradient"></span><span class="cover-label">{ESC(topics.get(e['topics'][0],'Занятие'))}</span><span class="poster-title">{title}</span><span class="cover-bottom">{kind}</span></a><button class="save" aria-label="В избранное: {title}" aria-pressed="false" data-save="{ESC(e['id'])}">♡</button><span class="free-badge">0 ₽</span></div><div class="card-copy"><p class="date">{when}</p><h3><a href="{ESC(e['url'])}">{title}</a></h3><p class="meta">{age(e)} · {ESC(e['durationLabel']) if e.get('durationLabel') else str(e['duration'])+' мин' if e.get('duration') else 'Длительность уточняется'}</p><p class="org">{ESC(e.get('publicOrganizer',e['organizer']))} · онлайн</p><div class="card-foot"><span>{ESC(e['freeLabel']) if e.get('freeLabel') else 'Бесплатное участие' if own else 'Бесплатный старт' if e['kind']=='appointment' else 'Бесплатная запись'}</span>{action}</div></div></article>'''
 def clipped(s,n):return s if len(s)<=n else s[:n-1].rsplit(' ',1)[0]+'…'
 def crumbs(items):return {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':name,'item':BASE+url} for i,(name,url) in enumerate(items)]}
 
@@ -115,7 +116,7 @@ def build(catalog,destination,baseline,now,last_fetch=None):
     own=e['id'].startswith('su-');aside.clear();aside.append(parse('<strong>0 ₽</strong><p>'+ESC(e['freeScope'])+'</p><p>'+ESC(age(e))+'</p><p>Онлайн</p>'+('<button class="primary" data-lektoriy="'+ESC(e['id'])+'">Записаться бесплатно ↗</button>' if own else '<a class="primary" href="'+ESC(e['outboundUrl'])+'" target="_blank" rel="noopener noreferrer">На сайт организатора ↗</a>')))
   pills=main.select('.detail-grid .pill')
   if pills:pills[0].string=age(e)
-  if len(pills)>1:pills[1].string={'scheduled':'По расписанию','recording':'Видеозапись','appointment':'По записи'}[e['kind']]
+  if len(pills)>1:pills[1].string=e.get('formatLabel') or {'scheduled':'По расписанию','recording':'Видеозапись','appointment':'По записи'}[e['kind']]
   if e['id'].startswith('su-'):
    facts=main.select('.detail-grid aside > p')
    if len(facts)>1:
@@ -129,6 +130,9 @@ def build(catalog,destination,baseline,now,last_fetch=None):
   for a in main.select('[data-lektoriy],.detail-grid aside a[href]'):
    if a.name=='button':a['data-lektoriy']=e['id']
    elif a.get('href','').startswith('https://') and 'pro-schools.ru' not in a['href']:a['href']=e['outboundUrl']
+  if e.get('sponsored'):
+   for a in main.select('.detail-grid a[href]'):
+    if a.get('href')==e['outboundUrl']:a['rel']='sponsored nofollow noopener noreferrer';a.string=e.get('actionLabel','На сайт школы')+' ↗'
   if e['status']!='active':
    text={'expired':('Это мероприятие уже завершилось. ' if e.get('end') or e.get('duration') else 'Время начала этого мероприятия уже прошло. ')+'Выберите другое бесплатное занятие в афише.','unverified':'Уточняем актуальное расписание. Пока можно выбрать другие занятия в афише.','withdrawn':'Организатор снял это предложение. Выберите другое бесплатное занятие.'}[e['status']]
    main.h1.insert_before(parse('<p class="lesson-status" role="status">'+text+f' <a href="{HUB}">Смотреть афишу →</a></p>'))
@@ -145,8 +149,9 @@ def build(catalog,destination,baseline,now,last_fetch=None):
  # Keep old topic URLs usable, but empty sections are noindex and out of sitemap/search.
  old_topics={p.parent.name for p in (baseline/'besplatnye-uroki').glob('*/index.html') if p.parent.name in topics}
  for t in set(t for e in catalog for t in e['topics'])|old_topics:
-  group=[e for e in active if t in e['topics']];old=baseline/(HUB+t+'/').lstrip('/')/'index.html';doc=parse(old.read_text() if old.exists() else templates['subject']);heading=doc.h1.get_text(' ',strip=True) if old.exists() else 'Бесплатные уроки: '+topics[t];doc.h1.string=heading;intro=doc.h1.find_next_sibling('p');
+  group=[e for e in active if t in e['topics']];old=baseline/(HUB+t+'/').lstrip('/')/'index.html';doc=parse(old.read_text() if old.exists() else templates['subject']);heading=doc.h1.get_text(' ',strip=True) if old.exists() else 'Бесплатные уроки: '+topics[t];heading='Бесплатные курсы программирования' if t=='programmirovanie' else heading;doc.h1.string=heading;intro=doc.h1.find_next_sibling('p');
   if intro:intro.string='Выберите занятие по интересу и удобному времени. Сейчас в подборке: '+str(len(group))+'. Условия бесплатного участия указаны в карточках.'
+  if intro and t=='programmirovanie':intro.string='Курсы в записи, материалы для самостоятельного старта и пробные занятия. В каждой карточке указано, что доступно бесплатно. Сейчас предложений: '+str(len(group))+'.'
   container=doc.select_one('.subject-results');container.clear();container.append(parse('<div class="cards">'+''.join(card(e,topics) for e in group)+'</div>' if group else f'<p>Сейчас новых занятий по этому направлению нет. <a href="{HUB}">Посмотрите всю афишу</a>.</p>'))
   save(doc,HUB+t+'/',heading+' для детей онлайн | ProSchools',heading+f' для детей онлайн: {len(group)} предложений. Выберите класс, время и формат. Открытые уроки, пробные занятия и записи.',(group or active)[0]['cover'],index=bool(group),schema=[crumbs([('Главная','/'),('Бесплатные уроки',HUB),(heading,HUB+t+'/')]),schema_list(heading,HUB+t+'/',group)])
  write(assets/'events.json',catalog)
