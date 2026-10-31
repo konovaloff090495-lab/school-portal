@@ -56,7 +56,7 @@ try:
   lm.text='2026-10-31'
  assert urls_before<=set(elems);assert sitemap.read_bytes()==sm_before,'Concurrent sitemap writer';write(sitemap,ET.tostring(tree,encoding='utf-8',xml_declaration=True))
  temp=catalog_base/'current.next';temp.symlink_to(release);os.replace(temp,link)
- write(snippet,'location = /podderzhka-semej { return 301 /podderzhka-semej/$is_args$args; }\nlocation = /podderzhka-semej/index.html { return 301 /podderzhka-semej/$is_args$args; }\nlocation = /podderzhka-semej/ {\n alias /srv/portfolio/proschools/static/family-support/current/index.html;\n default_type text/html;\n add_header Cache-Control "public, max-age=300, must-revalidate" always;\n add_header X-Content-Type-Options nosniff always;\n add_header Referrer-Policy strict-origin-when-cross-origin always;\n}\n')
+ write(snippet,'location = /podderzhka-semej { return 301 /podderzhka-semej/$is_args$args; }\nlocation = /podderzhka-semej/index.html { return 301 /podderzhka-semej/$is_args$args; }\nlocation = /podderzhka-semej/ {\n root /srv/portfolio/proschools/static/family-support/current;\n try_files /index.html =404;\n default_type text/html;\n add_header Cache-Control "public, max-age=300, must-revalidate" always;\n add_header X-Content-Type-Options nosniff always;\n add_header Referrer-Policy strict-origin-when-cross-origin always;\n}\n')
  include='include /etc/nginx/snippets/proschools-family-support.conf;'
  if include not in nginx_before:
   anchor=' include /etc/nginx/snippets/proschools-language-practice.conf;';assert nginx_before.count(anchor)==1;assert nginx.read_text()==nginx_before,'Concurrent nginx editor';write(nginx,nginx_before.replace(anchor,anchor+'\n '+include))

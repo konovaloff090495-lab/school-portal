@@ -77,6 +77,8 @@ def main():
  manifest=json.loads((release/'_programming/manifest.json').read_text())
  content=release/'_programming/content-paths.json'
  if content.exists():manifest['indexable']+=json.loads(content.read_text())
+ static_paths=Path(__file__).resolve().parents[2]/'data/static-content-paths.json'
+ if static_paths.exists():manifest['indexable']+=json.loads(static_paths.read_text())
  content,n=merge(source,manifest)
  # Keep a non-trivial sitemap. An unexpected upstream error must not erase it.
  if n<1000:raise RuntimeError('Unexpectedly small upstream sitemap')
