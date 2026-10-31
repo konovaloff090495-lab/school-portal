@@ -17,10 +17,10 @@ print(json.dumps({'root':str(root),'pid':pid,'posts':items,'chrome_sha':hashlib.
 '''
 data=json.loads(run(code));(O/'preflight.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
 assert data['chrome_sha']==hashlib.sha256((R/'src/site-navigation/chrome.json').read_bytes()).hexdigest(),'Canonical navigation changed on live host'
-measures=json.loads((R/'research/family-support/measures-register.json').read_text());expected={m['id'] for m in measures if m.get('existing')}
-assert {k for k,v in data['posts'].items() if v['exists']}==expected,'Unexpected existing/new article conflict'
-for m in measures:
- if m.get('existing'):
-  saved=json.loads((O/'source-before'/(m['id']+'.json')).read_text())
-  assert saved==data['posts'][m['id']]['data'],'Existing article differs from reviewed source: '+m['id']
-print('Preflight OK:',len(posts),'articles;',len(expected),'existing; current and navigation match')
+baseline=json.loads((O/'baseline-continued.json').read_text())['posts']
+for slug,item in data['posts'].items():
+ if slug in baseline:
+  assert item['sha256']==baseline[slug]['sha256'],'Published article changed concurrently: '+slug
+ else:
+  assert not item['exists'],'New slug conflicts with existing article: '+slug
+print('Preflight OK:',len(posts),'articles;',len(baseline),'reviewed published versions; navigation matches')
