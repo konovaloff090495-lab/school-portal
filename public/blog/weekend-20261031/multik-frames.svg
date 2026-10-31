@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="450" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 450" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="450"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-450)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="450" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,96%,92%); fill-rule: evenodd;"/>
+			<text x="40" y="395" style="font-family: Arial-Bold; font-size: 30px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,790) scale(1,-1)">Один кадр — одно небольшое движение</text>
+			<rect x="30" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 40,145 L 200,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="60" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="80" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">1</text>
+			<rect x="225" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 235,145 L 395,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="277" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="275" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">2</text>
+			<rect x="420" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 430,145 L 590,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="494" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="470" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">3</text>
+			<rect x="615" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 625,145 L 785,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="711" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="665" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">4</text>
+			<rect x="810" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 820,145 L 980,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="928" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="860" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">5</text>
+			<rect x="1005" y="115" width="180" height="220" rx="8" ry="8" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 1015,145 L 1175,145 Z" style="stroke: rgb(61%,67%,67%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="1145" cy="185" r="18" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<text x="1055" y="355" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,710) scale(1,-1)">6</text>
+			<text x="40" y="55" style="font-family: Arial; font-size: 24px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,110) scale(1,-1)">При 8 кадрах в секунду эти 6 кадров займут 0,75 секунды.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="480" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="480"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-480)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="480" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,96%,92%); fill-rule: evenodd;"/>
+			<text x="40" y="425" style="font-family: Arial-Bold; font-size: 30px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,850) scale(1,-1)">Квест «Пропавшая звезда»: порядок подсказок</text>
+			<rect x="32" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="42" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">СТАРТ</text>
+			<path d="M 177,278 L 195,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="197" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="207" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">КНИГА</text>
+			<path d="M 342,278 L 360,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="362" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="372" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">СТОЛ</text>
+			<path d="M 507,278 L 525,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="527" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="537" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">ЗЕРКАЛО</text>
+			<path d="M 672,278 L 690,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="692" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="702" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">ПОДУШКА</text>
+			<path d="M 837,278 L 855,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="857" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="867" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">ЧАСЫ</text>
+			<path d="M 1002,278 L 1020,278 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="1022" y="230" width="145" height="95" rx="12" ry="12" style="stroke: rgb(20%,49%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1032" y="270" style="font-family: Arial-Bold; font-size: 17px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,540) scale(1,-1)">КОРОБКА</text>
+			<text x="45" y="140" style="font-family: Arial; font-size: 23px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,280) scale(1,-1)">Организатор заранее раскладывает карточки. Ребёнок получает только СТАРТ.</text>
+			<text x="45" y="90" style="font-family: Arial; font-size: 21px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,180) scale(1,-1)">Не прячьте задания высоко, рядом с розетками, техникой, окнами и лекарствами.</text>
+		</g>
+	</g>
+</svg>

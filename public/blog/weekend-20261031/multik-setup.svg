@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="640" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="640"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-640)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="640" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,96%,92%); fill-rule: evenodd;"/>
+			<text x="40" y="585" style="font-family: Arial-Bold; font-size: 30px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1170) scale(1,-1)">Съёмка мультфильма: камера остаётся на месте</text>
+			<rect x="550" y="140" width="570" height="300" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="575" y="465" style="font-family: Arial; font-size: 25px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,930) scale(1,-1)">Сцена из картона</text>
+			<circle cx="700" cy="230" r="45" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 3; fill: rgb(20%,49%,50%); fill-rule: evenodd;"/>
+			<circle cx="687" cy="240" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 3; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="713" cy="240" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 3; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="180" y="200" width="150" height="260" rx="16" ry="16" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,23%,26%); fill-rule: evenodd;"/>
+			<rect x="193" y="222" width="124" height="215" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,96%,92%); fill-rule: evenodd;"/>
+			<circle cx="255" cy="213" r="4" style="stroke: none; stroke-linecap: butt; stroke-width: 3; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 255,200 L 195,80 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 8;"/>
+			<path d="M 255,200 L 315,80 Z" style="stroke: rgb(14%,23%,26%); stroke-linecap: butt; stroke-width: 8;"/>
+			<path d="M 340,330 L 530,330 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 510,345 L 530,330 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 510,315 L 530,330 Z" style="stroke: rgb(86%,40%,30%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="75" y="515" style="font-family: Arial; font-size: 23px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,1030) scale(1,-1)">Телефон на устойчивой опоре</text>
+			<text x="70" y="40" style="font-family: Arial; font-size: 22px;fill: rgb(14%,23%,26%); stroke:none;" transform="translate(0,80) scale(1,-1)">Свет сбоку • руки убираем перед каждым кадром • телефон не двигаем</text>
+		</g>
+	</g>
+</svg>

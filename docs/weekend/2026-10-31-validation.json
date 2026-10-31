@@ -1,0 +1,82 @@
+{
+  "release": "weekend-20261031",
+  "scope": "Six new blog pages (five tutorials and collection), three existing guide links, static illustrations and downloads. No application or form code changes.",
+  "content": {
+    "posts": 9,
+    "new_posts": 6,
+    "updated_guides": 3,
+    "download_files": 6,
+    "original_covers": 5,
+    "instruction_diagrams": 7,
+    "internal_destinations": 123,
+    "assets": 18,
+    "html_checks": true
+  },
+  "materials": {
+    "multik-storyboard.pdf": {
+      "pages": 2,
+      "no_text_outside_page": true
+    },
+    "focus-cards.pdf": {
+      "pages": 6,
+      "no_text_outside_page": true
+    },
+    "scratch-checklist.pdf": {
+      "pages": 2,
+      "no_text_outside_page": true
+    },
+    "quest-print.pdf": {
+      "pages": 5,
+      "no_text_outside_page": true
+    },
+    "anime-practice.pdf": {
+      "pages": 3,
+      "no_text_outside_page": true
+    },
+    "puzzles": {
+      "1089_tested_numbers": 640,
+      "grid15_all6_permutations": true,
+      "quest_answers": true
+    }
+  },
+  "scratch_vm": {
+    "loaded": true,
+    "spriteCount": 2,
+    "moveLeft": true,
+    "moveRight": true,
+    "bounds": true,
+    "fall": true,
+    "missNoScore": true,
+    "catchOnePoint": true,
+    "restartReset": true,
+    "collision": "geometric sensor stub with target positions; no pixel renderer"
+  },
+  "scratch_browser": {
+    "initial": {
+      "sprites": [
+        {
+          "name": "Корзина",
+          "costume": 1
+        },
+        {
+          "name": "Звезда",
+          "costume": 2
+        }
+      ],
+      "score": "0"
+    },
+    "x": 176,
+    "catchResult": {
+      "touching": true,
+      "score": 1
+    },
+    "pixelRenderer": true,
+    "loadedAndPlayable": true
+  },
+  "internal_links": {
+    "checked": 117,
+    "failed": []
+  },
+  "image_prompts": "data/blog-visuals/weekend-20261031.json",
+  "publication": "Pending live validation"
+}
