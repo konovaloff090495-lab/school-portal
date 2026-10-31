@@ -58,5 +58,9 @@ try:
  for old in releases:
   if old.resolve()not in [current.resolve(),previous_current]:shutil.rmtree(old)
  (R/'last-refresh.json').write_text(json.dumps(status,ensure_ascii=False,indent=2));print(json.dumps(status,ensure_ascii=False),flush=True)
+ # All sections are scanned; a notification failure keeps its retry queue and cannot undo publication.
+ if pathlib.Path('/var/lib/portfolio/proschools-indexing/public-key.json').exists():
+  try:run(H/'notify-site-indexnow.py',optional=True)
+  except Exception:print('Site IndexNow notification deferred; published release retained',flush=True)
 except Exception as error:
  status.update({'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'error':str(error),'previous_release_preserved':True,'warnings':warnings});(R/'last-refresh.json').write_text(json.dumps(status,ensure_ascii=False,indent=2));print(json.dumps(status,ensure_ascii=False),flush=True);raise
