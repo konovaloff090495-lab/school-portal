@@ -1,0 +1,668 @@
+[
+  {
+    "name": "Балашиха",
+    "population": 544303,
+    "territory_code": "467040000011002",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Ногинск",
+    "population": 103403,
+    "territory_code": "467510000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Старая Купавна",
+    "population": 23944,
+    "territory_code": "467510000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Электроугли",
+    "population": 18060,
+    "territory_code": "467510000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Бронницы",
+    "population": 21050,
+    "territory_code": "467050000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Волоколамск",
+    "population": 25394,
+    "territory_code": "467080000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Воскресенск",
+    "population": 95347,
+    "territory_code": "467100000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Белоозёрский",
+    "population": 13437,
+    "territory_code": "467100000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Дзержинский",
+    "population": 57308,
+    "territory_code": "467110000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Дмитров",
+    "population": 63986,
+    "territory_code": "467150000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Яхрома",
+    "population": 13791,
+    "territory_code": "467150000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Долгопрудный",
+    "population": 118760,
+    "territory_code": "467160000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Домодедово",
+    "population": 158046,
+    "territory_code": "467090000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Дубна",
+    "population": 74223,
+    "territory_code": "467180000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Егорьевск",
+    "population": 71024,
+    "territory_code": "467220000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Жуковский",
+    "population": 109831,
+    "territory_code": "467250000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Зарайск",
+    "population": 20253,
+    "territory_code": "467290000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Истра",
+    "population": 34552,
+    "territory_code": "467330000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Дедовск",
+    "population": 30180,
+    "territory_code": "467330000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Кашира",
+    "population": 44433,
+    "territory_code": "467350000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Клин",
+    "population": 89153,
+    "territory_code": "467370000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Высоковск",
+    "population": 12965,
+    "territory_code": "467370000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Коломна",
+    "population": 132772,
+    "territory_code": "467380000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Озёры",
+    "population": 23952,
+    "territory_code": "467380000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Королёв",
+    "population": 226477,
+    "territory_code": "467340000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Котельники",
+    "population": 75289,
+    "territory_code": "467390000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Красногорск",
+    "population": 196987,
+    "territory_code": "467440000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Краснознаменск",
+    "population": 44687,
+    "territory_code": "467060000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Видное",
+    "population": 108683,
+    "territory_code": "467070000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Лобня",
+    "population": 82353,
+    "territory_code": "467400000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Лосино-Петровский",
+    "population": 29831,
+    "territory_code": "467420000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Луховицы",
+    "population": 29805,
+    "territory_code": "467470000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Лыткарино",
+    "population": 66930,
+    "territory_code": "467410000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Люберцы",
+    "population": 238534,
+    "territory_code": "467480000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Можайск",
+    "population": 32516,
+    "territory_code": "467450000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Мытищи",
+    "population": 278693,
+    "territory_code": "467460000011002",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Наро-Фоминск",
+    "population": 76191,
+    "territory_code": "467500000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Апрелевка",
+    "population": 38955,
+    "territory_code": "467500000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Верея",
+    "population": 4836,
+    "territory_code": "467500000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Одинцово",
+    "population": 189797,
+    "territory_code": "467550000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Голицыно",
+    "population": 22878,
+    "territory_code": "467550000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Звенигород",
+    "population": 37915,
+    "territory_code": "467550000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Кубинка",
+    "population": 23638,
+    "territory_code": "467550000161000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Орехово-Зуево",
+    "population": 104812,
+    "territory_code": "467570000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Дрезна",
+    "population": 12156,
+    "territory_code": "467570000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Куровское",
+    "population": 19931,
+    "territory_code": "467570000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Ликино-Дулёво",
+    "population": 33917,
+    "territory_code": "467570000161000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Павловский Посад",
+    "population": 65331,
+    "territory_code": "467590000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Электрогорск",
+    "population": 30044,
+    "territory_code": "467590000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Подольск",
+    "population": 313414,
+    "territory_code": "467600000011002",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Пушкино",
+    "population": 112807,
+    "territory_code": "467580000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Ивантеевка",
+    "population": 84203,
+    "territory_code": "467580000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Красноармейск",
+    "population": 26746,
+    "territory_code": "467580000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Раменское",
+    "population": 117115,
+    "territory_code": "467680000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Реутов",
+    "population": 118065,
+    "territory_code": "467640000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Руза",
+    "population": 15071,
+    "territory_code": "467660000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Сергиев Посад",
+    "population": 98476,
+    "territory_code": "467280000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Краснозаводск",
+    "population": 14321,
+    "territory_code": "467280000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Пересвет",
+    "population": 11421,
+    "territory_code": "467280000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Хотьково",
+    "population": 20612,
+    "territory_code": "467280000161000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Серпухов",
+    "population": 134360,
+    "territory_code": "467700000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Протвино",
+    "population": 37270,
+    "territory_code": "467700000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Пущино",
+    "population": 19229,
+    "territory_code": "467700000111000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Солнечногорск",
+    "population": 48678,
+    "territory_code": "467710000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Ступино",
+    "population": 63151,
+    "territory_code": "467760000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Талдом",
+    "population": 17048,
+    "territory_code": "467780000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Фрязино",
+    "population": 58535,
+    "territory_code": "467800000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Химки",
+    "population": 259399,
+    "territory_code": "467830000011002",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Черноголовка",
+    "population": 18352,
+    "territory_code": "467810000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Чехов",
+    "population": 86786,
+    "territory_code": "467840000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Шатура",
+    "population": 36428,
+    "territory_code": "467860000011000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Рошаль",
+    "population": 20757,
+    "territory_code": "467860000061000",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Щёлково",
+    "population": 139737,
+    "territory_code": "467880000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  },
+  {
+    "name": "Электросталь",
+    "population": 143048,
+    "territory_code": "467900000011003",
+    "population_date": "2025-01-01",
+    "population_source": "https://rosstat.gov.ru/storage/mediabank/%D0%A1hisl_MO_01-01-2025.xlsx",
+    "population_status": "primary_city_settlement",
+    "region": "Московская область"
+  }
+]
