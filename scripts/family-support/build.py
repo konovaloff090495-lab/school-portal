@@ -51,6 +51,17 @@ index=[{k:v for k,v in by.get(p['slug'],p).items() if k!='content'} for p in ind
 known={p['slug'] for p in index}
 index += [{k:v for k,v in p.items() if k!='content'} for p in posts if p['slug'] not in known]
 write(ROOT/'content/blog/index.json',index)
+search=ROOT/'public/site-navigation/search-index.js'
+prefix='window.PRO_SEARCH_INDEX='
+rows=json.loads(search.read_text().removeprefix(prefix).strip().removesuffix(';'))
+targets={'/blog/'+p['slug']+'/':{'t':p['title'],'u':'/blog/'+p['slug']+'/','y':'page','s':'Помощь семьям','k':' '.join(p['tags']),'region':''} for p in posts}
+targets['/podderzhka-semej/']={'t':'Пособия, льготы и субсидии семьям с детьми','u':'/podderzhka-semej/','y':'page','s':'Помощь семьям','k':'поддержка пособия льготы выплаты дети семья','region':''}
+seen=set()
+for n,row in enumerate(rows):
+ path=row['u'].removeprefix('https://pro-schools.ru')
+ if path in targets:rows[n]={**row,**targets[path],'u':row['u']};seen.add(path)
+rows.extend(value for path,value in targets.items() if path not in seen)
+search.write_text(prefix+json.dumps(rows,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n')
 write(OUT/'posts.json',posts);write(DATA/'measures-register.json',measures)
 chrome=read(ROOT/'src/site-navigation/chrome.json')
 for part in ['header','footer']:

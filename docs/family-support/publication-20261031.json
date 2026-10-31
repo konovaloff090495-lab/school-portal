@@ -1,0 +1,366 @@
+{
+  "publication": {
+    "source_commit": "df7bbefdf44871e4bb1fe10f172af2b7a3c4aacb",
+    "root": "/srv/portfolio/proschools/releases/competitor-coverage-20261028",
+    "backup": "/srv/portfolio/proschools/archives/family-support-20261031-113857",
+    "catalog": "/srv/portfolio/proschools/static/family-support/releases/20261031-113857",
+    "posts": 25,
+    "new": 21,
+    "updated": 4,
+    "manifest": 1847,
+    "search": 21776,
+    "sitemap_before": 35794,
+    "sitemap_after": 35816,
+    "sitemap_lost": 0,
+    "revalidated": [
+      {
+        "slug": "edinoe-posobie",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-rozhdenie-rebenka",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-uhod-do-polutora-let",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-beremennost-rody",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "ezhegodnaya-vyplata-semyam",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "matkapital",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "vyplata-matkapital-do-treh-let",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "socialnyj-kontrakt-semyam",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "450-tysyach-ipoteka",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "nalogovyj-vychet-na-detej",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "uhod-rebenok-invalid",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-usynovlenie-opeka",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-detyam-pogibshego-voennosluzhashchego",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "kompensaciya-voennaya-travma-seme",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "zhku-semyam-pogibshih-voennyh",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "remont-doma-seme-voennosluzhashchego",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "nsu-detyam-invalidam",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "socialnyj-kontrakt-tomsk",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "subsidia-zhku-moskovskaya-oblast",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "nalogovyj-vychet-obuchenie-detej-2026",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "besplatnoe-pitanie-v-shkole-komu-polozheno",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "posobie-k-shkole-vyplaty-2026",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "lgoty-mnogodetnym-semyam-shkola",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "kompensaciya-detskij-sad",
+        "http": "200",
+        "exit": 0
+      },
+      {
+        "slug": "postuplenie-deti-uchastnikov-svo",
+        "http": "200",
+        "exit": 0
+      }
+    ]
+  },
+  "verification": {
+    "articles": [
+      {
+        "url": "https://pro-schools.ru/blog/edinoe-posobie/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-rozhdenie-rebenka/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-uhod-do-polutora-let/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-beremennost-rody/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/ezhegodnaya-vyplata-semyam/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/matkapital/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/vyplata-matkapital-do-treh-let/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/socialnyj-kontrakt-semyam/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/450-tysyach-ipoteka/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/nalogovyj-vychet-na-detej/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/uhod-rebenok-invalid/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-usynovlenie-opeka/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-detyam-pogibshego-voennosluzhashchego/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/kompensaciya-voennaya-travma-seme/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/zhku-semyam-pogibshih-voennyh/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/remont-doma-seme-voennosluzhashchego/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/nsu-detyam-invalidam/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/socialnyj-kontrakt-tomsk/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/subsidia-zhku-moskovskaya-oblast/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/nalogovyj-vychet-obuchenie-detej-2026/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/besplatnoe-pitanie-v-shkole-komu-polozheno/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/posobie-k-shkole-vyplaty-2026/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/lgoty-mnogodetnym-semyam-shkola/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/kompensaciya-detskij-sad/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      },
+      {
+        "url": "https://pro-schools.ru/blog/postuplenie-deti-uchastnikov-svo/",
+        "http": 200,
+        "canonical": "self",
+        "h1": 1,
+        "telephoneForms": 0
+      }
+    ],
+    "catalog": "HTTP200+SHA256 match",
+    "images": 18,
+    "sitemap": 35817,
+    "search": 21777,
+    "all26URLsInSitemapAndSearch": true,
+    "existingRoutes": "4 HTTP200"
+  },
+  "catalogUI": {
+    "results": [
+      {
+        "width": 320,
+        "scroll": 320,
+        "broken": []
+      },
+      {
+        "width": 390,
+        "scroll": 390,
+        "broken": []
+      },
+      {
+        "width": 768,
+        "scroll": 768,
+        "broken": []
+      },
+      {
+        "width": 1024,
+        "scroll": 1024,
+        "broken": []
+      },
+      {
+        "width": 1440,
+        "scroll": 1440,
+        "broken": []
+      }
+    ],
+    "filterTests": "passed"
+  },
+  "articleViewports": 50,
+  "persistence": {
+    "static_paths": [
+      "/podderzhka-semej/"
+    ],
+    "programming_overlay_paths": 1,
+    "refresh_script": "patched narrowly, compiled"
+  }
+}
