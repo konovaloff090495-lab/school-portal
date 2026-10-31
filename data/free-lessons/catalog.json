@@ -5307,5 +5307,56 @@
     "cover": "/besplatnye-uroki/assets/covers/um-free-course-russian-language-7-class-2-art-v1.webp",
     "checkedAt": "2026-10-20",
     "status": "active"
+  },
+  {
+    "id": "skysmart-freeprogramming-1888",
+    "slug": "skysmart-besplatnaya-shkola-programmirovaniya",
+    "url": "/besplatnye-uroki/zanyatiya/skysmart-besplatnaya-shkola-programmirovaniya/",
+    "title": "Бесплатная школа программирования Skysmart: 18 материалов",
+    "shortTitle": "Skysmart: бесплатная школа программирования",
+    "organizer": "Skysmart",
+    "publicOrganizer": "Skysmart",
+    "sourceUrl": "https://school.skysmart.ru/freeprogramming",
+    "outboundUrl": "https://t-cpa.ru/1lfVIq",
+    "topics": [
+      "programmirovanie",
+      "scratch",
+      "python",
+      "neyroseti",
+      "proforientatsiya"
+    ],
+    "ages": [
+      7,
+      17
+    ],
+    "grades": [],
+    "kind": "recording",
+    "format": "online",
+    "price": 0,
+    "currency": "RUB",
+    "start": null,
+    "duration": null,
+    "durationLabel": "18 материалов",
+    "formatLabel": "Самостоятельно",
+    "actionLabel": "Получить материалы",
+    "freeLabel": "Бесплатный набор",
+    "description": "18 бесплатных материалов для детей 7–17 лет и родителей: программирование с интерактивными видеоуроками, создание игр на Scratch, первые задания на Python, кибербезопасность, нейросети и профориентация. Ребёнок изучает готовые материалы в удобное время. В набор входят тест на таланты и материалы о профессиях будущего.",
+    "freeScope": "Бесплатно: набор из 18 материалов, включая видеоуроки, интерактивные задания и гайды. Четыре блока: погружение в ИТ, кибербезопасность, нейросети и профориентация. Это самостоятельное знакомство с ИТ; регулярные занятия с преподавателем не заявлены. Для получения набора нужно оставить заявку на сайте Skysmart. Акция действует до 31 декабря 2026 года.",
+    "cover": "/besplatnye-uroki/assets/covers/skysmart-freeprogramming-1888.webp",
+    "eventType": "materials",
+    "sponsored": true,
+    "trackingStatus": "tpartners_offer_1888",
+    "checkedAt": "2026-10-31",
+    "status": "active",
+    "availableUntil": "2026-12-31T23:59:59+03:00",
+    "verification": {
+      "freeConfirmed": true,
+      "childAudienceConfirmed": true,
+      "detailPage": "https://school.skysmart.ru/freeprogramming",
+      "verifiedAt": "2026-10-31",
+      "startAnytime": true,
+      "selfPaced": true,
+      "basis": "Live advertiser page and partner offer description supplied by site owner"
+    }
   }
 ]

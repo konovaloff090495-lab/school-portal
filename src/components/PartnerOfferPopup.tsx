@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { suUrl } from '@/lib/su-products'
+import skysmartOffer from '../../public/partners/skysmart/offer.json'
 
 const YM_ID = 108789843
 // Агрессивный режим (как оффер-поп-ап card-open.ru): показ на КАЖДОЙ статье,
@@ -21,6 +22,7 @@ function clickedThisSession(): boolean {
 
 export default function PartnerOfferPopup() {
   const pathname = usePathname()
+  const skysmartPath = skysmartOffer.paths.includes(pathname) && Date.now() <= Date.parse(skysmartOffer.expiresAt)
   const adult = /vechern|vzrosl|ne-zakonchil-shkolu|eksternat|attestat-v-/.test(pathname)
   const [open, setOpen] = useState(false)
   const openedRef = useRef(false)
@@ -34,7 +36,8 @@ export default function PartnerOfferPopup() {
 
   // Перезапуск на каждый переход по статьям (layout в SPA не перемонтируется).
   useEffect(() => {
-    if (clickedThisSession()) return
+    setOpen(false)
+    if (skysmartPath || clickedThisSession()) return
     openedRef.current = false
     const timer = setTimeout(show, DELAY_MS)
     const onScroll = () => {
@@ -43,7 +46,7 @@ export default function PartnerOfferPopup() {
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll) }
-  }, [pathname, show])
+  }, [pathname, show, skysmartPath])
 
   function handleCta() {
     window.ym?.(YM_ID, 'reachGoal', 'partner_popup_click', { page_path: pathname, offer: adult ? 'adult-route-v1' : 'online-school' })
@@ -51,7 +54,7 @@ export default function PartnerOfferPopup() {
     setOpen(false)
   }
 
-  if (!open) return null
+  if (!open || skysmartPath) return null
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">

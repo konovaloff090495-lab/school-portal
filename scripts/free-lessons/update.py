@@ -18,6 +18,8 @@ def iso(s):
 def lifecycle(events,now,max_age=7):
  for e in events:
   if e.get('status')=='withdrawn':continue
+  if e.get('availableUntil') and iso(e['availableUntil'])<=now:
+   e['status']='expired';continue
   if e['id'].startswith('su-'):
    verified=iso(e.get('scheduleVerifiedAt',e['checkedAt']+'T00:00:00+03:00'))
    if now-verified>timedelta(days=max_age):e['status']='unverified';e['occurrences']=[];e['start']=None;continue
