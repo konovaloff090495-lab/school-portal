@@ -29,7 +29,12 @@ def select(items,c,cat=None,mode=None,age=None,topic=None,venue=None):
  if fr:
   def event_bounds(e):return bounds(mode,{'timezone':e.get('timezone')})if c.get('scope')=='country'and mode in ['segodnya','zavtra','vykhodnye']else(fr,to)
   def has(e):
-   f,t=event_bounds(e);return any(f<=d['date']<=t for d in e['dates'])
+   f,t=event_bounds(e);now=datetime.datetime.now(datetime.timezone.utc)
+   def upcoming(d):
+    if d.get('kind')=='booking_window':return d['date']>=now.astimezone(ZoneInfo(e.get('timezone')or'Europe/Moscow')).date().isoformat()
+    try:return datetime.datetime.fromisoformat((d.get('endIso')or d['iso']).replace('Z','+00:00'))>=now
+    except(ValueError,KeyError,TypeError):return d['date']>=now.astimezone(ZoneInfo(e.get('timezone')or'Europe/Moscow')).date().isoformat()
+   return any(f<=d['date']<=t and upcoming(d)for d in e['dates'])
   def period(e):
    f,t=event_bounds(e);return any(p['from']<=t and p['to']>=f for p in e.get('availablePeriods',[]))or(e['type']=='Выставки и музеи'and e.get('schedule',{}).get('mode')=='until'and(e['schedule'].get('primaryDate')or'')[:10]>=f)
   rows=[e for e in rows if has(e)or period(e)];rows.sort(key=lambda e:not has(e))

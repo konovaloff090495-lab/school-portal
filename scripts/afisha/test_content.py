@@ -1,7 +1,15 @@
 import unittest,datetime,tempfile,pathlib,json
 from content_facts import extract,excerpt,culture
 from enrich import enrich
+from snapshot import events as snapshot_events
 class ContentTests(unittest.TestCase):
+ def test_streamed_multibyte_event_array(self):
+  with tempfile.TemporaryDirectory()as d:
+   p=pathlib.Path(d)/'events.json';rows=[{'id':str(n),'about':'Программа 🎨 [a,b]','dates':[{'date':'2026-11-01','time':'11:00'}]}for n in range(4)];p.write_text(json.dumps(rows,ensure_ascii=False));self.assertEqual(list(snapshot_events(p,3)),rows)
+ def test_truncated_snapshot_fails(self):
+  with tempfile.TemporaryDirectory()as d:
+   p=pathlib.Path(d)/'events.json';p.write_text('[{"id":"one"}')
+   with self.assertRaises(ValueError):list(snapshot_events(p,3))
  def test_admission_is_not_recommendation(self):
   f=extract('Занятие для детей от 4 до 8 лет. Продолжительность: 1 час 30 минут.');self.assertEqual(f['recommendedAge'],[4,8]);self.assertEqual(f['durationMinutes'],90);self.assertNotIn('declaredAdmissionAge',f)
  def test_explicit_admission_conflict(self):
