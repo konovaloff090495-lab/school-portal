@@ -28,7 +28,7 @@ for f in (W/'afisha-cache').glob('*.json'):
   im=e.get('Image16x9')or e.get('Image1x1')or{}
   if im.get('Url'):media['afisha-'+str(e['ID'])]={'url':im['Url'],'credit':im.get('Copyright')or im.get('Author')or'Афиша.ру'}
 media.update(read(M/'media.json',{}).get('by_source_id',{}))
-geo=read(M/'geography.json',{});venues=geo.get('venues',{});national=read(R/'outputs/ProSchools-afisha-national.json',{});events=[];held=[]
+geo=read(M/'geography.json',{});venues=geo.get('venues',{});national=read(R/'outputs/ProSchools-afisha-national.json',{});venuegeo=read(P/'venue-geography.json',{});events=[];held=[]
 # Exact locality facts take precedence over broad donor /msk/ namespace.
 for e in national.get('events',[]):
  v=e['venue'];loc=v.get('locale')or{};explicit=names.get(norm(re.sub(r'^Город\s+','',loc.get('title')or'',flags=re.I)));addr=v.get('address')or'';city=explicit if explicit else e['cities'][0];moved=False
@@ -47,6 +47,8 @@ for e in national.get('events',[]):
  schedule=e['source_schedules'][0]if e['source_schedules']else{};row={**g,'id':e['id'],'title':e['title'],'type':e['category'],'format':e['category'],'image':'','city':city,'district':g.get('district')or'','okrug':g.get('okrug')or'','metro':'','place':v.get('title')or'Площадка уточняется','address':addr,'media':(im.get('gallery')or[im])if im else[],'date':dates[0]['date']if dates else'','time':dates[0]['time']if dates else'','slots':[x['time']for x in dates],'dates':dates,'age':[e['age_restriction']or 0,17],'ageRestriction':e['age_restriction'],'price':e['price']['min'],'priceData':e['price'],'duration':'','family':False,'sources':source,'schedule':schedule,'checked':e['source_checked_at'],'about':'','result':''}
  if im:
   for m in row['media']:m.setdefault('source_url',source[0]['url'])
+ vg=venuegeo.get(str((v.get('institution')or{}).get('_id')),{});point=vg.get('coordinates')
+ if point and norm(vg.get('address'))==norm(addr)and not row.get('coordinates'):row['coordinates']=point;row['coordinate_source']=vg['source']
  events.append(row)
 # Direct source calendars. Out-of-city tours are kept separate from city venues.
 products={str(e['id']):e for e in read(R/'work/excursion-donors/tripster-catalog.json',[])}

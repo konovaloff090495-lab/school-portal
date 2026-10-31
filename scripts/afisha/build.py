@@ -1,6 +1,7 @@
 # coding: utf-8
 import pathlib,json,re,os,html,hashlib,datetime,base64,shutil,ast,gzip
 from bs4 import BeautifulSoup
+from guide import city_guide,city_directory
 R=pathlib.Path(os.environ.get('AFISHA_ROOT',pathlib.Path(__file__).resolve().parents[2]));P=R/'work/afisha-production';H=pathlib.Path(__file__).parent;OUT=pathlib.Path(os.environ.get('AFISHA_RELEASE',P/'release'));A=OUT/'afisha/assets';A.mkdir(parents=True,exist_ok=True);(A/'apps').mkdir(exist_ok=True);(OUT/'afisha/data').mkdir(exist_ok=True)
 registry=json.loads((P/'registry.json').read_text());seen=json.loads((P/'city-events.json').read_text());all_events=json.loads((P/'events.json').read_text());bycity={c['name']:c for c in registry};basejs=(H/'app.template.js').read_text();shell=BeautifulSoup((H/'shell.template.html').read_text(),'html.parser');root=shell.select_one('#ps-afisha-mock')or shell
 # Production uses the current canonical shared navigation, never the mock toolbar.
@@ -83,7 +84,7 @@ seen['Россия']=sorted(all_events,key=lambda e:(not bool(e['media']),e['dat
 for c in registry:
  c.update({'templateCity':'Москва','templatePrep':'Москве','templateGen':'Москвы'});name=c['name'];items=seen.get(name,[]);cats={cat:sum(cat in e.get('categories',[e['type']])for e in items)for cat in slugs};pool=[e for e in all_events if (not c['isMO']or e['city']in {x['name']for x in registry if x.get('isMO')})and e['city']!=name];alternatives=[]
  for cat in slugs:alternatives.extend([e for e in pool if cat in e.get('categories',[e['type']])][:6])
- alternatives=list({e['id']:e for e in alternatives}.values());payload={'config':c,'items':items,'categories':cats,'cities':[{k:x[k]for k in ['name','base','isMO']}for x in registry],'alternatives':alternatives,'checked_at':now};compressed(OUT/'afisha/data'/f"{c['slug']}.json",json.dumps(payload,ensure_ascii=False,separators=(',',':')))
+ alternatives=list({e['id']:e for e in alternatives}.values());payload={'config':c,'items':items,'categories':cats,'cities':[{k:x[k]for k in ['name','base','isMO']}for x in registry],'alternatives':alternatives,'checked_at':now,'guide':city_guide(c,items,slugs),'directory':city_directory(c,registry)};compressed(OUT/'afisha/data'/f"{c['slug']}.json",json.dumps(payload,ensure_ascii=False,separators=(',',':')))
  script=basejs.replace("timeZone:'Europe/Moscow'","timeZone:cityConfig.timezone||'Europe/Moscow'").replace('Время московское','Местное время').replace("'/afisha/moskva/'",json.dumps(c['base'],ensure_ascii=False)).replace('в Москве',c['inCity']).replace('по Москве','по городу '+name).replace('Москвы',name).replace('Москва',name).replace('[37.62,55.75]',json.dumps(c.get('center')or[37.62,55.75]))
  compressed(A/'apps'/f"{c['slug']}.js",script)
  if os.environ.get('AFISHA_ONLY_ASSETS')=='1':continue
@@ -94,8 +95,10 @@ for c in registry:
   body+='<div class="ps-ssr-grid">'+''.join(card(e)for e in selected[:24])+'</div>'
   if len(selected)<6:
    alt=[e for e in alternatives if not cat or cat in e.get('categories',[e['type']])][:6];other_category=not bool(alt);alt=alt or alternatives[:6];body+=('<h2>Другие варианты досуга</h2><p>Это реальные события других категорий. Они не являются точным совпадением выбранной категории. Смотрите город и дату в карточке.</p>'if other_category else'<h2>В других городах '+('Московской области'if c.get('isMO')else'России')+'</h2><p>Эти события проходят в других городах. Смотрите город, адрес и дату в карточке.</p>')+'<div class="ps-ssr-grid">'+''.join(card(e)for e in alt)+'</div>'
-  if cat:cp=copies[cat];body+='<h2>'+esc(cp[0])+'</h2><p>'+esc(cp[1])+'</p><h2>'+esc(cp[2])+'</h2><p>'+esc(cp[3])+'</p>'
-  body+='<h2>'+('Города Московской области'if c.get('isMO')else'Афиша по городам')+'</h2>'+citylinks;write(path,c,title,description,body)
+  if cat:cp=[v.replace('в Москве',c['inCity']).replace('Москвы',c['name'])for v in copies[cat]];body+='<h2>'+esc(cp[0])+'</h2><p>'+esc(cp[1])+'</p><h2>'+esc(cp[2])+'</h2><p>'+esc(cp[3])+'</p>'
+  body+=city_directory(c,registry)
+  if not cat:body+=city_guide(c,items,slugs)
+  write(path,c,title,description,body)
  counts[name]={'events':len(items),'categories':cats,'base':c['base']}
 if os.environ.get('AFISHA_ONLY_ASSETS')=='1':
  print('Shared assets updated for',len(registry),'geographic pages');raise SystemExit(0)
