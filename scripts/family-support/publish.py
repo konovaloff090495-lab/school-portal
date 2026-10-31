@@ -18,7 +18,7 @@ pid=subprocess.check_output(['systemctl','show','portfolio-site@proschools.servi
 for p in data['posts']:
  f=root/'content/blog'/(p['slug']+'.json');before=data['before'][p['slug']]
  assert (before is None and not f.exists()) or (before and f.exists() and hashlib.sha256(f.read_bytes()).hexdigest()==before),'Concurrent article change: '+p['slug']
-backup=base/'archives/family-support-20261031';backup.mkdir(exist_ok=False)
+attempt=time.strftime('%H%M%S',time.gmtime());backup=base/'archives'/('family-support-20261031-'+attempt);backup.mkdir(exist_ok=False)
 def write(f,b):
  f=f.resolve();f.parent.mkdir(parents=True,exist_ok=True);tmp=f.with_name(f.name+'.family-tmp');tmp.write_bytes(b if isinstance(b,bytes) else b.encode());tmp.chmod(0o644);os.replace(tmp,f)
 def dump(x):return json.dumps(x,ensure_ascii=False,indent=2)+'\n'
@@ -30,7 +30,7 @@ for name in paths:
 sitemap=base/'static-runtime/work/programming/release/sitemap.xml';sm_before=sitemap.read_bytes();(backup/'sitemap-before.xml').write_bytes(sm_before)
 nginx=Path('/etc/nginx/sites-enabled/proschools-clean').resolve();nginx_before=nginx.read_text();(backup/'nginx-before.conf').write_text(nginx_before)
 snippet=Path('/etc/nginx/snippets/proschools-family-support.conf');snippet_before=snippet.read_text() if snippet.exists() else None
-catalog_base=base/'static/family-support';catalog_base.mkdir(parents=True,exist_ok=True);catalog_base.chmod(0o755);release=catalog_base/'releases/20261031';release.mkdir(parents=True,exist_ok=False);release.parent.chmod(0o755);release.chmod(0o755);write(release/'index.html',data['catalog'])
+catalog_base=base/'static/family-support';catalog_base.mkdir(parents=True,exist_ok=True);catalog_base.chmod(0o755);release=catalog_base/('releases/20261031-'+attempt);release.mkdir(parents=True,exist_ok=False);release.parent.chmod(0o755);release.chmod(0o755);write(release/'index.html',data['catalog'])
 link=catalog_base/'current';previous_catalog=str(link.resolve()) if link.exists() else None
 try:
  by={p['slug']:p for p in data['posts']}
@@ -61,7 +61,12 @@ try:
  if include not in nginx_before:
   anchor=' include /etc/nginx/snippets/proschools-language-practice.conf;';assert nginx_before.count(anchor)==1;assert nginx.read_text()==nginx_before,'Concurrent nginx editor';write(nginx,nginx_before.replace(anchor,anchor+'\n '+include))
  subprocess.run(['nginx','-t'],check=True,capture_output=True);subprocess.run(['systemctl','reload','nginx'],check=True)
- live=subprocess.check_output(['curl','--fail','--silent','--show-error','--max-time','20','--resolve','pro-schools.ru:443:127.0.0.1','https://pro-schools.ru/podderzhka-semej/']);assert hashlib.sha256(live).hexdigest()==hashlib.sha256(data['catalog'].encode()).hexdigest()
+ valid=False
+ for check in range(10):
+  probe=subprocess.run(['curl','--fail','--silent','--show-error','--max-time','20','--resolve','pro-schools.ru:443:127.0.0.1','https://pro-schools.ru/podderzhka-semej/'],capture_output=True)
+  if probe.returncode==0 and hashlib.sha256(probe.stdout).hexdigest()==hashlib.sha256(data['catalog'].encode()).hexdigest():valid=True;break
+  time.sleep(0.5)
+ assert valid,'Catalogue response did not match after Nginx reload'
  assert (base/'current').resolve()==root
 except Exception:
  for name in paths:
