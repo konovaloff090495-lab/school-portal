@@ -46,5 +46,5 @@ readRoute();
 
 $$('[data-date=weekend]').forEach(b=>b.textContent='Ближайшие выходные');$$('[data-date=tomorrow]').forEach(b=>b.textContent='Завтра');
 // Use the site's existing counter; catalogue search text is excluded from page-view URLs.
-function afishaAnalyticsUrl(){const url=new URL(location.href);url.searchParams.delete('q');return url.href}
+function afishaAnalyticsUrl(){const url=new URL(location.href);url.searchParams.delete('q');url.searchParams.delete('near');return url.href}
 if(!window.ym){window.ym=function(){(window.ym.a=window.ym.a||[]).push(arguments)};window.ym.l=Date.now();const tag=document.createElement('script');tag.async=true;tag.src='https://mc.yandex.ru/metrika/tag.js?id=108789843';document.head.appendChild(tag);window.ym(108789843,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',referrer:document.referrer,url:afishaAnalyticsUrl(),accurateTrackBounce:true,trackLinks:true})}
