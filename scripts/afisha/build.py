@@ -1,17 +1,15 @@
 # coding: utf-8
-import pathlib,json,re,os,html,hashlib,datetime,base64,shutil,ast,gzip,sys
+import pathlib,json,re,os,html,hashlib,datetime,base64,shutil,ast,gzip
 from bs4 import BeautifulSoup
 from guide import city_guide,city_directory
 from selections import TOPICS,select,landing_specs,selection_copy
+from snapshot import events as snapshot_events
 R=pathlib.Path(os.environ.get('AFISHA_ROOT',pathlib.Path(__file__).resolve().parents[2]));P=R/'work/afisha-production';H=pathlib.Path(__file__).parent;OUT=pathlib.Path(os.environ.get('AFISHA_RELEASE',P/'release'));A=OUT/'afisha/assets';A.mkdir(parents=True,exist_ok=True);(A/'apps').mkdir(exist_ok=True);(OUT/'afisha/data').mkdir(exist_ok=True)
 TEMPORAL=os.environ.get('AFISHA_TEMPORAL_ONLY')=='1';history_path=pathlib.Path(os.environ.get('AFISHA_PUBLISHED_SELECTIONS',str(P/'published-selections.json')));history=json.loads(history_path.read_text())if history_path.exists()else{};next_history={k:dict(v)for k,v in history.items()};
-def shared_values(row):
- # Source calendars repeat the same dates, venue URLs and locality thousands of times.
- for key,value in row.items():
-  if isinstance(value,str)and key in ['date','time','iso','endIso','source','timezone','city','place','address']:row[key]=sys.intern(value)
-  elif key=='slots'and isinstance(value,list):row[key]=[sys.intern(v)if isinstance(v,str)else v for v in value]
- return row
-registry=json.loads((P/'registry.json').read_text());all_events=json.loads((P/'events.json').read_text(),object_hook=shared_values);bycity={c['name']:c for c in registry};seen={c['name']:[]for c in registry}
+if TEMPORAL:
+ city_entries=json.loads((OUT/'afisha/cities.json').read_text());registry=[json.loads(gzip.decompress((OUT/'afisha/data'/(c['slug']+'.json.gz')).read_bytes()))['config']for c in city_entries if c['slug']!='russia'];all_events=list(snapshot_events(OUT/'afisha/data/russia-catalog.json.gz'))
+else:registry=json.loads((P/'registry.json').read_text());all_events=list(snapshot_events(P/'events.json'))
+bycity={c['name']:c for c in registry};seen={c['name']:[]for c in registry}
 for event_row in all_events:
  if event_row.get('listingStatus')in ['age_review','published_dates_finished']:continue
  if event_row['city']in seen:seen[event_row['city']].append(event_row)
