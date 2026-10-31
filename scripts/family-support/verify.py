@@ -29,5 +29,5 @@ _,search,_=get('/site-navigation/search-index.js');prefix='window.PRO_SEARCH_IND
 for path in ['/podderzhka-semej/']+['/blog/'+p['slug']+'/' for p in posts]:assert path in search_paths,path
 for path in ['/','/blog/','/shkoly/','/poisk/']:
  status,_,_=get(path);assert status==200,path
-result={'articles':report,'catalog':'HTTP200+SHA256 match','images':len(images),'sitemap':len(urls),'search':len(entries),'all26URLsInSitemapAndSearch':True,'existingRoutes':'4 HTTP200'}
+result={'articles':report,'catalog':'HTTP200+SHA256 match','images':len(images),'sitemap':len(urls),'search':len(entries),'allURLsInSitemapAndSearch':True,'existingRoutes':'4 HTTP200'}
 (O/'live-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print('PASS',len(report),'articles + catalogue;',len(images),'images; sitemap/search; 4 existing routes')
