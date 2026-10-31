@@ -31,6 +31,8 @@ try:
  if os.environ.get('TRIPSTER_PUBLIC_CONFIG'):
   if run(H/'collectors/tripster.py',optional=True):run(H/'collectors/tripster-prepare.py',optional=True)
  run(H/'collectors/venue-geo.py',optional=True)
+ run(H/'collectors/afisha-venue-geo.py',optional=True)
+ run(H/'collectors/event-venue-geo.py',optional=True)
  run(H/'data.py')
  # Retain previously published event URLs and their original facts when a donor delists one.
  current=S/'current';previous_current=current.resolve()if current.exists()else None
