@@ -79,3 +79,4 @@ print('Afisha routes and isolated 48h service installed; timer awaits first veri
 
 if(runtime/'html-server.py').exists():subprocess.run([sys.executable,str(runtime/'install-html-service.py')],check=True)
 if(runtime/'refresh-views.py').exists():subprocess.run([sys.executable,str(runtime/'install-views-service.py')],check=True)
+if pathlib.Path('/var/lib/portfolio/proschools-indexing/public-key.json').exists():subprocess.run([sys.executable,str(runtime/'install-site-indexnow.py')],check=True)
