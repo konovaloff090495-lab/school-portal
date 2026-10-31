@@ -11,6 +11,34 @@ const originalRenderCatalogProduction=renderCatalog;renderCatalog=function(){ori
 root.addEventListener('click',event=>{const target=event.target.closest('[data-city],[data-city-catalog]');if(!target)return;event.preventDefault();event.stopImmediatePropagation();const name=target.dataset.city||target.dataset.cityCatalog;const city=payload.cities.find(c=>c.name===name);location.assign(city?city.base:'/afisha/');},true);
 try{const saved=JSON.parse(localStorage.getItem('proschools-afisha-saved')||'[]');if(Array.isArray(saved))state.saved=saved.filter(v=>typeof v==='string')}catch{}
 const originalSaveProduction=save;save=function(){try{localStorage.setItem('proschools-afisha-saved',JSON.stringify(state.saved))}catch{}originalSaveProduction()};
+// The city picker belongs beside the control, rather than above the page header.
+for(const id of ['ps-age','ps-hero-age'])$('#'+id).querySelector('option[value="all"]').textContent='Любой';
+for(const button of root.querySelectorAll('[data-action="city"]')){
+  button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-expanded','false');
+  if(button.closest('.ps-search-field')){
+    button.classList.add('ps-city-trigger');
+    button.innerHTML='<span data-city-label="">'+esc(cityConfig.name)+'</span>';
+  }
+}
+root.addEventListener('click',event=>{
+  const button=event.target.closest('[data-action="city"]');if(!button)return;
+  event.preventDefault();event.stopImmediatePropagation();
+  if(openPopup&&popupAnchor===button){closePopup();return}
+  const panel=document.createElement('div');panel.className='ps-select-panel ps-city-panel';
+  panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Выберите город');
+  panel.innerHTML='<div class="ps-city-panel-head"><strong>Выберите город</strong><button type="button" aria-label="Закрыть выбор города">×</button></div><input type="search" placeholder="Город или область" aria-label="Поиск города" autocomplete="off"><nav class="ps-city-results" aria-label="Города афиши"></nav><p class="ps-city-empty" hidden>Город не найден. Проверьте название.</p>';
+  const list=panel.querySelector('.ps-city-results');
+  const cities=[...payload.cities].sort((a,b)=>Number(b.name===cityConfig.name)-Number(a.name===cityConfig.name)||Number(b.isMO&&cityConfig.isMO)-Number(a.isMO&&cityConfig.isMO));
+  list.innerHTML=cities.map(c=>'<a href="'+esc(c.base)+'"'+(c.name===cityConfig.name?' aria-current="page"':'')+'>'+esc(c.name)+(c.isMO&&c.name!=='Московская область'?'<small>Московская область</small>':'')+'</a>').join('');
+  panel.querySelector('button').onclick=()=>{closePopup();button.focus()};
+  const input=panel.querySelector('input');
+  input.oninput=()=>{const query=input.value.toLowerCase().replace(/ё/g,'е').trim();let found=0;for(const link of list.children){link.hidden=!link.textContent.toLowerCase().replace(/ё/g,'е').includes(query);if(!link.hidden)found++}panel.querySelector('.ps-city-empty').hidden=!!found};
+  if(button.getBoundingClientRect().bottom>innerHeight-240)button.scrollIntoView({block:'center',behavior:'instant'});
+  placePopup(panel,button);
+  const bounds=button.getBoundingClientRect();panel.style.top=(bounds.bottom+8)+'px';panel.style.maxHeight=Math.max(160,innerHeight-bounds.bottom-20)+'px';
+  input.focus({preventScroll:true});
+},true);
+
 readRoute();
 
 $$('[data-date=weekend]').forEach(b=>b.textContent='Ближайшие выходные');$$('[data-date=tomorrow]').forEach(b=>b.textContent='Завтра');
