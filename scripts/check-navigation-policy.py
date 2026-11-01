@@ -42,6 +42,6 @@ for s in p['sections']:
 for n in h.all('a')+f.all('a'):
  href=n.attrs.get('href','')
  assert href and not href.lower().startswith(('javascript:','data:')),'Unsafe/empty navigation URL'
-for renderer in ['scripts/courses/design/render.py','scripts/programming/build.py','scripts/free-lessons/refresh.py']:
+for renderer in ['scripts/courses/design/render.py','scripts/programming/build.py','scripts/free-lessons/refresh.py','scripts/family-support/build.py']:
  assert 'src/site-navigation/chrome.json' in (R/renderer).read_text(),'Renderer must use canonical navigation: '+renderer
-print('Navigation policy OK: desktop/mobile order, labels, footer destinations, 4 renderers')
+print('Navigation policy OK: desktop/mobile order, labels, footer destinations, 5 renderers')
