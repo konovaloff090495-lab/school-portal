@@ -86,6 +86,17 @@ faculties={
  '27':['tehnolog.*predprinim','технолог.*предприним'], '21':['e.commerce','elektronn.*torg','электронн.*торг'],
  '31':['iskusstvenn.*intellekt','искусственн.*интеллект'],
 }
+# Faculty IDs come from the live partner catalogue, never from their numeric order.
+faculties.update({
+ '18':['igrov.*industr','игров.*индустр'], '12':['sport','спорт'],
+ '26':['muzykaln.*industr','музыкальн.*индустр'], '19':['animac','анимац'],
+ '46':['tehnich.*uprav','технич.*управ'], '11':['reklam','реклам'],
+ '44':['teploener','теплоэнер'], '29':['kino','кино','televid','телевид'],
+ '49':['mezhdunarod.*otnoshen','международ.*отношен'], '33':['programmirov','программиров'],
+ '43':['stroitel','строител'], '30':['gosudarst.*uprav','государств.*управ','municipal','муниципал'],
+ '23':['zhurnal','журнал'], '2':['turizm','туризм','gostepriim','гостеприим'],
+ '8':['internet.profess','интернет.професс'], '45':['tehnosfer','техносфер'],
+})
 out=[]
 for o in items:
  id=o['id']; kw=keywords.get(id,[])

@@ -1,7 +1,7 @@
 {
   "version": "20261101",
   "analysedPages": 21702,
-  "matchedPages": 9113,
+  "matchedPages": 9022,
   "uncovered": [],
   "pages": [
     {
@@ -3386,13 +3386,6 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-yuurgu-chelyabinsk/",
-      "title": "Лицей при Южно-Уральском государственном университете",
-      "category": "Челябинск · пр. Ленина, д. 76",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/lingvisticheskie-klassy-chgpu-chelyabinsk/",
       "title": "Лингвистические классы при факультете иностранных языков ЧГПУ",
       "category": "Челябинск · пр. Ленина, д. 69, корп. 3",
@@ -3663,13 +3656,6 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-tgu-tomsk/",
-      "title": "Лицей при Томском государственном университете",
-      "category": "Томск · пр. Ленина, д. 36",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/himiko-biologicheskiy-licey-tgu-tomsk/",
       "title": "Химико-биологический лицей ТГУ",
       "category": "Томск · пр. Ленина, д. 36, корп. 2",
@@ -3695,9 +3681,7 @@
       "title": "Инженерный лицей Томского государственного университета",
       "category": "Томск · пр. Ленина, д. 36",
       "primary": "university-57",
-      "related": [
-        "university-30"
-      ]
+      "related": []
     },
     {
       "path": "/shkola/tsentr-pmss-raduga-tomsk/",
@@ -3810,26 +3794,10 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-pri-sgu-saratov/",
-      "title": "Лицей при Саратовском государственном университете имени Н.Г. Чернышевского",
-      "category": "Саратов · ул. Астраханская, д. 83",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/medicinskiy-licey-pri-sgmu-saratov/",
       "title": "Медицинский лицей при Саратовском государственном медицинском университете",
       "category": "Саратов · ул. Большая Казачья, д. 112",
       "primary": "university-20",
-      "related": [
-        "university-30"
-      ]
-    },
-    {
-      "path": "/shkola/agro-licey-pri-sgau-saratov/",
-      "title": "Агротехнологический лицей при Саратовском государственном аграрном университете",
-      "category": "Саратов · Театральная площадь, д. 1",
-      "primary": "university-30",
       "related": []
     },
     {
@@ -3974,20 +3942,6 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-udgu-izhevsk/",
-      "title": "Лицей при Удмуртском государственном университете",
-      "category": "Ижевск · ул. Университетская, д. 1",
-      "primary": "university-30",
-      "related": []
-    },
-    {
-      "path": "/shkola/it-licey-udgu-izhevsk/",
-      "title": "IT-лицей Удмуртского государственного университета",
-      "category": "Ижевск · ул. Ломоносова, д. 4Б",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/licey-86-it-profil-izhevsk/",
       "title": "Лицей № 86 с углублённым изучением информатики",
       "category": "Ижевск · ул. Пушкинская, д. 268",
@@ -4074,20 +4028,11 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-pri-altgu-barnaul/",
-      "title": "Лицей при Алтайском государственном университете",
-      "category": "Барнаул · пр. Ленина, д. 61",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/inzhenernyy-licey-pri-altgtu-barnaul/",
       "title": "Инженерный лицей при Алтайском государственном техническом университете",
       "category": "Барнаул · пр. Ленина, д. 46",
       "primary": "university-57",
-      "related": [
-        "university-30"
-      ]
+      "related": []
     },
     {
       "path": "/shkola/mediko-biologicheskie-klassy-pri-agmu-barnaul/",
@@ -4095,8 +4040,7 @@
       "category": "Барнаул · пр. Ленина, д. 40",
       "primary": "lektoriy-eksperimentalnaya-biologiya-himiya",
       "related": [
-        "university-20",
-        "university-30"
+        "university-20"
       ]
     },
     {
@@ -4104,15 +4048,6 @@
       "title": "Педагогические классы при Алтайском государственном педагогическом университете",
       "category": "Барнаул · ул. Молодёжная, д. 55",
       "primary": "university-28",
-      "related": [
-        "university-30"
-      ]
-    },
-    {
-      "path": "/shkola/agrarnyy-licey-pri-altgau-barnaul/",
-      "title": "Аграрный лицей при Алтайском государственном аграрном университете",
-      "category": "Барнаул · пр. Красноармейский, д. 98",
-      "primary": "university-30",
       "related": []
     },
     {
@@ -4234,13 +4169,6 @@
       "title": "Домашняя школа для спортивной элиты",
       "category": "Ульяновск · ул. Локомотивная, д. 12",
       "primary": "homeschool",
-      "related": []
-    },
-    {
-      "path": "/shkola/licey-pri-ulgu-ulyanovsk/",
-      "title": "Лицей при Ульяновском государственном университете",
-      "category": "Ульяновск · ул. Льва Толстого, д. 42",
-      "primary": "university-30",
       "related": []
     },
     {
@@ -4388,53 +4316,31 @@
       "related": []
     },
     {
-      "path": "/shkola/licey-pri-togu-khabarovsk/",
-      "title": "Лицей при Тихоокеанском государственном университете",
-      "category": "Хабаровск · ул. Тихоокеанская, д. 136",
-      "primary": "university-30",
-      "related": []
-    },
-    {
       "path": "/shkola/gimnaziya-pri-dvgups-khabarovsk/",
       "title": "Гимназия при Дальневосточном государственном университете путей сообщения",
       "category": "Хабаровск · ул. Серышева, д. 47",
       "primary": "skills",
-      "related": [
-        "university-30"
-      ]
+      "related": []
     },
     {
       "path": "/shkola/medicinskie-klassy-pri-dvgmu-khabarovsk/",
       "title": "Медицинские классы при Дальневосточном государственном медицинском университете",
       "category": "Хабаровск · ул. Муравьёва-Амурского, д. 35",
       "primary": "university-20",
-      "related": [
-        "university-30"
-      ]
+      "related": []
     },
     {
       "path": "/shkola/ekonomicheskie-klassy-pri-hgueip-khabarovsk/",
       "title": "Экономические классы при Хабаровском государственном университете экономики и права",
       "category": "Хабаровск · ул. Тихоокеанская, д. 134",
       "primary": "university-1",
-      "related": [
-        "university-30"
-      ]
+      "related": []
     },
     {
       "path": "/shkola/pedagogicheskie-klassy-pri-dvgggu-khabarovsk/",
       "title": "Педагогические классы при Дальневосточном государственном гуманитарном университете",
       "category": "Хабаровск · ул. Карла Маркса, д. 52",
       "primary": "university-28",
-      "related": [
-        "university-30"
-      ]
-    },
-    {
-      "path": "/shkola/agrarnye-klassy-pri-dvgau-khabarovsk/",
-      "title": "Агротехнологические классы при Дальневосточном государственном аграрном университете",
-      "category": "Хабаровск · ул. Политехническая, д. 17",
-      "primary": "university-30",
       "related": []
     },
     {
@@ -9703,7 +9609,6 @@
       "category": "Челябинск · ул. Университетская Набережная, 103",
       "primary": "trial-it",
       "related": [
-        "university-23",
         "university-33"
       ]
     },
@@ -11123,13 +11028,6 @@
       "related": []
     },
     {
-      "path": "/shkola/uralskaya-specialnaya-muzykalnaya-shkola-kolledzh-ekaterinburg/",
-      "title": "Уральская специальная музыкальная школа (колледж)",
-      "category": "Екатеринбург · ул. Антона Валека, 25",
-      "primary": "college-26",
-      "related": []
-    },
-    {
       "path": "/shkola/detskaya-shkola-iskusstv-2-kazan/",
       "title": "Детская школа искусств № 2",
       "category": "Казань · ул. Галимджана Баруди, 25А",
@@ -11442,13 +11340,6 @@
       "title": "Детская школа искусств № 7",
       "category": "Воронеж · Московский просп., 123",
       "primary": "lektoriy-iskusstvo-i-tvorchestvo",
-      "related": []
-    },
-    {
-      "path": "/shkola/voronezhskaya-specialnaya-muzykalnaya-shkola-kolledzh-voronezh/",
-      "title": "Воронежская специальная музыкальная школа (колледж)",
-      "category": "Воронеж · Никитинская ул., 26",
-      "primary": "college-26",
       "related": []
     },
     {
@@ -18574,9 +18465,8 @@
       "path": "/uchebnik/istoriya/5-klass/drevniy-kitay-5/",
       "title": "Где и когда возник Древний Китай",
       "category": "Онлайн-учебник · 5 класс",
-      "primary": "china-study",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -21376,9 +21266,8 @@
       "path": "/uchebnik/informatika/6-klass/sozdanie-animacii-6/",
       "title": "Что такое анимация",
       "category": "Онлайн-учебник · 6 класс",
-      "primary": "camp-comics",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -22110,13 +21999,6 @@
       "related": [
         "tutor"
       ]
-    },
-    {
-      "path": "/uchebnik/literatura/2-klass/proizvedeniya-o-detyah-i-druzhbe-2/",
-      "title": "Рассказы о детях и дружбе",
-      "category": "Онлайн-учебник · 2 класс",
-      "primary": "hoodie",
-      "related": []
     },
     {
       "path": "/uchebnik/literatura/3-klass/rasskazy-o-detyah-i-druzhbe-3/",
@@ -29685,7 +29567,6 @@
       "primary": "ege-tutor",
       "related": [
         "ege-pair",
-        "school-calm",
         "school-tutor",
         "tutor"
       ]
@@ -33663,9 +33544,8 @@
       "path": "/uchebnik/istoriya/8-klass/opiumnye-voyny-kitay-8/",
       "title": "Опиумные войны и «открытие» Китая",
       "category": "Онлайн-учебник · 8 класс",
-      "primary": "china-study",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -35433,9 +35313,8 @@
       "path": "/uchebnik/russkiy-yazyk/11-klass/rechevoy-etiket-delovoe-obshchenie-11/",
       "title": "Речевой этикет и его роль",
       "category": "Онлайн-учебник · 11 класс",
-      "primary": "skills",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -58883,9 +58762,8 @@
       "path": "/uchebnik/informatika/6-klass/perehod-i-perekhody-v-prezentacii-6/",
       "title": "Переходы между слайдами и анимация",
       "category": "Онлайн-учебник · 6 класс",
-      "primary": "camp-comics",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -59466,9 +59344,8 @@
       "path": "/uchebnik/istoriya/5-klass/velikaya-kitayskaya-stena-5/",
       "title": "Зачем построили стену",
       "category": "Онлайн-учебник · 5 класс",
-      "primary": "china-study",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -59476,9 +59353,8 @@
       "path": "/uchebnik/istoriya/5-klass/izobreteniya-drevnih-kitaytsev-5/",
       "title": "Шёлк — тайна Китая",
       "category": "Онлайн-учебник · 5 класс",
-      "primary": "china-study",
+      "primary": "school-tutor",
       "related": [
-        "school-tutor",
         "tutor"
       ]
     },
@@ -66273,6 +66149,56 @@
       "related": []
     },
     {
+      "path": "/blog/chto-delat-esli-ne-nravitsya-vuz/",
+      "title": "Что делать, если не нравится вуз или специальность",
+      "category": "Профориентация",
+      "primary": "university-1",
+      "related": [
+        "university-10",
+        "university-11",
+        "university-12",
+        "university-13",
+        "university-17",
+        "university-18",
+        "university-19",
+        "university-2",
+        "university-20",
+        "university-21",
+        "university-22",
+        "university-23",
+        "university-26",
+        "university-27",
+        "university-28",
+        "university-29",
+        "university-3",
+        "university-30",
+        "university-31",
+        "university-32",
+        "university-33",
+        "university-35",
+        "university-36",
+        "university-37",
+        "university-4",
+        "university-41",
+        "university-42",
+        "university-43",
+        "university-44",
+        "university-45",
+        "university-46",
+        "university-47",
+        "university-49",
+        "university-5",
+        "university-50",
+        "university-52",
+        "university-57",
+        "university-58",
+        "university-6",
+        "university-7",
+        "university-8",
+        "university-9"
+      ]
+    },
+    {
       "path": "/blog/kak-nauchitsya-bystro-chitat/",
       "title": "Как научиться быстро читать: скорочтение для школьника",
       "category": "Учёба и развитие",
@@ -67373,9 +67299,7 @@
       "title": "Финансовая грамотность для школьников: что нужно знать с 10 лет",
       "category": "ОБУЧЕНИЕ",
       "primary": "lektoriy-finansovaya-gramotnost",
-      "related": [
-        "money"
-      ]
+      "related": []
     },
     {
       "path": "/blog/professii-bez-ege/",
@@ -67456,6 +67380,15 @@
         "university-7",
         "university-8",
         "university-9"
+      ]
+    },
+    {
+      "path": "/blog/sport-karyera-kak-sovmeshat/",
+      "title": "Спорт и учёба в школе: как совмещать без ущерба для карьеры",
+      "category": "ШКОЛЫ",
+      "primary": "college-12",
+      "related": [
+        "university-12"
       ]
     },
     {
@@ -67556,274 +67489,11 @@
       ]
     },
     {
-      "path": "/blog/postuplenie-v-mfti-2026-bally/",
-      "title": "Поступление в МФТИ: программы, экзамены и конкурсные группы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-mgimo-2026-bally/",
-      "title": "Поступление в МГИМО: стоимость, конкурс и выбор программы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-rudn-2026-bally/",
-      "title": "Поступление в РУДН: проходные баллы, программы и документы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/postuplenie-v-finansovy-universitet-2026/",
       "title": "Поступление в Финансовый университет: программы, баллы и стоимость",
       "category": "Советы родителям",
       "primary": "lektoriy-finansovaya-gramotnost",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-kfu-2026-bally/",
-      "title": "Как поступить в КФУ: Казань, программы, баллы и правила приёма",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-urfu-2026-bally/",
-      "title": "Поступление в УрФУ: программы, баллы и документы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-ngu-2026-bally/",
-      "title": "Поступление в НГУ: программы, экзамены и правила приёма",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-vshe-2026-bally/",
-      "title": "Поступление в ВШЭ: программы, баллы, бюджет и платное обучение",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-baumanku-2026-bally/",
-      "title": "Поступление в Бауманку: программы, экзамены и проходные баллы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-sechenovku-2026-bally/",
-      "title": "Поступление в Сеченовский университет: программы, баллы и документы",
-      "category": "Советы родителям",
-      "primary": "university-33",
       "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-pirogova-2026-bally/",
-      "title": "Поступление в Пироговский университет: программы, баллы и правила",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-mglu-2026-bally/",
-      "title": "МГЛУ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-tpu-2026-bally/",
-      "title": "Томский политехнический университет: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-tgu-tomsk-2026-bally/",
-      "title": "ТГУ в Томске: поступление, пилотные программы и проходные баллы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-dvfu-2026-bally/",
-      "title": "ДВФУ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-yufu-2026-bally/",
-      "title": "Поступление в ЮФУ: программы, кампусы и проходные баллы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-sfu-krasnoyarsk-2026-bally/",
-      "title": "Поступление в СФУ: программы, проходные баллы и зачисление",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-samarsky-universitet-2026-bally/",
-      "title": "Самарский университет имени Королёва: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-misis-2026-bally/",
-      "title": "Университет МИСИС: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-plehanova-2026-bally/",
-      "title": "РЭУ имени Г. В. Плеханова: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-kubgu-2026-bally/",
-      "title": "Поступление в КубГУ 2026: проходные баллы Кубанского государственного университета",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-mai-2026-bally/",
-      "title": "Поступление в МАИ: программы, испытания и проходные баллы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-spbgu-2026-bally/",
-      "title": "Поступление в СПбГУ: программы, проходные баллы и конкурс",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-itmo-2026-bally/",
-      "title": "Поступление в ИТМО: программы, баллы и индивидуальные достижения",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-rggu-2026-bally/",
-      "title": "Поступление в РГГУ: программы, экзамены, баллы и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-ngtu-nizhniy-novgorod-2026-bally/",
-      "title": "Поступление в НГТУ 2026: проходные баллы Нижегородского государственного технического университета",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-vgu-voronezh-2026-bally/",
-      "title": "Воронежский государственный университет: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-omgu-2026-bally/",
-      "title": "Поступление в ОмГУ 2026: проходные баллы Омского государственного университета",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-tyumgu-2026-bally/",
-      "title": "Тюменский государственный университет: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-pgniu-perm-2026-bally/",
-      "title": "Пермский государственный национальный исследовательский университет: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-30",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/postuplenie-v-sgu-saratov-2026-bally/",
-      "title": "Саратовский университет имени Н. Г. Чернышевского: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/postuplenie-v-timirjazevku-2026-bally/",
-      "title": "Тимирязевская академия: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
     },
     {
       "path": "/blog/biologiya-5-klass-pervyy-god/",
@@ -68013,9 +67683,7 @@
       "title": "Стресс в 10 классе: почему дети «сломались» после перехода в профиль",
       "category": "Советы родителям",
       "primary": "lektoriy-psihologicheskaya-razgruzka",
-      "related": [
-        "school-calm"
-      ]
+      "related": []
     },
     {
       "path": "/blog/otsrochka-ot-shkoly-7-let/",
@@ -68078,6 +67746,15 @@
       "category": "Учёба и развитие",
       "primary": "lektoriy-etika",
       "related": []
+    },
+    {
+      "path": "/blog/sportivnaya-shkola-sshor-kak-postupit/",
+      "title": "Спортивная школа (СШОР): как поступить, с какого возраста и что важно знать",
+      "category": "Типы школ",
+      "primary": "college-12",
+      "related": [
+        "university-12"
+      ]
     },
     {
       "path": "/blog/obrazovatelnyj-centr-sirius-kak-popast/",
@@ -68411,6 +68088,56 @@
       ]
     },
     {
+      "path": "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+      "title": "Как выбрать вузы и специальности для подачи документов в 2026",
+      "category": "Советы родителям",
+      "primary": "university-1",
+      "related": [
+        "university-10",
+        "university-11",
+        "university-12",
+        "university-13",
+        "university-17",
+        "university-18",
+        "university-19",
+        "university-2",
+        "university-20",
+        "university-21",
+        "university-22",
+        "university-23",
+        "university-26",
+        "university-27",
+        "university-28",
+        "university-29",
+        "university-3",
+        "university-30",
+        "university-31",
+        "university-32",
+        "university-33",
+        "university-35",
+        "university-36",
+        "university-37",
+        "university-4",
+        "university-41",
+        "university-42",
+        "university-43",
+        "university-44",
+        "university-45",
+        "university-46",
+        "university-47",
+        "university-49",
+        "university-5",
+        "university-50",
+        "university-52",
+        "university-57",
+        "university-58",
+        "university-6",
+        "university-7",
+        "university-8",
+        "university-9"
+      ]
+    },
+    {
       "path": "/blog/apellyaciya-rezultatov-oge-2026/",
       "title": "Апелляция результатов ОГЭ в 2026 году: как и когда подавать",
       "category": "Советы родителям",
@@ -68423,6 +68150,56 @@
       "category": "Советы родителям",
       "primary": "oge-pair",
       "related": []
+    },
+    {
+      "path": "/blog/perevod-na-druguyu-specialnost-v-vuze/",
+      "title": "Перевод на другую специальность внутри вуза: как это оформить",
+      "category": "Советы родителям",
+      "primary": "university-1",
+      "related": [
+        "university-10",
+        "university-11",
+        "university-12",
+        "university-13",
+        "university-17",
+        "university-18",
+        "university-19",
+        "university-2",
+        "university-20",
+        "university-21",
+        "university-22",
+        "university-23",
+        "university-26",
+        "university-27",
+        "university-28",
+        "university-29",
+        "university-3",
+        "university-30",
+        "university-31",
+        "university-32",
+        "university-33",
+        "university-35",
+        "university-36",
+        "university-37",
+        "university-4",
+        "university-41",
+        "university-42",
+        "university-43",
+        "university-44",
+        "university-45",
+        "university-46",
+        "university-47",
+        "university-49",
+        "university-5",
+        "university-50",
+        "university-52",
+        "university-57",
+        "university-58",
+        "university-6",
+        "university-7",
+        "university-8",
+        "university-9"
+      ]
     },
     {
       "path": "/blog/kak-postupit-v-vuz-posle-kolledzha-bez-ege/",
@@ -68453,10 +68230,10 @@
       "related": []
     },
     {
-      "path": "/blog/kak-postupit-v-vuz-mvd-2026/",
-      "title": "Как поступить в вуз МВД: программа, оформление кандидата и подготовка",
+      "path": "/blog/kak-postupit-v-sportivnyj-vuz/",
+      "title": "Как поступить в спортивный вуз в 2026 году: нормативы ОФП",
       "category": "Поступление",
-      "primary": "university-33",
+      "primary": "university-12",
       "related": []
     },
     {
@@ -68716,9 +68493,7 @@
       "title": "ВПР в 8 классе: по каким предметам, как проходит и как подготовиться без стресса",
       "category": "Подготовка к экзаменам",
       "primary": "lektoriy-psihologicheskaya-razgruzka",
-      "related": [
-        "school-calm"
-      ]
+      "related": []
     },
     {
       "path": "/blog/onlajn-shkola-izhevsk/",
@@ -69295,10 +69070,7 @@
       "title": "Программирование для детей по возрастам: 6–8, 9–12 и 13–17 лет",
       "category": "ОБУЧЕНИЕ",
       "primary": "trial-it",
-      "related": [
-        "artist-young",
-        "world-junior"
-      ]
+      "related": []
     },
     {
       "path": "/blog/python-dlya-detej/",
@@ -69367,15 +69139,6 @@
       "related": []
     },
     {
-      "path": "/blog/gimnaziya-primakova-postuplenie-stoimost/",
-      "title": "Гимназия Примакова: поступление, стоимость и программы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/kolledzh-mid-postuplenie-posle-9-klassa/",
       "title": "Колледж МИД после 9 класса: поступление и специальности",
       "category": "Советы родителям",
@@ -69429,15 +69192,6 @@
       "related": []
     },
     {
-      "path": "/blog/britanskaya-mezhdunarodnaya-shkola-postuplenie/",
-      "title": "Британская международная школа в Москве: программы, приём и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/cirkovoe-uchilishche-postuplenie/",
       "title": "Цирковое училище ГУЦЭИ: как поступить на цирковое искусство и эстраду",
       "category": "Советы родителям",
@@ -69451,56 +69205,6 @@
       "title": "Европейская гимназия в Москве: поступление, английский и стоимость",
       "category": "Советы родителям",
       "primary": "lektoriy-angliyskiy",
-      "related": []
-    },
-    {
-      "path": "/blog/gitis-postuplenie/",
-      "title": "ГИТИС: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/gnesinyh-postuplenie/",
-      "title": "Как поступить в Гнесинку: РАМ, музыкальное училище или школа",
-      "category": "Советы родителям",
-      "primary": "college-26",
-      "related": [
-        "university-26"
-      ]
-    },
-    {
-      "path": "/blog/gornyy-universitet-postuplenie/",
-      "title": "Санкт-Петербургский горный университет: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/guap-postuplenie/",
-      "title": "ГУАП: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/gubkina-postuplenie/",
-      "title": "РГУ нефти и газа имени И. М. Губкина: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/innopolis-postuplenie/",
-      "title": "Университет Иннополис: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "university-33",
       "related": []
     },
     {
@@ -69578,76 +69282,6 @@
       ]
     },
     {
-      "path": "/blog/leti-postuplenie/",
-      "title": "ЛЭТИ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/mei-postuplenie/",
-      "title": "Поступление в МЭИ: программы, экзамены и обучение после колледжа",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": []
-    },
-    {
-      "path": "/blog/mgpu-postuplenie/",
-      "title": "МГПУ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/miit-postuplenie/",
-      "title": "РУТ (МИИТ): поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/mirea-postuplenie/",
-      "title": "РТУ МИРЭА: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/moskovskiy-politeh-postuplenie/",
-      "title": "Московский Политех: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/mpgu-postuplenie/",
-      "title": "МПГУ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/nngu-lobachevskogo-postuplenie/",
-      "title": "ННГУ имени Лобачевского: поступление и выбор программы",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/okean-lager-kak-popast-postuplenie/",
       "title": "Как попасть в лагерь «Океан»: путёвка от региона, партнёра и платный заезд",
       "category": "Советы родителям",
@@ -69673,56 +69307,6 @@
       ]
     },
     {
-      "path": "/blog/pediatricheskiy-universitet-postuplenie/",
-      "title": "Педиатрический университет в Петербурге: программы и поступление",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/pirogovskaya-shkola-postuplenie/",
-      "title": "Пироговская школа: поступление, экзамены и учебная программа",
-      "category": "Выбор школы",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/rgisi-postuplenie/",
-      "title": "РГИСИ: поступление, программы, экзамены и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/rgpu-gercena-postuplenie/",
-      "title": "РГПУ имени Герцена: поступление, программы и вступительные испытания",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/russian-international-school-postuplenie/",
-      "title": "Russian International School: поступление в RIS и выбор программы",
-      "category": "Выбор школы",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/sankt-peterburgskiy-universitet-grazhdanskoy-aviacii-postuplenie/",
-      "title": "СПбГУ гражданской авиации: поступление на пилота и другие программы",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
       "path": "/blog/shkola-1580-postuplenie/",
       "title": "Бауманская инженерная школа № 1580: как поступить и оформить перевод",
       "category": "Выбор школы",
@@ -69732,45 +69316,11 @@
       ]
     },
     {
-      "path": "/blog/shkola-makarun-postuplenie/",
-      "title": "Школа «Макарун» в Москве: программы, поступление и выбор тарифа",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/shkola-nika-postuplenie/",
       "title": "Школа «НИКА»: поступление на очное и заочное обучение",
       "category": "Выбор школы",
       "primary": "comfort",
       "related": []
-    },
-    {
-      "path": "/blog/spbgltu-postuplenie/",
-      "title": "СПбГЛТУ имени Кирова: поступление и программы лесотехнического университета",
-      "category": "Советы родителям",
-      "primary": "university-33",
-      "related": []
-    },
-    {
-      "path": "/blog/uchilishche-olimpiyskogo-rezerva-postuplenie/",
-      "title": "Училище олимпийского резерва: как поступить и выбрать программу",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/ulyanovskiy-institut-grazhdanskoy-aviacii-postuplenie/",
-      "title": "Ульяновский институт гражданской авиации: как выбрать программу и поступить",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
     },
     {
       "path": "/blog/vgik-postuplenie/",
@@ -69796,12 +69346,8 @@
       "path": "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/",
       "title": "Факультет международных отношений МГИМО: программы и поступление",
       "category": "Советы родителям",
-      "primary": "college-18",
-      "related": [
-        "university-18",
-        "college-33",
-        "university-33"
-      ]
+      "primary": "university-49",
+      "related": []
     },
     {
       "path": "/blog/fakultet-psihologii-mgu-postuplenie/",
@@ -69810,38 +69356,15 @@
       "primary": "college-13",
       "related": [
         "lektoriy-psihologicheskaya-razgruzka",
-        "university-13",
-        "college-33",
-        "university-33"
+        "university-13"
       ]
     },
     {
       "path": "/blog/fkn-vshe-postuplenie/",
       "title": "Факультет компьютерных наук ВШЭ: программы, конкурс и поступление",
       "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "trial-it",
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/gimnaziya-korifey-postuplenie-stoimost/",
-      "title": "Гимназия № 210 «Корифей»: поступление, программы и платные услуги",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/moskovskaya-shkola-programmistov-postuplenie/",
-      "title": "Московская школа программистов: поступление, форматы и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
+      "primary": "trial-it",
+      "related": []
     },
     {
       "path": "/blog/obshchezhitie-finuniversitet/",
@@ -69858,29 +69381,11 @@
       "related": []
     },
     {
-      "path": "/blog/spbgu-fakultety-i-programmy/",
-      "title": "Факультеты и программы СПбГУ: как выбрать направление и проверить условия приёма",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/stipendii-mai/",
       "title": "Стипендии МАИ в 2026/27: баллы ЕГЭ, сессия и выплаты ректора",
       "category": "Советы родителям",
       "primary": "ege-pair",
       "related": []
-    },
-    {
-      "path": "/blog/vmk-mgu-postuplenie/",
-      "title": "ВМК МГУ: поступление, программы и вступительные испытания",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
     },
     {
       "path": "/blog/yuridicheskiy-fakultet-mgu-postuplenie/",
@@ -70052,15 +69557,6 @@
       ]
     },
     {
-      "path": "/blog/mezhdunarodnaya-shkola-kazani-postuplenie/",
-      "title": "Международная школа Казани: кампусы, программа и поступление",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/shkola-olimp-plyus-postuplenie/",
       "title": "Школа «Олимп-Плюс»: очное поступление и изменения заочного набора",
       "category": "Советы родителям",
@@ -70102,33 +69598,6 @@
       "primary": "college-6",
       "related": [
         "university-6"
-      ]
-    },
-    {
-      "path": "/blog/shkola-avrora-novosibirsk-postuplenie/",
-      "title": "Школа «Аврора» в Новосибирске: отделения, программы и оплата",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/shkola-elena-servis-kazan-postuplenie/",
-      "title": "Школа «Елена-Сервис» в Казани: полный день, программы и оформление",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/shkola-indra-ekaterinburg-postuplenie/",
-      "title": "Школа «Индра» в Екатеринбурге: программы, приём и учебный режим",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
       ]
     },
     {
@@ -70472,23 +69941,11 @@
       ]
     },
     {
-      "path": "/blog/shkola-alternativa-krasnodar-postuplenie/",
-      "title": "Школа «Альтернатива» в Краснодаре: программы, полный день и договор 2026/27",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/shkola-tvorchestvo-ekaterinburg-postuplenie/",
       "title": "Частная школа «Творчество» на Пионеров в Екатеринбурге: программы и приём",
       "category": "Советы родителям",
       "primary": "lektoriy-iskusstvo-i-tvorchestvo",
-      "related": [
-        "college-33",
-        "university-33"
-      ]
+      "related": []
     },
     {
       "path": "/blog/licey-14-rostov-postuplenie/",
@@ -70512,15 +69969,6 @@
       "category": "Советы родителям",
       "primary": "profile",
       "related": []
-    },
-    {
-      "path": "/blog/shkola-yunek-pavlino-postuplenie/",
-      "title": "Школа ЮНЭК в Павлино: программы, собеседование и договор обучения",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
     },
     {
       "path": "/blog/yakutskiy-gorodskoy-licey-postuplenie/",
@@ -70609,24 +70057,6 @@
       "related": []
     },
     {
-      "path": "/blog/gimnaziya-serafima-sarovskogo-berdsk-postuplenie/",
-      "title": "Гимназия Серафима Саровского в Бердске: программы и поступление",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/intellekt-akademiya-novokuzneck-postuplenie/",
-      "title": "«Интеллект Академия» в Новокузнецке: программы, приём и цена 2026/27",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/kursy-bumazhnoe-tvorchestvo-dlya-detej-obzor/",
       "title": "Бумажное творчество для детей: курсы, программы и выбор",
       "category": "Курсы для детей",
@@ -70654,24 +70084,6 @@
       "primary": "oge-pair",
       "related": [
         "profile"
-      ]
-    },
-    {
-      "path": "/blog/omskaya-hristianskaya-shkola-postuplenie/",
-      "title": "Омская христианская школа: программы, поступление и стоимость",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
-      "path": "/blog/shkola-svetoch-anapa-postuplenie/",
-      "title": "Школа «Светоч» в Анапе: программы, поступление и оплата",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
       ]
     },
     {
@@ -70736,15 +70148,6 @@
       ]
     },
     {
-      "path": "/blog/shkola-garmoniya-omsk-postuplenie/",
-      "title": "Школа «Гармония» в Омске: программы, адреса и поступление",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/blog/svyato-uspenskaya-gimnaziya-stavropol-postuplenie/",
       "title": "Свято-Успенская гимназия Ставрополя: начальная школа и приём",
       "category": "Советы родителям",
@@ -70768,15 +70171,6 @@
       "category": "Советы родителям",
       "primary": "profile",
       "related": []
-    },
-    {
-      "path": "/blog/shkola-na-marsovom-pole-orenburg-postuplenie/",
-      "title": "Школа на Марсовом поле в Оренбурге: поступление, программы и цена",
-      "category": "Советы родителям",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
     },
     {
       "path": "/blog/yuridicheskaya-gimnaziya-9-rostov-postuplenie/",
@@ -71629,13 +71023,6 @@
       "related": []
     },
     {
-      "path": "/kursy/kurs/synergy-chtenie-b6fed/",
-      "title": "Курсы чтения для детей 4–11 лет",
-      "category": "Синергия · Курс для детей",
-      "primary": "lektoriy-literaturnyy-klub",
-      "related": []
-    },
-    {
       "path": "/kursy/kurs/synergy-angliyskiy-dlya-doshkolnikov-78ad5/",
       "title": "Английский язык для дошкольников онлайн",
       "category": "Синергия · Курс для детей",
@@ -72018,21 +71405,11 @@
       ]
     },
     {
-      "path": "/kursy/kurs/synergy-sozdatel-mirov-10-17-let-f36d0/",
-      "title": "Создатель интерактивных миров: геймдев для подростков 10–17 лет",
-      "category": "Синергия · Курс для детей",
-      "primary": "artist-young",
-      "related": [
-        "world-junior"
-      ]
-    },
-    {
       "path": "/kursy/kurs/synergy-hudozhnik-6-9-let-2371b/",
       "title": "Художник в мире технологий: цифровое творчество для детей 6–9 лет",
       "category": "Синергия · Курс для детей",
-      "primary": "lektoriy-iskusstvo-i-tvorchestvo",
+      "primary": "artist-young",
       "related": [
-        "artist-young",
         "world-junior"
       ]
     },
@@ -72041,10 +71418,7 @@
       "title": "Художник в мире технологий: дизайн для подростков 10–17 лет",
       "category": "Синергия · Курс для детей",
       "primary": "artist-teen",
-      "related": [
-        "artist-young",
-        "world-junior"
-      ]
+      "related": []
     },
     {
       "path": "/kursy/kurs/synergy-fullstack-razrabotchik-84bc4/",
@@ -72054,13 +71428,6 @@
       "related": [
         "world-teen"
       ]
-    },
-    {
-      "path": "/kursy/kurs/algoritmika-110713234c/",
-      "title": "Компьютерная грамотность для детей 7–9 лет",
-      "category": "Алгоритмика · Курс для детей",
-      "primary": "lektoriy-informatika",
-      "related": []
     },
     {
       "path": "/kursy/kurs/kodland-roblox-game-design-1d878/",
@@ -72175,23 +71542,11 @@
       ]
     },
     {
-      "path": "/kursy/kurs/easycode-designer-world-technology-10-17-734d7/",
-      "title": "Художник в мире технологий, 10–17 лет",
-      "category": "EasyCode · Курс для детей",
-      "primary": "artist-young",
-      "related": [
-        "world-junior"
-      ]
-    },
-    {
       "path": "/kursy/kurs/easycode-fullstack-10-17-ba2fa/",
       "title": "Fullstack-разработчик, 10–17 лет",
       "category": "EasyCode · Курс для детей",
       "primary": "fullstack",
-      "related": [
-        "artist-young",
-        "world-junior"
-      ]
+      "related": []
     },
     {
       "path": "/kursy/kurs/rebotica-web-designer-b60d6/",
@@ -72319,18 +71674,10 @@
       "path": "/kursy/kurs/novakid-education-6-55c70/",
       "title": "Курсы английского для детей 6–7 лет",
       "category": "Novakid · Курс для детей",
-      "primary": "lektoriy-angliyskiy",
+      "primary": "artist-young",
       "related": [
-        "artist-young",
         "world-junior"
       ]
-    },
-    {
-      "path": "/kursy/kurs/novakid-education-8-9-9adda/",
-      "title": "Курсы английского для детей 8–9 лет",
-      "category": "Novakid · Курс для детей",
-      "primary": "lektoriy-angliyskiy",
-      "related": []
     },
     {
       "path": "/kursy/kurs/novakid-education-10-f8e27/",
@@ -72410,11 +71757,8 @@
       "path": "/kursy/kurs/pixel-scratch-2e392/",
       "title": "Курс Scratch —программирование для детей 8-12 лет",
       "category": "Пиксель · Курс для детей",
-      "primary": "world-junior",
-      "related": [
-        "trial-it",
-        "artist-young"
-      ]
+      "primary": "trial-it",
+      "related": []
     },
     {
       "path": "/kursy/kurs/pixel-programmirovanie-python-v-minecraft-s-ii-3c692/",
@@ -72433,10 +71777,7 @@
       "title": "Курс веб-дизайна для детей 9-13 лет",
       "category": "Пиксель · Курс для детей",
       "primary": "artist-teen",
-      "related": [
-        "artist-young",
-        "world-junior"
-      ]
+      "related": []
     },
     {
       "path": "/kursy/kurs/pixel-roblox-s-ii-cca41/",
@@ -72501,10 +71842,7 @@
       "title": "Курс Python Django для школьников 14-17 лет",
       "category": "Пиксель · Курс для детей",
       "primary": "world-teen",
-      "related": [
-        "artist-young",
-        "world-junior"
-      ]
+      "related": []
     },
     {
       "path": "/kursy/kurs/pixel-kurs-unity-dlya-detey-razrabotka-mobilnyh-igr-3abf1/",
@@ -73005,15 +72343,6 @@
       ]
     },
     {
-      "path": "/kursy/kurs/easycode-interactive-world-creator-13-17-eb8e2/",
-      "title": "Создатель интерактивных миров: Senior, 13–17 лет",
-      "category": "EasyCode · Курс для детей",
-      "primary": "artist-young",
-      "related": [
-        "world-junior"
-      ]
-    },
-    {
       "path": "/kursy/kurs/advance-oge-math-5ab0b/",
       "title": "ОГЭ по математике",
       "category": "Advance · Курс для детей",
@@ -73382,13 +72711,6 @@
       "related": [
         "school-tutor"
       ]
-    },
-    {
-      "path": "/kursy/kurs/foxford-school-3d707e34e6/",
-      "title": "Русский язык по программе Эльконина-Давыдова для 2 класса",
-      "category": "Фоксфорд · Курс для детей",
-      "primary": "artist-teen",
-      "related": []
     },
     {
       "path": "/kursy/kurs/foxford-school-be8287694b/",
@@ -73970,9 +73292,8 @@
       "path": "/kursy/kurs/hello-world-a0ccbba948/",
       "title": "Английский для детей 6–9 лет",
       "category": "Hello World School · Курс для детей",
-      "primary": "lektoriy-angliyskiy",
+      "primary": "artist-young",
       "related": [
-        "artist-young",
         "world-junior"
       ]
     },
@@ -74208,9 +73529,8 @@
       "path": "/kursy/kurs/interneturok-56c63d1728/",
       "title": "Логопед для детей 5–8 лет",
       "category": "ИнтернетУрок · Курс для детей",
-      "primary": "artist-teen",
+      "primary": "artist-young",
       "related": [
-        "artist-young",
         "world-junior"
       ]
     },
@@ -74437,9 +73757,7 @@
       "title": "Рисование на компьютере для детей 7–10 лет",
       "category": "Айтигенио · Курс для детей",
       "primary": "lektoriy-iskusstvo-i-tvorchestvo",
-      "related": [
-        "artist-young"
-      ]
+      "related": []
     },
     {
       "path": "/kursy/kurs/itgenio-3980b9dfe1/",
@@ -74707,7 +74025,6 @@
       "category": "Алгоритмика · Курс для детей",
       "primary": "world-junior",
       "related": [
-        "lektoriy-informatika",
         "artist-young"
       ]
     },
@@ -74715,12 +74032,8 @@
       "path": "/kursy/kurs/algoritmika-e04c837803/",
       "title": "Minecraft: программирование для детей 9–12 лет",
       "category": "Алгоритмика · Курс для детей",
-      "primary": "world-junior",
-      "related": [
-        "lektoriy-informatika",
-        "trial-it",
-        "artist-young"
-      ]
+      "primary": "trial-it",
+      "related": []
     },
     {
       "path": "/kursy/kurs/kodland-dea31050d9/",
@@ -76821,15 +76134,6 @@
       "related": []
     },
     {
-      "path": "/blog/professionalitet-kak-vybrat-programmu/",
-      "title": "Профессионалитет: что это, сколько учатся и как выбрать программу",
-      "category": "Поступление",
-      "primary": "college-33",
-      "related": [
-        "university-33"
-      ]
-    },
-    {
       "path": "/uchebnik/frantsuzskiy-yazyk/5-klass/glagoly-pervoy-gruppy-frantsuzskiy/",
       "title": "Глаголы первой группы во французском языке: настоящее время",
       "category": "Онлайн-учебник · 5 класс",
@@ -78556,9 +77860,8 @@
       "path": "/uchebnik/informatika/9-klass/cms-sistemy-upravleniya-kontentom/",
       "title": "Что такое CMS: содержание, шаблоны и процесс публикации",
       "category": "Онлайн-учебник · 9 класс",
-      "primary": "blogging",
+      "primary": "lektoriy-informatika",
       "related": [
-        "lektoriy-informatika",
         "school-tutor",
         "tutor"
       ]
@@ -79863,15 +79166,6 @@
       "related": []
     },
     {
-      "path": "/blog/edinoe-posobie/",
-      "title": "Единое пособие на детей до 17 лет и беременным",
-      "category": "Помощь семьям",
-      "primary": "artist-young",
-      "related": [
-        "world-junior"
-      ]
-    },
-    {
       "path": "/blog/nalogovyj-vychet-sport-detej/",
       "title": "Вычет за спорт ребёнка: секция, фитнес и документы",
       "category": "Помощь семьям",
@@ -80682,17 +79976,14 @@
         "/shkola/detskaya-shkola-iskusstv-22-astrahan/",
         "/shkola/detskaya-shkola-iskusstv-2-astrahan/",
         "/shkola/detskaya-shkola-iskusstv-1-astrahan/",
-        "/uchebnik/biologiya/11-klass/aromorfoz-idioadaptaciya-degeneraciya-11/",
         "/blog/adaptatsiya-v-novoj-shkole/",
         "/blog/kak-spravitsya-so-stressom-pered-ekzamenom/",
         "/blog/shkolnaya-trevozhnost/",
         "/blog/pervyj-mesyac-na-onlajn-obuchenii/",
         "/blog/stress-pered-ekzamenami-kak-pomoch/",
         "/blog/domashnee-zadanie-bez-stressa/",
-        "/blog/stres-v-10-klasse-kak-pomoch/",
         "/blog/vpr-podgotovka-shkolnika/",
         "/blog/vozvrashchenie-k-uchebe-posle-kanikul/",
-        "/blog/vpr-8-klass-podgotovka/",
         "/kursy/kurs/synergy-bloging-dlya-podrostkov-5fcd4/"
       ],
       "approvalRequired": false
@@ -81187,8 +80478,7 @@
         "/kursy/kurs/coddy-videobloging-af31c/",
         "/kursy/kurs/coddy-c10766b1e9/",
         "/kursy/kurs/rostelecom-lyceum-8d2880e83b/",
-        "/kursy/kurs/rostelecom-lyceum-2e4615d0a4/",
-        "/uchebnik/informatika/9-klass/cms-sistemy-upravleniya-kontentom/"
+        "/kursy/kurs/rostelecom-lyceum-2e4615d0a4/"
       ],
       "relatedPages": [
         "/kursy/"
@@ -81359,7 +80649,6 @@
         "/uchebnik/obshchestvoznanie/6-klass/emocii-i-chuvstva-6/",
         "/uchebnik/informatika/8-klass/informacionnyj-obem-soobshcheniya-8/",
         "/uchebnik/russkiy-yazyk/9-klass/obobshchenie-pravopisaniya-9/",
-        "/uchebnik/russkiy-yazyk/11-klass/rechevoy-etiket-delovoe-obshchenie-11/",
         "/uchebnik/obshchestvoznanie/10-klass/obshchenie-i-ego-vidy-10/",
         "/uchebnik/russkiy-yazyk/9-klass/obobshchenno-lichnye-predlozheniya-9/",
         "/uchebnik/informatika/7-klass/obem-tekstovogo-soobshcheniya-7/",
@@ -81594,7 +80883,6 @@
       "relatedPages": [
         "/kursy/",
         "/blog/karmannye-dengi-rebenku/",
-        "/blog/finansovaya-gramotnost-shkolnikov/",
         "/blog/karmannye-dengi-rebenku-5-klass/",
         "/blog/karmannye-dengi-shkolniku/",
         "/blog/finansovaya-gramotnost-dlya-shkolnika/",
@@ -81621,7 +80909,6 @@
         "/kursy/kurs/rebotica-gamedev-2c4fe/",
         "/kursy/kurs/pixel-detskoe-programmirovanie-scratch-64d4d/",
         "/kursy/kurs/pixel-scratch-s-ii-0652b/",
-        "/kursy/kurs/pixel-scratch-2e392/",
         "/kursy/kurs/pixel-programmirovanie-python-v-minecraft-s-ii-3c692/",
         "/kursy/kurs/pixel-roblox-s-ii-cca41/",
         "/kursy/kurs/pixel-roblox-d9be4/",
@@ -81648,7 +80935,6 @@
         "/kursy/kurs/algoritmika-f58de32a0b/",
         "/kursy/kurs/algoritmika-f9b21e6074/",
         "/kursy/kurs/algoritmika-22cb23b61e/",
-        "/kursy/kurs/algoritmika-e04c837803/",
         "/kursy/kurs/kodland-dea31050d9/",
         "/kursy/kurs/kodland-8e44be22ad/",
         "/kursy/kurs/kodland-1bd8aa6431/",
@@ -81860,7 +81146,6 @@
         "/blog/otsrochka-ot-shkoly-7-let/",
         "/blog/besplatnoe-pitanie-v-shkole-komu-polozheno/",
         "/blog/podgotovka-k-shkole-onlajn/",
-        "/blog/programmirovanie-dlya-detej-po-vozrastam/",
         "/blog/sozdanie-igr-dlya-detej-kursy/",
         "/blog/luchshie-kursy-3d-modelirovaniya-dlya-detej/",
         "/blog/shkola-kvadrivium-spb-postuplenie/",
@@ -81871,21 +81156,14 @@
         "/kursy/kurs/sotka-literatura-c2669/",
         "/kursy/kurs/synergy-gibkie-navyki-76669/",
         "/kursy/kurs/synergy-sozdatel-mirov-6-9-let-0b159/",
-        "/kursy/kurs/synergy-sozdatel-mirov-10-17-let-f36d0/",
         "/kursy/kurs/synergy-hudozhnik-6-9-let-2371b/",
-        "/kursy/kurs/synergy-hudozhnik-10-17-let-7e9c1/",
         "/kursy/kurs/kodland-funtech-928d2/",
         "/kursy/kurs/coddy-robotics-464e5/",
         "/kursy/kurs/easycode-designer-world-technology-6-9-08681/",
-        "/kursy/kurs/easycode-designer-world-technology-10-17-734d7/",
-        "/kursy/kurs/easycode-fullstack-10-17-ba2fa/",
         "/kursy/kurs/teatrika-preschool-d2528/",
         "/kursy/kurs/novakid-education-6-55c70/",
-        "/kursy/kurs/pixel-webdesign-mladshie-shkolniki-b2ff0/",
-        "/kursy/kurs/pixel-django-dlya-detej-f3329/",
         "/kursy/kurs/coddy-python-i-javascript-igrovoe-programmirovanie-v-codecombat-d9010/",
         "/kursy/kurs/easycode-interactive-world-creator-6-9-f7d17/",
-        "/kursy/kurs/easycode-interactive-world-creator-13-17-eb8e2/",
         "/kursy/kurs/coddy-b4c86c97a0/",
         "/kursy/kurs/coddy-abf3f609d0/",
         "/kursy/kurs/stop-ugroza-1869081194/",
@@ -81903,7 +81181,6 @@
         "/blog/lermontov-dlya-mladshih-shkolnikov-tri-teksta/",
         "/blog/kak-razvit-kommunikaciyu-u-mladshih-shkolnikov/",
         "/blog/kak-sdelat-igru-v-skretch/",
-        "/blog/edinoe-posobie/",
         "/blog/uchebnik-korejskogo-dlya-podrostka/"
       ],
       "approvalRequired": false
@@ -82112,7 +81389,6 @@
         "/shkola/nekommercheskaya-obscheobrazovatelnaya-mezhdunarodnaya-druzhba-moskva/",
         "/shkola/liga-robotov-ul-druzhby-kemerovo/",
         "/shkola/skajprog-prosp-druzhby-narodov-naberezhnye-chelny/",
-        "/uchebnik/literatura/2-klass/proizvedeniya-o-detyah-i-druzhbe-2/",
         "/uchebnik/literatura/3-klass/rasskazy-o-detyah-i-druzhbe-3/",
         "/uchebnik/literatura/8-klass/pushkin-19-oktyabrya-8/",
         "/uchebnik/literatura/6-klass/pushkin-i-i-pushchinu-6/",
@@ -82493,18 +81769,19 @@
         "/blog/shkola-solnce-kazan-postuplenie/",
         "/blog/svyato-uspenskaya-gimnaziya-stavropol-postuplenie/",
         "/blog/shkola-zolotoe-sechenie-zlatoust-postuplenie/",
-        "/kursy/kurs/synergy-sozdatel-mirov-10-17-let-f36d0/",
+        "/kursy/kurs/synergy-hudozhnik-6-9-let-2371b/",
         "/kursy/kurs/kodland-funtech-928d2/",
         "/kursy/kurs/easycode-designer-world-technology-6-9-08681/",
-        "/kursy/kurs/easycode-designer-world-technology-10-17-734d7/",
         "/kursy/kurs/teatrika-preschool-d2528/",
+        "/kursy/kurs/novakid-education-6-55c70/",
         "/kursy/kurs/coddy-osnovy-tsifrovogo-risunka-v-procreate-b4f5a/",
         "/kursy/kurs/easycode-interactive-world-creator-6-9-f7d17/",
-        "/kursy/kurs/easycode-interactive-world-creator-13-17-eb8e2/",
         "/kursy/kurs/coddy-abf3f609d0/",
         "/kursy/kurs/stop-ugroza-1869081194/",
         "/kursy/kurs/hello-world-213a6d2a9f/",
+        "/kursy/kurs/hello-world-a0ccbba948/",
         "/kursy/kurs/deutsch-online-a2e43c7e8f/",
+        "/kursy/kurs/interneturok-56c63d1728/",
         "/kursy/kurs/itgenio-4a9a76c936/",
         "/blog/zolotaya-osen-v-nachalnoj-shkole-tri-scenariya/",
         "/blog/kompoziciya-v-risunke-pervye-uprazhneniya/",
@@ -82515,7 +81792,6 @@
         "/blog/kak-narisovat-babochku-pyat-shagov/",
         "/blog/kak-narisovat-golubya-prostaya-shema/",
         "/blog/kak-narisovat-anime-personazha/",
-        "/blog/edinoe-posobie/",
         "/blog/uchebnik-korejskogo-dlya-podrostka/"
       ],
       "relatedPages": [
@@ -82526,7 +81802,6 @@
         "/shkola/nachalnaya-obscheobrazovatelnaya-shkola-39-chita/",
         "/shkola/mou-sosh-2-nachalnoe-gorodskoe-uchilische-pushkinskaya-shkola-kamyshin/",
         "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
-        "/blog/programmirovanie-dlya-detej-po-vozrastam/",
         "/blog/scratch-dlya-detej/",
         "/blog/sozdanie-igr-dlya-detej-kursy/",
         "/blog/minecraft-programmirovanie-dlya-detej/",
@@ -82536,26 +81811,19 @@
         "/kursy/kurs/sotka-literatura-c2669/",
         "/kursy/kurs/synergy-gibkie-navyki-76669/",
         "/kursy/kurs/synergy-sozdatel-mirov-6-9-let-0b159/",
-        "/kursy/kurs/synergy-hudozhnik-6-9-let-2371b/",
-        "/kursy/kurs/synergy-hudozhnik-10-17-let-7e9c1/",
         "/kursy/kurs/kodland-roblox-game-design-1d878/",
         "/kursy/kurs/coddy-robotics-464e5/",
         "/kursy/kurs/coddy-web-design-from-scratch-f6c14/",
         "/kursy/kurs/coddy-sozdanie-igr-v-roblox-studio-acd41/",
-        "/kursy/kurs/easycode-fullstack-10-17-ba2fa/",
         "/kursy/kurs/rebotica-gamedev-2c4fe/",
-        "/kursy/kurs/novakid-education-6-55c70/",
         "/kursy/kurs/artfox-dlya-detey-9ce35/",
         "/kursy/kurs/artfox-individualnye-zanyatiya-risovaniya-f3300/",
         "/kursy/kurs/pixel-detskoe-programmirovanie-scratch-64d4d/",
         "/kursy/kurs/pixel-scratch-s-ii-0652b/",
-        "/kursy/kurs/pixel-scratch-2e392/",
         "/kursy/kurs/pixel-programmirovanie-python-v-minecraft-s-ii-3c692/",
-        "/kursy/kurs/pixel-webdesign-mladshie-shkolniki-b2ff0/",
         "/kursy/kurs/pixel-roblox-s-ii-cca41/",
         "/kursy/kurs/pixel-roblox-d9be4/",
         "/kursy/kurs/pixel-roblox-modelirovanie-4ea47/",
-        "/kursy/kurs/pixel-django-dlya-detej-f3329/",
         "/kursy/kurs/coddy-minecraft-vvedenie-v-iskusstvennyy-intellekt-d431e/",
         "/kursy/kurs/coddy-minecraft-programming-5d8bf/",
         "/kursy/kurs/coddy-digital-art-risovanie-na-planshete-95bf3/",
@@ -82575,20 +81843,16 @@
         "/kursy/kurs/hello-world-3882b10441/",
         "/kursy/kurs/hello-world-2b7547faab/",
         "/kursy/kurs/hello-world-b78407a162/",
-        "/kursy/kurs/hello-world-a0ccbba948/",
         "/kursy/kurs/kaplan-school-1b052d9ef0/",
-        "/kursy/kurs/interneturok-56c63d1728/",
         "/kursy/kurs/interneturok-eddec608e8/",
         "/kursy/kurs/itgenio-e6cc16f761/",
         "/kursy/kurs/itgenio-f422ef39b4/",
         "/kursy/kurs/itgenio-4a3865b90c/",
-        "/kursy/kurs/itgenio-05bdf90633/",
         "/kursy/kurs/itgenio-3980b9dfe1/",
         "/kursy/kurs/algoritmika-ea03070c6b/",
         "/kursy/kurs/algoritmika-f58de32a0b/",
         "/kursy/kurs/algoritmika-f9b21e6074/",
         "/kursy/kurs/algoritmika-22cb23b61e/",
-        "/kursy/kurs/algoritmika-e04c837803/",
         "/kursy/kurs/kodland-dea31050d9/",
         "/kursy/kurs/kodland-8e44be22ad/",
         "/kursy/kurs/kodland-1bd8aa6431/",
@@ -88834,7 +88098,6 @@
         "/kursy/kurs/sotka-informatika-8622d/",
         "/kursy/kurs/foxford-school-7aee2b3d9e/",
         "/kursy/kurs/foxford-school-3f073d7126/",
-        "/kursy/kurs/foxford-school-3d707e34e6/",
         "/kursy/kurs/foxford-school-3f02463dff/",
         "/kursy/kurs/foxford-school-7463d1a4b7/",
         "/kursy/kurs/skysmart-9933d514f6/",
@@ -88853,7 +88116,6 @@
         "/kursy/kurs/rostelecom-lyceum-31b0cf9615/",
         "/kursy/kurs/rostelecom-lyceum-5ffd400ea7/",
         "/kursy/kurs/rostelecom-lyceum-b3b783da01/",
-        "/kursy/kurs/interneturok-56c63d1728/",
         "/kursy/kurs/itgenio-db0ed1d9c7/",
         "/kursy/kurs/itgenio-8c87648464/",
         "/kursy/kurs/itgenio-36359968cd/",
@@ -89335,9 +88597,11 @@
         "/blog/programmirovanie-dlya-detej/",
         "/blog/programmirovanie-dlya-detej-po-vozrastam/",
         "/blog/skolko-stoyat-kursy-programmirovaniya-dlya-detej/",
+        "/blog/fkn-vshe-postuplenie/",
         "/kursy/kurs/synergy-sozdatel-mirov-6-9-let-0b159/",
         "/kursy/kurs/coddy-robotics-464e5/",
         "/kursy/kurs/rebotica-programmer-569c3/",
+        "/kursy/kurs/pixel-scratch-2e392/",
         "/kursy/kurs/coddy-programmirovanie-igr-na-python-e2b28/",
         "/kursy/kurs/coddy-python-i-javascript-igrovoe-programmirovanie-v-codecombat-d9010/",
         "/kursy/kurs/coddy-programmirovanie-na-javascript-5ac05/",
@@ -89352,6 +88616,7 @@
         "/kursy/kurs/itgenio-f482d77d91/",
         "/kursy/kurs/sirius-3005/",
         "/kursy/kurs/sirius-3124/",
+        "/kursy/kurs/algoritmika-e04c837803/",
         "/kursy/kurs/kodland-351d31ef84/",
         "/kursy/kurs/skillbox-kids-53781d29ef/",
         "/kursy/kurs/codim-online-4b992b01f5/",
@@ -89373,11 +88638,9 @@
         "/blog/besplatnye-kursy-programmirovaniya-dlya-detej/",
         "/blog/minecraft-programmirovanie-dlya-detej/",
         "/blog/roblox-studio-dlya-detej/",
-        "/blog/fkn-vshe-postuplenie/",
         "/kursy/kurs/kodland-roblox-game-design-1d878/",
         "/kursy/kurs/pixel-detskoe-programmirovanie-scratch-64d4d/",
         "/kursy/kurs/pixel-scratch-s-ii-0652b/",
-        "/kursy/kurs/pixel-scratch-2e392/",
         "/kursy/kurs/pixel-programmirovanie-python-v-minecraft-s-ii-3c692/",
         "/kursy/kurs/pixel-roblox-d9be4/",
         "/kursy/kurs/pixel-python-5b4eb/",
@@ -89397,7 +88660,6 @@
         "/kursy/kurs/rostelecom-lyceum-372142602d/",
         "/kursy/kurs/itgenio-e6cc16f761/",
         "/kursy/kurs/itgenio-4a3865b90c/",
-        "/kursy/kurs/algoritmika-e04c837803/",
         "/kursy/kurs/kodland-dea31050d9/",
         "/kursy/kurs/kodland-8e44be22ad/",
         "/kursy/kurs/skillbox-kids-9541de5a8c/",
@@ -90408,6 +89670,7 @@
         "/uchebnik/geografiya/9-klass/transport-rossii-9/",
         "/uchebnik/istoriya/5-klass/drevnee-dvurechye-5/",
         "/uchebnik/istoriya/5-klass/drevnyaya-indiya-5/",
+        "/uchebnik/istoriya/5-klass/drevniy-kitay-5/",
         "/uchebnik/istoriya/5-klass/schyot-let-istorii-5/",
         "/uchebnik/istoriya/6-klass/vizantiya-6/",
         "/uchebnik/istoriya/6-klass/vostochnye-slavyane-6/",
@@ -90678,6 +89941,7 @@
         "/uchebnik/informatika/6-klass/algoritm-s-vetvleniem-6/",
         "/uchebnik/informatika/6-klass/ciklicheskie-algoritmy-6/",
         "/uchebnik/informatika/6-klass/chislovaya-informaciya-tablicy-6/",
+        "/uchebnik/informatika/6-klass/sozdanie-animacii-6/",
         "/uchebnik/informatika/7-klass/ustroystvo-kompyutera-7/",
         "/uchebnik/informatika/7-klass/programmnoe-obespechenie-7/",
         "/uchebnik/informatika/7-klass/fayly-i-fayrovaya-sistema-7/",
@@ -91757,6 +91021,7 @@
         "/uchebnik/istoriya/8-klass/kontrreformy-aleksandra-3-8/",
         "/uchebnik/istoriya/8-klass/narodnichestvo-8/",
         "/uchebnik/istoriya/8-klass/grazhdanskaya-voyna-v-ssha-8/",
+        "/uchebnik/istoriya/8-klass/opiumnye-voyny-kitay-8/",
         "/uchebnik/istoriya/8-klass/peredvizhniki-8/",
         "/uchebnik/istoriya/9-klass/deyatelnost-speranskogo-9/",
         "/uchebnik/istoriya/9-klass/arakcheevshchina-9/",
@@ -91944,6 +91209,7 @@
         "/uchebnik/russkiy-yazyk/11-klass/bezudarnye-glasnye-kornya-11/",
         "/uchebnik/russkiy-yazyk/11-klass/abzac-i-logika-teksta-11/",
         "/uchebnik/russkiy-yazyk/11-klass/informatsionnaya-obrabotka-teksta-11/",
+        "/uchebnik/russkiy-yazyk/11-klass/rechevoy-etiket-delovoe-obshchenie-11/",
         "/uchebnik/literatura/7-klass/pushkin-mednyy-vsadnik-vstuplenie-7/",
         "/uchebnik/literatura/7-klass/gogol-shinel-7/",
         "/uchebnik/literatura/7-klass/turgenev-stihotvoreniya-v-proze-7/",
@@ -94111,6 +93377,7 @@
         "/uchebnik/informatika/6-klass/arhivaciya-i-szhatie-fajlov-6/",
         "/uchebnik/informatika/6-klass/yacheyka-i-adres-v-tablice-6/",
         "/uchebnik/informatika/6-klass/formuly-so-ssylkami-v-tablice-6/",
+        "/uchebnik/informatika/6-klass/perehod-i-perekhody-v-prezentacii-6/",
         "/uchebnik/informatika/6-klass/poiskovaya-sistema-i-zapros-6/",
         "/uchebnik/informatika/6-klass/kopirovanie-i-peremeshchenie-fajlov-6/",
         "/uchebnik/informatika/6-klass/vstavka-risunka-v-dokument-6/",
@@ -94160,6 +93427,8 @@
         "/uchebnik/istoriya/5-klass/faraony-i-piramidy-egipta-5/",
         "/uchebnik/istoriya/5-klass/kasty-drevney-indii-5/",
         "/uchebnik/istoriya/5-klass/konfutsiy-i-uchenie-mudretsa-5/",
+        "/uchebnik/istoriya/5-klass/velikaya-kitayskaya-stena-5/",
+        "/uchebnik/istoriya/5-klass/izobreteniya-drevnih-kitaytsev-5/",
         "/uchebnik/istoriya/5-klass/gorod-vavilon-i-tsar-navuhodonosor-5/",
         "/uchebnik/istoriya/5-klass/drevnegrecheskie-uchenye-5/",
         "/uchebnik/istoriya/5-klass/rimskaya-armiya-i-legiony-5/",
@@ -95094,7 +94363,6 @@
         "/uchebnik/angliiskiy-yazyk/6-klass/future-simple-6/",
         "/uchebnik/angliiskiy-yazyk/10-klass/vremena-obzor-10/",
         "/uchebnik/angliiskiy-yazyk/10-klass/podgotovka-ege-eng-10/",
-        "/uchebnik/istoriya/5-klass/drevniy-kitay-5/",
         "/uchebnik/obshchestvoznanie/6-klass/obshchenie-6/",
         "/uchebnik/biologiya/5-klass/tsarstvo-zhivotnyh-5/",
         "/uchebnik/biologiya/5-klass/sreda-obitaniya-5/",
@@ -95131,7 +94399,6 @@
         "/uchebnik/angliiskiy-yazyk/9-klass/articles-a-an-the-zero-9/",
         "/uchebnik/angliiskiy-yazyk/9-klass/used-to-would-past-habits-9/",
         "/uchebnik/informatika/5-klass/modeli-i-modelirovanie-5/",
-        "/uchebnik/informatika/6-klass/sozdanie-animacii-6/",
         "/uchebnik/informatika/7-klass/modelirovanie-i-modeli-7/",
         "/uchebnik/informatika/8-klass/kodirovanie-teksta-8/",
         "/uchebnik/informatika/8-klass/kodirovanie-grafiki-8/",
@@ -95383,7 +94650,6 @@
         "/uchebnik/informatika/9-klass/dvoichnaya-arifmetika-9/",
         "/uchebnik/informatika/9-klass/logicheskie-shemy-9/",
         "/uchebnik/informatika/9-klass/otladka-programm-9/",
-        "/uchebnik/istoriya/8-klass/opiumnye-voyny-kitay-8/",
         "/uchebnik/fizika/9-klass/iskusstvennye-sputniki-9/",
         "/uchebnik/geografiya/8-klass/migracii-naseleniya-rossii-8/",
         "/uchebnik/literatura/5-klass/kataev-tsvetik-semitsvetik-5/",
@@ -95391,7 +94657,6 @@
         "/uchebnik/informatika/5-klass/kodirovanie-cveta-rgb-5/",
         "/uchebnik/informatika/7-klass/kodirovka-unicode-i-utf-7/",
         "/uchebnik/informatika/7-klass/dvoichnaya-arifmetika-slozhenie-7/",
-        "/uchebnik/russkiy-yazyk/11-klass/rechevoy-etiket-delovoe-obshchenie-11/",
         "/uchebnik/literatura/10-klass/lermontov-geroy-nashego-vremeni-10/",
         "/uchebnik/literatura/10-klass/gogol-myortvye-dushi-10/",
         "/uchebnik/literatura/10-klass/pushkin-evgeniy-onegin-10/",
@@ -95784,7 +95049,6 @@
         "/uchebnik/russkiy-yazyk/7-klass/ne-s-raznymi-chastyami-rechi-obobschenie-7/",
         "/uchebnik/russkiy-yazyk/8-klass/frazy-rechevogo-etiketa-8/",
         "/uchebnik/informatika/5-klass/kodirovanie-napravleniy-strelkami-5/",
-        "/uchebnik/informatika/6-klass/perehod-i-perekhody-v-prezentacii-6/",
         "/uchebnik/informatika/7-klass/rabota-s-neskolkimi-listami-7/",
         "/uchebnik/informatika/7-klass/kolichestvo-informacii-v-soobshchenii-7/",
         "/uchebnik/informatika/7-klass/kodirovanie-grafiki-cherno-belaya-7/",
@@ -95798,8 +95062,6 @@
         "/uchebnik/angliiskiy-yazyk/10-klass/konstrukcii-so-such-that-10/",
         "/uchebnik/angliiskiy-yazyk/11-klass/ege-listening-strategies-11/",
         "/uchebnik/angliiskiy-yazyk/11-klass/ege-grammar-vocab-tasks-11/",
-        "/uchebnik/istoriya/5-klass/velikaya-kitayskaya-stena-5/",
-        "/uchebnik/istoriya/5-klass/izobreteniya-drevnih-kitaytsev-5/",
         "/uchebnik/biologiya/5-klass/stroenie-griba-shlyapochnogo-5/",
         "/uchebnik/biologiya/5-klass/plesnevye-griby-i-drozhzhi-5/",
         "/uchebnik/biologiya/5-klass/rol-bakteriy-v-prirode-5/",
@@ -96028,12 +95290,15 @@
       ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/professiya-yurist-dlya-shkolnika/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
@@ -96075,6 +95340,7 @@
       "relatedPages": [
         "/shkola/it-licey-pri-sgu-saratov/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/it-professii-dlya-shkolnikov/",
@@ -96083,6 +95349,8 @@
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/blog/lit-1533-postuplenie/",
@@ -96124,12 +95392,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/blog/ekonomicheskiy-fakultet-mgu-postuplenie/",
@@ -96165,6 +95436,7 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
@@ -96172,6 +95444,8 @@
         "/blog/pedagogicheskij-klass-v-shkole/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/professiya-psiholog-dlya-shkolnika/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
@@ -96211,12 +95485,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96250,12 +95527,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96289,7 +95569,10 @@
       "primaryPages": [
         "/shkola/ekonomicheskiy-licey-pri-finec-sankt-peterburg/",
         "/shkola/ekonomicheskie-klassy-sfuki-krasnoyarsk/",
-        "/shkola/ekonomicheskie-klassy-pri-hgueip-khabarovsk/"
+        "/shkola/ekonomicheskie-klassy-pri-hgueip-khabarovsk/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/"
       ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
@@ -96339,12 +95622,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/professiya-dizayner-dlya-shkolnika/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
@@ -96388,6 +95674,7 @@
       ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
@@ -96395,6 +95682,8 @@
         "/blog/pedagogicheskij-klass-v-shkole/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/",
@@ -96437,6 +95726,7 @@
       "relatedPages": [
         "/shkola/mediko-biologicheskie-klassy-pri-agmu-barnaul/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/medicinskoe-obrazovanie-postupit/",
@@ -96445,6 +95735,8 @@
         "/blog/medicinskij-klass-v-shkole/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/predprofessionalnye-klassy-chto-eto/",
         "/blog/rezultaty-shkoly-letovo/",
@@ -96494,6 +95786,7 @@
       ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/inzhenernye-klassy-v-shkole/",
@@ -96501,6 +95794,8 @@
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/predprofessionalnye-klassy-chto-eto/",
         "/blog/rezultaty-shkoly-letovo/",
@@ -96544,12 +95839,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96561,12 +95859,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96600,12 +95901,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96617,12 +95921,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96656,24 +95963,24 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
-        "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/",
         "/kursy/kurs/coddy-future-profession-42772/"
       ],
       "approvalRequired": true
     },
     "college-18": {
       "title": "Колледж: Игровая индустрия",
-      "primaryPages": [
-        "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/"
-      ],
+      "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
         "/blog/kuda-postupat-posle-9-klassa/",
@@ -96695,15 +96002,22 @@
     },
     "university-12": {
       "title": "Университет: Спорт",
-      "primaryPages": [],
+      "primaryPages": [
+        "/blog/kak-postupit-v-sportivnyj-vuz/"
+      ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
+        "/blog/sport-karyera-kak-sovmeshat/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
+        "/blog/sportivnaya-shkola-sshor-kak-postupit/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96712,7 +96026,10 @@
     },
     "college-12": {
       "title": "Колледж: Спорт",
-      "primaryPages": [],
+      "primaryPages": [
+        "/blog/sport-karyera-kak-sovmeshat/",
+        "/blog/sportivnaya-shkola-sshor-kak-postupit/"
+      ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
         "/blog/kuda-postupat-posle-9-klassa/",
@@ -96737,26 +96054,24 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
-        "/blog/gnesinyh-postuplenie/",
         "/kursy/kurs/coddy-future-profession-42772/"
       ],
       "approvalRequired": true
     },
     "college-26": {
       "title": "Колледж: Музыкальная индустрия",
-      "primaryPages": [
-        "/shkola/uralskaya-specialnaya-muzykalnaya-shkola-kolledzh-ekaterinburg/",
-        "/shkola/voronezhskaya-specialnaya-muzykalnaya-shkola-kolledzh-voronezh/",
-        "/blog/gnesinyh-postuplenie/"
-      ],
+      "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
         "/blog/kuda-postupat-posle-9-klassa/",
@@ -96781,12 +96096,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96820,12 +96138,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96837,12 +96158,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96878,12 +96202,15 @@
         "/shkola/lingvisticheskie-klassy-chgpu-chelyabinsk/",
         "/shkola/lingvisticheskiy-licey-pri-sgu-saratov/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96920,12 +96247,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96937,12 +96267,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96973,15 +96306,20 @@
     },
     "university-49": {
       "title": "Университет: Международные отношения",
-      "primaryPages": [],
+      "primaryPages": [
+        "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/"
+      ],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -96990,159 +96328,28 @@
     },
     "university-33": {
       "title": "Университет: Программирование",
-      "primaryPages": [
-        "/blog/postuplenie-v-sechenovku-2026-bally/",
-        "/blog/postuplenie-v-pirogova-2026-bally/",
-        "/blog/postuplenie-v-tpu-2026-bally/",
-        "/blog/postuplenie-v-samarsky-universitet-2026-bally/",
-        "/blog/postuplenie-v-misis-2026-bally/",
-        "/blog/postuplenie-v-sgu-saratov-2026-bally/",
-        "/blog/kak-postupit-v-vuz-mvd-2026/",
-        "/blog/gornyy-universitet-postuplenie/",
-        "/blog/innopolis-postuplenie/",
-        "/blog/pediatricheskiy-universitet-postuplenie/",
-        "/blog/sankt-peterburgskiy-universitet-grazhdanskoy-aviacii-postuplenie/",
-        "/blog/spbgltu-postuplenie/"
-      ],
+      "primaryPages": [],
       "relatedPages": [
         "/shkola/uchi-ru-oflajn-shkola-programmirovaniya-ul-universitetskaya-naberezhna/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
-        "/blog/postuplenie-v-mfti-2026-bally/",
-        "/blog/postuplenie-v-mgimo-2026-bally/",
-        "/blog/postuplenie-v-rudn-2026-bally/",
-        "/blog/postuplenie-v-finansovy-universitet-2026/",
-        "/blog/postuplenie-v-kfu-2026-bally/",
-        "/blog/postuplenie-v-urfu-2026-bally/",
-        "/blog/postuplenie-v-ngu-2026-bally/",
-        "/blog/postuplenie-v-vshe-2026-bally/",
-        "/blog/postuplenie-v-baumanku-2026-bally/",
-        "/blog/postuplenie-v-mglu-2026-bally/",
-        "/blog/postuplenie-v-tgu-tomsk-2026-bally/",
-        "/blog/postuplenie-v-dvfu-2026-bally/",
-        "/blog/postuplenie-v-yufu-2026-bally/",
-        "/blog/postuplenie-v-sfu-krasnoyarsk-2026-bally/",
-        "/blog/postuplenie-v-plehanova-2026-bally/",
-        "/blog/postuplenie-v-mai-2026-bally/",
-        "/blog/postuplenie-v-spbgu-2026-bally/",
-        "/blog/postuplenie-v-itmo-2026-bally/",
-        "/blog/postuplenie-v-rggu-2026-bally/",
-        "/blog/postuplenie-v-vgu-voronezh-2026-bally/",
-        "/blog/postuplenie-v-tyumgu-2026-bally/",
-        "/blog/postuplenie-v-pgniu-perm-2026-bally/",
-        "/blog/postuplenie-v-timirjazevku-2026-bally/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
-        "/blog/gimnaziya-primakova-postuplenie-stoimost/",
-        "/blog/britanskaya-mezhdunarodnaya-shkola-postuplenie/",
-        "/blog/gitis-postuplenie/",
-        "/blog/guap-postuplenie/",
-        "/blog/gubkina-postuplenie/",
-        "/blog/leti-postuplenie/",
-        "/blog/mgpu-postuplenie/",
-        "/blog/miit-postuplenie/",
-        "/blog/mirea-postuplenie/",
-        "/blog/moskovskiy-politeh-postuplenie/",
-        "/blog/mpgu-postuplenie/",
-        "/blog/nngu-lobachevskogo-postuplenie/",
-        "/blog/pirogovskaya-shkola-postuplenie/",
-        "/blog/rgisi-postuplenie/",
-        "/blog/rgpu-gercena-postuplenie/",
-        "/blog/russian-international-school-postuplenie/",
-        "/blog/shkola-makarun-postuplenie/",
-        "/blog/uchilishche-olimpiyskogo-rezerva-postuplenie/",
-        "/blog/ulyanovskiy-institut-grazhdanskoy-aviacii-postuplenie/",
-        "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/",
-        "/blog/fakultet-psihologii-mgu-postuplenie/",
-        "/blog/fkn-vshe-postuplenie/",
-        "/blog/gimnaziya-korifey-postuplenie-stoimost/",
-        "/blog/moskovskaya-shkola-programmistov-postuplenie/",
-        "/blog/spbgu-fakultety-i-programmy/",
-        "/blog/vmk-mgu-postuplenie/",
-        "/blog/mezhdunarodnaya-shkola-kazani-postuplenie/",
-        "/blog/shkola-avrora-novosibirsk-postuplenie/",
-        "/blog/shkola-elena-servis-kazan-postuplenie/",
-        "/blog/shkola-indra-ekaterinburg-postuplenie/",
-        "/blog/shkola-alternativa-krasnodar-postuplenie/",
-        "/blog/shkola-tvorchestvo-ekaterinburg-postuplenie/",
-        "/blog/shkola-yunek-pavlino-postuplenie/",
-        "/blog/gimnaziya-serafima-sarovskogo-berdsk-postuplenie/",
-        "/blog/intellekt-akademiya-novokuzneck-postuplenie/",
-        "/blog/omskaya-hristianskaya-shkola-postuplenie/",
-        "/blog/shkola-svetoch-anapa-postuplenie/",
-        "/blog/shkola-garmoniya-omsk-postuplenie/",
-        "/blog/shkola-na-marsovom-pole-orenburg-postuplenie/",
-        "/kursy/kurs/coddy-future-profession-42772/",
-        "/blog/professionalitet-kak-vybrat-programmu/"
+        "/kursy/kurs/coddy-future-profession-42772/"
       ],
       "approvalRequired": true
     },
     "college-33": {
       "title": "Колледж: Программирование",
-      "primaryPages": [
-        "/blog/postuplenie-v-mfti-2026-bally/",
-        "/blog/postuplenie-v-mgimo-2026-bally/",
-        "/blog/postuplenie-v-rudn-2026-bally/",
-        "/blog/postuplenie-v-kfu-2026-bally/",
-        "/blog/postuplenie-v-urfu-2026-bally/",
-        "/blog/postuplenie-v-ngu-2026-bally/",
-        "/blog/postuplenie-v-vshe-2026-bally/",
-        "/blog/postuplenie-v-baumanku-2026-bally/",
-        "/blog/postuplenie-v-mglu-2026-bally/",
-        "/blog/postuplenie-v-tgu-tomsk-2026-bally/",
-        "/blog/postuplenie-v-dvfu-2026-bally/",
-        "/blog/postuplenie-v-yufu-2026-bally/",
-        "/blog/postuplenie-v-sfu-krasnoyarsk-2026-bally/",
-        "/blog/postuplenie-v-plehanova-2026-bally/",
-        "/blog/postuplenie-v-mai-2026-bally/",
-        "/blog/postuplenie-v-spbgu-2026-bally/",
-        "/blog/postuplenie-v-itmo-2026-bally/",
-        "/blog/postuplenie-v-rggu-2026-bally/",
-        "/blog/postuplenie-v-timirjazevku-2026-bally/",
-        "/blog/gimnaziya-primakova-postuplenie-stoimost/",
-        "/blog/britanskaya-mezhdunarodnaya-shkola-postuplenie/",
-        "/blog/gitis-postuplenie/",
-        "/blog/guap-postuplenie/",
-        "/blog/gubkina-postuplenie/",
-        "/blog/leti-postuplenie/",
-        "/blog/mei-postuplenie/",
-        "/blog/mgpu-postuplenie/",
-        "/blog/miit-postuplenie/",
-        "/blog/mirea-postuplenie/",
-        "/blog/moskovskiy-politeh-postuplenie/",
-        "/blog/mpgu-postuplenie/",
-        "/blog/nngu-lobachevskogo-postuplenie/",
-        "/blog/pirogovskaya-shkola-postuplenie/",
-        "/blog/rgisi-postuplenie/",
-        "/blog/rgpu-gercena-postuplenie/",
-        "/blog/russian-international-school-postuplenie/",
-        "/blog/shkola-makarun-postuplenie/",
-        "/blog/uchilishche-olimpiyskogo-rezerva-postuplenie/",
-        "/blog/ulyanovskiy-institut-grazhdanskoy-aviacii-postuplenie/",
-        "/blog/fkn-vshe-postuplenie/",
-        "/blog/gimnaziya-korifey-postuplenie-stoimost/",
-        "/blog/moskovskaya-shkola-programmistov-postuplenie/",
-        "/blog/spbgu-fakultety-i-programmy/",
-        "/blog/vmk-mgu-postuplenie/",
-        "/blog/mezhdunarodnaya-shkola-kazani-postuplenie/",
-        "/blog/shkola-avrora-novosibirsk-postuplenie/",
-        "/blog/shkola-elena-servis-kazan-postuplenie/",
-        "/blog/shkola-indra-ekaterinburg-postuplenie/",
-        "/blog/shkola-alternativa-krasnodar-postuplenie/",
-        "/blog/shkola-yunek-pavlino-postuplenie/",
-        "/blog/gimnaziya-serafima-sarovskogo-berdsk-postuplenie/",
-        "/blog/intellekt-akademiya-novokuzneck-postuplenie/",
-        "/blog/omskaya-hristianskaya-shkola-postuplenie/",
-        "/blog/shkola-svetoch-anapa-postuplenie/",
-        "/blog/shkola-garmoniya-omsk-postuplenie/",
-        "/blog/shkola-na-marsovom-pole-orenburg-postuplenie/",
-        "/blog/professionalitet-kak-vybrat-programmu/"
-      ],
+      "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
         "/blog/kuda-postupat-posle-9-klassa/",
@@ -97158,9 +96365,6 @@
         "/blog/kolledzh-mid-postuplenie-posle-9-klassa/",
         "/blog/kolledzh-caricyno-postuplenie/",
         "/blog/kolledzh-mgimo-postuplenie/",
-        "/blog/fakultet-mezhdunarodnyh-otnosheniy-mgimo/",
-        "/blog/fakultet-psihologii-mgu-postuplenie/",
-        "/blog/shkola-tvorchestvo-ekaterinburg-postuplenie/",
         "/kursy/kurs/coddy-future-profession-42772/"
       ],
       "approvalRequired": true
@@ -97170,12 +96374,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97206,42 +96413,18 @@
     },
     "university-30": {
       "title": "Университет: Государственное управление",
-      "primaryPages": [
-        "/shkola/licey-yuurgu-chelyabinsk/",
-        "/shkola/licey-tgu-tomsk/",
-        "/shkola/licey-pri-sgu-saratov/",
-        "/shkola/agro-licey-pri-sgau-saratov/",
-        "/shkola/licey-udgu-izhevsk/",
-        "/shkola/it-licey-udgu-izhevsk/",
-        "/shkola/licey-pri-altgu-barnaul/",
-        "/shkola/agrarnyy-licey-pri-altgau-barnaul/",
-        "/shkola/licey-pri-ulgu-ulyanovsk/",
-        "/shkola/licey-pri-togu-khabarovsk/",
-        "/shkola/agrarnye-klassy-pri-dvgau-khabarovsk/",
-        "/blog/postuplenie-v-kubgu-2026-bally/",
-        "/blog/postuplenie-v-ngtu-nizhniy-novgorod-2026-bally/",
-        "/blog/postuplenie-v-vgu-voronezh-2026-bally/",
-        "/blog/postuplenie-v-omgu-2026-bally/",
-        "/blog/postuplenie-v-tyumgu-2026-bally/",
-        "/blog/postuplenie-v-pgniu-perm-2026-bally/"
-      ],
+      "primaryPages": [],
       "relatedPages": [
-        "/shkola/inzhenerniy-licey-tomsk/",
-        "/shkola/medicinskiy-licey-pri-sgmu-saratov/",
-        "/shkola/inzhenernyy-licey-pri-altgtu-barnaul/",
-        "/shkola/mediko-biologicheskie-klassy-pri-agmu-barnaul/",
-        "/shkola/pedagogicheskie-klassy-pri-altgpu-barnaul/",
-        "/shkola/gimnaziya-pri-dvgups-khabarovsk/",
-        "/shkola/medicinskie-klassy-pri-dvgmu-khabarovsk/",
-        "/shkola/ekonomicheskie-klassy-pri-hgueip-khabarovsk/",
-        "/shkola/pedagogicheskie-klassy-pri-dvgggu-khabarovsk/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97252,14 +96435,16 @@
       "title": "Университет: Журналистика",
       "primaryPages": [],
       "relatedPages": [
-        "/shkola/uchi-ru-oflajn-shkola-programmirovaniya-ul-universitetskaya-naberezhna/",
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97271,12 +96456,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97310,12 +96498,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97349,12 +96540,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97388,12 +96582,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97427,12 +96624,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97444,12 +96644,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97461,12 +96664,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/blog/akademiya-vaganovoy-postuplenie/",
@@ -97480,12 +96686,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97497,12 +96706,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97514,12 +96726,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97553,12 +96768,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97570,12 +96788,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97609,12 +96830,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97648,12 +96872,15 @@
       "primaryPages": [],
       "relatedPages": [
         "/blog/kadetskaya-shkola-chto-nuzhno-znat/",
+        "/blog/chto-delat-esli-ne-nravitsya-vuz/",
         "/blog/postuplenie-v-mgtu-2026-bally/",
         "/blog/kuda-postupat-posle-11-klassa/",
         "/blog/professii-bez-ege/",
         "/blog/tvorcheskoe-obrazovanie-rossiya/",
         "/blog/mgu-napravleniya-i-spetsialnosti-2026/",
         "/blog/proforientaciya-9-klass-testy/",
+        "/blog/kak-vybrat-vuzy-i-specialnosti-dlya-podachi/",
+        "/blog/perevod-na-druguyu-specialnost-v-vuze/",
         "/blog/bauman-fakultety-i-specialnosti-2026/",
         "/blog/rezultaty-shkoly-letovo/",
         "/kursy/kurs/coddy-future-profession-42772/"
@@ -97735,8 +96962,6 @@
     "camp-comics": {
       "title": "Университет: Арт-кэмп: комиксы и анимация",
       "primaryPages": [
-        "/uchebnik/informatika/6-klass/sozdanie-animacii-6/",
-        "/uchebnik/informatika/6-klass/perehod-i-perekhody-v-prezentacii-6/",
         "/blog/luchshie-kursy-videomontazha-dlya-detej/",
         "/blog/kursy-animaciya-dlya-detej-obzor/",
         "/kursy/kurs/synergy-multiplikatsiya-personazha-3e3fa/",
@@ -97881,8 +97106,6 @@
         "/kursy/kurs/teatrika-english-kids-e277f/",
         "/kursy/kurs/teatrika-english-7e506/",
         "/kursy/kurs/novakid-education-4-5-12dda/",
-        "/kursy/kurs/novakid-education-6-55c70/",
-        "/kursy/kurs/novakid-education-8-9-9adda/",
         "/kursy/kurs/novakid-education-10-f8e27/",
         "/kursy/kurs/novakid-education-11-12-dbf83/",
         "/kursy/kurs/novakid-education-14-95129/",
@@ -97915,7 +97138,6 @@
         "/kursy/kurs/tutoronline-7121850565/",
         "/kursy/kurs/coddy-8486b58195/",
         "/kursy/kurs/amakids-efaf2238c4/",
-        "/kursy/kurs/hello-world-a0ccbba948/",
         "/kursy/kurs/hello-world-800a29260c/",
         "/kursy/kurs/hello-world-26cff92eb5/",
         "/kursy/kurs/enline-0f8e5487d1/",
@@ -98626,7 +97848,6 @@
         "/blog/luchshie-kursy-informatiki-dlya-9-klassa/",
         "/blog/obzor-shkoly-algoritmika/",
         "/blog/kamensk-uralskaya-gimnaziya-postuplenie/",
-        "/kursy/kurs/algoritmika-110713234c/",
         "/kursy/kurs/teatrika-informatika-f824e/",
         "/kursy/kurs/coddy-robowin-osnovy-logiki-i-algoritmiki-691de/",
         "/kursy/kurs/umschool-computer-science-61304/",
@@ -98660,6 +97881,7 @@
         "/uchebnik/informatika/10-klass/java-util-arrays-metody/",
         "/uchebnik/informatika/10-klass/java-boxing-unboxing/",
         "/uchebnik/informatika/10-klass/java-try-catch-finally/",
+        "/uchebnik/informatika/9-klass/cms-sistemy-upravleniya-kontentom/",
         "/uchebnik/informatika/9-klass/stil-koda-na-c/",
         "/uchebnik/informatika/10-klass/java-util-collection-interface/",
         "/uchebnik/informatika/10-klass/cpp-new-delete/",
@@ -98731,12 +97953,9 @@
         "/kursy/kurs/coddy-oge-computer-science-28c6e/",
         "/kursy/kurs/algoritmika-f58de32a0b/",
         "/kursy/kurs/algoritmika-f9b21e6074/",
-        "/kursy/kurs/algoritmika-22cb23b61e/",
-        "/kursy/kurs/algoritmika-e04c837803/",
         "/besplatnye-uroki/zanyatiya/algoritmika-ai/",
         "/uchebnik/informatika/9-klass/html-tablicy-i-frejmy/",
-        "/uchebnik/informatika/9-klass/python-tkinter-canvas-risovanie/",
-        "/uchebnik/informatika/9-klass/cms-sistemy-upravleniya-kontentom/"
+        "/uchebnik/informatika/9-klass/python-tkinter-canvas-risovanie/"
       ],
       "approvalRequired": false
     },
@@ -99691,7 +98910,6 @@
         "/blog/shkola-tvorchestvo-ekaterinburg-postuplenie/",
         "/blog/kursy-bumazhnoe-tvorchestvo-dlya-detej-obzor/",
         "/kursy/kurs/synergy-neirostart-cifrovoe-tvorchestvo-7ad17/",
-        "/kursy/kurs/synergy-hudozhnik-6-9-let-2371b/",
         "/kursy/kurs/artfox-dlya-detey-9ce35/",
         "/kursy/kurs/artfox-individualnye-zanyatiya-risovaniya-f3300/",
         "/kursy/kurs/coddy-digital-art-risovanie-na-planshete-95bf3/",
@@ -99827,7 +99045,6 @@
         "/blog/konkursnye-spiski-mgyua-2026/",
         "/blog/luchshie-kursy-chteniya-dlya-detej/",
         "/blog/kursy-skorochtenie-dlya-detej-obzor/",
-        "/kursy/kurs/synergy-chtenie-b6fed/",
         "/kursy/kurs/iqsha-chtenie-i-gramota-3bbdd/",
         "/kursy/kurs/iq007-reutov-38364c1e47/",
         "/kursy/kurs/amakids-34bfeb86d4/",
@@ -100124,10 +99341,6 @@
         "/shkola/shkola-93-kitayskiy-chelyabinsk/",
         "/shkola/shkola-kitayskogo-yazyka-laoshi-ufa/",
         "/shkola/russko-kitayskaya-mezhdunarodnaya-shkola-moskva/",
-        "/uchebnik/istoriya/5-klass/drevniy-kitay-5/",
-        "/uchebnik/istoriya/8-klass/opiumnye-voyny-kitay-8/",
-        "/uchebnik/istoriya/5-klass/velikaya-kitayskaya-stena-5/",
-        "/uchebnik/istoriya/5-klass/izobreteniya-drevnih-kitaytsev-5/",
         "/blog/kakoj-inostrannyj-yazyk-vybrat-rebenku/",
         "/blog/kursy-kitayskiy-dlya-detej-obzor/",
         "/kursy/kurs/coddy-0f523ed0c7/",

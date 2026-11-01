@@ -17,10 +17,14 @@ assert.equal(primary('/uchebnik/russkiy/1-klass/zvuki/'),undefined);
 assert.equal(primary('/admin/otzyvy/','Образование'),undefined);
 assert.equal(primary('/blog/kak-vybrat-yuridicheskiy-kolledzh/'),'college-4');
 assert.equal(rules.rank(data.offers,{path:'/blog/python-dlya-detej/'}).some(x=>x.offer.id.startsWith('university')),false);
+assert.equal(primary('/blog/postupit-v-vuz-kino-i-televidenie/'),'university-29');
+assert.equal(primary('/blog/sport-kakoj-vybrat-kolledzh/'),'college-12');
+assert.equal(primary('/blog/zhurnalistika-kakoj-vybrat-vuz/'),'university-23');
+assert.ok(rules.rank(data.offers,{path:'/blog/finansovaya-gramotnost-dlya-17-let/'}).every(x=>x.offer.maxAge>=17));
 for(const o of data.offers) {
  assert.ok(o.keywords.length,o.id);
  if(o.approvalRequired) assert.equal(o.benefit,'Спецусловия',o.id);
  const u=new URL(rules.link(o.id,'/blog/test/','popup'));
  assert.equal(u.pathname,'/sale/');assert.equal(u.hash,'#offer='+o.id);assert.equal(u.searchParams.get('utm_source'),'gerasimov_lav');
 }
-console.log('Passed: 137 offers, topic/age exclusions, 14 page scenarios, approval flags and sale deep links');
+console.log('Passed: 137 offers, topic/age exclusions, 18 page scenarios, approval flags and sale deep links');
