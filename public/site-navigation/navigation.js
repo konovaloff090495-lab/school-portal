@@ -121,7 +121,7 @@ try{if(!representativePage()&&!localStorage.getItem('selected_region')&&!localSt
 })();
 
 /* Contextual education offers; standalone module, no navigation changes. */
-(()=>{let loaded=false;function load(){if(loaded||!location.pathname.startsWith('/blog/'))return;loaded=true;const s=document.createElement('script');s.src='/partners/skysmart/offer.js?v=20261031';s.defer=true;document.head.append(s)}load();window.addEventListener('ps:navigation-route',load)})();
+(()=>{let loaded=false;function load(){if(Date.now()<Date.parse('2026-12-07T00:00:00+03:00'))return;if(loaded||!location.pathname.startsWith('/blog/'))return;loaded=true;const s=document.createElement('script');s.src='/partners/skysmart/offer.js?v=20261031';s.defer=true;document.head.append(s)}load();window.addEventListener('ps:navigation-route',load)})();
 
 /* Reviewed school website change, 2026-10-31: the archived domain no longer serves the school. */
 (()=>{
