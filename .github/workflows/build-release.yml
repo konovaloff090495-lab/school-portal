@@ -75,6 +75,21 @@ jobs:
           retention-days: 2
       - run: node scripts/schools/check-media.mjs
       - run: npm run build
+      - name: Preserve compiled candidate before HTTP checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-release
+          COPYFILE_DISABLE=1 tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
+          (cd build-release && sha256sum next-release.tar.zst > SHA256SUMS)
+          cp .next/BUILD_ID build-release/BUILD_ID
+          git rev-parse HEAD > build-release/SOURCE_COMMIT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: next-release-candidate
+          path: build-release/
+          retention-days: 2
+          compression-level: 0
       - run: node --experimental-strip-types scripts/check-textbook-sanitizer.mjs
       - run: node scripts/check-textbook-extra-http.mjs
         timeout-minutes: 5
@@ -133,13 +148,10 @@ jobs:
           name: school-format-debug
           path: work/seo-school-formats-qa/
           retention-days: 2
-      - name: Package build and provenance
+      - name: Add verification reports to release
         shell: bash
         run: |
           set -euo pipefail
-          mkdir build-release
-          COPYFILE_DISABLE=1 tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
-          (cd build-release && if command -v sha256sum >/dev/null 2>&1; then sha256sum next-release.tar.zst; else shasum -a 256 next-release.tar.zst; fi > SHA256SUMS)
           cp -r work/school-submission-qa build-release/qa
           cp -r work/externat-qa build-release/qa-externat-catalog
           cp -r work/online-catalog-qa build-release/qa-online-catalog
@@ -148,8 +160,6 @@ jobs:
           cp -r work/search-qa build-release/qa-search
           cp -r work/sale-context-qa build-release/qa-catalog-gifts
           cp -r work/school-cards-qa build-release/qa-school-cards
-          cp .next/BUILD_ID build-release/BUILD_ID
-          git rev-parse HEAD > build-release/SOURCE_COMMIT
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 3
       - uses: actions/upload-artifact@v4
