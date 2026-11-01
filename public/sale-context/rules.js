@@ -15,7 +15,7 @@
     const text = path + ' ' + title + ' ' + normalize(input.category);
     const gradeMatch = (path + ' ' + title).match(/(?:^|[\s/\-])(1[01]|[1-9])(?:-|\s)*(?:klass|класс)/);
     const grade = gradeMatch ? Number(gradeMatch[1]) : null;
-    const ageMatch = text.match(/(?:dlya-|для\s+)?(1[0-9]|[6-9])(?:-|\s)*(?:let|лет)/);
+    const ageMatch = text.match(/(?:^|\D)(\d{1,2})(?:-|\s)*(?:let|лет)/);
     const age = ageMatch ? Number(ageMatch[1]) : null;
     return { path, title, text, grade, age, adult: adult.test(text), career: career.test(text) };
   }
@@ -28,7 +28,7 @@
       const faculty = university.test(o.id);
       if (c.adult && !faculty && o.id !== 'externat') continue;
       if (faculty && !c.career) continue;
-      if (c.age && (c.age < o.minAge || c.age > o.maxAge)) continue;
+      if (c.age !== null && (c.age < o.minAge || c.age > o.maxAge)) continue;
       if (c.grade && (o.minAge > c.grade + 7 || o.maxAge < c.grade + 5)) continue;
       if (faculty && /(?:college|kolledzh|колледж)/.test(c.text) && o.id.startsWith('university-')) continue;
       if (faculty && /(?:universitet|университет|vuz|\bвуз)/.test(c.text) && !/(?:колледж|kolledzh)/.test(c.text) && o.id.startsWith('college-')) continue;
