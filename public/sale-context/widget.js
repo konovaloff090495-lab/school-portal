@@ -58,6 +58,7 @@
     if (!state || state.dialog.open || (!manual && (Date.now() >= VALID_UNTIL || suppressed()))) return;
     if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]')) return;
     const focus = document.activeElement;
+    if (!manual && (document.querySelector('#first-city-prompt:not([hidden]),.ps-sky-popup:not([hidden])') || focus?.tagName==='IFRAME')) return;
     if (!manual && (focus?.matches('input,textarea,select,[contenteditable="true"]') || Array.from(document.querySelectorAll('form')).some(f=>{const r=f.getBoundingClientRect();return r.height>0&&r.top<innerHeight&&r.bottom>0;}))) return;
     state.opener = focus;state.oldOverflow = document.body.style.overflow;
     selection(state.active);state.dialog.showModal();document.body.style.overflow = 'hidden';
