@@ -7,7 +7,7 @@
   const normalize = value => String(value || '').toLowerCase().replace(/ё/g, 'е').replace(/[—–_]/g, '-');
   const excluded = /^\/(?:api|admin|lk|poisk|spasibo|politika|soglasie|reklamodatel|dobavit|razmestit)(?:\/|-|$)/;
   const adult = /(?:vzrosl|vechern|ne-zakonchil-shkolu|аттестат.*взросл|вечерн.*школ)/;
-  const career = /(?:kolledzh|college|университет|universitet|university|колледж|професси|profess|карьер|karier|факультет|fakultet|абитуриент|abiturient|поступ|postup|выбор.*вуз|vybor.*vuz|после\s*(?:9|11)|posle-(?:9|11))/;
+  const career = /(?:vuz|вуз|kolledzh|college|университет|universitet|university|колледж|професси|profess|карьер|karier|факультет|fakultet|абитуриент|abiturient|поступ|postup|выбор.*вуз|vybor.*vuz|после\s*(?:9|11)|posle-(?:9|11))/;
   const facultyGeneric = /(?:куда.поступ|kuda-postup|vybor-profess|выбор.професс|proforient|профориент|spetsialnost|специальност)/;
   function context(input) {
     const path = normalize(input.path).split('?')[0];
@@ -15,7 +15,9 @@
     const text = path + ' ' + title + ' ' + normalize(input.category);
     const gradeMatch = (path + ' ' + title).match(/(?:^|[\s/\-])(1[01]|[1-9])(?:-|\s)*(?:klass|класс)/);
     const grade = gradeMatch ? Number(gradeMatch[1]) : null;
-    return { path, title, text, grade, adult: adult.test(text), career: career.test(text) };
+    const ageMatch = text.match(/(?:dlya-|для\s+)?(1[0-9]|[6-9])(?:-|\s)*(?:let|лет)/);
+    const age = ageMatch ? Number(ageMatch[1]) : null;
+    return { path, title, text, grade, age, adult: adult.test(text), career: career.test(text) };
   }
   function rank(offers, input) {
     const c = context(input);
@@ -26,6 +28,8 @@
       const faculty = university.test(o.id);
       if (c.adult && !faculty && o.id !== 'externat') continue;
       if (faculty && !c.career) continue;
+      if (c.age && (c.age < o.minAge || c.age > o.maxAge)) continue;
+      if (c.grade && (o.minAge > c.grade + 7 || o.maxAge < c.grade + 5)) continue;
       if (faculty && /(?:college|kolledzh|колледж)/.test(c.text) && o.id.startsWith('university-')) continue;
       if (faculty && /(?:universitet|университет|vuz|\bвуз)/.test(c.text) && !/(?:колледж|kolledzh)/.test(c.text) && o.id.startsWith('college-')) continue;
       const match = o.keywords.filter(k => new RegExp(k, 'i').test(c.text));
