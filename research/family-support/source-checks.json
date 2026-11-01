@@ -1,0 +1,235 @@
+[
+  {
+    "id": "unified",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/edinoe_posobie/",
+    "status": 200,
+    "sha256": "623e8feeb44b7eb1bcba96831a69e99cbe1b2324a1b79105d380e152ae3a8368",
+    "retrieved_at": "2026-10-31T11:12:57.975018+00:00",
+    "text_chars": 7308
+  },
+  {
+    "id": "assessment",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/edinoe_posobie/ocenka/",
+    "status": 200,
+    "sha256": "ae0c01effcb8e9a8259fd5f716cf394df675c9b775565508e3de76baac026f49",
+    "retrieved_at": "2026-10-31T11:12:57.595903+00:00",
+    "text_chars": 26371
+  },
+  {
+    "id": "birth",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/edinovremennoe_posobie_pri_rozhdenii_rebenka/",
+    "status": 200,
+    "sha256": "d33eb661d50e67ec009a41e2a895a029fe1a9074768a5788093cc5834863d6d7",
+    "retrieved_at": "2026-10-31T11:12:57.013221+00:00",
+    "text_chars": 8205
+  },
+  {
+    "id": "care",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/ezhemesyachnoe_posobie_po_uhodu_za_rebenkom/",
+    "status": 200,
+    "sha256": "59dc71e41e7d5756b14ad6aa16ebcb4e8d16a3a90ba9e537879bad8cbf2ad7e7",
+    "retrieved_at": "2026-10-31T11:12:58.636158+00:00",
+    "text_chars": 34290
+  },
+  {
+    "id": "pregnancy",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/posobie_po_beremennosti_i_rodam",
+    "status": 200,
+    "sha256": "e65a0d430b7d27a0c34ee12e66d420261f1eb772d43cd3b0fc6fb0cb197ffaf6",
+    "retrieved_at": "2026-10-31T11:12:59.126478+00:00",
+    "text_chars": 11911
+  },
+  {
+    "id": "adoption",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/edinovremennoe_posobie_pri_peredache_rebenka_na_vospitanie_v_semyu",
+    "status": 200,
+    "sha256": "d589c2bc58d5edaad15c344cb7aa1a4c31ad3c8ccd6059bc53d44724c0170b0d",
+    "retrieved_at": "2026-10-31T11:12:59.475143+00:00",
+    "text_chars": 5769
+  },
+  {
+    "id": "annual",
+    "url": "https://sfr.gov.ru/grazhdanam/semyam_s_detmi/ezhegodnaya_semejnaya_vyplata",
+    "status": 200,
+    "sha256": "378d337eb92ba52cfbc901045c29b60fe3a6c1dc1461824e477560638e6c3bda",
+    "retrieved_at": "2026-10-31T11:12:59.967633+00:00",
+    "text_chars": 6894
+  },
+  {
+    "id": "capital",
+    "url": "https://sfr.gov.ru/grazhdanam/msk/",
+    "status": 200,
+    "sha256": "f0520d5da901ea2b9ba50a672597c10878eb7a82de058325b474da2099e737e4",
+    "retrieved_at": "2026-10-31T11:13:00.946814+00:00",
+    "text_chars": 6573
+  },
+  {
+    "id": "contract",
+    "url": "https://mintrud.gov.ru/socialnyj_kontrakt/",
+    "status": 200,
+    "sha256": "a4f8d343419f4210ab4a9255af324cbf6ac2f7d11648f16db34a97a412f9eaea",
+    "retrieved_at": "2026-10-31T11:13:00.147403+00:00",
+    "text_chars": 2894
+  },
+  {
+    "id": "veteran-contract",
+    "url": "https://mintrud.gov.ru/social/556",
+    "status": 200,
+    "sha256": "c68bdf2e2c61588ec414c649871dbf7861824e44987494a71288ccc3d839e2e6",
+    "retrieved_at": "2026-10-31T11:13:00.988553+00:00",
+    "text_chars": 5720
+  },
+  {
+    "id": "housing",
+    "url": "https://mintrud.gov.ru/podderzhka_semei/",
+    "status": 200,
+    "sha256": "0cb032af4b12a5635a08eb0c6f6fa354e4b6d0a3b9f8b454b377898561567f29",
+    "retrieved_at": "2026-10-31T11:13:00.393668+00:00",
+    "text_chars": 7481
+  },
+  {
+    "id": "tax-standard",
+    "url": "https://www.nalog.gov.ru/rn77/taxation/taxes/ndfl/nalog_vichet/standart_nv/",
+    "status": 200,
+    "sha256": "83b7dd11fad96750003ccbb07b4fee1823000718e33cfdc8fccad9a47a149332",
+    "retrieved_at": "2026-10-31T11:13:00.827099+00:00",
+    "text_chars": 12423
+  },
+  {
+    "id": "tax-education",
+    "url": "https://www.nalog.gov.ru/rn77/taxation/taxes/ndfl/nalog_vichet/soc_nv/soc_nv_ob/",
+    "status": 200,
+    "sha256": "095e472295c76b3914553f8854fb415989e0d70b0a0bc311f8762f5d55a61aaf",
+    "retrieved_at": "2026-10-31T11:13:01.021007+00:00",
+    "text_chars": 15324
+  },
+  {
+    "id": "disability-care",
+    "url": "https://sfr.gov.ru/grazhdanam/invalidam/vyplaty_i_lgoty/viplati_po_uhody-get_viplati_po_uhody/ev_month/",
+    "status": 200,
+    "sha256": "3b6a15f5dc262a191a6cabf7f45ca53fcbd07879fef0b89985eb52ad7ba17a4e",
+    "retrieved_at": "2026-10-31T11:13:01.445417+00:00",
+    "text_chars": 9743
+  },
+  {
+    "id": "nsu",
+    "url": "https://sfr.gov.ru/grazhdanam/socialnaya_podderzhka/federal_beneficiaries/nsu/",
+    "status": 200,
+    "sha256": "95ed29630b61dfe87a186b4392734515b5ceff05e212d2e0c94763414225dec1",
+    "retrieved_at": "2026-10-31T11:13:02.857141+00:00",
+    "text_chars": 11684
+  },
+  {
+    "id": "disability",
+    "url": "https://mintrud.gov.ru/vozmozhnosti/dlya-grazhdan-s-invalidnostyu",
+    "status": 200,
+    "sha256": "256647e7d8bb5fbcff75719622f2ad0c641bddb1799e168a577cb26a4a928f84",
+    "retrieved_at": "2026-10-31T11:13:02.860986+00:00",
+    "text_chars": 41397
+  },
+  {
+    "id": "svo",
+    "url": "https://mintrud.gov.ru/vozmozhnosti/uchastnikam-svo-i-semyam",
+    "status": 200,
+    "sha256": "1d7b77189412237e65e5f87f7d18ee4f0cee9eb340d9e8a5acc721bf0f03d2ff",
+    "retrieved_at": "2026-10-31T11:13:02.860833+00:00",
+    "text_chars": 42105
+  },
+  {
+    "id": "military-child",
+    "url": "https://sfr.gov.ru/grazhdanam/socialnaya_podderzhka/Military_families/allowance_for_children/",
+    "status": 200,
+    "sha256": "69226822ac82f92b5f120d3bb64d82ff3bbf47ea4dae21200900762b32ed6797",
+    "retrieved_at": "2026-10-31T11:13:03.565872+00:00",
+    "text_chars": 5679
+  },
+  {
+    "id": "military",
+    "url": "https://sfr.gov.ru/grazhdanam/socialnaya_podderzhka/Military_families/",
+    "status": 200,
+    "sha256": "efdd8334d0f26c3c551299b93cbab4d4adc72f36231299d0c5124816cd4c7bfe",
+    "retrieved_at": "2026-10-31T11:13:03.035696+00:00",
+    "text_chars": 4331
+  },
+  {
+    "id": "admission",
+    "url": "https://minobrnauki.gov.ru/open_ministry/reception/faq/",
+    "status": 200,
+    "sha256": "5f60640f553dd3c0d0dc77e778ebb808dbdb2082262a157bb3f17f5c4601e278",
+    "retrieved_at": "2026-10-31T11:13:03.250589+00:00",
+    "text_chars": 58056
+  },
+  {
+    "id": "admission-2026",
+    "url": "https://www.minobrnauki.gov.ru/press-center/news/novosti-ministerstva/100874/",
+    "status": 200,
+    "sha256": "5f87c5d41171269b9a1facdbefe53c82894d491482d71d51c7ed01ab8da672db",
+    "retrieved_at": "2026-10-31T11:13:03.457307+00:00",
+    "text_chars": 207
+  },
+  {
+    "id": "meals",
+    "url": "https://edu.gov.ru/activity/main_activities/general_edu/hot_meals/",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1129)>"
+  },
+  {
+    "id": "tomsk-contract",
+    "url": "https://dszn.tomsk.gov.ru/sotsialnyj-kontrakt",
+    "status": 200,
+    "sha256": "31f8dc80a1e0a5df076268d916fdb2e4272597ade24e642273ddd0a599ee9a53",
+    "retrieved_at": "2026-10-31T11:13:04.591241+00:00",
+    "text_chars": 14201
+  },
+  {
+    "id": "tomsk-education",
+    "url": "https://do.tomsk.gov.ru/mery-sotsialnoj-podderzhki",
+    "status": 200,
+    "sha256": "e8a14df17d390a1b48e4fe8bbf992f41798bc6757b69b9b916808cce59c4030a",
+    "retrieved_at": "2026-10-31T11:13:04.655503+00:00",
+    "text_chars": 7303
+  },
+  {
+    "id": "mo-uniform",
+    "url": "https://bal.msr.mosreg.ru/uslugi/help/vyplata-na-shkolnuyu-formu-227",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "mo-uniform-2026",
+    "url": "https://mosreg.ru/sobytiya/novosti/news-submoscow/neiroset-pomogla-zhitelyam-podmoskovya-podat-95-tys-zayavlenii-na-vyplatu-dlya-shkolnoi-formy",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "spb-child",
+    "url": "https://gu.spb.ru/634317/",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>"
+  },
+  {
+    "id": "spb-uniform",
+    "url": "https://gu.spb.ru/news/mnogodetnye-semi-mogut-poluchit-vyplatu-na-shkolnu/",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>"
+  },
+  {
+    "id": "spb-sums",
+    "url": "https://www.gov.spb.ru/gov/otrasl/trud/denezhnye-vyplaty-v-sankt-peterburge-razlichnym-kategoriyam-grazhdan-v/",
+    "status": 200,
+    "sha256": "24742b00b28e4b36277e9e0cb23f2f3ee3a10bc8838ef21e8029b138d7d931f6",
+    "retrieved_at": "2026-10-31T11:13:05.556972+00:00",
+    "text_chars": 22282
+  },
+  {
+    "id": "utilities",
+    "url": "https://epp.genproc.gov.ru/ru/proc_78/activity/legal-education/explain/property/e2017917/",
+    "status": 200,
+    "sha256": "c0ceedcf88ab9eaabfa92153f3fbb00bf2bd72d8cbc66eb2cd79103876c11eba",
+    "retrieved_at": "2026-10-31T11:13:05.615745+00:00",
+    "text_chars": 6828
+  },
+  {
+    "id": "mo-utilities",
+    "url": "https://ktc.mosreg.ru/sobytiya/novosti-ministerstva/subsidiya-na-oplatu-zhku-v-moskovskoi-oblasti",
+    "status": 200,
+    "sha256": "b7b03e7d7692197c8c973431e26c9f35e0512266829b9a35e17473a123a293f5",
+    "retrieved_at": "2026-10-31T11:13:04.877860+00:00",
+    "text_chars": 0
+  }
+]

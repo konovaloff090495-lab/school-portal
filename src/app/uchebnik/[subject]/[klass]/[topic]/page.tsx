@@ -103,6 +103,19 @@ export default async function TopicPage({ params }: Props) {
 
   const pageUrl = `https://pro-schools.ru/uchebnik/${subjectSlug}/${klassStr}/${topicSlug}/`
 
+  // Keep one mobile instance of block 1, with its existing width and reserved height.
+  const mobileAd = (
+    <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
+      <div className="flex items-center justify-between mb-2 px-1">
+        <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
+        <span className="text-[10px] text-gray-300">16+</span>
+      </div>
+      <div style={{ minHeight: 250 }}>
+        <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
+      </div>
+    </aside>
+  )
+
   return (
     <div className="min-h-screen bg-gray-50">
       <BreadcrumbJsonLd items={[
@@ -155,6 +168,10 @@ export default async function TopicPage({ params }: Props) {
                 <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-6 pl-4 border-l-4 border-blue-500">
                   {topic.excerpt}
                 </p>
+                {/* The short answer stays first; mobile readers reach this slot before the long article. */}
+                <div className="-mx-6 md:-mx-8 lg:hidden" data-ps-ad-placement="textbook-mobile-after-answer-v1">
+                  {mobileAd}
+                </div>
                 {topicImage && (
                   <div className="mb-8">
                     <TextbookPhoto
@@ -192,15 +209,7 @@ export default async function TopicPage({ params }: Props) {
             )}
           </div>
 
-          <aside className="lg:hidden bg-white rounded-2xl border border-gray-100 shadow-sm p-3 mb-6" aria-label="Реклама">
-            <div className="flex items-center justify-between mb-2 px-1">
-              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">Реклама</span>
-              <span className="text-[10px] text-gray-300">16+</span>
-            </div>
-            <div style={{ minHeight: 250 }}>
-              <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="uchebnik-topic-mobile" viewport="mobile" />
-            </div>
-          </aside>
+          {!article?.content && mobileAd}
 
           {practice.length > 0 && (
             <TextbookPractice questions={practice} topicKey={`${subjectSlug}/${klass}/${topicSlug}`} />

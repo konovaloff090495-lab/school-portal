@@ -1,0 +1,36 @@
+{
+  "new_urls": 0,
+  "updated_articles": 3,
+  "changed_query_decisions": 9,
+  "changed_queries": [
+    "английский книги phonics puder для дошкольников скачать",
+    "легкий китайский для детей",
+    "легкий китайский язык для детей",
+    "легкий китайский для детей учебник",
+    "легкий китайский язык для детей учебник",
+    "легкий китайский язык для детей 1",
+    "учебник легкий китайский язык для детей 1",
+    "легкий китайский для детей 1 аудио",
+    "легкий китайский язык для детей 2 класс"
+  ],
+  "confirmed": {
+    "series": "Chinese Made Easy for Kids",
+    "publisher": "Joint Publishing",
+    "russian_textbook1_isbn": "9789620429699",
+    "russian_workbook1_isbn": "9789620429736",
+    "english_2ed_textbook1_isbn": "9789620435904",
+    "resource": "CMEK-Textbook1-Audio",
+    "resource_bytes": 22647834,
+    "anonymous_access": "Login and Redeem; authenticated download not tested"
+  },
+  "sources": [
+    "https://www.jpchinese.org/product/book/details/9789620435904",
+    "https://www.jpchinese.org/cme/detail?series=Chinese+Made+Easy",
+    "https://www.jpchinese.org/pdfjs/web/Catalogue2024M.pdf"
+  ],
+  "unconfirmed": [
+    "Phonics Puder: no verified bibliographic identity",
+    "Russian textbook1 audio: exact downloadable file/version match not verified"
+  ],
+  "correction": "Earlier articles associated Russian title with Easy Steps BLCUP. Corrected distinction without removing URL, verified BLCUP facts or offer. Official catalogue Russian ISBN ends9699, not retailer typo9691."
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "scratch",
+    "tool": "built-in image_gen",
+    "source": "/Users/dmitriikonovalov/.codex/generated_images/01a190dd-cbb5-7f92-9d1a-1545ba88b3b3/exec-cb9352c5-9120-427e-8c94-163b0fc84910.png",
+    "asset": "/blog/weekend-20261031/scratch-cover.webp",
+    "prompt": "Use case: illustration-story. Asset type: wide editorial cover for a Russian educational article, landscape 3:2. A thoughtful 10-year-old child at a home desk building a simple catch-the-star game on a laptop, colorful interlocking programming blocks visually beside the laptop, warm daylight, realistic editorial photography with subtle playful paper shapes. Cream, coral, teal accents. No readable words, no logos, no watermarks, no fake screenshots. The child uses keyboard arrow keys. Natural hands.",
+    "use": "Illustrative editorial cover, not instructional screenshot"
+  },
+  {
+    "id": "anime",
+    "tool": "built-in image_gen",
+    "source": "/Users/dmitriikonovalov/.codex/generated_images/01a190dd-cbb5-7f92-9d1a-1545ba88b3b3/exec-cc10c3b0-6ed3-4adf-970c-258c6d15a856.png",
+    "asset": "/blog/weekend-20261031/anime-cover.webp",
+    "prompt": "Use case: illustration-story. Asset type: wide editorial cover landscape 3:2 for a beginner anime drawing tutorial. Overhead closeup of a real sketchbook on cream desk, a hand drawing an ORIGINAL friendly anime teenager face with a graphite pencil, construction circle and facial guidelines on the left sketch and finished character portrait on the right. Distinct original character, no copyrighted franchise. Soft natural daylight, warm cream and coral stationery, excellent anatomy, clean approachable drawing. No words, no watermarks.",
+    "use": "Illustrative editorial cover, not instructional screenshot"
+  },
+  {
+    "id": "multik",
+    "tool": "built-in image_gen",
+    "source": "/Users/dmitriikonovalov/.codex/generated_images/01a190dd-cbb5-7f92-9d1a-1545ba88b3b3/exec-389f8951-e60b-41f3-9c3a-1bab4a9db147.png",
+    "asset": "/blog/weekend-20261031/multik-cover.webp",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 cover for a family stop-motion tutorial. A small handmade teal plasticine ball character with two tiny eyes, paper sun and folded cream cardboard stage on a home desk, smartphone securely on a miniature tabletop tripod aimed at the stage, a child's hand just outside frame moving the ball. Warm window light, tactile realistic clay, coral and cream details. No readable words, no logos, no watermark, no impossible physics.",
+    "use": "Illustrative editorial cover, not instructional screenshot"
+  },
+  {
+    "id": "focus",
+    "tool": "built-in image_gen",
+    "source": "/Users/dmitriikonovalov/.codex/generated_images/01a190dd-cbb5-7f92-9d1a-1545ba88b3b3/exec-446ab0d8-e7bb-434d-aa3b-1d9b150985b8.png",
+    "asset": "/blog/weekend-20261031/focus-cover.webp",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 cover for children's simple magic tricks. Overhead home table with an ordinary plain red paper strip loop, two small paper rings, a coin and a pencil, two child's hands arranging a paper loop trick, warm daylight and inviting cream background with coral and teal accents. Honest easy craft magic, no fire, no sharp knives, no chemicals. No words, no logos, no watermarks.",
+    "use": "Illustrative editorial cover, not instructional screenshot"
+  },
+  {
+    "id": "quest",
+    "tool": "built-in image_gen",
+    "source": "/Users/dmitriikonovalov/.codex/generated_images/01a190dd-cbb5-7f92-9d1a-1545ba88b3b3/exec-fd6fc223-6015-4825-8539-1215d0cd939b.png",
+    "asset": "/blog/weekend-20261031/quest-cover.webp",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 cover for a printable home treasure hunt ages 8-10. A child and parent at a cozy living room table arranging cream clue cards with simple abstract symbols, pencil, small envelopes, a treasure box containing colorful paper stars. Bookshelf, sofa and friendly lamp in background. Warm daylight, cream coral teal palette, natural hands, no pirate weapons. No legible writing, no logos, no watermark.",
+    "use": "Illustrative editorial cover, not instructional screenshot"
+  }
+]
