@@ -93,6 +93,7 @@
     banner.append(label,copy,actions);
     const slots=Array.from(document.querySelectorAll('[data-ps-sale-slot]'));const slot=slots.find(n=>n.getBoundingClientRect().width>0);
     const cardAnchor=document.querySelector('[data-school-card-release] .school-card-layout');
+    if (location.pathname.startsWith('/shkola/') && !cardAnchor) return;
     const lessonAnchor=location.pathname.startsWith('/uchebnik/') ? document.querySelector('.textbook-content') : location.pathname.startsWith('/gdz/') ? Array.from(document.querySelectorAll('article.gdz-solve')).at(-1) : null;
     if (slot) slot.append(banner);
     else if (cardAnchor) cardAnchor.insertAdjacentElement('afterend',banner);
@@ -118,7 +119,8 @@
     fetch(PREFIX+'offers.json?v='+VERSION).then(r=>{if(!r.ok)throw Error('offers');return r.json();}),
     window.ProSchoolsSaleRules ? Promise.resolve() : loadScript(PREFIX+'rules.js?v='+VERSION)
   ]).then(([data])=>{
-    offers=data.offers;rules=window.ProSchoolsSaleRules;mount();
+    offers=data.offers;rules=window.ProSchoolsSaleRules;
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
     window.addEventListener('ps:navigation-route',route);window.addEventListener('popstate',route);window.addEventListener('scroll',scroll,{passive:true});
     // Next can stream a page after the route notification; only react to heading/path changes.
     const changes=new MutationObserver(()=>{const h=document.querySelector('#main h1,main h1,h1');if(h&&(!state||state.signature!==location.pathname+'|'+h.textContent.trim()))route();});
