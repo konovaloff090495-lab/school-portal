@@ -13,8 +13,15 @@ on:
           - ubuntu-24.04
           - macos-15-intel
 
+      reuse_run:
+        description: Reuse a compiled candidate from this workflow (native inputs must match)
+        type: string
+        required: false
+        default: ''
+
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: build-release-artifact-${{ github.ref }}
@@ -74,7 +81,47 @@ jobs:
           path: work/school-submission-qa/
           retention-days: 2
       - run: node scripts/schools/check-media.mjs
+      - uses: actions/download-artifact@v4
+        if: inputs.reuse_run != ''
+        with:
+          name: next-release-candidate
+          run-id: ${{ inputs.reuse_run }}
+          github-token: ${{ github.token }}
+          path: work/reuse-release/
+      - name: Restore candidate only when compiled inputs match
+        if: inputs.reuse_run != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd work/reuse-release && sha256sum -c SHA256SUMS)
+          compiled=$(cat work/reuse-release/SOURCE_COMMIT)
+          [[ "$compiled" =~ ^[0-9a-f]{40}$ ]]
+          git fetch --depth=1 origin "$compiled"
+          git diff --exit-code "$compiled" HEAD -- src content data next.config.ts package.json package-lock.json postcss.config.mjs tsconfig.json public ':!public/sale-context' ':!public/site-navigation/navigation.js'
+          mkdir .next-reused
+          tar --zstd -xf work/reuse-release/next-release.tar.zst -C .next-reused
+          if [ -d .next ]; then mv .next .next-prebuild-smoke; fi
+          mv .next-reused .next
+          cmp .next/BUILD_ID work/reuse-release/BUILD_ID
+          cp work/reuse-release/SOURCE_COMMIT BUILD_SOURCE_COMMIT
       - run: npm run build
+        if: inputs.reuse_run == ''
+      - name: Preserve compiled candidate before HTTP checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-release
+          COPYFILE_DISABLE=1 tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
+          (cd build-release && sha256sum next-release.tar.zst > SHA256SUMS)
+          cp .next/BUILD_ID build-release/BUILD_ID
+          if [ -f BUILD_SOURCE_COMMIT ]; then cp BUILD_SOURCE_COMMIT build-release/SOURCE_COMMIT; else git rev-parse HEAD > build-release/SOURCE_COMMIT; fi
+          git rev-parse HEAD > build-release/DEPLOYMENT_COMMIT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: next-release-candidate
+          path: build-release/
+          retention-days: 2
+          compression-level: 0
       - run: node --experimental-strip-types scripts/check-textbook-sanitizer.mjs
       - run: node scripts/check-textbook-extra-http.mjs
         timeout-minutes: 5
@@ -88,13 +135,14 @@ jobs:
           name: school-cards-debug
           path: work/school-cards-qa/
           retention-days: 2
-      - run: node scripts/test-catalog-gifts-http.mjs
+      - run: node scripts/sale-context/test.cjs
+      - run: node scripts/sale-context/check-http.mjs
         timeout-minutes: 5
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: catalog-gifts-debug
-          path: work/catalog-gifts-qa/
+          path: work/sale-context-qa/
           retention-days: 2
       - run: node scripts/seo/search-http.mjs
         timeout-minutes: 3
@@ -132,23 +180,18 @@ jobs:
           name: school-format-debug
           path: work/seo-school-formats-qa/
           retention-days: 2
-      - name: Package build and provenance
+      - name: Add verification reports to release
         shell: bash
         run: |
           set -euo pipefail
-          mkdir build-release
-          COPYFILE_DISABLE=1 tar --exclude='./cache' --exclude='./dev' -cf - -C .next . | zstd -T2 -8 --long=27 -o build-release/next-release.tar.zst
-          (cd build-release && if command -v sha256sum >/dev/null 2>&1; then sha256sum next-release.tar.zst; else shasum -a 256 next-release.tar.zst; fi > SHA256SUMS)
           cp -r work/school-submission-qa build-release/qa
           cp -r work/externat-qa build-release/qa-externat-catalog
           cp -r work/online-catalog-qa build-release/qa-online-catalog
           cp -r work/seo-school-formats-qa build-release/qa-school-formats
           cp -r work/leads-growth-qa build-release/qa-leads-growth
           cp -r work/search-qa build-release/qa-search
-          cp -r work/catalog-gifts-qa build-release/qa-catalog-gifts
+          cp -r work/sale-context-qa build-release/qa-catalog-gifts
           cp -r work/school-cards-qa build-release/qa-school-cards
-          cp .next/BUILD_ID build-release/BUILD_ID
-          git rev-parse HEAD > build-release/SOURCE_COMMIT
       - run: node scripts/test-school-submissions-http.mjs
         timeout-minutes: 3
       - uses: actions/upload-artifact@v4
