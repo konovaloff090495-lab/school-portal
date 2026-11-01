@@ -1,7 +1,7 @@
 {
   "version": "20261101",
   "analysedPages": 21702,
-  "matchedPages": 9022,
+  "matchedPages": 9017,
   "uncovered": [],
   "pages": [
     {
@@ -9583,13 +9583,6 @@
       "related": []
     },
     {
-      "path": "/shkola/algoritmika-ul-40-letiya-pobedy-chelyabinsk/",
-      "title": "Алгоритмика — ул. 40-летия Победы",
-      "category": "Челябинск · ул. 40-летия Победы, 17А",
-      "primary": "lektoriy-informatika",
-      "related": []
-    },
-    {
       "path": "/shkola/algoritmika-ul-agalakova-chelyabinsk/",
       "title": "Алгоритмика — ул. Агалакова",
       "category": "Челябинск · ул. Агалакова, 30",
@@ -9991,13 +9984,6 @@
       "related": []
     },
     {
-      "path": "/shkola/kibernetika-ul-imeni-50-letiya-vlksm-izhevsk/",
-      "title": "Кибернетика — ул. имени 50-летия ВЛКСМ",
-      "category": "Ижевск · ул. имени 50-летия ВЛКСМ, 27",
-      "primary": "lektoriy-etika",
-      "related": []
-    },
-    {
       "path": "/shkola/algoritmika-molodezhnaya-ul-izhevsk/",
       "title": "Алгоритмика — Молодёжная ул.",
       "category": "Ижевск · Молодёжная ул., 111/2",
@@ -10243,13 +10229,6 @@
       "path": "/shkola/algoritmika-salmyshskaya-ul-orenburg/",
       "title": "Алгоритмика — Салмышская ул.",
       "category": "Оренбург · Салмышская ул., 60",
-      "primary": "lektoriy-informatika",
-      "related": []
-    },
-    {
-      "path": "/shkola/algoritmika-ul-50-let-oktyabrya-kemerovo/",
-      "title": "Алгоритмика — ул. 50 лет Октября",
-      "category": "Кемерово · ул. 50 лет Октября, 32",
       "primary": "lektoriy-informatika",
       "related": []
     },
@@ -68778,13 +68757,6 @@
       "related": []
     },
     {
-      "path": "/blog/attestat-v-30-let/",
-      "title": "Аттестат в 30 лет: реально ли доучиться взрослому",
-      "category": "Взрослым",
-      "primary": "externat",
-      "related": []
-    },
-    {
       "path": "/blog/otkrytaya-smennaya-shkola/",
       "title": "Открытая (сменная) школа: что это и чем отличается от вечерней",
       "category": "Взрослым",
@@ -71661,13 +71633,6 @@
       "title": "Занятия с репетитором по физике",
       "category": "Тетрика · Курс для детей",
       "primary": "tutor",
-      "related": []
-    },
-    {
-      "path": "/kursy/kurs/novakid-education-4-5-12dda/",
-      "title": "Курсы английского для детей 4–5 лет",
-      "category": "Novakid · Курс для детей",
-      "primary": "lektoriy-angliyskiy",
       "related": []
     },
     {
@@ -88454,7 +88419,6 @@
         "/blog/sdat-oge-vzroslomu/",
         "/blog/postupit-v-vuz-bez-attestata/",
         "/blog/srednee-obrazovanie-dlya-vzroslyh/",
-        "/blog/attestat-v-30-let/",
         "/blog/otkrytaya-smennaya-shkola/",
         "/blog/skolko-stoit-eksternat/",
         "/blog/skolko-uchitsya-vzroslomu-do-attestata/",
@@ -97105,7 +97069,6 @@
         "/kursy/kurs/synergy-angliyskiy-yazyk-ne-kak-v-shkole-e42ed/",
         "/kursy/kurs/teatrika-english-kids-e277f/",
         "/kursy/kurs/teatrika-english-7e506/",
-        "/kursy/kurs/novakid-education-4-5-12dda/",
         "/kursy/kurs/novakid-education-10-f8e27/",
         "/kursy/kurs/novakid-education-11-12-dbf83/",
         "/kursy/kurs/novakid-education-14-95129/",
@@ -97613,7 +97576,6 @@
         "/shkola/algoritmika-gornaya-ul-nizhnij-novgorod/",
         "/shkola/algoritmika-ul-vaneeva-nizhnij-novgorod/",
         "/shkola/algoritmika-ul-truda-chelyabinsk/",
-        "/shkola/algoritmika-ul-40-letiya-pobedy-chelyabinsk/",
         "/shkola/algoritmika-ul-agalakova-chelyabinsk/",
         "/shkola/algoritmika-prosp-geroya-rossii-e-n-rodionova-chelyabinsk/",
         "/shkola/algoritmika-ul-250-letiya-chelyabinska-chelyabinsk/",
@@ -97683,7 +97645,6 @@
         "/shkola/algoritmika-ul-babicha-yaroslavl/",
         "/shkola/algoritmika-tomilinskaya-ul-orenburg/",
         "/shkola/algoritmika-salmyshskaya-ul-orenburg/",
-        "/shkola/algoritmika-ul-50-let-oktyabrya-kemerovo/",
         "/shkola/algoritmika-prosp-shahterov-kemerovo/",
         "/shkola/algoritmika-leningradskij-prosp-kemerovo/",
         "/shkola/algoritmika-ul-zubkovoj-ryazan/",
@@ -99134,7 +99095,6 @@
         "/shkola/sportivnaya-shkola-dzyudo-sambo-legkaya-atletika-ivanovo/",
         "/shkola/progimnaziya-237-semitsvetik-saratov/",
         "/shkola/shkola-etiketa-i-vsestoronnego-razvitiya-moskva/",
-        "/shkola/kibernetika-ul-imeni-50-letiya-vlksm-izhevsk/",
         "/shkola/kibernetika-ul-9-yanvarya-izhevsk/",
         "/shkola/kibernetika-iyulskaya-ul-izhevsk/",
         "/shkola/kibernetika-ul-gagarina-izhevsk/",
