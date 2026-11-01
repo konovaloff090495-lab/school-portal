@@ -112,3 +112,6 @@ $$('[data-city-open]').forEach(b=>b.addEventListener('click',()=>track('city_sel
 update();
 try{if(!representativePage()&&!localStorage.getItem('selected_region')&&!localStorage.getItem('proschools-first-city-dismissed')&&!localStorage.getItem('geo_prompt_dismissed')&&!cityMap[location.pathname.split('/')[2]]){$('#first-city-prompt').hidden=false;track('city_prompt_shown')}}catch{}
 })();
+
+/* Contextual sale: shared across native and static pages, independent of navigation state. */
+(function(){if(document.querySelector("script[data-ps-sale-loader]"))return;var s=document.createElement("script");s.src="/sale-context/widget.js?v=20261101";s.dataset.psSaleLoader="1";s.defer=true;document.head.appendChild(s);})();
