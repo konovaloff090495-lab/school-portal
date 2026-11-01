@@ -100,7 +100,7 @@
     }
     const dialog=el('dialog','ps-sale-dialog');dialog.dataset.psSale='popup';dialog.setAttribute('aria-labelledby','ps-sale-dialog-title');
     const content=el('div','ps-sale-content');const related=el('div','ps-sale-related-wrap');
-    const dismiss=button('×','ps-sale-close',close);dismiss.setAttribute('aria-label','Закрыть предложение');dialog.append(dismiss,content,related);document.body.append(dialog);
+    const dismiss=button('×','ps-sale-close',close);dismiss.setAttribute('aria-label','Закрыть предложение');const closebar=el('div','ps-sale-closebar');closebar.append(dismiss);dialog.append(closebar,content,related);document.body.append(dialog);
     state={path:location.pathname,title,signature,ranked,active:o,banner,dialog,content,related,started:Date.now(),opener:null,oldOverflow:''};
     dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();}});
     const mounted=state;dialog.addEventListener('close',()=>{document.body.style.overflow=mounted.oldOverflow||'';write(localStorage,'ps_sale_closed',String(Date.now()));if(mounted.opener?.isConnected)mounted.opener.focus();});
