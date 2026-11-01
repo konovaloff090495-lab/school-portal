@@ -6,13 +6,13 @@ import {chromium} from 'playwright';
 const base=process.env.SALE_QA_BASE||'http://127.0.0.1:3194';
 const output='work/sale-context-qa';await fs.mkdir(output,{recursive:true});
 const child=process.env.SALE_QA_BASE?null:spawn(process.execPath,['node_modules/next/dist/bin/next','start','-p','3194'],{detached:true,stdio:'ignore'});
-let browser;const errors=[],checks=[];
+let browser,page;const errors=[],checks=[];
 try{
  for(let n=0;n<60;n++){try{if((await fetch(base+'/robots.txt')).ok)break;}catch{}await new Promise(r=>setTimeout(r,500));}
  browser=await chromium.launch({headless:true});const ctx=await browser.newContext();
  await ctx.route('**/*',route=>route.request().url().startsWith(base)?route.continue():route.abort());
  await ctx.addInitScript(()=>{localStorage.setItem('proschools-first-city-dismissed','1');sessionStorage.setItem('ps_sale_clicked',String(Date.now()));window.ym=()=>{};});
- const page=await ctx.newPage();page.on('pageerror',e=>errors.push(e.message));
+ page=await ctx.newPage();await page.clock.setFixedTime(new Date('2026-11-01T09:00:00+03:00'));page.on('pageerror',e=>errors.push(e.message));
  const scenarios=[['/blog/python-dlya-detej/','world-teen'],['/blog/vechernyaya-shkola-dlya-vzroslyh/','externat'],['/oge/','oge-pair']];
  for(const width of [1440,768,390,320]){
   await page.setViewportSize({width,height:900});
@@ -29,9 +29,10 @@ try{
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    if(path.includes('python'))await page.screenshot({path:`${output}/popup-${width}.png`});
    await page.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
+   await page.waitForFunction(()=>document.body.style.overflow==='');
    assert.equal(await page.locator('body').evaluate(el=>el.style.overflow),'');
    checks.push({width,path,id,utm:true,escape:true});
   }
  }
  assert.deepEqual(errors,[]);await fs.writeFile(output+'/results.json',JSON.stringify({checks,errors},null,2));console.log('Contextual sale: '+checks.length+' compiled-page checks passed');
-}finally{await browser?.close();if(child)try{process.kill(-child.pid,'SIGTERM');}catch{}}
+}catch(error){if(page)await page.screenshot({path:output+'/failure.png'}).catch(()=>{});await fs.writeFile(output+'/failure.json',JSON.stringify({error:String(error),checks,errors},null,2));throw error;}finally{await browser?.close();if(child)try{process.kill(-child.pid,'SIGTERM');}catch{}}
