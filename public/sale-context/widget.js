@@ -92,11 +92,15 @@
     const actions=el('div','ps-sale-banner-actions');actions.append(cta(o,'banner'),button('Предложения по теме','ps-sale-more',()=>show(true)));
     banner.append(label,copy,actions);
     const slots=Array.from(document.querySelectorAll('[data-ps-sale-slot]'));const slot=slots.find(n=>n.getBoundingClientRect().width>0);
+    const lessonAnchor=location.pathname.startsWith('/uchebnik/') ? document.querySelector('.textbook-content') : location.pathname.startsWith('/gdz/') ? Array.from(document.querySelectorAll('article.gdz-solve')).at(-1) : null;
     if (slot) slot.append(banner);
+    // Keep the short answer, existing mobile ad and worked solution in their original order.
+    else if (lessonAnchor) lessonAnchor.insertAdjacentElement('afterend',banner);
     else {
-      const anchor=heading.closest('header,.hero-wrap,.ps-hero,.hero,.page-hero') || heading.parentElement;
+      const anchor=heading.closest('header,.hero-wrap,.ps-hero,.hero,.page-hero,.gdz-pagehead') || heading.parentElement;
       if (!anchor || anchor===document.body || anchor===document.documentElement) return;
-      anchor.insertAdjacentElement('afterend',banner);
+      if (anchor.matches('[class*="max-w-"]')) anchor.append(banner);
+      else anchor.insertAdjacentElement('afterend',banner);
     }
     const dialog=el('dialog','ps-sale-dialog');dialog.dataset.psSale='popup';dialog.setAttribute('aria-labelledby','ps-sale-dialog-title');
     const content=el('div','ps-sale-content');const related=el('div','ps-sale-related-wrap');
