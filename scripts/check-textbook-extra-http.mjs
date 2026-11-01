@@ -31,7 +31,7 @@ try {
     assert.equal(res.status, 200, path);
     assert.equal((body.match(/<h1\b/g) || []).length, 1, path);
     assert.ok(body.includes(`href="https://pro-schools.ru${path}"`), `Canonical: ${path}`);
-    assert.ok(body.includes('Источники и материалы'), `Full article: ${path}`);
+    assert.match(body, /Источники и (?:материалы|проверка)/, `Full article sources: ${path}`);
   }
   const missing = await get('/uchebnik/frantsuzskiy-yazyk/5-klass/not-a-real-topic-coverage-check/');
   assert.equal(missing.status, 404, 'Unknown topic must remain 404');
