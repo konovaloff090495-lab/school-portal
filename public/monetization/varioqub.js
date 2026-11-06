@@ -75,7 +75,10 @@
       if (!manager || typeof manager.render !== 'function') return;
       document.documentElement.setAttribute('data-ps-top-status', 'requested');
       try {
+        var blogTest = window.__psBlogAds && window.__psBlogAds.getActive();
+        if (blogTest && blogTest.qa) return;
         manager.render({blockId: config.topAd.blockId, type: 'topAd',
+          statId: blogTest ? blogTest.statId : undefined,
           onRender: function () {
             if (current !== generation || !topEnabled() || topSuppressed) { destroyFloor(); return; }
             document.documentElement.setAttribute('data-ps-top-status', 'rendered');
