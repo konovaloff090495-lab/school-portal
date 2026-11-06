@@ -13,7 +13,7 @@ assert 'chrome.header' in (ROOT/'src/components/Header.tsx').read_text()
 assert 'chrome.footer' in (ROOT/'src/components/Footer.tsx').read_text()
 expected={part:BeautifulSoup(chrome[part],'html.parser').get_text(' ',strip=True) for part in ['header','footer']}
 count=0
-for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/programming/release').rglob('index.html'))+list((ROOT/'public/besplatnye-uroki').rglob('index.html'))+list((ROOT/'public/podderzhka-semej').rglob('index.html')):
+for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/programming/release').rglob('index.html'))+list((ROOT/'public/besplatnye-uroki').rglob('index.html'))+list((ROOT/'public/podderzhka-semej').rglob('index.html'))+list((ROOT/'work/career/release').rglob('index.html')):
  doc=BeautifulSoup(file.read_text(),'html.parser')
  for part in ['header','footer']:
   wrapper=doc.select_one('.ps-chrome-'+part)
@@ -21,6 +21,13 @@ for file in list((ROOT/'public/kursy').rglob('index.html'))+list((ROOT/'work/pro
   assert wrapper.get('data-navigation-version')==chrome['version'],(str(file),'Stale version')
   assert wrapper.get_text(' ',strip=True)==expected[part],(str(file),'Diverged '+part)
  assert len(doc.select('header'))==1 and len(doc.select('footer'))==1,str(file)
- assert doc.select_one('script[src^="/site-navigation/navigation.js"]'),str(file)
+ if doc.body.get('data-career-page')=='private':
+  # Private result/test pages keep the canonical chrome but never load its
+  # optional analytics/advertising runtime. The private copy retains menu/search.
+  assert doc.select_one('script[src^="/career-assets/privacy-navigation.js"]'),str(file)
+  assert not doc.select_one('script[src^="http"]'),str(file)
+  assert doc.select_one('meta[name="referrer"]').get('content')=='no-referrer',str(file)
+ else:
+  assert doc.select_one('script[src^="/site-navigation/navigation.js"]'),str(file)
  count+=1
 print(f'Navigation contract OK: root layout + {count} static pages, {chrome["version"]}')

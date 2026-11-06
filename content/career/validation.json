@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "expected_total": 70,
+  "content_pages": 69,
+  "existing_test_retained": 1,
+  "new_paths": 60,
+  "existing_blog_append": 9,
+  "originals_verified_unchanged": [
+    {
+      "path": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "sha256": "4669d27ce540bc376584b59de20131311e2b80efe63659df56f47aae37ddd35a",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/proforientatsiya-shkolnikov/",
+      "sha256": "2ffbdf908e5e43f80aebbd2ecbe4c4ed06bac93edcf507d7e7d95925090730c3",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/profminimum-i-bilet-v-budushchee/",
+      "sha256": "6d9d4ccc1edb0724d46c42de6b2def5eb4be65cd14748244a4f8def0809a5f81",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "sha256": "a2425dece13cb53b9fdee2b64bb1fb68af74f4d4248a530a27f0f0b585533556",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/kak-vybrat-professiyu-podrostku/",
+      "sha256": "b41d68154e7e8f7bb1c55125ca16ae7de18226f92ab2cc9b6e3c4f92ab0fc95c",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/proforientaciya-9-klass-testy/",
+      "sha256": "65fc8e0167cdce1163beb439ed6c79b2e7a5877f378e5d1ddc0ab7f91bf1754b",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "sha256": "4e2a7cf837adda73d91870d7294746f28445279a1708bb9a3a74f9e99ba3ed41",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "sha256": "507a1833a96f97d0423c06071c776d41fa283affc9e4532f90ebc47193a76238",
+      "original_preserved": true
+    },
+    {
+      "path": "/blog/proforientaciya-7-8-klass/",
+      "sha256": "f076e4356d2b30c9ea259966ec078251785a6510d8a63bfaaf49258332f075b7",
+      "original_preserved": true
+    }
+  ],
+  "worksheets_html": 69,
+  "print_script_exists": true,
+  "word_count_total": 21062,
+  "word_count_min": 270,
+  "word_count_max": 356,
+  "unique_titles": 69,
+  "page_kinds": {
+    "family-guide": 29,
+    "teacher-material": 20,
+    "class-material": 11,
+    "method-review": 9
+  },
+  "pages_sha256": "819f3fc1f7f6c51760b5bc2a7666d84fabfbc1063e02b0c8ec452b2be1a37d3e",
+  "checks": [
+    "All 70 planned destinations covered (69 descriptions + retained /test/)",
+    "Nine original blog files match saved SHA256 and remain untouched",
+    "Every worksheet link points to a real editable printable HTML artifact",
+    "No foreign scripts, forms, placeholders or copied method keys in new sections",
+    "Related links remain inside the planned map; hub lists every destination"
+  ],
+  "scope": "Content integrity only. Browser rendering, partner delivery and production URL checks belong to integration QA.",
+  "editorial_note": "Exercises and plans are original editorial materials. No claim of expert review, clinical diagnosis or validated psychometrics."
+}

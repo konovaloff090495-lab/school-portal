@@ -29,10 +29,71 @@ export interface LeadPayload {
   crm?: boolean
 }
 
+export interface CareerResultPayload {
+  purpose: 'result_save'
+  request_id: string
+  email: string
+  age: number
+  grade: number
+  answers: Array<number | null>
+  pd_agreed: boolean
+  adult_confirmed: boolean
+  marketing_agreed: boolean
+  landing?: string
+  visit_utm?: Record<string, string>
+  website?: string
+}
+
+export interface CareerPartnerPayload {
+  purpose: 'partner_request'
+  request_id: string
+  offer_id: string
+  name: string
+  phone: string
+  pd_agreed: boolean
+  marketing_agreed: boolean
+  website?: string
+}
+
+export interface CareerReceipt {
+  ok: boolean
+  result_id?: string
+  recovery_url?: string
+  mail_sent?: boolean
+  result?: Record<string, unknown>
+  request_id?: string
+  status?: 'pending' | 'sending' | 'delivered' | 'rejected' | 'uncertain' | 'configuration_error'
+  duplicate?: boolean
+  error?: string
+  http_status?: number
+}
+
 export interface SchoolSubmissionPayload { kind: 'school-submission'; formData: FormData; crm: false; source: 'Добавление школы' }
 export function submitLead(payload: LeadPayload): Promise<boolean>
 export function submitLead(payload: SchoolSubmissionPayload): Promise<import('./school-submissions/types').SubmissionReceipt>
-export async function submitLead(payload: LeadPayload | SchoolSubmissionPayload): Promise<boolean | import('./school-submissions/types').SubmissionReceipt> {
+export function submitLead(payload: CareerResultPayload | CareerPartnerPayload): Promise<CareerReceipt>
+export async function submitLead(payload: LeadPayload | SchoolSubmissionPayload | CareerResultPayload | CareerPartnerPayload): Promise<boolean | import('./school-submissions/types').SubmissionReceipt | CareerReceipt> {
+  if ('purpose' in payload) {
+    // Career results are saved without CRM. Only an explicit partner choice creates
+    // a partner request. Neither branch writes email or phone to browser storage.
+    try {
+      const context = getLeadContext()
+      const { purpose, ...fields } = payload
+      const visitUtm = Object.fromEntries(Object.entries(
+        payload.purpose === 'result_save' ? (payload.visit_utm || context.utm) : context.utm
+      ).filter(([key]) => ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid', 'gclid', 'referrer', 'ym_client_id'].includes(key)))
+      const body = payload.purpose === 'result_save'
+        ? { ...fields, landing: payload.landing || window.location.pathname, visit_utm: visitUtm, source: 'career_result_save' }
+        : { ...fields, source: 'career_partner_' + payload.offer_id }
+      const res = await fetch(purpose === 'result_save' ? '/api/career/results/' : '/api/career/partner/', {
+        method: 'POST', credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+      })
+      const receipt = await res.json().catch(() => ({})) as CareerReceipt
+      return { ...receipt, ok: res.ok && receipt.ok === true, http_status: res.status }
+    } catch { return { ok: false, error: 'network_error' } }
+  }
+
   if ('kind' in payload && payload.kind === 'school-submission') {
     const response = await fetch('/api/school-submissions/submit/', { method: 'POST', body: payload.formData })
     const receipt = await response.json()
