@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 declare global {
   interface Window {
+    __psBlogAds?: { getActive: () => { arm: string; statId: number; qa: boolean } | null }
     yaContextCb?: Array<() => void>
     Ya?: {
       Context: {
@@ -11,6 +13,7 @@ declare global {
             blockId: string
             renderTo: string
             pageNumber?: number
+            statId?: number
           }) => void
         }
       }
@@ -85,12 +88,15 @@ interface Props {
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
 export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
+  const pathname = usePathname()
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
     : `yandex_rtb_${blockId}`
   const hostRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const experiment = window.__psBlogAds?.getActive()
+    if (experiment?.qa) return
     if (viewport) {
       const isDesktop = window.matchMedia('(min-width: 1024px)').matches
       if (viewport === 'desktop' && !isDesktop) return
@@ -116,7 +122,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       host.replaceChildren(node)
       window.yaContextCb = window.yaContextCb || []
       window.yaContextCb.push(() => {
-        window.Ya?.Context.AdvManager.render({ blockId, renderTo: id })
+        window.Ya?.Context.AdvManager.render({ blockId, renderTo: id, statId: experiment?.statId })
       })
       // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
       // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
@@ -135,7 +141,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     // Таймеры в скрытой вкладке работают, пусть и реже.
     const t = window.setTimeout(draw, 0)
     return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, divId, viewport])
+  }, [blockId, divId, viewport, pathname])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />
