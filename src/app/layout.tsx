@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script';
 import { Inter, Unbounded, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -64,6 +65,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${inter.className} ${unbounded.variable} ${manrope.variable} bg-[#F8FAFC] min-h-screen`}>
+        <Script src="/monetization/blog-experiment.js?v=20261106a" strategy="beforeInteractive" />
         <YandexMetrika /><GrowthFunnelTracking />
         <YandexRTB />
         <Header />

@@ -7,6 +7,8 @@ import { getAllPostsMeta, getPostBySlug, getAllPostSlugs, safePublishedAt } from
 import { sanitizeHtml } from '@/lib/sanitize'
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/lib/schema'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import BlogMidAd from '@/components/BlogMidAd'
+import blogAdCohort from '@/data/blog-ad-cohort.json'
 import { AD_BLOCKS } from '@/lib/ads'
 import OnlineLeadCta from '@/components/OnlineLeadCta'
 import AdultAttestatLinks from '@/components/AdultAttestatLinks'
@@ -92,7 +94,15 @@ export default async function BlogPostPage({ params }: Props) {
 
   // Разбиваем тело статьи на секции по заголовкам <h2>, чтобы вставить
   // рекламные блоки прямо в контент (видны на всех экранах, включая мобильные).
-  const rawHtml = sanitizeHtml(post.content)
+  let rawHtml = sanitizeHtml(post.content)
+  const adExperimentEligible = blogAdCohort.includes(slug)
+  if (adExperimentEligible) {
+    let heading = 0
+    rawHtml = rawHtml.replace(/<h2\b/gi, (match) => {
+      heading += 1
+      return heading === 3 ? '<div id="ps-blog-early-ad"></div>' + match : match
+    })
+  }
   const sections = rawHtml.split('</h2>').map((s, i, arr) => (i < arr.length - 1 ? s + '</h2>' : s))
   // Позиции вставки рекламы: максимум 2 блока — в начале статьи (высокая видимость)
   // и в середине. Откат уплотнения до 5 блоков (ebae112): плотная раскладка
@@ -355,7 +365,7 @@ export default async function BlogPostPage({ params }: Props) {
                       />
                     </div>
                   )}
-                  {i === mobileMidAd && (
+                  {i === mobileMidAd && (adExperimentEligible ? <BlogMidAd key={slug} blockId={AD_BLOCKS.blogSidebar} /> : (
                     <div className="in-article-ad post-mobile-ad">
                       <div className="in-article-ad-label">
                         <span>Реклама</span>
@@ -367,7 +377,7 @@ export default async function BlogPostPage({ params }: Props) {
                         viewport="mobile"
                       />
                     </div>
-                  )}
+                  ))}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                   {adultCluster && i === Math.min(1, sections.length - 1) && <AdultAttestatLinks />}
                   {i === suBannerBefore && !adultCluster && (
