@@ -6,7 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'work/career/release';AS=OUT/'career-assets'
-VERSION='20261106.1';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
+VERSION='20261106.2';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
 E=lambda x:html.escape(str(x),quote=True)
 def load():
  global chrome,P
@@ -91,6 +91,8 @@ def build():
  load();AS.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/'scripts/career/style.css',AS/'style.css');shutil.copy2(ROOT/'content/career/questions.json',AS/'questions.json')
  worksheets=ROOT/'content/career/worksheets'
  if worksheets.exists():shutil.copytree(worksheets,AS/'worksheets',dirs_exist_ok=True)
+ legacy_entry=ROOT/'scripts/career/monitoring/funnel/legacy-entry.js'
+ if legacy_entry.exists():shutil.copy2(legacy_entry,AS/'legacy-entry.js')
  privacy=ROOT/'scripts/career/privacy-navigation.js'
  if privacy.exists():shutil.copy2(privacy,AS/'privacy-navigation.js')
  pageinfo=[render(p) for p in P if p['path']!='/test/']
