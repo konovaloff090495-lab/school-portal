@@ -1,0 +1,1717 @@
+{
+  "links": [
+    {
+      "from": "/proforientaciya/",
+      "to": "/test/",
+      "anchor": "Онлайн-тест профориентации"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "anchor": "Бесплатная профориентация: что попробовать после чтения"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/projects/",
+      "anchor": "Профориентационный проект: темы и пример паспорта"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/organization/",
+      "anchor": "Организация профориентационной работы в школе"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/proforientatsiya-shkolnikov/",
+      "anchor": "Как организовать профориентацию школьника: план для семьи"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/models/",
+      "anchor": "Единая модель профориентации и профминимум"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/profminimum-i-bilet-v-budushchee/",
+      "anchor": "Профминимум и «Билет в будущее»: вопросы семьи к школе"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "anchor": "Курсы профориентации: как сравнивать программы"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/professii/",
+      "anchor": "Профессии для школьников: изучаем через задачи"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/9-klass/",
+      "anchor": "Профориентация в 9 классе: колледж или десятый класс: матрица решения"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/klimov/",
+      "anchor": "Тест Климова на профориентацию: ДДО и его результат"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/plans/",
+      "anchor": "План профориентационной работы и КТП: заполненный пример"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/kak-vybrat-professiyu-podrostku/",
+      "anchor": "Как подростку выбрать профессию: от гипотезы к опыту"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/doshkolniki/",
+      "anchor": "Профориентация дошкольников: знакомство с трудом в игре"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/konsultaciya/",
+      "anchor": "Консультация профориентолога: как подготовиться и что спросить"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/8-klass/",
+      "anchor": "Профориентация в 8 классе: проба до выбора маршрута"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/6-klass/",
+      "anchor": "Профориентация в 6 классе: за профессией видны задачи"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/11-klass/",
+      "anchor": "Профориентация в 11 классе: план поступления с запасным вариантом"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/holland/",
+      "anchor": "Тест Холланда / Голланда: что означает RIASEC"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/chto-eto/",
+      "anchor": "Что такое профориентация и зачем она школьнику"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/7-klass/",
+      "anchor": "Профориентация в 7 классе: проверяем интерес маленьким проектом"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/dlya-podrostkov/",
+      "anchor": "Профориентация подростков: самостоятельность и поддержка"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/5-klass/",
+      "anchor": "Профориентация в 5 классе: один интерес — три разных дела"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/dlya-detey/",
+      "anchor": "Профориентация детей по возрасту: с чего начать"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/10-klass/",
+      "anchor": "Профориентация в 10 классе: проверяем выбранный профиль"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/igry/",
+      "anchor": "Игры по профориентации дома: три задания для семьи"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/test-9-11-klass/",
+      "anchor": "Тест на профориентацию для 9–11 классов"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/rezapkina/",
+      "anchor": "Методики Резапкиной: какой опросник вы ищете"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/theory/",
+      "anchor": "Профессиональное самоопределение: понятия для практики"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/golomshtok/",
+      "anchor": "Карта интересов Голомштока: как понимать результат"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/gde-proyti/",
+      "anchor": "Где пройти профориентацию: официальные ресурсы и дистанционные варианты"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/1-klass/",
+      "anchor": "Профориентация в 1 классе: кто помогает нашему классу"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/preschool/",
+      "anchor": "Ранняя профориентация в детском саду: занятия без выбора карьеры"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/presentations/",
+      "anchor": "Презентация по профориентации: восемь экранов для занятия"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/proforientaciya-9-klass-testy/",
+      "anchor": "Выбор после 9 класса: дополнение к семейному плану"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/video/",
+      "anchor": "Видео о профессиях: как смотреть с ребёнком"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/4-klass/",
+      "anchor": "Профориентация в 4 классе: удобная школа"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/schein/",
+      "anchor": "Якоря карьеры Шейна: ценности и ограничения применения школьникам"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/posters/",
+      "anchor": "Стенд по профориентации: что разместить и как обновлять"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/library/",
+      "anchor": "Профориентация в библиотеке: выставка и разговор о работе"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/3-klass/",
+      "anchor": "Профориентация в 3 классе: школьная редакция"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/scenarios/",
+      "anchor": "Сценарий профориентационного занятия: «Заказ для команды»"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/programs/",
+      "anchor": "Программа профориентации: образец модуля на восемь встреч"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "anchor": "Младшие школьники: как обсуждать результат игры"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/events/",
+      "anchor": "Неделя профориентации: план с действиями учеников"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/blog/proforientaciya-7-8-klass/",
+      "anchor": "Профориентация в 7–8 классах: план двух проб"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/jovayshi/",
+      "anchor": "Опросник Йовайши: профессиональные склонности и следующий шаг"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/ai/",
+      "anchor": "ИИ для профориентации: вопросы, а не автоматический выбор"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/knigi/",
+      "anchor": "Книги о профессиях: что читать с ребёнком и как обсуждать"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/evaluation/",
+      "anchor": "Отчёт по профориентации: показатели и образец разбора"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/test-5-8-klass/",
+      "anchor": "Тест на профориентацию для 5–8 классов"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/pryazhnikov/",
+      "anchor": "Методы Пряжникова: активное профессиональное самоопределение"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/dlya-detey-s-ovz/",
+      "anchor": "Профориентация ребёнка с ОВЗ: доступная проба и индивидуальный маршрут"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/kak-vybrat-programmu/",
+      "anchor": "Как выбрать программу профориентации и оценить отзывы"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/2-klass/",
+      "anchor": "Профориентация в 2 классе: мастерская полезных вещей"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/family/",
+      "anchor": "Родительское собрание о профориентации: план разговора"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/games/",
+      "anchor": "Игры по профориентации для класса: три формата"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/potemkina/",
+      "anchor": "Методика Потёмкиной: установки и выбор профессии"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/unscientific/",
+      "anchor": "Профориентация по дате рождения и другим признакам: что проверять"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/pedagogam/special/",
+      "anchor": "Профориентационное занятие для детей с ОВЗ: адаптация задания"
+    },
+    {
+      "from": "/proforientaciya/",
+      "to": "/proforientaciya/testy/ovcharov/",
+      "anchor": "Мотивы выбора профессии: методика Р. В. Овчаровой"
+    },
+    {
+      "from": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/besplatnaya-proforientaciya-dlya-shkolnikov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/projects/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/projects/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/projects/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/projects/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/organization/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/organization/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/organization/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/organization/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/blog/proforientatsiya-shkolnikov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/proforientatsiya-shkolnikov/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/proforientatsiya-shkolnikov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/proforientatsiya-shkolnikov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/models/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/models/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/models/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/models/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/blog/profminimum-i-bilet-v-budushchee/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/profminimum-i-bilet-v-budushchee/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/profminimum-i-bilet-v-budushchee/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/profminimum-i-bilet-v-budushchee/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/kursy-proorientaciya-dlya-detej-obzor/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/professii/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/professii/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/professii/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/professii/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/9-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/9-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/9-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/9-klass/",
+      "to": "/proforientaciya/test-9-11-klass/",
+      "anchor": "Тест на профориентацию для 9–11 классов"
+    },
+    {
+      "from": "/proforientaciya/professionalnye-proby/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/professionalnye-proby/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/professionalnye-proby/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/professionalnye-proby/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/klimov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/klimov/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/klimov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/klimov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/plans/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/plans/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/plans/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/plans/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/blog/kak-vybrat-professiyu-podrostku/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/kak-vybrat-professiyu-podrostku/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/kak-vybrat-professiyu-podrostku/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/kak-vybrat-professiyu-podrostku/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/doshkolniki/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/doshkolniki/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/doshkolniki/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/doshkolniki/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/konsultaciya/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/konsultaciya/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/konsultaciya/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/konsultaciya/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/lessons/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/lessons/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/lessons/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/lessons/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/8-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/8-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/8-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/8-klass/",
+      "to": "/proforientaciya/test-5-8-klass/",
+      "anchor": "Тест на профориентацию для 5–8 классов"
+    },
+    {
+      "from": "/proforientaciya/6-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/6-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/6-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/6-klass/",
+      "to": "/proforientaciya/test-5-8-klass/",
+      "anchor": "Тест на профориентацию для 5–8 классов"
+    },
+    {
+      "from": "/proforientaciya/11-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/11-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/11-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/11-klass/",
+      "to": "/proforientaciya/test-9-11-klass/",
+      "anchor": "Тест на профориентацию для 9–11 классов"
+    },
+    {
+      "from": "/proforientaciya/testy/holland/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/holland/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/holland/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/holland/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/chto-eto/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/chto-eto/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/chto-eto/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/chto-eto/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/7-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/7-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/7-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/7-klass/",
+      "to": "/proforientaciya/test-5-8-klass/",
+      "anchor": "Тест на профориентацию для 5–8 классов"
+    },
+    {
+      "from": "/proforientaciya/dlya-podrostkov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/dlya-podrostkov/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/dlya-podrostkov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/dlya-podrostkov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/5-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/5-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/5-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/5-klass/",
+      "to": "/proforientaciya/test-5-8-klass/",
+      "anchor": "Тест на профориентацию для 5–8 классов"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/10-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/10-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/10-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/10-klass/",
+      "to": "/proforientaciya/test-9-11-klass/",
+      "anchor": "Тест на профориентацию для 9–11 классов"
+    },
+    {
+      "from": "/proforientaciya/igry/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/igry/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/igry/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/igry/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/test-9-11-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/test-9-11-klass/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/test-9-11-klass/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/test-9-11-klass/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/testy/rezapkina/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/rezapkina/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/rezapkina/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/rezapkina/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/theory/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/theory/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/theory/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/theory/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/testy/golomshtok/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/golomshtok/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/golomshtok/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/golomshtok/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/gde-proyti/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/gde-proyti/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/gde-proyti/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/gde-proyti/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/1-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/1-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/1-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/1-klass/",
+      "to": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "anchor": "Младшие школьники: как обсуждать результат игры"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/preschool/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/preschool/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/preschool/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/preschool/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/presentations/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/presentations/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/presentations/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/presentations/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/blog/proforientaciya-9-klass-testy/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/proforientaciya-9-klass-testy/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/proforientaciya-9-klass-testy/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/proforientaciya-9-klass-testy/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/video/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/video/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/video/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/video/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/roditelyam/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/roditelyam/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/roditelyam/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/roditelyam/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/4-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/4-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/4-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/4-klass/",
+      "to": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "anchor": "Младшие школьники: как обсуждать результат игры"
+    },
+    {
+      "from": "/proforientaciya/testy/schein/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/schein/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/schein/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/schein/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/posters/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/posters/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/posters/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/posters/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/library/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/library/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/library/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/library/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/3-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/3-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/3-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/3-klass/",
+      "to": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "anchor": "Младшие школьники: как обсуждать результат игры"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/scenarios/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/scenarios/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/scenarios/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/scenarios/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/programs/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/programs/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/programs/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/programs/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/events/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/events/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/events/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/events/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/blog/proforientaciya-7-8-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/blog/proforientaciya-7-8-klass/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/blog/proforientaciya-7-8-klass/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/blog/proforientaciya-7-8-klass/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/kak-ponyat-rezultaty/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/kak-ponyat-rezultaty/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/kak-ponyat-rezultaty/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/kak-ponyat-rezultaty/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/worksheets/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/worksheets/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/worksheets/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/worksheets/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/testy/jovayshi/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/jovayshi/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/jovayshi/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/jovayshi/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/ai/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/ai/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/ai/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/ai/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/knigi/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/knigi/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/knigi/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/knigi/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/evaluation/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/evaluation/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/evaluation/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/evaluation/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/test-5-8-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/test-5-8-klass/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/test-5-8-klass/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/test-5-8-klass/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/testy/pryazhnikov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/pryazhnikov/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/pryazhnikov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/pryazhnikov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey-s-ovz/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey-s-ovz/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey-s-ovz/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/dlya-detey-s-ovz/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/kak-vybrat-programmu/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/kak-vybrat-programmu/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/kak-vybrat-programmu/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/kak-vybrat-programmu/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/practice/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/practice/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/practice/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/practice/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/2-klass/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/2-klass/",
+      "to": "/proforientaciya/pedagogam/lessons/",
+      "anchor": "Классный час по профориентации: сценарий «Работа за названием»"
+    },
+    {
+      "from": "/proforientaciya/2-klass/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/2-klass/",
+      "to": "/blog/proforientaciya-dlya-mladshih-shkolnikov/",
+      "anchor": "Младшие школьники: как обсуждать результат игры"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/family/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/family/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/family/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/family/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/games/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/games/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/games/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/games/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/testy/potemkina/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/potemkina/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/potemkina/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/potemkina/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/unscientific/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/unscientific/",
+      "to": "/proforientaciya/roditelyam/",
+      "anchor": "Как помочь ребёнку выбрать направление: вопросы родителю"
+    },
+    {
+      "from": "/proforientaciya/unscientific/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/unscientific/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/special/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/special/",
+      "to": "/proforientaciya/pedagogam/",
+      "anchor": "Профориентация в школе: материалы педагогу"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/special/",
+      "to": "/proforientaciya/pedagogam/worksheets/",
+      "anchor": "Рабочие листы по профориентации: наблюдение вместо ярлыка"
+    },
+    {
+      "from": "/proforientaciya/pedagogam/special/",
+      "to": "/proforientaciya/pedagogam/practice/",
+      "anchor": "Профессиональная проба в школе: подготовка и разбор"
+    },
+    {
+      "from": "/proforientaciya/testy/ovcharov/",
+      "to": "/proforientaciya/",
+      "anchor": "Профориентация для детей и школьников"
+    },
+    {
+      "from": "/proforientaciya/testy/ovcharov/",
+      "to": "/blog/test-na-proforientaciyu-kak-vybrat/",
+      "anchor": "Тесты профориентации: сравнение подходов"
+    },
+    {
+      "from": "/proforientaciya/testy/ovcharov/",
+      "to": "/proforientaciya/kak-ponyat-rezultaty/",
+      "anchor": "Результаты профориентации: как читать и что делать дальше"
+    },
+    {
+      "from": "/proforientaciya/testy/ovcharov/",
+      "to": "/proforientaciya/professionalnye-proby/",
+      "anchor": "Профессиональные пробы и экскурсии: как получить пользу"
+    }
+  ],
+  "status": "editorially_related",
+  "retained": [
+    {
+      "path": "/test/",
+      "status": "existing_functionality_retained",
+      "note": "Свободный существующий тест без изменения функциональности"
+    }
+  ]
+}

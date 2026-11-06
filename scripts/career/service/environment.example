@@ -1,0 +1,19 @@
+# Install /etc/proschools-career.env, root:root0600; never commit actual values.
+CAREER_ORIGIN=https://pro-schools.ru
+CAREER_PORT=8795
+CAREER_DB=/var/lib/proschools-career/career.sqlite3
+# Generate server-side: openssl rand -hex32 (without echo to shared logs).
+CAREER_KEY_HEX=
+EASYCODE_WEBHOOK_URL=
+UKIDS_WEBHOOK_URL=
+SYNERGY_GRAPHQL_URL=https://api.school.synergy.ru/graphql
+SYNERGY_LAND_CODE=mo_tilda_online_school
+CAREER_CRM_TIMEOUT_MS=60000
+# Optional service email. Keep unset until SMTP is verified.
+CAREER_NODE_MODULE_ROOT=/usr/local/lib/proschools-career
+CAREER_SMTP_HOST=smtp.beget.com
+CAREER_SMTP_PORT=2525
+CAREER_SMTP_SECURE=false
+CAREER_SMTP_USER=hello@pro-schools.ru
+CAREER_SMTP_PASSWORD=
+CAREER_SMTP_FROM=ProSchools <hello@pro-schools.ru>

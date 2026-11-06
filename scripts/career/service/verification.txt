@@ -1,0 +1,18 @@
+✔ result save: zero CRM; encryption; cookie; secret only hash; idempotency; no email verification claim (39.869875ms)
+✔ each chosen CRM once, exact UTM payload, requests scoped and duplicate safe (24.872541ms)
+✔ HTTP200 CRM errors rejected; timeout uncertain never blind retry; restart does not resend sending (10.118583ms)
+✔ slow CRM does not block partner acceptance; concurrent requests claim once (17.6195ms)
+✔ origin/schema/consent/honeypot/age/body/auth/server routes protections (14.372792ms)
+✔ retention expiry, sessions and recovery expiry; crash claims uncertain (3.80725ms)
+✔ scoring null/ties/no false aptitude and phone normalization (0.082125ms)
+✔ compiled canonical submitLead sends actual blog-entry payload through API without old CRM/profile side effects (119.209292ms)
+✔ untrusted markup and token attacks are rejected without reflection; OPTIONS has no CORS access (8.536959ms)
+✔ aggregate first-party events: strict schema, Origin, no session lookup, no PII columns, day counts and24h dedup (11.048125ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 344.70125

@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {"incremental": false, "plugins": [], "noEmit": true},
+  "include": ["../../src/lib/submitLead.ts", "../../src/lib/leadContext.ts", "../../src/lib/leadProfile.ts", "../../src/lib/phone.ts"],
+  "exclude": ["../../node_modules"]
+}
