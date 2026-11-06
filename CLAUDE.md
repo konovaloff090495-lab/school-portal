@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## Runtime 06.11.2026: Selectel и неизменяемая сборка
+
+Текущий VPS **90.156.159.51**, `/srv/portfolio/proschools/current` → `releases/rsya-blogs-20261106`. `.next` — read-only SquashFS с отдельным systemd mount-unit и RequiresMountsFor. Не распаковывать поверх него и не удалять старый `reserve-20261102`: новый релиз использует его public/content/data/node_modules. ISR нового BUILD_ID отделён от старого кэша. Перед следующим релизом прочитать общую память `project_rsya_group_launch_2026_11_06.md` и квитанции в `reports/monetization-2026-11-06/group-launch/`; прежние адреса ниже исторические. Групповой тест349статей активен, нельзя одновременно менять его позиции, Top, размеры или настройки.
+
 School applications also require `portfolio-school-bridge-prepare.service` and `private-school.conf` on every deploy. Do not restore public database processing. See `docs/operational-data-protection.md` for the active encrypted stores, MFA and recovery boundaries.
 
 
