@@ -1,0 +1,629 @@
+{
+  "version": 1,
+  "site": "https://pro-schools.ru",
+  "created_at": "2026-11-06T10:32:36.156248+00:00",
+  "followup_date": "2026-11-13",
+  "project_id": 28653775,
+  "group_name": "Профориентация 20261106",
+  "preferred_region_key": 225,
+  "region_policy": "Use existing project default Russia (225), preserving all project searchers, regions and depth. No project-wide changes.",
+  "queries": [
+    {
+      "query": "профориентация",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [
+        "hub"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация для школьников",
+      "target_urls": [
+        "/blog/proforientatsiya-shkolnikov/"
+      ],
+      "clusters": [
+        "schoolchildren"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация для детей",
+      "target_urls": [
+        "/proforientaciya/dlya-detey/"
+      ],
+      "clusters": [
+        "children"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация для подростков",
+      "target_urls": [
+        "/proforientaciya/dlya-podrostkov/"
+      ],
+      "clusters": [
+        "teenagers"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию для школьников",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию бесплатно",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация онлайн",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация для младших школьников",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "как помочь ребенку выбрать профессию",
+      "target_urls": [
+        "/blog/kak-vybrat-professiyu-podrostku/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "ребенок не знает кем хочет стать",
+      "target_urls": [
+        "/blog/kak-vybrat-professiyu-podrostku/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 5 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 6 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 7 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 8 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 9 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 10 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для 11 класса",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест на профориентацию 5 класс",
+      "target_urls": [
+        "/proforientaciya/test-5-8-klass/"
+      ],
+      "clusters": [
+        "test-middle"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию 6 класс",
+      "target_urls": [
+        "/proforientaciya/test-5-8-klass/"
+      ],
+      "clusters": [
+        "test-middle"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию 7 класс",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест на профориентацию 8 класс",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест на профориентацию 9 класс",
+      "target_urls": [
+        "/proforientaciya/test-9-11-klass/"
+      ],
+      "clusters": [
+        "test-high"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию 10 класс",
+      "target_urls": [
+        "/proforientaciya/test-9-11-klass/"
+      ],
+      "clusters": [
+        "test-high"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на профориентацию 11 класс",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест Климова профориентация",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест Холланда профориентация",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "карта интересов Голомштока",
+      "target_urls": [
+        "/proforientaciya/testy/golomshtok/"
+      ],
+      "clusters": [
+        "method-golomshtok"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест Йовайши профориентация",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест Резапкиной профориентация",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест Кабардовой профориентация",
+      "target_urls": [
+        "/blog/test-na-proforientaciyu-kak-vybrat/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "карта интересов Азбель Грецов",
+      "target_urls": [
+        "/proforientaciya/testy/golomshtok/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "тест Ориентация Соломина",
+      "target_urls": [
+        "/blog/test-na-proforientaciyu-kak-vybrat/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "как выбрать профессию после 9 класса",
+      "target_urls": [
+        "/blog/proforientaciya-9-klass-testy/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "как выбрать профессию после 11 класса",
+      "target_urls": [
+        "/proforientaciya/11-klass/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "колледж или 10 класс",
+      "target_urls": [
+        "/blog/proforientaciya-9-klass-testy/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентационные игры для школьников",
+      "target_urls": [
+        "/proforientaciya/igry/"
+      ],
+      "clusters": [
+        "games"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "классный час профориентация 5 класс",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "классный час профориентация 9 класс",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для родителей",
+      "target_urls": [
+        "/proforientaciya/roditelyam/"
+      ],
+      "clusters": [
+        "parents"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация для дошкольников",
+      "target_urls": [
+        "/proforientaciya/doshkolniki/"
+      ],
+      "clusters": [
+        "preschool"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "ранняя профориентация детей",
+      "target_urls": [
+        "/proforientaciya/doshkolniki/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для школьников москва",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для школьников спб",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация стоимость",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация для подростков отзывы",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "лучшие тесты на профориентацию",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "методики профориентации школьников",
+      "target_urls": [
+        "/blog/test-na-proforientaciyu-kak-vybrat/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профессиональные пробы для школьников",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "план профориентации в школе",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "презентация профориентация",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "manual_monitoring_intent_assignment"
+    },
+    {
+      "query": "профориентация 2026",
+      "target_urls": [
+        "/proforientaciya/"
+      ],
+      "clusters": [
+        "hub"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "профориентация россия мои горизонты",
+      "target_urls": [
+        ""
+      ],
+      "clusters": [
+        "navigation"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "билет в будущее профориентация",
+      "target_urls": [
+        "/blog/profminimum-i-bilet-v-budushchee/"
+      ],
+      "clusters": [
+        "public-programs"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    },
+    {
+      "query": "тест на выбор профессии",
+      "target_urls": [
+        "/test/"
+      ],
+      "clusters": [
+        "test"
+      ],
+      "selection": "fixed_representative_panel",
+      "introduced": "2026-11-06",
+      "target_mapping": "semantic_map_exact_or_representative"
+    }
+  ],
+  "max_check_rub": 100,
+  "data_semantics": "Missing GSC rows and positions are unavailable/not_reported, never synthesized as zero.",
+  "group_id": 78638789,
+  "region_indexes": [
+    5,
+    7
+  ],
+  "searchers": [
+    {
+      "name": "Yandex",
+      "index": 5,
+      "region_key": 225,
+      "depth": 1,
+      "effective_top": 100
+    },
+    {
+      "name": "Google",
+      "index": 7,
+      "region_key": 225,
+      "depth": 1,
+      "effective_top": 10
+    }
+  ],
+  "api_host": "https://api.topvisor.ru/v2/json",
+  "scheduling": "No schedule settings modified; replay only this group in the 2026-11-13 Codex heartbeat."
+}

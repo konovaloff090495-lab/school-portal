@@ -1,0 +1,71 @@
+{
+  "schema": "career-funnel-export-v2",
+  "checked_at_utc": "2026-11-06T10:42:30.643529+00:00",
+  "date1": "2026-11-06",
+  "date2": "2026-11-06",
+  "timezone": "Europe/Moscow",
+  "public_paths_count": 69,
+  "tracking_v2_available": false,
+  "retained_results": 0,
+  "retained_requests": [],
+  "legacy_unclassified_events": [
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 3
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/4-klass/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 1
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/pedagogam/plans/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 1
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/pedagogam/theory/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 1
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/professii/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 1
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/testy/golomshtok/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 2
+    },
+    {
+      "day": "2026-11-06",
+      "event": "career_landing_view",
+      "landing": "/proforientaciya/testy/pryazhnikov/",
+      "offer_id": "",
+      "grade": 0,
+      "count": 1
+    }
+  ],
+  "known_engineering_qa_before_cutover": 3,
+  "history_warning": "Retained result/request rows are not lifetime leads; deleted QA records cannot be reconstructed. Legacy event_counts do not distinguish QA/real."
+}

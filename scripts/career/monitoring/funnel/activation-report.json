@@ -1,0 +1,103 @@
+{
+  "snapshot": "school-portal/scripts/career/monitoring/funnel/activation-2026-11-06.json",
+  "period": [
+    "2026-11-06",
+    "2026-11-06"
+  ],
+  "summary": {
+    "available": true,
+    "tracking_meta": {
+      "schema_version": "2",
+      "activated_at_utc": "2026-11-06T10:50:38.179Z"
+    },
+    "counts_nonqa": {
+      "career_landing_view": 0,
+      "career_cta_click": 0,
+      "career_test_start": 0,
+      "career_question_view": 0,
+      "career_question_answered": 0,
+      "career_test_complete": 0,
+      "career_gate_view": 0,
+      "career_result_saved": 0,
+      "career_result_view": 0,
+      "career_offer_view": 0,
+      "career_offer_select": 0,
+      "career_partner_request_saved": 0,
+      "career_crm_delivered": 0,
+      "career_crm_rejected": 0,
+      "career_crm_uncertain": 0,
+      "career_crm_configuration_error": 0,
+      "career_feedback_easy": 0,
+      "career_feedback_difficult": 0
+    },
+    "counts_qa": {
+      "career_landing_view": 2,
+      "career_cta_click": 0,
+      "career_test_start": 0,
+      "career_question_view": 1,
+      "career_question_answered": 0,
+      "career_test_complete": 0,
+      "career_gate_view": 0,
+      "career_result_saved": 0,
+      "career_result_view": 0,
+      "career_offer_view": 0,
+      "career_offer_select": 0,
+      "career_partner_request_saved": 0,
+      "career_crm_delivered": 0,
+      "career_crm_rejected": 0,
+      "career_crm_uncertain": 0,
+      "career_crm_configuration_error": 0,
+      "career_feedback_easy": 0,
+      "career_feedback_difficult": 0
+    },
+    "cohorts": {
+      "organic": {
+        "entry_journeys": 0,
+        "stage_journeys": {
+          "career_landing_view": 0,
+          "career_cta_click": 0,
+          "career_test_start": 0,
+          "career_question_view": 0,
+          "career_question_answered": 0,
+          "career_test_complete": 0,
+          "career_gate_view": 0,
+          "career_result_saved": 0,
+          "career_result_view": 0,
+          "career_offer_view": 0,
+          "career_offer_select": 0,
+          "career_partner_request_saved": 0,
+          "career_crm_delivered": 0,
+          "career_crm_rejected": 0,
+          "career_crm_uncertain": 0,
+          "career_crm_configuration_error": 0,
+          "career_feedback_easy": 0,
+          "career_feedback_difficult": 0
+        },
+        "unique_request_conversion_pct": null,
+        "unique_delivered_conversion_pct": null,
+        "note": "Anonymous browser journeys, not Metrika people. Numerator intersects journeys with first measured eligible public entry in this window."
+      }
+    },
+    "partners": [],
+    "question_steps": [],
+    "completion_elapsed": [],
+    "unlinked_request_events": 0,
+    "without_journey": [],
+    "ux_pulse": {
+      "responses": 0,
+      "easy": 0,
+      "difficult": 0,
+      "easy_share_pct": null,
+      "interpretation": "Voluntary feedback; small or self-selected samples do not prove usability. Inspect step dropoff and elapsed buckets separately."
+    }
+  },
+  "limits": [
+    "No sales, payments, revenue or deal status for any of the three partners. CRM delivered is not sale.",
+    "No PII/answer/token/journey hash in this report.",
+    "First-party journey is per tab/sessionStorage; different devices/new sessions can split a person.",
+    "Exact first-party cohort starts at v2 activation; legacy counts unclassified.",
+    "Facts expire after30days; durable event aggregates survive delete and retention.",
+    "Metrika visits/visitors are independent denominators; do not join them to journeys as if identities matched.",
+    "Question views without answers are observed missing next actions, not proof of difficulty; elapsed includes idle and reload time."
+  ]
+}

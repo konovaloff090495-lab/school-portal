@@ -1,0 +1,22 @@
+{
+  "snapshot": "school-portal/scripts/career/monitoring/funnel/baseline-2026-11-06.json",
+  "period": [
+    "2026-11-06",
+    "2026-11-06"
+  ],
+  "summary": {
+    "available": false,
+    "reason": "Tracking v2 not activated at snapshot time; historical non-QA funnel is unknown, not zero.",
+    "legacy_unclassified_events": 10,
+    "known_pre_cutover_engineering_qa": 3
+  },
+  "limits": [
+    "No sales, payments, revenue or deal status for any of the three partners. CRM delivered is not sale.",
+    "No PII/answer/token/journey hash in this report.",
+    "First-party journey is per tab/sessionStorage; different devices/new sessions can split a person.",
+    "Exact first-party cohort starts at v2 activation; legacy counts unclassified.",
+    "Facts expire after30days; durable event aggregates survive delete and retention.",
+    "Metrika visits/visitors are independent denominators; do not join them to journeys as if identities matched.",
+    "Question views without answers are observed missing next actions, not proof of difficulty; elapsed includes idle and reload time."
+  ]
+}

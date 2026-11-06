@@ -29,6 +29,13 @@ export interface LeadPayload {
   crm?: boolean
 }
 
+export interface CareerMeasurement {
+  journey_id: string
+  referrer_host?: string
+  visit_utm?: Record<string, string>
+  elapsed_bucket?: string
+}
+
 export interface CareerResultPayload {
   purpose: 'result_save'
   request_id: string
@@ -42,6 +49,7 @@ export interface CareerResultPayload {
   landing?: string
   visit_utm?: Record<string, string>
   website?: string
+  measurement?: CareerMeasurement
 }
 
 export interface CareerPartnerPayload {
@@ -53,6 +61,7 @@ export interface CareerPartnerPayload {
   pd_agreed: boolean
   marketing_agreed: boolean
   website?: string
+  measurement?: CareerMeasurement
 }
 
 export interface CareerReceipt {
