@@ -20,3 +20,28 @@ function getActive(){
 }
 window.__psBlogAds={getActive:getActive};getActive();
 })();
+
+/* Measurement only: reuse the statId input of the immutable ad components.
+ * The original blog experiment above still owns its routes and assignment. */
+(function () {
+  'use strict';
+  var adapter = window.__psBlogAds;
+  if (!adapter || adapter.sectionTagsInstalled) return;
+  var blogAssignment = adapter.getActive;
+  function isPhone() {
+    var nav = window.navigator;
+    if (nav.userAgentData && typeof nav.userAgentData.mobile === 'boolean') {
+      return nav.userAgentData.mobile;
+    }
+    var ua = nav.userAgent || '';
+    return /iPhone|iPod|Android.*Mobile|Windows Phone/i.test(ua);
+  }
+  adapter.getActive = function () {
+    var path = location.pathname;
+    var statId = /^\/gdz(?:\/|$)/.test(path) ? 611090101
+      : /^\/olimpiady(?:\/|$)/.test(path) ? 611090102 : null;
+    if (statId !== null && isPhone()) return {statId: statId, qa: false};
+    return blogAssignment();
+  };
+  adapter.sectionTagsInstalled = true;
+})();
