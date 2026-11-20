@@ -46,6 +46,7 @@ try {
       expectedBlocks.unshift('R-A-19425636-1')
       assert.equal(await inlineAd.count(), 1, path)
       assert.equal(await inlineAd.locator('xpath=preceding-sibling::div[1]/article').count(), 6, path)
+      await inlineAd.locator('[id^="yandex_rtb_R-A-19425636-1_"]').waitFor({ state: 'attached' })
     } else {
       assert.equal(await inlineAd.count(), 0, path)
     }
@@ -57,6 +58,15 @@ try {
       assert.match(consent, /ИП Герасимова/)
       assert.doesNotMatch(consent, /Синерг|АНО ВО|9702078886/)
     }
+  }
+  await page.setViewportSize({ width: 1440, height: 900 })
+  for (const path of ['/shkoly/', '/shkoly/tomsk/eksternal/']) {
+    const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
+    assert.equal(response.status(), 200, path)
+    await page.locator('[data-catalog-inline-ad] [id^="yandex_rtb_R-A-19425636-2_"]').waitFor({ state: 'attached' })
+    await page.locator('[data-ps-native-ads="early"] [id^="yandex_rtb_R-A-19425636-1_"]').waitFor({ state: 'attached' })
+    await page.waitForFunction(() => window.__informationAdCalls.length >= 3)
+    assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-1', 'R-A-19425636-2', 'R-A-19425636-3'], path)
   }
   console.log('Verified informational pages, lead closure, Synergy card and unique RTB calls')
 } finally {

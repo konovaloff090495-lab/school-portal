@@ -23,6 +23,8 @@ declare global {
 
 interface Props {
   blockId: string
+  /** Optional desktop counterpart for placements that exchange block IDs. */
+  desktopBlockId?: string
   /** Уникальный суффикс для div ID, если блок используется несколько раз на странице */
   suffix?: string
   /**
@@ -35,6 +37,8 @@ interface Props {
   retry?: boolean
   statId?: number
 }
+
+let sharedViewport: { pathname: string; isDesktop: boolean } | undefined
 
 /**
  * Рекламный блок РСЯ.
@@ -89,23 +93,25 @@ interface Props {
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, suffix, viewport, retry = true, statId }: Props) {
+export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewport, retry = true, statId }: Props) {
   const pathname = usePathname()
-  const divId = suffix
-    ? `yandex_rtb_${blockId}_${suffix}`
-    : `yandex_rtb_${blockId}`
   const hostRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const experiment = window.__psBlogAds?.getActive()
     if (experiment?.qa) return
-    if (viewport) {
-      const isDesktop = window.matchMedia('(min-width: 1024px)').matches
-      if (viewport === 'desktop' && !isDesktop) return
-      if (viewport === 'mobile' && isDesktop) return
+    let isDesktop = window.matchMedia('(min-width: 1024px)').matches
+    if (desktopBlockId) {
+      // Keep both catalog placements paired if filters remount just one after a resize.
+      if (sharedViewport?.pathname !== pathname) sharedViewport = { pathname, isDesktop }
+      isDesktop = sharedViewport.isDesktop
     }
+    if (viewport === 'desktop' && !isDesktop) return
+    if (viewport === 'mobile' && isDesktop) return
     const host = hostRef.current
     if (!host) return
+    const activeBlockId = isDesktop && desktopBlockId ? desktopBlockId : blockId
+    const divId = `yandex_rtb_${activeBlockId}${suffix ? `_${suffix}` : ''}`
 
     // Замер 31.08 (вечер): вызов из useEffect в момент гидрации не даёт рекламы,
     // а точно такой же вызов в свежесозданный узел ПОСЛЕ того, как страница ожила,
@@ -125,7 +131,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport, retry = tru
       window.yaContextCb = window.yaContextCb || []
       window.yaContextCb.push(() => {
         if (!cancelled && node.isConnected) {
-          window.Ya?.Context.AdvManager.render({ blockId, renderTo: id, statId: statId ?? experiment?.statId })
+          window.Ya?.Context.AdvManager.render({ blockId: activeBlockId, renderTo: id, statId: statId ?? experiment?.statId })
         }
       })
       // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
@@ -145,7 +151,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport, retry = tru
     // Таймеры в скрытой вкладке работают, пусть и реже.
     const t = window.setTimeout(draw, 0)
     return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, divId, viewport, pathname, retry, statId])
+  }, [blockId, desktopBlockId, suffix, viewport, pathname, retry, statId])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />

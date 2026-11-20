@@ -58,7 +58,12 @@ export const AD_BLOCKS = {
  */
 export const AD_SLOT_2 = AD_BLOCKS.blogInline
 export const AD_SLOT_3 = AD_BLOCKS.blogSidebar
-export const CATALOG_INLINE_AD = { blockId: AD_BLOCKS.gdzUchebnik, statId: 202611203 } as const
+// The desktop catalog prioritizes the unit that filled between its rows in live QA.
+export const CATALOG_INLINE_AD = {
+  blockId: AD_BLOCKS.gdzUchebnik,
+  desktopBlockId: AD_SLOT_2,
+  statId: 202611203,
+} as const
 
 /**
  * ЗАМЕР 16.09.2026 — почему слот 2 в учебнике переехал ВНУТРЬ статьи.
