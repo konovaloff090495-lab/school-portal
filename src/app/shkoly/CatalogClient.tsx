@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
+import { useState, useMemo, useCallback, useEffect, useRef, useId } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -18,6 +18,8 @@ import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import YandexRTBBanner from '@/components/YandexRTBBanner'
+import { CATALOG_INLINE_AD } from '@/lib/ads'
 import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 
 // Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
@@ -246,6 +248,18 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
 }
 
 const PAGE_SIZE = 24
+// Six cards end a complete row at all three grid widths (1, 2, or 3 columns).
+const CARDS_BEFORE_AD = 6
+
+function CatalogInlineAd() {
+  const id = useId().replace(/[^a-z0-9_-]/gi, '')
+
+  return (
+    <div data-catalog-inline-ad className="col-span-full min-w-0 -mt-5 has-[[id^=yandex_rtb_]>*]:mt-0">
+      <YandexRTBBanner {...CATALOG_INLINE_AD} suffix={`catalog-${id}`} retry={false} />
+    </div>
+  )
+}
 
 export default function CatalogClient({
   allowedSchoolSlugs,
@@ -1236,10 +1250,13 @@ export default function CatalogClient({
 
           {filtered.length > 0 && viewMode === 'grid' && (() => {
             const page = filtered.slice(0, visibleCount)
+            const cards = page.map(school => <SchoolCard key={school.id} school={school} />)
             return (
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {page.map(school => <SchoolCard key={school.id} school={school} />)}
+                  {cards.slice(0, CARDS_BEFORE_AD)}
+                  {cards.length > CARDS_BEFORE_AD && <CatalogInlineAd />}
+                  {cards.slice(CARDS_BEFORE_AD)}
                 </div>
                 {visibleCount < filtered.length && (
                   <div className="mt-8 text-center">

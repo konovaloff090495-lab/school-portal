@@ -25,7 +25,7 @@
  *   /uchebnik/ — gdzUchebnik: десктоп — сайдбар, мобильные — вверху тела страницы
  *   /gdz/      — gdzUchebnik: десктоп — рельса, мобильные — инлайн
  *
- * Каталог школ и другие страницы без собственных мест используют SiteAds.
+ * Каталог школ использует SiteAds и отдельный блок после шестой карточки.
  *
  * ЗАМЕР 31.08.2026: запросы 11 748/мес при 14 512 монетизируемых просмотрах — 0,81
  * на просмотр. Причина низкого числа найдена и устранена этой правкой, а не «одним
@@ -58,6 +58,7 @@ export const AD_BLOCKS = {
  */
 export const AD_SLOT_2 = AD_BLOCKS.blogInline
 export const AD_SLOT_3 = AD_BLOCKS.blogSidebar
+export const CATALOG_INLINE_AD = { blockId: AD_BLOCKS.gdzUchebnik, statId: 202611203 } as const
 
 /**
  * ЗАМЕР 16.09.2026 — почему слот 2 в учебнике переехал ВНУТРЬ статьи.
