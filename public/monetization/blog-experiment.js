@@ -28,6 +28,15 @@ window.__psBlogAds={getActive:getActive};getActive();
   var adapter = window.__psBlogAds;
   if (!adapter || adapter.sectionTagsInstalled) return;
   var blogAssignment = adapter.getActive;
+  var books = new Set([
+    '/gdz/8-klass/fizika/peryshkin-8', '/gdz/5-klass/geografiya/alekseev',
+    '/gdz/6-klass/matematika/vilenkin', '/gdz/10-klass/geometriya/atanasyan-10',
+    '/gdz/6-klass/russkiy-yazyk/ladyzhenskaya', '/gdz/11-klass/obshchestvoznanie/bogolyubov',
+    '/gdz/7-klass/fizika/peryshkin', '/gdz/9-klass/fizika/peryshkin',
+    '/gdz/8-klass/russkiy-yazyk/ladyzhenskaya-8', '/gdz/8-klass/geografiya/alekseev',
+    '/gdz/7-klass/geometriya/atanasyan', '/gdz/10-klass/obshchestvoznanie/bogolyubov'
+  ]);
+  var learningKey = 'ps_learning_20261120';
   function isPhone() {
     var nav = window.navigator;
     if (nav.userAgentData && typeof nav.userAgentData.mobile === 'boolean') {
@@ -37,10 +46,38 @@ window.__psBlogAds={getActive:getActive};getActive();
     return /iPhone|iPod|Android.*Mobile|Windows Phone/i.test(ua);
   }
   adapter.getActive = function () {
-    var path = location.pathname;
+    var path = location.pathname.replace(/\/$/, '');
+    var phone = isPhone();
+    if (books.has(path) && window.matchMedia('(max-width: 1023px)').matches) {
+      var preview = new URLSearchParams(location.search).get('ps_learning_preview');
+      var qa = preview === 'A' || preview === 'B';
+      if (qa || phone) {
+        var arm = qa ? preview : 'X';
+        if (!qa) {
+          try {
+            arm = localStorage.getItem(learningKey);
+            if (arm !== 'A' && arm !== 'B') {
+              arm = crypto.getRandomValues(new Uint8Array(1))[0] % 2 ? 'B' : 'A';
+              localStorage.setItem(learningKey, arm);
+            }
+          } catch (_) { arm = 'X'; }
+        }
+        var marker = (qa ? 'QA-' : '') + arm;
+        document.documentElement.setAttribute('data-ps-learning-arm', marker);
+        if (!qa && arm !== 'X' && window.__psLearningPath !== path) {
+          window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
+          window.ym(108789843, 'params', {ps_learning_20261120: arm});
+          window.__psLearningPath = path;
+        }
+        return {arm: arm, qa: qa, statId: {A: 611200201, B: 611200202, X: 611200203}[arm]};
+      }
+    }
+    window.__psLearningPath = null;
+    document.documentElement.removeAttribute('data-ps-learning-arm');
     var statId = /^\/gdz(?:\/|$)/.test(path) ? 611090101
-      : /^\/olimpiady(?:\/|$)/.test(path) ? 611090102 : null;
-    if (statId !== null && isPhone()) return {statId: statId, qa: false};
+      : /^\/olimpiady(?:\/|$)/.test(path) ? 611090102
+      : /^\/uchebnik(?:\/|$)/.test(path) ? 611200204 : null;
+    if (statId !== null && phone) return {statId: statId, qa: false};
     return blogAssignment();
   };
   adapter.sectionTagsInstalled = true;
