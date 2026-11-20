@@ -33,7 +33,6 @@ export default function PolitikaKonfidentsialnosti() {
             <li><strong>ИНН:</strong> 890203667705</li>
             <li><strong>ОГРНИП:</strong> 322508100563828</li>
             <li><strong>Электронная почта:</strong> <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
-            <li><strong>Телефон:</strong> <a href="tel:[redacted]" className="text-[#0369A1] hover:underline">[redacted]</a></li>
           </ul>
         </section>
 
@@ -148,7 +147,6 @@ export default function PolitikaKonfidentsialnosti() {
           <p>По всем вопросам, связанным с обработкой персональных данных:</p>
           <ul className="mt-2 list-none pl-0 space-y-1">
             <li>Email: <a href="mailto:hello@pro-schools.ru" className="text-[#0369A1] hover:underline">hello@pro-schools.ru</a></li>
-            <li>Телефон: <a href="tel:[redacted]" className="text-[#0369A1] hover:underline">[redacted]</a></li>
           </ul>
         </section>
 
