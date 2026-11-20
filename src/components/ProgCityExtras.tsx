@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { regionLabels, regionLabelsIn, regionSlugs, getSchoolsByRegionAndType, getSchoolsByFeature, type RegionSlug } from '@/data/schools'
 
 export default function ProgCityExtras({ region, count }: { region?: RegionSlug; count: number }) {
@@ -17,20 +16,6 @@ export default function ProgCityExtras({ region, count }: { region?: RegionSlug;
 
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', fontFamily: 'var(--font-manrope, system-ui)', color: '#1A1814' }}>
-      <OnlineLeadCta
-        source={source}
-        heading={count === 0
-          ? `Очной школы программирования ${regionIn} в каталоге нет — начните онлайн`
-          : 'Не подходит расписание очных занятий? Онлайн-школа программирования с пробным уроком'}
-        text={`EasyCode — онлайн-школа программирования для детей 7–17 лет: занятие с преподавателем раз в неделю в группе до 15 человек или индивидуально, еженедельные вебинары о технологиях, куратор в чате и портфолио проектов. Направления — Scratch и создание игр, Python и ИИ, Godot, дизайн. Ребёнок занимается из дома ${regionIn}, вы видите прогресс в личном кабинете. Оставьте контакты — уточним условия на консультации, подберём направление по возрасту и запишем на пробный урок.`}
-        bullets={[
-          'от 5 500 ₽/мес, рассрочка и оплата по счёту',
-          'образовательная лицензия, резидент Сколково',
-          'проект каждые полгода и публичная защита — портфолио к 9–11 классу',
-        ]}
-        city={regionName}
-      />
-
       <section style={{ margin: '0 0 28px' }}>
         <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Как выбрать школу программирования для ребёнка {regionIn}</h2>
         <ol style={{ fontSize: 15, lineHeight: 1.65, color: '#3F3A35', margin: 0, paddingLeft: 22 }}>

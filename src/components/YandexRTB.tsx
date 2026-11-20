@@ -15,12 +15,13 @@ import Script from 'next/script'
  */
 export default function YandexRTB() {
   const pathname=usePathname()
-  if(pathname.startsWith('/dobavit-shkolu')||pathname.startsWith('/admin/shkoly'))return null
+  if(pathname.startsWith('/lk')||pathname.startsWith('/admin/shkoly'))return null
   return (
     <Script id="ya-rtb-loader" strategy="afterInteractive">
       {`
         window.yaContextCb = window.yaContextCb || [];
         (function() {
+          if (document.querySelector('script[src="https://yandex.ru/ads/system/context.js"]')) return;
           var s = document.createElement('script');
           s.src = 'https://yandex.ru/ads/system/context.js';
           s.async = true;

@@ -53,20 +53,11 @@ try {
       const response = await page.goto(base + path, { waitUntil: 'domcontentloaded', timeout: 120000 })
       assert.equal(response.status(), 200, path)
       await page.evaluate(() => document.fonts.ready)
-      await page.waitForFunction(() => { const input = document.querySelector('form[data-growth-form="school-card"] input[type="tel"]'); return input && Object.keys(input).some(k => k.startsWith('__reactProps$')) })
       assert.equal(await page.locator('h1').count(), 1)
-      assert.equal(await page.locator('form[data-growth-form="school-card"]').count(), 1, 'One form, one state')
-      const geometry = await page.evaluate(() => {
-        const form = document.querySelector('form[data-growth-form="school-card"]')
-        const faq = [...document.querySelectorAll('h2')].find(x => x.textContent === 'Часто задаваемые вопросы')
-        const tel = form.querySelector('input[type="tel"]')
-        return { overflow: document.documentElement.scrollWidth > innerWidth + 1, formY: Math.round(form.getBoundingClientRect().top + scrollY), faqY: faq ? Math.round(faq.getBoundingClientRect().top + scrollY) : null, inputFont: parseFloat(getComputedStyle(tel).fontSize), inputHeight: tel.getBoundingClientRect().height, submitHeight: form.querySelector('button[type="submit"]').getBoundingClientRect().height }
-      })
+      assert.equal(await page.locator('form:has(input[type="tel"])').count(), 0)
+      const geometry = { overflow: await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1) }
       assert.equal(geometry.overflow, false, path + ' @' + width)
       if (!baselineMode) {
-        assert.ok(geometry.formY < geometry.faqY, 'The mobile form must precede FAQ')
-        assert.ok(geometry.inputFont >= 16, 'No iOS focus zoom')
-        assert.ok(geometry.inputHeight >= 44 && geometry.submitHeight >= 44, 'Usable touch targets')
         if (width >= 1024) {
           const intro = await page.locator('.school-card-intro').boundingBox(), main = await page.locator('.school-card-main').boundingBox()
           assert.ok(main.y - intro.y - intro.height <= 26, 'Desktop content must not wait for the taller form column')
@@ -83,26 +74,11 @@ try {
             assert.ok(Math.abs(first.y - second.y) < 2, 'Quick action CSS must not put the first breadcrumb on its own row')
           }
         }
-        const cta = page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]')
-        if (width < 768) assert.ok((await cta.boundingBox()).y < 800, 'Consultation shortcut on first mobile screen')
-        await cta.click()
-        await page.waitForFunction(() => location.hash === '#school-card-form')
-        const clickCheck = await page.locator('#school-card-form input[type="text"]').first().evaluate(el => {
-          const r = el.getBoundingClientRect(), top = document.elementFromPoint(r.x + r.width / 2, r.y + Math.min(r.height / 2, 20))
-          return { top: r.top, visible: el === top || el.contains(top) }
-        })
-        assert.ok(clickCheck.visible, 'Form input must not be covered after anchor navigation: ' + JSON.stringify(clickCheck))
-        const titleVisible = await page.locator('#school-card-form h3').first().evaluate(el => { const r = el.getBoundingClientRect(); const top = document.elementFromPoint(r.x + Math.min(r.width / 2, 50), r.y + 8); return el === top || el.contains(top) })
-        assert.ok(titleVisible, 'The sticky header must not cover the form heading after anchor navigation')
-        await page.goto(base + path, { waitUntil: 'domcontentloaded' })
-        await page.evaluate(() => document.fonts.ready)
       }
       if ([360, 1366].includes(width) && [paths[0], paths[3], paths[5]].includes(path)) {
         const name = path.split('/').at(-2)
         await page.screenshot({ path: `${output}/${name}-${width}.png` })
         if (!baselineMode && width === 360) {
-          await page.getByRole('navigation', { name: 'Быстро перейти в карточке' }).locator('a[href="#school-card-form"]').click()
-          await page.screenshot({ path: `${output}/${name}-${width}-form.png` })
           if (await page.locator('[data-school-card-guide]').count()) {
             await page.locator('[data-school-card-guide]').scrollIntoViewIfNeeded()
             await page.screenshot({ path: `${output}/${name}-${width}-content.png` })
@@ -142,35 +118,8 @@ try {
       assert.equal(await detail.getAttribute('open'), '')
       checks.push({ content: slug, officialSources: true, faqSchemaMatches: true })
     }
-    for (const [path, width, marketing] of [[paths[0], 360, false], [paths[3], 390, true], [paths[5], 320, false], [paths[6], 1366, true]]) {
-      await page.setViewportSize({ width, height: 800 })
-      await page.goto(base + path, { waitUntil: 'domcontentloaded' })
-      await page.waitForFunction(() => { const input = document.querySelector('form[data-growth-form="school-card"] input[type="tel"]'); return input && Object.keys(input).some(k => k.startsWith('__reactProps$')) })
-      const form = page.locator('form[data-growth-form="school-card"]')
-      const flags = form.locator('input[type="checkbox"]')
-      assert.ok(await flags.nth(0).isChecked()); assert.ok(await flags.nth(1).isChecked())
-      await flags.nth(0).uncheck(); assert.ok(await form.locator('button[type="submit"]').isDisabled()); await flags.nth(0).check()
-      await form.getByLabel('Ваше имя', { exact: true }).fill('Проверка карточки')
-      await form.getByLabel('Номер телефона', { exact: true }).fill('123')
-      await form.getByLabel('Номер телефона', { exact: true }).blur()
-      assert.ok(await form.locator('p.text-red-500').count(), 'Invalid phone feedback')
-      await form.getByLabel('Номер телефона', { exact: true }).fill('+79162847319')
-      await form.getByLabel('Электронная почта', { exact: true }).fill('school-card-check@example.invalid')
-      await flags.nth(1).setChecked(marketing)
-      await form.locator('button[type="submit"]').click()
-      if (leads.length === 1) {
-        await form.getByRole('alert').waitFor(); assert.ok(await form.getByLabel('Ваше имя', { exact: true }).inputValue())
-        await form.locator('button[type="submit"]').click()
-      }
-      await page.waitForURL('**/spasibo/**', { timeout: 120000 })
-      const lead = leads.at(-1)
-      assert.equal(lead.marketing_agreed, marketing); assert.equal(lead.pd_agreed, true); assert.equal(lead.crm, true)
-      assert.ok(lead.school && lead.city); assert.match(lead.source, /^Карточка школы:/)
-      assert.ok(JSON.stringify(lead).includes(path), 'Submission page retained')
-      checks.push({ mock: path, width, marketing, success: true })
-    }
-    assert.equal(leads.length, 5, 'One error + four successful mock sends')
   }
+  assert.equal(leads.length, 0)
   assert.deepEqual(errors, [])
   if (!baselineMode) assert.deepEqual(failedAssets, [])
   await fs.writeFile(output + '/qa.json', JSON.stringify({ result: 'passed', mode: baselineMode ? 'before' : 'after', checks, mockRequests: leads.length, errors, failedAssets }, null, 2))

@@ -1,0 +1,15 @@
+[data-lektoriy], #lead-dialog, .result-offers, .thanks-offer:has([data-trial-form]),
+.school-submission[data-mode="form"],
+[data-ps-sale], [data-ps-sale-slot], #school-card-form, a[href="#school-card-form"],
+[data-offer-form], #partner-dialog, #partner-offers, #podbor:has(form [type="tel"]),
+#konsultaciya:has(form [type="tel"]), form[data-growth-form],
+form:has([type="tel"]):has([type="email"]) { display: none !important; }
+.ps-site-ad {
+  box-sizing: border-box;
+  width: min(calc(100% - 2rem), 76rem);
+  margin: 1rem auto;
+  overflow: clip;
+  min-width: 0;
+}
+.ps-site-ad:empty { margin-block: 0; }
+.ps-site-ad[hidden] { display: none; }

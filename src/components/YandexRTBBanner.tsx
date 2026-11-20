@@ -23,6 +23,8 @@ declare global {
 
 interface Props {
   blockId: string
+  /** Optional desktop counterpart for placements that exchange block IDs. */
+  desktopBlockId?: string
   /** Уникальный суффикс для div ID, если блок используется несколько раз на странице */
   suffix?: string
   /**
@@ -32,7 +34,12 @@ interface Props {
    * реклама уедет в скрытый сайдбар. Граница — 1024px (Tailwind `lg`).
    */
   viewport?: 'mobile' | 'desktop'
+  loadNearViewport?: boolean
+  retry?: boolean
+  statId?: number
 }
+
+let pairedPlacementViewport: { pathname: string; isDesktop: boolean } | undefined
 
 /**
  * Рекламный блок РСЯ.
@@ -40,7 +47,8 @@ interface Props {
  * blockId — идентификатор блока из кабинета РСЯ, напр. "R-A-19425636-1"
  * suffix  — уникальный суффикс если блок стоит несколько раз на одной странице
  *
- * Рендер — сразу при монтировании (revert 919fc25).
+ * По умолчанию рендер начинается при монтировании. Дополнительное место
+ * каталога загружается при прокрутке после первоначальных запросов.
  *
  * 25.07 блоки перевели на отложенный рендер через IntersectionObserver ради
  * viewability. Замер за 10 дней после (`python3 rsya.py --period 30days --days`):
@@ -87,23 +95,29 @@ interface Props {
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
+export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewport, loadNearViewport = false, retry = true, statId }: Props) {
   const pathname = usePathname()
-  const divId = suffix
-    ? `yandex_rtb_${blockId}_${suffix}`
-    : `yandex_rtb_${blockId}`
   const hostRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const experiment = window.__psBlogAds?.getActive()
     if (experiment?.qa) return
-    if (viewport) {
-      const isDesktop = window.matchMedia('(min-width: 1024px)').matches
-      if (viewport === 'desktop' && !isDesktop) return
-      if (viewport === 'mobile' && isDesktop) return
-    }
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches
+    if (viewport === 'desktop' && !isDesktop) return
+    if (viewport === 'mobile' && isDesktop) return
     const host = hostRef.current
     if (!host) return
+
+    let activeBlockId = blockId
+    if (desktopBlockId) {
+      // Keep both catalog placements paired if filters remount just one after a resize.
+      if (pairedPlacementViewport?.pathname !== pathname) {
+        const narrowDesktop = window.matchMedia('(min-width: 640px) and (hover: hover) and (pointer: fine)').matches
+        pairedPlacementViewport = { pathname, isDesktop: isDesktop || narrowDesktop }
+      }
+      if (pairedPlacementViewport.isDesktop) activeBlockId = desktopBlockId
+    }
+    const divId = `yandex_rtb_${activeBlockId}${suffix ? `_${suffix}` : ''}`
 
     // Замер 31.08 (вечер): вызов из useEffect в момент гидрации не даёт рекламы,
     // а точно такой же вызов в свежесозданный узел ПОСЛЕ того, как страница ожила,
@@ -122,11 +136,13 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       host.replaceChildren(node)
       window.yaContextCb = window.yaContextCb || []
       window.yaContextCb.push(() => {
-        window.Ya?.Context.AdvManager.render({ blockId, renderTo: id, statId: experiment?.statId })
+        if (!cancelled && node.isConnected) {
+          window.Ya?.Context.AdvManager.render({ blockId: activeBlockId, renderTo: id, statId: statId ?? experiment?.statId })
+        }
       })
       // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
       // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
-      if (attempt < 3) {
+      if (retry && attempt < 3) {
         window.setTimeout(() => {
           if (cancelled) return
           if (!node.isConnected || node.childElementCount === 0) draw()
@@ -139,9 +155,24 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     // с rAF место не создавалось и реклама не запрашивалась никогда. Замер
     // 31.08: document.visibilityState === 'hidden' → узлов нет ни одного.
     // Таймеры в скрытой вкладке работают, пусть и реже.
-    const t = window.setTimeout(draw, 0)
-    return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, divId, viewport, pathname])
+    let observer: IntersectionObserver | undefined
+    let timer: number | undefined
+    if (loadNearViewport && typeof IntersectionObserver === 'function') {
+      observer = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return
+        observer?.disconnect()
+        draw()
+      }, { rootMargin: '250px 0px' })
+      observer.observe(host)
+    } else {
+      timer = window.setTimeout(draw, 0)
+    }
+    return () => {
+      cancelled = true
+      observer?.disconnect()
+      window.clearTimeout(timer)
+    }
+  }, [blockId, desktopBlockId, suffix, viewport, pathname, loadNearViewport, retry, statId])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />

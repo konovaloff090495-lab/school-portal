@@ -1,20 +1,14 @@
-import type { Metadata } from 'next'
-import OfferWall from '@/components/offerwall/OfferWall'
+import Link from 'next/link'
 
-// Та же витрина подарков, но как самостоятельная страница: на неё можно вести людей
-// из писем, SMS и с других наших сайтов, а не только после заявки. Не индексируется.
-export const metadata: Metadata = {
-  title: 'Подарки и спецпредложения — ШколыРоссии.рф',
-  robots: { index: false, follow: false },
-}
+export const metadata = { title: 'Бесплатные учебные материалы — ProSchools' }
 
-export default function PodarkiPage() {
-  return (
-    <OfferWall
-      place="podarki"
-      kicker="Подарки читателям портала"
-      title="Выберите подарок"
-      subtitle="Бесплатная неделя обучения, пробные дни на курсах ЕГЭ и ОГЭ, диагностика с репетитором, подбор колледжа и бонусы на каникулы."
-    />
-  )
+export default function InformationPage() {
+  return <div className="mx-auto max-w-3xl px-4 py-12">
+    <h1 className="text-3xl font-bold">Бесплатные учебные материалы</h1>
+    <p className="mt-4">Подборки бесплатных уроков и материалов для школьников.</p>
+    <nav aria-label="Разделы сайта" className="mt-6 flex flex-wrap gap-5 text-sky-800 underline">
+      <Link href="/shkoly/">Каталог школ</Link>
+      <Link href="/besplatnye-uroki/">Бесплатные уроки</Link>
+    </nav>
+  </div>
 }

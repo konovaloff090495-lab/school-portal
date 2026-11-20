@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { regionLabels, regionLabelsIn, regionSlugs, getSchoolsByRegionAndType, type RegionSlug } from '@/data/schools'
 
 /**
  * Дополнение к страницам центров ЕГЭ/ОГЭ: хаб /shkoly/tipy/podgotovka-ege|oge/ и город
  * /shkoly/<город>/podgotovka-ege|oge/. Карточки центров собраны вручную по Яндекс Картам
  * (запрос «курсы ЕГЭ ОГЭ <город>», 09.2026) в 30 крупных городах — без цен, которые не
- * проверены. Конверсионная часть страницы — онлайн-курсы «Синергии» (факты из базы
+ * проверены. Конверсионная часть страницы — онлайн-курсы онлайн-школы (факты из базы
  * знаний продукта: 10 предметов ЕГЭ / 11 ОГЭ, курс 9 месяцев с 1 сентября, 56 вебинаров
  * на предмет, 3 пробника, от 49 590 ₽ за предмет, рассрочка от 4 132 ₽/мес, пробный день).
  * Заявка уходит через submitLead() (OnlineLeadCta → LeadForm) с уникальным source.
@@ -27,20 +26,6 @@ export default function EgeCityExtras({ region, variant, count }: { region?: Reg
 
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', fontFamily: 'var(--font-manrope, system-ui)', color: '#1A1814' }}>
-      <OnlineLeadCta
-        source={source}
-        heading={count === 0
-          ? `Очных курсов ${exam} ${cityLabel} в каталоге пока нет — подготовьтесь онлайн`
-          : `Не подходит расписание очных курсов? Онлайн-курс ${exam} с пробным днём`}
-        text={`Онлайн-курсы подготовки к ${exam} для ${grades}: ${variant === 'ege' ? '10 предметов' : '11 предметов'}, курс на учебный год с 1 сентября — 56 вебинаров по предмету (2 в неделю), тренажёры, конспекты, три пробных экзамена с разбором и куратор на связи каждый день. Занятия из дома ${regionIn}, экзамен — в своей школе. Оставьте контакты — уточним условия на консультации, откроем пробный день бесплатно и подберём предметы.`}
-        bullets={[
-          'от 49 590 ₽ за годовой курс одного предмета, рассрочка от 4 132 ₽/мес',
-          'преподаватели — эксперты МЦКО и вузов, ежегодно сдают экзамен сами',
-          'тариф «Про»: домашние задания с проверкой педагога, наставник и сопровождение до поступления',
-        ]}
-        city={regionName}
-      />
-
       <section style={{ margin: '0 0 28px' }}>
         <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 10px' }}>Как выбрать курсы {exam} {regionIn}</h2>
         <ol style={{ fontSize: 15, lineHeight: 1.65, color: '#3F3A35', margin: 0, paddingLeft: 22 }}>

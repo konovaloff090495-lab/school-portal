@@ -1,0 +1,94 @@
+import assert from 'node:assert/strict'
+import { spawn } from 'node:child_process'
+import { chromium } from 'playwright'
+
+const base = process.env.INFORMATION_QA_BASE || 'http://127.0.0.1:3194'
+const paths = [
+  '/', '/shkoly/', '/shkoly/tomsk/eksternal/', '/shkoly/tipy/online/',
+  '/shkola/onlain-shkola-sinergiya-moskva/', '/shkoly/tipy/online/sinergiya/',
+  '/attestat-vzroslomu/', '/soglasie-marketing/', '/dobavit-shkolu/',
+]
+const child = process.env.INFORMATION_QA_BASE ? null : spawn(
+  process.execPath, ['node_modules/next/dist/bin/next', 'start', '-p', '3194'],
+  { stdio: 'inherit' },
+)
+
+async function checkSecondCatalogAd(page, path) {
+  const secondAd = page.locator('[data-catalog-inline-ad="12"]')
+  assert.equal(await secondAd.locator('xpath=preceding-sibling::div/article').count(), 12, path)
+  assert.equal(await secondAd.locator('[id^="yandex_rtb_"]').count(), 0, path)
+  await secondAd.evaluate(element => window.scrollTo(0, window.scrollY + element.getBoundingClientRect().top - 200))
+  const secondTarget = secondAd.locator('[id^="yandex_rtb_R-A-19425636-3_catalog-12-"]')
+  const footerTarget = page.locator('[data-ps-native-ads="lower"] [id^="yandex_rtb_R-A-19425636-3_"]')
+  await secondTarget.waitFor({ state: 'attached' })
+  assert.notEqual(await secondTarget.getAttribute('id'), await footerTarget.getAttribute('id'), path)
+  await page.waitForFunction(() => window.__informationAdCalls.length >= 4)
+  assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-1', 'R-A-19425636-2', 'R-A-19425636-3', 'R-A-19425636-3'], path)
+}
+
+let browser
+try {
+  for (let attempt = 0; attempt < 40; attempt++) {
+    try { if ((await fetch(base + '/robots.txt', { signal: AbortSignal.timeout(1200) })).ok) break } catch {}
+    await new Promise(resolve => setTimeout(resolve, 300))
+  }
+  const closed = await fetch(base + '/api/leads/submit/', { method: 'POST' })
+  assert.equal(closed.status, 410)
+  browser = await chromium.launch({ headless: true, channel: process.env.INFORMATION_QA_BROWSER || undefined })
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } })
+  await context.route('**/*', route => route.request().url().startsWith(base) ? route.continue() : route.abort())
+  await context.addInitScript(() => {
+    localStorage.setItem('proschools-first-city-dismissed', '1')
+    const calls = []
+    window.__informationAdCalls = calls
+    window.yaContextCb = []
+    window.yaContextCb.push = callback => { callback(); return 0 }
+    window.Ya = { Context: { AdvManager: { render: params => calls.push(params.blockId) } } }
+  })
+  const page = await context.newPage()
+  for (const path of paths) {
+    const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
+    assert.equal(response.status(), 200, path)
+    assert.equal(await page.locator('#main h1').count(), 1, path)
+    assert.equal(await page.locator('form:has([type="tel"]), [data-ps-sale], [data-ps-sale-slot]').count(), 0, path)
+    const hosts = await page.locator('a[href]').evaluateAll(nodes => nodes.map(node => new URL(node.href).hostname))
+    assert.ok(!hosts.some(host => /(^|\.)(?:synergy(?:-academy)?\.ru|syndev\.ru|school-?university\.(?:com|ru))$/.test(host)), path)
+    const catalogCards = page.locator('#spisok-shkol > div > .grid > article')
+    const inlineAd = page.locator('[data-catalog-inline-ad="6"]')
+    const secondAd = page.locator('[data-catalog-inline-ad="12"]')
+    const cardCount = await catalogCards.count()
+    const expectedBlocks = ['R-A-19425636-2', 'R-A-19425636-3']
+    if (cardCount > 6) {
+      expectedBlocks.unshift('R-A-19425636-1')
+      assert.equal(await inlineAd.count(), 1, path)
+      assert.equal(await inlineAd.locator('xpath=preceding-sibling::div[1]/article').count(), 6, path)
+      await inlineAd.locator('[id^="yandex_rtb_R-A-19425636-1_"]').waitFor({ state: 'attached' })
+    } else {
+      assert.equal(await inlineAd.count(), 0, path)
+    }
+    assert.equal(await secondAd.count(), cardCount > 12 ? 1 : 0, path)
+    await page.waitForFunction(count => window.__informationAdCalls.length >= count, expectedBlocks.length)
+    assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), expectedBlocks, path)
+    if (path === '/shkoly/') await checkSecondCatalogAd(page, path)
+    assert.doesNotMatch(await page.locator('#main').innerText(), /Синерги[яиуюе]|\bSynergy\b/i, path)
+    if (path === '/soglasie-marketing/') {
+      const consent = await page.locator('#main').innerText()
+      assert.match(consent, /ИП Герасимова/)
+      assert.doesNotMatch(consent, /Синерг|АНО ВО|9702078886/)
+    }
+  }
+  for (const [path, width] of [['/shkoly/', 1440], ['/shkoly/tomsk/eksternal/', 920]]) {
+    await page.setViewportSize({ width, height: 900 })
+    const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
+    assert.equal(response.status(), 200, path)
+    await page.locator('[data-catalog-inline-ad="6"] [id^="yandex_rtb_R-A-19425636-2_"]').waitFor({ state: 'attached' })
+    await page.locator('[data-ps-native-ads="early"] [id^="yandex_rtb_R-A-19425636-1_"]').waitFor({ state: 'attached' })
+    await page.waitForFunction(() => window.__informationAdCalls.length >= 3)
+    assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-1', 'R-A-19425636-2', 'R-A-19425636-3'], path)
+    await checkSecondCatalogAd(page, path)
+  }
+  console.log('Verified informational pages, lead closure, Synergy card and unique RTB calls')
+} finally {
+  await browser?.close()
+  child?.kill()
+}

@@ -36,21 +36,21 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Next.js inline scripts + загрузчик и скрипты рекламы РСЯ (Яндекс)
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru *.yandex.ru yastatic.net abt.s3.yandex.net https://ssynergy.logos.unis.studio",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' mc.yandex.ru yandex.ru *.yandex.ru yastatic.net abt.s3.yandex.net",
       // Inline стили — для CSS-in-JS и контента блога
       "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
       // Картинки: свои + data-URI + креативы и аватары рекламы РСЯ
-      "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net https://ssynergy.logos.unis.studio https://thumb.wikimedia.org https://upload.wikimedia.org",
+      "img-src 'self' data: blob: mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net yastatic.net https://thumb.wikimedia.org https://upload.wikimedia.org",
       // Шрифты Google
       "font-src 'self' fonts.gstatic.com",
       "media-src 'self' https://vos.olimpiada.ru",
       // API-запросы + запросы рекламы РСЯ
-      "connect-src 'self' formspree.io vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net ip-api.com https://ssynergy.logos.unis.studio wss://ssynergy.logos.unis.studio",
+      "connect-src 'self' vitals.vercel-insights.com mc.yandex.ru yandex.ru *.yandex.ru *.yandex.net ip-api.com",
       // Фреймы рекламы РСЯ (баннеры РСЯ рендерятся в iframe) + карта OpenStreetMap
       "frame-src 'self' yandex.ru *.yandex.ru yastatic.net www.openstreetmap.org openstreetmap.org",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self' formspree.io",
+      "form-action 'self'",
     ].join('; '),
   },
 ];

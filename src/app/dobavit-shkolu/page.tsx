@@ -1,6 +1,14 @@
-import type {Metadata} from 'next'
-import SubmissionWidget from '@/components/school-submissions/SubmissionWidget'
-import {regionSlugs,regionLabels} from '@/data/schools'
-import './submission.css'
-export const metadata:Metadata={title:'Добавить школу в каталог — Про-Скул',description:'Расскажите о вашей школе, загрузите фотографии и отправьте заявку на проверку редакции. Основное размещение бесплатно.',alternates:{canonical:'https://pro-schools.ru/dobavit-shkolu/'}}
-export default function AddSchool(){return <SubmissionWidget mode="form" regions={regionSlugs.map(slug=>({slug,label:regionLabels[slug]}))}/>}
+import Link from 'next/link'
+
+export const metadata = { title: 'Добавить школу в каталог — ProSchools' }
+
+export default function InformationPage() {
+  return <div className="mx-auto max-w-3xl px-4 py-12">
+    <h1 className="text-3xl font-bold">Добавить школу в каталог</h1>
+    <p className="mt-4">Сведения о школе можно направить в редакцию по адресу hello@pro-schools.ru.</p>
+    <nav aria-label="Разделы сайта" className="mt-6 flex flex-wrap gap-5 text-sky-800 underline">
+      <Link href="/shkoly/">Каталог школ</Link>
+      <Link href="/besplatnye-uroki/">Бесплатные уроки</Link>
+    </nav>
+  </div>
+}

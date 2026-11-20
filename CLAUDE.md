@@ -13,12 +13,7 @@ School applications also require `portfolio-school-bridge-prepare.service` and `
 
 - Прод перенесён на чистый VPS `155.212.140.76`: пользователь `portfolio-admin`, ключ `~/.ssh/portfolio_security_20261024`, сервис `portfolio-site@proschools`, релизы `/srv/portfolio/proschools/releases/`, активная ссылка `/srv/portfolio/proschools/current`. Старые разделы ниже о PM2 и выкладке на `45.80.70.209` исторические и больше не применяются. Не передавать секреты на старый сервер.
 - Собирать в GitHub Actions `build-release.yml` на `ubuntu-22.04`; проверять `SOURCE_COMMIT`, SHA256, BUILD_ID и тесты, готовить отдельный релиз и проверять его до переключения ссылки. Не собирать на работающем VPS и не переписывать активную `.next`. Публичные файлы и состояние сохранять; предыдущий релиз нужен для отката и общих зависимостей.
-- По прямому решению Дмитрия 26.10.2026 согласие на ПДн в общих лид-формах предвыбрано (`PDN_DEFAULT_SELECTED`); в общей LeadForm маркетинговая галочка предвыбрана по последнему запросу Дмитрия 26.10; в остальных формах сохраняется прежний default. Снятие ПДн блокирует отправку. Этот выбор интерфейса не считать доказательством отдельного клика пользователя; `form_policy_version` и `pd_default_selected` сохраняются отдельно от версии текста. Согласие на ПДн ведёт на `/soglasie-na-obrabotku-personalnyh-dannyh/`, реклама — на `/soglasie-marketing/`. Политика конфиденциальности не заменяет отдельное согласие.
-- Тексты и версия находятся в `src/lib/lead-consent.ts`. При изменении принятого текста повышать версию; сервер сохраняет свой текст, хеш и время в зашифрованной заявке. Не подменять серверные доказательства данными клиента и не приписывать старым заявкам новую версию.
-- У формы явно указывать реального получателя CRM. Заявка на «Синергию» не должна выглядеть заявкой в другую школу из каталога. B2B-обращения с `crm: false` не передаются школе, но также сохраняются защищённо.
-- Ветка Formspree удалена. Не возвращать зарубежную копию контактов или контакты в Telegram без отдельной правовой и технической оценки. Уведомления содержат номер заявки вместо контактных данных.
-- Перед изменениями обработки данных запускать `node scripts/test-lead-consent.mjs`, TypeScript и проверки лид-форм. Браузерные тесты проверяют предвыбор ПДн, отказ при снятии и оставляют рекламу выключенной; реальные заявки и письма в проверках не создавать.
-- Оператор ProSchools — ИП Герасимов. Договорные роли, уведомления РКН и права на материалы проверяются отдельно; технические исправления не означают полного юридического соответствия.
+- Оператор ProSchools — ИП Герасимов. В действующем согласии на рассылки указан этот оператор. Исторические квитанции и данные сохраняют исходные версии.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -78,7 +73,7 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 
 ### Key integrations
 
-- **Leads**: `/api/leads/submit` → Telegram + CRM Синергии (GraphQL `sendLead`, `src/lib/synergy.ts`) + Formspree (если задан)
+- **Прежние заявки**: `/api/leads/submit/` завершён и возвращает HTTP 410.
 - **Reviews**: GitHub API (fine-grained PAT) — moderation via `/admin/otzyvy`
 - **Analytics**: Yandex Metrika (no GA)
 - **Ads**: Yandex РСЯ — CSP in `next.config.ts` allows their iframes
@@ -88,23 +83,9 @@ Every page exports `Metadata` built via helpers in `src/lib/utils.ts` (`buildTit
 
 `/scripts/` contains Node/Python scripts for offline data enrichment and batch content generation (uses `@anthropic-ai/sdk`). These are run locally, not deployed.
 
-## Лид-формы — ОБЯЗАТЕЛЬНОЕ ПРАВИЛО
+## Информационный сайт и реклама с 20.11.2026
 
-**Любая форма, собирающая имя/телефон (существующая или новая — на любой новой странице,
-поп-апе, баннере, квизе), отправляет заявку ТОЛЬКО через `submitLead()` из `src/lib/submitLead.ts`.**
-Тогда заявка автоматически уходит в Telegram и в CRM Синергии (GraphQL `sendLead`,
-landCode `mo_tilda_online_school`, `utm_source=gerasimov_lav`, школа/город/комментарий
-в `latestComment`, UTM/страница/реферер/ClientID Метрики в `customAttributes`).
-
-- Каждой форме — свой уникальный `source` (это `formTitle` в CRM и подпись в Telegram).
-- Две отдельные галочки согласий: ПДн (обязательная, `/politika-konfidentsialnosti/`)
-  и маркетинг (`/soglasie-marketing/`, по умолчанию выключена); значения передаются как `pd_agreed` / `marketing_agreed`.
-- Маска/валидация телефона — `formatPhone` / `validatePhone` из `src/lib/phone.ts`.
-- B2B-формы (рекламодатели, «разместить школу») — тоже через `submitLead()`, но с `crm: false`.
-- Прямой `fetch('/api/leads/submit')`, Formspree/Tilda/Bitrix в компонентах — запрещены.
-- Гард `scripts/check-lead-forms.sh` (`npm run lint:leads`) запускается в `deploy.sh` перед сборкой
-  и **останавливает деплой**, если файл с `type="tel"` не импортирует `submitLead`.
-- Тест интеграции без dev-сервера: `SYNERGY_GRAPHQL_URL=https://api.school.syndev.ru/graphql npx tsx <скрипт с import './src/lib/synergy'>` из корня проекта.
+ProSchools публикует каталог и учебные материалы. Приём заявок завершён. Использовать информационные ссылки на страницы каталога. Адрес бывшей брендовой карточки сохранён, текущий заголовок «Онлайн-школа». Название и изображения партнёра убраны из редакционного контента. Рекламные объявления, которые подбирает РСЯ, доступны без блокировки этого рекламодателя. Её прежние внешние ссылки, формы, баннеры и интеграция отключены. РСЯ подключена к общим публичным шаблонам, для статических разделов используется site-navigation/information.js. Перед выпуском проверять закрытый адрес заявок, отсутствие форм и партнёрских ссылок, сохранность URL и отсутствие повторного вызова рекламных блоков.
 
 ## Deploy (VPS Бегет)
 

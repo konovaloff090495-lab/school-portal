@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from 'next/script';
 import { Inter, Unbounded, Manrope } from "next/font/google";
 import "./globals.css";
+import SiteAds from "@/components/SiteAds";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GrowthFunnelTracking from '@/components/GrowthFunnelTracking';
@@ -10,7 +11,6 @@ import YandexRTB from "@/components/YandexRTB";
 import ScrollToTop from "@/components/ScrollToTop";
 import NavigationRuntime from "@/components/NavigationRuntime";
 import "../../public/site-navigation/navigation.css";
-import LogosChatWidget from "@/components/LogosChatWidget";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], preload: false });
 const unbounded = Unbounded({
@@ -70,10 +70,11 @@ export default function RootLayout({
         <YandexRTB />
         <Header />
         <NavigationRuntime />
+        <SiteAds placement="early" />
         <main id="main">{children}</main>
+        <SiteAds placement="lower" />
         <Footer />
         <ScrollToTop />
-        <LogosChatWidget />
       </body>
     </html>
   );

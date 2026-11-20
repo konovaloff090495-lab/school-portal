@@ -25,7 +25,8 @@ try {
     assert.equal(r.status,200,row.slug)
     assert.equal((html.match(/<h1\b/g)||[]).length,1,row.slug)
     assert.ok(html.includes(row.name.replaceAll('«','&laquo;')) || html.includes(row.name) || html.includes(row.slug),row.slug)
-    assert.match(html,/school-card-form/)
+    assert.doesNotMatch(html,/school-card-form|data-growth-form=/)
+    assert.match(html,/data-ps-native-ads="early"/)
     checked++
   }
   for(const region of new Set(registry.map(r=>r.region))) {

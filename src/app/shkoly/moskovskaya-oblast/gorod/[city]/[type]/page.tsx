@@ -6,7 +6,6 @@ import RelatedSchools from '@/components/RelatedSchools'
 import { relatedForMoCityType, TYPE_TO_FEATURE, TYPE_FULL_NAME } from '@/lib/related-schools'
 import familyGeography from '@/data/family-geography.json'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import Link from 'next/link'
 
@@ -150,7 +149,6 @@ export default async function MoCityTypePage({ params }: Props) {
       seoContent={t === 'semejnye' ? <>
         <p className="mb-5 text-sm"><Link className="text-sky-700 hover:underline" href="/shkoly/tipy/semejnye/">Семейные школы по городам России</Link> · <Link className="text-sky-700 hover:underline" href="/shkoly/moskovskaya-oblast/semejnye/">Все школы Московской области</Link></p>
         {city === 'dmitrov' && <section className="mb-6"><h2 className="text-xl font-bold mb-3">Рядом с Дмитровом</h2><p>Семейная школа <Link className="text-sky-700 hover:underline" href="/shkola/semejnaya-shkola-goodwin-rybnoe/">«ГУДВИН»</Link> находится в посёлке Рыбное, д. 37. Школа указывает примерно 20 минут пути от Дмитрова и предлагает трансфер.</p></section>}
-        <OnlineLeadCta source={`Семейные школы: город МО ${cityLabel}`} city={cityLabel} heading={`Семейное обучение ${locative}: подберём школу для прикрепления`} text="Поможем выбрать онлайн-школу по классу и формату занятий, разобраться с прикреплением и аттестацией." />
         <OnlineBrandsTable title={`Онлайн-школы для семейного обучения ${locative}`} compact />
       </> : undefined}
     />

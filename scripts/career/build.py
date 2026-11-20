@@ -6,7 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'work/career/release';AS=OUT/'career-assets'
-VERSION='20261106.2';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
+VERSION='20261120.1';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
 E=lambda x:html.escape(str(x),quote=True)
 def load():
  global chrome,P
@@ -86,7 +86,7 @@ def hub_body(p):
  head+='<section><h2>Уже знакомы с прежними тестами?</h2><p><a href="/test/">Прежний тест на профориентацию</a> и <a href="/test/extended/">расширенный тест</a> остаются доступны по своим адресам.</p></section>'
  return head
 
-def testbody():return '''<div class="test-top"><a href="/proforientaciya/" class="text-link">← К материалам</a><span>Авторский опрос интересов ProSchools</span><button class="text-button" data-clear type="button">Начать заново</button></div><section class="test-shell"><aside class="test-aside"><p class="eyebrow">ЗНАКОМСТВО С СОБОЙ</p><h2>Здесь нет<br>правильных<br>ответов.</h2><p>Отвечает школьник. Выбирайте то, что интересно сейчас, а не то, что получается лучше всего.</p><div class="small-card"><b>Ещё не пробовал?</b><p>«Не знаю» — тоже ответ. Результат поможет выбрать новые пробы.</p></div><p class="micro">24 вопроса. После ответов email совершеннолетнего родителя или участника 18 лет откроет полный результат. Это оригинальный опрос, а не диагностическая методика Климова или Холланда. Психометрическая валидность не проверялась.</p></aside><div class="question-panel ym-disable-keys" id="test-content" tabindex="-1"><h1>Карта интересов</h1><p role="status">Загружаем вопросы…</p><noscript>Для прохождения опроса нужен JavaScript.</noscript></div></section>'''
+def testbody():return '''<div class="test-top"><a href="/proforientaciya/" class="text-link">← К материалам</a><span>Авторский опрос интересов ProSchools</span><button class="text-button" data-clear type="button">Начать заново</button></div><section class="test-shell"><aside class="test-aside"><p class="eyebrow">ЗНАКОМСТВО С СОБОЙ</p><h2>Здесь нет<br>правильных<br>ответов.</h2><p>Отвечает школьник. Выбирайте то, что интересно сейчас, а не то, что получается лучше всего.</p><div class="small-card"><b>Ещё не пробовал?</b><p>«Не знаю» — тоже ответ. Результат поможет выбрать новые пробы.</p></div><p class="micro">24 вопроса. После ответов результат откроется в этой вкладке. Это оригинальный опрос, а не диагностическая методика Климова или Холланда. Психометрическая валидность не проверялась.</p></aside><div class="question-panel ym-disable-keys" id="test-content" tabindex="-1"><h1>Карта интересов</h1><p role="status">Загружаем вопросы…</p><noscript>Для прохождения опроса нужен JavaScript.</noscript></div></section>'''
 def build():
  load();AS.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/'scripts/career/style.css',AS/'style.css');shutil.copy2(ROOT/'content/career/questions.json',AS/'questions.json')
  worksheets=ROOT/'content/career/worksheets'
@@ -99,7 +99,7 @@ def build():
  legal_path=ROOT/'content/career/legal-pages.json'
  if legal_path.exists():pageinfo.extend(render(p) for p in json.loads(legal_path.read_text()))
  save(TEST,doc('Карта интересов для школьников — 24 вопроса | ProSchools','Авторский опрос интересов: первые пробы и направления для исследования. Не определяет способности и профессию.',TEST,testbody(),True))
- save(RESULT,doc('Результат карты интересов | ProSchools','Личная карта интересов и план первых проб.',RESULT,'<div id="result-content" class="ym-disable-keys"><h1>Результат карты интересов</h1><p role="status">Проверяем доступ к результату…</p></div><dialog id="partner-dialog" aria-labelledby="partner-title"><button class="dialog-close" data-close aria-label="Закрыть" type="button">×</button><div id="partner-content"></div></dialog><div class="toast" hidden role="status"></div>',True))
+ save(RESULT,doc('Результат карты интересов | ProSchools','Личная карта интересов и план первых проб.',RESULT,'<div id="result-content" class="ym-disable-keys"><h1>Результат карты интересов</h1><p role="status">Проверяем доступ к результату…</p></div><div class="toast" hidden role="status"></div>',True))
  paths=[p['path'] for p in pageinfo if not p['preserved_original'] and not p.get('noindex')];assert len(paths)==len(set(paths));assert TEST not in paths and RESULT not in paths
  (OUT/'sitemap-career.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+SITE+x+'</loc><lastmod>2026-11-06</lastmod></url>' for x in paths)+'</urlset>')
  manifest={'version':VERSION,'navigation_version':chrome['version'],'pages':paths,'support_pages':[TEST,RESULT]+[p['path'] for p in pageinfo if p.get('noindex')],'existing_blog_updates':[p['path'] for p in pageinfo if p['preserved_original']],'preservation':pageinfo,'files':[{'path':str(f.relative_to(OUT)),'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'bytes':f.stat().st_size} for f in OUT.rglob('*') if f.is_file()]}

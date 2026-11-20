@@ -4,7 +4,6 @@ import { getSchoolsByType } from '@/data/schools'
 import SchoolCard from '@/components/SchoolCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 
 const TITLE = 'Семейная школа онлайн'
 const DESC  = 'Онлайн семейные школы России — дистанционное семейное обучение с поддержкой педагогов. Аттестация, гибкий график, обучение из любого города.'
@@ -33,7 +32,6 @@ export default function SemejnyeOnlinePage() {
       <h2 className="text-xl font-bold mb-4">Ещё дистанционные проекты семейного обучения</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">{remoteSchools.map(school => <SchoolCard key={school.id} school={school} />)}</div>
     </section>}
-    <OnlineLeadCta source="Семейные школы: онлайн" />
     <section className="mt-8">
       <h2 className="text-xl font-bold mb-3">Что уточнить перед поступлением</h2>
       <p>Узнайте, есть ли живые уроки, как проверяют задания, кто помогает ребёнку с расписанием, какие услуги входят в тариф и какая школа организует аттестации. Условия зачисления и доступность выбранного класса уточняйте на странице конкретной программы.</p>

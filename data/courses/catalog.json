@@ -3460,7 +3460,7 @@
     "id": "synergy-podgotovka-k-shkole-82655",
     "title": "Подготовка к школе онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "podgotovka-k-shkole",
     "tags": [
       "podgotovka-k-shkole"
@@ -3508,14 +3508,14 @@
       ]
     ],
     "summary": "",
-    "editorialDescription": "Индивидуальная подготовка Synergy Kids объединяет математику, чтение и речь, письмо и знакомство с окружающим миром. Для детей 4–7 лет предусмотрены три траектории: на два года, один год или три месяца. Они включают соответственно 144, 72 и 36 уроков. Занятие длится 45 минут; подходящую программу подбирают с учётом времени до школы и текущих навыков.",
+    "editorialDescription": "Индивидуальная подготовка начальные онлайн-классы объединяет математику, чтение и речь, письмо и знакомство с окружающим миром. Для детей 4–7 лет предусмотрены три траектории: на два года, один год или три месяца. Они включают соответственно 144, 72 и 36 уроков. Занятие длится 45 минут; подходящую программу подбирают с учётом времени до школы и текущих навыков.",
     "editorialCheckedAt": "2026-10-19"
   },
   {
     "id": "synergy-matematika-7b2b4",
     "title": "Математика для 1–4 классов онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "matematika",
     "tags": [
       "matematika"
@@ -3572,7 +3572,7 @@
     "id": "synergy-russkiy-yazyk-67ad8",
     "title": "Русский язык для 2–4 классов онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "russkiy",
     "tags": [
       "russkiy"
@@ -3628,7 +3628,7 @@
     "id": "synergy-angliyskiy-yazyk-167f6",
     "title": "Английский язык для 1–4 классов онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "angliyskiy",
     "tags": [
       "angliyskiy"
@@ -3683,7 +3683,7 @@
     "id": "synergy-chtenie-b6fed",
     "title": "Курсы чтения для детей 4–11 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "chtenie",
     "tags": [
       "chtenie"
@@ -3727,7 +3727,7 @@
     "id": "synergy-domashnee-zadanie-88b57",
     "title": "Помощь с домашним заданием для 1–4 классов",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "shkolnye-predmety",
     "tags": [
       "shkolnye-predmety"
@@ -3763,7 +3763,7 @@
     "id": "synergy-triz-416da",
     "title": "Изобретательство (ТРИЗ) для детей 5–11 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "logika",
     "tags": [
       "logika"
@@ -3807,7 +3807,7 @@
     "id": "synergy-stem-6cb2c",
     "title": "STEM: наука, технологии, инженерия и математика",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "matematika",
     "tags": [
       "matematika"
@@ -3854,7 +3854,7 @@
     "id": "synergy-angliyskiy-dlya-doshkolnikov-78ad5",
     "title": "Английский язык для дошкольников онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "angliyskiy",
     "tags": [
       "angliyskiy"
@@ -3893,7 +3893,7 @@
     "id": "synergy-matematika-dlya-doshkolnikov-32ce3",
     "title": "Математика для дошкольников онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "matematika",
     "tags": [
       "matematika"
@@ -3937,7 +3937,7 @@
     "id": "synergy-angliyskiy-5-6-klass-66698",
     "title": "Английский язык для 5–6 классов онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "angliyskiy",
     "tags": [
       "angliyskiy"
@@ -3992,7 +3992,7 @@
     "id": "synergy-gibkie-navyki-76669",
     "title": "Развитие гибких навыков: годовая программа",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills"
@@ -4024,7 +4024,7 @@
     "id": "synergy-shkola-bez-stressa-ac7b5",
     "title": "Школа без стресса: курс для 1–5 классов",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills"
@@ -4059,7 +4059,7 @@
     "id": "synergy-finansovaya-gramotnost-c5a14",
     "title": "Финансовая грамотность для детей 11–13 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "finansovaya-gramotnost",
     "tags": [
       "finansovaya-gramotnost",
@@ -4095,7 +4095,7 @@
     "id": "synergy-bloging-b5d45",
     "title": "Блогинг для детей 10–13 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "videomontazh",
     "tags": [
       "videomontazh",
@@ -4132,7 +4132,7 @@
     "id": "synergy-lyudi-v-hudi-40008",
     "title": "Люди в худи: клуб для подростков 10–15 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills"
@@ -4166,7 +4166,7 @@
     "id": "synergy-matematika-9b9fa",
     "title": "Подготовка к ЕГЭ по математике онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4191,7 +4191,7 @@
     "id": "synergy-russkiy-yazyk-cfa54",
     "title": "Подготовка к ЕГЭ по русскому языку онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4216,7 +4216,7 @@
     "id": "synergy-fizika-1fd26",
     "title": "Подготовка к ЕГЭ по физике онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4241,7 +4241,7 @@
     "id": "synergy-angliyskiy-yazyk-00067",
     "title": "Подготовка к ЕГЭ по английскому языку онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4266,7 +4266,7 @@
     "id": "synergy-himiya-71d85",
     "title": "Подготовка к ЕГЭ по химии онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4291,7 +4291,7 @@
     "id": "synergy-biologiya-9292a",
     "title": "Подготовка к ЕГЭ по биологии онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4316,7 +4316,7 @@
     "id": "synergy-informatika-34a61",
     "title": "Подготовка к ЕГЭ по информатике онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4346,7 +4346,7 @@
     "id": "synergy-istoriya-08108",
     "title": "Подготовка к ЕГЭ по истории онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4371,7 +4371,7 @@
     "id": "synergy-obshchestvoznanie-0d179",
     "title": "Подготовка к ЕГЭ по обществознанию онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4396,7 +4396,7 @@
     "id": "synergy-literatura-d3911",
     "title": "Подготовка к ЕГЭ по литературе онлайн",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "ege",
     "tags": [
       "ege",
@@ -4421,7 +4421,7 @@
     "id": "synergy-matematika-5ccb8",
     "title": "Подготовка к ОГЭ по математике онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4446,7 +4446,7 @@
     "id": "synergy-russkiy-yazyk-a99d0",
     "title": "Подготовка к ОГЭ по русскому языку онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4471,7 +4471,7 @@
     "id": "synergy-fizika-677e9",
     "title": "Подготовка к ОГЭ по физике онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4496,7 +4496,7 @@
     "id": "synergy-angliyskiy-yazyk-4c8d7",
     "title": "Подготовка к ОГЭ по английскому языку онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4521,7 +4521,7 @@
     "id": "synergy-himiya-11621",
     "title": "Подготовка к ОГЭ по химии онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4546,7 +4546,7 @@
     "id": "synergy-biologiya-f1b73",
     "title": "Подготовка к ОГЭ по биологии онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4571,7 +4571,7 @@
     "id": "synergy-informatika-f355c",
     "title": "Подготовка к ОГЭ по информатике онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4601,7 +4601,7 @@
     "id": "synergy-istoriya-719a4",
     "title": "Подготовка к ОГЭ по истории онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4626,7 +4626,7 @@
     "id": "synergy-obshchestvoznanie-0cf41",
     "title": "Подготовка к ОГЭ по обществознанию онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4651,7 +4651,7 @@
     "id": "synergy-geografiya-3d217",
     "title": "Подготовка к ОГЭ по географии онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4676,7 +4676,7 @@
     "id": "synergy-literatura-0383b",
     "title": "Подготовка к ОГЭ по литературе онлайн, 9 класс",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "oge",
     "tags": [
       "oge",
@@ -4701,7 +4701,7 @@
     "id": "synergy-internet-marketing-3536c",
     "title": "Интернет-маркетинг: продвигаем бренд, а не пересказываем теорию",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills",
@@ -4731,7 +4731,7 @@
     "id": "synergy-bloging-dlya-podrostkov-5fcd4",
     "title": "Блогинг для подростков: осваиваем базу без риска и стресса",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "videomontazh",
     "tags": [
       "videomontazh",
@@ -4762,7 +4762,7 @@
     "id": "synergy-zhurnalistika-i-novye-media-021a4",
     "title": "Журналистика и новые медиа: от репортажа до личного блога",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills",
@@ -4795,7 +4795,7 @@
     "id": "synergy-pravovoy-kompas-c84bf",
     "title": "Правовой компас: разбираемся в законах на реальных кейсах",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills"
@@ -4827,7 +4827,7 @@
     "id": "synergy-finansovaya-gramotnost-0264d",
     "title": "Финансовая грамотность: от карманных денег до инвестиций",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "finansovaya-gramotnost",
     "tags": [
       "finansovaya-gramotnost"
@@ -4860,7 +4860,7 @@
     "id": "synergy-startap-s-nulya-63e4d",
     "title": "Стартап с нуля: от идеи до запуска своего дела",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills",
@@ -4893,7 +4893,7 @@
     "id": "synergy-angliyskiy-yazyk-ne-kak-v-shkole-e42ed",
     "title": "Английский язык «не как в школе»: курс перевода и живого языка для подростков",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "angliyskiy",
     "tags": [
       "angliyskiy"
@@ -4924,7 +4924,7 @@
     "id": "synergy-osnovy-psihologii-7e179",
     "title": "Основы психологии: курс для подростков о себе, эмоциях и общении",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills",
@@ -4957,7 +4957,7 @@
     "id": "synergy-shahmaty-s-nulya-do-pervyh-pobed-d83b2",
     "title": "ChessUp! шахматы: от первого хода до первой победы",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "shahmaty",
     "tags": [
       "shahmaty"
@@ -4989,7 +4989,7 @@
     "id": "synergy-iskusstvennyy-intellekt-pervyy-shag-v-buduschee-b4845",
     "title": "Искусственный интеллект: первый шаг в будущее — курс по нейросетям для подростков",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt"
@@ -5021,7 +5021,7 @@
     "id": "synergy-neirostart-cifrovoe-tvorchestvo-7ad17",
     "title": "Нейростарт — учим школьников создавать тексты, картинки и видео с ии",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt",
@@ -5057,7 +5057,7 @@
     "id": "synergy-sozdanie-koda-s-pomoschyu-neyrosetey-4ebe1",
     "title": "Вайб-кодинг для школьников: создавай сайты и telegram-ботов с ии",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "web-razrabotka",
     "tags": [
       "web-razrabotka",
@@ -5091,7 +5091,7 @@
     "id": "synergy-sozdanie-igr-s-pomoschyu-neyrosetey-c94ee",
     "title": "Создай свою первую игру с помощью нейросетей: от идеи до релиза",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt"
@@ -5122,7 +5122,7 @@
     "id": "synergy-sozdanie-prilozheniy-ot-idei-do-prototipa-862a0",
     "title": "Создание приложений: от идеи до прототипа — курс no-code разработки для подростков",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "mobilnye-prilozheniya",
     "tags": [
       "mobilnye-prilozheniya"
@@ -5154,7 +5154,7 @@
     "id": "synergy-graficheskiy-dizayn-v-figma-c880d",
     "title": "Графический дизайн в Figma: курс веб-дизайна для подростков",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "dizayn",
     "tags": [
       "dizayn"
@@ -5190,7 +5190,7 @@
     "id": "synergy-dizayn-saytov-na-tilda-fad80",
     "title": "Дизайн сайтов на Tilda: курс веб-дизайна «под ключ» для подростков",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "web-razrabotka",
     "tags": [
       "web-razrabotka",
@@ -5228,7 +5228,7 @@
     "id": "synergy-multiplikatsiya-personazha-3e3fa",
     "title": "Создай своего анимационного персонажа: от эскиза до готового мультфильма",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "risovanie",
     "tags": [
       "risovanie",
@@ -5268,7 +5268,7 @@
     "id": "synergy-robototehnika-ot-idei-do-prototipa-42ef9",
     "title": "От идеи до прототипа: собери и запрограммируй своего первого робота",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "programmirovanie",
     "tags": [
       "programmirovanie"
@@ -5300,7 +5300,7 @@
     "id": "synergy-igray-i-sozdavay-b225b",
     "title": "Играй и создавай: первая игра ребёнка на Godot с помощью ИИ",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "unity",
     "tags": [
       "unity",
@@ -5338,7 +5338,7 @@
     "id": "synergy-vaybkoding-74af1",
     "title": "Вайбкодинг: программируй с помощью ИИ",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt",
@@ -5375,7 +5375,7 @@
     "id": "synergy-dizayn-s-ii-6daa5",
     "title": "Дизайн с ИИ: от идеи до готовых проектов",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt",
@@ -5404,7 +5404,7 @@
     "id": "synergy-uchim-uchitsya-s-ii-6066b",
     "title": "Учим учиться с ИИ: помощник в любом предмете",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "iskusstvennyy-intellekt",
     "tags": [
       "iskusstvennyy-intellekt",
@@ -5437,7 +5437,7 @@
     "id": "synergy-navyki-budushchego-f7e6d",
     "title": "Навыки будущего: от общения до фриланса",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "soft-skills",
     "tags": [
       "soft-skills",
@@ -5462,7 +5462,7 @@
     "id": "synergy-sozdatel-mirov-6-9-let-0b159",
     "title": "Создатель интерактивных миров: программирование для детей 6–9 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "programmirovanie",
     "tags": [
       "programmirovanie"
@@ -5494,7 +5494,7 @@
     "id": "synergy-sozdatel-mirov-10-17-let-f36d0",
     "title": "Создатель интерактивных миров: геймдев для подростков 10–17 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "programmirovanie",
     "tags": [
       "programmirovanie"
@@ -5526,7 +5526,7 @@
     "id": "synergy-hudozhnik-6-9-let-2371b",
     "title": "Художник в мире технологий: цифровое творчество для детей 6–9 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "programmirovanie",
     "tags": [
       "programmirovanie"
@@ -5558,7 +5558,7 @@
     "id": "synergy-hudozhnik-10-17-let-7e9c1",
     "title": "Художник в мире технологий: дизайн для подростков 10–17 лет",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "dizayn",
     "tags": [
       "dizayn",
@@ -5591,7 +5591,7 @@
     "id": "synergy-fullstack-razrabotchik-84bc4",
     "title": "fullstack разработчик: от Python до собственного веб-сервиса",
     "brandId": "synergy",
-    "brand": "Синергия",
+    "brand": "Онлайн-школа",
     "category": "python",
     "tags": [
       "python",

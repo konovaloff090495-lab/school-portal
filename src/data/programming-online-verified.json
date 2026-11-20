@@ -28,15 +28,15 @@
     },
     {
       "id": "synergy",
-      "name": "Синергия",
+      "name": "Онлайн-школа",
       "website": "https://school-university.com/kursy-dlya-detey/robototehnika-ot-idei-do-prototipa/",
       "sourceUrl": "https://school-university.com/kursy-dlya-detey/robototehnika-ot-idei-do-prototipa/",
       "checkedAt": "2026-10-19",
       "ageRange": null,
       "format": "Онлайн; формат зависит от программы",
-      "description": "Синергия: проверенный онлайн-формат. Направления и условия смотрите в карточке конкретной программы.",
+      "description": "Онлайн-школа: проверенный онлайн-формат. Направления и условия смотрите в карточке конкретной программы.",
       "aliases": [
-        "Школа Синергия"
+        "Школа Онлайн-школа"
       ],
       "topics": [
         "informatika",

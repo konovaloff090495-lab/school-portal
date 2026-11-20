@@ -1,7 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFileSync, mkdtempSync, rmSync } from 'node:fs'
-import { tmpdir } from 'node:os'
-import { join } from 'node:path'
+import { readFileSync } from 'node:fs'
 import { createJiti } from '../../node_modules/jiti/lib/jiti.mjs'
 
 const jiti = createJiti(import.meta.url)
@@ -53,32 +51,4 @@ delete globalThis.window
 delete globalThis.document
 delete globalThis.sessionStorage
 
-// Mock the transport: no requests, emails or CRM test leads leave this process.
-const nativeFetch = globalThis.fetch
-let received
-globalThis.fetch = async (_url, options) => {
-  received = JSON.parse(options.body).variables
-  return Response.json({ data: { sendLead: { success: true, lead: { id: 'test-crm-id' } } } })
-}
-const { sendLeadToSynergy } = await jiti.import('../../src/lib/synergy.ts')
-const input = { name: 'Test', phone: '+79001234568', formTitle: 'Evening test', formId: 'evening-v1', product: 'attestat-online', pageUrl: 'https://pro-schools.ru/attestat-vzroslomu/?goal=9', landingUrl: context.landing_url, firstReferrer: context.first_referrer, personalDataAgree: true, marketingAgree: false }
-assert.equal((await sendLeadToSynergy(input)).ok, true)
-assert.equal(received.utmData.utm_source, 'gerasimov_lav')
-assert.equal(received.utmData.utm_content, '/attestat-vzroslomu/')
-assert.equal(received.customAttributes.landing_url, context.landing_url)
-assert.equal(received.customAttributes.form_id, 'evening-v1')
-await sendLeadToSynergy({ ...input, utm: { utm_source: 'yandex', utm_content: 'visitor-content' } })
-assert.equal(received.utmData.utm_content, 'visitor-content')
-assert.equal(received.customAttributes.original_utm.utm_source, 'yandex')
-globalThis.fetch = nativeFetch
-
-const temp = mkdtempSync(join(tmpdir(), 'ps-lead-check-'))
-process.env.LEAD_JOURNAL_PATH = join(temp, 'journal.jsonl')
-try {
-  const { recordLeadSubmission } = await jiti.import('../../src/lib/lead-journal.ts')
-  await recordLeadSubmission({ page_url: input.pageUrl, landing_url: input.landingUrl, form_id: input.formId }, { status: 'accepted', id: 'test-crm-id' })
-  const entry = JSON.parse(readFileSync(process.env.LEAD_JOURNAL_PATH, 'utf8').trim())
-  assert.equal(entry.crm.id, 'test-crm-id')
-  assert.equal(entry.landing_url, undefined, 'Receipt journal must not retain visitor data')
-} finally { rmSync(temp, { recursive: true, force: true }) }
-console.log('Passed: class coverage, first-entry attribution, UTM preservation, CRM mapping and private receipt')
+console.log('Passed: class coverage, first-entry attribution and UTM preservation')

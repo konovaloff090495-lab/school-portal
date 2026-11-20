@@ -6,7 +6,6 @@ import { onlineBrands } from '@/data/online-brands'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import CatalogClient from '../../CatalogClient'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 
 /**
  * /shkoly/<город>/online/ — онлайн-школы для жителей города.
@@ -70,7 +69,7 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
         ]}
         seoContent={<div className="mt-10 space-y-6">
         <p style={{ fontSize: 16.5, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 22px', maxWidth: 860 }}>
-          Онлайн-школа не привязана к городу: ребёнок {regionIn} учится в той же Фоксфорд, ИнтернетУрок или Синергии,
+          Онлайн-школа не привязана к городу: ребёнок {regionIn} учится в той же Фоксфорд, ИнтернетУрок или онлайн-школы,
           что и ученик из Москвы, а аттестат получает такой же — государственного образца.
           {local.length > 0
             ? ` Ниже сначала ${local.length === 1 ? 'местная онлайн-школа' : `${local.length} ${schoolsWord(local.length)}`} ${regionIn}, затем федеральные.`
@@ -81,13 +80,6 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
         <OnlineBrandsTable
           title={`Какую онлайн-школу выбрать ${regionIn}: сравнение цен и аттестации`}
           intro={`В таблице — федеральные онлайн-школы. Собственная аккредитация — у ${own.map(b => b.name).join(', ')}: они зачисляют ребёнка к себе и сами выдают аттестат. Остальные оформляют аттестат через школу-партнёра.`}
-        />
-
-        <OnlineLeadCta
-          source={`Онлайн-школы: город ${regionName}`}
-          heading={`Условия платной онлайн-программы Синергии ${regionIn}`}
-          text={`Для сравнения школ используйте таблицу и официальные сайты. Заявка из этой формы поступит консультанту Синергии: укажите класс, задачу и удобное время звонка. Документы, полную стоимость и место экзаменов уточните до договора.`}
-          city={regionName}
         />
 
         <h2 style={{ fontSize: 22, fontWeight: 800, margin: '8px 0 12px' }}>Как перевести ребёнка {regionIn} на онлайн-обучение</h2>

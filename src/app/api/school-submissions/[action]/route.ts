@@ -1,14 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import {publishedSchools} from '@/lib/school-submissions/catalog'
-import { randomBytes } from 'node:crypto'
-import { mkdir, writeFile, unlink } from 'node:fs/promises'
-import path from 'node:path'
-import sharp from 'sharp'
 import { revalidatePath } from 'next/cache'
-import { submissions, SubmissionError, storeDirectory, wakeSchoolModerator } from '@/lib/school-submissions/store'
+import { submissions, SubmissionError, wakeSchoolModerator } from '@/lib/school-submissions/store'
 import { checkOrigin, owner, requireAdmin, sameSecret, adminSession, ipHash, validId } from '@/lib/school-submissions/auth'
-import { validateSubmission } from '@/lib/school-submissions/validate'
-import type { SchoolApplication, SubmissionPhoto, SubmissionReceipt } from '@/lib/school-submissions/types'
+import type { SchoolApplication, SubmissionReceipt } from '@/lib/school-submissions/types'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 type Context = { params: Promise<{action:string}> }
@@ -32,7 +27,6 @@ export async function GET(req:NextRequest,{params}:Context) {
  }catch(error){return failure(error)}
 }
 export async function POST(req:NextRequest,{params}:Context) {
- const newFiles:string[]=[]
  try {
   const {action}=await params
   if(action==='unsubscribe') {
@@ -41,45 +35,7 @@ export async function POST(req:NextRequest,{params}:Context) {
    await submissions('unsubscribe',{id,token});return new NextResponse('<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Готово</title><body style="font:16px sans-serif;background:#fff8f0;padding:40px"><h1>Вы отписаны от рассылки</h1><p>Письма со статусами заявки продолжат приходить.</p></body></html>',{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Referrer-Policy':'no-referrer'}})
   }
   checkOrigin(req)
-  if(action==='submit') {
-   await submissions('rate',{key:'upload:'+ipHash(req),cap:30,window:3600})
-   if(Number(req.headers.get('content-length')||0)>45*1024*1024)throw new SubmissionError('Файлы слишком большие',413)
-   const form=await req.formData()
-   const rawText=form.get('payload');if(typeof rawText!=='string'||rawText.length>24000)throw new SubmissionError('Некорректная заявка')
-   let payload;try{payload=JSON.parse(rawText)}catch{throw new SubmissionError('Некорректная заявка')}
-   if(!payload||typeof payload!=='object'||!payload.data||typeof payload.data!=='object')throw new SubmissionError('Некорректная заявка')
-   if(payload.website_check)throw new SubmissionError('Не удалось отправить форму')
-   const data=validateSubmission(payload.data)
-   let auth: {id:string;token:string}|undefined, previous:SchoolApplication|undefined
-   if(payload.id){auth=owner(req);if(auth.id!==payload.id)throw new SubmissionError('Недействительная ссылка',403);previous=await submissions<SchoolApplication>('get',auth)}
-   const id=auth?.id||randomBytes(16).toString('hex')
-   const specs=payload.photos
-   if(!Array.isArray(specs)||specs.length>8)throw new SubmissionError('Можно добавить до 8 фотографий')
-   const photos:SubmissionPhoto[]=[]
-   for(let i=0;i<specs.length;i++) {
-    const spec=specs[i];if(typeof spec.caption!=='string'||spec.caption.length>160)throw new SubmissionError('Проверьте подпись фото')
-    const uploaded=form.get('photo_'+i)
-    if(uploaded instanceof File) {
-     if(uploaded.size>5*1024*1024||!['image/jpeg','image/png','image/webp'].includes(uploaded.type))throw new SubmissionError('Фото: JPG, PNG или WebP, до 5 МБ после обработки')
-     const source=Buffer.from(await uploaded.arrayBuffer())
-     const processor=sharp(source,{limitInputPixels:40_000_000,animated:false,failOn:'error'})
-     const info=await processor.metadata()
-     if(!['jpeg','png','webp'].includes(info.format||'')||!info.width||!info.height)throw new SubmissionError('Не удалось прочитать фото')
-     const image=await processor.rotate().resize({width:1800,height:1400,fit:'inside',withoutEnlargement:true}).jpeg({quality:86}).toBuffer()
-     const file=randomBytes(16).toString('hex')+'.jpg',dir=path.join(storeDirectory,'photos',id)
-     await mkdir(dir,{recursive:true,mode:0o700});const destination=path.join(dir,file);await writeFile(destination,image,{mode:0o600});newFiles.push(destination);photos.push({file,caption:spec.caption.trim()})
-    } else {
-     if(!previous?.photos.some(p=>p.file===spec.file))throw new SubmissionError('Загрузите фотографии заново')
-     photos.push({file:spec.file,caption:spec.caption.trim()})
-    }
-   }
-   if(new Set(photos.map(p=>p.file)).size!==photos.length)throw new SubmissionError('Удалите дубли фотографий')
-   if(typeof payload.request_id!=='string'||!/^[a-f0-9-]{20,60}$/i.test(payload.request_id))throw new SubmissionError('Обновите страницу и повторите отправку')
-   const receipt=await submissions<SubmissionReceipt>(auth?'resubmit':'create',{id,...auth,request_id:payload.request_id,data,photos,ip:ipHash(req)})
-   if(receipt.id!==id)await Promise.all(newFiles.map(f=>unlink(f).catch(()=>{})))
-   if(auth)wakeSchoolModerator()
-   return setOwner(json(receipt),receipt)
-  }
+  if(action==='submit'||action==='subscribe')return json({error:'Приём заявок завершён'},410)
   if(Number(req.headers.get('content-length')||0)>10000)throw new SubmissionError('Запрос слишком большой',413)
   const body=await req.json()
   if(action==='admin-login') {
@@ -99,10 +55,10 @@ export async function POST(req:NextRequest,{params}:Context) {
   }
   const auth=owner(req)
   if(action==='access'){const result=await submissions<SchoolApplication>('get',auth);return setOwner(json(result),auth)}
-  if(!['confirm','resend','feedback','subscribe'].includes(action))throw new SubmissionError('Неизвестное действие')
+  if(!['confirm','resend','feedback'].includes(action))throw new SubmissionError('Неизвестное действие')
   const before=action==='confirm'?await submissions<SchoolApplication>('get',auth):undefined
   const result=await submissions(action,{...body,...auth})
   if(action==='confirm'&&before?.status==='unconfirmed')wakeSchoolModerator()
   return json(result)
- }catch(error){await Promise.all(newFiles.map(f=>unlink(f).catch(()=>{})));return failure(error)}
+ }catch(error){return failure(error)}
 }

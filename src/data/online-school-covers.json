@@ -16,12 +16,9 @@
   },
   "onlain-shkola-sinergiya-moskva": {
     "fallbackSrc": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat-roditelyam.webp",
-    "src": "/schools/online-covers-20261026/onlain-shkola-sinergiya-moskva.webp",
-    "kind": "official",
-    "checkedAt": "2026-10-26",
-    "website": "https://schooluniversity.ru/",
-    "sourceUrl": "https://static.tildacdn.com/tild3166-3865-4138-b039-636437313233/photo.png",
-    "sha256": "cc01246b6ff2047529a0c9a89c2f279a165160b8c2cf86166bef580ea31b8f02"
+    "src": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat-roditelyam.webp",
+    "kind": "illustration",
+    "sha256": "1926f8317cf21f8e07a753d252ece00e418d2ecfac94524d52941a9982729e79"
   },
   "onlajn-shkola-onlajn-gimnaziya-1": {
     "fallbackSrc": "/blog/images/editorial-20261021/bulling-v-shkole-chto-delat.webp",

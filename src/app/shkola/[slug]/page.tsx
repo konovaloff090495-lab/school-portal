@@ -9,7 +9,6 @@ import {
 } from '@/data/schools'
 import { getTypeColor, getTypeBorderColor, typeNoun } from '@/lib/utils'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import LeadForm from '@/components/LeadForm'
 import SchoolCard from '@/components/SchoolCard'
 import SchoolPageGallery from '@/components/SchoolPageGallery'
 import SchoolMatchModal from '@/components/SchoolMatchModal'
@@ -71,7 +70,7 @@ function generateFaq(school: ReturnType<typeof getSchoolBySlug> & object) {
     q: `Как ${enrollVerb} в ${school.name}?`,
     a: school.website
       ? `Оставьте заявку на официальном сайте школы (${school.website.replace(/^https?:\/\//, '')})${school.phone ? ` или позвоните ${callTo}` : ''}. Приёмная комиссия ответит на все вопросы и назначит собеседование.`
-      : `${callImperative}. Уточните наличие мест, возраст и документы для поступления. Форма на портале — отдельная консультация Синергии по платному онлайн-обучению; она не отправляет заявление в эту школу.`,
+      : `${callImperative}. Уточните наличие мест, возраст и документы для поступления.`,
   })
 
   // 3. Стоимость обучения
@@ -347,7 +346,6 @@ export default async function SchoolPage({ params }: Props) {
         )}
       </SchoolPageGallery>
       <nav aria-label="Быстро перейти в карточке" className="mt-4 flex flex-wrap gap-2 sm:gap-3">
-        <a href="#school-card-form" className="inline-flex min-h-11 items-center justify-center rounded-lg bg-[#0369A1] px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700">{school.type === 'vechernie' || school.type === 'eksternal' ? 'Консультация по онлайн-обучению' : 'Консультация по обучению'}</a>
         <a href="#kontakty" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">Контакты школы</a>
         {guide && <a href="#usloviya-priema" className="inline-flex min-h-11 items-center px-2 py-2 text-sm font-medium text-[#0369A1] underline underline-offset-4">Условия приёма</a>}
       </nav>
@@ -415,11 +413,6 @@ export default async function SchoolPage({ params }: Props) {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* One form instance; on mobile it precedes the long content and recommendations. */}
-        <div id="school-card-form" className="school-card-lead min-w-0 scroll-mt-32">
-          <LeadForm schoolName={school.name} schoolCity={school.city} attestat={school.type === 'vechernie'} />
         </div>
 
         {/* Main content */}

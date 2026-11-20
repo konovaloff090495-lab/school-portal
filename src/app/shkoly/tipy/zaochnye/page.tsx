@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { BreadcrumbJsonLd } from '@/lib/schema'
 
 const url = 'https://pro-schools.ru/shkoly/tipy/zaochnye/'
@@ -23,6 +22,5 @@ export default function CorrespondenceSchoolsPage() {
       <section><h2 className="text-2xl font-bold mb-3">Приём подростков и взрослых</h2><p className="leading-7">Для подростка важны согласование формы с родителями и передача результатов из прежней школы. Для взрослого — документ об уже полученном уровне образования, сохранённые отметки и действующие правила приёма. Возраст, наличие мест и возможность восстановить результаты уточняйте у принимающей организации.</p><p className="leading-7 mt-3">Не оплачивайте обещание «аттестат без экзаменов». Завершение программы и допуск к ГИА определяются установленными процедурами. Ускорить изучение тем можно только в рамках согласованного учебного маршрута; государственные экзамены проходят по отдельному календарю.</p></section>
       <section><h2 className="text-2xl font-bold mb-3">Следующий шаг</h2><ul className="list-disc pl-6 space-y-2"><li><Link className="text-blue-800 underline" href="/blog/zaochnoe-obuchenie-v-shkole/">Порядок перехода на заочную форму</Link></li><li><Link className="text-blue-800 underline" href="/blog/ochno-zaochnaya-forma-obucheniya/">Как устроена очно-заочная школа</Link></li><li><Link className="text-blue-800 underline" href="/shkoly/tipy/vechernie/">Вечерние школы и обучение взрослых</Link></li><li><Link className="text-blue-800 underline" href="/shkoly/tipy/eksternal/10-11-klass/">Экстернат 10–11 классов</Link></li><li><a className="text-blue-800 underline" href="https://www.consultant.ru/document/cons_doc_LAW_140174/">Закон №273-ФЗ: статьи 17, 34, 58 и 63</a></li></ul></section>
     </div>
-    <OnlineLeadCta source="Заочные школы: федеральный каталог" heading="Уточнить условия заочного обучения" text="Консультант онлайн-школы Синергия объяснит условия своей программы. Другие предложения сравнивайте по обзорам и официальным документам школ." />
   </main>
 }
