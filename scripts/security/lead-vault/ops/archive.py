@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Mirror ciphertext only, without exposing provider credentials to either website."""
+from portfolio_lead_operators import PRIMARY_OPERATOR, secondary_operator
 import json,pathlib,sqlite3,os,hashlib,base64,datetime as dt,fcntl
 import boto3
 from botocore.config import Config
@@ -10,7 +11,7 @@ lock=(base/'archive.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_N
 creds=json.loads(pathlib.Path('/root/portfolio-selectel.json').read_text())
 s3=boto3.client('s3',endpoint_url=creds['endpoint'],region_name=creds['region'],aws_access_key_id=creds['access_key'],aws_secret_access_key=creds['secret_key'],config=Config(s3={'addressing_style':'virtual'},connect_timeout=10,read_timeout=20,retries={'max_attempts':2}))
 now=dt.datetime.now(dt.timezone.utc);until=now+dt.timedelta(days=31)
-for operator in ('gerasimov','portfolio-owner'):
+for operator in (PRIMARY_OPERATOR, secondary_operator()):
  folder=base/operator;folder.mkdir(exist_ok=True)
  ledger=sqlite3.connect(folder/'archive-receipts.sqlite3');ledger.execute('CREATE TABLE IF NOT EXISTS receipts(id TEXT PRIMARY KEY,digest TEXT NOT NULL,object_key TEXT NOT NULL,version TEXT NOT NULL,verified_at TEXT NOT NULL)')
  with sqlite3.connect('file:/var/lib/portfolio-leads/'+operator+'/leads.sqlite3?mode=ro',uri=True) as source:

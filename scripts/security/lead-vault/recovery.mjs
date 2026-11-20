@@ -1,6 +1,15 @@
-import {readFileSync} from 'node:fs';import {spawnSync} from 'node:child_process';
+import {existsSync, readFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {randomBytes,scryptSync,createCipheriv,createDecipheriv,createHash} from 'node:crypto';
-const operator=process.argv[2];if(!['gerasimov','portfolio-owner'].includes(operator))throw Error('operator');
+const operator = process.argv[2];
+if (!/^[a-z][a-z0-9-]{0,62}$/.test(operator ?? '')) throw Error('operator');
+if (operator !== 'gerasimov') {
+ const sourceHelper = fileURLToPath(new URL('./ops/portfolio_lead_operators.py', import.meta.url));
+ const helper = existsSync(sourceHelper) ? sourceHelper : '/usr/local/sbin/portfolio_lead_operators.py';
+ const configured = spawnSync('/usr/bin/python3', [helper], {encoding: 'utf8'});
+ if (configured.status !== 0 || configured.stdout.trim() !== operator) throw Error('operator');
+}
 const master=readFileSync('/root/portfolio-backup.key','utf8').trim();
 function derive(salt){return scryptSync(master,'portfolio-lead-recovery-v1:'+operator+':'+salt,32,{N:32768,r:8,p:1,maxmem:64*1024*1024})}
 if(process.argv[3]==='--verify'){

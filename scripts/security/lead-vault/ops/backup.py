@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Consistent, separately encrypted operator backups. Never prunes or deletes remote objects."""
+from portfolio_lead_operators import PRIMARY_OPERATOR, require_operator
 import pathlib,subprocess,sqlite3,os,shutil,datetime,json,sys
 os.umask(0o077)
-operator=sys.argv[1]
-assert operator in ('gerasimov','portfolio-owner')
+operator = require_operator(sys.argv[1])
 base=pathlib.Path('/var/backups/portfolio-leads')/operator;base.mkdir(parents=True,exist_ok=True)
 repo=base/'restic';stage=base/'stage';stage.mkdir(exist_ok=True)
 config=pathlib.Path('/etc/portfolio-leads')/operator
@@ -22,12 +22,12 @@ if operator=='gerasimov':
         with sqlite3.connect('file:'+str(operational)+'?mode=ro',uri=True) as source,sqlite3.connect(stage/'mailer.sqlite3') as target:source.backup(target)
         with sqlite3.connect(stage/'mailer.sqlite3') as check:assert check.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
 # Only a fixed read-only subset of DELA private state can be exported.
-if operator=='portfolio-owner' and pathlib.Path('/etc/portfolio-leads/portfolio-owner/delomba-backup-enabled').exists():
+if operator != PRIMARY_OPERATOR and (config / 'delomba-backup-enabled').exists():
     temporary=stage/'delomba-private.incoming'
     with temporary.open('wb') as output:
         subprocess.run(['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=30','kvantb7q@kvantb7q.beget.tech','delomba-private'],stdout=output,check=True,timeout=180)
     os.replace(temporary,stage/'delomba-private.tar')
-if operator=='portfolio-owner' and pathlib.Path('/etc/portfolio-leads/portfolio-owner/card-postback-backup-enabled').exists():
+if operator != PRIMARY_OPERATOR and (config / 'card-postback-backup-enabled').exists():
     temporary=stage/'cardopen-postbacks.incoming'
     with temporary.open('wb') as output:
         subprocess.run(['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=30','kvantb7q@kvantb7q.beget.tech','cardopen-records'],stdout=output,check=True,timeout=90)

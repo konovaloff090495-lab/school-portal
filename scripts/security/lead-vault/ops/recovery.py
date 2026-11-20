@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Recover new operator keys with the owner's already saved original recovery password."""
+from portfolio_lead_operators import require_operator
 import sys,subprocess,pathlib,json,hashlib,base64,datetime as dt,tempfile,tarfile,io,os
 import boto3
 from botocore.config import Config
-os.umask(0o077);operator=sys.argv[1];assert operator in ('gerasimov','portfolio-owner')
+os.umask(0o077);operator = require_operator(sys.argv[1])
 node='/usr/local/bin/node';script='/opt/portfolio-lead-vault/recovery.mjs'
 payload=subprocess.check_output([node,script,operator]);stamp=dt.datetime.now(dt.timezone.utc);digest=hashlib.sha256(payload).hexdigest();key='lead-recovery/'+operator+'/'+stamp.strftime('%Y%m%dT%H%M%SZ')+'-'+digest[:12]+'.json'
 c=json.loads(pathlib.Path('/root/portfolio-selectel.json').read_text());s3=boto3.client('s3',endpoint_url=c['endpoint'],region_name=c['region'],aws_access_key_id=c['access_key'],aws_secret_access_key=c['secret_key'],config=Config(s3={'addressing_style':'virtual'},connect_timeout=15,read_timeout=30,retries={'max_attempts':3}))

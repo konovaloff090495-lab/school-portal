@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Minute encrypted snapshots of operational state; uploads only changed content."""
+from portfolio_lead_operators import PRIMARY_OPERATOR, secondary_operator
 import os,pathlib,json,datetime as dt,sqlite3,tarfile,tempfile,io,hashlib,base64,subprocess,fcntl,pwd,contextlib,hmac
 import boto3
 from botocore.config import Config
@@ -16,7 +17,8 @@ def operator_temporary(username='lead-gerasimov'):
   try:yield folder
   finally:os.chown(folder,0,0)
 now=dt.datetime.now(dt.timezone.utc);failed=[]
-operators=['gerasimov','portfolio-owner']
+secondary = secondary_operator()
+operators = [PRIMARY_OPERATOR, secondary]
 if pathlib.Path('/etc/portfolio/education-gifts/encrypted-storage-ready').exists():operators.append('education-gifts')
 for operator in operators:
  try:
@@ -38,13 +40,13 @@ for operator in operators:
   else:
    command=['ssh','-i','/home/portfolio-admin/migration/beget-reader','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile=/root/portfolio-beget-known-hosts','-o','ConnectTimeout=15','kvantb7q@kvantb7q.beget.tech','delomba-records']
    result=subprocess.run(command,capture_output=True,timeout=45);assert result.returncode==0,'Shared snapshot failed';raw=result.stdout
-  if operator=='portfolio-owner':
+  if operator == secondary:
    extra=subprocess.run(command[:-1]+['cardopen-records'],capture_output=True,timeout=45);assert extra.returncode==0,'Card postback export failed'
    buffer=io.BytesIO(raw)
    with tarfile.open(fileobj=io.BytesIO(extra.stdout)) as incoming,tarfile.open(fileobj=buffer,mode='a') as outgoing:
     member=incoming.getmember('card-open.ru/ppm_postbacks.jsonl');assert member.isfile();outgoing.addfile(member,incoming.extractfile(member))
    raw=buffer.getvalue()
-  if operator in ('gerasimov','portfolio-owner'):
+  if operator in (PRIMARY_OPERATOR, secondary):
    username='lead-'+operator
    with operator_temporary(username) as temporary:
     source=state/'auth.sqlite3';target=pathlib.Path(temporary)/'auth.sqlite3'
@@ -64,7 +66,7 @@ for operator in operators:
    names=[m.name for m in archive if m.isfile()]
    required=['newsletter.sqlite3','schools.sqlite3','operator-auth.sqlite3'] if operator=='gerasimov' else ['contest.sqlite3'] if operator=='education-gifts' else ['operator-auth.sqlite3','card-open.ru/ppm_postbacks.jsonl']
    assert all(name in names for name in required),'Incomplete operational archive'
-   if operator=='portfolio-owner':assert any(name.endswith('/.crm/crm.sqlite') for name in names),'DELA database missing from export'
+   if operator == secondary:assert any(name.endswith('/.crm/crm.sqlite') for name in names),'DELA database missing from export'
   content_hash=normalized.hexdigest();path=folder/'last-ops-archive.json';previous=json.loads(path.read_text()) if path.exists() else {}
   if previous.get('content_sha256')==content_hash:
    previous['checked_at']=now.isoformat();path.write_text(json.dumps(previous));continue

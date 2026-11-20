@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Replicate a completed restic repository without temporary locks; never delete."""
+from portfolio_lead_operators import require_operator
 import base64
 import datetime as dt
 import hashlib
@@ -12,8 +13,7 @@ import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
 
-OPERATOR = sys.argv[1]
-assert OPERATOR in ('gerasimov', 'portfolio-owner')
+OPERATOR = require_operator(sys.argv[1])
 REPO = pathlib.Path('/var/backups/portfolio-leads') / OPERATOR / 'restic'
 CREDS = pathlib.Path('/root/portfolio-selectel.json')
 PREFIX = 'repositories/lead-vault-' + OPERATOR + '-v1/'
