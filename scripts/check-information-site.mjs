@@ -39,8 +39,18 @@ try {
     assert.equal(await page.locator('form:has([type="tel"]), [data-ps-sale], [data-ps-sale-slot]').count(), 0, path)
     const hosts = await page.locator('a[href]').evaluateAll(nodes => nodes.map(node => new URL(node.href).hostname))
     assert.ok(!hosts.some(host => /(^|\.)(?:synergy(?:-academy)?\.ru|syndev\.ru|school-?university\.(?:com|ru))$/.test(host)), path)
-    await page.waitForFunction(() => window.__informationAdCalls.length >= 2)
-    assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-2', 'R-A-19425636-3'], path)
+    const catalogCards = page.locator('#spisok-shkol .grid > article')
+    const inlineAd = page.locator('[data-catalog-inline-ad]')
+    const expectedBlocks = ['R-A-19425636-2', 'R-A-19425636-3']
+    if (await catalogCards.count() > 6) {
+      expectedBlocks.unshift('R-A-19425636-1')
+      assert.equal(await inlineAd.count(), 1, path)
+      assert.equal(await inlineAd.locator('xpath=preceding-sibling::article').count(), 6, path)
+    } else {
+      assert.equal(await inlineAd.count(), 0, path)
+    }
+    await page.waitForFunction(count => window.__informationAdCalls.length >= count, expectedBlocks.length)
+    assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), expectedBlocks, path)
     assert.doesNotMatch(await page.locator('#main').innerText(), /Синерги[яиуюе]|\bSynergy\b/i, path)
     if (path === '/soglasie-marketing/') {
       const consent = await page.locator('#main').innerText()
