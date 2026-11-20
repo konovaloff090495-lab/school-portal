@@ -1,28 +1,19 @@
 import http from 'node:http';
 import {pathToFileURL} from 'node:url';
-import {Store,uuid,makeMeasurement,ELAPSED_BUCKETS,MEASUREMENT_PATHS} from './store.mjs';
-import {calculate} from './scoring.mjs';
-import {OFFERS} from './delivery.mjs';
-import {sendRecoveryMail} from './mail.mjs';
-const EMAIL=/^[^\s@<>]{1,64}@[^\s@<>.][^\s@<>]{0,180}\.[A-Za-zА-Яа-я]{2,24}$/;
+import {Store,uuid,ELAPSED_BUCKETS,MEASUREMENT_PATHS} from './store.mjs';
+const historicalOffers = new Set(['easycode-trial','ukids-diagnostic','synergy-school']);
 const COOKIE='__Host-ps_career';
 const EVENTS=new Set(['career_landing_view','career_test_start','career_test_complete','career_gate_view','career_result_view','career_offer_view','career_offer_select','career_cta_click','career_question_view','career_question_answered','career_feedback_easy','career_feedback_difficult']);
 const canonicalPath=p=>typeof p==='string'&&p.length<=300&&/^\/(?:[a-z0-9_-]+\/)*[a-z0-9_-]*\/?$/.test(p);
 export function normalizePhone(raw){if(typeof raw!=='string'||raw.length>40)return null;const d=raw.replace(/[\s()+-]/g,'');const n=d.length===11&&/^[78]/.test(d)?'7'+d.slice(1):d.length===10?'7'+d:null;return n&&/^7[3489]\d{9}$/.test(n)&&!/^7(\d)\1{9}$/.test(n)?'+'+n:null}
 const fail=(status=400)=>{throw Object.assign(Error('request_rejected'),{status})};
-const boolean=b=>typeof b==='boolean';
 const plain=x=>x!==null&&typeof x==='object'&&!Array.isArray(x)&&Object.getPrototypeOf(x)===Object.prototype;
 function object(b,allowed){if(!plain(b)||Object.keys(b).some(k=>!allowed.includes(k)))fail();if(b.website!==undefined&&b.website!=='')fail()}
 
 function measurementBody(m){if(m===undefined)return null;object(m,['journey_id','referrer_host','visit_utm','elapsed_bucket']);if(!uuid.test(m.journey_id||''))fail();if(m.referrer_host!==undefined&&(typeof m.referrer_host!=='string'||m.referrer_host.length>253||(m.referrer_host!==''&&!/^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(m.referrer_host))))fail();if(m.elapsed_bucket!==undefined&&!ELAPSED_BUCKETS.includes(m.elapsed_bucket))fail();if(m.visit_utm!==undefined){if(!plain(m.visit_utm)||Object.keys(m.visit_utm).length>7)fail();for(const[k,v]of Object.entries(m.visit_utm))if(!['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','gclid'].includes(k)||typeof v!=='string'||v.length>500||/[\r\n\0]/.test(v))fail()}return m}
 
-function resultBody(b){object(b,['request_id','email','age','grade','answers','pd_agreed','adult_confirmed','marketing_agreed','landing','visit_utm','website','source','measurement']);if(b.source!==undefined&&b.source!=='career_result_save')fail();if(!uuid.test(b.request_id||'')||typeof b.email!=='string'||!EMAIL.test(b.email)||b.email.length>254||!Number.isInteger(b.age)||b.age<10||b.age>18||!Number.isInteger(b.grade)||b.grade<5||b.grade>11||!Array.isArray(b.answers)||b.answers.length!==24||b.answers.some(v=>v!==null&&v!==0&&v!==1&&v!==2)||b.pd_agreed!==true||b.adult_confirmed!==true||!boolean(b.marketing_agreed))fail();
- if(!canonicalPath(b.landing))fail();const utm=b.visit_utm??{};if(!plain(utm)||Object.keys(utm).length>9)fail();for(const[k,v]of Object.entries(utm))if(!['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid','gclid','referrer','ym_client_id'].includes(k)||typeof v!=='string'||v.length>500||/[\r\n\0]/.test(v))fail();
- return {request_id:b.request_id,email:b.email.trim().toLowerCase(),age:b.age,grade:b.grade,answers:b.answers,pd_agreed:true,adult_confirmed:true,marketing_agreed:b.marketing_agreed,landing:b.landing,visit_utm:utm,measurement:measurementBody(b.measurement),source:'career_result_save',consent_version:'career-2026-11-06-v2',pd_default_selected:true,marketing_default_selected:false};
-}
-function partnerBody(b){object(b,['request_id','offer_id','name','phone','pd_agreed','marketing_agreed','website','source','measurement']);if(b.source!==undefined&&b.source!=='career_partner_'+b.offer_id)fail();const phone=normalizePhone(b.phone);if(!uuid.test(b.request_id||'')||typeof b.name!=='string'||b.name.trim().length<2||b.name.length>100||/[<>\r\n\0]/.test(b.name)||!phone||b.pd_agreed!==true||!boolean(b.marketing_agreed)||!OFFERS.some(o=>o.id===b.offer_id))fail();return {request_id:b.request_id,offer_id:b.offer_id,name:b.name.trim(),phone,pd_agreed:true,marketing_agreed:b.marketing_agreed,source:'career_partner_'+b.offer_id,measurement:measurementBody(b.measurement)}}
 async function body(req){if(req.headers['content-type']?.split(';')[0]!=='application/json')fail(415);const length=Number(req.headers['content-length']||0);if(length>16384)fail(413);let size=0,chunks=[];for await(const chunk of req){size+=chunk.length;if(size>16384)fail(413);chunks.push(chunk)}try{return JSON.parse(Buffer.concat(chunks).toString())}catch{fail()}}
-export function createCareerServer({env=process.env,transport=fetch,mail=sendRecoveryMail,now=()=>Date.now()}={}){
+export function createCareerServer({env=process.env,now=()=>Date.now()}={}){
  const origin=env.CAREER_ORIGIN||'https://pro-schools.ru';if(!/^https:\/\/[a-z0-9.-]+$/.test(origin))throw Error('invalid_origin');
  const store=new Store(env.CAREER_DB||'/var/lib/proschools-career/career.sqlite3',env.CAREER_KEY_HEX,now);
  const cookie=(value,clear=false)=>`${COOKIE}=${value}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=${clear?0:2592000}`;
@@ -36,7 +27,7 @@ export function createCareerServer({env=process.env,transport=fetch,mail=sendRec
  if(path==='/api/career/health/'&&req.method==='GET'){store.db.prepare('SELECT 1').get();return send(200,{ok:true})}
  if(path!=='/api/career/events/'&&!store.rate(`${address}:${mutate?'write':'read'}`,mutate?Number(env.CAREER_WRITE_LIMIT||40):240,600000))fail(429);
  if(path==='/api/career/events/'&&req.method==='POST'){
-  if(!store.rate(address+':events',240,600000))fail(429);const b=await body(req);object(b,['event','event_id','landing','grade','offer_id','measurement','step','elapsed_bucket']);if(!EVENTS.has(b.event)||!uuid.test(b.event_id||'')||!canonicalPath(b.landing)||!MEASUREMENT_PATHS.has(b.landing)||(b.grade!==undefined&&(!Number.isInteger(b.grade)||b.grade<5||b.grade>11))||(b.offer_id!==undefined&&!OFFERS.some(o=>o.id===b.offer_id)))fail();if(b.step!==undefined&&(!Number.isInteger(b.step)||b.step<1||b.step>24))fail();if(b.elapsed_bucket!==undefined&&!ELAPSED_BUCKETS.includes(b.elapsed_bucket))fail();if(['career_question_view','career_question_answered'].includes(b.event)&&b.step===undefined)fail();b.measurement=measurementBody(b.measurement);if(b.event.startsWith('career_feedback_')&&!b.measurement?.journey_id)fail();const duplicate=store.recordEvent(b);return send(200,{ok:true,duplicate});
+  if(!store.rate(address+':events',240,600000))fail(429);const b=await body(req);object(b,['event','event_id','landing','grade','offer_id','measurement','step','elapsed_bucket']);if(!EVENTS.has(b.event)||!uuid.test(b.event_id||'')||!canonicalPath(b.landing)||!MEASUREMENT_PATHS.has(b.landing)||(b.grade!==undefined&&(!Number.isInteger(b.grade)||b.grade<5||b.grade>11))||(b.offer_id!==undefined&&!historicalOffers.has(b.offer_id)))fail();if(b.step!==undefined&&(!Number.isInteger(b.step)||b.step<1||b.step>24))fail();if(b.elapsed_bucket!==undefined&&!ELAPSED_BUCKETS.includes(b.elapsed_bucket))fail();if(['career_question_view','career_question_answered'].includes(b.event)&&b.step===undefined)fail();b.measurement=measurementBody(b.measurement);if(b.event.startsWith('career_feedback_')&&!b.measurement?.journey_id)fail();const duplicate=store.recordEvent(b);return send(200,{ok:true,duplicate});
  }
  user=store.authenticate(session);
  if(path==='/api/career/access/'&&req.method==='POST'){if(!store.rate(address+':access',15,3600000))fail(429);const b=await body(req);object(b,['token']);const recovered=store.recover(b.token);if(!recovered)fail(401);res.setHeader('Set-Cookie',cookie(recovered.session));return send(200,{ok:true,result_id:recovered.id})}

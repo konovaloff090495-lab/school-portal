@@ -4,7 +4,7 @@ import { chromium } from 'playwright'
 
 const base = process.env.INFORMATION_QA_BASE || 'http://127.0.0.1:3194'
 const paths = [
-  '/', '/shkoly/', '/shkoly/moskva/chastnye/', '/shkoly/tipy/online/',
+  '/', '/shkoly/', '/shkoly/tomsk/eksternal/', '/shkoly/tipy/online/',
   '/shkola/onlain-shkola-sinergiya-moskva/', '/shkoly/tipy/online/sinergiya/',
   '/attestat-vzroslomu/', '/soglasie-marketing/', '/dobavit-shkolu/',
 ]
@@ -41,6 +41,7 @@ try {
     assert.ok(!hosts.some(host => /(^|\.)(?:synergy(?:-academy)?\.ru|syndev\.ru|school-?university\.(?:com|ru))$/.test(host)), path)
     await page.waitForFunction(() => window.__informationAdCalls.length >= 2)
     assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-2', 'R-A-19425636-3'], path)
+    assert.doesNotMatch(await page.locator('main').innerText(), /Синерги[яиуюе]|\bSynergy\b/i, path)
     if (path === '/soglasie-marketing/') {
       const consent = await page.locator('main').innerText()
       assert.match(consent, /ИП Герасимова/)

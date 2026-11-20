@@ -33,6 +33,7 @@ interface Props {
    */
   viewport?: 'mobile' | 'desktop'
   retry?: boolean
+  statId?: number
 }
 
 /**
@@ -88,7 +89,7 @@ interface Props {
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, suffix, viewport, retry = true }: Props) {
+export default function YandexRTBBanner({ blockId, suffix, viewport, retry = true, statId }: Props) {
   const pathname = usePathname()
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
@@ -123,7 +124,9 @@ export default function YandexRTBBanner({ blockId, suffix, viewport, retry = tru
       host.replaceChildren(node)
       window.yaContextCb = window.yaContextCb || []
       window.yaContextCb.push(() => {
-        window.Ya?.Context.AdvManager.render({ blockId, renderTo: id, statId: experiment?.statId })
+        if (!cancelled && node.isConnected) {
+          window.Ya?.Context.AdvManager.render({ blockId, renderTo: id, statId: statId ?? experiment?.statId })
+        }
       })
       // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
       // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
@@ -142,7 +145,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport, retry = tru
     // Таймеры в скрытой вкладке работают, пусть и реже.
     const t = window.setTimeout(draw, 0)
     return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, divId, viewport, pathname, retry])
+  }, [blockId, divId, viewport, pathname, retry, statId])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />

@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const url = `https://pro-schools.ru/shkoly/${r}/online/`
     const title = `Онлайн-школы ${cityIn} 2026: ${list.length} ${schoolsWord(list.length)} с аттестатом, цены, отзывы`
     const description =
-      `Онлайн-школы для жителей ${regionLabels[r]}: Фоксфорд, ИнтернетУрок, Синергия, Онлайн Гимназия №1, Skysmart и другие — ` +
+      `Онлайн-школы для жителей ${regionLabels[r]}: Фоксфорд, ИнтернетУрок, Онлайн-школа, Онлайн Гимназия №1, Skysmart и другие — ` +
       `цены 2026/27 от 6 530 ₽/мес, у кого своя аккредитация, где бесплатный пробный период. Как перевести ребёнка ${cityIn} на дистанционное обучение.`
     return {
       title, description,
@@ -164,7 +164,7 @@ export default async function TypePage({ params }: Props) {
             ? <>
                 <OnlineBrandsTable
                   title={`Онлайн-школы для семейного обучения ${regionIn}`}
-                  intro="Все семь школ зачисляют на семейную или заочную форму из любого города и проводят аттестации дистанционно; у Синергии, Онлайн Гимназии №1 и БИТ — собственная аккредитация."
+                  intro="Все семь школ зачисляют на семейную или заочную форму из любого города и проводят аттестации дистанционно; у онлайн-школы, Онлайн Гимназии №1 и БИТ — собственная аккредитация."
                   compact
                 />
                 <SeoBlock region={r} type={t} count={list.length} hubHref={`/shkoly/tipy/${t}/`} hubLabel={hubLabel} />

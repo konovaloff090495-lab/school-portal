@@ -69,7 +69,7 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
         ]}
         seoContent={<div className="mt-10 space-y-6">
         <p style={{ fontSize: 16.5, lineHeight: 1.6, color: '#3F3A35', margin: '0 0 22px', maxWidth: 860 }}>
-          Онлайн-школа не привязана к городу: ребёнок {regionIn} учится в той же Фоксфорд, ИнтернетУрок или Синергии,
+          Онлайн-школа не привязана к городу: ребёнок {regionIn} учится в той же Фоксфорд, ИнтернетУрок или онлайн-школы,
           что и ученик из Москвы, а аттестат получает такой же — государственного образца.
           {local.length > 0
             ? ` Ниже сначала ${local.length === 1 ? 'местная онлайн-школа' : `${local.length} ${schoolsWord(local.length)}`} ${regionIn}, затем федеральные.`

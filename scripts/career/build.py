@@ -6,7 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'work/career/release';AS=OUT/'career-assets'
-VERSION='20261106.2';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
+VERSION='20261120.1';SITE='https://pro-schools.ru';TEST='/proforientaciya/karta-interesov/';RESULT='/proforientaciya/rezultat/'
 E=lambda x:html.escape(str(x),quote=True)
 def load():
  global chrome,P

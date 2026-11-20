@@ -16,13 +16,13 @@ export default function VechernieCityExtras({ region, count, variant = 'vecherni
         <li><strong>Местная школа.</strong> По официальным контактам подтвердите действующее название, приём вашего возраста и класса. Если контакты не подтверждаются, запросите актуальную информацию в управлении образования города.</li>
         <li><strong>Расписание и оплата.</strong> Уточните обязательные дни посещения, форму и срок программы. Наличие бюджетных мест и платные дополнительные услуги проверяйте отдельно.</li>
         <li><strong>Аттестации.</strong> До записи согласуйте зачёт предыдущих результатов, допуск к ГИА, регистрацию и место очных экзаменов. Учебный курс не заменяет школьное оформление.</li>
-        <li><strong>Онлайн-альтернатива.</strong> Если готовы к платной программе, сравните обычный темп и экстернат. У Синергии уроки и промежуточные аттестации онлайн, а ОГЭ/ЕГЭ по программе проходят очно в Москве.</li>
+        <li><strong>Онлайн-альтернатива.</strong> Если готовы к платной программе, сравните обычный темп и экстернат. У онлайн-школы уроки и промежуточные аттестации онлайн, а ОГЭ/ЕГЭ по программе проходят очно в Москве.</li>
       </ol>
       <nav aria-label={`Маршруты к аттестату: ${regionName}`} className="flex flex-wrap gap-4 text-sm font-semibold text-blue-800 underline">
         <Link href="/shkoly/tipy/vechernie/9-klass/">Окончить 9 класс</Link><Link href="/shkoly/tipy/vechernie/posle-9-klassa/">Поступить после 9 класса</Link><Link href="/shkoly/tipy/vechernie/starshie-klassy/">Программы 10–11 классов</Link><Link href="/blog/vechernyaya-shkola-kak-postupit/">Документы для поступления</Link>
       </nav>
     </section>
 
-    <p className="text-sm leading-6 text-slate-600">Сравните <Link href="/attestat-vzroslomu/" className="text-blue-800 underline">маршруты к аттестату взрослому</Link>, <Link href="/blog/eksternat-ili-vechernyaya-shkola/" className="text-blue-800 underline">экстернат и вечернюю школу</Link>, <Link href="/shkoly/tipy/online/" className="text-blue-800 underline">онлайн-школы</Link>. Условия Синергии сверены 22.10.2026 по <a href="https://school-university.com/vechernyaya-shkola/" rel="nofollow" className="text-blue-800 underline">описанию программы</a>; наличие мест и условия конкретного договора уточняются в школе.</p>
+    <p className="text-sm leading-6 text-slate-600">Сравните <Link href="/attestat-vzroslomu/" className="text-blue-800 underline">маршруты к аттестату взрослому</Link>, <Link href="/blog/eksternat-ili-vechernyaya-shkola/" className="text-blue-800 underline">экстернат и вечернюю школу</Link>, <Link href="/shkoly/tipy/online/" className="text-blue-800 underline">онлайн-школы</Link>. Условия онлайн-школы сверены 22.10.2026 по <a href="https://school-university.com/vechernyaya-shkola/" rel="nofollow" className="text-blue-800 underline">описанию программы</a>; наличие мест и условия конкретного договора уточняются в школе.</p>
   </div>
 }

@@ -1,4 +1,5 @@
-[data-lektoriy], #lead-dialog,
+[data-lektoriy], #lead-dialog, .result-offers, .thanks-offer:has([data-trial-form]),
+.school-submission[data-mode="form"],
 [data-ps-sale], [data-ps-sale-slot], #school-card-form, a[href="#school-card-form"],
 [data-offer-form], #partner-dialog, #partner-offers, #podbor:has(form [type="tel"]),
 #konsultaciya:has(form [type="tel"]), form[data-growth-form],

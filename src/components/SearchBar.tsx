@@ -13,7 +13,7 @@ export default function SearchBar() {
     router.push(q ? `/poisk/?q=${encodeURIComponent(q)}` : '/poisk/')
   }
 
-  const suggestions = ['Синергия', 'Онлайн-школы', 'Экстернат', 'Вечерние школы']
+  const suggestions = ['Онлайн-школы', 'Экстернат', 'Вечерние школы']
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-2xl">
