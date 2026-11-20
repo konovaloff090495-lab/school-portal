@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ExamShell, { AdInline, Crumbs, breadcrumbLd } from '@/components/exam/ExamShell'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import {
   type Exam, type SiteSubject, type DocKind, docsFor, docPath, currentSummary, minutesLabel, pagesWord,
   EXAM_NAME, KIND_PLURAL, CURRENT_YEAR, PREV_YEAR, siteSubjects,
@@ -122,13 +121,6 @@ export default function ExamSubjectPage({ exam, s }: { exam: Exam; s: SiteSubjec
           ))}
         </section>
       )}
-
-      <OnlineLeadCta
-        source={`${exam}-subject-${s.slug}`}
-        heading={`Подготовка к ${ex} по ${s.dat} с преподавателем`}
-        text={`Оставьте номер — подберём онлайн-курс подготовки к ${ex} по ${s.dat}: расписание, формат, пробный урок. Перезвоним и расскажем, как готовиться по материалам ФИПИ без пробелов.`}
-        bullets={['занятия по кодификатору и демоверсии текущего года', 'пробники в формате экзамена с разбором ошибок', 'бесплатный пробный урок']}
-      />
 
       <section className="ol-text ol-seo">
         <h2>Как готовиться к {ex} по {s.dat} по материалам ФИПИ</h2>

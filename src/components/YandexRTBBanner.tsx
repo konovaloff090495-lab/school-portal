@@ -32,6 +32,7 @@ interface Props {
    * реклама уедет в скрытый сайдбар. Граница — 1024px (Tailwind `lg`).
    */
   viewport?: 'mobile' | 'desktop'
+  retry?: boolean
 }
 
 /**
@@ -87,7 +88,7 @@ interface Props {
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
+export default function YandexRTBBanner({ blockId, suffix, viewport, retry = true }: Props) {
   const pathname = usePathname()
   const divId = suffix
     ? `yandex_rtb_${blockId}_${suffix}`
@@ -126,7 +127,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
       })
       // Самопроверка: если через 4 с место пустое, пробуем ещё раз в НОВЫЙ узел —
       // повторно в тот же renderTo РСЯ не рисует. Больше двух попыток не делаем.
-      if (attempt < 3) {
+      if (retry && attempt < 3) {
         window.setTimeout(() => {
           if (cancelled) return
           if (!node.isConnected || node.childElementCount === 0) draw()
@@ -141,7 +142,7 @@ export default function YandexRTBBanner({ blockId, suffix, viewport }: Props) {
     // Таймеры в скрытой вкладке работают, пусть и реже.
     const t = window.setTimeout(draw, 0)
     return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, divId, viewport, pathname])
+  }, [blockId, divId, viewport, pathname, retry])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />

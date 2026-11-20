@@ -22,7 +22,7 @@ export type OnlineBrand = {
   name: string           // короткое имя бренда
   fullName: string       // как называется продукт у самого бренда
   legal: string          // юрлицо / город
-  site: string
+  site?: string
   cardSlug?: string      // карточка в каталоге /shkola/<slug>/ (если есть)
   grades: string
   since?: number        // год старта — только если подтверждён сайтом бренда
@@ -154,7 +154,6 @@ const originalOnlineBrands: OnlineBrand[] = [
     name: 'Синергия',
     fullName: 'Онлайн-школа «Синергия» (Школьный Университет)',
     legal: 'Университет «Синергия», Москва',
-    site: 'https://schooluniversity.ru/',
     cardSlug: 'onlain-shkola-sinergiya-moskva',
     grades: '5–11 (1–4 — Synergy Kids)',
     attestation: 'own',

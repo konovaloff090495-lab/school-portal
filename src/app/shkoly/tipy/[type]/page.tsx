@@ -14,7 +14,6 @@ import CatalogClient from '../../CatalogClient'
 import SeoBlock from '@/components/SeoBlock'
 import TypeGuide from '@/components/TypeGuide'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import EgeCityExtras from '@/components/EgeCityExtras'
 import ProgCityExtras from '@/components/ProgCityExtras'
 import FamilyCityNav from '@/components/FamilyCityNav'
@@ -549,13 +548,6 @@ export default async function GlobalTypePage({ params }: Props) {
     : t === 'eksternal'
     ? <>
         <SchoolFormatAdvice type={t} hideLinks />
-        <OnlineLeadCta
-          attestat
-          source="Экстернат: хаб /shkoly/tipy/eksternal/"
-          heading="Экстернат онлайн: согласуйте темп 10–11 классов"
-          text="Платная онлайн-программа Синергии: материалы в записи и промежуточные аттестации онлайн. Темп и сроки согласуются по документам; ОГЭ/ЕГЭ по программе проходят очно в Москве. Уточните условия до оплаты."
-          bullets={['документы сканами, зачисление круглый год', 'для подростков и взрослых с перерывом в учёбе', 'рассрочка, маткапитал, налоговый вычет']}
-        />
         <TypeGuide type={t} />
       </>
     : t === 'online'
@@ -565,17 +557,11 @@ export default async function GlobalTypePage({ params }: Props) {
         <OnlineBrandsTable all intro="Сравнивайте одинаковые программы: класс, уроки, школьное оформление и полную стоимость. Аттестационный пакет не равен полной школе. В обзорах указаны источники, даты и ограничения проверки." />
         <OnlinePathChooser />
         <SchoolFormatAdvice type={t} />
-        <OnlineLeadCta source="Онлайн-школы: хаб /shkoly/tipy/online/" />
         <TypeGuide type={t} />
       </>
     : t === 'domashnie'
     ? <>
         <DomashnieSubNav />
-        <OnlineLeadCta
-          source="Домашние школы: хаб /shkoly/tipy/domashnie/"
-          heading="Подобрать домашнюю школу онлайн"
-          text="Консультант Синергии расскажет о её платной онлайн-программе. Укажите класс и причину перехода; зачисление, аттестации и стоимость согласуйте до оплаты. Медицинское обучение на дому обсуждается непосредственно с вашей школой."
-        />
         <OnlineBrandsTable
           title="Домашние школы онлайн: сравнение цен и аттестации"
           intro="Продукты «домашняя школа» у федеральных онлайн-школ: стоимость формата с зачислением, кто выдаёт аттестат и есть ли пробный период."
@@ -587,12 +573,6 @@ export default async function GlobalTypePage({ params }: Props) {
     ? <>
         <SemejnyeSubNav />
         <FamilyCityNav />
-        <OnlineLeadCta
-          source="Семейные школы: хаб /shkoly/tipy/semejnye/"
-          heading="Рассматриваете платную семейную программу Синергии?"
-          text="Уточните у консультанта Синергии программу, оформление и полную стоимость. Эта форма не является обращением в муниципальную школу. Место промежуточных аттестаций и государственных экзаменов согласуйте отдельно."
-          bullets={['уведомление и документы — по шагам', 'прикрепление к аккредитованной школе, аттестации онлайн', 'место ОГЭ/ЕГЭ и выдачи аттестата — по условиям программы']}
-        />
         <OnlineBrandsTable
           title="Онлайн-школы для семейного обучения — 2026/27"
           intro="Все семь зачисляют на семейную или заочную форму из любого города и проводят промежуточные аттестации дистанционно."

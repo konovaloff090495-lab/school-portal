@@ -10,9 +10,7 @@ import YandexRTBBanner from '@/components/YandexRTBBanner'
 import BlogMidAd from '@/components/BlogMidAd'
 import blogAdCohort from '@/data/blog-ad-cohort.json'
 import { AD_BLOCKS } from '@/lib/ads'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import AdultAttestatLinks from '@/components/AdultAttestatLinks'
-import SuPartnerBanner from '@/components/SuPartnerBanner'
 import { onlineBrands } from '@/data/online-brands'
 
 // Кластер «онлайн / домашнее / семейное обучение»: ~60 статей, 13 000 визитов за квартал
@@ -136,11 +134,6 @@ export default async function BlogPostPage({ params }: Props) {
   const adultCluster = isAdultCluster(post) && suSchoolish
   const onlineCluster = !adultCluster && isOnlineCluster(post) && suSchoolish
   const brandStripAfter = onlineCluster && sections.length >= 2 ? 0 : -1
-  // Партнёрский баннер продукта Синергии (school-university.com): одна компактная
-  // плашка в теле статьи и развёрнутый оффер после текста. Ставим со второй секции,
-  // чтобы не биться с блоком РСЯ, который стоит перед первой.
-  const suBannerBefore = post.suProduct && sections.length >= 3 ? 1 : -1
-
   return (
     <>
       <ArticleJsonLd post={post} url={`https://pro-schools.ru/blog/${post.slug}/`} />
@@ -380,14 +373,6 @@ export default async function BlogPostPage({ params }: Props) {
                   ))}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                   {adultCluster && i === Math.min(1, sections.length - 1) && <AdultAttestatLinks />}
-                  {i === suBannerBefore && !adultCluster && (
-                    <SuPartnerBanner
-                      productKey={post.suProduct!}
-                      postSlug={post.slug}
-                      pathOverride={post.suPath}
-                      compact
-                    />
-                  )}
                   {i === brandStripAfter && (
                     <div style={{
                       margin: '20px 0 24px', padding: '14px 16px', borderRadius: 14,
@@ -405,18 +390,6 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </article>
 
-            {/* Партнёрский оффер продукта Синергии.
-                В онлайн- и «взрослом» кластерах ниже уже стоит НАША лид-форма
-                (OnlineLeadCta) — два крупных блока подряд гасят оба, поэтому там
-                партнёр остаётся только плашкой в теле статьи. */}
-            {post.suProduct && !onlineCluster && !adultCluster && (
-              <SuPartnerBanner
-                productKey={post.suProduct}
-                postSlug={post.slug}
-                pathOverride={post.suPath}
-              />
-            )}
-
             {/* Tags */}
             <div style={{ marginTop: 28, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {post.tags.map(tag => (
@@ -430,28 +403,7 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </div>
 
-            {/* CTA */}
-            {onlineCluster && (
-              <div style={{ marginTop: 32 }}>
-                <OnlineLeadCta
-                  source={`Блог (онлайн-кластер): ${post.slug}`}
-                  heading="Подобрать онлайн-школу с государственным аттестатом"
-                  text="Скажите класс, город и бюджет — за 30 минут перезвоним и подскажем, какая онлайн-школа подойдёт ребёнку, где бесплатный пробный период и как оформить перевод без потери года."
-                />
-              </div>
-            )}
-            {adultCluster && (
-              <div style={{ marginTop: 32 }}>
-                <OnlineLeadCta
-                  source={`Блог (взрослым): ${post.slug}`}
-                  attestat
-                  heading="Аттестат взрослому: уточнить программу онлайн-обучения"
-                  text="Рассмотрите платное онлайн-обучение Синергии. Уроки в записи и промежуточные аттестации доступны онлайн; ОГЭ/ЕГЭ по программе проходят очно в Москве. Консультант уточнит ваши документы, сроки и полную стоимость."
-                  bullets={['отдельные маршруты к аттестату за 9 и 11 класс', 'темп обучения и документы согласуются со школой', 'поездку на государственные экзамены планируют заранее']}
-                />
-              </div>
-            )}
-            {!onlineCluster && !adultCluster && !post.suProduct && <div style={{
+            {!onlineCluster && !adultCluster && <div style={{
               marginTop: 40, background: 'linear-gradient(135deg, #FFB988 0%, #FF6B3D 100%)',
               borderRadius: 24, padding: '32px 28px', color: 'white',
               fontFamily: 'var(--font-manrope)',

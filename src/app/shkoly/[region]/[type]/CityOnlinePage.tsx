@@ -6,7 +6,6 @@ import { onlineBrands } from '@/data/online-brands'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import CatalogClient from '../../CatalogClient'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 
 /**
  * /shkoly/<город>/online/ — онлайн-школы для жителей города.
@@ -81,13 +80,6 @@ export default function CityOnlinePage({ region }: { region: RegionSlug }) {
         <OnlineBrandsTable
           title={`Какую онлайн-школу выбрать ${regionIn}: сравнение цен и аттестации`}
           intro={`В таблице — федеральные онлайн-школы. Собственная аккредитация — у ${own.map(b => b.name).join(', ')}: они зачисляют ребёнка к себе и сами выдают аттестат. Остальные оформляют аттестат через школу-партнёра.`}
-        />
-
-        <OnlineLeadCta
-          source={`Онлайн-школы: город ${regionName}`}
-          heading={`Условия платной онлайн-программы Синергии ${regionIn}`}
-          text={`Для сравнения школ используйте таблицу и официальные сайты. Заявка из этой формы поступит консультанту Синергии: укажите класс, задачу и удобное время звонка. Документы, полную стоимость и место экзаменов уточните до договора.`}
-          city={regionName}
         />
 
         <h2 style={{ fontSize: 22, fontWeight: 800, margin: '8px 0 12px' }}>Как перевести ребёнка {regionIn} на онлайн-обучение</h2>

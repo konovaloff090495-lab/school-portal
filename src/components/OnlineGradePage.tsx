@@ -4,7 +4,6 @@ import { getSchoolsByType } from '@/data/schools'
 import { explicitSchoolGrades } from '@/lib/school-grades'
 import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import gradePages from '@/data/online-grade-pages.json'
 
 export function getOnlineGradePage(slug: string) {
@@ -38,7 +37,6 @@ export default function OnlineGradePage({ slug }: { slug: string }) {
           <section><h2 className="text-2xl font-bold mb-3">Что получить от школы до оплаты</h2><ol className="list-decimal pl-6 space-y-2 leading-7"><li>Договор с точным классом, сроком обучения и перечнем услуг. Название платформы может отличаться от юридического лица школы.</li><li>Подтверждение формы обучения и зачисления: приказ, договор на аттестацию либо понятное описание самостоятельного прикрепления.</li><li>Расписание в вашем часовом поясе, пример урока и домашней работы с обратной связью. Уточните, что происходит при пропуске.</li><li>План аттестаций: предметы, сроки, формат, пересдачи и документы о результатах.</li><li>Полную стоимость до конца учебного года: уроки, сопровождение, прикрепление и дополнительные занятия. Рассрочка не равна скидке.</li></ol></section>
           <section><h2 className="text-2xl font-bold mb-3">Как оформить переход</h2><p className="leading-7">Онлайн — технология занятий. При заочной или очно-заочной форме ученик зачислен в школу; при семейном образовании обучение организует семья, а для аттестации оформляется зачисление экстерном. Согласуйте новый маршрут и документы до отчисления из прежней школы.</p><div className="flex flex-wrap gap-4 mt-4"><Link className="text-blue-800 underline" href="/blog/semejnoe-obuchenie-kak-perejti/">Переход на семейное обучение</Link><Link className="text-blue-800 underline" href="/blog/prikreplenie-k-shkole-dlya-attestacii/">Прикрепление для аттестации</Link><Link className="text-blue-800 underline" href="/blog/besplatnaya-onlajn-shkola/">Что доступно бесплатно</Link></div></section>
         </div>
-        <OnlineLeadCta source={`Онлайн-школы по классам: ${slug}`} heading={`Консультация по программе: ${page.label.toLowerCase()}`} text="Консультант онлайн-школы Синергия расскажет о своей программе, зачислении и условиях оплаты. Сравнить остальные школы можно по таблице и официальным сайтам в обзорах." bullets={['назовите класс и текущую форму обучения', 'уточните расписание и требования к аттестации', 'попросите полный расчёт учебного года']} />
       </div>}
     />
   </>

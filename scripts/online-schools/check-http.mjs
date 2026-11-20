@@ -35,13 +35,6 @@ try{
    checks.push({path,width,filters:true,cardsBeforeComparison:true,overflow:false})
   }
  }
- for(const [width,marketing]of [[1440,true],[390,false]]){
-  await page.setViewportSize({width,height:1000});await page.goto(base+'/shkoly/moskva/online/',{waitUntil:'domcontentloaded'});await page.evaluate(()=>window.dispatchEvent(new Event('ps:catalog-drawer-open')))
-  await page.waitForFunction(()=>{const input=document.querySelector('#podbor form input[type="tel"]');return input&&Object.keys(input).some(k=>k.startsWith('__reactProps$'))})
-  const form=page.locator('#podbor form');await form.scrollIntoViewIfNeeded();await form.getByPlaceholder('Ваше имя',{exact:true}).fill('Проверка каталога');await form.locator('input[type="tel"]').fill('+79162847319');await form.locator('input[type="email"]').fill('catalog-check@example.invalid');assert.match(await form.locator('input[type="tel"]').inputValue(),/^\+7 \(/)
-  const flags=form.locator('input[type="checkbox"]');assert.equal(await flags.nth(0).isChecked(),true);await flags.nth(0).uncheck();await page.waitForFunction(()=>document.querySelector('#podbor button[type="submit"]')?.disabled===true);assert.equal(await form.locator('button[type="submit"]').isDisabled(),true);await flags.nth(0).check();await flags.nth(1).setChecked(marketing);await form.locator('button[type="submit"]').click();await page.waitForURL('**/spasibo/**',{timeout:120000})
-  const lead=leads.at(-1);assert.equal(lead.crm,true);assert.equal(lead.pd_agreed,true);assert.equal(lead.marketing_agreed,marketing);assert.equal(lead.source,'Онлайн-школы: город Москва');assert.equal(lead.city,'Москва');checks.push({mock:true,width,marketing,thanks:true})
- }
  await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/shkoly/moskva/online/',{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>{const b=[...document.querySelectorAll('button')].find(x=>x.textContent?.trim()==='Ступень обучения');return b&&Object.keys(b).some(k=>k.startsWith('__reactProps$'))})
  while(await page.getByRole('button',{name:/Загрузить ещё/}).count())await page.getByRole('button',{name:/Загрузить ещё/}).click()
@@ -50,7 +43,7 @@ try{
  for(const img of await schoolImages.all()){await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());assert.ok(await img.evaluate(el=>el.naturalWidth>0));const url=new URL(await img.getAttribute('src'),base);urls.push(url.searchParams.get('url')||url.pathname)}
  assert.equal(new Set(urls).size,51,'Every online school must have a distinct loaded image')
  checks.push({schoolImages:51,loaded:true,distinct:true})
- assert.equal(leads.length,2);assert.deepEqual(errors,[])
+ assert.equal(leads.length,0);assert.equal(await page.locator('form input[type="tel"]').count(),0);assert.deepEqual(errors,[])
  await fs.writeFile(`${output}/qa.json`,JSON.stringify({result:'passed',checks,leads},null,2));console.log(JSON.stringify({result:'passed',checks:checks.length,mockLeads:leads.length}))
 }catch(error){await page?.screenshot({path:`${output}/failure.png`}).catch(()=>{});await fs.writeFile(`${output}/failure.json`,JSON.stringify({error:String(error),checks,leads},null,2));throw error
 }finally{await browser?.close();if(child)try{process.kill(-child.pid,'SIGTERM')}catch{child.kill('SIGTERM')}}

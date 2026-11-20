@@ -12,4 +12,5 @@ for(const name of ['submitLead','leadContext','leadProfile','phone','lead-consen
  await fs.writeFile(path.join(out,name+'.js'),r.outputText);
 }
 await fs.copyFile(path.join(root,'scripts/career/client.js'),path.join(out,'client.js'));
-console.log('Career canonical transport compiled');
+await fs.copyFile(path.join(root,'scripts/career/service/scoring-core.mjs'),path.join(out,'scoring-core.mjs'));
+console.log('Career client compiled');

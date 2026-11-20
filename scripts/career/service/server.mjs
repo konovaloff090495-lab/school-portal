@@ -2,7 +2,7 @@ import http from 'node:http';
 import {pathToFileURL} from 'node:url';
 import {Store,uuid,makeMeasurement,ELAPSED_BUCKETS,MEASUREMENT_PATHS} from './store.mjs';
 import {calculate} from './scoring.mjs';
-import {Delivery,OFFERS} from './delivery.mjs';
+import {OFFERS} from './delivery.mjs';
 import {sendRecoveryMail} from './mail.mjs';
 const EMAIL=/^[^\s@<>]{1,64}@[^\s@<>.][^\s@<>]{0,180}\.[A-Za-zА-Яа-я]{2,24}$/;
 const COOKIE='__Host-ps_career';
@@ -24,7 +24,7 @@ function partnerBody(b){object(b,['request_id','offer_id','name','phone','pd_agr
 async function body(req){if(req.headers['content-type']?.split(';')[0]!=='application/json')fail(415);const length=Number(req.headers['content-length']||0);if(length>16384)fail(413);let size=0,chunks=[];for await(const chunk of req){size+=chunk.length;if(size>16384)fail(413);chunks.push(chunk)}try{return JSON.parse(Buffer.concat(chunks).toString())}catch{fail()}}
 export function createCareerServer({env=process.env,transport=fetch,mail=sendRecoveryMail,now=()=>Date.now()}={}){
  const origin=env.CAREER_ORIGIN||'https://pro-schools.ru';if(!/^https:\/\/[a-z0-9.-]+$/.test(origin))throw Error('invalid_origin');
- const store=new Store(env.CAREER_DB||'/var/lib/proschools-career/career.sqlite3',env.CAREER_KEY_HEX,now),delivery=new Delivery(store,env,transport);
+ const store=new Store(env.CAREER_DB||'/var/lib/proschools-career/career.sqlite3',env.CAREER_KEY_HEX,now);
  const cookie=(value,clear=false)=>`${COOKIE}=${value}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=${clear?0:2592000}`;
  const server=http.createServer(async(req,res)=>{res.setHeader('Cache-Control','private, no-store');res.setHeader('Pragma','no-cache');res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('Cross-Origin-Resource-Policy','same-origin');
  const send=(status,data)=>{res.writeHead(status);res.end(JSON.stringify(data))};
@@ -32,31 +32,22 @@ export function createCareerServer({env=process.env,transport=fetch,mail=sendRec
  if(mutate&&req.headers.origin!==origin)fail(403);if(req.headers.origin&&req.headers.origin!==origin)fail(403);if(req.headers['sec-fetch-site']==='cross-site')fail(403);
  const ip=req.socket.remoteAddress?.replace('::ffff:','');const address=['127.0.0.1','::1'].includes(ip)?String(req.headers['x-real-ip']||ip):ip;
  const session=req.headers.cookie?.split(';').map(v=>v.trim()).find(v=>v.startsWith(COOKIE+'='))?.slice(COOKIE.length+1);let user;
+ if(['/api/career/partner/','/api/career/offers/','/api/career/results/'].includes(path))return send(410,{ok:false,error:'intake_closed'});
  if(path==='/api/career/health/'&&req.method==='GET'){store.db.prepare('SELECT 1').get();return send(200,{ok:true})}
  if(path!=='/api/career/events/'&&!store.rate(`${address}:${mutate?'write':'read'}`,mutate?Number(env.CAREER_WRITE_LIMIT||40):240,600000))fail(429);
  if(path==='/api/career/events/'&&req.method==='POST'){
   if(!store.rate(address+':events',240,600000))fail(429);const b=await body(req);object(b,['event','event_id','landing','grade','offer_id','measurement','step','elapsed_bucket']);if(!EVENTS.has(b.event)||!uuid.test(b.event_id||'')||!canonicalPath(b.landing)||!MEASUREMENT_PATHS.has(b.landing)||(b.grade!==undefined&&(!Number.isInteger(b.grade)||b.grade<5||b.grade>11))||(b.offer_id!==undefined&&!OFFERS.some(o=>o.id===b.offer_id)))fail();if(b.step!==undefined&&(!Number.isInteger(b.step)||b.step<1||b.step>24))fail();if(b.elapsed_bucket!==undefined&&!ELAPSED_BUCKETS.includes(b.elapsed_bucket))fail();if(['career_question_view','career_question_answered'].includes(b.event)&&b.step===undefined)fail();b.measurement=measurementBody(b.measurement);if(b.event.startsWith('career_feedback_')&&!b.measurement?.journey_id)fail();const duplicate=store.recordEvent(b);return send(200,{ok:true,duplicate});
  }
  user=store.authenticate(session);
- if(path==='/api/career/results/'&&req.method==='POST'){
-  if(!store.rate(address+':results',Number(env.CAREER_SAVE_LIMIT||10),3600000))fail(429);const data=resultBody(await body(req));data.measurement=makeMeasurement(data.measurement,data.visit_utm,(env.CAREER_QA_EMAILS||'').toLowerCase().split(',').map(x=>x.trim()).filter(Boolean).includes(data.email));const saved=store.createResult(data,calculate(data.answers,data.grade,now()));
-  res.setHeader('Set-Cookie',cookie(saved.session));const recovery_url=`/proforientaciya/rezultat/#token=${saved.recovery}`;const mail_sent=saved.duplicate?false:await mail(data.email,origin+recovery_url,env);
-  return send(200,{ok:true,result_id:saved.id,result:saved.result,recovery_url,mail_sent,duplicate:saved.duplicate});
- }
  if(path==='/api/career/access/'&&req.method==='POST'){if(!store.rate(address+':access',15,3600000))fail(429);const b=await body(req);object(b,['token']);const recovered=store.recover(b.token);if(!recovered)fail(401);res.setHeader('Set-Cookie',cookie(recovered.session));return send(200,{ok:true,result_id:recovered.id})}
  if(!user)fail(401);
  if(path==='/api/career/results/current/'&&req.method==='GET')return send(200,{ok:true,result_id:user.id,result:user.result,recovery_url:store.recoveryUrl(user),email_masked:user.data.email.replace(/^(.).+(@.+)$/,'$1***$2'),requests:store.requests(user.id)});
- if(path==='/api/career/offers/'&&req.method==='GET')return send(200,{ok:true,offers:delivery.offers(user.data.age)});
- if(path==='/api/career/partner/'&&req.method==='POST'){
-  if(!store.rate(user.id+':partners',15,3600000))fail(429);const b=partnerBody(await body(req)),offer=OFFERS.find(o=>o.id===b.offer_id);if(user.data.age<offer.age_min||user.data.age>offer.age_max)fail(400);if(!delivery.available(offer))fail(503);
-  b.measurement=b.measurement?makeMeasurement(b.measurement,user.data.visit_utm,user.data.measurement?.is_test===true||(env.CAREER_QA_NAMES||'').toLowerCase().split('|').map(x=>x.trim()).filter(Boolean).includes(b.name.toLowerCase())):user.data.measurement;const saved=store.request(user,b);send(saved.duplicate?200:202,{ok:true,request_id:saved.row.request_id,status:saved.row.status,duplicate:saved.duplicate});void delivery.drain();return;
- }
  if(path==='/api/career/requests/status/'&&req.method==='GET'){const id=url.searchParams.get('request_id');if(!uuid.test(id||''))fail();const r=store.requests(user.id).find(r=>r.request_id===id);if(!r)fail(404);return send(200,{ok:true,...r})}
  if((path==='/api/career/results/current/'&&req.method==='DELETE')||(path==='/api/career/delete/'&&req.method==='POST')){if(req.method==='POST'){const b=await body(req);object(b,[])}store.delete(user.id);res.setHeader('Set-Cookie',cookie('',true));return send(200,{ok:true})}
  fail(404);
  }catch(e){if(!res.headersSent){const status=e.status||500;if(status===500)console.error(JSON.stringify({event:'career_api_error',code:'internal'}));if(status===429)res.setHeader('Retry-After','600');send(status,{ok:false,error:status===401?'Доступ не найден или истёк.':status===503?'Предложение временно недоступно.':'Не удалось выполнить запрос. Проверьте данные и повторите.'})}else res.end()}
  });
- const timer=setInterval(()=>{try{store.cleanup();void delivery.drain().catch(()=>{})}catch{console.error('{"event":"career_maintenance_error"}')}},30000);timer.unref();server.requestTimeout=15000;server.headersTimeout=10000;server.keepAliveTimeout=5000;
- return {server,store,delivery,close:()=>{clearInterval(timer);server.close();store.close()}};
+ const timer=setInterval(()=>{try{store.cleanup();}catch{console.error('{"event":"career_maintenance_error"}')}},30000);timer.unref();server.requestTimeout=15000;server.headersTimeout=10000;server.keepAliveTimeout=5000;
+ return {server,store,close:()=>{clearInterval(timer);server.close();store.close()}};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const app=createCareerServer();app.server.listen(Number(process.env.CAREER_PORT||8795),'127.0.0.1',()=>console.info('{"event":"career_service_ready"}'));process.on('SIGTERM',()=>{app.server.close(()=>{app.store.close();process.exit(0)})})}

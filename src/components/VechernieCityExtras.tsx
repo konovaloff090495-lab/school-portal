@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import { regionLabels, regionLabelsIn, type RegionSlug } from '@/data/schools'
 
 export default function VechernieCityExtras({ region, count, variant = 'vechernie', afterLead }: { region: RegionSlug; count: number; variant?: 'vechernie' | 'eksternal'; afterLead?: ReactNode }) {
@@ -8,13 +7,6 @@ export default function VechernieCityExtras({ region, count, variant = 'vecherni
   const regionIn = regionLabelsIn[region]
   const regionName = regionLabels[region]
   return <div className="max-w-4xl mx-auto space-y-8 pb-8">
-    <OnlineLeadCta attestat
-      source={ekst ? `Экстернат: город ${regionName}` : `Вечерние школы: город ${regionName}`}
-      heading="Аттестат за 9 или 11 класс: узнайте условия онлайн-обучения"
-      text={`Консультация Синергии для жителей ${regionName}: какие документы нужны, какой темп подходит и сколько стоит программа. Занятия в записи и промежуточные аттестации онлайн; ОГЭ/ЕГЭ по программе — очно в Москве. Эта заявка не отправляется в местные школы ${regionIn}.`}
-      bullets={['маршрут к аттестату за 9 или 11 класс — по вашим документам', 'полная стоимость, сроки и содержание договора до оплаты', 'место экзаменов и необходимость поездки обсуждаются заранее']}
-      city={regionName}
-    />
     {afterLead}
     <section className="space-y-4">
       <h2 className="text-2xl font-bold">{ekst ? `Как выбрать экстернат ${regionIn}` : `Поступление в вечернюю школу ${regionIn}: что уточнить`}</h2>

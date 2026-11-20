@@ -15,7 +15,6 @@ import { BreadcrumbJsonLd, SchoolListJsonLd } from '@/lib/schema'
 import CityOnlinePage, { ONLINE_INDEX_REGIONS, onlineSchoolsForCity, schoolsWord } from './CityOnlinePage'
 import VechernieCityExtras from '@/components/VechernieCityExtras'
 import EgeCityExtras from '@/components/EgeCityExtras'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
 
 import { isCityTypeIndexable } from '@/lib/index-rules'
@@ -163,13 +162,6 @@ export default async function TypePage({ params }: Props) {
             ? <><WaldorfCatalogNotes /><SeoBlock region={r} type={t} count={list.length} hubHref="/shkoly/tipy/valdorfskie/" hubLabel={hubLabel} /></>
             : t === 'semejnye'
             ? <>
-                <OnlineLeadCta
-                  source={`Семейные школы: город ${regionName}`}
-                  heading={`Платная семейная программа Синергии ${regionIn}`}
-                  text="Консультант Синергии расскажет об условиях её платной программы. Укажите класс, задачу и удобное время звонка. Форма не подаёт заявление в местную муниципальную школу; зачисление, цену и аттестации согласуйте до оплаты."
-                  bullets={['уведомление в управление образования и документы', 'принимающая организация и оформление школьных результатов', 'место аттестаций и ОГЭ/ЕГЭ — по условиям выбранной программы']}
-                  city={regionName}
-                />
                 <OnlineBrandsTable
                   title={`Онлайн-школы для семейного обучения ${regionIn}`}
                   intro="Все семь школ зачисляют на семейную или заочную форму из любого города и проводят аттестации дистанционно; у Синергии, Онлайн Гимназии №1 и БИТ — собственная аккредитация."

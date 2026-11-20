@@ -19,6 +19,8 @@ export function sanitizeHtml(html: string): string {
     .replace(/\s+on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '')
     // Удаляем javascript: в href/src/action
     .replace(/(href|src|action)\s*=\s*["']?\s*javascript:[^"'\s>]*/gi, '$1="#"')
+    // У прежних партнёрских ссылок сохраняем текст статьи.
+    .replace(/<a\b(?=[^>]*\bhref\s*=\s*["']?(?:https?:)?\/\/(?:[a-z0-9-]+\.)*(?:synergy\.ru|synergy\.com|synergy-academy\.ru|syndev\.ru|school-?university\.(?:ru|com))(?=[:\/"'?#>\s]))[^>]*>([\s\S]*?)<\/a>/gi, '$1')
     // Удаляем data: URI в src (потенциальный XSS в IE)
     .replace(/src\s*=\s*["']?\s*data:[^"'\s>]*/gi, 'src=""')
 }

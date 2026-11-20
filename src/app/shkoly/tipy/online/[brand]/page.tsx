@@ -10,7 +10,6 @@ import { regionSlugs, regionLabelsIn } from '@/data/schools'
 import { BreadcrumbJsonLd, FaqJsonLd } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import OnlineBrandsTable from '@/components/OnlineBrandsTable'
-import OnlineLeadCta from '@/components/OnlineLeadCta'
 import ReviewsBlock from '@/components/ReviewsBlock'
 
 /**
@@ -20,7 +19,7 @@ import ReviewsBlock from '@/components/ReviewsBlock'
  * (9,8 тыс.), «онлайн гимназия 1» (9,8 тыс.), «интернетурок», «skysmart школа» —
  * это люди, которые уже выбирают онлайн-школу. У нас под них были только тонкие
  * карточки /shkola/. Здесь — обзор с реальными тарифами, схемой аттестации,
- * плюсами/минусами, FAQ-разметкой, отзывами пользователей и лид-формой подбора.
+ * плюсами/минусами, FAQ-разметкой, отзывами пользователей .
  */
 
 interface Props { params: Promise<{ brand: string }> }
@@ -111,7 +110,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           {b.students && <Fact k="Ученики" v={b.students} />}
         </div>
 
-        {verified && <section className="border border-slate-200 rounded-xl p-5 mb-8 bg-slate-50"><h2 className="text-xl font-bold mb-3">Школьные документы и состав продукта: проверка {verified.checkedAt}</h2><p className="leading-7 mb-3">{verified.note}</p><p className="text-sm text-slate-600 mb-3">Проверены опубликованные сведения провайдера. Для своего договора дополнительно сверяйте юридическое лицо и уровень программы в реестрах; это не независимая оценка качества школы.</p><ul className="list-disc pl-5 space-y-2">{verified.sources.map((url, i) => <li key={url}><a href={url} className="text-blue-800 underline break-all">Официальный источник {i + 1}</a></li>)}</ul></section>}
+        {verified && <section className="border border-slate-200 rounded-xl p-5 mb-8 bg-slate-50"><h2 className="text-xl font-bold mb-3">Школьные документы и состав продукта: проверка {verified.checkedAt}</h2><p className="leading-7 mb-3">{verified.note}</p><p className="text-sm text-slate-600 mb-3">Проверены опубликованные сведения провайдера. Для своего договора дополнительно сверяйте юридическое лицо и уровень программы в реестрах; это не независимая оценка качества школы.</p>{verified.sources.length > 0 && <ul className="list-disc pl-5 space-y-2">{verified.sources.map((url, i) => <li key={url}><a href={url} className="text-blue-800 underline break-all">Официальный источник {i + 1}</a></li>)}</ul>}</section>}
         <p className="text-sm text-slate-600 mb-5">Минимальный учебный тариф может не включать зачисление и аттестацию. Сопоставляйте один класс, одинаковый состав услуг и полную сумму за год. Исторический ориентир не гарантирует текущую цену.</p>
         {/* Тарифы */}
         <h2 style={h2}>Тарифы {b.name} на 2026/27 учебный год</h2>
@@ -172,13 +171,6 @@ export default async function OnlineBrandPage({ params }: Props) {
         </div>
         <p style={p}><strong>Кому подходит:</strong> {b.fitFor}.</p>
 
-        <OnlineLeadCta
-          source={`Онлайн-школы: бренд ${b.name}`}
-          heading="Хотите сравнить с платной программой Синергии?"
-          text={`Условия ${b.name} проверяйте на её официальном сайте и в сравнении ниже. Эта форма направляет заявку консультанту Синергии по её программам. Укажите класс и удобное время звонка; зачисление, стоимость и аттестации согласуйте до оплаты.`}
-          schoolName={b.name}
-        />
-
         <OnlineBrandsTable
           title={`${b.name} или другие онлайн-школы: сравнение`}
           intro="Все школы из таблицы работают по всей России — город ученика не важен. Сначала идут школы с собственной аккредитацией, дальше — по цене формата с зачислением."
@@ -213,7 +205,7 @@ export default async function OnlineBrandPage({ params }: Props) {
           <li><Link href="/shkoly/tipy/domashnie/" style={a}>Домашние школы и домашнее обучение — как оформить</Link></li>
           <li><Link href="/shkoly/tipy/eksternal/" style={a}>Школы-экстернаты: 10–11 класс за год</Link></li>
           {b.cardSlug && <li><Link href={`/shkola/${b.cardSlug}/`} style={a}>Карточка {b.name} в каталоге</Link></li>}
-          <li><a href={b.site} rel="nofollow noopener" target="_blank" style={a}>Официальный сайт {b.name}</a></li>
+          {b.site && <li><a href={b.site} rel="nofollow noopener" target="_blank" style={a}>Официальный сайт {b.name}</a></li>}
         </ul>
         <p style={{ ...p, fontSize: 14 }}>
           Онлайн-школы для жителей:{' '}

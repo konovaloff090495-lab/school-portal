@@ -1,14 +1,10 @@
 'use client'
-import { PDN_DEFAULT_SELECTED } from '@/lib/lead-consent'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
-  getUser, saveUser, getExpressResult, saveExtendedResult,
+  getUser, getExpressResult, saveExtendedResult,
   type UserProfile, type ExtendedTestResult,
 } from '@/lib/userStorage'
-import { formatPhone, validatePhone } from '@/lib/phone'
-import { submitLead } from '@/lib/submitLead'
-import LeadGiftNotice from '@/components/LeadGiftNotice'
 
 // ── Типы ─────────────────────────────────────────────────────────────────────
 
@@ -269,12 +265,6 @@ export default function ExtendedTest() {
     setUser(getUser())
   }, [])
 
-  const handleRegister = (profile: UserProfile) => {
-    saveUser(profile)
-    setUser(profile)
-    setScreen('test')
-  }
-
   const handleAnswer = (val: AnswerValue) => {
     const newAnswers = { ...answers, [currentQ]: val }
     setAnswers(newAnswers)
@@ -303,7 +293,7 @@ export default function ExtendedTest() {
   }
 
   if (screen === 'gate') {
-    return <GateScreen user={user} onContinue={handleRegister} />
+    return <GateScreen onStart={() => setScreen('test')} />
   }
 
   if (screen === 'test') {
@@ -330,159 +320,13 @@ export default function ExtendedTest() {
   return <ResultScreen result={result!} user={user} onRestart={handleRestart} />
 }
 
-// ── Экран: Лид-форма (Гейт) ───────────────────────────────────────────────────
-
-function GateScreen({ user, onContinue }: { user: UserProfile | null; onContinue: (p: UserProfile) => void }) {
-  const [name, setName] = useState(user?.name ?? '')
-  const [email, setEmail] = useState(user?.email ?? '')
-  const [phone, setPhone] = useState(user?.phone ?? '')
-  const [pdAgreed, setPdAgreed] = useState(PDN_DEFAULT_SELECTED)
-  const [marketingAgreed, setMarketingAgreed] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
-
-  const phoneFilled = phone.replace(/\D/g, '').length > 1
-
-  const validate = () => {
-    const e: Record<string, string> = {}
-    if (!name.trim()) e.name = 'Введите имя'
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = 'Введите корректный email'
-    if (phoneFilled) { const pe = validatePhone(phone); if (pe) e.phone = pe }
-    setErrors(e)
-    return Object.keys(e).length === 0
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!validate()) return
-    // Телефон указан → это лид: уходит в Telegram и CRM Синергии (не блокируем переход к тесту)
-    if (phoneFilled && pdAgreed) {
-      void submitLead({
-        name: name.trim(), email: email.trim(), phone,
-        source: 'Профтест: расширенный (гейт)',
-        pd_agreed: pdAgreed, marketing_agreed: marketingAgreed,
-      })
-    }
-    onContinue({ name: name.trim(), email: email.trim(), phone: phoneFilled ? phone : undefined, createdAt: new Date().toISOString() })
-  }
-
+function GateScreen({ onStart }: { onStart: () => void }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-violet-50">
-      <div className="max-w-lg mx-auto px-4 pt-12 pb-20">
-
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs text-gray-400 mb-8">
-          <Link href="/test/" className="hover:text-gray-600">Экспресс-тест</Link>
-          <span>›</span>
-          <span className="text-gray-700 font-medium">Расширенный тест</span>
-        </div>
-
-        {/* Hero */}
-        <div className="text-center mb-8">
-          <div className="text-5xl mb-4">🔍</div>
-          <h1 className="text-3xl font-black text-[#0F172A] mb-3">
-            Расширенный тест профориентации
-          </h1>
-          <p className="text-gray-500 text-sm leading-relaxed">
-            30 вопросов · ~10 минут · Полный портрет личности
-          </p>
-        </div>
-
-        {/* Что будет в результате */}
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Ваш профиль включает</p>
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { emoji: '🧠', text: 'Стиль мышления и обучения' },
-              { emoji: '🌐', text: 'Социальный тип личности' },
-              { emoji: '🔥', text: 'Тип мотивации' },
-              { emoji: '🏆', text: 'Карьерные пути с % совпадения' },
-              { emoji: '🌱', text: 'Ключевые интересы и навыки' },
-              { emoji: '💾', text: 'Сохранение в личном кабинете' },
-            ].map(item => (
-              <div key={item.text} className="flex items-center gap-2">
-                <span className="text-lg">{item.emoji}</span>
-                <span className="text-xs text-gray-700">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Форма */}
-        <div className="bg-white rounded-2xl border border-violet-100 shadow-sm p-6">
-          <p className="text-sm font-semibold text-[#0F172A] mb-1">
-            {user ? 'Продолжить как ' + user.name : 'Создайте личный кабинет'}
-          </p>
-          <p className="text-xs text-gray-400 mb-5">
-            Результаты теста будут сохранены и доступны в любое время
-          </p>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <p className="text-xs text-gray-600 leading-relaxed">Заявка на консультацию по программам онлайн-школы «Синергия» будет передана АНО ВО «Московский университет «Синергия». Она не направляется другой школе из каталога.</p>
-            <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1">Имя *</label>
-              <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                placeholder="Иван"
-                className={`w-full border rounded-xl px-4 py-3 text-sm outline-none transition-all ${
-                  errors.name ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100'
-                }`}
-              />
-              {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
-            </div>
-            <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1">Email *</label>
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="ivan@example.com"
-                className={`w-full border rounded-xl px-4 py-3 text-sm outline-none transition-all ${
-                  errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100'
-                }`}
-              />
-              {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
-            </div>
-            <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1">Телефон <span className="text-gray-400 font-normal">(необязательно)</span></label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={e => { setPhone(e.target.value.replace(/\D/g, '').length ? formatPhone(e.target.value) : ''); if (errors.phone) setErrors(({ phone: _p, ...rest }) => rest) }}
-                placeholder="+7 (___) ___-__-__"
-                maxLength={18}
-                className={`w-full border rounded-xl px-4 py-3 text-sm outline-none transition-all ${
-                  errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-violet-400 focus:ring-2 focus:ring-violet-100'
-                }`}
-              />
-              {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
-            </div>
-            <LeadGiftNotice afterTest />
-            <button
-              type="submit"
-              className="w-full py-3.5 rounded-xl bg-[#7C3AED] hover:bg-violet-600 text-white font-bold text-sm transition-all duration-200 shadow-md shadow-violet-200 hover:-translate-y-0.5"
-            >
-              Начать расширенный тест →
-            </button>
-            <div className="space-y-1.5">
-              <label className="flex items-start gap-2 cursor-pointer">
-                <input type="checkbox" checked={pdAgreed} onChange={e => setPdAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
-                <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Даю согласие на{' '}
-                  <Link href="/soglasie-na-obrabotku-personalnyh-dannyh/" className="text-[#7C3AED] hover:underline" target="_blank">обработку персональных данных</Link>
-                </span>
-              </label>
-              <label className="flex items-start gap-2 cursor-pointer">
-                <input type="checkbox" checked={marketingAgreed} onChange={e => setMarketingAgreed(e.target.checked)} className="mt-0.5 shrink-0 accent-[#7C3AED]" />
-                <span className="text-[11px] text-gray-500 leading-relaxed">
-                  Согласен получать уведомления —{' '}
-                  <Link href="/soglasie-marketing/" className="text-[#7C3AED] hover:underline" target="_blank">условия рассылки</Link>
-                </span>
-              </label>
-            </div>
-          </form>
-        </div>
-      </div>
+    <div className="max-w-lg mx-auto px-4 py-12">
+      <Link href="/test/" className="text-sm text-violet-700 underline">Экспресс-тест</Link>
+      <h1 className="mt-5 text-3xl font-black text-slate-900">Расширенный тест профориентации</h1>
+      <p className="mt-3 text-slate-600">Ответьте на вопросы, чтобы узнать, какие занятия и направления могут вам подойти.</p>
+      <button type="button" onClick={onStart} className="mt-6 rounded-xl bg-violet-700 px-6 py-3 font-bold text-white">Начать тест</button>
     </div>
   )
 }
@@ -711,11 +555,6 @@ function ResultScreen({
             )}
           </div>
         </div>
-
-        <Link href="/podarki/" className="mb-6 block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600">
-          <LeadGiftNotice afterTest />
-          <span className="mt-2 block text-center text-sm font-semibold text-[#C2410C]">Выбрать подарок →</span>
-        </Link>
 
         {/* LK + Каталог */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">

@@ -17,8 +17,6 @@ import { hasConfirmedFreePrice } from '@/lib/school-price'
 import { getTypeColor, pluralSchools } from '@/lib/utils'
 import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-profiles'
 import SchoolCard from '@/components/SchoolCard'
-import CatalogSynergyOffer from '@/components/CatalogSynergyOffer'
-import ExternatBanner from '@/components/ExternatBanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 
@@ -1238,31 +1236,10 @@ export default function CatalogClient({
 
           {filtered.length > 0 && viewMode === 'grid' && (() => {
             const page = filtered.slice(0, visibleCount)
-            const cards = page.map((school, i) => {
-              const elements: React.ReactNode[] = []
-              // Keep the full-width banner between complete rows at both column counts.
-              if (i === 3) {
-                elements.push(
-                  <div key="externat-banner-wide" className="col-span-full sm:hidden xl:block"><ExternatBanner /></div>
-                )
-              }
-              if (i === 4) {
-                elements.push(
-                  <div key="externat-banner-two-columns" className="col-span-full hidden sm:block xl:hidden"><ExternatBanner /></div>
-                )
-              }
-              if (i === 12) {
-                elements.push(
-                  <div key="synergy-trial" className="col-span-full"><CatalogSynergyOffer /></div>
-                )
-              }
-              elements.push(<SchoolCard key={school.id} school={school} />)
-              return elements
-            })
             return (
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {cards}
+                  {page.map(school => <SchoolCard key={school.id} school={school} />)}
                 </div>
                 {visibleCount < filtered.length && (
                   <div className="mt-8 text-center">
