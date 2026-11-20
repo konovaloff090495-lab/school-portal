@@ -38,7 +38,7 @@ interface Props {
   statId?: number
 }
 
-let sharedViewport: { pathname: string; isDesktop: boolean } | undefined
+let pairedPlacementViewport: { pathname: string; isDesktop: boolean } | undefined
 
 /**
  * Рекламный блок РСЯ.
@@ -100,17 +100,21 @@ export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewp
   useEffect(() => {
     const experiment = window.__psBlogAds?.getActive()
     if (experiment?.qa) return
-    let isDesktop = window.matchMedia('(min-width: 1024px)').matches
-    if (desktopBlockId) {
-      // Keep both catalog placements paired if filters remount just one after a resize.
-      if (sharedViewport?.pathname !== pathname) sharedViewport = { pathname, isDesktop }
-      isDesktop = sharedViewport.isDesktop
-    }
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches
     if (viewport === 'desktop' && !isDesktop) return
     if (viewport === 'mobile' && isDesktop) return
     const host = hostRef.current
     if (!host) return
-    const activeBlockId = isDesktop && desktopBlockId ? desktopBlockId : blockId
+
+    let activeBlockId = blockId
+    if (desktopBlockId) {
+      // Keep both catalog placements paired if filters remount just one after a resize.
+      if (pairedPlacementViewport?.pathname !== pathname) {
+        const narrowDesktop = window.matchMedia('(min-width: 640px) and (hover: hover) and (pointer: fine)').matches
+        pairedPlacementViewport = { pathname, isDesktop: isDesktop || narrowDesktop }
+      }
+      if (pairedPlacementViewport.isDesktop) activeBlockId = desktopBlockId
+    }
     const divId = `yandex_rtb_${activeBlockId}${suffix ? `_${suffix}` : ''}`
 
     // Замер 31.08 (вечер): вызов из useEffect в момент гидрации не даёт рекламы,

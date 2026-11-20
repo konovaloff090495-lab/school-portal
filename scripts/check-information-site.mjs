@@ -59,8 +59,8 @@ try {
       assert.doesNotMatch(consent, /Синерг|АНО ВО|9702078886/)
     }
   }
-  await page.setViewportSize({ width: 1440, height: 900 })
-  for (const path of ['/shkoly/', '/shkoly/tomsk/eksternal/']) {
+  for (const [path, width] of [['/shkoly/', 1440], ['/shkoly/tomsk/eksternal/', 920]]) {
+    await page.setViewportSize({ width, height: 900 })
     const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
     assert.equal(response.status(), 200, path)
     await page.locator('[data-catalog-inline-ad] [id^="yandex_rtb_R-A-19425636-2_"]').waitFor({ state: 'attached' })
