@@ -255,7 +255,7 @@ function CatalogInlineAd() {
   const id = useId().replace(/[^a-z0-9_-]/gi, '')
 
   return (
-    <div data-catalog-inline-ad className="col-span-full min-w-0 -mt-5 has-[[id^=yandex_rtb_]>*]:mt-0">
+    <div data-catalog-inline-ad className="col-span-full min-w-0 -mt-5 has-[[id]>*]:mt-0">
       <YandexRTBBanner {...CATALOG_INLINE_AD} suffix={`catalog-${id}`} retry={false} />
     </div>
   )
