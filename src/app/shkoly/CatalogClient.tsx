@@ -255,7 +255,7 @@ function CatalogInlineAd() {
   const id = useId().replace(/[^a-z0-9_-]/gi, '')
 
   return (
-    <div data-catalog-inline-ad className="col-span-full min-w-0 -mt-5 has-[[id]>*]:mt-0">
+    <div data-catalog-inline-ad className="min-w-0 has-[[id]>*]:mt-5">
       <YandexRTBBanner {...CATALOG_INLINE_AD} suffix={`catalog-${id}`} retry={false} />
     </div>
   )
@@ -1255,9 +1255,15 @@ export default function CatalogClient({
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
                   {cards.slice(0, CARDS_BEFORE_AD)}
-                  {cards.length > CARDS_BEFORE_AD && <CatalogInlineAd />}
-                  {cards.slice(CARDS_BEFORE_AD)}
                 </div>
+                {cards.length > CARDS_BEFORE_AD && (
+                  <>
+                    <CatalogInlineAd />
+                    <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                      {cards.slice(CARDS_BEFORE_AD)}
+                    </div>
+                  </>
+                )}
                 {visibleCount < filtered.length && (
                   <div className="mt-8 text-center">
                     <button
