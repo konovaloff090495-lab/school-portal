@@ -35,15 +35,15 @@ try {
   for (const path of paths) {
     const response = await page.goto(base + path, { waitUntil: 'domcontentloaded' })
     assert.equal(response.status(), 200, path)
-    assert.equal(await page.locator('main h1').count(), 1, path)
+    assert.equal(await page.locator('#main h1').count(), 1, path)
     assert.equal(await page.locator('form:has([type="tel"]), [data-ps-sale], [data-ps-sale-slot]').count(), 0, path)
     const hosts = await page.locator('a[href]').evaluateAll(nodes => nodes.map(node => new URL(node.href).hostname))
     assert.ok(!hosts.some(host => /(^|\.)(?:synergy(?:-academy)?\.ru|syndev\.ru|school-?university\.(?:com|ru))$/.test(host)), path)
     await page.waitForFunction(() => window.__informationAdCalls.length >= 2)
     assert.deepEqual((await page.evaluate(() => window.__informationAdCalls)).sort(), ['R-A-19425636-2', 'R-A-19425636-3'], path)
-    assert.doesNotMatch(await page.locator('main').innerText(), /Синерги[яиуюе]|\bSynergy\b/i, path)
+    assert.doesNotMatch(await page.locator('#main').innerText(), /Синерги[яиуюе]|\bSynergy\b/i, path)
     if (path === '/soglasie-marketing/') {
-      const consent = await page.locator('main').innerText()
+      const consent = await page.locator('#main').innerText()
       assert.match(consent, /ИП Герасимова/)
       assert.doesNotMatch(consent, /Синерг|АНО ВО|9702078886/)
     }
