@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useCallback, useEffect, useRef, useId } from 'react'
+import { Fragment, useState, useMemo, useCallback, useEffect, useRef, useId } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -19,7 +19,7 @@ import { SCHOOL_PROFILES, detectProfile, type ProfileId } from '@/lib/school-pro
 import SchoolCard from '@/components/SchoolCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
-import { CATALOG_INLINE_AD } from '@/lib/ads'
+import { CATALOG_INLINE_AD, CATALOG_SECOND_INLINE_AD } from '@/lib/ads'
 import { getSchoolLevels, type EducationLevel } from '@/lib/school-levels'
 
 // Типы, у которых карточка без priceFrom значит «платно, цена по запросу», а не «бесплатно»
@@ -248,15 +248,18 @@ function ActiveChip({ label, onRemove }: { label: string; onRemove: () => void }
 }
 
 const PAGE_SIZE = 24
-// Six cards end a complete row at all three grid widths (1, 2, or 3 columns).
-const CARDS_BEFORE_AD = 6
+// Both positions follow complete rows at every catalog grid width.
+const CATALOG_AD_PLACEMENTS = [
+  { after: 6, banner: CATALOG_INLINE_AD },
+  { after: 12, banner: CATALOG_SECOND_INLINE_AD },
+] as const
 
-function CatalogInlineAd() {
+function CatalogInlineAd({ after, banner }: typeof CATALOG_AD_PLACEMENTS[number]) {
   const id = useId().replace(/[^a-z0-9_-]/gi, '')
 
   return (
-    <div data-catalog-inline-ad className="min-w-0 has-[[id]>*]:mt-5">
-      <YandexRTBBanner {...CATALOG_INLINE_AD} suffix={`catalog-${id}`} retry={false} />
+    <div data-catalog-inline-ad={after} className="min-w-0 has-[[id]>*]:mt-5">
+      <YandexRTBBanner {...banner} suffix={`catalog-${after}-${id}`} retry={false} />
     </div>
   )
 }
@@ -1251,19 +1254,20 @@ export default function CatalogClient({
           {filtered.length > 0 && viewMode === 'grid' && (() => {
             const page = filtered.slice(0, visibleCount)
             const cards = page.map(school => <SchoolCard key={school.id} school={school} />)
+            const placements = CATALOG_AD_PLACEMENTS.filter(({ after }) => cards.length > after)
             return (
               <div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {cards.slice(0, CARDS_BEFORE_AD)}
-                </div>
-                {cards.length > CARDS_BEFORE_AD && (
-                  <>
-                    <CatalogInlineAd />
-                    <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                      {cards.slice(CARDS_BEFORE_AD)}
-                    </div>
-                  </>
-                )}
+                {[...placements, null].map((placement, index) => {
+                  const start = placements[index - 1]?.after ?? 0
+                  return (
+                    <Fragment key={start}>
+                      <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5${start ? ' mt-5' : ''}`}>
+                        {cards.slice(start, placement?.after)}
+                      </div>
+                      {placement && <CatalogInlineAd {...placement} />}
+                    </Fragment>
+                  )
+                })}
                 {visibleCount < filtered.length && (
                   <div className="mt-8 text-center">
                     <button

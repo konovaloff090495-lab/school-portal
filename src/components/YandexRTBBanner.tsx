@@ -34,6 +34,7 @@ interface Props {
    * реклама уедет в скрытый сайдбар. Граница — 1024px (Tailwind `lg`).
    */
   viewport?: 'mobile' | 'desktop'
+  loadNearViewport?: boolean
   retry?: boolean
   statId?: number
 }
@@ -46,7 +47,8 @@ let pairedPlacementViewport: { pathname: string; isDesktop: boolean } | undefine
  * blockId — идентификатор блока из кабинета РСЯ, напр. "R-A-19425636-1"
  * suffix  — уникальный суффикс если блок стоит несколько раз на одной странице
  *
- * Рендер — сразу при монтировании (revert 919fc25).
+ * По умолчанию рендер начинается при монтировании. Дополнительное место
+ * каталога загружается при прокрутке после первоначальных запросов.
  *
  * 25.07 блоки перевели на отложенный рендер через IntersectionObserver ради
  * viewability. Замер за 10 дней после (`python3 rsya.py --period 30days --days`):
@@ -93,7 +95,7 @@ let pairedPlacementViewport: { pathname: string; isDesktop: boolean } | undefine
  * Проверка через matchMedia синхронная, в том же useEffect — отложенного рендера
  * (провал 25.07, CPM втрое вниз) здесь нет.
  */
-export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewport, retry = true, statId }: Props) {
+export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewport, loadNearViewport = false, retry = true, statId }: Props) {
   const pathname = usePathname()
   const hostRef = useRef<HTMLDivElement>(null)
 
@@ -153,9 +155,24 @@ export default function YandexRTBBanner({ blockId, desktopBlockId, suffix, viewp
     // с rAF место не создавалось и реклама не запрашивалась никогда. Замер
     // 31.08: document.visibilityState === 'hidden' → узлов нет ни одного.
     // Таймеры в скрытой вкладке работают, пусть и реже.
-    const t = window.setTimeout(draw, 0)
-    return () => { cancelled = true; window.clearTimeout(t) }
-  }, [blockId, desktopBlockId, suffix, viewport, pathname, retry, statId])
+    let observer: IntersectionObserver | undefined
+    let timer: number | undefined
+    if (loadNearViewport && typeof IntersectionObserver === 'function') {
+      observer = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return
+        observer?.disconnect()
+        draw()
+      }, { rootMargin: '250px 0px' })
+      observer.observe(host)
+    } else {
+      timer = window.setTimeout(draw, 0)
+    }
+    return () => {
+      cancelled = true
+      observer?.disconnect()
+      window.clearTimeout(timer)
+    }
+  }, [blockId, desktopBlockId, suffix, viewport, pathname, loadNearViewport, retry, statId])
 
   // suppressHydrationWarning + пустой children: React не трогает содержимое хоста.
   return <div ref={hostRef} suppressHydrationWarning />
