@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllGdzBooks, getGdzBook, getGdzAllProblems, gdzNumLabel } from '@/data/gdz'
 import YandexRTBBanner from '@/components/YandexRTBBanner'
+import GdzBookMobileAd from '@/components/GdzBookMobileAd'
 import { AD_BLOCKS, AD_SLOT_2, AD_SLOT_3 } from '@/lib/ads'
 import { getTopicsForSubjectAndClass, getSubjectBySlug } from '@/data/textbook'
 
@@ -140,6 +141,7 @@ export default async function GdzBookPage({ params }: Props) {
             </svg>
             <input type="text" inputMode="numeric" placeholder="Введите номер упражнения…" aria-label="Поиск по номеру"/>
           </div>
+          <div id="ps-gdz-book-early-ad" />
 
           {/* Содержание */}
           <section className="gdz-section">
@@ -147,12 +149,7 @@ export default async function GdzBookPage({ params }: Props) {
 
             {book.chapters.map((chapter, ci) => (
               <div key={chapter.title}>
-                {ci === 2 && (
-                  <aside className="gdz-ad gdz-ad-inline" aria-label="Реклама">
-                    <div className="gdz-ad-label"><span>Реклама</span><span className="age">16+</span></div>
-                    <YandexRTBBanner blockId={AD_BLOCKS.gdzUchebnik} suffix="list-inline" viewport="mobile" />
-                  </aside>
-                )}
+                {ci === 2 && <GdzBookMobileAd blockId={AD_BLOCKS.gdzUchebnik} />}
                 <div className="gdz-toc-group">
                   <h3>{chapter.title}</h3>
                   <div className="gdz-num-grid">
