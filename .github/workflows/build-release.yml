@@ -157,7 +157,6 @@ jobs:
           cp -r work/externat-qa build-release/qa-externat-catalog
           cp -r work/online-catalog-qa build-release/qa-online-catalog
           cp -r work/seo-school-formats-qa build-release/qa-school-formats
-          cp -r work/leads-growth-qa build-release/qa-leads-growth
           cp -r work/search-qa build-release/qa-search
           cp -r work/school-cards-qa build-release/qa-school-cards
       - uses: actions/upload-artifact@v4
