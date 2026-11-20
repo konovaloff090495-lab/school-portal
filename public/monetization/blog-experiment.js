@@ -21,64 +21,235 @@ function getActive(){
 window.__psBlogAds={getActive:getActive};getActive();
 })();
 
-/* Measurement only: reuse the statId input of the immutable ad components.
- * The original blog experiment above still owns its routes and assignment. */
+/* GDZ rollout and the section-specific reporting tags used by native slots. */
 (function () {
   'use strict';
-  var adapter = window.__psBlogAds;
+  const adapter = window.__psBlogAds;
   if (!adapter || adapter.sectionTagsInstalled) return;
-  var blogAssignment = adapter.getActive;
-  var books = new Set([
-    '/gdz/8-klass/fizika/peryshkin-8', '/gdz/5-klass/geografiya/alekseev',
-    '/gdz/6-klass/matematika/vilenkin', '/gdz/10-klass/geometriya/atanasyan-10',
-    '/gdz/6-klass/russkiy-yazyk/ladyzhenskaya', '/gdz/11-klass/obshchestvoznanie/bogolyubov',
-    '/gdz/7-klass/fizika/peryshkin', '/gdz/9-klass/fizika/peryshkin',
-    '/gdz/8-klass/russkiy-yazyk/ladyzhenskaya-8', '/gdz/8-klass/geografiya/alekseev',
-    '/gdz/7-klass/geometriya/atanasyan', '/gdz/10-klass/obshchestvoznanie/bogolyubov'
-  ]);
-  var learningKey = 'ps_learning_20261120';
+  const blogAssignment = adapter.getActive;
+  const rolloutStatId = 611200202; // Also selects the existing early book placement.
+  const inlineIds = [7, 8, 9, 10];
+  const blockPrefix = 'R-A-19425636-';
+  const route = /^\/gdz(?:\/[^/]+){0,4}\/?$/;
+  const mobile = '(max-width: 1023px)';
+  let state;
+  let scheduled = false;
+
   function isPhone() {
-    var nav = window.navigator;
+    const nav = window.navigator;
     if (nav.userAgentData && typeof nav.userAgentData.mobile === 'boolean') {
       return nav.userAgentData.mobile;
     }
-    var ua = nav.userAgent || '';
-    return /iPhone|iPod|Android.*Mobile|Windows Phone/i.test(ua);
+    return /iPhone|iPod|Android.*Mobile|Windows Phone/i.test(nav.userAgent || '');
   }
+
+  function previewMode() {
+    const params = new URLSearchParams(location.search);
+    const legacy = params.get('ps_learning_preview');
+    return legacy === 'A' ? 'A' : legacy === 'B' || params.has('ps_gdz_preview') ? 'B' : '';
+  }
+
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    window.setTimeout(() => {
+      scheduled = false;
+      placeAds();
+    }, 120);
+  }
+
   adapter.getActive = function () {
-    var path = location.pathname.replace(/\/$/, '');
-    var phone = isPhone();
-    if (books.has(path) && window.matchMedia('(max-width: 1023px)').matches) {
-      var preview = new URLSearchParams(location.search).get('ps_learning_preview');
-      var qa = preview === 'A' || preview === 'B';
-      if (qa || phone) {
-        var arm = qa ? preview : 'X';
-        if (!qa) {
-          try {
-            arm = localStorage.getItem(learningKey);
-            if (arm !== 'A' && arm !== 'B') {
-              arm = crypto.getRandomValues(new Uint8Array(1))[0] % 2 ? 'B' : 'A';
-              localStorage.setItem(learningKey, arm);
-            }
-          } catch (_) { arm = 'X'; }
-        }
-        var marker = (qa ? 'QA-' : '') + arm;
-        document.documentElement.setAttribute('data-ps-learning-arm', marker);
-        if (!qa && arm !== 'X' && window.__psLearningPath !== path) {
-          window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
-          window.ym(108789843, 'params', {ps_learning_20261120: arm});
-          window.__psLearningPath = path;
-        }
-        return {arm: arm, qa: qa, statId: {A: 611200201, B: 611200202, X: 611200203}[arm]};
-      }
+    const path = location.pathname.replace(/\/$/, '');
+    if (route.test(path)) {
+      const preview = previewMode();
+      document.documentElement.setAttribute('data-ps-gdz-rollout', preview ? 'QA-' + preview : 'live');
+      schedule();
+      return {arm: preview || 'B', qa: Boolean(preview), statId: rolloutStatId};
     }
-    window.__psLearningPath = null;
-    document.documentElement.removeAttribute('data-ps-learning-arm');
-    var statId = /^\/gdz(?:\/|$)/.test(path) ? 611090101
-      : /^\/olimpiady(?:\/|$)/.test(path) ? 611090102
+    if (state || scheduled) schedule();
+    document.documentElement.removeAttribute('data-ps-gdz-rollout');
+    const statId = /^\/olimpiady(?:\/|$)/.test(path) ? 611090102
       : /^\/uchebnik(?:\/|$)/.test(path) ? 611200204 : null;
-    if (statId !== null && phone) return {statId: statId, qa: false};
+    if (statId !== null && isPhone()) return {statId, qa: false};
     return blogAssignment();
   };
   adapter.sectionTagsInstalled = true;
+
+  function position(node) {
+    const rect = node.getBoundingClientRect();
+    return {top: rect.top + window.scrollY, bottom: rect.bottom + window.scrollY,
+      width: rect.width, height: rect.height};
+  }
+
+  function placeIndexEarly(main, current) {
+    // Change visual order without moving React's nodes outside their parent.
+    const ad = main.querySelector(':scope > aside.gdz-ad-inline[data-rsya]');
+    const crumbs = main.querySelector(':scope > .gdz-crumbs');
+    const head = main.querySelector(':scope > .gdz-pagehead');
+    if (!ad || !crumbs || !head) return;
+    for (const [node, property, value] of [
+      [main, 'display', 'flex'], [main, 'flexDirection', 'column'],
+      [crumbs, 'order', '-3'], [head, 'order', '-2'], [ad, 'order', '-1'],
+    ]) {
+      current.styles.push([node, property, node.style[property]]);
+      node.style[property] = value;
+    }
+    ad.setAttribute('data-ps-gdz-early', 'index');
+    current.index = ad;
+  }
+
+  function makeAd(current, target, id, {after = false, append = false, grid = false, offset} = {}) {
+    const blockId = blockPrefix + id;
+    const holder = document.createElement('aside');
+    holder.setAttribute('aria-label', 'Реклама');
+    holder.setAttribute('data-ps-gdz-extra', blockId);
+    holder.style.cssText = 'display:block;min-width:0;max-width:100%;';
+    if (grid) holder.style.gridColumn = '1 / -1';
+    const slot = document.createElement('div');
+    slot.id = 'yandex_rtb_' + blockId + '_gdz';
+    holder.append(slot);
+    if (offset !== undefined) {
+      current.textParents.add(target.parentElement);
+      const range = document.createRange();
+      range.setStart(target, offset);
+      range.collapse(true);
+      range.insertNode(holder);
+    } else if (append) target.append(holder);
+    else if (after) target.after(holder);
+    else target.before(holder);
+    current.added.push(holder);
+    current.used.add(id);
+    if (current.preview) {
+      holder.style.cssText += 'height:24px;background:#f5f6fa;color:#526078;font:13px/24px sans-serif;text-align:center;';
+      slot.textContent = 'Реклама · проверка места';
+      return;
+    }
+
+    const request = () => {
+      window.yaContextCb = window.yaContextCb || [];
+      window.yaContextCb.push(() => {
+        if (!holder.isConnected || current.path !== location.pathname) return;
+        window.Ya?.Context?.AdvManager?.render({
+          blockId, renderTo: slot.id, statId: rolloutStatId,
+          onRender() { holder.style.marginBlock = '12px'; },
+        });
+      });
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      request();
+      return;
+    }
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      request();
+    }, {rootMargin: '560px 0px'});
+    current.observers.push(observer);
+    observer.observe(holder);
+  }
+
+  function solutionCandidates(main) {
+    const steps = main.querySelectorAll('.gdz-steps > li');
+    if (!steps.length) return [];
+    const segmenter = typeof Intl.Segmenter === 'function'
+      ? new Intl.Segmenter('ru', {granularity: 'sentence'}) : null;
+    const range = document.createRange();
+    const points = [];
+    for (const step of steps) {
+      const box = position(step);
+      if (!box.width || !box.height) continue;
+      points.push({node: step, top: box.bottom, append: true});
+      if (!segmenter || box.height < 380) continue;
+      for (const node of step.childNodes) {
+        if (node.nodeType !== 3 || node.length < 550) continue;
+        for (const {index} of segmenter.segment(node.data)) {
+          if (index < 200 || node.length - index < 150) continue;
+          const end = node.data.slice(0, index).trimEnd().length;
+          range.setStart(node, end - 1);
+          range.setEnd(node, end);
+          const rect = range.getBoundingClientRect();
+          if (rect.height) points.push({node, top: rect.bottom + window.scrollY, offset: index});
+        }
+      }
+    }
+    return points;
+  }
+
+  function candidates(main) {
+    const found = [...main.querySelectorAll(
+      ':scope > .gdz-section, :scope > .gdz-solve, .gdz-solution-images > img, ' +
+      '.gdz-num-grid > a, .gdz-book-grid > a, .gdz-subj-grid > a'
+    )];
+    const lastRow = new Map();
+    const points = found.flatMap(node => {
+      const box = position(node);
+      if (!box.width || !box.height) return [];
+      const grid = node.matches('a');
+      if (grid) {
+        const previous = lastRow.get(node.parentElement);
+        if (previous !== undefined && Math.abs(previous - box.top) < 3) return [];
+        lastRow.set(node.parentElement, box.top);
+      }
+      return [{node, top: box.top, grid}];
+    });
+    return points.concat(solutionCandidates(main)).sort((a, b) => a.top - b.top);
+  }
+
+  function placeAds() {
+    const path = location.pathname;
+    const main = route.test(path) ? document.querySelector('.gdz-main') : null;
+    if (!main || state?.path !== path || state.main !== main) {
+      if (state) {
+        state.observers.forEach(observer => observer.disconnect());
+        state.added.forEach(node => node.remove());
+        state.textParents.forEach(node => node.normalize());
+        state.styles.forEach(([node, property, value]) => { node.style[property] = value; });
+        state.index?.removeAttribute('data-ps-gdz-early');
+        state = undefined;
+      }
+      if (!main) return;
+      state = {path, main, preview: previewMode(), added: [], observers: [], styles: [],
+        used: new Set(), textParents: new Set()};
+      if (/^\/gdz\/?$/.test(path) && window.matchMedia(mobile).matches && state.preview !== 'A') {
+        placeIndexEarly(main, state);
+      }
+    }
+    if (state.preview === 'A') return;
+
+    const search = main.querySelector('.gdz-exsearch');
+    if (search && !state.used.has(6) && window.matchMedia(mobile).matches &&
+        (!main.querySelector('#ps-gdz-book-early-ad') || main.querySelectorAll('.gdz-toc-group').length < 3)) {
+      makeAd(state, search, 6, {after: true});
+    }
+
+    const ids = inlineIds.filter(id => !state.used.has(id));
+    if (!ids.length) return;
+    const lead = search || main.querySelector('.gdz-pagehead');
+    if (!lead) return;
+    const start = position(lead).bottom;
+    const end = position(main).bottom;
+    const gap = Math.max(760, window.innerHeight * 1.08);
+    const blocked = [...main.querySelectorAll('.gdz-ad-inline, [data-ps-gdz-extra]')]
+      .filter(node => node.getClientRects().length)
+      .map(position);
+    let last = start;
+    const selected = [];
+    for (const candidate of candidates(main)) {
+      if (candidate.top - last < gap || end - candidate.top < gap * 0.55) continue;
+      if (blocked.some(slot => candidate.top >= slot.top - gap * 0.72 &&
+                                candidate.top <= slot.bottom + gap * 0.72)) continue;
+      selected.push(candidate);
+      last = candidate.top;
+      if (selected.length === ids.length) break;
+    }
+    // Split text from the end so earlier offsets still address the original node.
+    selected.map((point, index) => ({...point, id: ids[index]})).reverse()
+      .forEach(({node, id, ...options}) => makeAd(state, node, id, options));
+  }
+
+  if (route.test(location.pathname)) schedule();
+  document.addEventListener('load', event => {
+    if (event.target?.matches?.('.gdz-solution-img') && route.test(location.pathname)) schedule();
+  }, true);
 })();

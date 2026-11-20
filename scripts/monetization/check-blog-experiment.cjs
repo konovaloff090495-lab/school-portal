@@ -4,8 +4,8 @@ const code=fs.readFileSync('public/monetization/blog-experiment.js','utf8');
 assert(cohort.length>100);for(const slug of cohort)assert(code.includes(JSON.stringify(slug)));
 function run({stored=null,preview='',path='/blog/'+cohort[0]+'/',storageFail=false,phone=false,narrow=phone}={}){
  const attrs={},params=[];let value=stored;
- const window={ym(...x){params.push(x)},navigator:{userAgentData:{mobile:phone}},matchMedia(){return {matches:narrow}}};
- const ctx=vm.createContext({window,location:{pathname:path,search:preview},document:{documentElement:{setAttribute(k,v){attrs[k]=v},removeAttribute(k){delete attrs[k]}}},URLSearchParams,Set,Uint32Array,decodeURIComponent,crypto:{getRandomValues(x){x[0]=1;return x}},localStorage:{getItem(){if(storageFail)throw Error();return value},setItem(k,v){value=v}}});
+ const window={ym(...x){params.push(x)},navigator:{userAgentData:{mobile:phone}},matchMedia(){return {matches:narrow}},setTimeout(){}};
+ const ctx=vm.createContext({window,location:{pathname:path,search:preview},document:{addEventListener(){},documentElement:{setAttribute(k,v){attrs[k]=v},removeAttribute(k){delete attrs[k]}}},URLSearchParams,Set,Uint32Array,decodeURIComponent,crypto:{getRandomValues(x){x[0]=1;return x}},localStorage:{getItem(){if(storageFail)throw Error();return value},setItem(k,v){value=v}}});
  vm.runInContext(code,ctx);return{window,attrs,params,value,ctx};
 }
 for(const arm of ['A','B']){const r=run({stored:arm});const a=r.window.__psBlogAds.getActive();assert.equal(a.arm,arm);assert.equal(a.statId,arm==='A'?611060201:611060202);assert.equal(r.params.length,1);vm.runInContext(code,r.ctx);assert.equal(r.params.length,1)}
@@ -15,16 +15,22 @@ for(const path of ['/shkoly/','/shkola/example/','/blog/not-in-cohort/','/uchebn
 const r=run({stored:'A'});r.ctx.location.pathname='/shkoly/';assert.equal(r.window.__psBlogAds.getActive(),null);
 console.log('PASS blog cohort assignment, persistence, QA exclusion, storage failure and SPA scope exit');
 const book='/gdz/6-klass/matematika/vilenkin/';
-for(const arm of ['A','B']){
- const device=run({stored:arm,path:book,phone:true});
- const candidate=device.window.__psBlogAds.getActive();
- assert.equal(candidate.statId,arm==='A'?611200201:611200202);
- assert.equal(device.params[0][2].ps_learning_20261120,arm);
- const preview=run({path:book,narrow:true,preview:'?ps_learning_preview='+arm});
- assert.equal(preview.window.__psBlogAds.getActive().qa,true);
- assert.equal(preview.params.length,0);
+for(const path of ['/gdz/','/gdz/6-klass/','/gdz/6-klass/matematika/',book,book+'nomer-1-1/','/gdz/5-klass/matematika/vilenkin/']){
+ for (const phone of [true,false]) {
+  const device=run({stored:'A',path,phone,storageFail:true});
+  const candidate=device.window.__psBlogAds.getActive();
+  assert.equal(candidate.statId,611200202);
+  assert.equal(candidate.arm,'B');
+  assert.equal(candidate.qa,false);
+  assert.equal(device.params.length,0);
+ }
 }
-assert.equal(run({path:book}).window.__psBlogAds.getActive(),null);
-assert.equal(run({path:book,phone:true,storageFail:true}).window.__psBlogAds.getActive().arm,'X');
+const preview=run({path:book,narrow:true,preview:'?ps_gdz_preview=1'});
+assert.equal(preview.window.__psBlogAds.getActive().qa,true);
+assert.equal(preview.attrs['data-ps-gdz-rollout'],'QA-B');
+preview.ctx.location.pathname='/shkoly/';
+assert.equal(preview.window.__psBlogAds.getActive(),null);
+assert.equal(preview.attrs['data-ps-gdz-rollout'],undefined);
+assert.equal(run({path:book,preview:'?ps_learning_preview=A'}).window.__psBlogAds.getActive().arm,'A');
 assert.equal(run({path:'/uchebnik/istoriya/',phone:true}).window.__psBlogAds.getActive().statId,611200204);
-console.log('PASS GDZ phone assignment, QA and separate textbook measurement');
+console.log('PASS GDZ whole-section rollout, QA and separate textbook measurement');
